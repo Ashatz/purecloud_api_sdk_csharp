@@ -1,4 +1,3 @@
 buildScripts/node_modules/
 buildScripts/npm-debug.log
 bin/
-build/
