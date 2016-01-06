@@ -1,0 +1,9 @@
+{
+	"name":"PureCloudApiLibrary_CSharp",
+	"version":"1.0.0",
+	"description":"A C# client library for the PureCloud Public API",
+	"dependencies": {
+		"wget":"*",
+		"mkdirp":"*"
+	}
+}
