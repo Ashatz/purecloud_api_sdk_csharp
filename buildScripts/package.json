@@ -4,7 +4,6 @@
 	"description":"A C# client library for the PureCloud Public API",
 	"dependencies": {
 		"wget":"*",
-		"mkdirp":"*",
-		"fs":"*"
+		"mkdirp":"*"
 	}
 }
