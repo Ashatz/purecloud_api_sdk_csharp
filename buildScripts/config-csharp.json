@@ -1,6 +1,6 @@
 {
 	"packageName":"ININ.PureCloudApi",
-	"packageVersion":"0.1.0.0",
+	"packageVersion":"0.0.0.0",
 	"packageTitle":"PureCloud Public API Library",
     "packageProductName":"PureCloudPublicAPILibrary",
     "packageDescription":"A .NET library to interface with the PureCloud Public API",
