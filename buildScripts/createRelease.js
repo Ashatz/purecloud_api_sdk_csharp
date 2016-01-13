@@ -36,7 +36,7 @@ function main() {
 		.then(function(res) {
 			logRelease(res, 'Created ');
 
-			api.repos.releases.uploadReleaseAsset(res.upload_url, 'ININ.PureCloudApi.dll', 'The DLL', './build/bin/ININ.PureCloudApi.dll')
+			api.repos.releases.uploadReleaseAsset(res.upload_url, 'ININ.PureCloudApi.dll', 'The DLL', './build/bin/ININ.PureCloudApi.dll', 'application/x-msdownload')
 				.then(function(res) {
 					logAsset(res, 'Uploaded ');
 				}, 
