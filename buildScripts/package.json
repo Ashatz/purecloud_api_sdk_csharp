@@ -7,7 +7,7 @@
 	"dependencies": {
 		"wget":"*",
 		"mkdirp":"*",
-		"github-api-promise":"1.0.4",
+		"github-api-promise":"*",
 		"dateformat":"*"
 	}
 }
