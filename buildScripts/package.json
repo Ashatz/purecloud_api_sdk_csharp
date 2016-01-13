@@ -1,6 +1,6 @@
 {
 	"name":"PureCloudApiLibrary_CSharp",
-	"version":"1.0.0",
+	"version":"1.0.1",
 	"description":"A C# client library for the PureCloud Public API",
 	"repository":"https://github.com/MyPureCloud/PureCloudApiLibrary_CSharp.git",
 	"license":"MIT",
