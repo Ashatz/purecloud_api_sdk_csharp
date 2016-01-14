@@ -31,6 +31,8 @@ function main() {
 	var zipFilePath = './bin/' + zipFileName;
 	zipReleaseFiles(zipFilePath)
 		.then(function() {
+			console.log('zip file created, uploading....');
+			
 			var createReleaseOptions = {
 				"tag_name": version,
 				"target_commitish": "master",
@@ -44,23 +46,26 @@ function main() {
 				.then(function(res) {
 					logRelease(res, 'Created ');
 
-					api.repos.releases.uploadReleaseAsset(
-						res.upload_url, 
-						zipFileName, 
-						'Release binaries', 
-						zipFilePath, 
-						'application/zip')
-						.then(function(res) {
-							logAsset(res, 'Uploaded ');
-						}, 
-						function(err) {
-							console.log('Request failed: ' + err);
-						});
+					uploadReleaseAsset(res.upload_url, 'ININ.PureCloudApi.dll', 'ININ.PureCloudApi.dll', './build/bin/ININ.PureCloudApi.dll', 'application/x-msdownload');
+					uploadReleaseAsset(res.upload_url, 'ININ.PureCloudApi.xml', 'ININ.PureCloudApi.xml', './build/bin/ININ.PureCloudApi.xml', 'application/xml');
+					uploadReleaseAsset(res.upload_url, 'Newtonsoft.Json.dll', 'Newtonsoft.Json.dll', './build/bin/Newtonsoft.Json.dll', 'application/x-msdownload');
+					uploadReleaseAsset(res.upload_url, 'RestSharp.dll', 'RestSharp.dll', './build/bin/RestSharp.dll', 'application/x-msdownload');
+					uploadReleaseAsset(res.upload_url, zipFileName, 'Release binaries', zipFilePath, 'application/zip');
 				}, 
 				function(err) {
 					console.log('Request failed: ' + err);
 					throw err;
 				});
+		});
+}
+
+function uploadReleaseAsset(uploadUrl, fileName, label, filePath, mimeType) {
+	api.repos.releases.uploadReleaseAsset(uploadUrl, fileName, label, filePath, mimeType)
+		.then(function(res) {
+			logAsset(res, 'Uploaded ');
+		}, 
+		function(err) {
+			console.log('Request failed: ' + err);
 		});
 }
 
