@@ -66,3 +66,7 @@ function logRelease(release, prefix) {
 function logAsset(asset) {
 	console.log('Asset "' + asset.name + '" (' + asset.label + ') #' + asset.id + ' uploaded by ' + asset.uploader.login + ' on ' + dateFormat(asset.updated_at, dFormat) + ' at ' + dateFormat(asset.updated_at, tFormat));
 }
+
+function stringStartsWith (string, prefix) {
+    return string.slice(0, prefix.length) == prefix;
+}
