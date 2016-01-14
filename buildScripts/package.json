@@ -8,6 +8,8 @@
 		"wget":"*",
 		"mkdirp":"*",
 		"github-api-promise":"*",
-		"dateformat":"*"
+		"dateformat":"*",
+		"Q":"*",
+		"archiver":"*"
 	}
 }
