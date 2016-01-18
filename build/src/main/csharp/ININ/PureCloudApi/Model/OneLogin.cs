@@ -50,17 +50,17 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
-        /// Gets or Sets IssuerURI
-        /// </summary>
-        [DataMember(Name="issuerURI", EmitDefaultValue=false)]
-        public string IssuerURI { get; set; }
-  
-        
-        /// <summary>
         /// Gets or Sets SsoTargetURI
         /// </summary>
         [DataMember(Name="ssoTargetURI", EmitDefaultValue=false)]
         public string SsoTargetURI { get; set; }
+  
+        
+        /// <summary>
+        /// Gets or Sets IssuerURI
+        /// </summary>
+        [DataMember(Name="issuerURI", EmitDefaultValue=false)]
+        public string IssuerURI { get; set; }
   
         
         /// <summary>
@@ -83,8 +83,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Certificate: ").Append(Certificate).Append("\n");
-            sb.Append("  IssuerURI: ").Append(IssuerURI).Append("\n");
             sb.Append("  SsoTargetURI: ").Append(SsoTargetURI).Append("\n");
+            sb.Append("  IssuerURI: ").Append(IssuerURI).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
@@ -139,14 +139,14 @@ namespace ININ.PureCloudApi.Model
                     this.Certificate.Equals(other.Certificate)
                 ) && 
                 (
-                    this.IssuerURI == other.IssuerURI ||
-                    this.IssuerURI != null &&
-                    this.IssuerURI.Equals(other.IssuerURI)
-                ) && 
-                (
                     this.SsoTargetURI == other.SsoTargetURI ||
                     this.SsoTargetURI != null &&
                     this.SsoTargetURI.Equals(other.SsoTargetURI)
+                ) && 
+                (
+                    this.IssuerURI == other.IssuerURI ||
+                    this.IssuerURI != null &&
+                    this.IssuerURI.Equals(other.IssuerURI)
                 ) && 
                 (
                     this.SelfUri == other.SelfUri ||
@@ -176,11 +176,11 @@ namespace ININ.PureCloudApi.Model
                 if (this.Certificate != null)
                     hash = hash * 57 + this.Certificate.GetHashCode();
                 
-                if (this.IssuerURI != null)
-                    hash = hash * 57 + this.IssuerURI.GetHashCode();
-                
                 if (this.SsoTargetURI != null)
                     hash = hash * 57 + this.SsoTargetURI.GetHashCode();
+                
+                if (this.IssuerURI != null)
+                    hash = hash * 57 + this.IssuerURI.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 57 + this.SelfUri.GetHashCode();
