@@ -1033,8 +1033,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">The number of entries to return per page, or omitted for the default.</param>
         /// <param name="pageNumber">The page number to return, or omitted for the first page.</param>
         /// <param name="expand">Expand instructions for the return value.</param>
+        /// <param name="name">Search phrase to match on the queue&#39;s name.</param>
         /// <returns>QueuesEntityListing</returns>
-        QueuesEntityListing ProcessautomationQueuesGet (int? pageSize = null, int? pageNumber = null, string expand = null);
+        QueuesEntityListing ProcessautomationQueuesGet (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null);
   
         /// <summary>
         /// Get all queues for an organization
@@ -1045,8 +1046,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">The number of entries to return per page, or omitted for the default.</param>
         /// <param name="pageNumber">The page number to return, or omitted for the first page.</param>
         /// <param name="expand">Expand instructions for the return value.</param>
+        /// <param name="name">Search phrase to match on the queue&#39;s name.</param>
         /// <returns>ApiResponse of QueuesEntityListing</returns>
-        ApiResponse<QueuesEntityListing> ProcessautomationQueuesGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null);
+        ApiResponse<QueuesEntityListing> ProcessautomationQueuesGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null);
 
         /// <summary>
         /// Get all queues for an organization
@@ -1057,8 +1059,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">The number of entries to return per page, or omitted for the default.</param>
         /// <param name="pageNumber">The page number to return, or omitted for the first page.</param>
         /// <param name="expand">Expand instructions for the return value.</param>
+        /// <param name="name">Search phrase to match on the queue&#39;s name.</param>
         /// <returns>Task of QueuesEntityListing</returns>
-        System.Threading.Tasks.Task<QueuesEntityListing> ProcessautomationQueuesGetAsync (int? pageSize = null, int? pageNumber = null, string expand = null);
+        System.Threading.Tasks.Task<QueuesEntityListing> ProcessautomationQueuesGetAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null);
 
         /// <summary>
         /// Get all queues for an organization
@@ -1069,8 +1072,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">The number of entries to return per page, or omitted for the default.</param>
         /// <param name="pageNumber">The page number to return, or omitted for the first page.</param>
         /// <param name="expand">Expand instructions for the return value.</param>
+        /// <param name="name">Search phrase to match on the queue&#39;s name.</param>
         /// <returns>Task of ApiResponse (QueuesEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueuesEntityListing>> ProcessautomationQueuesGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<QueuesEntityListing>> ProcessautomationQueuesGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null);
         
         /// <summary>
         /// Create a new queue object
@@ -1254,8 +1258,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">The number of entries to return per page, or omitted for the default.</param>
         /// <param name="pageNumber">The page number to return, or omitted for the first page.</param>
         /// <param name="expand">Expand instructions for the return value.</param>
+        /// <param name="name">Search phrase to match on the queue member&#39;s name.</param>
         /// <returns>QueueMemberEntityListing</returns>
-        QueueMemberEntityListing ProcessautomationQueuesIdMembersGet (string id, int? pageSize = null, int? pageNumber = null, string expand = null);
+        QueueMemberEntityListing ProcessautomationQueuesIdMembersGet (string id, int? pageSize = null, int? pageNumber = null, string expand = null, string name = null);
   
         /// <summary>
         /// Get members in a queue
@@ -1267,8 +1272,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">The number of entries to return per page, or omitted for the default.</param>
         /// <param name="pageNumber">The page number to return, or omitted for the first page.</param>
         /// <param name="expand">Expand instructions for the return value.</param>
+        /// <param name="name">Search phrase to match on the queue member&#39;s name.</param>
         /// <returns>ApiResponse of QueueMemberEntityListing</returns>
-        ApiResponse<QueueMemberEntityListing> ProcessautomationQueuesIdMembersGetWithHttpInfo (string id, int? pageSize = null, int? pageNumber = null, string expand = null);
+        ApiResponse<QueueMemberEntityListing> ProcessautomationQueuesIdMembersGetWithHttpInfo (string id, int? pageSize = null, int? pageNumber = null, string expand = null, string name = null);
 
         /// <summary>
         /// Get members in a queue
@@ -1280,8 +1286,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">The number of entries to return per page, or omitted for the default.</param>
         /// <param name="pageNumber">The page number to return, or omitted for the first page.</param>
         /// <param name="expand">Expand instructions for the return value.</param>
+        /// <param name="name">Search phrase to match on the queue member&#39;s name.</param>
         /// <returns>Task of QueueMemberEntityListing</returns>
-        System.Threading.Tasks.Task<QueueMemberEntityListing> ProcessautomationQueuesIdMembersGetAsync (string id, int? pageSize = null, int? pageNumber = null, string expand = null);
+        System.Threading.Tasks.Task<QueueMemberEntityListing> ProcessautomationQueuesIdMembersGetAsync (string id, int? pageSize = null, int? pageNumber = null, string expand = null, string name = null);
 
         /// <summary>
         /// Get members in a queue
@@ -1293,8 +1300,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">The number of entries to return per page, or omitted for the default.</param>
         /// <param name="pageNumber">The page number to return, or omitted for the first page.</param>
         /// <param name="expand">Expand instructions for the return value.</param>
+        /// <param name="name">Search phrase to match on the queue member&#39;s name.</param>
         /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> ProcessautomationQueuesIdMembersGetAsyncWithHttpInfo (string id, int? pageSize = null, int? pageNumber = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> ProcessautomationQueuesIdMembersGetAsyncWithHttpInfo (string id, int? pageSize = null, int? pageNumber = null, string expand = null, string name = null);
         
         /// <summary>
         /// Edit the members in a queue
@@ -5444,10 +5452,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">The number of entries to return per page, or omitted for the default.</param> 
         /// <param name="pageNumber">The page number to return, or omitted for the first page.</param> 
         /// <param name="expand">Expand instructions for the return value.</param> 
+        /// <param name="name">Search phrase to match on the queue&#39;s name.</param> 
         /// <returns>QueuesEntityListing</returns>
-        public QueuesEntityListing ProcessautomationQueuesGet (int? pageSize = null, int? pageNumber = null, string expand = null)
+        public QueuesEntityListing ProcessautomationQueuesGet (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null)
         {
-             ApiResponse<QueuesEntityListing> response = ProcessautomationQueuesGetWithHttpInfo(pageSize, pageNumber, expand);
+             ApiResponse<QueuesEntityListing> response = ProcessautomationQueuesGetWithHttpInfo(pageSize, pageNumber, expand, name);
              return response.Data;
         }
 
@@ -5457,8 +5466,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">The number of entries to return per page, or omitted for the default.</param> 
         /// <param name="pageNumber">The page number to return, or omitted for the first page.</param> 
         /// <param name="expand">Expand instructions for the return value.</param> 
+        /// <param name="name">Search phrase to match on the queue&#39;s name.</param> 
         /// <returns>ApiResponse of QueuesEntityListing</returns>
-        public ApiResponse< QueuesEntityListing > ProcessautomationQueuesGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null)
+        public ApiResponse< QueuesEntityListing > ProcessautomationQueuesGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null)
         {
             
     
@@ -5486,6 +5496,7 @@ namespace ININ.PureCloudApi.Api
             if (pageSize != null) queryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) queryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (expand != null) queryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            if (name != null) queryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             
             
             
@@ -5523,10 +5534,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">The number of entries to return per page, or omitted for the default.</param>
         /// <param name="pageNumber">The page number to return, or omitted for the first page.</param>
         /// <param name="expand">Expand instructions for the return value.</param>
+        /// <param name="name">Search phrase to match on the queue&#39;s name.</param>
         /// <returns>Task of QueuesEntityListing</returns>
-        public async System.Threading.Tasks.Task<QueuesEntityListing> ProcessautomationQueuesGetAsync (int? pageSize = null, int? pageNumber = null, string expand = null)
+        public async System.Threading.Tasks.Task<QueuesEntityListing> ProcessautomationQueuesGetAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null)
         {
-             ApiResponse<QueuesEntityListing> response = await ProcessautomationQueuesGetAsyncWithHttpInfo(pageSize, pageNumber, expand);
+             ApiResponse<QueuesEntityListing> response = await ProcessautomationQueuesGetAsyncWithHttpInfo(pageSize, pageNumber, expand, name);
              return response.Data;
 
         }
@@ -5537,8 +5549,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">The number of entries to return per page, or omitted for the default.</param>
         /// <param name="pageNumber">The page number to return, or omitted for the first page.</param>
         /// <param name="expand">Expand instructions for the return value.</param>
+        /// <param name="name">Search phrase to match on the queue&#39;s name.</param>
         /// <returns>Task of ApiResponse (QueuesEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueuesEntityListing>> ProcessautomationQueuesGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<QueuesEntityListing>> ProcessautomationQueuesGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null)
         {
             
     
@@ -5566,6 +5579,7 @@ namespace ININ.PureCloudApi.Api
             if (pageSize != null) queryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) queryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (expand != null) queryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            if (name != null) queryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             
             
             
@@ -6223,10 +6237,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">The number of entries to return per page, or omitted for the default.</param> 
         /// <param name="pageNumber">The page number to return, or omitted for the first page.</param> 
         /// <param name="expand">Expand instructions for the return value.</param> 
+        /// <param name="name">Search phrase to match on the queue member&#39;s name.</param> 
         /// <returns>QueueMemberEntityListing</returns>
-        public QueueMemberEntityListing ProcessautomationQueuesIdMembersGet (string id, int? pageSize = null, int? pageNumber = null, string expand = null)
+        public QueueMemberEntityListing ProcessautomationQueuesIdMembersGet (string id, int? pageSize = null, int? pageNumber = null, string expand = null, string name = null)
         {
-             ApiResponse<QueueMemberEntityListing> response = ProcessautomationQueuesIdMembersGetWithHttpInfo(id, pageSize, pageNumber, expand);
+             ApiResponse<QueueMemberEntityListing> response = ProcessautomationQueuesIdMembersGetWithHttpInfo(id, pageSize, pageNumber, expand, name);
              return response.Data;
         }
 
@@ -6237,8 +6252,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">The number of entries to return per page, or omitted for the default.</param> 
         /// <param name="pageNumber">The page number to return, or omitted for the first page.</param> 
         /// <param name="expand">Expand instructions for the return value.</param> 
+        /// <param name="name">Search phrase to match on the queue member&#39;s name.</param> 
         /// <returns>ApiResponse of QueueMemberEntityListing</returns>
-        public ApiResponse< QueueMemberEntityListing > ProcessautomationQueuesIdMembersGetWithHttpInfo (string id, int? pageSize = null, int? pageNumber = null, string expand = null)
+        public ApiResponse< QueueMemberEntityListing > ProcessautomationQueuesIdMembersGetWithHttpInfo (string id, int? pageSize = null, int? pageNumber = null, string expand = null, string name = null)
         {
             
             // verify the required parameter 'id' is set
@@ -6270,6 +6286,7 @@ namespace ININ.PureCloudApi.Api
             if (pageSize != null) queryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) queryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (expand != null) queryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            if (name != null) queryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             
             
             
@@ -6308,10 +6325,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">The number of entries to return per page, or omitted for the default.</param>
         /// <param name="pageNumber">The page number to return, or omitted for the first page.</param>
         /// <param name="expand">Expand instructions for the return value.</param>
+        /// <param name="name">Search phrase to match on the queue member&#39;s name.</param>
         /// <returns>Task of QueueMemberEntityListing</returns>
-        public async System.Threading.Tasks.Task<QueueMemberEntityListing> ProcessautomationQueuesIdMembersGetAsync (string id, int? pageSize = null, int? pageNumber = null, string expand = null)
+        public async System.Threading.Tasks.Task<QueueMemberEntityListing> ProcessautomationQueuesIdMembersGetAsync (string id, int? pageSize = null, int? pageNumber = null, string expand = null, string name = null)
         {
-             ApiResponse<QueueMemberEntityListing> response = await ProcessautomationQueuesIdMembersGetAsyncWithHttpInfo(id, pageSize, pageNumber, expand);
+             ApiResponse<QueueMemberEntityListing> response = await ProcessautomationQueuesIdMembersGetAsyncWithHttpInfo(id, pageSize, pageNumber, expand, name);
              return response.Data;
 
         }
@@ -6323,8 +6341,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">The number of entries to return per page, or omitted for the default.</param>
         /// <param name="pageNumber">The page number to return, or omitted for the first page.</param>
         /// <param name="expand">Expand instructions for the return value.</param>
+        /// <param name="name">Search phrase to match on the queue member&#39;s name.</param>
         /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> ProcessautomationQueuesIdMembersGetAsyncWithHttpInfo (string id, int? pageSize = null, int? pageNumber = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> ProcessautomationQueuesIdMembersGetAsyncWithHttpInfo (string id, int? pageSize = null, int? pageNumber = null, string expand = null, string name = null)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ProcessautomationQueuesIdMembersGet");
@@ -6355,6 +6374,7 @@ namespace ININ.PureCloudApi.Api
             if (pageSize != null) queryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) queryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (expand != null) queryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            if (name != null) queryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             
             
             
