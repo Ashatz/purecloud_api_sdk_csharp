@@ -20,3 +20,4 @@ cd %WORKSPACE%
 
 call git add .
 call git commit -am %version%
+call git push
