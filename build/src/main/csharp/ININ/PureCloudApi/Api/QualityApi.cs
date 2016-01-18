@@ -479,9 +479,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="agentUserId">user id of agent requested</param>
         /// <param name="evaluatorUserId">user id of the evaluator</param>
         /// <param name="name">name</param>
-        /// <param name="group">group id</param>
         /// <returns>AgentActivityEntityListing</returns>
-        AgentActivityEntityListing QualityAgentsActivityGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
+        AgentActivityEntityListing QualityAgentsActivityGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null);
   
         /// <summary>
         /// Gets a list of Agent Activities
@@ -498,9 +497,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="agentUserId">user id of agent requested</param>
         /// <param name="evaluatorUserId">user id of the evaluator</param>
         /// <param name="name">name</param>
-        /// <param name="group">group id</param>
         /// <returns>ApiResponse of AgentActivityEntityListing</returns>
-        ApiResponse<AgentActivityEntityListing> QualityAgentsActivityGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
+        ApiResponse<AgentActivityEntityListing> QualityAgentsActivityGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null);
 
         /// <summary>
         /// Gets a list of Agent Activities
@@ -517,9 +515,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="agentUserId">user id of agent requested</param>
         /// <param name="evaluatorUserId">user id of the evaluator</param>
         /// <param name="name">name</param>
-        /// <param name="group">group id</param>
         /// <returns>Task of AgentActivityEntityListing</returns>
-        System.Threading.Tasks.Task<AgentActivityEntityListing> QualityAgentsActivityGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
+        System.Threading.Tasks.Task<AgentActivityEntityListing> QualityAgentsActivityGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null);
 
         /// <summary>
         /// Gets a list of Agent Activities
@@ -536,9 +533,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="agentUserId">user id of agent requested</param>
         /// <param name="evaluatorUserId">user id of the evaluator</param>
         /// <param name="name">name</param>
-        /// <param name="group">group id</param>
         /// <returns>Task of ApiResponse (AgentActivityEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> QualityAgentsActivityGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
+        System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> QualityAgentsActivityGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null);
         
         /// <summary>
         /// Get the list of calibrations
@@ -1238,9 +1234,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param>
         /// <param name="name">Evaluator name</param>
         /// <param name="permission">permission strings</param>
-        /// <param name="group">group id</param>
         /// <returns>EvaluatorActivityEntityListing</returns>
-        EvaluatorActivityEntityListing QualityEvaluatorsActivityGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null);
+        EvaluatorActivityEntityListing QualityEvaluatorsActivityGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null);
   
         /// <summary>
         /// Get an evaluator activity
@@ -1256,9 +1251,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param>
         /// <param name="name">Evaluator name</param>
         /// <param name="permission">permission strings</param>
-        /// <param name="group">group id</param>
         /// <returns>ApiResponse of EvaluatorActivityEntityListing</returns>
-        ApiResponse<EvaluatorActivityEntityListing> QualityEvaluatorsActivityGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null);
+        ApiResponse<EvaluatorActivityEntityListing> QualityEvaluatorsActivityGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null);
 
         /// <summary>
         /// Get an evaluator activity
@@ -1274,9 +1268,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param>
         /// <param name="name">Evaluator name</param>
         /// <param name="permission">permission strings</param>
-        /// <param name="group">group id</param>
         /// <returns>Task of EvaluatorActivityEntityListing</returns>
-        System.Threading.Tasks.Task<EvaluatorActivityEntityListing> QualityEvaluatorsActivityGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null);
+        System.Threading.Tasks.Task<EvaluatorActivityEntityListing> QualityEvaluatorsActivityGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null);
 
         /// <summary>
         /// Get an evaluator activity
@@ -1292,9 +1285,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param>
         /// <param name="name">Evaluator name</param>
         /// <param name="permission">permission strings</param>
-        /// <param name="group">group id</param>
         /// <returns>Task of ApiResponse (EvaluatorActivityEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluatorActivityEntityListing>> QualityEvaluatorsActivityGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluatorActivityEntityListing>> QualityEvaluatorsActivityGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null);
         
     }
   
@@ -2940,11 +2932,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="agentUserId">user id of agent requested</param> 
         /// <param name="evaluatorUserId">user id of the evaluator</param> 
         /// <param name="name">name</param> 
-        /// <param name="group">group id</param> 
         /// <returns>AgentActivityEntityListing</returns>
-        public AgentActivityEntityListing QualityAgentsActivityGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
+        public AgentActivityEntityListing QualityAgentsActivityGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null)
         {
-             ApiResponse<AgentActivityEntityListing> response = QualityAgentsActivityGetWithHttpInfo(pageSize, pageNumber, sortBy, expand, startTime, endTime, agentUserId, evaluatorUserId, name, group);
+             ApiResponse<AgentActivityEntityListing> response = QualityAgentsActivityGetWithHttpInfo(pageSize, pageNumber, sortBy, expand, startTime, endTime, agentUserId, evaluatorUserId, name);
              return response.Data;
         }
 
@@ -2960,9 +2951,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="agentUserId">user id of agent requested</param> 
         /// <param name="evaluatorUserId">user id of the evaluator</param> 
         /// <param name="name">name</param> 
-        /// <param name="group">group id</param> 
         /// <returns>ApiResponse of AgentActivityEntityListing</returns>
-        public ApiResponse< AgentActivityEntityListing > QualityAgentsActivityGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
+        public ApiResponse< AgentActivityEntityListing > QualityAgentsActivityGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null)
         {
             
     
@@ -2996,7 +2986,6 @@ namespace ININ.PureCloudApi.Api
             if (agentUserId != null) queryParams.Add("agentUserId", Configuration.ApiClient.ParameterToString(agentUserId)); // query parameter
             if (evaluatorUserId != null) queryParams.Add("evaluatorUserId", Configuration.ApiClient.ParameterToString(evaluatorUserId)); // query parameter
             if (name != null) queryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
-            if (group != null) queryParams.Add("group", Configuration.ApiClient.ParameterToString(group)); // query parameter
             
             
             
@@ -3040,11 +3029,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="agentUserId">user id of agent requested</param>
         /// <param name="evaluatorUserId">user id of the evaluator</param>
         /// <param name="name">name</param>
-        /// <param name="group">group id</param>
         /// <returns>Task of AgentActivityEntityListing</returns>
-        public async System.Threading.Tasks.Task<AgentActivityEntityListing> QualityAgentsActivityGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
+        public async System.Threading.Tasks.Task<AgentActivityEntityListing> QualityAgentsActivityGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null)
         {
-             ApiResponse<AgentActivityEntityListing> response = await QualityAgentsActivityGetAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, startTime, endTime, agentUserId, evaluatorUserId, name, group);
+             ApiResponse<AgentActivityEntityListing> response = await QualityAgentsActivityGetAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, startTime, endTime, agentUserId, evaluatorUserId, name);
              return response.Data;
 
         }
@@ -3061,9 +3049,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="agentUserId">user id of agent requested</param>
         /// <param name="evaluatorUserId">user id of the evaluator</param>
         /// <param name="name">name</param>
-        /// <param name="group">group id</param>
         /// <returns>Task of ApiResponse (AgentActivityEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> QualityAgentsActivityGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> QualityAgentsActivityGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null)
         {
             
     
@@ -3097,7 +3084,6 @@ namespace ININ.PureCloudApi.Api
             if (agentUserId != null) queryParams.Add("agentUserId", Configuration.ApiClient.ParameterToString(agentUserId)); // query parameter
             if (evaluatorUserId != null) queryParams.Add("evaluatorUserId", Configuration.ApiClient.ParameterToString(evaluatorUserId)); // query parameter
             if (name != null) queryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
-            if (group != null) queryParams.Add("group", Configuration.ApiClient.ParameterToString(group)); // query parameter
             
             
             
@@ -5352,11 +5338,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param> 
         /// <param name="name">Evaluator name</param> 
         /// <param name="permission">permission strings</param> 
-        /// <param name="group">group id</param> 
         /// <returns>EvaluatorActivityEntityListing</returns>
-        public EvaluatorActivityEntityListing QualityEvaluatorsActivityGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null)
+        public EvaluatorActivityEntityListing QualityEvaluatorsActivityGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null)
         {
-             ApiResponse<EvaluatorActivityEntityListing> response = QualityEvaluatorsActivityGetWithHttpInfo(pageSize, pageNumber, sortBy, expand, startTime, endTime, name, permission, group);
+             ApiResponse<EvaluatorActivityEntityListing> response = QualityEvaluatorsActivityGetWithHttpInfo(pageSize, pageNumber, sortBy, expand, startTime, endTime, name, permission);
              return response.Data;
         }
 
@@ -5371,9 +5356,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param> 
         /// <param name="name">Evaluator name</param> 
         /// <param name="permission">permission strings</param> 
-        /// <param name="group">group id</param> 
         /// <returns>ApiResponse of EvaluatorActivityEntityListing</returns>
-        public ApiResponse< EvaluatorActivityEntityListing > QualityEvaluatorsActivityGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null)
+        public ApiResponse< EvaluatorActivityEntityListing > QualityEvaluatorsActivityGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null)
         {
             
     
@@ -5406,7 +5390,6 @@ namespace ININ.PureCloudApi.Api
             if (endTime != null) queryParams.Add("endTime", Configuration.ApiClient.ParameterToString(endTime)); // query parameter
             if (name != null) queryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             if (permission != null) queryParams.Add("permission", Configuration.ApiClient.ParameterToString(permission)); // query parameter
-            if (group != null) queryParams.Add("group", Configuration.ApiClient.ParameterToString(group)); // query parameter
             
             
             
@@ -5449,11 +5432,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param>
         /// <param name="name">Evaluator name</param>
         /// <param name="permission">permission strings</param>
-        /// <param name="group">group id</param>
         /// <returns>Task of EvaluatorActivityEntityListing</returns>
-        public async System.Threading.Tasks.Task<EvaluatorActivityEntityListing> QualityEvaluatorsActivityGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null)
+        public async System.Threading.Tasks.Task<EvaluatorActivityEntityListing> QualityEvaluatorsActivityGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null)
         {
-             ApiResponse<EvaluatorActivityEntityListing> response = await QualityEvaluatorsActivityGetAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, startTime, endTime, name, permission, group);
+             ApiResponse<EvaluatorActivityEntityListing> response = await QualityEvaluatorsActivityGetAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, startTime, endTime, name, permission);
              return response.Data;
 
         }
@@ -5469,9 +5451,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param>
         /// <param name="name">Evaluator name</param>
         /// <param name="permission">permission strings</param>
-        /// <param name="group">group id</param>
         /// <returns>Task of ApiResponse (EvaluatorActivityEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluatorActivityEntityListing>> QualityEvaluatorsActivityGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluatorActivityEntityListing>> QualityEvaluatorsActivityGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null)
         {
             
     
@@ -5504,7 +5485,6 @@ namespace ININ.PureCloudApi.Api
             if (endTime != null) queryParams.Add("endTime", Configuration.ApiClient.ParameterToString(endTime)); // query parameter
             if (name != null) queryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             if (permission != null) queryParams.Add("permission", Configuration.ApiClient.ParameterToString(permission)); // query parameter
-            if (group != null) queryParams.Add("group", Configuration.ApiClient.ParameterToString(group)); // query parameter
             
             
             

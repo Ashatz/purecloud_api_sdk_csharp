@@ -54,7 +54,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Data
         /// </summary>
         [DataMember(Name="data", EmitDefaultValue=false)]
-        public Dictionary<string, InlineResponse200> Data { get; set; }
+        public JsonNode Data { get; set; }
   
         
         /// <summary>
@@ -158,7 +158,7 @@ namespace ININ.PureCloudApi.Model
                 (
                     this.Data == other.Data ||
                     this.Data != null &&
-                    this.Data.SequenceEqual(other.Data)
+                    this.Data.Equals(other.Data)
                 ) && 
                 (
                     this.CallRecords == other.CallRecords ||

@@ -485,50 +485,6 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> AnalyticsMetricsQueryPostAsyncWithHttpInfo (Body body = null);
         
         /// <summary>
-        /// Executes a query against the analytics service
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <param name="body">queryObject</param>
-        /// <param name="version">Version number</param>
-        /// <returns></returns>
-        void AnalyticsQueryPost (Body1 body = null, string version = null);
-  
-        /// <summary>
-        /// Executes a query against the analytics service
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <param name="body">queryObject</param>
-        /// <param name="version">Version number</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> AnalyticsQueryPostWithHttpInfo (Body1 body = null, string version = null);
-
-        /// <summary>
-        /// Executes a query against the analytics service
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <param name="body">queryObject</param>
-        /// <param name="version">Version number</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task AnalyticsQueryPostAsync (Body1 body = null, string version = null);
-
-        /// <summary>
-        /// Executes a query against the analytics service
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <param name="body">queryObject</param>
-        /// <param name="version">Version number</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> AnalyticsQueryPostAsyncWithHttpInfo (Body1 body = null, string version = null);
-        
-        /// <summary>
         /// Get list of reporting metadata.
         /// </summary>
         /// <remarks>
@@ -1088,7 +1044,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">queryObject</param>
         /// <returns></returns>
-        void AnalyticsSegmentsQueryPost (Body2 body = null);
+        void AnalyticsSegmentsQueryPost (Body1 body = null);
   
         /// <summary>
         /// Executes a segments query against the analytics service
@@ -1098,7 +1054,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">queryObject</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> AnalyticsSegmentsQueryPostWithHttpInfo (Body2 body = null);
+        ApiResponse<Object> AnalyticsSegmentsQueryPostWithHttpInfo (Body1 body = null);
 
         /// <summary>
         /// Executes a segments query against the analytics service
@@ -1108,7 +1064,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">queryObject</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task AnalyticsSegmentsQueryPostAsync (Body2 body = null);
+        System.Threading.Tasks.Task AnalyticsSegmentsQueryPostAsync (Body1 body = null);
 
         /// <summary>
         /// Executes a segments query against the analytics service
@@ -1118,7 +1074,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">queryObject</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> AnalyticsSegmentsQueryPostAsyncWithHttpInfo (Body2 body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> AnalyticsSegmentsQueryPostAsyncWithHttpInfo (Body1 body = null);
         
     }
   
@@ -2874,157 +2830,6 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException (statusCode, "Error calling AnalyticsMetricsQueryPost: " + response.Content, response.Content);
             else if (statusCode == 0)
                 throw new ApiException (statusCode, "Error calling AnalyticsMetricsQueryPost: " + response.ErrorMessage, response.ErrorMessage);
-
-            
-            return new ApiResponse<Object>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-        
-        /// <summary>
-        /// Executes a query against the analytics service 
-        /// </summary>
-        /// <param name="body">queryObject</param> 
-        /// <param name="version">Version number</param> 
-        /// <returns></returns>
-        public void AnalyticsQueryPost (Body1 body = null, string version = null)
-        {
-             AnalyticsQueryPostWithHttpInfo(body, version);
-        }
-
-        /// <summary>
-        /// Executes a query against the analytics service 
-        /// </summary>
-        /// <param name="body">queryObject</param> 
-        /// <param name="version">Version number</param> 
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> AnalyticsQueryPostWithHttpInfo (Body1 body = null, string version = null)
-        {
-            
-    
-            var path_ = "/api/v1/analytics/query";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
-
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
-                "application/json"
-            };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            
-            if (version != null) queryParams.Add("version", Configuration.ApiClient.ParameterToString(version)); // query parameter
-            
-            
-            
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
-
-            
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-    
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
-
-            int statusCode = (int) response.StatusCode;
-    
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AnalyticsQueryPost: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AnalyticsQueryPost: " + response.ErrorMessage, response.ErrorMessage);
-    
-            
-            return new ApiResponse<Object>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-    
-        /// <summary>
-        /// Executes a query against the analytics service 
-        /// </summary>
-        /// <param name="body">queryObject</param>
-        /// <param name="version">Version number</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task AnalyticsQueryPostAsync (Body1 body = null, string version = null)
-        {
-             await AnalyticsQueryPostAsyncWithHttpInfo(body, version);
-
-        }
-
-        /// <summary>
-        /// Executes a query against the analytics service 
-        /// </summary>
-        /// <param name="body">queryObject</param>
-        /// <param name="version">Version number</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> AnalyticsQueryPostAsyncWithHttpInfo (Body1 body = null, string version = null)
-        {
-            
-    
-            var path_ = "/api/v1/analytics/query";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
-
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
-                "application/json"
-            };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            
-            if (version != null) queryParams.Add("version", Configuration.ApiClient.ParameterToString(version)); // query parameter
-            
-            
-            
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
-
-            
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
-
-            int statusCode = (int) response.StatusCode;
- 
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AnalyticsQueryPost: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AnalyticsQueryPost: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -5041,7 +4846,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">queryObject</param> 
         /// <returns></returns>
-        public void AnalyticsSegmentsQueryPost (Body2 body = null)
+        public void AnalyticsSegmentsQueryPost (Body1 body = null)
         {
              AnalyticsSegmentsQueryPostWithHttpInfo(body);
         }
@@ -5051,7 +4856,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">queryObject</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> AnalyticsSegmentsQueryPostWithHttpInfo (Body2 body = null)
+        public ApiResponse<Object> AnalyticsSegmentsQueryPostWithHttpInfo (Body1 body = null)
         {
             
     
@@ -5113,7 +4918,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">queryObject</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task AnalyticsSegmentsQueryPostAsync (Body2 body = null)
+        public async System.Threading.Tasks.Task AnalyticsSegmentsQueryPostAsync (Body1 body = null)
         {
              await AnalyticsSegmentsQueryPostAsyncWithHttpInfo(body);
 
@@ -5124,7 +4929,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">queryObject</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> AnalyticsSegmentsQueryPostAsyncWithHttpInfo (Body2 body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> AnalyticsSegmentsQueryPostAsyncWithHttpInfo (Body1 body = null)
         {
             
     

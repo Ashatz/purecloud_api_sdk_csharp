@@ -90,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Data
         /// </summary>
         [DataMember(Name="data", EmitDefaultValue=false)]
-        public Dictionary<string, InlineResponse200> Data { get; set; }
+        public Dictionary<string, EdgeLineProperties> Data { get; set; }
   
         
         /// <summary>

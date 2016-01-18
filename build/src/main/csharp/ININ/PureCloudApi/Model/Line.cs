@@ -111,7 +111,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Properties
         /// </summary>
         [DataMember(Name="properties", EmitDefaultValue=false)]
-        public Dictionary<string, InlineResponse200> Properties { get; set; }
+        public JsonNode Properties { get; set; }
   
         
         /// <summary>
@@ -295,7 +295,7 @@ namespace ININ.PureCloudApi.Model
                 (
                     this.Properties == other.Properties ||
                     this.Properties != null &&
-                    this.Properties.SequenceEqual(other.Properties)
+                    this.Properties.Equals(other.Properties)
                 ) && 
                 (
                     this.EdgeGroup == other.EdgeGroup ||

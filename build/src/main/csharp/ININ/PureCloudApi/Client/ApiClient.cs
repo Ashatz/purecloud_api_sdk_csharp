@@ -20,17 +20,17 @@ namespace ININ.PureCloudApi.Client
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiClient" /> class
-        /// with default configuration and base path (https://api.inindca.com).
+        /// with default configuration and base path (https://api.mypurecloud.com).
         /// </summary>
         public ApiClient()
         {
             Configuration = Configuration.Default;
-            RestClient = new RestClient("https://api.inindca.com");
+            RestClient = new RestClient("https://api.mypurecloud.com");
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiClient" /> class
-        /// with default base path (https://api.inindca.com).
+        /// with default base path (https://api.mypurecloud.com).
         /// </summary>
         /// <param name="config">An instance of Configuration.</param>
         public ApiClient(Configuration config = null)
@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Client
             else
                 Configuration = config;
 
-            RestClient = new RestClient("https://api.inindca.com");
+            RestClient = new RestClient("https://api.mypurecloud.com");
         }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace ININ.PureCloudApi.Client
         /// with default configuration.
         /// </summary>
         /// <param name="basePath">The base path.</param>
-        public ApiClient(String basePath = "https://api.inindca.com")
+        public ApiClient(String basePath = "https://api.mypurecloud.com")
         {
            if (String.IsNullOrEmpty(basePath))
                 throw new ArgumentException("basePath cannot be empty");

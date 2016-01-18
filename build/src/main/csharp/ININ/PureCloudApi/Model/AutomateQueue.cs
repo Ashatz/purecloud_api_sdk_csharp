@@ -59,22 +59,6 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
-        /// The last time that the queue was updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-        /// </summary>
-        /// <value>The last time that the queue was updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
-        [DataMember(Name="lastUpdateTime", EmitDefaultValue=false)]
-        public DateTime? LastUpdateTime { get; set; }
-  
-        
-        /// <summary>
-        /// The user who last performed an update.
-        /// </summary>
-        /// <value>The user who last performed an update.</value>
-        [DataMember(Name="lastUpdateUser", EmitDefaultValue=false)]
-        public User LastUpdateUser { get; set; }
-  
-        
-        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -95,8 +79,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Members: ").Append(Members).Append("\n");
-            sb.Append("  LastUpdateTime: ").Append(LastUpdateTime).Append("\n");
-            sb.Append("  LastUpdateUser: ").Append(LastUpdateUser).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
@@ -156,16 +138,6 @@ namespace ININ.PureCloudApi.Model
                     this.Members.SequenceEqual(other.Members)
                 ) && 
                 (
-                    this.LastUpdateTime == other.LastUpdateTime ||
-                    this.LastUpdateTime != null &&
-                    this.LastUpdateTime.Equals(other.LastUpdateTime)
-                ) && 
-                (
-                    this.LastUpdateUser == other.LastUpdateUser ||
-                    this.LastUpdateUser != null &&
-                    this.LastUpdateUser.Equals(other.LastUpdateUser)
-                ) && 
-                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -195,12 +167,6 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.Members != null)
                     hash = hash * 57 + this.Members.GetHashCode();
-                
-                if (this.LastUpdateTime != null)
-                    hash = hash * 57 + this.LastUpdateTime.GetHashCode();
-                
-                if (this.LastUpdateUser != null)
-                    hash = hash * 57 + this.LastUpdateUser.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 57 + this.SelfUri.GetHashCode();

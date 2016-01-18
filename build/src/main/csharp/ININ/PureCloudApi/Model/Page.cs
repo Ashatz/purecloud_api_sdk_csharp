@@ -69,14 +69,14 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets RootContainer
         /// </summary>
         [DataMember(Name="rootContainer", EmitDefaultValue=false)]
-        public Dictionary<string, InlineResponse200> RootContainer { get; set; }
+        public Dictionary<string, EdgeLineProperties> RootContainer { get; set; }
   
         
         /// <summary>
         /// Gets or Sets Properties
         /// </summary>
         [DataMember(Name="properties", EmitDefaultValue=false)]
-        public Dictionary<string, InlineResponse200> Properties { get; set; }
+        public Dictionary<string, EdgeLineProperties> Properties { get; set; }
   
         
         /// <summary>
