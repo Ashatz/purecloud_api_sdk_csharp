@@ -40979,19 +40979,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.AddressListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.AddressListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.AddressListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.AddressListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.AddressListing.NextUri">
@@ -41002,6 +40997,11 @@
         <member name="P:ININ.PureCloudApi.Model.AddressListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.AddressListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.AddressListing.PageCount">
@@ -41197,19 +41197,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.AgentActivityEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.AgentActivityEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.AgentActivityEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.AgentActivityEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.AgentActivityEntityListing.NextUri">
@@ -41220,6 +41215,11 @@
         <member name="P:ININ.PureCloudApi.Model.AgentActivityEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.AgentActivityEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.AgentActivityEntityListing.PageCount">
@@ -41489,19 +41489,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.AlertEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.AlertEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.AlertEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.AlertEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.AlertEntityListing.NextUri">
@@ -41512,6 +41507,11 @@
         <member name="P:ININ.PureCloudApi.Model.AlertEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.AlertEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.AlertEntityListing.PageCount">
@@ -42021,19 +42021,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.AttributeGroupInstanceEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.AttributeGroupInstanceEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.AttributeGroupInstanceEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.AttributeGroupInstanceEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.AttributeGroupInstanceEntityListing.NextUri">
@@ -42044,6 +42039,11 @@
         <member name="P:ININ.PureCloudApi.Model.AttributeGroupInstanceEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.AttributeGroupInstanceEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.AttributeGroupInstanceEntityListing.PageCount">
@@ -42768,19 +42768,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.AvailableAdditionalServiceListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.AvailableAdditionalServiceListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.AvailableAdditionalServiceListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.AvailableAdditionalServiceListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.AvailableAdditionalServiceListing.NextUri">
@@ -42791,6 +42786,11 @@
         <member name="P:ININ.PureCloudApi.Model.AvailableAdditionalServiceListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.AvailableAdditionalServiceListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.AvailableAdditionalServiceListing.PageCount">
@@ -43755,19 +43755,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.CalibrationEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.CalibrationEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.CalibrationEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.CalibrationEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.CalibrationEntityListing.NextUri">
@@ -43778,6 +43773,11 @@
         <member name="P:ININ.PureCloudApi.Model.CalibrationEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.CalibrationEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.CalibrationEntityListing.PageCount">
@@ -44145,19 +44145,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.CallableTimeSetEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.CallableTimeSetEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.CallableTimeSetEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.CallableTimeSetEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.CallableTimeSetEntityListing.NextUri">
@@ -44168,6 +44163,11 @@
         <member name="P:ININ.PureCloudApi.Model.CallableTimeSetEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.CallableTimeSetEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.CallableTimeSetEntityListing.PageCount">
@@ -44598,19 +44598,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.CampaignEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.CampaignEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.CampaignEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.CampaignEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.CampaignEntityListing.NextUri">
@@ -44621,6 +44616,11 @@
         <member name="P:ININ.PureCloudApi.Model.CampaignEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.CampaignEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.CampaignEntityListing.PageCount">
@@ -44877,19 +44877,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.CampaignSequenceEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.CampaignSequenceEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.CampaignSequenceEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.CampaignSequenceEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.CampaignSequenceEntityListing.NextUri">
@@ -44900,6 +44895,11 @@
         <member name="P:ININ.PureCloudApi.Model.CampaignSequenceEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.CampaignSequenceEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.CampaignSequenceEntityListing.PageCount">
@@ -45182,19 +45182,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.CarrierEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.CarrierEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.CarrierEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.CarrierEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.CarrierEntityListing.NextUri">
@@ -45205,6 +45200,11 @@
         <member name="P:ININ.PureCloudApi.Model.CarrierEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.CarrierEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.CarrierEntityListing.PageCount">
@@ -45322,19 +45322,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.CertificateAuthorityEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.CertificateAuthorityEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.CertificateAuthorityEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.CertificateAuthorityEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.CertificateAuthorityEntityListing.NextUri">
@@ -45345,6 +45340,11 @@
         <member name="P:ININ.PureCloudApi.Model.CertificateAuthorityEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.CertificateAuthorityEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.CertificateAuthorityEntityListing.PageCount">
@@ -45611,19 +45611,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.ChannelEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.ChannelEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ChannelEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ChannelEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ChannelEntityListing.NextUri">
@@ -45634,6 +45629,11 @@
         <member name="P:ININ.PureCloudApi.Model.ChannelEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ChannelEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ChannelEntityListing.PageCount">
@@ -46161,19 +46161,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.ChatSearchListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.ChatSearchListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ChatSearchListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ChatSearchListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ChatSearchListing.NextUri">
@@ -46184,6 +46179,11 @@
         <member name="P:ININ.PureCloudApi.Model.ChatSearchListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ChatSearchListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ChatSearchListing.PageCount">
@@ -46624,19 +46624,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.CommandStatusEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.CommandStatusEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.CommandStatusEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.CommandStatusEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.CommandStatusEntityListing.NextUri">
@@ -46647,6 +46642,11 @@
         <member name="P:ININ.PureCloudApi.Model.CommandStatusEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.CommandStatusEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.CommandStatusEntityListing.PageCount">
@@ -47000,19 +47000,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.ConsumedResourcesEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.ConsumedResourcesEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ConsumedResourcesEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ConsumedResourcesEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ConsumedResourcesEntityListing.NextUri">
@@ -47023,6 +47018,11 @@
         <member name="P:ININ.PureCloudApi.Model.ConsumedResourcesEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ConsumedResourcesEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ConsumedResourcesEntityListing.PageCount">
@@ -47092,19 +47092,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.ConsumingResourcesEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.ConsumingResourcesEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ConsumingResourcesEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ConsumingResourcesEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ConsumingResourcesEntityListing.NextUri">
@@ -47115,6 +47110,11 @@
         <member name="P:ININ.PureCloudApi.Model.ConsumingResourcesEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ConsumingResourcesEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ConsumingResourcesEntityListing.PageCount">
@@ -47441,19 +47441,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.ContactListEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.ContactListEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ContactListEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ContactListEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ContactListEntityListing.NextUri">
@@ -47464,6 +47459,11 @@
         <member name="P:ININ.PureCloudApi.Model.ContactListEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ContactListEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ContactListEntityListing.PageCount">
@@ -48133,19 +48133,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.ConversationEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.ConversationEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ConversationEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ConversationEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ConversationEntityListing.NextUri">
@@ -48156,6 +48151,11 @@
         <member name="P:ININ.PureCloudApi.Model.ConversationEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ConversationEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ConversationEntityListing.PageCount">
@@ -48404,19 +48404,14 @@
             Gets or Sets Facets
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.ConversationQueryResponse.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.ConversationQueryResponse.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ConversationQueryResponse.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ConversationQueryResponse.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ConversationQueryResponse.NextUri">
@@ -48427,6 +48422,11 @@
         <member name="P:ININ.PureCloudApi.Model.ConversationQueryResponse.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ConversationQueryResponse.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ConversationQueryResponse.PageCount">
@@ -49269,19 +49269,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.DeletedResourceConsumerEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.DeletedResourceConsumerEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DeletedResourceConsumerEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.DeletedResourceConsumerEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DeletedResourceConsumerEntityListing.NextUri">
@@ -49292,6 +49287,11 @@
         <member name="P:ININ.PureCloudApi.Model.DeletedResourceConsumerEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DeletedResourceConsumerEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DeletedResourceConsumerEntityListing.PageCount">
@@ -49748,19 +49748,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.DependencyObjectEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.DependencyObjectEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DependencyObjectEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.DependencyObjectEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DependencyObjectEntityListing.NextUri">
@@ -49771,6 +49766,11 @@
         <member name="P:ININ.PureCloudApi.Model.DependencyObjectEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DependencyObjectEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DependencyObjectEntityListing.PageCount">
@@ -49985,19 +49985,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.DependencyTypeEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.DependencyTypeEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DependencyTypeEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.DependencyTypeEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DependencyTypeEntityListing.NextUri">
@@ -50008,6 +50003,11 @@
         <member name="P:ININ.PureCloudApi.Model.DependencyTypeEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DependencyTypeEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DependencyTypeEntityListing.PageCount">
@@ -50630,19 +50630,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.DIDEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.DIDEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DIDEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.DIDEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DIDEntityListing.NextUri">
@@ -50653,6 +50648,11 @@
         <member name="P:ININ.PureCloudApi.Model.DIDEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DIDEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DIDEntityListing.PageCount">
@@ -50851,19 +50851,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.DIDPoolEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.DIDPoolEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DIDPoolEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.DIDPoolEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DIDPoolEntityListing.NextUri">
@@ -50874,6 +50869,11 @@
         <member name="P:ININ.PureCloudApi.Model.DIDPoolEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DIDPoolEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DIDPoolEntityListing.PageCount">
@@ -51091,19 +51091,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.DncListEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.DncListEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DncListEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.DncListEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DncListEntityListing.NextUri">
@@ -51114,6 +51109,11 @@
         <member name="P:ININ.PureCloudApi.Model.DncListEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DncListEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DncListEntityListing.PageCount">
@@ -51573,19 +51573,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.DocumentAuditEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.DocumentAuditEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DocumentAuditEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.DocumentAuditEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DocumentAuditEntityListing.NextUri">
@@ -51596,6 +51591,11 @@
         <member name="P:ININ.PureCloudApi.Model.DocumentAuditEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DocumentAuditEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DocumentAuditEntityListing.PageCount">
@@ -51665,19 +51665,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.DocumentEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.DocumentEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DocumentEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.DocumentEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DocumentEntityListing.NextUri">
@@ -51688,6 +51683,11 @@
         <member name="P:ININ.PureCloudApi.Model.DocumentEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DocumentEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DocumentEntityListing.PageCount">
@@ -51978,19 +51978,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.DomainBillingPeriodEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.DomainBillingPeriodEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DomainBillingPeriodEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.DomainBillingPeriodEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DomainBillingPeriodEntityListing.NextUri">
@@ -52001,6 +51996,11 @@
         <member name="P:ININ.PureCloudApi.Model.DomainBillingPeriodEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainBillingPeriodEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DomainBillingPeriodEntityListing.PageCount">
@@ -52491,19 +52491,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.DomainEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.DomainEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DomainEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.DomainEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DomainEntityListing.NextUri">
@@ -52514,6 +52509,11 @@
         <member name="P:ININ.PureCloudApi.Model.DomainEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DomainEntityListing.PageCount">
@@ -52583,19 +52583,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.DomainEntityListingEvaluationForm.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.DomainEntityListingEvaluationForm.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DomainEntityListingEvaluationForm.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.DomainEntityListingEvaluationForm.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DomainEntityListingEvaluationForm.NextUri">
@@ -52606,6 +52601,11 @@
         <member name="P:ININ.PureCloudApi.Model.DomainEntityListingEvaluationForm.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainEntityListingEvaluationForm.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DomainEntityListingEvaluationForm.PageCount">
@@ -52675,19 +52675,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.DomainEntityListingQueryResult.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.DomainEntityListingQueryResult.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DomainEntityListingQueryResult.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.DomainEntityListingQueryResult.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DomainEntityListingQueryResult.NextUri">
@@ -52698,6 +52693,11 @@
         <member name="P:ININ.PureCloudApi.Model.DomainEntityListingQueryResult.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainEntityListingQueryResult.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DomainEntityListingQueryResult.PageCount">
@@ -52767,19 +52767,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.DomainInvoiceEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.DomainInvoiceEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DomainInvoiceEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.DomainInvoiceEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DomainInvoiceEntityListing.NextUri">
@@ -52790,6 +52785,11 @@
         <member name="P:ININ.PureCloudApi.Model.DomainInvoiceEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainInvoiceEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DomainInvoiceEntityListing.PageCount">
@@ -52933,19 +52933,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.DomainLicenseEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.DomainLicenseEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DomainLicenseEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.DomainLicenseEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DomainLicenseEntityListing.NextUri">
@@ -52956,6 +52951,11 @@
         <member name="P:ININ.PureCloudApi.Model.DomainLicenseEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainLicenseEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DomainLicenseEntityListing.PageCount">
@@ -54135,19 +54135,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.DomainThirdPartyAccountEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.DomainThirdPartyAccountEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DomainThirdPartyAccountEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.DomainThirdPartyAccountEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DomainThirdPartyAccountEntityListing.NextUri">
@@ -54158,6 +54153,11 @@
         <member name="P:ININ.PureCloudApi.Model.DomainThirdPartyAccountEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainThirdPartyAccountEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DomainThirdPartyAccountEntityListing.PageCount">
@@ -54227,19 +54227,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.DomainThirdPartySubscriptionEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.DomainThirdPartySubscriptionEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DomainThirdPartySubscriptionEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.DomainThirdPartySubscriptionEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DomainThirdPartySubscriptionEntityListing.NextUri">
@@ -54250,6 +54245,11 @@
         <member name="P:ININ.PureCloudApi.Model.DomainThirdPartySubscriptionEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainThirdPartySubscriptionEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DomainThirdPartySubscriptionEntityListing.PageCount">
@@ -54319,19 +54319,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.DomainVoiceRateResponseItemEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.DomainVoiceRateResponseItemEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DomainVoiceRateResponseItemEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.DomainVoiceRateResponseItemEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DomainVoiceRateResponseItemEntityListing.NextUri">
@@ -54342,6 +54337,11 @@
         <member name="P:ININ.PureCloudApi.Model.DomainVoiceRateResponseItemEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainVoiceRateResponseItemEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.DomainVoiceRateResponseItemEntityListing.PageCount">
@@ -54805,19 +54805,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.EdgeEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.EdgeEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.EdgeEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.EdgeEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.EdgeEntityListing.NextUri">
@@ -54828,6 +54823,11 @@
         <member name="P:ININ.PureCloudApi.Model.EdgeEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.EdgeEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.EdgeEntityListing.PageCount">
@@ -55008,19 +55008,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.EdgeGroupEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.EdgeGroupEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.EdgeGroupEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.EdgeGroupEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.EdgeGroupEntityListing.NextUri">
@@ -55031,6 +55026,11 @@
         <member name="P:ININ.PureCloudApi.Model.EdgeGroupEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.EdgeGroupEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.EdgeGroupEntityListing.PageCount">
@@ -55281,19 +55281,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.EdgeLineEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.EdgeLineEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.EdgeLineEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.EdgeLineEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.EdgeLineEntityListing.NextUri">
@@ -55304,6 +55299,11 @@
         <member name="P:ININ.PureCloudApi.Model.EdgeLineEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.EdgeLineEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.EdgeLineEntityListing.PageCount">
@@ -55819,19 +55819,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.EmailMessageListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.EmailMessageListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.EmailMessageListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.EmailMessageListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.EmailMessageListing.NextUri">
@@ -55842,6 +55837,11 @@
         <member name="P:ININ.PureCloudApi.Model.EmailMessageListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.EmailMessageListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.EmailMessageListing.PageCount">
@@ -56079,19 +56079,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.EncryptionKeyEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.EncryptionKeyEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.EncryptionKeyEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.EncryptionKeyEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.EncryptionKeyEntityListing.NextUri">
@@ -56102,6 +56097,11 @@
         <member name="P:ININ.PureCloudApi.Model.EncryptionKeyEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.EncryptionKeyEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.EncryptionKeyEntityListing.PageCount">
@@ -56307,19 +56307,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.EndpointEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.EndpointEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.EndpointEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.EndpointEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.EndpointEntityListing.NextUri">
@@ -56330,6 +56325,11 @@
         <member name="P:ININ.PureCloudApi.Model.EndpointEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.EndpointEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.EndpointEntityListing.PageCount">
@@ -56836,19 +56836,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.EvaluationEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.EvaluationEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.EvaluationEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.EvaluationEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.EvaluationEntityListing.NextUri">
@@ -56859,6 +56854,11 @@
         <member name="P:ININ.PureCloudApi.Model.EvaluationEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.EvaluationEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.EvaluationEntityListing.PageCount">
@@ -57070,19 +57070,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.EvaluationFormEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.EvaluationFormEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.EvaluationFormEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.EvaluationFormEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.EvaluationFormEntityListing.NextUri">
@@ -57093,6 +57088,11 @@
         <member name="P:ININ.PureCloudApi.Model.EvaluationFormEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.EvaluationFormEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.EvaluationFormEntityListing.PageCount">
@@ -57425,19 +57425,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.EvaluatorActivityEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.EvaluatorActivityEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.EvaluatorActivityEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.EvaluatorActivityEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.EvaluatorActivityEntityListing.NextUri">
@@ -57448,6 +57443,11 @@
         <member name="P:ININ.PureCloudApi.Model.EvaluatorActivityEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.EvaluatorActivityEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.EvaluatorActivityEntityListing.PageCount">
@@ -57696,19 +57696,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.ExtensionEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.ExtensionEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ExtensionEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ExtensionEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ExtensionEntityListing.NextUri">
@@ -57719,6 +57714,11 @@
         <member name="P:ININ.PureCloudApi.Model.ExtensionEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ExtensionEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ExtensionEntityListing.PageCount">
@@ -57906,19 +57906,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.ExtensionPoolEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.ExtensionPoolEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ExtensionPoolEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ExtensionPoolEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ExtensionPoolEntityListing.NextUri">
@@ -57929,6 +57924,11 @@
         <member name="P:ININ.PureCloudApi.Model.ExtensionPoolEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ExtensionPoolEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ExtensionPoolEntityListing.PageCount">
@@ -59038,19 +59038,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.FaxDocumentEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.FaxDocumentEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.FaxDocumentEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.FaxDocumentEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.FaxDocumentEntityListing.NextUri">
@@ -59061,6 +59056,11 @@
         <member name="P:ININ.PureCloudApi.Model.FaxDocumentEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.FaxDocumentEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.FaxDocumentEntityListing.PageCount">
@@ -59686,19 +59686,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.FlowConfigMetaDataEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.FlowConfigMetaDataEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.FlowConfigMetaDataEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.FlowConfigMetaDataEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.FlowConfigMetaDataEntityListing.NextUri">
@@ -59709,6 +59704,11 @@
         <member name="P:ININ.PureCloudApi.Model.FlowConfigMetaDataEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.FlowConfigMetaDataEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.FlowConfigMetaDataEntityListing.PageCount">
@@ -59945,19 +59945,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.FlowEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.FlowEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.FlowEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.FlowEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.FlowEntityListing.NextUri">
@@ -59968,6 +59963,11 @@
         <member name="P:ININ.PureCloudApi.Model.FlowEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.FlowEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.FlowEntityListing.PageCount">
@@ -60246,19 +60246,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.FlowHistoryResultItemEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.FlowHistoryResultItemEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.FlowHistoryResultItemEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.FlowHistoryResultItemEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.FlowHistoryResultItemEntityListing.NextUri">
@@ -60269,6 +60264,11 @@
         <member name="P:ININ.PureCloudApi.Model.FlowHistoryResultItemEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.FlowHistoryResultItemEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.FlowHistoryResultItemEntityListing.PageCount">
@@ -60993,19 +60993,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.FlowVersionConfigMetaDataEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.FlowVersionConfigMetaDataEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.FlowVersionConfigMetaDataEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.FlowVersionConfigMetaDataEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.FlowVersionConfigMetaDataEntityListing.NextUri">
@@ -61016,6 +61011,11 @@
         <member name="P:ININ.PureCloudApi.Model.FlowVersionConfigMetaDataEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.FlowVersionConfigMetaDataEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.FlowVersionConfigMetaDataEntityListing.PageCount">
@@ -61085,19 +61085,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.FlowVersionEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.FlowVersionEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.FlowVersionEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.FlowVersionEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.FlowVersionEntityListing.NextUri">
@@ -61108,6 +61103,11 @@
         <member name="P:ININ.PureCloudApi.Model.FlowVersionEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.FlowVersionEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.FlowVersionEntityListing.PageCount">
@@ -61711,19 +61711,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.GroupEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.GroupEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.GroupEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.GroupEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.GroupEntityListing.NextUri">
@@ -61734,6 +61729,11 @@
         <member name="P:ININ.PureCloudApi.Model.GroupEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.GroupEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.GroupEntityListing.PageCount">
@@ -62007,19 +62007,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.HardwareRateListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.HardwareRateListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.HardwareRateListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.HardwareRateListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.HardwareRateListing.NextUri">
@@ -62030,6 +62025,11 @@
         <member name="P:ININ.PureCloudApi.Model.HardwareRateListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.HardwareRateListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.HardwareRateListing.PageCount">
@@ -62294,19 +62294,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.InboundDomainEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.InboundDomainEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.InboundDomainEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.InboundDomainEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.InboundDomainEntityListing.NextUri">
@@ -62317,6 +62312,11 @@
         <member name="P:ININ.PureCloudApi.Model.InboundDomainEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.InboundDomainEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.InboundDomainEntityListing.PageCount">
@@ -62493,19 +62493,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.InboundRouteEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.InboundRouteEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.InboundRouteEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.InboundRouteEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.InboundRouteEntityListing.NextUri">
@@ -62516,6 +62511,11 @@
         <member name="P:ININ.PureCloudApi.Model.InboundRouteEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.InboundRouteEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.InboundRouteEntityListing.PageCount">
@@ -63050,19 +63050,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.IVREntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.IVREntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.IVREntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.IVREntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.IVREntityListing.NextUri">
@@ -63073,6 +63068,11 @@
         <member name="P:ININ.PureCloudApi.Model.IVREntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.IVREntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.IVREntityListing.PageCount">
@@ -63412,19 +63412,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.LanguageEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.LanguageEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.LanguageEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.LanguageEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.LanguageEntityListing.NextUri">
@@ -63435,6 +63430,11 @@
         <member name="P:ININ.PureCloudApi.Model.LanguageEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.LanguageEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.LanguageEntityListing.PageCount">
@@ -63579,19 +63579,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.LibraryEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.LibraryEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.LibraryEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.LibraryEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.LibraryEntityListing.NextUri">
@@ -63602,6 +63597,11 @@
         <member name="P:ININ.PureCloudApi.Model.LibraryEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.LibraryEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.LibraryEntityListing.PageCount">
@@ -63997,19 +63997,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.LineBaseEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.LineBaseEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.LineBaseEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.LineBaseEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.LineBaseEntityListing.NextUri">
@@ -64020,6 +64015,11 @@
         <member name="P:ININ.PureCloudApi.Model.LineBaseEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.LineBaseEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.LineBaseEntityListing.PageCount">
@@ -64089,19 +64089,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.LineEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.LineEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.LineEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.LineEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.LineEntityListing.NextUri">
@@ -64112,6 +64107,11 @@
         <member name="P:ININ.PureCloudApi.Model.LineEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.LineEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.LineEntityListing.PageCount">
@@ -64253,19 +64253,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.LinkedEntityListingFlowDetails.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.LinkedEntityListingFlowDetails.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.LinkedEntityListingFlowDetails.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.LinkedEntityListingFlowDetails.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.LinkedEntityListingFlowDetails.NextUri">
@@ -64276,6 +64271,11 @@
         <member name="P:ININ.PureCloudApi.Model.LinkedEntityListingFlowDetails.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.LinkedEntityListingFlowDetails.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.LinkedEntityListingFlowDetails.PageCount">
@@ -64345,19 +64345,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.LinkedEntityListingWorkItemSearchDetails.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.LinkedEntityListingWorkItemSearchDetails.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.LinkedEntityListingWorkItemSearchDetails.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.LinkedEntityListingWorkItemSearchDetails.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.LinkedEntityListingWorkItemSearchDetails.NextUri">
@@ -64368,6 +64363,11 @@
         <member name="P:ININ.PureCloudApi.Model.LinkedEntityListingWorkItemSearchDetails.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.LinkedEntityListingWorkItemSearchDetails.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.LinkedEntityListingWorkItemSearchDetails.PageCount">
@@ -64724,19 +64724,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.LocationEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.LocationEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.LocationEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.LocationEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.LocationEntityListing.NextUri">
@@ -64747,6 +64742,11 @@
         <member name="P:ININ.PureCloudApi.Model.LocationEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.LocationEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.LocationEntityListing.PageCount">
@@ -64880,19 +64880,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.LogicalInterfaceEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.LogicalInterfaceEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.LogicalInterfaceEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.LogicalInterfaceEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.LogicalInterfaceEntityListing.NextUri">
@@ -64903,6 +64898,11 @@
         <member name="P:ININ.PureCloudApi.Model.LogicalInterfaceEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.LogicalInterfaceEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.LogicalInterfaceEntityListing.PageCount">
@@ -66000,19 +66000,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.OAuthClientEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.OAuthClientEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.OAuthClientEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.OAuthClientEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.OAuthClientEntityListing.NextUri">
@@ -66023,6 +66018,11 @@
         <member name="P:ININ.PureCloudApi.Model.OAuthClientEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.OAuthClientEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.OAuthClientEntityListing.PageCount">
@@ -66151,19 +66151,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.OAuthProviderEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.OAuthProviderEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.OAuthProviderEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.OAuthProviderEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.OAuthProviderEntityListing.NextUri">
@@ -66174,6 +66169,11 @@
         <member name="P:ININ.PureCloudApi.Model.OAuthProviderEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.OAuthProviderEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.OAuthProviderEntityListing.PageCount">
@@ -66291,14 +66291,14 @@
             Gets or Sets Certificate
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.OneLogin.SsoTargetURI">
-            <summary>
-            Gets or Sets SsoTargetURI
-            </summary>
-        </member>
         <member name="P:ININ.PureCloudApi.Model.OneLogin.IssuerURI">
             <summary>
             Gets or Sets IssuerURI
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.OneLogin.SsoTargetURI">
+            <summary>
+            Gets or Sets SsoTargetURI
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.OneLogin.SelfUri">
@@ -66783,19 +66783,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.OrganizationPresenceEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.OrganizationPresenceEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.OrganizationPresenceEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.OrganizationPresenceEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.OrganizationPresenceEntityListing.NextUri">
@@ -66806,6 +66801,11 @@
         <member name="P:ININ.PureCloudApi.Model.OrganizationPresenceEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.OrganizationPresenceEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.OrganizationPresenceEntityListing.PageCount">
@@ -66875,19 +66875,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.OrganizationRoleEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.OrganizationRoleEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.OrganizationRoleEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.OrganizationRoleEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.OrganizationRoleEntityListing.NextUri">
@@ -66898,6 +66893,11 @@
         <member name="P:ININ.PureCloudApi.Model.OrganizationRoleEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.OrganizationRoleEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.OrganizationRoleEntityListing.PageCount">
@@ -67186,19 +67186,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.OrphanRecordingListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.OrphanRecordingListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.OrphanRecordingListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.OrphanRecordingListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.OrphanRecordingListing.NextUri">
@@ -67209,6 +67204,11 @@
         <member name="P:ININ.PureCloudApi.Model.OrphanRecordingListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.OrphanRecordingListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.OrphanRecordingListing.PageCount">
@@ -67414,19 +67414,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.OutboundRouteEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.OutboundRouteEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.OutboundRouteEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.OutboundRouteEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.OutboundRouteEntityListing.NextUri">
@@ -67437,6 +67432,11 @@
         <member name="P:ININ.PureCloudApi.Model.OutboundRouteEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.OutboundRouteEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.OutboundRouteEntityListing.PageCount">
@@ -68221,19 +68221,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.PermissionCollectionEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.PermissionCollectionEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.PermissionCollectionEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.PermissionCollectionEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.PermissionCollectionEntityListing.NextUri">
@@ -68244,6 +68239,11 @@
         <member name="P:ININ.PureCloudApi.Model.PermissionCollectionEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.PermissionCollectionEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.PermissionCollectionEntityListing.PageCount">
@@ -68550,19 +68550,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.PhoneBaseEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.PhoneBaseEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.PhoneBaseEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.PhoneBaseEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.PhoneBaseEntityListing.NextUri">
@@ -68573,6 +68568,11 @@
         <member name="P:ININ.PureCloudApi.Model.PhoneBaseEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.PhoneBaseEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.PhoneBaseEntityListing.PageCount">
@@ -68761,19 +68761,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.PhoneEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.PhoneEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.PhoneEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.PhoneEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.PhoneEntityListing.NextUri">
@@ -68784,6 +68779,11 @@
         <member name="P:ININ.PureCloudApi.Model.PhoneEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.PhoneEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.PhoneEntityListing.PageCount">
@@ -68853,19 +68853,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.PhoneMetaBaseEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.PhoneMetaBaseEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.PhoneMetaBaseEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.PhoneMetaBaseEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.PhoneMetaBaseEntityListing.NextUri">
@@ -68876,6 +68871,11 @@
         <member name="P:ININ.PureCloudApi.Model.PhoneMetaBaseEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.PhoneMetaBaseEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.PhoneMetaBaseEntityListing.PageCount">
@@ -69191,19 +69191,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.PhysicalInterfaceEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.PhysicalInterfaceEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.PhysicalInterfaceEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.PhysicalInterfaceEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.PhysicalInterfaceEntityListing.NextUri">
@@ -69214,6 +69209,11 @@
         <member name="P:ININ.PureCloudApi.Model.PhysicalInterfaceEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.PhysicalInterfaceEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.PhysicalInterfaceEntityListing.PageCount">
@@ -69590,19 +69590,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.PolicyEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.PolicyEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.PolicyEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.PolicyEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.PolicyEntityListing.NextUri">
@@ -69613,6 +69608,11 @@
         <member name="P:ININ.PureCloudApi.Model.PolicyEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.PolicyEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.PolicyEntityListing.PageCount">
@@ -70255,19 +70255,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.PromptAssetEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.PromptAssetEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.PromptAssetEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.PromptAssetEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.PromptAssetEntityListing.NextUri">
@@ -70278,6 +70273,11 @@
         <member name="P:ININ.PureCloudApi.Model.PromptAssetEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.PromptAssetEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.PromptAssetEntityListing.PageCount">
@@ -70347,19 +70347,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.PromptEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.PromptEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.PromptEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.PromptEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.PromptEntityListing.NextUri">
@@ -70370,6 +70365,11 @@
         <member name="P:ININ.PureCloudApi.Model.PromptEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.PromptEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.PromptEntityListing.PageCount">
@@ -70961,14 +70961,14 @@
             Gets or Sets Level
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.QualityAudit.Status">
-            <summary>
-            Gets or Sets Status
-            </summary>
-        </member>
         <member name="P:ININ.PureCloudApi.Model.QualityAudit.Entity">
             <summary>
             Gets or Sets Entity
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.QualityAudit.Status">
+            <summary>
+            Gets or Sets Status
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.QualityAudit.Action">
@@ -71054,19 +71054,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.QualityAuditPage.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.QualityAuditPage.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.QualityAuditPage.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.QualityAuditPage.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.QualityAuditPage.NextUri">
@@ -71077,6 +71072,11 @@
         <member name="P:ININ.PureCloudApi.Model.QualityAuditPage.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.QualityAuditPage.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.QualityAuditPage.PageCount">
@@ -71798,19 +71798,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.QueueEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.QueueEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.QueueEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.QueueEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.QueueEntityListing.NextUri">
@@ -71821,6 +71816,11 @@
         <member name="P:ININ.PureCloudApi.Model.QueueEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.QueueEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.QueueEntityListing.PageCount">
@@ -71974,19 +71974,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.QueueMemberEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.QueueMemberEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.QueueMemberEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.QueueMemberEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.QueueMemberEntityListing.NextUri">
@@ -71997,6 +71992,11 @@
         <member name="P:ININ.PureCloudApi.Model.QueueMemberEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.QueueMemberEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.QueueMemberEntityListing.PageCount">
@@ -72066,19 +72066,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.QueuesEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.QueuesEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.QueuesEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.QueuesEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.QueuesEntityListing.NextUri">
@@ -72089,6 +72084,11 @@
         <member name="P:ININ.PureCloudApi.Model.QueuesEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.QueuesEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.QueuesEntityListing.PageCount">
@@ -72501,19 +72501,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.QuoteListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.QuoteListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.QuoteListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.QuoteListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.QuoteListing.NextUri">
@@ -72524,6 +72519,11 @@
         <member name="P:ININ.PureCloudApi.Model.QuoteListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.QuoteListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.QuoteListing.PageCount">
@@ -73104,19 +73104,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.ReportMetaDataEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.ReportMetaDataEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ReportMetaDataEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ReportMetaDataEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ReportMetaDataEntityListing.NextUri">
@@ -73127,6 +73122,11 @@
         <member name="P:ININ.PureCloudApi.Model.ReportMetaDataEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ReportMetaDataEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ReportMetaDataEntityListing.PageCount">
@@ -73373,19 +73373,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.ReportRunEntryEntityDomainListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.ReportRunEntryEntityDomainListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ReportRunEntryEntityDomainListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ReportRunEntryEntityDomainListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ReportRunEntryEntityDomainListing.NextUri">
@@ -73396,6 +73391,11 @@
         <member name="P:ININ.PureCloudApi.Model.ReportRunEntryEntityDomainListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ReportRunEntryEntityDomainListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ReportRunEntryEntityDomainListing.PageCount">
@@ -73597,19 +73597,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.ReportScheduleEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.ReportScheduleEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ReportScheduleEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ReportScheduleEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ReportScheduleEntityListing.NextUri">
@@ -73620,6 +73615,11 @@
         <member name="P:ININ.PureCloudApi.Model.ReportScheduleEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ReportScheduleEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ReportScheduleEntityListing.PageCount">
@@ -74058,19 +74058,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.ResponseEntityList.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.ResponseEntityList.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ResponseEntityList.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ResponseEntityList.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ResponseEntityList.NextUri">
@@ -74081,6 +74076,11 @@
         <member name="P:ININ.PureCloudApi.Model.ResponseEntityList.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ResponseEntityList.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ResponseEntityList.PageCount">
@@ -74150,19 +74150,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.ResponseEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.ResponseEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ResponseEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ResponseEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ResponseEntityListing.NextUri">
@@ -74173,6 +74168,11 @@
         <member name="P:ININ.PureCloudApi.Model.ResponseEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ResponseEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ResponseEntityListing.PageCount">
@@ -74431,19 +74431,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.ResponseSetEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.ResponseSetEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ResponseSetEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ResponseSetEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ResponseSetEntityListing.NextUri">
@@ -74454,6 +74449,11 @@
         <member name="P:ININ.PureCloudApi.Model.ResponseSetEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ResponseSetEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ResponseSetEntityListing.PageCount">
@@ -74863,19 +74863,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.RuleEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.RuleEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.RuleEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.RuleEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.RuleEntityListing.NextUri">
@@ -74886,6 +74881,11 @@
         <member name="P:ININ.PureCloudApi.Model.RuleEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.RuleEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.RuleEntityListing.PageCount">
@@ -75046,19 +75046,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.RuleSetEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.RuleSetEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.RuleSetEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.RuleSetEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.RuleSetEntityListing.NextUri">
@@ -75069,6 +75064,11 @@
         <member name="P:ININ.PureCloudApi.Model.RuleSetEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.RuleSetEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.RuleSetEntityListing.PageCount">
@@ -75326,19 +75326,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.ScheduleEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.ScheduleEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ScheduleEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ScheduleEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ScheduleEntityListing.NextUri">
@@ -75349,6 +75344,11 @@
         <member name="P:ININ.PureCloudApi.Model.ScheduleEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ScheduleEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ScheduleEntityListing.PageCount">
@@ -75539,19 +75539,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.ScheduleGroupEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.ScheduleGroupEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ScheduleGroupEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ScheduleGroupEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ScheduleGroupEntityListing.NextUri">
@@ -75562,6 +75557,11 @@
         <member name="P:ININ.PureCloudApi.Model.ScheduleGroupEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ScheduleGroupEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ScheduleGroupEntityListing.PageCount">
@@ -75690,19 +75690,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.SchemaCategoryEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.SchemaCategoryEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.SchemaCategoryEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.SchemaCategoryEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.SchemaCategoryEntityListing.NextUri">
@@ -75713,6 +75708,11 @@
         <member name="P:ININ.PureCloudApi.Model.SchemaCategoryEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.SchemaCategoryEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.SchemaCategoryEntityListing.PageCount">
@@ -75782,19 +75782,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.SchemaReferenceEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.SchemaReferenceEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.SchemaReferenceEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.SchemaReferenceEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.SchemaReferenceEntityListing.NextUri">
@@ -75805,6 +75800,11 @@
         <member name="P:ININ.PureCloudApi.Model.SchemaReferenceEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.SchemaReferenceEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.SchemaReferenceEntityListing.PageCount">
@@ -75987,19 +75987,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.ScriptEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.ScriptEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ScriptEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ScriptEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ScriptEntityListing.NextUri">
@@ -76010,6 +76005,11 @@
         <member name="P:ININ.PureCloudApi.Model.ScriptEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ScriptEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ScriptEntityListing.PageCount">
@@ -76227,19 +76227,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.SecurityProfileEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.SecurityProfileEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.SecurityProfileEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.SecurityProfileEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.SecurityProfileEntityListing.NextUri">
@@ -76250,6 +76245,11 @@
         <member name="P:ININ.PureCloudApi.Model.SecurityProfileEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.SecurityProfileEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.SecurityProfileEntityListing.PageCount">
@@ -76658,19 +76658,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.ServiceEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.ServiceEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ServiceEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ServiceEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ServiceEntityListing.NextUri">
@@ -76681,6 +76676,11 @@
         <member name="P:ININ.PureCloudApi.Model.ServiceEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ServiceEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ServiceEntityListing.PageCount">
@@ -76959,19 +76959,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.SessionEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.SessionEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.SessionEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.SessionEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.SessionEntityListing.NextUri">
@@ -76982,6 +76977,11 @@
         <member name="P:ININ.PureCloudApi.Model.SessionEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.SessionEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.SessionEntityListing.PageCount">
@@ -77259,19 +77259,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.ShareEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.ShareEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ShareEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ShareEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ShareEntityListing.NextUri">
@@ -77282,6 +77277,11 @@
         <member name="P:ININ.PureCloudApi.Model.ShareEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ShareEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ShareEntityListing.PageCount">
@@ -77695,19 +77695,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.SiteEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.SiteEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.SiteEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.SiteEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.SiteEntityListing.NextUri">
@@ -77718,6 +77713,11 @@
         <member name="P:ININ.PureCloudApi.Model.SiteEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.SiteEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.SiteEntityListing.PageCount">
@@ -77893,19 +77893,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.SkillEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.SkillEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.SkillEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.SkillEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.SkillEntityListing.NextUri">
@@ -77916,6 +77911,11 @@
         <member name="P:ININ.PureCloudApi.Model.SkillEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.SkillEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.SkillEntityListing.PageCount">
@@ -78436,19 +78436,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.SpreadsheetTransformEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.SpreadsheetTransformEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.SpreadsheetTransformEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.SpreadsheetTransformEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.SpreadsheetTransformEntityListing.NextUri">
@@ -78459,6 +78454,11 @@
         <member name="P:ININ.PureCloudApi.Model.SpreadsheetTransformEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.SpreadsheetTransformEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.SpreadsheetTransformEntityListing.PageCount">
@@ -78612,19 +78612,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.StationEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.StationEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.StationEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.StationEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.StationEntityListing.NextUri">
@@ -78635,6 +78630,11 @@
         <member name="P:ININ.PureCloudApi.Model.StationEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.StationEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.StationEntityListing.PageCount">
@@ -79063,19 +79063,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.SystemPromptAssetEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.SystemPromptAssetEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.SystemPromptAssetEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.SystemPromptAssetEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.SystemPromptAssetEntityListing.NextUri">
@@ -79086,6 +79081,11 @@
         <member name="P:ININ.PureCloudApi.Model.SystemPromptAssetEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.SystemPromptAssetEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.SystemPromptAssetEntityListing.PageCount">
@@ -79155,19 +79155,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.SystemPromptEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.SystemPromptEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.SystemPromptEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.SystemPromptEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.SystemPromptEntityListing.NextUri">
@@ -79178,6 +79173,11 @@
         <member name="P:ININ.PureCloudApi.Model.SystemPromptEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.SystemPromptEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.SystemPromptEntityListing.PageCount">
@@ -79549,19 +79549,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.TagValueEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.TagValueEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.TagValueEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.TagValueEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.TagValueEntityListing.NextUri">
@@ -79572,6 +79567,11 @@
         <member name="P:ININ.PureCloudApi.Model.TagValueEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.TagValueEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.TagValueEntityListing.PageCount">
@@ -79737,19 +79737,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.TemplateEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.TemplateEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.TemplateEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.TemplateEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.TemplateEntityListing.NextUri">
@@ -79760,6 +79755,11 @@
         <member name="P:ININ.PureCloudApi.Model.TemplateEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.TemplateEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.TemplateEntityListing.PageCount">
@@ -79995,19 +79995,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.TextTableTransformEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.TextTableTransformEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.TextTableTransformEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.TextTableTransformEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.TextTableTransformEntityListing.NextUri">
@@ -80018,6 +80013,11 @@
         <member name="P:ININ.PureCloudApi.Model.TextTableTransformEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.TextTableTransformEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.TextTableTransformEntityListing.PageCount">
@@ -80523,19 +80523,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.TimeZoneEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.TimeZoneEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.TimeZoneEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.TimeZoneEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.TimeZoneEntityListing.NextUri">
@@ -80546,6 +80541,11 @@
         <member name="P:ININ.PureCloudApi.Model.TimeZoneEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.TimeZoneEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.TimeZoneEntityListing.PageCount">
@@ -80615,19 +80615,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.TopicEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.TopicEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.TopicEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.TopicEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.TopicEntityListing.NextUri">
@@ -80638,6 +80633,11 @@
         <member name="P:ININ.PureCloudApi.Model.TopicEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.TopicEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.TopicEntityListing.PageCount">
@@ -81264,19 +81264,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.TrunkMetabaseEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.TrunkMetabaseEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.TrunkMetabaseEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.TrunkMetabaseEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.TrunkMetabaseEntityListing.NextUri">
@@ -81287,6 +81282,11 @@
         <member name="P:ININ.PureCloudApi.Model.TrunkMetabaseEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.TrunkMetabaseEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.TrunkMetabaseEntityListing.PageCount">
@@ -82045,19 +82045,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.UserActionCategoryEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.UserActionCategoryEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.UserActionCategoryEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.UserActionCategoryEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.UserActionCategoryEntityListing.NextUri">
@@ -82068,6 +82063,11 @@
         <member name="P:ININ.PureCloudApi.Model.UserActionCategoryEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.UserActionCategoryEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.UserActionCategoryEntityListing.PageCount">
@@ -82226,9 +82226,9 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.UserActionMetadataEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.UserActionMetadataEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.UserActionMetadataEntityListing.PreviousUri">
@@ -82236,14 +82236,14 @@
             Gets or Sets PreviousUri
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.UserActionMetadataEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
-            </summary>
-        </member>
         <member name="P:ININ.PureCloudApi.Model.UserActionMetadataEntityListing.NextUri">
             <summary>
             Gets or Sets NextUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.UserActionMetadataEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.UserActionMetadataEntityListing.PageCount">
@@ -82531,19 +82531,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.UserEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.UserEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.UserEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.UserEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.UserEntityListing.NextUri">
@@ -82554,6 +82549,11 @@
         <member name="P:ININ.PureCloudApi.Model.UserEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.UserEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.UserEntityListing.PageCount">
@@ -82887,19 +82887,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.UserPresenceEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.UserPresenceEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.UserPresenceEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.UserPresenceEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.UserPresenceEntityListing.NextUri">
@@ -82910,6 +82905,11 @@
         <member name="P:ININ.PureCloudApi.Model.UserPresenceEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.UserPresenceEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.UserPresenceEntityListing.PageCount">
@@ -83140,19 +83140,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.UserQueueEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.UserQueueEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.UserQueueEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.UserQueueEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.UserQueueEntityListing.NextUri">
@@ -83163,6 +83158,11 @@
         <member name="P:ININ.PureCloudApi.Model.UserQueueEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.UserQueueEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.UserQueueEntityListing.PageCount">
@@ -83343,19 +83343,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.UserRecordingEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.UserRecordingEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.UserRecordingEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.UserRecordingEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.UserRecordingEntityListing.NextUri">
@@ -83366,6 +83361,11 @@
         <member name="P:ININ.PureCloudApi.Model.UserRecordingEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.UserRecordingEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.UserRecordingEntityListing.PageCount">
@@ -83435,19 +83435,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.UsersEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.UsersEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.UsersEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.UsersEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.UsersEntityListing.NextUri">
@@ -83458,6 +83453,11 @@
         <member name="P:ININ.PureCloudApi.Model.UsersEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.UsersEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.UsersEntityListing.PageCount">
@@ -83642,19 +83642,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.UserSkillEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.UserSkillEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.UserSkillEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.UserSkillEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.UserSkillEntityListing.NextUri">
@@ -83665,6 +83660,11 @@
         <member name="P:ININ.PureCloudApi.Model.UserSkillEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.UserSkillEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.UserSkillEntityListing.PageCount">
@@ -84417,19 +84417,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.VoicemailMessageEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.VoicemailMessageEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.VoicemailMessageEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.VoicemailMessageEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.VoicemailMessageEntityListing.NextUri">
@@ -84440,6 +84435,11 @@
         <member name="P:ININ.PureCloudApi.Model.VoicemailMessageEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.VoicemailMessageEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.VoicemailMessageEntityListing.PageCount">
@@ -85098,19 +85098,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.VoiceRateInternationalEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.VoiceRateInternationalEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.VoiceRateInternationalEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.VoiceRateInternationalEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.VoiceRateInternationalEntityListing.NextUri">
@@ -85121,6 +85116,11 @@
         <member name="P:ININ.PureCloudApi.Model.VoiceRateInternationalEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.VoiceRateInternationalEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.VoiceRateInternationalEntityListing.PageCount">
@@ -85479,19 +85479,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.VoiceXmlOperationEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.VoiceXmlOperationEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.VoiceXmlOperationEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.VoiceXmlOperationEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.VoiceXmlOperationEntityListing.NextUri">
@@ -85502,6 +85497,11 @@
         <member name="P:ININ.PureCloudApi.Model.VoiceXmlOperationEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.VoiceXmlOperationEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.VoiceXmlOperationEntityListing.PageCount">
@@ -86535,19 +86535,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.WorkspaceAttributeEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.WorkspaceAttributeEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.WorkspaceAttributeEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.WorkspaceAttributeEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.WorkspaceAttributeEntityListing.NextUri">
@@ -86558,6 +86553,11 @@
         <member name="P:ININ.PureCloudApi.Model.WorkspaceAttributeEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.WorkspaceAttributeEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.WorkspaceAttributeEntityListing.PageCount">
@@ -86679,19 +86679,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.WorkspaceEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.WorkspaceEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.WorkspaceEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.WorkspaceEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.WorkspaceEntityListing.NextUri">
@@ -86702,6 +86697,11 @@
         <member name="P:ININ.PureCloudApi.Model.WorkspaceEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.WorkspaceEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.WorkspaceEntityListing.PageCount">
@@ -86860,19 +86860,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.WorkspaceMemberEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.WorkspaceMemberEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.WorkspaceMemberEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.WorkspaceMemberEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.WorkspaceMemberEntityListing.NextUri">
@@ -86883,6 +86878,11 @@
         <member name="P:ININ.PureCloudApi.Model.WorkspaceMemberEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.WorkspaceMemberEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.WorkspaceMemberEntityListing.PageCount">
@@ -87158,19 +87158,14 @@
             Gets or Sets Entities
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.WrapupCodeEntityListing.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.WrapupCodeEntityListing.FirstUri">
             <summary>
-            Gets or Sets SelfUri
+            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.WrapupCodeEntityListing.PreviousUri">
             <summary>
             Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.WrapupCodeEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.WrapupCodeEntityListing.NextUri">
@@ -87181,6 +87176,11 @@
         <member name="P:ININ.PureCloudApi.Model.WrapupCodeEntityListing.LastUri">
             <summary>
             Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.WrapupCodeEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.WrapupCodeEntityListing.PageCount">
