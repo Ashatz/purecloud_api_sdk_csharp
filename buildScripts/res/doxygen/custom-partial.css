@@ -1,0 +1,108 @@
+a, 
+a:visited, 
+.contents a, 
+.contents a:visited {
+	color: #1997CA;
+}
+
+.headerTitle a,
+.headerTitle a:visited,
+.headerTitle a:active {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.tabs, 
+.tabs2, 
+.tabs3, 
+.navpath ul {
+	background-image: none;
+	background-color: #F5F5F5;
+	border-bottom: 1px solid #084081;
+}
+
+.tabs, 
+.tabs2, 
+.tabs3,
+.navpath {
+	border-bottom: 1px solid #084081;
+}
+
+.tablist li, 
+.tablist a, 
+.tablist a:hover {
+	background-image: none;
+}
+
+.tablist a:hover {
+	background-color: #0868AC;
+}
+
+.tablist li.current a {
+	background-image: none;
+	background-color: #084081;
+}
+
+.navpath ul {
+	border: 0px;
+	margin: 0px 0px 0px 12px;
+}
+
+.navpath li {
+	background-image: none;
+}
+
+.navpath li.navelem a:hover {
+    color: #1997CA;
+}
+
+#titlearea {
+	border: 0px;
+}
+
+.home-intro {
+	bottom: 0px;
+}
+
+.memproto, 
+.memdoc {
+	border: 1px solid #DDDDDD;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	background-image: none;
+}
+
+.memproto {
+	background-color: #DDDDDD;
+}
+
+h2.groupheader {
+	border-bottom: 1px solid #084081;
+	color: #084081;
+}
+
+.title {
+	color: #084081;
+}
+
+span.mlabel {
+	background-color: #052C3E;
+    border: 1px solid #0F465D;
+    color: #F6F6F6;
+}
+
+.paramname {
+    color: #FD971F;
+}
+
+table.params td.paramname {
+	padding-right: 10px;
+}
+
+.navpath li a::before {
+    /* background-color: red; */
+    content: ">";
+    margin-right: 20px;
+}
