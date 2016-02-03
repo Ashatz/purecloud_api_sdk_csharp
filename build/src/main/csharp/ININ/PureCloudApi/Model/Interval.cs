@@ -23,22 +23,61 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         public Interval()
         {
+            this.BeforeNow = false;
+            this.AfterNow = false;
             
         }
 
         
         /// <summary>
-        /// Gets or Sets Start
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        [DataMember(Name="start", EmitDefaultValue=false)]
-        public string Start { get; set; }
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="end", EmitDefaultValue=false)]
+        public DateTime? End { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets End
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        [DataMember(Name="end", EmitDefaultValue=false)]
-        public string End { get; set; }
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="start", EmitDefaultValue=false)]
+        public DateTime? Start { get; set; }
+  
+        
+        /// <summary>
+        /// Gets or Sets Chronology
+        /// </summary>
+        [DataMember(Name="chronology", EmitDefaultValue=false)]
+        public Chronology Chronology { get; set; }
+  
+        
+        /// <summary>
+        /// Gets or Sets EndMillis
+        /// </summary>
+        [DataMember(Name="endMillis", EmitDefaultValue=false)]
+        public long? EndMillis { get; set; }
+  
+        
+        /// <summary>
+        /// Gets or Sets StartMillis
+        /// </summary>
+        [DataMember(Name="startMillis", EmitDefaultValue=false)]
+        public long? StartMillis { get; set; }
+  
+        
+        /// <summary>
+        /// Gets or Sets BeforeNow
+        /// </summary>
+        [DataMember(Name="beforeNow", EmitDefaultValue=false)]
+        public bool? BeforeNow { get; set; }
+  
+        
+        /// <summary>
+        /// Gets or Sets AfterNow
+        /// </summary>
+        [DataMember(Name="afterNow", EmitDefaultValue=false)]
+        public bool? AfterNow { get; set; }
   
         
   
@@ -50,8 +89,13 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Interval {\n");
-            sb.Append("  Start: ").Append(Start).Append("\n");
             sb.Append("  End: ").Append(End).Append("\n");
+            sb.Append("  Start: ").Append(Start).Append("\n");
+            sb.Append("  Chronology: ").Append(Chronology).Append("\n");
+            sb.Append("  EndMillis: ").Append(EndMillis).Append("\n");
+            sb.Append("  StartMillis: ").Append(StartMillis).Append("\n");
+            sb.Append("  BeforeNow: ").Append(BeforeNow).Append("\n");
+            sb.Append("  AfterNow: ").Append(AfterNow).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -90,14 +134,39 @@ namespace ININ.PureCloudApi.Model
 
             return 
                 (
+                    this.End == other.End ||
+                    this.End != null &&
+                    this.End.Equals(other.End)
+                ) && 
+                (
                     this.Start == other.Start ||
                     this.Start != null &&
                     this.Start.Equals(other.Start)
                 ) && 
                 (
-                    this.End == other.End ||
-                    this.End != null &&
-                    this.End.Equals(other.End)
+                    this.Chronology == other.Chronology ||
+                    this.Chronology != null &&
+                    this.Chronology.Equals(other.Chronology)
+                ) && 
+                (
+                    this.EndMillis == other.EndMillis ||
+                    this.EndMillis != null &&
+                    this.EndMillis.Equals(other.EndMillis)
+                ) && 
+                (
+                    this.StartMillis == other.StartMillis ||
+                    this.StartMillis != null &&
+                    this.StartMillis.Equals(other.StartMillis)
+                ) && 
+                (
+                    this.BeforeNow == other.BeforeNow ||
+                    this.BeforeNow != null &&
+                    this.BeforeNow.Equals(other.BeforeNow)
+                ) && 
+                (
+                    this.AfterNow == other.AfterNow ||
+                    this.AfterNow != null &&
+                    this.AfterNow.Equals(other.AfterNow)
                 );
         }
 
@@ -113,11 +182,26 @@ namespace ININ.PureCloudApi.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
+                if (this.End != null)
+                    hash = hash * 57 + this.End.GetHashCode();
+                
                 if (this.Start != null)
                     hash = hash * 57 + this.Start.GetHashCode();
                 
-                if (this.End != null)
-                    hash = hash * 57 + this.End.GetHashCode();
+                if (this.Chronology != null)
+                    hash = hash * 57 + this.Chronology.GetHashCode();
+                
+                if (this.EndMillis != null)
+                    hash = hash * 57 + this.EndMillis.GetHashCode();
+                
+                if (this.StartMillis != null)
+                    hash = hash * 57 + this.StartMillis.GetHashCode();
+                
+                if (this.BeforeNow != null)
+                    hash = hash * 57 + this.BeforeNow.GetHashCode();
+                
+                if (this.AfterNow != null)
+                    hash = hash * 57 + this.AfterNow.GetHashCode();
                 
                 return hash;
             }
