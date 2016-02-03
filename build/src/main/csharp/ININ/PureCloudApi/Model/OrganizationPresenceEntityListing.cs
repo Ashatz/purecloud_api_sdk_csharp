@@ -70,17 +70,17 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
-        /// Gets or Sets FirstUri
-        /// </summary>
-        [DataMember(Name="firstUri", EmitDefaultValue=false)]
-        public string FirstUri { get; set; }
-  
-        
-        /// <summary>
         /// Gets or Sets NextUri
         /// </summary>
         [DataMember(Name="nextUri", EmitDefaultValue=false)]
         public string NextUri { get; set; }
+  
+        
+        /// <summary>
+        /// Gets or Sets FirstUri
+        /// </summary>
+        [DataMember(Name="firstUri", EmitDefaultValue=false)]
+        public string FirstUri { get; set; }
   
         
         /// <summary>
@@ -112,8 +112,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  PreviousUri: ").Append(PreviousUri).Append("\n");
-            sb.Append("  FirstUri: ").Append(FirstUri).Append("\n");
             sb.Append("  NextUri: ").Append(NextUri).Append("\n");
+            sb.Append("  FirstUri: ").Append(FirstUri).Append("\n");
             sb.Append("  LastUri: ").Append(LastUri).Append("\n");
             sb.Append("  PageCount: ").Append(PageCount).Append("\n");
             
@@ -184,14 +184,14 @@ namespace ININ.PureCloudApi.Model
                     this.PreviousUri.Equals(other.PreviousUri)
                 ) && 
                 (
-                    this.FirstUri == other.FirstUri ||
-                    this.FirstUri != null &&
-                    this.FirstUri.Equals(other.FirstUri)
-                ) && 
-                (
                     this.NextUri == other.NextUri ||
                     this.NextUri != null &&
                     this.NextUri.Equals(other.NextUri)
+                ) && 
+                (
+                    this.FirstUri == other.FirstUri ||
+                    this.FirstUri != null &&
+                    this.FirstUri.Equals(other.FirstUri)
                 ) && 
                 (
                     this.LastUri == other.LastUri ||
@@ -235,11 +235,11 @@ namespace ININ.PureCloudApi.Model
                 if (this.PreviousUri != null)
                     hash = hash * 57 + this.PreviousUri.GetHashCode();
                 
-                if (this.FirstUri != null)
-                    hash = hash * 57 + this.FirstUri.GetHashCode();
-                
                 if (this.NextUri != null)
                     hash = hash * 57 + this.NextUri.GetHashCode();
+                
+                if (this.FirstUri != null)
+                    hash = hash * 57 + this.FirstUri.GetHashCode();
                 
                 if (this.LastUri != null)
                     hash = hash * 57 + this.LastUri.GetHashCode();
