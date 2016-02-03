@@ -38,18 +38,17 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-        /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
-        [DataMember(Name="start", EmitDefaultValue=false)]
-        public DateTime? Start { get; set; }
-  
-        
-        /// <summary>
         /// Gets or Sets Chronology
         /// </summary>
         [DataMember(Name="chronology", EmitDefaultValue=false)]
         public Chronology Chronology { get; set; }
+  
+        
+        /// <summary>
+        /// Gets or Sets StartMillis
+        /// </summary>
+        [DataMember(Name="startMillis", EmitDefaultValue=false)]
+        public long? StartMillis { get; set; }
   
         
         /// <summary>
@@ -60,10 +59,11 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
-        /// Gets or Sets StartMillis
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        [DataMember(Name="startMillis", EmitDefaultValue=false)]
-        public long? StartMillis { get; set; }
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="start", EmitDefaultValue=false)]
+        public DateTime? Start { get; set; }
   
         
         /// <summary>
@@ -90,10 +90,10 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class Interval {\n");
             sb.Append("  End: ").Append(End).Append("\n");
-            sb.Append("  Start: ").Append(Start).Append("\n");
             sb.Append("  Chronology: ").Append(Chronology).Append("\n");
-            sb.Append("  EndMillis: ").Append(EndMillis).Append("\n");
             sb.Append("  StartMillis: ").Append(StartMillis).Append("\n");
+            sb.Append("  EndMillis: ").Append(EndMillis).Append("\n");
+            sb.Append("  Start: ").Append(Start).Append("\n");
             sb.Append("  BeforeNow: ").Append(BeforeNow).Append("\n");
             sb.Append("  AfterNow: ").Append(AfterNow).Append("\n");
             
@@ -139,14 +139,14 @@ namespace ININ.PureCloudApi.Model
                     this.End.Equals(other.End)
                 ) && 
                 (
-                    this.Start == other.Start ||
-                    this.Start != null &&
-                    this.Start.Equals(other.Start)
-                ) && 
-                (
                     this.Chronology == other.Chronology ||
                     this.Chronology != null &&
                     this.Chronology.Equals(other.Chronology)
+                ) && 
+                (
+                    this.StartMillis == other.StartMillis ||
+                    this.StartMillis != null &&
+                    this.StartMillis.Equals(other.StartMillis)
                 ) && 
                 (
                     this.EndMillis == other.EndMillis ||
@@ -154,9 +154,9 @@ namespace ININ.PureCloudApi.Model
                     this.EndMillis.Equals(other.EndMillis)
                 ) && 
                 (
-                    this.StartMillis == other.StartMillis ||
-                    this.StartMillis != null &&
-                    this.StartMillis.Equals(other.StartMillis)
+                    this.Start == other.Start ||
+                    this.Start != null &&
+                    this.Start.Equals(other.Start)
                 ) && 
                 (
                     this.BeforeNow == other.BeforeNow ||
@@ -185,17 +185,17 @@ namespace ININ.PureCloudApi.Model
                 if (this.End != null)
                     hash = hash * 57 + this.End.GetHashCode();
                 
-                if (this.Start != null)
-                    hash = hash * 57 + this.Start.GetHashCode();
-                
                 if (this.Chronology != null)
                     hash = hash * 57 + this.Chronology.GetHashCode();
+                
+                if (this.StartMillis != null)
+                    hash = hash * 57 + this.StartMillis.GetHashCode();
                 
                 if (this.EndMillis != null)
                     hash = hash * 57 + this.EndMillis.GetHashCode();
                 
-                if (this.StartMillis != null)
-                    hash = hash * 57 + this.StartMillis.GetHashCode();
+                if (this.Start != null)
+                    hash = hash * 57 + this.Start.GetHashCode();
                 
                 if (this.BeforeNow != null)
                     hash = hash * 57 + this.BeforeNow.GetHashCode();
