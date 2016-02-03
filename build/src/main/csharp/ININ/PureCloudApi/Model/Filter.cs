@@ -13,7 +13,7 @@ namespace ININ.PureCloudApi.Model
 {
 
     /// <summary>
-    /// 
+    /// Used to filter response queries
     /// </summary>
     [DataContract]
     public class Filter :  IEquatable<Filter>
@@ -28,31 +28,27 @@ namespace ININ.PureCloudApi.Model
 
         
         /// <summary>
-        /// Gets or Sets Name
+        /// Field to filter on. Allowed values are 'name' and 'libraryId.
         /// </summary>
+        /// <value>Field to filter on. Allowed values are 'name' and 'libraryId.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets Type
+        /// Filter operation: IN, EQUALS, NOTEQUALS.
         /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Operator
-        /// </summary>
+        /// <value>Filter operation: IN, EQUALS, NOTEQUALS.</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
         public string Operator { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets Values
+        /// Values to filter on.
         /// </summary>
+        /// <value>Values to filter on.</value>
         [DataMember(Name="values", EmitDefaultValue=false)]
-        public List<LineProperties> Values { get; set; }
+        public List<string> Values { get; set; }
   
         
   
@@ -65,7 +61,6 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class Filter {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Operator: ").Append(Operator).Append("\n");
             sb.Append("  Values: ").Append(Values).Append("\n");
             
@@ -111,11 +106,6 @@ namespace ININ.PureCloudApi.Model
                     this.Name.Equals(other.Name)
                 ) && 
                 (
-                    this.Type == other.Type ||
-                    this.Type != null &&
-                    this.Type.Equals(other.Type)
-                ) && 
-                (
                     this.Operator == other.Operator ||
                     this.Operator != null &&
                     this.Operator.Equals(other.Operator)
@@ -141,9 +131,6 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.Name != null)
                     hash = hash * 57 + this.Name.GetHashCode();
-                
-                if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
                 
                 if (this.Operator != null)
                     hash = hash * 57 + this.Operator.GetHashCode();
