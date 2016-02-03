@@ -41,6 +41,13 @@ namespace ININ.PureCloudApi.Model
         public string Type { get; set; }
   
         
+        /// <summary>
+        /// Gets or Sets CallableTimeColumn
+        /// </summary>
+        [DataMember(Name="callableTimeColumn", EmitDefaultValue=false)]
+        public string CallableTimeColumn { get; set; }
+  
+        
   
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,6 +59,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class PhoneNumberColumn {\n");
             sb.Append("  ColumnName: ").Append(ColumnName).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  CallableTimeColumn: ").Append(CallableTimeColumn).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -98,6 +106,11 @@ namespace ININ.PureCloudApi.Model
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
+                ) && 
+                (
+                    this.CallableTimeColumn == other.CallableTimeColumn ||
+                    this.CallableTimeColumn != null &&
+                    this.CallableTimeColumn.Equals(other.CallableTimeColumn)
                 );
         }
 
@@ -118,6 +131,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.Type != null)
                     hash = hash * 57 + this.Type.GetHashCode();
+                
+                if (this.CallableTimeColumn != null)
+                    hash = hash * 57 + this.CallableTimeColumn.GetHashCode();
                 
                 return hash;
             }

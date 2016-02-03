@@ -23,13 +23,16 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         public Rule()
         {
+            this.Enabled = false;
+            this.InAlarm = false;
             
         }
 
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The globally unique identifier for the object.
         /// </summary>
+        /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
   
@@ -42,31 +45,81 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
-        /// Gets or Sets Order
+        /// Gets or Sets Title
         /// </summary>
-        [DataMember(Name="order", EmitDefaultValue=false)]
-        public int? Order { get; set; }
+        [DataMember(Name="title", EmitDefaultValue=false)]
+        public string Title { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets Category
+        /// Gets or Sets Description
         /// </summary>
-        [DataMember(Name="category", EmitDefaultValue=false)]
-        public string Category { get; set; }
+        [DataMember(Name="description", EmitDefaultValue=false)]
+        public string Description { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets Conditions
+        /// Gets or Sets Enabled
         /// </summary>
-        [DataMember(Name="conditions", EmitDefaultValue=false)]
-        public List<Condition> Conditions { get; set; }
+        [DataMember(Name="enabled", EmitDefaultValue=false)]
+        public bool? Enabled { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets Actions
+        /// Gets or Sets Metric
         /// </summary>
-        [DataMember(Name="actions", EmitDefaultValue=false)]
-        public List<Action> Actions { get; set; }
+        [DataMember(Name="metric", EmitDefaultValue=false)]
+        public string Metric { get; set; }
+  
+        
+        /// <summary>
+        /// Gets or Sets Entity
+        /// </summary>
+        [DataMember(Name="entity", EmitDefaultValue=false)]
+        public Entity Entity { get; set; }
+  
+        
+        /// <summary>
+        /// Gets or Sets MetricThresholds
+        /// </summary>
+        [DataMember(Name="metricThresholds", EmitDefaultValue=false)]
+        public List<MetricThreshold> MetricThresholds { get; set; }
+  
+        
+        /// <summary>
+        /// Gets or Sets InAlarm
+        /// </summary>
+        [DataMember(Name="inAlarm", EmitDefaultValue=false)]
+        public bool? InAlarm { get; set; }
+  
+        
+        /// <summary>
+        /// Gets or Sets Occurrence
+        /// </summary>
+        [DataMember(Name="occurrence", EmitDefaultValue=false)]
+        public Occurrence Occurrence { get; set; }
+  
+        
+        /// <summary>
+        /// Gets or Sets MediaType
+        /// </summary>
+        [DataMember(Name="mediaType", EmitDefaultValue=false)]
+        public string MediaType { get; set; }
+  
+        
+        /// <summary>
+        /// Gets or Sets Statistic
+        /// </summary>
+        [DataMember(Name="statistic", EmitDefaultValue=false)]
+        public string Statistic { get; set; }
+  
+        
+        /// <summary>
+        /// The URI for this object
+        /// </summary>
+        /// <value>The URI for this object</value>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; set; }
   
         
   
@@ -80,10 +133,17 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class Rule {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Order: ").Append(Order).Append("\n");
-            sb.Append("  Category: ").Append(Category).Append("\n");
-            sb.Append("  Conditions: ").Append(Conditions).Append("\n");
-            sb.Append("  Actions: ").Append(Actions).Append("\n");
+            sb.Append("  Title: ").Append(Title).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            sb.Append("  Metric: ").Append(Metric).Append("\n");
+            sb.Append("  Entity: ").Append(Entity).Append("\n");
+            sb.Append("  MetricThresholds: ").Append(MetricThresholds).Append("\n");
+            sb.Append("  InAlarm: ").Append(InAlarm).Append("\n");
+            sb.Append("  Occurrence: ").Append(Occurrence).Append("\n");
+            sb.Append("  MediaType: ").Append(MediaType).Append("\n");
+            sb.Append("  Statistic: ").Append(Statistic).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -132,24 +192,59 @@ namespace ININ.PureCloudApi.Model
                     this.Name.Equals(other.Name)
                 ) && 
                 (
-                    this.Order == other.Order ||
-                    this.Order != null &&
-                    this.Order.Equals(other.Order)
+                    this.Title == other.Title ||
+                    this.Title != null &&
+                    this.Title.Equals(other.Title)
                 ) && 
                 (
-                    this.Category == other.Category ||
-                    this.Category != null &&
-                    this.Category.Equals(other.Category)
+                    this.Description == other.Description ||
+                    this.Description != null &&
+                    this.Description.Equals(other.Description)
                 ) && 
                 (
-                    this.Conditions == other.Conditions ||
-                    this.Conditions != null &&
-                    this.Conditions.SequenceEqual(other.Conditions)
+                    this.Enabled == other.Enabled ||
+                    this.Enabled != null &&
+                    this.Enabled.Equals(other.Enabled)
                 ) && 
                 (
-                    this.Actions == other.Actions ||
-                    this.Actions != null &&
-                    this.Actions.SequenceEqual(other.Actions)
+                    this.Metric == other.Metric ||
+                    this.Metric != null &&
+                    this.Metric.Equals(other.Metric)
+                ) && 
+                (
+                    this.Entity == other.Entity ||
+                    this.Entity != null &&
+                    this.Entity.Equals(other.Entity)
+                ) && 
+                (
+                    this.MetricThresholds == other.MetricThresholds ||
+                    this.MetricThresholds != null &&
+                    this.MetricThresholds.SequenceEqual(other.MetricThresholds)
+                ) && 
+                (
+                    this.InAlarm == other.InAlarm ||
+                    this.InAlarm != null &&
+                    this.InAlarm.Equals(other.InAlarm)
+                ) && 
+                (
+                    this.Occurrence == other.Occurrence ||
+                    this.Occurrence != null &&
+                    this.Occurrence.Equals(other.Occurrence)
+                ) && 
+                (
+                    this.MediaType == other.MediaType ||
+                    this.MediaType != null &&
+                    this.MediaType.Equals(other.MediaType)
+                ) && 
+                (
+                    this.Statistic == other.Statistic ||
+                    this.Statistic != null &&
+                    this.Statistic.Equals(other.Statistic)
+                ) && 
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -171,17 +266,38 @@ namespace ININ.PureCloudApi.Model
                 if (this.Name != null)
                     hash = hash * 57 + this.Name.GetHashCode();
                 
-                if (this.Order != null)
-                    hash = hash * 57 + this.Order.GetHashCode();
+                if (this.Title != null)
+                    hash = hash * 57 + this.Title.GetHashCode();
                 
-                if (this.Category != null)
-                    hash = hash * 57 + this.Category.GetHashCode();
+                if (this.Description != null)
+                    hash = hash * 57 + this.Description.GetHashCode();
                 
-                if (this.Conditions != null)
-                    hash = hash * 57 + this.Conditions.GetHashCode();
+                if (this.Enabled != null)
+                    hash = hash * 57 + this.Enabled.GetHashCode();
                 
-                if (this.Actions != null)
-                    hash = hash * 57 + this.Actions.GetHashCode();
+                if (this.Metric != null)
+                    hash = hash * 57 + this.Metric.GetHashCode();
+                
+                if (this.Entity != null)
+                    hash = hash * 57 + this.Entity.GetHashCode();
+                
+                if (this.MetricThresholds != null)
+                    hash = hash * 57 + this.MetricThresholds.GetHashCode();
+                
+                if (this.InAlarm != null)
+                    hash = hash * 57 + this.InAlarm.GetHashCode();
+                
+                if (this.Occurrence != null)
+                    hash = hash * 57 + this.Occurrence.GetHashCode();
+                
+                if (this.MediaType != null)
+                    hash = hash * 57 + this.MediaType.GetHashCode();
+                
+                if (this.Statistic != null)
+                    hash = hash * 57 + this.Statistic.GetHashCode();
+                
+                if (this.SelfUri != null)
+                    hash = hash * 57 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
