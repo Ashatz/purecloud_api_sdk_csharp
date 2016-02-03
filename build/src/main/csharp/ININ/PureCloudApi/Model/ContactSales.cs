@@ -106,6 +106,13 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
+        /// Gets or Sets QuoteId
+        /// </summary>
+        [DataMember(Name="quoteId", EmitDefaultValue=false)]
+        public string QuoteId { get; set; }
+  
+        
+        /// <summary>
         /// Gets or Sets Industry
         /// </summary>
         [DataMember(Name="industry", EmitDefaultValue=false)]
@@ -147,6 +154,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  ProductName: ").Append(ProductName).Append("\n");
+            sb.Append("  QuoteId: ").Append(QuoteId).Append("\n");
             sb.Append("  Industry: ").Append(Industry).Append("\n");
             sb.Append("  EstimatedUsers: ").Append(EstimatedUsers).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -243,6 +251,11 @@ namespace ININ.PureCloudApi.Model
                     this.ProductName.Equals(other.ProductName)
                 ) && 
                 (
+                    this.QuoteId == other.QuoteId ||
+                    this.QuoteId != null &&
+                    this.QuoteId.Equals(other.QuoteId)
+                ) && 
+                (
                     this.Industry == other.Industry ||
                     this.Industry != null &&
                     this.Industry.Equals(other.Industry)
@@ -303,6 +316,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.ProductName != null)
                     hash = hash * 57 + this.ProductName.GetHashCode();
+                
+                if (this.QuoteId != null)
+                    hash = hash * 57 + this.QuoteId.GetHashCode();
                 
                 if (this.Industry != null)
                     hash = hash * 57 + this.Industry.GetHashCode();

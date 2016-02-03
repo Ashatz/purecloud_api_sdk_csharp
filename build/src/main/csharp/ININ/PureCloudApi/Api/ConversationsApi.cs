@@ -125,6 +125,46 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<ConversationResponse>> ConversationsPostAsyncWithHttpInfo (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null);
         
         /// <summary>
+        /// Create Fax Conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="body">Fax</param>
+        /// <returns>FaxSendResponse</returns>
+        FaxSendResponse ConversationsFaxPost (FaxSendRequest body = null);
+  
+        /// <summary>
+        /// Create Fax Conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="body">Fax</param>
+        /// <returns>ApiResponse of FaxSendResponse</returns>
+        ApiResponse<FaxSendResponse> ConversationsFaxPostWithHttpInfo (FaxSendRequest body = null);
+
+        /// <summary>
+        /// Create Fax Conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="body">Fax</param>
+        /// <returns>Task of FaxSendResponse</returns>
+        System.Threading.Tasks.Task<FaxSendResponse> ConversationsFaxPostAsync (FaxSendRequest body = null);
+
+        /// <summary>
+        /// Create Fax Conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="body">Fax</param>
+        /// <returns>Task of ApiResponse (FaxSendResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FaxSendResponse>> ConversationsFaxPostAsyncWithHttpInfo (FaxSendRequest body = null);
+        
+        /// <summary>
         /// Get the maximum number of participants that this user can have on a conference
         /// </summary>
         /// <remarks>
@@ -1555,6 +1595,153 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ConversationResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ConversationResponse) Configuration.ApiClient.Deserialize(response, typeof(ConversationResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Create Fax Conversation 
+        /// </summary>
+        /// <param name="body">Fax</param> 
+        /// <returns>FaxSendResponse</returns>
+        public FaxSendResponse ConversationsFaxPost (FaxSendRequest body = null)
+        {
+             ApiResponse<FaxSendResponse> response = ConversationsFaxPostWithHttpInfo(body);
+             return response.Data;
+        }
+
+        /// <summary>
+        /// Create Fax Conversation 
+        /// </summary>
+        /// <param name="body">Fax</param> 
+        /// <returns>ApiResponse of FaxSendResponse</returns>
+        public ApiResponse< FaxSendResponse > ConversationsFaxPostWithHttpInfo (FaxSendRequest body = null)
+        {
+            
+    
+            var path_ = "/api/v1/conversations/fax";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling ConversationsFaxPost: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling ConversationsFaxPost: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<FaxSendResponse>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FaxSendResponse) Configuration.ApiClient.Deserialize(response, typeof(FaxSendResponse)));
+            
+        }
+    
+        /// <summary>
+        /// Create Fax Conversation 
+        /// </summary>
+        /// <param name="body">Fax</param>
+        /// <returns>Task of FaxSendResponse</returns>
+        public async System.Threading.Tasks.Task<FaxSendResponse> ConversationsFaxPostAsync (FaxSendRequest body = null)
+        {
+             ApiResponse<FaxSendResponse> response = await ConversationsFaxPostAsyncWithHttpInfo(body);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Create Fax Conversation 
+        /// </summary>
+        /// <param name="body">Fax</param>
+        /// <returns>Task of ApiResponse (FaxSendResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FaxSendResponse>> ConversationsFaxPostAsyncWithHttpInfo (FaxSendRequest body = null)
+        {
+            
+    
+            var path_ = "/api/v1/conversations/fax";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling ConversationsFaxPost: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling ConversationsFaxPost: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<FaxSendResponse>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FaxSendResponse) Configuration.ApiClient.Deserialize(response, typeof(FaxSendResponse)));
             
         }
         

@@ -125,104 +125,56 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> ConversationsConversationidRecordingsRecordingidGetAsyncWithHttpInfo (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null);
         
         /// <summary>
-        /// Sets the restore state on a recording.
+        /// Updates the retention records on a recording.
         /// </summary>
         /// <remarks>
-        /// It is not currently possible to force something into long term storage, so this can only be used to request a restoration. In addition, a restoration takes some time, and so it is not guaranteed to be completed for several hours.
+        /// Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. Use of the query parameter &#39;restoreDays&#39; is deprecated and will be removed in the next major version release. If &#39;restoreDays&#39; is provided, no attempt at updating other retention data will be made. To migrate to the new usage, issuing a request with restoreDays=10 would instead set the archiveDate&#39;s time stamp in the PUT body to 10 days in the future.
         /// </remarks>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
-        /// <param name="restoreDays">The number of days the recording will be available before it is re-archived.</param>
+        /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param>
         /// <returns></returns>
         void ConversationsConversationidRecordingsRecordingidPut (string conversationId, string recordingId, Recording body, int? restoreDays = null);
   
         /// <summary>
-        /// Sets the restore state on a recording.
+        /// Updates the retention records on a recording.
         /// </summary>
         /// <remarks>
-        /// It is not currently possible to force something into long term storage, so this can only be used to request a restoration. In addition, a restoration takes some time, and so it is not guaranteed to be completed for several hours.
+        /// Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. Use of the query parameter &#39;restoreDays&#39; is deprecated and will be removed in the next major version release. If &#39;restoreDays&#39; is provided, no attempt at updating other retention data will be made. To migrate to the new usage, issuing a request with restoreDays=10 would instead set the archiveDate&#39;s time stamp in the PUT body to 10 days in the future.
         /// </remarks>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
-        /// <param name="restoreDays">The number of days the recording will be available before it is re-archived.</param>
+        /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> ConversationsConversationidRecordingsRecordingidPutWithHttpInfo (string conversationId, string recordingId, Recording body, int? restoreDays = null);
 
         /// <summary>
-        /// Sets the restore state on a recording.
+        /// Updates the retention records on a recording.
         /// </summary>
         /// <remarks>
-        /// It is not currently possible to force something into long term storage, so this can only be used to request a restoration. In addition, a restoration takes some time, and so it is not guaranteed to be completed for several hours.
+        /// Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. Use of the query parameter &#39;restoreDays&#39; is deprecated and will be removed in the next major version release. If &#39;restoreDays&#39; is provided, no attempt at updating other retention data will be made. To migrate to the new usage, issuing a request with restoreDays=10 would instead set the archiveDate&#39;s time stamp in the PUT body to 10 days in the future.
         /// </remarks>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
-        /// <param name="restoreDays">The number of days the recording will be available before it is re-archived.</param>
+        /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task ConversationsConversationidRecordingsRecordingidPutAsync (string conversationId, string recordingId, Recording body, int? restoreDays = null);
 
         /// <summary>
-        /// Sets the restore state on a recording.
+        /// Updates the retention records on a recording.
         /// </summary>
         /// <remarks>
-        /// It is not currently possible to force something into long term storage, so this can only be used to request a restoration. In addition, a restoration takes some time, and so it is not guaranteed to be completed for several hours.
+        /// Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. Use of the query parameter &#39;restoreDays&#39; is deprecated and will be removed in the next major version release. If &#39;restoreDays&#39; is provided, no attempt at updating other retention data will be made. To migrate to the new usage, issuing a request with restoreDays=10 would instead set the archiveDate&#39;s time stamp in the PUT body to 10 days in the future.
         /// </remarks>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
-        /// <param name="restoreDays">The number of days the recording will be available before it is re-archived.</param>
+        /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ConversationsConversationidRecordingsRecordingidPutAsyncWithHttpInfo (string conversationId, string recordingId, Recording body, int? restoreDays = null);
-        
-        /// <summary>
-        /// Updates the recording retention durations
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <param name="conversationId">Conversation ID</param>
-        /// <param name="recordingId">Recording ID</param>
-        /// <param name="body">recording</param>
-        /// <returns>Recording</returns>
-        Recording ConversationsConversationidRecordingsRecordingidPatch (string conversationId, string recordingId, Recording body = null);
-  
-        /// <summary>
-        /// Updates the recording retention durations
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <param name="conversationId">Conversation ID</param>
-        /// <param name="recordingId">Recording ID</param>
-        /// <param name="body">recording</param>
-        /// <returns>ApiResponse of Recording</returns>
-        ApiResponse<Recording> ConversationsConversationidRecordingsRecordingidPatchWithHttpInfo (string conversationId, string recordingId, Recording body = null);
-
-        /// <summary>
-        /// Updates the recording retention durations
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <param name="conversationId">Conversation ID</param>
-        /// <param name="recordingId">Recording ID</param>
-        /// <param name="body">recording</param>
-        /// <returns>Task of Recording</returns>
-        System.Threading.Tasks.Task<Recording> ConversationsConversationidRecordingsRecordingidPatchAsync (string conversationId, string recordingId, Recording body = null);
-
-        /// <summary>
-        /// Updates the recording retention durations
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <param name="conversationId">Conversation ID</param>
-        /// <param name="recordingId">Recording ID</param>
-        /// <param name="body">recording</param>
-        /// <returns>Task of ApiResponse (Recording)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Recording>> ConversationsConversationidRecordingsRecordingidPatchAsyncWithHttpInfo (string conversationId, string recordingId, Recording body = null);
         
         /// <summary>
         /// Get annotations for recording
@@ -479,8 +431,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="agentUserId">user id of agent requested</param>
         /// <param name="evaluatorUserId">user id of the evaluator</param>
         /// <param name="name">name</param>
+        /// <param name="group">group id</param>
         /// <returns>AgentActivityEntityListing</returns>
-        AgentActivityEntityListing QualityAgentsActivityGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null);
+        AgentActivityEntityListing QualityAgentsActivityGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
   
         /// <summary>
         /// Gets a list of Agent Activities
@@ -497,8 +450,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="agentUserId">user id of agent requested</param>
         /// <param name="evaluatorUserId">user id of the evaluator</param>
         /// <param name="name">name</param>
+        /// <param name="group">group id</param>
         /// <returns>ApiResponse of AgentActivityEntityListing</returns>
-        ApiResponse<AgentActivityEntityListing> QualityAgentsActivityGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null);
+        ApiResponse<AgentActivityEntityListing> QualityAgentsActivityGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
 
         /// <summary>
         /// Gets a list of Agent Activities
@@ -515,8 +469,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="agentUserId">user id of agent requested</param>
         /// <param name="evaluatorUserId">user id of the evaluator</param>
         /// <param name="name">name</param>
+        /// <param name="group">group id</param>
         /// <returns>Task of AgentActivityEntityListing</returns>
-        System.Threading.Tasks.Task<AgentActivityEntityListing> QualityAgentsActivityGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null);
+        System.Threading.Tasks.Task<AgentActivityEntityListing> QualityAgentsActivityGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
 
         /// <summary>
         /// Gets a list of Agent Activities
@@ -533,8 +488,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="agentUserId">user id of agent requested</param>
         /// <param name="evaluatorUserId">user id of the evaluator</param>
         /// <param name="name">name</param>
+        /// <param name="group">group id</param>
         /// <returns>Task of ApiResponse (AgentActivityEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> QualityAgentsActivityGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> QualityAgentsActivityGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
         
         /// <summary>
         /// Get the list of calibrations
@@ -1234,8 +1190,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param>
         /// <param name="name">Evaluator name</param>
         /// <param name="permission">permission strings</param>
+        /// <param name="group">group id</param>
         /// <returns>EvaluatorActivityEntityListing</returns>
-        EvaluatorActivityEntityListing QualityEvaluatorsActivityGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null);
+        EvaluatorActivityEntityListing QualityEvaluatorsActivityGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null);
   
         /// <summary>
         /// Get an evaluator activity
@@ -1251,8 +1208,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param>
         /// <param name="name">Evaluator name</param>
         /// <param name="permission">permission strings</param>
+        /// <param name="group">group id</param>
         /// <returns>ApiResponse of EvaluatorActivityEntityListing</returns>
-        ApiResponse<EvaluatorActivityEntityListing> QualityEvaluatorsActivityGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null);
+        ApiResponse<EvaluatorActivityEntityListing> QualityEvaluatorsActivityGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null);
 
         /// <summary>
         /// Get an evaluator activity
@@ -1268,8 +1226,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param>
         /// <param name="name">Evaluator name</param>
         /// <param name="permission">permission strings</param>
+        /// <param name="group">group id</param>
         /// <returns>Task of EvaluatorActivityEntityListing</returns>
-        System.Threading.Tasks.Task<EvaluatorActivityEntityListing> QualityEvaluatorsActivityGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null);
+        System.Threading.Tasks.Task<EvaluatorActivityEntityListing> QualityEvaluatorsActivityGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null);
 
         /// <summary>
         /// Get an evaluator activity
@@ -1285,8 +1244,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param>
         /// <param name="name">Evaluator name</param>
         /// <param name="permission">permission strings</param>
+        /// <param name="group">group id</param>
         /// <returns>Task of ApiResponse (EvaluatorActivityEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluatorActivityEntityListing>> QualityEvaluatorsActivityGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluatorActivityEntityListing>> QualityEvaluatorsActivityGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null);
         
     }
   
@@ -1716,12 +1676,12 @@ namespace ININ.PureCloudApi.Api
         }
         
         /// <summary>
-        /// Sets the restore state on a recording. It is not currently possible to force something into long term storage, so this can only be used to request a restoration. In addition, a restoration takes some time, and so it is not guaranteed to be completed for several hours.
+        /// Updates the retention records on a recording. Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. Use of the query parameter &#39;restoreDays&#39; is deprecated and will be removed in the next major version release. If &#39;restoreDays&#39; is provided, no attempt at updating other retention data will be made. To migrate to the new usage, issuing a request with restoreDays=10 would instead set the archiveDate&#39;s time stamp in the PUT body to 10 days in the future.
         /// </summary>
         /// <param name="conversationId">Conversation ID</param> 
         /// <param name="recordingId">Recording ID</param> 
         /// <param name="body">recording</param> 
-        /// <param name="restoreDays">The number of days the recording will be available before it is re-archived.</param> 
+        /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param> 
         /// <returns></returns>
         public void ConversationsConversationidRecordingsRecordingidPut (string conversationId, string recordingId, Recording body, int? restoreDays = null)
         {
@@ -1729,12 +1689,12 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Sets the restore state on a recording. It is not currently possible to force something into long term storage, so this can only be used to request a restoration. In addition, a restoration takes some time, and so it is not guaranteed to be completed for several hours.
+        /// Updates the retention records on a recording. Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. Use of the query parameter &#39;restoreDays&#39; is deprecated and will be removed in the next major version release. If &#39;restoreDays&#39; is provided, no attempt at updating other retention data will be made. To migrate to the new usage, issuing a request with restoreDays=10 would instead set the archiveDate&#39;s time stamp in the PUT body to 10 days in the future.
         /// </summary>
         /// <param name="conversationId">Conversation ID</param> 
         /// <param name="recordingId">Recording ID</param> 
         /// <param name="body">recording</param> 
-        /// <param name="restoreDays">The number of days the recording will be available before it is re-archived.</param> 
+        /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param> 
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> ConversationsConversationidRecordingsRecordingidPutWithHttpInfo (string conversationId, string recordingId, Recording body, int? restoreDays = null)
         {
@@ -1806,12 +1766,12 @@ namespace ININ.PureCloudApi.Api
         }
     
         /// <summary>
-        /// Sets the restore state on a recording. It is not currently possible to force something into long term storage, so this can only be used to request a restoration. In addition, a restoration takes some time, and so it is not guaranteed to be completed for several hours.
+        /// Updates the retention records on a recording. Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. Use of the query parameter &#39;restoreDays&#39; is deprecated and will be removed in the next major version release. If &#39;restoreDays&#39; is provided, no attempt at updating other retention data will be made. To migrate to the new usage, issuing a request with restoreDays=10 would instead set the archiveDate&#39;s time stamp in the PUT body to 10 days in the future.
         /// </summary>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
-        /// <param name="restoreDays">The number of days the recording will be available before it is re-archived.</param>
+        /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task ConversationsConversationidRecordingsRecordingidPutAsync (string conversationId, string recordingId, Recording body, int? restoreDays = null)
         {
@@ -1820,12 +1780,12 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Sets the restore state on a recording. It is not currently possible to force something into long term storage, so this can only be used to request a restoration. In addition, a restoration takes some time, and so it is not guaranteed to be completed for several hours.
+        /// Updates the retention records on a recording. Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. Use of the query parameter &#39;restoreDays&#39; is deprecated and will be removed in the next major version release. If &#39;restoreDays&#39; is provided, no attempt at updating other retention data will be made. To migrate to the new usage, issuing a request with restoreDays=10 would instead set the archiveDate&#39;s time stamp in the PUT body to 10 days in the future.
         /// </summary>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
-        /// <param name="restoreDays">The number of days the recording will be available before it is re-archived.</param>
+        /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> ConversationsConversationidRecordingsRecordingidPutAsyncWithHttpInfo (string conversationId, string recordingId, Recording body, int? restoreDays = null)
         {
@@ -1891,175 +1851,6 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Object>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
-        }
-        
-        /// <summary>
-        /// Updates the recording retention durations 
-        /// </summary>
-        /// <param name="conversationId">Conversation ID</param> 
-        /// <param name="recordingId">Recording ID</param> 
-        /// <param name="body">recording</param> 
-        /// <returns>Recording</returns>
-        public Recording ConversationsConversationidRecordingsRecordingidPatch (string conversationId, string recordingId, Recording body = null)
-        {
-             ApiResponse<Recording> response = ConversationsConversationidRecordingsRecordingidPatchWithHttpInfo(conversationId, recordingId, body);
-             return response.Data;
-        }
-
-        /// <summary>
-        /// Updates the recording retention durations 
-        /// </summary>
-        /// <param name="conversationId">Conversation ID</param> 
-        /// <param name="recordingId">Recording ID</param> 
-        /// <param name="body">recording</param> 
-        /// <returns>ApiResponse of Recording</returns>
-        public ApiResponse< Recording > ConversationsConversationidRecordingsRecordingidPatchWithHttpInfo (string conversationId, string recordingId, Recording body = null)
-        {
-            
-            // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidRecordingsRecordingidPatch");
-            
-            // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling ConversationsConversationidRecordingsRecordingidPatch");
-            
-    
-            var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
-
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
-                "application/json"
-            };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            if (conversationId != null) pathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
-            if (recordingId != null) pathParams.Add("recordingId", Configuration.ApiClient.ParameterToString(recordingId)); // path parameter
-            
-            
-            
-            
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
-
-            
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-    
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
-
-            int statusCode = (int) response.StatusCode;
-    
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidPatch: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidPatch: " + response.ErrorMessage, response.ErrorMessage);
-    
-            return new ApiResponse<Recording>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Recording) Configuration.ApiClient.Deserialize(response, typeof(Recording)));
-            
-        }
-    
-        /// <summary>
-        /// Updates the recording retention durations 
-        /// </summary>
-        /// <param name="conversationId">Conversation ID</param>
-        /// <param name="recordingId">Recording ID</param>
-        /// <param name="body">recording</param>
-        /// <returns>Task of Recording</returns>
-        public async System.Threading.Tasks.Task<Recording> ConversationsConversationidRecordingsRecordingidPatchAsync (string conversationId, string recordingId, Recording body = null)
-        {
-             ApiResponse<Recording> response = await ConversationsConversationidRecordingsRecordingidPatchAsyncWithHttpInfo(conversationId, recordingId, body);
-             return response.Data;
-
-        }
-
-        /// <summary>
-        /// Updates the recording retention durations 
-        /// </summary>
-        /// <param name="conversationId">Conversation ID</param>
-        /// <param name="recordingId">Recording ID</param>
-        /// <param name="body">recording</param>
-        /// <returns>Task of ApiResponse (Recording)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Recording>> ConversationsConversationidRecordingsRecordingidPatchAsyncWithHttpInfo (string conversationId, string recordingId, Recording body = null)
-        {
-            // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidRecordingsRecordingidPatch");
-            // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling ConversationsConversationidRecordingsRecordingidPatch");
-            
-    
-            var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
-
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
-                "application/json"
-            };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            if (conversationId != null) pathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
-            if (recordingId != null) pathParams.Add("recordingId", Configuration.ApiClient.ParameterToString(recordingId)); // path parameter
-            
-            
-            
-            
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
-
-            
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
-
-            int statusCode = (int) response.StatusCode;
- 
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidPatch: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidPatch: " + response.ErrorMessage, response.ErrorMessage);
-
-            return new ApiResponse<Recording>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Recording) Configuration.ApiClient.Deserialize(response, typeof(Recording)));
-            
         }
         
         /// <summary>
@@ -2932,10 +2723,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="agentUserId">user id of agent requested</param> 
         /// <param name="evaluatorUserId">user id of the evaluator</param> 
         /// <param name="name">name</param> 
+        /// <param name="group">group id</param> 
         /// <returns>AgentActivityEntityListing</returns>
-        public AgentActivityEntityListing QualityAgentsActivityGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null)
+        public AgentActivityEntityListing QualityAgentsActivityGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
         {
-             ApiResponse<AgentActivityEntityListing> response = QualityAgentsActivityGetWithHttpInfo(pageSize, pageNumber, sortBy, expand, startTime, endTime, agentUserId, evaluatorUserId, name);
+             ApiResponse<AgentActivityEntityListing> response = QualityAgentsActivityGetWithHttpInfo(pageSize, pageNumber, sortBy, expand, startTime, endTime, agentUserId, evaluatorUserId, name, group);
              return response.Data;
         }
 
@@ -2951,8 +2743,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="agentUserId">user id of agent requested</param> 
         /// <param name="evaluatorUserId">user id of the evaluator</param> 
         /// <param name="name">name</param> 
+        /// <param name="group">group id</param> 
         /// <returns>ApiResponse of AgentActivityEntityListing</returns>
-        public ApiResponse< AgentActivityEntityListing > QualityAgentsActivityGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null)
+        public ApiResponse< AgentActivityEntityListing > QualityAgentsActivityGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
         {
             
     
@@ -2986,6 +2779,7 @@ namespace ININ.PureCloudApi.Api
             if (agentUserId != null) queryParams.Add("agentUserId", Configuration.ApiClient.ParameterToString(agentUserId)); // query parameter
             if (evaluatorUserId != null) queryParams.Add("evaluatorUserId", Configuration.ApiClient.ParameterToString(evaluatorUserId)); // query parameter
             if (name != null) queryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (group != null) queryParams.Add("group", Configuration.ApiClient.ParameterToString(group)); // query parameter
             
             
             
@@ -3029,10 +2823,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="agentUserId">user id of agent requested</param>
         /// <param name="evaluatorUserId">user id of the evaluator</param>
         /// <param name="name">name</param>
+        /// <param name="group">group id</param>
         /// <returns>Task of AgentActivityEntityListing</returns>
-        public async System.Threading.Tasks.Task<AgentActivityEntityListing> QualityAgentsActivityGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null)
+        public async System.Threading.Tasks.Task<AgentActivityEntityListing> QualityAgentsActivityGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
         {
-             ApiResponse<AgentActivityEntityListing> response = await QualityAgentsActivityGetAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, startTime, endTime, agentUserId, evaluatorUserId, name);
+             ApiResponse<AgentActivityEntityListing> response = await QualityAgentsActivityGetAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, startTime, endTime, agentUserId, evaluatorUserId, name, group);
              return response.Data;
 
         }
@@ -3049,8 +2844,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="agentUserId">user id of agent requested</param>
         /// <param name="evaluatorUserId">user id of the evaluator</param>
         /// <param name="name">name</param>
+        /// <param name="group">group id</param>
         /// <returns>Task of ApiResponse (AgentActivityEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> QualityAgentsActivityGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> QualityAgentsActivityGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
         {
             
     
@@ -3084,6 +2880,7 @@ namespace ININ.PureCloudApi.Api
             if (agentUserId != null) queryParams.Add("agentUserId", Configuration.ApiClient.ParameterToString(agentUserId)); // query parameter
             if (evaluatorUserId != null) queryParams.Add("evaluatorUserId", Configuration.ApiClient.ParameterToString(evaluatorUserId)); // query parameter
             if (name != null) queryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (group != null) queryParams.Add("group", Configuration.ApiClient.ParameterToString(group)); // query parameter
             
             
             
@@ -5338,10 +5135,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param> 
         /// <param name="name">Evaluator name</param> 
         /// <param name="permission">permission strings</param> 
+        /// <param name="group">group id</param> 
         /// <returns>EvaluatorActivityEntityListing</returns>
-        public EvaluatorActivityEntityListing QualityEvaluatorsActivityGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null)
+        public EvaluatorActivityEntityListing QualityEvaluatorsActivityGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null)
         {
-             ApiResponse<EvaluatorActivityEntityListing> response = QualityEvaluatorsActivityGetWithHttpInfo(pageSize, pageNumber, sortBy, expand, startTime, endTime, name, permission);
+             ApiResponse<EvaluatorActivityEntityListing> response = QualityEvaluatorsActivityGetWithHttpInfo(pageSize, pageNumber, sortBy, expand, startTime, endTime, name, permission, group);
              return response.Data;
         }
 
@@ -5356,8 +5154,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param> 
         /// <param name="name">Evaluator name</param> 
         /// <param name="permission">permission strings</param> 
+        /// <param name="group">group id</param> 
         /// <returns>ApiResponse of EvaluatorActivityEntityListing</returns>
-        public ApiResponse< EvaluatorActivityEntityListing > QualityEvaluatorsActivityGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null)
+        public ApiResponse< EvaluatorActivityEntityListing > QualityEvaluatorsActivityGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null)
         {
             
     
@@ -5390,6 +5189,7 @@ namespace ININ.PureCloudApi.Api
             if (endTime != null) queryParams.Add("endTime", Configuration.ApiClient.ParameterToString(endTime)); // query parameter
             if (name != null) queryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             if (permission != null) queryParams.Add("permission", Configuration.ApiClient.ParameterToString(permission)); // query parameter
+            if (group != null) queryParams.Add("group", Configuration.ApiClient.ParameterToString(group)); // query parameter
             
             
             
@@ -5432,10 +5232,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param>
         /// <param name="name">Evaluator name</param>
         /// <param name="permission">permission strings</param>
+        /// <param name="group">group id</param>
         /// <returns>Task of EvaluatorActivityEntityListing</returns>
-        public async System.Threading.Tasks.Task<EvaluatorActivityEntityListing> QualityEvaluatorsActivityGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null)
+        public async System.Threading.Tasks.Task<EvaluatorActivityEntityListing> QualityEvaluatorsActivityGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null)
         {
-             ApiResponse<EvaluatorActivityEntityListing> response = await QualityEvaluatorsActivityGetAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, startTime, endTime, name, permission);
+             ApiResponse<EvaluatorActivityEntityListing> response = await QualityEvaluatorsActivityGetAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, startTime, endTime, name, permission, group);
              return response.Data;
 
         }
@@ -5451,8 +5252,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endTime">The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param>
         /// <param name="name">Evaluator name</param>
         /// <param name="permission">permission strings</param>
+        /// <param name="group">group id</param>
         /// <returns>Task of ApiResponse (EvaluatorActivityEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluatorActivityEntityListing>> QualityEvaluatorsActivityGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluatorActivityEntityListing>> QualityEvaluatorsActivityGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null)
         {
             
     
@@ -5485,6 +5287,7 @@ namespace ININ.PureCloudApi.Api
             if (endTime != null) queryParams.Add("endTime", Configuration.ApiClient.ParameterToString(endTime)); // query parameter
             if (name != null) queryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             if (permission != null) queryParams.Add("permission", Configuration.ApiClient.ParameterToString(permission)); // query parameter
+            if (group != null) queryParams.Add("group", Configuration.ApiClient.ParameterToString(group)); // query parameter
             
             
             

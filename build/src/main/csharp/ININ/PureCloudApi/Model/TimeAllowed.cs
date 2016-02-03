@@ -23,6 +23,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         public TimeAllowed()
         {
+            this.Empty = false;
             
         }
 
@@ -41,6 +42,13 @@ namespace ININ.PureCloudApi.Model
         public string TimeZoneId { get; set; }
   
         
+        /// <summary>
+        /// Gets or Sets Empty
+        /// </summary>
+        [DataMember(Name="empty", EmitDefaultValue=false)]
+        public bool? Empty { get; set; }
+  
+        
   
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,6 +60,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class TimeAllowed {\n");
             sb.Append("  TimeSlots: ").Append(TimeSlots).Append("\n");
             sb.Append("  TimeZoneId: ").Append(TimeZoneId).Append("\n");
+            sb.Append("  Empty: ").Append(Empty).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -98,6 +107,11 @@ namespace ININ.PureCloudApi.Model
                     this.TimeZoneId == other.TimeZoneId ||
                     this.TimeZoneId != null &&
                     this.TimeZoneId.Equals(other.TimeZoneId)
+                ) && 
+                (
+                    this.Empty == other.Empty ||
+                    this.Empty != null &&
+                    this.Empty.Equals(other.Empty)
                 );
         }
 
@@ -118,6 +132,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.TimeZoneId != null)
                     hash = hash * 57 + this.TimeZoneId.GetHashCode();
+                
+                if (this.Empty != null)
+                    hash = hash * 57 + this.Empty.GetHashCode();
                 
                 return hash;
             }

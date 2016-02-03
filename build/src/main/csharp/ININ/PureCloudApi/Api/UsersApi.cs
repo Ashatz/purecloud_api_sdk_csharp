@@ -385,6 +385,98 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<CallForwarding>> UsersUseridCallforwardingPatchAsyncWithHttpInfo (string userId, CallForwarding body = null);
         
         /// <summary>
+        /// Get a user&#39;s Geolocation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="userId">user Id</param>
+        /// <param name="clientId">client Id</param>
+        /// <returns>Geolocation</returns>
+        Geolocation UsersUseridGeolocationsClientidGet (string userId, string clientId);
+  
+        /// <summary>
+        /// Get a user&#39;s Geolocation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="userId">user Id</param>
+        /// <param name="clientId">client Id</param>
+        /// <returns>ApiResponse of Geolocation</returns>
+        ApiResponse<Geolocation> UsersUseridGeolocationsClientidGetWithHttpInfo (string userId, string clientId);
+
+        /// <summary>
+        /// Get a user&#39;s Geolocation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="userId">user Id</param>
+        /// <param name="clientId">client Id</param>
+        /// <returns>Task of Geolocation</returns>
+        System.Threading.Tasks.Task<Geolocation> UsersUseridGeolocationsClientidGetAsync (string userId, string clientId);
+
+        /// <summary>
+        /// Get a user&#39;s Geolocation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="userId">user Id</param>
+        /// <param name="clientId">client Id</param>
+        /// <returns>Task of ApiResponse (Geolocation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Geolocation>> UsersUseridGeolocationsClientidGetAsyncWithHttpInfo (string userId, string clientId);
+        
+        /// <summary>
+        /// Patch a user&#39;s Geolocation
+        /// </summary>
+        /// <remarks>
+        /// The geolocation object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the client as the user&#39;s primary geolocation source.  Option 2: Provide the &#39;latitude&#39; and &#39;longitude&#39; values.  This will enqueue an asynchronous update of the &#39;city&#39;, &#39;region&#39;, and &#39;country&#39;, generating a notification. A subsequent GET operation will include the new values for &#39;city&#39;, &#39;region&#39; and &#39;country&#39;.  Option 3:  Provide the &#39;city&#39;, &#39;region&#39;, &#39;country&#39; values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
+        /// </remarks>
+        /// <param name="userId">user Id</param>
+        /// <param name="clientId">client Id</param>
+        /// <param name="body"></param>
+        /// <returns>Geolocation</returns>
+        Geolocation UsersUseridGeolocationsClientidPatch (string userId, string clientId, Geolocation body = null);
+  
+        /// <summary>
+        /// Patch a user&#39;s Geolocation
+        /// </summary>
+        /// <remarks>
+        /// The geolocation object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the client as the user&#39;s primary geolocation source.  Option 2: Provide the &#39;latitude&#39; and &#39;longitude&#39; values.  This will enqueue an asynchronous update of the &#39;city&#39;, &#39;region&#39;, and &#39;country&#39;, generating a notification. A subsequent GET operation will include the new values for &#39;city&#39;, &#39;region&#39; and &#39;country&#39;.  Option 3:  Provide the &#39;city&#39;, &#39;region&#39;, &#39;country&#39; values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
+        /// </remarks>
+        /// <param name="userId">user Id</param>
+        /// <param name="clientId">client Id</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of Geolocation</returns>
+        ApiResponse<Geolocation> UsersUseridGeolocationsClientidPatchWithHttpInfo (string userId, string clientId, Geolocation body = null);
+
+        /// <summary>
+        /// Patch a user&#39;s Geolocation
+        /// </summary>
+        /// <remarks>
+        /// The geolocation object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the client as the user&#39;s primary geolocation source.  Option 2: Provide the &#39;latitude&#39; and &#39;longitude&#39; values.  This will enqueue an asynchronous update of the &#39;city&#39;, &#39;region&#39;, and &#39;country&#39;, generating a notification. A subsequent GET operation will include the new values for &#39;city&#39;, &#39;region&#39; and &#39;country&#39;.  Option 3:  Provide the &#39;city&#39;, &#39;region&#39;, &#39;country&#39; values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
+        /// </remarks>
+        /// <param name="userId">user Id</param>
+        /// <param name="clientId">client Id</param>
+        /// <param name="body"></param>
+        /// <returns>Task of Geolocation</returns>
+        System.Threading.Tasks.Task<Geolocation> UsersUseridGeolocationsClientidPatchAsync (string userId, string clientId, Geolocation body = null);
+
+        /// <summary>
+        /// Patch a user&#39;s Geolocation
+        /// </summary>
+        /// <remarks>
+        /// The geolocation object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the client as the user&#39;s primary geolocation source.  Option 2: Provide the &#39;latitude&#39; and &#39;longitude&#39; values.  This will enqueue an asynchronous update of the &#39;city&#39;, &#39;region&#39;, and &#39;country&#39;, generating a notification. A subsequent GET operation will include the new values for &#39;city&#39;, &#39;region&#39; and &#39;country&#39;.  Option 3:  Provide the &#39;city&#39;, &#39;region&#39;, &#39;country&#39; values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
+        /// </remarks>
+        /// <param name="userId">user Id</param>
+        /// <param name="clientId">client Id</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (Geolocation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Geolocation>> UsersUseridGeolocationsClientidPatchAsyncWithHttpInfo (string userId, string clientId, Geolocation body = null);
+        
+        /// <summary>
         /// Get a OutOfOffice
         /// </summary>
         /// <remarks>
@@ -2209,6 +2301,338 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<CallForwarding>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CallForwarding) Configuration.ApiClient.Deserialize(response, typeof(CallForwarding)));
+            
+        }
+        
+        /// <summary>
+        /// Get a user&#39;s Geolocation 
+        /// </summary>
+        /// <param name="userId">user Id</param> 
+        /// <param name="clientId">client Id</param> 
+        /// <returns>Geolocation</returns>
+        public Geolocation UsersUseridGeolocationsClientidGet (string userId, string clientId)
+        {
+             ApiResponse<Geolocation> response = UsersUseridGeolocationsClientidGetWithHttpInfo(userId, clientId);
+             return response.Data;
+        }
+
+        /// <summary>
+        /// Get a user&#39;s Geolocation 
+        /// </summary>
+        /// <param name="userId">user Id</param> 
+        /// <param name="clientId">client Id</param> 
+        /// <returns>ApiResponse of Geolocation</returns>
+        public ApiResponse< Geolocation > UsersUseridGeolocationsClientidGetWithHttpInfo (string userId, string clientId)
+        {
+            
+            // verify the required parameter 'userId' is set
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling UsersUseridGeolocationsClientidGet");
+            
+            // verify the required parameter 'clientId' is set
+            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling UsersUseridGeolocationsClientidGet");
+            
+    
+            var path_ = "/api/v1/users/{userId}/geolocations/{clientId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (userId != null) pathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (clientId != null) pathParams.Add("clientId", Configuration.ApiClient.ParameterToString(clientId)); // path parameter
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling UsersUseridGeolocationsClientidGet: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling UsersUseridGeolocationsClientidGet: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<Geolocation>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Geolocation) Configuration.ApiClient.Deserialize(response, typeof(Geolocation)));
+            
+        }
+    
+        /// <summary>
+        /// Get a user&#39;s Geolocation 
+        /// </summary>
+        /// <param name="userId">user Id</param>
+        /// <param name="clientId">client Id</param>
+        /// <returns>Task of Geolocation</returns>
+        public async System.Threading.Tasks.Task<Geolocation> UsersUseridGeolocationsClientidGetAsync (string userId, string clientId)
+        {
+             ApiResponse<Geolocation> response = await UsersUseridGeolocationsClientidGetAsyncWithHttpInfo(userId, clientId);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Get a user&#39;s Geolocation 
+        /// </summary>
+        /// <param name="userId">user Id</param>
+        /// <param name="clientId">client Id</param>
+        /// <returns>Task of ApiResponse (Geolocation)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Geolocation>> UsersUseridGeolocationsClientidGetAsyncWithHttpInfo (string userId, string clientId)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling UsersUseridGeolocationsClientidGet");
+            // verify the required parameter 'clientId' is set
+            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling UsersUseridGeolocationsClientidGet");
+            
+    
+            var path_ = "/api/v1/users/{userId}/geolocations/{clientId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (userId != null) pathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (clientId != null) pathParams.Add("clientId", Configuration.ApiClient.ParameterToString(clientId)); // path parameter
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling UsersUseridGeolocationsClientidGet: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling UsersUseridGeolocationsClientidGet: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<Geolocation>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Geolocation) Configuration.ApiClient.Deserialize(response, typeof(Geolocation)));
+            
+        }
+        
+        /// <summary>
+        /// Patch a user&#39;s Geolocation The geolocation object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the client as the user&#39;s primary geolocation source.  Option 2: Provide the &#39;latitude&#39; and &#39;longitude&#39; values.  This will enqueue an asynchronous update of the &#39;city&#39;, &#39;region&#39;, and &#39;country&#39;, generating a notification. A subsequent GET operation will include the new values for &#39;city&#39;, &#39;region&#39; and &#39;country&#39;.  Option 3:  Provide the &#39;city&#39;, &#39;region&#39;, &#39;country&#39; values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
+        /// </summary>
+        /// <param name="userId">user Id</param> 
+        /// <param name="clientId">client Id</param> 
+        /// <param name="body"></param> 
+        /// <returns>Geolocation</returns>
+        public Geolocation UsersUseridGeolocationsClientidPatch (string userId, string clientId, Geolocation body = null)
+        {
+             ApiResponse<Geolocation> response = UsersUseridGeolocationsClientidPatchWithHttpInfo(userId, clientId, body);
+             return response.Data;
+        }
+
+        /// <summary>
+        /// Patch a user&#39;s Geolocation The geolocation object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the client as the user&#39;s primary geolocation source.  Option 2: Provide the &#39;latitude&#39; and &#39;longitude&#39; values.  This will enqueue an asynchronous update of the &#39;city&#39;, &#39;region&#39;, and &#39;country&#39;, generating a notification. A subsequent GET operation will include the new values for &#39;city&#39;, &#39;region&#39; and &#39;country&#39;.  Option 3:  Provide the &#39;city&#39;, &#39;region&#39;, &#39;country&#39; values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
+        /// </summary>
+        /// <param name="userId">user Id</param> 
+        /// <param name="clientId">client Id</param> 
+        /// <param name="body"></param> 
+        /// <returns>ApiResponse of Geolocation</returns>
+        public ApiResponse< Geolocation > UsersUseridGeolocationsClientidPatchWithHttpInfo (string userId, string clientId, Geolocation body = null)
+        {
+            
+            // verify the required parameter 'userId' is set
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling UsersUseridGeolocationsClientidPatch");
+            
+            // verify the required parameter 'clientId' is set
+            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling UsersUseridGeolocationsClientidPatch");
+            
+    
+            var path_ = "/api/v1/users/{userId}/geolocations/{clientId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (userId != null) pathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (clientId != null) pathParams.Add("clientId", Configuration.ApiClient.ParameterToString(clientId)); // path parameter
+            
+            
+            
+            
+            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling UsersUseridGeolocationsClientidPatch: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling UsersUseridGeolocationsClientidPatch: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<Geolocation>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Geolocation) Configuration.ApiClient.Deserialize(response, typeof(Geolocation)));
+            
+        }
+    
+        /// <summary>
+        /// Patch a user&#39;s Geolocation The geolocation object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the client as the user&#39;s primary geolocation source.  Option 2: Provide the &#39;latitude&#39; and &#39;longitude&#39; values.  This will enqueue an asynchronous update of the &#39;city&#39;, &#39;region&#39;, and &#39;country&#39;, generating a notification. A subsequent GET operation will include the new values for &#39;city&#39;, &#39;region&#39; and &#39;country&#39;.  Option 3:  Provide the &#39;city&#39;, &#39;region&#39;, &#39;country&#39; values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
+        /// </summary>
+        /// <param name="userId">user Id</param>
+        /// <param name="clientId">client Id</param>
+        /// <param name="body"></param>
+        /// <returns>Task of Geolocation</returns>
+        public async System.Threading.Tasks.Task<Geolocation> UsersUseridGeolocationsClientidPatchAsync (string userId, string clientId, Geolocation body = null)
+        {
+             ApiResponse<Geolocation> response = await UsersUseridGeolocationsClientidPatchAsyncWithHttpInfo(userId, clientId, body);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Patch a user&#39;s Geolocation The geolocation object can be patched one of three ways. Option 1: Set the &#39;primary&#39; property to true. This will set the client as the user&#39;s primary geolocation source.  Option 2: Provide the &#39;latitude&#39; and &#39;longitude&#39; values.  This will enqueue an asynchronous update of the &#39;city&#39;, &#39;region&#39;, and &#39;country&#39;, generating a notification. A subsequent GET operation will include the new values for &#39;city&#39;, &#39;region&#39; and &#39;country&#39;.  Option 3:  Provide the &#39;city&#39;, &#39;region&#39;, &#39;country&#39; values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
+        /// </summary>
+        /// <param name="userId">user Id</param>
+        /// <param name="clientId">client Id</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (Geolocation)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Geolocation>> UsersUseridGeolocationsClientidPatchAsyncWithHttpInfo (string userId, string clientId, Geolocation body = null)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling UsersUseridGeolocationsClientidPatch");
+            // verify the required parameter 'clientId' is set
+            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling UsersUseridGeolocationsClientidPatch");
+            
+    
+            var path_ = "/api/v1/users/{userId}/geolocations/{clientId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (userId != null) pathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (clientId != null) pathParams.Add("clientId", Configuration.ApiClient.ParameterToString(clientId)); // path parameter
+            
+            
+            
+            
+            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling UsersUseridGeolocationsClientidPatch: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling UsersUseridGeolocationsClientidPatch: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<Geolocation>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Geolocation) Configuration.ApiClient.Deserialize(response, typeof(Geolocation)));
             
         }
         

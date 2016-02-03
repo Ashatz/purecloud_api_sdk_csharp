@@ -69,6 +69,20 @@ namespace ININ.PureCloudApi.Model
         public int? UsersOnQueueWithStation { get; set; }
   
         
+        /// <summary>
+        /// Gets or Sets UsersOnACampaignCall
+        /// </summary>
+        [DataMember(Name="usersOnACampaignCall", EmitDefaultValue=false)]
+        public int? UsersOnACampaignCall { get; set; }
+  
+        
+        /// <summary>
+        /// Gets or Sets UsersOnANonCampaignCall
+        /// </summary>
+        [DataMember(Name="usersOnANonCampaignCall", EmitDefaultValue=false)]
+        public int? UsersOnANonCampaignCall { get; set; }
+  
+        
   
         /// <summary>
         /// Returns the string presentation of the object
@@ -84,6 +98,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  UsersOnQueue: ").Append(UsersOnQueue).Append("\n");
             sb.Append("  UsersNotUtilized: ").Append(UsersNotUtilized).Append("\n");
             sb.Append("  UsersOnQueueWithStation: ").Append(UsersOnQueueWithStation).Append("\n");
+            sb.Append("  UsersOnACampaignCall: ").Append(UsersOnACampaignCall).Append("\n");
+            sb.Append("  UsersOnANonCampaignCall: ").Append(UsersOnANonCampaignCall).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -150,6 +166,16 @@ namespace ININ.PureCloudApi.Model
                     this.UsersOnQueueWithStation == other.UsersOnQueueWithStation ||
                     this.UsersOnQueueWithStation != null &&
                     this.UsersOnQueueWithStation.Equals(other.UsersOnQueueWithStation)
+                ) && 
+                (
+                    this.UsersOnACampaignCall == other.UsersOnACampaignCall ||
+                    this.UsersOnACampaignCall != null &&
+                    this.UsersOnACampaignCall.Equals(other.UsersOnACampaignCall)
+                ) && 
+                (
+                    this.UsersOnANonCampaignCall == other.UsersOnANonCampaignCall ||
+                    this.UsersOnANonCampaignCall != null &&
+                    this.UsersOnANonCampaignCall.Equals(other.UsersOnANonCampaignCall)
                 );
         }
 
@@ -182,6 +208,12 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.UsersOnQueueWithStation != null)
                     hash = hash * 57 + this.UsersOnQueueWithStation.GetHashCode();
+                
+                if (this.UsersOnACampaignCall != null)
+                    hash = hash * 57 + this.UsersOnACampaignCall.GetHashCode();
+                
+                if (this.UsersOnANonCampaignCall != null)
+                    hash = hash * 57 + this.UsersOnANonCampaignCall.GetHashCode();
                 
                 return hash;
             }

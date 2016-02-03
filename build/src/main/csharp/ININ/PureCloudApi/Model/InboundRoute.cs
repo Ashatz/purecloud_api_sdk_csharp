@@ -99,14 +99,6 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
-        /// The maximum spam score for email that will be routed.
-        /// </summary>
-        /// <value>The maximum spam score for email that will be routed.</value>
-        [DataMember(Name="spamThreshold", EmitDefaultValue=false)]
-        public double? SpamThreshold { get; set; }
-  
-        
-        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -132,7 +124,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  FromName: ").Append(FromName).Append("\n");
             sb.Append("  FromEmail: ").Append(FromEmail).Append("\n");
-            sb.Append("  SpamThreshold: ").Append(SpamThreshold).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
@@ -217,11 +208,6 @@ namespace ININ.PureCloudApi.Model
                     this.FromEmail.Equals(other.FromEmail)
                 ) && 
                 (
-                    this.SpamThreshold == other.SpamThreshold ||
-                    this.SpamThreshold != null &&
-                    this.SpamThreshold.Equals(other.SpamThreshold)
-                ) && 
-                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -266,9 +252,6 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.FromEmail != null)
                     hash = hash * 57 + this.FromEmail.GetHashCode();
-                
-                if (this.SpamThreshold != null)
-                    hash = hash * 57 + this.SpamThreshold.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 57 + this.SelfUri.GetHashCode();

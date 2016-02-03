@@ -237,6 +237,13 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
+        /// Gets or Sets Videos
+        /// </summary>
+        [DataMember(Name="videos", EmitDefaultValue=false)]
+        public List<Video> Videos { get; set; }
+  
+        
+        /// <summary>
         /// Gets or Sets Evaluations
         /// </summary>
         [DataMember(Name="evaluations", EmitDefaultValue=false)]
@@ -281,6 +288,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Chats: ").Append(Chats).Append("\n");
             sb.Append("  Emails: ").Append(Emails).Append("\n");
             sb.Append("  SocialExpressions: ").Append(SocialExpressions).Append("\n");
+            sb.Append("  Videos: ").Append(Videos).Append("\n");
             sb.Append("  Evaluations: ").Append(Evaluations).Append("\n");
             
             sb.Append("}\n");
@@ -465,6 +473,11 @@ namespace ININ.PureCloudApi.Model
                     this.SocialExpressions.SequenceEqual(other.SocialExpressions)
                 ) && 
                 (
+                    this.Videos == other.Videos ||
+                    this.Videos != null &&
+                    this.Videos.SequenceEqual(other.Videos)
+                ) && 
+                (
                     this.Evaluations == other.Evaluations ||
                     this.Evaluations != null &&
                     this.Evaluations.SequenceEqual(other.Evaluations)
@@ -569,6 +582,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.SocialExpressions != null)
                     hash = hash * 57 + this.SocialExpressions.GetHashCode();
+                
+                if (this.Videos != null)
+                    hash = hash * 57 + this.Videos.GetHashCode();
                 
                 if (this.Evaluations != null)
                     hash = hash * 57 + this.Evaluations.GetHashCode();

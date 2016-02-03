@@ -17,6 +17,222 @@ namespace ININ.PureCloudApi.Api
     {
         
         /// <summary>
+        /// Get the list of edge groups.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="name">Name</param>
+        /// <param name="sortBy">Sort by</param>
+        /// <returns>EdgeGroupEntityListing</returns>
+        EdgeGroupEntityListing TelephonyProvidersEdgeEdgegroupsGet (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
+  
+        /// <summary>
+        /// Get the list of edge groups.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="name">Name</param>
+        /// <param name="sortBy">Sort by</param>
+        /// <returns>ApiResponse of EdgeGroupEntityListing</returns>
+        ApiResponse<EdgeGroupEntityListing> TelephonyProvidersEdgeEdgegroupsGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
+
+        /// <summary>
+        /// Get the list of edge groups.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="name">Name</param>
+        /// <param name="sortBy">Sort by</param>
+        /// <returns>Task of EdgeGroupEntityListing</returns>
+        System.Threading.Tasks.Task<EdgeGroupEntityListing> TelephonyProvidersEdgeEdgegroupsGetAsync (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
+
+        /// <summary>
+        /// Get the list of edge groups.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="name">Name</param>
+        /// <param name="sortBy">Sort by</param>
+        /// <returns>Task of ApiResponse (EdgeGroupEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EdgeGroupEntityListing>> TelephonyProvidersEdgeEdgegroupsGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
+        
+        /// <summary>
+        /// Create an edge group.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="body">EdgeGroup</param>
+        /// <returns>EdgeGroup</returns>
+        EdgeGroup TelephonyProvidersEdgeEdgegroupsPost (EdgeGroup body = null);
+  
+        /// <summary>
+        /// Create an edge group.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="body">EdgeGroup</param>
+        /// <returns>ApiResponse of EdgeGroup</returns>
+        ApiResponse<EdgeGroup> TelephonyProvidersEdgeEdgegroupsPostWithHttpInfo (EdgeGroup body = null);
+
+        /// <summary>
+        /// Create an edge group.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="body">EdgeGroup</param>
+        /// <returns>Task of EdgeGroup</returns>
+        System.Threading.Tasks.Task<EdgeGroup> TelephonyProvidersEdgeEdgegroupsPostAsync (EdgeGroup body = null);
+
+        /// <summary>
+        /// Create an edge group.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="body">EdgeGroup</param>
+        /// <returns>Task of ApiResponse (EdgeGroup)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> TelephonyProvidersEdgeEdgegroupsPostAsyncWithHttpInfo (EdgeGroup body = null);
+        
+        /// <summary>
+        /// Get edge group.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="edgeGroupId">Edge group ID</param>
+        /// <returns>EdgeGroup</returns>
+        EdgeGroup TelephonyProvidersEdgeEdgegroupsEdgegroupidGet (string edgeGroupId);
+  
+        /// <summary>
+        /// Get edge group.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="edgeGroupId">Edge group ID</param>
+        /// <returns>ApiResponse of EdgeGroup</returns>
+        ApiResponse<EdgeGroup> TelephonyProvidersEdgeEdgegroupsEdgegroupidGetWithHttpInfo (string edgeGroupId);
+
+        /// <summary>
+        /// Get edge group.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="edgeGroupId">Edge group ID</param>
+        /// <returns>Task of EdgeGroup</returns>
+        System.Threading.Tasks.Task<EdgeGroup> TelephonyProvidersEdgeEdgegroupsEdgegroupidGetAsync (string edgeGroupId);
+
+        /// <summary>
+        /// Get edge group.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="edgeGroupId">Edge group ID</param>
+        /// <returns>Task of ApiResponse (EdgeGroup)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> TelephonyProvidersEdgeEdgegroupsEdgegroupidGetAsyncWithHttpInfo (string edgeGroupId);
+        
+        /// <summary>
+        /// Update an edge group.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="edgeGroupId">Edge group ID</param>
+        /// <param name="body">EdgeGroup</param>
+        /// <returns>EdgeGroup</returns>
+        EdgeGroup TelephonyProvidersEdgeEdgegroupsEdgegroupidPut (string edgeGroupId, EdgeGroup body = null);
+  
+        /// <summary>
+        /// Update an edge group.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="edgeGroupId">Edge group ID</param>
+        /// <param name="body">EdgeGroup</param>
+        /// <returns>ApiResponse of EdgeGroup</returns>
+        ApiResponse<EdgeGroup> TelephonyProvidersEdgeEdgegroupsEdgegroupidPutWithHttpInfo (string edgeGroupId, EdgeGroup body = null);
+
+        /// <summary>
+        /// Update an edge group.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="edgeGroupId">Edge group ID</param>
+        /// <param name="body">EdgeGroup</param>
+        /// <returns>Task of EdgeGroup</returns>
+        System.Threading.Tasks.Task<EdgeGroup> TelephonyProvidersEdgeEdgegroupsEdgegroupidPutAsync (string edgeGroupId, EdgeGroup body = null);
+
+        /// <summary>
+        /// Update an edge group.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="edgeGroupId">Edge group ID</param>
+        /// <param name="body">EdgeGroup</param>
+        /// <returns>Task of ApiResponse (EdgeGroup)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> TelephonyProvidersEdgeEdgegroupsEdgegroupidPutAsyncWithHttpInfo (string edgeGroupId, EdgeGroup body = null);
+        
+        /// <summary>
+        /// Delete an edge group.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="edgeGroupId">Edge group ID</param>
+        /// <returns>string</returns>
+        string TelephonyProvidersEdgeEdgegroupsEdgegroupidDelete (string edgeGroupId);
+  
+        /// <summary>
+        /// Delete an edge group.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="edgeGroupId">Edge group ID</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> TelephonyProvidersEdgeEdgegroupsEdgegroupidDeleteWithHttpInfo (string edgeGroupId);
+
+        /// <summary>
+        /// Delete an edge group.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="edgeGroupId">Edge group ID</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> TelephonyProvidersEdgeEdgegroupsEdgegroupidDeleteAsync (string edgeGroupId);
+
+        /// <summary>
+        /// Delete an edge group.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="edgeGroupId">Edge group ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> TelephonyProvidersEdgeEdgegroupsEdgegroupidDeleteAsyncWithHttpInfo (string edgeGroupId);
+        
+        /// <summary>
         /// Get a listing of line base settings objects
         /// </summary>
         /// <remarks>
@@ -243,6 +459,226 @@ namespace ININ.PureCloudApi.Api
         /// <param name="lineId">Line ID</param>
         /// <returns>Task of ApiResponse (Line)</returns>
         System.Threading.Tasks.Task<ApiResponse<Line>> TelephonyProvidersEdgeLinesLineidGetAsyncWithHttpInfo (string lineId);
+        
+        /// <summary>
+        /// Get outbound routes
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="name">Name</param>
+        /// <param name="siteId">Filter by site.id</param>
+        /// <param name="sortBy">Sort by</param>
+        /// <returns>OutboundRouteEntityListing</returns>
+        OutboundRouteEntityListing TelephonyProvidersEdgeOutboundroutesGet (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null);
+  
+        /// <summary>
+        /// Get outbound routes
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="name">Name</param>
+        /// <param name="siteId">Filter by site.id</param>
+        /// <param name="sortBy">Sort by</param>
+        /// <returns>ApiResponse of OutboundRouteEntityListing</returns>
+        ApiResponse<OutboundRouteEntityListing> TelephonyProvidersEdgeOutboundroutesGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null);
+
+        /// <summary>
+        /// Get outbound routes
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="name">Name</param>
+        /// <param name="siteId">Filter by site.id</param>
+        /// <param name="sortBy">Sort by</param>
+        /// <returns>Task of OutboundRouteEntityListing</returns>
+        System.Threading.Tasks.Task<OutboundRouteEntityListing> TelephonyProvidersEdgeOutboundroutesGetAsync (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null);
+
+        /// <summary>
+        /// Get outbound routes
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="name">Name</param>
+        /// <param name="siteId">Filter by site.id</param>
+        /// <param name="sortBy">Sort by</param>
+        /// <returns>Task of ApiResponse (OutboundRouteEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OutboundRouteEntityListing>> TelephonyProvidersEdgeOutboundroutesGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null);
+        
+        /// <summary>
+        /// Create outbound rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="body">OutboundRoute</param>
+        /// <returns>OutboundRoute</returns>
+        OutboundRoute TelephonyProvidersEdgeOutboundroutesPost (OutboundRoute body = null);
+  
+        /// <summary>
+        /// Create outbound rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="body">OutboundRoute</param>
+        /// <returns>ApiResponse of OutboundRoute</returns>
+        ApiResponse<OutboundRoute> TelephonyProvidersEdgeOutboundroutesPostWithHttpInfo (OutboundRoute body = null);
+
+        /// <summary>
+        /// Create outbound rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="body">OutboundRoute</param>
+        /// <returns>Task of OutboundRoute</returns>
+        System.Threading.Tasks.Task<OutboundRoute> TelephonyProvidersEdgeOutboundroutesPostAsync (OutboundRoute body = null);
+
+        /// <summary>
+        /// Create outbound rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="body">OutboundRoute</param>
+        /// <returns>Task of ApiResponse (OutboundRoute)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> TelephonyProvidersEdgeOutboundroutesPostAsyncWithHttpInfo (OutboundRoute body = null);
+        
+        /// <summary>
+        /// Get outbound route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <returns>OutboundRoute</returns>
+        OutboundRoute TelephonyProvidersEdgeOutboundroutesOutboundrouteidGet (string outboundRouteId);
+  
+        /// <summary>
+        /// Get outbound route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <returns>ApiResponse of OutboundRoute</returns>
+        ApiResponse<OutboundRoute> TelephonyProvidersEdgeOutboundroutesOutboundrouteidGetWithHttpInfo (string outboundRouteId);
+
+        /// <summary>
+        /// Get outbound route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <returns>Task of OutboundRoute</returns>
+        System.Threading.Tasks.Task<OutboundRoute> TelephonyProvidersEdgeOutboundroutesOutboundrouteidGetAsync (string outboundRouteId);
+
+        /// <summary>
+        /// Get outbound route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <returns>Task of ApiResponse (OutboundRoute)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> TelephonyProvidersEdgeOutboundroutesOutboundrouteidGetAsyncWithHttpInfo (string outboundRouteId);
+        
+        /// <summary>
+        /// Update outbound route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <param name="body">OutboundRoute</param>
+        /// <returns>OutboundRoute</returns>
+        OutboundRoute TelephonyProvidersEdgeOutboundroutesOutboundrouteidPut (string outboundRouteId, OutboundRoute body = null);
+  
+        /// <summary>
+        /// Update outbound route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <param name="body">OutboundRoute</param>
+        /// <returns>ApiResponse of OutboundRoute</returns>
+        ApiResponse<OutboundRoute> TelephonyProvidersEdgeOutboundroutesOutboundrouteidPutWithHttpInfo (string outboundRouteId, OutboundRoute body = null);
+
+        /// <summary>
+        /// Update outbound route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <param name="body">OutboundRoute</param>
+        /// <returns>Task of OutboundRoute</returns>
+        System.Threading.Tasks.Task<OutboundRoute> TelephonyProvidersEdgeOutboundroutesOutboundrouteidPutAsync (string outboundRouteId, OutboundRoute body = null);
+
+        /// <summary>
+        /// Update outbound route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <param name="body">OutboundRoute</param>
+        /// <returns>Task of ApiResponse (OutboundRoute)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> TelephonyProvidersEdgeOutboundroutesOutboundrouteidPutAsyncWithHttpInfo (string outboundRouteId, OutboundRoute body = null);
+        
+        /// <summary>
+        /// Delete Outbound Route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <returns>string</returns>
+        string TelephonyProvidersEdgeOutboundroutesOutboundrouteidDelete (string outboundRouteId);
+  
+        /// <summary>
+        /// Delete Outbound Route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> TelephonyProvidersEdgeOutboundroutesOutboundrouteidDeleteWithHttpInfo (string outboundRouteId);
+
+        /// <summary>
+        /// Delete Outbound Route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> TelephonyProvidersEdgeOutboundroutesOutboundrouteidDeleteAsync (string outboundRouteId);
+
+        /// <summary>
+        /// Delete Outbound Route
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> TelephonyProvidersEdgeOutboundroutesOutboundrouteidDeleteAsyncWithHttpInfo (string outboundRouteId);
         
         /// <summary>
         /// Get a list of Phone Base Settings objects
@@ -1327,6 +1763,780 @@ namespace ININ.PureCloudApi.Api
    
         
         /// <summary>
+        /// Get the list of edge groups. 
+        /// </summary>
+        /// <param name="pageSize">Page size</param> 
+        /// <param name="pageNumber">Page number</param> 
+        /// <param name="name">Name</param> 
+        /// <param name="sortBy">Sort by</param> 
+        /// <returns>EdgeGroupEntityListing</returns>
+        public EdgeGroupEntityListing TelephonyProvidersEdgeEdgegroupsGet (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+        {
+             ApiResponse<EdgeGroupEntityListing> response = TelephonyProvidersEdgeEdgegroupsGetWithHttpInfo(pageSize, pageNumber, name, sortBy);
+             return response.Data;
+        }
+
+        /// <summary>
+        /// Get the list of edge groups. 
+        /// </summary>
+        /// <param name="pageSize">Page size</param> 
+        /// <param name="pageNumber">Page number</param> 
+        /// <param name="name">Name</param> 
+        /// <param name="sortBy">Sort by</param> 
+        /// <returns>ApiResponse of EdgeGroupEntityListing</returns>
+        public ApiResponse< EdgeGroupEntityListing > TelephonyProvidersEdgeEdgegroupsGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+        {
+            
+    
+            var path_ = "/api/v1/telephony/providers/edge/edgegroups";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            if (pageSize != null) queryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) queryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (name != null) queryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (sortBy != null) queryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeEdgegroupsGet: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeEdgegroupsGet: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<EdgeGroupEntityListing>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EdgeGroupEntityListing) Configuration.ApiClient.Deserialize(response, typeof(EdgeGroupEntityListing)));
+            
+        }
+    
+        /// <summary>
+        /// Get the list of edge groups. 
+        /// </summary>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="name">Name</param>
+        /// <param name="sortBy">Sort by</param>
+        /// <returns>Task of EdgeGroupEntityListing</returns>
+        public async System.Threading.Tasks.Task<EdgeGroupEntityListing> TelephonyProvidersEdgeEdgegroupsGetAsync (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+        {
+             ApiResponse<EdgeGroupEntityListing> response = await TelephonyProvidersEdgeEdgegroupsGetAsyncWithHttpInfo(pageSize, pageNumber, name, sortBy);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Get the list of edge groups. 
+        /// </summary>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="name">Name</param>
+        /// <param name="sortBy">Sort by</param>
+        /// <returns>Task of ApiResponse (EdgeGroupEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeGroupEntityListing>> TelephonyProvidersEdgeEdgegroupsGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+        {
+            
+    
+            var path_ = "/api/v1/telephony/providers/edge/edgegroups";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            if (pageSize != null) queryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) queryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (name != null) queryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (sortBy != null) queryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeEdgegroupsGet: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeEdgegroupsGet: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<EdgeGroupEntityListing>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EdgeGroupEntityListing) Configuration.ApiClient.Deserialize(response, typeof(EdgeGroupEntityListing)));
+            
+        }
+        
+        /// <summary>
+        /// Create an edge group. 
+        /// </summary>
+        /// <param name="body">EdgeGroup</param> 
+        /// <returns>EdgeGroup</returns>
+        public EdgeGroup TelephonyProvidersEdgeEdgegroupsPost (EdgeGroup body = null)
+        {
+             ApiResponse<EdgeGroup> response = TelephonyProvidersEdgeEdgegroupsPostWithHttpInfo(body);
+             return response.Data;
+        }
+
+        /// <summary>
+        /// Create an edge group. 
+        /// </summary>
+        /// <param name="body">EdgeGroup</param> 
+        /// <returns>ApiResponse of EdgeGroup</returns>
+        public ApiResponse< EdgeGroup > TelephonyProvidersEdgeEdgegroupsPostWithHttpInfo (EdgeGroup body = null)
+        {
+            
+    
+            var path_ = "/api/v1/telephony/providers/edge/edgegroups";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeEdgegroupsPost: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeEdgegroupsPost: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<EdgeGroup>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EdgeGroup) Configuration.ApiClient.Deserialize(response, typeof(EdgeGroup)));
+            
+        }
+    
+        /// <summary>
+        /// Create an edge group. 
+        /// </summary>
+        /// <param name="body">EdgeGroup</param>
+        /// <returns>Task of EdgeGroup</returns>
+        public async System.Threading.Tasks.Task<EdgeGroup> TelephonyProvidersEdgeEdgegroupsPostAsync (EdgeGroup body = null)
+        {
+             ApiResponse<EdgeGroup> response = await TelephonyProvidersEdgeEdgegroupsPostAsyncWithHttpInfo(body);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Create an edge group. 
+        /// </summary>
+        /// <param name="body">EdgeGroup</param>
+        /// <returns>Task of ApiResponse (EdgeGroup)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> TelephonyProvidersEdgeEdgegroupsPostAsyncWithHttpInfo (EdgeGroup body = null)
+        {
+            
+    
+            var path_ = "/api/v1/telephony/providers/edge/edgegroups";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeEdgegroupsPost: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeEdgegroupsPost: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<EdgeGroup>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EdgeGroup) Configuration.ApiClient.Deserialize(response, typeof(EdgeGroup)));
+            
+        }
+        
+        /// <summary>
+        /// Get edge group. 
+        /// </summary>
+        /// <param name="edgeGroupId">Edge group ID</param> 
+        /// <returns>EdgeGroup</returns>
+        public EdgeGroup TelephonyProvidersEdgeEdgegroupsEdgegroupidGet (string edgeGroupId)
+        {
+             ApiResponse<EdgeGroup> response = TelephonyProvidersEdgeEdgegroupsEdgegroupidGetWithHttpInfo(edgeGroupId);
+             return response.Data;
+        }
+
+        /// <summary>
+        /// Get edge group. 
+        /// </summary>
+        /// <param name="edgeGroupId">Edge group ID</param> 
+        /// <returns>ApiResponse of EdgeGroup</returns>
+        public ApiResponse< EdgeGroup > TelephonyProvidersEdgeEdgegroupsEdgegroupidGetWithHttpInfo (string edgeGroupId)
+        {
+            
+            // verify the required parameter 'edgeGroupId' is set
+            if (edgeGroupId == null) throw new ApiException(400, "Missing required parameter 'edgeGroupId' when calling TelephonyProvidersEdgeEdgegroupsEdgegroupidGet");
+            
+    
+            var path_ = "/api/v1/telephony/providers/edge/edgegroups/{edgeGroupId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (edgeGroupId != null) pathParams.Add("edgeGroupId", Configuration.ApiClient.ParameterToString(edgeGroupId)); // path parameter
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeEdgegroupsEdgegroupidGet: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeEdgegroupsEdgegroupidGet: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<EdgeGroup>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EdgeGroup) Configuration.ApiClient.Deserialize(response, typeof(EdgeGroup)));
+            
+        }
+    
+        /// <summary>
+        /// Get edge group. 
+        /// </summary>
+        /// <param name="edgeGroupId">Edge group ID</param>
+        /// <returns>Task of EdgeGroup</returns>
+        public async System.Threading.Tasks.Task<EdgeGroup> TelephonyProvidersEdgeEdgegroupsEdgegroupidGetAsync (string edgeGroupId)
+        {
+             ApiResponse<EdgeGroup> response = await TelephonyProvidersEdgeEdgegroupsEdgegroupidGetAsyncWithHttpInfo(edgeGroupId);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Get edge group. 
+        /// </summary>
+        /// <param name="edgeGroupId">Edge group ID</param>
+        /// <returns>Task of ApiResponse (EdgeGroup)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> TelephonyProvidersEdgeEdgegroupsEdgegroupidGetAsyncWithHttpInfo (string edgeGroupId)
+        {
+            // verify the required parameter 'edgeGroupId' is set
+            if (edgeGroupId == null) throw new ApiException(400, "Missing required parameter 'edgeGroupId' when calling TelephonyProvidersEdgeEdgegroupsEdgegroupidGet");
+            
+    
+            var path_ = "/api/v1/telephony/providers/edge/edgegroups/{edgeGroupId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (edgeGroupId != null) pathParams.Add("edgeGroupId", Configuration.ApiClient.ParameterToString(edgeGroupId)); // path parameter
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeEdgegroupsEdgegroupidGet: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeEdgegroupsEdgegroupidGet: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<EdgeGroup>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EdgeGroup) Configuration.ApiClient.Deserialize(response, typeof(EdgeGroup)));
+            
+        }
+        
+        /// <summary>
+        /// Update an edge group. 
+        /// </summary>
+        /// <param name="edgeGroupId">Edge group ID</param> 
+        /// <param name="body">EdgeGroup</param> 
+        /// <returns>EdgeGroup</returns>
+        public EdgeGroup TelephonyProvidersEdgeEdgegroupsEdgegroupidPut (string edgeGroupId, EdgeGroup body = null)
+        {
+             ApiResponse<EdgeGroup> response = TelephonyProvidersEdgeEdgegroupsEdgegroupidPutWithHttpInfo(edgeGroupId, body);
+             return response.Data;
+        }
+
+        /// <summary>
+        /// Update an edge group. 
+        /// </summary>
+        /// <param name="edgeGroupId">Edge group ID</param> 
+        /// <param name="body">EdgeGroup</param> 
+        /// <returns>ApiResponse of EdgeGroup</returns>
+        public ApiResponse< EdgeGroup > TelephonyProvidersEdgeEdgegroupsEdgegroupidPutWithHttpInfo (string edgeGroupId, EdgeGroup body = null)
+        {
+            
+            // verify the required parameter 'edgeGroupId' is set
+            if (edgeGroupId == null) throw new ApiException(400, "Missing required parameter 'edgeGroupId' when calling TelephonyProvidersEdgeEdgegroupsEdgegroupidPut");
+            
+    
+            var path_ = "/api/v1/telephony/providers/edge/edgegroups/{edgeGroupId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (edgeGroupId != null) pathParams.Add("edgeGroupId", Configuration.ApiClient.ParameterToString(edgeGroupId)); // path parameter
+            
+            
+            
+            
+            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeEdgegroupsEdgegroupidPut: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeEdgegroupsEdgegroupidPut: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<EdgeGroup>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EdgeGroup) Configuration.ApiClient.Deserialize(response, typeof(EdgeGroup)));
+            
+        }
+    
+        /// <summary>
+        /// Update an edge group. 
+        /// </summary>
+        /// <param name="edgeGroupId">Edge group ID</param>
+        /// <param name="body">EdgeGroup</param>
+        /// <returns>Task of EdgeGroup</returns>
+        public async System.Threading.Tasks.Task<EdgeGroup> TelephonyProvidersEdgeEdgegroupsEdgegroupidPutAsync (string edgeGroupId, EdgeGroup body = null)
+        {
+             ApiResponse<EdgeGroup> response = await TelephonyProvidersEdgeEdgegroupsEdgegroupidPutAsyncWithHttpInfo(edgeGroupId, body);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Update an edge group. 
+        /// </summary>
+        /// <param name="edgeGroupId">Edge group ID</param>
+        /// <param name="body">EdgeGroup</param>
+        /// <returns>Task of ApiResponse (EdgeGroup)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> TelephonyProvidersEdgeEdgegroupsEdgegroupidPutAsyncWithHttpInfo (string edgeGroupId, EdgeGroup body = null)
+        {
+            // verify the required parameter 'edgeGroupId' is set
+            if (edgeGroupId == null) throw new ApiException(400, "Missing required parameter 'edgeGroupId' when calling TelephonyProvidersEdgeEdgegroupsEdgegroupidPut");
+            
+    
+            var path_ = "/api/v1/telephony/providers/edge/edgegroups/{edgeGroupId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (edgeGroupId != null) pathParams.Add("edgeGroupId", Configuration.ApiClient.ParameterToString(edgeGroupId)); // path parameter
+            
+            
+            
+            
+            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeEdgegroupsEdgegroupidPut: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeEdgegroupsEdgegroupidPut: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<EdgeGroup>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EdgeGroup) Configuration.ApiClient.Deserialize(response, typeof(EdgeGroup)));
+            
+        }
+        
+        /// <summary>
+        /// Delete an edge group. 
+        /// </summary>
+        /// <param name="edgeGroupId">Edge group ID</param> 
+        /// <returns>string</returns>
+        public string TelephonyProvidersEdgeEdgegroupsEdgegroupidDelete (string edgeGroupId)
+        {
+             ApiResponse<string> response = TelephonyProvidersEdgeEdgegroupsEdgegroupidDeleteWithHttpInfo(edgeGroupId);
+             return response.Data;
+        }
+
+        /// <summary>
+        /// Delete an edge group. 
+        /// </summary>
+        /// <param name="edgeGroupId">Edge group ID</param> 
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > TelephonyProvidersEdgeEdgegroupsEdgegroupidDeleteWithHttpInfo (string edgeGroupId)
+        {
+            
+            // verify the required parameter 'edgeGroupId' is set
+            if (edgeGroupId == null) throw new ApiException(400, "Missing required parameter 'edgeGroupId' when calling TelephonyProvidersEdgeEdgegroupsEdgegroupidDelete");
+            
+    
+            var path_ = "/api/v1/telephony/providers/edge/edgegroups/{edgeGroupId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (edgeGroupId != null) pathParams.Add("edgeGroupId", Configuration.ApiClient.ParameterToString(edgeGroupId)); // path parameter
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeEdgegroupsEdgegroupidDelete: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeEdgegroupsEdgegroupidDelete: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<string>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(response, typeof(string)));
+            
+        }
+    
+        /// <summary>
+        /// Delete an edge group. 
+        /// </summary>
+        /// <param name="edgeGroupId">Edge group ID</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> TelephonyProvidersEdgeEdgegroupsEdgegroupidDeleteAsync (string edgeGroupId)
+        {
+             ApiResponse<string> response = await TelephonyProvidersEdgeEdgegroupsEdgegroupidDeleteAsyncWithHttpInfo(edgeGroupId);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Delete an edge group. 
+        /// </summary>
+        /// <param name="edgeGroupId">Edge group ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> TelephonyProvidersEdgeEdgegroupsEdgegroupidDeleteAsyncWithHttpInfo (string edgeGroupId)
+        {
+            // verify the required parameter 'edgeGroupId' is set
+            if (edgeGroupId == null) throw new ApiException(400, "Missing required parameter 'edgeGroupId' when calling TelephonyProvidersEdgeEdgegroupsEdgegroupidDelete");
+            
+    
+            var path_ = "/api/v1/telephony/providers/edge/edgegroups/{edgeGroupId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (edgeGroupId != null) pathParams.Add("edgeGroupId", Configuration.ApiClient.ParameterToString(edgeGroupId)); // path parameter
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeEdgegroupsEdgegroupidDelete: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeEdgegroupsEdgegroupidDelete: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<string>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(response, typeof(string)));
+            
+        }
+        
+        /// <summary>
         /// Get a listing of line base settings objects 
         /// </summary>
         /// <param name="pageNumber">Page number</param> 
@@ -2115,6 +3325,786 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Line>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Line) Configuration.ApiClient.Deserialize(response, typeof(Line)));
+            
+        }
+        
+        /// <summary>
+        /// Get outbound routes 
+        /// </summary>
+        /// <param name="pageSize">Page size</param> 
+        /// <param name="pageNumber">Page number</param> 
+        /// <param name="name">Name</param> 
+        /// <param name="siteId">Filter by site.id</param> 
+        /// <param name="sortBy">Sort by</param> 
+        /// <returns>OutboundRouteEntityListing</returns>
+        public OutboundRouteEntityListing TelephonyProvidersEdgeOutboundroutesGet (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null)
+        {
+             ApiResponse<OutboundRouteEntityListing> response = TelephonyProvidersEdgeOutboundroutesGetWithHttpInfo(pageSize, pageNumber, name, siteId, sortBy);
+             return response.Data;
+        }
+
+        /// <summary>
+        /// Get outbound routes 
+        /// </summary>
+        /// <param name="pageSize">Page size</param> 
+        /// <param name="pageNumber">Page number</param> 
+        /// <param name="name">Name</param> 
+        /// <param name="siteId">Filter by site.id</param> 
+        /// <param name="sortBy">Sort by</param> 
+        /// <returns>ApiResponse of OutboundRouteEntityListing</returns>
+        public ApiResponse< OutboundRouteEntityListing > TelephonyProvidersEdgeOutboundroutesGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null)
+        {
+            
+    
+            var path_ = "/api/v1/telephony/providers/edge/outboundroutes";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            if (pageSize != null) queryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) queryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (name != null) queryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (siteId != null) queryParams.Add("site.id", Configuration.ApiClient.ParameterToString(siteId)); // query parameter
+            if (sortBy != null) queryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeOutboundroutesGet: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeOutboundroutesGet: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<OutboundRouteEntityListing>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (OutboundRouteEntityListing) Configuration.ApiClient.Deserialize(response, typeof(OutboundRouteEntityListing)));
+            
+        }
+    
+        /// <summary>
+        /// Get outbound routes 
+        /// </summary>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="name">Name</param>
+        /// <param name="siteId">Filter by site.id</param>
+        /// <param name="sortBy">Sort by</param>
+        /// <returns>Task of OutboundRouteEntityListing</returns>
+        public async System.Threading.Tasks.Task<OutboundRouteEntityListing> TelephonyProvidersEdgeOutboundroutesGetAsync (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null)
+        {
+             ApiResponse<OutboundRouteEntityListing> response = await TelephonyProvidersEdgeOutboundroutesGetAsyncWithHttpInfo(pageSize, pageNumber, name, siteId, sortBy);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Get outbound routes 
+        /// </summary>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="name">Name</param>
+        /// <param name="siteId">Filter by site.id</param>
+        /// <param name="sortBy">Sort by</param>
+        /// <returns>Task of ApiResponse (OutboundRouteEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OutboundRouteEntityListing>> TelephonyProvidersEdgeOutboundroutesGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null)
+        {
+            
+    
+            var path_ = "/api/v1/telephony/providers/edge/outboundroutes";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            if (pageSize != null) queryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) queryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (name != null) queryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (siteId != null) queryParams.Add("site.id", Configuration.ApiClient.ParameterToString(siteId)); // query parameter
+            if (sortBy != null) queryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeOutboundroutesGet: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeOutboundroutesGet: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<OutboundRouteEntityListing>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (OutboundRouteEntityListing) Configuration.ApiClient.Deserialize(response, typeof(OutboundRouteEntityListing)));
+            
+        }
+        
+        /// <summary>
+        /// Create outbound rule 
+        /// </summary>
+        /// <param name="body">OutboundRoute</param> 
+        /// <returns>OutboundRoute</returns>
+        public OutboundRoute TelephonyProvidersEdgeOutboundroutesPost (OutboundRoute body = null)
+        {
+             ApiResponse<OutboundRoute> response = TelephonyProvidersEdgeOutboundroutesPostWithHttpInfo(body);
+             return response.Data;
+        }
+
+        /// <summary>
+        /// Create outbound rule 
+        /// </summary>
+        /// <param name="body">OutboundRoute</param> 
+        /// <returns>ApiResponse of OutboundRoute</returns>
+        public ApiResponse< OutboundRoute > TelephonyProvidersEdgeOutboundroutesPostWithHttpInfo (OutboundRoute body = null)
+        {
+            
+    
+            var path_ = "/api/v1/telephony/providers/edge/outboundroutes";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeOutboundroutesPost: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeOutboundroutesPost: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<OutboundRoute>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (OutboundRoute) Configuration.ApiClient.Deserialize(response, typeof(OutboundRoute)));
+            
+        }
+    
+        /// <summary>
+        /// Create outbound rule 
+        /// </summary>
+        /// <param name="body">OutboundRoute</param>
+        /// <returns>Task of OutboundRoute</returns>
+        public async System.Threading.Tasks.Task<OutboundRoute> TelephonyProvidersEdgeOutboundroutesPostAsync (OutboundRoute body = null)
+        {
+             ApiResponse<OutboundRoute> response = await TelephonyProvidersEdgeOutboundroutesPostAsyncWithHttpInfo(body);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Create outbound rule 
+        /// </summary>
+        /// <param name="body">OutboundRoute</param>
+        /// <returns>Task of ApiResponse (OutboundRoute)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> TelephonyProvidersEdgeOutboundroutesPostAsyncWithHttpInfo (OutboundRoute body = null)
+        {
+            
+    
+            var path_ = "/api/v1/telephony/providers/edge/outboundroutes";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeOutboundroutesPost: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeOutboundroutesPost: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<OutboundRoute>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (OutboundRoute) Configuration.ApiClient.Deserialize(response, typeof(OutboundRoute)));
+            
+        }
+        
+        /// <summary>
+        /// Get outbound route 
+        /// </summary>
+        /// <param name="outboundRouteId">Outbound route ID</param> 
+        /// <returns>OutboundRoute</returns>
+        public OutboundRoute TelephonyProvidersEdgeOutboundroutesOutboundrouteidGet (string outboundRouteId)
+        {
+             ApiResponse<OutboundRoute> response = TelephonyProvidersEdgeOutboundroutesOutboundrouteidGetWithHttpInfo(outboundRouteId);
+             return response.Data;
+        }
+
+        /// <summary>
+        /// Get outbound route 
+        /// </summary>
+        /// <param name="outboundRouteId">Outbound route ID</param> 
+        /// <returns>ApiResponse of OutboundRoute</returns>
+        public ApiResponse< OutboundRoute > TelephonyProvidersEdgeOutboundroutesOutboundrouteidGetWithHttpInfo (string outboundRouteId)
+        {
+            
+            // verify the required parameter 'outboundRouteId' is set
+            if (outboundRouteId == null) throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling TelephonyProvidersEdgeOutboundroutesOutboundrouteidGet");
+            
+    
+            var path_ = "/api/v1/telephony/providers/edge/outboundroutes/{outboundRouteId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (outboundRouteId != null) pathParams.Add("outboundRouteId", Configuration.ApiClient.ParameterToString(outboundRouteId)); // path parameter
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeOutboundroutesOutboundrouteidGet: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeOutboundroutesOutboundrouteidGet: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<OutboundRoute>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (OutboundRoute) Configuration.ApiClient.Deserialize(response, typeof(OutboundRoute)));
+            
+        }
+    
+        /// <summary>
+        /// Get outbound route 
+        /// </summary>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <returns>Task of OutboundRoute</returns>
+        public async System.Threading.Tasks.Task<OutboundRoute> TelephonyProvidersEdgeOutboundroutesOutboundrouteidGetAsync (string outboundRouteId)
+        {
+             ApiResponse<OutboundRoute> response = await TelephonyProvidersEdgeOutboundroutesOutboundrouteidGetAsyncWithHttpInfo(outboundRouteId);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Get outbound route 
+        /// </summary>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <returns>Task of ApiResponse (OutboundRoute)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> TelephonyProvidersEdgeOutboundroutesOutboundrouteidGetAsyncWithHttpInfo (string outboundRouteId)
+        {
+            // verify the required parameter 'outboundRouteId' is set
+            if (outboundRouteId == null) throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling TelephonyProvidersEdgeOutboundroutesOutboundrouteidGet");
+            
+    
+            var path_ = "/api/v1/telephony/providers/edge/outboundroutes/{outboundRouteId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (outboundRouteId != null) pathParams.Add("outboundRouteId", Configuration.ApiClient.ParameterToString(outboundRouteId)); // path parameter
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeOutboundroutesOutboundrouteidGet: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeOutboundroutesOutboundrouteidGet: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<OutboundRoute>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (OutboundRoute) Configuration.ApiClient.Deserialize(response, typeof(OutboundRoute)));
+            
+        }
+        
+        /// <summary>
+        /// Update outbound route 
+        /// </summary>
+        /// <param name="outboundRouteId">Outbound route ID</param> 
+        /// <param name="body">OutboundRoute</param> 
+        /// <returns>OutboundRoute</returns>
+        public OutboundRoute TelephonyProvidersEdgeOutboundroutesOutboundrouteidPut (string outboundRouteId, OutboundRoute body = null)
+        {
+             ApiResponse<OutboundRoute> response = TelephonyProvidersEdgeOutboundroutesOutboundrouteidPutWithHttpInfo(outboundRouteId, body);
+             return response.Data;
+        }
+
+        /// <summary>
+        /// Update outbound route 
+        /// </summary>
+        /// <param name="outboundRouteId">Outbound route ID</param> 
+        /// <param name="body">OutboundRoute</param> 
+        /// <returns>ApiResponse of OutboundRoute</returns>
+        public ApiResponse< OutboundRoute > TelephonyProvidersEdgeOutboundroutesOutboundrouteidPutWithHttpInfo (string outboundRouteId, OutboundRoute body = null)
+        {
+            
+            // verify the required parameter 'outboundRouteId' is set
+            if (outboundRouteId == null) throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling TelephonyProvidersEdgeOutboundroutesOutboundrouteidPut");
+            
+    
+            var path_ = "/api/v1/telephony/providers/edge/outboundroutes/{outboundRouteId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (outboundRouteId != null) pathParams.Add("outboundRouteId", Configuration.ApiClient.ParameterToString(outboundRouteId)); // path parameter
+            
+            
+            
+            
+            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeOutboundroutesOutboundrouteidPut: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeOutboundroutesOutboundrouteidPut: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<OutboundRoute>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (OutboundRoute) Configuration.ApiClient.Deserialize(response, typeof(OutboundRoute)));
+            
+        }
+    
+        /// <summary>
+        /// Update outbound route 
+        /// </summary>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <param name="body">OutboundRoute</param>
+        /// <returns>Task of OutboundRoute</returns>
+        public async System.Threading.Tasks.Task<OutboundRoute> TelephonyProvidersEdgeOutboundroutesOutboundrouteidPutAsync (string outboundRouteId, OutboundRoute body = null)
+        {
+             ApiResponse<OutboundRoute> response = await TelephonyProvidersEdgeOutboundroutesOutboundrouteidPutAsyncWithHttpInfo(outboundRouteId, body);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Update outbound route 
+        /// </summary>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <param name="body">OutboundRoute</param>
+        /// <returns>Task of ApiResponse (OutboundRoute)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> TelephonyProvidersEdgeOutboundroutesOutboundrouteidPutAsyncWithHttpInfo (string outboundRouteId, OutboundRoute body = null)
+        {
+            // verify the required parameter 'outboundRouteId' is set
+            if (outboundRouteId == null) throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling TelephonyProvidersEdgeOutboundroutesOutboundrouteidPut");
+            
+    
+            var path_ = "/api/v1/telephony/providers/edge/outboundroutes/{outboundRouteId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (outboundRouteId != null) pathParams.Add("outboundRouteId", Configuration.ApiClient.ParameterToString(outboundRouteId)); // path parameter
+            
+            
+            
+            
+            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeOutboundroutesOutboundrouteidPut: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeOutboundroutesOutboundrouteidPut: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<OutboundRoute>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (OutboundRoute) Configuration.ApiClient.Deserialize(response, typeof(OutboundRoute)));
+            
+        }
+        
+        /// <summary>
+        /// Delete Outbound Route 
+        /// </summary>
+        /// <param name="outboundRouteId">Outbound route ID</param> 
+        /// <returns>string</returns>
+        public string TelephonyProvidersEdgeOutboundroutesOutboundrouteidDelete (string outboundRouteId)
+        {
+             ApiResponse<string> response = TelephonyProvidersEdgeOutboundroutesOutboundrouteidDeleteWithHttpInfo(outboundRouteId);
+             return response.Data;
+        }
+
+        /// <summary>
+        /// Delete Outbound Route 
+        /// </summary>
+        /// <param name="outboundRouteId">Outbound route ID</param> 
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > TelephonyProvidersEdgeOutboundroutesOutboundrouteidDeleteWithHttpInfo (string outboundRouteId)
+        {
+            
+            // verify the required parameter 'outboundRouteId' is set
+            if (outboundRouteId == null) throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling TelephonyProvidersEdgeOutboundroutesOutboundrouteidDelete");
+            
+    
+            var path_ = "/api/v1/telephony/providers/edge/outboundroutes/{outboundRouteId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (outboundRouteId != null) pathParams.Add("outboundRouteId", Configuration.ApiClient.ParameterToString(outboundRouteId)); // path parameter
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeOutboundroutesOutboundrouteidDelete: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeOutboundroutesOutboundrouteidDelete: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<string>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(response, typeof(string)));
+            
+        }
+    
+        /// <summary>
+        /// Delete Outbound Route 
+        /// </summary>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> TelephonyProvidersEdgeOutboundroutesOutboundrouteidDeleteAsync (string outboundRouteId)
+        {
+             ApiResponse<string> response = await TelephonyProvidersEdgeOutboundroutesOutboundrouteidDeleteAsyncWithHttpInfo(outboundRouteId);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Delete Outbound Route 
+        /// </summary>
+        /// <param name="outboundRouteId">Outbound route ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> TelephonyProvidersEdgeOutboundroutesOutboundrouteidDeleteAsyncWithHttpInfo (string outboundRouteId)
+        {
+            // verify the required parameter 'outboundRouteId' is set
+            if (outboundRouteId == null) throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling TelephonyProvidersEdgeOutboundroutesOutboundrouteidDelete");
+            
+    
+            var path_ = "/api/v1/telephony/providers/edge/outboundroutes/{outboundRouteId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (outboundRouteId != null) pathParams.Add("outboundRouteId", Configuration.ApiClient.ParameterToString(outboundRouteId)); // path parameter
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeOutboundroutesOutboundrouteidDelete: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling TelephonyProvidersEdgeOutboundroutesOutboundrouteidDelete: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<string>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(response, typeof(string)));
             
         }
         

@@ -23,6 +23,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         public InboundDomain()
         {
+            this.SubDomain = false;
             
         }
 
@@ -50,6 +51,14 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
+        /// Indicates if this a PureCloud sub-domain.  If true, then the appropriate DNS records are created for sending/receiving email.
+        /// </summary>
+        /// <value>Indicates if this a PureCloud sub-domain.  If true, then the appropriate DNS records are created for sending/receiving email.</value>
+        [DataMember(Name="subDomain", EmitDefaultValue=false)]
+        public bool? SubDomain { get; set; }
+  
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -69,6 +78,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  MxRecordStatus: ").Append(MxRecordStatus).Append("\n");
+            sb.Append("  SubDomain: ").Append(SubDomain).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
@@ -123,6 +133,11 @@ namespace ININ.PureCloudApi.Model
                     this.MxRecordStatus.Equals(other.MxRecordStatus)
                 ) && 
                 (
+                    this.SubDomain == other.SubDomain ||
+                    this.SubDomain != null &&
+                    this.SubDomain.Equals(other.SubDomain)
+                ) && 
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -149,6 +164,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.MxRecordStatus != null)
                     hash = hash * 57 + this.MxRecordStatus.GetHashCode();
+                
+                if (this.SubDomain != null)
+                    hash = hash * 57 + this.SubDomain.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 57 + this.SelfUri.GetHashCode();

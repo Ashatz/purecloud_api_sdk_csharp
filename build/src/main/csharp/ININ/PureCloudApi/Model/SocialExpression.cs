@@ -43,6 +43,13 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
+        /// Gets or Sets SocialMediaId
+        /// </summary>
+        [DataMember(Name="socialMediaId", EmitDefaultValue=false)]
+        public string SocialMediaId { get; set; }
+  
+        
+        /// <summary>
         /// Gets or Sets SocialMediaHub
         /// </summary>
         [DataMember(Name="socialMediaHub", EmitDefaultValue=false)]
@@ -103,6 +110,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class SocialExpression {\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  SocialMediaId: ").Append(SocialMediaId).Append("\n");
             sb.Append("  SocialMediaHub: ").Append(SocialMediaHub).Append("\n");
             sb.Append("  PreviewText: ").Append(PreviewText).Append("\n");
             sb.Append("  RecordingId: ").Append(RecordingId).Append("\n");
@@ -158,6 +166,11 @@ namespace ININ.PureCloudApi.Model
                     this.Id.Equals(other.Id)
                 ) && 
                 (
+                    this.SocialMediaId == other.SocialMediaId ||
+                    this.SocialMediaId != null &&
+                    this.SocialMediaId.Equals(other.SocialMediaId)
+                ) && 
+                (
                     this.SocialMediaHub == other.SocialMediaHub ||
                     this.SocialMediaHub != null &&
                     this.SocialMediaHub.Equals(other.SocialMediaHub)
@@ -211,6 +224,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.Id != null)
                     hash = hash * 57 + this.Id.GetHashCode();
+                
+                if (this.SocialMediaId != null)
+                    hash = hash * 57 + this.SocialMediaId.GetHashCode();
                 
                 if (this.SocialMediaHub != null)
                     hash = hash * 57 + this.SocialMediaHub.GetHashCode();

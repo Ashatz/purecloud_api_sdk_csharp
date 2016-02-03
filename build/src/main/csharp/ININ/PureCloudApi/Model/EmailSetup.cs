@@ -28,10 +28,11 @@ namespace ININ.PureCloudApi.Model
 
         
         /// <summary>
-        /// Gets or Sets MxRecordEntries
+        /// The root PureCloud domain that all sub-domains are created from.
         /// </summary>
-        [DataMember(Name="mxRecordEntries", EmitDefaultValue=false)]
-        public List<MxRecordEntry> MxRecordEntries { get; set; }
+        /// <value>The root PureCloud domain that all sub-domains are created from.</value>
+        [DataMember(Name="rootDomain", EmitDefaultValue=false)]
+        public string RootDomain { get; set; }
   
         
   
@@ -43,7 +44,7 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EmailSetup {\n");
-            sb.Append("  MxRecordEntries: ").Append(MxRecordEntries).Append("\n");
+            sb.Append("  RootDomain: ").Append(RootDomain).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -82,9 +83,9 @@ namespace ININ.PureCloudApi.Model
 
             return 
                 (
-                    this.MxRecordEntries == other.MxRecordEntries ||
-                    this.MxRecordEntries != null &&
-                    this.MxRecordEntries.SequenceEqual(other.MxRecordEntries)
+                    this.RootDomain == other.RootDomain ||
+                    this.RootDomain != null &&
+                    this.RootDomain.Equals(other.RootDomain)
                 );
         }
 
@@ -100,8 +101,8 @@ namespace ININ.PureCloudApi.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.MxRecordEntries != null)
-                    hash = hash * 57 + this.MxRecordEntries.GetHashCode();
+                if (this.RootDomain != null)
+                    hash = hash * 57 + this.RootDomain.GetHashCode();
                 
                 return hash;
             }

@@ -24,6 +24,7 @@ namespace ININ.PureCloudApi.Model
         public Evaluation()
         {
             this.AgentHasRead = false;
+            this.Redacted = false;
             this.IsScoringIndex = false;
             
         }
@@ -132,6 +133,13 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
+        /// Gets or Sets Redacted
+        /// </summary>
+        [DataMember(Name="redacted", EmitDefaultValue=false)]
+        public bool? Redacted { get; set; }
+  
+        
+        /// <summary>
         /// Gets or Sets IsScoringIndex
         /// </summary>
         [DataMember(Name="isScoringIndex", EmitDefaultValue=false)]
@@ -169,6 +177,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  AssignedDate: ").Append(AssignedDate).Append("\n");
             sb.Append("  ChangedDate: ").Append(ChangedDate).Append("\n");
             sb.Append("  Queue: ").Append(Queue).Append("\n");
+            sb.Append("  Redacted: ").Append(Redacted).Append("\n");
             sb.Append("  IsScoringIndex: ").Append(IsScoringIndex).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
@@ -279,6 +288,11 @@ namespace ININ.PureCloudApi.Model
                     this.Queue.Equals(other.Queue)
                 ) && 
                 (
+                    this.Redacted == other.Redacted ||
+                    this.Redacted != null &&
+                    this.Redacted.Equals(other.Redacted)
+                ) && 
+                (
                     this.IsScoringIndex == other.IsScoringIndex ||
                     this.IsScoringIndex != null &&
                     this.IsScoringIndex.Equals(other.IsScoringIndex)
@@ -343,6 +357,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.Queue != null)
                     hash = hash * 57 + this.Queue.GetHashCode();
+                
+                if (this.Redacted != null)
+                    hash = hash * 57 + this.Redacted.GetHashCode();
                 
                 if (this.IsScoringIndex != null)
                     hash = hash * 57 + this.IsScoringIndex.GetHashCode();

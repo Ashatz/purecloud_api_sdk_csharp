@@ -109,10 +109,27 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
-        /// Gets or Sets Managed
+        /// Is this edge group being managed remotely.
         /// </summary>
+        /// <value>Is this edge group being managed remotely.</value>
         [DataMember(Name="managed", EmitDefaultValue=false)]
         public bool? Managed { get; set; }
+  
+        
+        /// <summary>
+        /// A trunk base settings assignment of trunkType \"EDGE\" to use for edge-to-edge communication.
+        /// </summary>
+        /// <value>A trunk base settings assignment of trunkType \"EDGE\" to use for edge-to-edge communication.</value>
+        [DataMember(Name="edgeTrunkBaseAssignment", EmitDefaultValue=false)]
+        public TrunkBaseAssignment EdgeTrunkBaseAssignment { get; set; }
+  
+        
+        /// <summary>
+        /// Trunk base settings assignments of trunkType \"PHONE\" to inherit to edge logical interfaces for phone communication.
+        /// </summary>
+        /// <value>Trunk base settings assignments of trunkType \"PHONE\" to inherit to edge logical interfaces for phone communication.</value>
+        [DataMember(Name="phoneTrunkBaseAssignments", EmitDefaultValue=false)]
+        public List<TrunkBaseAssignment> PhoneTrunkBaseAssignments { get; set; }
   
         
         /// <summary>
@@ -144,6 +161,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ModifiedByApp: ").Append(ModifiedByApp).Append("\n");
             sb.Append("  CreatedByApp: ").Append(CreatedByApp).Append("\n");
             sb.Append("  Managed: ").Append(Managed).Append("\n");
+            sb.Append("  EdgeTrunkBaseAssignment: ").Append(EdgeTrunkBaseAssignment).Append("\n");
+            sb.Append("  PhoneTrunkBaseAssignments: ").Append(PhoneTrunkBaseAssignments).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
@@ -243,6 +262,16 @@ namespace ININ.PureCloudApi.Model
                     this.Managed.Equals(other.Managed)
                 ) && 
                 (
+                    this.EdgeTrunkBaseAssignment == other.EdgeTrunkBaseAssignment ||
+                    this.EdgeTrunkBaseAssignment != null &&
+                    this.EdgeTrunkBaseAssignment.Equals(other.EdgeTrunkBaseAssignment)
+                ) && 
+                (
+                    this.PhoneTrunkBaseAssignments == other.PhoneTrunkBaseAssignments ||
+                    this.PhoneTrunkBaseAssignments != null &&
+                    this.PhoneTrunkBaseAssignments.SequenceEqual(other.PhoneTrunkBaseAssignments)
+                ) && 
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -296,6 +325,12 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.Managed != null)
                     hash = hash * 57 + this.Managed.GetHashCode();
+                
+                if (this.EdgeTrunkBaseAssignment != null)
+                    hash = hash * 57 + this.EdgeTrunkBaseAssignment.GetHashCode();
+                
+                if (this.PhoneTrunkBaseAssignments != null)
+                    hash = hash * 57 + this.PhoneTrunkBaseAssignments.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 57 + this.SelfUri.GetHashCode();

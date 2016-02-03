@@ -54,6 +54,13 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public string Type { get; set; }
+  
+        
+        /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
@@ -194,6 +201,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  PurchaseOrder: ").Append(PurchaseOrder).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  IsSubmitted: ").Append(IsSubmitted).Append("\n");
             sb.Append("  IsPending: ").Append(IsPending).Append("\n");
@@ -263,6 +271,11 @@ namespace ININ.PureCloudApi.Model
                     this.PurchaseOrder == other.PurchaseOrder ||
                     this.PurchaseOrder != null &&
                     this.PurchaseOrder.Equals(other.PurchaseOrder)
+                ) && 
+                (
+                    this.Type == other.Type ||
+                    this.Type != null &&
+                    this.Type.Equals(other.Type)
                 ) && 
                 (
                     this.Status == other.Status ||
@@ -376,6 +389,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.PurchaseOrder != null)
                     hash = hash * 57 + this.PurchaseOrder.GetHashCode();
+                
+                if (this.Type != null)
+                    hash = hash * 57 + this.Type.GetHashCode();
                 
                 if (this.Status != null)
                     hash = hash * 57 + this.Status.GetHashCode();

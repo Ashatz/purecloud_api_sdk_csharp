@@ -156,6 +156,13 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
+        /// Gets or Sets Geolocation
+        /// </summary>
+        [DataMember(Name="geolocation", EmitDefaultValue=false)]
+        public Geolocation Geolocation { get; set; }
+  
+        
+        /// <summary>
         /// Gets or Sets Permissions
         /// </summary>
         [DataMember(Name="permissions", EmitDefaultValue=false)]
@@ -225,6 +232,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Conversations: ").Append(Conversations).Append("\n");
             sb.Append("  ConversationSummary: ").Append(ConversationSummary).Append("\n");
             sb.Append("  OutOfOffice: ").Append(OutOfOffice).Append("\n");
+            sb.Append("  Geolocation: ").Append(Geolocation).Append("\n");
             sb.Append("  Permissions: ").Append(Permissions).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  RequestedStatus: ").Append(RequestedStatus).Append("\n");
@@ -359,6 +367,11 @@ namespace ININ.PureCloudApi.Model
                     this.OutOfOffice.Equals(other.OutOfOffice)
                 ) && 
                 (
+                    this.Geolocation == other.Geolocation ||
+                    this.Geolocation != null &&
+                    this.Geolocation.Equals(other.Geolocation)
+                ) && 
+                (
                     this.Permissions == other.Permissions ||
                     this.Permissions != null &&
                     this.Permissions.SequenceEqual(other.Permissions)
@@ -455,6 +468,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.OutOfOffice != null)
                     hash = hash * 57 + this.OutOfOffice.GetHashCode();
+                
+                if (this.Geolocation != null)
+                    hash = hash * 57 + this.Geolocation.GetHashCode();
                 
                 if (this.Permissions != null)
                     hash = hash * 57 + this.Permissions.GetHashCode();

@@ -62,6 +62,13 @@ namespace ININ.PureCloudApi.Model
         public MediaSummary SocialExpression { get; set; }
   
         
+        /// <summary>
+        /// Gets or Sets Video
+        /// </summary>
+        [DataMember(Name="video", EmitDefaultValue=false)]
+        public MediaSummary Video { get; set; }
+  
+        
   
         /// <summary>
         /// Returns the string presentation of the object
@@ -76,6 +83,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("  Chat: ").Append(Chat).Append("\n");
             sb.Append("  SocialExpression: ").Append(SocialExpression).Append("\n");
+            sb.Append("  Video: ").Append(Video).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -137,6 +145,11 @@ namespace ININ.PureCloudApi.Model
                     this.SocialExpression == other.SocialExpression ||
                     this.SocialExpression != null &&
                     this.SocialExpression.Equals(other.SocialExpression)
+                ) && 
+                (
+                    this.Video == other.Video ||
+                    this.Video != null &&
+                    this.Video.Equals(other.Video)
                 );
         }
 
@@ -166,6 +179,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.SocialExpression != null)
                     hash = hash * 57 + this.SocialExpression.GetHashCode();
+                
+                if (this.Video != null)
+                    hash = hash * 57 + this.Video.GetHashCode();
                 
                 return hash;
             }

@@ -83,6 +83,14 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
+        /// Roles assigned to this client. Roles only apply to clients using the client_credential grant
+        /// </summary>
+        /// <value>Roles assigned to this client. Roles only apply to clients using the client_credential grant</value>
+        [DataMember(Name="roleIds", EmitDefaultValue=false)]
+        public List<string> RoleIds { get; set; }
+  
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -106,6 +114,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  RegisteredRedirectUri: ").Append(RegisteredRedirectUri).Append("\n");
             sb.Append("  Secret: ").Append(Secret).Append("\n");
+            sb.Append("  RoleIds: ").Append(RoleIds).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
@@ -180,6 +189,11 @@ namespace ININ.PureCloudApi.Model
                     this.Secret.Equals(other.Secret)
                 ) && 
                 (
+                    this.RoleIds == other.RoleIds ||
+                    this.RoleIds != null &&
+                    this.RoleIds.SequenceEqual(other.RoleIds)
+                ) && 
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -218,6 +232,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.Secret != null)
                     hash = hash * 57 + this.Secret.GetHashCode();
+                
+                if (this.RoleIds != null)
+                    hash = hash * 57 + this.RoleIds.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 57 + this.SelfUri.GetHashCode();

@@ -131,13 +131,6 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
-        /// Gets or Sets Endpoints
-        /// </summary>
-        [DataMember(Name="endpoints", EmitDefaultValue=false)]
-        public List<Endpoint> Endpoints { get; set; }
-  
-        
-        /// <summary>
         /// Gets or Sets Distribution
         /// </summary>
         [DataMember(Name="distribution", EmitDefaultValue=false)]
@@ -149,6 +142,14 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="managed", EmitDefaultValue=false)]
         public bool? Managed { get; set; }
+  
+        
+        /// <summary>
+        /// Trunk base settings of trunkType \"EXTERNAL\".  This base must also be set on an edge logical interface for correct routing.
+        /// </summary>
+        /// <value>Trunk base settings of trunkType \"EXTERNAL\".  This base must also be set on an edge logical interface for correct routing.</value>
+        [DataMember(Name="externalTrunkBases", EmitDefaultValue=false)]
+        public List<UriReference> ExternalTrunkBases { get; set; }
   
         
         /// <summary>
@@ -182,9 +183,9 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Site: ").Append(Site).Append("\n");
             sb.Append("  ClassificationTypes: ").Append(ClassificationTypes).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
-            sb.Append("  Endpoints: ").Append(Endpoints).Append("\n");
             sb.Append("  Distribution: ").Append(Distribution).Append("\n");
             sb.Append("  Managed: ").Append(Managed).Append("\n");
+            sb.Append("  ExternalTrunkBases: ").Append(ExternalTrunkBases).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
@@ -294,11 +295,6 @@ namespace ININ.PureCloudApi.Model
                     this.Enabled.Equals(other.Enabled)
                 ) && 
                 (
-                    this.Endpoints == other.Endpoints ||
-                    this.Endpoints != null &&
-                    this.Endpoints.SequenceEqual(other.Endpoints)
-                ) && 
-                (
                     this.Distribution == other.Distribution ||
                     this.Distribution != null &&
                     this.Distribution.Equals(other.Distribution)
@@ -307,6 +303,11 @@ namespace ININ.PureCloudApi.Model
                     this.Managed == other.Managed ||
                     this.Managed != null &&
                     this.Managed.Equals(other.Managed)
+                ) && 
+                (
+                    this.ExternalTrunkBases == other.ExternalTrunkBases ||
+                    this.ExternalTrunkBases != null &&
+                    this.ExternalTrunkBases.SequenceEqual(other.ExternalTrunkBases)
                 ) && 
                 (
                     this.SelfUri == other.SelfUri ||
@@ -369,14 +370,14 @@ namespace ININ.PureCloudApi.Model
                 if (this.Enabled != null)
                     hash = hash * 57 + this.Enabled.GetHashCode();
                 
-                if (this.Endpoints != null)
-                    hash = hash * 57 + this.Endpoints.GetHashCode();
-                
                 if (this.Distribution != null)
                     hash = hash * 57 + this.Distribution.GetHashCode();
                 
                 if (this.Managed != null)
                     hash = hash * 57 + this.Managed.GetHashCode();
+                
+                if (this.ExternalTrunkBases != null)
+                    hash = hash * 57 + this.ExternalTrunkBases.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 57 + this.SelfUri.GetHashCode();

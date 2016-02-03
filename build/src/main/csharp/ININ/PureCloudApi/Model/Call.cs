@@ -123,6 +123,13 @@ namespace ININ.PureCloudApi.Model
         public DateTime? StartHoldTime { get; set; }
   
         
+        /// <summary>
+        /// Gets or Sets DocumentId
+        /// </summary>
+        [DataMember(Name="documentId", EmitDefaultValue=false)]
+        public string DocumentId { get; set; }
+  
+        
   
         /// <summary>
         /// Returns the string presentation of the object
@@ -145,6 +152,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
+            sb.Append("  DocumentId: ").Append(DocumentId).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -246,6 +254,11 @@ namespace ININ.PureCloudApi.Model
                     this.StartHoldTime == other.StartHoldTime ||
                     this.StartHoldTime != null &&
                     this.StartHoldTime.Equals(other.StartHoldTime)
+                ) && 
+                (
+                    this.DocumentId == other.DocumentId ||
+                    this.DocumentId != null &&
+                    this.DocumentId.Equals(other.DocumentId)
                 );
         }
 
@@ -299,6 +312,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.StartHoldTime != null)
                     hash = hash * 57 + this.StartHoldTime.GetHashCode();
+                
+                if (this.DocumentId != null)
+                    hash = hash * 57 + this.DocumentId.GetHashCode();
                 
                 return hash;
             }

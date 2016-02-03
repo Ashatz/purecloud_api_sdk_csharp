@@ -105,6 +105,42 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<PermissionCollectionEntityListing>> AuthorizationPermissionsGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
+        /// Get the list of enabled products
+        /// </summary>
+        /// <remarks>
+        /// Gets the list of enabled products. Some example product names are: collaborateFree, collaboratePro, communicate, and engage.
+        /// </remarks>
+        /// <returns>OrganizationProductEntityListing</returns>
+        OrganizationProductEntityListing AuthorizationProductsGet ();
+  
+        /// <summary>
+        /// Get the list of enabled products
+        /// </summary>
+        /// <remarks>
+        /// Gets the list of enabled products. Some example product names are: collaborateFree, collaboratePro, communicate, and engage.
+        /// </remarks>
+        /// <returns>ApiResponse of OrganizationProductEntityListing</returns>
+        ApiResponse<OrganizationProductEntityListing> AuthorizationProductsGetWithHttpInfo ();
+
+        /// <summary>
+        /// Get the list of enabled products
+        /// </summary>
+        /// <remarks>
+        /// Gets the list of enabled products. Some example product names are: collaborateFree, collaboratePro, communicate, and engage.
+        /// </remarks>
+        /// <returns>Task of OrganizationProductEntityListing</returns>
+        System.Threading.Tasks.Task<OrganizationProductEntityListing> AuthorizationProductsGetAsync ();
+
+        /// <summary>
+        /// Get the list of enabled products
+        /// </summary>
+        /// <remarks>
+        /// Gets the list of enabled products. Some example product names are: collaborateFree, collaboratePro, communicate, and engage.
+        /// </remarks>
+        /// <returns>Task of ApiResponse (OrganizationProductEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<OrganizationProductEntityListing>> AuthorizationProductsGetAsyncWithHttpInfo ();
+        
+        /// <summary>
         /// Retrieve a list of all roles defined for the organization
         /// </summary>
         /// <remarks>
@@ -1137,6 +1173,147 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<PermissionCollectionEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PermissionCollectionEntityListing) Configuration.ApiClient.Deserialize(response, typeof(PermissionCollectionEntityListing)));
+            
+        }
+        
+        /// <summary>
+        /// Get the list of enabled products Gets the list of enabled products. Some example product names are: collaborateFree, collaboratePro, communicate, and engage.
+        /// </summary>
+        /// <returns>OrganizationProductEntityListing</returns>
+        public OrganizationProductEntityListing AuthorizationProductsGet ()
+        {
+             ApiResponse<OrganizationProductEntityListing> response = AuthorizationProductsGetWithHttpInfo();
+             return response.Data;
+        }
+
+        /// <summary>
+        /// Get the list of enabled products Gets the list of enabled products. Some example product names are: collaborateFree, collaboratePro, communicate, and engage.
+        /// </summary>
+        /// <returns>ApiResponse of OrganizationProductEntityListing</returns>
+        public ApiResponse< OrganizationProductEntityListing > AuthorizationProductsGetWithHttpInfo ()
+        {
+            
+    
+            var path_ = "/api/v1/authorization/products";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling AuthorizationProductsGet: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling AuthorizationProductsGet: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<OrganizationProductEntityListing>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (OrganizationProductEntityListing) Configuration.ApiClient.Deserialize(response, typeof(OrganizationProductEntityListing)));
+            
+        }
+    
+        /// <summary>
+        /// Get the list of enabled products Gets the list of enabled products. Some example product names are: collaborateFree, collaboratePro, communicate, and engage.
+        /// </summary>
+        /// <returns>Task of OrganizationProductEntityListing</returns>
+        public async System.Threading.Tasks.Task<OrganizationProductEntityListing> AuthorizationProductsGetAsync ()
+        {
+             ApiResponse<OrganizationProductEntityListing> response = await AuthorizationProductsGetAsyncWithHttpInfo();
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Get the list of enabled products Gets the list of enabled products. Some example product names are: collaborateFree, collaboratePro, communicate, and engage.
+        /// </summary>
+        /// <returns>Task of ApiResponse (OrganizationProductEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationProductEntityListing>> AuthorizationProductsGetAsyncWithHttpInfo ()
+        {
+            
+    
+            var path_ = "/api/v1/authorization/products";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling AuthorizationProductsGet: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling AuthorizationProductsGet: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<OrganizationProductEntityListing>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (OrganizationProductEntityListing) Configuration.ApiClient.Deserialize(response, typeof(OrganizationProductEntityListing)));
             
         }
         

@@ -42,6 +42,20 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
+        /// Gets or Sets EntityId
+        /// </summary>
+        [DataMember(Name="entityId", EmitDefaultValue=false)]
+        public string EntityId { get; set; }
+  
+        
+        /// <summary>
+        /// Gets or Sets EntityName
+        /// </summary>
+        [DataMember(Name="entityName", EmitDefaultValue=false)]
+        public string EntityName { get; set; }
+  
+        
+        /// <summary>
         /// Gets or Sets Message
         /// </summary>
         [DataMember(Name="message", EmitDefaultValue=false)]
@@ -76,6 +90,13 @@ namespace ININ.PureCloudApi.Model
         public List<Detail> Details { get; set; }
   
         
+        /// <summary>
+        /// Gets or Sets Errors
+        /// </summary>
+        [DataMember(Name="errors", EmitDefaultValue=false)]
+        public List<ErrorBody> Errors { get; set; }
+  
+        
   
         /// <summary>
         /// Returns the string presentation of the object
@@ -87,11 +108,14 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class ErrorBody {\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
+            sb.Append("  EntityId: ").Append(EntityId).Append("\n");
+            sb.Append("  EntityName: ").Append(EntityName).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  MessageWithParams: ").Append(MessageWithParams).Append("\n");
             sb.Append("  MessageParams: ").Append(MessageParams).Append("\n");
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
             sb.Append("  Details: ").Append(Details).Append("\n");
+            sb.Append("  Errors: ").Append(Errors).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -140,6 +164,16 @@ namespace ININ.PureCloudApi.Model
                     this.Code.Equals(other.Code)
                 ) && 
                 (
+                    this.EntityId == other.EntityId ||
+                    this.EntityId != null &&
+                    this.EntityId.Equals(other.EntityId)
+                ) && 
+                (
+                    this.EntityName == other.EntityName ||
+                    this.EntityName != null &&
+                    this.EntityName.Equals(other.EntityName)
+                ) && 
+                (
                     this.Message == other.Message ||
                     this.Message != null &&
                     this.Message.Equals(other.Message)
@@ -163,6 +197,11 @@ namespace ININ.PureCloudApi.Model
                     this.Details == other.Details ||
                     this.Details != null &&
                     this.Details.SequenceEqual(other.Details)
+                ) && 
+                (
+                    this.Errors == other.Errors ||
+                    this.Errors != null &&
+                    this.Errors.SequenceEqual(other.Errors)
                 );
         }
 
@@ -184,6 +223,12 @@ namespace ININ.PureCloudApi.Model
                 if (this.Code != null)
                     hash = hash * 57 + this.Code.GetHashCode();
                 
+                if (this.EntityId != null)
+                    hash = hash * 57 + this.EntityId.GetHashCode();
+                
+                if (this.EntityName != null)
+                    hash = hash * 57 + this.EntityName.GetHashCode();
+                
                 if (this.Message != null)
                     hash = hash * 57 + this.Message.GetHashCode();
                 
@@ -198,6 +243,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.Details != null)
                     hash = hash * 57 + this.Details.GetHashCode();
+                
+                if (this.Errors != null)
+                    hash = hash * 57 + this.Errors.GetHashCode();
                 
                 return hash;
             }

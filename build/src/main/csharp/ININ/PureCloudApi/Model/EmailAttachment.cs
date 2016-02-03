@@ -49,6 +49,13 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
+        /// Gets or Sets AttachmentId
+        /// </summary>
+        [DataMember(Name="attachmentId", EmitDefaultValue=false)]
+        public string AttachmentId { get; set; }
+  
+        
+        /// <summary>
         /// Gets or Sets ContentLength
         /// </summary>
         [DataMember(Name="contentLength", EmitDefaultValue=false)]
@@ -67,6 +74,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  ContentPath: ").Append(ContentPath).Append("\n");
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
+            sb.Append("  AttachmentId: ").Append(AttachmentId).Append("\n");
             sb.Append("  ContentLength: ").Append(ContentLength).Append("\n");
             
             sb.Append("}\n");
@@ -121,6 +129,11 @@ namespace ININ.PureCloudApi.Model
                     this.ContentType.Equals(other.ContentType)
                 ) && 
                 (
+                    this.AttachmentId == other.AttachmentId ||
+                    this.AttachmentId != null &&
+                    this.AttachmentId.Equals(other.AttachmentId)
+                ) && 
+                (
                     this.ContentLength == other.ContentLength ||
                     this.ContentLength != null &&
                     this.ContentLength.Equals(other.ContentLength)
@@ -147,6 +160,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.ContentType != null)
                     hash = hash * 57 + this.ContentType.GetHashCode();
+                
+                if (this.AttachmentId != null)
+                    hash = hash * 57 + this.AttachmentId.GetHashCode();
                 
                 if (this.ContentLength != null)
                     hash = hash * 57 + this.ContentLength.GetHashCode();

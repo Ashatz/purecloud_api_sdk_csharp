@@ -52,7 +52,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<VoiceRateExtended> Entities { get; set; }
+        public List<VoiceRate> Entities { get; set; }
   
         
         /// <summary>
