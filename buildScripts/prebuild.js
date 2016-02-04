@@ -64,8 +64,10 @@ function downloadFile(url, output) {
 		return;
 	});
 	download.on('end', function(output) {
+		/*Jenkins doesn't support clearLine. Lame.
 		process.stdout.clearLine();
 		process.stdout.cursorTo(0);
+		*/
 	    console.log('File downloaded to : ' + output);
 	    deferred.resolve();
 		return;
@@ -73,14 +75,17 @@ function downloadFile(url, output) {
 	download.on('progress', function(progress) {
 		// Report progress at 5% intervals
 		var p = Number((progress * 100).toFixed(0));
-		var progressInterval = 2;
+		var progressInterval = 5;
 		if (p > progressTracker && p % progressInterval == 0) {
 			progressTracker = p;
+			console.log(progressTracker + '%');
+			/* Jenkins doesn't support clearLine. Lame.
 			process.stdout.clearLine();
 			process.stdout.cursorTo(0);
 			var completed = new Array((progressTracker / progressInterval) + 1).join("█");
 			var left = new Array(((100 - progressTracker) / progressInterval) + 1).join(" ");
 			process.stdout.write('Progress [' + completed + left + '] ' + progressTracker + '%');  // write text
+			*/
 		}
 	});
 
