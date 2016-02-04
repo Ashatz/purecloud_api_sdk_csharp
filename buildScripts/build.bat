@@ -19,4 +19,4 @@ call compile.bat
 cd %WORKSPACE%\repo
 
 call git add .
-call git commit -am %version%
+call git commit -am %PACKAGE_VERSION%
