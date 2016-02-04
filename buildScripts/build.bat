@@ -3,6 +3,7 @@ call npm install
 cd %WORKSPACE%\repo
 
 node buildScripts\prebuild.js
+set /p PACKAGE_VERSION=<bin\VERSION
 
 rmdir /S /Q build
 mkdir build

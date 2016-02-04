@@ -135,11 +135,12 @@ function updateVersion() {
 function writeConfig() {
 	var deferred = Q.defer();
 
-	process.env.PACKAGE_VERSION = packageVersion + '.' + process.env['BUILD_NUMBER'];
-	console.log('Package version: ' + process.env.PACKAGE_VERSION);
+	var v = packageVersion + '.' + process.env['BUILD_NUMBER'];
+	console.log('Package version: ' + v);
+	fs.writeFileSync('bin/VERSION', v, 'UTF-8');
 	var config = {
 		"packageName":"ININ.PureCloudApi",
-		"packageVersion":process.env.PACKAGE_VERSION,
+		"packageVersion":v,
 		"packageTitle":"PureCloud Public API Library",
 	    "packageProductName":"PureCloudPublicAPILibrary",
 	    "packageDescription":"A .NET library to interface with the PureCloud Public API",
