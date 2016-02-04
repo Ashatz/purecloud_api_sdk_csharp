@@ -10,6 +10,7 @@
 		"github-api-promise":"*",
 		"dateformat":"*",
 		"Q":"*",
-		"archiver":"*"
+		"archiver":"*",
+		"PureCloudApiLibraries":"git://github.com/MyPureCloud/PureCloudApiLibraries.git"
 	}
 }
