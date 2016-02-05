@@ -1,7 +1,7 @@
 {
-	"name":"PureCloudApiLibrary_CSharp",
+	"name":"purecloud_api_sdk_csharp",
 	"version":"1.0.1",
-	"description":"A C# client library for the PureCloud Public API",
+	"description":"A C# SDK for the PureCloud API",
 	"repository":"https://github.com/MyPureCloud/PureCloudApiLibrary_CSharp.git",
 	"license":"MIT",
 	"dependencies": {
