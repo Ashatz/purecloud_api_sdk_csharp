@@ -1,2 +1,2 @@
-# PureCloudApiLibrary_CSharp
-A C# client library for the PureCloud Public API
+# PureCloud API SDK - C#
+A C# SDK for the PureCloud Public API
