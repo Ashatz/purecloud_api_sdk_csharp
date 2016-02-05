@@ -11,6 +11,6 @@
 		"dateformat":"*",
 		"Q":"*",
 		"archiver":"*",
-		"PureCloudApiLibraries":"git://github.com/MyPureCloud/PureCloudApiLibraries.git"
+		"purecloud-api-sdk-common":"git://github.com/MyPureCloud/purecloud_api_sdk_common.git"
 	}
 }

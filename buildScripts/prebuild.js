@@ -2,7 +2,7 @@ var wget = require('wget');
 var mkdirp = require('mkdirp');
 var fs = require('fs');
 var Q = require('q');
-var pclib = require('PureCloudApiLibraries');
+var pclib = require('purecloud-api-sdk-common');
 var path = require('path');
 
 var progressTracker = 0;
