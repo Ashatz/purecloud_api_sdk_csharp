@@ -2,7 +2,7 @@ var archiver = require('archiver');
 var Q = require('q');
 var fs = require('fs');
 
-zipDoxygenFiles('doxygen/doxygen-csharp.zip')
+zipDoxygenFiles('doxygen-csharp.zip')
 	.then(function() {
 		console.log('archiveDocs script complete');
 		// Have to explicitly exit because promises keep the node process running
@@ -29,6 +29,10 @@ function zipDoxygenFiles(zipPath) {
 	// Callback for file write error
 	archive.on('error', function(err) {
 		deferred.reject(err);
+	});
+
+	archive.on('entry', function(entryData) {
+		console.log('Adding file: ' + entryData.name);
 	});
 
 	archive.pipe(output);
