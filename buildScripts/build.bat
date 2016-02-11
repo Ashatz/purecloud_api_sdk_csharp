@@ -19,7 +19,5 @@ cd %WORKSPACE%\repo\build
 call compile.bat
 cd %WORKSPACE%\repo
 
-IF EXIST newVersion.md(
-    call git add .
-    call git commit -am %PACKAGE_VERSION%
-)
+IF EXIST newVersion.md call git add .
+IF EXIST newVersion.md call git commit -am %PACKAGE_VERSION%
