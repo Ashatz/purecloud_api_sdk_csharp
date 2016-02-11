@@ -18,6 +18,10 @@ function main() {
 	var token = null;
 	var releaseNotes = '';
 
+	function stringStartsWith (string, prefix) {
+	    return string.slice(0, prefix.length) == prefix;
+	}
+
 	// Parse args
 	process.argv.forEach(function (val, index, array) {
 		if (stringStartsWith(val, '/version=')) {
