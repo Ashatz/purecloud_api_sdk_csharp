@@ -29,14 +29,22 @@ downloadFile(
 	})
 	.catch(function(error) {
 		console.log('Error encountered in prebuild script!');
-		console.log(error);
+		console.log(error.stack);
 		process.exit(1);
 	});
 
 
-function downloadFile(url, output) {
+function downloadFile(url, output, append) {
 	var deferred = Q.defer();
 
+	if (append != true) {
+		if (fileExists(output)) {
+			console.log('Deleting ' + output);
+			fs.unlinkSync(output);
+		} else {
+			console.log('file does not exist: ' + output)
+		}
+	}
 	progressTracker = 0;
 	var dirPath = '';
 	if (output.indexOf('/') > -1)
@@ -164,6 +172,16 @@ function writeConfig() {
 	return deferred.promise;
 }
 
-function stringStartsWith (string, prefix) {
+function stringStartsWith(string, prefix) {
     return string.slice(0, prefix.length) == prefix;
+}
+
+function fileExists(filepath) {
+	if (!filepath) return false
+
+	try {
+		return fs.statSync(filepath).isFile()
+	} catch (e) {
+		return false
+	}
 }
