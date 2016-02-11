@@ -38,7 +38,7 @@ function main() {
 
 			console.log('zip file created, uploading....');
 
-			release.release(token, repo, version, releaseNotes, zipFileNamem zipFilePath);
+			release.release(token, repo, version, releaseNotes, zipFileName, zipFilePath);
 
 		});
 }
