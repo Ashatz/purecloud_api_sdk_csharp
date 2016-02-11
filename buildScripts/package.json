@@ -9,7 +9,7 @@
 		"mkdirp":"*",
 		"github-api-promise":"*",
 		"dateformat":"*",
-		"Q":"*",
+		"q":"*",
 		"archiver":"*",
 		"purecloud-api-sdk-common":"git://github.com/MyPureCloud/purecloud_api_sdk_common.git"
 	}

@@ -3,27 +3,31 @@ var dateFormat = require('dateformat');
 var fs = require('fs');
 var archiver = require('archiver');
 var Q = require('q');
+var release = require('purecloud-api-sdk-common').createRelease();
 
 var dFormat = 'dddd, mmmm dS yyyy';
 var tFormat = 'h:MM:ss TT';
 
-api.config.owner = 'MyPureCloud';
-api.config.repo = 'PureCloudApiLibrary_CSharp';
+var repo = 'purecloud_api_sdk_csharp';
 
 main();
 
 
-
 function main() {
 	var version = '0.0.0.0';
+	var token = null;
+	var releaseNotes = '';
 
 	// Parse args
 	process.argv.forEach(function (val, index, array) {
 		if (stringStartsWith(val, '/version=')) {
 			version = val.substring(9);
 		} else if (stringStartsWith(val, '/token=')) {
-			api.config.token = val.substring(7);
-		}
+			token = val.substring(7);
+		} else if (stringStartsWith(val, '/releasenotes=')) {
+	        releaseNotes = val.substring(14);
+	    }
+
 	});
 
 	// Create zip for release
@@ -31,36 +35,11 @@ function main() {
 	var zipFilePath = './bin/' + zipFileName;
 	zipReleaseFiles(zipFilePath)
 		.then(function() {
+
 			console.log('zip file created, uploading....');
 
-			var createReleaseOptions = {
-				"tag_name": version,
-				"target_commitish": "master",
-				"name": version,
-				"body": "Jenkins build " + version,
-				"draft": false,
-				"prerelease": false
-			};
+			release.release(token, repo, version, releaseNotes, zipFileNamem zipFilePath);
 
-			api.repos.releases.createRelease(createReleaseOptions)
-				.then(function(res) {
-					logRelease(res, 'Created ');
-					uploadReleaseAsset(res.upload_url, zipFileName, 'Release binaries', zipFilePath, 'application/zip');
-				}, 
-				function(err) {
-					console.log('Request failed: ' + err);
-					throw err;
-				});
-		});
-}
-
-function uploadReleaseAsset(uploadUrl, fileName, label, filePath, mimeType) {
-	api.repos.releases.uploadReleaseAsset(uploadUrl, fileName, label, filePath, mimeType)
-		.then(function(res) {
-			logAsset(res, 'Uploaded ');
-		}, 
-		function(err) {
-			console.log('Request failed: ' + err);
 		});
 }
 
@@ -92,25 +71,4 @@ function zipReleaseFiles(zipPath) {
 		.finalize();
 
 	return deferred.promise;
-}
-
-// Log a single release
-function logRelease(release, prefix) {
-	if (prefix) {
-		if (prefix.substring(prefix.length - 1) != ' ') {
-			prefix += ' ';
-		}
-	} else {
-		prefix = '';
-	}
-	console.log(prefix + 'release #' + release.id + ', "' + release.name + '", tag: ' + release.tag_name + ', published on ' + dateFormat(release.published_at, dFormat) + ' at ' + dateFormat(release.published_at, tFormat));
-}
-
-// Log a single asset
-function logAsset(asset) {
-	console.log('Asset "' + asset.name + '" (' + asset.label + ') #' + asset.id + ' uploaded by ' + asset.uploader.login + ' on ' + dateFormat(asset.updated_at, dFormat) + ' at ' + dateFormat(asset.updated_at, tFormat));
-}
-
-function stringStartsWith (string, prefix) {
-    return string.slice(0, prefix.length) == prefix;
 }

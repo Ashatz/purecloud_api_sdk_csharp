@@ -3,22 +3,22 @@ var mkdirp = require('mkdirp');
 var fs = require('fs');
 var Q = require('q');
 var pclib = require('purecloud-api-sdk-common');
+var pclibSwaggerVersion = pclib.swaggerVersioning();
 var path = require('path');
 
 var progressTracker = 0;
-var packageVersion = '0.0.0';
 var oldSwaggerPath = 'lib/swagger-old.json';
 var newSwaggerPath = 'lib/swagger.json';
 var versionFilePath = 'buildScripts/version.json';
 
 downloadFile(
-	'http://repo1.maven.org/maven2/io/swagger/swagger-codegen-cli/2.1.4/swagger-codegen-cli-2.1.4.jar', 
+	'http://repo1.maven.org/maven2/io/swagger/swagger-codegen-cli/2.1.4/swagger-codegen-cli-2.1.4.jar',
 	'bin/swagger-codegen-cli.jar')
 	.then(function() {
 		//TODO: allow this to proceed once the swagger file is fixed
 		return;
 		// Download the latest swagger
-		return downloadFile('https://api.mypurecloud.com/api/v1/docs/swagger', newSwaggerPath); 
+		return downloadFile('https://api.mypurecloud.com/api/v1/docs/swagger', newSwaggerPath);
 	})
 	.then(updateVersion)
 	.then(writeConfig)
@@ -54,7 +54,7 @@ function downloadFile(url, output, append) {
 	else
 		console.log('output path does not contain a directory');
 
-	mkdirp(dirPath, function(err) { 
+	mkdirp(dirPath, function(err) {
 		if (err) {
 			console.log('Fatal error making directory: ');
 			console.log(err);
@@ -101,49 +101,33 @@ function downloadFile(url, output, append) {
 }
 
 function updateVersion() {
-	console.log('Verifying files...');
-	if (!fs.existsSync(versionFilePath)) {
-		console.log('Creating ' + versionFilePath);
-		fs.writeFileSync(versionFilePath, '{"major":0,"minor":0,"point":0,"changelog":{}}', 'UTF-8');
-	}
-	if (!fs.existsSync(newSwaggerPath)) {
-		throw new Error('Failed to find new swagger file at ' + newSwaggerPath);
-	}
-	if (!fs.existsSync(oldSwaggerPath)) {
-		console.log('Creating ' + oldSwaggerPath + ' from ' + newSwaggerPath);
-		fs.writeFileSync(oldSwaggerPath, fs.readFileSync(newSwaggerPath, 'UTF-8'), 'UTF-8');
-	}
+	var deferred = Q.defer();
 
-	// Temporarially using a static local file until swagger doc issues are resolved
-	var versioning = pclib.swaggerVersioning();
+	pclib.updateSwaggerAndVersion("swagger.json", "version.json", "mypurecloud.com", function(hasChanges){
+        var version = pclibSwaggerVersion.getVersionString("version.json");
 
-	var oldVersion = versioning.getVersionString(versionFilePath);
-	console.log('Old version: ' + oldVersion);
+        if(hasChanges){
+            console.log("has changes, new version: " + version)
+            fs.writeFileSync("newVersion.md", version);
 
-	// Read swagger files into memory
-	console.log('Loading old swagger from ' + oldSwaggerPath);
-	var oldSwagger = JSON.parse(fs.readFileSync(oldSwaggerPath, 'UTF-8'));
-	console.log('Loading new swagger from ' + newSwaggerPath);
-	var newSwagger = JSON.parse(fs.readFileSync(newSwaggerPath, 'UTF-8'));
+			versionJson = JSON.parse(fs.readFileSync("version.json", 'UTF-8'))
 
-	// Diff
-	console.log('Diffing swagger...')
-    var swaggerDifferences = versioning.checkAll(oldSwagger, newSwagger);
+			var notes = pclibSwaggerVersion.getChangeReadmeText(versionJson.changelog[version]);
+			fs.writeFileSync("RELEASENOTES", notes);
+        }else{
+            console.log("no changes, still version " + version)
+        }
 
-    // Update version file
-    var hasChanges = versioning.updateVersionFile(swaggerDifferences, versionFilePath);
+		 deferred.resolve();
+    });
 
-    // Overwrite old swagger file with latest data
-    fs.writeFileSync(oldSwaggerPath, JSON.stringify(newSwagger), 'UTF-8');
-
-    packageVersion = versioning.getVersionString(versionFilePath);
-	console.log('New version: ' + packageVersion + (hasChanges ? '' : ' [UNCHANGED]'));
+	return deferred.promise;
 }
 
 function writeConfig() {
 	var deferred = Q.defer();
 
-	var v = packageVersion + '.' + process.env['BUILD_NUMBER'];
+	var v = pclibSwaggerVersion.getVersionString("version.json");
 	console.log('Package version: ' + v);
 	fs.writeFileSync('bin/VERSION', v, 'UTF-8');
 	var config = {
