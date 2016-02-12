@@ -5,7 +5,6 @@
 	"repository":"https://github.com/MyPureCloud/PureCloudApiLibrary_CSharp.git",
 	"license":"MIT",
 	"dependencies": {
-		"wget":"*",
 		"mkdirp":"*",
 		"github-api-promise":"*",
 		"dateformat":"*",
