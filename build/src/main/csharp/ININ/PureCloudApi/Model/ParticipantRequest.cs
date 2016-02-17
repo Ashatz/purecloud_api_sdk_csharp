@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class ParticipantRequest :  IEquatable<ParticipantRequest>
+    public partial class ParticipantRequest :  IEquatable<ParticipantRequest>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ParticipantRequest" /> class.
@@ -133,7 +132,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ParticipantRequest instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ParticipantRequest to be compared</param>
+        /// <param name="other">Instance of ParticipantRequest to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ParticipantRequest other)
         {
@@ -197,34 +196,32 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Wrapup != null)
-                    hash = hash * 57 + this.Wrapup.GetHashCode();
+                    hash = hash * 59 + this.Wrapup.GetHashCode();
                 
                 if (this.State != null)
-                    hash = hash * 57 + this.State.GetHashCode();
+                    hash = hash * 59 + this.State.GetHashCode();
                 
                 if (this.Recording != null)
-                    hash = hash * 57 + this.Recording.GetHashCode();
+                    hash = hash * 59 + this.Recording.GetHashCode();
                 
                 if (this.Muted != null)
-                    hash = hash * 57 + this.Muted.GetHashCode();
+                    hash = hash * 59 + this.Muted.GetHashCode();
                 
                 if (this.Confined != null)
-                    hash = hash * 57 + this.Confined.GetHashCode();
+                    hash = hash * 59 + this.Confined.GetHashCode();
                 
                 if (this.Held != null)
-                    hash = hash * 57 + this.Held.GetHashCode();
+                    hash = hash * 59 + this.Held.GetHashCode();
                 
                 if (this.WrapupSkipped != null)
-                    hash = hash * 57 + this.WrapupSkipped.GetHashCode();
+                    hash = hash * 59 + this.WrapupSkipped.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

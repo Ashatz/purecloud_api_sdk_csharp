@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class LocationAddressFields :  IEquatable<LocationAddressFields>
+    public partial class LocationAddressFields :  IEquatable<LocationAddressFields>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="LocationAddressFields" /> class.
@@ -120,7 +119,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if LocationAddressFields instances are equal
         /// </summary>
-        /// <param name="obj">Instance of LocationAddressFields to be compared</param>
+        /// <param name="other">Instance of LocationAddressFields to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(LocationAddressFields other)
         {
@@ -179,31 +178,29 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.City != null)
-                    hash = hash * 57 + this.City.GetHashCode();
+                    hash = hash * 59 + this.City.GetHashCode();
                 
                 if (this.Country != null)
-                    hash = hash * 57 + this.Country.GetHashCode();
+                    hash = hash * 59 + this.Country.GetHashCode();
                 
                 if (this.CountryName != null)
-                    hash = hash * 57 + this.CountryName.GetHashCode();
+                    hash = hash * 59 + this.CountryName.GetHashCode();
                 
                 if (this.State != null)
-                    hash = hash * 57 + this.State.GetHashCode();
+                    hash = hash * 59 + this.State.GetHashCode();
                 
                 if (this.Street1 != null)
-                    hash = hash * 57 + this.Street1.GetHashCode();
+                    hash = hash * 59 + this.Street1.GetHashCode();
                 
                 if (this.Street2 != null)
-                    hash = hash * 57 + this.Street2.GetHashCode();
+                    hash = hash * 59 + this.Street2.GetHashCode();
                 
                 if (this.Zipcode != null)
-                    hash = hash * 57 + this.Zipcode.GetHashCode();
+                    hash = hash * 59 + this.Zipcode.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class FavoriteTemplateRequestData :  IEquatable<FavoriteTemplateRequestData>
+    public partial class FavoriteTemplateRequestData :  IEquatable<FavoriteTemplateRequestData>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FavoriteTemplateRequestData" /> class.
@@ -72,7 +71,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FavoriteTemplateRequestData instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FavoriteTemplateRequestData to be compared</param>
+        /// <param name="other">Instance of FavoriteTemplateRequestData to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FavoriteTemplateRequestData other)
         {
@@ -101,13 +100,11 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.TemplateId != null)
-                    hash = hash * 57 + this.TemplateId.GetHashCode();
+                    hash = hash * 59 + this.TemplateId.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

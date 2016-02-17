@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class UploadProgress :  IEquatable<UploadProgress>
+    public partial class UploadProgress :  IEquatable<UploadProgress>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UploadProgress" /> class.
@@ -127,7 +126,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if UploadProgress instances are equal
         /// </summary>
-        /// <param name="obj">Instance of UploadProgress to be compared</param>
+        /// <param name="other">Instance of UploadProgress to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(UploadProgress other)
         {
@@ -186,31 +185,29 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.CarrierId != null)
-                    hash = hash * 57 + this.CarrierId.GetHashCode();
+                    hash = hash * 59 + this.CarrierId.GetHashCode();
                 
                 if (this.SchemaName != null)
-                    hash = hash * 57 + this.SchemaName.GetHashCode();
+                    hash = hash * 59 + this.SchemaName.GetHashCode();
                 
                 if (this.Status != null)
-                    hash = hash * 57 + this.Status.GetHashCode();
+                    hash = hash * 59 + this.Status.GetHashCode();
                 
                 if (this.Filename != null)
-                    hash = hash * 57 + this.Filename.GetHashCode();
+                    hash = hash * 59 + this.Filename.GetHashCode();
                 
                 if (this.Filetype != null)
-                    hash = hash * 57 + this.Filetype.GetHashCode();
+                    hash = hash * 59 + this.Filetype.GetHashCode();
                 
                 if (this.Created != null)
-                    hash = hash * 57 + this.Created.GetHashCode();
+                    hash = hash * 59 + this.Created.GetHashCode();
                 
                 if (this.Updated != null)
-                    hash = hash * 57 + this.Updated.GetHashCode();
+                    hash = hash * 59 + this.Updated.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

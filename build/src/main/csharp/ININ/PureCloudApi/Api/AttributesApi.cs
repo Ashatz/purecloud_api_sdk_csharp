@@ -1,11 +1,11 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 using ININ.PureCloudApi.Client;
 using ININ.PureCloudApi.Model;
-
 
 namespace ININ.PureCloudApi.Api
 {
@@ -25,7 +25,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="pageSize">Page size</param>
         /// <returns>AttributeEntityListing</returns>
-        AttributeEntityListing Get (int? pageNumber = null, int? pageSize = null);
+        AttributeEntityListing GetAttributes (int? pageNumber = null, int? pageSize = null);
   
         /// <summary>
         /// Gets a list of existing attributes.
@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="pageSize">Page size</param>
         /// <returns>ApiResponse of AttributeEntityListing</returns>
-        ApiResponse<AttributeEntityListing> GetWithHttpInfo (int? pageNumber = null, int? pageSize = null);
+        ApiResponse<AttributeEntityListing> GetAttributesWithHttpInfo (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
         /// Gets a list of existing attributes.
@@ -47,7 +47,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="pageSize">Page size</param>
         /// <returns>Task of AttributeEntityListing</returns>
-        System.Threading.Tasks.Task<AttributeEntityListing> GetAsync (int? pageNumber = null, int? pageSize = null);
+        System.Threading.Tasks.Task<AttributeEntityListing> GetAttributesAsync (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
         /// Gets a list of existing attributes.
@@ -58,7 +58,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="pageSize">Page size</param>
         /// <returns>Task of ApiResponse (AttributeEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AttributeEntityListing>> GetAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<AttributeEntityListing>> GetAttributesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null);
         
         /// <summary>
         /// Create an attribute.
@@ -67,8 +67,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <param name="body">Attribute</param>
-        /// <returns>Attribute</returns>
-        Attribute Create (Attribute body = null);
+        /// <returns>ININ.PureCloudApi.Model.Attribute</returns>
+        ININ.PureCloudApi.Model.Attribute PostAttributes (ININ.PureCloudApi.Model.Attribute body = null);
   
         /// <summary>
         /// Create an attribute.
@@ -77,8 +77,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <param name="body">Attribute</param>
-        /// <returns>ApiResponse of Attribute</returns>
-        ApiResponse<Attribute> CreateWithHttpInfo (Attribute body = null);
+        /// <returns>ApiResponse of ININ.PureCloudApi.Model.Attribute</returns>
+        ApiResponse<ININ.PureCloudApi.Model.Attribute> PostAttributesWithHttpInfo (ININ.PureCloudApi.Model.Attribute body = null);
 
         /// <summary>
         /// Create an attribute.
@@ -87,8 +87,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <param name="body">Attribute</param>
-        /// <returns>Task of Attribute</returns>
-        System.Threading.Tasks.Task<Attribute> CreateAsync (Attribute body = null);
+        /// <returns>Task of ININ.PureCloudApi.Model.Attribute</returns>
+        System.Threading.Tasks.Task<ININ.PureCloudApi.Model.Attribute> PostAttributesAsync (ININ.PureCloudApi.Model.Attribute body = null);
 
         /// <summary>
         /// Create an attribute.
@@ -97,8 +97,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <param name="body">Attribute</param>
-        /// <returns>Task of ApiResponse (Attribute)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Attribute>> CreateAsyncWithHttpInfo (Attribute body = null);
+        /// <returns>Task of ApiResponse (ININ.PureCloudApi.Model.Attribute)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ININ.PureCloudApi.Model.Attribute>> PostAttributesAsyncWithHttpInfo (ININ.PureCloudApi.Model.Attribute body = null);
         
         /// <summary>
         /// Query attributes
@@ -108,7 +108,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">query</param>
         /// <returns>AttributeEntityListing</returns>
-        AttributeEntityListing CreateQuery (AttributeQueryRequest body = null);
+        AttributeEntityListing PostQuery (AttributeQueryRequest body = null);
   
         /// <summary>
         /// Query attributes
@@ -118,7 +118,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">query</param>
         /// <returns>ApiResponse of AttributeEntityListing</returns>
-        ApiResponse<AttributeEntityListing> CreateQueryWithHttpInfo (AttributeQueryRequest body = null);
+        ApiResponse<AttributeEntityListing> PostQueryWithHttpInfo (AttributeQueryRequest body = null);
 
         /// <summary>
         /// Query attributes
@@ -128,7 +128,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">query</param>
         /// <returns>Task of AttributeEntityListing</returns>
-        System.Threading.Tasks.Task<AttributeEntityListing> CreateQueryAsync (AttributeQueryRequest body = null);
+        System.Threading.Tasks.Task<AttributeEntityListing> PostQueryAsync (AttributeQueryRequest body = null);
 
         /// <summary>
         /// Query attributes
@@ -138,7 +138,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (AttributeEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AttributeEntityListing>> CreateQueryAsyncWithHttpInfo (AttributeQueryRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<AttributeEntityListing>> PostQueryAsyncWithHttpInfo (AttributeQueryRequest body = null);
         
         /// <summary>
         /// Get details about an existing attribute.
@@ -147,8 +147,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <param name="attributeId">Attribute ID</param>
-        /// <returns>Attribute</returns>
-        Attribute GetAttribute (string attributeId);
+        /// <returns>ININ.PureCloudApi.Model.Attribute</returns>
+        ININ.PureCloudApi.Model.Attribute Get (string attributeId);
   
         /// <summary>
         /// Get details about an existing attribute.
@@ -157,8 +157,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <param name="attributeId">Attribute ID</param>
-        /// <returns>ApiResponse of Attribute</returns>
-        ApiResponse<Attribute> GetAttributeWithHttpInfo (string attributeId);
+        /// <returns>ApiResponse of ININ.PureCloudApi.Model.Attribute</returns>
+        ApiResponse<ININ.PureCloudApi.Model.Attribute> GetWithHttpInfo (string attributeId);
 
         /// <summary>
         /// Get details about an existing attribute.
@@ -167,8 +167,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <param name="attributeId">Attribute ID</param>
-        /// <returns>Task of Attribute</returns>
-        System.Threading.Tasks.Task<Attribute> GetAttributeAsync (string attributeId);
+        /// <returns>Task of ININ.PureCloudApi.Model.Attribute</returns>
+        System.Threading.Tasks.Task<ININ.PureCloudApi.Model.Attribute> GetAsync (string attributeId);
 
         /// <summary>
         /// Get details about an existing attribute.
@@ -177,8 +177,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <param name="attributeId">Attribute ID</param>
-        /// <returns>Task of ApiResponse (Attribute)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Attribute>> GetAttributeAsyncWithHttpInfo (string attributeId);
+        /// <returns>Task of ApiResponse (ININ.PureCloudApi.Model.Attribute)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ININ.PureCloudApi.Model.Attribute>> GetAsyncWithHttpInfo (string attributeId);
         
         /// <summary>
         /// Update an existing attribute.
@@ -188,8 +188,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="attributeId">Attribute ID</param>
         /// <param name="body">Attribute</param>
-        /// <returns>Attribute</returns>
-        Attribute UpdateAttribute (string attributeId, Attribute body = null);
+        /// <returns>ININ.PureCloudApi.Model.Attribute</returns>
+        ININ.PureCloudApi.Model.Attribute Put (string attributeId, ININ.PureCloudApi.Model.Attribute body = null);
   
         /// <summary>
         /// Update an existing attribute.
@@ -199,8 +199,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="attributeId">Attribute ID</param>
         /// <param name="body">Attribute</param>
-        /// <returns>ApiResponse of Attribute</returns>
-        ApiResponse<Attribute> UpdateAttributeWithHttpInfo (string attributeId, Attribute body = null);
+        /// <returns>ApiResponse of ININ.PureCloudApi.Model.Attribute</returns>
+        ApiResponse<ININ.PureCloudApi.Model.Attribute> PutWithHttpInfo (string attributeId, ININ.PureCloudApi.Model.Attribute body = null);
 
         /// <summary>
         /// Update an existing attribute.
@@ -210,8 +210,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="attributeId">Attribute ID</param>
         /// <param name="body">Attribute</param>
-        /// <returns>Task of Attribute</returns>
-        System.Threading.Tasks.Task<Attribute> UpdateAttributeAsync (string attributeId, Attribute body = null);
+        /// <returns>Task of ININ.PureCloudApi.Model.Attribute</returns>
+        System.Threading.Tasks.Task<ININ.PureCloudApi.Model.Attribute> PutAsync (string attributeId, ININ.PureCloudApi.Model.Attribute body = null);
 
         /// <summary>
         /// Update an existing attribute.
@@ -221,8 +221,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="attributeId">Attribute ID</param>
         /// <param name="body">Attribute</param>
-        /// <returns>Task of ApiResponse (Attribute)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Attribute>> UpdateAttributeAsyncWithHttpInfo (string attributeId, Attribute body = null);
+        /// <returns>Task of ApiResponse (ININ.PureCloudApi.Model.Attribute)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ININ.PureCloudApi.Model.Attribute>> PutAsyncWithHttpInfo (string attributeId, ININ.PureCloudApi.Model.Attribute body = null);
         
         /// <summary>
         /// Delete an existing Attribute.
@@ -232,7 +232,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="attributeId">Attribute ID</param>
         /// <returns></returns>
-        void DeleteAttribute (string attributeId);
+        void Delete (string attributeId);
   
         /// <summary>
         /// Delete an existing Attribute.
@@ -242,7 +242,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="attributeId">Attribute ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteAttributeWithHttpInfo (string attributeId);
+        ApiResponse<Object> DeleteWithHttpInfo (string attributeId);
 
         /// <summary>
         /// Delete an existing Attribute.
@@ -252,7 +252,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="attributeId">Attribute ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteAttributeAsync (string attributeId);
+        System.Threading.Tasks.Task DeleteAsync (string attributeId);
 
         /// <summary>
         /// Delete an existing Attribute.
@@ -262,7 +262,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="attributeId">Attribute ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAttributeAsyncWithHttpInfo (string attributeId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAsyncWithHttpInfo (string attributeId);
         
     }
   
@@ -348,9 +348,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="pageSize">Page size</param> 
         /// <returns>AttributeEntityListing</returns>
-        public AttributeEntityListing Get (int? pageNumber = null, int? pageSize = null)
+        public AttributeEntityListing GetAttributes (int? pageNumber = null, int? pageSize = null)
         {
-             ApiResponse<AttributeEntityListing> response = GetWithHttpInfo(pageNumber, pageSize);
+             ApiResponse<AttributeEntityListing> response = GetAttributesWithHttpInfo(pageNumber, pageSize);
              return response.Data;
         }
 
@@ -360,7 +360,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="pageSize">Page size</param> 
         /// <returns>ApiResponse of AttributeEntityListing</returns>
-        public ApiResponse< AttributeEntityListing > GetWithHttpInfo (int? pageNumber = null, int? pageSize = null)
+        public ApiResponse< AttributeEntityListing > GetAttributesWithHttpInfo (int? pageNumber = null, int? pageSize = null)
         {
             
     
@@ -371,15 +371,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -392,7 +398,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -403,14 +408,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetAttributes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetAttributes: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<AttributeEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -424,9 +431,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="pageSize">Page size</param>
         /// <returns>Task of AttributeEntityListing</returns>
-        public async System.Threading.Tasks.Task<AttributeEntityListing> GetAsync (int? pageNumber = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<AttributeEntityListing> GetAttributesAsync (int? pageNumber = null, int? pageSize = null)
         {
-             ApiResponse<AttributeEntityListing> response = await GetAsyncWithHttpInfo(pageNumber, pageSize);
+             ApiResponse<AttributeEntityListing> response = await GetAttributesAsyncWithHttpInfo(pageNumber, pageSize);
              return response.Data;
 
         }
@@ -437,7 +444,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="pageSize">Page size</param>
         /// <returns>Task of ApiResponse (AttributeEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AttributeEntityListing>> GetAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AttributeEntityListing>> GetAttributesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null)
         {
             
     
@@ -445,18 +452,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -480,14 +493,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetAttributes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetAttributes: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<AttributeEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -499,10 +514,10 @@ namespace ININ.PureCloudApi.Api
         /// Create an attribute. 
         /// </summary>
         /// <param name="body">Attribute</param> 
-        /// <returns>Attribute</returns>
-        public Attribute Create (Attribute body = null)
+        /// <returns>ININ.PureCloudApi.Model.Attribute</returns>
+        public ININ.PureCloudApi.Model.Attribute PostAttributes (ININ.PureCloudApi.Model.Attribute body = null)
         {
-             ApiResponse<Attribute> response = CreateWithHttpInfo(body);
+             ApiResponse<ININ.PureCloudApi.Model.Attribute> response = PostAttributesWithHttpInfo(body);
              return response.Data;
         }
 
@@ -510,8 +525,8 @@ namespace ININ.PureCloudApi.Api
         /// Create an attribute. 
         /// </summary>
         /// <param name="body">Attribute</param> 
-        /// <returns>ApiResponse of Attribute</returns>
-        public ApiResponse< Attribute > CreateWithHttpInfo (Attribute body = null)
+        /// <returns>ApiResponse of ININ.PureCloudApi.Model.Attribute</returns>
+        public ApiResponse< ININ.PureCloudApi.Model.Attribute > PostAttributesWithHttpInfo (ININ.PureCloudApi.Model.Attribute body = null)
         {
             
     
@@ -522,15 +537,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -539,10 +560,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -553,18 +579,20 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling Create: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostAttributes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling Create: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostAttributes: " + response.ErrorMessage, response.ErrorMessage);
     
-            return new ApiResponse<Attribute>(statusCode,
+            return new ApiResponse<ININ.PureCloudApi.Model.Attribute>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Attribute) Configuration.ApiClient.Deserialize(response, typeof(Attribute)));
+                (ININ.PureCloudApi.Model.Attribute) Configuration.ApiClient.Deserialize(response, typeof(ININ.PureCloudApi.Model.Attribute)));
             
         }
     
@@ -572,10 +600,10 @@ namespace ININ.PureCloudApi.Api
         /// Create an attribute. 
         /// </summary>
         /// <param name="body">Attribute</param>
-        /// <returns>Task of Attribute</returns>
-        public async System.Threading.Tasks.Task<Attribute> CreateAsync (Attribute body = null)
+        /// <returns>Task of ININ.PureCloudApi.Model.Attribute</returns>
+        public async System.Threading.Tasks.Task<ININ.PureCloudApi.Model.Attribute> PostAttributesAsync (ININ.PureCloudApi.Model.Attribute body = null)
         {
-             ApiResponse<Attribute> response = await CreateAsyncWithHttpInfo(body);
+             ApiResponse<ININ.PureCloudApi.Model.Attribute> response = await PostAttributesAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -584,8 +612,8 @@ namespace ININ.PureCloudApi.Api
         /// Create an attribute. 
         /// </summary>
         /// <param name="body">Attribute</param>
-        /// <returns>Task of ApiResponse (Attribute)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Attribute>> CreateAsyncWithHttpInfo (Attribute body = null)
+        /// <returns>Task of ApiResponse (ININ.PureCloudApi.Model.Attribute)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ININ.PureCloudApi.Model.Attribute>> PostAttributesAsyncWithHttpInfo (ININ.PureCloudApi.Model.Attribute body = null)
         {
             
     
@@ -593,18 +621,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -627,18 +661,20 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling Create: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostAttributes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling Create: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostAttributes: " + response.ErrorMessage, response.ErrorMessage);
 
-            return new ApiResponse<Attribute>(statusCode,
+            return new ApiResponse<ININ.PureCloudApi.Model.Attribute>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Attribute) Configuration.ApiClient.Deserialize(response, typeof(Attribute)));
+                (ININ.PureCloudApi.Model.Attribute) Configuration.ApiClient.Deserialize(response, typeof(ININ.PureCloudApi.Model.Attribute)));
             
         }
         
@@ -647,9 +683,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">query</param> 
         /// <returns>AttributeEntityListing</returns>
-        public AttributeEntityListing CreateQuery (AttributeQueryRequest body = null)
+        public AttributeEntityListing PostQuery (AttributeQueryRequest body = null)
         {
-             ApiResponse<AttributeEntityListing> response = CreateQueryWithHttpInfo(body);
+             ApiResponse<AttributeEntityListing> response = PostQueryWithHttpInfo(body);
              return response.Data;
         }
 
@@ -658,7 +694,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">query</param> 
         /// <returns>ApiResponse of AttributeEntityListing</returns>
-        public ApiResponse< AttributeEntityListing > CreateQueryWithHttpInfo (AttributeQueryRequest body = null)
+        public ApiResponse< AttributeEntityListing > PostQueryWithHttpInfo (AttributeQueryRequest body = null)
         {
             
     
@@ -669,15 +705,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -686,10 +728,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -700,14 +747,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateQuery: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostQuery: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateQuery: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostQuery: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<AttributeEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -720,9 +769,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">query</param>
         /// <returns>Task of AttributeEntityListing</returns>
-        public async System.Threading.Tasks.Task<AttributeEntityListing> CreateQueryAsync (AttributeQueryRequest body = null)
+        public async System.Threading.Tasks.Task<AttributeEntityListing> PostQueryAsync (AttributeQueryRequest body = null)
         {
-             ApiResponse<AttributeEntityListing> response = await CreateQueryAsyncWithHttpInfo(body);
+             ApiResponse<AttributeEntityListing> response = await PostQueryAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -732,7 +781,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (AttributeEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AttributeEntityListing>> CreateQueryAsyncWithHttpInfo (AttributeQueryRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AttributeEntityListing>> PostQueryAsyncWithHttpInfo (AttributeQueryRequest body = null)
         {
             
     
@@ -740,18 +789,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -774,14 +829,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateQuery: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostQuery: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateQuery: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostQuery: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<AttributeEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -793,10 +850,10 @@ namespace ININ.PureCloudApi.Api
         /// Get details about an existing attribute. 
         /// </summary>
         /// <param name="attributeId">Attribute ID</param> 
-        /// <returns>Attribute</returns>
-        public Attribute GetAttribute (string attributeId)
+        /// <returns>ININ.PureCloudApi.Model.Attribute</returns>
+        public ININ.PureCloudApi.Model.Attribute Get (string attributeId)
         {
-             ApiResponse<Attribute> response = GetAttributeWithHttpInfo(attributeId);
+             ApiResponse<ININ.PureCloudApi.Model.Attribute> response = GetWithHttpInfo(attributeId);
              return response.Data;
         }
 
@@ -804,12 +861,13 @@ namespace ININ.PureCloudApi.Api
         /// Get details about an existing attribute. 
         /// </summary>
         /// <param name="attributeId">Attribute ID</param> 
-        /// <returns>ApiResponse of Attribute</returns>
-        public ApiResponse< Attribute > GetAttributeWithHttpInfo (string attributeId)
+        /// <returns>ApiResponse of ININ.PureCloudApi.Model.Attribute</returns>
+        public ApiResponse< ININ.PureCloudApi.Model.Attribute > GetWithHttpInfo (string attributeId)
         {
             
             // verify the required parameter 'attributeId' is set
-            if (attributeId == null) throw new ApiException(400, "Missing required parameter 'attributeId' when calling GetAttribute");
+            if (attributeId == null)
+                throw new ApiException(400, "Missing required parameter 'attributeId' when calling AttributesApi->Get");
             
     
             var path_ = "/api/v1/attributes/{attributeId}";
@@ -819,15 +877,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -839,7 +903,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -850,18 +913,20 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetAttribute: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetAttribute: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
     
-            return new ApiResponse<Attribute>(statusCode,
+            return new ApiResponse<ININ.PureCloudApi.Model.Attribute>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Attribute) Configuration.ApiClient.Deserialize(response, typeof(Attribute)));
+                (ININ.PureCloudApi.Model.Attribute) Configuration.ApiClient.Deserialize(response, typeof(ININ.PureCloudApi.Model.Attribute)));
             
         }
     
@@ -869,10 +934,10 @@ namespace ININ.PureCloudApi.Api
         /// Get details about an existing attribute. 
         /// </summary>
         /// <param name="attributeId">Attribute ID</param>
-        /// <returns>Task of Attribute</returns>
-        public async System.Threading.Tasks.Task<Attribute> GetAttributeAsync (string attributeId)
+        /// <returns>Task of ININ.PureCloudApi.Model.Attribute</returns>
+        public async System.Threading.Tasks.Task<ININ.PureCloudApi.Model.Attribute> GetAsync (string attributeId)
         {
-             ApiResponse<Attribute> response = await GetAttributeAsyncWithHttpInfo(attributeId);
+             ApiResponse<ININ.PureCloudApi.Model.Attribute> response = await GetAsyncWithHttpInfo(attributeId);
              return response.Data;
 
         }
@@ -881,29 +946,35 @@ namespace ININ.PureCloudApi.Api
         /// Get details about an existing attribute. 
         /// </summary>
         /// <param name="attributeId">Attribute ID</param>
-        /// <returns>Task of ApiResponse (Attribute)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Attribute>> GetAttributeAsyncWithHttpInfo (string attributeId)
+        /// <returns>Task of ApiResponse (ININ.PureCloudApi.Model.Attribute)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ININ.PureCloudApi.Model.Attribute>> GetAsyncWithHttpInfo (string attributeId)
         {
             // verify the required parameter 'attributeId' is set
-            if (attributeId == null) throw new ApiException(400, "Missing required parameter 'attributeId' when calling GetAttribute");
+            if (attributeId == null) throw new ApiException(400, "Missing required parameter 'attributeId' when calling Get");
             
     
             var path_ = "/api/v1/attributes/{attributeId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -926,18 +997,20 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetAttribute: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetAttribute: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
 
-            return new ApiResponse<Attribute>(statusCode,
+            return new ApiResponse<ININ.PureCloudApi.Model.Attribute>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Attribute) Configuration.ApiClient.Deserialize(response, typeof(Attribute)));
+                (ININ.PureCloudApi.Model.Attribute) Configuration.ApiClient.Deserialize(response, typeof(ININ.PureCloudApi.Model.Attribute)));
             
         }
         
@@ -946,10 +1019,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="attributeId">Attribute ID</param> 
         /// <param name="body">Attribute</param> 
-        /// <returns>Attribute</returns>
-        public Attribute UpdateAttribute (string attributeId, Attribute body = null)
+        /// <returns>ININ.PureCloudApi.Model.Attribute</returns>
+        public ININ.PureCloudApi.Model.Attribute Put (string attributeId, ININ.PureCloudApi.Model.Attribute body = null)
         {
-             ApiResponse<Attribute> response = UpdateAttributeWithHttpInfo(attributeId, body);
+             ApiResponse<ININ.PureCloudApi.Model.Attribute> response = PutWithHttpInfo(attributeId, body);
              return response.Data;
         }
 
@@ -958,12 +1031,13 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="attributeId">Attribute ID</param> 
         /// <param name="body">Attribute</param> 
-        /// <returns>ApiResponse of Attribute</returns>
-        public ApiResponse< Attribute > UpdateAttributeWithHttpInfo (string attributeId, Attribute body = null)
+        /// <returns>ApiResponse of ININ.PureCloudApi.Model.Attribute</returns>
+        public ApiResponse< ININ.PureCloudApi.Model.Attribute > PutWithHttpInfo (string attributeId, ININ.PureCloudApi.Model.Attribute body = null)
         {
             
             // verify the required parameter 'attributeId' is set
-            if (attributeId == null) throw new ApiException(400, "Missing required parameter 'attributeId' when calling UpdateAttribute");
+            if (attributeId == null)
+                throw new ApiException(400, "Missing required parameter 'attributeId' when calling AttributesApi->Put");
             
     
             var path_ = "/api/v1/attributes/{attributeId}";
@@ -973,15 +1047,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -991,10 +1071,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1005,18 +1090,20 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateAttribute: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Put: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateAttribute: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Put: " + response.ErrorMessage, response.ErrorMessage);
     
-            return new ApiResponse<Attribute>(statusCode,
+            return new ApiResponse<ININ.PureCloudApi.Model.Attribute>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Attribute) Configuration.ApiClient.Deserialize(response, typeof(Attribute)));
+                (ININ.PureCloudApi.Model.Attribute) Configuration.ApiClient.Deserialize(response, typeof(ININ.PureCloudApi.Model.Attribute)));
             
         }
     
@@ -1025,10 +1112,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="attributeId">Attribute ID</param>
         /// <param name="body">Attribute</param>
-        /// <returns>Task of Attribute</returns>
-        public async System.Threading.Tasks.Task<Attribute> UpdateAttributeAsync (string attributeId, Attribute body = null)
+        /// <returns>Task of ININ.PureCloudApi.Model.Attribute</returns>
+        public async System.Threading.Tasks.Task<ININ.PureCloudApi.Model.Attribute> PutAsync (string attributeId, ININ.PureCloudApi.Model.Attribute body = null)
         {
-             ApiResponse<Attribute> response = await UpdateAttributeAsyncWithHttpInfo(attributeId, body);
+             ApiResponse<ININ.PureCloudApi.Model.Attribute> response = await PutAsyncWithHttpInfo(attributeId, body);
              return response.Data;
 
         }
@@ -1038,29 +1125,35 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="attributeId">Attribute ID</param>
         /// <param name="body">Attribute</param>
-        /// <returns>Task of ApiResponse (Attribute)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Attribute>> UpdateAttributeAsyncWithHttpInfo (string attributeId, Attribute body = null)
+        /// <returns>Task of ApiResponse (ININ.PureCloudApi.Model.Attribute)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ININ.PureCloudApi.Model.Attribute>> PutAsyncWithHttpInfo (string attributeId, ININ.PureCloudApi.Model.Attribute body = null)
         {
             // verify the required parameter 'attributeId' is set
-            if (attributeId == null) throw new ApiException(400, "Missing required parameter 'attributeId' when calling UpdateAttribute");
+            if (attributeId == null) throw new ApiException(400, "Missing required parameter 'attributeId' when calling Put");
             
     
             var path_ = "/api/v1/attributes/{attributeId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1084,18 +1177,20 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateAttribute: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Put: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateAttribute: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Put: " + response.ErrorMessage, response.ErrorMessage);
 
-            return new ApiResponse<Attribute>(statusCode,
+            return new ApiResponse<ININ.PureCloudApi.Model.Attribute>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Attribute) Configuration.ApiClient.Deserialize(response, typeof(Attribute)));
+                (ININ.PureCloudApi.Model.Attribute) Configuration.ApiClient.Deserialize(response, typeof(ININ.PureCloudApi.Model.Attribute)));
             
         }
         
@@ -1104,9 +1199,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="attributeId">Attribute ID</param> 
         /// <returns></returns>
-        public void DeleteAttribute (string attributeId)
+        public void Delete (string attributeId)
         {
-             DeleteAttributeWithHttpInfo(attributeId);
+             DeleteWithHttpInfo(attributeId);
         }
 
         /// <summary>
@@ -1114,11 +1209,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="attributeId">Attribute ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteAttributeWithHttpInfo (string attributeId)
+        public ApiResponse<Object> DeleteWithHttpInfo (string attributeId)
         {
             
             // verify the required parameter 'attributeId' is set
-            if (attributeId == null) throw new ApiException(400, "Missing required parameter 'attributeId' when calling DeleteAttribute");
+            if (attributeId == null)
+                throw new ApiException(400, "Missing required parameter 'attributeId' when calling AttributesApi->Delete");
             
     
             var path_ = "/api/v1/attributes/{attributeId}";
@@ -1128,15 +1224,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1148,7 +1250,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1159,14 +1260,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteAttribute: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Delete: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteAttribute: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Delete: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -1179,9 +1282,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="attributeId">Attribute ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteAttributeAsync (string attributeId)
+        public async System.Threading.Tasks.Task DeleteAsync (string attributeId)
         {
-             await DeleteAttributeAsyncWithHttpInfo(attributeId);
+             await DeleteAsyncWithHttpInfo(attributeId);
 
         }
 
@@ -1190,28 +1293,34 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="attributeId">Attribute ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAttributeAsyncWithHttpInfo (string attributeId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAsyncWithHttpInfo (string attributeId)
         {
             // verify the required parameter 'attributeId' is set
-            if (attributeId == null) throw new ApiException(400, "Missing required parameter 'attributeId' when calling DeleteAttribute");
+            if (attributeId == null) throw new ApiException(400, "Missing required parameter 'attributeId' when calling Delete");
             
     
             var path_ = "/api/v1/attributes/{attributeId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1234,14 +1343,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteAttribute: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Delete: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteAttribute: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Delete: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,

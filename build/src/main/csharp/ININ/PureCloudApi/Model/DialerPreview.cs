@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class DialerPreview :  IEquatable<DialerPreview>
+    public partial class DialerPreview :  IEquatable<DialerPreview>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerPreview" /> class.
@@ -104,7 +103,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DialerPreview instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DialerPreview to be compared</param>
+        /// <param name="other">Instance of DialerPreview to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DialerPreview other)
         {
@@ -153,25 +152,23 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.ContactId != null)
-                    hash = hash * 57 + this.ContactId.GetHashCode();
+                    hash = hash * 59 + this.ContactId.GetHashCode();
                 
                 if (this.ContactListId != null)
-                    hash = hash * 57 + this.ContactListId.GetHashCode();
+                    hash = hash * 59 + this.ContactListId.GetHashCode();
                 
                 if (this.CampaignId != null)
-                    hash = hash * 57 + this.CampaignId.GetHashCode();
+                    hash = hash * 59 + this.CampaignId.GetHashCode();
                 
                 if (this.PhoneNumberColumns != null)
-                    hash = hash * 57 + this.PhoneNumberColumns.GetHashCode();
+                    hash = hash * 59 + this.PhoneNumberColumns.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

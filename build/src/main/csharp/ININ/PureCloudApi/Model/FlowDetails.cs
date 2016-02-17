@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// Details about the current state of a Flow Instance
     /// </summary>
     [DataContract]
-    public class FlowDetails :  IEquatable<FlowDetails>
+    public partial class FlowDetails :  IEquatable<FlowDetails>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowDetails" /> class.
@@ -171,7 +170,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FlowDetails instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FlowDetails to be compared</param>
+        /// <param name="other">Instance of FlowDetails to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FlowDetails other)
         {
@@ -255,46 +254,44 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.FlowConfigId != null)
-                    hash = hash * 57 + this.FlowConfigId.GetHashCode();
+                    hash = hash * 59 + this.FlowConfigId.GetHashCode();
                 
                 if (this.LaunchTime != null)
-                    hash = hash * 57 + this.LaunchTime.GetHashCode();
+                    hash = hash * 59 + this.LaunchTime.GetHashCode();
                 
                 if (this.LaunchType != null)
-                    hash = hash * 57 + this.LaunchType.GetHashCode();
+                    hash = hash * 59 + this.LaunchType.GetHashCode();
                 
                 if (this.LaunchedBy != null)
-                    hash = hash * 57 + this.LaunchedBy.GetHashCode();
+                    hash = hash * 59 + this.LaunchedBy.GetHashCode();
                 
                 if (this.Status != null)
-                    hash = hash * 57 + this.Status.GetHashCode();
+                    hash = hash * 59 + this.Status.GetHashCode();
                 
                 if (this.AssociatedDocuments != null)
-                    hash = hash * 57 + this.AssociatedDocuments.GetHashCode();
+                    hash = hash * 59 + this.AssociatedDocuments.GetHashCode();
                 
                 if (this.FlowCompletionTime != null)
-                    hash = hash * 57 + this.FlowCompletionTime.GetHashCode();
+                    hash = hash * 59 + this.FlowCompletionTime.GetHashCode();
                 
                 if (this.FlowCompletionReason != null)
-                    hash = hash * 57 + this.FlowCompletionReason.GetHashCode();
+                    hash = hash * 59 + this.FlowCompletionReason.GetHashCode();
                 
                 if (this.FlowErrorInfo != null)
-                    hash = hash * 57 + this.FlowErrorInfo.GetHashCode();
+                    hash = hash * 59 + this.FlowErrorInfo.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

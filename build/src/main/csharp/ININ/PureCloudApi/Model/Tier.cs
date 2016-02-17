@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Tier :  IEquatable<Tier>
+    public partial class Tier :  IEquatable<Tier>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Tier" /> class.
@@ -80,7 +79,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Tier instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Tier to be compared</param>
+        /// <param name="other">Instance of Tier to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Tier other)
         {
@@ -114,16 +113,14 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Currency != null)
-                    hash = hash * 57 + this.Currency.GetHashCode();
+                    hash = hash * 59 + this.Currency.GetHashCode();
                 
                 if (this.Price != null)
-                    hash = hash * 57 + this.Price.GetHashCode();
+                    hash = hash * 59 + this.Price.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

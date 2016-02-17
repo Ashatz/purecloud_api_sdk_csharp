@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class QueueUtilizationDiagnostic :  IEquatable<QueueUtilizationDiagnostic>
+    public partial class QueueUtilizationDiagnostic :  IEquatable<QueueUtilizationDiagnostic>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueUtilizationDiagnostic" /> class.
@@ -128,7 +127,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if QueueUtilizationDiagnostic instances are equal
         /// </summary>
-        /// <param name="obj">Instance of QueueUtilizationDiagnostic to be compared</param>
+        /// <param name="other">Instance of QueueUtilizationDiagnostic to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(QueueUtilizationDiagnostic other)
         {
@@ -192,34 +191,32 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Queue != null)
-                    hash = hash * 57 + this.Queue.GetHashCode();
+                    hash = hash * 59 + this.Queue.GetHashCode();
                 
                 if (this.UsersInQueue != null)
-                    hash = hash * 57 + this.UsersInQueue.GetHashCode();
+                    hash = hash * 59 + this.UsersInQueue.GetHashCode();
                 
                 if (this.ActiveUsersInQueue != null)
-                    hash = hash * 57 + this.ActiveUsersInQueue.GetHashCode();
+                    hash = hash * 59 + this.ActiveUsersInQueue.GetHashCode();
                 
                 if (this.UsersOnQueue != null)
-                    hash = hash * 57 + this.UsersOnQueue.GetHashCode();
+                    hash = hash * 59 + this.UsersOnQueue.GetHashCode();
                 
                 if (this.UsersNotUtilized != null)
-                    hash = hash * 57 + this.UsersNotUtilized.GetHashCode();
+                    hash = hash * 59 + this.UsersNotUtilized.GetHashCode();
                 
                 if (this.UsersOnQueueWithStation != null)
-                    hash = hash * 57 + this.UsersOnQueueWithStation.GetHashCode();
+                    hash = hash * 59 + this.UsersOnQueueWithStation.GetHashCode();
                 
                 if (this.UsersOnACampaignCall != null)
-                    hash = hash * 57 + this.UsersOnACampaignCall.GetHashCode();
+                    hash = hash * 59 + this.UsersOnACampaignCall.GetHashCode();
                 
                 if (this.UsersOnANonCampaignCall != null)
-                    hash = hash * 57 + this.UsersOnANonCampaignCall.GetHashCode();
+                    hash = hash * 59 + this.UsersOnANonCampaignCall.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

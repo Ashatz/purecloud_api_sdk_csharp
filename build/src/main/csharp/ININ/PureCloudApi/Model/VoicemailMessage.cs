@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class VoicemailMessage :  IEquatable<VoicemailMessage>
+    public partial class VoicemailMessage :  IEquatable<VoicemailMessage>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailMessage" /> class.
@@ -157,7 +156,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if VoicemailMessage instances are equal
         /// </summary>
-        /// <param name="obj">Instance of VoicemailMessage to be compared</param>
+        /// <param name="other">Instance of VoicemailMessage to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(VoicemailMessage other)
         {
@@ -236,43 +235,41 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Conversation != null)
-                    hash = hash * 57 + this.Conversation.GetHashCode();
+                    hash = hash * 59 + this.Conversation.GetHashCode();
                 
                 if (this.Read != null)
-                    hash = hash * 57 + this.Read.GetHashCode();
+                    hash = hash * 59 + this.Read.GetHashCode();
                 
                 if (this.AudioRecordingDurationSeconds != null)
-                    hash = hash * 57 + this.AudioRecordingDurationSeconds.GetHashCode();
+                    hash = hash * 59 + this.AudioRecordingDurationSeconds.GetHashCode();
                 
                 if (this.AudioRecordingSizeBytes != null)
-                    hash = hash * 57 + this.AudioRecordingSizeBytes.GetHashCode();
+                    hash = hash * 59 + this.AudioRecordingSizeBytes.GetHashCode();
                 
                 if (this.CreatedDate != null)
-                    hash = hash * 57 + this.CreatedDate.GetHashCode();
+                    hash = hash * 59 + this.CreatedDate.GetHashCode();
                 
                 if (this.ModifiedDate != null)
-                    hash = hash * 57 + this.ModifiedDate.GetHashCode();
+                    hash = hash * 59 + this.ModifiedDate.GetHashCode();
                 
                 if (this.CallerAddress != null)
-                    hash = hash * 57 + this.CallerAddress.GetHashCode();
+                    hash = hash * 59 + this.CallerAddress.GetHashCode();
                 
                 if (this.CallerName != null)
-                    hash = hash * 57 + this.CallerName.GetHashCode();
+                    hash = hash * 59 + this.CallerName.GetHashCode();
                 
                 if (this.CallerUser != null)
-                    hash = hash * 57 + this.CallerUser.GetHashCode();
+                    hash = hash * 59 + this.CallerUser.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

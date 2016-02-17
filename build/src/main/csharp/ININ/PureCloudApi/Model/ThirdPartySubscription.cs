@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class ThirdPartySubscription :  IEquatable<ThirdPartySubscription>
+    public partial class ThirdPartySubscription :  IEquatable<ThirdPartySubscription>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ThirdPartySubscription" /> class.
@@ -115,7 +114,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ThirdPartySubscription instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ThirdPartySubscription to be compared</param>
+        /// <param name="other">Instance of ThirdPartySubscription to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ThirdPartySubscription other)
         {
@@ -169,28 +168,26 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Notes != null)
-                    hash = hash * 57 + this.Notes.GetHashCode();
+                    hash = hash * 59 + this.Notes.GetHashCode();
                 
                 if (this.ContractEffectiveDate != null)
-                    hash = hash * 57 + this.ContractEffectiveDate.GetHashCode();
+                    hash = hash * 59 + this.ContractEffectiveDate.GetHashCode();
                 
                 if (this.Version != null)
-                    hash = hash * 57 + this.Version.GetHashCode();
+                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

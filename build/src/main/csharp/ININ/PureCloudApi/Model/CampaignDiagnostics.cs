@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class CampaignDiagnostics :  IEquatable<CampaignDiagnostics>
+    public partial class CampaignDiagnostics :  IEquatable<CampaignDiagnostics>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignDiagnostics" /> class.
@@ -88,7 +87,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if CampaignDiagnostics instances are equal
         /// </summary>
-        /// <param name="obj">Instance of CampaignDiagnostics to be compared</param>
+        /// <param name="other">Instance of CampaignDiagnostics to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(CampaignDiagnostics other)
         {
@@ -127,19 +126,17 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.CallableContacts != null)
-                    hash = hash * 57 + this.CallableContacts.GetHashCode();
+                    hash = hash * 59 + this.CallableContacts.GetHashCode();
                 
                 if (this.QueueUtilizationDiagnostic != null)
-                    hash = hash * 57 + this.QueueUtilizationDiagnostic.GetHashCode();
+                    hash = hash * 59 + this.QueueUtilizationDiagnostic.GetHashCode();
                 
                 if (this.OutstandingInteractionsCount != null)
-                    hash = hash * 57 + this.OutstandingInteractionsCount.GetHashCode();
+                    hash = hash * 59 + this.OutstandingInteractionsCount.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

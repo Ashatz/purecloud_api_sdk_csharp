@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Extension :  IEquatable<Extension>
+    public partial class Extension :  IEquatable<Extension>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Extension" /> class.
@@ -197,7 +196,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Extension instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Extension to be compared</param>
+        /// <param name="other">Instance of Extension to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Extension other)
         {
@@ -301,58 +300,56 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Description != null)
-                    hash = hash * 57 + this.Description.GetHashCode();
+                    hash = hash * 59 + this.Description.GetHashCode();
                 
                 if (this.Version != null)
-                    hash = hash * 57 + this.Version.GetHashCode();
+                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 if (this.DateCreated != null)
-                    hash = hash * 57 + this.DateCreated.GetHashCode();
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
                 
                 if (this.DateModified != null)
-                    hash = hash * 57 + this.DateModified.GetHashCode();
+                    hash = hash * 59 + this.DateModified.GetHashCode();
                 
                 if (this.ModifiedBy != null)
-                    hash = hash * 57 + this.ModifiedBy.GetHashCode();
+                    hash = hash * 59 + this.ModifiedBy.GetHashCode();
                 
                 if (this.CreatedBy != null)
-                    hash = hash * 57 + this.CreatedBy.GetHashCode();
+                    hash = hash * 59 + this.CreatedBy.GetHashCode();
                 
                 if (this.State != null)
-                    hash = hash * 57 + this.State.GetHashCode();
+                    hash = hash * 59 + this.State.GetHashCode();
                 
                 if (this.ModifiedByApp != null)
-                    hash = hash * 57 + this.ModifiedByApp.GetHashCode();
+                    hash = hash * 59 + this.ModifiedByApp.GetHashCode();
                 
                 if (this.CreatedByApp != null)
-                    hash = hash * 57 + this.CreatedByApp.GetHashCode();
+                    hash = hash * 59 + this.CreatedByApp.GetHashCode();
                 
                 if (this.Number != null)
-                    hash = hash * 57 + this.Number.GetHashCode();
+                    hash = hash * 59 + this.Number.GetHashCode();
                 
                 if (this.Owner != null)
-                    hash = hash * 57 + this.Owner.GetHashCode();
+                    hash = hash * 59 + this.Owner.GetHashCode();
                 
                 if (this.ExtensionPool != null)
-                    hash = hash * 57 + this.ExtensionPool.GetHashCode();
+                    hash = hash * 59 + this.ExtensionPool.GetHashCode();
                 
                 if (this.OwnerType != null)
-                    hash = hash * 57 + this.OwnerType.GetHashCode();
+                    hash = hash * 59 + this.OwnerType.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

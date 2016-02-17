@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class FailedObject :  IEquatable<FailedObject>
+    public partial class FailedObject :  IEquatable<FailedObject>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FailedObject" /> class.
@@ -96,7 +95,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FailedObject instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FailedObject to be compared</param>
+        /// <param name="other">Instance of FailedObject to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FailedObject other)
         {
@@ -140,22 +139,20 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Version != null)
-                    hash = hash * 57 + this.Version.GetHashCode();
+                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.ErrorCode != null)
-                    hash = hash * 57 + this.ErrorCode.GetHashCode();
+                    hash = hash * 59 + this.ErrorCode.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

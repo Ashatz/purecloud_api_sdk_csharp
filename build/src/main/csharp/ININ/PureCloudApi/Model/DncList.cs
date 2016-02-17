@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class DncList :  IEquatable<DncList>
+    public partial class DncList :  IEquatable<DncList>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DncList" /> class.
@@ -148,7 +147,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DncList instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DncList to be compared</param>
+        /// <param name="other">Instance of DncList to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DncList other)
         {
@@ -222,40 +221,38 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.DateCreated != null)
-                    hash = hash * 57 + this.DateCreated.GetHashCode();
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
                 
                 if (this.DateModified != null)
-                    hash = hash * 57 + this.DateModified.GetHashCode();
+                    hash = hash * 59 + this.DateModified.GetHashCode();
                 
                 if (this.Version != null)
-                    hash = hash * 57 + this.Version.GetHashCode();
+                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 if (this.PhoneNumberColumns != null)
-                    hash = hash * 57 + this.PhoneNumberColumns.GetHashCode();
+                    hash = hash * 59 + this.PhoneNumberColumns.GetHashCode();
                 
                 if (this.ImportStatus != null)
-                    hash = hash * 57 + this.ImportStatus.GetHashCode();
+                    hash = hash * 59 + this.ImportStatus.GetHashCode();
                 
                 if (this.FileKey != null)
-                    hash = hash * 57 + this.FileKey.GetHashCode();
+                    hash = hash * 59 + this.FileKey.GetHashCode();
                 
                 if (this.Size != null)
-                    hash = hash * 57 + this.Size.GetHashCode();
+                    hash = hash * 59 + this.Size.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

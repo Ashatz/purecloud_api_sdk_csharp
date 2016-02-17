@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Policy :  IEquatable<Policy>
+    public partial class Policy :  IEquatable<Policy>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Policy" /> class.
@@ -157,7 +156,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Policy instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Policy to be compared</param>
+        /// <param name="other">Instance of Policy to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Policy other)
         {
@@ -236,43 +235,41 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.ModifiedDate != null)
-                    hash = hash * 57 + this.ModifiedDate.GetHashCode();
+                    hash = hash * 59 + this.ModifiedDate.GetHashCode();
                 
                 if (this.CreatedDate != null)
-                    hash = hash * 57 + this.CreatedDate.GetHashCode();
+                    hash = hash * 59 + this.CreatedDate.GetHashCode();
                 
                 if (this.Order != null)
-                    hash = hash * 57 + this.Order.GetHashCode();
+                    hash = hash * 59 + this.Order.GetHashCode();
                 
                 if (this.Description != null)
-                    hash = hash * 57 + this.Description.GetHashCode();
+                    hash = hash * 59 + this.Description.GetHashCode();
                 
                 if (this.Enabled != null)
-                    hash = hash * 57 + this.Enabled.GetHashCode();
+                    hash = hash * 59 + this.Enabled.GetHashCode();
                 
                 if (this.Conditions != null)
-                    hash = hash * 57 + this.Conditions.GetHashCode();
+                    hash = hash * 59 + this.Conditions.GetHashCode();
                 
                 if (this.Actions != null)
-                    hash = hash * 57 + this.Actions.GetHashCode();
+                    hash = hash * 59 + this.Actions.GetHashCode();
                 
                 if (this.PolicyErrors != null)
-                    hash = hash * 57 + this.PolicyErrors.GetHashCode();
+                    hash = hash * 59 + this.PolicyErrors.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

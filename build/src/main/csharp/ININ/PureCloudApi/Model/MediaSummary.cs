@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class MediaSummary :  IEquatable<MediaSummary>
+    public partial class MediaSummary :  IEquatable<MediaSummary>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaSummary" /> class.
@@ -80,7 +79,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if MediaSummary instances are equal
         /// </summary>
-        /// <param name="obj">Instance of MediaSummary to be compared</param>
+        /// <param name="other">Instance of MediaSummary to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(MediaSummary other)
         {
@@ -114,16 +113,14 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.ContactCenter != null)
-                    hash = hash * 57 + this.ContactCenter.GetHashCode();
+                    hash = hash * 59 + this.ContactCenter.GetHashCode();
                 
                 if (this.Enterprise != null)
-                    hash = hash * 57 + this.Enterprise.GetHashCode();
+                    hash = hash * 59 + this.Enterprise.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

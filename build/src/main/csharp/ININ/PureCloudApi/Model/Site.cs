@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Site :  IEquatable<Site>
+    public partial class Site :  IEquatable<Site>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Site" /> class.
@@ -238,7 +237,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Site instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Site to be compared</param>
+        /// <param name="other">Instance of Site to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Site other)
         {
@@ -367,73 +366,71 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Description != null)
-                    hash = hash * 57 + this.Description.GetHashCode();
+                    hash = hash * 59 + this.Description.GetHashCode();
                 
                 if (this.Version != null)
-                    hash = hash * 57 + this.Version.GetHashCode();
+                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 if (this.DateCreated != null)
-                    hash = hash * 57 + this.DateCreated.GetHashCode();
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
                 
                 if (this.DateModified != null)
-                    hash = hash * 57 + this.DateModified.GetHashCode();
+                    hash = hash * 59 + this.DateModified.GetHashCode();
                 
                 if (this.ModifiedBy != null)
-                    hash = hash * 57 + this.ModifiedBy.GetHashCode();
+                    hash = hash * 59 + this.ModifiedBy.GetHashCode();
                 
                 if (this.CreatedBy != null)
-                    hash = hash * 57 + this.CreatedBy.GetHashCode();
+                    hash = hash * 59 + this.CreatedBy.GetHashCode();
                 
                 if (this.State != null)
-                    hash = hash * 57 + this.State.GetHashCode();
+                    hash = hash * 59 + this.State.GetHashCode();
                 
                 if (this.ModifiedByApp != null)
-                    hash = hash * 57 + this.ModifiedByApp.GetHashCode();
+                    hash = hash * 59 + this.ModifiedByApp.GetHashCode();
                 
                 if (this.CreatedByApp != null)
-                    hash = hash * 57 + this.CreatedByApp.GetHashCode();
+                    hash = hash * 59 + this.CreatedByApp.GetHashCode();
                 
                 if (this.PrimarySites != null)
-                    hash = hash * 57 + this.PrimarySites.GetHashCode();
+                    hash = hash * 59 + this.PrimarySites.GetHashCode();
                 
                 if (this.SecondarySites != null)
-                    hash = hash * 57 + this.SecondarySites.GetHashCode();
+                    hash = hash * 59 + this.SecondarySites.GetHashCode();
                 
                 if (this.PrimaryEdges != null)
-                    hash = hash * 57 + this.PrimaryEdges.GetHashCode();
+                    hash = hash * 59 + this.PrimaryEdges.GetHashCode();
                 
                 if (this.SecondaryEdges != null)
-                    hash = hash * 57 + this.SecondaryEdges.GetHashCode();
+                    hash = hash * 59 + this.SecondaryEdges.GetHashCode();
                 
                 if (this.Addresses != null)
-                    hash = hash * 57 + this.Addresses.GetHashCode();
+                    hash = hash * 59 + this.Addresses.GetHashCode();
                 
                 if (this.Edges != null)
-                    hash = hash * 57 + this.Edges.GetHashCode();
+                    hash = hash * 59 + this.Edges.GetHashCode();
                 
                 if (this.EdgeAutoUpdateConfig != null)
-                    hash = hash * 57 + this.EdgeAutoUpdateConfig.GetHashCode();
+                    hash = hash * 59 + this.EdgeAutoUpdateConfig.GetHashCode();
                 
                 if (this.Location != null)
-                    hash = hash * 57 + this.Location.GetHashCode();
+                    hash = hash * 59 + this.Location.GetHashCode();
                 
                 if (this.Managed != null)
-                    hash = hash * 57 + this.Managed.GetHashCode();
+                    hash = hash * 59 + this.Managed.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

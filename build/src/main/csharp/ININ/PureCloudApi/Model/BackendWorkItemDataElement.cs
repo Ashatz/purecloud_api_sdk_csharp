@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class BackendWorkItemDataElement :  IEquatable<BackendWorkItemDataElement>
+    public partial class BackendWorkItemDataElement :  IEquatable<BackendWorkItemDataElement>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="BackendWorkItemDataElement" /> class.
@@ -96,7 +95,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if BackendWorkItemDataElement instances are equal
         /// </summary>
-        /// <param name="obj">Instance of BackendWorkItemDataElement to be compared</param>
+        /// <param name="other">Instance of BackendWorkItemDataElement to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(BackendWorkItemDataElement other)
         {
@@ -140,22 +139,20 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Prompt != null)
-                    hash = hash * 57 + this.Prompt.GetHashCode();
+                    hash = hash * 59 + this.Prompt.GetHashCode();
                 
                 if (this.DataItemId != null)
-                    hash = hash * 57 + this.DataItemId.GetHashCode();
+                    hash = hash * 59 + this.DataItemId.GetHashCode();
                 
                 if (this.ControlType != null)
-                    hash = hash * 57 + this.ControlType.GetHashCode();
+                    hash = hash * 59 + this.ControlType.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

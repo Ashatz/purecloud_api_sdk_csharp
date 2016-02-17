@@ -1,11 +1,11 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 using ININ.PureCloudApi.Client;
 using ININ.PureCloudApi.Model;
-
 
 namespace ININ.PureCloudApi.Api
 {
@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Search request options</param>
         /// <returns>ChatSearchListing</returns>
-        ChatSearchListing CreateChats (ChatSearchRequest body = null);
+        ChatSearchListing PostChats (ChatSearchRequest body = null);
   
         /// <summary>
         /// Search chat history
@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of ChatSearchListing</returns>
-        ApiResponse<ChatSearchListing> CreateChatsWithHttpInfo (ChatSearchRequest body = null);
+        ApiResponse<ChatSearchListing> PostChatsWithHttpInfo (ChatSearchRequest body = null);
 
         /// <summary>
         /// Search chat history
@@ -44,7 +44,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ChatSearchListing</returns>
-        System.Threading.Tasks.Task<ChatSearchListing> CreateChatsAsync (ChatSearchRequest body = null);
+        System.Threading.Tasks.Task<ChatSearchListing> PostChatsAsync (ChatSearchRequest body = null);
 
         /// <summary>
         /// Search chat history
@@ -54,7 +54,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (ChatSearchListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ChatSearchListing>> CreateChatsAsyncWithHttpInfo (ChatSearchRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<ChatSearchListing>> PostChatsAsyncWithHttpInfo (ChatSearchRequest body = null);
         
     }
   
@@ -139,9 +139,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Search request options</param> 
         /// <returns>ChatSearchListing</returns>
-        public ChatSearchListing CreateChats (ChatSearchRequest body = null)
+        public ChatSearchListing PostChats (ChatSearchRequest body = null)
         {
-             ApiResponse<ChatSearchListing> response = CreateChatsWithHttpInfo(body);
+             ApiResponse<ChatSearchListing> response = PostChatsWithHttpInfo(body);
              return response.Data;
         }
 
@@ -150,7 +150,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Search request options</param> 
         /// <returns>ApiResponse of ChatSearchListing</returns>
-        public ApiResponse< ChatSearchListing > CreateChatsWithHttpInfo (ChatSearchRequest body = null)
+        public ApiResponse< ChatSearchListing > PostChatsWithHttpInfo (ChatSearchRequest body = null)
         {
             
     
@@ -161,15 +161,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -178,10 +184,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -192,14 +203,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateChats: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostChats: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateChats: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostChats: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ChatSearchListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -212,9 +225,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ChatSearchListing</returns>
-        public async System.Threading.Tasks.Task<ChatSearchListing> CreateChatsAsync (ChatSearchRequest body = null)
+        public async System.Threading.Tasks.Task<ChatSearchListing> PostChatsAsync (ChatSearchRequest body = null)
         {
-             ApiResponse<ChatSearchListing> response = await CreateChatsAsyncWithHttpInfo(body);
+             ApiResponse<ChatSearchListing> response = await PostChatsAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -224,7 +237,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (ChatSearchListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ChatSearchListing>> CreateChatsAsyncWithHttpInfo (ChatSearchRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ChatSearchListing>> PostChatsAsyncWithHttpInfo (ChatSearchRequest body = null)
         {
             
     
@@ -232,18 +245,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -266,14 +285,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateChats: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostChats: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateChats: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostChats: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ChatSearchListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

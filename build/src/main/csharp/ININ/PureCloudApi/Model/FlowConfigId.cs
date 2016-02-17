@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// ID of a Flow Definition with an optional version
     /// </summary>
     [DataContract]
-    public class FlowConfigId :  IEquatable<FlowConfigId>
+    public partial class FlowConfigId :  IEquatable<FlowConfigId>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowConfigId" /> class.
@@ -99,7 +98,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FlowConfigId instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FlowConfigId to be compared</param>
+        /// <param name="other">Instance of FlowConfigId to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FlowConfigId other)
         {
@@ -143,22 +142,20 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 if (this.Version != null)
-                    hash = hash * 57 + this.Version.GetHashCode();
+                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

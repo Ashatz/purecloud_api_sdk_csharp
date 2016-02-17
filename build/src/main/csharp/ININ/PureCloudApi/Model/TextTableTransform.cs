@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class TextTableTransform :  IEquatable<TextTableTransform>
+    public partial class TextTableTransform :  IEquatable<TextTableTransform>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TextTableTransform" /> class.
@@ -138,7 +137,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if TextTableTransform instances are equal
         /// </summary>
-        /// <param name="obj">Instance of TextTableTransform to be compared</param>
+        /// <param name="other">Instance of TextTableTransform to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(TextTableTransform other)
         {
@@ -207,37 +206,35 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.RestEndpoint != null)
-                    hash = hash * 57 + this.RestEndpoint.GetHashCode();
+                    hash = hash * 59 + this.RestEndpoint.GetHashCode();
                 
                 if (this.FilenameTransforms != null)
-                    hash = hash * 57 + this.FilenameTransforms.GetHashCode();
+                    hash = hash * 59 + this.FilenameTransforms.GetHashCode();
                 
                 if (this.Tags != null)
-                    hash = hash * 57 + this.Tags.GetHashCode();
+                    hash = hash * 59 + this.Tags.GetHashCode();
                 
                 if (this.CommentSymbol != null)
-                    hash = hash * 57 + this.CommentSymbol.GetHashCode();
+                    hash = hash * 59 + this.CommentSymbol.GetHashCode();
                 
                 if (this.Delimiter != null)
-                    hash = hash * 57 + this.Delimiter.GetHashCode();
+                    hash = hash * 59 + this.Delimiter.GetHashCode();
                 
                 if (this.Table != null)
-                    hash = hash * 57 + this.Table.GetHashCode();
+                    hash = hash * 59 + this.Table.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// Used as part of a searchRequest or reportRequest to denote which facets to generate from the search results.  For RANGE facets, one of rangeFrom or rangeTo (or both) MUST be set
     /// </summary>
     [DataContract]
-    public class FacetRequest :  IEquatable<FacetRequest>
+    public partial class FacetRequest :  IEquatable<FacetRequest>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FacetRequest" /> class.
@@ -127,7 +126,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FacetRequest instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FacetRequest to be compared</param>
+        /// <param name="other">Instance of FacetRequest to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FacetRequest other)
         {
@@ -186,31 +185,29 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.FacetRequestQueryType != null)
-                    hash = hash * 57 + this.FacetRequestQueryType.GetHashCode();
+                    hash = hash * 59 + this.FacetRequestQueryType.GetHashCode();
                 
                 if (this.FieldName != null)
-                    hash = hash * 57 + this.FieldName.GetHashCode();
+                    hash = hash * 59 + this.FieldName.GetHashCode();
                 
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
+                    hash = hash * 59 + this.Type.GetHashCode();
                 
                 if (this.RangeFrom != null)
-                    hash = hash * 57 + this.RangeFrom.GetHashCode();
+                    hash = hash * 59 + this.RangeFrom.GetHashCode();
                 
                 if (this.RangeTo != null)
-                    hash = hash * 57 + this.RangeTo.GetHashCode();
+                    hash = hash * 59 + this.RangeTo.GetHashCode();
                 
                 if (this.MaxFacetCount != null)
-                    hash = hash * 57 + this.MaxFacetCount.GetHashCode();
+                    hash = hash * 59 + this.MaxFacetCount.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

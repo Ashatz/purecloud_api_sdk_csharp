@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// Historical conversation request parameters
     /// </summary>
     [DataContract]
-    public class ConversationHistoricalQueryRequestBody :  IEquatable<ConversationHistoricalQueryRequestBody>
+    public partial class ConversationHistoricalQueryRequestBody :  IEquatable<ConversationHistoricalQueryRequestBody>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationHistoricalQueryRequestBody" /> class.
@@ -100,7 +99,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ConversationHistoricalQueryRequestBody instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ConversationHistoricalQueryRequestBody to be compared</param>
+        /// <param name="other">Instance of ConversationHistoricalQueryRequestBody to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ConversationHistoricalQueryRequestBody other)
         {
@@ -144,22 +143,20 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.PageSize != null)
-                    hash = hash * 57 + this.PageSize.GetHashCode();
+                    hash = hash * 59 + this.PageSize.GetHashCode();
                 
                 if (this.Maximum != null)
-                    hash = hash * 57 + this.Maximum.GetHashCode();
+                    hash = hash * 59 + this.Maximum.GetHashCode();
                 
                 if (this.Filters != null)
-                    hash = hash * 57 + this.Filters.GetHashCode();
+                    hash = hash * 59 + this.Filters.GetHashCode();
                 
                 if (this.Facets != null)
-                    hash = hash * 57 + this.Facets.GetHashCode();
+                    hash = hash * 59 + this.Facets.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

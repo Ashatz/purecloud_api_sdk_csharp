@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class FlowVersion :  IEquatable<FlowVersion>
+    public partial class FlowVersion :  IEquatable<FlowVersion>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowVersion" /> class.
@@ -154,7 +153,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FlowVersion instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FlowVersion to be compared</param>
+        /// <param name="other">Instance of FlowVersion to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FlowVersion other)
         {
@@ -233,43 +232,41 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.CommitVersion != null)
-                    hash = hash * 57 + this.CommitVersion.GetHashCode();
+                    hash = hash * 59 + this.CommitVersion.GetHashCode();
                 
                 if (this.ConfigurationVersion != null)
-                    hash = hash * 57 + this.ConfigurationVersion.GetHashCode();
+                    hash = hash * 59 + this.ConfigurationVersion.GetHashCode();
                 
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
+                    hash = hash * 59 + this.Type.GetHashCode();
                 
                 if (this.CreatedBy != null)
-                    hash = hash * 57 + this.CreatedBy.GetHashCode();
+                    hash = hash * 59 + this.CreatedBy.GetHashCode();
                 
                 if (this.ConfigurationUri != null)
-                    hash = hash * 57 + this.ConfigurationUri.GetHashCode();
+                    hash = hash * 59 + this.ConfigurationUri.GetHashCode();
                 
                 if (this.DateCreated != null)
-                    hash = hash * 57 + this.DateCreated.GetHashCode();
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
                 
                 if (this.GenerationId != null)
-                    hash = hash * 57 + this.GenerationId.GetHashCode();
+                    hash = hash * 59 + this.GenerationId.GetHashCode();
                 
                 if (this.PublishResultUri != null)
-                    hash = hash * 57 + this.PublishResultUri.GetHashCode();
+                    hash = hash * 59 + this.PublishResultUri.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

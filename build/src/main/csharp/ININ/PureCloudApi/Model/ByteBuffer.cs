@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class ByteBuffer :  IEquatable<ByteBuffer>
+    public partial class ByteBuffer :  IEquatable<ByteBuffer>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ByteBuffer" /> class.
@@ -130,7 +129,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ByteBuffer instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ByteBuffer to be compared</param>
+        /// <param name="other">Instance of ByteBuffer to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ByteBuffer other)
         {
@@ -194,34 +193,32 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Short != null)
-                    hash = hash * 57 + this.Short.GetHashCode();
+                    hash = hash * 59 + this.Short.GetHashCode();
                 
                 if (this.Char != null)
-                    hash = hash * 57 + this.Char.GetHashCode();
+                    hash = hash * 59 + this.Char.GetHashCode();
                 
                 if (this.Int != null)
-                    hash = hash * 57 + this.Int.GetHashCode();
+                    hash = hash * 59 + this.Int.GetHashCode();
                 
                 if (this.Long != null)
-                    hash = hash * 57 + this.Long.GetHashCode();
+                    hash = hash * 59 + this.Long.GetHashCode();
                 
                 if (this.Float != null)
-                    hash = hash * 57 + this.Float.GetHashCode();
+                    hash = hash * 59 + this.Float.GetHashCode();
                 
                 if (this.Double != null)
-                    hash = hash * 57 + this.Double.GetHashCode();
+                    hash = hash * 59 + this.Double.GetHashCode();
                 
                 if (this.Direct != null)
-                    hash = hash * 57 + this.Direct.GetHashCode();
+                    hash = hash * 59 + this.Direct.GetHashCode();
                 
                 if (this.ReadOnly != null)
-                    hash = hash * 57 + this.ReadOnly.GetHashCode();
+                    hash = hash * 59 + this.ReadOnly.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

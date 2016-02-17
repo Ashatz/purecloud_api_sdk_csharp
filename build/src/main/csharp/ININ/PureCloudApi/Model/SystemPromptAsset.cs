@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class SystemPromptAsset :  IEquatable<SystemPromptAsset>
+    public partial class SystemPromptAsset :  IEquatable<SystemPromptAsset>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SystemPromptAsset" /> class.
@@ -155,7 +154,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if SystemPromptAsset instances are equal
         /// </summary>
-        /// <param name="obj">Instance of SystemPromptAsset to be compared</param>
+        /// <param name="other">Instance of SystemPromptAsset to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(SystemPromptAsset other)
         {
@@ -234,43 +233,41 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.PromptId != null)
-                    hash = hash * 57 + this.PromptId.GetHashCode();
+                    hash = hash * 59 + this.PromptId.GetHashCode();
                 
                 if (this.Language != null)
-                    hash = hash * 57 + this.Language.GetHashCode();
+                    hash = hash * 59 + this.Language.GetHashCode();
                 
                 if (this.DurationSeconds != null)
-                    hash = hash * 57 + this.DurationSeconds.GetHashCode();
+                    hash = hash * 59 + this.DurationSeconds.GetHashCode();
                 
                 if (this.MediaUri != null)
-                    hash = hash * 57 + this.MediaUri.GetHashCode();
+                    hash = hash * 59 + this.MediaUri.GetHashCode();
                 
                 if (this.TtsString != null)
-                    hash = hash * 57 + this.TtsString.GetHashCode();
+                    hash = hash * 59 + this.TtsString.GetHashCode();
                 
                 if (this.UploadUri != null)
-                    hash = hash * 57 + this.UploadUri.GetHashCode();
+                    hash = hash * 59 + this.UploadUri.GetHashCode();
                 
                 if (this.UploadStatus != null)
-                    hash = hash * 57 + this.UploadStatus.GetHashCode();
+                    hash = hash * 59 + this.UploadStatus.GetHashCode();
                 
                 if (this.HasDefault != null)
-                    hash = hash * 57 + this.HasDefault.GetHashCode();
+                    hash = hash * 59 + this.HasDefault.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

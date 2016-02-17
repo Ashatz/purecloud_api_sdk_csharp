@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class DomainOrganizationRole :  IEquatable<DomainOrganizationRole>
+    public partial class DomainOrganizationRole :  IEquatable<DomainOrganizationRole>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainOrganizationRole" /> class.
@@ -164,7 +163,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DomainOrganizationRole instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DomainOrganizationRole to be compared</param>
+        /// <param name="other">Instance of DomainOrganizationRole to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DomainOrganizationRole other)
         {
@@ -248,46 +247,44 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Description != null)
-                    hash = hash * 57 + this.Description.GetHashCode();
+                    hash = hash * 59 + this.Description.GetHashCode();
                 
                 if (this.DefaultRoleId != null)
-                    hash = hash * 57 + this.DefaultRoleId.GetHashCode();
+                    hash = hash * 59 + this.DefaultRoleId.GetHashCode();
                 
                 if (this.Permissions != null)
-                    hash = hash * 57 + this.Permissions.GetHashCode();
+                    hash = hash * 59 + this.Permissions.GetHashCode();
                 
                 if (this.Licenses != null)
-                    hash = hash * 57 + this.Licenses.GetHashCode();
+                    hash = hash * 59 + this.Licenses.GetHashCode();
                 
                 if (this.PermissionPolicies != null)
-                    hash = hash * 57 + this.PermissionPolicies.GetHashCode();
+                    hash = hash * 59 + this.PermissionPolicies.GetHashCode();
                 
                 if (this.Code != null)
-                    hash = hash * 57 + this.Code.GetHashCode();
+                    hash = hash * 59 + this.Code.GetHashCode();
                 
                 if (this.UserCount != null)
-                    hash = hash * 57 + this.UserCount.GetHashCode();
+                    hash = hash * 59 + this.UserCount.GetHashCode();
                 
                 if (this.RoleNeedsUpdate != null)
-                    hash = hash * 57 + this.RoleNeedsUpdate.GetHashCode();
+                    hash = hash * 59 + this.RoleNeedsUpdate.GetHashCode();
                 
                 if (this.Default != null)
-                    hash = hash * 57 + this.Default.GetHashCode();
+                    hash = hash * 59 + this.Default.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

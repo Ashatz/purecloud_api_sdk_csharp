@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// Creating an Organization
     /// </summary>
     [DataContract]
-    public class OrganizationCreate :  IEquatable<OrganizationCreate>
+    public partial class OrganizationCreate :  IEquatable<OrganizationCreate>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="OrganizationCreate" /> class.
@@ -119,7 +118,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if OrganizationCreate instances are equal
         /// </summary>
-        /// <param name="obj">Instance of OrganizationCreate to be compared</param>
+        /// <param name="other">Instance of OrganizationCreate to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(OrganizationCreate other)
         {
@@ -173,28 +172,26 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.AdminUsername != null)
-                    hash = hash * 57 + this.AdminUsername.GetHashCode();
+                    hash = hash * 59 + this.AdminUsername.GetHashCode();
                 
                 if (this.AdminPassword != null)
-                    hash = hash * 57 + this.AdminPassword.GetHashCode();
+                    hash = hash * 59 + this.AdminPassword.GetHashCode();
                 
                 if (this.Domain != null)
-                    hash = hash * 57 + this.Domain.GetHashCode();
+                    hash = hash * 59 + this.Domain.GetHashCode();
                 
                 if (this.ThirdPartyOrgName != null)
-                    hash = hash * 57 + this.ThirdPartyOrgName.GetHashCode();
+                    hash = hash * 59 + this.ThirdPartyOrgName.GetHashCode();
                 
                 if (this.Deletable != null)
-                    hash = hash * 57 + this.Deletable.GetHashCode();
+                    hash = hash * 59 + this.Deletable.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

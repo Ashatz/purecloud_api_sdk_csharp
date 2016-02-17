@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class VoiceRatesCsv :  IEquatable<VoiceRatesCsv>
+    public partial class VoiceRatesCsv :  IEquatable<VoiceRatesCsv>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="VoiceRatesCsv" /> class.
@@ -100,7 +99,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if VoiceRatesCsv instances are equal
         /// </summary>
-        /// <param name="obj">Instance of VoiceRatesCsv to be compared</param>
+        /// <param name="other">Instance of VoiceRatesCsv to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(VoiceRatesCsv other)
         {
@@ -144,22 +143,20 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Url != null)
-                    hash = hash * 57 + this.Url.GetHashCode();
+                    hash = hash * 59 + this.Url.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

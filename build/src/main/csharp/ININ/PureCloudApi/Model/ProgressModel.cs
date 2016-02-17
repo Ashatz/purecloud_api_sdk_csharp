@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class ProgressModel :  IEquatable<ProgressModel>
+    public partial class ProgressModel :  IEquatable<ProgressModel>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ProgressModel" /> class.
@@ -91,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ProgressModel instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ProgressModel to be compared</param>
+        /// <param name="other">Instance of ProgressModel to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ProgressModel other)
         {
@@ -130,19 +129,17 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Phase != null)
-                    hash = hash * 57 + this.Phase.GetHashCode();
+                    hash = hash * 59 + this.Phase.GetHashCode();
                 
                 if (this.IterationsDone != null)
-                    hash = hash * 57 + this.IterationsDone.GetHashCode();
+                    hash = hash * 59 + this.IterationsDone.GetHashCode();
                 
                 if (this.IterationsInPhase != null)
-                    hash = hash * 57 + this.IterationsInPhase.GetHashCode();
+                    hash = hash * 59 + this.IterationsInPhase.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

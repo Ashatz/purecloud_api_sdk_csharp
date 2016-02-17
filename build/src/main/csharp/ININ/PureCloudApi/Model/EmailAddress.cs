@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class EmailAddress :  IEquatable<EmailAddress>
+    public partial class EmailAddress :  IEquatable<EmailAddress>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailAddress" /> class.
@@ -80,7 +79,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if EmailAddress instances are equal
         /// </summary>
-        /// <param name="obj">Instance of EmailAddress to be compared</param>
+        /// <param name="other">Instance of EmailAddress to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(EmailAddress other)
         {
@@ -114,16 +113,14 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Email != null)
-                    hash = hash * 57 + this.Email.GetHashCode();
+                    hash = hash * 59 + this.Email.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

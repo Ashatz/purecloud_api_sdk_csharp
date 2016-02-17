@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class WorkItemDefinition :  IEquatable<WorkItemDefinition>
+    public partial class WorkItemDefinition :  IEquatable<WorkItemDefinition>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkItemDefinition" /> class.
@@ -99,7 +98,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if WorkItemDefinition instances are equal
         /// </summary>
-        /// <param name="obj">Instance of WorkItemDefinition to be compared</param>
+        /// <param name="other">Instance of WorkItemDefinition to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(WorkItemDefinition other)
         {
@@ -143,22 +142,20 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.CommandCategories != null)
-                    hash = hash * 57 + this.CommandCategories.GetHashCode();
+                    hash = hash * 59 + this.CommandCategories.GetHashCode();
                 
                 if (this.DataElements != null)
-                    hash = hash * 57 + this.DataElements.GetHashCode();
+                    hash = hash * 59 + this.DataElements.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

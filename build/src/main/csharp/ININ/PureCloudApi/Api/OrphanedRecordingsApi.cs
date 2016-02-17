@@ -1,11 +1,11 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 using ININ.PureCloudApi.Client;
 using ININ.PureCloudApi.Model;
-
 
 namespace ININ.PureCloudApi.Api
 {
@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
         /// <returns>OrphanRecordingListing</returns>
-        OrphanRecordingListing Get (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null);
+        OrphanRecordingListing GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null);
   
         /// <summary>
         /// Gets all orphan recordings
@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
         /// <returns>ApiResponse of OrphanRecordingListing</returns>
-        ApiResponse<OrphanRecordingListing> GetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null);
+        ApiResponse<OrphanRecordingListing> GetOrphanrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null);
 
         /// <summary>
         /// Gets all orphan recordings
@@ -53,7 +53,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
         /// <returns>Task of OrphanRecordingListing</returns>
-        System.Threading.Tasks.Task<OrphanRecordingListing> GetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null);
+        System.Threading.Tasks.Task<OrphanRecordingListing> GetOrphanrecordingsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null);
 
         /// <summary>
         /// Gets all orphan recordings
@@ -66,7 +66,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
         /// <returns>Task of ApiResponse (OrphanRecordingListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrphanRecordingListing>> GetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<OrphanRecordingListing>> GetOrphanrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null);
         
         /// <summary>
         /// Gets a single orphan recording
@@ -76,7 +76,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>OrphanRecording</returns>
-        OrphanRecording GetOrphan (string orphanId);
+        OrphanRecording GetOrphanrecording (string orphanId);
   
         /// <summary>
         /// Gets a single orphan recording
@@ -86,7 +86,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>ApiResponse of OrphanRecording</returns>
-        ApiResponse<OrphanRecording> GetOrphanWithHttpInfo (string orphanId);
+        ApiResponse<OrphanRecording> GetOrphanrecordingWithHttpInfo (string orphanId);
 
         /// <summary>
         /// Gets a single orphan recording
@@ -96,7 +96,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of OrphanRecording</returns>
-        System.Threading.Tasks.Task<OrphanRecording> GetOrphanAsync (string orphanId);
+        System.Threading.Tasks.Task<OrphanRecording> GetOrphanrecordingAsync (string orphanId);
 
         /// <summary>
         /// Gets a single orphan recording
@@ -106,7 +106,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of ApiResponse (OrphanRecording)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> GetOrphanAsyncWithHttpInfo (string orphanId);
+        System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> GetOrphanrecordingAsyncWithHttpInfo (string orphanId);
         
         /// <summary>
         /// deletes a single orphan recording
@@ -116,7 +116,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>OrphanRecording</returns>
-        OrphanRecording DeleteOrphan (string orphanId);
+        OrphanRecording DeleteOrphanrecording (string orphanId);
   
         /// <summary>
         /// deletes a single orphan recording
@@ -126,7 +126,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>ApiResponse of OrphanRecording</returns>
-        ApiResponse<OrphanRecording> DeleteOrphanWithHttpInfo (string orphanId);
+        ApiResponse<OrphanRecording> DeleteOrphanrecordingWithHttpInfo (string orphanId);
 
         /// <summary>
         /// deletes a single orphan recording
@@ -136,7 +136,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of OrphanRecording</returns>
-        System.Threading.Tasks.Task<OrphanRecording> DeleteOrphanAsync (string orphanId);
+        System.Threading.Tasks.Task<OrphanRecording> DeleteOrphanrecordingAsync (string orphanId);
 
         /// <summary>
         /// deletes a single orphan recording
@@ -146,7 +146,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of ApiResponse (OrphanRecording)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> DeleteOrphanAsyncWithHttpInfo (string orphanId);
+        System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> DeleteOrphanrecordingAsyncWithHttpInfo (string orphanId);
         
     }
   
@@ -234,9 +234,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">variable name requested to sort by</param> 
         /// <param name="expand">variable name requested by expand list</param> 
         /// <returns>OrphanRecordingListing</returns>
-        public OrphanRecordingListing Get (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null)
+        public OrphanRecordingListing GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null)
         {
-             ApiResponse<OrphanRecordingListing> response = GetWithHttpInfo(pageSize, pageNumber, sortBy, expand);
+             ApiResponse<OrphanRecordingListing> response = GetOrphanrecordingsWithHttpInfo(pageSize, pageNumber, sortBy, expand);
              return response.Data;
         }
 
@@ -248,7 +248,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">variable name requested to sort by</param> 
         /// <param name="expand">variable name requested by expand list</param> 
         /// <returns>ApiResponse of OrphanRecordingListing</returns>
-        public ApiResponse< OrphanRecordingListing > GetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null)
+        public ApiResponse< OrphanRecordingListing > GetOrphanrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null)
         {
             
     
@@ -259,15 +259,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -282,7 +288,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -293,14 +298,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetOrphanrecordings: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetOrphanrecordings: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OrphanRecordingListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -316,9 +323,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
         /// <returns>Task of OrphanRecordingListing</returns>
-        public async System.Threading.Tasks.Task<OrphanRecordingListing> GetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<OrphanRecordingListing> GetOrphanrecordingsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null)
         {
-             ApiResponse<OrphanRecordingListing> response = await GetAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand);
+             ApiResponse<OrphanRecordingListing> response = await GetOrphanrecordingsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand);
              return response.Data;
 
         }
@@ -331,7 +338,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
         /// <returns>Task of ApiResponse (OrphanRecordingListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrphanRecordingListing>> GetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OrphanRecordingListing>> GetOrphanrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null)
         {
             
     
@@ -339,18 +346,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -376,14 +389,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetOrphanrecordings: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetOrphanrecordings: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OrphanRecordingListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -396,9 +411,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="orphanId">Orphan ID</param> 
         /// <returns>OrphanRecording</returns>
-        public OrphanRecording GetOrphan (string orphanId)
+        public OrphanRecording GetOrphanrecording (string orphanId)
         {
-             ApiResponse<OrphanRecording> response = GetOrphanWithHttpInfo(orphanId);
+             ApiResponse<OrphanRecording> response = GetOrphanrecordingWithHttpInfo(orphanId);
              return response.Data;
         }
 
@@ -407,11 +422,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="orphanId">Orphan ID</param> 
         /// <returns>ApiResponse of OrphanRecording</returns>
-        public ApiResponse< OrphanRecording > GetOrphanWithHttpInfo (string orphanId)
+        public ApiResponse< OrphanRecording > GetOrphanrecordingWithHttpInfo (string orphanId)
         {
             
             // verify the required parameter 'orphanId' is set
-            if (orphanId == null) throw new ApiException(400, "Missing required parameter 'orphanId' when calling GetOrphan");
+            if (orphanId == null)
+                throw new ApiException(400, "Missing required parameter 'orphanId' when calling OrphanedRecordingsApi->GetOrphanrecording");
             
     
             var path_ = "/api/v1/orphanrecordings/{orphanId}";
@@ -421,15 +437,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -441,7 +463,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -452,14 +473,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetOrphan: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetOrphanrecording: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetOrphan: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetOrphanrecording: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OrphanRecording>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -472,9 +495,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of OrphanRecording</returns>
-        public async System.Threading.Tasks.Task<OrphanRecording> GetOrphanAsync (string orphanId)
+        public async System.Threading.Tasks.Task<OrphanRecording> GetOrphanrecordingAsync (string orphanId)
         {
-             ApiResponse<OrphanRecording> response = await GetOrphanAsyncWithHttpInfo(orphanId);
+             ApiResponse<OrphanRecording> response = await GetOrphanrecordingAsyncWithHttpInfo(orphanId);
              return response.Data;
 
         }
@@ -484,28 +507,34 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of ApiResponse (OrphanRecording)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> GetOrphanAsyncWithHttpInfo (string orphanId)
+        public async System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> GetOrphanrecordingAsyncWithHttpInfo (string orphanId)
         {
             // verify the required parameter 'orphanId' is set
-            if (orphanId == null) throw new ApiException(400, "Missing required parameter 'orphanId' when calling GetOrphan");
+            if (orphanId == null) throw new ApiException(400, "Missing required parameter 'orphanId' when calling GetOrphanrecording");
             
     
             var path_ = "/api/v1/orphanrecordings/{orphanId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -528,14 +557,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetOrphan: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetOrphanrecording: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetOrphan: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetOrphanrecording: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OrphanRecording>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -548,9 +579,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="orphanId">Orphan ID</param> 
         /// <returns>OrphanRecording</returns>
-        public OrphanRecording DeleteOrphan (string orphanId)
+        public OrphanRecording DeleteOrphanrecording (string orphanId)
         {
-             ApiResponse<OrphanRecording> response = DeleteOrphanWithHttpInfo(orphanId);
+             ApiResponse<OrphanRecording> response = DeleteOrphanrecordingWithHttpInfo(orphanId);
              return response.Data;
         }
 
@@ -559,11 +590,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="orphanId">Orphan ID</param> 
         /// <returns>ApiResponse of OrphanRecording</returns>
-        public ApiResponse< OrphanRecording > DeleteOrphanWithHttpInfo (string orphanId)
+        public ApiResponse< OrphanRecording > DeleteOrphanrecordingWithHttpInfo (string orphanId)
         {
             
             // verify the required parameter 'orphanId' is set
-            if (orphanId == null) throw new ApiException(400, "Missing required parameter 'orphanId' when calling DeleteOrphan");
+            if (orphanId == null)
+                throw new ApiException(400, "Missing required parameter 'orphanId' when calling OrphanedRecordingsApi->DeleteOrphanrecording");
             
     
             var path_ = "/api/v1/orphanrecordings/{orphanId}";
@@ -573,15 +605,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -593,7 +631,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -604,14 +641,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteOrphan: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteOrphanrecording: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteOrphan: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteOrphanrecording: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OrphanRecording>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -624,9 +663,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of OrphanRecording</returns>
-        public async System.Threading.Tasks.Task<OrphanRecording> DeleteOrphanAsync (string orphanId)
+        public async System.Threading.Tasks.Task<OrphanRecording> DeleteOrphanrecordingAsync (string orphanId)
         {
-             ApiResponse<OrphanRecording> response = await DeleteOrphanAsyncWithHttpInfo(orphanId);
+             ApiResponse<OrphanRecording> response = await DeleteOrphanrecordingAsyncWithHttpInfo(orphanId);
              return response.Data;
 
         }
@@ -636,28 +675,34 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of ApiResponse (OrphanRecording)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> DeleteOrphanAsyncWithHttpInfo (string orphanId)
+        public async System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> DeleteOrphanrecordingAsyncWithHttpInfo (string orphanId)
         {
             // verify the required parameter 'orphanId' is set
-            if (orphanId == null) throw new ApiException(400, "Missing required parameter 'orphanId' when calling DeleteOrphan");
+            if (orphanId == null) throw new ApiException(400, "Missing required parameter 'orphanId' when calling DeleteOrphanrecording");
             
     
             var path_ = "/api/v1/orphanrecordings/{orphanId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -680,14 +725,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteOrphan: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteOrphanrecording: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteOrphan: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteOrphanrecording: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OrphanRecording>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

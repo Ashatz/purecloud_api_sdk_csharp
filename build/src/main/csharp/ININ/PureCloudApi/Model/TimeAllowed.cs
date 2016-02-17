@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class TimeAllowed :  IEquatable<TimeAllowed>
+    public partial class TimeAllowed :  IEquatable<TimeAllowed>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeAllowed" /> class.
@@ -89,7 +88,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if TimeAllowed instances are equal
         /// </summary>
-        /// <param name="obj">Instance of TimeAllowed to be compared</param>
+        /// <param name="other">Instance of TimeAllowed to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(TimeAllowed other)
         {
@@ -128,19 +127,17 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.TimeSlots != null)
-                    hash = hash * 57 + this.TimeSlots.GetHashCode();
+                    hash = hash * 59 + this.TimeSlots.GetHashCode();
                 
                 if (this.TimeZoneId != null)
-                    hash = hash * 57 + this.TimeZoneId.GetHashCode();
+                    hash = hash * 59 + this.TimeZoneId.GetHashCode();
                 
                 if (this.Empty != null)
-                    hash = hash * 57 + this.Empty.GetHashCode();
+                    hash = hash * 59 + this.Empty.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

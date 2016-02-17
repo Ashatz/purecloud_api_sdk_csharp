@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class TransformProgress :  IEquatable<TransformProgress>
+    public partial class TransformProgress :  IEquatable<TransformProgress>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TransformProgress" /> class.
@@ -162,7 +161,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if TransformProgress instances are equal
         /// </summary>
-        /// <param name="obj">Instance of TransformProgress to be compared</param>
+        /// <param name="other">Instance of TransformProgress to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(TransformProgress other)
         {
@@ -241,43 +240,41 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Service != null)
-                    hash = hash * 57 + this.Service.GetHashCode();
+                    hash = hash * 59 + this.Service.GetHashCode();
                 
                 if (this.User != null)
-                    hash = hash * 57 + this.User.GetHashCode();
+                    hash = hash * 59 + this.User.GetHashCode();
                 
                 if (this.UploadTime != null)
-                    hash = hash * 57 + this.UploadTime.GetHashCode();
+                    hash = hash * 59 + this.UploadTime.GetHashCode();
                 
                 if (this.Filename != null)
-                    hash = hash * 57 + this.Filename.GetHashCode();
+                    hash = hash * 59 + this.Filename.GetHashCode();
                 
                 if (this.Tags != null)
-                    hash = hash * 57 + this.Tags.GetHashCode();
+                    hash = hash * 59 + this.Tags.GetHashCode();
                 
                 if (this.Progress != null)
-                    hash = hash * 57 + this.Progress.GetHashCode();
+                    hash = hash * 59 + this.Progress.GetHashCode();
                 
                 if (this.Model != null)
-                    hash = hash * 57 + this.Model.GetHashCode();
+                    hash = hash * 59 + this.Model.GetHashCode();
                 
                 if (this.Errors != null)
-                    hash = hash * 57 + this.Errors.GetHashCode();
+                    hash = hash * 59 + this.Errors.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

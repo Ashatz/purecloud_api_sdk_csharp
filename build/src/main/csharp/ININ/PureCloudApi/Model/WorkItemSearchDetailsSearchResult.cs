@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// Contains the found elements of a search along with the facet result.  All facet results are always returned along with the searchResults regardless of page size/number.
     /// </summary>
     [DataContract]
-    public class WorkItemSearchDetailsSearchResult :  IEquatable<WorkItemSearchDetailsSearchResult>
+    public partial class WorkItemSearchDetailsSearchResult :  IEquatable<WorkItemSearchDetailsSearchResult>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkItemSearchDetailsSearchResult" /> class.
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if WorkItemSearchDetailsSearchResult instances are equal
         /// </summary>
-        /// <param name="obj">Instance of WorkItemSearchDetailsSearchResult to be compared</param>
+        /// <param name="other">Instance of WorkItemSearchDetailsSearchResult to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(WorkItemSearchDetailsSearchResult other)
         {
@@ -116,16 +115,14 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.SearchResults != null)
-                    hash = hash * 57 + this.SearchResults.GetHashCode();
+                    hash = hash * 59 + this.SearchResults.GetHashCode();
                 
                 if (this.FacetResults != null)
-                    hash = hash * 57 + this.FacetResults.GetHashCode();
+                    hash = hash * 59 + this.FacetResults.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

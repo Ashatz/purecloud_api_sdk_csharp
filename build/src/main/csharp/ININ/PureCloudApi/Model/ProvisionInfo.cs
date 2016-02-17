@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class ProvisionInfo :  IEquatable<ProvisionInfo>
+    public partial class ProvisionInfo :  IEquatable<ProvisionInfo>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ProvisionInfo" /> class.
@@ -91,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ProvisionInfo instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ProvisionInfo to be compared</param>
+        /// <param name="other">Instance of ProvisionInfo to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ProvisionInfo other)
         {
@@ -130,19 +129,17 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Time != null)
-                    hash = hash * 57 + this.Time.GetHashCode();
+                    hash = hash * 59 + this.Time.GetHashCode();
                 
                 if (this.Source != null)
-                    hash = hash * 57 + this.Source.GetHashCode();
+                    hash = hash * 59 + this.Source.GetHashCode();
                 
                 if (this.ErrorInfo != null)
-                    hash = hash * 57 + this.ErrorInfo.GetHashCode();
+                    hash = hash * 59 + this.ErrorInfo.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

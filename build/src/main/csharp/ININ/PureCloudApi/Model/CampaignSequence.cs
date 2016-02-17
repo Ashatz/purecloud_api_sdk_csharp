@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class CampaignSequence :  IEquatable<CampaignSequence>
+    public partial class CampaignSequence :  IEquatable<CampaignSequence>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignSequence" /> class.
@@ -157,7 +156,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if CampaignSequence instances are equal
         /// </summary>
-        /// <param name="obj">Instance of CampaignSequence to be compared</param>
+        /// <param name="other">Instance of CampaignSequence to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(CampaignSequence other)
         {
@@ -236,43 +235,41 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.DateCreated != null)
-                    hash = hash * 57 + this.DateCreated.GetHashCode();
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
                 
                 if (this.DateModified != null)
-                    hash = hash * 57 + this.DateModified.GetHashCode();
+                    hash = hash * 59 + this.DateModified.GetHashCode();
                 
                 if (this.Version != null)
-                    hash = hash * 57 + this.Version.GetHashCode();
+                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 if (this.Campaigns != null)
-                    hash = hash * 57 + this.Campaigns.GetHashCode();
+                    hash = hash * 59 + this.Campaigns.GetHashCode();
                 
                 if (this.CurrentCampaign != null)
-                    hash = hash * 57 + this.CurrentCampaign.GetHashCode();
+                    hash = hash * 59 + this.CurrentCampaign.GetHashCode();
                 
                 if (this.Status != null)
-                    hash = hash * 57 + this.Status.GetHashCode();
+                    hash = hash * 59 + this.Status.GetHashCode();
                 
                 if (this.StopMessage != null)
-                    hash = hash * 57 + this.StopMessage.GetHashCode();
+                    hash = hash * 59 + this.StopMessage.GetHashCode();
                 
                 if (this.Repeat != null)
-                    hash = hash * 57 + this.Repeat.GetHashCode();
+                    hash = hash * 59 + this.Repeat.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

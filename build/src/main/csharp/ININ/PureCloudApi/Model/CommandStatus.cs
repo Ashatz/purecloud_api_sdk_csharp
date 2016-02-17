@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class CommandStatus :  IEquatable<CommandStatus>
+    public partial class CommandStatus :  IEquatable<CommandStatus>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CommandStatus" /> class.
@@ -131,7 +130,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if CommandStatus instances are equal
         /// </summary>
-        /// <param name="obj">Instance of CommandStatus to be compared</param>
+        /// <param name="other">Instance of CommandStatus to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(CommandStatus other)
         {
@@ -195,34 +194,32 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Expiration != null)
-                    hash = hash * 57 + this.Expiration.GetHashCode();
+                    hash = hash * 59 + this.Expiration.GetHashCode();
                 
                 if (this.UserId != null)
-                    hash = hash * 57 + this.UserId.GetHashCode();
+                    hash = hash * 59 + this.UserId.GetHashCode();
                 
                 if (this.StatusCode != null)
-                    hash = hash * 57 + this.StatusCode.GetHashCode();
+                    hash = hash * 59 + this.StatusCode.GetHashCode();
                 
                 if (this.CommandType != null)
-                    hash = hash * 57 + this.CommandType.GetHashCode();
+                    hash = hash * 59 + this.CommandType.GetHashCode();
                 
                 if (this.Document != null)
-                    hash = hash * 57 + this.Document.GetHashCode();
+                    hash = hash * 59 + this.Document.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

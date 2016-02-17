@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class PolicyErrorMessage :  IEquatable<PolicyErrorMessage>
+    public partial class PolicyErrorMessage :  IEquatable<PolicyErrorMessage>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PolicyErrorMessage" /> class.
@@ -121,7 +120,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if PolicyErrorMessage instances are equal
         /// </summary>
-        /// <param name="obj">Instance of PolicyErrorMessage to be compared</param>
+        /// <param name="other">Instance of PolicyErrorMessage to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(PolicyErrorMessage other)
         {
@@ -180,31 +179,29 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.StatusCode != null)
-                    hash = hash * 57 + this.StatusCode.GetHashCode();
+                    hash = hash * 59 + this.StatusCode.GetHashCode();
                 
                 if (this.UserMessage != null)
-                    hash = hash * 57 + this.UserMessage.GetHashCode();
+                    hash = hash * 59 + this.UserMessage.GetHashCode();
                 
                 if (this.UserParamsMessage != null)
-                    hash = hash * 57 + this.UserParamsMessage.GetHashCode();
+                    hash = hash * 59 + this.UserParamsMessage.GetHashCode();
                 
                 if (this.ErrorCode != null)
-                    hash = hash * 57 + this.ErrorCode.GetHashCode();
+                    hash = hash * 59 + this.ErrorCode.GetHashCode();
                 
                 if (this.CorrelationId != null)
-                    hash = hash * 57 + this.CorrelationId.GetHashCode();
+                    hash = hash * 59 + this.CorrelationId.GetHashCode();
                 
                 if (this.UserParams != null)
-                    hash = hash * 57 + this.UserParams.GetHashCode();
+                    hash = hash * 59 + this.UserParams.GetHashCode();
                 
                 if (this.InsertDate != null)
-                    hash = hash * 57 + this.InsertDate.GetHashCode();
+                    hash = hash * 59 + this.InsertDate.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

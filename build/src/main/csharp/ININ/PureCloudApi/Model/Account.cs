@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Account :  IEquatable<Account>
+    public partial class Account :  IEquatable<Account>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Account" /> class.
@@ -309,7 +308,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Account instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Account to be compared</param>
+        /// <param name="other">Instance of Account to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Account other)
         {
@@ -483,100 +482,98 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.OrgLegalName != null)
-                    hash = hash * 57 + this.OrgLegalName.GetHashCode();
+                    hash = hash * 59 + this.OrgLegalName.GetHashCode();
                 
                 if (this.BillingAddressLine1 != null)
-                    hash = hash * 57 + this.BillingAddressLine1.GetHashCode();
+                    hash = hash * 59 + this.BillingAddressLine1.GetHashCode();
                 
                 if (this.BillingAddressLine2 != null)
-                    hash = hash * 57 + this.BillingAddressLine2.GetHashCode();
+                    hash = hash * 59 + this.BillingAddressLine2.GetHashCode();
                 
                 if (this.BillingAddressCity != null)
-                    hash = hash * 57 + this.BillingAddressCity.GetHashCode();
+                    hash = hash * 59 + this.BillingAddressCity.GetHashCode();
                 
                 if (this.BillingAddressState != null)
-                    hash = hash * 57 + this.BillingAddressState.GetHashCode();
+                    hash = hash * 59 + this.BillingAddressState.GetHashCode();
                 
                 if (this.BillingAddressZipCode != null)
-                    hash = hash * 57 + this.BillingAddressZipCode.GetHashCode();
+                    hash = hash * 59 + this.BillingAddressZipCode.GetHashCode();
                 
                 if (this.BillingAddressCountry != null)
-                    hash = hash * 57 + this.BillingAddressCountry.GetHashCode();
+                    hash = hash * 59 + this.BillingAddressCountry.GetHashCode();
                 
                 if (this.LegalAddressLine1 != null)
-                    hash = hash * 57 + this.LegalAddressLine1.GetHashCode();
+                    hash = hash * 59 + this.LegalAddressLine1.GetHashCode();
                 
                 if (this.LegalAddressLine2 != null)
-                    hash = hash * 57 + this.LegalAddressLine2.GetHashCode();
+                    hash = hash * 59 + this.LegalAddressLine2.GetHashCode();
                 
                 if (this.LegalAddressCity != null)
-                    hash = hash * 57 + this.LegalAddressCity.GetHashCode();
+                    hash = hash * 59 + this.LegalAddressCity.GetHashCode();
                 
                 if (this.LegalAddressState != null)
-                    hash = hash * 57 + this.LegalAddressState.GetHashCode();
+                    hash = hash * 59 + this.LegalAddressState.GetHashCode();
                 
                 if (this.LegalAddressZipCode != null)
-                    hash = hash * 57 + this.LegalAddressZipCode.GetHashCode();
+                    hash = hash * 59 + this.LegalAddressZipCode.GetHashCode();
                 
                 if (this.LegalAddressCountry != null)
-                    hash = hash * 57 + this.LegalAddressCountry.GetHashCode();
+                    hash = hash * 59 + this.LegalAddressCountry.GetHashCode();
                 
                 if (this.BillingContactFirstName != null)
-                    hash = hash * 57 + this.BillingContactFirstName.GetHashCode();
+                    hash = hash * 59 + this.BillingContactFirstName.GetHashCode();
                 
                 if (this.BillingContactLastName != null)
-                    hash = hash * 57 + this.BillingContactLastName.GetHashCode();
+                    hash = hash * 59 + this.BillingContactLastName.GetHashCode();
                 
                 if (this.BillingContactEmail != null)
-                    hash = hash * 57 + this.BillingContactEmail.GetHashCode();
+                    hash = hash * 59 + this.BillingContactEmail.GetHashCode();
                 
                 if (this.BillingContactPhone != null)
-                    hash = hash * 57 + this.BillingContactPhone.GetHashCode();
+                    hash = hash * 59 + this.BillingContactPhone.GetHashCode();
                 
                 if (this.PurchaseOrderNumber != null)
-                    hash = hash * 57 + this.PurchaseOrderNumber.GetHashCode();
+                    hash = hash * 59 + this.PurchaseOrderNumber.GetHashCode();
                 
                 if (this.IsTaxExempt != null)
-                    hash = hash * 57 + this.IsTaxExempt.GetHashCode();
+                    hash = hash * 59 + this.IsTaxExempt.GetHashCode();
                 
                 if (this.Currency != null)
-                    hash = hash * 57 + this.Currency.GetHashCode();
+                    hash = hash * 59 + this.Currency.GetHashCode();
                 
                 if (this.PaymentTerm != null)
-                    hash = hash * 57 + this.PaymentTerm.GetHashCode();
+                    hash = hash * 59 + this.PaymentTerm.GetHashCode();
                 
                 if (this.ContractTerm != null)
-                    hash = hash * 57 + this.ContractTerm.GetHashCode();
+                    hash = hash * 59 + this.ContractTerm.GetHashCode();
                 
                 if (this.AutoRenew != null)
-                    hash = hash * 57 + this.AutoRenew.GetHashCode();
+                    hash = hash * 59 + this.AutoRenew.GetHashCode();
                 
                 if (this.Enabled != null)
-                    hash = hash * 57 + this.Enabled.GetHashCode();
+                    hash = hash * 59 + this.Enabled.GetHashCode();
                 
                 if (this.MinCommitQuantities != null)
-                    hash = hash * 57 + this.MinCommitQuantities.GetHashCode();
+                    hash = hash * 59 + this.MinCommitQuantities.GetHashCode();
                 
                 if (this.EstimatedQuantities != null)
-                    hash = hash * 57 + this.EstimatedQuantities.GetHashCode();
+                    hash = hash * 59 + this.EstimatedQuantities.GetHashCode();
                 
                 if (this.OneTimeCharges != null)
-                    hash = hash * 57 + this.OneTimeCharges.GetHashCode();
+                    hash = hash * 59 + this.OneTimeCharges.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

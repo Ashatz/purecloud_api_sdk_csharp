@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class TransformModel :  IEquatable<TransformModel>
+    public partial class TransformModel :  IEquatable<TransformModel>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TransformModel" /> class.
@@ -122,7 +121,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if TransformModel instances are equal
         /// </summary>
-        /// <param name="obj">Instance of TransformModel to be compared</param>
+        /// <param name="other">Instance of TransformModel to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(TransformModel other)
         {
@@ -181,31 +180,29 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.RestEndpoint != null)
-                    hash = hash * 57 + this.RestEndpoint.GetHashCode();
+                    hash = hash * 59 + this.RestEndpoint.GetHashCode();
                 
                 if (this.FilenameTransforms != null)
-                    hash = hash * 57 + this.FilenameTransforms.GetHashCode();
+                    hash = hash * 59 + this.FilenameTransforms.GetHashCode();
                 
                 if (this.Tags != null)
-                    hash = hash * 57 + this.Tags.GetHashCode();
+                    hash = hash * 59 + this.Tags.GetHashCode();
                 
                 if (this.ClientTransformModel != null)
-                    hash = hash * 57 + this.ClientTransformModel.GetHashCode();
+                    hash = hash * 59 + this.ClientTransformModel.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

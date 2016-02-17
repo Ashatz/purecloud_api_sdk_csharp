@@ -1,11 +1,11 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 using ININ.PureCloudApi.Client;
 using ININ.PureCloudApi.Model;
-
 
 namespace ININ.PureCloudApi.Api
 {
@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>GeolocationSettings</returns>
-        GeolocationSettings GetSettings ();
+        GeolocationSettings GetGeolocationsSettings ();
   
         /// <summary>
         /// Get a organization&#39;s GeolocationSettings
@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of GeolocationSettings</returns>
-        ApiResponse<GeolocationSettings> GetSettingsWithHttpInfo ();
+        ApiResponse<GeolocationSettings> GetGeolocationsSettingsWithHttpInfo ();
 
         /// <summary>
         /// Get a organization&#39;s GeolocationSettings
@@ -41,7 +41,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of GeolocationSettings</returns>
-        System.Threading.Tasks.Task<GeolocationSettings> GetSettingsAsync ();
+        System.Threading.Tasks.Task<GeolocationSettings> GetGeolocationsSettingsAsync ();
 
         /// <summary>
         /// Get a organization&#39;s GeolocationSettings
@@ -50,7 +50,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse (GeolocationSettings)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> GetSettingsAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> GetGeolocationsSettingsAsyncWithHttpInfo ();
         
         /// <summary>
         /// Patch a organization&#39;s GeolocationSettings
@@ -60,7 +60,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>GeolocationSettings</returns>
-        GeolocationSettings PatchSettings (GeolocationSettings body = null);
+        GeolocationSettings PatchGeolocationsSettings (GeolocationSettings body = null);
   
         /// <summary>
         /// Patch a organization&#39;s GeolocationSettings
@@ -70,7 +70,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>ApiResponse of GeolocationSettings</returns>
-        ApiResponse<GeolocationSettings> PatchSettingsWithHttpInfo (GeolocationSettings body = null);
+        ApiResponse<GeolocationSettings> PatchGeolocationsSettingsWithHttpInfo (GeolocationSettings body = null);
 
         /// <summary>
         /// Patch a organization&#39;s GeolocationSettings
@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of GeolocationSettings</returns>
-        System.Threading.Tasks.Task<GeolocationSettings> PatchSettingsAsync (GeolocationSettings body = null);
+        System.Threading.Tasks.Task<GeolocationSettings> PatchGeolocationsSettingsAsync (GeolocationSettings body = null);
 
         /// <summary>
         /// Patch a organization&#39;s GeolocationSettings
@@ -90,7 +90,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (GeolocationSettings)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> PatchSettingsAsyncWithHttpInfo (GeolocationSettings body = null);
+        System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> PatchGeolocationsSettingsAsyncWithHttpInfo (GeolocationSettings body = null);
         
         /// <summary>
         /// Get a user&#39;s Geolocation
@@ -101,7 +101,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
         /// <returns>Geolocation</returns>
-        Geolocation GetUserGeolocationsByClientId (string userId, string clientId);
+        Geolocation GetGeolocation (string userId, string clientId);
   
         /// <summary>
         /// Get a user&#39;s Geolocation
@@ -112,7 +112,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
         /// <returns>ApiResponse of Geolocation</returns>
-        ApiResponse<Geolocation> GetUserGeolocationsByClientIdWithHttpInfo (string userId, string clientId);
+        ApiResponse<Geolocation> GetGeolocationWithHttpInfo (string userId, string clientId);
 
         /// <summary>
         /// Get a user&#39;s Geolocation
@@ -123,7 +123,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
         /// <returns>Task of Geolocation</returns>
-        System.Threading.Tasks.Task<Geolocation> GetUserGeolocationsByClientIdAsync (string userId, string clientId);
+        System.Threading.Tasks.Task<Geolocation> GetGeolocationAsync (string userId, string clientId);
 
         /// <summary>
         /// Get a user&#39;s Geolocation
@@ -134,7 +134,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
         /// <returns>Task of ApiResponse (Geolocation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Geolocation>> GetUserGeolocationsByClientIdAsyncWithHttpInfo (string userId, string clientId);
+        System.Threading.Tasks.Task<ApiResponse<Geolocation>> GetGeolocationAsyncWithHttpInfo (string userId, string clientId);
         
         /// <summary>
         /// Patch a user&#39;s Geolocation
@@ -146,7 +146,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">client Id</param>
         /// <param name="body"></param>
         /// <returns>Geolocation</returns>
-        Geolocation PatchUserGeolocationsByClientId (string userId, string clientId, Geolocation body = null);
+        Geolocation PatchGeolocation (string userId, string clientId, Geolocation body = null);
   
         /// <summary>
         /// Patch a user&#39;s Geolocation
@@ -158,7 +158,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">client Id</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Geolocation</returns>
-        ApiResponse<Geolocation> PatchUserGeolocationsByClientIdWithHttpInfo (string userId, string clientId, Geolocation body = null);
+        ApiResponse<Geolocation> PatchGeolocationWithHttpInfo (string userId, string clientId, Geolocation body = null);
 
         /// <summary>
         /// Patch a user&#39;s Geolocation
@@ -170,7 +170,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">client Id</param>
         /// <param name="body"></param>
         /// <returns>Task of Geolocation</returns>
-        System.Threading.Tasks.Task<Geolocation> PatchUserGeolocationsByClientIdAsync (string userId, string clientId, Geolocation body = null);
+        System.Threading.Tasks.Task<Geolocation> PatchGeolocationAsync (string userId, string clientId, Geolocation body = null);
 
         /// <summary>
         /// Patch a user&#39;s Geolocation
@@ -182,7 +182,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">client Id</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Geolocation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Geolocation>> PatchUserGeolocationsByClientIdAsyncWithHttpInfo (string userId, string clientId, Geolocation body = null);
+        System.Threading.Tasks.Task<ApiResponse<Geolocation>> PatchGeolocationAsyncWithHttpInfo (string userId, string clientId, Geolocation body = null);
         
     }
   
@@ -266,9 +266,9 @@ namespace ININ.PureCloudApi.Api
         /// Get a organization&#39;s GeolocationSettings 
         /// </summary>
         /// <returns>GeolocationSettings</returns>
-        public GeolocationSettings GetSettings ()
+        public GeolocationSettings GetGeolocationsSettings ()
         {
-             ApiResponse<GeolocationSettings> response = GetSettingsWithHttpInfo();
+             ApiResponse<GeolocationSettings> response = GetGeolocationsSettingsWithHttpInfo();
              return response.Data;
         }
 
@@ -276,7 +276,7 @@ namespace ININ.PureCloudApi.Api
         /// Get a organization&#39;s GeolocationSettings 
         /// </summary>
         /// <returns>ApiResponse of GeolocationSettings</returns>
-        public ApiResponse< GeolocationSettings > GetSettingsWithHttpInfo ()
+        public ApiResponse< GeolocationSettings > GetGeolocationsSettingsWithHttpInfo ()
         {
             
     
@@ -287,15 +287,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -306,7 +312,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -317,14 +322,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSettings: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetGeolocationsSettings: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSettings: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetGeolocationsSettings: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<GeolocationSettings>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -336,9 +343,9 @@ namespace ININ.PureCloudApi.Api
         /// Get a organization&#39;s GeolocationSettings 
         /// </summary>
         /// <returns>Task of GeolocationSettings</returns>
-        public async System.Threading.Tasks.Task<GeolocationSettings> GetSettingsAsync ()
+        public async System.Threading.Tasks.Task<GeolocationSettings> GetGeolocationsSettingsAsync ()
         {
-             ApiResponse<GeolocationSettings> response = await GetSettingsAsyncWithHttpInfo();
+             ApiResponse<GeolocationSettings> response = await GetGeolocationsSettingsAsyncWithHttpInfo();
              return response.Data;
 
         }
@@ -347,7 +354,7 @@ namespace ININ.PureCloudApi.Api
         /// Get a organization&#39;s GeolocationSettings 
         /// </summary>
         /// <returns>Task of ApiResponse (GeolocationSettings)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> GetSettingsAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> GetGeolocationsSettingsAsyncWithHttpInfo ()
         {
             
     
@@ -355,18 +362,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -388,14 +401,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSettings: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetGeolocationsSettings: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSettings: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetGeolocationsSettings: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<GeolocationSettings>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -408,9 +423,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>GeolocationSettings</returns>
-        public GeolocationSettings PatchSettings (GeolocationSettings body = null)
+        public GeolocationSettings PatchGeolocationsSettings (GeolocationSettings body = null)
         {
-             ApiResponse<GeolocationSettings> response = PatchSettingsWithHttpInfo(body);
+             ApiResponse<GeolocationSettings> response = PatchGeolocationsSettingsWithHttpInfo(body);
              return response.Data;
         }
 
@@ -419,7 +434,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>ApiResponse of GeolocationSettings</returns>
-        public ApiResponse< GeolocationSettings > PatchSettingsWithHttpInfo (GeolocationSettings body = null)
+        public ApiResponse< GeolocationSettings > PatchGeolocationsSettingsWithHttpInfo (GeolocationSettings body = null)
         {
             
     
@@ -430,15 +445,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -447,10 +468,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -461,14 +487,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PatchSettings: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PatchGeolocationsSettings: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PatchSettings: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PatchGeolocationsSettings: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<GeolocationSettings>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -481,9 +509,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of GeolocationSettings</returns>
-        public async System.Threading.Tasks.Task<GeolocationSettings> PatchSettingsAsync (GeolocationSettings body = null)
+        public async System.Threading.Tasks.Task<GeolocationSettings> PatchGeolocationsSettingsAsync (GeolocationSettings body = null)
         {
-             ApiResponse<GeolocationSettings> response = await PatchSettingsAsyncWithHttpInfo(body);
+             ApiResponse<GeolocationSettings> response = await PatchGeolocationsSettingsAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -493,7 +521,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (GeolocationSettings)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> PatchSettingsAsyncWithHttpInfo (GeolocationSettings body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> PatchGeolocationsSettingsAsyncWithHttpInfo (GeolocationSettings body = null)
         {
             
     
@@ -501,18 +529,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -535,14 +569,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PatchSettings: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PatchGeolocationsSettings: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PatchSettings: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PatchGeolocationsSettings: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<GeolocationSettings>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -556,9 +592,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">user Id</param> 
         /// <param name="clientId">client Id</param> 
         /// <returns>Geolocation</returns>
-        public Geolocation GetUserGeolocationsByClientId (string userId, string clientId)
+        public Geolocation GetGeolocation (string userId, string clientId)
         {
-             ApiResponse<Geolocation> response = GetUserGeolocationsByClientIdWithHttpInfo(userId, clientId);
+             ApiResponse<Geolocation> response = GetGeolocationWithHttpInfo(userId, clientId);
              return response.Data;
         }
 
@@ -568,14 +604,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">user Id</param> 
         /// <param name="clientId">client Id</param> 
         /// <returns>ApiResponse of Geolocation</returns>
-        public ApiResponse< Geolocation > GetUserGeolocationsByClientIdWithHttpInfo (string userId, string clientId)
+        public ApiResponse< Geolocation > GetGeolocationWithHttpInfo (string userId, string clientId)
         {
             
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling GetUserGeolocationsByClientId");
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling GeolocationApi->GetGeolocation");
             
             // verify the required parameter 'clientId' is set
-            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling GetUserGeolocationsByClientId");
+            if (clientId == null)
+                throw new ApiException(400, "Missing required parameter 'clientId' when calling GeolocationApi->GetGeolocation");
             
     
             var path_ = "/api/v1/users/{userId}/geolocations/{clientId}";
@@ -585,15 +623,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -606,7 +650,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -617,14 +660,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetUserGeolocationsByClientId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetGeolocation: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetUserGeolocationsByClientId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetGeolocation: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Geolocation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -638,9 +683,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
         /// <returns>Task of Geolocation</returns>
-        public async System.Threading.Tasks.Task<Geolocation> GetUserGeolocationsByClientIdAsync (string userId, string clientId)
+        public async System.Threading.Tasks.Task<Geolocation> GetGeolocationAsync (string userId, string clientId)
         {
-             ApiResponse<Geolocation> response = await GetUserGeolocationsByClientIdAsyncWithHttpInfo(userId, clientId);
+             ApiResponse<Geolocation> response = await GetGeolocationAsyncWithHttpInfo(userId, clientId);
              return response.Data;
 
         }
@@ -651,30 +696,36 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
         /// <returns>Task of ApiResponse (Geolocation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Geolocation>> GetUserGeolocationsByClientIdAsyncWithHttpInfo (string userId, string clientId)
+        public async System.Threading.Tasks.Task<ApiResponse<Geolocation>> GetGeolocationAsyncWithHttpInfo (string userId, string clientId)
         {
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling GetUserGeolocationsByClientId");
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling GetGeolocation");
             // verify the required parameter 'clientId' is set
-            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling GetUserGeolocationsByClientId");
+            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling GetGeolocation");
             
     
             var path_ = "/api/v1/users/{userId}/geolocations/{clientId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -698,14 +749,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetUserGeolocationsByClientId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetGeolocation: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetUserGeolocationsByClientId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetGeolocation: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Geolocation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -720,9 +773,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">client Id</param> 
         /// <param name="body"></param> 
         /// <returns>Geolocation</returns>
-        public Geolocation PatchUserGeolocationsByClientId (string userId, string clientId, Geolocation body = null)
+        public Geolocation PatchGeolocation (string userId, string clientId, Geolocation body = null)
         {
-             ApiResponse<Geolocation> response = PatchUserGeolocationsByClientIdWithHttpInfo(userId, clientId, body);
+             ApiResponse<Geolocation> response = PatchGeolocationWithHttpInfo(userId, clientId, body);
              return response.Data;
         }
 
@@ -733,14 +786,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">client Id</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of Geolocation</returns>
-        public ApiResponse< Geolocation > PatchUserGeolocationsByClientIdWithHttpInfo (string userId, string clientId, Geolocation body = null)
+        public ApiResponse< Geolocation > PatchGeolocationWithHttpInfo (string userId, string clientId, Geolocation body = null)
         {
             
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling PatchUserGeolocationsByClientId");
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling GeolocationApi->PatchGeolocation");
             
             // verify the required parameter 'clientId' is set
-            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling PatchUserGeolocationsByClientId");
+            if (clientId == null)
+                throw new ApiException(400, "Missing required parameter 'clientId' when calling GeolocationApi->PatchGeolocation");
             
     
             var path_ = "/api/v1/users/{userId}/geolocations/{clientId}";
@@ -750,15 +805,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -769,10 +830,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -783,14 +849,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PatchUserGeolocationsByClientId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PatchGeolocation: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PatchUserGeolocationsByClientId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PatchGeolocation: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Geolocation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -805,9 +873,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">client Id</param>
         /// <param name="body"></param>
         /// <returns>Task of Geolocation</returns>
-        public async System.Threading.Tasks.Task<Geolocation> PatchUserGeolocationsByClientIdAsync (string userId, string clientId, Geolocation body = null)
+        public async System.Threading.Tasks.Task<Geolocation> PatchGeolocationAsync (string userId, string clientId, Geolocation body = null)
         {
-             ApiResponse<Geolocation> response = await PatchUserGeolocationsByClientIdAsyncWithHttpInfo(userId, clientId, body);
+             ApiResponse<Geolocation> response = await PatchGeolocationAsyncWithHttpInfo(userId, clientId, body);
              return response.Data;
 
         }
@@ -819,30 +887,36 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">client Id</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Geolocation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Geolocation>> PatchUserGeolocationsByClientIdAsyncWithHttpInfo (string userId, string clientId, Geolocation body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Geolocation>> PatchGeolocationAsyncWithHttpInfo (string userId, string clientId, Geolocation body = null)
         {
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling PatchUserGeolocationsByClientId");
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling PatchGeolocation");
             // verify the required parameter 'clientId' is set
-            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling PatchUserGeolocationsByClientId");
+            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling PatchGeolocation");
             
     
             var path_ = "/api/v1/users/{userId}/geolocations/{clientId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -867,14 +941,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PatchUserGeolocationsByClientId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PatchGeolocation: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PatchUserGeolocationsByClientId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PatchGeolocation: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Geolocation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

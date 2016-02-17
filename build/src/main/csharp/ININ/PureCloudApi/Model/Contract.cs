@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Contract :  IEquatable<Contract>
+    public partial class Contract :  IEquatable<Contract>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Contract" /> class.
@@ -114,7 +113,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Contract instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Contract to be compared</param>
+        /// <param name="other">Instance of Contract to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Contract other)
         {
@@ -168,28 +167,26 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Quote != null)
-                    hash = hash * 57 + this.Quote.GetHashCode();
+                    hash = hash * 59 + this.Quote.GetHashCode();
                 
                 if (this.SignerUrl != null)
-                    hash = hash * 57 + this.SignerUrl.GetHashCode();
+                    hash = hash * 59 + this.SignerUrl.GetHashCode();
                 
                 if (this.Job != null)
-                    hash = hash * 57 + this.Job.GetHashCode();
+                    hash = hash * 59 + this.Job.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

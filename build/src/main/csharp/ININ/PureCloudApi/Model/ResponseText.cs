@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// Contains information about the text associated with a response.
     /// </summary>
     [DataContract]
-    public class ResponseText :  IEquatable<ResponseText>
+    public partial class ResponseText :  IEquatable<ResponseText>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseText" /> class.
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ResponseText instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ResponseText to be compared</param>
+        /// <param name="other">Instance of ResponseText to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ResponseText other)
         {
@@ -116,16 +115,14 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Content != null)
-                    hash = hash * 57 + this.Content.GetHashCode();
+                    hash = hash * 59 + this.Content.GetHashCode();
                 
                 if (this.ContentType != null)
-                    hash = hash * 57 + this.ContentType.GetHashCode();
+                    hash = hash * 59 + this.ContentType.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class UserActionMetadataRequest :  IEquatable<UserActionMetadataRequest>
+    public partial class UserActionMetadataRequest :  IEquatable<UserActionMetadataRequest>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UserActionMetadataRequest" /> class.
@@ -112,7 +111,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if UserActionMetadataRequest instances are equal
         /// </summary>
-        /// <param name="obj">Instance of UserActionMetadataRequest to be compared</param>
+        /// <param name="other">Instance of UserActionMetadataRequest to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(UserActionMetadataRequest other)
         {
@@ -166,28 +165,26 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Format != null)
-                    hash = hash * 57 + this.Format.GetHashCode();
+                    hash = hash * 59 + this.Format.GetHashCode();
                 
                 if (this.Method != null)
-                    hash = hash * 57 + this.Method.GetHashCode();
+                    hash = hash * 59 + this.Method.GetHashCode();
                 
                 if (this.InputSchemaUri != null)
-                    hash = hash * 57 + this.InputSchemaUri.GetHashCode();
+                    hash = hash * 59 + this.InputSchemaUri.GetHashCode();
                 
                 if (this.SuccessSchemaUri != null)
-                    hash = hash * 57 + this.SuccessSchemaUri.GetHashCode();
+                    hash = hash * 59 + this.SuccessSchemaUri.GetHashCode();
                 
                 if (this.InputSchema != null)
-                    hash = hash * 57 + this.InputSchema.GetHashCode();
+                    hash = hash * 59 + this.InputSchema.GetHashCode();
                 
                 if (this.SuccessSchema != null)
-                    hash = hash * 57 + this.SuccessSchema.GetHashCode();
+                    hash = hash * 59 + this.SuccessSchema.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

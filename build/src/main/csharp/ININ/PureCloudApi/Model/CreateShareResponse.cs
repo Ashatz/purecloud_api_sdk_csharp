@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class CreateShareResponse :  IEquatable<CreateShareResponse>
+    public partial class CreateShareResponse :  IEquatable<CreateShareResponse>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateShareResponse" /> class.
@@ -154,7 +153,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if CreateShareResponse instances are equal
         /// </summary>
-        /// <param name="obj">Instance of CreateShareResponse to be compared</param>
+        /// <param name="other">Instance of CreateShareResponse to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(CreateShareResponse other)
         {
@@ -233,43 +232,41 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.SharedEntityType != null)
-                    hash = hash * 57 + this.SharedEntityType.GetHashCode();
+                    hash = hash * 59 + this.SharedEntityType.GetHashCode();
                 
                 if (this.SharedEntity != null)
-                    hash = hash * 57 + this.SharedEntity.GetHashCode();
+                    hash = hash * 59 + this.SharedEntity.GetHashCode();
                 
                 if (this.MemberType != null)
-                    hash = hash * 57 + this.MemberType.GetHashCode();
+                    hash = hash * 59 + this.MemberType.GetHashCode();
                 
                 if (this.Member != null)
-                    hash = hash * 57 + this.Member.GetHashCode();
+                    hash = hash * 59 + this.Member.GetHashCode();
                 
                 if (this.SharedBy != null)
-                    hash = hash * 57 + this.SharedBy.GetHashCode();
+                    hash = hash * 59 + this.SharedBy.GetHashCode();
                 
                 if (this.Workspace != null)
-                    hash = hash * 57 + this.Workspace.GetHashCode();
+                    hash = hash * 59 + this.Workspace.GetHashCode();
                 
                 if (this.Succeeded != null)
-                    hash = hash * 57 + this.Succeeded.GetHashCode();
+                    hash = hash * 59 + this.Succeeded.GetHashCode();
                 
                 if (this.Failed != null)
-                    hash = hash * 57 + this.Failed.GetHashCode();
+                    hash = hash * 59 + this.Failed.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

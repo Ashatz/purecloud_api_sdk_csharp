@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Language :  IEquatable<Language>
+    public partial class Language :  IEquatable<Language>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Language" /> class.
@@ -90,7 +89,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Language instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Language to be compared</param>
+        /// <param name="other">Instance of Language to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Language other)
         {
@@ -129,19 +128,17 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

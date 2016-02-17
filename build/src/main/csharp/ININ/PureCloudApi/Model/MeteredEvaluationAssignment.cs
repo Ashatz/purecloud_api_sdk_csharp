@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class MeteredEvaluationAssignment :  IEquatable<MeteredEvaluationAssignment>
+    public partial class MeteredEvaluationAssignment :  IEquatable<MeteredEvaluationAssignment>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="MeteredEvaluationAssignment" /> class.
@@ -113,7 +112,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if MeteredEvaluationAssignment instances are equal
         /// </summary>
-        /// <param name="obj">Instance of MeteredEvaluationAssignment to be compared</param>
+        /// <param name="other">Instance of MeteredEvaluationAssignment to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(MeteredEvaluationAssignment other)
         {
@@ -167,28 +166,26 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.EvaluationContextId != null)
-                    hash = hash * 57 + this.EvaluationContextId.GetHashCode();
+                    hash = hash * 59 + this.EvaluationContextId.GetHashCode();
                 
                 if (this.Evaluators != null)
-                    hash = hash * 57 + this.Evaluators.GetHashCode();
+                    hash = hash * 59 + this.Evaluators.GetHashCode();
                 
                 if (this.MaxNumberEvaluations != null)
-                    hash = hash * 57 + this.MaxNumberEvaluations.GetHashCode();
+                    hash = hash * 59 + this.MaxNumberEvaluations.GetHashCode();
                 
                 if (this.EvaluationForm != null)
-                    hash = hash * 57 + this.EvaluationForm.GetHashCode();
+                    hash = hash * 59 + this.EvaluationForm.GetHashCode();
                 
                 if (this.AssignToActiveUser != null)
-                    hash = hash * 57 + this.AssignToActiveUser.GetHashCode();
+                    hash = hash * 59 + this.AssignToActiveUser.GetHashCode();
                 
                 if (this.TimeInterval != null)
-                    hash = hash * 57 + this.TimeInterval.GetHashCode();
+                    hash = hash * 59 + this.TimeInterval.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

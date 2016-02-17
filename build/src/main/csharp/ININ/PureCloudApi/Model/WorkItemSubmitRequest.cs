@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// Used as the body to the submitWorkItem request.
     /// </summary>
     [DataContract]
-    public class WorkItemSubmitRequest :  IEquatable<WorkItemSubmitRequest>
+    public partial class WorkItemSubmitRequest :  IEquatable<WorkItemSubmitRequest>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkItemSubmitRequest" /> class.
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if WorkItemSubmitRequest instances are equal
         /// </summary>
-        /// <param name="obj">Instance of WorkItemSubmitRequest to be compared</param>
+        /// <param name="other">Instance of WorkItemSubmitRequest to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(WorkItemSubmitRequest other)
         {
@@ -116,16 +115,14 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.CommandId != null)
-                    hash = hash * 57 + this.CommandId.GetHashCode();
+                    hash = hash * 59 + this.CommandId.GetHashCode();
                 
                 if (this.DataItems != null)
-                    hash = hash * 57 + this.DataItems.GetHashCode();
+                    hash = hash * 59 + this.DataItems.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -1,11 +1,11 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 using ININ.PureCloudApi.Client;
 using ININ.PureCloudApi.Model;
-
 
 namespace ININ.PureCloudApi.Api
 {
@@ -25,7 +25,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>DomainEntityListing</returns>
-        DomainEntityListing Get (int? pageSize = null, int? pageNumber = null);
+        DomainEntityListing GetGreetings (int? pageSize = null, int? pageNumber = null);
   
         /// <summary>
         /// Gets an Organization&#39;s Greetings
@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>ApiResponse of DomainEntityListing</returns>
-        ApiResponse<DomainEntityListing> GetWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        ApiResponse<DomainEntityListing> GetGreetingsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Gets an Organization&#39;s Greetings
@@ -47,7 +47,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of DomainEntityListing</returns>
-        System.Threading.Tasks.Task<DomainEntityListing> GetAsync (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<DomainEntityListing> GetGreetingsAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Gets an Organization&#39;s Greetings
@@ -58,7 +58,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (DomainEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainEntityListing>> GetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<DomainEntityListing>> GetGreetingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
         /// Create a Greeting for an Organization
@@ -68,7 +68,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">The Greeting to create</param>
         /// <returns>DefaultGreetingList</returns>
-        DefaultGreetingList Create (Greeting body);
+        DefaultGreetingList PostGreetings (Greeting body);
   
         /// <summary>
         /// Create a Greeting for an Organization
@@ -78,7 +78,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">The Greeting to create</param>
         /// <returns>ApiResponse of DefaultGreetingList</returns>
-        ApiResponse<DefaultGreetingList> CreateWithHttpInfo (Greeting body);
+        ApiResponse<DefaultGreetingList> PostGreetingsWithHttpInfo (Greeting body);
 
         /// <summary>
         /// Create a Greeting for an Organization
@@ -88,7 +88,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of DefaultGreetingList</returns>
-        System.Threading.Tasks.Task<DefaultGreetingList> CreateAsync (Greeting body);
+        System.Threading.Tasks.Task<DefaultGreetingList> PostGreetingsAsync (Greeting body);
 
         /// <summary>
         /// Create a Greeting for an Organization
@@ -98,7 +98,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> CreateAsyncWithHttpInfo (Greeting body);
+        System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PostGreetingsAsyncWithHttpInfo (Greeting body);
         
         /// <summary>
         /// Get an Organization&#39;s DefaultGreetingList
@@ -144,7 +144,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>DefaultGreetingList</returns>
-        DefaultGreetingList UpdateDefaults (DefaultGreetingList body);
+        DefaultGreetingList PutDefaults (DefaultGreetingList body);
   
         /// <summary>
         /// Update an Organization&#39;s DefaultGreetingList
@@ -154,7 +154,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>ApiResponse of DefaultGreetingList</returns>
-        ApiResponse<DefaultGreetingList> UpdateDefaultsWithHttpInfo (DefaultGreetingList body);
+        ApiResponse<DefaultGreetingList> PutDefaultsWithHttpInfo (DefaultGreetingList body);
 
         /// <summary>
         /// Update an Organization&#39;s DefaultGreetingList
@@ -164,7 +164,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>Task of DefaultGreetingList</returns>
-        System.Threading.Tasks.Task<DefaultGreetingList> UpdateDefaultsAsync (DefaultGreetingList body);
+        System.Threading.Tasks.Task<DefaultGreetingList> PutDefaultsAsync (DefaultGreetingList body);
 
         /// <summary>
         /// Update an Organization&#39;s DefaultGreetingList
@@ -174,7 +174,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> UpdateDefaultsAsyncWithHttpInfo (DefaultGreetingList body);
+        System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PutDefaultsAsyncWithHttpInfo (DefaultGreetingList body);
         
         /// <summary>
         /// Get a Greeting with the given GreetingId
@@ -184,7 +184,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Greeting</returns>
-        Greeting GetGreeting (string greetingId);
+        Greeting Get (string greetingId);
   
         /// <summary>
         /// Get a Greeting with the given GreetingId
@@ -194,7 +194,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>ApiResponse of Greeting</returns>
-        ApiResponse<Greeting> GetGreetingWithHttpInfo (string greetingId);
+        ApiResponse<Greeting> GetWithHttpInfo (string greetingId);
 
         /// <summary>
         /// Get a Greeting with the given GreetingId
@@ -204,7 +204,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Task of Greeting</returns>
-        System.Threading.Tasks.Task<Greeting> GetGreetingAsync (string greetingId);
+        System.Threading.Tasks.Task<Greeting> GetAsync (string greetingId);
 
         /// <summary>
         /// Get a Greeting with the given GreetingId
@@ -214,7 +214,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Greeting>> GetGreetingAsyncWithHttpInfo (string greetingId);
+        System.Threading.Tasks.Task<ApiResponse<Greeting>> GetAsyncWithHttpInfo (string greetingId);
         
         /// <summary>
         /// Updates the Greeting with the given GreetingId
@@ -225,7 +225,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="body">The updated Greeting</param>
         /// <returns>Greeting</returns>
-        Greeting UpdateGreeting (string greetingId, Greeting body);
+        Greeting Put (string greetingId, Greeting body);
   
         /// <summary>
         /// Updates the Greeting with the given GreetingId
@@ -236,7 +236,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="body">The updated Greeting</param>
         /// <returns>ApiResponse of Greeting</returns>
-        ApiResponse<Greeting> UpdateGreetingWithHttpInfo (string greetingId, Greeting body);
+        ApiResponse<Greeting> PutWithHttpInfo (string greetingId, Greeting body);
 
         /// <summary>
         /// Updates the Greeting with the given GreetingId
@@ -247,7 +247,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="body">The updated Greeting</param>
         /// <returns>Task of Greeting</returns>
-        System.Threading.Tasks.Task<Greeting> UpdateGreetingAsync (string greetingId, Greeting body);
+        System.Threading.Tasks.Task<Greeting> PutAsync (string greetingId, Greeting body);
 
         /// <summary>
         /// Updates the Greeting with the given GreetingId
@@ -258,7 +258,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="body">The updated Greeting</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Greeting>> UpdateGreetingAsyncWithHttpInfo (string greetingId, Greeting body);
+        System.Threading.Tasks.Task<ApiResponse<Greeting>> PutAsyncWithHttpInfo (string greetingId, Greeting body);
         
         /// <summary>
         /// Deletes a Greeting with the given GreetingId
@@ -268,7 +268,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Greeting</returns>
-        Greeting DeleteGreeting (string greetingId);
+        Greeting Delete (string greetingId);
   
         /// <summary>
         /// Deletes a Greeting with the given GreetingId
@@ -278,7 +278,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>ApiResponse of Greeting</returns>
-        ApiResponse<Greeting> DeleteGreetingWithHttpInfo (string greetingId);
+        ApiResponse<Greeting> DeleteWithHttpInfo (string greetingId);
 
         /// <summary>
         /// Deletes a Greeting with the given GreetingId
@@ -288,7 +288,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Task of Greeting</returns>
-        System.Threading.Tasks.Task<Greeting> DeleteGreetingAsync (string greetingId);
+        System.Threading.Tasks.Task<Greeting> DeleteAsync (string greetingId);
 
         /// <summary>
         /// Deletes a Greeting with the given GreetingId
@@ -298,7 +298,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Greeting>> DeleteGreetingAsyncWithHttpInfo (string greetingId);
+        System.Threading.Tasks.Task<ApiResponse<Greeting>> DeleteAsyncWithHttpInfo (string greetingId);
         
         /// <summary>
         /// Get media playback URI for this greeting
@@ -309,7 +309,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="formatId">The desired format (WAV, etc.)</param>
         /// <returns>GreetingMediaInfo</returns>
-        GreetingMediaInfo GetGreetingMedia (string greetingId, string formatId = null);
+        GreetingMediaInfo GetMedia (string greetingId, string formatId = null);
   
         /// <summary>
         /// Get media playback URI for this greeting
@@ -320,7 +320,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="formatId">The desired format (WAV, etc.)</param>
         /// <returns>ApiResponse of GreetingMediaInfo</returns>
-        ApiResponse<GreetingMediaInfo> GetGreetingMediaWithHttpInfo (string greetingId, string formatId = null);
+        ApiResponse<GreetingMediaInfo> GetMediaWithHttpInfo (string greetingId, string formatId = null);
 
         /// <summary>
         /// Get media playback URI for this greeting
@@ -331,7 +331,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="formatId">The desired format (WAV, etc.)</param>
         /// <returns>Task of GreetingMediaInfo</returns>
-        System.Threading.Tasks.Task<GreetingMediaInfo> GetGreetingMediaAsync (string greetingId, string formatId = null);
+        System.Threading.Tasks.Task<GreetingMediaInfo> GetMediaAsync (string greetingId, string formatId = null);
 
         /// <summary>
         /// Get media playback URI for this greeting
@@ -342,7 +342,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="formatId">The desired format (WAV, etc.)</param>
         /// <returns>Task of ApiResponse (GreetingMediaInfo)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GreetingMediaInfo>> GetGreetingMediaAsyncWithHttpInfo (string greetingId, string formatId = null);
+        System.Threading.Tasks.Task<ApiResponse<GreetingMediaInfo>> GetMediaAsyncWithHttpInfo (string greetingId, string formatId = null);
         
         /// <summary>
         /// Get a list of the User&#39;s Greetings
@@ -401,7 +401,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Greeting</returns>
-        Greeting CreateUserGreetings (string userId, Greeting body);
+        Greeting PostUserGreetings (string userId, Greeting body);
   
         /// <summary>
         /// Creates a Greeting for a User
@@ -412,7 +412,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>ApiResponse of Greeting</returns>
-        ApiResponse<Greeting> CreateUserGreetingsWithHttpInfo (string userId, Greeting body);
+        ApiResponse<Greeting> PostUserGreetingsWithHttpInfo (string userId, Greeting body);
 
         /// <summary>
         /// Creates a Greeting for a User
@@ -423,7 +423,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of Greeting</returns>
-        System.Threading.Tasks.Task<Greeting> CreateUserGreetingsAsync (string userId, Greeting body);
+        System.Threading.Tasks.Task<Greeting> PostUserGreetingsAsync (string userId, Greeting body);
 
         /// <summary>
         /// Creates a Greeting for a User
@@ -434,7 +434,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Greeting>> CreateUserGreetingsAsyncWithHttpInfo (string userId, Greeting body);
+        System.Threading.Tasks.Task<ApiResponse<Greeting>> PostUserGreetingsAsyncWithHttpInfo (string userId, Greeting body);
         
         /// <summary>
         /// Grabs the list of Default Greetings given a User&#39;s ID
@@ -485,7 +485,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>DefaultGreetingList</returns>
-        DefaultGreetingList UpdateUserGreetingsDefaults (string userId, DefaultGreetingList body);
+        DefaultGreetingList PutUserGreetingsDefaults (string userId, DefaultGreetingList body);
   
         /// <summary>
         /// Updates the DefaultGreetingList of the specified User
@@ -496,7 +496,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>ApiResponse of DefaultGreetingList</returns>
-        ApiResponse<DefaultGreetingList> UpdateUserGreetingsDefaultsWithHttpInfo (string userId, DefaultGreetingList body);
+        ApiResponse<DefaultGreetingList> PutUserGreetingsDefaultsWithHttpInfo (string userId, DefaultGreetingList body);
 
         /// <summary>
         /// Updates the DefaultGreetingList of the specified User
@@ -507,7 +507,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>Task of DefaultGreetingList</returns>
-        System.Threading.Tasks.Task<DefaultGreetingList> UpdateUserGreetingsDefaultsAsync (string userId, DefaultGreetingList body);
+        System.Threading.Tasks.Task<DefaultGreetingList> PutUserGreetingsDefaultsAsync (string userId, DefaultGreetingList body);
 
         /// <summary>
         /// Updates the DefaultGreetingList of the specified User
@@ -518,7 +518,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> UpdateUserGreetingsDefaultsAsyncWithHttpInfo (string userId, DefaultGreetingList body);
+        System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PutUserGreetingsDefaultsAsyncWithHttpInfo (string userId, DefaultGreetingList body);
         
     }
   
@@ -604,9 +604,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>DomainEntityListing</returns>
-        public DomainEntityListing Get (int? pageSize = null, int? pageNumber = null)
+        public DomainEntityListing GetGreetings (int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<DomainEntityListing> response = GetWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<DomainEntityListing> response = GetGreetingsWithHttpInfo(pageSize, pageNumber);
              return response.Data;
         }
 
@@ -616,7 +616,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>ApiResponse of DomainEntityListing</returns>
-        public ApiResponse< DomainEntityListing > GetWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< DomainEntityListing > GetGreetingsWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -627,15 +627,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -648,7 +654,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -659,14 +664,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetGreetings: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetGreetings: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DomainEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -680,9 +687,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of DomainEntityListing</returns>
-        public async System.Threading.Tasks.Task<DomainEntityListing> GetAsync (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<DomainEntityListing> GetGreetingsAsync (int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<DomainEntityListing> response = await GetAsyncWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<DomainEntityListing> response = await GetGreetingsAsyncWithHttpInfo(pageSize, pageNumber);
              return response.Data;
 
         }
@@ -693,7 +700,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (DomainEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainEntityListing>> GetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainEntityListing>> GetGreetingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -701,18 +708,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -736,14 +749,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetGreetings: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetGreetings: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DomainEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -756,9 +771,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">The Greeting to create</param> 
         /// <returns>DefaultGreetingList</returns>
-        public DefaultGreetingList Create (Greeting body)
+        public DefaultGreetingList PostGreetings (Greeting body)
         {
-             ApiResponse<DefaultGreetingList> response = CreateWithHttpInfo(body);
+             ApiResponse<DefaultGreetingList> response = PostGreetingsWithHttpInfo(body);
              return response.Data;
         }
 
@@ -767,11 +782,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">The Greeting to create</param> 
         /// <returns>ApiResponse of DefaultGreetingList</returns>
-        public ApiResponse< DefaultGreetingList > CreateWithHttpInfo (Greeting body)
+        public ApiResponse< DefaultGreetingList > PostGreetingsWithHttpInfo (Greeting body)
         {
             
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling Create");
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PostGreetings");
             
     
             var path_ = "/api/v1/greetings";
@@ -781,15 +797,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -798,10 +820,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -812,14 +839,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling Create: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostGreetings: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling Create: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostGreetings: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DefaultGreetingList>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -832,9 +861,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of DefaultGreetingList</returns>
-        public async System.Threading.Tasks.Task<DefaultGreetingList> CreateAsync (Greeting body)
+        public async System.Threading.Tasks.Task<DefaultGreetingList> PostGreetingsAsync (Greeting body)
         {
-             ApiResponse<DefaultGreetingList> response = await CreateAsyncWithHttpInfo(body);
+             ApiResponse<DefaultGreetingList> response = await PostGreetingsAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -844,28 +873,34 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> CreateAsyncWithHttpInfo (Greeting body)
+        public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PostGreetingsAsyncWithHttpInfo (Greeting body)
         {
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling Create");
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PostGreetings");
             
     
             var path_ = "/api/v1/greetings";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -888,14 +923,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling Create: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostGreetings: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling Create: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostGreetings: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DefaultGreetingList>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -928,15 +965,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -947,7 +990,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -958,7 +1000,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -996,18 +1040,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1029,7 +1079,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
@@ -1049,9 +1101,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">The updated defaultGreetingList</param> 
         /// <returns>DefaultGreetingList</returns>
-        public DefaultGreetingList UpdateDefaults (DefaultGreetingList body)
+        public DefaultGreetingList PutDefaults (DefaultGreetingList body)
         {
-             ApiResponse<DefaultGreetingList> response = UpdateDefaultsWithHttpInfo(body);
+             ApiResponse<DefaultGreetingList> response = PutDefaultsWithHttpInfo(body);
              return response.Data;
         }
 
@@ -1060,11 +1112,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">The updated defaultGreetingList</param> 
         /// <returns>ApiResponse of DefaultGreetingList</returns>
-        public ApiResponse< DefaultGreetingList > UpdateDefaultsWithHttpInfo (DefaultGreetingList body)
+        public ApiResponse< DefaultGreetingList > PutDefaultsWithHttpInfo (DefaultGreetingList body)
         {
             
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling UpdateDefaults");
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutDefaults");
             
     
             var path_ = "/api/v1/greetings/defaults";
@@ -1074,15 +1127,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1091,10 +1150,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1105,14 +1169,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateDefaults: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutDefaults: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateDefaults: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutDefaults: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DefaultGreetingList>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1125,9 +1191,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>Task of DefaultGreetingList</returns>
-        public async System.Threading.Tasks.Task<DefaultGreetingList> UpdateDefaultsAsync (DefaultGreetingList body)
+        public async System.Threading.Tasks.Task<DefaultGreetingList> PutDefaultsAsync (DefaultGreetingList body)
         {
-             ApiResponse<DefaultGreetingList> response = await UpdateDefaultsAsyncWithHttpInfo(body);
+             ApiResponse<DefaultGreetingList> response = await PutDefaultsAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -1137,28 +1203,34 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> UpdateDefaultsAsyncWithHttpInfo (DefaultGreetingList body)
+        public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PutDefaultsAsyncWithHttpInfo (DefaultGreetingList body)
         {
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling UpdateDefaults");
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PutDefaults");
             
     
             var path_ = "/api/v1/greetings/defaults";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1181,14 +1253,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateDefaults: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutDefaults: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateDefaults: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutDefaults: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DefaultGreetingList>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1201,9 +1275,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="greetingId">Greeting ID</param> 
         /// <returns>Greeting</returns>
-        public Greeting GetGreeting (string greetingId)
+        public Greeting Get (string greetingId)
         {
-             ApiResponse<Greeting> response = GetGreetingWithHttpInfo(greetingId);
+             ApiResponse<Greeting> response = GetWithHttpInfo(greetingId);
              return response.Data;
         }
 
@@ -1212,11 +1286,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="greetingId">Greeting ID</param> 
         /// <returns>ApiResponse of Greeting</returns>
-        public ApiResponse< Greeting > GetGreetingWithHttpInfo (string greetingId)
+        public ApiResponse< Greeting > GetWithHttpInfo (string greetingId)
         {
             
             // verify the required parameter 'greetingId' is set
-            if (greetingId == null) throw new ApiException(400, "Missing required parameter 'greetingId' when calling GetGreeting");
+            if (greetingId == null)
+                throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->Get");
             
     
             var path_ = "/api/v1/greetings/{greetingId}";
@@ -1226,15 +1301,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1246,7 +1327,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1257,14 +1337,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetGreeting: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetGreeting: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Greeting>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1277,9 +1359,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Task of Greeting</returns>
-        public async System.Threading.Tasks.Task<Greeting> GetGreetingAsync (string greetingId)
+        public async System.Threading.Tasks.Task<Greeting> GetAsync (string greetingId)
         {
-             ApiResponse<Greeting> response = await GetGreetingAsyncWithHttpInfo(greetingId);
+             ApiResponse<Greeting> response = await GetAsyncWithHttpInfo(greetingId);
              return response.Data;
 
         }
@@ -1289,28 +1371,34 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Greeting>> GetGreetingAsyncWithHttpInfo (string greetingId)
+        public async System.Threading.Tasks.Task<ApiResponse<Greeting>> GetAsyncWithHttpInfo (string greetingId)
         {
             // verify the required parameter 'greetingId' is set
-            if (greetingId == null) throw new ApiException(400, "Missing required parameter 'greetingId' when calling GetGreeting");
+            if (greetingId == null) throw new ApiException(400, "Missing required parameter 'greetingId' when calling Get");
             
     
             var path_ = "/api/v1/greetings/{greetingId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1333,14 +1421,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetGreeting: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetGreeting: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Greeting>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1354,9 +1444,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param> 
         /// <param name="body">The updated Greeting</param> 
         /// <returns>Greeting</returns>
-        public Greeting UpdateGreeting (string greetingId, Greeting body)
+        public Greeting Put (string greetingId, Greeting body)
         {
-             ApiResponse<Greeting> response = UpdateGreetingWithHttpInfo(greetingId, body);
+             ApiResponse<Greeting> response = PutWithHttpInfo(greetingId, body);
              return response.Data;
         }
 
@@ -1366,14 +1456,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param> 
         /// <param name="body">The updated Greeting</param> 
         /// <returns>ApiResponse of Greeting</returns>
-        public ApiResponse< Greeting > UpdateGreetingWithHttpInfo (string greetingId, Greeting body)
+        public ApiResponse< Greeting > PutWithHttpInfo (string greetingId, Greeting body)
         {
             
             // verify the required parameter 'greetingId' is set
-            if (greetingId == null) throw new ApiException(400, "Missing required parameter 'greetingId' when calling UpdateGreeting");
+            if (greetingId == null)
+                throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->Put");
             
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling UpdateGreeting");
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->Put");
             
     
             var path_ = "/api/v1/greetings/{greetingId}";
@@ -1383,15 +1475,115 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (greetingId != null) pathParams.Add("greetingId", Configuration.ApiClient.ParameterToString(greetingId)); // path parameter
+            
+            
+            
+            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling Put: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling Put: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<Greeting>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Greeting) Configuration.ApiClient.Deserialize(response, typeof(Greeting)));
+            
+        }
+    
+        /// <summary>
+        /// Updates the Greeting with the given GreetingId 
+        /// </summary>
+        /// <param name="greetingId">Greeting ID</param>
+        /// <param name="body">The updated Greeting</param>
+        /// <returns>Task of Greeting</returns>
+        public async System.Threading.Tasks.Task<Greeting> PutAsync (string greetingId, Greeting body)
+        {
+             ApiResponse<Greeting> response = await PutAsyncWithHttpInfo(greetingId, body);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Updates the Greeting with the given GreetingId 
+        /// </summary>
+        /// <param name="greetingId">Greeting ID</param>
+        /// <param name="body">The updated Greeting</param>
+        /// <returns>Task of ApiResponse (Greeting)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Greeting>> PutAsyncWithHttpInfo (string greetingId, Greeting body)
+        {
+            // verify the required parameter 'greetingId' is set
+            if (greetingId == null) throw new ApiException(400, "Missing required parameter 'greetingId' when calling Put");
+            // verify the required parameter 'body' is set
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling Put");
+            
+    
+            var path_ = "/api/v1/greetings/{greetingId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1413,97 +1605,18 @@ namespace ININ.PureCloudApi.Api
                 headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
             
-    
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
-
-            int statusCode = (int) response.StatusCode;
-    
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateGreeting: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateGreeting: " + response.ErrorMessage, response.ErrorMessage);
-    
-            return new ApiResponse<Greeting>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Greeting) Configuration.ApiClient.Deserialize(response, typeof(Greeting)));
-            
-        }
-    
-        /// <summary>
-        /// Updates the Greeting with the given GreetingId 
-        /// </summary>
-        /// <param name="greetingId">Greeting ID</param>
-        /// <param name="body">The updated Greeting</param>
-        /// <returns>Task of Greeting</returns>
-        public async System.Threading.Tasks.Task<Greeting> UpdateGreetingAsync (string greetingId, Greeting body)
-        {
-             ApiResponse<Greeting> response = await UpdateGreetingAsyncWithHttpInfo(greetingId, body);
-             return response.Data;
-
-        }
-
-        /// <summary>
-        /// Updates the Greeting with the given GreetingId 
-        /// </summary>
-        /// <param name="greetingId">Greeting ID</param>
-        /// <param name="body">The updated Greeting</param>
-        /// <returns>Task of ApiResponse (Greeting)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Greeting>> UpdateGreetingAsyncWithHttpInfo (string greetingId, Greeting body)
-        {
-            // verify the required parameter 'greetingId' is set
-            if (greetingId == null) throw new ApiException(400, "Missing required parameter 'greetingId' when calling UpdateGreeting");
-            // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling UpdateGreeting");
-            
-    
-            var path_ = "/api/v1/greetings/{greetingId}";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
-
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
-                "application/json"
-            };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            if (greetingId != null) pathParams.Add("greetingId", Configuration.ApiClient.ParameterToString(greetingId)); // path parameter
-            
-            
-            
-            
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
-
-            
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateGreeting: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Put: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateGreeting: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Put: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Greeting>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1516,9 +1629,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="greetingId">Greeting ID</param> 
         /// <returns>Greeting</returns>
-        public Greeting DeleteGreeting (string greetingId)
+        public Greeting Delete (string greetingId)
         {
-             ApiResponse<Greeting> response = DeleteGreetingWithHttpInfo(greetingId);
+             ApiResponse<Greeting> response = DeleteWithHttpInfo(greetingId);
              return response.Data;
         }
 
@@ -1527,11 +1640,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="greetingId">Greeting ID</param> 
         /// <returns>ApiResponse of Greeting</returns>
-        public ApiResponse< Greeting > DeleteGreetingWithHttpInfo (string greetingId)
+        public ApiResponse< Greeting > DeleteWithHttpInfo (string greetingId)
         {
             
             // verify the required parameter 'greetingId' is set
-            if (greetingId == null) throw new ApiException(400, "Missing required parameter 'greetingId' when calling DeleteGreeting");
+            if (greetingId == null)
+                throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->Delete");
             
     
             var path_ = "/api/v1/greetings/{greetingId}";
@@ -1541,15 +1655,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1561,7 +1681,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1572,14 +1691,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteGreeting: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Delete: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteGreeting: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Delete: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Greeting>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1592,9 +1713,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Task of Greeting</returns>
-        public async System.Threading.Tasks.Task<Greeting> DeleteGreetingAsync (string greetingId)
+        public async System.Threading.Tasks.Task<Greeting> DeleteAsync (string greetingId)
         {
-             ApiResponse<Greeting> response = await DeleteGreetingAsyncWithHttpInfo(greetingId);
+             ApiResponse<Greeting> response = await DeleteAsyncWithHttpInfo(greetingId);
              return response.Data;
 
         }
@@ -1604,28 +1725,34 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Greeting>> DeleteGreetingAsyncWithHttpInfo (string greetingId)
+        public async System.Threading.Tasks.Task<ApiResponse<Greeting>> DeleteAsyncWithHttpInfo (string greetingId)
         {
             // verify the required parameter 'greetingId' is set
-            if (greetingId == null) throw new ApiException(400, "Missing required parameter 'greetingId' when calling DeleteGreeting");
+            if (greetingId == null) throw new ApiException(400, "Missing required parameter 'greetingId' when calling Delete");
             
     
             var path_ = "/api/v1/greetings/{greetingId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1648,14 +1775,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteGreeting: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Delete: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteGreeting: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Delete: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Greeting>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1669,9 +1798,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param> 
         /// <param name="formatId">The desired format (WAV, etc.)</param> 
         /// <returns>GreetingMediaInfo</returns>
-        public GreetingMediaInfo GetGreetingMedia (string greetingId, string formatId = null)
+        public GreetingMediaInfo GetMedia (string greetingId, string formatId = null)
         {
-             ApiResponse<GreetingMediaInfo> response = GetGreetingMediaWithHttpInfo(greetingId, formatId);
+             ApiResponse<GreetingMediaInfo> response = GetMediaWithHttpInfo(greetingId, formatId);
              return response.Data;
         }
 
@@ -1681,11 +1810,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param> 
         /// <param name="formatId">The desired format (WAV, etc.)</param> 
         /// <returns>ApiResponse of GreetingMediaInfo</returns>
-        public ApiResponse< GreetingMediaInfo > GetGreetingMediaWithHttpInfo (string greetingId, string formatId = null)
+        public ApiResponse< GreetingMediaInfo > GetMediaWithHttpInfo (string greetingId, string formatId = null)
         {
             
             // verify the required parameter 'greetingId' is set
-            if (greetingId == null) throw new ApiException(400, "Missing required parameter 'greetingId' when calling GetGreetingMedia");
+            if (greetingId == null)
+                throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetMedia");
             
     
             var path_ = "/api/v1/greetings/{greetingId}/media";
@@ -1695,15 +1825,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1716,7 +1852,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1727,14 +1862,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetGreetingMedia: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetMedia: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetGreetingMedia: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetMedia: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<GreetingMediaInfo>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1748,9 +1885,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="formatId">The desired format (WAV, etc.)</param>
         /// <returns>Task of GreetingMediaInfo</returns>
-        public async System.Threading.Tasks.Task<GreetingMediaInfo> GetGreetingMediaAsync (string greetingId, string formatId = null)
+        public async System.Threading.Tasks.Task<GreetingMediaInfo> GetMediaAsync (string greetingId, string formatId = null)
         {
-             ApiResponse<GreetingMediaInfo> response = await GetGreetingMediaAsyncWithHttpInfo(greetingId, formatId);
+             ApiResponse<GreetingMediaInfo> response = await GetMediaAsyncWithHttpInfo(greetingId, formatId);
              return response.Data;
 
         }
@@ -1761,28 +1898,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <param name="formatId">The desired format (WAV, etc.)</param>
         /// <returns>Task of ApiResponse (GreetingMediaInfo)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GreetingMediaInfo>> GetGreetingMediaAsyncWithHttpInfo (string greetingId, string formatId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<GreetingMediaInfo>> GetMediaAsyncWithHttpInfo (string greetingId, string formatId = null)
         {
             // verify the required parameter 'greetingId' is set
-            if (greetingId == null) throw new ApiException(400, "Missing required parameter 'greetingId' when calling GetGreetingMedia");
+            if (greetingId == null) throw new ApiException(400, "Missing required parameter 'greetingId' when calling GetMedia");
             
     
             var path_ = "/api/v1/greetings/{greetingId}/media";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1806,14 +1949,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetGreetingMedia: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetMedia: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetGreetingMedia: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetMedia: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<GreetingMediaInfo>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1845,7 +1990,8 @@ namespace ININ.PureCloudApi.Api
         {
             
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling GetUserGreetings");
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->GetUserGreetings");
             
     
             var path_ = "/api/v1/users/{userId}/greetings";
@@ -1855,15 +2001,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1877,7 +2029,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1888,7 +2039,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -1934,18 +2087,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1970,7 +2129,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
@@ -1991,9 +2152,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param> 
         /// <param name="body">The Greeting to create</param> 
         /// <returns>Greeting</returns>
-        public Greeting CreateUserGreetings (string userId, Greeting body)
+        public Greeting PostUserGreetings (string userId, Greeting body)
         {
-             ApiResponse<Greeting> response = CreateUserGreetingsWithHttpInfo(userId, body);
+             ApiResponse<Greeting> response = PostUserGreetingsWithHttpInfo(userId, body);
              return response.Data;
         }
 
@@ -2003,14 +2164,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param> 
         /// <param name="body">The Greeting to create</param> 
         /// <returns>ApiResponse of Greeting</returns>
-        public ApiResponse< Greeting > CreateUserGreetingsWithHttpInfo (string userId, Greeting body)
+        public ApiResponse< Greeting > PostUserGreetingsWithHttpInfo (string userId, Greeting body)
         {
             
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling CreateUserGreetings");
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->PostUserGreetings");
             
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling CreateUserGreetings");
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PostUserGreetings");
             
     
             var path_ = "/api/v1/users/{userId}/greetings";
@@ -2020,15 +2183,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2038,10 +2207,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -2052,14 +2226,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateUserGreetings: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostUserGreetings: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateUserGreetings: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostUserGreetings: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Greeting>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2073,9 +2249,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of Greeting</returns>
-        public async System.Threading.Tasks.Task<Greeting> CreateUserGreetingsAsync (string userId, Greeting body)
+        public async System.Threading.Tasks.Task<Greeting> PostUserGreetingsAsync (string userId, Greeting body)
         {
-             ApiResponse<Greeting> response = await CreateUserGreetingsAsyncWithHttpInfo(userId, body);
+             ApiResponse<Greeting> response = await PostUserGreetingsAsyncWithHttpInfo(userId, body);
              return response.Data;
 
         }
@@ -2086,30 +2262,36 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Greeting>> CreateUserGreetingsAsyncWithHttpInfo (string userId, Greeting body)
+        public async System.Threading.Tasks.Task<ApiResponse<Greeting>> PostUserGreetingsAsyncWithHttpInfo (string userId, Greeting body)
         {
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling CreateUserGreetings");
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling PostUserGreetings");
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling CreateUserGreetings");
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PostUserGreetings");
             
     
             var path_ = "/api/v1/users/{userId}/greetings";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2133,14 +2315,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateUserGreetings: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostUserGreetings: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateUserGreetings: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostUserGreetings: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Greeting>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2168,7 +2352,8 @@ namespace ININ.PureCloudApi.Api
         {
             
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling GetUserGreetingsDefaults");
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->GetUserGreetingsDefaults");
             
     
             var path_ = "/api/v1/users/{userId}/greetings/defaults";
@@ -2178,15 +2363,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2198,7 +2389,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -2209,7 +2399,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -2251,18 +2443,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2285,7 +2483,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
@@ -2306,9 +2506,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param> 
         /// <param name="body">The updated defaultGreetingList</param> 
         /// <returns>DefaultGreetingList</returns>
-        public DefaultGreetingList UpdateUserGreetingsDefaults (string userId, DefaultGreetingList body)
+        public DefaultGreetingList PutUserGreetingsDefaults (string userId, DefaultGreetingList body)
         {
-             ApiResponse<DefaultGreetingList> response = UpdateUserGreetingsDefaultsWithHttpInfo(userId, body);
+             ApiResponse<DefaultGreetingList> response = PutUserGreetingsDefaultsWithHttpInfo(userId, body);
              return response.Data;
         }
 
@@ -2318,14 +2518,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param> 
         /// <param name="body">The updated defaultGreetingList</param> 
         /// <returns>ApiResponse of DefaultGreetingList</returns>
-        public ApiResponse< DefaultGreetingList > UpdateUserGreetingsDefaultsWithHttpInfo (string userId, DefaultGreetingList body)
+        public ApiResponse< DefaultGreetingList > PutUserGreetingsDefaultsWithHttpInfo (string userId, DefaultGreetingList body)
         {
             
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling UpdateUserGreetingsDefaults");
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->PutUserGreetingsDefaults");
             
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling UpdateUserGreetingsDefaults");
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutUserGreetingsDefaults");
             
     
             var path_ = "/api/v1/users/{userId}/greetings/defaults";
@@ -2335,15 +2537,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2353,10 +2561,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -2367,14 +2580,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateUserGreetingsDefaults: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutUserGreetingsDefaults: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateUserGreetingsDefaults: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutUserGreetingsDefaults: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DefaultGreetingList>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2388,9 +2603,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>Task of DefaultGreetingList</returns>
-        public async System.Threading.Tasks.Task<DefaultGreetingList> UpdateUserGreetingsDefaultsAsync (string userId, DefaultGreetingList body)
+        public async System.Threading.Tasks.Task<DefaultGreetingList> PutUserGreetingsDefaultsAsync (string userId, DefaultGreetingList body)
         {
-             ApiResponse<DefaultGreetingList> response = await UpdateUserGreetingsDefaultsAsyncWithHttpInfo(userId, body);
+             ApiResponse<DefaultGreetingList> response = await PutUserGreetingsDefaultsAsyncWithHttpInfo(userId, body);
              return response.Data;
 
         }
@@ -2401,30 +2616,36 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> UpdateUserGreetingsDefaultsAsyncWithHttpInfo (string userId, DefaultGreetingList body)
+        public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PutUserGreetingsDefaultsAsyncWithHttpInfo (string userId, DefaultGreetingList body)
         {
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling UpdateUserGreetingsDefaults");
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling PutUserGreetingsDefaults");
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling UpdateUserGreetingsDefaults");
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PutUserGreetingsDefaults");
             
     
             var path_ = "/api/v1/users/{userId}/greetings/defaults";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2448,14 +2669,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateUserGreetingsDefaults: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutUserGreetingsDefaults: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateUserGreetingsDefaults: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutUserGreetingsDefaults: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DefaultGreetingList>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

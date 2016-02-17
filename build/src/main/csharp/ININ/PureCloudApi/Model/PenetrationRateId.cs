@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class PenetrationRateId :  IEquatable<PenetrationRateId>
+    public partial class PenetrationRateId :  IEquatable<PenetrationRateId>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PenetrationRateId" /> class.
@@ -80,7 +79,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if PenetrationRateId instances are equal
         /// </summary>
-        /// <param name="obj">Instance of PenetrationRateId to be compared</param>
+        /// <param name="other">Instance of PenetrationRateId to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(PenetrationRateId other)
         {
@@ -114,16 +113,14 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.ContactList != null)
-                    hash = hash * 57 + this.ContactList.GetHashCode();
+                    hash = hash * 59 + this.ContactList.GetHashCode();
                 
                 if (this.Qualifier != null)
-                    hash = hash * 57 + this.Qualifier.GetHashCode();
+                    hash = hash * 59 + this.Qualifier.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

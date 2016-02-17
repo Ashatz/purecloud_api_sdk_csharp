@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class SocializeEntityFilter :  IEquatable<SocializeEntityFilter>
+    public partial class SocializeEntityFilter :  IEquatable<SocializeEntityFilter>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SocializeEntityFilter" /> class.
@@ -91,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if SocializeEntityFilter instances are equal
         /// </summary>
-        /// <param name="obj">Instance of SocializeEntityFilter to be compared</param>
+        /// <param name="other">Instance of SocializeEntityFilter to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(SocializeEntityFilter other)
         {
@@ -130,19 +129,17 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.FieldName != null)
-                    hash = hash * 57 + this.FieldName.GetHashCode();
+                    hash = hash * 59 + this.FieldName.GetHashCode();
                 
                 if (this.Operator != null)
-                    hash = hash * 57 + this.Operator.GetHashCode();
+                    hash = hash * 59 + this.Operator.GetHashCode();
                 
                 if (this.FieldValue != null)
-                    hash = hash * 57 + this.FieldValue.GetHashCode();
+                    hash = hash * 59 + this.FieldValue.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

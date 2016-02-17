@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class QueryRequest :  IEquatable<QueryRequest>
+    public partial class QueryRequest :  IEquatable<QueryRequest>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="QueryRequest" /> class.
@@ -112,7 +111,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if QueryRequest instances are equal
         /// </summary>
-        /// <param name="obj">Instance of QueryRequest to be compared</param>
+        /// <param name="other">Instance of QueryRequest to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(QueryRequest other)
         {
@@ -166,28 +165,26 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.QueryPhrase != null)
-                    hash = hash * 57 + this.QueryPhrase.GetHashCode();
+                    hash = hash * 59 + this.QueryPhrase.GetHashCode();
                 
                 if (this.PageNumber != null)
-                    hash = hash * 57 + this.PageNumber.GetHashCode();
+                    hash = hash * 59 + this.PageNumber.GetHashCode();
                 
                 if (this.PageSize != null)
-                    hash = hash * 57 + this.PageSize.GetHashCode();
+                    hash = hash * 59 + this.PageSize.GetHashCode();
                 
                 if (this.FacetNameRequests != null)
-                    hash = hash * 57 + this.FacetNameRequests.GetHashCode();
+                    hash = hash * 59 + this.FacetNameRequests.GetHashCode();
                 
                 if (this.Sort != null)
-                    hash = hash * 57 + this.Sort.GetHashCode();
+                    hash = hash * 59 + this.Sort.GetHashCode();
                 
                 if (this.Filters != null)
-                    hash = hash * 57 + this.Filters.GetHashCode();
+                    hash = hash * 59 + this.Filters.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

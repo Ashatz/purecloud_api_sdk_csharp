@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class FacetTerm :  IEquatable<FacetTerm>
+    public partial class FacetTerm :  IEquatable<FacetTerm>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FacetTerm" /> class.
@@ -113,7 +112,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FacetTerm instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FacetTerm to be compared</param>
+        /// <param name="other">Instance of FacetTerm to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FacetTerm other)
         {
@@ -167,28 +166,26 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Term != null)
-                    hash = hash * 57 + this.Term.GetHashCode();
+                    hash = hash * 59 + this.Term.GetHashCode();
                 
                 if (this.Key != null)
-                    hash = hash * 57 + this.Key.GetHashCode();
+                    hash = hash * 59 + this.Key.GetHashCode();
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Count != null)
-                    hash = hash * 57 + this.Count.GetHashCode();
+                    hash = hash * 59 + this.Count.GetHashCode();
                 
                 if (this.Time != null)
-                    hash = hash * 57 + this.Time.GetHashCode();
+                    hash = hash * 59 + this.Time.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

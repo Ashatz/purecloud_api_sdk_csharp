@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// Data containing details to upload a flow definition to for post versioned flows.
     /// </summary>
     [DataContract]
-    public class FlowUploadResponse :  IEquatable<FlowUploadResponse>
+    public partial class FlowUploadResponse :  IEquatable<FlowUploadResponse>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowUploadResponse" /> class.
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FlowUploadResponse instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FlowUploadResponse to be compared</param>
+        /// <param name="other">Instance of FlowUploadResponse to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FlowUploadResponse other)
         {
@@ -116,16 +115,14 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Uri != null)
-                    hash = hash * 57 + this.Uri.GetHashCode();
+                    hash = hash * 59 + this.Uri.GetHashCode();
                 
                 if (this.UploadToken != null)
-                    hash = hash * 57 + this.UploadToken.GetHashCode();
+                    hash = hash * 59 + this.UploadToken.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

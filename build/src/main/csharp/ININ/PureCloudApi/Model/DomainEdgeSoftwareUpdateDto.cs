@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class DomainEdgeSoftwareUpdateDto :  IEquatable<DomainEdgeSoftwareUpdateDto>
+    public partial class DomainEdgeSoftwareUpdateDto :  IEquatable<DomainEdgeSoftwareUpdateDto>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainEdgeSoftwareUpdateDto" /> class.
@@ -141,7 +140,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DomainEdgeSoftwareUpdateDto instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DomainEdgeSoftwareUpdateDto to be compared</param>
+        /// <param name="other">Instance of DomainEdgeSoftwareUpdateDto to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DomainEdgeSoftwareUpdateDto other)
         {
@@ -210,37 +209,35 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Version != null)
-                    hash = hash * 57 + this.Version.GetHashCode();
+                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 if (this.MaxDownloadRate != null)
-                    hash = hash * 57 + this.MaxDownloadRate.GetHashCode();
+                    hash = hash * 59 + this.MaxDownloadRate.GetHashCode();
                 
                 if (this.DownloadStartTime != null)
-                    hash = hash * 57 + this.DownloadStartTime.GetHashCode();
+                    hash = hash * 59 + this.DownloadStartTime.GetHashCode();
                 
                 if (this.ExecuteStartTime != null)
-                    hash = hash * 57 + this.ExecuteStartTime.GetHashCode();
+                    hash = hash * 59 + this.ExecuteStartTime.GetHashCode();
                 
                 if (this.ExecuteStopTime != null)
-                    hash = hash * 57 + this.ExecuteStopTime.GetHashCode();
+                    hash = hash * 59 + this.ExecuteStopTime.GetHashCode();
                 
                 if (this.ExecuteOnIdle != null)
-                    hash = hash * 57 + this.ExecuteOnIdle.GetHashCode();
+                    hash = hash * 59 + this.ExecuteOnIdle.GetHashCode();
                 
                 if (this.Status != null)
-                    hash = hash * 57 + this.Status.GetHashCode();
+                    hash = hash * 59 + this.Status.GetHashCode();
                 
                 if (this.EdgeUri != null)
-                    hash = hash * 57 + this.EdgeUri.GetHashCode();
+                    hash = hash * 59 + this.EdgeUri.GetHashCode();
                 
                 if (this.Current != null)
-                    hash = hash * 57 + this.Current.GetHashCode();
+                    hash = hash * 59 + this.Current.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

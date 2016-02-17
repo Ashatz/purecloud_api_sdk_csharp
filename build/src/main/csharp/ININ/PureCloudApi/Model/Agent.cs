@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Agent :  IEquatable<Agent>
+    public partial class Agent :  IEquatable<Agent>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Agent" /> class.
@@ -72,7 +71,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Agent instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Agent to be compared</param>
+        /// <param name="other">Instance of Agent to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Agent other)
         {
@@ -101,13 +100,11 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Stage != null)
-                    hash = hash * 57 + this.Stage.GetHashCode();
+                    hash = hash * 59 + this.Stage.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

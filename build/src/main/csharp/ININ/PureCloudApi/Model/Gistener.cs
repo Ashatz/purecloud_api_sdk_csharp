@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Gistener :  IEquatable<Gistener>
+    public partial class Gistener :  IEquatable<Gistener>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Gistener" /> class.
@@ -181,7 +180,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Gistener instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Gistener to be compared</param>
+        /// <param name="other">Instance of Gistener to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Gistener other)
         {
@@ -270,49 +269,47 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.DateCreated != null)
-                    hash = hash * 57 + this.DateCreated.GetHashCode();
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
                 
                 if (this.DateModified != null)
-                    hash = hash * 57 + this.DateModified.GetHashCode();
+                    hash = hash * 59 + this.DateModified.GetHashCode();
                 
                 if (this.Enabled != null)
-                    hash = hash * 57 + this.Enabled.GetHashCode();
+                    hash = hash * 59 + this.Enabled.GetHashCode();
                 
                 if (this.AnyWords != null)
-                    hash = hash * 57 + this.AnyWords.GetHashCode();
+                    hash = hash * 59 + this.AnyWords.GetHashCode();
                 
                 if (this.AllWords != null)
-                    hash = hash * 57 + this.AllWords.GetHashCode();
+                    hash = hash * 59 + this.AllWords.GetHashCode();
                 
                 if (this.ExcludeWords != null)
-                    hash = hash * 57 + this.ExcludeWords.GetHashCode();
+                    hash = hash * 59 + this.ExcludeWords.GetHashCode();
                 
                 if (this.ExactPhrase != null)
-                    hash = hash * 57 + this.ExactPhrase.GetHashCode();
+                    hash = hash * 59 + this.ExactPhrase.GetHashCode();
                 
                 if (this.GroupTags != null)
-                    hash = hash * 57 + this.GroupTags.GetHashCode();
+                    hash = hash * 59 + this.GroupTags.GetHashCode();
                 
                 if (this.SocialAccount != null)
-                    hash = hash * 57 + this.SocialAccount.GetHashCode();
+                    hash = hash * 59 + this.SocialAccount.GetHashCode();
                 
                 if (this.Queue != null)
-                    hash = hash * 57 + this.Queue.GetHashCode();
+                    hash = hash * 59 + this.Queue.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

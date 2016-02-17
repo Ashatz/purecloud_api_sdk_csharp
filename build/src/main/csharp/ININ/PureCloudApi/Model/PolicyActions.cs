@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class PolicyActions :  IEquatable<PolicyActions>
+    public partial class PolicyActions :  IEquatable<PolicyActions>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PolicyActions" /> class.
@@ -114,7 +113,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if PolicyActions instances are equal
         /// </summary>
-        /// <param name="obj">Instance of PolicyActions to be compared</param>
+        /// <param name="other">Instance of PolicyActions to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(PolicyActions other)
         {
@@ -168,28 +167,26 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.RetainRecording != null)
-                    hash = hash * 57 + this.RetainRecording.GetHashCode();
+                    hash = hash * 59 + this.RetainRecording.GetHashCode();
                 
                 if (this.DeleteRecording != null)
-                    hash = hash * 57 + this.DeleteRecording.GetHashCode();
+                    hash = hash * 59 + this.DeleteRecording.GetHashCode();
                 
                 if (this.AssignEvaluations != null)
-                    hash = hash * 57 + this.AssignEvaluations.GetHashCode();
+                    hash = hash * 59 + this.AssignEvaluations.GetHashCode();
                 
                 if (this.AssignMeteredEvaluations != null)
-                    hash = hash * 57 + this.AssignMeteredEvaluations.GetHashCode();
+                    hash = hash * 59 + this.AssignMeteredEvaluations.GetHashCode();
                 
                 if (this.AssignCalibrations != null)
-                    hash = hash * 57 + this.AssignCalibrations.GetHashCode();
+                    hash = hash * 59 + this.AssignCalibrations.GetHashCode();
                 
                 if (this.RetentionDuration != null)
-                    hash = hash * 57 + this.RetentionDuration.GetHashCode();
+                    hash = hash * 59 + this.RetentionDuration.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

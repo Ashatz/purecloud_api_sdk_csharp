@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class DefaultGreetingList :  IEquatable<DefaultGreetingList>
+    public partial class DefaultGreetingList :  IEquatable<DefaultGreetingList>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DefaultGreetingList" /> class.
@@ -148,7 +147,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DefaultGreetingList instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DefaultGreetingList to be compared</param>
+        /// <param name="other">Instance of DefaultGreetingList to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DefaultGreetingList other)
         {
@@ -222,40 +221,38 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Owner != null)
-                    hash = hash * 57 + this.Owner.GetHashCode();
+                    hash = hash * 59 + this.Owner.GetHashCode();
                 
                 if (this.OwnerType != null)
-                    hash = hash * 57 + this.OwnerType.GetHashCode();
+                    hash = hash * 59 + this.OwnerType.GetHashCode();
                 
                 if (this.Greetings != null)
-                    hash = hash * 57 + this.Greetings.GetHashCode();
+                    hash = hash * 59 + this.Greetings.GetHashCode();
                 
                 if (this.CreatedDate != null)
-                    hash = hash * 57 + this.CreatedDate.GetHashCode();
+                    hash = hash * 59 + this.CreatedDate.GetHashCode();
                 
                 if (this.CreatedBy != null)
-                    hash = hash * 57 + this.CreatedBy.GetHashCode();
+                    hash = hash * 59 + this.CreatedBy.GetHashCode();
                 
                 if (this.ModifiedDate != null)
-                    hash = hash * 57 + this.ModifiedDate.GetHashCode();
+                    hash = hash * 59 + this.ModifiedDate.GetHashCode();
                 
                 if (this.ModifiedBy != null)
-                    hash = hash * 57 + this.ModifiedBy.GetHashCode();
+                    hash = hash * 59 + this.ModifiedBy.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class DialerDispositionCallCommand :  IEquatable<DialerDispositionCallCommand>
+    public partial class DialerDispositionCallCommand :  IEquatable<DialerDispositionCallCommand>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerDispositionCallCommand" /> class.
@@ -88,7 +87,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DialerDispositionCallCommand instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DialerDispositionCallCommand to be compared</param>
+        /// <param name="other">Instance of DialerDispositionCallCommand to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DialerDispositionCallCommand other)
         {
@@ -127,19 +126,17 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.CallId != null)
-                    hash = hash * 57 + this.CallId.GetHashCode();
+                    hash = hash * 59 + this.CallId.GetHashCode();
                 
                 if (this.WrapupCodeId != null)
-                    hash = hash * 57 + this.WrapupCodeId.GetHashCode();
+                    hash = hash * 59 + this.WrapupCodeId.GetHashCode();
                 
                 if (this.Contact != null)
-                    hash = hash * 57 + this.Contact.GetHashCode();
+                    hash = hash * 59 + this.Contact.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

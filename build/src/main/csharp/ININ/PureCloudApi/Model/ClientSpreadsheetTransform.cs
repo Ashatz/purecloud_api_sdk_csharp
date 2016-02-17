@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class ClientSpreadsheetTransform :  IEquatable<ClientSpreadsheetTransform>
+    public partial class ClientSpreadsheetTransform :  IEquatable<ClientSpreadsheetTransform>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ClientSpreadsheetTransform" /> class.
@@ -120,7 +119,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ClientSpreadsheetTransform instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ClientSpreadsheetTransform to be compared</param>
+        /// <param name="other">Instance of ClientSpreadsheetTransform to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ClientSpreadsheetTransform other)
         {
@@ -179,31 +178,29 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.EndpointId != null)
-                    hash = hash * 57 + this.EndpointId.GetHashCode();
+                    hash = hash * 59 + this.EndpointId.GetHashCode();
                 
                 if (this.FilenameReplaces != null)
-                    hash = hash * 57 + this.FilenameReplaces.GetHashCode();
+                    hash = hash * 59 + this.FilenameReplaces.GetHashCode();
                 
                 if (this.Tags != null)
-                    hash = hash * 57 + this.Tags.GetHashCode();
+                    hash = hash * 59 + this.Tags.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.SheetNameReplaces != null)
-                    hash = hash * 57 + this.SheetNameReplaces.GetHashCode();
+                    hash = hash * 59 + this.SheetNameReplaces.GetHashCode();
                 
                 if (this.Sheets != null)
-                    hash = hash * 57 + this.Sheets.GetHashCode();
+                    hash = hash * 59 + this.Sheets.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

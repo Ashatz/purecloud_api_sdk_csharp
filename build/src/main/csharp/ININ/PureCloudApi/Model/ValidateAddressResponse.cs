@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class ValidateAddressResponse :  IEquatable<ValidateAddressResponse>
+    public partial class ValidateAddressResponse :  IEquatable<ValidateAddressResponse>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ValidateAddressResponse" /> class.
@@ -81,7 +80,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ValidateAddressResponse instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ValidateAddressResponse to be compared</param>
+        /// <param name="other">Instance of ValidateAddressResponse to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ValidateAddressResponse other)
         {
@@ -115,16 +114,14 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Valid != null)
-                    hash = hash * 57 + this.Valid.GetHashCode();
+                    hash = hash * 59 + this.Valid.GetHashCode();
                 
                 if (this.Response != null)
-                    hash = hash * 57 + this.Response.GetHashCode();
+                    hash = hash * 59 + this.Response.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

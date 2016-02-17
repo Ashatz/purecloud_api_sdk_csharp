@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// Historical conversation request filter
     /// </summary>
     [DataContract]
-    public class ConversationHistoricalQueryRequestFilter :  IEquatable<ConversationHistoricalQueryRequestFilter>
+    public partial class ConversationHistoricalQueryRequestFilter :  IEquatable<ConversationHistoricalQueryRequestFilter>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationHistoricalQueryRequestFilter" /> class.
@@ -91,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ConversationHistoricalQueryRequestFilter instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ConversationHistoricalQueryRequestFilter to be compared</param>
+        /// <param name="other">Instance of ConversationHistoricalQueryRequestFilter to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ConversationHistoricalQueryRequestFilter other)
         {
@@ -130,19 +129,17 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Target != null)
-                    hash = hash * 57 + this.Target.GetHashCode();
+                    hash = hash * 59 + this.Target.GetHashCode();
                 
                 if (this.Operator != null)
-                    hash = hash * 57 + this.Operator.GetHashCode();
+                    hash = hash * 59 + this.Operator.GetHashCode();
                 
                 if (this.Values != null)
-                    hash = hash * 57 + this.Values.GetHashCode();
+                    hash = hash * 59 + this.Values.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

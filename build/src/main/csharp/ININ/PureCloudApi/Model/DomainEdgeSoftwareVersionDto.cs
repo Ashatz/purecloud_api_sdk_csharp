@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class DomainEdgeSoftwareVersionDto :  IEquatable<DomainEdgeSoftwareVersionDto>
+    public partial class DomainEdgeSoftwareVersionDto :  IEquatable<DomainEdgeSoftwareVersionDto>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainEdgeSoftwareVersionDto" /> class.
@@ -133,7 +132,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DomainEdgeSoftwareVersionDto instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DomainEdgeSoftwareVersionDto to be compared</param>
+        /// <param name="other">Instance of DomainEdgeSoftwareVersionDto to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DomainEdgeSoftwareVersionDto other)
         {
@@ -197,34 +196,32 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.EdgeVersion != null)
-                    hash = hash * 57 + this.EdgeVersion.GetHashCode();
+                    hash = hash * 59 + this.EdgeVersion.GetHashCode();
                 
                 if (this.PublishDate != null)
-                    hash = hash * 57 + this.PublishDate.GetHashCode();
+                    hash = hash * 59 + this.PublishDate.GetHashCode();
                 
                 if (this.EdgeUri != null)
-                    hash = hash * 57 + this.EdgeUri.GetHashCode();
+                    hash = hash * 59 + this.EdgeUri.GetHashCode();
                 
                 if (this.Current != null)
-                    hash = hash * 57 + this.Current.GetHashCode();
+                    hash = hash * 59 + this.Current.GetHashCode();
                 
                 if (this.LatestRelease != null)
-                    hash = hash * 57 + this.LatestRelease.GetHashCode();
+                    hash = hash * 59 + this.LatestRelease.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

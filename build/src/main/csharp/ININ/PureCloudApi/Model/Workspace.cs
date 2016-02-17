@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Workspace :  IEquatable<Workspace>
+    public partial class Workspace :  IEquatable<Workspace>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Workspace" /> class.
@@ -157,7 +156,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Workspace instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Workspace to be compared</param>
+        /// <param name="other">Instance of Workspace to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Workspace other)
         {
@@ -236,43 +235,41 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
+                    hash = hash * 59 + this.Type.GetHashCode();
                 
                 if (this.IsCurrentUserWorkspace != null)
-                    hash = hash * 57 + this.IsCurrentUserWorkspace.GetHashCode();
+                    hash = hash * 59 + this.IsCurrentUserWorkspace.GetHashCode();
                 
                 if (this.User != null)
-                    hash = hash * 57 + this.User.GetHashCode();
+                    hash = hash * 59 + this.User.GetHashCode();
                 
                 if (this.Bucket != null)
-                    hash = hash * 57 + this.Bucket.GetHashCode();
+                    hash = hash * 59 + this.Bucket.GetHashCode();
                 
                 if (this.DateCreated != null)
-                    hash = hash * 57 + this.DateCreated.GetHashCode();
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
                 
                 if (this.DateModified != null)
-                    hash = hash * 57 + this.DateModified.GetHashCode();
+                    hash = hash * 59 + this.DateModified.GetHashCode();
                 
                 if (this.Summary != null)
-                    hash = hash * 57 + this.Summary.GetHashCode();
+                    hash = hash * 59 + this.Summary.GetHashCode();
                 
                 if (this.Acl != null)
-                    hash = hash * 57 + this.Acl.GetHashCode();
+                    hash = hash * 59 + this.Acl.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -1,11 +1,11 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 using ININ.PureCloudApi.Client;
 using ININ.PureCloudApi.Model;
-
 
 namespace ININ.PureCloudApi.Api
 {
@@ -25,7 +25,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="pageSize">Page size</param>
         /// <returns>OrganizationPresenceEntityListing</returns>
-        OrganizationPresenceEntityListing Get (int? pageNumber = null, int? pageSize = null);
+        OrganizationPresenceEntityListing GetPresencedefinitions (int? pageNumber = null, int? pageSize = null);
   
         /// <summary>
         /// Get an Organization&#39;s list of Presences
@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="pageSize">Page size</param>
         /// <returns>ApiResponse of OrganizationPresenceEntityListing</returns>
-        ApiResponse<OrganizationPresenceEntityListing> GetWithHttpInfo (int? pageNumber = null, int? pageSize = null);
+        ApiResponse<OrganizationPresenceEntityListing> GetPresencedefinitionsWithHttpInfo (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
         /// Get an Organization&#39;s list of Presences
@@ -47,7 +47,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="pageSize">Page size</param>
         /// <returns>Task of OrganizationPresenceEntityListing</returns>
-        System.Threading.Tasks.Task<OrganizationPresenceEntityListing> GetAsync (int? pageNumber = null, int? pageSize = null);
+        System.Threading.Tasks.Task<OrganizationPresenceEntityListing> GetPresencedefinitionsAsync (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
         /// Get an Organization&#39;s list of Presences
@@ -58,7 +58,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="pageSize">Page size</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceEntityListing>> GetAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceEntityListing>> GetPresencedefinitionsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null);
         
         /// <summary>
         /// Create an OrganizationPresence
@@ -68,7 +68,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">The OrganizationPresence to create</param>
         /// <returns>OrganizationPresence</returns>
-        OrganizationPresence Create (OrganizationPresence body);
+        OrganizationPresence PostPresencedefinitions (OrganizationPresence body);
   
         /// <summary>
         /// Create an OrganizationPresence
@@ -78,7 +78,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">The OrganizationPresence to create</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
-        ApiResponse<OrganizationPresence> CreateWithHttpInfo (OrganizationPresence body);
+        ApiResponse<OrganizationPresence> PostPresencedefinitionsWithHttpInfo (OrganizationPresence body);
 
         /// <summary>
         /// Create an OrganizationPresence
@@ -88,7 +88,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">The OrganizationPresence to create</param>
         /// <returns>Task of OrganizationPresence</returns>
-        System.Threading.Tasks.Task<OrganizationPresence> CreateAsync (OrganizationPresence body);
+        System.Threading.Tasks.Task<OrganizationPresence> PostPresencedefinitionsAsync (OrganizationPresence body);
 
         /// <summary>
         /// Create an OrganizationPresence
@@ -98,7 +98,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">The OrganizationPresence to create</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> CreateAsyncWithHttpInfo (OrganizationPresence body);
+        System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> PostPresencedefinitionsAsyncWithHttpInfo (OrganizationPresence body);
         
         /// <summary>
         /// Get an OrganizationPresence
@@ -108,7 +108,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>OrganizationPresence</returns>
-        OrganizationPresence GetPresence (string presenceId);
+        OrganizationPresence GetPresencedefinition (string presenceId);
   
         /// <summary>
         /// Get an OrganizationPresence
@@ -118,7 +118,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
-        ApiResponse<OrganizationPresence> GetPresenceWithHttpInfo (string presenceId);
+        ApiResponse<OrganizationPresence> GetPresencedefinitionWithHttpInfo (string presenceId);
 
         /// <summary>
         /// Get an OrganizationPresence
@@ -128,7 +128,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>Task of OrganizationPresence</returns>
-        System.Threading.Tasks.Task<OrganizationPresence> GetPresenceAsync (string presenceId);
+        System.Threading.Tasks.Task<OrganizationPresence> GetPresencedefinitionAsync (string presenceId);
 
         /// <summary>
         /// Get an OrganizationPresence
@@ -138,7 +138,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> GetPresenceAsyncWithHttpInfo (string presenceId);
+        System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> GetPresencedefinitionAsyncWithHttpInfo (string presenceId);
         
         /// <summary>
         /// Update an OrganizationPresence
@@ -149,7 +149,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>OrganizationPresence</returns>
-        OrganizationPresence UpdatePresence (string presenceId, OrganizationPresence body);
+        OrganizationPresence PutPresencedefinition (string presenceId, OrganizationPresence body);
   
         /// <summary>
         /// Update an OrganizationPresence
@@ -160,7 +160,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
-        ApiResponse<OrganizationPresence> UpdatePresenceWithHttpInfo (string presenceId, OrganizationPresence body);
+        ApiResponse<OrganizationPresence> PutPresencedefinitionWithHttpInfo (string presenceId, OrganizationPresence body);
 
         /// <summary>
         /// Update an OrganizationPresence
@@ -171,7 +171,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>Task of OrganizationPresence</returns>
-        System.Threading.Tasks.Task<OrganizationPresence> UpdatePresenceAsync (string presenceId, OrganizationPresence body);
+        System.Threading.Tasks.Task<OrganizationPresence> PutPresencedefinitionAsync (string presenceId, OrganizationPresence body);
 
         /// <summary>
         /// Update an OrganizationPresence
@@ -182,7 +182,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> UpdatePresenceAsyncWithHttpInfo (string presenceId, OrganizationPresence body);
+        System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> PutPresencedefinitionAsyncWithHttpInfo (string presenceId, OrganizationPresence body);
         
         /// <summary>
         /// Delete an OrganizationPresence
@@ -192,7 +192,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>OrganizationPresence</returns>
-        OrganizationPresence DeletePresence (string presenceId);
+        OrganizationPresence DeletePresencedefinition (string presenceId);
   
         /// <summary>
         /// Delete an OrganizationPresence
@@ -202,7 +202,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
-        ApiResponse<OrganizationPresence> DeletePresenceWithHttpInfo (string presenceId);
+        ApiResponse<OrganizationPresence> DeletePresencedefinitionWithHttpInfo (string presenceId);
 
         /// <summary>
         /// Delete an OrganizationPresence
@@ -212,7 +212,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>Task of OrganizationPresence</returns>
-        System.Threading.Tasks.Task<OrganizationPresence> DeletePresenceAsync (string presenceId);
+        System.Threading.Tasks.Task<OrganizationPresence> DeletePresencedefinitionAsync (string presenceId);
 
         /// <summary>
         /// Delete an OrganizationPresence
@@ -222,7 +222,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> DeletePresenceAsyncWithHttpInfo (string presenceId);
+        System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> DeletePresencedefinitionAsyncWithHttpInfo (string presenceId);
         
         /// <summary>
         /// Get an User&#39;s list of Presences
@@ -281,7 +281,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="source">Source</param>
         /// <returns>UserPresence</returns>
-        UserPresence GetUserPresencesBySource (string userId, string source);
+        UserPresence GetUserPresences_0 (string userId, string source);
   
         /// <summary>
         /// Get a UserPresence
@@ -292,7 +292,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="source">Source</param>
         /// <returns>ApiResponse of UserPresence</returns>
-        ApiResponse<UserPresence> GetUserPresencesBySourceWithHttpInfo (string userId, string source);
+        ApiResponse<UserPresence> GetUserPresences_0WithHttpInfo (string userId, string source);
 
         /// <summary>
         /// Get a UserPresence
@@ -303,7 +303,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="source">Source</param>
         /// <returns>Task of UserPresence</returns>
-        System.Threading.Tasks.Task<UserPresence> GetUserPresencesBySourceAsync (string userId, string source);
+        System.Threading.Tasks.Task<UserPresence> GetUserPresences_0Async (string userId, string source);
 
         /// <summary>
         /// Get a UserPresence
@@ -314,7 +314,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="source">Source</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserPresence>> GetUserPresencesBySourceAsyncWithHttpInfo (string userId, string source);
+        System.Threading.Tasks.Task<ApiResponse<UserPresence>> GetUserPresences_0AsyncWithHttpInfo (string userId, string source);
         
         /// <summary>
         /// Update a UserPresence
@@ -326,7 +326,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="source">Source</param>
         /// <param name="body">The updated UserPresence</param>
         /// <returns>UserPresence</returns>
-        UserPresence UpdateUserPresencesBySource (string userId, string source, UserPresence body);
+        UserPresence PutUserPresences (string userId, string source, UserPresence body);
   
         /// <summary>
         /// Update a UserPresence
@@ -338,7 +338,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="source">Source</param>
         /// <param name="body">The updated UserPresence</param>
         /// <returns>ApiResponse of UserPresence</returns>
-        ApiResponse<UserPresence> UpdateUserPresencesBySourceWithHttpInfo (string userId, string source, UserPresence body);
+        ApiResponse<UserPresence> PutUserPresencesWithHttpInfo (string userId, string source, UserPresence body);
 
         /// <summary>
         /// Update a UserPresence
@@ -350,7 +350,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="source">Source</param>
         /// <param name="body">The updated UserPresence</param>
         /// <returns>Task of UserPresence</returns>
-        System.Threading.Tasks.Task<UserPresence> UpdateUserPresencesBySourceAsync (string userId, string source, UserPresence body);
+        System.Threading.Tasks.Task<UserPresence> PutUserPresencesAsync (string userId, string source, UserPresence body);
 
         /// <summary>
         /// Update a UserPresence
@@ -362,7 +362,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="source">Source</param>
         /// <param name="body">The updated UserPresence</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserPresence>> UpdateUserPresencesBySourceAsyncWithHttpInfo (string userId, string source, UserPresence body);
+        System.Threading.Tasks.Task<ApiResponse<UserPresence>> PutUserPresencesAsyncWithHttpInfo (string userId, string source, UserPresence body);
         
         /// <summary>
         /// Patch a UserPresence
@@ -374,7 +374,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="source">Source</param>
         /// <param name="body">The patched UserPresence</param>
         /// <returns>UserPresence</returns>
-        UserPresence PatchUserPresencesBySource (string userId, string source, UserPresence body);
+        UserPresence PatchUserPresences (string userId, string source, UserPresence body);
   
         /// <summary>
         /// Patch a UserPresence
@@ -386,7 +386,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="source">Source</param>
         /// <param name="body">The patched UserPresence</param>
         /// <returns>ApiResponse of UserPresence</returns>
-        ApiResponse<UserPresence> PatchUserPresencesBySourceWithHttpInfo (string userId, string source, UserPresence body);
+        ApiResponse<UserPresence> PatchUserPresencesWithHttpInfo (string userId, string source, UserPresence body);
 
         /// <summary>
         /// Patch a UserPresence
@@ -398,7 +398,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="source">Source</param>
         /// <param name="body">The patched UserPresence</param>
         /// <returns>Task of UserPresence</returns>
-        System.Threading.Tasks.Task<UserPresence> PatchUserPresencesBySourceAsync (string userId, string source, UserPresence body);
+        System.Threading.Tasks.Task<UserPresence> PatchUserPresencesAsync (string userId, string source, UserPresence body);
 
         /// <summary>
         /// Patch a UserPresence
@@ -410,7 +410,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="source">Source</param>
         /// <param name="body">The patched UserPresence</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserPresence>> PatchUserPresencesBySourceAsyncWithHttpInfo (string userId, string source, UserPresence body);
+        System.Threading.Tasks.Task<ApiResponse<UserPresence>> PatchUserPresencesAsyncWithHttpInfo (string userId, string source, UserPresence body);
         
         /// <summary>
         /// Get a user&#39;s Primary UserPresence
@@ -536,9 +536,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="pageSize">Page size</param> 
         /// <returns>OrganizationPresenceEntityListing</returns>
-        public OrganizationPresenceEntityListing Get (int? pageNumber = null, int? pageSize = null)
+        public OrganizationPresenceEntityListing GetPresencedefinitions (int? pageNumber = null, int? pageSize = null)
         {
-             ApiResponse<OrganizationPresenceEntityListing> response = GetWithHttpInfo(pageNumber, pageSize);
+             ApiResponse<OrganizationPresenceEntityListing> response = GetPresencedefinitionsWithHttpInfo(pageNumber, pageSize);
              return response.Data;
         }
 
@@ -548,7 +548,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="pageSize">Page size</param> 
         /// <returns>ApiResponse of OrganizationPresenceEntityListing</returns>
-        public ApiResponse< OrganizationPresenceEntityListing > GetWithHttpInfo (int? pageNumber = null, int? pageSize = null)
+        public ApiResponse< OrganizationPresenceEntityListing > GetPresencedefinitionsWithHttpInfo (int? pageNumber = null, int? pageSize = null)
         {
             
     
@@ -559,15 +559,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -580,7 +586,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -591,14 +596,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetPresencedefinitions: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetPresencedefinitions: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OrganizationPresenceEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -612,9 +619,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="pageSize">Page size</param>
         /// <returns>Task of OrganizationPresenceEntityListing</returns>
-        public async System.Threading.Tasks.Task<OrganizationPresenceEntityListing> GetAsync (int? pageNumber = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<OrganizationPresenceEntityListing> GetPresencedefinitionsAsync (int? pageNumber = null, int? pageSize = null)
         {
-             ApiResponse<OrganizationPresenceEntityListing> response = await GetAsyncWithHttpInfo(pageNumber, pageSize);
+             ApiResponse<OrganizationPresenceEntityListing> response = await GetPresencedefinitionsAsyncWithHttpInfo(pageNumber, pageSize);
              return response.Data;
 
         }
@@ -625,7 +632,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="pageSize">Page size</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceEntityListing>> GetAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceEntityListing>> GetPresencedefinitionsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null)
         {
             
     
@@ -633,18 +640,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -668,14 +681,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetPresencedefinitions: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetPresencedefinitions: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OrganizationPresenceEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -688,9 +703,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">The OrganizationPresence to create</param> 
         /// <returns>OrganizationPresence</returns>
-        public OrganizationPresence Create (OrganizationPresence body)
+        public OrganizationPresence PostPresencedefinitions (OrganizationPresence body)
         {
-             ApiResponse<OrganizationPresence> response = CreateWithHttpInfo(body);
+             ApiResponse<OrganizationPresence> response = PostPresencedefinitionsWithHttpInfo(body);
              return response.Data;
         }
 
@@ -699,11 +714,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">The OrganizationPresence to create</param> 
         /// <returns>ApiResponse of OrganizationPresence</returns>
-        public ApiResponse< OrganizationPresence > CreateWithHttpInfo (OrganizationPresence body)
+        public ApiResponse< OrganizationPresence > PostPresencedefinitionsWithHttpInfo (OrganizationPresence body)
         {
             
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling Create");
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PostPresencedefinitions");
             
     
             var path_ = "/api/v1/presencedefinitions";
@@ -713,15 +729,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -730,10 +752,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -744,14 +771,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling Create: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostPresencedefinitions: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling Create: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostPresencedefinitions: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OrganizationPresence>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -764,9 +793,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">The OrganizationPresence to create</param>
         /// <returns>Task of OrganizationPresence</returns>
-        public async System.Threading.Tasks.Task<OrganizationPresence> CreateAsync (OrganizationPresence body)
+        public async System.Threading.Tasks.Task<OrganizationPresence> PostPresencedefinitionsAsync (OrganizationPresence body)
         {
-             ApiResponse<OrganizationPresence> response = await CreateAsyncWithHttpInfo(body);
+             ApiResponse<OrganizationPresence> response = await PostPresencedefinitionsAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -776,28 +805,34 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">The OrganizationPresence to create</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> CreateAsyncWithHttpInfo (OrganizationPresence body)
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> PostPresencedefinitionsAsyncWithHttpInfo (OrganizationPresence body)
         {
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling Create");
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PostPresencedefinitions");
             
     
             var path_ = "/api/v1/presencedefinitions";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -820,14 +855,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling Create: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostPresencedefinitions: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling Create: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostPresencedefinitions: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OrganizationPresence>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -840,9 +877,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="presenceId">Organization Presence ID</param> 
         /// <returns>OrganizationPresence</returns>
-        public OrganizationPresence GetPresence (string presenceId)
+        public OrganizationPresence GetPresencedefinition (string presenceId)
         {
-             ApiResponse<OrganizationPresence> response = GetPresenceWithHttpInfo(presenceId);
+             ApiResponse<OrganizationPresence> response = GetPresencedefinitionWithHttpInfo(presenceId);
              return response.Data;
         }
 
@@ -851,11 +888,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="presenceId">Organization Presence ID</param> 
         /// <returns>ApiResponse of OrganizationPresence</returns>
-        public ApiResponse< OrganizationPresence > GetPresenceWithHttpInfo (string presenceId)
+        public ApiResponse< OrganizationPresence > GetPresencedefinitionWithHttpInfo (string presenceId)
         {
             
             // verify the required parameter 'presenceId' is set
-            if (presenceId == null) throw new ApiException(400, "Missing required parameter 'presenceId' when calling GetPresence");
+            if (presenceId == null)
+                throw new ApiException(400, "Missing required parameter 'presenceId' when calling PresenceApi->GetPresencedefinition");
             
     
             var path_ = "/api/v1/presencedefinitions/{presenceId}";
@@ -865,15 +903,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -885,7 +929,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -896,14 +939,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetPresence: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetPresencedefinition: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetPresence: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetPresencedefinition: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OrganizationPresence>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -916,9 +961,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>Task of OrganizationPresence</returns>
-        public async System.Threading.Tasks.Task<OrganizationPresence> GetPresenceAsync (string presenceId)
+        public async System.Threading.Tasks.Task<OrganizationPresence> GetPresencedefinitionAsync (string presenceId)
         {
-             ApiResponse<OrganizationPresence> response = await GetPresenceAsyncWithHttpInfo(presenceId);
+             ApiResponse<OrganizationPresence> response = await GetPresencedefinitionAsyncWithHttpInfo(presenceId);
              return response.Data;
 
         }
@@ -928,28 +973,34 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> GetPresenceAsyncWithHttpInfo (string presenceId)
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> GetPresencedefinitionAsyncWithHttpInfo (string presenceId)
         {
             // verify the required parameter 'presenceId' is set
-            if (presenceId == null) throw new ApiException(400, "Missing required parameter 'presenceId' when calling GetPresence");
+            if (presenceId == null) throw new ApiException(400, "Missing required parameter 'presenceId' when calling GetPresencedefinition");
             
     
             var path_ = "/api/v1/presencedefinitions/{presenceId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -972,14 +1023,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetPresence: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetPresencedefinition: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetPresence: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetPresencedefinition: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OrganizationPresence>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -993,9 +1046,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="presenceId">Organization Presence ID</param> 
         /// <param name="body">The OrganizationPresence to update</param> 
         /// <returns>OrganizationPresence</returns>
-        public OrganizationPresence UpdatePresence (string presenceId, OrganizationPresence body)
+        public OrganizationPresence PutPresencedefinition (string presenceId, OrganizationPresence body)
         {
-             ApiResponse<OrganizationPresence> response = UpdatePresenceWithHttpInfo(presenceId, body);
+             ApiResponse<OrganizationPresence> response = PutPresencedefinitionWithHttpInfo(presenceId, body);
              return response.Data;
         }
 
@@ -1005,14 +1058,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="presenceId">Organization Presence ID</param> 
         /// <param name="body">The OrganizationPresence to update</param> 
         /// <returns>ApiResponse of OrganizationPresence</returns>
-        public ApiResponse< OrganizationPresence > UpdatePresenceWithHttpInfo (string presenceId, OrganizationPresence body)
+        public ApiResponse< OrganizationPresence > PutPresencedefinitionWithHttpInfo (string presenceId, OrganizationPresence body)
         {
             
             // verify the required parameter 'presenceId' is set
-            if (presenceId == null) throw new ApiException(400, "Missing required parameter 'presenceId' when calling UpdatePresence");
+            if (presenceId == null)
+                throw new ApiException(400, "Missing required parameter 'presenceId' when calling PresenceApi->PutPresencedefinition");
             
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling UpdatePresence");
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PutPresencedefinition");
             
     
             var path_ = "/api/v1/presencedefinitions/{presenceId}";
@@ -1022,15 +1077,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1040,10 +1101,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1054,14 +1120,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdatePresence: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutPresencedefinition: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdatePresence: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutPresencedefinition: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OrganizationPresence>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1075,9 +1143,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>Task of OrganizationPresence</returns>
-        public async System.Threading.Tasks.Task<OrganizationPresence> UpdatePresenceAsync (string presenceId, OrganizationPresence body)
+        public async System.Threading.Tasks.Task<OrganizationPresence> PutPresencedefinitionAsync (string presenceId, OrganizationPresence body)
         {
-             ApiResponse<OrganizationPresence> response = await UpdatePresenceAsyncWithHttpInfo(presenceId, body);
+             ApiResponse<OrganizationPresence> response = await PutPresencedefinitionAsyncWithHttpInfo(presenceId, body);
              return response.Data;
 
         }
@@ -1088,30 +1156,36 @@ namespace ININ.PureCloudApi.Api
         /// <param name="presenceId">Organization Presence ID</param>
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> UpdatePresenceAsyncWithHttpInfo (string presenceId, OrganizationPresence body)
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> PutPresencedefinitionAsyncWithHttpInfo (string presenceId, OrganizationPresence body)
         {
             // verify the required parameter 'presenceId' is set
-            if (presenceId == null) throw new ApiException(400, "Missing required parameter 'presenceId' when calling UpdatePresence");
+            if (presenceId == null) throw new ApiException(400, "Missing required parameter 'presenceId' when calling PutPresencedefinition");
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling UpdatePresence");
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PutPresencedefinition");
             
     
             var path_ = "/api/v1/presencedefinitions/{presenceId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1135,14 +1209,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdatePresence: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutPresencedefinition: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdatePresence: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutPresencedefinition: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OrganizationPresence>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1155,9 +1231,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="presenceId">Organization Presence ID</param> 
         /// <returns>OrganizationPresence</returns>
-        public OrganizationPresence DeletePresence (string presenceId)
+        public OrganizationPresence DeletePresencedefinition (string presenceId)
         {
-             ApiResponse<OrganizationPresence> response = DeletePresenceWithHttpInfo(presenceId);
+             ApiResponse<OrganizationPresence> response = DeletePresencedefinitionWithHttpInfo(presenceId);
              return response.Data;
         }
 
@@ -1166,11 +1242,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="presenceId">Organization Presence ID</param> 
         /// <returns>ApiResponse of OrganizationPresence</returns>
-        public ApiResponse< OrganizationPresence > DeletePresenceWithHttpInfo (string presenceId)
+        public ApiResponse< OrganizationPresence > DeletePresencedefinitionWithHttpInfo (string presenceId)
         {
             
             // verify the required parameter 'presenceId' is set
-            if (presenceId == null) throw new ApiException(400, "Missing required parameter 'presenceId' when calling DeletePresence");
+            if (presenceId == null)
+                throw new ApiException(400, "Missing required parameter 'presenceId' when calling PresenceApi->DeletePresencedefinition");
             
     
             var path_ = "/api/v1/presencedefinitions/{presenceId}";
@@ -1180,15 +1257,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1200,7 +1283,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1211,14 +1293,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeletePresence: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeletePresencedefinition: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeletePresence: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeletePresencedefinition: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OrganizationPresence>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1231,9 +1315,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>Task of OrganizationPresence</returns>
-        public async System.Threading.Tasks.Task<OrganizationPresence> DeletePresenceAsync (string presenceId)
+        public async System.Threading.Tasks.Task<OrganizationPresence> DeletePresencedefinitionAsync (string presenceId)
         {
-             ApiResponse<OrganizationPresence> response = await DeletePresenceAsyncWithHttpInfo(presenceId);
+             ApiResponse<OrganizationPresence> response = await DeletePresencedefinitionAsyncWithHttpInfo(presenceId);
              return response.Data;
 
         }
@@ -1243,28 +1327,34 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> DeletePresenceAsyncWithHttpInfo (string presenceId)
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> DeletePresencedefinitionAsyncWithHttpInfo (string presenceId)
         {
             // verify the required parameter 'presenceId' is set
-            if (presenceId == null) throw new ApiException(400, "Missing required parameter 'presenceId' when calling DeletePresence");
+            if (presenceId == null) throw new ApiException(400, "Missing required parameter 'presenceId' when calling DeletePresencedefinition");
             
     
             var path_ = "/api/v1/presencedefinitions/{presenceId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1287,14 +1377,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeletePresence: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeletePresencedefinition: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeletePresence: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeletePresencedefinition: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OrganizationPresence>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1326,7 +1418,8 @@ namespace ININ.PureCloudApi.Api
         {
             
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling GetUserPresences");
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->GetUserPresences");
             
     
             var path_ = "/api/v1/users/{userId}/presences";
@@ -1336,15 +1429,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1358,7 +1457,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1369,7 +1467,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -1415,18 +1515,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1451,7 +1557,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
@@ -1472,9 +1580,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param> 
         /// <param name="source">Source</param> 
         /// <returns>UserPresence</returns>
-        public UserPresence GetUserPresencesBySource (string userId, string source)
+        public UserPresence GetUserPresences_0 (string userId, string source)
         {
-             ApiResponse<UserPresence> response = GetUserPresencesBySourceWithHttpInfo(userId, source);
+             ApiResponse<UserPresence> response = GetUserPresences_0WithHttpInfo(userId, source);
              return response.Data;
         }
 
@@ -1484,14 +1592,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param> 
         /// <param name="source">Source</param> 
         /// <returns>ApiResponse of UserPresence</returns>
-        public ApiResponse< UserPresence > GetUserPresencesBySourceWithHttpInfo (string userId, string source)
+        public ApiResponse< UserPresence > GetUserPresences_0WithHttpInfo (string userId, string source)
         {
             
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling GetUserPresencesBySource");
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->GetUserPresences_0");
             
             // verify the required parameter 'source' is set
-            if (source == null) throw new ApiException(400, "Missing required parameter 'source' when calling GetUserPresencesBySource");
+            if (source == null)
+                throw new ApiException(400, "Missing required parameter 'source' when calling PresenceApi->GetUserPresences_0");
             
     
             var path_ = "/api/v1/users/{userId}/presences/{source}";
@@ -1501,15 +1611,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1522,7 +1638,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1533,14 +1648,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetUserPresencesBySource: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetUserPresences_0: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetUserPresencesBySource: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetUserPresences_0: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<UserPresence>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1554,9 +1671,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="source">Source</param>
         /// <returns>Task of UserPresence</returns>
-        public async System.Threading.Tasks.Task<UserPresence> GetUserPresencesBySourceAsync (string userId, string source)
+        public async System.Threading.Tasks.Task<UserPresence> GetUserPresences_0Async (string userId, string source)
         {
-             ApiResponse<UserPresence> response = await GetUserPresencesBySourceAsyncWithHttpInfo(userId, source);
+             ApiResponse<UserPresence> response = await GetUserPresences_0AsyncWithHttpInfo(userId, source);
              return response.Data;
 
         }
@@ -1567,30 +1684,36 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="source">Source</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserPresence>> GetUserPresencesBySourceAsyncWithHttpInfo (string userId, string source)
+        public async System.Threading.Tasks.Task<ApiResponse<UserPresence>> GetUserPresences_0AsyncWithHttpInfo (string userId, string source)
         {
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling GetUserPresencesBySource");
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling GetUserPresences_0");
             // verify the required parameter 'source' is set
-            if (source == null) throw new ApiException(400, "Missing required parameter 'source' when calling GetUserPresencesBySource");
+            if (source == null) throw new ApiException(400, "Missing required parameter 'source' when calling GetUserPresences_0");
             
     
             var path_ = "/api/v1/users/{userId}/presences/{source}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1614,14 +1737,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetUserPresencesBySource: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetUserPresences_0: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetUserPresencesBySource: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetUserPresences_0: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<UserPresence>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1636,9 +1761,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="source">Source</param> 
         /// <param name="body">The updated UserPresence</param> 
         /// <returns>UserPresence</returns>
-        public UserPresence UpdateUserPresencesBySource (string userId, string source, UserPresence body)
+        public UserPresence PutUserPresences (string userId, string source, UserPresence body)
         {
-             ApiResponse<UserPresence> response = UpdateUserPresencesBySourceWithHttpInfo(userId, source, body);
+             ApiResponse<UserPresence> response = PutUserPresencesWithHttpInfo(userId, source, body);
              return response.Data;
         }
 
@@ -1649,17 +1774,20 @@ namespace ININ.PureCloudApi.Api
         /// <param name="source">Source</param> 
         /// <param name="body">The updated UserPresence</param> 
         /// <returns>ApiResponse of UserPresence</returns>
-        public ApiResponse< UserPresence > UpdateUserPresencesBySourceWithHttpInfo (string userId, string source, UserPresence body)
+        public ApiResponse< UserPresence > PutUserPresencesWithHttpInfo (string userId, string source, UserPresence body)
         {
             
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling UpdateUserPresencesBySource");
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->PutUserPresences");
             
             // verify the required parameter 'source' is set
-            if (source == null) throw new ApiException(400, "Missing required parameter 'source' when calling UpdateUserPresencesBySource");
+            if (source == null)
+                throw new ApiException(400, "Missing required parameter 'source' when calling PresenceApi->PutUserPresences");
             
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling UpdateUserPresencesBySource");
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PutUserPresences");
             
     
             var path_ = "/api/v1/users/{userId}/presences/{source}";
@@ -1669,15 +1797,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1688,10 +1822,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1702,14 +1841,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateUserPresencesBySource: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutUserPresences: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateUserPresencesBySource: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutUserPresences: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<UserPresence>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1724,9 +1865,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="source">Source</param>
         /// <param name="body">The updated UserPresence</param>
         /// <returns>Task of UserPresence</returns>
-        public async System.Threading.Tasks.Task<UserPresence> UpdateUserPresencesBySourceAsync (string userId, string source, UserPresence body)
+        public async System.Threading.Tasks.Task<UserPresence> PutUserPresencesAsync (string userId, string source, UserPresence body)
         {
-             ApiResponse<UserPresence> response = await UpdateUserPresencesBySourceAsyncWithHttpInfo(userId, source, body);
+             ApiResponse<UserPresence> response = await PutUserPresencesAsyncWithHttpInfo(userId, source, body);
              return response.Data;
 
         }
@@ -1738,32 +1879,38 @@ namespace ININ.PureCloudApi.Api
         /// <param name="source">Source</param>
         /// <param name="body">The updated UserPresence</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserPresence>> UpdateUserPresencesBySourceAsyncWithHttpInfo (string userId, string source, UserPresence body)
+        public async System.Threading.Tasks.Task<ApiResponse<UserPresence>> PutUserPresencesAsyncWithHttpInfo (string userId, string source, UserPresence body)
         {
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling UpdateUserPresencesBySource");
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling PutUserPresences");
             // verify the required parameter 'source' is set
-            if (source == null) throw new ApiException(400, "Missing required parameter 'source' when calling UpdateUserPresencesBySource");
+            if (source == null) throw new ApiException(400, "Missing required parameter 'source' when calling PutUserPresences");
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling UpdateUserPresencesBySource");
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PutUserPresences");
             
     
             var path_ = "/api/v1/users/{userId}/presences/{source}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1788,14 +1935,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateUserPresencesBySource: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutUserPresences: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateUserPresencesBySource: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutUserPresences: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<UserPresence>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1810,9 +1959,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="source">Source</param> 
         /// <param name="body">The patched UserPresence</param> 
         /// <returns>UserPresence</returns>
-        public UserPresence PatchUserPresencesBySource (string userId, string source, UserPresence body)
+        public UserPresence PatchUserPresences (string userId, string source, UserPresence body)
         {
-             ApiResponse<UserPresence> response = PatchUserPresencesBySourceWithHttpInfo(userId, source, body);
+             ApiResponse<UserPresence> response = PatchUserPresencesWithHttpInfo(userId, source, body);
              return response.Data;
         }
 
@@ -1823,17 +1972,20 @@ namespace ININ.PureCloudApi.Api
         /// <param name="source">Source</param> 
         /// <param name="body">The patched UserPresence</param> 
         /// <returns>ApiResponse of UserPresence</returns>
-        public ApiResponse< UserPresence > PatchUserPresencesBySourceWithHttpInfo (string userId, string source, UserPresence body)
+        public ApiResponse< UserPresence > PatchUserPresencesWithHttpInfo (string userId, string source, UserPresence body)
         {
             
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling PatchUserPresencesBySource");
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->PatchUserPresences");
             
             // verify the required parameter 'source' is set
-            if (source == null) throw new ApiException(400, "Missing required parameter 'source' when calling PatchUserPresencesBySource");
+            if (source == null)
+                throw new ApiException(400, "Missing required parameter 'source' when calling PresenceApi->PatchUserPresences");
             
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PatchUserPresencesBySource");
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PatchUserPresences");
             
     
             var path_ = "/api/v1/users/{userId}/presences/{source}";
@@ -1843,15 +1995,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1862,10 +2020,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1876,14 +2039,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PatchUserPresencesBySource: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PatchUserPresences: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PatchUserPresencesBySource: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PatchUserPresences: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<UserPresence>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1898,9 +2063,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="source">Source</param>
         /// <param name="body">The patched UserPresence</param>
         /// <returns>Task of UserPresence</returns>
-        public async System.Threading.Tasks.Task<UserPresence> PatchUserPresencesBySourceAsync (string userId, string source, UserPresence body)
+        public async System.Threading.Tasks.Task<UserPresence> PatchUserPresencesAsync (string userId, string source, UserPresence body)
         {
-             ApiResponse<UserPresence> response = await PatchUserPresencesBySourceAsyncWithHttpInfo(userId, source, body);
+             ApiResponse<UserPresence> response = await PatchUserPresencesAsyncWithHttpInfo(userId, source, body);
              return response.Data;
 
         }
@@ -1912,32 +2077,38 @@ namespace ININ.PureCloudApi.Api
         /// <param name="source">Source</param>
         /// <param name="body">The patched UserPresence</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserPresence>> PatchUserPresencesBySourceAsyncWithHttpInfo (string userId, string source, UserPresence body)
+        public async System.Threading.Tasks.Task<ApiResponse<UserPresence>> PatchUserPresencesAsyncWithHttpInfo (string userId, string source, UserPresence body)
         {
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling PatchUserPresencesBySource");
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling PatchUserPresences");
             // verify the required parameter 'source' is set
-            if (source == null) throw new ApiException(400, "Missing required parameter 'source' when calling PatchUserPresencesBySource");
+            if (source == null) throw new ApiException(400, "Missing required parameter 'source' when calling PatchUserPresences");
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PatchUserPresencesBySource");
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PatchUserPresences");
             
     
             var path_ = "/api/v1/users/{userId}/presences/{source}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1962,14 +2133,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PatchUserPresencesBySource: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PatchUserPresences: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PatchUserPresencesBySource: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PatchUserPresences: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<UserPresence>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1997,7 +2170,8 @@ namespace ININ.PureCloudApi.Api
         {
             
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling GetUserPrimarypresence");
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->GetUserPrimarypresence");
             
     
             var path_ = "/api/v1/users/{userId}/primarypresence";
@@ -2007,15 +2181,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2027,7 +2207,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -2038,7 +2217,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -2080,18 +2261,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2114,7 +2301,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  

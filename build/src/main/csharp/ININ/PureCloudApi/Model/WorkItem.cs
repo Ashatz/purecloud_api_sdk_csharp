@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// Information about the work item associated with a history item.
     /// </summary>
     [DataContract]
-    public class WorkItem :  IEquatable<WorkItem>
+    public partial class WorkItem :  IEquatable<WorkItem>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkItem" /> class.
@@ -91,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if WorkItem instances are equal
         /// </summary>
-        /// <param name="obj">Instance of WorkItem to be compared</param>
+        /// <param name="other">Instance of WorkItem to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(WorkItem other)
         {
@@ -130,19 +129,17 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.WorkItemExecId != null)
-                    hash = hash * 57 + this.WorkItemExecId.GetHashCode();
+                    hash = hash * 59 + this.WorkItemExecId.GetHashCode();
                 
                 if (this.WorkItemConfigId != null)
-                    hash = hash * 57 + this.WorkItemConfigId.GetHashCode();
+                    hash = hash * 59 + this.WorkItemConfigId.GetHashCode();
                 
                 if (this.WorkItemName != null)
-                    hash = hash * 57 + this.WorkItemName.GetHashCode();
+                    hash = hash * 59 + this.WorkItemName.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

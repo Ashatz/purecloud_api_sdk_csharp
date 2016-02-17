@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class IVR :  IEquatable<IVR>
+    public partial class IVR :  IEquatable<IVR>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="IVR" /> class.
@@ -220,7 +219,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if IVR instances are equal
         /// </summary>
-        /// <param name="obj">Instance of IVR to be compared</param>
+        /// <param name="other">Instance of IVR to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(IVR other)
         {
@@ -339,67 +338,65 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Description != null)
-                    hash = hash * 57 + this.Description.GetHashCode();
+                    hash = hash * 59 + this.Description.GetHashCode();
                 
                 if (this.Version != null)
-                    hash = hash * 57 + this.Version.GetHashCode();
+                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 if (this.DateCreated != null)
-                    hash = hash * 57 + this.DateCreated.GetHashCode();
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
                 
                 if (this.DateModified != null)
-                    hash = hash * 57 + this.DateModified.GetHashCode();
+                    hash = hash * 59 + this.DateModified.GetHashCode();
                 
                 if (this.ModifiedBy != null)
-                    hash = hash * 57 + this.ModifiedBy.GetHashCode();
+                    hash = hash * 59 + this.ModifiedBy.GetHashCode();
                 
                 if (this.CreatedBy != null)
-                    hash = hash * 57 + this.CreatedBy.GetHashCode();
+                    hash = hash * 59 + this.CreatedBy.GetHashCode();
                 
                 if (this.State != null)
-                    hash = hash * 57 + this.State.GetHashCode();
+                    hash = hash * 59 + this.State.GetHashCode();
                 
                 if (this.ModifiedByApp != null)
-                    hash = hash * 57 + this.ModifiedByApp.GetHashCode();
+                    hash = hash * 59 + this.ModifiedByApp.GetHashCode();
                 
                 if (this.CreatedByApp != null)
-                    hash = hash * 57 + this.CreatedByApp.GetHashCode();
+                    hash = hash * 59 + this.CreatedByApp.GetHashCode();
                 
                 if (this.IvrUri != null)
-                    hash = hash * 57 + this.IvrUri.GetHashCode();
+                    hash = hash * 59 + this.IvrUri.GetHashCode();
                 
                 if (this.Dnis != null)
-                    hash = hash * 57 + this.Dnis.GetHashCode();
+                    hash = hash * 59 + this.Dnis.GetHashCode();
                 
                 if (this.FlowId != null)
-                    hash = hash * 57 + this.FlowId.GetHashCode();
+                    hash = hash * 59 + this.FlowId.GetHashCode();
                 
                 if (this.ScheduleId != null)
-                    hash = hash * 57 + this.ScheduleId.GetHashCode();
+                    hash = hash * 59 + this.ScheduleId.GetHashCode();
                 
                 if (this.OpenHoursFlow != null)
-                    hash = hash * 57 + this.OpenHoursFlow.GetHashCode();
+                    hash = hash * 59 + this.OpenHoursFlow.GetHashCode();
                 
                 if (this.ClosedHoursFlow != null)
-                    hash = hash * 57 + this.ClosedHoursFlow.GetHashCode();
+                    hash = hash * 59 + this.ClosedHoursFlow.GetHashCode();
                 
                 if (this.ScheduleGroup != null)
-                    hash = hash * 57 + this.ScheduleGroup.GetHashCode();
+                    hash = hash * 59 + this.ScheduleGroup.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

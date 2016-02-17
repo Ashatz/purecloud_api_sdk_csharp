@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class LineStatus :  IEquatable<LineStatus>
+    public partial class LineStatus :  IEquatable<LineStatus>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="LineStatus" /> class.
@@ -110,7 +109,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if LineStatus instances are equal
         /// </summary>
-        /// <param name="obj">Instance of LineStatus to be compared</param>
+        /// <param name="other">Instance of LineStatus to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(LineStatus other)
         {
@@ -159,25 +158,23 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Reachable != null)
-                    hash = hash * 57 + this.Reachable.GetHashCode();
+                    hash = hash * 59 + this.Reachable.GetHashCode();
                 
                 if (this.AddressOfRecord != null)
-                    hash = hash * 57 + this.AddressOfRecord.GetHashCode();
+                    hash = hash * 59 + this.AddressOfRecord.GetHashCode();
                 
                 if (this.ContactAddresses != null)
-                    hash = hash * 57 + this.ContactAddresses.GetHashCode();
+                    hash = hash * 59 + this.ContactAddresses.GetHashCode();
                 
                 if (this.ReachableStateTime != null)
-                    hash = hash * 57 + this.ReachableStateTime.GetHashCode();
+                    hash = hash * 59 + this.ReachableStateTime.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

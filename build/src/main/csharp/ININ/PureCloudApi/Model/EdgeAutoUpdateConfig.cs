@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class EdgeAutoUpdateConfig :  IEquatable<EdgeAutoUpdateConfig>
+    public partial class EdgeAutoUpdateConfig :  IEquatable<EdgeAutoUpdateConfig>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeAutoUpdateConfig" /> class.
@@ -98,7 +97,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if EdgeAutoUpdateConfig instances are equal
         /// </summary>
-        /// <param name="obj">Instance of EdgeAutoUpdateConfig to be compared</param>
+        /// <param name="other">Instance of EdgeAutoUpdateConfig to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(EdgeAutoUpdateConfig other)
         {
@@ -142,22 +141,20 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.TimeZone != null)
-                    hash = hash * 57 + this.TimeZone.GetHashCode();
+                    hash = hash * 59 + this.TimeZone.GetHashCode();
                 
                 if (this.Rrule != null)
-                    hash = hash * 57 + this.Rrule.GetHashCode();
+                    hash = hash * 59 + this.Rrule.GetHashCode();
                 
                 if (this.Start != null)
-                    hash = hash * 57 + this.Start.GetHashCode();
+                    hash = hash * 59 + this.Start.GetHashCode();
                 
                 if (this.End != null)
-                    hash = hash * 57 + this.End.GetHashCode();
+                    hash = hash * 59 + this.End.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

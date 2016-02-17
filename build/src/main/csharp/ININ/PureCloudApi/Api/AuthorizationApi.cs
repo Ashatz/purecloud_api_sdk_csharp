@@ -1,11 +1,11 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 using ININ.PureCloudApi.Client;
 using ININ.PureCloudApi.Model;
-
 
 namespace ININ.PureCloudApi.Api
 {
@@ -208,7 +208,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>DomainOrganizationRole</returns>
-        DomainOrganizationRole CreateRoles (DomainOrganizationRole body = null);
+        DomainOrganizationRole PostRoles (DomainOrganizationRole body = null);
   
         /// <summary>
         /// Create an organization role.
@@ -218,7 +218,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
-        ApiResponse<DomainOrganizationRole> CreateRolesWithHttpInfo (DomainOrganizationRole body = null);
+        ApiResponse<DomainOrganizationRole> PostRolesWithHttpInfo (DomainOrganizationRole body = null);
 
         /// <summary>
         /// Create an organization role.
@@ -228,7 +228,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of DomainOrganizationRole</returns>
-        System.Threading.Tasks.Task<DomainOrganizationRole> CreateRolesAsync (DomainOrganizationRole body = null);
+        System.Threading.Tasks.Task<DomainOrganizationRole> PostRolesAsync (DomainOrganizationRole body = null);
 
         /// <summary>
         /// Create an organization role.
@@ -238,7 +238,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> CreateRolesAsyncWithHttpInfo (DomainOrganizationRole body = null);
+        System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PostRolesAsyncWithHttpInfo (DomainOrganizationRole body = null);
         
         /// <summary>
         /// Restore specified default roles
@@ -248,7 +248,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>OrganizationRoleEntityListing</returns>
-        OrganizationRoleEntityListing UpdateRolesDefault (List<DomainOrganizationRole> body = null);
+        OrganizationRoleEntityListing PutRolesDefault (List<DomainOrganizationRole> body = null);
   
         /// <summary>
         /// Restore specified default roles
@@ -258,7 +258,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
-        ApiResponse<OrganizationRoleEntityListing> UpdateRolesDefaultWithHttpInfo (List<DomainOrganizationRole> body = null);
+        ApiResponse<OrganizationRoleEntityListing> PutRolesDefaultWithHttpInfo (List<DomainOrganizationRole> body = null);
 
         /// <summary>
         /// Restore specified default roles
@@ -268,7 +268,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of OrganizationRoleEntityListing</returns>
-        System.Threading.Tasks.Task<OrganizationRoleEntityListing> UpdateRolesDefaultAsync (List<DomainOrganizationRole> body = null);
+        System.Threading.Tasks.Task<OrganizationRoleEntityListing> PutRolesDefaultAsync (List<DomainOrganizationRole> body = null);
 
         /// <summary>
         /// Restore specified default roles
@@ -278,7 +278,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> UpdateRolesDefaultAsyncWithHttpInfo (List<DomainOrganizationRole> body = null);
+        System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> PutRolesDefaultAsyncWithHttpInfo (List<DomainOrganizationRole> body = null);
         
         /// <summary>
         /// Restores all default roles
@@ -288,7 +288,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="force">Restore default roles</param>
         /// <returns>OrganizationRoleEntityListing</returns>
-        OrganizationRoleEntityListing CreateRolesDefault (bool? force = null);
+        OrganizationRoleEntityListing PostRolesDefault (bool? force = null);
   
         /// <summary>
         /// Restores all default roles
@@ -298,7 +298,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="force">Restore default roles</param>
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
-        ApiResponse<OrganizationRoleEntityListing> CreateRolesDefaultWithHttpInfo (bool? force = null);
+        ApiResponse<OrganizationRoleEntityListing> PostRolesDefaultWithHttpInfo (bool? force = null);
 
         /// <summary>
         /// Restores all default roles
@@ -308,7 +308,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="force">Restore default roles</param>
         /// <returns>Task of OrganizationRoleEntityListing</returns>
-        System.Threading.Tasks.Task<OrganizationRoleEntityListing> CreateRolesDefaultAsync (bool? force = null);
+        System.Threading.Tasks.Task<OrganizationRoleEntityListing> PostRolesDefaultAsync (bool? force = null);
 
         /// <summary>
         /// Restores all default roles
@@ -318,7 +318,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="force">Restore default roles</param>
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> CreateRolesDefaultAsyncWithHttpInfo (bool? force = null);
+        System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> PostRolesDefaultAsyncWithHttpInfo (bool? force = null);
         
         /// <summary>
         /// Get an org role to default role comparison comparison
@@ -329,7 +329,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="leftRoleId">Left Role ID</param>
         /// <param name="rightRoleId">Right Role id</param>
         /// <returns>DomainOrgRoleDifference</returns>
-        DomainOrgRoleDifference GetRolesLeftRoleComparedefaultByRightRoleId (string leftRoleId, string rightRoleId);
+        DomainOrgRoleDifference GetRoleComparedefault (string leftRoleId, string rightRoleId);
   
         /// <summary>
         /// Get an org role to default role comparison comparison
@@ -340,7 +340,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="leftRoleId">Left Role ID</param>
         /// <param name="rightRoleId">Right Role id</param>
         /// <returns>ApiResponse of DomainOrgRoleDifference</returns>
-        ApiResponse<DomainOrgRoleDifference> GetRolesLeftRoleComparedefaultByRightRoleIdWithHttpInfo (string leftRoleId, string rightRoleId);
+        ApiResponse<DomainOrgRoleDifference> GetRoleComparedefaultWithHttpInfo (string leftRoleId, string rightRoleId);
 
         /// <summary>
         /// Get an org role to default role comparison comparison
@@ -351,7 +351,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="leftRoleId">Left Role ID</param>
         /// <param name="rightRoleId">Right Role id</param>
         /// <returns>Task of DomainOrgRoleDifference</returns>
-        System.Threading.Tasks.Task<DomainOrgRoleDifference> GetRolesLeftRoleComparedefaultByRightRoleIdAsync (string leftRoleId, string rightRoleId);
+        System.Threading.Tasks.Task<DomainOrgRoleDifference> GetRoleComparedefaultAsync (string leftRoleId, string rightRoleId);
 
         /// <summary>
         /// Get an org role to default role comparison comparison
@@ -362,7 +362,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="leftRoleId">Left Role ID</param>
         /// <param name="rightRoleId">Right Role id</param>
         /// <returns>Task of ApiResponse (DomainOrgRoleDifference)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainOrgRoleDifference>> GetRolesLeftRoleComparedefaultByRightRoleIdAsyncWithHttpInfo (string leftRoleId, string rightRoleId);
+        System.Threading.Tasks.Task<ApiResponse<DomainOrgRoleDifference>> GetRoleComparedefaultAsyncWithHttpInfo (string leftRoleId, string rightRoleId);
         
         /// <summary>
         /// Get an unsaved org role to default role comparison
@@ -374,7 +374,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="rightRoleId">Right Role id</param>
         /// <param name="body"></param>
         /// <returns>DomainOrgRoleDifference</returns>
-        DomainOrgRoleDifference CreateRolesLeftRoleComparedefaultByRightRoleId (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null);
+        DomainOrgRoleDifference PostRoleComparedefault (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null);
   
         /// <summary>
         /// Get an unsaved org role to default role comparison
@@ -386,7 +386,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="rightRoleId">Right Role id</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of DomainOrgRoleDifference</returns>
-        ApiResponse<DomainOrgRoleDifference> CreateRolesLeftRoleComparedefaultByRightRoleIdWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null);
+        ApiResponse<DomainOrgRoleDifference> PostRoleComparedefaultWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null);
 
         /// <summary>
         /// Get an unsaved org role to default role comparison
@@ -398,7 +398,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="rightRoleId">Right Role id</param>
         /// <param name="body"></param>
         /// <returns>Task of DomainOrgRoleDifference</returns>
-        System.Threading.Tasks.Task<DomainOrgRoleDifference> CreateRolesLeftRoleComparedefaultByRightRoleIdAsync (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null);
+        System.Threading.Tasks.Task<DomainOrgRoleDifference> PostRoleComparedefaultAsync (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null);
 
         /// <summary>
         /// Get an unsaved org role to default role comparison
@@ -410,7 +410,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="rightRoleId">Right Role id</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DomainOrgRoleDifference)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainOrgRoleDifference>> CreateRolesLeftRoleComparedefaultByRightRoleIdAsyncWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null);
+        System.Threading.Tasks.Task<ApiResponse<DomainOrgRoleDifference>> PostRoleComparedefaultAsyncWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null);
         
         /// <summary>
         /// Get a single organization role.
@@ -461,7 +461,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>DomainOrganizationRole</returns>
-        DomainOrganizationRole UpdateRole (string roleId, DomainOrganizationRole body = null);
+        DomainOrganizationRole PutRole (string roleId, DomainOrganizationRole body = null);
   
         /// <summary>
         /// Update an organization role.
@@ -472,7 +472,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
-        ApiResponse<DomainOrganizationRole> UpdateRoleWithHttpInfo (string roleId, DomainOrganizationRole body = null);
+        ApiResponse<DomainOrganizationRole> PutRoleWithHttpInfo (string roleId, DomainOrganizationRole body = null);
 
         /// <summary>
         /// Update an organization role.
@@ -483,7 +483,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>Task of DomainOrganizationRole</returns>
-        System.Threading.Tasks.Task<DomainOrganizationRole> UpdateRoleAsync (string roleId, DomainOrganizationRole body = null);
+        System.Threading.Tasks.Task<DomainOrganizationRole> PutRoleAsync (string roleId, DomainOrganizationRole body = null);
 
         /// <summary>
         /// Update an organization role.
@@ -494,7 +494,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> UpdateRoleAsyncWithHttpInfo (string roleId, DomainOrganizationRole body = null);
+        System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PutRoleAsyncWithHttpInfo (string roleId, DomainOrganizationRole body = null);
         
         /// <summary>
         /// Delete an organization role.
@@ -589,7 +589,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>List&lt;string&gt;</returns>
-        List<string> UpdateRoleUsersAdd (string roleId, List<string> body = null);
+        List<string> PutRoleUsersAdd (string roleId, List<string> body = null);
   
         /// <summary>
         /// Sets the users for the role
@@ -600,7 +600,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        ApiResponse<List<string>> UpdateRoleUsersAddWithHttpInfo (string roleId, List<string> body = null);
+        ApiResponse<List<string>> PutRoleUsersAddWithHttpInfo (string roleId, List<string> body = null);
 
         /// <summary>
         /// Sets the users for the role
@@ -611,7 +611,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;string&gt;</returns>
-        System.Threading.Tasks.Task<List<string>> UpdateRoleUsersAddAsync (string roleId, List<string> body = null);
+        System.Threading.Tasks.Task<List<string>> PutRoleUsersAddAsync (string roleId, List<string> body = null);
 
         /// <summary>
         /// Sets the users for the role
@@ -622,7 +622,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<string>>> UpdateRoleUsersAddAsyncWithHttpInfo (string roleId, List<string> body = null);
+        System.Threading.Tasks.Task<ApiResponse<List<string>>> PutRoleUsersAddAsyncWithHttpInfo (string roleId, List<string> body = null);
         
         /// <summary>
         /// Removes the users from the role
@@ -633,7 +633,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>List&lt;string&gt;</returns>
-        List<string> UpdateRoleUsersRemove (string roleId, List<string> body = null);
+        List<string> PutRoleUsersRemove (string roleId, List<string> body = null);
   
         /// <summary>
         /// Removes the users from the role
@@ -644,7 +644,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        ApiResponse<List<string>> UpdateRoleUsersRemoveWithHttpInfo (string roleId, List<string> body = null);
+        ApiResponse<List<string>> PutRoleUsersRemoveWithHttpInfo (string roleId, List<string> body = null);
 
         /// <summary>
         /// Removes the users from the role
@@ -655,7 +655,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;string&gt;</returns>
-        System.Threading.Tasks.Task<List<string>> UpdateRoleUsersRemoveAsync (string roleId, List<string> body = null);
+        System.Threading.Tasks.Task<List<string>> PutRoleUsersRemoveAsync (string roleId, List<string> body = null);
 
         /// <summary>
         /// Removes the users from the role
@@ -666,7 +666,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<string>>> UpdateRoleUsersRemoveAsyncWithHttpInfo (string roleId, List<string> body = null);
+        System.Threading.Tasks.Task<ApiResponse<List<string>>> PutRoleUsersRemoveAsyncWithHttpInfo (string roleId, List<string> body = null);
         
         /// <summary>
         /// Get the list of roles for a user.
@@ -717,7 +717,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
         /// <returns>List&lt;string&gt;</returns>
-        List<string> UpdateUserRoles (string userId, List<string> body = null);
+        List<string> PutUserRoles (string userId, List<string> body = null);
   
         /// <summary>
         /// Sets the user&#39;s roles
@@ -728,7 +728,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        ApiResponse<List<string>> UpdateUserRolesWithHttpInfo (string userId, List<string> body = null);
+        ApiResponse<List<string>> PutUserRolesWithHttpInfo (string userId, List<string> body = null);
 
         /// <summary>
         /// Sets the user&#39;s roles
@@ -739,7 +739,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;string&gt;</returns>
-        System.Threading.Tasks.Task<List<string>> UpdateUserRolesAsync (string userId, List<string> body = null);
+        System.Threading.Tasks.Task<List<string>> PutUserRolesAsync (string userId, List<string> body = null);
 
         /// <summary>
         /// Sets the user&#39;s roles
@@ -750,7 +750,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<string>>> UpdateUserRolesAsyncWithHttpInfo (string userId, List<string> body = null);
+        System.Threading.Tasks.Task<ApiResponse<List<string>>> PutUserRolesAsyncWithHttpInfo (string userId, List<string> body = null);
         
         /// <summary>
         /// Removes all the roles from the user.
@@ -899,15 +899,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -920,7 +926,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -931,7 +936,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -973,18 +980,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1008,7 +1021,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
@@ -1052,15 +1067,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1073,7 +1094,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1084,7 +1104,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -1126,18 +1148,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1161,7 +1189,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
@@ -1201,15 +1231,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1220,7 +1256,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1231,7 +1266,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -1269,18 +1306,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1302,7 +1345,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
@@ -1354,15 +1399,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1379,7 +1430,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1390,7 +1440,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -1440,18 +1492,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1479,7 +1537,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
@@ -1499,9 +1559,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>DomainOrganizationRole</returns>
-        public DomainOrganizationRole CreateRoles (DomainOrganizationRole body = null)
+        public DomainOrganizationRole PostRoles (DomainOrganizationRole body = null)
         {
-             ApiResponse<DomainOrganizationRole> response = CreateRolesWithHttpInfo(body);
+             ApiResponse<DomainOrganizationRole> response = PostRolesWithHttpInfo(body);
              return response.Data;
         }
 
@@ -1510,7 +1570,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
-        public ApiResponse< DomainOrganizationRole > CreateRolesWithHttpInfo (DomainOrganizationRole body = null)
+        public ApiResponse< DomainOrganizationRole > PostRolesWithHttpInfo (DomainOrganizationRole body = null)
         {
             
     
@@ -1521,15 +1581,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1538,10 +1604,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1552,14 +1623,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateRoles: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostRoles: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateRoles: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostRoles: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DomainOrganizationRole>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1572,9 +1645,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of DomainOrganizationRole</returns>
-        public async System.Threading.Tasks.Task<DomainOrganizationRole> CreateRolesAsync (DomainOrganizationRole body = null)
+        public async System.Threading.Tasks.Task<DomainOrganizationRole> PostRolesAsync (DomainOrganizationRole body = null)
         {
-             ApiResponse<DomainOrganizationRole> response = await CreateRolesAsyncWithHttpInfo(body);
+             ApiResponse<DomainOrganizationRole> response = await PostRolesAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -1584,7 +1657,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> CreateRolesAsyncWithHttpInfo (DomainOrganizationRole body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PostRolesAsyncWithHttpInfo (DomainOrganizationRole body = null)
         {
             
     
@@ -1592,18 +1665,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1626,14 +1705,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateRoles: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostRoles: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateRoles: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostRoles: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DomainOrganizationRole>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1646,9 +1727,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>OrganizationRoleEntityListing</returns>
-        public OrganizationRoleEntityListing UpdateRolesDefault (List<DomainOrganizationRole> body = null)
+        public OrganizationRoleEntityListing PutRolesDefault (List<DomainOrganizationRole> body = null)
         {
-             ApiResponse<OrganizationRoleEntityListing> response = UpdateRolesDefaultWithHttpInfo(body);
+             ApiResponse<OrganizationRoleEntityListing> response = PutRolesDefaultWithHttpInfo(body);
              return response.Data;
         }
 
@@ -1657,7 +1738,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
-        public ApiResponse< OrganizationRoleEntityListing > UpdateRolesDefaultWithHttpInfo (List<DomainOrganizationRole> body = null)
+        public ApiResponse< OrganizationRoleEntityListing > PutRolesDefaultWithHttpInfo (List<DomainOrganizationRole> body = null)
         {
             
     
@@ -1668,15 +1749,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1685,10 +1772,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1699,14 +1791,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateRolesDefault: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutRolesDefault: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateRolesDefault: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutRolesDefault: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OrganizationRoleEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1719,9 +1813,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of OrganizationRoleEntityListing</returns>
-        public async System.Threading.Tasks.Task<OrganizationRoleEntityListing> UpdateRolesDefaultAsync (List<DomainOrganizationRole> body = null)
+        public async System.Threading.Tasks.Task<OrganizationRoleEntityListing> PutRolesDefaultAsync (List<DomainOrganizationRole> body = null)
         {
-             ApiResponse<OrganizationRoleEntityListing> response = await UpdateRolesDefaultAsyncWithHttpInfo(body);
+             ApiResponse<OrganizationRoleEntityListing> response = await PutRolesDefaultAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -1731,7 +1825,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> UpdateRolesDefaultAsyncWithHttpInfo (List<DomainOrganizationRole> body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> PutRolesDefaultAsyncWithHttpInfo (List<DomainOrganizationRole> body = null)
         {
             
     
@@ -1739,18 +1833,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1773,14 +1873,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateRolesDefault: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutRolesDefault: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateRolesDefault: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutRolesDefault: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OrganizationRoleEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1793,9 +1895,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="force">Restore default roles</param> 
         /// <returns>OrganizationRoleEntityListing</returns>
-        public OrganizationRoleEntityListing CreateRolesDefault (bool? force = null)
+        public OrganizationRoleEntityListing PostRolesDefault (bool? force = null)
         {
-             ApiResponse<OrganizationRoleEntityListing> response = CreateRolesDefaultWithHttpInfo(force);
+             ApiResponse<OrganizationRoleEntityListing> response = PostRolesDefaultWithHttpInfo(force);
              return response.Data;
         }
 
@@ -1804,7 +1906,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="force">Restore default roles</param> 
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
-        public ApiResponse< OrganizationRoleEntityListing > CreateRolesDefaultWithHttpInfo (bool? force = null)
+        public ApiResponse< OrganizationRoleEntityListing > PostRolesDefaultWithHttpInfo (bool? force = null)
         {
             
     
@@ -1815,15 +1917,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1835,7 +1943,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1846,14 +1953,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateRolesDefault: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostRolesDefault: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateRolesDefault: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostRolesDefault: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OrganizationRoleEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1866,9 +1975,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="force">Restore default roles</param>
         /// <returns>Task of OrganizationRoleEntityListing</returns>
-        public async System.Threading.Tasks.Task<OrganizationRoleEntityListing> CreateRolesDefaultAsync (bool? force = null)
+        public async System.Threading.Tasks.Task<OrganizationRoleEntityListing> PostRolesDefaultAsync (bool? force = null)
         {
-             ApiResponse<OrganizationRoleEntityListing> response = await CreateRolesDefaultAsyncWithHttpInfo(force);
+             ApiResponse<OrganizationRoleEntityListing> response = await PostRolesDefaultAsyncWithHttpInfo(force);
              return response.Data;
 
         }
@@ -1878,7 +1987,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="force">Restore default roles</param>
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> CreateRolesDefaultAsyncWithHttpInfo (bool? force = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> PostRolesDefaultAsyncWithHttpInfo (bool? force = null)
         {
             
     
@@ -1886,18 +1995,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1920,14 +2035,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateRolesDefault: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostRolesDefault: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateRolesDefault: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostRolesDefault: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OrganizationRoleEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1941,9 +2058,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="leftRoleId">Left Role ID</param> 
         /// <param name="rightRoleId">Right Role id</param> 
         /// <returns>DomainOrgRoleDifference</returns>
-        public DomainOrgRoleDifference GetRolesLeftRoleComparedefaultByRightRoleId (string leftRoleId, string rightRoleId)
+        public DomainOrgRoleDifference GetRoleComparedefault (string leftRoleId, string rightRoleId)
         {
-             ApiResponse<DomainOrgRoleDifference> response = GetRolesLeftRoleComparedefaultByRightRoleIdWithHttpInfo(leftRoleId, rightRoleId);
+             ApiResponse<DomainOrgRoleDifference> response = GetRoleComparedefaultWithHttpInfo(leftRoleId, rightRoleId);
              return response.Data;
         }
 
@@ -1953,14 +2070,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="leftRoleId">Left Role ID</param> 
         /// <param name="rightRoleId">Right Role id</param> 
         /// <returns>ApiResponse of DomainOrgRoleDifference</returns>
-        public ApiResponse< DomainOrgRoleDifference > GetRolesLeftRoleComparedefaultByRightRoleIdWithHttpInfo (string leftRoleId, string rightRoleId)
+        public ApiResponse< DomainOrgRoleDifference > GetRoleComparedefaultWithHttpInfo (string leftRoleId, string rightRoleId)
         {
             
             // verify the required parameter 'leftRoleId' is set
-            if (leftRoleId == null) throw new ApiException(400, "Missing required parameter 'leftRoleId' when calling GetRolesLeftRoleComparedefaultByRightRoleId");
+            if (leftRoleId == null)
+                throw new ApiException(400, "Missing required parameter 'leftRoleId' when calling AuthorizationApi->GetRoleComparedefault");
             
             // verify the required parameter 'rightRoleId' is set
-            if (rightRoleId == null) throw new ApiException(400, "Missing required parameter 'rightRoleId' when calling GetRolesLeftRoleComparedefaultByRightRoleId");
+            if (rightRoleId == null)
+                throw new ApiException(400, "Missing required parameter 'rightRoleId' when calling AuthorizationApi->GetRoleComparedefault");
             
     
             var path_ = "/api/v1/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
@@ -1970,15 +2089,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1991,7 +2116,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -2002,14 +2126,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetRolesLeftRoleComparedefaultByRightRoleId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetRoleComparedefault: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetRolesLeftRoleComparedefaultByRightRoleId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetRoleComparedefault: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DomainOrgRoleDifference>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2023,9 +2149,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="leftRoleId">Left Role ID</param>
         /// <param name="rightRoleId">Right Role id</param>
         /// <returns>Task of DomainOrgRoleDifference</returns>
-        public async System.Threading.Tasks.Task<DomainOrgRoleDifference> GetRolesLeftRoleComparedefaultByRightRoleIdAsync (string leftRoleId, string rightRoleId)
+        public async System.Threading.Tasks.Task<DomainOrgRoleDifference> GetRoleComparedefaultAsync (string leftRoleId, string rightRoleId)
         {
-             ApiResponse<DomainOrgRoleDifference> response = await GetRolesLeftRoleComparedefaultByRightRoleIdAsyncWithHttpInfo(leftRoleId, rightRoleId);
+             ApiResponse<DomainOrgRoleDifference> response = await GetRoleComparedefaultAsyncWithHttpInfo(leftRoleId, rightRoleId);
              return response.Data;
 
         }
@@ -2036,30 +2162,36 @@ namespace ININ.PureCloudApi.Api
         /// <param name="leftRoleId">Left Role ID</param>
         /// <param name="rightRoleId">Right Role id</param>
         /// <returns>Task of ApiResponse (DomainOrgRoleDifference)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainOrgRoleDifference>> GetRolesLeftRoleComparedefaultByRightRoleIdAsyncWithHttpInfo (string leftRoleId, string rightRoleId)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainOrgRoleDifference>> GetRoleComparedefaultAsyncWithHttpInfo (string leftRoleId, string rightRoleId)
         {
             // verify the required parameter 'leftRoleId' is set
-            if (leftRoleId == null) throw new ApiException(400, "Missing required parameter 'leftRoleId' when calling GetRolesLeftRoleComparedefaultByRightRoleId");
+            if (leftRoleId == null) throw new ApiException(400, "Missing required parameter 'leftRoleId' when calling GetRoleComparedefault");
             // verify the required parameter 'rightRoleId' is set
-            if (rightRoleId == null) throw new ApiException(400, "Missing required parameter 'rightRoleId' when calling GetRolesLeftRoleComparedefaultByRightRoleId");
+            if (rightRoleId == null) throw new ApiException(400, "Missing required parameter 'rightRoleId' when calling GetRoleComparedefault");
             
     
             var path_ = "/api/v1/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2083,14 +2215,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetRolesLeftRoleComparedefaultByRightRoleId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetRoleComparedefault: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetRolesLeftRoleComparedefaultByRightRoleId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetRoleComparedefault: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DomainOrgRoleDifference>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2105,9 +2239,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="rightRoleId">Right Role id</param> 
         /// <param name="body"></param> 
         /// <returns>DomainOrgRoleDifference</returns>
-        public DomainOrgRoleDifference CreateRolesLeftRoleComparedefaultByRightRoleId (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null)
+        public DomainOrgRoleDifference PostRoleComparedefault (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null)
         {
-             ApiResponse<DomainOrgRoleDifference> response = CreateRolesLeftRoleComparedefaultByRightRoleIdWithHttpInfo(leftRoleId, rightRoleId, body);
+             ApiResponse<DomainOrgRoleDifference> response = PostRoleComparedefaultWithHttpInfo(leftRoleId, rightRoleId, body);
              return response.Data;
         }
 
@@ -2118,14 +2252,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="rightRoleId">Right Role id</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of DomainOrgRoleDifference</returns>
-        public ApiResponse< DomainOrgRoleDifference > CreateRolesLeftRoleComparedefaultByRightRoleIdWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null)
+        public ApiResponse< DomainOrgRoleDifference > PostRoleComparedefaultWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null)
         {
             
             // verify the required parameter 'leftRoleId' is set
-            if (leftRoleId == null) throw new ApiException(400, "Missing required parameter 'leftRoleId' when calling CreateRolesLeftRoleComparedefaultByRightRoleId");
+            if (leftRoleId == null)
+                throw new ApiException(400, "Missing required parameter 'leftRoleId' when calling AuthorizationApi->PostRoleComparedefault");
             
             // verify the required parameter 'rightRoleId' is set
-            if (rightRoleId == null) throw new ApiException(400, "Missing required parameter 'rightRoleId' when calling CreateRolesLeftRoleComparedefaultByRightRoleId");
+            if (rightRoleId == null)
+                throw new ApiException(400, "Missing required parameter 'rightRoleId' when calling AuthorizationApi->PostRoleComparedefault");
             
     
             var path_ = "/api/v1/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
@@ -2135,15 +2271,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2154,10 +2296,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -2168,14 +2315,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateRolesLeftRoleComparedefaultByRightRoleId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostRoleComparedefault: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateRolesLeftRoleComparedefaultByRightRoleId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostRoleComparedefault: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DomainOrgRoleDifference>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2190,9 +2339,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="rightRoleId">Right Role id</param>
         /// <param name="body"></param>
         /// <returns>Task of DomainOrgRoleDifference</returns>
-        public async System.Threading.Tasks.Task<DomainOrgRoleDifference> CreateRolesLeftRoleComparedefaultByRightRoleIdAsync (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null)
+        public async System.Threading.Tasks.Task<DomainOrgRoleDifference> PostRoleComparedefaultAsync (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null)
         {
-             ApiResponse<DomainOrgRoleDifference> response = await CreateRolesLeftRoleComparedefaultByRightRoleIdAsyncWithHttpInfo(leftRoleId, rightRoleId, body);
+             ApiResponse<DomainOrgRoleDifference> response = await PostRoleComparedefaultAsyncWithHttpInfo(leftRoleId, rightRoleId, body);
              return response.Data;
 
         }
@@ -2204,30 +2353,36 @@ namespace ININ.PureCloudApi.Api
         /// <param name="rightRoleId">Right Role id</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DomainOrgRoleDifference)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainOrgRoleDifference>> CreateRolesLeftRoleComparedefaultByRightRoleIdAsyncWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainOrgRoleDifference>> PostRoleComparedefaultAsyncWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null)
         {
             // verify the required parameter 'leftRoleId' is set
-            if (leftRoleId == null) throw new ApiException(400, "Missing required parameter 'leftRoleId' when calling CreateRolesLeftRoleComparedefaultByRightRoleId");
+            if (leftRoleId == null) throw new ApiException(400, "Missing required parameter 'leftRoleId' when calling PostRoleComparedefault");
             // verify the required parameter 'rightRoleId' is set
-            if (rightRoleId == null) throw new ApiException(400, "Missing required parameter 'rightRoleId' when calling CreateRolesLeftRoleComparedefaultByRightRoleId");
+            if (rightRoleId == null) throw new ApiException(400, "Missing required parameter 'rightRoleId' when calling PostRoleComparedefault");
             
     
             var path_ = "/api/v1/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2252,14 +2407,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateRolesLeftRoleComparedefaultByRightRoleId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostRoleComparedefault: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateRolesLeftRoleComparedefaultByRightRoleId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostRoleComparedefault: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DomainOrgRoleDifference>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2287,7 +2444,8 @@ namespace ININ.PureCloudApi.Api
         {
             
             // verify the required parameter 'roleId' is set
-            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling GetRole");
+            if (roleId == null)
+                throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->GetRole");
             
     
             var path_ = "/api/v1/authorization/roles/{roleId}";
@@ -2297,15 +2455,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2317,7 +2481,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -2328,7 +2491,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -2370,18 +2535,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2404,7 +2575,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
@@ -2425,9 +2598,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param> 
         /// <param name="body"></param> 
         /// <returns>DomainOrganizationRole</returns>
-        public DomainOrganizationRole UpdateRole (string roleId, DomainOrganizationRole body = null)
+        public DomainOrganizationRole PutRole (string roleId, DomainOrganizationRole body = null)
         {
-             ApiResponse<DomainOrganizationRole> response = UpdateRoleWithHttpInfo(roleId, body);
+             ApiResponse<DomainOrganizationRole> response = PutRoleWithHttpInfo(roleId, body);
              return response.Data;
         }
 
@@ -2437,11 +2610,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
-        public ApiResponse< DomainOrganizationRole > UpdateRoleWithHttpInfo (string roleId, DomainOrganizationRole body = null)
+        public ApiResponse< DomainOrganizationRole > PutRoleWithHttpInfo (string roleId, DomainOrganizationRole body = null)
         {
             
             // verify the required parameter 'roleId' is set
-            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling UpdateRole");
+            if (roleId == null)
+                throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PutRole");
             
     
             var path_ = "/api/v1/authorization/roles/{roleId}";
@@ -2451,15 +2625,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2469,10 +2649,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -2483,14 +2668,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateRole: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutRole: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateRole: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutRole: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DomainOrganizationRole>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2504,9 +2691,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>Task of DomainOrganizationRole</returns>
-        public async System.Threading.Tasks.Task<DomainOrganizationRole> UpdateRoleAsync (string roleId, DomainOrganizationRole body = null)
+        public async System.Threading.Tasks.Task<DomainOrganizationRole> PutRoleAsync (string roleId, DomainOrganizationRole body = null)
         {
-             ApiResponse<DomainOrganizationRole> response = await UpdateRoleAsyncWithHttpInfo(roleId, body);
+             ApiResponse<DomainOrganizationRole> response = await PutRoleAsyncWithHttpInfo(roleId, body);
              return response.Data;
 
         }
@@ -2517,28 +2704,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> UpdateRoleAsyncWithHttpInfo (string roleId, DomainOrganizationRole body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PutRoleAsyncWithHttpInfo (string roleId, DomainOrganizationRole body = null)
         {
             // verify the required parameter 'roleId' is set
-            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling UpdateRole");
+            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling PutRole");
             
     
             var path_ = "/api/v1/authorization/roles/{roleId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2562,14 +2755,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateRole: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutRole: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateRole: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutRole: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DomainOrganizationRole>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2596,7 +2791,8 @@ namespace ININ.PureCloudApi.Api
         {
             
             // verify the required parameter 'roleId' is set
-            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling DeleteRole");
+            if (roleId == null)
+                throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->DeleteRole");
             
     
             var path_ = "/api/v1/authorization/roles/{roleId}";
@@ -2606,15 +2802,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2626,7 +2828,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -2637,7 +2838,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -2678,18 +2881,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2712,7 +2921,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
@@ -2749,7 +2960,8 @@ namespace ININ.PureCloudApi.Api
         {
             
             // verify the required parameter 'roleId' is set
-            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling PatchRole");
+            if (roleId == null)
+                throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PatchRole");
             
     
             var path_ = "/api/v1/authorization/roles/{roleId}";
@@ -2759,15 +2971,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2777,10 +2995,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -2791,7 +3014,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -2835,18 +3060,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2870,7 +3101,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
@@ -2891,9 +3124,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param> 
         /// <param name="body"></param> 
         /// <returns>List&lt;string&gt;</returns>
-        public List<string> UpdateRoleUsersAdd (string roleId, List<string> body = null)
+        public List<string> PutRoleUsersAdd (string roleId, List<string> body = null)
         {
-             ApiResponse<List<string>> response = UpdateRoleUsersAddWithHttpInfo(roleId, body);
+             ApiResponse<List<string>> response = PutRoleUsersAddWithHttpInfo(roleId, body);
              return response.Data;
         }
 
@@ -2903,11 +3136,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        public ApiResponse< List<string> > UpdateRoleUsersAddWithHttpInfo (string roleId, List<string> body = null)
+        public ApiResponse< List<string> > PutRoleUsersAddWithHttpInfo (string roleId, List<string> body = null)
         {
             
             // verify the required parameter 'roleId' is set
-            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling UpdateRoleUsersAdd");
+            if (roleId == null)
+                throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PutRoleUsersAdd");
             
     
             var path_ = "/api/v1/authorization/roles/{roleId}/users/add";
@@ -2917,15 +3151,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2935,10 +3175,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -2949,14 +3194,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateRoleUsersAdd: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutRoleUsersAdd: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateRoleUsersAdd: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutRoleUsersAdd: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<List<string>>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2970,9 +3217,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;string&gt;</returns>
-        public async System.Threading.Tasks.Task<List<string>> UpdateRoleUsersAddAsync (string roleId, List<string> body = null)
+        public async System.Threading.Tasks.Task<List<string>> PutRoleUsersAddAsync (string roleId, List<string> body = null)
         {
-             ApiResponse<List<string>> response = await UpdateRoleUsersAddAsyncWithHttpInfo(roleId, body);
+             ApiResponse<List<string>> response = await PutRoleUsersAddAsyncWithHttpInfo(roleId, body);
              return response.Data;
 
         }
@@ -2983,28 +3230,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<string>>> UpdateRoleUsersAddAsyncWithHttpInfo (string roleId, List<string> body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<string>>> PutRoleUsersAddAsyncWithHttpInfo (string roleId, List<string> body = null)
         {
             // verify the required parameter 'roleId' is set
-            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling UpdateRoleUsersAdd");
+            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling PutRoleUsersAdd");
             
     
             var path_ = "/api/v1/authorization/roles/{roleId}/users/add";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3028,14 +3281,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateRoleUsersAdd: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutRoleUsersAdd: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateRoleUsersAdd: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutRoleUsersAdd: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<List<string>>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3049,9 +3304,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param> 
         /// <param name="body"></param> 
         /// <returns>List&lt;string&gt;</returns>
-        public List<string> UpdateRoleUsersRemove (string roleId, List<string> body = null)
+        public List<string> PutRoleUsersRemove (string roleId, List<string> body = null)
         {
-             ApiResponse<List<string>> response = UpdateRoleUsersRemoveWithHttpInfo(roleId, body);
+             ApiResponse<List<string>> response = PutRoleUsersRemoveWithHttpInfo(roleId, body);
              return response.Data;
         }
 
@@ -3061,11 +3316,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        public ApiResponse< List<string> > UpdateRoleUsersRemoveWithHttpInfo (string roleId, List<string> body = null)
+        public ApiResponse< List<string> > PutRoleUsersRemoveWithHttpInfo (string roleId, List<string> body = null)
         {
             
             // verify the required parameter 'roleId' is set
-            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling UpdateRoleUsersRemove");
+            if (roleId == null)
+                throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PutRoleUsersRemove");
             
     
             var path_ = "/api/v1/authorization/roles/{roleId}/users/remove";
@@ -3075,15 +3331,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3093,10 +3355,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -3107,14 +3374,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateRoleUsersRemove: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutRoleUsersRemove: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateRoleUsersRemove: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutRoleUsersRemove: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<List<string>>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3128,9 +3397,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;string&gt;</returns>
-        public async System.Threading.Tasks.Task<List<string>> UpdateRoleUsersRemoveAsync (string roleId, List<string> body = null)
+        public async System.Threading.Tasks.Task<List<string>> PutRoleUsersRemoveAsync (string roleId, List<string> body = null)
         {
-             ApiResponse<List<string>> response = await UpdateRoleUsersRemoveAsyncWithHttpInfo(roleId, body);
+             ApiResponse<List<string>> response = await PutRoleUsersRemoveAsyncWithHttpInfo(roleId, body);
              return response.Data;
 
         }
@@ -3141,28 +3410,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<string>>> UpdateRoleUsersRemoveAsyncWithHttpInfo (string roleId, List<string> body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<string>>> PutRoleUsersRemoveAsyncWithHttpInfo (string roleId, List<string> body = null)
         {
             // verify the required parameter 'roleId' is set
-            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling UpdateRoleUsersRemove");
+            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling PutRoleUsersRemove");
             
     
             var path_ = "/api/v1/authorization/roles/{roleId}/users/remove";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3186,14 +3461,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateRoleUsersRemove: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutRoleUsersRemove: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateRoleUsersRemove: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutRoleUsersRemove: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<List<string>>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3221,7 +3498,8 @@ namespace ININ.PureCloudApi.Api
         {
             
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling GetUserRoles");
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling AuthorizationApi->GetUserRoles");
             
     
             var path_ = "/api/v1/authorization/users/{userId}/roles";
@@ -3231,15 +3509,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3251,7 +3535,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -3262,7 +3545,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -3304,18 +3589,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3338,7 +3629,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
@@ -3359,9 +3652,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param> 
         /// <param name="body"></param> 
         /// <returns>List&lt;string&gt;</returns>
-        public List<string> UpdateUserRoles (string userId, List<string> body = null)
+        public List<string> PutUserRoles (string userId, List<string> body = null)
         {
-             ApiResponse<List<string>> response = UpdateUserRolesWithHttpInfo(userId, body);
+             ApiResponse<List<string>> response = PutUserRolesWithHttpInfo(userId, body);
              return response.Data;
         }
 
@@ -3371,11 +3664,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        public ApiResponse< List<string> > UpdateUserRolesWithHttpInfo (string userId, List<string> body = null)
+        public ApiResponse< List<string> > PutUserRolesWithHttpInfo (string userId, List<string> body = null)
         {
             
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling UpdateUserRoles");
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling AuthorizationApi->PutUserRoles");
             
     
             var path_ = "/api/v1/authorization/users/{userId}/roles";
@@ -3385,15 +3679,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3403,10 +3703,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -3417,14 +3722,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateUserRoles: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutUserRoles: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateUserRoles: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutUserRoles: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<List<string>>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3438,9 +3745,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;string&gt;</returns>
-        public async System.Threading.Tasks.Task<List<string>> UpdateUserRolesAsync (string userId, List<string> body = null)
+        public async System.Threading.Tasks.Task<List<string>> PutUserRolesAsync (string userId, List<string> body = null)
         {
-             ApiResponse<List<string>> response = await UpdateUserRolesAsyncWithHttpInfo(userId, body);
+             ApiResponse<List<string>> response = await PutUserRolesAsyncWithHttpInfo(userId, body);
              return response.Data;
 
         }
@@ -3451,28 +3758,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<string>>> UpdateUserRolesAsyncWithHttpInfo (string userId, List<string> body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<string>>> PutUserRolesAsyncWithHttpInfo (string userId, List<string> body = null)
         {
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling UpdateUserRoles");
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling PutUserRoles");
             
     
             var path_ = "/api/v1/authorization/users/{userId}/roles";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3496,14 +3809,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateUserRoles: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutUserRoles: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateUserRoles: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutUserRoles: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<List<string>>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3530,7 +3845,8 @@ namespace ININ.PureCloudApi.Api
         {
             
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling DeleteUserRoles");
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling AuthorizationApi->DeleteUserRoles");
             
     
             var path_ = "/api/v1/authorization/users/{userId}/roles";
@@ -3540,15 +3856,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3560,7 +3882,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -3571,7 +3892,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -3612,18 +3935,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3646,7 +3975,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  

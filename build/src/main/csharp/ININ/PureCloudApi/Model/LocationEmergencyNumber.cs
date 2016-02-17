@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class LocationEmergencyNumber :  IEquatable<LocationEmergencyNumber>
+    public partial class LocationEmergencyNumber :  IEquatable<LocationEmergencyNumber>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="LocationEmergencyNumber" /> class.
@@ -89,7 +88,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if LocationEmergencyNumber instances are equal
         /// </summary>
-        /// <param name="obj">Instance of LocationEmergencyNumber to be compared</param>
+        /// <param name="other">Instance of LocationEmergencyNumber to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(LocationEmergencyNumber other)
         {
@@ -128,19 +127,17 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.E164 != null)
-                    hash = hash * 57 + this.E164.GetHashCode();
+                    hash = hash * 59 + this.E164.GetHashCode();
                 
                 if (this.Number != null)
-                    hash = hash * 57 + this.Number.GetHashCode();
+                    hash = hash * 59 + this.Number.GetHashCode();
                 
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
+                    hash = hash * 59 + this.Type.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

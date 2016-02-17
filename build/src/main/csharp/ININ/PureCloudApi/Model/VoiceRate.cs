@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class VoiceRate :  IEquatable<VoiceRate>
+    public partial class VoiceRate :  IEquatable<VoiceRate>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="VoiceRate" /> class.
@@ -153,7 +152,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if VoiceRate instances are equal
         /// </summary>
-        /// <param name="obj">Instance of VoiceRate to be compared</param>
+        /// <param name="other">Instance of VoiceRate to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(VoiceRate other)
         {
@@ -227,40 +226,38 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Currency != null)
-                    hash = hash * 57 + this.Currency.GetHashCode();
+                    hash = hash * 59 + this.Currency.GetHashCode();
                 
                 if (this.AmendmentId != null)
-                    hash = hash * 57 + this.AmendmentId.GetHashCode();
+                    hash = hash * 59 + this.AmendmentId.GetHashCode();
                 
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
+                    hash = hash * 59 + this.Type.GetHashCode();
                 
                 if (this.EffectiveDate != null)
-                    hash = hash * 57 + this.EffectiveDate.GetHashCode();
+                    hash = hash * 59 + this.EffectiveDate.GetHashCode();
                 
                 if (this.Rate != null)
-                    hash = hash * 57 + this.Rate.GetHashCode();
+                    hash = hash * 59 + this.Rate.GetHashCode();
                 
                 if (this.DurationMinimumSeconds != null)
-                    hash = hash * 57 + this.DurationMinimumSeconds.GetHashCode();
+                    hash = hash * 59 + this.DurationMinimumSeconds.GetHashCode();
                 
                 if (this.DurationIncrementSeconds != null)
-                    hash = hash * 57 + this.DurationIncrementSeconds.GetHashCode();
+                    hash = hash * 59 + this.DurationIncrementSeconds.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Preview :  IEquatable<Preview>
+    public partial class Preview :  IEquatable<Preview>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Preview" /> class.
@@ -137,7 +136,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Preview instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Preview to be compared</param>
+        /// <param name="other">Instance of Preview to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Preview other)
         {
@@ -206,37 +205,35 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 if (this.Campaign != null)
-                    hash = hash * 57 + this.Campaign.GetHashCode();
+                    hash = hash * 59 + this.Campaign.GetHashCode();
                 
                 if (this.ContactList != null)
-                    hash = hash * 57 + this.ContactList.GetHashCode();
+                    hash = hash * 59 + this.ContactList.GetHashCode();
                 
                 if (this.Contact != null)
-                    hash = hash * 57 + this.Contact.GetHashCode();
+                    hash = hash * 59 + this.Contact.GetHashCode();
                 
                 if (this.AvailablePhoneNumbers != null)
-                    hash = hash * 57 + this.AvailablePhoneNumbers.GetHashCode();
+                    hash = hash * 59 + this.AvailablePhoneNumbers.GetHashCode();
                 
                 if (this.RemainingSeconds != null)
-                    hash = hash * 57 + this.RemainingSeconds.GetHashCode();
+                    hash = hash * 59 + this.RemainingSeconds.GetHashCode();
                 
                 if (this.ScriptId != null)
-                    hash = hash * 57 + this.ScriptId.GetHashCode();
+                    hash = hash * 59 + this.ScriptId.GetHashCode();
                 
                 if (this.TimedOut != null)
-                    hash = hash * 57 + this.TimedOut.GetHashCode();
+                    hash = hash * 59 + this.TimedOut.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

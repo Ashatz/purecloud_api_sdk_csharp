@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Call :  IEquatable<Call>
+    public partial class Call :  IEquatable<Call>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Call" /> class.
@@ -181,7 +180,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Call instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Call to be compared</param>
+        /// <param name="other">Instance of Call to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Call other)
         {
@@ -275,52 +274,50 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.State != null)
-                    hash = hash * 57 + this.State.GetHashCode();
+                    hash = hash * 59 + this.State.GetHashCode();
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Direction != null)
-                    hash = hash * 57 + this.Direction.GetHashCode();
+                    hash = hash * 59 + this.Direction.GetHashCode();
                 
                 if (this.Recording != null)
-                    hash = hash * 57 + this.Recording.GetHashCode();
+                    hash = hash * 59 + this.Recording.GetHashCode();
                 
                 if (this.RecordingState != null)
-                    hash = hash * 57 + this.RecordingState.GetHashCode();
+                    hash = hash * 59 + this.RecordingState.GetHashCode();
                 
                 if (this.Muted != null)
-                    hash = hash * 57 + this.Muted.GetHashCode();
+                    hash = hash * 59 + this.Muted.GetHashCode();
                 
                 if (this.Confined != null)
-                    hash = hash * 57 + this.Confined.GetHashCode();
+                    hash = hash * 59 + this.Confined.GetHashCode();
                 
                 if (this.Held != null)
-                    hash = hash * 57 + this.Held.GetHashCode();
+                    hash = hash * 59 + this.Held.GetHashCode();
                 
                 if (this.RecordingId != null)
-                    hash = hash * 57 + this.RecordingId.GetHashCode();
+                    hash = hash * 59 + this.RecordingId.GetHashCode();
                 
                 if (this.Segments != null)
-                    hash = hash * 57 + this.Segments.GetHashCode();
+                    hash = hash * 59 + this.Segments.GetHashCode();
                 
                 if (this.ErrorInfo != null)
-                    hash = hash * 57 + this.ErrorInfo.GetHashCode();
+                    hash = hash * 59 + this.ErrorInfo.GetHashCode();
                 
                 if (this.DisconnectType != null)
-                    hash = hash * 57 + this.DisconnectType.GetHashCode();
+                    hash = hash * 59 + this.DisconnectType.GetHashCode();
                 
                 if (this.StartHoldTime != null)
-                    hash = hash * 57 + this.StartHoldTime.GetHashCode();
+                    hash = hash * 59 + this.StartHoldTime.GetHashCode();
                 
                 if (this.DocumentId != null)
-                    hash = hash * 57 + this.DocumentId.GetHashCode();
+                    hash = hash * 59 + this.DocumentId.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

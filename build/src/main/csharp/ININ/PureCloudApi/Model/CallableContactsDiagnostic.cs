@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class CallableContactsDiagnostic :  IEquatable<CallableContactsDiagnostic>
+    public partial class CallableContactsDiagnostic :  IEquatable<CallableContactsDiagnostic>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CallableContactsDiagnostic" /> class.
@@ -88,7 +87,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if CallableContactsDiagnostic instances are equal
         /// </summary>
-        /// <param name="obj">Instance of CallableContactsDiagnostic to be compared</param>
+        /// <param name="other">Instance of CallableContactsDiagnostic to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(CallableContactsDiagnostic other)
         {
@@ -127,19 +126,17 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.DncLists != null)
-                    hash = hash * 57 + this.DncLists.GetHashCode();
+                    hash = hash * 59 + this.DncLists.GetHashCode();
                 
                 if (this.CallableTimeSet != null)
-                    hash = hash * 57 + this.CallableTimeSet.GetHashCode();
+                    hash = hash * 59 + this.CallableTimeSet.GetHashCode();
                 
                 if (this.RuleSets != null)
-                    hash = hash * 57 + this.RuleSets.GetHashCode();
+                    hash = hash * 59 + this.RuleSets.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

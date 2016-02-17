@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class OAuthClient :  IEquatable<OAuthClient>
+    public partial class OAuthClient :  IEquatable<OAuthClient>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="OAuthClient" /> class.
@@ -144,7 +143,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if OAuthClient instances are equal
         /// </summary>
-        /// <param name="obj">Instance of OAuthClient to be compared</param>
+        /// <param name="other">Instance of OAuthClient to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(OAuthClient other)
         {
@@ -213,37 +212,35 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.AccessTokenValiditySeconds != null)
-                    hash = hash * 57 + this.AccessTokenValiditySeconds.GetHashCode();
+                    hash = hash * 59 + this.AccessTokenValiditySeconds.GetHashCode();
                 
                 if (this.AuthorizedGrantTypes != null)
-                    hash = hash * 57 + this.AuthorizedGrantTypes.GetHashCode();
+                    hash = hash * 59 + this.AuthorizedGrantTypes.GetHashCode();
                 
                 if (this.Description != null)
-                    hash = hash * 57 + this.Description.GetHashCode();
+                    hash = hash * 59 + this.Description.GetHashCode();
                 
                 if (this.RegisteredRedirectUri != null)
-                    hash = hash * 57 + this.RegisteredRedirectUri.GetHashCode();
+                    hash = hash * 59 + this.RegisteredRedirectUri.GetHashCode();
                 
                 if (this.Secret != null)
-                    hash = hash * 57 + this.Secret.GetHashCode();
+                    hash = hash * 59 + this.Secret.GetHashCode();
                 
                 if (this.RoleIds != null)
-                    hash = hash * 57 + this.RoleIds.GetHashCode();
+                    hash = hash * 59 + this.RoleIds.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

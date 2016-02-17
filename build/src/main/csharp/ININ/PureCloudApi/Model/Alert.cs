@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Alert :  IEquatable<Alert>
+    public partial class Alert :  IEquatable<Alert>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Alert" /> class.
@@ -189,7 +188,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Alert instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Alert to be compared</param>
+        /// <param name="other">Instance of Alert to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Alert other)
         {
@@ -288,55 +287,53 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Title != null)
-                    hash = hash * 57 + this.Title.GetHashCode();
+                    hash = hash * 59 + this.Title.GetHashCode();
                 
                 if (this.Description != null)
-                    hash = hash * 57 + this.Description.GetHashCode();
+                    hash = hash * 59 + this.Description.GetHashCode();
                 
                 if (this.Unread != null)
-                    hash = hash * 57 + this.Unread.GetHashCode();
+                    hash = hash * 59 + this.Unread.GetHashCode();
                 
                 if (this.Entity != null)
-                    hash = hash * 57 + this.Entity.GetHashCode();
+                    hash = hash * 59 + this.Entity.GetHashCode();
                 
                 if (this.Metric != null)
-                    hash = hash * 57 + this.Metric.GetHashCode();
+                    hash = hash * 59 + this.Metric.GetHashCode();
                 
                 if (this.MetricThresholds != null)
-                    hash = hash * 57 + this.MetricThresholds.GetHashCode();
+                    hash = hash * 59 + this.MetricThresholds.GetHashCode();
                 
                 if (this.MetricValue != null)
-                    hash = hash * 57 + this.MetricValue.GetHashCode();
+                    hash = hash * 59 + this.MetricValue.GetHashCode();
                 
                 if (this.StartTime != null)
-                    hash = hash * 57 + this.StartTime.GetHashCode();
+                    hash = hash * 59 + this.StartTime.GetHashCode();
                 
                 if (this.EndTime != null)
-                    hash = hash * 57 + this.EndTime.GetHashCode();
+                    hash = hash * 59 + this.EndTime.GetHashCode();
                 
                 if (this.MediaType != null)
-                    hash = hash * 57 + this.MediaType.GetHashCode();
+                    hash = hash * 59 + this.MediaType.GetHashCode();
                 
                 if (this.Statistic != null)
-                    hash = hash * 57 + this.Statistic.GetHashCode();
+                    hash = hash * 59 + this.Statistic.GetHashCode();
                 
                 if (this.RuleUri != null)
-                    hash = hash * 57 + this.RuleUri.GetHashCode();
+                    hash = hash * 59 + this.RuleUri.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

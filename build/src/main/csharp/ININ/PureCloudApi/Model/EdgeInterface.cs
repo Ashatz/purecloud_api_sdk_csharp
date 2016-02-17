@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class EdgeInterface :  IEquatable<EdgeInterface>
+    public partial class EdgeInterface :  IEquatable<EdgeInterface>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeInterface" /> class.
@@ -128,7 +127,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if EdgeInterface instances are equal
         /// </summary>
-        /// <param name="obj">Instance of EdgeInterface to be compared</param>
+        /// <param name="other">Instance of EdgeInterface to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(EdgeInterface other)
         {
@@ -192,34 +191,32 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
+                    hash = hash * 59 + this.Type.GetHashCode();
                 
                 if (this.IpAddress != null)
-                    hash = hash * 57 + this.IpAddress.GetHashCode();
+                    hash = hash * 59 + this.IpAddress.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.MacAddress != null)
-                    hash = hash * 57 + this.MacAddress.GetHashCode();
+                    hash = hash * 59 + this.MacAddress.GetHashCode();
                 
                 if (this.IfName != null)
-                    hash = hash * 57 + this.IfName.GetHashCode();
+                    hash = hash * 59 + this.IfName.GetHashCode();
                 
                 if (this.Endpoints != null)
-                    hash = hash * 57 + this.Endpoints.GetHashCode();
+                    hash = hash * 59 + this.Endpoints.GetHashCode();
                 
                 if (this.LineTypes != null)
-                    hash = hash * 57 + this.LineTypes.GetHashCode();
+                    hash = hash * 59 + this.LineTypes.GetHashCode();
                 
                 if (this.AddressFamilyId != null)
-                    hash = hash * 57 + this.AddressFamilyId.GetHashCode();
+                    hash = hash * 59 + this.AddressFamilyId.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

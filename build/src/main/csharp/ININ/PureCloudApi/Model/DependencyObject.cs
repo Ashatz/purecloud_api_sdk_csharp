@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class DependencyObject :  IEquatable<DependencyObject>
+    public partial class DependencyObject :  IEquatable<DependencyObject>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DependencyObject" /> class.
@@ -131,7 +130,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DependencyObject instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DependencyObject to be compared</param>
+        /// <param name="other">Instance of DependencyObject to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DependencyObject other)
         {
@@ -195,34 +194,32 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Version != null)
-                    hash = hash * 57 + this.Version.GetHashCode();
+                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
+                    hash = hash * 59 + this.Type.GetHashCode();
                 
                 if (this.Deleted != null)
-                    hash = hash * 57 + this.Deleted.GetHashCode();
+                    hash = hash * 59 + this.Deleted.GetHashCode();
                 
                 if (this.ConsumedResources != null)
-                    hash = hash * 57 + this.ConsumedResources.GetHashCode();
+                    hash = hash * 59 + this.ConsumedResources.GetHashCode();
                 
                 if (this.ConsumingResources != null)
-                    hash = hash * 57 + this.ConsumingResources.GetHashCode();
+                    hash = hash * 59 + this.ConsumingResources.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

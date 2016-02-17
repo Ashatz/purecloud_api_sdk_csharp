@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class UserConversationSummary :  IEquatable<UserConversationSummary>
+    public partial class UserConversationSummary :  IEquatable<UserConversationSummary>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UserConversationSummary" /> class.
@@ -120,7 +119,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if UserConversationSummary instances are equal
         /// </summary>
-        /// <param name="obj">Instance of UserConversationSummary to be compared</param>
+        /// <param name="other">Instance of UserConversationSummary to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(UserConversationSummary other)
         {
@@ -179,31 +178,29 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.UserId != null)
-                    hash = hash * 57 + this.UserId.GetHashCode();
+                    hash = hash * 59 + this.UserId.GetHashCode();
                 
                 if (this.Call != null)
-                    hash = hash * 57 + this.Call.GetHashCode();
+                    hash = hash * 59 + this.Call.GetHashCode();
                 
                 if (this.Callback != null)
-                    hash = hash * 57 + this.Callback.GetHashCode();
+                    hash = hash * 59 + this.Callback.GetHashCode();
                 
                 if (this.Email != null)
-                    hash = hash * 57 + this.Email.GetHashCode();
+                    hash = hash * 59 + this.Email.GetHashCode();
                 
                 if (this.Chat != null)
-                    hash = hash * 57 + this.Chat.GetHashCode();
+                    hash = hash * 59 + this.Chat.GetHashCode();
                 
                 if (this.SocialExpression != null)
-                    hash = hash * 57 + this.SocialExpression.GetHashCode();
+                    hash = hash * 59 + this.SocialExpression.GetHashCode();
                 
                 if (this.Video != null)
-                    hash = hash * 57 + this.Video.GetHashCode();
+                    hash = hash * 59 + this.Video.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

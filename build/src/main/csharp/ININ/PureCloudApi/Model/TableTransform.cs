@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class TableTransform :  IEquatable<TableTransform>
+    public partial class TableTransform :  IEquatable<TableTransform>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TableTransform" /> class.
@@ -112,7 +111,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if TableTransform instances are equal
         /// </summary>
-        /// <param name="obj">Instance of TableTransform to be compared</param>
+        /// <param name="other">Instance of TableTransform to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(TableTransform other)
         {
@@ -166,28 +165,26 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.HeaderRow != null)
-                    hash = hash * 57 + this.HeaderRow.GetHashCode();
+                    hash = hash * 59 + this.HeaderRow.GetHashCode();
                 
                 if (this.FirstData != null)
-                    hash = hash * 57 + this.FirstData.GetHashCode();
+                    hash = hash * 59 + this.FirstData.GetHashCode();
                 
                 if (this.HeaderReplaces != null)
-                    hash = hash * 57 + this.HeaderReplaces.GetHashCode();
+                    hash = hash * 59 + this.HeaderReplaces.GetHashCode();
                 
                 if (this.Columns != null)
-                    hash = hash * 57 + this.Columns.GetHashCode();
+                    hash = hash * 59 + this.Columns.GetHashCode();
                 
                 if (this.Unpivots != null)
-                    hash = hash * 57 + this.Unpivots.GetHashCode();
+                    hash = hash * 59 + this.Unpivots.GetHashCode();
                 
                 if (this.Collapses != null)
-                    hash = hash * 57 + this.Collapses.GetHashCode();
+                    hash = hash * 59 + this.Collapses.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Edge :  IEquatable<Edge>
+    public partial class Edge :  IEquatable<Edge>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Edge" /> class.
@@ -350,7 +349,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Edge instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Edge to be compared</param>
+        /// <param name="other">Instance of Edge to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Edge other)
         {
@@ -549,115 +548,113 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Description != null)
-                    hash = hash * 57 + this.Description.GetHashCode();
+                    hash = hash * 59 + this.Description.GetHashCode();
                 
                 if (this.Version != null)
-                    hash = hash * 57 + this.Version.GetHashCode();
+                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 if (this.DateCreated != null)
-                    hash = hash * 57 + this.DateCreated.GetHashCode();
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
                 
                 if (this.DateModified != null)
-                    hash = hash * 57 + this.DateModified.GetHashCode();
+                    hash = hash * 59 + this.DateModified.GetHashCode();
                 
                 if (this.ModifiedBy != null)
-                    hash = hash * 57 + this.ModifiedBy.GetHashCode();
+                    hash = hash * 59 + this.ModifiedBy.GetHashCode();
                 
                 if (this.CreatedBy != null)
-                    hash = hash * 57 + this.CreatedBy.GetHashCode();
+                    hash = hash * 59 + this.CreatedBy.GetHashCode();
                 
                 if (this.State != null)
-                    hash = hash * 57 + this.State.GetHashCode();
+                    hash = hash * 59 + this.State.GetHashCode();
                 
                 if (this.ModifiedByApp != null)
-                    hash = hash * 57 + this.ModifiedByApp.GetHashCode();
+                    hash = hash * 59 + this.ModifiedByApp.GetHashCode();
                 
                 if (this.CreatedByApp != null)
-                    hash = hash * 57 + this.CreatedByApp.GetHashCode();
+                    hash = hash * 59 + this.CreatedByApp.GetHashCode();
                 
                 if (this.Interfaces != null)
-                    hash = hash * 57 + this.Interfaces.GetHashCode();
+                    hash = hash * 59 + this.Interfaces.GetHashCode();
                 
                 if (this.Make != null)
-                    hash = hash * 57 + this.Make.GetHashCode();
+                    hash = hash * 59 + this.Make.GetHashCode();
                 
                 if (this.Model != null)
-                    hash = hash * 57 + this.Model.GetHashCode();
+                    hash = hash * 59 + this.Model.GetHashCode();
                 
                 if (this.ApiVersion != null)
-                    hash = hash * 57 + this.ApiVersion.GetHashCode();
+                    hash = hash * 59 + this.ApiVersion.GetHashCode();
                 
                 if (this.SoftwareVersion != null)
-                    hash = hash * 57 + this.SoftwareVersion.GetHashCode();
+                    hash = hash * 59 + this.SoftwareVersion.GetHashCode();
                 
                 if (this.SoftwareVersionTimestamp != null)
-                    hash = hash * 57 + this.SoftwareVersionTimestamp.GetHashCode();
+                    hash = hash * 59 + this.SoftwareVersionTimestamp.GetHashCode();
                 
                 if (this.SoftwareVersionPlatform != null)
-                    hash = hash * 57 + this.SoftwareVersionPlatform.GetHashCode();
+                    hash = hash * 59 + this.SoftwareVersionPlatform.GetHashCode();
                 
                 if (this.SoftwareVersionConfiguration != null)
-                    hash = hash * 57 + this.SoftwareVersionConfiguration.GetHashCode();
+                    hash = hash * 59 + this.SoftwareVersionConfiguration.GetHashCode();
                 
                 if (this.FullSoftwareVersion != null)
-                    hash = hash * 57 + this.FullSoftwareVersion.GetHashCode();
+                    hash = hash * 59 + this.FullSoftwareVersion.GetHashCode();
                 
                 if (this.PairingId != null)
-                    hash = hash * 57 + this.PairingId.GetHashCode();
+                    hash = hash * 59 + this.PairingId.GetHashCode();
                 
                 if (this.Fingerprint != null)
-                    hash = hash * 57 + this.Fingerprint.GetHashCode();
+                    hash = hash * 59 + this.Fingerprint.GetHashCode();
                 
                 if (this.FingerprintHint != null)
-                    hash = hash * 57 + this.FingerprintHint.GetHashCode();
+                    hash = hash * 59 + this.FingerprintHint.GetHashCode();
                 
                 if (this.CurrentVersion != null)
-                    hash = hash * 57 + this.CurrentVersion.GetHashCode();
+                    hash = hash * 59 + this.CurrentVersion.GetHashCode();
                 
                 if (this.StagedVersion != null)
-                    hash = hash * 57 + this.StagedVersion.GetHashCode();
+                    hash = hash * 59 + this.StagedVersion.GetHashCode();
                 
                 if (this.Patch != null)
-                    hash = hash * 57 + this.Patch.GetHashCode();
+                    hash = hash * 59 + this.Patch.GetHashCode();
                 
                 if (this.StatusCode != null)
-                    hash = hash * 57 + this.StatusCode.GetHashCode();
+                    hash = hash * 59 + this.StatusCode.GetHashCode();
                 
                 if (this.EdgeGroup != null)
-                    hash = hash * 57 + this.EdgeGroup.GetHashCode();
+                    hash = hash * 59 + this.EdgeGroup.GetHashCode();
                 
                 if (this.Site != null)
-                    hash = hash * 57 + this.Site.GetHashCode();
+                    hash = hash * 59 + this.Site.GetHashCode();
                 
                 if (this.SoftwareStatus != null)
-                    hash = hash * 57 + this.SoftwareStatus.GetHashCode();
+                    hash = hash * 59 + this.SoftwareStatus.GetHashCode();
                 
                 if (this.OnlineStatus != null)
-                    hash = hash * 57 + this.OnlineStatus.GetHashCode();
+                    hash = hash * 59 + this.OnlineStatus.GetHashCode();
                 
                 if (this.SerialNumber != null)
-                    hash = hash * 57 + this.SerialNumber.GetHashCode();
+                    hash = hash * 59 + this.SerialNumber.GetHashCode();
                 
                 if (this.PhysicalEdge != null)
-                    hash = hash * 57 + this.PhysicalEdge.GetHashCode();
+                    hash = hash * 59 + this.PhysicalEdge.GetHashCode();
                 
                 if (this.Managed != null)
-                    hash = hash * 57 + this.Managed.GetHashCode();
+                    hash = hash * 59 + this.Managed.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

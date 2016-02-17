@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class CallableTimeSet :  IEquatable<CallableTimeSet>
+    public partial class CallableTimeSet :  IEquatable<CallableTimeSet>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CallableTimeSet" /> class.
@@ -124,7 +123,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if CallableTimeSet instances are equal
         /// </summary>
-        /// <param name="obj">Instance of CallableTimeSet to be compared</param>
+        /// <param name="other">Instance of CallableTimeSet to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(CallableTimeSet other)
         {
@@ -183,31 +182,29 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.DateCreated != null)
-                    hash = hash * 57 + this.DateCreated.GetHashCode();
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
                 
                 if (this.DateModified != null)
-                    hash = hash * 57 + this.DateModified.GetHashCode();
+                    hash = hash * 59 + this.DateModified.GetHashCode();
                 
                 if (this.Version != null)
-                    hash = hash * 57 + this.Version.GetHashCode();
+                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 if (this.CallableTimes != null)
-                    hash = hash * 57 + this.CallableTimes.GetHashCode();
+                    hash = hash * 59 + this.CallableTimes.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

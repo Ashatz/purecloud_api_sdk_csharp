@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// Passed into a terminate command to customize the termination/cancellation action.
     /// </summary>
     [DataContract]
-    public class FlowTerminateRequest :  IEquatable<FlowTerminateRequest>
+    public partial class FlowTerminateRequest :  IEquatable<FlowTerminateRequest>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowTerminateRequest" /> class.
@@ -83,7 +82,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FlowTerminateRequest instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FlowTerminateRequest to be compared</param>
+        /// <param name="other">Instance of FlowTerminateRequest to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FlowTerminateRequest other)
         {
@@ -117,16 +116,14 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Force != null)
-                    hash = hash * 57 + this.Force.GetHashCode();
+                    hash = hash * 59 + this.Force.GetHashCode();
                 
                 if (this.Reason != null)
-                    hash = hash * 57 + this.Reason.GetHashCode();
+                    hash = hash * 59 + this.Reason.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

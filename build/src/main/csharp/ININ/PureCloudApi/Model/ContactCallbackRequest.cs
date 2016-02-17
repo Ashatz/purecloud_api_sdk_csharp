@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class ContactCallbackRequest :  IEquatable<ContactCallbackRequest>
+    public partial class ContactCallbackRequest :  IEquatable<ContactCallbackRequest>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactCallbackRequest" /> class.
@@ -104,7 +103,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ContactCallbackRequest instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ContactCallbackRequest to be compared</param>
+        /// <param name="other">Instance of ContactCallbackRequest to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ContactCallbackRequest other)
         {
@@ -153,25 +152,23 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.CampaignId != null)
-                    hash = hash * 57 + this.CampaignId.GetHashCode();
+                    hash = hash * 59 + this.CampaignId.GetHashCode();
                 
                 if (this.ContactListId != null)
-                    hash = hash * 57 + this.ContactListId.GetHashCode();
+                    hash = hash * 59 + this.ContactListId.GetHashCode();
                 
                 if (this.ContactId != null)
-                    hash = hash * 57 + this.ContactId.GetHashCode();
+                    hash = hash * 59 + this.ContactId.GetHashCode();
                 
                 if (this.PhoneColumn != null)
-                    hash = hash * 57 + this.PhoneColumn.GetHashCode();
+                    hash = hash * 59 + this.PhoneColumn.GetHashCode();
                 
                 if (this.Schedule != null)
-                    hash = hash * 57 + this.Schedule.GetHashCode();
+                    hash = hash * 59 + this.Schedule.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class IndexedTransform :  IEquatable<IndexedTransform>
+    public partial class IndexedTransform :  IEquatable<IndexedTransform>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="IndexedTransform" /> class.
@@ -96,7 +95,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if IndexedTransform instances are equal
         /// </summary>
-        /// <param name="obj">Instance of IndexedTransform to be compared</param>
+        /// <param name="other">Instance of IndexedTransform to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(IndexedTransform other)
         {
@@ -140,22 +139,20 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Replaces != null)
-                    hash = hash * 57 + this.Replaces.GetHashCode();
+                    hash = hash * 59 + this.Replaces.GetHashCode();
                 
                 if (this.EntityPath != null)
-                    hash = hash * 57 + this.EntityPath.GetHashCode();
+                    hash = hash * 59 + this.EntityPath.GetHashCode();
                 
                 if (this.Index != null)
-                    hash = hash * 57 + this.Index.GetHashCode();
+                    hash = hash * 59 + this.Index.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// Used as the body to the activateFlow request.
     /// </summary>
     [DataContract]
-    public class FlowActivateRequest :  IEquatable<FlowActivateRequest>
+    public partial class FlowActivateRequest :  IEquatable<FlowActivateRequest>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowActivateRequest" /> class.
@@ -74,7 +73,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FlowActivateRequest instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FlowActivateRequest to be compared</param>
+        /// <param name="other">Instance of FlowActivateRequest to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FlowActivateRequest other)
         {
@@ -103,13 +102,11 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Activated != null)
-                    hash = hash * 57 + this.Activated.GetHashCode();
+                    hash = hash * 59 + this.Activated.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

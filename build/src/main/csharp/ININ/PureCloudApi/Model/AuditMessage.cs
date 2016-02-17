@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class AuditMessage :  IEquatable<AuditMessage>
+    public partial class AuditMessage :  IEquatable<AuditMessage>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditMessage" /> class.
@@ -193,7 +192,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if AuditMessage instances are equal
         /// </summary>
-        /// <param name="obj">Instance of AuditMessage to be compared</param>
+        /// <param name="other">Instance of AuditMessage to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(AuditMessage other)
         {
@@ -297,58 +296,56 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.User != null)
-                    hash = hash * 57 + this.User.GetHashCode();
+                    hash = hash * 59 + this.User.GetHashCode();
                 
                 if (this.CorrelationId != null)
-                    hash = hash * 57 + this.CorrelationId.GetHashCode();
+                    hash = hash * 59 + this.CorrelationId.GetHashCode();
                 
                 if (this.TransactionId != null)
-                    hash = hash * 57 + this.TransactionId.GetHashCode();
+                    hash = hash * 59 + this.TransactionId.GetHashCode();
                 
                 if (this.TransactionInitiator != null)
-                    hash = hash * 57 + this.TransactionInitiator.GetHashCode();
+                    hash = hash * 59 + this.TransactionInitiator.GetHashCode();
                 
                 if (this.Application != null)
-                    hash = hash * 57 + this.Application.GetHashCode();
+                    hash = hash * 59 + this.Application.GetHashCode();
                 
                 if (this.ServiceName != null)
-                    hash = hash * 57 + this.ServiceName.GetHashCode();
+                    hash = hash * 59 + this.ServiceName.GetHashCode();
                 
                 if (this.Level != null)
-                    hash = hash * 57 + this.Level.GetHashCode();
+                    hash = hash * 59 + this.Level.GetHashCode();
                 
                 if (this.Timestamp != null)
-                    hash = hash * 57 + this.Timestamp.GetHashCode();
+                    hash = hash * 59 + this.Timestamp.GetHashCode();
                 
                 if (this.ReceivedTimestamp != null)
-                    hash = hash * 57 + this.ReceivedTimestamp.GetHashCode();
+                    hash = hash * 59 + this.ReceivedTimestamp.GetHashCode();
                 
                 if (this.Status != null)
-                    hash = hash * 57 + this.Status.GetHashCode();
+                    hash = hash * 59 + this.Status.GetHashCode();
                 
                 if (this.ActionContext != null)
-                    hash = hash * 57 + this.ActionContext.GetHashCode();
+                    hash = hash * 59 + this.ActionContext.GetHashCode();
                 
                 if (this.Action != null)
-                    hash = hash * 57 + this.Action.GetHashCode();
+                    hash = hash * 59 + this.Action.GetHashCode();
                 
                 if (this.Changes != null)
-                    hash = hash * 57 + this.Changes.GetHashCode();
+                    hash = hash * 59 + this.Changes.GetHashCode();
                 
                 if (this.Entity != null)
-                    hash = hash * 57 + this.Entity.GetHashCode();
+                    hash = hash * 59 + this.Entity.GetHashCode();
                 
                 if (this.ServiceContext != null)
-                    hash = hash * 57 + this.ServiceContext.GetHashCode();
+                    hash = hash * 59 + this.ServiceContext.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

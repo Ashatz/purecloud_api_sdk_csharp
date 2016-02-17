@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Organization :  IEquatable<Organization>
+    public partial class Organization :  IEquatable<Organization>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Organization" /> class.
@@ -171,7 +170,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Organization instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Organization to be compared</param>
+        /// <param name="other">Instance of Organization to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Organization other)
         {
@@ -260,49 +259,47 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.ThirdPartyOrgId != null)
-                    hash = hash * 57 + this.ThirdPartyOrgId.GetHashCode();
+                    hash = hash * 59 + this.ThirdPartyOrgId.GetHashCode();
                 
                 if (this.ThirdPartyOrgName != null)
-                    hash = hash * 57 + this.ThirdPartyOrgName.GetHashCode();
+                    hash = hash * 59 + this.ThirdPartyOrgName.GetHashCode();
                 
                 if (this.ThirdPartyURI != null)
-                    hash = hash * 57 + this.ThirdPartyURI.GetHashCode();
+                    hash = hash * 59 + this.ThirdPartyURI.GetHashCode();
                 
                 if (this.AdminUsername != null)
-                    hash = hash * 57 + this.AdminUsername.GetHashCode();
+                    hash = hash * 59 + this.AdminUsername.GetHashCode();
                 
                 if (this.AdminPassword != null)
-                    hash = hash * 57 + this.AdminPassword.GetHashCode();
+                    hash = hash * 59 + this.AdminPassword.GetHashCode();
                 
                 if (this.Domain != null)
-                    hash = hash * 57 + this.Domain.GetHashCode();
+                    hash = hash * 59 + this.Domain.GetHashCode();
                 
                 if (this.Version != null)
-                    hash = hash * 57 + this.Version.GetHashCode();
+                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 if (this.State != null)
-                    hash = hash * 57 + this.State.GetHashCode();
+                    hash = hash * 59 + this.State.GetHashCode();
                 
                 if (this.DefaultSiteId != null)
-                    hash = hash * 57 + this.DefaultSiteId.GetHashCode();
+                    hash = hash * 59 + this.DefaultSiteId.GetHashCode();
                 
                 if (this.Deletable != null)
-                    hash = hash * 57 + this.Deletable.GetHashCode();
+                    hash = hash * 59 + this.Deletable.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

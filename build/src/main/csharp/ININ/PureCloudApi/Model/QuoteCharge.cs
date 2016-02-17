@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class QuoteCharge :  IEquatable<QuoteCharge>
+    public partial class QuoteCharge :  IEquatable<QuoteCharge>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="QuoteCharge" /> class.
@@ -182,7 +181,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if QuoteCharge instances are equal
         /// </summary>
-        /// <param name="obj">Instance of QuoteCharge to be compared</param>
+        /// <param name="other">Instance of QuoteCharge to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(QuoteCharge other)
         {
@@ -271,49 +270,47 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Sku != null)
-                    hash = hash * 57 + this.Sku.GetHashCode();
+                    hash = hash * 59 + this.Sku.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.ChargeType != null)
-                    hash = hash * 57 + this.ChargeType.GetHashCode();
+                    hash = hash * 59 + this.ChargeType.GetHashCode();
                 
                 if (this.Quantity != null)
-                    hash = hash * 57 + this.Quantity.GetHashCode();
+                    hash = hash * 59 + this.Quantity.GetHashCode();
                 
                 if (this.ListTotal != null)
-                    hash = hash * 57 + this.ListTotal.GetHashCode();
+                    hash = hash * 59 + this.ListTotal.GetHashCode();
                 
                 if (this.Total != null)
-                    hash = hash * 57 + this.Total.GetHashCode();
+                    hash = hash * 59 + this.Total.GetHashCode();
                 
                 if (this.ListPriceDisplay != null)
-                    hash = hash * 57 + this.ListPriceDisplay.GetHashCode();
+                    hash = hash * 59 + this.ListPriceDisplay.GetHashCode();
                 
                 if (this.Discount != null)
-                    hash = hash * 57 + this.Discount.GetHashCode();
+                    hash = hash * 59 + this.Discount.GetHashCode();
                 
                 if (this.EffectivePrice != null)
-                    hash = hash * 57 + this.EffectivePrice.GetHashCode();
+                    hash = hash * 59 + this.EffectivePrice.GetHashCode();
                 
                 if (this.ProductShippable != null)
-                    hash = hash * 57 + this.ProductShippable.GetHashCode();
+                    hash = hash * 59 + this.ProductShippable.GetHashCode();
                 
                 if (this.ShippingAddress != null)
-                    hash = hash * 57 + this.ShippingAddress.GetHashCode();
+                    hash = hash * 59 + this.ShippingAddress.GetHashCode();
                 
                 if (this.ForRelatedPart != null)
-                    hash = hash * 57 + this.ForRelatedPart.GetHashCode();
+                    hash = hash * 59 + this.ForRelatedPart.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class PhoneStatus :  IEquatable<PhoneStatus>
+    public partial class PhoneStatus :  IEquatable<PhoneStatus>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneStatus" /> class.
@@ -144,7 +143,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if PhoneStatus instances are equal
         /// </summary>
-        /// <param name="obj">Instance of PhoneStatus to be compared</param>
+        /// <param name="other">Instance of PhoneStatus to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(PhoneStatus other)
         {
@@ -213,37 +212,35 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.OperationalStatus != null)
-                    hash = hash * 57 + this.OperationalStatus.GetHashCode();
+                    hash = hash * 59 + this.OperationalStatus.GetHashCode();
                 
                 if (this.EdgesStatus != null)
-                    hash = hash * 57 + this.EdgesStatus.GetHashCode();
+                    hash = hash * 59 + this.EdgesStatus.GetHashCode();
                 
                 if (this.Provision != null)
-                    hash = hash * 57 + this.Provision.GetHashCode();
+                    hash = hash * 59 + this.Provision.GetHashCode();
                 
                 if (this.LineStatuses != null)
-                    hash = hash * 57 + this.LineStatuses.GetHashCode();
+                    hash = hash * 59 + this.LineStatuses.GetHashCode();
                 
                 if (this.PhoneAssignmentToEdgeType != null)
-                    hash = hash * 57 + this.PhoneAssignmentToEdgeType.GetHashCode();
+                    hash = hash * 59 + this.PhoneAssignmentToEdgeType.GetHashCode();
                 
                 if (this.Edge != null)
-                    hash = hash * 57 + this.Edge.GetHashCode();
+                    hash = hash * 59 + this.Edge.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

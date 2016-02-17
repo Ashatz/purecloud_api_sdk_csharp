@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class TimeSlot :  IEquatable<TimeSlot>
+    public partial class TimeSlot :  IEquatable<TimeSlot>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeSlot" /> class.
@@ -88,7 +87,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if TimeSlot instances are equal
         /// </summary>
-        /// <param name="obj">Instance of TimeSlot to be compared</param>
+        /// <param name="other">Instance of TimeSlot to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(TimeSlot other)
         {
@@ -127,19 +126,17 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.StartTime != null)
-                    hash = hash * 57 + this.StartTime.GetHashCode();
+                    hash = hash * 59 + this.StartTime.GetHashCode();
                 
                 if (this.StopTime != null)
-                    hash = hash * 57 + this.StopTime.GetHashCode();
+                    hash = hash * 59 + this.StopTime.GetHashCode();
                 
                 if (this.Day != null)
-                    hash = hash * 57 + this.Day.GetHashCode();
+                    hash = hash * 59 + this.Day.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

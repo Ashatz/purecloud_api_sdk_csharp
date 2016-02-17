@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class UserStationResource :  IEquatable<UserStationResource>
+    public partial class UserStationResource :  IEquatable<UserStationResource>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UserStationResource" /> class.
@@ -137,7 +136,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if UserStationResource instances are equal
         /// </summary>
-        /// <param name="obj">Instance of UserStationResource to be compared</param>
+        /// <param name="other">Instance of UserStationResource to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(UserStationResource other)
         {
@@ -206,37 +205,35 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.UserId != null)
-                    hash = hash * 57 + this.UserId.GetHashCode();
+                    hash = hash * 59 + this.UserId.GetHashCode();
                 
                 if (this.StationId != null)
-                    hash = hash * 57 + this.StationId.GetHashCode();
+                    hash = hash * 59 + this.StationId.GetHashCode();
                 
                 if (this.StationName != null)
-                    hash = hash * 57 + this.StationName.GetHashCode();
+                    hash = hash * 59 + this.StationName.GetHashCode();
                 
                 if (this.LocationId != null)
-                    hash = hash * 57 + this.LocationId.GetHashCode();
+                    hash = hash * 59 + this.LocationId.GetHashCode();
                 
                 if (this.Provider != null)
-                    hash = hash * 57 + this.Provider.GetHashCode();
+                    hash = hash * 59 + this.Provider.GetHashCode();
                 
                 if (this.AddressGroup != null)
-                    hash = hash * 57 + this.AddressGroup.GetHashCode();
+                    hash = hash * 59 + this.AddressGroup.GetHashCode();
                 
                 if (this.UserUri != null)
-                    hash = hash * 57 + this.UserUri.GetHashCode();
+                    hash = hash * 59 + this.UserUri.GetHashCode();
                 
                 if (this.StationUri != null)
-                    hash = hash * 57 + this.StationUri.GetHashCode();
+                    hash = hash * 59 + this.StationUri.GetHashCode();
                 
                 if (this.DefaultStation != null)
-                    hash = hash * 57 + this.DefaultStation.GetHashCode();
+                    hash = hash * 59 + this.DefaultStation.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

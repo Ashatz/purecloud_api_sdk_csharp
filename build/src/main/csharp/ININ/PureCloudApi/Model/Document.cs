@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Document :  IEquatable<Document>
+    public partial class Document :  IEquatable<Document>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Document" /> class.
@@ -311,7 +310,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Document instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Document to be compared</param>
+        /// <param name="other">Instance of Document to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Document other)
         {
@@ -485,100 +484,98 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.ChangeNumber != null)
-                    hash = hash * 57 + this.ChangeNumber.GetHashCode();
+                    hash = hash * 59 + this.ChangeNumber.GetHashCode();
                 
                 if (this.DateCreated != null)
-                    hash = hash * 57 + this.DateCreated.GetHashCode();
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
                 
                 if (this.DateModified != null)
-                    hash = hash * 57 + this.DateModified.GetHashCode();
+                    hash = hash * 59 + this.DateModified.GetHashCode();
                 
                 if (this.DateUploaded != null)
-                    hash = hash * 57 + this.DateUploaded.GetHashCode();
+                    hash = hash * 59 + this.DateUploaded.GetHashCode();
                 
                 if (this.ContentUri != null)
-                    hash = hash * 57 + this.ContentUri.GetHashCode();
+                    hash = hash * 59 + this.ContentUri.GetHashCode();
                 
                 if (this.Workspace != null)
-                    hash = hash * 57 + this.Workspace.GetHashCode();
+                    hash = hash * 59 + this.Workspace.GetHashCode();
                 
                 if (this.CreatedBy != null)
-                    hash = hash * 57 + this.CreatedBy.GetHashCode();
+                    hash = hash * 59 + this.CreatedBy.GetHashCode();
                 
                 if (this.UploadedBy != null)
-                    hash = hash * 57 + this.UploadedBy.GetHashCode();
+                    hash = hash * 59 + this.UploadedBy.GetHashCode();
                 
                 if (this.ContentType != null)
-                    hash = hash * 57 + this.ContentType.GetHashCode();
+                    hash = hash * 59 + this.ContentType.GetHashCode();
                 
                 if (this.ContentLength != null)
-                    hash = hash * 57 + this.ContentLength.GetHashCode();
+                    hash = hash * 59 + this.ContentLength.GetHashCode();
                 
                 if (this.SystemType != null)
-                    hash = hash * 57 + this.SystemType.GetHashCode();
+                    hash = hash * 59 + this.SystemType.GetHashCode();
                 
                 if (this.Filename != null)
-                    hash = hash * 57 + this.Filename.GetHashCode();
+                    hash = hash * 59 + this.Filename.GetHashCode();
                 
                 if (this.PageCount != null)
-                    hash = hash * 57 + this.PageCount.GetHashCode();
+                    hash = hash * 59 + this.PageCount.GetHashCode();
                 
                 if (this.Read != null)
-                    hash = hash * 57 + this.Read.GetHashCode();
+                    hash = hash * 59 + this.Read.GetHashCode();
                 
                 if (this.CallerAddress != null)
-                    hash = hash * 57 + this.CallerAddress.GetHashCode();
+                    hash = hash * 59 + this.CallerAddress.GetHashCode();
                 
                 if (this.ReceiverAddress != null)
-                    hash = hash * 57 + this.ReceiverAddress.GetHashCode();
+                    hash = hash * 59 + this.ReceiverAddress.GetHashCode();
                 
                 if (this.Tags != null)
-                    hash = hash * 57 + this.Tags.GetHashCode();
+                    hash = hash * 59 + this.Tags.GetHashCode();
                 
                 if (this.TagValues != null)
-                    hash = hash * 57 + this.TagValues.GetHashCode();
+                    hash = hash * 59 + this.TagValues.GetHashCode();
                 
                 if (this.Thumbnails != null)
-                    hash = hash * 57 + this.Thumbnails.GetHashCode();
+                    hash = hash * 59 + this.Thumbnails.GetHashCode();
                 
                 if (this.UploadStatus != null)
-                    hash = hash * 57 + this.UploadStatus.GetHashCode();
+                    hash = hash * 59 + this.UploadStatus.GetHashCode();
                 
                 if (this.UploadDestinationUri != null)
-                    hash = hash * 57 + this.UploadDestinationUri.GetHashCode();
+                    hash = hash * 59 + this.UploadDestinationUri.GetHashCode();
                 
                 if (this.UploadMethod != null)
-                    hash = hash * 57 + this.UploadMethod.GetHashCode();
+                    hash = hash * 59 + this.UploadMethod.GetHashCode();
                 
                 if (this.LockInfo != null)
-                    hash = hash * 57 + this.LockInfo.GetHashCode();
+                    hash = hash * 59 + this.LockInfo.GetHashCode();
                 
                 if (this.Acl != null)
-                    hash = hash * 57 + this.Acl.GetHashCode();
+                    hash = hash * 59 + this.Acl.GetHashCode();
                 
                 if (this.SharingStatus != null)
-                    hash = hash * 57 + this.SharingStatus.GetHashCode();
+                    hash = hash * 59 + this.SharingStatus.GetHashCode();
                 
                 if (this.SharingUri != null)
-                    hash = hash * 57 + this.SharingUri.GetHashCode();
+                    hash = hash * 59 + this.SharingUri.GetHashCode();
                 
                 if (this.DownloadSharingUri != null)
-                    hash = hash * 57 + this.DownloadSharingUri.GetHashCode();
+                    hash = hash * 59 + this.DownloadSharingUri.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

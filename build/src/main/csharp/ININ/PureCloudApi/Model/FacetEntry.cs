@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class FacetEntry :  IEquatable<FacetEntry>
+    public partial class FacetEntry :  IEquatable<FacetEntry>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FacetEntry" /> class.
@@ -128,7 +127,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FacetEntry instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FacetEntry to be compared</param>
+        /// <param name="other">Instance of FacetEntry to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FacetEntry other)
         {
@@ -192,34 +191,32 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Attribute != null)
-                    hash = hash * 57 + this.Attribute.GetHashCode();
+                    hash = hash * 59 + this.Attribute.GetHashCode();
                 
                 if (this.Statistics != null)
-                    hash = hash * 57 + this.Statistics.GetHashCode();
+                    hash = hash * 59 + this.Statistics.GetHashCode();
                 
                 if (this.Other != null)
-                    hash = hash * 57 + this.Other.GetHashCode();
+                    hash = hash * 59 + this.Other.GetHashCode();
                 
                 if (this.Total != null)
-                    hash = hash * 57 + this.Total.GetHashCode();
+                    hash = hash * 59 + this.Total.GetHashCode();
                 
                 if (this.Missing != null)
-                    hash = hash * 57 + this.Missing.GetHashCode();
+                    hash = hash * 59 + this.Missing.GetHashCode();
                 
                 if (this.TermCount != null)
-                    hash = hash * 57 + this.TermCount.GetHashCode();
+                    hash = hash * 59 + this.TermCount.GetHashCode();
                 
                 if (this.TermType != null)
-                    hash = hash * 57 + this.TermType.GetHashCode();
+                    hash = hash * 59 + this.TermType.GetHashCode();
                 
                 if (this.Terms != null)
-                    hash = hash * 57 + this.Terms.GetHashCode();
+                    hash = hash * 59 + this.Terms.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

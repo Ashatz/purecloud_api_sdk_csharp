@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// Information about one flow history item
     /// </summary>
     [DataContract]
-    public class FlowHistoryItem :  IEquatable<FlowHistoryItem>
+    public partial class FlowHistoryItem :  IEquatable<FlowHistoryItem>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowHistoryItem" /> class.
@@ -137,7 +136,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FlowHistoryItem instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FlowHistoryItem to be compared</param>
+        /// <param name="other">Instance of FlowHistoryItem to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FlowHistoryItem other)
         {
@@ -201,34 +200,32 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.HistoryEventTime != null)
-                    hash = hash * 57 + this.HistoryEventTime.GetHashCode();
+                    hash = hash * 59 + this.HistoryEventTime.GetHashCode();
                 
                 if (this.State != null)
-                    hash = hash * 57 + this.State.GetHashCode();
+                    hash = hash * 59 + this.State.GetHashCode();
                 
                 if (this.WorkItem != null)
-                    hash = hash * 57 + this.WorkItem.GetHashCode();
+                    hash = hash * 59 + this.WorkItem.GetHashCode();
                 
                 if (this.User != null)
-                    hash = hash * 57 + this.User.GetHashCode();
+                    hash = hash * 59 + this.User.GetHashCode();
                 
                 if (this.Queue != null)
-                    hash = hash * 57 + this.Queue.GetHashCode();
+                    hash = hash * 59 + this.Queue.GetHashCode();
                 
                 if (this.HistoryEventData != null)
-                    hash = hash * 57 + this.HistoryEventData.GetHashCode();
+                    hash = hash * 59 + this.HistoryEventData.GetHashCode();
                 
                 if (this.HistoryEventType != null)
-                    hash = hash * 57 + this.HistoryEventType.GetHashCode();
+                    hash = hash * 59 + this.HistoryEventType.GetHashCode();
                 
                 if (this.Success != null)
-                    hash = hash * 57 + this.Success.GetHashCode();
+                    hash = hash * 59 + this.Success.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

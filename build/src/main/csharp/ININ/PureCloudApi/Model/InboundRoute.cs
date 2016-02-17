@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class InboundRoute :  IEquatable<InboundRoute>
+    public partial class InboundRoute :  IEquatable<InboundRoute>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="InboundRoute" /> class.
@@ -153,7 +152,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if InboundRoute instances are equal
         /// </summary>
-        /// <param name="obj">Instance of InboundRoute to be compared</param>
+        /// <param name="other">Instance of InboundRoute to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(InboundRoute other)
         {
@@ -227,40 +226,38 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Pattern != null)
-                    hash = hash * 57 + this.Pattern.GetHashCode();
+                    hash = hash * 59 + this.Pattern.GetHashCode();
                 
                 if (this.Queue != null)
-                    hash = hash * 57 + this.Queue.GetHashCode();
+                    hash = hash * 59 + this.Queue.GetHashCode();
                 
                 if (this.Priority != null)
-                    hash = hash * 57 + this.Priority.GetHashCode();
+                    hash = hash * 59 + this.Priority.GetHashCode();
                 
                 if (this.Skills != null)
-                    hash = hash * 57 + this.Skills.GetHashCode();
+                    hash = hash * 59 + this.Skills.GetHashCode();
                 
                 if (this.Language != null)
-                    hash = hash * 57 + this.Language.GetHashCode();
+                    hash = hash * 59 + this.Language.GetHashCode();
                 
                 if (this.FromName != null)
-                    hash = hash * 57 + this.FromName.GetHashCode();
+                    hash = hash * 59 + this.FromName.GetHashCode();
                 
                 if (this.FromEmail != null)
-                    hash = hash * 57 + this.FromEmail.GetHashCode();
+                    hash = hash * 59 + this.FromEmail.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

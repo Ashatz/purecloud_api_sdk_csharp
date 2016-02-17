@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Charge :  IEquatable<Charge>
+    public partial class Charge :  IEquatable<Charge>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Charge" /> class.
@@ -120,7 +119,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Charge instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Charge to be compared</param>
+        /// <param name="other">Instance of Charge to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Charge other)
         {
@@ -179,31 +178,29 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.LicenseCount != null)
-                    hash = hash * 57 + this.LicenseCount.GetHashCode();
+                    hash = hash * 59 + this.LicenseCount.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Description != null)
-                    hash = hash * 57 + this.Description.GetHashCode();
+                    hash = hash * 59 + this.Description.GetHashCode();
                 
                 if (this.Price != null)
-                    hash = hash * 57 + this.Price.GetHashCode();
+                    hash = hash * 59 + this.Price.GetHashCode();
                 
                 if (this.UnitOfMeasure != null)
-                    hash = hash * 57 + this.UnitOfMeasure.GetHashCode();
+                    hash = hash * 59 + this.UnitOfMeasure.GetHashCode();
                 
                 if (this.BillingPeriod != null)
-                    hash = hash * 57 + this.BillingPeriod.GetHashCode();
+                    hash = hash * 59 + this.BillingPeriod.GetHashCode();
                 
                 if (this.Quantity != null)
-                    hash = hash * 57 + this.Quantity.GetHashCode();
+                    hash = hash * 59 + this.Quantity.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Email :  IEquatable<Email>
+    public partial class Email :  IEquatable<Email>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Email" /> class.
@@ -154,7 +153,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Email instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Email to be compared</param>
+        /// <param name="other">Instance of Email to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Email other)
         {
@@ -233,43 +232,41 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.State != null)
-                    hash = hash * 57 + this.State.GetHashCode();
+                    hash = hash * 59 + this.State.GetHashCode();
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Held != null)
-                    hash = hash * 57 + this.Held.GetHashCode();
+                    hash = hash * 59 + this.Held.GetHashCode();
                 
                 if (this.Subject != null)
-                    hash = hash * 57 + this.Subject.GetHashCode();
+                    hash = hash * 59 + this.Subject.GetHashCode();
                 
                 if (this.MessagesSent != null)
-                    hash = hash * 57 + this.MessagesSent.GetHashCode();
+                    hash = hash * 59 + this.MessagesSent.GetHashCode();
                 
                 if (this.Segments != null)
-                    hash = hash * 57 + this.Segments.GetHashCode();
+                    hash = hash * 59 + this.Segments.GetHashCode();
                 
                 if (this.Direction != null)
-                    hash = hash * 57 + this.Direction.GetHashCode();
+                    hash = hash * 59 + this.Direction.GetHashCode();
                 
                 if (this.RecordingId != null)
-                    hash = hash * 57 + this.RecordingId.GetHashCode();
+                    hash = hash * 59 + this.RecordingId.GetHashCode();
                 
                 if (this.ErrorInfo != null)
-                    hash = hash * 57 + this.ErrorInfo.GetHashCode();
+                    hash = hash * 59 + this.ErrorInfo.GetHashCode();
                 
                 if (this.DisconnectType != null)
-                    hash = hash * 57 + this.DisconnectType.GetHashCode();
+                    hash = hash * 59 + this.DisconnectType.GetHashCode();
                 
                 if (this.StartHoldTime != null)
-                    hash = hash * 57 + this.StartHoldTime.GetHashCode();
+                    hash = hash * 59 + this.StartHoldTime.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// launch parameters or initializations for variables in the flow.
     /// </summary>
     [DataContract]
-    public class FlowInputData :  IEquatable<FlowInputData>
+    public partial class FlowInputData :  IEquatable<FlowInputData>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowInputData" /> class.
@@ -73,7 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FlowInputData instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FlowInputData to be compared</param>
+        /// <param name="other">Instance of FlowInputData to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FlowInputData other)
         {
@@ -102,13 +101,11 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.LinkedDocumentIds != null)
-                    hash = hash * 57 + this.LinkedDocumentIds.GetHashCode();
+                    hash = hash * 59 + this.LinkedDocumentIds.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

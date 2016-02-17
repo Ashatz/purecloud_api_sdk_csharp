@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class RoutingStatus :  IEquatable<RoutingStatus>
+    public partial class RoutingStatus :  IEquatable<RoutingStatus>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="RoutingStatus" /> class.
@@ -89,7 +88,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if RoutingStatus instances are equal
         /// </summary>
-        /// <param name="obj">Instance of RoutingStatus to be compared</param>
+        /// <param name="other">Instance of RoutingStatus to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(RoutingStatus other)
         {
@@ -128,19 +127,17 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.UserId != null)
-                    hash = hash * 57 + this.UserId.GetHashCode();
+                    hash = hash * 59 + this.UserId.GetHashCode();
                 
                 if (this.Status != null)
-                    hash = hash * 57 + this.Status.GetHashCode();
+                    hash = hash * 59 + this.Status.GetHashCode();
                 
                 if (this.StartTime != null)
-                    hash = hash * 57 + this.StartTime.GetHashCode();
+                    hash = hash * 59 + this.StartTime.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

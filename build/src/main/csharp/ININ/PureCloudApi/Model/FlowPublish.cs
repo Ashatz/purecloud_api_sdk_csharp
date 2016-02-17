@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// Returned upon a successful publish request.
     /// </summary>
     [DataContract]
-    public class FlowPublish :  IEquatable<FlowPublish>
+    public partial class FlowPublish :  IEquatable<FlowPublish>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowPublish" /> class.
@@ -108,7 +107,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FlowPublish instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FlowPublish to be compared</param>
+        /// <param name="other">Instance of FlowPublish to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FlowPublish other)
         {
@@ -157,25 +156,23 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.FlowConfigVersionSource != null)
-                    hash = hash * 57 + this.FlowConfigVersionSource.GetHashCode();
+                    hash = hash * 59 + this.FlowConfigVersionSource.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 if (this.Version != null)
-                    hash = hash * 57 + this.Version.GetHashCode();
+                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

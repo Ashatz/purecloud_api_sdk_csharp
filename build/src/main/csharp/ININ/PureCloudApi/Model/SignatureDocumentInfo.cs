@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class SignatureDocumentInfo :  IEquatable<SignatureDocumentInfo>
+    public partial class SignatureDocumentInfo :  IEquatable<SignatureDocumentInfo>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SignatureDocumentInfo" /> class.
@@ -88,7 +87,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if SignatureDocumentInfo instances are equal
         /// </summary>
-        /// <param name="obj">Instance of SignatureDocumentInfo to be compared</param>
+        /// <param name="other">Instance of SignatureDocumentInfo to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(SignatureDocumentInfo other)
         {
@@ -127,19 +126,17 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Org != null)
-                    hash = hash * 57 + this.Org.GetHashCode();
+                    hash = hash * 59 + this.Org.GetHashCode();
                 
                 if (this.User != null)
-                    hash = hash * 57 + this.User.GetHashCode();
+                    hash = hash * 59 + this.User.GetHashCode();
                 
                 if (this.ReturnUrl != null)
-                    hash = hash * 57 + this.ReturnUrl.GetHashCode();
+                    hash = hash * 59 + this.ReturnUrl.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

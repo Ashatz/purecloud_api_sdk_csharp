@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Location :  IEquatable<Location>
+    public partial class Location :  IEquatable<Location>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Location" /> class.
@@ -164,7 +163,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Location instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Location to be compared</param>
+        /// <param name="other">Instance of Location to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Location other)
         {
@@ -248,46 +247,44 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Address != null)
-                    hash = hash * 57 + this.Address.GetHashCode();
+                    hash = hash * 59 + this.Address.GetHashCode();
                 
                 if (this.AddressFields != null)
-                    hash = hash * 57 + this.AddressFields.GetHashCode();
+                    hash = hash * 59 + this.AddressFields.GetHashCode();
                 
                 if (this.AddressVerified != null)
-                    hash = hash * 57 + this.AddressVerified.GetHashCode();
+                    hash = hash * 59 + this.AddressVerified.GetHashCode();
                 
                 if (this.EmergencyNumber != null)
-                    hash = hash * 57 + this.EmergencyNumber.GetHashCode();
+                    hash = hash * 59 + this.EmergencyNumber.GetHashCode();
                 
                 if (this.Notes != null)
-                    hash = hash * 57 + this.Notes.GetHashCode();
+                    hash = hash * 59 + this.Notes.GetHashCode();
                 
                 if (this.Path != null)
-                    hash = hash * 57 + this.Path.GetHashCode();
+                    hash = hash * 59 + this.Path.GetHashCode();
                 
                 if (this.State != null)
-                    hash = hash * 57 + this.State.GetHashCode();
+                    hash = hash * 59 + this.State.GetHashCode();
                 
                 if (this.SublocationOrder != null)
-                    hash = hash * 57 + this.SublocationOrder.GetHashCode();
+                    hash = hash * 59 + this.SublocationOrder.GetHashCode();
                 
                 if (this.Version != null)
-                    hash = hash * 57 + this.Version.GetHashCode();
+                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Geolocation :  IEquatable<Geolocation>
+    public partial class Geolocation :  IEquatable<Geolocation>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Geolocation" /> class.
@@ -149,7 +148,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Geolocation instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Geolocation to be compared</param>
+        /// <param name="other">Instance of Geolocation to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Geolocation other)
         {
@@ -223,40 +222,38 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
+                    hash = hash * 59 + this.Type.GetHashCode();
                 
                 if (this.Primary != null)
-                    hash = hash * 57 + this.Primary.GetHashCode();
+                    hash = hash * 59 + this.Primary.GetHashCode();
                 
                 if (this.Latitude != null)
-                    hash = hash * 57 + this.Latitude.GetHashCode();
+                    hash = hash * 59 + this.Latitude.GetHashCode();
                 
                 if (this.Longitude != null)
-                    hash = hash * 57 + this.Longitude.GetHashCode();
+                    hash = hash * 59 + this.Longitude.GetHashCode();
                 
                 if (this.Country != null)
-                    hash = hash * 57 + this.Country.GetHashCode();
+                    hash = hash * 59 + this.Country.GetHashCode();
                 
                 if (this.Region != null)
-                    hash = hash * 57 + this.Region.GetHashCode();
+                    hash = hash * 59 + this.Region.GetHashCode();
                 
                 if (this.City != null)
-                    hash = hash * 57 + this.City.GetHashCode();
+                    hash = hash * 59 + this.City.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -1,11 +1,11 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 using ININ.PureCloudApi.Client;
 using ININ.PureCloudApi.Model;
-
 
 namespace ININ.PureCloudApi.Api
 {
@@ -69,7 +69,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="downloadId">Download ID</param>
         /// <param name="contentDisposition"></param>
         /// <returns>UrlResponse</returns>
-        UrlResponse GetDownload (string downloadId, string contentDisposition = null);
+        UrlResponse Get (string downloadId, string contentDisposition = null);
   
         /// <summary>
         /// Issues a redirect to a signed secure download URL for specified download
@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="downloadId">Download ID</param>
         /// <param name="contentDisposition"></param>
         /// <returns>ApiResponse of UrlResponse</returns>
-        ApiResponse<UrlResponse> GetDownloadWithHttpInfo (string downloadId, string contentDisposition = null);
+        ApiResponse<UrlResponse> GetWithHttpInfo (string downloadId, string contentDisposition = null);
 
         /// <summary>
         /// Issues a redirect to a signed secure download URL for specified download
@@ -91,7 +91,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="downloadId">Download ID</param>
         /// <param name="contentDisposition"></param>
         /// <returns>Task of UrlResponse</returns>
-        System.Threading.Tasks.Task<UrlResponse> GetDownloadAsync (string downloadId, string contentDisposition = null);
+        System.Threading.Tasks.Task<UrlResponse> GetAsync (string downloadId, string contentDisposition = null);
 
         /// <summary>
         /// Issues a redirect to a signed secure download URL for specified download
@@ -102,7 +102,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="downloadId">Download ID</param>
         /// <param name="contentDisposition"></param>
         /// <returns>Task of ApiResponse (UrlResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UrlResponse>> GetDownloadAsyncWithHttpInfo (string downloadId, string contentDisposition = null);
+        System.Threading.Tasks.Task<ApiResponse<UrlResponse>> GetAsyncWithHttpInfo (string downloadId, string contentDisposition = null);
         
     }
   
@@ -210,15 +210,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -231,7 +237,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -242,7 +247,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -283,18 +290,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -318,7 +331,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
@@ -339,9 +354,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="downloadId">Download ID</param> 
         /// <param name="contentDisposition"></param> 
         /// <returns>UrlResponse</returns>
-        public UrlResponse GetDownload (string downloadId, string contentDisposition = null)
+        public UrlResponse Get (string downloadId, string contentDisposition = null)
         {
-             ApiResponse<UrlResponse> response = GetDownloadWithHttpInfo(downloadId, contentDisposition);
+             ApiResponse<UrlResponse> response = GetWithHttpInfo(downloadId, contentDisposition);
              return response.Data;
         }
 
@@ -351,11 +366,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="downloadId">Download ID</param> 
         /// <param name="contentDisposition"></param> 
         /// <returns>ApiResponse of UrlResponse</returns>
-        public ApiResponse< UrlResponse > GetDownloadWithHttpInfo (string downloadId, string contentDisposition = null)
+        public ApiResponse< UrlResponse > GetWithHttpInfo (string downloadId, string contentDisposition = null)
         {
             
             // verify the required parameter 'downloadId' is set
-            if (downloadId == null) throw new ApiException(400, "Missing required parameter 'downloadId' when calling GetDownload");
+            if (downloadId == null)
+                throw new ApiException(400, "Missing required parameter 'downloadId' when calling DownloadsApi->Get");
             
     
             var path_ = "/api/v1/downloads/{downloadId}";
@@ -365,15 +381,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -386,7 +408,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -397,14 +418,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetDownload: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetDownload: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<UrlResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -418,9 +441,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="downloadId">Download ID</param>
         /// <param name="contentDisposition"></param>
         /// <returns>Task of UrlResponse</returns>
-        public async System.Threading.Tasks.Task<UrlResponse> GetDownloadAsync (string downloadId, string contentDisposition = null)
+        public async System.Threading.Tasks.Task<UrlResponse> GetAsync (string downloadId, string contentDisposition = null)
         {
-             ApiResponse<UrlResponse> response = await GetDownloadAsyncWithHttpInfo(downloadId, contentDisposition);
+             ApiResponse<UrlResponse> response = await GetAsyncWithHttpInfo(downloadId, contentDisposition);
              return response.Data;
 
         }
@@ -431,28 +454,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="downloadId">Download ID</param>
         /// <param name="contentDisposition"></param>
         /// <returns>Task of ApiResponse (UrlResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UrlResponse>> GetDownloadAsyncWithHttpInfo (string downloadId, string contentDisposition = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UrlResponse>> GetAsyncWithHttpInfo (string downloadId, string contentDisposition = null)
         {
             // verify the required parameter 'downloadId' is set
-            if (downloadId == null) throw new ApiException(400, "Missing required parameter 'downloadId' when calling GetDownload");
+            if (downloadId == null) throw new ApiException(400, "Missing required parameter 'downloadId' when calling Get");
             
     
             var path_ = "/api/v1/downloads/{downloadId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -476,14 +505,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetDownload: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetDownload: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<UrlResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

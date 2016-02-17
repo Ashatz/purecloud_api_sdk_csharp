@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class QuestionGroup :  IEquatable<QuestionGroup>
+    public partial class QuestionGroup :  IEquatable<QuestionGroup>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="QuestionGroup" /> class.
@@ -140,7 +139,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if QuestionGroup instances are equal
         /// </summary>
-        /// <param name="obj">Instance of QuestionGroup to be compared</param>
+        /// <param name="other">Instance of QuestionGroup to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(QuestionGroup other)
         {
@@ -209,37 +208,35 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
+                    hash = hash * 59 + this.Type.GetHashCode();
                 
                 if (this.DefaultAnswersToHighest != null)
-                    hash = hash * 57 + this.DefaultAnswersToHighest.GetHashCode();
+                    hash = hash * 59 + this.DefaultAnswersToHighest.GetHashCode();
                 
                 if (this.DefaultAnswersToNA != null)
-                    hash = hash * 57 + this.DefaultAnswersToNA.GetHashCode();
+                    hash = hash * 59 + this.DefaultAnswersToNA.GetHashCode();
                 
                 if (this.NaEnabled != null)
-                    hash = hash * 57 + this.NaEnabled.GetHashCode();
+                    hash = hash * 59 + this.NaEnabled.GetHashCode();
                 
                 if (this.Weight != null)
-                    hash = hash * 57 + this.Weight.GetHashCode();
+                    hash = hash * 59 + this.Weight.GetHashCode();
                 
                 if (this.ManualWeight != null)
-                    hash = hash * 57 + this.ManualWeight.GetHashCode();
+                    hash = hash * 59 + this.ManualWeight.GetHashCode();
                 
                 if (this.Questions != null)
-                    hash = hash * 57 + this.Questions.GetHashCode();
+                    hash = hash * 59 + this.Questions.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

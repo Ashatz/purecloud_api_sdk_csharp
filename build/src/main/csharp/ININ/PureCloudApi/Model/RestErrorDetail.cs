@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class RestErrorDetail :  IEquatable<RestErrorDetail>
+    public partial class RestErrorDetail :  IEquatable<RestErrorDetail>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="RestErrorDetail" /> class.
@@ -80,7 +79,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if RestErrorDetail instances are equal
         /// </summary>
-        /// <param name="obj">Instance of RestErrorDetail to be compared</param>
+        /// <param name="other">Instance of RestErrorDetail to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(RestErrorDetail other)
         {
@@ -114,16 +113,14 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Error != null)
-                    hash = hash * 57 + this.Error.GetHashCode();
+                    hash = hash * 59 + this.Error.GetHashCode();
                 
                 if (this.Details != null)
-                    hash = hash * 57 + this.Details.GetHashCode();
+                    hash = hash * 59 + this.Details.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class PhoneBase :  IEquatable<PhoneBase>
+    public partial class PhoneBase :  IEquatable<PhoneBase>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneBase" /> class.
@@ -122,7 +121,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if PhoneBase instances are equal
         /// </summary>
-        /// <param name="obj">Instance of PhoneBase to be compared</param>
+        /// <param name="other">Instance of PhoneBase to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(PhoneBase other)
         {
@@ -181,31 +180,29 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.PhoneMetaBase != null)
-                    hash = hash * 57 + this.PhoneMetaBase.GetHashCode();
+                    hash = hash * 59 + this.PhoneMetaBase.GetHashCode();
                 
                 if (this.Lines != null)
-                    hash = hash * 57 + this.Lines.GetHashCode();
+                    hash = hash * 59 + this.Lines.GetHashCode();
                 
                 if (this.Properties != null)
-                    hash = hash * 57 + this.Properties.GetHashCode();
+                    hash = hash * 59 + this.Properties.GetHashCode();
                 
                 if (this.Capabilities != null)
-                    hash = hash * 57 + this.Capabilities.GetHashCode();
+                    hash = hash * 59 + this.Capabilities.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

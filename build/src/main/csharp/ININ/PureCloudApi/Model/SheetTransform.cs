@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class SheetTransform :  IEquatable<SheetTransform>
+    public partial class SheetTransform :  IEquatable<SheetTransform>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SheetTransform" /> class.
@@ -88,7 +87,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if SheetTransform instances are equal
         /// </summary>
-        /// <param name="obj">Instance of SheetTransform to be compared</param>
+        /// <param name="other">Instance of SheetTransform to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(SheetTransform other)
         {
@@ -127,19 +126,17 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Sheet != null)
-                    hash = hash * 57 + this.Sheet.GetHashCode();
+                    hash = hash * 59 + this.Sheet.GetHashCode();
                 
                 if (this.SheetName != null)
-                    hash = hash * 57 + this.SheetName.GetHashCode();
+                    hash = hash * 59 + this.SheetName.GetHashCode();
                 
                 if (this.Table != null)
-                    hash = hash * 57 + this.Table.GetHashCode();
+                    hash = hash * 59 + this.Table.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

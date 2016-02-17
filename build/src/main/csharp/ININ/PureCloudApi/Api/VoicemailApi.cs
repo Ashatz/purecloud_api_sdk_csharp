@@ -1,11 +1,11 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 using ININ.PureCloudApi.Client;
 using ININ.PureCloudApi.Model;
-
 
 namespace ININ.PureCloudApi.Api
 {
@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="userId">User ID</param>
         /// <returns>VoicemailUserPolicy</returns>
-        VoicemailUserPolicy GetUservoicemailpoliciesUser (string userId);
+        VoicemailUserPolicy GetConfigurationUservoicemailpolicie (string userId);
   
         /// <summary>
         /// Get a user&#39;s voicemail policy
@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
-        ApiResponse<VoicemailUserPolicy> GetUservoicemailpoliciesUserWithHttpInfo (string userId);
+        ApiResponse<VoicemailUserPolicy> GetConfigurationUservoicemailpolicieWithHttpInfo (string userId);
 
         /// <summary>
         /// Get a user&#39;s voicemail policy
@@ -44,7 +44,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="userId">User ID</param>
         /// <returns>Task of VoicemailUserPolicy</returns>
-        System.Threading.Tasks.Task<VoicemailUserPolicy> GetUservoicemailpoliciesUserAsync (string userId);
+        System.Threading.Tasks.Task<VoicemailUserPolicy> GetConfigurationUservoicemailpolicieAsync (string userId);
 
         /// <summary>
         /// Get a user&#39;s voicemail policy
@@ -54,7 +54,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> GetUservoicemailpoliciesUserAsyncWithHttpInfo (string userId);
+        System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> GetConfigurationUservoicemailpolicieAsyncWithHttpInfo (string userId);
         
         /// <summary>
         /// Update a user&#39;s voicemail policy
@@ -65,7 +65,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>VoicemailUserPolicy</returns>
-        VoicemailUserPolicy PatchUservoicemailpoliciesUser (string userId, VoicemailUserPolicy body);
+        VoicemailUserPolicy PatchConfigurationUservoicemailpolicie (string userId, VoicemailUserPolicy body);
   
         /// <summary>
         /// Update a user&#39;s voicemail policy
@@ -76,7 +76,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
-        ApiResponse<VoicemailUserPolicy> PatchUservoicemailpoliciesUserWithHttpInfo (string userId, VoicemailUserPolicy body);
+        ApiResponse<VoicemailUserPolicy> PatchConfigurationUservoicemailpolicieWithHttpInfo (string userId, VoicemailUserPolicy body);
 
         /// <summary>
         /// Update a user&#39;s voicemail policy
@@ -87,7 +87,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>Task of VoicemailUserPolicy</returns>
-        System.Threading.Tasks.Task<VoicemailUserPolicy> PatchUservoicemailpoliciesUserAsync (string userId, VoicemailUserPolicy body);
+        System.Threading.Tasks.Task<VoicemailUserPolicy> PatchConfigurationUservoicemailpolicieAsync (string userId, VoicemailUserPolicy body);
 
         /// <summary>
         /// Update a user&#39;s voicemail policy
@@ -98,7 +98,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> PatchUservoicemailpoliciesUserAsyncWithHttpInfo (string userId, VoicemailUserPolicy body);
+        System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> PatchConfigurationUservoicemailpolicieAsyncWithHttpInfo (string userId, VoicemailUserPolicy body);
         
         /// <summary>
         /// Get a policy
@@ -107,7 +107,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>VoicemailOrganizationPolicy</returns>
-        VoicemailOrganizationPolicy GetVoicemailpolicy ();
+        VoicemailOrganizationPolicy GetConfigurationVoicemailpolicy ();
   
         /// <summary>
         /// Get a policy
@@ -116,7 +116,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of VoicemailOrganizationPolicy</returns>
-        ApiResponse<VoicemailOrganizationPolicy> GetVoicemailpolicyWithHttpInfo ();
+        ApiResponse<VoicemailOrganizationPolicy> GetConfigurationVoicemailpolicyWithHttpInfo ();
 
         /// <summary>
         /// Get a policy
@@ -125,7 +125,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of VoicemailOrganizationPolicy</returns>
-        System.Threading.Tasks.Task<VoicemailOrganizationPolicy> GetVoicemailpolicyAsync ();
+        System.Threading.Tasks.Task<VoicemailOrganizationPolicy> GetConfigurationVoicemailpolicyAsync ();
 
         /// <summary>
         /// Get a policy
@@ -134,7 +134,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse (VoicemailOrganizationPolicy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> GetVoicemailpolicyAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> GetConfigurationVoicemailpolicyAsyncWithHttpInfo ();
         
         /// <summary>
         /// Update a policy
@@ -144,7 +144,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Policy</param>
         /// <returns>VoicemailOrganizationPolicy</returns>
-        VoicemailOrganizationPolicy UpdateVoicemailpolicy (VoicemailOrganizationPolicy body = null);
+        VoicemailOrganizationPolicy PutConfigurationVoicemailpolicy (VoicemailOrganizationPolicy body = null);
   
         /// <summary>
         /// Update a policy
@@ -154,7 +154,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of VoicemailOrganizationPolicy</returns>
-        ApiResponse<VoicemailOrganizationPolicy> UpdateVoicemailpolicyWithHttpInfo (VoicemailOrganizationPolicy body = null);
+        ApiResponse<VoicemailOrganizationPolicy> PutConfigurationVoicemailpolicyWithHttpInfo (VoicemailOrganizationPolicy body = null);
 
         /// <summary>
         /// Update a policy
@@ -164,7 +164,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Policy</param>
         /// <returns>Task of VoicemailOrganizationPolicy</returns>
-        System.Threading.Tasks.Task<VoicemailOrganizationPolicy> UpdateVoicemailpolicyAsync (VoicemailOrganizationPolicy body = null);
+        System.Threading.Tasks.Task<VoicemailOrganizationPolicy> PutConfigurationVoicemailpolicyAsync (VoicemailOrganizationPolicy body = null);
 
         /// <summary>
         /// Update a policy
@@ -174,7 +174,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (VoicemailOrganizationPolicy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> UpdateVoicemailpolicyAsyncWithHttpInfo (VoicemailOrganizationPolicy body = null);
+        System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> PutConfigurationVoicemailpolicyAsyncWithHttpInfo (VoicemailOrganizationPolicy body = null);
         
         /// <summary>
         /// Get mailbox information
@@ -333,7 +333,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="messageId">Message ID</param>
         /// <param name="body">VoicemailMessage</param>
         /// <returns>VoicemailMessage</returns>
-        VoicemailMessage UpdateMessage (string messageId, VoicemailMessage body = null);
+        VoicemailMessage PutMessage (string messageId, VoicemailMessage body = null);
   
         /// <summary>
         /// Update a message.
@@ -344,7 +344,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="messageId">Message ID</param>
         /// <param name="body">VoicemailMessage</param>
         /// <returns>ApiResponse of VoicemailMessage</returns>
-        ApiResponse<VoicemailMessage> UpdateMessageWithHttpInfo (string messageId, VoicemailMessage body = null);
+        ApiResponse<VoicemailMessage> PutMessageWithHttpInfo (string messageId, VoicemailMessage body = null);
 
         /// <summary>
         /// Update a message.
@@ -355,7 +355,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="messageId">Message ID</param>
         /// <param name="body">VoicemailMessage</param>
         /// <returns>Task of VoicemailMessage</returns>
-        System.Threading.Tasks.Task<VoicemailMessage> UpdateMessageAsync (string messageId, VoicemailMessage body = null);
+        System.Threading.Tasks.Task<VoicemailMessage> PutMessageAsync (string messageId, VoicemailMessage body = null);
 
         /// <summary>
         /// Update a message.
@@ -366,7 +366,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="messageId">Message ID</param>
         /// <param name="body">VoicemailMessage</param>
         /// <returns>Task of ApiResponse (VoicemailMessage)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> UpdateMessageAsyncWithHttpInfo (string messageId, VoicemailMessage body = null);
+        System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> PutMessageAsyncWithHttpInfo (string messageId, VoicemailMessage body = null);
         
         /// <summary>
         /// Delete a message.
@@ -535,9 +535,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="userId">User ID</param> 
         /// <returns>VoicemailUserPolicy</returns>
-        public VoicemailUserPolicy GetUservoicemailpoliciesUser (string userId)
+        public VoicemailUserPolicy GetConfigurationUservoicemailpolicie (string userId)
         {
-             ApiResponse<VoicemailUserPolicy> response = GetUservoicemailpoliciesUserWithHttpInfo(userId);
+             ApiResponse<VoicemailUserPolicy> response = GetConfigurationUservoicemailpolicieWithHttpInfo(userId);
              return response.Data;
         }
 
@@ -546,11 +546,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="userId">User ID</param> 
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
-        public ApiResponse< VoicemailUserPolicy > GetUservoicemailpoliciesUserWithHttpInfo (string userId)
+        public ApiResponse< VoicemailUserPolicy > GetConfigurationUservoicemailpolicieWithHttpInfo (string userId)
         {
             
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling GetUservoicemailpoliciesUser");
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling VoicemailApi->GetConfigurationUservoicemailpolicie");
             
     
             var path_ = "/api/v1/configuration/uservoicemailpolicies/{userId}";
@@ -560,15 +561,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -580,7 +587,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -591,14 +597,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetUservoicemailpoliciesUser: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConfigurationUservoicemailpolicie: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetUservoicemailpoliciesUser: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConfigurationUservoicemailpolicie: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<VoicemailUserPolicy>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -611,9 +619,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="userId">User ID</param>
         /// <returns>Task of VoicemailUserPolicy</returns>
-        public async System.Threading.Tasks.Task<VoicemailUserPolicy> GetUservoicemailpoliciesUserAsync (string userId)
+        public async System.Threading.Tasks.Task<VoicemailUserPolicy> GetConfigurationUservoicemailpolicieAsync (string userId)
         {
-             ApiResponse<VoicemailUserPolicy> response = await GetUservoicemailpoliciesUserAsyncWithHttpInfo(userId);
+             ApiResponse<VoicemailUserPolicy> response = await GetConfigurationUservoicemailpolicieAsyncWithHttpInfo(userId);
              return response.Data;
 
         }
@@ -623,28 +631,34 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> GetUservoicemailpoliciesUserAsyncWithHttpInfo (string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> GetConfigurationUservoicemailpolicieAsyncWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling GetUservoicemailpoliciesUser");
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling GetConfigurationUservoicemailpolicie");
             
     
             var path_ = "/api/v1/configuration/uservoicemailpolicies/{userId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -667,14 +681,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetUservoicemailpoliciesUser: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConfigurationUservoicemailpolicie: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetUservoicemailpoliciesUser: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConfigurationUservoicemailpolicie: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<VoicemailUserPolicy>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -688,9 +704,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param> 
         /// <param name="body">The user&#39;s voicemail policy</param> 
         /// <returns>VoicemailUserPolicy</returns>
-        public VoicemailUserPolicy PatchUservoicemailpoliciesUser (string userId, VoicemailUserPolicy body)
+        public VoicemailUserPolicy PatchConfigurationUservoicemailpolicie (string userId, VoicemailUserPolicy body)
         {
-             ApiResponse<VoicemailUserPolicy> response = PatchUservoicemailpoliciesUserWithHttpInfo(userId, body);
+             ApiResponse<VoicemailUserPolicy> response = PatchConfigurationUservoicemailpolicieWithHttpInfo(userId, body);
              return response.Data;
         }
 
@@ -700,14 +716,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param> 
         /// <param name="body">The user&#39;s voicemail policy</param> 
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
-        public ApiResponse< VoicemailUserPolicy > PatchUservoicemailpoliciesUserWithHttpInfo (string userId, VoicemailUserPolicy body)
+        public ApiResponse< VoicemailUserPolicy > PatchConfigurationUservoicemailpolicieWithHttpInfo (string userId, VoicemailUserPolicy body)
         {
             
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling PatchUservoicemailpoliciesUser");
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling VoicemailApi->PatchConfigurationUservoicemailpolicie");
             
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PatchUservoicemailpoliciesUser");
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PatchConfigurationUservoicemailpolicie");
             
     
             var path_ = "/api/v1/configuration/uservoicemailpolicies/{userId}";
@@ -717,15 +735,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -735,10 +759,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -749,14 +778,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PatchUservoicemailpoliciesUser: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PatchConfigurationUservoicemailpolicie: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PatchUservoicemailpoliciesUser: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PatchConfigurationUservoicemailpolicie: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<VoicemailUserPolicy>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -770,9 +801,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>Task of VoicemailUserPolicy</returns>
-        public async System.Threading.Tasks.Task<VoicemailUserPolicy> PatchUservoicemailpoliciesUserAsync (string userId, VoicemailUserPolicy body)
+        public async System.Threading.Tasks.Task<VoicemailUserPolicy> PatchConfigurationUservoicemailpolicieAsync (string userId, VoicemailUserPolicy body)
         {
-             ApiResponse<VoicemailUserPolicy> response = await PatchUservoicemailpoliciesUserAsyncWithHttpInfo(userId, body);
+             ApiResponse<VoicemailUserPolicy> response = await PatchConfigurationUservoicemailpolicieAsyncWithHttpInfo(userId, body);
              return response.Data;
 
         }
@@ -783,30 +814,36 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> PatchUservoicemailpoliciesUserAsyncWithHttpInfo (string userId, VoicemailUserPolicy body)
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> PatchConfigurationUservoicemailpolicieAsyncWithHttpInfo (string userId, VoicemailUserPolicy body)
         {
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling PatchUservoicemailpoliciesUser");
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling PatchConfigurationUservoicemailpolicie");
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PatchUservoicemailpoliciesUser");
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PatchConfigurationUservoicemailpolicie");
             
     
             var path_ = "/api/v1/configuration/uservoicemailpolicies/{userId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -830,14 +867,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PatchUservoicemailpoliciesUser: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PatchConfigurationUservoicemailpolicie: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PatchUservoicemailpoliciesUser: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PatchConfigurationUservoicemailpolicie: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<VoicemailUserPolicy>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -849,9 +888,9 @@ namespace ININ.PureCloudApi.Api
         /// Get a policy 
         /// </summary>
         /// <returns>VoicemailOrganizationPolicy</returns>
-        public VoicemailOrganizationPolicy GetVoicemailpolicy ()
+        public VoicemailOrganizationPolicy GetConfigurationVoicemailpolicy ()
         {
-             ApiResponse<VoicemailOrganizationPolicy> response = GetVoicemailpolicyWithHttpInfo();
+             ApiResponse<VoicemailOrganizationPolicy> response = GetConfigurationVoicemailpolicyWithHttpInfo();
              return response.Data;
         }
 
@@ -859,7 +898,7 @@ namespace ININ.PureCloudApi.Api
         /// Get a policy 
         /// </summary>
         /// <returns>ApiResponse of VoicemailOrganizationPolicy</returns>
-        public ApiResponse< VoicemailOrganizationPolicy > GetVoicemailpolicyWithHttpInfo ()
+        public ApiResponse< VoicemailOrganizationPolicy > GetConfigurationVoicemailpolicyWithHttpInfo ()
         {
             
     
@@ -870,15 +909,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -889,7 +934,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -900,14 +944,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetVoicemailpolicy: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConfigurationVoicemailpolicy: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetVoicemailpolicy: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConfigurationVoicemailpolicy: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<VoicemailOrganizationPolicy>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -919,9 +965,9 @@ namespace ININ.PureCloudApi.Api
         /// Get a policy 
         /// </summary>
         /// <returns>Task of VoicemailOrganizationPolicy</returns>
-        public async System.Threading.Tasks.Task<VoicemailOrganizationPolicy> GetVoicemailpolicyAsync ()
+        public async System.Threading.Tasks.Task<VoicemailOrganizationPolicy> GetConfigurationVoicemailpolicyAsync ()
         {
-             ApiResponse<VoicemailOrganizationPolicy> response = await GetVoicemailpolicyAsyncWithHttpInfo();
+             ApiResponse<VoicemailOrganizationPolicy> response = await GetConfigurationVoicemailpolicyAsyncWithHttpInfo();
              return response.Data;
 
         }
@@ -930,7 +976,7 @@ namespace ININ.PureCloudApi.Api
         /// Get a policy 
         /// </summary>
         /// <returns>Task of ApiResponse (VoicemailOrganizationPolicy)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> GetVoicemailpolicyAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> GetConfigurationVoicemailpolicyAsyncWithHttpInfo ()
         {
             
     
@@ -938,18 +984,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -971,14 +1023,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetVoicemailpolicy: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConfigurationVoicemailpolicy: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetVoicemailpolicy: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConfigurationVoicemailpolicy: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<VoicemailOrganizationPolicy>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -991,9 +1045,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Policy</param> 
         /// <returns>VoicemailOrganizationPolicy</returns>
-        public VoicemailOrganizationPolicy UpdateVoicemailpolicy (VoicemailOrganizationPolicy body = null)
+        public VoicemailOrganizationPolicy PutConfigurationVoicemailpolicy (VoicemailOrganizationPolicy body = null)
         {
-             ApiResponse<VoicemailOrganizationPolicy> response = UpdateVoicemailpolicyWithHttpInfo(body);
+             ApiResponse<VoicemailOrganizationPolicy> response = PutConfigurationVoicemailpolicyWithHttpInfo(body);
              return response.Data;
         }
 
@@ -1002,7 +1056,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Policy</param> 
         /// <returns>ApiResponse of VoicemailOrganizationPolicy</returns>
-        public ApiResponse< VoicemailOrganizationPolicy > UpdateVoicemailpolicyWithHttpInfo (VoicemailOrganizationPolicy body = null)
+        public ApiResponse< VoicemailOrganizationPolicy > PutConfigurationVoicemailpolicyWithHttpInfo (VoicemailOrganizationPolicy body = null)
         {
             
     
@@ -1013,15 +1067,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1030,10 +1090,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1044,14 +1109,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateVoicemailpolicy: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutConfigurationVoicemailpolicy: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateVoicemailpolicy: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutConfigurationVoicemailpolicy: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<VoicemailOrganizationPolicy>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1064,9 +1131,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Policy</param>
         /// <returns>Task of VoicemailOrganizationPolicy</returns>
-        public async System.Threading.Tasks.Task<VoicemailOrganizationPolicy> UpdateVoicemailpolicyAsync (VoicemailOrganizationPolicy body = null)
+        public async System.Threading.Tasks.Task<VoicemailOrganizationPolicy> PutConfigurationVoicemailpolicyAsync (VoicemailOrganizationPolicy body = null)
         {
-             ApiResponse<VoicemailOrganizationPolicy> response = await UpdateVoicemailpolicyAsyncWithHttpInfo(body);
+             ApiResponse<VoicemailOrganizationPolicy> response = await PutConfigurationVoicemailpolicyAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -1076,7 +1143,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (VoicemailOrganizationPolicy)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> UpdateVoicemailpolicyAsyncWithHttpInfo (VoicemailOrganizationPolicy body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> PutConfigurationVoicemailpolicyAsyncWithHttpInfo (VoicemailOrganizationPolicy body = null)
         {
             
     
@@ -1084,18 +1151,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1118,14 +1191,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateVoicemailpolicy: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutConfigurationVoicemailpolicy: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateVoicemailpolicy: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutConfigurationVoicemailpolicy: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<VoicemailOrganizationPolicy>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1158,15 +1233,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1177,7 +1258,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1188,7 +1268,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -1226,18 +1308,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1259,7 +1347,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
@@ -1299,15 +1389,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1318,7 +1414,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1329,7 +1424,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -1367,18 +1464,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1400,7 +1503,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
@@ -1440,15 +1545,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1459,7 +1570,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1470,7 +1580,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -1508,18 +1620,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1541,7 +1659,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
@@ -1576,7 +1696,8 @@ namespace ININ.PureCloudApi.Api
         {
             
             // verify the required parameter 'messageId' is set
-            if (messageId == null) throw new ApiException(400, "Missing required parameter 'messageId' when calling GetMessage");
+            if (messageId == null)
+                throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailApi->GetMessage");
             
     
             var path_ = "/api/v1/voicemail/messages/{messageId}";
@@ -1586,15 +1707,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1606,7 +1733,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1617,7 +1743,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -1659,18 +1787,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1693,7 +1827,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
@@ -1714,9 +1850,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="messageId">Message ID</param> 
         /// <param name="body">VoicemailMessage</param> 
         /// <returns>VoicemailMessage</returns>
-        public VoicemailMessage UpdateMessage (string messageId, VoicemailMessage body = null)
+        public VoicemailMessage PutMessage (string messageId, VoicemailMessage body = null)
         {
-             ApiResponse<VoicemailMessage> response = UpdateMessageWithHttpInfo(messageId, body);
+             ApiResponse<VoicemailMessage> response = PutMessageWithHttpInfo(messageId, body);
              return response.Data;
         }
 
@@ -1726,11 +1862,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="messageId">Message ID</param> 
         /// <param name="body">VoicemailMessage</param> 
         /// <returns>ApiResponse of VoicemailMessage</returns>
-        public ApiResponse< VoicemailMessage > UpdateMessageWithHttpInfo (string messageId, VoicemailMessage body = null)
+        public ApiResponse< VoicemailMessage > PutMessageWithHttpInfo (string messageId, VoicemailMessage body = null)
         {
             
             // verify the required parameter 'messageId' is set
-            if (messageId == null) throw new ApiException(400, "Missing required parameter 'messageId' when calling UpdateMessage");
+            if (messageId == null)
+                throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailApi->PutMessage");
             
     
             var path_ = "/api/v1/voicemail/messages/{messageId}";
@@ -1740,15 +1877,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1758,10 +1901,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1772,14 +1920,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateMessage: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutMessage: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateMessage: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutMessage: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<VoicemailMessage>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1793,9 +1943,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="messageId">Message ID</param>
         /// <param name="body">VoicemailMessage</param>
         /// <returns>Task of VoicemailMessage</returns>
-        public async System.Threading.Tasks.Task<VoicemailMessage> UpdateMessageAsync (string messageId, VoicemailMessage body = null)
+        public async System.Threading.Tasks.Task<VoicemailMessage> PutMessageAsync (string messageId, VoicemailMessage body = null)
         {
-             ApiResponse<VoicemailMessage> response = await UpdateMessageAsyncWithHttpInfo(messageId, body);
+             ApiResponse<VoicemailMessage> response = await PutMessageAsyncWithHttpInfo(messageId, body);
              return response.Data;
 
         }
@@ -1806,28 +1956,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="messageId">Message ID</param>
         /// <param name="body">VoicemailMessage</param>
         /// <returns>Task of ApiResponse (VoicemailMessage)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> UpdateMessageAsyncWithHttpInfo (string messageId, VoicemailMessage body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> PutMessageAsyncWithHttpInfo (string messageId, VoicemailMessage body = null)
         {
             // verify the required parameter 'messageId' is set
-            if (messageId == null) throw new ApiException(400, "Missing required parameter 'messageId' when calling UpdateMessage");
+            if (messageId == null) throw new ApiException(400, "Missing required parameter 'messageId' when calling PutMessage");
             
     
             var path_ = "/api/v1/voicemail/messages/{messageId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1851,14 +2007,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateMessage: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutMessage: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateMessage: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutMessage: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<VoicemailMessage>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1886,7 +2044,8 @@ namespace ININ.PureCloudApi.Api
         {
             
             // verify the required parameter 'messageId' is set
-            if (messageId == null) throw new ApiException(400, "Missing required parameter 'messageId' when calling DeleteMessage");
+            if (messageId == null)
+                throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailApi->DeleteMessage");
             
     
             var path_ = "/api/v1/voicemail/messages/{messageId}";
@@ -1896,15 +2055,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1916,7 +2081,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1927,7 +2091,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -1969,18 +2135,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2003,7 +2175,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
@@ -2040,7 +2214,8 @@ namespace ININ.PureCloudApi.Api
         {
             
             // verify the required parameter 'messageId' is set
-            if (messageId == null) throw new ApiException(400, "Missing required parameter 'messageId' when calling GetMessageMedia");
+            if (messageId == null)
+                throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailApi->GetMessageMedia");
             
     
             var path_ = "/api/v1/voicemail/messages/{messageId}/media";
@@ -2050,15 +2225,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2071,7 +2252,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -2082,7 +2262,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -2126,18 +2308,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2161,7 +2349,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  

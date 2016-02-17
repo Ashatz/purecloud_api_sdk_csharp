@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Condition :  IEquatable<Condition>
+    public partial class Condition :  IEquatable<Condition>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Condition" /> class.
@@ -121,7 +120,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Condition instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Condition to be compared</param>
+        /// <param name="other">Instance of Condition to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Condition other)
         {
@@ -180,31 +179,29 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
+                    hash = hash * 59 + this.Type.GetHashCode();
                 
                 if (this.Inverted != null)
-                    hash = hash * 57 + this.Inverted.GetHashCode();
+                    hash = hash * 59 + this.Inverted.GetHashCode();
                 
                 if (this.AttributeName != null)
-                    hash = hash * 57 + this.AttributeName.GetHashCode();
+                    hash = hash * 59 + this.AttributeName.GetHashCode();
                 
                 if (this.Value != null)
-                    hash = hash * 57 + this.Value.GetHashCode();
+                    hash = hash * 59 + this.Value.GetHashCode();
                 
                 if (this.ValueType != null)
-                    hash = hash * 57 + this.ValueType.GetHashCode();
+                    hash = hash * 59 + this.ValueType.GetHashCode();
                 
                 if (this.Operator != null)
-                    hash = hash * 57 + this.Operator.GetHashCode();
+                    hash = hash * 59 + this.Operator.GetHashCode();
                 
                 if (this.Codes != null)
-                    hash = hash * 57 + this.Codes.GetHashCode();
+                    hash = hash * 59 + this.Codes.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

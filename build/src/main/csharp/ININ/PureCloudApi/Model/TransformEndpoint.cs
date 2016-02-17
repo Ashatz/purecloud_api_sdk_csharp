@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class TransformEndpoint :  IEquatable<TransformEndpoint>
+    public partial class TransformEndpoint :  IEquatable<TransformEndpoint>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TransformEndpoint" /> class.
@@ -173,7 +172,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if TransformEndpoint instances are equal
         /// </summary>
-        /// <param name="obj">Instance of TransformEndpoint to be compared</param>
+        /// <param name="other">Instance of TransformEndpoint to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(TransformEndpoint other)
         {
@@ -257,46 +256,44 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.SwaggerUrl != null)
-                    hash = hash * 57 + this.SwaggerUrl.GetHashCode();
+                    hash = hash * 59 + this.SwaggerUrl.GetHashCode();
                 
                 if (this.Route != null)
-                    hash = hash * 57 + this.Route.GetHashCode();
+                    hash = hash * 59 + this.Route.GetHashCode();
                 
                 if (this.Entity != null)
-                    hash = hash * 57 + this.Entity.GetHashCode();
+                    hash = hash * 59 + this.Entity.GetHashCode();
                 
                 if (this.ApiFunction != null)
-                    hash = hash * 57 + this.ApiFunction.GetHashCode();
+                    hash = hash * 59 + this.ApiFunction.GetHashCode();
                 
                 if (this.Ready != null)
-                    hash = hash * 57 + this.Ready.GetHashCode();
+                    hash = hash * 59 + this.Ready.GetHashCode();
                 
                 if (this.Active != null)
-                    hash = hash * 57 + this.Active.GetHashCode();
+                    hash = hash * 59 + this.Active.GetHashCode();
                 
                 if (this.BatchSize != null)
-                    hash = hash * 57 + this.BatchSize.GetHashCode();
+                    hash = hash * 59 + this.BatchSize.GetHashCode();
                 
                 if (this.Parallelism != null)
-                    hash = hash * 57 + this.Parallelism.GetHashCode();
+                    hash = hash * 59 + this.Parallelism.GetHashCode();
                 
                 if (this.UpdateProgressEvery != null)
-                    hash = hash * 57 + this.UpdateProgressEvery.GetHashCode();
+                    hash = hash * 59 + this.UpdateProgressEvery.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class AccountOverview :  IEquatable<AccountOverview>
+    public partial class AccountOverview :  IEquatable<AccountOverview>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AccountOverview" /> class.
@@ -132,7 +131,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if AccountOverview instances are equal
         /// </summary>
-        /// <param name="obj">Instance of AccountOverview to be compared</param>
+        /// <param name="other">Instance of AccountOverview to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(AccountOverview other)
         {
@@ -196,34 +195,32 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.IsSuperUser != null)
-                    hash = hash * 57 + this.IsSuperUser.GetHashCode();
+                    hash = hash * 59 + this.IsSuperUser.GetHashCode();
                 
                 if (this.HasAccountNumber != null)
-                    hash = hash * 57 + this.HasAccountNumber.GetHashCode();
+                    hash = hash * 59 + this.HasAccountNumber.GetHashCode();
                 
                 if (this.UsageCharges != null)
-                    hash = hash * 57 + this.UsageCharges.GetHashCode();
+                    hash = hash * 59 + this.UsageCharges.GetHashCode();
                 
                 if (this.DomesticChargesTotal != null)
-                    hash = hash * 57 + this.DomesticChargesTotal.GetHashCode();
+                    hash = hash * 59 + this.DomesticChargesTotal.GetHashCode();
                 
                 if (this.InternationalChargesTotal != null)
-                    hash = hash * 57 + this.InternationalChargesTotal.GetHashCode();
+                    hash = hash * 59 + this.InternationalChargesTotal.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class PenetrationRate :  IEquatable<PenetrationRate>
+    public partial class PenetrationRate :  IEquatable<PenetrationRate>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PenetrationRate" /> class.
@@ -96,7 +95,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if PenetrationRate instances are equal
         /// </summary>
-        /// <param name="obj">Instance of PenetrationRate to be compared</param>
+        /// <param name="other">Instance of PenetrationRate to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(PenetrationRate other)
         {
@@ -140,22 +139,20 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.NumberOfContactsCalled != null)
-                    hash = hash * 57 + this.NumberOfContactsCalled.GetHashCode();
+                    hash = hash * 59 + this.NumberOfContactsCalled.GetHashCode();
                 
                 if (this.TotalNumberOfContacts != null)
-                    hash = hash * 57 + this.TotalNumberOfContacts.GetHashCode();
+                    hash = hash * 59 + this.TotalNumberOfContacts.GetHashCode();
                 
                 if (this.Percentage != null)
-                    hash = hash * 57 + this.Percentage.GetHashCode();
+                    hash = hash * 59 + this.Percentage.GetHashCode();
                 
                 if (this.PenetrationRateId != null)
-                    hash = hash * 57 + this.PenetrationRateId.GetHashCode();
+                    hash = hash * 59 + this.PenetrationRateId.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

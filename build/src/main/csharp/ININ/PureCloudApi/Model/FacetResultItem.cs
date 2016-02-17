@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class FacetResultItem :  IEquatable<FacetResultItem>
+    public partial class FacetResultItem :  IEquatable<FacetResultItem>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FacetResultItem" /> class.
@@ -122,7 +121,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FacetResultItem instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FacetResultItem to be compared</param>
+        /// <param name="other">Instance of FacetResultItem to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FacetResultItem other)
         {
@@ -181,31 +180,29 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Count != null)
-                    hash = hash * 57 + this.Count.GetHashCode();
+                    hash = hash * 59 + this.Count.GetHashCode();
                 
                 if (this.Document != null)
-                    hash = hash * 57 + this.Document.GetHashCode();
+                    hash = hash * 59 + this.Document.GetHashCode();
                 
                 if (this.User != null)
-                    hash = hash * 57 + this.User.GetHashCode();
+                    hash = hash * 59 + this.User.GetHashCode();
                 
                 if (this.Queue != null)
-                    hash = hash * 57 + this.Queue.GetHashCode();
+                    hash = hash * 59 + this.Queue.GetHashCode();
                 
                 if (this.FlowConfigId != null)
-                    hash = hash * 57 + this.FlowConfigId.GetHashCode();
+                    hash = hash * 59 + this.FlowConfigId.GetHashCode();
                 
                 if (this.Workspace != null)
-                    hash = hash * 57 + this.Workspace.GetHashCode();
+                    hash = hash * 59 + this.Workspace.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

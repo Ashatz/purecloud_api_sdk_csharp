@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class VoicemailOrganizationPolicy :  IEquatable<VoicemailOrganizationPolicy>
+    public partial class VoicemailOrganizationPolicy :  IEquatable<VoicemailOrganizationPolicy>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailOrganizationPolicy" /> class.
@@ -191,7 +190,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if VoicemailOrganizationPolicy instances are equal
         /// </summary>
-        /// <param name="obj">Instance of VoicemailOrganizationPolicy to be compared</param>
+        /// <param name="other">Instance of VoicemailOrganizationPolicy to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(VoicemailOrganizationPolicy other)
         {
@@ -290,55 +289,53 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Enabled != null)
-                    hash = hash * 57 + this.Enabled.GetHashCode();
+                    hash = hash * 59 + this.Enabled.GetHashCode();
                 
                 if (this.RetentionTimeDays != null)
-                    hash = hash * 57 + this.RetentionTimeDays.GetHashCode();
+                    hash = hash * 59 + this.RetentionTimeDays.GetHashCode();
                 
                 if (this.AlertTimeoutSeconds != null)
-                    hash = hash * 57 + this.AlertTimeoutSeconds.GetHashCode();
+                    hash = hash * 59 + this.AlertTimeoutSeconds.GetHashCode();
                 
                 if (this.MinimumRecordingTimeSeconds != null)
-                    hash = hash * 57 + this.MinimumRecordingTimeSeconds.GetHashCode();
+                    hash = hash * 59 + this.MinimumRecordingTimeSeconds.GetHashCode();
                 
                 if (this.MaximumRecordingTimeSeconds != null)
-                    hash = hash * 57 + this.MaximumRecordingTimeSeconds.GetHashCode();
+                    hash = hash * 59 + this.MaximumRecordingTimeSeconds.GetHashCode();
                 
                 if (this.UnavailableMessageUri != null)
-                    hash = hash * 57 + this.UnavailableMessageUri.GetHashCode();
+                    hash = hash * 59 + this.UnavailableMessageUri.GetHashCode();
                 
                 if (this.NamePromptMessageUri != null)
-                    hash = hash * 57 + this.NamePromptMessageUri.GetHashCode();
+                    hash = hash * 59 + this.NamePromptMessageUri.GetHashCode();
                 
                 if (this.FullMessageUri != null)
-                    hash = hash * 57 + this.FullMessageUri.GetHashCode();
+                    hash = hash * 59 + this.FullMessageUri.GetHashCode();
                 
                 if (this.CompressSilence != null)
-                    hash = hash * 57 + this.CompressSilence.GetHashCode();
+                    hash = hash * 59 + this.CompressSilence.GetHashCode();
                 
                 if (this.PinConfiguration != null)
-                    hash = hash * 57 + this.PinConfiguration.GetHashCode();
+                    hash = hash * 59 + this.PinConfiguration.GetHashCode();
                 
                 if (this.QuotaSizeBytes != null)
-                    hash = hash * 57 + this.QuotaSizeBytes.GetHashCode();
+                    hash = hash * 59 + this.QuotaSizeBytes.GetHashCode();
                 
                 if (this.CreatedDate != null)
-                    hash = hash * 57 + this.CreatedDate.GetHashCode();
+                    hash = hash * 59 + this.CreatedDate.GetHashCode();
                 
                 if (this.ModifiedDate != null)
-                    hash = hash * 57 + this.ModifiedDate.GetHashCode();
+                    hash = hash * 59 + this.ModifiedDate.GetHashCode();
                 
                 if (this.VoicemailExtension != null)
-                    hash = hash * 57 + this.VoicemailExtension.GetHashCode();
+                    hash = hash * 59 + this.VoicemailExtension.GetHashCode();
                 
                 if (this.PinRequired != null)
-                    hash = hash * 57 + this.PinRequired.GetHashCode();
+                    hash = hash * 59 + this.PinRequired.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class DomainPermission :  IEquatable<DomainPermission>
+    public partial class DomainPermission :  IEquatable<DomainPermission>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainPermission" /> class.
@@ -113,7 +112,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DomainPermission instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DomainPermission to be compared</param>
+        /// <param name="other">Instance of DomainPermission to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DomainPermission other)
         {
@@ -167,28 +166,26 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Domain != null)
-                    hash = hash * 57 + this.Domain.GetHashCode();
+                    hash = hash * 59 + this.Domain.GetHashCode();
                 
                 if (this.EntityType != null)
-                    hash = hash * 57 + this.EntityType.GetHashCode();
+                    hash = hash * 59 + this.EntityType.GetHashCode();
                 
                 if (this.Action != null)
-                    hash = hash * 57 + this.Action.GetHashCode();
+                    hash = hash * 59 + this.Action.GetHashCode();
                 
                 if (this.Label != null)
-                    hash = hash * 57 + this.Label.GetHashCode();
+                    hash = hash * 59 + this.Label.GetHashCode();
                 
                 if (this.Licenses != null)
-                    hash = hash * 57 + this.Licenses.GetHashCode();
+                    hash = hash * 59 + this.Licenses.GetHashCode();
                 
                 if (this.AllowsConditions != null)
-                    hash = hash * 57 + this.AllowsConditions.GetHashCode();
+                    hash = hash * 59 + this.AllowsConditions.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

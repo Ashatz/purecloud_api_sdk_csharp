@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class WrapUpCodeMapping :  IEquatable<WrapUpCodeMapping>
+    public partial class WrapUpCodeMapping :  IEquatable<WrapUpCodeMapping>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WrapUpCodeMapping" /> class.
@@ -132,7 +131,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if WrapUpCodeMapping instances are equal
         /// </summary>
-        /// <param name="obj">Instance of WrapUpCodeMapping to be compared</param>
+        /// <param name="other">Instance of WrapUpCodeMapping to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(WrapUpCodeMapping other)
         {
@@ -196,34 +195,32 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.DateCreated != null)
-                    hash = hash * 57 + this.DateCreated.GetHashCode();
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
                 
                 if (this.DateModified != null)
-                    hash = hash * 57 + this.DateModified.GetHashCode();
+                    hash = hash * 59 + this.DateModified.GetHashCode();
                 
                 if (this.Version != null)
-                    hash = hash * 57 + this.Version.GetHashCode();
+                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 if (this.DefaultSet != null)
-                    hash = hash * 57 + this.DefaultSet.GetHashCode();
+                    hash = hash * 59 + this.DefaultSet.GetHashCode();
                 
                 if (this.Mapping != null)
-                    hash = hash * 57 + this.Mapping.GetHashCode();
+                    hash = hash * 59 + this.Mapping.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

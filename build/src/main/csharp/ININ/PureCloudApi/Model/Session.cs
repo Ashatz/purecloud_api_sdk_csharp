@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Session :  IEquatable<Session>
+    public partial class Session :  IEquatable<Session>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Session" /> class.
@@ -131,7 +130,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Session instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Session to be compared</param>
+        /// <param name="other">Instance of Session to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Session other)
         {
@@ -195,34 +194,32 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.MinutesToLive != null)
-                    hash = hash * 57 + this.MinutesToLive.GetHashCode();
+                    hash = hash * 59 + this.MinutesToLive.GetHashCode();
                 
                 if (this.UserAgent != null)
-                    hash = hash * 57 + this.UserAgent.GetHashCode();
+                    hash = hash * 59 + this.UserAgent.GetHashCode();
                 
                 if (this.CreatedOn != null)
-                    hash = hash * 57 + this.CreatedOn.GetHashCode();
+                    hash = hash * 59 + this.CreatedOn.GetHashCode();
                 
                 if (this.User != null)
-                    hash = hash * 57 + this.User.GetHashCode();
+                    hash = hash * 59 + this.User.GetHashCode();
                 
                 if (this.Language != null)
-                    hash = hash * 57 + this.Language.GetHashCode();
+                    hash = hash * 59 + this.Language.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

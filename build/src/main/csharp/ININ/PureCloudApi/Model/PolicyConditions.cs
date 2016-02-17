@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class PolicyConditions :  IEquatable<PolicyConditions>
+    public partial class PolicyConditions :  IEquatable<PolicyConditions>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PolicyConditions" /> class.
@@ -128,7 +127,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if PolicyConditions instances are equal
         /// </summary>
-        /// <param name="obj">Instance of PolicyConditions to be compared</param>
+        /// <param name="other">Instance of PolicyConditions to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(PolicyConditions other)
         {
@@ -192,34 +191,32 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.ForUsers != null)
-                    hash = hash * 57 + this.ForUsers.GetHashCode();
+                    hash = hash * 59 + this.ForUsers.GetHashCode();
                 
                 if (this.Directions != null)
-                    hash = hash * 57 + this.Directions.GetHashCode();
+                    hash = hash * 59 + this.Directions.GetHashCode();
                 
                 if (this.DateRanges != null)
-                    hash = hash * 57 + this.DateRanges.GetHashCode();
+                    hash = hash * 59 + this.DateRanges.GetHashCode();
                 
                 if (this.MediaTypes != null)
-                    hash = hash * 57 + this.MediaTypes.GetHashCode();
+                    hash = hash * 59 + this.MediaTypes.GetHashCode();
                 
                 if (this.ForQueues != null)
-                    hash = hash * 57 + this.ForQueues.GetHashCode();
+                    hash = hash * 59 + this.ForQueues.GetHashCode();
                 
                 if (this.Duration != null)
-                    hash = hash * 57 + this.Duration.GetHashCode();
+                    hash = hash * 59 + this.Duration.GetHashCode();
                 
                 if (this.WrapupCodes != null)
-                    hash = hash * 57 + this.WrapupCodes.GetHashCode();
+                    hash = hash * 59 + this.WrapupCodes.GetHashCode();
                 
                 if (this.TimeAllowed != null)
-                    hash = hash * 57 + this.TimeAllowed.GetHashCode();
+                    hash = hash * 59 + this.TimeAllowed.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

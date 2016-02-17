@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class SheetSchema :  IEquatable<SheetSchema>
+    public partial class SheetSchema :  IEquatable<SheetSchema>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SheetSchema" /> class.
@@ -118,7 +117,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if SheetSchema instances are equal
         /// </summary>
-        /// <param name="obj">Instance of SheetSchema to be compared</param>
+        /// <param name="other">Instance of SheetSchema to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(SheetSchema other)
         {
@@ -172,28 +171,26 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.HeaderRow != null)
-                    hash = hash * 57 + this.HeaderRow.GetHashCode();
+                    hash = hash * 59 + this.HeaderRow.GetHashCode();
                 
                 if (this.DataRow != null)
-                    hash = hash * 57 + this.DataRow.GetHashCode();
+                    hash = hash * 59 + this.DataRow.GetHashCode();
                 
                 if (this.HeaderMappings != null)
-                    hash = hash * 57 + this.HeaderMappings.GetHashCode();
+                    hash = hash * 59 + this.HeaderMappings.GetHashCode();
                 
                 if (this.RateType != null)
-                    hash = hash * 57 + this.RateType.GetHashCode();
+                    hash = hash * 59 + this.RateType.GetHashCode();
                 
                 if (this.SheetNumber != null)
-                    hash = hash * 57 + this.SheetNumber.GetHashCode();
+                    hash = hash * 59 + this.SheetNumber.GetHashCode();
                 
                 if (this.DateFormat != null)
-                    hash = hash * 57 + this.DateFormat.GetHashCode();
+                    hash = hash * 59 + this.DateFormat.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

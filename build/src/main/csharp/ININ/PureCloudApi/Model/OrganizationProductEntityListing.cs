@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class OrganizationProductEntityListing :  IEquatable<OrganizationProductEntityListing>
+    public partial class OrganizationProductEntityListing :  IEquatable<OrganizationProductEntityListing>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="OrganizationProductEntityListing" /> class.
@@ -104,7 +103,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if OrganizationProductEntityListing instances are equal
         /// </summary>
-        /// <param name="obj">Instance of OrganizationProductEntityListing to be compared</param>
+        /// <param name="other">Instance of OrganizationProductEntityListing to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(OrganizationProductEntityListing other)
         {
@@ -153,25 +152,23 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.PageSize != null)
-                    hash = hash * 57 + this.PageSize.GetHashCode();
+                    hash = hash * 59 + this.PageSize.GetHashCode();
                 
                 if (this.PageNumber != null)
-                    hash = hash * 57 + this.PageNumber.GetHashCode();
+                    hash = hash * 59 + this.PageNumber.GetHashCode();
                 
                 if (this.Total != null)
-                    hash = hash * 57 + this.Total.GetHashCode();
+                    hash = hash * 59 + this.Total.GetHashCode();
                 
                 if (this.Entities != null)
-                    hash = hash * 57 + this.Entities.GetHashCode();
+                    hash = hash * 59 + this.Entities.GetHashCode();
                 
                 if (this.PageCount != null)
-                    hash = hash * 57 + this.PageCount.GetHashCode();
+                    hash = hash * 59 + this.PageCount.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class AccountStatus :  IEquatable<AccountStatus>
+    public partial class AccountStatus :  IEquatable<AccountStatus>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AccountStatus" /> class.
@@ -139,7 +138,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if AccountStatus instances are equal
         /// </summary>
-        /// <param name="obj">Instance of AccountStatus to be compared</param>
+        /// <param name="other">Instance of AccountStatus to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(AccountStatus other)
         {
@@ -208,37 +207,35 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.OrgName != null)
-                    hash = hash * 57 + this.OrgName.GetHashCode();
+                    hash = hash * 59 + this.OrgName.GetHashCode();
                 
                 if (this.Configured != null)
-                    hash = hash * 57 + this.Configured.GetHashCode();
+                    hash = hash * 59 + this.Configured.GetHashCode();
                 
                 if (this.AdminUIURL != null)
-                    hash = hash * 57 + this.AdminUIURL.GetHashCode();
+                    hash = hash * 59 + this.AdminUIURL.GetHashCode();
                 
                 if (this.ThirdPartyAccountId != null)
-                    hash = hash * 57 + this.ThirdPartyAccountId.GetHashCode();
+                    hash = hash * 59 + this.ThirdPartyAccountId.GetHashCode();
                 
                 if (this.ThirdPartySubscriptionId != null)
-                    hash = hash * 57 + this.ThirdPartySubscriptionId.GetHashCode();
+                    hash = hash * 59 + this.ThirdPartySubscriptionId.GetHashCode();
                 
                 if (this.ThirdPartySubscriptionNonAcbId != null)
-                    hash = hash * 57 + this.ThirdPartySubscriptionNonAcbId.GetHashCode();
+                    hash = hash * 59 + this.ThirdPartySubscriptionNonAcbId.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

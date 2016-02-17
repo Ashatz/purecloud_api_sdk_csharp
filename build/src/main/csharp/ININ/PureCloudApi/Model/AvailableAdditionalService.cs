@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class AvailableAdditionalService :  IEquatable<AvailableAdditionalService>
+    public partial class AvailableAdditionalService :  IEquatable<AvailableAdditionalService>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AvailableAdditionalService" /> class.
@@ -126,7 +125,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if AvailableAdditionalService instances are equal
         /// </summary>
-        /// <param name="obj">Instance of AvailableAdditionalService to be compared</param>
+        /// <param name="other">Instance of AvailableAdditionalService to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(AvailableAdditionalService other)
         {
@@ -185,31 +184,29 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Description != null)
-                    hash = hash * 57 + this.Description.GetHashCode();
+                    hash = hash * 59 + this.Description.GetHashCode();
                 
                 if (this.PartNumber != null)
-                    hash = hash * 57 + this.PartNumber.GetHashCode();
+                    hash = hash * 59 + this.PartNumber.GetHashCode();
                 
                 if (this.RequiredForProducts != null)
-                    hash = hash * 57 + this.RequiredForProducts.GetHashCode();
+                    hash = hash * 59 + this.RequiredForProducts.GetHashCode();
                 
                 if (this.Rate != null)
-                    hash = hash * 57 + this.Rate.GetHashCode();
+                    hash = hash * 59 + this.Rate.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

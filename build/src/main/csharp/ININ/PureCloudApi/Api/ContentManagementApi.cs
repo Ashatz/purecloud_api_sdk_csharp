@@ -1,11 +1,11 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 using ININ.PureCloudApi.Client;
 using ININ.PureCloudApi.Model;
-
 
 namespace ININ.PureCloudApi.Api
 {
@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <returns>QueryResults</returns>
-        QueryResults CreateAuditquery (ContentQueryRequest body);
+        QueryResults PostContentmanagementAuditquery (ContentQueryRequest body);
   
         /// <summary>
         /// Query audits
@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <returns>ApiResponse of QueryResults</returns>
-        ApiResponse<QueryResults> CreateAuditqueryWithHttpInfo (ContentQueryRequest body);
+        ApiResponse<QueryResults> PostContentmanagementAuditqueryWithHttpInfo (ContentQueryRequest body);
 
         /// <summary>
         /// Query audits
@@ -44,7 +44,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <returns>Task of QueryResults</returns>
-        System.Threading.Tasks.Task<QueryResults> CreateAuditqueryAsync (ContentQueryRequest body);
+        System.Threading.Tasks.Task<QueryResults> PostContentmanagementAuditqueryAsync (ContentQueryRequest body);
 
         /// <summary>
         /// Query audits
@@ -54,7 +54,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <returns>Task of ApiResponse (QueryResults)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueryResults>> CreateAuditqueryAsyncWithHttpInfo (ContentQueryRequest body);
+        System.Threading.Tasks.Task<ApiResponse<QueryResults>> PostContentmanagementAuditqueryAsyncWithHttpInfo (ContentQueryRequest body);
         
         /// <summary>
         /// Get a list of documents.
@@ -70,7 +70,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">name or dateCreated</param>
         /// <param name="sortOrder">ascending or descending</param>
         /// <returns>DocumentEntityListing</returns>
-        DocumentEntityListing GetDocuments (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+        DocumentEntityListing GetContentmanagementDocuments (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
   
         /// <summary>
         /// Get a list of documents.
@@ -86,7 +86,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">name or dateCreated</param>
         /// <param name="sortOrder">ascending or descending</param>
         /// <returns>ApiResponse of DocumentEntityListing</returns>
-        ApiResponse<DocumentEntityListing> GetDocumentsWithHttpInfo (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+        ApiResponse<DocumentEntityListing> GetContentmanagementDocumentsWithHttpInfo (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get a list of documents.
@@ -102,7 +102,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">name or dateCreated</param>
         /// <param name="sortOrder">ascending or descending</param>
         /// <returns>Task of DocumentEntityListing</returns>
-        System.Threading.Tasks.Task<DocumentEntityListing> GetDocumentsAsync (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<DocumentEntityListing> GetContentmanagementDocumentsAsync (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get a list of documents.
@@ -118,7 +118,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">name or dateCreated</param>
         /// <param name="sortOrder">ascending or descending</param>
         /// <returns>Task of ApiResponse (DocumentEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentEntityListing>> GetDocumentsAsyncWithHttpInfo (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<DocumentEntityListing>> GetContentmanagementDocumentsAsyncWithHttpInfo (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
         
         /// <summary>
         /// Add a document.
@@ -131,7 +131,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source.</param>
         /// <param name="_override">Override any lock on the source document</param>
         /// <returns>Document</returns>
-        Document CreateDocuments (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null);
+        Document PostContentmanagementDocuments (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null);
   
         /// <summary>
         /// Add a document.
@@ -144,7 +144,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source.</param>
         /// <param name="_override">Override any lock on the source document</param>
         /// <returns>ApiResponse of Document</returns>
-        ApiResponse<Document> CreateDocumentsWithHttpInfo (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null);
+        ApiResponse<Document> PostContentmanagementDocumentsWithHttpInfo (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null);
 
         /// <summary>
         /// Add a document.
@@ -157,7 +157,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source.</param>
         /// <param name="_override">Override any lock on the source document</param>
         /// <returns>Task of Document</returns>
-        System.Threading.Tasks.Task<Document> CreateDocumentsAsync (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null);
+        System.Threading.Tasks.Task<Document> PostContentmanagementDocumentsAsync (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null);
 
         /// <summary>
         /// Add a document.
@@ -170,7 +170,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source.</param>
         /// <param name="_override">Override any lock on the source document</param>
         /// <returns>Task of ApiResponse (Document)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Document>> CreateDocumentsAsyncWithHttpInfo (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null);
+        System.Threading.Tasks.Task<ApiResponse<Document>> PostContentmanagementDocumentsAsyncWithHttpInfo (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null);
         
         /// <summary>
         /// Get a document.
@@ -181,7 +181,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Document</returns>
-        Document GetDocument (string documentId, string expand = null);
+        Document GetContentmanagementDocument (string documentId, string expand = null);
   
         /// <summary>
         /// Get a document.
@@ -192,7 +192,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>ApiResponse of Document</returns>
-        ApiResponse<Document> GetDocumentWithHttpInfo (string documentId, string expand = null);
+        ApiResponse<Document> GetContentmanagementDocumentWithHttpInfo (string documentId, string expand = null);
 
         /// <summary>
         /// Get a document.
@@ -203,7 +203,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of Document</returns>
-        System.Threading.Tasks.Task<Document> GetDocumentAsync (string documentId, string expand = null);
+        System.Threading.Tasks.Task<Document> GetContentmanagementDocumentAsync (string documentId, string expand = null);
 
         /// <summary>
         /// Get a document.
@@ -214,7 +214,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of ApiResponse (Document)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Document>> GetDocumentAsyncWithHttpInfo (string documentId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Document>> GetContentmanagementDocumentAsyncWithHttpInfo (string documentId, string expand = null);
         
         /// <summary>
         /// Update a document.
@@ -227,7 +227,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Expand some document fields</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>Document</returns>
-        Document CreateDocument (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null);
+        Document PostContentmanagementDocument (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null);
   
         /// <summary>
         /// Update a document.
@@ -240,7 +240,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Expand some document fields</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>ApiResponse of Document</returns>
-        ApiResponse<Document> CreateDocumentWithHttpInfo (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null);
+        ApiResponse<Document> PostContentmanagementDocumentWithHttpInfo (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null);
 
         /// <summary>
         /// Update a document.
@@ -253,7 +253,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Expand some document fields</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>Task of Document</returns>
-        System.Threading.Tasks.Task<Document> CreateDocumentAsync (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null);
+        System.Threading.Tasks.Task<Document> PostContentmanagementDocumentAsync (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null);
 
         /// <summary>
         /// Update a document.
@@ -266,7 +266,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Expand some document fields</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>Task of ApiResponse (Document)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Document>> CreateDocumentAsyncWithHttpInfo (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null);
+        System.Threading.Tasks.Task<ApiResponse<Document>> PostContentmanagementDocumentAsyncWithHttpInfo (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null);
         
         /// <summary>
         /// Delete a document.
@@ -277,7 +277,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns></returns>
-        void DeleteDocument (string documentId, bool? _override = null);
+        void DeleteContentmanagementDocument (string documentId, bool? _override = null);
   
         /// <summary>
         /// Delete a document.
@@ -288,7 +288,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteDocumentWithHttpInfo (string documentId, bool? _override = null);
+        ApiResponse<Object> DeleteContentmanagementDocumentWithHttpInfo (string documentId, bool? _override = null);
 
         /// <summary>
         /// Delete a document.
@@ -299,7 +299,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteDocumentAsync (string documentId, bool? _override = null);
+        System.Threading.Tasks.Task DeleteContentmanagementDocumentAsync (string documentId, bool? _override = null);
 
         /// <summary>
         /// Delete a document.
@@ -310,7 +310,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteDocumentAsyncWithHttpInfo (string documentId, bool? _override = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementDocumentAsyncWithHttpInfo (string documentId, bool? _override = null);
         
         /// <summary>
         /// Get a list of audits for a document.
@@ -326,7 +326,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>DocumentAuditEntityListing</returns>
-        DocumentAuditEntityListing GetDocumentAudits (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null);
+        DocumentAuditEntityListing GetContentmanagementDocumentAudits (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null);
   
         /// <summary>
         /// Get a list of audits for a document.
@@ -342,7 +342,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>ApiResponse of DocumentAuditEntityListing</returns>
-        ApiResponse<DocumentAuditEntityListing> GetDocumentAuditsWithHttpInfo (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null);
+        ApiResponse<DocumentAuditEntityListing> GetContentmanagementDocumentAuditsWithHttpInfo (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get a list of audits for a document.
@@ -358,7 +358,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of DocumentAuditEntityListing</returns>
-        System.Threading.Tasks.Task<DocumentAuditEntityListing> GetDocumentAuditsAsync (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<DocumentAuditEntityListing> GetContentmanagementDocumentAuditsAsync (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get a list of audits for a document.
@@ -374,7 +374,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ApiResponse (DocumentAuditEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentAuditEntityListing>> GetDocumentAuditsAsyncWithHttpInfo (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<DocumentAuditEntityListing>> GetContentmanagementDocumentAuditsAsyncWithHttpInfo (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null);
         
         /// <summary>
         /// Download a document.
@@ -386,7 +386,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment.</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
         /// <returns></returns>
-        void GetDocumentContent (string documentId, string disposition = null, string contentType = null);
+        void GetContentmanagementDocumentContent (string documentId, string disposition = null, string contentType = null);
   
         /// <summary>
         /// Download a document.
@@ -398,7 +398,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment.</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetDocumentContentWithHttpInfo (string documentId, string disposition = null, string contentType = null);
+        ApiResponse<Object> GetContentmanagementDocumentContentWithHttpInfo (string documentId, string disposition = null, string contentType = null);
 
         /// <summary>
         /// Download a document.
@@ -410,7 +410,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment.</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetDocumentContentAsync (string documentId, string disposition = null, string contentType = null);
+        System.Threading.Tasks.Task GetContentmanagementDocumentContentAsync (string documentId, string disposition = null, string contentType = null);
 
         /// <summary>
         /// Download a document.
@@ -422,7 +422,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment.</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetDocumentContentAsyncWithHttpInfo (string documentId, string disposition = null, string contentType = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetContentmanagementDocumentContentAsyncWithHttpInfo (string documentId, string disposition = null, string contentType = null);
         
         /// <summary>
         /// Replace the contents of a document.
@@ -434,7 +434,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Replace Request</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>ReplaceResponse</returns>
-        ReplaceResponse CreateDocumentContent (string documentId, ReplaceRequest body = null, bool? _override = null);
+        ReplaceResponse PostContentmanagementDocumentContent (string documentId, ReplaceRequest body = null, bool? _override = null);
   
         /// <summary>
         /// Replace the contents of a document.
@@ -446,7 +446,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Replace Request</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>ApiResponse of ReplaceResponse</returns>
-        ApiResponse<ReplaceResponse> CreateDocumentContentWithHttpInfo (string documentId, ReplaceRequest body = null, bool? _override = null);
+        ApiResponse<ReplaceResponse> PostContentmanagementDocumentContentWithHttpInfo (string documentId, ReplaceRequest body = null, bool? _override = null);
 
         /// <summary>
         /// Replace the contents of a document.
@@ -458,7 +458,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Replace Request</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>Task of ReplaceResponse</returns>
-        System.Threading.Tasks.Task<ReplaceResponse> CreateDocumentContentAsync (string documentId, ReplaceRequest body = null, bool? _override = null);
+        System.Threading.Tasks.Task<ReplaceResponse> PostContentmanagementDocumentContentAsync (string documentId, ReplaceRequest body = null, bool? _override = null);
 
         /// <summary>
         /// Replace the contents of a document.
@@ -470,7 +470,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Replace Request</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>Task of ApiResponse (ReplaceResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReplaceResponse>> CreateDocumentContentAsyncWithHttpInfo (string documentId, ReplaceRequest body = null, bool? _override = null);
+        System.Threading.Tasks.Task<ApiResponse<ReplaceResponse>> PostContentmanagementDocumentContentAsyncWithHttpInfo (string documentId, ReplaceRequest body = null, bool? _override = null);
         
         /// <summary>
         /// Query content
@@ -485,7 +485,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">ascending or descending</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>QueryResults</returns>
-        QueryResults GetQuery (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null);
+        QueryResults GetContentmanagementQuery (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null);
   
         /// <summary>
         /// Query content
@@ -500,7 +500,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">ascending or descending</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>ApiResponse of QueryResults</returns>
-        ApiResponse<QueryResults> GetQueryWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null);
+        ApiResponse<QueryResults> GetContentmanagementQueryWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null);
 
         /// <summary>
         /// Query content
@@ -515,7 +515,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">ascending or descending</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of QueryResults</returns>
-        System.Threading.Tasks.Task<QueryResults> GetQueryAsync (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null);
+        System.Threading.Tasks.Task<QueryResults> GetContentmanagementQueryAsync (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null);
 
         /// <summary>
         /// Query content
@@ -530,7 +530,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">ascending or descending</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of ApiResponse (QueryResults)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueryResults>> GetQueryAsyncWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<QueryResults>> GetContentmanagementQueryAsyncWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null);
         
         /// <summary>
         /// Query content
@@ -541,7 +541,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>QueryResults</returns>
-        QueryResults CreateQuery (QueryRequest body, string expand = null);
+        QueryResults PostContentmanagementQuery (QueryRequest body, string expand = null);
   
         /// <summary>
         /// Query content
@@ -552,7 +552,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>ApiResponse of QueryResults</returns>
-        ApiResponse<QueryResults> CreateQueryWithHttpInfo (QueryRequest body, string expand = null);
+        ApiResponse<QueryResults> PostContentmanagementQueryWithHttpInfo (QueryRequest body, string expand = null);
 
         /// <summary>
         /// Query content
@@ -563,7 +563,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of QueryResults</returns>
-        System.Threading.Tasks.Task<QueryResults> CreateQueryAsync (QueryRequest body, string expand = null);
+        System.Threading.Tasks.Task<QueryResults> PostContentmanagementQueryAsync (QueryRequest body, string expand = null);
 
         /// <summary>
         /// Query content
@@ -574,7 +574,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of ApiResponse (QueryResults)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueryResults>> CreateQueryAsyncWithHttpInfo (QueryRequest body, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<QueryResults>> PostContentmanagementQueryAsyncWithHttpInfo (QueryRequest body, string expand = null);
         
         /// <summary>
         /// Get a List of Security Profiles
@@ -583,7 +583,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>SecurityProfileEntityListing</returns>
-        SecurityProfileEntityListing GetSecurityprofiles ();
+        SecurityProfileEntityListing GetContentmanagementSecurityprofiles ();
   
         /// <summary>
         /// Get a List of Security Profiles
@@ -592,7 +592,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of SecurityProfileEntityListing</returns>
-        ApiResponse<SecurityProfileEntityListing> GetSecurityprofilesWithHttpInfo ();
+        ApiResponse<SecurityProfileEntityListing> GetContentmanagementSecurityprofilesWithHttpInfo ();
 
         /// <summary>
         /// Get a List of Security Profiles
@@ -601,7 +601,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of SecurityProfileEntityListing</returns>
-        System.Threading.Tasks.Task<SecurityProfileEntityListing> GetSecurityprofilesAsync ();
+        System.Threading.Tasks.Task<SecurityProfileEntityListing> GetContentmanagementSecurityprofilesAsync ();
 
         /// <summary>
         /// Get a List of Security Profiles
@@ -610,7 +610,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse (SecurityProfileEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SecurityProfileEntityListing>> GetSecurityprofilesAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<SecurityProfileEntityListing>> GetContentmanagementSecurityprofilesAsyncWithHttpInfo ();
         
         /// <summary>
         /// Get a Security Profile
@@ -620,7 +620,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="securityProfileId">Security Profile Id</param>
         /// <returns>SecurityProfile</returns>
-        SecurityProfile GetSecurityProfile (string securityProfileId);
+        SecurityProfile GetContentmanagementSecurityprofile (string securityProfileId);
   
         /// <summary>
         /// Get a Security Profile
@@ -630,7 +630,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="securityProfileId">Security Profile Id</param>
         /// <returns>ApiResponse of SecurityProfile</returns>
-        ApiResponse<SecurityProfile> GetSecurityProfileWithHttpInfo (string securityProfileId);
+        ApiResponse<SecurityProfile> GetContentmanagementSecurityprofileWithHttpInfo (string securityProfileId);
 
         /// <summary>
         /// Get a Security Profile
@@ -640,7 +640,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="securityProfileId">Security Profile Id</param>
         /// <returns>Task of SecurityProfile</returns>
-        System.Threading.Tasks.Task<SecurityProfile> GetSecurityProfileAsync (string securityProfileId);
+        System.Threading.Tasks.Task<SecurityProfile> GetContentmanagementSecurityprofileAsync (string securityProfileId);
 
         /// <summary>
         /// Get a Security Profile
@@ -650,7 +650,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="securityProfileId">Security Profile Id</param>
         /// <returns>Task of ApiResponse (SecurityProfile)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SecurityProfile>> GetSecurityProfileAsyncWithHttpInfo (string securityProfileId);
+        System.Threading.Tasks.Task<ApiResponse<SecurityProfile>> GetContentmanagementSecurityprofileAsyncWithHttpInfo (string securityProfileId);
         
         /// <summary>
         /// Get shared documents. Securely download a shared document.
@@ -664,7 +664,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns></returns>
-        void GetSharedShared (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
+        void GetContentmanagementShared (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
   
         /// <summary>
         /// Get shared documents. Securely download a shared document.
@@ -678,7 +678,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetSharedSharedWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
+        ApiResponse<Object> GetContentmanagementSharedWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
 
         /// <summary>
         /// Get shared documents. Securely download a shared document.
@@ -692,7 +692,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetSharedSharedAsync (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
+        System.Threading.Tasks.Task GetContentmanagementSharedAsync (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
 
         /// <summary>
         /// Get shared documents. Securely download a shared document.
@@ -706,7 +706,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetSharedSharedAsyncWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetContentmanagementSharedAsyncWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
         
         /// <summary>
         /// Gets a list of shares.  You must specify at least one filter (e.g. entityId).
@@ -719,7 +719,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>ShareEntityListing</returns>
-        ShareEntityListing GetShares (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null);
+        ShareEntityListing GetContentmanagementShares (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null);
   
         /// <summary>
         /// Gets a list of shares.  You must specify at least one filter (e.g. entityId).
@@ -732,7 +732,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>ApiResponse of ShareEntityListing</returns>
-        ApiResponse<ShareEntityListing> GetSharesWithHttpInfo (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null);
+        ApiResponse<ShareEntityListing> GetContentmanagementSharesWithHttpInfo (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Gets a list of shares.  You must specify at least one filter (e.g. entityId).
@@ -745,7 +745,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ShareEntityListing</returns>
-        System.Threading.Tasks.Task<ShareEntityListing> GetSharesAsync (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ShareEntityListing> GetContentmanagementSharesAsync (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Gets a list of shares.  You must specify at least one filter (e.g. entityId).
@@ -758,7 +758,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (ShareEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ShareEntityListing>> GetSharesAsyncWithHttpInfo (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<ShareEntityListing>> GetContentmanagementSharesAsyncWithHttpInfo (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
         /// Creates a new share or updates an existing share if the entity has already been shared
@@ -768,7 +768,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
         /// <returns>CreateShareResponse</returns>
-        CreateShareResponse CreateShares (CreateShareRequest body = null);
+        CreateShareResponse PostContentmanagementShares (CreateShareRequest body = null);
   
         /// <summary>
         /// Creates a new share or updates an existing share if the entity has already been shared
@@ -778,7 +778,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
         /// <returns>ApiResponse of CreateShareResponse</returns>
-        ApiResponse<CreateShareResponse> CreateSharesWithHttpInfo (CreateShareRequest body = null);
+        ApiResponse<CreateShareResponse> PostContentmanagementSharesWithHttpInfo (CreateShareRequest body = null);
 
         /// <summary>
         /// Creates a new share or updates an existing share if the entity has already been shared
@@ -788,7 +788,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
         /// <returns>Task of CreateShareResponse</returns>
-        System.Threading.Tasks.Task<CreateShareResponse> CreateSharesAsync (CreateShareRequest body = null);
+        System.Threading.Tasks.Task<CreateShareResponse> PostContentmanagementSharesAsync (CreateShareRequest body = null);
 
         /// <summary>
         /// Creates a new share or updates an existing share if the entity has already been shared
@@ -798,7 +798,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
         /// <returns>Task of ApiResponse (CreateShareResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateShareResponse>> CreateSharesAsyncWithHttpInfo (CreateShareRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<CreateShareResponse>> PostContentmanagementSharesAsyncWithHttpInfo (CreateShareRequest body = null);
         
         /// <summary>
         /// Retrieve details about an existing share.
@@ -809,7 +809,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="shareId">Share ID</param>
         /// <param name="expand">Expand share fields</param>
         /// <returns>Share</returns>
-        Share GetShare (string shareId, string expand = null);
+        Share GetContentmanagementShare (string shareId, string expand = null);
   
         /// <summary>
         /// Retrieve details about an existing share.
@@ -820,7 +820,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="shareId">Share ID</param>
         /// <param name="expand">Expand share fields</param>
         /// <returns>ApiResponse of Share</returns>
-        ApiResponse<Share> GetShareWithHttpInfo (string shareId, string expand = null);
+        ApiResponse<Share> GetContentmanagementShareWithHttpInfo (string shareId, string expand = null);
 
         /// <summary>
         /// Retrieve details about an existing share.
@@ -831,7 +831,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="shareId">Share ID</param>
         /// <param name="expand">Expand share fields</param>
         /// <returns>Task of Share</returns>
-        System.Threading.Tasks.Task<Share> GetShareAsync (string shareId, string expand = null);
+        System.Threading.Tasks.Task<Share> GetContentmanagementShareAsync (string shareId, string expand = null);
 
         /// <summary>
         /// Retrieve details about an existing share.
@@ -842,7 +842,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="shareId">Share ID</param>
         /// <param name="expand">Expand share fields</param>
         /// <returns>Task of ApiResponse (Share)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Share>> GetShareAsyncWithHttpInfo (string shareId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Share>> GetContentmanagementShareAsyncWithHttpInfo (string shareId, string expand = null);
         
         /// <summary>
         /// Deletes an existing share.
@@ -852,7 +852,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="shareId">Share ID</param>
         /// <returns></returns>
-        void DeleteShare (string shareId);
+        void DeleteContentmanagementShare (string shareId);
   
         /// <summary>
         /// Deletes an existing share.
@@ -862,7 +862,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="shareId">Share ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteShareWithHttpInfo (string shareId);
+        ApiResponse<Object> DeleteContentmanagementShareWithHttpInfo (string shareId);
 
         /// <summary>
         /// Deletes an existing share.
@@ -872,7 +872,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="shareId">Share ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteShareAsync (string shareId);
+        System.Threading.Tasks.Task DeleteContentmanagementShareAsync (string shareId);
 
         /// <summary>
         /// Deletes an existing share.
@@ -882,7 +882,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="shareId">Share ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteShareAsyncWithHttpInfo (string shareId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementShareAsyncWithHttpInfo (string shareId);
         
         /// <summary>
         /// Get a list of statuses for pending operations
@@ -893,7 +893,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>CommandStatusEntityListing</returns>
-        CommandStatusEntityListing GetStatus (int? pageSize = null, int? pageNumber = null);
+        CommandStatusEntityListing GetContentmanagementStatus (int? pageSize = null, int? pageNumber = null);
   
         /// <summary>
         /// Get a list of statuses for pending operations
@@ -904,7 +904,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>ApiResponse of CommandStatusEntityListing</returns>
-        ApiResponse<CommandStatusEntityListing> GetStatusWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        ApiResponse<CommandStatusEntityListing> GetContentmanagementStatusWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get a list of statuses for pending operations
@@ -915,7 +915,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of CommandStatusEntityListing</returns>
-        System.Threading.Tasks.Task<CommandStatusEntityListing> GetStatusAsync (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<CommandStatusEntityListing> GetContentmanagementStatusAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get a list of statuses for pending operations
@@ -926,7 +926,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (CommandStatusEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommandStatusEntityListing>> GetStatusAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<CommandStatusEntityListing>> GetContentmanagementStatusAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
         /// Get a status.
@@ -936,7 +936,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="statusId">Status ID</param>
         /// <returns>CommandStatus</returns>
-        CommandStatus GetStatusStatus (string statusId);
+        CommandStatus GetContentmanagementStatu (string statusId);
   
         /// <summary>
         /// Get a status.
@@ -946,7 +946,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="statusId">Status ID</param>
         /// <returns>ApiResponse of CommandStatus</returns>
-        ApiResponse<CommandStatus> GetStatusStatusWithHttpInfo (string statusId);
+        ApiResponse<CommandStatus> GetContentmanagementStatuWithHttpInfo (string statusId);
 
         /// <summary>
         /// Get a status.
@@ -956,7 +956,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="statusId">Status ID</param>
         /// <returns>Task of CommandStatus</returns>
-        System.Threading.Tasks.Task<CommandStatus> GetStatusStatusAsync (string statusId);
+        System.Threading.Tasks.Task<CommandStatus> GetContentmanagementStatuAsync (string statusId);
 
         /// <summary>
         /// Get a status.
@@ -966,7 +966,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="statusId">Status ID</param>
         /// <returns>Task of ApiResponse (CommandStatus)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommandStatus>> GetStatusStatusAsyncWithHttpInfo (string statusId);
+        System.Threading.Tasks.Task<ApiResponse<CommandStatus>> GetContentmanagementStatuAsyncWithHttpInfo (string statusId);
         
         /// <summary>
         /// Cancel the command for this status
@@ -976,7 +976,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="statusId">Status ID</param>
         /// <returns></returns>
-        void DeleteStatusStatus (string statusId);
+        void DeleteContentmanagementStatu (string statusId);
   
         /// <summary>
         /// Cancel the command for this status
@@ -986,7 +986,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="statusId">Status ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteStatusStatusWithHttpInfo (string statusId);
+        ApiResponse<Object> DeleteContentmanagementStatuWithHttpInfo (string statusId);
 
         /// <summary>
         /// Cancel the command for this status
@@ -996,7 +996,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="statusId">Status ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteStatusStatusAsync (string statusId);
+        System.Threading.Tasks.Task DeleteContentmanagementStatuAsync (string statusId);
 
         /// <summary>
         /// Cancel the command for this status
@@ -1006,7 +1006,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="statusId">Status ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteStatusStatusAsyncWithHttpInfo (string statusId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementStatuAsyncWithHttpInfo (string statusId);
         
         /// <summary>
         /// Get a list of workspaces.
@@ -1019,7 +1019,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="access">Requested access level</param>
         /// <param name="expand">Expand some workspace fields</param>
         /// <returns>WorkspaceEntityListing</returns>
-        WorkspaceEntityListing GetWorkspaces (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null);
+        WorkspaceEntityListing GetContentmanagementWorkspaces (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null);
   
         /// <summary>
         /// Get a list of workspaces.
@@ -1032,7 +1032,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="access">Requested access level</param>
         /// <param name="expand">Expand some workspace fields</param>
         /// <returns>ApiResponse of WorkspaceEntityListing</returns>
-        ApiResponse<WorkspaceEntityListing> GetWorkspacesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null);
+        ApiResponse<WorkspaceEntityListing> GetContentmanagementWorkspacesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null);
 
         /// <summary>
         /// Get a list of workspaces.
@@ -1045,7 +1045,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="access">Requested access level</param>
         /// <param name="expand">Expand some workspace fields</param>
         /// <returns>Task of WorkspaceEntityListing</returns>
-        System.Threading.Tasks.Task<WorkspaceEntityListing> GetWorkspacesAsync (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null);
+        System.Threading.Tasks.Task<WorkspaceEntityListing> GetContentmanagementWorkspacesAsync (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null);
 
         /// <summary>
         /// Get a list of workspaces.
@@ -1058,7 +1058,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="access">Requested access level</param>
         /// <param name="expand">Expand some workspace fields</param>
         /// <returns>Task of ApiResponse (WorkspaceEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WorkspaceEntityListing>> GetWorkspacesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<WorkspaceEntityListing>> GetContentmanagementWorkspacesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null);
         
         /// <summary>
         /// Create a group workspace
@@ -1068,7 +1068,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Workspace</param>
         /// <returns>Workspace</returns>
-        Workspace CreateWorkspaces (WorkspaceCreate body = null);
+        Workspace PostContentmanagementWorkspaces (WorkspaceCreate body = null);
   
         /// <summary>
         /// Create a group workspace
@@ -1078,7 +1078,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Workspace</param>
         /// <returns>ApiResponse of Workspace</returns>
-        ApiResponse<Workspace> CreateWorkspacesWithHttpInfo (WorkspaceCreate body = null);
+        ApiResponse<Workspace> PostContentmanagementWorkspacesWithHttpInfo (WorkspaceCreate body = null);
 
         /// <summary>
         /// Create a group workspace
@@ -1088,7 +1088,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Workspace</param>
         /// <returns>Task of Workspace</returns>
-        System.Threading.Tasks.Task<Workspace> CreateWorkspacesAsync (WorkspaceCreate body = null);
+        System.Threading.Tasks.Task<Workspace> PostContentmanagementWorkspacesAsync (WorkspaceCreate body = null);
 
         /// <summary>
         /// Create a group workspace
@@ -1098,7 +1098,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Workspace>> CreateWorkspacesAsyncWithHttpInfo (WorkspaceCreate body = null);
+        System.Threading.Tasks.Task<ApiResponse<Workspace>> PostContentmanagementWorkspacesAsyncWithHttpInfo (WorkspaceCreate body = null);
         
         /// <summary>
         /// Get a workspace.
@@ -1109,7 +1109,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="expand">Expand some workspace fields</param>
         /// <returns>Workspace</returns>
-        Workspace GetWorkspace (string workspaceId, string expand = null);
+        Workspace GetContentmanagementWorkspace (string workspaceId, string expand = null);
   
         /// <summary>
         /// Get a workspace.
@@ -1120,7 +1120,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="expand">Expand some workspace fields</param>
         /// <returns>ApiResponse of Workspace</returns>
-        ApiResponse<Workspace> GetWorkspaceWithHttpInfo (string workspaceId, string expand = null);
+        ApiResponse<Workspace> GetContentmanagementWorkspaceWithHttpInfo (string workspaceId, string expand = null);
 
         /// <summary>
         /// Get a workspace.
@@ -1131,7 +1131,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="expand">Expand some workspace fields</param>
         /// <returns>Task of Workspace</returns>
-        System.Threading.Tasks.Task<Workspace> GetWorkspaceAsync (string workspaceId, string expand = null);
+        System.Threading.Tasks.Task<Workspace> GetContentmanagementWorkspaceAsync (string workspaceId, string expand = null);
 
         /// <summary>
         /// Get a workspace.
@@ -1142,7 +1142,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="expand">Expand some workspace fields</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Workspace>> GetWorkspaceAsyncWithHttpInfo (string workspaceId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Workspace>> GetContentmanagementWorkspaceAsyncWithHttpInfo (string workspaceId, string expand = null);
         
         /// <summary>
         /// Update a workspace
@@ -1153,7 +1153,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Workspace</returns>
-        Workspace UpdateWorkspace (string workspaceId, Workspace body = null);
+        Workspace PutContentmanagementWorkspace (string workspaceId, Workspace body = null);
   
         /// <summary>
         /// Update a workspace
@@ -1164,7 +1164,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>ApiResponse of Workspace</returns>
-        ApiResponse<Workspace> UpdateWorkspaceWithHttpInfo (string workspaceId, Workspace body = null);
+        ApiResponse<Workspace> PutContentmanagementWorkspaceWithHttpInfo (string workspaceId, Workspace body = null);
 
         /// <summary>
         /// Update a workspace
@@ -1175,7 +1175,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Task of Workspace</returns>
-        System.Threading.Tasks.Task<Workspace> UpdateWorkspaceAsync (string workspaceId, Workspace body = null);
+        System.Threading.Tasks.Task<Workspace> PutContentmanagementWorkspaceAsync (string workspaceId, Workspace body = null);
 
         /// <summary>
         /// Update a workspace
@@ -1186,7 +1186,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Workspace>> UpdateWorkspaceAsyncWithHttpInfo (string workspaceId, Workspace body = null);
+        System.Threading.Tasks.Task<ApiResponse<Workspace>> PutContentmanagementWorkspaceAsyncWithHttpInfo (string workspaceId, Workspace body = null);
         
         /// <summary>
         /// Delete a workspace
@@ -1197,7 +1197,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace.</param>
         /// <returns></returns>
-        void DeleteWorkspace (string workspaceId, string moveChildrenToWorkspaceId = null);
+        void DeleteContentmanagementWorkspace (string workspaceId, string moveChildrenToWorkspaceId = null);
   
         /// <summary>
         /// Delete a workspace
@@ -1208,7 +1208,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteWorkspaceWithHttpInfo (string workspaceId, string moveChildrenToWorkspaceId = null);
+        ApiResponse<Object> DeleteContentmanagementWorkspaceWithHttpInfo (string workspaceId, string moveChildrenToWorkspaceId = null);
 
         /// <summary>
         /// Delete a workspace
@@ -1219,7 +1219,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteWorkspaceAsync (string workspaceId, string moveChildrenToWorkspaceId = null);
+        System.Threading.Tasks.Task DeleteContentmanagementWorkspaceAsync (string workspaceId, string moveChildrenToWorkspaceId = null);
 
         /// <summary>
         /// Delete a workspace
@@ -1230,7 +1230,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkspaceAsyncWithHttpInfo (string workspaceId, string moveChildrenToWorkspaceId = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementWorkspaceAsyncWithHttpInfo (string workspaceId, string moveChildrenToWorkspaceId = null);
         
         /// <summary>
         /// Get a list workspace members
@@ -1243,7 +1243,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">Expand workspace member fields</param>
         /// <returns>WorkspaceMemberEntityListing</returns>
-        WorkspaceMemberEntityListing GetWorkspaceMembers (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null);
+        WorkspaceMemberEntityListing GetContentmanagementWorkspaceMembers (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null);
   
         /// <summary>
         /// Get a list workspace members
@@ -1256,7 +1256,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">Expand workspace member fields</param>
         /// <returns>ApiResponse of WorkspaceMemberEntityListing</returns>
-        ApiResponse<WorkspaceMemberEntityListing> GetWorkspaceMembersWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null);
+        ApiResponse<WorkspaceMemberEntityListing> GetContentmanagementWorkspaceMembersWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null);
 
         /// <summary>
         /// Get a list workspace members
@@ -1269,7 +1269,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">Expand workspace member fields</param>
         /// <returns>Task of WorkspaceMemberEntityListing</returns>
-        System.Threading.Tasks.Task<WorkspaceMemberEntityListing> GetWorkspaceMembersAsync (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null);
+        System.Threading.Tasks.Task<WorkspaceMemberEntityListing> GetContentmanagementWorkspaceMembersAsync (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null);
 
         /// <summary>
         /// Get a list workspace members
@@ -1282,7 +1282,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">Expand workspace member fields</param>
         /// <returns>Task of ApiResponse (WorkspaceMemberEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WorkspaceMemberEntityListing>> GetWorkspaceMembersAsyncWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<WorkspaceMemberEntityListing>> GetContentmanagementWorkspaceMembersAsyncWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null);
         
         /// <summary>
         /// Get a workspace member
@@ -1294,7 +1294,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="expand">Expand workspace member fields</param>
         /// <returns>WorkspaceMember</returns>
-        WorkspaceMember GetWorkspaceMembersByMemberId (string workspaceId, string memberId, string expand = null);
+        WorkspaceMember GetContentmanagementWorkspaceMember (string workspaceId, string memberId, string expand = null);
   
         /// <summary>
         /// Get a workspace member
@@ -1306,7 +1306,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="expand">Expand workspace member fields</param>
         /// <returns>ApiResponse of WorkspaceMember</returns>
-        ApiResponse<WorkspaceMember> GetWorkspaceMembersByMemberIdWithHttpInfo (string workspaceId, string memberId, string expand = null);
+        ApiResponse<WorkspaceMember> GetContentmanagementWorkspaceMemberWithHttpInfo (string workspaceId, string memberId, string expand = null);
 
         /// <summary>
         /// Get a workspace member
@@ -1318,7 +1318,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="expand">Expand workspace member fields</param>
         /// <returns>Task of WorkspaceMember</returns>
-        System.Threading.Tasks.Task<WorkspaceMember> GetWorkspaceMembersByMemberIdAsync (string workspaceId, string memberId, string expand = null);
+        System.Threading.Tasks.Task<WorkspaceMember> GetContentmanagementWorkspaceMemberAsync (string workspaceId, string memberId, string expand = null);
 
         /// <summary>
         /// Get a workspace member
@@ -1330,7 +1330,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="expand">Expand workspace member fields</param>
         /// <returns>Task of ApiResponse (WorkspaceMember)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> GetWorkspaceMembersByMemberIdAsyncWithHttpInfo (string workspaceId, string memberId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> GetContentmanagementWorkspaceMemberAsyncWithHttpInfo (string workspaceId, string memberId, string expand = null);
         
         /// <summary>
         /// Add a member to a workspace
@@ -1342,7 +1342,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>WorkspaceMember</returns>
-        WorkspaceMember UpdateWorkspaceMembersByMemberId (string workspaceId, string memberId, WorkspaceMember body = null);
+        WorkspaceMember PutContentmanagementWorkspaceMember (string workspaceId, string memberId, WorkspaceMember body = null);
   
         /// <summary>
         /// Add a member to a workspace
@@ -1354,7 +1354,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>ApiResponse of WorkspaceMember</returns>
-        ApiResponse<WorkspaceMember> UpdateWorkspaceMembersByMemberIdWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body = null);
+        ApiResponse<WorkspaceMember> PutContentmanagementWorkspaceMemberWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body = null);
 
         /// <summary>
         /// Add a member to a workspace
@@ -1366,7 +1366,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Task of WorkspaceMember</returns>
-        System.Threading.Tasks.Task<WorkspaceMember> UpdateWorkspaceMembersByMemberIdAsync (string workspaceId, string memberId, WorkspaceMember body = null);
+        System.Threading.Tasks.Task<WorkspaceMember> PutContentmanagementWorkspaceMemberAsync (string workspaceId, string memberId, WorkspaceMember body = null);
 
         /// <summary>
         /// Add a member to a workspace
@@ -1378,7 +1378,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (WorkspaceMember)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> UpdateWorkspaceMembersByMemberIdAsyncWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body = null);
+        System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> PutContentmanagementWorkspaceMemberAsyncWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body = null);
         
         /// <summary>
         /// Delete a member from a workspace
@@ -1389,7 +1389,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns></returns>
-        void DeleteWorkspaceMembersByMemberId (string workspaceId, string memberId);
+        void DeleteContentmanagementWorkspaceMember (string workspaceId, string memberId);
   
         /// <summary>
         /// Delete a member from a workspace
@@ -1400,7 +1400,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteWorkspaceMembersByMemberIdWithHttpInfo (string workspaceId, string memberId);
+        ApiResponse<Object> DeleteContentmanagementWorkspaceMemberWithHttpInfo (string workspaceId, string memberId);
 
         /// <summary>
         /// Delete a member from a workspace
@@ -1411,7 +1411,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteWorkspaceMembersByMemberIdAsync (string workspaceId, string memberId);
+        System.Threading.Tasks.Task DeleteContentmanagementWorkspaceMemberAsync (string workspaceId, string memberId);
 
         /// <summary>
         /// Delete a member from a workspace
@@ -1422,7 +1422,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkspaceMembersByMemberIdAsyncWithHttpInfo (string workspaceId, string memberId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementWorkspaceMemberAsyncWithHttpInfo (string workspaceId, string memberId);
         
         /// <summary>
         /// Get a list of workspace tags
@@ -1436,7 +1436,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>TagValueEntityListing</returns>
-        TagValueEntityListing GetWorkspaceTagvalues (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null);
+        TagValueEntityListing GetContentmanagementWorkspaceTagvalues (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null);
   
         /// <summary>
         /// Get a list of workspace tags
@@ -1450,7 +1450,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>ApiResponse of TagValueEntityListing</returns>
-        ApiResponse<TagValueEntityListing> GetWorkspaceTagvaluesWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null);
+        ApiResponse<TagValueEntityListing> GetContentmanagementWorkspaceTagvaluesWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null);
 
         /// <summary>
         /// Get a list of workspace tags
@@ -1464,7 +1464,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of TagValueEntityListing</returns>
-        System.Threading.Tasks.Task<TagValueEntityListing> GetWorkspaceTagvaluesAsync (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null);
+        System.Threading.Tasks.Task<TagValueEntityListing> GetContentmanagementWorkspaceTagvaluesAsync (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null);
 
         /// <summary>
         /// Get a list of workspace tags
@@ -1478,7 +1478,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of ApiResponse (TagValueEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> GetWorkspaceTagvaluesAsyncWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> GetContentmanagementWorkspaceTagvaluesAsyncWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null);
         
         /// <summary>
         /// Create a workspace tag
@@ -1489,7 +1489,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">tag</param>
         /// <returns>TagValue</returns>
-        TagValue CreateWorkspaceTagvalues (string workspaceId, TagValue body = null);
+        TagValue PostContentmanagementWorkspaceTagvalues (string workspaceId, TagValue body = null);
   
         /// <summary>
         /// Create a workspace tag
@@ -1500,7 +1500,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">tag</param>
         /// <returns>ApiResponse of TagValue</returns>
-        ApiResponse<TagValue> CreateWorkspaceTagvaluesWithHttpInfo (string workspaceId, TagValue body = null);
+        ApiResponse<TagValue> PostContentmanagementWorkspaceTagvaluesWithHttpInfo (string workspaceId, TagValue body = null);
 
         /// <summary>
         /// Create a workspace tag
@@ -1511,7 +1511,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">tag</param>
         /// <returns>Task of TagValue</returns>
-        System.Threading.Tasks.Task<TagValue> CreateWorkspaceTagvaluesAsync (string workspaceId, TagValue body = null);
+        System.Threading.Tasks.Task<TagValue> PostContentmanagementWorkspaceTagvaluesAsync (string workspaceId, TagValue body = null);
 
         /// <summary>
         /// Create a workspace tag
@@ -1522,7 +1522,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">tag</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TagValue>> CreateWorkspaceTagvaluesAsyncWithHttpInfo (string workspaceId, TagValue body = null);
+        System.Threading.Tasks.Task<ApiResponse<TagValue>> PostContentmanagementWorkspaceTagvaluesAsyncWithHttpInfo (string workspaceId, TagValue body = null);
         
         /// <summary>
         /// Perform a prefix query on tags in the workspace
@@ -1534,7 +1534,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>TagValueEntityListing</returns>
-        TagValueEntityListing CreateWorkspaceTagvaluesQuery (string workspaceId, TagQueryRequest body = null, string expand = null);
+        TagValueEntityListing PostContentmanagementWorkspaceTagvaluesQuery (string workspaceId, TagQueryRequest body = null, string expand = null);
   
         /// <summary>
         /// Perform a prefix query on tags in the workspace
@@ -1546,7 +1546,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>ApiResponse of TagValueEntityListing</returns>
-        ApiResponse<TagValueEntityListing> CreateWorkspaceTagvaluesQueryWithHttpInfo (string workspaceId, TagQueryRequest body = null, string expand = null);
+        ApiResponse<TagValueEntityListing> PostContentmanagementWorkspaceTagvaluesQueryWithHttpInfo (string workspaceId, TagQueryRequest body = null, string expand = null);
 
         /// <summary>
         /// Perform a prefix query on tags in the workspace
@@ -1558,7 +1558,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of TagValueEntityListing</returns>
-        System.Threading.Tasks.Task<TagValueEntityListing> CreateWorkspaceTagvaluesQueryAsync (string workspaceId, TagQueryRequest body = null, string expand = null);
+        System.Threading.Tasks.Task<TagValueEntityListing> PostContentmanagementWorkspaceTagvaluesQueryAsync (string workspaceId, TagQueryRequest body = null, string expand = null);
 
         /// <summary>
         /// Perform a prefix query on tags in the workspace
@@ -1570,7 +1570,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of ApiResponse (TagValueEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> CreateWorkspaceTagvaluesQueryAsyncWithHttpInfo (string workspaceId, TagQueryRequest body = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> PostContentmanagementWorkspaceTagvaluesQueryAsyncWithHttpInfo (string workspaceId, TagQueryRequest body = null, string expand = null);
         
         /// <summary>
         /// Get a workspace tag
@@ -1582,7 +1582,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>TagValue</returns>
-        TagValue GetWorkspaceTagvaluesByTagId (string workspaceId, string tagId, string expand = null);
+        TagValue GetContentmanagementWorkspaceTagvalue (string workspaceId, string tagId, string expand = null);
   
         /// <summary>
         /// Get a workspace tag
@@ -1594,7 +1594,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>ApiResponse of TagValue</returns>
-        ApiResponse<TagValue> GetWorkspaceTagvaluesByTagIdWithHttpInfo (string workspaceId, string tagId, string expand = null);
+        ApiResponse<TagValue> GetContentmanagementWorkspaceTagvalueWithHttpInfo (string workspaceId, string tagId, string expand = null);
 
         /// <summary>
         /// Get a workspace tag
@@ -1606,7 +1606,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of TagValue</returns>
-        System.Threading.Tasks.Task<TagValue> GetWorkspaceTagvaluesByTagIdAsync (string workspaceId, string tagId, string expand = null);
+        System.Threading.Tasks.Task<TagValue> GetContentmanagementWorkspaceTagvalueAsync (string workspaceId, string tagId, string expand = null);
 
         /// <summary>
         /// Get a workspace tag
@@ -1618,7 +1618,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TagValue>> GetWorkspaceTagvaluesByTagIdAsyncWithHttpInfo (string workspaceId, string tagId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<TagValue>> GetContentmanagementWorkspaceTagvalueAsyncWithHttpInfo (string workspaceId, string tagId, string expand = null);
         
         /// <summary>
         /// Update a workspace tag. Will update all documents with the new tag value.
@@ -1630,7 +1630,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>TagValue</returns>
-        TagValue UpdateWorkspaceTagvaluesByTagId (string workspaceId, string tagId, TagValue body = null);
+        TagValue PutContentmanagementWorkspaceTagvalue (string workspaceId, string tagId, TagValue body = null);
   
         /// <summary>
         /// Update a workspace tag. Will update all documents with the new tag value.
@@ -1642,7 +1642,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>ApiResponse of TagValue</returns>
-        ApiResponse<TagValue> UpdateWorkspaceTagvaluesByTagIdWithHttpInfo (string workspaceId, string tagId, TagValue body = null);
+        ApiResponse<TagValue> PutContentmanagementWorkspaceTagvalueWithHttpInfo (string workspaceId, string tagId, TagValue body = null);
 
         /// <summary>
         /// Update a workspace tag. Will update all documents with the new tag value.
@@ -1654,7 +1654,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Task of TagValue</returns>
-        System.Threading.Tasks.Task<TagValue> UpdateWorkspaceTagvaluesByTagIdAsync (string workspaceId, string tagId, TagValue body = null);
+        System.Threading.Tasks.Task<TagValue> PutContentmanagementWorkspaceTagvalueAsync (string workspaceId, string tagId, TagValue body = null);
 
         /// <summary>
         /// Update a workspace tag. Will update all documents with the new tag value.
@@ -1666,7 +1666,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TagValue>> UpdateWorkspaceTagvaluesByTagIdAsyncWithHttpInfo (string workspaceId, string tagId, TagValue body = null);
+        System.Threading.Tasks.Task<ApiResponse<TagValue>> PutContentmanagementWorkspaceTagvalueAsyncWithHttpInfo (string workspaceId, string tagId, TagValue body = null);
         
         /// <summary>
         /// Delete workspace tag
@@ -1677,7 +1677,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
         /// <returns></returns>
-        void DeleteWorkspaceTagvaluesByTagId (string workspaceId, string tagId);
+        void DeleteContentmanagementWorkspaceTagvalue (string workspaceId, string tagId);
   
         /// <summary>
         /// Delete workspace tag
@@ -1688,7 +1688,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteWorkspaceTagvaluesByTagIdWithHttpInfo (string workspaceId, string tagId);
+        ApiResponse<Object> DeleteContentmanagementWorkspaceTagvalueWithHttpInfo (string workspaceId, string tagId);
 
         /// <summary>
         /// Delete workspace tag
@@ -1699,7 +1699,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteWorkspaceTagvaluesByTagIdAsync (string workspaceId, string tagId);
+        System.Threading.Tasks.Task DeleteContentmanagementWorkspaceTagvalueAsync (string workspaceId, string tagId);
 
         /// <summary>
         /// Delete workspace tag
@@ -1710,7 +1710,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkspaceTagvaluesByTagIdAsyncWithHttpInfo (string workspaceId, string tagId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementWorkspaceTagvalueAsyncWithHttpInfo (string workspaceId, string tagId);
         
     }
   
@@ -1795,9 +1795,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Allows for a filtered query returning facet information</param> 
         /// <returns>QueryResults</returns>
-        public QueryResults CreateAuditquery (ContentQueryRequest body)
+        public QueryResults PostContentmanagementAuditquery (ContentQueryRequest body)
         {
-             ApiResponse<QueryResults> response = CreateAuditqueryWithHttpInfo(body);
+             ApiResponse<QueryResults> response = PostContentmanagementAuditqueryWithHttpInfo(body);
              return response.Data;
         }
 
@@ -1806,11 +1806,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Allows for a filtered query returning facet information</param> 
         /// <returns>ApiResponse of QueryResults</returns>
-        public ApiResponse< QueryResults > CreateAuditqueryWithHttpInfo (ContentQueryRequest body)
+        public ApiResponse< QueryResults > PostContentmanagementAuditqueryWithHttpInfo (ContentQueryRequest body)
         {
             
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling CreateAuditquery");
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostContentmanagementAuditquery");
             
     
             var path_ = "/api/v1/contentmanagement/auditquery";
@@ -1820,15 +1821,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1837,10 +1844,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1851,14 +1863,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateAuditquery: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementAuditquery: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateAuditquery: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementAuditquery: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<QueryResults>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1871,9 +1885,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <returns>Task of QueryResults</returns>
-        public async System.Threading.Tasks.Task<QueryResults> CreateAuditqueryAsync (ContentQueryRequest body)
+        public async System.Threading.Tasks.Task<QueryResults> PostContentmanagementAuditqueryAsync (ContentQueryRequest body)
         {
-             ApiResponse<QueryResults> response = await CreateAuditqueryAsyncWithHttpInfo(body);
+             ApiResponse<QueryResults> response = await PostContentmanagementAuditqueryAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -1883,28 +1897,34 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <returns>Task of ApiResponse (QueryResults)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueryResults>> CreateAuditqueryAsyncWithHttpInfo (ContentQueryRequest body)
+        public async System.Threading.Tasks.Task<ApiResponse<QueryResults>> PostContentmanagementAuditqueryAsyncWithHttpInfo (ContentQueryRequest body)
         {
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling CreateAuditquery");
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PostContentmanagementAuditquery");
             
     
             var path_ = "/api/v1/contentmanagement/auditquery";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1927,14 +1947,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateAuditquery: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementAuditquery: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateAuditquery: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementAuditquery: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<QueryResults>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1953,9 +1975,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">name or dateCreated</param> 
         /// <param name="sortOrder">ascending or descending</param> 
         /// <returns>DocumentEntityListing</returns>
-        public DocumentEntityListing GetDocuments (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        public DocumentEntityListing GetContentmanagementDocuments (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<DocumentEntityListing> response = GetDocumentsWithHttpInfo(workspaceId, name, expand, pageSize, pageNumber, sortBy, sortOrder);
+             ApiResponse<DocumentEntityListing> response = GetContentmanagementDocumentsWithHttpInfo(workspaceId, name, expand, pageSize, pageNumber, sortBy, sortOrder);
              return response.Data;
         }
 
@@ -1970,11 +1992,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">name or dateCreated</param> 
         /// <param name="sortOrder">ascending or descending</param> 
         /// <returns>ApiResponse of DocumentEntityListing</returns>
-        public ApiResponse< DocumentEntityListing > GetDocumentsWithHttpInfo (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        public ApiResponse< DocumentEntityListing > GetContentmanagementDocumentsWithHttpInfo (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
             
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetDocuments");
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetContentmanagementDocuments");
             
     
             var path_ = "/api/v1/contentmanagement/documents";
@@ -1984,15 +2007,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2010,7 +2039,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -2021,14 +2049,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetDocuments: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementDocuments: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetDocuments: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementDocuments: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DocumentEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2047,9 +2077,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">name or dateCreated</param>
         /// <param name="sortOrder">ascending or descending</param>
         /// <returns>Task of DocumentEntityListing</returns>
-        public async System.Threading.Tasks.Task<DocumentEntityListing> GetDocumentsAsync (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<DocumentEntityListing> GetContentmanagementDocumentsAsync (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<DocumentEntityListing> response = await GetDocumentsAsyncWithHttpInfo(workspaceId, name, expand, pageSize, pageNumber, sortBy, sortOrder);
+             ApiResponse<DocumentEntityListing> response = await GetContentmanagementDocumentsAsyncWithHttpInfo(workspaceId, name, expand, pageSize, pageNumber, sortBy, sortOrder);
              return response.Data;
 
         }
@@ -2065,28 +2095,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">name or dateCreated</param>
         /// <param name="sortOrder">ascending or descending</param>
         /// <returns>Task of ApiResponse (DocumentEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DocumentEntityListing>> GetDocumentsAsyncWithHttpInfo (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentEntityListing>> GetContentmanagementDocumentsAsyncWithHttpInfo (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetDocuments");
+            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetContentmanagementDocuments");
             
     
             var path_ = "/api/v1/contentmanagement/documents";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2115,14 +2151,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetDocuments: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementDocuments: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetDocuments: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementDocuments: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DocumentEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2138,9 +2176,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source.</param> 
         /// <param name="_override">Override any lock on the source document</param> 
         /// <returns>Document</returns>
-        public Document CreateDocuments (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null)
+        public Document PostContentmanagementDocuments (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null)
         {
-             ApiResponse<Document> response = CreateDocumentsWithHttpInfo(body, copySource, moveSource, _override);
+             ApiResponse<Document> response = PostContentmanagementDocumentsWithHttpInfo(body, copySource, moveSource, _override);
              return response.Data;
         }
 
@@ -2152,7 +2190,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source.</param> 
         /// <param name="_override">Override any lock on the source document</param> 
         /// <returns>ApiResponse of Document</returns>
-        public ApiResponse< Document > CreateDocumentsWithHttpInfo (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null)
+        public ApiResponse< Document > PostContentmanagementDocumentsWithHttpInfo (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null)
         {
             
     
@@ -2163,15 +2201,117 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            if (copySource != null) queryParams.Add("copySource", Configuration.ApiClient.ParameterToString(copySource)); // query parameter
+            if (moveSource != null) queryParams.Add("moveSource", Configuration.ApiClient.ParameterToString(moveSource)); // query parameter
+            if (_override != null) queryParams.Add("override", Configuration.ApiClient.ParameterToString(_override)); // query parameter
+            
+            
+            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling PostContentmanagementDocuments: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling PostContentmanagementDocuments: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<Document>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Document) Configuration.ApiClient.Deserialize(response, typeof(Document)));
+            
+        }
+    
+        /// <summary>
+        /// Add a document. 
+        /// </summary>
+        /// <param name="body">Document</param>
+        /// <param name="copySource">Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source.</param>
+        /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source.</param>
+        /// <param name="_override">Override any lock on the source document</param>
+        /// <returns>Task of Document</returns>
+        public async System.Threading.Tasks.Task<Document> PostContentmanagementDocumentsAsync (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null)
+        {
+             ApiResponse<Document> response = await PostContentmanagementDocumentsAsyncWithHttpInfo(body, copySource, moveSource, _override);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Add a document. 
+        /// </summary>
+        /// <param name="body">Document</param>
+        /// <param name="copySource">Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source.</param>
+        /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source.</param>
+        /// <param name="_override">Override any lock on the source document</param>
+        /// <returns>Task of ApiResponse (Document)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Document>> PostContentmanagementDocumentsAsyncWithHttpInfo (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null)
+        {
+            
+    
+            var path_ = "/api/v1/contentmanagement/documents";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2195,99 +2335,18 @@ namespace ININ.PureCloudApi.Api
                 headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
             
-    
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
-
-            int statusCode = (int) response.StatusCode;
-    
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateDocuments: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateDocuments: " + response.ErrorMessage, response.ErrorMessage);
-    
-            return new ApiResponse<Document>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Document) Configuration.ApiClient.Deserialize(response, typeof(Document)));
-            
-        }
-    
-        /// <summary>
-        /// Add a document. 
-        /// </summary>
-        /// <param name="body">Document</param>
-        /// <param name="copySource">Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source.</param>
-        /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source.</param>
-        /// <param name="_override">Override any lock on the source document</param>
-        /// <returns>Task of Document</returns>
-        public async System.Threading.Tasks.Task<Document> CreateDocumentsAsync (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null)
-        {
-             ApiResponse<Document> response = await CreateDocumentsAsyncWithHttpInfo(body, copySource, moveSource, _override);
-             return response.Data;
-
-        }
-
-        /// <summary>
-        /// Add a document. 
-        /// </summary>
-        /// <param name="body">Document</param>
-        /// <param name="copySource">Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source.</param>
-        /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source.</param>
-        /// <param name="_override">Override any lock on the source document</param>
-        /// <returns>Task of ApiResponse (Document)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Document>> CreateDocumentsAsyncWithHttpInfo (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null)
-        {
-            
-    
-            var path_ = "/api/v1/contentmanagement/documents";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
-
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
-                "application/json"
-            };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            
-            if (copySource != null) queryParams.Add("copySource", Configuration.ApiClient.ParameterToString(copySource)); // query parameter
-            if (moveSource != null) queryParams.Add("moveSource", Configuration.ApiClient.ParameterToString(moveSource)); // query parameter
-            if (_override != null) queryParams.Add("override", Configuration.ApiClient.ParameterToString(_override)); // query parameter
-            
-            
-            
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
-
-            
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateDocuments: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementDocuments: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateDocuments: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementDocuments: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Document>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2301,9 +2360,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param> 
         /// <param name="expand">Expand some document fields</param> 
         /// <returns>Document</returns>
-        public Document GetDocument (string documentId, string expand = null)
+        public Document GetContentmanagementDocument (string documentId, string expand = null)
         {
-             ApiResponse<Document> response = GetDocumentWithHttpInfo(documentId, expand);
+             ApiResponse<Document> response = GetContentmanagementDocumentWithHttpInfo(documentId, expand);
              return response.Data;
         }
 
@@ -2313,11 +2372,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param> 
         /// <param name="expand">Expand some document fields</param> 
         /// <returns>ApiResponse of Document</returns>
-        public ApiResponse< Document > GetDocumentWithHttpInfo (string documentId, string expand = null)
+        public ApiResponse< Document > GetContentmanagementDocumentWithHttpInfo (string documentId, string expand = null)
         {
             
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetDocument");
+            if (documentId == null)
+                throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->GetContentmanagementDocument");
             
     
             var path_ = "/api/v1/contentmanagement/documents/{documentId}";
@@ -2327,15 +2387,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2348,7 +2414,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -2359,14 +2424,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetDocument: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementDocument: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetDocument: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementDocument: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Document>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2380,9 +2447,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of Document</returns>
-        public async System.Threading.Tasks.Task<Document> GetDocumentAsync (string documentId, string expand = null)
+        public async System.Threading.Tasks.Task<Document> GetContentmanagementDocumentAsync (string documentId, string expand = null)
         {
-             ApiResponse<Document> response = await GetDocumentAsyncWithHttpInfo(documentId, expand);
+             ApiResponse<Document> response = await GetContentmanagementDocumentAsyncWithHttpInfo(documentId, expand);
              return response.Data;
 
         }
@@ -2393,28 +2460,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of ApiResponse (Document)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Document>> GetDocumentAsyncWithHttpInfo (string documentId, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Document>> GetContentmanagementDocumentAsyncWithHttpInfo (string documentId, string expand = null)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetDocument");
+            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetContentmanagementDocument");
             
     
             var path_ = "/api/v1/contentmanagement/documents/{documentId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2438,14 +2511,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetDocument: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementDocument: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetDocument: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementDocument: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Document>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2461,9 +2536,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Expand some document fields</param> 
         /// <param name="_override">Override any lock on the document</param> 
         /// <returns>Document</returns>
-        public Document CreateDocument (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null)
+        public Document PostContentmanagementDocument (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null)
         {
-             ApiResponse<Document> response = CreateDocumentWithHttpInfo(documentId, body, expand, _override);
+             ApiResponse<Document> response = PostContentmanagementDocumentWithHttpInfo(documentId, body, expand, _override);
              return response.Data;
         }
 
@@ -2475,11 +2550,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Expand some document fields</param> 
         /// <param name="_override">Override any lock on the document</param> 
         /// <returns>ApiResponse of Document</returns>
-        public ApiResponse< Document > CreateDocumentWithHttpInfo (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null)
+        public ApiResponse< Document > PostContentmanagementDocumentWithHttpInfo (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null)
         {
             
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling CreateDocument");
+            if (documentId == null)
+                throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->PostContentmanagementDocument");
             
     
             var path_ = "/api/v1/contentmanagement/documents/{documentId}";
@@ -2489,15 +2565,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2509,10 +2591,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -2523,14 +2610,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateDocument: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementDocument: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateDocument: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementDocument: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Document>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2546,9 +2635,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Expand some document fields</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>Task of Document</returns>
-        public async System.Threading.Tasks.Task<Document> CreateDocumentAsync (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null)
+        public async System.Threading.Tasks.Task<Document> PostContentmanagementDocumentAsync (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null)
         {
-             ApiResponse<Document> response = await CreateDocumentAsyncWithHttpInfo(documentId, body, expand, _override);
+             ApiResponse<Document> response = await PostContentmanagementDocumentAsyncWithHttpInfo(documentId, body, expand, _override);
              return response.Data;
 
         }
@@ -2561,28 +2650,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Expand some document fields</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>Task of ApiResponse (Document)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Document>> CreateDocumentAsyncWithHttpInfo (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Document>> PostContentmanagementDocumentAsyncWithHttpInfo (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling CreateDocument");
+            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling PostContentmanagementDocument");
             
     
             var path_ = "/api/v1/contentmanagement/documents/{documentId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2608,14 +2703,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateDocument: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementDocument: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateDocument: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementDocument: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Document>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2629,9 +2726,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param> 
         /// <param name="_override">Override any lock on the document</param> 
         /// <returns></returns>
-        public void DeleteDocument (string documentId, bool? _override = null)
+        public void DeleteContentmanagementDocument (string documentId, bool? _override = null)
         {
-             DeleteDocumentWithHttpInfo(documentId, _override);
+             DeleteContentmanagementDocumentWithHttpInfo(documentId, _override);
         }
 
         /// <summary>
@@ -2640,11 +2737,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param> 
         /// <param name="_override">Override any lock on the document</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteDocumentWithHttpInfo (string documentId, bool? _override = null)
+        public ApiResponse<Object> DeleteContentmanagementDocumentWithHttpInfo (string documentId, bool? _override = null)
         {
             
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling DeleteDocument");
+            if (documentId == null)
+                throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->DeleteContentmanagementDocument");
             
     
             var path_ = "/api/v1/contentmanagement/documents/{documentId}";
@@ -2654,15 +2752,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2675,7 +2779,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -2686,14 +2789,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteDocument: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteContentmanagementDocument: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteDocument: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteContentmanagementDocument: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -2707,9 +2812,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteDocumentAsync (string documentId, bool? _override = null)
+        public async System.Threading.Tasks.Task DeleteContentmanagementDocumentAsync (string documentId, bool? _override = null)
         {
-             await DeleteDocumentAsyncWithHttpInfo(documentId, _override);
+             await DeleteContentmanagementDocumentAsyncWithHttpInfo(documentId, _override);
 
         }
 
@@ -2719,28 +2824,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteDocumentAsyncWithHttpInfo (string documentId, bool? _override = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementDocumentAsyncWithHttpInfo (string documentId, bool? _override = null)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling DeleteDocument");
+            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling DeleteContentmanagementDocument");
             
     
             var path_ = "/api/v1/contentmanagement/documents/{documentId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2764,14 +2875,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteDocument: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteContentmanagementDocument: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteDocument: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteContentmanagementDocument: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -2790,9 +2903,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param> 
         /// <param name="sortOrder">Sort order</param> 
         /// <returns>DocumentAuditEntityListing</returns>
-        public DocumentAuditEntityListing GetDocumentAudits (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null)
+        public DocumentAuditEntityListing GetContentmanagementDocumentAudits (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<DocumentAuditEntityListing> response = GetDocumentAuditsWithHttpInfo(documentId, pageSize, pageNumber, transactionFilter, level, sortBy, sortOrder);
+             ApiResponse<DocumentAuditEntityListing> response = GetContentmanagementDocumentAuditsWithHttpInfo(documentId, pageSize, pageNumber, transactionFilter, level, sortBy, sortOrder);
              return response.Data;
         }
 
@@ -2807,11 +2920,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param> 
         /// <param name="sortOrder">Sort order</param> 
         /// <returns>ApiResponse of DocumentAuditEntityListing</returns>
-        public ApiResponse< DocumentAuditEntityListing > GetDocumentAuditsWithHttpInfo (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null)
+        public ApiResponse< DocumentAuditEntityListing > GetContentmanagementDocumentAuditsWithHttpInfo (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null)
         {
             
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetDocumentAudits");
+            if (documentId == null)
+                throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->GetContentmanagementDocumentAudits");
             
     
             var path_ = "/api/v1/contentmanagement/documents/{documentId}/audits";
@@ -2821,15 +2935,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2847,7 +2967,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -2858,14 +2977,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetDocumentAudits: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementDocumentAudits: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetDocumentAudits: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementDocumentAudits: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DocumentAuditEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2884,9 +3005,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of DocumentAuditEntityListing</returns>
-        public async System.Threading.Tasks.Task<DocumentAuditEntityListing> GetDocumentAuditsAsync (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<DocumentAuditEntityListing> GetContentmanagementDocumentAuditsAsync (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<DocumentAuditEntityListing> response = await GetDocumentAuditsAsyncWithHttpInfo(documentId, pageSize, pageNumber, transactionFilter, level, sortBy, sortOrder);
+             ApiResponse<DocumentAuditEntityListing> response = await GetContentmanagementDocumentAuditsAsyncWithHttpInfo(documentId, pageSize, pageNumber, transactionFilter, level, sortBy, sortOrder);
              return response.Data;
 
         }
@@ -2902,28 +3023,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ApiResponse (DocumentAuditEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DocumentAuditEntityListing>> GetDocumentAuditsAsyncWithHttpInfo (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentAuditEntityListing>> GetContentmanagementDocumentAuditsAsyncWithHttpInfo (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetDocumentAudits");
+            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetContentmanagementDocumentAudits");
             
     
             var path_ = "/api/v1/contentmanagement/documents/{documentId}/audits";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2952,14 +3079,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetDocumentAudits: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementDocumentAudits: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetDocumentAudits: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementDocumentAudits: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DocumentAuditEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2974,9 +3103,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment.</param> 
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param> 
         /// <returns></returns>
-        public void GetDocumentContent (string documentId, string disposition = null, string contentType = null)
+        public void GetContentmanagementDocumentContent (string documentId, string disposition = null, string contentType = null)
         {
-             GetDocumentContentWithHttpInfo(documentId, disposition, contentType);
+             GetContentmanagementDocumentContentWithHttpInfo(documentId, disposition, contentType);
         }
 
         /// <summary>
@@ -2986,11 +3115,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment.</param> 
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetDocumentContentWithHttpInfo (string documentId, string disposition = null, string contentType = null)
+        public ApiResponse<Object> GetContentmanagementDocumentContentWithHttpInfo (string documentId, string disposition = null, string contentType = null)
         {
             
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetDocumentContent");
+            if (documentId == null)
+                throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->GetContentmanagementDocumentContent");
             
     
             var path_ = "/api/v1/contentmanagement/documents/{documentId}/content";
@@ -3000,15 +3130,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3022,7 +3158,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -3033,14 +3168,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetDocumentContent: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementDocumentContent: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetDocumentContent: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementDocumentContent: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -3055,9 +3192,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment.</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetDocumentContentAsync (string documentId, string disposition = null, string contentType = null)
+        public async System.Threading.Tasks.Task GetContentmanagementDocumentContentAsync (string documentId, string disposition = null, string contentType = null)
         {
-             await GetDocumentContentAsyncWithHttpInfo(documentId, disposition, contentType);
+             await GetContentmanagementDocumentContentAsyncWithHttpInfo(documentId, disposition, contentType);
 
         }
 
@@ -3068,28 +3205,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment.</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetDocumentContentAsyncWithHttpInfo (string documentId, string disposition = null, string contentType = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetContentmanagementDocumentContentAsyncWithHttpInfo (string documentId, string disposition = null, string contentType = null)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetDocumentContent");
+            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetContentmanagementDocumentContent");
             
     
             var path_ = "/api/v1/contentmanagement/documents/{documentId}/content";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3114,14 +3257,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetDocumentContent: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementDocumentContent: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetDocumentContent: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementDocumentContent: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -3136,9 +3281,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Replace Request</param> 
         /// <param name="_override">Override any lock on the document</param> 
         /// <returns>ReplaceResponse</returns>
-        public ReplaceResponse CreateDocumentContent (string documentId, ReplaceRequest body = null, bool? _override = null)
+        public ReplaceResponse PostContentmanagementDocumentContent (string documentId, ReplaceRequest body = null, bool? _override = null)
         {
-             ApiResponse<ReplaceResponse> response = CreateDocumentContentWithHttpInfo(documentId, body, _override);
+             ApiResponse<ReplaceResponse> response = PostContentmanagementDocumentContentWithHttpInfo(documentId, body, _override);
              return response.Data;
         }
 
@@ -3149,11 +3294,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Replace Request</param> 
         /// <param name="_override">Override any lock on the document</param> 
         /// <returns>ApiResponse of ReplaceResponse</returns>
-        public ApiResponse< ReplaceResponse > CreateDocumentContentWithHttpInfo (string documentId, ReplaceRequest body = null, bool? _override = null)
+        public ApiResponse< ReplaceResponse > PostContentmanagementDocumentContentWithHttpInfo (string documentId, ReplaceRequest body = null, bool? _override = null)
         {
             
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling CreateDocumentContent");
+            if (documentId == null)
+                throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->PostContentmanagementDocumentContent");
             
     
             var path_ = "/api/v1/contentmanagement/documents/{documentId}/content";
@@ -3163,15 +3309,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3182,10 +3334,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -3196,14 +3353,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateDocumentContent: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementDocumentContent: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateDocumentContent: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementDocumentContent: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ReplaceResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3218,9 +3377,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Replace Request</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>Task of ReplaceResponse</returns>
-        public async System.Threading.Tasks.Task<ReplaceResponse> CreateDocumentContentAsync (string documentId, ReplaceRequest body = null, bool? _override = null)
+        public async System.Threading.Tasks.Task<ReplaceResponse> PostContentmanagementDocumentContentAsync (string documentId, ReplaceRequest body = null, bool? _override = null)
         {
-             ApiResponse<ReplaceResponse> response = await CreateDocumentContentAsyncWithHttpInfo(documentId, body, _override);
+             ApiResponse<ReplaceResponse> response = await PostContentmanagementDocumentContentAsyncWithHttpInfo(documentId, body, _override);
              return response.Data;
 
         }
@@ -3232,28 +3391,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Replace Request</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>Task of ApiResponse (ReplaceResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ReplaceResponse>> CreateDocumentContentAsyncWithHttpInfo (string documentId, ReplaceRequest body = null, bool? _override = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ReplaceResponse>> PostContentmanagementDocumentContentAsyncWithHttpInfo (string documentId, ReplaceRequest body = null, bool? _override = null)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling CreateDocumentContent");
+            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling PostContentmanagementDocumentContent");
             
     
             var path_ = "/api/v1/contentmanagement/documents/{documentId}/content";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3278,14 +3443,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateDocumentContent: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementDocumentContent: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateDocumentContent: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementDocumentContent: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ReplaceResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3303,9 +3470,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">ascending or descending</param> 
         /// <param name="expand">Expand some document fields</param> 
         /// <returns>QueryResults</returns>
-        public QueryResults GetQuery (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null)
+        public QueryResults GetContentmanagementQuery (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null)
         {
-             ApiResponse<QueryResults> response = GetQueryWithHttpInfo(queryPhrase, pageSize, pageNumber, sortBy, sortOrder, expand);
+             ApiResponse<QueryResults> response = GetContentmanagementQueryWithHttpInfo(queryPhrase, pageSize, pageNumber, sortBy, sortOrder, expand);
              return response.Data;
         }
 
@@ -3319,11 +3486,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">ascending or descending</param> 
         /// <param name="expand">Expand some document fields</param> 
         /// <returns>ApiResponse of QueryResults</returns>
-        public ApiResponse< QueryResults > GetQueryWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null)
+        public ApiResponse< QueryResults > GetContentmanagementQueryWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null)
         {
             
             // verify the required parameter 'queryPhrase' is set
-            if (queryPhrase == null) throw new ApiException(400, "Missing required parameter 'queryPhrase' when calling GetQuery");
+            if (queryPhrase == null)
+                throw new ApiException(400, "Missing required parameter 'queryPhrase' when calling ContentManagementApi->GetContentmanagementQuery");
             
     
             var path_ = "/api/v1/contentmanagement/query";
@@ -3333,15 +3501,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3358,7 +3532,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -3369,14 +3542,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetQuery: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementQuery: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetQuery: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementQuery: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<QueryResults>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3394,9 +3569,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">ascending or descending</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of QueryResults</returns>
-        public async System.Threading.Tasks.Task<QueryResults> GetQueryAsync (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null)
+        public async System.Threading.Tasks.Task<QueryResults> GetContentmanagementQueryAsync (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null)
         {
-             ApiResponse<QueryResults> response = await GetQueryAsyncWithHttpInfo(queryPhrase, pageSize, pageNumber, sortBy, sortOrder, expand);
+             ApiResponse<QueryResults> response = await GetContentmanagementQueryAsyncWithHttpInfo(queryPhrase, pageSize, pageNumber, sortBy, sortOrder, expand);
              return response.Data;
 
         }
@@ -3411,28 +3586,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">ascending or descending</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of ApiResponse (QueryResults)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueryResults>> GetQueryAsyncWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<QueryResults>> GetContentmanagementQueryAsyncWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null)
         {
             // verify the required parameter 'queryPhrase' is set
-            if (queryPhrase == null) throw new ApiException(400, "Missing required parameter 'queryPhrase' when calling GetQuery");
+            if (queryPhrase == null) throw new ApiException(400, "Missing required parameter 'queryPhrase' when calling GetContentmanagementQuery");
             
     
             var path_ = "/api/v1/contentmanagement/query";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3460,14 +3641,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetQuery: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementQuery: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetQuery: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementQuery: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<QueryResults>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3481,9 +3664,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Allows for a filtered query returning facet information</param> 
         /// <param name="expand">Expand some document fields</param> 
         /// <returns>QueryResults</returns>
-        public QueryResults CreateQuery (QueryRequest body, string expand = null)
+        public QueryResults PostContentmanagementQuery (QueryRequest body, string expand = null)
         {
-             ApiResponse<QueryResults> response = CreateQueryWithHttpInfo(body, expand);
+             ApiResponse<QueryResults> response = PostContentmanagementQueryWithHttpInfo(body, expand);
              return response.Data;
         }
 
@@ -3493,11 +3676,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Allows for a filtered query returning facet information</param> 
         /// <param name="expand">Expand some document fields</param> 
         /// <returns>ApiResponse of QueryResults</returns>
-        public ApiResponse< QueryResults > CreateQueryWithHttpInfo (QueryRequest body, string expand = null)
+        public ApiResponse< QueryResults > PostContentmanagementQueryWithHttpInfo (QueryRequest body, string expand = null)
         {
             
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling CreateQuery");
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostContentmanagementQuery");
             
     
             var path_ = "/api/v1/contentmanagement/query";
@@ -3507,15 +3691,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3525,10 +3715,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -3539,14 +3734,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateQuery: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementQuery: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateQuery: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementQuery: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<QueryResults>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3560,9 +3757,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of QueryResults</returns>
-        public async System.Threading.Tasks.Task<QueryResults> CreateQueryAsync (QueryRequest body, string expand = null)
+        public async System.Threading.Tasks.Task<QueryResults> PostContentmanagementQueryAsync (QueryRequest body, string expand = null)
         {
-             ApiResponse<QueryResults> response = await CreateQueryAsyncWithHttpInfo(body, expand);
+             ApiResponse<QueryResults> response = await PostContentmanagementQueryAsyncWithHttpInfo(body, expand);
              return response.Data;
 
         }
@@ -3573,28 +3770,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of ApiResponse (QueryResults)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueryResults>> CreateQueryAsyncWithHttpInfo (QueryRequest body, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<QueryResults>> PostContentmanagementQueryAsyncWithHttpInfo (QueryRequest body, string expand = null)
         {
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling CreateQuery");
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PostContentmanagementQuery");
             
     
             var path_ = "/api/v1/contentmanagement/query";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3618,14 +3821,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateQuery: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementQuery: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateQuery: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementQuery: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<QueryResults>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3637,9 +3842,9 @@ namespace ININ.PureCloudApi.Api
         /// Get a List of Security Profiles 
         /// </summary>
         /// <returns>SecurityProfileEntityListing</returns>
-        public SecurityProfileEntityListing GetSecurityprofiles ()
+        public SecurityProfileEntityListing GetContentmanagementSecurityprofiles ()
         {
-             ApiResponse<SecurityProfileEntityListing> response = GetSecurityprofilesWithHttpInfo();
+             ApiResponse<SecurityProfileEntityListing> response = GetContentmanagementSecurityprofilesWithHttpInfo();
              return response.Data;
         }
 
@@ -3647,7 +3852,7 @@ namespace ININ.PureCloudApi.Api
         /// Get a List of Security Profiles 
         /// </summary>
         /// <returns>ApiResponse of SecurityProfileEntityListing</returns>
-        public ApiResponse< SecurityProfileEntityListing > GetSecurityprofilesWithHttpInfo ()
+        public ApiResponse< SecurityProfileEntityListing > GetContentmanagementSecurityprofilesWithHttpInfo ()
         {
             
     
@@ -3658,15 +3863,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3677,7 +3888,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -3688,14 +3898,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSecurityprofiles: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementSecurityprofiles: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSecurityprofiles: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementSecurityprofiles: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<SecurityProfileEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3707,9 +3919,9 @@ namespace ININ.PureCloudApi.Api
         /// Get a List of Security Profiles 
         /// </summary>
         /// <returns>Task of SecurityProfileEntityListing</returns>
-        public async System.Threading.Tasks.Task<SecurityProfileEntityListing> GetSecurityprofilesAsync ()
+        public async System.Threading.Tasks.Task<SecurityProfileEntityListing> GetContentmanagementSecurityprofilesAsync ()
         {
-             ApiResponse<SecurityProfileEntityListing> response = await GetSecurityprofilesAsyncWithHttpInfo();
+             ApiResponse<SecurityProfileEntityListing> response = await GetContentmanagementSecurityprofilesAsyncWithHttpInfo();
              return response.Data;
 
         }
@@ -3718,7 +3930,7 @@ namespace ININ.PureCloudApi.Api
         /// Get a List of Security Profiles 
         /// </summary>
         /// <returns>Task of ApiResponse (SecurityProfileEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SecurityProfileEntityListing>> GetSecurityprofilesAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityProfileEntityListing>> GetContentmanagementSecurityprofilesAsyncWithHttpInfo ()
         {
             
     
@@ -3726,18 +3938,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3759,14 +3977,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSecurityprofiles: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementSecurityprofiles: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSecurityprofiles: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementSecurityprofiles: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<SecurityProfileEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3779,9 +3999,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="securityProfileId">Security Profile Id</param> 
         /// <returns>SecurityProfile</returns>
-        public SecurityProfile GetSecurityProfile (string securityProfileId)
+        public SecurityProfile GetContentmanagementSecurityprofile (string securityProfileId)
         {
-             ApiResponse<SecurityProfile> response = GetSecurityProfileWithHttpInfo(securityProfileId);
+             ApiResponse<SecurityProfile> response = GetContentmanagementSecurityprofileWithHttpInfo(securityProfileId);
              return response.Data;
         }
 
@@ -3790,11 +4010,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="securityProfileId">Security Profile Id</param> 
         /// <returns>ApiResponse of SecurityProfile</returns>
-        public ApiResponse< SecurityProfile > GetSecurityProfileWithHttpInfo (string securityProfileId)
+        public ApiResponse< SecurityProfile > GetContentmanagementSecurityprofileWithHttpInfo (string securityProfileId)
         {
             
             // verify the required parameter 'securityProfileId' is set
-            if (securityProfileId == null) throw new ApiException(400, "Missing required parameter 'securityProfileId' when calling GetSecurityProfile");
+            if (securityProfileId == null)
+                throw new ApiException(400, "Missing required parameter 'securityProfileId' when calling ContentManagementApi->GetContentmanagementSecurityprofile");
             
     
             var path_ = "/api/v1/contentmanagement/securityprofiles/{securityProfileId}";
@@ -3804,15 +4025,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3824,7 +4051,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -3835,14 +4061,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSecurityProfile: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementSecurityprofile: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSecurityProfile: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementSecurityprofile: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<SecurityProfile>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3855,9 +4083,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="securityProfileId">Security Profile Id</param>
         /// <returns>Task of SecurityProfile</returns>
-        public async System.Threading.Tasks.Task<SecurityProfile> GetSecurityProfileAsync (string securityProfileId)
+        public async System.Threading.Tasks.Task<SecurityProfile> GetContentmanagementSecurityprofileAsync (string securityProfileId)
         {
-             ApiResponse<SecurityProfile> response = await GetSecurityProfileAsyncWithHttpInfo(securityProfileId);
+             ApiResponse<SecurityProfile> response = await GetContentmanagementSecurityprofileAsyncWithHttpInfo(securityProfileId);
              return response.Data;
 
         }
@@ -3867,28 +4095,34 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="securityProfileId">Security Profile Id</param>
         /// <returns>Task of ApiResponse (SecurityProfile)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SecurityProfile>> GetSecurityProfileAsyncWithHttpInfo (string securityProfileId)
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityProfile>> GetContentmanagementSecurityprofileAsyncWithHttpInfo (string securityProfileId)
         {
             // verify the required parameter 'securityProfileId' is set
-            if (securityProfileId == null) throw new ApiException(400, "Missing required parameter 'securityProfileId' when calling GetSecurityProfile");
+            if (securityProfileId == null) throw new ApiException(400, "Missing required parameter 'securityProfileId' when calling GetContentmanagementSecurityprofile");
             
     
             var path_ = "/api/v1/contentmanagement/securityprofiles/{securityProfileId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3911,14 +4145,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSecurityProfile: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementSecurityprofile: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSecurityProfile: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementSecurityprofile: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<SecurityProfile>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3935,9 +4171,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param> 
         /// <param name="expand">Expand some document fields</param> 
         /// <returns></returns>
-        public void GetSharedShared (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
+        public void GetContentmanagementShared (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
         {
-             GetSharedSharedWithHttpInfo(sharedId, redirect, disposition, contentType, expand);
+             GetContentmanagementSharedWithHttpInfo(sharedId, redirect, disposition, contentType, expand);
         }
 
         /// <summary>
@@ -3949,11 +4185,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param> 
         /// <param name="expand">Expand some document fields</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetSharedSharedWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
+        public ApiResponse<Object> GetContentmanagementSharedWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
         {
             
             // verify the required parameter 'sharedId' is set
-            if (sharedId == null) throw new ApiException(400, "Missing required parameter 'sharedId' when calling GetSharedShared");
+            if (sharedId == null)
+                throw new ApiException(400, "Missing required parameter 'sharedId' when calling ContentManagementApi->GetContentmanagementShared");
             
     
             var path_ = "/api/v1/contentmanagement/shared/{sharedId}";
@@ -3963,15 +4200,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3987,7 +4230,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -3998,14 +4240,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSharedShared: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementShared: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSharedShared: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementShared: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -4022,9 +4266,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetSharedSharedAsync (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
+        public async System.Threading.Tasks.Task GetContentmanagementSharedAsync (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
         {
-             await GetSharedSharedAsyncWithHttpInfo(sharedId, redirect, disposition, contentType, expand);
+             await GetContentmanagementSharedAsyncWithHttpInfo(sharedId, redirect, disposition, contentType, expand);
 
         }
 
@@ -4037,28 +4281,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetSharedSharedAsyncWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetContentmanagementSharedAsyncWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
         {
             // verify the required parameter 'sharedId' is set
-            if (sharedId == null) throw new ApiException(400, "Missing required parameter 'sharedId' when calling GetSharedShared");
+            if (sharedId == null) throw new ApiException(400, "Missing required parameter 'sharedId' when calling GetContentmanagementShared");
             
     
             var path_ = "/api/v1/contentmanagement/shared/{sharedId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -4085,14 +4335,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSharedShared: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementShared: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSharedShared: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementShared: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -4108,9 +4360,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>ShareEntityListing</returns>
-        public ShareEntityListing GetShares (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null)
+        public ShareEntityListing GetContentmanagementShares (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<ShareEntityListing> response = GetSharesWithHttpInfo(entityId, expand, pageSize, pageNumber);
+             ApiResponse<ShareEntityListing> response = GetContentmanagementSharesWithHttpInfo(entityId, expand, pageSize, pageNumber);
              return response.Data;
         }
 
@@ -4122,7 +4374,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>ApiResponse of ShareEntityListing</returns>
-        public ApiResponse< ShareEntityListing > GetSharesWithHttpInfo (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< ShareEntityListing > GetContentmanagementSharesWithHttpInfo (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -4133,15 +4385,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -4156,7 +4414,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -4167,14 +4424,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetShares: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementShares: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetShares: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementShares: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ShareEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4190,9 +4449,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ShareEntityListing</returns>
-        public async System.Threading.Tasks.Task<ShareEntityListing> GetSharesAsync (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ShareEntityListing> GetContentmanagementSharesAsync (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<ShareEntityListing> response = await GetSharesAsyncWithHttpInfo(entityId, expand, pageSize, pageNumber);
+             ApiResponse<ShareEntityListing> response = await GetContentmanagementSharesAsyncWithHttpInfo(entityId, expand, pageSize, pageNumber);
              return response.Data;
 
         }
@@ -4205,7 +4464,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (ShareEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ShareEntityListing>> GetSharesAsyncWithHttpInfo (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ShareEntityListing>> GetContentmanagementSharesAsyncWithHttpInfo (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -4213,18 +4472,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -4250,14 +4515,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetShares: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementShares: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetShares: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementShares: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ShareEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4270,9 +4537,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param> 
         /// <returns>CreateShareResponse</returns>
-        public CreateShareResponse CreateShares (CreateShareRequest body = null)
+        public CreateShareResponse PostContentmanagementShares (CreateShareRequest body = null)
         {
-             ApiResponse<CreateShareResponse> response = CreateSharesWithHttpInfo(body);
+             ApiResponse<CreateShareResponse> response = PostContentmanagementSharesWithHttpInfo(body);
              return response.Data;
         }
 
@@ -4281,7 +4548,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param> 
         /// <returns>ApiResponse of CreateShareResponse</returns>
-        public ApiResponse< CreateShareResponse > CreateSharesWithHttpInfo (CreateShareRequest body = null)
+        public ApiResponse< CreateShareResponse > PostContentmanagementSharesWithHttpInfo (CreateShareRequest body = null)
         {
             
     
@@ -4292,15 +4559,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -4309,10 +4582,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -4323,14 +4601,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateShares: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementShares: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateShares: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementShares: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<CreateShareResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4343,9 +4623,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
         /// <returns>Task of CreateShareResponse</returns>
-        public async System.Threading.Tasks.Task<CreateShareResponse> CreateSharesAsync (CreateShareRequest body = null)
+        public async System.Threading.Tasks.Task<CreateShareResponse> PostContentmanagementSharesAsync (CreateShareRequest body = null)
         {
-             ApiResponse<CreateShareResponse> response = await CreateSharesAsyncWithHttpInfo(body);
+             ApiResponse<CreateShareResponse> response = await PostContentmanagementSharesAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -4355,7 +4635,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
         /// <returns>Task of ApiResponse (CreateShareResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CreateShareResponse>> CreateSharesAsyncWithHttpInfo (CreateShareRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CreateShareResponse>> PostContentmanagementSharesAsyncWithHttpInfo (CreateShareRequest body = null)
         {
             
     
@@ -4363,18 +4643,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -4397,14 +4683,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateShares: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementShares: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateShares: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementShares: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<CreateShareResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4418,9 +4706,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="shareId">Share ID</param> 
         /// <param name="expand">Expand share fields</param> 
         /// <returns>Share</returns>
-        public Share GetShare (string shareId, string expand = null)
+        public Share GetContentmanagementShare (string shareId, string expand = null)
         {
-             ApiResponse<Share> response = GetShareWithHttpInfo(shareId, expand);
+             ApiResponse<Share> response = GetContentmanagementShareWithHttpInfo(shareId, expand);
              return response.Data;
         }
 
@@ -4430,11 +4718,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="shareId">Share ID</param> 
         /// <param name="expand">Expand share fields</param> 
         /// <returns>ApiResponse of Share</returns>
-        public ApiResponse< Share > GetShareWithHttpInfo (string shareId, string expand = null)
+        public ApiResponse< Share > GetContentmanagementShareWithHttpInfo (string shareId, string expand = null)
         {
             
             // verify the required parameter 'shareId' is set
-            if (shareId == null) throw new ApiException(400, "Missing required parameter 'shareId' when calling GetShare");
+            if (shareId == null)
+                throw new ApiException(400, "Missing required parameter 'shareId' when calling ContentManagementApi->GetContentmanagementShare");
             
     
             var path_ = "/api/v1/contentmanagement/shares/{shareId}";
@@ -4444,15 +4733,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -4465,7 +4760,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -4476,14 +4770,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetShare: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementShare: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetShare: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementShare: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Share>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4497,9 +4793,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="shareId">Share ID</param>
         /// <param name="expand">Expand share fields</param>
         /// <returns>Task of Share</returns>
-        public async System.Threading.Tasks.Task<Share> GetShareAsync (string shareId, string expand = null)
+        public async System.Threading.Tasks.Task<Share> GetContentmanagementShareAsync (string shareId, string expand = null)
         {
-             ApiResponse<Share> response = await GetShareAsyncWithHttpInfo(shareId, expand);
+             ApiResponse<Share> response = await GetContentmanagementShareAsyncWithHttpInfo(shareId, expand);
              return response.Data;
 
         }
@@ -4510,28 +4806,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="shareId">Share ID</param>
         /// <param name="expand">Expand share fields</param>
         /// <returns>Task of ApiResponse (Share)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Share>> GetShareAsyncWithHttpInfo (string shareId, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Share>> GetContentmanagementShareAsyncWithHttpInfo (string shareId, string expand = null)
         {
             // verify the required parameter 'shareId' is set
-            if (shareId == null) throw new ApiException(400, "Missing required parameter 'shareId' when calling GetShare");
+            if (shareId == null) throw new ApiException(400, "Missing required parameter 'shareId' when calling GetContentmanagementShare");
             
     
             var path_ = "/api/v1/contentmanagement/shares/{shareId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -4555,14 +4857,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetShare: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementShare: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetShare: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementShare: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Share>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4575,9 +4879,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="shareId">Share ID</param> 
         /// <returns></returns>
-        public void DeleteShare (string shareId)
+        public void DeleteContentmanagementShare (string shareId)
         {
-             DeleteShareWithHttpInfo(shareId);
+             DeleteContentmanagementShareWithHttpInfo(shareId);
         }
 
         /// <summary>
@@ -4585,11 +4889,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="shareId">Share ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteShareWithHttpInfo (string shareId)
+        public ApiResponse<Object> DeleteContentmanagementShareWithHttpInfo (string shareId)
         {
             
             // verify the required parameter 'shareId' is set
-            if (shareId == null) throw new ApiException(400, "Missing required parameter 'shareId' when calling DeleteShare");
+            if (shareId == null)
+                throw new ApiException(400, "Missing required parameter 'shareId' when calling ContentManagementApi->DeleteContentmanagementShare");
             
     
             var path_ = "/api/v1/contentmanagement/shares/{shareId}";
@@ -4599,15 +4904,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -4619,7 +4930,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -4630,14 +4940,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteShare: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteContentmanagementShare: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteShare: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteContentmanagementShare: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -4650,9 +4962,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="shareId">Share ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteShareAsync (string shareId)
+        public async System.Threading.Tasks.Task DeleteContentmanagementShareAsync (string shareId)
         {
-             await DeleteShareAsyncWithHttpInfo(shareId);
+             await DeleteContentmanagementShareAsyncWithHttpInfo(shareId);
 
         }
 
@@ -4661,28 +4973,34 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="shareId">Share ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteShareAsyncWithHttpInfo (string shareId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementShareAsyncWithHttpInfo (string shareId)
         {
             // verify the required parameter 'shareId' is set
-            if (shareId == null) throw new ApiException(400, "Missing required parameter 'shareId' when calling DeleteShare");
+            if (shareId == null) throw new ApiException(400, "Missing required parameter 'shareId' when calling DeleteContentmanagementShare");
             
     
             var path_ = "/api/v1/contentmanagement/shares/{shareId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -4705,14 +5023,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteShare: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteContentmanagementShare: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteShare: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteContentmanagementShare: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -4726,9 +5046,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>CommandStatusEntityListing</returns>
-        public CommandStatusEntityListing GetStatus (int? pageSize = null, int? pageNumber = null)
+        public CommandStatusEntityListing GetContentmanagementStatus (int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<CommandStatusEntityListing> response = GetStatusWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<CommandStatusEntityListing> response = GetContentmanagementStatusWithHttpInfo(pageSize, pageNumber);
              return response.Data;
         }
 
@@ -4738,7 +5058,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>ApiResponse of CommandStatusEntityListing</returns>
-        public ApiResponse< CommandStatusEntityListing > GetStatusWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< CommandStatusEntityListing > GetContentmanagementStatusWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -4749,15 +5069,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -4770,7 +5096,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -4781,14 +5106,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetStatus: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementStatus: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetStatus: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementStatus: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<CommandStatusEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4802,9 +5129,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of CommandStatusEntityListing</returns>
-        public async System.Threading.Tasks.Task<CommandStatusEntityListing> GetStatusAsync (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<CommandStatusEntityListing> GetContentmanagementStatusAsync (int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<CommandStatusEntityListing> response = await GetStatusAsyncWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<CommandStatusEntityListing> response = await GetContentmanagementStatusAsyncWithHttpInfo(pageSize, pageNumber);
              return response.Data;
 
         }
@@ -4815,7 +5142,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (CommandStatusEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CommandStatusEntityListing>> GetStatusAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CommandStatusEntityListing>> GetContentmanagementStatusAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -4823,18 +5150,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -4858,14 +5191,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetStatus: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementStatus: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetStatus: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementStatus: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<CommandStatusEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4878,9 +5213,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="statusId">Status ID</param> 
         /// <returns>CommandStatus</returns>
-        public CommandStatus GetStatusStatus (string statusId)
+        public CommandStatus GetContentmanagementStatu (string statusId)
         {
-             ApiResponse<CommandStatus> response = GetStatusStatusWithHttpInfo(statusId);
+             ApiResponse<CommandStatus> response = GetContentmanagementStatuWithHttpInfo(statusId);
              return response.Data;
         }
 
@@ -4889,11 +5224,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="statusId">Status ID</param> 
         /// <returns>ApiResponse of CommandStatus</returns>
-        public ApiResponse< CommandStatus > GetStatusStatusWithHttpInfo (string statusId)
+        public ApiResponse< CommandStatus > GetContentmanagementStatuWithHttpInfo (string statusId)
         {
             
             // verify the required parameter 'statusId' is set
-            if (statusId == null) throw new ApiException(400, "Missing required parameter 'statusId' when calling GetStatusStatus");
+            if (statusId == null)
+                throw new ApiException(400, "Missing required parameter 'statusId' when calling ContentManagementApi->GetContentmanagementStatu");
             
     
             var path_ = "/api/v1/contentmanagement/status/{statusId}";
@@ -4903,15 +5239,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -4923,7 +5265,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -4934,14 +5275,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetStatusStatus: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementStatu: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetStatusStatus: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementStatu: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<CommandStatus>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4954,9 +5297,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="statusId">Status ID</param>
         /// <returns>Task of CommandStatus</returns>
-        public async System.Threading.Tasks.Task<CommandStatus> GetStatusStatusAsync (string statusId)
+        public async System.Threading.Tasks.Task<CommandStatus> GetContentmanagementStatuAsync (string statusId)
         {
-             ApiResponse<CommandStatus> response = await GetStatusStatusAsyncWithHttpInfo(statusId);
+             ApiResponse<CommandStatus> response = await GetContentmanagementStatuAsyncWithHttpInfo(statusId);
              return response.Data;
 
         }
@@ -4966,28 +5309,34 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="statusId">Status ID</param>
         /// <returns>Task of ApiResponse (CommandStatus)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CommandStatus>> GetStatusStatusAsyncWithHttpInfo (string statusId)
+        public async System.Threading.Tasks.Task<ApiResponse<CommandStatus>> GetContentmanagementStatuAsyncWithHttpInfo (string statusId)
         {
             // verify the required parameter 'statusId' is set
-            if (statusId == null) throw new ApiException(400, "Missing required parameter 'statusId' when calling GetStatusStatus");
+            if (statusId == null) throw new ApiException(400, "Missing required parameter 'statusId' when calling GetContentmanagementStatu");
             
     
             var path_ = "/api/v1/contentmanagement/status/{statusId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -5010,14 +5359,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetStatusStatus: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementStatu: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetStatusStatus: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementStatu: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<CommandStatus>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5030,9 +5381,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="statusId">Status ID</param> 
         /// <returns></returns>
-        public void DeleteStatusStatus (string statusId)
+        public void DeleteContentmanagementStatu (string statusId)
         {
-             DeleteStatusStatusWithHttpInfo(statusId);
+             DeleteContentmanagementStatuWithHttpInfo(statusId);
         }
 
         /// <summary>
@@ -5040,11 +5391,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="statusId">Status ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteStatusStatusWithHttpInfo (string statusId)
+        public ApiResponse<Object> DeleteContentmanagementStatuWithHttpInfo (string statusId)
         {
             
             // verify the required parameter 'statusId' is set
-            if (statusId == null) throw new ApiException(400, "Missing required parameter 'statusId' when calling DeleteStatusStatus");
+            if (statusId == null)
+                throw new ApiException(400, "Missing required parameter 'statusId' when calling ContentManagementApi->DeleteContentmanagementStatu");
             
     
             var path_ = "/api/v1/contentmanagement/status/{statusId}";
@@ -5054,15 +5406,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -5074,7 +5432,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -5085,14 +5442,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteStatusStatus: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteContentmanagementStatu: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteStatusStatus: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteContentmanagementStatu: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -5105,9 +5464,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="statusId">Status ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteStatusStatusAsync (string statusId)
+        public async System.Threading.Tasks.Task DeleteContentmanagementStatuAsync (string statusId)
         {
-             await DeleteStatusStatusAsyncWithHttpInfo(statusId);
+             await DeleteContentmanagementStatuAsyncWithHttpInfo(statusId);
 
         }
 
@@ -5116,28 +5475,34 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="statusId">Status ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteStatusStatusAsyncWithHttpInfo (string statusId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementStatuAsyncWithHttpInfo (string statusId)
         {
             // verify the required parameter 'statusId' is set
-            if (statusId == null) throw new ApiException(400, "Missing required parameter 'statusId' when calling DeleteStatusStatus");
+            if (statusId == null) throw new ApiException(400, "Missing required parameter 'statusId' when calling DeleteContentmanagementStatu");
             
     
             var path_ = "/api/v1/contentmanagement/status/{statusId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -5160,14 +5525,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteStatusStatus: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteContentmanagementStatu: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteStatusStatus: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteContentmanagementStatu: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -5183,9 +5550,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="access">Requested access level</param> 
         /// <param name="expand">Expand some workspace fields</param> 
         /// <returns>WorkspaceEntityListing</returns>
-        public WorkspaceEntityListing GetWorkspaces (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null)
+        public WorkspaceEntityListing GetContentmanagementWorkspaces (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null)
         {
-             ApiResponse<WorkspaceEntityListing> response = GetWorkspacesWithHttpInfo(pageSize, pageNumber, access, expand);
+             ApiResponse<WorkspaceEntityListing> response = GetContentmanagementWorkspacesWithHttpInfo(pageSize, pageNumber, access, expand);
              return response.Data;
         }
 
@@ -5197,7 +5564,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="access">Requested access level</param> 
         /// <param name="expand">Expand some workspace fields</param> 
         /// <returns>ApiResponse of WorkspaceEntityListing</returns>
-        public ApiResponse< WorkspaceEntityListing > GetWorkspacesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null)
+        public ApiResponse< WorkspaceEntityListing > GetContentmanagementWorkspacesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null)
         {
             
     
@@ -5208,15 +5575,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -5231,7 +5604,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -5242,14 +5614,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetWorkspaces: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaces: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetWorkspaces: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaces: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<WorkspaceEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5265,9 +5639,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="access">Requested access level</param>
         /// <param name="expand">Expand some workspace fields</param>
         /// <returns>Task of WorkspaceEntityListing</returns>
-        public async System.Threading.Tasks.Task<WorkspaceEntityListing> GetWorkspacesAsync (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null)
+        public async System.Threading.Tasks.Task<WorkspaceEntityListing> GetContentmanagementWorkspacesAsync (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null)
         {
-             ApiResponse<WorkspaceEntityListing> response = await GetWorkspacesAsyncWithHttpInfo(pageSize, pageNumber, access, expand);
+             ApiResponse<WorkspaceEntityListing> response = await GetContentmanagementWorkspacesAsyncWithHttpInfo(pageSize, pageNumber, access, expand);
              return response.Data;
 
         }
@@ -5280,7 +5654,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="access">Requested access level</param>
         /// <param name="expand">Expand some workspace fields</param>
         /// <returns>Task of ApiResponse (WorkspaceEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WorkspaceEntityListing>> GetWorkspacesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WorkspaceEntityListing>> GetContentmanagementWorkspacesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null)
         {
             
     
@@ -5288,18 +5662,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -5325,14 +5705,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetWorkspaces: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaces: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetWorkspaces: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaces: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<WorkspaceEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5345,9 +5727,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Workspace</param> 
         /// <returns>Workspace</returns>
-        public Workspace CreateWorkspaces (WorkspaceCreate body = null)
+        public Workspace PostContentmanagementWorkspaces (WorkspaceCreate body = null)
         {
-             ApiResponse<Workspace> response = CreateWorkspacesWithHttpInfo(body);
+             ApiResponse<Workspace> response = PostContentmanagementWorkspacesWithHttpInfo(body);
              return response.Data;
         }
 
@@ -5356,7 +5738,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Workspace</param> 
         /// <returns>ApiResponse of Workspace</returns>
-        public ApiResponse< Workspace > CreateWorkspacesWithHttpInfo (WorkspaceCreate body = null)
+        public ApiResponse< Workspace > PostContentmanagementWorkspacesWithHttpInfo (WorkspaceCreate body = null)
         {
             
     
@@ -5367,15 +5749,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -5384,10 +5772,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -5398,14 +5791,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateWorkspaces: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementWorkspaces: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateWorkspaces: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementWorkspaces: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Workspace>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5418,9 +5813,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Workspace</param>
         /// <returns>Task of Workspace</returns>
-        public async System.Threading.Tasks.Task<Workspace> CreateWorkspacesAsync (WorkspaceCreate body = null)
+        public async System.Threading.Tasks.Task<Workspace> PostContentmanagementWorkspacesAsync (WorkspaceCreate body = null)
         {
-             ApiResponse<Workspace> response = await CreateWorkspacesAsyncWithHttpInfo(body);
+             ApiResponse<Workspace> response = await PostContentmanagementWorkspacesAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -5430,7 +5825,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Workspace>> CreateWorkspacesAsyncWithHttpInfo (WorkspaceCreate body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Workspace>> PostContentmanagementWorkspacesAsyncWithHttpInfo (WorkspaceCreate body = null)
         {
             
     
@@ -5438,18 +5833,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -5472,14 +5873,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateWorkspaces: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementWorkspaces: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateWorkspaces: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementWorkspaces: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Workspace>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5493,9 +5896,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param> 
         /// <param name="expand">Expand some workspace fields</param> 
         /// <returns>Workspace</returns>
-        public Workspace GetWorkspace (string workspaceId, string expand = null)
+        public Workspace GetContentmanagementWorkspace (string workspaceId, string expand = null)
         {
-             ApiResponse<Workspace> response = GetWorkspaceWithHttpInfo(workspaceId, expand);
+             ApiResponse<Workspace> response = GetContentmanagementWorkspaceWithHttpInfo(workspaceId, expand);
              return response.Data;
         }
 
@@ -5505,11 +5908,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param> 
         /// <param name="expand">Expand some workspace fields</param> 
         /// <returns>ApiResponse of Workspace</returns>
-        public ApiResponse< Workspace > GetWorkspaceWithHttpInfo (string workspaceId, string expand = null)
+        public ApiResponse< Workspace > GetContentmanagementWorkspaceWithHttpInfo (string workspaceId, string expand = null)
         {
             
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetWorkspace");
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetContentmanagementWorkspace");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}";
@@ -5519,15 +5923,107 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (workspaceId != null) pathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
+            
+            if (expand != null) queryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            
+            
+            
+            
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspace: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspace: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<Workspace>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Workspace) Configuration.ApiClient.Deserialize(response, typeof(Workspace)));
+            
+        }
+    
+        /// <summary>
+        /// Get a workspace. 
+        /// </summary>
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="expand">Expand some workspace fields</param>
+        /// <returns>Task of Workspace</returns>
+        public async System.Threading.Tasks.Task<Workspace> GetContentmanagementWorkspaceAsync (string workspaceId, string expand = null)
+        {
+             ApiResponse<Workspace> response = await GetContentmanagementWorkspaceAsyncWithHttpInfo(workspaceId, expand);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Get a workspace. 
+        /// </summary>
+        /// <param name="workspaceId">Workspace ID</param>
+        /// <param name="expand">Expand some workspace fields</param>
+        /// <returns>Task of ApiResponse (Workspace)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Workspace>> GetContentmanagementWorkspaceAsyncWithHttpInfo (string workspaceId, string expand = null)
+        {
+            // verify the required parameter 'workspaceId' is set
+            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetContentmanagementWorkspace");
+            
+    
+            var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -5549,95 +6045,18 @@ namespace ININ.PureCloudApi.Api
                 headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
             
-    
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
-
-            int statusCode = (int) response.StatusCode;
-    
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetWorkspace: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetWorkspace: " + response.ErrorMessage, response.ErrorMessage);
-    
-            return new ApiResponse<Workspace>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Workspace) Configuration.ApiClient.Deserialize(response, typeof(Workspace)));
-            
-        }
-    
-        /// <summary>
-        /// Get a workspace. 
-        /// </summary>
-        /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="expand">Expand some workspace fields</param>
-        /// <returns>Task of Workspace</returns>
-        public async System.Threading.Tasks.Task<Workspace> GetWorkspaceAsync (string workspaceId, string expand = null)
-        {
-             ApiResponse<Workspace> response = await GetWorkspaceAsyncWithHttpInfo(workspaceId, expand);
-             return response.Data;
-
-        }
-
-        /// <summary>
-        /// Get a workspace. 
-        /// </summary>
-        /// <param name="workspaceId">Workspace ID</param>
-        /// <param name="expand">Expand some workspace fields</param>
-        /// <returns>Task of ApiResponse (Workspace)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Workspace>> GetWorkspaceAsyncWithHttpInfo (string workspaceId, string expand = null)
-        {
-            // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetWorkspace");
-            
-    
-            var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
-
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
-                "application/json"
-            };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            if (workspaceId != null) pathParams.Add("workspaceId", Configuration.ApiClient.ParameterToString(workspaceId)); // path parameter
-            
-            if (expand != null) queryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
-
-            
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetWorkspace: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspace: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetWorkspace: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspace: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Workspace>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5651,9 +6070,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param> 
         /// <param name="body">Workspace</param> 
         /// <returns>Workspace</returns>
-        public Workspace UpdateWorkspace (string workspaceId, Workspace body = null)
+        public Workspace PutContentmanagementWorkspace (string workspaceId, Workspace body = null)
         {
-             ApiResponse<Workspace> response = UpdateWorkspaceWithHttpInfo(workspaceId, body);
+             ApiResponse<Workspace> response = PutContentmanagementWorkspaceWithHttpInfo(workspaceId, body);
              return response.Data;
         }
 
@@ -5663,11 +6082,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param> 
         /// <param name="body">Workspace</param> 
         /// <returns>ApiResponse of Workspace</returns>
-        public ApiResponse< Workspace > UpdateWorkspaceWithHttpInfo (string workspaceId, Workspace body = null)
+        public ApiResponse< Workspace > PutContentmanagementWorkspaceWithHttpInfo (string workspaceId, Workspace body = null)
         {
             
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling UpdateWorkspace");
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PutContentmanagementWorkspace");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}";
@@ -5677,15 +6097,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -5695,10 +6121,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -5709,14 +6140,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateWorkspace: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutContentmanagementWorkspace: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateWorkspace: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutContentmanagementWorkspace: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Workspace>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5730,9 +6163,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Task of Workspace</returns>
-        public async System.Threading.Tasks.Task<Workspace> UpdateWorkspaceAsync (string workspaceId, Workspace body = null)
+        public async System.Threading.Tasks.Task<Workspace> PutContentmanagementWorkspaceAsync (string workspaceId, Workspace body = null)
         {
-             ApiResponse<Workspace> response = await UpdateWorkspaceAsyncWithHttpInfo(workspaceId, body);
+             ApiResponse<Workspace> response = await PutContentmanagementWorkspaceAsyncWithHttpInfo(workspaceId, body);
              return response.Data;
 
         }
@@ -5743,28 +6176,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Workspace>> UpdateWorkspaceAsyncWithHttpInfo (string workspaceId, Workspace body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Workspace>> PutContentmanagementWorkspaceAsyncWithHttpInfo (string workspaceId, Workspace body = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling UpdateWorkspace");
+            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling PutContentmanagementWorkspace");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -5788,14 +6227,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateWorkspace: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutContentmanagementWorkspace: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateWorkspace: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutContentmanagementWorkspace: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Workspace>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5809,9 +6250,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param> 
         /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace.</param> 
         /// <returns></returns>
-        public void DeleteWorkspace (string workspaceId, string moveChildrenToWorkspaceId = null)
+        public void DeleteContentmanagementWorkspace (string workspaceId, string moveChildrenToWorkspaceId = null)
         {
-             DeleteWorkspaceWithHttpInfo(workspaceId, moveChildrenToWorkspaceId);
+             DeleteContentmanagementWorkspaceWithHttpInfo(workspaceId, moveChildrenToWorkspaceId);
         }
 
         /// <summary>
@@ -5820,11 +6261,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param> 
         /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace.</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteWorkspaceWithHttpInfo (string workspaceId, string moveChildrenToWorkspaceId = null)
+        public ApiResponse<Object> DeleteContentmanagementWorkspaceWithHttpInfo (string workspaceId, string moveChildrenToWorkspaceId = null)
         {
             
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling DeleteWorkspace");
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->DeleteContentmanagementWorkspace");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}";
@@ -5834,15 +6276,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -5855,7 +6303,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -5866,14 +6313,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteWorkspace: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteContentmanagementWorkspace: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteWorkspace: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteContentmanagementWorkspace: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -5887,9 +6336,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteWorkspaceAsync (string workspaceId, string moveChildrenToWorkspaceId = null)
+        public async System.Threading.Tasks.Task DeleteContentmanagementWorkspaceAsync (string workspaceId, string moveChildrenToWorkspaceId = null)
         {
-             await DeleteWorkspaceAsyncWithHttpInfo(workspaceId, moveChildrenToWorkspaceId);
+             await DeleteContentmanagementWorkspaceAsyncWithHttpInfo(workspaceId, moveChildrenToWorkspaceId);
 
         }
 
@@ -5899,28 +6348,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkspaceAsyncWithHttpInfo (string workspaceId, string moveChildrenToWorkspaceId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementWorkspaceAsyncWithHttpInfo (string workspaceId, string moveChildrenToWorkspaceId = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling DeleteWorkspace");
+            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling DeleteContentmanagementWorkspace");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -5944,14 +6399,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteWorkspace: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteContentmanagementWorkspace: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteWorkspace: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteContentmanagementWorkspace: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -5967,9 +6424,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="expand">Expand workspace member fields</param> 
         /// <returns>WorkspaceMemberEntityListing</returns>
-        public WorkspaceMemberEntityListing GetWorkspaceMembers (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null)
+        public WorkspaceMemberEntityListing GetContentmanagementWorkspaceMembers (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null)
         {
-             ApiResponse<WorkspaceMemberEntityListing> response = GetWorkspaceMembersWithHttpInfo(workspaceId, pageSize, pageNumber, expand);
+             ApiResponse<WorkspaceMemberEntityListing> response = GetContentmanagementWorkspaceMembersWithHttpInfo(workspaceId, pageSize, pageNumber, expand);
              return response.Data;
         }
 
@@ -5981,11 +6438,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="expand">Expand workspace member fields</param> 
         /// <returns>ApiResponse of WorkspaceMemberEntityListing</returns>
-        public ApiResponse< WorkspaceMemberEntityListing > GetWorkspaceMembersWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null)
+        public ApiResponse< WorkspaceMemberEntityListing > GetContentmanagementWorkspaceMembersWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null)
         {
             
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetWorkspaceMembers");
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetContentmanagementWorkspaceMembers");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/members";
@@ -5995,15 +6453,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -6018,7 +6482,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -6029,14 +6492,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetWorkspaceMembers: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceMembers: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetWorkspaceMembers: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceMembers: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<WorkspaceMemberEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6052,9 +6517,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">Expand workspace member fields</param>
         /// <returns>Task of WorkspaceMemberEntityListing</returns>
-        public async System.Threading.Tasks.Task<WorkspaceMemberEntityListing> GetWorkspaceMembersAsync (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null)
+        public async System.Threading.Tasks.Task<WorkspaceMemberEntityListing> GetContentmanagementWorkspaceMembersAsync (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null)
         {
-             ApiResponse<WorkspaceMemberEntityListing> response = await GetWorkspaceMembersAsyncWithHttpInfo(workspaceId, pageSize, pageNumber, expand);
+             ApiResponse<WorkspaceMemberEntityListing> response = await GetContentmanagementWorkspaceMembersAsyncWithHttpInfo(workspaceId, pageSize, pageNumber, expand);
              return response.Data;
 
         }
@@ -6067,28 +6532,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">Expand workspace member fields</param>
         /// <returns>Task of ApiResponse (WorkspaceMemberEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WorkspaceMemberEntityListing>> GetWorkspaceMembersAsyncWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WorkspaceMemberEntityListing>> GetContentmanagementWorkspaceMembersAsyncWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetWorkspaceMembers");
+            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetContentmanagementWorkspaceMembers");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/members";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -6114,14 +6585,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetWorkspaceMembers: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceMembers: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetWorkspaceMembers: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceMembers: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<WorkspaceMemberEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6136,9 +6609,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param> 
         /// <param name="expand">Expand workspace member fields</param> 
         /// <returns>WorkspaceMember</returns>
-        public WorkspaceMember GetWorkspaceMembersByMemberId (string workspaceId, string memberId, string expand = null)
+        public WorkspaceMember GetContentmanagementWorkspaceMember (string workspaceId, string memberId, string expand = null)
         {
-             ApiResponse<WorkspaceMember> response = GetWorkspaceMembersByMemberIdWithHttpInfo(workspaceId, memberId, expand);
+             ApiResponse<WorkspaceMember> response = GetContentmanagementWorkspaceMemberWithHttpInfo(workspaceId, memberId, expand);
              return response.Data;
         }
 
@@ -6149,14 +6622,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param> 
         /// <param name="expand">Expand workspace member fields</param> 
         /// <returns>ApiResponse of WorkspaceMember</returns>
-        public ApiResponse< WorkspaceMember > GetWorkspaceMembersByMemberIdWithHttpInfo (string workspaceId, string memberId, string expand = null)
+        public ApiResponse< WorkspaceMember > GetContentmanagementWorkspaceMemberWithHttpInfo (string workspaceId, string memberId, string expand = null)
         {
             
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetWorkspaceMembersByMemberId");
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetContentmanagementWorkspaceMember");
             
             // verify the required parameter 'memberId' is set
-            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling GetWorkspaceMembersByMemberId");
+            if (memberId == null)
+                throw new ApiException(400, "Missing required parameter 'memberId' when calling ContentManagementApi->GetContentmanagementWorkspaceMember");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
@@ -6166,15 +6641,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -6188,7 +6669,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -6199,14 +6679,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetWorkspaceMembersByMemberId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceMember: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetWorkspaceMembersByMemberId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceMember: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<WorkspaceMember>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6221,9 +6703,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="expand">Expand workspace member fields</param>
         /// <returns>Task of WorkspaceMember</returns>
-        public async System.Threading.Tasks.Task<WorkspaceMember> GetWorkspaceMembersByMemberIdAsync (string workspaceId, string memberId, string expand = null)
+        public async System.Threading.Tasks.Task<WorkspaceMember> GetContentmanagementWorkspaceMemberAsync (string workspaceId, string memberId, string expand = null)
         {
-             ApiResponse<WorkspaceMember> response = await GetWorkspaceMembersByMemberIdAsyncWithHttpInfo(workspaceId, memberId, expand);
+             ApiResponse<WorkspaceMember> response = await GetContentmanagementWorkspaceMemberAsyncWithHttpInfo(workspaceId, memberId, expand);
              return response.Data;
 
         }
@@ -6235,30 +6717,36 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="expand">Expand workspace member fields</param>
         /// <returns>Task of ApiResponse (WorkspaceMember)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> GetWorkspaceMembersByMemberIdAsyncWithHttpInfo (string workspaceId, string memberId, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> GetContentmanagementWorkspaceMemberAsyncWithHttpInfo (string workspaceId, string memberId, string expand = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetWorkspaceMembersByMemberId");
+            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetContentmanagementWorkspaceMember");
             // verify the required parameter 'memberId' is set
-            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling GetWorkspaceMembersByMemberId");
+            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling GetContentmanagementWorkspaceMember");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -6283,14 +6771,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetWorkspaceMembersByMemberId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceMember: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetWorkspaceMembersByMemberId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceMember: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<WorkspaceMember>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6305,9 +6795,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param> 
         /// <param name="body">Workspace</param> 
         /// <returns>WorkspaceMember</returns>
-        public WorkspaceMember UpdateWorkspaceMembersByMemberId (string workspaceId, string memberId, WorkspaceMember body = null)
+        public WorkspaceMember PutContentmanagementWorkspaceMember (string workspaceId, string memberId, WorkspaceMember body = null)
         {
-             ApiResponse<WorkspaceMember> response = UpdateWorkspaceMembersByMemberIdWithHttpInfo(workspaceId, memberId, body);
+             ApiResponse<WorkspaceMember> response = PutContentmanagementWorkspaceMemberWithHttpInfo(workspaceId, memberId, body);
              return response.Data;
         }
 
@@ -6318,14 +6808,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param> 
         /// <param name="body">Workspace</param> 
         /// <returns>ApiResponse of WorkspaceMember</returns>
-        public ApiResponse< WorkspaceMember > UpdateWorkspaceMembersByMemberIdWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body = null)
+        public ApiResponse< WorkspaceMember > PutContentmanagementWorkspaceMemberWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body = null)
         {
             
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling UpdateWorkspaceMembersByMemberId");
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PutContentmanagementWorkspaceMember");
             
             // verify the required parameter 'memberId' is set
-            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling UpdateWorkspaceMembersByMemberId");
+            if (memberId == null)
+                throw new ApiException(400, "Missing required parameter 'memberId' when calling ContentManagementApi->PutContentmanagementWorkspaceMember");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
@@ -6335,15 +6827,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -6354,10 +6852,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -6368,14 +6871,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateWorkspaceMembersByMemberId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutContentmanagementWorkspaceMember: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateWorkspaceMembersByMemberId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutContentmanagementWorkspaceMember: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<WorkspaceMember>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6390,9 +6895,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Task of WorkspaceMember</returns>
-        public async System.Threading.Tasks.Task<WorkspaceMember> UpdateWorkspaceMembersByMemberIdAsync (string workspaceId, string memberId, WorkspaceMember body = null)
+        public async System.Threading.Tasks.Task<WorkspaceMember> PutContentmanagementWorkspaceMemberAsync (string workspaceId, string memberId, WorkspaceMember body = null)
         {
-             ApiResponse<WorkspaceMember> response = await UpdateWorkspaceMembersByMemberIdAsyncWithHttpInfo(workspaceId, memberId, body);
+             ApiResponse<WorkspaceMember> response = await PutContentmanagementWorkspaceMemberAsyncWithHttpInfo(workspaceId, memberId, body);
              return response.Data;
 
         }
@@ -6404,30 +6909,36 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (WorkspaceMember)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> UpdateWorkspaceMembersByMemberIdAsyncWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> PutContentmanagementWorkspaceMemberAsyncWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling UpdateWorkspaceMembersByMemberId");
+            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling PutContentmanagementWorkspaceMember");
             // verify the required parameter 'memberId' is set
-            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling UpdateWorkspaceMembersByMemberId");
+            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling PutContentmanagementWorkspaceMember");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -6452,14 +6963,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateWorkspaceMembersByMemberId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutContentmanagementWorkspaceMember: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateWorkspaceMembersByMemberId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutContentmanagementWorkspaceMember: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<WorkspaceMember>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6473,9 +6986,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param> 
         /// <param name="memberId">Member ID</param> 
         /// <returns></returns>
-        public void DeleteWorkspaceMembersByMemberId (string workspaceId, string memberId)
+        public void DeleteContentmanagementWorkspaceMember (string workspaceId, string memberId)
         {
-             DeleteWorkspaceMembersByMemberIdWithHttpInfo(workspaceId, memberId);
+             DeleteContentmanagementWorkspaceMemberWithHttpInfo(workspaceId, memberId);
         }
 
         /// <summary>
@@ -6484,14 +6997,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param> 
         /// <param name="memberId">Member ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteWorkspaceMembersByMemberIdWithHttpInfo (string workspaceId, string memberId)
+        public ApiResponse<Object> DeleteContentmanagementWorkspaceMemberWithHttpInfo (string workspaceId, string memberId)
         {
             
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling DeleteWorkspaceMembersByMemberId");
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->DeleteContentmanagementWorkspaceMember");
             
             // verify the required parameter 'memberId' is set
-            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling DeleteWorkspaceMembersByMemberId");
+            if (memberId == null)
+                throw new ApiException(400, "Missing required parameter 'memberId' when calling ContentManagementApi->DeleteContentmanagementWorkspaceMember");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
@@ -6501,15 +7016,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -6522,7 +7043,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -6533,14 +7053,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteWorkspaceMembersByMemberId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteContentmanagementWorkspaceMember: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteWorkspaceMembersByMemberId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteContentmanagementWorkspaceMember: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -6554,9 +7076,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteWorkspaceMembersByMemberIdAsync (string workspaceId, string memberId)
+        public async System.Threading.Tasks.Task DeleteContentmanagementWorkspaceMemberAsync (string workspaceId, string memberId)
         {
-             await DeleteWorkspaceMembersByMemberIdAsyncWithHttpInfo(workspaceId, memberId);
+             await DeleteContentmanagementWorkspaceMemberAsyncWithHttpInfo(workspaceId, memberId);
 
         }
 
@@ -6566,30 +7088,36 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkspaceMembersByMemberIdAsyncWithHttpInfo (string workspaceId, string memberId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementWorkspaceMemberAsyncWithHttpInfo (string workspaceId, string memberId)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling DeleteWorkspaceMembersByMemberId");
+            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling DeleteContentmanagementWorkspaceMember");
             // verify the required parameter 'memberId' is set
-            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling DeleteWorkspaceMembersByMemberId");
+            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling DeleteContentmanagementWorkspaceMember");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -6613,14 +7141,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteWorkspaceMembersByMemberId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteContentmanagementWorkspaceMember: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteWorkspaceMembersByMemberId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteContentmanagementWorkspaceMember: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -6637,9 +7167,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="expand">Expand some document fields</param> 
         /// <returns>TagValueEntityListing</returns>
-        public TagValueEntityListing GetWorkspaceTagvalues (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null)
+        public TagValueEntityListing GetContentmanagementWorkspaceTagvalues (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null)
         {
-             ApiResponse<TagValueEntityListing> response = GetWorkspaceTagvaluesWithHttpInfo(workspaceId, value, pageSize, pageNumber, expand);
+             ApiResponse<TagValueEntityListing> response = GetContentmanagementWorkspaceTagvaluesWithHttpInfo(workspaceId, value, pageSize, pageNumber, expand);
              return response.Data;
         }
 
@@ -6652,11 +7182,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="expand">Expand some document fields</param> 
         /// <returns>ApiResponse of TagValueEntityListing</returns>
-        public ApiResponse< TagValueEntityListing > GetWorkspaceTagvaluesWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null)
+        public ApiResponse< TagValueEntityListing > GetContentmanagementWorkspaceTagvaluesWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null)
         {
             
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetWorkspaceTagvalues");
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetContentmanagementWorkspaceTagvalues");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues";
@@ -6666,15 +7197,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -6690,7 +7227,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -6701,14 +7237,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetWorkspaceTagvalues: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceTagvalues: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetWorkspaceTagvalues: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceTagvalues: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<TagValueEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6725,9 +7263,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of TagValueEntityListing</returns>
-        public async System.Threading.Tasks.Task<TagValueEntityListing> GetWorkspaceTagvaluesAsync (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null)
+        public async System.Threading.Tasks.Task<TagValueEntityListing> GetContentmanagementWorkspaceTagvaluesAsync (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null)
         {
-             ApiResponse<TagValueEntityListing> response = await GetWorkspaceTagvaluesAsyncWithHttpInfo(workspaceId, value, pageSize, pageNumber, expand);
+             ApiResponse<TagValueEntityListing> response = await GetContentmanagementWorkspaceTagvaluesAsyncWithHttpInfo(workspaceId, value, pageSize, pageNumber, expand);
              return response.Data;
 
         }
@@ -6741,28 +7279,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of ApiResponse (TagValueEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> GetWorkspaceTagvaluesAsyncWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> GetContentmanagementWorkspaceTagvaluesAsyncWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetWorkspaceTagvalues");
+            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetContentmanagementWorkspaceTagvalues");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -6789,14 +7333,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetWorkspaceTagvalues: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceTagvalues: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetWorkspaceTagvalues: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceTagvalues: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<TagValueEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6810,9 +7356,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param> 
         /// <param name="body">tag</param> 
         /// <returns>TagValue</returns>
-        public TagValue CreateWorkspaceTagvalues (string workspaceId, TagValue body = null)
+        public TagValue PostContentmanagementWorkspaceTagvalues (string workspaceId, TagValue body = null)
         {
-             ApiResponse<TagValue> response = CreateWorkspaceTagvaluesWithHttpInfo(workspaceId, body);
+             ApiResponse<TagValue> response = PostContentmanagementWorkspaceTagvaluesWithHttpInfo(workspaceId, body);
              return response.Data;
         }
 
@@ -6822,11 +7368,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param> 
         /// <param name="body">tag</param> 
         /// <returns>ApiResponse of TagValue</returns>
-        public ApiResponse< TagValue > CreateWorkspaceTagvaluesWithHttpInfo (string workspaceId, TagValue body = null)
+        public ApiResponse< TagValue > PostContentmanagementWorkspaceTagvaluesWithHttpInfo (string workspaceId, TagValue body = null)
         {
             
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling CreateWorkspaceTagvalues");
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PostContentmanagementWorkspaceTagvalues");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues";
@@ -6836,15 +7383,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -6854,10 +7407,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -6868,14 +7426,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateWorkspaceTagvalues: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementWorkspaceTagvalues: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateWorkspaceTagvalues: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementWorkspaceTagvalues: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<TagValue>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6889,9 +7449,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">tag</param>
         /// <returns>Task of TagValue</returns>
-        public async System.Threading.Tasks.Task<TagValue> CreateWorkspaceTagvaluesAsync (string workspaceId, TagValue body = null)
+        public async System.Threading.Tasks.Task<TagValue> PostContentmanagementWorkspaceTagvaluesAsync (string workspaceId, TagValue body = null)
         {
-             ApiResponse<TagValue> response = await CreateWorkspaceTagvaluesAsyncWithHttpInfo(workspaceId, body);
+             ApiResponse<TagValue> response = await PostContentmanagementWorkspaceTagvaluesAsyncWithHttpInfo(workspaceId, body);
              return response.Data;
 
         }
@@ -6902,28 +7462,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">tag</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TagValue>> CreateWorkspaceTagvaluesAsyncWithHttpInfo (string workspaceId, TagValue body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TagValue>> PostContentmanagementWorkspaceTagvaluesAsyncWithHttpInfo (string workspaceId, TagValue body = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling CreateWorkspaceTagvalues");
+            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling PostContentmanagementWorkspaceTagvalues");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -6947,14 +7513,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateWorkspaceTagvalues: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementWorkspaceTagvalues: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateWorkspaceTagvalues: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementWorkspaceTagvalues: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<TagValue>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6969,9 +7537,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param> 
         /// <param name="expand">Expand some document fields</param> 
         /// <returns>TagValueEntityListing</returns>
-        public TagValueEntityListing CreateWorkspaceTagvaluesQuery (string workspaceId, TagQueryRequest body = null, string expand = null)
+        public TagValueEntityListing PostContentmanagementWorkspaceTagvaluesQuery (string workspaceId, TagQueryRequest body = null, string expand = null)
         {
-             ApiResponse<TagValueEntityListing> response = CreateWorkspaceTagvaluesQueryWithHttpInfo(workspaceId, body, expand);
+             ApiResponse<TagValueEntityListing> response = PostContentmanagementWorkspaceTagvaluesQueryWithHttpInfo(workspaceId, body, expand);
              return response.Data;
         }
 
@@ -6982,11 +7550,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param> 
         /// <param name="expand">Expand some document fields</param> 
         /// <returns>ApiResponse of TagValueEntityListing</returns>
-        public ApiResponse< TagValueEntityListing > CreateWorkspaceTagvaluesQueryWithHttpInfo (string workspaceId, TagQueryRequest body = null, string expand = null)
+        public ApiResponse< TagValueEntityListing > PostContentmanagementWorkspaceTagvaluesQueryWithHttpInfo (string workspaceId, TagQueryRequest body = null, string expand = null)
         {
             
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling CreateWorkspaceTagvaluesQuery");
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PostContentmanagementWorkspaceTagvaluesQuery");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues/query";
@@ -6996,15 +7565,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -7015,10 +7590,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -7029,14 +7609,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateWorkspaceTagvaluesQuery: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementWorkspaceTagvaluesQuery: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateWorkspaceTagvaluesQuery: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementWorkspaceTagvaluesQuery: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<TagValueEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7051,9 +7633,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of TagValueEntityListing</returns>
-        public async System.Threading.Tasks.Task<TagValueEntityListing> CreateWorkspaceTagvaluesQueryAsync (string workspaceId, TagQueryRequest body = null, string expand = null)
+        public async System.Threading.Tasks.Task<TagValueEntityListing> PostContentmanagementWorkspaceTagvaluesQueryAsync (string workspaceId, TagQueryRequest body = null, string expand = null)
         {
-             ApiResponse<TagValueEntityListing> response = await CreateWorkspaceTagvaluesQueryAsyncWithHttpInfo(workspaceId, body, expand);
+             ApiResponse<TagValueEntityListing> response = await PostContentmanagementWorkspaceTagvaluesQueryAsyncWithHttpInfo(workspaceId, body, expand);
              return response.Data;
 
         }
@@ -7065,28 +7647,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of ApiResponse (TagValueEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> CreateWorkspaceTagvaluesQueryAsyncWithHttpInfo (string workspaceId, TagQueryRequest body = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> PostContentmanagementWorkspaceTagvaluesQueryAsyncWithHttpInfo (string workspaceId, TagQueryRequest body = null, string expand = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling CreateWorkspaceTagvaluesQuery");
+            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling PostContentmanagementWorkspaceTagvaluesQuery");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues/query";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -7111,14 +7699,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateWorkspaceTagvaluesQuery: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementWorkspaceTagvaluesQuery: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateWorkspaceTagvaluesQuery: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostContentmanagementWorkspaceTagvaluesQuery: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<TagValueEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7133,9 +7723,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param> 
         /// <param name="expand">Expand some document fields</param> 
         /// <returns>TagValue</returns>
-        public TagValue GetWorkspaceTagvaluesByTagId (string workspaceId, string tagId, string expand = null)
+        public TagValue GetContentmanagementWorkspaceTagvalue (string workspaceId, string tagId, string expand = null)
         {
-             ApiResponse<TagValue> response = GetWorkspaceTagvaluesByTagIdWithHttpInfo(workspaceId, tagId, expand);
+             ApiResponse<TagValue> response = GetContentmanagementWorkspaceTagvalueWithHttpInfo(workspaceId, tagId, expand);
              return response.Data;
         }
 
@@ -7146,14 +7736,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param> 
         /// <param name="expand">Expand some document fields</param> 
         /// <returns>ApiResponse of TagValue</returns>
-        public ApiResponse< TagValue > GetWorkspaceTagvaluesByTagIdWithHttpInfo (string workspaceId, string tagId, string expand = null)
+        public ApiResponse< TagValue > GetContentmanagementWorkspaceTagvalueWithHttpInfo (string workspaceId, string tagId, string expand = null)
         {
             
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetWorkspaceTagvaluesByTagId");
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetContentmanagementWorkspaceTagvalue");
             
             // verify the required parameter 'tagId' is set
-            if (tagId == null) throw new ApiException(400, "Missing required parameter 'tagId' when calling GetWorkspaceTagvaluesByTagId");
+            if (tagId == null)
+                throw new ApiException(400, "Missing required parameter 'tagId' when calling ContentManagementApi->GetContentmanagementWorkspaceTagvalue");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
@@ -7163,15 +7755,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -7185,7 +7783,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -7196,14 +7793,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetWorkspaceTagvaluesByTagId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceTagvalue: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetWorkspaceTagvaluesByTagId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceTagvalue: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<TagValue>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7218,9 +7817,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of TagValue</returns>
-        public async System.Threading.Tasks.Task<TagValue> GetWorkspaceTagvaluesByTagIdAsync (string workspaceId, string tagId, string expand = null)
+        public async System.Threading.Tasks.Task<TagValue> GetContentmanagementWorkspaceTagvalueAsync (string workspaceId, string tagId, string expand = null)
         {
-             ApiResponse<TagValue> response = await GetWorkspaceTagvaluesByTagIdAsyncWithHttpInfo(workspaceId, tagId, expand);
+             ApiResponse<TagValue> response = await GetContentmanagementWorkspaceTagvalueAsyncWithHttpInfo(workspaceId, tagId, expand);
              return response.Data;
 
         }
@@ -7232,30 +7831,36 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TagValue>> GetWorkspaceTagvaluesByTagIdAsyncWithHttpInfo (string workspaceId, string tagId, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TagValue>> GetContentmanagementWorkspaceTagvalueAsyncWithHttpInfo (string workspaceId, string tagId, string expand = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetWorkspaceTagvaluesByTagId");
+            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetContentmanagementWorkspaceTagvalue");
             // verify the required parameter 'tagId' is set
-            if (tagId == null) throw new ApiException(400, "Missing required parameter 'tagId' when calling GetWorkspaceTagvaluesByTagId");
+            if (tagId == null) throw new ApiException(400, "Missing required parameter 'tagId' when calling GetContentmanagementWorkspaceTagvalue");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -7280,14 +7885,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetWorkspaceTagvaluesByTagId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceTagvalue: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetWorkspaceTagvaluesByTagId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceTagvalue: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<TagValue>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7302,9 +7909,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param> 
         /// <param name="body">Workspace</param> 
         /// <returns>TagValue</returns>
-        public TagValue UpdateWorkspaceTagvaluesByTagId (string workspaceId, string tagId, TagValue body = null)
+        public TagValue PutContentmanagementWorkspaceTagvalue (string workspaceId, string tagId, TagValue body = null)
         {
-             ApiResponse<TagValue> response = UpdateWorkspaceTagvaluesByTagIdWithHttpInfo(workspaceId, tagId, body);
+             ApiResponse<TagValue> response = PutContentmanagementWorkspaceTagvalueWithHttpInfo(workspaceId, tagId, body);
              return response.Data;
         }
 
@@ -7315,14 +7922,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param> 
         /// <param name="body">Workspace</param> 
         /// <returns>ApiResponse of TagValue</returns>
-        public ApiResponse< TagValue > UpdateWorkspaceTagvaluesByTagIdWithHttpInfo (string workspaceId, string tagId, TagValue body = null)
+        public ApiResponse< TagValue > PutContentmanagementWorkspaceTagvalueWithHttpInfo (string workspaceId, string tagId, TagValue body = null)
         {
             
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling UpdateWorkspaceTagvaluesByTagId");
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PutContentmanagementWorkspaceTagvalue");
             
             // verify the required parameter 'tagId' is set
-            if (tagId == null) throw new ApiException(400, "Missing required parameter 'tagId' when calling UpdateWorkspaceTagvaluesByTagId");
+            if (tagId == null)
+                throw new ApiException(400, "Missing required parameter 'tagId' when calling ContentManagementApi->PutContentmanagementWorkspaceTagvalue");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
@@ -7332,15 +7941,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -7351,10 +7966,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -7365,14 +7985,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateWorkspaceTagvaluesByTagId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutContentmanagementWorkspaceTagvalue: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateWorkspaceTagvaluesByTagId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutContentmanagementWorkspaceTagvalue: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<TagValue>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7387,9 +8009,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Task of TagValue</returns>
-        public async System.Threading.Tasks.Task<TagValue> UpdateWorkspaceTagvaluesByTagIdAsync (string workspaceId, string tagId, TagValue body = null)
+        public async System.Threading.Tasks.Task<TagValue> PutContentmanagementWorkspaceTagvalueAsync (string workspaceId, string tagId, TagValue body = null)
         {
-             ApiResponse<TagValue> response = await UpdateWorkspaceTagvaluesByTagIdAsyncWithHttpInfo(workspaceId, tagId, body);
+             ApiResponse<TagValue> response = await PutContentmanagementWorkspaceTagvalueAsyncWithHttpInfo(workspaceId, tagId, body);
              return response.Data;
 
         }
@@ -7401,30 +8023,36 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TagValue>> UpdateWorkspaceTagvaluesByTagIdAsyncWithHttpInfo (string workspaceId, string tagId, TagValue body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TagValue>> PutContentmanagementWorkspaceTagvalueAsyncWithHttpInfo (string workspaceId, string tagId, TagValue body = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling UpdateWorkspaceTagvaluesByTagId");
+            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling PutContentmanagementWorkspaceTagvalue");
             // verify the required parameter 'tagId' is set
-            if (tagId == null) throw new ApiException(400, "Missing required parameter 'tagId' when calling UpdateWorkspaceTagvaluesByTagId");
+            if (tagId == null) throw new ApiException(400, "Missing required parameter 'tagId' when calling PutContentmanagementWorkspaceTagvalue");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -7449,14 +8077,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateWorkspaceTagvaluesByTagId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutContentmanagementWorkspaceTagvalue: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateWorkspaceTagvaluesByTagId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutContentmanagementWorkspaceTagvalue: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<TagValue>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7470,9 +8100,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param> 
         /// <param name="tagId">Tag ID</param> 
         /// <returns></returns>
-        public void DeleteWorkspaceTagvaluesByTagId (string workspaceId, string tagId)
+        public void DeleteContentmanagementWorkspaceTagvalue (string workspaceId, string tagId)
         {
-             DeleteWorkspaceTagvaluesByTagIdWithHttpInfo(workspaceId, tagId);
+             DeleteContentmanagementWorkspaceTagvalueWithHttpInfo(workspaceId, tagId);
         }
 
         /// <summary>
@@ -7481,14 +8111,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param> 
         /// <param name="tagId">Tag ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteWorkspaceTagvaluesByTagIdWithHttpInfo (string workspaceId, string tagId)
+        public ApiResponse<Object> DeleteContentmanagementWorkspaceTagvalueWithHttpInfo (string workspaceId, string tagId)
         {
             
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling DeleteWorkspaceTagvaluesByTagId");
+            if (workspaceId == null)
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->DeleteContentmanagementWorkspaceTagvalue");
             
             // verify the required parameter 'tagId' is set
-            if (tagId == null) throw new ApiException(400, "Missing required parameter 'tagId' when calling DeleteWorkspaceTagvaluesByTagId");
+            if (tagId == null)
+                throw new ApiException(400, "Missing required parameter 'tagId' when calling ContentManagementApi->DeleteContentmanagementWorkspaceTagvalue");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
@@ -7498,15 +8130,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -7519,7 +8157,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -7530,14 +8167,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteWorkspaceTagvaluesByTagId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteContentmanagementWorkspaceTagvalue: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteWorkspaceTagvaluesByTagId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteContentmanagementWorkspaceTagvalue: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -7551,9 +8190,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteWorkspaceTagvaluesByTagIdAsync (string workspaceId, string tagId)
+        public async System.Threading.Tasks.Task DeleteContentmanagementWorkspaceTagvalueAsync (string workspaceId, string tagId)
         {
-             await DeleteWorkspaceTagvaluesByTagIdAsyncWithHttpInfo(workspaceId, tagId);
+             await DeleteContentmanagementWorkspaceTagvalueAsyncWithHttpInfo(workspaceId, tagId);
 
         }
 
@@ -7563,30 +8202,36 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkspaceTagvaluesByTagIdAsyncWithHttpInfo (string workspaceId, string tagId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementWorkspaceTagvalueAsyncWithHttpInfo (string workspaceId, string tagId)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling DeleteWorkspaceTagvaluesByTagId");
+            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling DeleteContentmanagementWorkspaceTagvalue");
             // verify the required parameter 'tagId' is set
-            if (tagId == null) throw new ApiException(400, "Missing required parameter 'tagId' when calling DeleteWorkspaceTagvaluesByTagId");
+            if (tagId == null) throw new ApiException(400, "Missing required parameter 'tagId' when calling DeleteContentmanagementWorkspaceTagvalue");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -7610,14 +8255,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteWorkspaceTagvaluesByTagId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteContentmanagementWorkspaceTagvalue: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteWorkspaceTagvaluesByTagId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteContentmanagementWorkspaceTagvalue: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,

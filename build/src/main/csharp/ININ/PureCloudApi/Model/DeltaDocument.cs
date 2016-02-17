@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class DeltaDocument :  IEquatable<DeltaDocument>
+    public partial class DeltaDocument :  IEquatable<DeltaDocument>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DeltaDocument" /> class.
@@ -121,7 +120,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DeltaDocument instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DeltaDocument to be compared</param>
+        /// <param name="other">Instance of DeltaDocument to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DeltaDocument other)
         {
@@ -180,31 +179,29 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Filename != null)
-                    hash = hash * 57 + this.Filename.GetHashCode();
+                    hash = hash * 59 + this.Filename.GetHashCode();
                 
                 if (this.ContentType != null)
-                    hash = hash * 57 + this.ContentType.GetHashCode();
+                    hash = hash * 59 + this.ContentType.GetHashCode();
                 
                 if (this.ContentLengthBytes != null)
-                    hash = hash * 57 + this.ContentLengthBytes.GetHashCode();
+                    hash = hash * 59 + this.ContentLengthBytes.GetHashCode();
                 
                 if (this.Operation != null)
-                    hash = hash * 57 + this.Operation.GetHashCode();
+                    hash = hash * 59 + this.Operation.GetHashCode();
                 
                 if (this.DateModified != null)
-                    hash = hash * 57 + this.DateModified.GetHashCode();
+                    hash = hash * 59 + this.DateModified.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

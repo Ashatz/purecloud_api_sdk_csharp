@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Video :  IEquatable<Video>
+    public partial class Video :  IEquatable<Video>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Video" /> class.
@@ -131,7 +130,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Video instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Video to be compared</param>
+        /// <param name="other">Instance of Video to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Video other)
         {
@@ -195,34 +194,32 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.State != null)
-                    hash = hash * 57 + this.State.GetHashCode();
+                    hash = hash * 59 + this.State.GetHashCode();
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Context != null)
-                    hash = hash * 57 + this.Context.GetHashCode();
+                    hash = hash * 59 + this.Context.GetHashCode();
                 
                 if (this.AudioMuted != null)
-                    hash = hash * 57 + this.AudioMuted.GetHashCode();
+                    hash = hash * 59 + this.AudioMuted.GetHashCode();
                 
                 if (this.VideoMuted != null)
-                    hash = hash * 57 + this.VideoMuted.GetHashCode();
+                    hash = hash * 59 + this.VideoMuted.GetHashCode();
                 
                 if (this.SharingScreen != null)
-                    hash = hash * 57 + this.SharingScreen.GetHashCode();
+                    hash = hash * 59 + this.SharingScreen.GetHashCode();
                 
                 if (this.PeerCount != null)
-                    hash = hash * 57 + this.PeerCount.GetHashCode();
+                    hash = hash * 59 + this.PeerCount.GetHashCode();
                 
                 if (this.DisconnectType != null)
-                    hash = hash * 57 + this.DisconnectType.GetHashCode();
+                    hash = hash * 59 + this.DisconnectType.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

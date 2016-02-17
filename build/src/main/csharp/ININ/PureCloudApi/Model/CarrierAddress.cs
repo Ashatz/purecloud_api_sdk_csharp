@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class CarrierAddress :  IEquatable<CarrierAddress>
+    public partial class CarrierAddress :  IEquatable<CarrierAddress>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CarrierAddress" /> class.
@@ -104,7 +103,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if CarrierAddress instances are equal
         /// </summary>
-        /// <param name="obj">Instance of CarrierAddress to be compared</param>
+        /// <param name="other">Instance of CarrierAddress to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(CarrierAddress other)
         {
@@ -153,25 +152,23 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.StreetAddress1 != null)
-                    hash = hash * 57 + this.StreetAddress1.GetHashCode();
+                    hash = hash * 59 + this.StreetAddress1.GetHashCode();
                 
                 if (this.StreetAddress2 != null)
-                    hash = hash * 57 + this.StreetAddress2.GetHashCode();
+                    hash = hash * 59 + this.StreetAddress2.GetHashCode();
                 
                 if (this.City != null)
-                    hash = hash * 57 + this.City.GetHashCode();
+                    hash = hash * 59 + this.City.GetHashCode();
                 
                 if (this.State != null)
-                    hash = hash * 57 + this.State.GetHashCode();
+                    hash = hash * 59 + this.State.GetHashCode();
                 
                 if (this.Zipcode != null)
-                    hash = hash * 57 + this.Zipcode.GetHashCode();
+                    hash = hash * 59 + this.Zipcode.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class FacetStatistics :  IEquatable<FacetStatistics>
+    public partial class FacetStatistics :  IEquatable<FacetStatistics>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FacetStatistics" /> class.
@@ -122,7 +121,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FacetStatistics instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FacetStatistics to be compared</param>
+        /// <param name="other">Instance of FacetStatistics to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FacetStatistics other)
         {
@@ -181,31 +180,29 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Count != null)
-                    hash = hash * 57 + this.Count.GetHashCode();
+                    hash = hash * 59 + this.Count.GetHashCode();
                 
                 if (this.Min != null)
-                    hash = hash * 57 + this.Min.GetHashCode();
+                    hash = hash * 59 + this.Min.GetHashCode();
                 
                 if (this.Max != null)
-                    hash = hash * 57 + this.Max.GetHashCode();
+                    hash = hash * 59 + this.Max.GetHashCode();
                 
                 if (this.Mean != null)
-                    hash = hash * 57 + this.Mean.GetHashCode();
+                    hash = hash * 59 + this.Mean.GetHashCode();
                 
                 if (this.StdDeviation != null)
-                    hash = hash * 57 + this.StdDeviation.GetHashCode();
+                    hash = hash * 59 + this.StdDeviation.GetHashCode();
                 
                 if (this.DateMin != null)
-                    hash = hash * 57 + this.DateMin.GetHashCode();
+                    hash = hash * 59 + this.DateMin.GetHashCode();
                 
                 if (this.DateMax != null)
-                    hash = hash * 57 + this.DateMax.GetHashCode();
+                    hash = hash * 59 + this.DateMax.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

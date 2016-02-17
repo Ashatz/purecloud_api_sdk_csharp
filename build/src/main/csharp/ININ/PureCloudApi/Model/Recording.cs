@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Recording :  IEquatable<Recording>
+    public partial class Recording :  IEquatable<Recording>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Recording" /> class.
@@ -261,7 +260,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Recording instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Recording to be compared</param>
+        /// <param name="other">Instance of Recording to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Recording other)
         {
@@ -405,82 +404,80 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.ConversationId != null)
-                    hash = hash * 57 + this.ConversationId.GetHashCode();
+                    hash = hash * 59 + this.ConversationId.GetHashCode();
                 
                 if (this.Path != null)
-                    hash = hash * 57 + this.Path.GetHashCode();
+                    hash = hash * 59 + this.Path.GetHashCode();
                 
                 if (this.StartTime != null)
-                    hash = hash * 57 + this.StartTime.GetHashCode();
+                    hash = hash * 59 + this.StartTime.GetHashCode();
                 
                 if (this.EndTime != null)
-                    hash = hash * 57 + this.EndTime.GetHashCode();
+                    hash = hash * 59 + this.EndTime.GetHashCode();
                 
                 if (this.Media != null)
-                    hash = hash * 57 + this.Media.GetHashCode();
+                    hash = hash * 59 + this.Media.GetHashCode();
                 
                 if (this.MediaUri != null)
-                    hash = hash * 57 + this.MediaUri.GetHashCode();
+                    hash = hash * 59 + this.MediaUri.GetHashCode();
                 
                 if (this.WaveUri != null)
-                    hash = hash * 57 + this.WaveUri.GetHashCode();
+                    hash = hash * 59 + this.WaveUri.GetHashCode();
                 
                 if (this.Annotations != null)
-                    hash = hash * 57 + this.Annotations.GetHashCode();
+                    hash = hash * 59 + this.Annotations.GetHashCode();
                 
                 if (this.Transcript != null)
-                    hash = hash * 57 + this.Transcript.GetHashCode();
+                    hash = hash * 59 + this.Transcript.GetHashCode();
                 
                 if (this.EmailTranscript != null)
-                    hash = hash * 57 + this.EmailTranscript.GetHashCode();
+                    hash = hash * 59 + this.EmailTranscript.GetHashCode();
                 
                 if (this.FileState != null)
-                    hash = hash * 57 + this.FileState.GetHashCode();
+                    hash = hash * 59 + this.FileState.GetHashCode();
                 
                 if (this.RestoreExpirationTime != null)
-                    hash = hash * 57 + this.RestoreExpirationTime.GetHashCode();
+                    hash = hash * 59 + this.RestoreExpirationTime.GetHashCode();
                 
                 if (this.MediaUris != null)
-                    hash = hash * 57 + this.MediaUris.GetHashCode();
+                    hash = hash * 59 + this.MediaUris.GetHashCode();
                 
                 if (this.EstimatedTranscodeTimeMs != null)
-                    hash = hash * 57 + this.EstimatedTranscodeTimeMs.GetHashCode();
+                    hash = hash * 59 + this.EstimatedTranscodeTimeMs.GetHashCode();
                 
                 if (this.ActualTranscodeTimeMs != null)
-                    hash = hash * 57 + this.ActualTranscodeTimeMs.GetHashCode();
+                    hash = hash * 59 + this.ActualTranscodeTimeMs.GetHashCode();
                 
                 if (this.ArchiveDate != null)
-                    hash = hash * 57 + this.ArchiveDate.GetHashCode();
+                    hash = hash * 59 + this.ArchiveDate.GetHashCode();
                 
                 if (this.ArchiveMedium != null)
-                    hash = hash * 57 + this.ArchiveMedium.GetHashCode();
+                    hash = hash * 59 + this.ArchiveMedium.GetHashCode();
                 
                 if (this.DeleteDate != null)
-                    hash = hash * 57 + this.DeleteDate.GetHashCode();
+                    hash = hash * 59 + this.DeleteDate.GetHashCode();
                 
                 if (this.MaxAllowedRestorationsForOrg != null)
-                    hash = hash * 57 + this.MaxAllowedRestorationsForOrg.GetHashCode();
+                    hash = hash * 59 + this.MaxAllowedRestorationsForOrg.GetHashCode();
                 
                 if (this.RemainingRestorationsAllowedForOrg != null)
-                    hash = hash * 57 + this.RemainingRestorationsAllowedForOrg.GetHashCode();
+                    hash = hash * 59 + this.RemainingRestorationsAllowedForOrg.GetHashCode();
                 
                 if (this.RecordingId != null)
-                    hash = hash * 57 + this.RecordingId.GetHashCode();
+                    hash = hash * 59 + this.RecordingId.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

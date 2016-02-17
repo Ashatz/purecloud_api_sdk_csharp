@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class DomainOrgRoleDifference :  IEquatable<DomainOrgRoleDifference>
+    public partial class DomainOrgRoleDifference :  IEquatable<DomainOrgRoleDifference>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainOrgRoleDifference" /> class.
@@ -104,7 +103,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DomainOrgRoleDifference instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DomainOrgRoleDifference to be compared</param>
+        /// <param name="other">Instance of DomainOrgRoleDifference to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DomainOrgRoleDifference other)
         {
@@ -153,25 +152,23 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.RemovedPermissionPolicies != null)
-                    hash = hash * 57 + this.RemovedPermissionPolicies.GetHashCode();
+                    hash = hash * 59 + this.RemovedPermissionPolicies.GetHashCode();
                 
                 if (this.AddedPermissionPolicies != null)
-                    hash = hash * 57 + this.AddedPermissionPolicies.GetHashCode();
+                    hash = hash * 59 + this.AddedPermissionPolicies.GetHashCode();
                 
                 if (this.SamePermissionPolicies != null)
-                    hash = hash * 57 + this.SamePermissionPolicies.GetHashCode();
+                    hash = hash * 59 + this.SamePermissionPolicies.GetHashCode();
                 
                 if (this.UserOrgRole != null)
-                    hash = hash * 57 + this.UserOrgRole.GetHashCode();
+                    hash = hash * 59 + this.UserOrgRole.GetHashCode();
                 
                 if (this.RoleFromDefault != null)
-                    hash = hash * 57 + this.RoleFromDefault.GetHashCode();
+                    hash = hash * 59 + this.RoleFromDefault.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

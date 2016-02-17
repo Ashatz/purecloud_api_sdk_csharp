@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class ErrorBody :  IEquatable<ErrorBody>
+    public partial class ErrorBody :  IEquatable<ErrorBody>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ErrorBody" /> class.
@@ -144,7 +143,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ErrorBody instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ErrorBody to be compared</param>
+        /// <param name="other">Instance of ErrorBody to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ErrorBody other)
         {
@@ -218,40 +217,38 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Status != null)
-                    hash = hash * 57 + this.Status.GetHashCode();
+                    hash = hash * 59 + this.Status.GetHashCode();
                 
                 if (this.Code != null)
-                    hash = hash * 57 + this.Code.GetHashCode();
+                    hash = hash * 59 + this.Code.GetHashCode();
                 
                 if (this.EntityId != null)
-                    hash = hash * 57 + this.EntityId.GetHashCode();
+                    hash = hash * 59 + this.EntityId.GetHashCode();
                 
                 if (this.EntityName != null)
-                    hash = hash * 57 + this.EntityName.GetHashCode();
+                    hash = hash * 59 + this.EntityName.GetHashCode();
                 
                 if (this.Message != null)
-                    hash = hash * 57 + this.Message.GetHashCode();
+                    hash = hash * 59 + this.Message.GetHashCode();
                 
                 if (this.MessageWithParams != null)
-                    hash = hash * 57 + this.MessageWithParams.GetHashCode();
+                    hash = hash * 59 + this.MessageWithParams.GetHashCode();
                 
                 if (this.MessageParams != null)
-                    hash = hash * 57 + this.MessageParams.GetHashCode();
+                    hash = hash * 59 + this.MessageParams.GetHashCode();
                 
                 if (this.ContextId != null)
-                    hash = hash * 57 + this.ContextId.GetHashCode();
+                    hash = hash * 59 + this.ContextId.GetHashCode();
                 
                 if (this.Details != null)
-                    hash = hash * 57 + this.Details.GetHashCode();
+                    hash = hash * 59 + this.Details.GetHashCode();
                 
                 if (this.Errors != null)
-                    hash = hash * 57 + this.Errors.GetHashCode();
+                    hash = hash * 59 + this.Errors.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

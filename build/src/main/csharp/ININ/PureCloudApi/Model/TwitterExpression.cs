@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class TwitterExpression :  IEquatable<TwitterExpression>
+    public partial class TwitterExpression :  IEquatable<TwitterExpression>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TwitterExpression" /> class.
@@ -284,7 +283,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if TwitterExpression instances are equal
         /// </summary>
-        /// <param name="obj">Instance of TwitterExpression to be compared</param>
+        /// <param name="other">Instance of TwitterExpression to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(TwitterExpression other)
         {
@@ -428,82 +427,80 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.DateCreated != null)
-                    hash = hash * 57 + this.DateCreated.GetHashCode();
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
                 
                 if (this.DateModified != null)
-                    hash = hash * 57 + this.DateModified.GetHashCode();
+                    hash = hash * 59 + this.DateModified.GetHashCode();
                 
                 if (this.IsDispositioned != null)
-                    hash = hash * 57 + this.IsDispositioned.GetHashCode();
+                    hash = hash * 59 + this.IsDispositioned.GetHashCode();
                 
                 if (this.IsNoise != null)
-                    hash = hash * 57 + this.IsNoise.GetHashCode();
+                    hash = hash * 59 + this.IsNoise.GetHashCode();
                 
                 if (this.Gistener != null)
-                    hash = hash * 57 + this.Gistener.GetHashCode();
+                    hash = hash * 59 + this.Gistener.GetHashCode();
                 
                 if (this.TweetId != null)
-                    hash = hash * 57 + this.TweetId.GetHashCode();
+                    hash = hash * 59 + this.TweetId.GetHashCode();
                 
                 if (this.Text != null)
-                    hash = hash * 57 + this.Text.GetHashCode();
+                    hash = hash * 59 + this.Text.GetHashCode();
                 
                 if (this.TweetCreated != null)
-                    hash = hash * 57 + this.TweetCreated.GetHashCode();
+                    hash = hash * 59 + this.TweetCreated.GetHashCode();
                 
                 if (this.IsReply != null)
-                    hash = hash * 57 + this.IsReply.GetHashCode();
+                    hash = hash * 59 + this.IsReply.GetHashCode();
                 
                 if (this.IsRetweet != null)
-                    hash = hash * 57 + this.IsRetweet.GetHashCode();
+                    hash = hash * 59 + this.IsRetweet.GetHashCode();
                 
                 if (this.RetweetParentId != null)
-                    hash = hash * 57 + this.RetweetParentId.GetHashCode();
+                    hash = hash * 59 + this.RetweetParentId.GetHashCode();
                 
                 if (this.RetweetCount != null)
-                    hash = hash * 57 + this.RetweetCount.GetHashCode();
+                    hash = hash * 59 + this.RetweetCount.GetHashCode();
                 
                 if (this.IsQuotedTweet != null)
-                    hash = hash * 57 + this.IsQuotedTweet.GetHashCode();
+                    hash = hash * 59 + this.IsQuotedTweet.GetHashCode();
                 
                 if (this.QuotedParentId != null)
-                    hash = hash * 57 + this.QuotedParentId.GetHashCode();
+                    hash = hash * 59 + this.QuotedParentId.GetHashCode();
                 
                 if (this.UserId != null)
-                    hash = hash * 57 + this.UserId.GetHashCode();
+                    hash = hash * 59 + this.UserId.GetHashCode();
                 
                 if (this.UserName != null)
-                    hash = hash * 57 + this.UserName.GetHashCode();
+                    hash = hash * 59 + this.UserName.GetHashCode();
                 
                 if (this.UserScreenName != null)
-                    hash = hash * 57 + this.UserScreenName.GetHashCode();
+                    hash = hash * 59 + this.UserScreenName.GetHashCode();
                 
                 if (this.UserTweetCount != null)
-                    hash = hash * 57 + this.UserTweetCount.GetHashCode();
+                    hash = hash * 59 + this.UserTweetCount.GetHashCode();
                 
                 if (this.UserFollowersCount != null)
-                    hash = hash * 57 + this.UserFollowersCount.GetHashCode();
+                    hash = hash * 59 + this.UserFollowersCount.GetHashCode();
                 
                 if (this.GroupTags != null)
-                    hash = hash * 57 + this.GroupTags.GetHashCode();
+                    hash = hash * 59 + this.GroupTags.GetHashCode();
                 
                 if (this.Routed != null)
-                    hash = hash * 57 + this.Routed.GetHashCode();
+                    hash = hash * 59 + this.Routed.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

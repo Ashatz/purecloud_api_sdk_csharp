@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class QueueMember :  IEquatable<QueueMember>
+    public partial class QueueMember :  IEquatable<QueueMember>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueMember" /> class.
@@ -131,7 +130,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if QueueMember instances are equal
         /// </summary>
-        /// <param name="obj">Instance of QueueMember to be compared</param>
+        /// <param name="other">Instance of QueueMember to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(QueueMember other)
         {
@@ -195,34 +194,32 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.User != null)
-                    hash = hash * 57 + this.User.GetHashCode();
+                    hash = hash * 59 + this.User.GetHashCode();
                 
                 if (this.RingNumber != null)
-                    hash = hash * 57 + this.RingNumber.GetHashCode();
+                    hash = hash * 59 + this.RingNumber.GetHashCode();
                 
                 if (this.Joined != null)
-                    hash = hash * 57 + this.Joined.GetHashCode();
+                    hash = hash * 59 + this.Joined.GetHashCode();
                 
                 if (this.MemberBy != null)
-                    hash = hash * 57 + this.MemberBy.GetHashCode();
+                    hash = hash * 59 + this.MemberBy.GetHashCode();
                 
                 if (this.RoutingStatus != null)
-                    hash = hash * 57 + this.RoutingStatus.GetHashCode();
+                    hash = hash * 59 + this.RoutingStatus.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

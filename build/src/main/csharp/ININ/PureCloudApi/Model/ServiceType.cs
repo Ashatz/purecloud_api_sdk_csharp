@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class ServiceType :  IEquatable<ServiceType>
+    public partial class ServiceType :  IEquatable<ServiceType>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ServiceType" /> class.
@@ -112,7 +111,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ServiceType instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ServiceType to be compared</param>
+        /// <param name="other">Instance of ServiceType to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ServiceType other)
         {
@@ -166,28 +165,26 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
+                    hash = hash * 59 + this.Type.GetHashCode();
                 
                 if (this.Parameters != null)
-                    hash = hash * 57 + this.Parameters.GetHashCode();
+                    hash = hash * 59 + this.Parameters.GetHashCode();
                 
                 if (this.Codecs != null)
-                    hash = hash * 57 + this.Codecs.GetHashCode();
+                    hash = hash * 59 + this.Codecs.GetHashCode();
                 
                 if (this.CallingPartyId != null)
-                    hash = hash * 57 + this.CallingPartyId.GetHashCode();
+                    hash = hash * 59 + this.CallingPartyId.GetHashCode();
                 
                 if (this.CallHistory != null)
-                    hash = hash * 57 + this.CallHistory.GetHashCode();
+                    hash = hash * 59 + this.CallHistory.GetHashCode();
                 
                 if (this.Prefix != null)
-                    hash = hash * 57 + this.Prefix.GetHashCode();
+                    hash = hash * 59 + this.Prefix.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

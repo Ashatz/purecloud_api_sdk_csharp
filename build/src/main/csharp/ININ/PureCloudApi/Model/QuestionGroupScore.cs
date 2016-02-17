@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class QuestionGroupScore :  IEquatable<QuestionGroupScore>
+    public partial class QuestionGroupScore :  IEquatable<QuestionGroupScore>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="QuestionGroupScore" /> class.
@@ -153,7 +152,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if QuestionGroupScore instances are equal
         /// </summary>
-        /// <param name="obj">Instance of QuestionGroupScore to be compared</param>
+        /// <param name="other">Instance of QuestionGroupScore to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(QuestionGroupScore other)
         {
@@ -232,43 +231,41 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.QuestionGroupId != null)
-                    hash = hash * 57 + this.QuestionGroupId.GetHashCode();
+                    hash = hash * 59 + this.QuestionGroupId.GetHashCode();
                 
                 if (this.TotalScore != null)
-                    hash = hash * 57 + this.TotalScore.GetHashCode();
+                    hash = hash * 59 + this.TotalScore.GetHashCode();
                 
                 if (this.MaxTotalScore != null)
-                    hash = hash * 57 + this.MaxTotalScore.GetHashCode();
+                    hash = hash * 59 + this.MaxTotalScore.GetHashCode();
                 
                 if (this.TotalCriticalScore != null)
-                    hash = hash * 57 + this.TotalCriticalScore.GetHashCode();
+                    hash = hash * 59 + this.TotalCriticalScore.GetHashCode();
                 
                 if (this.MaxTotalCriticalScore != null)
-                    hash = hash * 57 + this.MaxTotalCriticalScore.GetHashCode();
+                    hash = hash * 59 + this.MaxTotalCriticalScore.GetHashCode();
                 
                 if (this.TotalScoreUnweighted != null)
-                    hash = hash * 57 + this.TotalScoreUnweighted.GetHashCode();
+                    hash = hash * 59 + this.TotalScoreUnweighted.GetHashCode();
                 
                 if (this.MaxTotalScoreUnweighted != null)
-                    hash = hash * 57 + this.MaxTotalScoreUnweighted.GetHashCode();
+                    hash = hash * 59 + this.MaxTotalScoreUnweighted.GetHashCode();
                 
                 if (this.TotalCriticalScoreUnweighted != null)
-                    hash = hash * 57 + this.TotalCriticalScoreUnweighted.GetHashCode();
+                    hash = hash * 59 + this.TotalCriticalScoreUnweighted.GetHashCode();
                 
                 if (this.MaxTotalCriticalScoreUnweighted != null)
-                    hash = hash * 57 + this.MaxTotalCriticalScoreUnweighted.GetHashCode();
+                    hash = hash * 59 + this.MaxTotalCriticalScoreUnweighted.GetHashCode();
                 
                 if (this.MarkedNA != null)
-                    hash = hash * 57 + this.MarkedNA.GetHashCode();
+                    hash = hash * 59 + this.MarkedNA.GetHashCode();
                 
                 if (this.QuestionScores != null)
-                    hash = hash * 57 + this.QuestionScores.GetHashCode();
+                    hash = hash * 59 + this.QuestionScores.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

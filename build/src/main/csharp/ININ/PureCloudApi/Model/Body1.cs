@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Body1 : Dictionary<String, Object>,  IEquatable<Body1>
+    public partial class Body1 : Dictionary<String, Object>,  IEquatable<Body1>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Body1" /> class.
@@ -64,7 +63,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Body1 instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Body1 to be compared</param>
+        /// <param name="other">Instance of Body1 to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Body1 other)
         {
@@ -92,6 +91,4 @@ namespace ININ.PureCloudApi.Model
         }
 
     }
-
-
 }

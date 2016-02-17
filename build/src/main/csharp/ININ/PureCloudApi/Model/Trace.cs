@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Trace :  IEquatable<Trace>
+    public partial class Trace :  IEquatable<Trace>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Trace" /> class.
@@ -121,7 +120,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Trace instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Trace to be compared</param>
+        /// <param name="other">Instance of Trace to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Trace other)
         {
@@ -180,31 +179,29 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Topic != null)
-                    hash = hash * 57 + this.Topic.GetHashCode();
+                    hash = hash * 59 + this.Topic.GetHashCode();
                 
                 if (this.Timestamp != null)
-                    hash = hash * 57 + this.Timestamp.GetHashCode();
+                    hash = hash * 59 + this.Timestamp.GetHashCode();
                 
                 if (this.Level != null)
-                    hash = hash * 57 + this.Level.GetHashCode();
+                    hash = hash * 59 + this.Level.GetHashCode();
                 
                 if (this.Message != null)
-                    hash = hash * 57 + this.Message.GetHashCode();
+                    hash = hash * 59 + this.Message.GetHashCode();
                 
                 if (this.Details != null)
-                    hash = hash * 57 + this.Details.GetHashCode();
+                    hash = hash * 59 + this.Details.GetHashCode();
                 
                 if (this.TimestampString != null)
-                    hash = hash * 57 + this.TimestampString.GetHashCode();
+                    hash = hash * 59 + this.TimestampString.GetHashCode();
                 
                 if (this.DetailsString != null)
-                    hash = hash * 57 + this.DetailsString.GetHashCode();
+                    hash = hash * 59 + this.DetailsString.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

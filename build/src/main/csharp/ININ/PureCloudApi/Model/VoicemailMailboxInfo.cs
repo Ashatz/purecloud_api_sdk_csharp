@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class VoicemailMailboxInfo :  IEquatable<VoicemailMailboxInfo>
+    public partial class VoicemailMailboxInfo :  IEquatable<VoicemailMailboxInfo>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailMailboxInfo" /> class.
@@ -114,7 +113,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if VoicemailMailboxInfo instances are equal
         /// </summary>
-        /// <param name="obj">Instance of VoicemailMailboxInfo to be compared</param>
+        /// <param name="other">Instance of VoicemailMailboxInfo to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(VoicemailMailboxInfo other)
         {
@@ -168,28 +167,26 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.UsageSizeBytes != null)
-                    hash = hash * 57 + this.UsageSizeBytes.GetHashCode();
+                    hash = hash * 59 + this.UsageSizeBytes.GetHashCode();
                 
                 if (this.TotalCount != null)
-                    hash = hash * 57 + this.TotalCount.GetHashCode();
+                    hash = hash * 59 + this.TotalCount.GetHashCode();
                 
                 if (this.UnreadCount != null)
-                    hash = hash * 57 + this.UnreadCount.GetHashCode();
+                    hash = hash * 59 + this.UnreadCount.GetHashCode();
                 
                 if (this.VoicemailPolicy != null)
-                    hash = hash * 57 + this.VoicemailPolicy.GetHashCode();
+                    hash = hash * 59 + this.VoicemailPolicy.GetHashCode();
                 
                 if (this.CreatedDate != null)
-                    hash = hash * 57 + this.CreatedDate.GetHashCode();
+                    hash = hash * 59 + this.CreatedDate.GetHashCode();
                 
                 if (this.ModifiedDate != null)
-                    hash = hash * 57 + this.ModifiedDate.GetHashCode();
+                    hash = hash * 59 + this.ModifiedDate.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

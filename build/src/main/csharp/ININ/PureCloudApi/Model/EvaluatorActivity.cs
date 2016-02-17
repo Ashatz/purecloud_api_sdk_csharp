@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class EvaluatorActivity :  IEquatable<EvaluatorActivity>
+    public partial class EvaluatorActivity :  IEquatable<EvaluatorActivity>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluatorActivity" /> class.
@@ -146,7 +145,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if EvaluatorActivity instances are equal
         /// </summary>
-        /// <param name="obj">Instance of EvaluatorActivity to be compared</param>
+        /// <param name="other">Instance of EvaluatorActivity to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(EvaluatorActivity other)
         {
@@ -220,40 +219,38 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Evaluator != null)
-                    hash = hash * 57 + this.Evaluator.GetHashCode();
+                    hash = hash * 59 + this.Evaluator.GetHashCode();
                 
                 if (this.NumEvaluationsAssigned != null)
-                    hash = hash * 57 + this.NumEvaluationsAssigned.GetHashCode();
+                    hash = hash * 59 + this.NumEvaluationsAssigned.GetHashCode();
                 
                 if (this.NumEvaluationsStarted != null)
-                    hash = hash * 57 + this.NumEvaluationsStarted.GetHashCode();
+                    hash = hash * 59 + this.NumEvaluationsStarted.GetHashCode();
                 
                 if (this.NumEvaluationsCompleted != null)
-                    hash = hash * 57 + this.NumEvaluationsCompleted.GetHashCode();
+                    hash = hash * 59 + this.NumEvaluationsCompleted.GetHashCode();
                 
                 if (this.NumCalibrationsAssigned != null)
-                    hash = hash * 57 + this.NumCalibrationsAssigned.GetHashCode();
+                    hash = hash * 59 + this.NumCalibrationsAssigned.GetHashCode();
                 
                 if (this.NumCalibrationsStarted != null)
-                    hash = hash * 57 + this.NumCalibrationsStarted.GetHashCode();
+                    hash = hash * 59 + this.NumCalibrationsStarted.GetHashCode();
                 
                 if (this.NumCalibrationsCompleted != null)
-                    hash = hash * 57 + this.NumCalibrationsCompleted.GetHashCode();
+                    hash = hash * 59 + this.NumCalibrationsCompleted.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

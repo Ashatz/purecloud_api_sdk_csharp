@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Service :  IEquatable<Service>
+    public partial class Service :  IEquatable<Service>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Service" /> class.
@@ -147,7 +146,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Service instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Service to be compared</param>
+        /// <param name="other">Instance of Service to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Service other)
         {
@@ -221,40 +220,38 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Status != null)
-                    hash = hash * 57 + this.Status.GetHashCode();
+                    hash = hash * 59 + this.Status.GetHashCode();
                 
                 if (this.Domains != null)
-                    hash = hash * 57 + this.Domains.GetHashCode();
+                    hash = hash * 59 + this.Domains.GetHashCode();
                 
                 if (this.ServiceTypes != null)
-                    hash = hash * 57 + this.ServiceTypes.GetHashCode();
+                    hash = hash * 59 + this.ServiceTypes.GetHashCode();
                 
                 if (this.Gateways != null)
-                    hash = hash * 57 + this.Gateways.GetHashCode();
+                    hash = hash * 59 + this.Gateways.GetHashCode();
                 
                 if (this.Dns != null)
-                    hash = hash * 57 + this.Dns.GetHashCode();
+                    hash = hash * 59 + this.Dns.GetHashCode();
                 
                 if (this.Vpn != null)
-                    hash = hash * 57 + this.Vpn.GetHashCode();
+                    hash = hash * 59 + this.Vpn.GetHashCode();
                 
                 if (this.Carrier != null)
-                    hash = hash * 57 + this.Carrier.GetHashCode();
+                    hash = hash * 59 + this.Carrier.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

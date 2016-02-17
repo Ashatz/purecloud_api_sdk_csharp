@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class ChatSearchRequest :  IEquatable<ChatSearchRequest>
+    public partial class ChatSearchRequest :  IEquatable<ChatSearchRequest>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatSearchRequest" /> class.
@@ -136,7 +135,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ChatSearchRequest instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ChatSearchRequest to be compared</param>
+        /// <param name="other">Instance of ChatSearchRequest to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ChatSearchRequest other)
         {
@@ -200,34 +199,32 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Query != null)
-                    hash = hash * 57 + this.Query.GetHashCode();
+                    hash = hash * 59 + this.Query.GetHashCode();
                 
                 if (this.Order != null)
-                    hash = hash * 57 + this.Order.GetHashCode();
+                    hash = hash * 59 + this.Order.GetHashCode();
                 
                 if (this.TargetJids != null)
-                    hash = hash * 57 + this.TargetJids.GetHashCode();
+                    hash = hash * 59 + this.TargetJids.GetHashCode();
                 
                 if (this.PageSize != null)
-                    hash = hash * 57 + this.PageSize.GetHashCode();
+                    hash = hash * 59 + this.PageSize.GetHashCode();
                 
                 if (this.PageNumber != null)
-                    hash = hash * 57 + this.PageNumber.GetHashCode();
+                    hash = hash * 59 + this.PageNumber.GetHashCode();
                 
                 if (this.FromDate != null)
-                    hash = hash * 57 + this.FromDate.GetHashCode();
+                    hash = hash * 59 + this.FromDate.GetHashCode();
                 
                 if (this.ToDate != null)
-                    hash = hash * 57 + this.ToDate.GetHashCode();
+                    hash = hash * 59 + this.ToDate.GetHashCode();
                 
                 if (this.Expand != null)
-                    hash = hash * 57 + this.Expand.GetHashCode();
+                    hash = hash * 59 + this.Expand.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

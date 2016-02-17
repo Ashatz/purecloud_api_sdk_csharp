@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// Details about a specific Flow Definition version.
     /// </summary>
     [DataContract]
-    public class FlowVersionConfigMetaData :  IEquatable<FlowVersionConfigMetaData>
+    public partial class FlowVersionConfigMetaData :  IEquatable<FlowVersionConfigMetaData>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowVersionConfigMetaData" /> class.
@@ -135,7 +134,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FlowVersionConfigMetaData instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FlowVersionConfigMetaData to be compared</param>
+        /// <param name="other">Instance of FlowVersionConfigMetaData to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FlowVersionConfigMetaData other)
         {
@@ -199,34 +198,32 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.VersionSpecificComment != null)
-                    hash = hash * 57 + this.VersionSpecificComment.GetHashCode();
+                    hash = hash * 59 + this.VersionSpecificComment.GetHashCode();
                 
                 if (this.FlowDefinitionUri != null)
-                    hash = hash * 57 + this.FlowDefinitionUri.GetHashCode();
+                    hash = hash * 59 + this.FlowDefinitionUri.GetHashCode();
                 
                 if (this.CreatedByUser != null)
-                    hash = hash * 57 + this.CreatedByUser.GetHashCode();
+                    hash = hash * 59 + this.CreatedByUser.GetHashCode();
                 
                 if (this.CreatedDate != null)
-                    hash = hash * 57 + this.CreatedDate.GetHashCode();
+                    hash = hash * 59 + this.CreatedDate.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 if (this.Version != null)
-                    hash = hash * 57 + this.Version.GetHashCode();
+                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

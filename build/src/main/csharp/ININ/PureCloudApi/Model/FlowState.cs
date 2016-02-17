@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// Information about the a State of a flow
     /// </summary>
     [DataContract]
-    public class FlowState :  IEquatable<FlowState>
+    public partial class FlowState :  IEquatable<FlowState>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowState" /> class.
@@ -91,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FlowState instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FlowState to be compared</param>
+        /// <param name="other">Instance of FlowState to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FlowState other)
         {
@@ -130,19 +129,17 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.StateExecId != null)
-                    hash = hash * 57 + this.StateExecId.GetHashCode();
+                    hash = hash * 59 + this.StateExecId.GetHashCode();
                 
                 if (this.StateConfigId != null)
-                    hash = hash * 57 + this.StateConfigId.GetHashCode();
+                    hash = hash * 59 + this.StateConfigId.GetHashCode();
                 
                 if (this.StateName != null)
-                    hash = hash * 57 + this.StateName.GetHashCode();
+                    hash = hash * 59 + this.StateName.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

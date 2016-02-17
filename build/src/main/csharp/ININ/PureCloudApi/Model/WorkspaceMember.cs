@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class WorkspaceMember :  IEquatable<WorkspaceMember>
+    public partial class WorkspaceMember :  IEquatable<WorkspaceMember>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkspaceMember" /> class.
@@ -138,7 +137,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if WorkspaceMember instances are equal
         /// </summary>
-        /// <param name="obj">Instance of WorkspaceMember to be compared</param>
+        /// <param name="other">Instance of WorkspaceMember to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(WorkspaceMember other)
         {
@@ -207,37 +206,35 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Workspace != null)
-                    hash = hash * 57 + this.Workspace.GetHashCode();
+                    hash = hash * 59 + this.Workspace.GetHashCode();
                 
                 if (this.MemberType != null)
-                    hash = hash * 57 + this.MemberType.GetHashCode();
+                    hash = hash * 59 + this.MemberType.GetHashCode();
                 
                 if (this.Member != null)
-                    hash = hash * 57 + this.Member.GetHashCode();
+                    hash = hash * 59 + this.Member.GetHashCode();
                 
                 if (this.User != null)
-                    hash = hash * 57 + this.User.GetHashCode();
+                    hash = hash * 59 + this.User.GetHashCode();
                 
                 if (this.Group != null)
-                    hash = hash * 57 + this.Group.GetHashCode();
+                    hash = hash * 59 + this.Group.GetHashCode();
                 
                 if (this.SecurityProfile != null)
-                    hash = hash * 57 + this.SecurityProfile.GetHashCode();
+                    hash = hash * 59 + this.SecurityProfile.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

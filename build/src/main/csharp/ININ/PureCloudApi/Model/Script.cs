@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Script :  IEquatable<Script>
+    public partial class Script :  IEquatable<Script>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Script" /> class.
@@ -174,7 +173,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Script instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Script to be compared</param>
+        /// <param name="other">Instance of Script to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Script other)
         {
@@ -263,49 +262,47 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.VersionId != null)
-                    hash = hash * 57 + this.VersionId.GetHashCode();
+                    hash = hash * 59 + this.VersionId.GetHashCode();
                 
                 if (this.CreatedDate != null)
-                    hash = hash * 57 + this.CreatedDate.GetHashCode();
+                    hash = hash * 59 + this.CreatedDate.GetHashCode();
                 
                 if (this.ModifiedDate != null)
-                    hash = hash * 57 + this.ModifiedDate.GetHashCode();
+                    hash = hash * 59 + this.ModifiedDate.GetHashCode();
                 
                 if (this.PublishedDate != null)
-                    hash = hash * 57 + this.PublishedDate.GetHashCode();
+                    hash = hash * 59 + this.PublishedDate.GetHashCode();
                 
                 if (this.VersionDate != null)
-                    hash = hash * 57 + this.VersionDate.GetHashCode();
+                    hash = hash * 59 + this.VersionDate.GetHashCode();
                 
                 if (this.StartPageId != null)
-                    hash = hash * 57 + this.StartPageId.GetHashCode();
+                    hash = hash * 59 + this.StartPageId.GetHashCode();
                 
                 if (this.StartPageName != null)
-                    hash = hash * 57 + this.StartPageName.GetHashCode();
+                    hash = hash * 59 + this.StartPageName.GetHashCode();
                 
                 if (this.Features != null)
-                    hash = hash * 57 + this.Features.GetHashCode();
+                    hash = hash * 59 + this.Features.GetHashCode();
                 
                 if (this.Variables != null)
-                    hash = hash * 57 + this.Variables.GetHashCode();
+                    hash = hash * 59 + this.Variables.GetHashCode();
                 
                 if (this.CustomActions != null)
-                    hash = hash * 57 + this.CustomActions.GetHashCode();
+                    hash = hash * 59 + this.CustomActions.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class TraceList :  IEquatable<TraceList>
+    public partial class TraceList :  IEquatable<TraceList>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TraceList" /> class.
@@ -80,7 +79,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if TraceList instances are equal
         /// </summary>
-        /// <param name="obj">Instance of TraceList to be compared</param>
+        /// <param name="other">Instance of TraceList to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(TraceList other)
         {
@@ -114,16 +113,14 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.App != null)
-                    hash = hash * 57 + this.App.GetHashCode();
+                    hash = hash * 59 + this.App.GetHashCode();
                 
                 if (this.Traces != null)
-                    hash = hash * 57 + this.Traces.GetHashCode();
+                    hash = hash * 59 + this.Traces.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

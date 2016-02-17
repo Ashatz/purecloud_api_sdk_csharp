@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class InboundDomain :  IEquatable<InboundDomain>
+    public partial class InboundDomain :  IEquatable<InboundDomain>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="InboundDomain" /> class.
@@ -108,7 +107,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if InboundDomain instances are equal
         /// </summary>
-        /// <param name="obj">Instance of InboundDomain to be compared</param>
+        /// <param name="other">Instance of InboundDomain to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(InboundDomain other)
         {
@@ -157,25 +156,23 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.MxRecordStatus != null)
-                    hash = hash * 57 + this.MxRecordStatus.GetHashCode();
+                    hash = hash * 59 + this.MxRecordStatus.GetHashCode();
                 
                 if (this.SubDomain != null)
-                    hash = hash * 57 + this.SubDomain.GetHashCode();
+                    hash = hash * 59 + this.SubDomain.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class ResourcePermissionPolicy :  IEquatable<ResourcePermissionPolicy>
+    public partial class ResourcePermissionPolicy :  IEquatable<ResourcePermissionPolicy>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ResourcePermissionPolicy" /> class.
@@ -152,7 +151,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ResourcePermissionPolicy instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ResourcePermissionPolicy to be compared</param>
+        /// <param name="other">Instance of ResourcePermissionPolicy to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ResourcePermissionPolicy other)
         {
@@ -231,43 +230,41 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.OrgId != null)
-                    hash = hash * 57 + this.OrgId.GetHashCode();
+                    hash = hash * 59 + this.OrgId.GetHashCode();
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Domain != null)
-                    hash = hash * 57 + this.Domain.GetHashCode();
+                    hash = hash * 59 + this.Domain.GetHashCode();
                 
                 if (this.EntityName != null)
-                    hash = hash * 57 + this.EntityName.GetHashCode();
+                    hash = hash * 59 + this.EntityName.GetHashCode();
                 
                 if (this.PolicyName != null)
-                    hash = hash * 57 + this.PolicyName.GetHashCode();
+                    hash = hash * 59 + this.PolicyName.GetHashCode();
                 
                 if (this.PolicyDescription != null)
-                    hash = hash * 57 + this.PolicyDescription.GetHashCode();
+                    hash = hash * 59 + this.PolicyDescription.GetHashCode();
                 
                 if (this.ActionSetKey != null)
-                    hash = hash * 57 + this.ActionSetKey.GetHashCode();
+                    hash = hash * 59 + this.ActionSetKey.GetHashCode();
                 
                 if (this.ResourceConditionNode != null)
-                    hash = hash * 57 + this.ResourceConditionNode.GetHashCode();
+                    hash = hash * 59 + this.ResourceConditionNode.GetHashCode();
                 
                 if (this.NamedResources != null)
-                    hash = hash * 57 + this.NamedResources.GetHashCode();
+                    hash = hash * 59 + this.NamedResources.GetHashCode();
                 
                 if (this.ResourceCondition != null)
-                    hash = hash * 57 + this.ResourceCondition.GetHashCode();
+                    hash = hash * 59 + this.ResourceCondition.GetHashCode();
                 
                 if (this.ActionSet != null)
-                    hash = hash * 57 + this.ActionSet.GetHashCode();
+                    hash = hash * 59 + this.ActionSet.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

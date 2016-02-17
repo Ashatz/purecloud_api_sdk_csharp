@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// Represents a certificate to parse.
     /// </summary>
     [DataContract]
-    public class Certificate :  IEquatable<Certificate>
+    public partial class Certificate :  IEquatable<Certificate>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Certificate" /> class.
@@ -73,7 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Certificate instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Certificate to be compared</param>
+        /// <param name="other">Instance of Certificate to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Certificate other)
         {
@@ -102,13 +101,11 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this._Certificate != null)
-                    hash = hash * 57 + this._Certificate.GetHashCode();
+                    hash = hash * 59 + this._Certificate.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

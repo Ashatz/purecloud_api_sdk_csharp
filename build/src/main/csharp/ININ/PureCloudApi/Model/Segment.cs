@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Segment :  IEquatable<Segment>
+    public partial class Segment :  IEquatable<Segment>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Segment" /> class.
@@ -106,7 +105,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Segment instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Segment to be compared</param>
+        /// <param name="other">Instance of Segment to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Segment other)
         {
@@ -155,25 +154,23 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.StartTime != null)
-                    hash = hash * 57 + this.StartTime.GetHashCode();
+                    hash = hash * 59 + this.StartTime.GetHashCode();
                 
                 if (this.EndTime != null)
-                    hash = hash * 57 + this.EndTime.GetHashCode();
+                    hash = hash * 59 + this.EndTime.GetHashCode();
                 
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
+                    hash = hash * 59 + this.Type.GetHashCode();
                 
                 if (this.HowEnded != null)
-                    hash = hash * 57 + this.HowEnded.GetHashCode();
+                    hash = hash * 59 + this.HowEnded.GetHashCode();
                 
                 if (this.DisconnectType != null)
-                    hash = hash * 57 + this.DisconnectType.GetHashCode();
+                    hash = hash * 59 + this.DisconnectType.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

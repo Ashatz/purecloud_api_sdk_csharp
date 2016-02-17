@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Contact :  IEquatable<Contact>
+    public partial class Contact :  IEquatable<Contact>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Contact" /> class.
@@ -131,7 +130,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Contact instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Contact to be compared</param>
+        /// <param name="other">Instance of Contact to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Contact other)
         {
@@ -195,34 +194,32 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.ContactListId != null)
-                    hash = hash * 57 + this.ContactListId.GetHashCode();
+                    hash = hash * 59 + this.ContactListId.GetHashCode();
                 
                 if (this.Data != null)
-                    hash = hash * 57 + this.Data.GetHashCode();
+                    hash = hash * 59 + this.Data.GetHashCode();
                 
                 if (this.CallRecords != null)
-                    hash = hash * 57 + this.CallRecords.GetHashCode();
+                    hash = hash * 59 + this.CallRecords.GetHashCode();
                 
                 if (this.Callable != null)
-                    hash = hash * 57 + this.Callable.GetHashCode();
+                    hash = hash * 59 + this.Callable.GetHashCode();
                 
                 if (this.PhoneNumberStatus != null)
-                    hash = hash * 57 + this.PhoneNumberStatus.GetHashCode();
+                    hash = hash * 59 + this.PhoneNumberStatus.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

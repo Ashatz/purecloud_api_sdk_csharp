@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class DomainNetworkRoute :  IEquatable<DomainNetworkRoute>
+    public partial class DomainNetworkRoute :  IEquatable<DomainNetworkRoute>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainNetworkRoute" /> class.
@@ -105,7 +104,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DomainNetworkRoute instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DomainNetworkRoute to be compared</param>
+        /// <param name="other">Instance of DomainNetworkRoute to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DomainNetworkRoute other)
         {
@@ -154,25 +153,23 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Prefix != null)
-                    hash = hash * 57 + this.Prefix.GetHashCode();
+                    hash = hash * 59 + this.Prefix.GetHashCode();
                 
                 if (this.Nexthop != null)
-                    hash = hash * 57 + this.Nexthop.GetHashCode();
+                    hash = hash * 59 + this.Nexthop.GetHashCode();
                 
                 if (this.Persistent != null)
-                    hash = hash * 57 + this.Persistent.GetHashCode();
+                    hash = hash * 59 + this.Persistent.GetHashCode();
                 
                 if (this.Metric != null)
-                    hash = hash * 57 + this.Metric.GetHashCode();
+                    hash = hash * 59 + this.Metric.GetHashCode();
                 
                 if (this.Family != null)
-                    hash = hash * 57 + this.Family.GetHashCode();
+                    hash = hash * 59 + this.Family.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class DocumentUpload :  IEquatable<DocumentUpload>
+    public partial class DocumentUpload :  IEquatable<DocumentUpload>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentUpload" /> class.
@@ -104,7 +103,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DocumentUpload instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DocumentUpload to be compared</param>
+        /// <param name="other">Instance of DocumentUpload to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DocumentUpload other)
         {
@@ -153,25 +152,23 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Workspace != null)
-                    hash = hash * 57 + this.Workspace.GetHashCode();
+                    hash = hash * 59 + this.Workspace.GetHashCode();
                 
                 if (this.Tags != null)
-                    hash = hash * 57 + this.Tags.GetHashCode();
+                    hash = hash * 59 + this.Tags.GetHashCode();
                 
                 if (this.TagIds != null)
-                    hash = hash * 57 + this.TagIds.GetHashCode();
+                    hash = hash * 59 + this.TagIds.GetHashCode();
                 
                 if (this.Attributes != null)
-                    hash = hash * 57 + this.Attributes.GetHashCode();
+                    hash = hash * 59 + this.Attributes.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

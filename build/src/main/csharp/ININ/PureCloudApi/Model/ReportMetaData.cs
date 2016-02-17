@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class ReportMetaData :  IEquatable<ReportMetaData>
+    public partial class ReportMetaData :  IEquatable<ReportMetaData>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportMetaData" /> class.
@@ -138,7 +137,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ReportMetaData instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ReportMetaData to be compared</param>
+        /// <param name="other">Instance of ReportMetaData to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ReportMetaData other)
         {
@@ -207,37 +206,35 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Title != null)
-                    hash = hash * 57 + this.Title.GetHashCode();
+                    hash = hash * 59 + this.Title.GetHashCode();
                 
                 if (this.Description != null)
-                    hash = hash * 57 + this.Description.GetHashCode();
+                    hash = hash * 59 + this.Description.GetHashCode();
                 
                 if (this.Keywords != null)
-                    hash = hash * 57 + this.Keywords.GetHashCode();
+                    hash = hash * 59 + this.Keywords.GetHashCode();
                 
                 if (this.AvailableLocales != null)
-                    hash = hash * 57 + this.AvailableLocales.GetHashCode();
+                    hash = hash * 59 + this.AvailableLocales.GetHashCode();
                 
                 if (this.Parameters != null)
-                    hash = hash * 57 + this.Parameters.GetHashCode();
+                    hash = hash * 59 + this.Parameters.GetHashCode();
                 
                 if (this.ExampleUrl != null)
-                    hash = hash * 57 + this.ExampleUrl.GetHashCode();
+                    hash = hash * 59 + this.ExampleUrl.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

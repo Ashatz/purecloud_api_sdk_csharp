@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Endpoint :  IEquatable<Endpoint>
+    public partial class Endpoint :  IEquatable<Endpoint>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Endpoint" /> class.
@@ -213,7 +212,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Endpoint instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Endpoint to be compared</param>
+        /// <param name="other">Instance of Endpoint to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Endpoint other)
         {
@@ -327,64 +326,62 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Description != null)
-                    hash = hash * 57 + this.Description.GetHashCode();
+                    hash = hash * 59 + this.Description.GetHashCode();
                 
                 if (this.Version != null)
-                    hash = hash * 57 + this.Version.GetHashCode();
+                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 if (this.DateCreated != null)
-                    hash = hash * 57 + this.DateCreated.GetHashCode();
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
                 
                 if (this.DateModified != null)
-                    hash = hash * 57 + this.DateModified.GetHashCode();
+                    hash = hash * 59 + this.DateModified.GetHashCode();
                 
                 if (this.ModifiedBy != null)
-                    hash = hash * 57 + this.ModifiedBy.GetHashCode();
+                    hash = hash * 59 + this.ModifiedBy.GetHashCode();
                 
                 if (this.CreatedBy != null)
-                    hash = hash * 57 + this.CreatedBy.GetHashCode();
+                    hash = hash * 59 + this.CreatedBy.GetHashCode();
                 
                 if (this.State != null)
-                    hash = hash * 57 + this.State.GetHashCode();
+                    hash = hash * 59 + this.State.GetHashCode();
                 
                 if (this.ModifiedByApp != null)
-                    hash = hash * 57 + this.ModifiedByApp.GetHashCode();
+                    hash = hash * 59 + this.ModifiedByApp.GetHashCode();
                 
                 if (this.CreatedByApp != null)
-                    hash = hash * 57 + this.CreatedByApp.GetHashCode();
+                    hash = hash * 59 + this.CreatedByApp.GetHashCode();
                 
                 if (this.Count != null)
-                    hash = hash * 57 + this.Count.GetHashCode();
+                    hash = hash * 59 + this.Count.GetHashCode();
                 
                 if (this.Properties != null)
-                    hash = hash * 57 + this.Properties.GetHashCode();
+                    hash = hash * 59 + this.Properties.GetHashCode();
                 
                 if (this.Schema != null)
-                    hash = hash * 57 + this.Schema.GetHashCode();
+                    hash = hash * 59 + this.Schema.GetHashCode();
                 
                 if (this.Enabled != null)
-                    hash = hash * 57 + this.Enabled.GetHashCode();
+                    hash = hash * 59 + this.Enabled.GetHashCode();
                 
                 if (this.Site != null)
-                    hash = hash * 57 + this.Site.GetHashCode();
+                    hash = hash * 59 + this.Site.GetHashCode();
                 
                 if (this.Dids != null)
-                    hash = hash * 57 + this.Dids.GetHashCode();
+                    hash = hash * 59 + this.Dids.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class ArchiveRetention :  IEquatable<ArchiveRetention>
+    public partial class ArchiveRetention :  IEquatable<ArchiveRetention>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ArchiveRetention" /> class.
@@ -80,7 +79,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ArchiveRetention instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ArchiveRetention to be compared</param>
+        /// <param name="other">Instance of ArchiveRetention to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ArchiveRetention other)
         {
@@ -114,16 +113,14 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Days != null)
-                    hash = hash * 57 + this.Days.GetHashCode();
+                    hash = hash * 59 + this.Days.GetHashCode();
                 
                 if (this.StorageMedium != null)
-                    hash = hash * 57 + this.StorageMedium.GetHashCode();
+                    hash = hash * 59 + this.StorageMedium.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

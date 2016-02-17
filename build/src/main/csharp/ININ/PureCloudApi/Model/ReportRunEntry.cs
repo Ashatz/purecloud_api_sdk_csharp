@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class ReportRunEntry :  IEquatable<ReportRunEntry>
+    public partial class ReportRunEntry :  IEquatable<ReportRunEntry>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportRunEntry" /> class.
@@ -155,7 +154,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ReportRunEntry instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ReportRunEntry to be compared</param>
+        /// <param name="other">Instance of ReportRunEntry to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ReportRunEntry other)
         {
@@ -234,43 +233,41 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.ReportId != null)
-                    hash = hash * 57 + this.ReportId.GetHashCode();
+                    hash = hash * 59 + this.ReportId.GetHashCode();
                 
                 if (this.RunTime != null)
-                    hash = hash * 57 + this.RunTime.GetHashCode();
+                    hash = hash * 59 + this.RunTime.GetHashCode();
                 
                 if (this.RunStatus != null)
-                    hash = hash * 57 + this.RunStatus.GetHashCode();
+                    hash = hash * 59 + this.RunStatus.GetHashCode();
                 
                 if (this.ErrorMessage != null)
-                    hash = hash * 57 + this.ErrorMessage.GetHashCode();
+                    hash = hash * 59 + this.ErrorMessage.GetHashCode();
                 
                 if (this.RunDurationMsec != null)
-                    hash = hash * 57 + this.RunDurationMsec.GetHashCode();
+                    hash = hash * 59 + this.RunDurationMsec.GetHashCode();
                 
                 if (this.ReportUrl != null)
-                    hash = hash * 57 + this.ReportUrl.GetHashCode();
+                    hash = hash * 59 + this.ReportUrl.GetHashCode();
                 
                 if (this.ReportFormat != null)
-                    hash = hash * 57 + this.ReportFormat.GetHashCode();
+                    hash = hash * 59 + this.ReportFormat.GetHashCode();
                 
                 if (this.ScheduleUri != null)
-                    hash = hash * 57 + this.ScheduleUri.GetHashCode();
+                    hash = hash * 59 + this.ScheduleUri.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class DomainResourceConditionNode :  IEquatable<DomainResourceConditionNode>
+    public partial class DomainResourceConditionNode :  IEquatable<DomainResourceConditionNode>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainResourceConditionNode" /> class.
@@ -104,7 +103,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DomainResourceConditionNode instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DomainResourceConditionNode to be compared</param>
+        /// <param name="other">Instance of DomainResourceConditionNode to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DomainResourceConditionNode other)
         {
@@ -153,25 +152,23 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.VariableName != null)
-                    hash = hash * 57 + this.VariableName.GetHashCode();
+                    hash = hash * 59 + this.VariableName.GetHashCode();
                 
                 if (this.Operator != null)
-                    hash = hash * 57 + this.Operator.GetHashCode();
+                    hash = hash * 59 + this.Operator.GetHashCode();
                 
                 if (this.Operands != null)
-                    hash = hash * 57 + this.Operands.GetHashCode();
+                    hash = hash * 59 + this.Operands.GetHashCode();
                 
                 if (this.Conjunction != null)
-                    hash = hash * 57 + this.Conjunction.GetHashCode();
+                    hash = hash * 59 + this.Conjunction.GetHashCode();
                 
                 if (this.Terms != null)
-                    hash = hash * 57 + this.Terms.GetHashCode();
+                    hash = hash * 59 + this.Terms.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

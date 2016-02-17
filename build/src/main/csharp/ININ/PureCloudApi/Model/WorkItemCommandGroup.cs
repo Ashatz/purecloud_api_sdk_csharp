@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class WorkItemCommandGroup :  IEquatable<WorkItemCommandGroup>
+    public partial class WorkItemCommandGroup :  IEquatable<WorkItemCommandGroup>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkItemCommandGroup" /> class.
@@ -88,7 +87,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if WorkItemCommandGroup instances are equal
         /// </summary>
-        /// <param name="obj">Instance of WorkItemCommandGroup to be compared</param>
+        /// <param name="other">Instance of WorkItemCommandGroup to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(WorkItemCommandGroup other)
         {
@@ -127,19 +126,17 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Category != null)
-                    hash = hash * 57 + this.Category.GetHashCode();
+                    hash = hash * 59 + this.Category.GetHashCode();
                 
                 if (this.DefaultCommandId != null)
-                    hash = hash * 57 + this.DefaultCommandId.GetHashCode();
+                    hash = hash * 59 + this.DefaultCommandId.GetHashCode();
                 
                 if (this.Commands != null)
-                    hash = hash * 57 + this.Commands.GetHashCode();
+                    hash = hash * 59 + this.Commands.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

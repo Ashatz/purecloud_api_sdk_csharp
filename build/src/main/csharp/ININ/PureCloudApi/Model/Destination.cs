@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Destination :  IEquatable<Destination>
+    public partial class Destination :  IEquatable<Destination>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Destination" /> class.
@@ -113,7 +112,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Destination instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Destination to be compared</param>
+        /// <param name="other">Instance of Destination to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Destination other)
         {
@@ -167,28 +166,26 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.AccountCodeDigits != null)
-                    hash = hash * 57 + this.AccountCodeDigits.GetHashCode();
+                    hash = hash * 59 + this.AccountCodeDigits.GetHashCode();
                 
                 if (this.PostConnectDigits != null)
-                    hash = hash * 57 + this.PostConnectDigits.GetHashCode();
+                    hash = hash * 59 + this.PostConnectDigits.GetHashCode();
                 
                 if (this.Address != null)
-                    hash = hash * 57 + this.Address.GetHashCode();
+                    hash = hash * 59 + this.Address.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.UserId != null)
-                    hash = hash * 57 + this.UserId.GetHashCode();
+                    hash = hash * 59 + this.UserId.GetHashCode();
                 
                 if (this.QueueId != null)
-                    hash = hash * 57 + this.QueueId.GetHashCode();
+                    hash = hash * 59 + this.QueueId.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

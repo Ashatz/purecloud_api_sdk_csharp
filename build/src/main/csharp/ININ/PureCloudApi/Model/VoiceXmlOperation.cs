@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class VoiceXmlOperation :  IEquatable<VoiceXmlOperation>
+    public partial class VoiceXmlOperation :  IEquatable<VoiceXmlOperation>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="VoiceXmlOperation" /> class.
@@ -162,7 +161,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if VoiceXmlOperation instances are equal
         /// </summary>
-        /// <param name="obj">Instance of VoiceXmlOperation to be compared</param>
+        /// <param name="other">Instance of VoiceXmlOperation to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(VoiceXmlOperation other)
         {
@@ -246,46 +245,44 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
+                    hash = hash * 59 + this.Type.GetHashCode();
                 
                 if (this.Method != null)
-                    hash = hash * 57 + this.Method.GetHashCode();
+                    hash = hash * 59 + this.Method.GetHashCode();
                 
                 if (this.Encoding != null)
-                    hash = hash * 57 + this.Encoding.GetHashCode();
+                    hash = hash * 59 + this.Encoding.GetHashCode();
                 
                 if (this.Description != null)
-                    hash = hash * 57 + this.Description.GetHashCode();
+                    hash = hash * 59 + this.Description.GetHashCode();
                 
                 if (this.Uri != null)
-                    hash = hash * 57 + this.Uri.GetHashCode();
+                    hash = hash * 59 + this.Uri.GetHashCode();
                 
                 if (this.Inputs != null)
-                    hash = hash * 57 + this.Inputs.GetHashCode();
+                    hash = hash * 59 + this.Inputs.GetHashCode();
                 
                 if (this.Outputs != null)
-                    hash = hash * 57 + this.Outputs.GetHashCode();
+                    hash = hash * 59 + this.Outputs.GetHashCode();
                 
                 if (this.FetchAudio != null)
-                    hash = hash * 57 + this.FetchAudio.GetHashCode();
+                    hash = hash * 59 + this.FetchAudio.GetHashCode();
                 
                 if (this.TimeoutMS != null)
-                    hash = hash * 57 + this.TimeoutMS.GetHashCode();
+                    hash = hash * 59 + this.TimeoutMS.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

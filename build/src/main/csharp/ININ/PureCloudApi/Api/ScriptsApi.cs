@@ -1,11 +1,11 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 using ININ.PureCloudApi.Client;
 using ININ.PureCloudApi.Model;
-
 
 namespace ININ.PureCloudApi.Api
 {
@@ -29,7 +29,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand2">Expand</param>
         /// <param name="name">Name</param>
         /// <returns>EvaluationFormEntityListing</returns>
-        EvaluationFormEntityListing GetForms (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null);
+        EvaluationFormEntityListing GetQualityForms (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null);
   
         /// <summary>
         /// Get the list of evaluation forms
@@ -44,7 +44,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand2">Expand</param>
         /// <param name="name">Name</param>
         /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
-        ApiResponse<EvaluationFormEntityListing> GetFormsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null);
+        ApiResponse<EvaluationFormEntityListing> GetQualityFormsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null);
 
         /// <summary>
         /// Get the list of evaluation forms
@@ -59,7 +59,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand2">Expand</param>
         /// <param name="name">Name</param>
         /// <returns>Task of EvaluationFormEntityListing</returns>
-        System.Threading.Tasks.Task<EvaluationFormEntityListing> GetFormsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null);
+        System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityFormsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null);
 
         /// <summary>
         /// Get the list of evaluation forms
@@ -74,7 +74,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand2">Expand</param>
         /// <param name="name">Name</param>
         /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetFormsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityFormsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null);
         
         /// <summary>
         /// Create an evaluation form.
@@ -84,7 +84,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>EvaluationForm</returns>
-        EvaluationForm CreateForms (EvaluationForm body = null);
+        EvaluationForm PostQualityForms (EvaluationForm body = null);
   
         /// <summary>
         /// Create an evaluation form.
@@ -94,7 +94,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>ApiResponse of EvaluationForm</returns>
-        ApiResponse<EvaluationForm> CreateFormsWithHttpInfo (EvaluationForm body = null);
+        ApiResponse<EvaluationForm> PostQualityFormsWithHttpInfo (EvaluationForm body = null);
 
         /// <summary>
         /// Create an evaluation form.
@@ -104,7 +104,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of EvaluationForm</returns>
-        System.Threading.Tasks.Task<EvaluationForm> CreateFormsAsync (EvaluationForm body = null);
+        System.Threading.Tasks.Task<EvaluationForm> PostQualityFormsAsync (EvaluationForm body = null);
 
         /// <summary>
         /// Create an evaluation form.
@@ -114,7 +114,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> CreateFormsAsyncWithHttpInfo (EvaluationForm body = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostQualityFormsAsyncWithHttpInfo (EvaluationForm body = null);
         
         /// <summary>
         /// Get an evaluation form
@@ -124,7 +124,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="formId">Form ID</param>
         /// <returns>EvaluationForm</returns>
-        EvaluationForm GetForm (string formId);
+        EvaluationForm GetQualityForm (string formId);
   
         /// <summary>
         /// Get an evaluation form
@@ -134,7 +134,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="formId">Form ID</param>
         /// <returns>ApiResponse of EvaluationForm</returns>
-        ApiResponse<EvaluationForm> GetFormWithHttpInfo (string formId);
+        ApiResponse<EvaluationForm> GetQualityFormWithHttpInfo (string formId);
 
         /// <summary>
         /// Get an evaluation form
@@ -144,7 +144,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="formId">Form ID</param>
         /// <returns>Task of EvaluationForm</returns>
-        System.Threading.Tasks.Task<EvaluationForm> GetFormAsync (string formId);
+        System.Threading.Tasks.Task<EvaluationForm> GetQualityFormAsync (string formId);
 
         /// <summary>
         /// Get an evaluation form
@@ -154,7 +154,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="formId">Form ID</param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetFormAsyncWithHttpInfo (string formId);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetQualityFormAsyncWithHttpInfo (string formId);
         
         /// <summary>
         /// Update an evaluation form.
@@ -165,7 +165,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formId">Form ID</param>
         /// <param name="body"></param>
         /// <returns>EvaluationForm</returns>
-        EvaluationForm UpdateForm (string formId, EvaluationForm body = null);
+        EvaluationForm PutQualityForm (string formId, EvaluationForm body = null);
   
         /// <summary>
         /// Update an evaluation form.
@@ -176,7 +176,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formId">Form ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of EvaluationForm</returns>
-        ApiResponse<EvaluationForm> UpdateFormWithHttpInfo (string formId, EvaluationForm body = null);
+        ApiResponse<EvaluationForm> PutQualityFormWithHttpInfo (string formId, EvaluationForm body = null);
 
         /// <summary>
         /// Update an evaluation form.
@@ -187,7 +187,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formId">Form ID</param>
         /// <param name="body"></param>
         /// <returns>Task of EvaluationForm</returns>
-        System.Threading.Tasks.Task<EvaluationForm> UpdateFormAsync (string formId, EvaluationForm body = null);
+        System.Threading.Tasks.Task<EvaluationForm> PutQualityFormAsync (string formId, EvaluationForm body = null);
 
         /// <summary>
         /// Update an evaluation form.
@@ -198,7 +198,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formId">Form ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> UpdateFormAsyncWithHttpInfo (string formId, EvaluationForm body = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PutQualityFormAsyncWithHttpInfo (string formId, EvaluationForm body = null);
         
         /// <summary>
         /// Delete an evaluation form.
@@ -208,7 +208,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="formId">Form ID</param>
         /// <returns>string</returns>
-        string DeleteForm (string formId);
+        string DeleteQualityForm (string formId);
   
         /// <summary>
         /// Delete an evaluation form.
@@ -218,7 +218,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="formId">Form ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteFormWithHttpInfo (string formId);
+        ApiResponse<string> DeleteQualityFormWithHttpInfo (string formId);
 
         /// <summary>
         /// Delete an evaluation form.
@@ -228,7 +228,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="formId">Form ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteFormAsync (string formId);
+        System.Threading.Tasks.Task<string> DeleteQualityFormAsync (string formId);
 
         /// <summary>
         /// Delete an evaluation form.
@@ -238,7 +238,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="formId">Form ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteFormAsyncWithHttpInfo (string formId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteQualityFormAsyncWithHttpInfo (string formId);
         
         /// <summary>
         /// Gets all the revisions for a specific evaluation.
@@ -250,7 +250,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>EvaluationFormEntityListing</returns>
-        EvaluationFormEntityListing GetFormVersions (string formId, int? pageSize = null, int? pageNumber = null);
+        EvaluationFormEntityListing GetQualityFormVersions (string formId, int? pageSize = null, int? pageNumber = null);
   
         /// <summary>
         /// Gets all the revisions for a specific evaluation.
@@ -262,7 +262,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
-        ApiResponse<EvaluationFormEntityListing> GetFormVersionsWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null);
+        ApiResponse<EvaluationFormEntityListing> GetQualityFormVersionsWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Gets all the revisions for a specific evaluation.
@@ -274,7 +274,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of EvaluationFormEntityListing</returns>
-        System.Threading.Tasks.Task<EvaluationFormEntityListing> GetFormVersionsAsync (string formId, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityFormVersionsAsync (string formId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Gets all the revisions for a specific evaluation.
@@ -286,7 +286,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetFormVersionsAsyncWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityFormVersionsAsyncWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
         /// Get the published evaluation forms.
@@ -298,7 +298,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="name">Name</param>
         /// <returns>EvaluationFormEntityListing</returns>
-        EvaluationFormEntityListing GetPublishedforms (int? pageSize = null, int? pageNumber = null, string name = null);
+        EvaluationFormEntityListing GetQualityPublishedforms (int? pageSize = null, int? pageNumber = null, string name = null);
   
         /// <summary>
         /// Get the published evaluation forms.
@@ -310,7 +310,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="name">Name</param>
         /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
-        ApiResponse<EvaluationFormEntityListing> GetPublishedformsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null);
+        ApiResponse<EvaluationFormEntityListing> GetQualityPublishedformsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null);
 
         /// <summary>
         /// Get the published evaluation forms.
@@ -322,7 +322,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="name">Name</param>
         /// <returns>Task of EvaluationFormEntityListing</returns>
-        System.Threading.Tasks.Task<EvaluationFormEntityListing> GetPublishedformsAsync (int? pageSize = null, int? pageNumber = null, string name = null);
+        System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityPublishedformsAsync (int? pageSize = null, int? pageNumber = null, string name = null);
 
         /// <summary>
         /// Get the published evaluation forms.
@@ -334,7 +334,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="name">Name</param>
         /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetPublishedformsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityPublishedformsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null);
         
         /// <summary>
         /// Publish an evaluation form.
@@ -344,7 +344,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>EvaluationForm</returns>
-        EvaluationForm CreatePublishedforms (EvaluationForm body = null);
+        EvaluationForm PostQualityPublishedforms (EvaluationForm body = null);
   
         /// <summary>
         /// Publish an evaluation form.
@@ -354,7 +354,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>ApiResponse of EvaluationForm</returns>
-        ApiResponse<EvaluationForm> CreatePublishedformsWithHttpInfo (EvaluationForm body = null);
+        ApiResponse<EvaluationForm> PostQualityPublishedformsWithHttpInfo (EvaluationForm body = null);
 
         /// <summary>
         /// Publish an evaluation form.
@@ -364,7 +364,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of EvaluationForm</returns>
-        System.Threading.Tasks.Task<EvaluationForm> CreatePublishedformsAsync (EvaluationForm body = null);
+        System.Threading.Tasks.Task<EvaluationForm> PostQualityPublishedformsAsync (EvaluationForm body = null);
 
         /// <summary>
         /// Publish an evaluation form.
@@ -374,7 +374,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> CreatePublishedformsAsyncWithHttpInfo (EvaluationForm body = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostQualityPublishedformsAsyncWithHttpInfo (EvaluationForm body = null);
         
         /// <summary>
         /// Get the published evaluation forms.
@@ -384,7 +384,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="formId">Form ID</param>
         /// <returns>EvaluationForm</returns>
-        EvaluationForm GetPublishedformsForm (string formId);
+        EvaluationForm GetQualityPublishedform (string formId);
   
         /// <summary>
         /// Get the published evaluation forms.
@@ -394,7 +394,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="formId">Form ID</param>
         /// <returns>ApiResponse of EvaluationForm</returns>
-        ApiResponse<EvaluationForm> GetPublishedformsFormWithHttpInfo (string formId);
+        ApiResponse<EvaluationForm> GetQualityPublishedformWithHttpInfo (string formId);
 
         /// <summary>
         /// Get the published evaluation forms.
@@ -404,7 +404,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="formId">Form ID</param>
         /// <returns>Task of EvaluationForm</returns>
-        System.Threading.Tasks.Task<EvaluationForm> GetPublishedformsFormAsync (string formId);
+        System.Threading.Tasks.Task<EvaluationForm> GetQualityPublishedformAsync (string formId);
 
         /// <summary>
         /// Get the published evaluation forms.
@@ -414,7 +414,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="formId">Form ID</param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetPublishedformsFormAsyncWithHttpInfo (string formId);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetQualityPublishedformAsyncWithHttpInfo (string formId);
         
         /// <summary>
         /// Get the list of scripts
@@ -428,7 +428,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param>
         /// <param name="feature">Feature</param>
         /// <returns>ScriptEntityListing</returns>
-        ScriptEntityListing Get (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null);
+        ScriptEntityListing GetScripts (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null);
   
         /// <summary>
         /// Get the list of scripts
@@ -442,7 +442,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param>
         /// <param name="feature">Feature</param>
         /// <returns>ApiResponse of ScriptEntityListing</returns>
-        ApiResponse<ScriptEntityListing> GetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null);
+        ApiResponse<ScriptEntityListing> GetScriptsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null);
 
         /// <summary>
         /// Get the list of scripts
@@ -456,7 +456,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param>
         /// <param name="feature">Feature</param>
         /// <returns>Task of ScriptEntityListing</returns>
-        System.Threading.Tasks.Task<ScriptEntityListing> GetAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null);
+        System.Threading.Tasks.Task<ScriptEntityListing> GetScriptsAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null);
 
         /// <summary>
         /// Get the list of scripts
@@ -470,7 +470,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param>
         /// <param name="feature">Feature</param>
         /// <returns>Task of ApiResponse (ScriptEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null);
+        System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null);
         
         /// <summary>
         /// Create a script.
@@ -480,7 +480,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Script</returns>
-        Script Create (Body2 body = null);
+        Script PostScripts (Body2 body = null);
   
         /// <summary>
         /// Create a script.
@@ -490,7 +490,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Script</returns>
-        ApiResponse<Script> CreateWithHttpInfo (Body2 body = null);
+        ApiResponse<Script> PostScriptsWithHttpInfo (Body2 body = null);
 
         /// <summary>
         /// Create a script.
@@ -500,7 +500,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of Script</returns>
-        System.Threading.Tasks.Task<Script> CreateAsync (Body2 body = null);
+        System.Threading.Tasks.Task<Script> PostScriptsAsync (Body2 body = null);
 
         /// <summary>
         /// Create a script.
@@ -510,7 +510,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Script)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Script>> CreateAsyncWithHttpInfo (Body2 body = null);
+        System.Threading.Tasks.Task<ApiResponse<Script>> PostScriptsAsyncWithHttpInfo (Body2 body = null);
         
     }
   
@@ -600,9 +600,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand2">Expand</param> 
         /// <param name="name">Name</param> 
         /// <returns>EvaluationFormEntityListing</returns>
-        public EvaluationFormEntityListing GetForms (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null)
+        public EvaluationFormEntityListing GetQualityForms (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null)
         {
-             ApiResponse<EvaluationFormEntityListing> response = GetFormsWithHttpInfo(pageSize, pageNumber, sortBy, expand, expand2, name);
+             ApiResponse<EvaluationFormEntityListing> response = GetQualityFormsWithHttpInfo(pageSize, pageNumber, sortBy, expand, expand2, name);
              return response.Data;
         }
 
@@ -616,7 +616,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand2">Expand</param> 
         /// <param name="name">Name</param> 
         /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
-        public ApiResponse< EvaluationFormEntityListing > GetFormsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null)
+        public ApiResponse< EvaluationFormEntityListing > GetQualityFormsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null)
         {
             
     
@@ -627,15 +627,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -652,7 +658,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -663,14 +668,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetForms: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetQualityForms: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetForms: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetQualityForms: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EvaluationFormEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -688,9 +695,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand2">Expand</param>
         /// <param name="name">Name</param>
         /// <returns>Task of EvaluationFormEntityListing</returns>
-        public async System.Threading.Tasks.Task<EvaluationFormEntityListing> GetFormsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null)
+        public async System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityFormsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null)
         {
-             ApiResponse<EvaluationFormEntityListing> response = await GetFormsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, expand2, name);
+             ApiResponse<EvaluationFormEntityListing> response = await GetQualityFormsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, expand2, name);
              return response.Data;
 
         }
@@ -705,7 +712,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand2">Expand</param>
         /// <param name="name">Name</param>
         /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetFormsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityFormsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null)
         {
             
     
@@ -713,18 +720,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -752,14 +765,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetForms: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetQualityForms: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetForms: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetQualityForms: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EvaluationFormEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -772,9 +787,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>EvaluationForm</returns>
-        public EvaluationForm CreateForms (EvaluationForm body = null)
+        public EvaluationForm PostQualityForms (EvaluationForm body = null)
         {
-             ApiResponse<EvaluationForm> response = CreateFormsWithHttpInfo(body);
+             ApiResponse<EvaluationForm> response = PostQualityFormsWithHttpInfo(body);
              return response.Data;
         }
 
@@ -783,7 +798,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>ApiResponse of EvaluationForm</returns>
-        public ApiResponse< EvaluationForm > CreateFormsWithHttpInfo (EvaluationForm body = null)
+        public ApiResponse< EvaluationForm > PostQualityFormsWithHttpInfo (EvaluationForm body = null)
         {
             
     
@@ -794,15 +809,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -811,10 +832,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -825,14 +851,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateForms: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostQualityForms: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateForms: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostQualityForms: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EvaluationForm>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -845,9 +873,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of EvaluationForm</returns>
-        public async System.Threading.Tasks.Task<EvaluationForm> CreateFormsAsync (EvaluationForm body = null)
+        public async System.Threading.Tasks.Task<EvaluationForm> PostQualityFormsAsync (EvaluationForm body = null)
         {
-             ApiResponse<EvaluationForm> response = await CreateFormsAsyncWithHttpInfo(body);
+             ApiResponse<EvaluationForm> response = await PostQualityFormsAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -857,7 +885,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> CreateFormsAsyncWithHttpInfo (EvaluationForm body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostQualityFormsAsyncWithHttpInfo (EvaluationForm body = null)
         {
             
     
@@ -865,18 +893,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -899,14 +933,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateForms: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostQualityForms: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateForms: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostQualityForms: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EvaluationForm>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -919,9 +955,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="formId">Form ID</param> 
         /// <returns>EvaluationForm</returns>
-        public EvaluationForm GetForm (string formId)
+        public EvaluationForm GetQualityForm (string formId)
         {
-             ApiResponse<EvaluationForm> response = GetFormWithHttpInfo(formId);
+             ApiResponse<EvaluationForm> response = GetQualityFormWithHttpInfo(formId);
              return response.Data;
         }
 
@@ -930,11 +966,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="formId">Form ID</param> 
         /// <returns>ApiResponse of EvaluationForm</returns>
-        public ApiResponse< EvaluationForm > GetFormWithHttpInfo (string formId)
+        public ApiResponse< EvaluationForm > GetQualityFormWithHttpInfo (string formId)
         {
             
             // verify the required parameter 'formId' is set
-            if (formId == null) throw new ApiException(400, "Missing required parameter 'formId' when calling GetForm");
+            if (formId == null)
+                throw new ApiException(400, "Missing required parameter 'formId' when calling ScriptsApi->GetQualityForm");
             
     
             var path_ = "/api/v1/quality/forms/{formId}";
@@ -944,15 +981,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -964,7 +1007,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -975,14 +1017,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetForm: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetQualityForm: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetForm: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetQualityForm: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EvaluationForm>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -995,9 +1039,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="formId">Form ID</param>
         /// <returns>Task of EvaluationForm</returns>
-        public async System.Threading.Tasks.Task<EvaluationForm> GetFormAsync (string formId)
+        public async System.Threading.Tasks.Task<EvaluationForm> GetQualityFormAsync (string formId)
         {
-             ApiResponse<EvaluationForm> response = await GetFormAsyncWithHttpInfo(formId);
+             ApiResponse<EvaluationForm> response = await GetQualityFormAsyncWithHttpInfo(formId);
              return response.Data;
 
         }
@@ -1007,28 +1051,34 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="formId">Form ID</param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetFormAsyncWithHttpInfo (string formId)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetQualityFormAsyncWithHttpInfo (string formId)
         {
             // verify the required parameter 'formId' is set
-            if (formId == null) throw new ApiException(400, "Missing required parameter 'formId' when calling GetForm");
+            if (formId == null) throw new ApiException(400, "Missing required parameter 'formId' when calling GetQualityForm");
             
     
             var path_ = "/api/v1/quality/forms/{formId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1051,14 +1101,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetForm: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetQualityForm: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetForm: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetQualityForm: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EvaluationForm>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1072,9 +1124,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formId">Form ID</param> 
         /// <param name="body"></param> 
         /// <returns>EvaluationForm</returns>
-        public EvaluationForm UpdateForm (string formId, EvaluationForm body = null)
+        public EvaluationForm PutQualityForm (string formId, EvaluationForm body = null)
         {
-             ApiResponse<EvaluationForm> response = UpdateFormWithHttpInfo(formId, body);
+             ApiResponse<EvaluationForm> response = PutQualityFormWithHttpInfo(formId, body);
              return response.Data;
         }
 
@@ -1084,11 +1136,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formId">Form ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of EvaluationForm</returns>
-        public ApiResponse< EvaluationForm > UpdateFormWithHttpInfo (string formId, EvaluationForm body = null)
+        public ApiResponse< EvaluationForm > PutQualityFormWithHttpInfo (string formId, EvaluationForm body = null)
         {
             
             // verify the required parameter 'formId' is set
-            if (formId == null) throw new ApiException(400, "Missing required parameter 'formId' when calling UpdateForm");
+            if (formId == null)
+                throw new ApiException(400, "Missing required parameter 'formId' when calling ScriptsApi->PutQualityForm");
             
     
             var path_ = "/api/v1/quality/forms/{formId}";
@@ -1098,15 +1151,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1116,10 +1175,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1130,14 +1194,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateForm: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutQualityForm: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateForm: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutQualityForm: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EvaluationForm>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1151,9 +1217,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formId">Form ID</param>
         /// <param name="body"></param>
         /// <returns>Task of EvaluationForm</returns>
-        public async System.Threading.Tasks.Task<EvaluationForm> UpdateFormAsync (string formId, EvaluationForm body = null)
+        public async System.Threading.Tasks.Task<EvaluationForm> PutQualityFormAsync (string formId, EvaluationForm body = null)
         {
-             ApiResponse<EvaluationForm> response = await UpdateFormAsyncWithHttpInfo(formId, body);
+             ApiResponse<EvaluationForm> response = await PutQualityFormAsyncWithHttpInfo(formId, body);
              return response.Data;
 
         }
@@ -1164,28 +1230,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formId">Form ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> UpdateFormAsyncWithHttpInfo (string formId, EvaluationForm body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PutQualityFormAsyncWithHttpInfo (string formId, EvaluationForm body = null)
         {
             // verify the required parameter 'formId' is set
-            if (formId == null) throw new ApiException(400, "Missing required parameter 'formId' when calling UpdateForm");
+            if (formId == null) throw new ApiException(400, "Missing required parameter 'formId' when calling PutQualityForm");
             
     
             var path_ = "/api/v1/quality/forms/{formId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1209,14 +1281,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateForm: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutQualityForm: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateForm: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutQualityForm: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EvaluationForm>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1229,9 +1303,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="formId">Form ID</param> 
         /// <returns>string</returns>
-        public string DeleteForm (string formId)
+        public string DeleteQualityForm (string formId)
         {
-             ApiResponse<string> response = DeleteFormWithHttpInfo(formId);
+             ApiResponse<string> response = DeleteQualityFormWithHttpInfo(formId);
              return response.Data;
         }
 
@@ -1240,11 +1314,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="formId">Form ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteFormWithHttpInfo (string formId)
+        public ApiResponse< string > DeleteQualityFormWithHttpInfo (string formId)
         {
             
             // verify the required parameter 'formId' is set
-            if (formId == null) throw new ApiException(400, "Missing required parameter 'formId' when calling DeleteForm");
+            if (formId == null)
+                throw new ApiException(400, "Missing required parameter 'formId' when calling ScriptsApi->DeleteQualityForm");
             
     
             var path_ = "/api/v1/quality/forms/{formId}";
@@ -1254,15 +1329,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1274,7 +1355,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1285,14 +1365,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteForm: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteQualityForm: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteForm: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteQualityForm: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1305,9 +1387,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="formId">Form ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteFormAsync (string formId)
+        public async System.Threading.Tasks.Task<string> DeleteQualityFormAsync (string formId)
         {
-             ApiResponse<string> response = await DeleteFormAsyncWithHttpInfo(formId);
+             ApiResponse<string> response = await DeleteQualityFormAsyncWithHttpInfo(formId);
              return response.Data;
 
         }
@@ -1317,28 +1399,34 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="formId">Form ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteFormAsyncWithHttpInfo (string formId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteQualityFormAsyncWithHttpInfo (string formId)
         {
             // verify the required parameter 'formId' is set
-            if (formId == null) throw new ApiException(400, "Missing required parameter 'formId' when calling DeleteForm");
+            if (formId == null) throw new ApiException(400, "Missing required parameter 'formId' when calling DeleteQualityForm");
             
     
             var path_ = "/api/v1/quality/forms/{formId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1361,14 +1449,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteForm: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteQualityForm: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteForm: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteQualityForm: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1383,9 +1473,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>EvaluationFormEntityListing</returns>
-        public EvaluationFormEntityListing GetFormVersions (string formId, int? pageSize = null, int? pageNumber = null)
+        public EvaluationFormEntityListing GetQualityFormVersions (string formId, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<EvaluationFormEntityListing> response = GetFormVersionsWithHttpInfo(formId, pageSize, pageNumber);
+             ApiResponse<EvaluationFormEntityListing> response = GetQualityFormVersionsWithHttpInfo(formId, pageSize, pageNumber);
              return response.Data;
         }
 
@@ -1396,11 +1486,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
-        public ApiResponse< EvaluationFormEntityListing > GetFormVersionsWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< EvaluationFormEntityListing > GetQualityFormVersionsWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null)
         {
             
             // verify the required parameter 'formId' is set
-            if (formId == null) throw new ApiException(400, "Missing required parameter 'formId' when calling GetFormVersions");
+            if (formId == null)
+                throw new ApiException(400, "Missing required parameter 'formId' when calling ScriptsApi->GetQualityFormVersions");
             
     
             var path_ = "/api/v1/quality/forms/{formId}/versions";
@@ -1410,15 +1501,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1432,7 +1529,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1443,14 +1539,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetFormVersions: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetQualityFormVersions: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetFormVersions: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetQualityFormVersions: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EvaluationFormEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1465,9 +1563,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of EvaluationFormEntityListing</returns>
-        public async System.Threading.Tasks.Task<EvaluationFormEntityListing> GetFormVersionsAsync (string formId, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityFormVersionsAsync (string formId, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<EvaluationFormEntityListing> response = await GetFormVersionsAsyncWithHttpInfo(formId, pageSize, pageNumber);
+             ApiResponse<EvaluationFormEntityListing> response = await GetQualityFormVersionsAsyncWithHttpInfo(formId, pageSize, pageNumber);
              return response.Data;
 
         }
@@ -1479,28 +1577,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetFormVersionsAsyncWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityFormVersionsAsyncWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null)
         {
             // verify the required parameter 'formId' is set
-            if (formId == null) throw new ApiException(400, "Missing required parameter 'formId' when calling GetFormVersions");
+            if (formId == null) throw new ApiException(400, "Missing required parameter 'formId' when calling GetQualityFormVersions");
             
     
             var path_ = "/api/v1/quality/forms/{formId}/versions";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1525,14 +1629,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetFormVersions: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetQualityFormVersions: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetFormVersions: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetQualityFormVersions: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EvaluationFormEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1547,9 +1653,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="name">Name</param> 
         /// <returns>EvaluationFormEntityListing</returns>
-        public EvaluationFormEntityListing GetPublishedforms (int? pageSize = null, int? pageNumber = null, string name = null)
+        public EvaluationFormEntityListing GetQualityPublishedforms (int? pageSize = null, int? pageNumber = null, string name = null)
         {
-             ApiResponse<EvaluationFormEntityListing> response = GetPublishedformsWithHttpInfo(pageSize, pageNumber, name);
+             ApiResponse<EvaluationFormEntityListing> response = GetQualityPublishedformsWithHttpInfo(pageSize, pageNumber, name);
              return response.Data;
         }
 
@@ -1560,7 +1666,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="name">Name</param> 
         /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
-        public ApiResponse< EvaluationFormEntityListing > GetPublishedformsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null)
+        public ApiResponse< EvaluationFormEntityListing > GetQualityPublishedformsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null)
         {
             
     
@@ -1571,15 +1677,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1593,7 +1705,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1604,14 +1715,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetPublishedforms: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetQualityPublishedforms: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetPublishedforms: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetQualityPublishedforms: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EvaluationFormEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1626,9 +1739,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="name">Name</param>
         /// <returns>Task of EvaluationFormEntityListing</returns>
-        public async System.Threading.Tasks.Task<EvaluationFormEntityListing> GetPublishedformsAsync (int? pageSize = null, int? pageNumber = null, string name = null)
+        public async System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityPublishedformsAsync (int? pageSize = null, int? pageNumber = null, string name = null)
         {
-             ApiResponse<EvaluationFormEntityListing> response = await GetPublishedformsAsyncWithHttpInfo(pageSize, pageNumber, name);
+             ApiResponse<EvaluationFormEntityListing> response = await GetQualityPublishedformsAsyncWithHttpInfo(pageSize, pageNumber, name);
              return response.Data;
 
         }
@@ -1640,7 +1753,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="name">Name</param>
         /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetPublishedformsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityPublishedformsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null)
         {
             
     
@@ -1648,18 +1761,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1684,14 +1803,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetPublishedforms: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetQualityPublishedforms: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetPublishedforms: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetQualityPublishedforms: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EvaluationFormEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1704,9 +1825,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>EvaluationForm</returns>
-        public EvaluationForm CreatePublishedforms (EvaluationForm body = null)
+        public EvaluationForm PostQualityPublishedforms (EvaluationForm body = null)
         {
-             ApiResponse<EvaluationForm> response = CreatePublishedformsWithHttpInfo(body);
+             ApiResponse<EvaluationForm> response = PostQualityPublishedformsWithHttpInfo(body);
              return response.Data;
         }
 
@@ -1715,7 +1836,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>ApiResponse of EvaluationForm</returns>
-        public ApiResponse< EvaluationForm > CreatePublishedformsWithHttpInfo (EvaluationForm body = null)
+        public ApiResponse< EvaluationForm > PostQualityPublishedformsWithHttpInfo (EvaluationForm body = null)
         {
             
     
@@ -1726,15 +1847,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1743,10 +1870,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1757,14 +1889,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreatePublishedforms: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostQualityPublishedforms: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreatePublishedforms: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostQualityPublishedforms: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EvaluationForm>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1777,9 +1911,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of EvaluationForm</returns>
-        public async System.Threading.Tasks.Task<EvaluationForm> CreatePublishedformsAsync (EvaluationForm body = null)
+        public async System.Threading.Tasks.Task<EvaluationForm> PostQualityPublishedformsAsync (EvaluationForm body = null)
         {
-             ApiResponse<EvaluationForm> response = await CreatePublishedformsAsyncWithHttpInfo(body);
+             ApiResponse<EvaluationForm> response = await PostQualityPublishedformsAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -1789,7 +1923,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> CreatePublishedformsAsyncWithHttpInfo (EvaluationForm body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostQualityPublishedformsAsyncWithHttpInfo (EvaluationForm body = null)
         {
             
     
@@ -1797,18 +1931,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1831,14 +1971,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreatePublishedforms: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostQualityPublishedforms: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreatePublishedforms: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostQualityPublishedforms: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EvaluationForm>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1851,9 +1993,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="formId">Form ID</param> 
         /// <returns>EvaluationForm</returns>
-        public EvaluationForm GetPublishedformsForm (string formId)
+        public EvaluationForm GetQualityPublishedform (string formId)
         {
-             ApiResponse<EvaluationForm> response = GetPublishedformsFormWithHttpInfo(formId);
+             ApiResponse<EvaluationForm> response = GetQualityPublishedformWithHttpInfo(formId);
              return response.Data;
         }
 
@@ -1862,11 +2004,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="formId">Form ID</param> 
         /// <returns>ApiResponse of EvaluationForm</returns>
-        public ApiResponse< EvaluationForm > GetPublishedformsFormWithHttpInfo (string formId)
+        public ApiResponse< EvaluationForm > GetQualityPublishedformWithHttpInfo (string formId)
         {
             
             // verify the required parameter 'formId' is set
-            if (formId == null) throw new ApiException(400, "Missing required parameter 'formId' when calling GetPublishedformsForm");
+            if (formId == null)
+                throw new ApiException(400, "Missing required parameter 'formId' when calling ScriptsApi->GetQualityPublishedform");
             
     
             var path_ = "/api/v1/quality/publishedforms/{formId}";
@@ -1876,15 +2019,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1896,7 +2045,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1907,14 +2055,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetPublishedformsForm: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetQualityPublishedform: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetPublishedformsForm: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetQualityPublishedform: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EvaluationForm>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1927,9 +2077,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="formId">Form ID</param>
         /// <returns>Task of EvaluationForm</returns>
-        public async System.Threading.Tasks.Task<EvaluationForm> GetPublishedformsFormAsync (string formId)
+        public async System.Threading.Tasks.Task<EvaluationForm> GetQualityPublishedformAsync (string formId)
         {
-             ApiResponse<EvaluationForm> response = await GetPublishedformsFormAsyncWithHttpInfo(formId);
+             ApiResponse<EvaluationForm> response = await GetQualityPublishedformAsyncWithHttpInfo(formId);
              return response.Data;
 
         }
@@ -1939,28 +2089,34 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="formId">Form ID</param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetPublishedformsFormAsyncWithHttpInfo (string formId)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetQualityPublishedformAsyncWithHttpInfo (string formId)
         {
             // verify the required parameter 'formId' is set
-            if (formId == null) throw new ApiException(400, "Missing required parameter 'formId' when calling GetPublishedformsForm");
+            if (formId == null) throw new ApiException(400, "Missing required parameter 'formId' when calling GetQualityPublishedform");
             
     
             var path_ = "/api/v1/quality/publishedforms/{formId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1983,14 +2139,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetPublishedformsForm: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetQualityPublishedform: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetPublishedformsForm: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetQualityPublishedform: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EvaluationForm>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2007,9 +2165,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param> 
         /// <param name="feature">Feature</param> 
         /// <returns>ScriptEntityListing</returns>
-        public ScriptEntityListing Get (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null)
+        public ScriptEntityListing GetScripts (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null)
         {
-             ApiResponse<ScriptEntityListing> response = GetWithHttpInfo(pageSize, pageNumber, expand, name, feature);
+             ApiResponse<ScriptEntityListing> response = GetScriptsWithHttpInfo(pageSize, pageNumber, expand, name, feature);
              return response.Data;
         }
 
@@ -2022,7 +2180,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param> 
         /// <param name="feature">Feature</param> 
         /// <returns>ApiResponse of ScriptEntityListing</returns>
-        public ApiResponse< ScriptEntityListing > GetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null)
+        public ApiResponse< ScriptEntityListing > GetScriptsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null)
         {
             
     
@@ -2033,15 +2191,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2057,7 +2221,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -2068,14 +2231,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetScripts: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetScripts: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ScriptEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2092,9 +2257,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param>
         /// <param name="feature">Feature</param>
         /// <returns>Task of ScriptEntityListing</returns>
-        public async System.Threading.Tasks.Task<ScriptEntityListing> GetAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null)
+        public async System.Threading.Tasks.Task<ScriptEntityListing> GetScriptsAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null)
         {
-             ApiResponse<ScriptEntityListing> response = await GetAsyncWithHttpInfo(pageSize, pageNumber, expand, name, feature);
+             ApiResponse<ScriptEntityListing> response = await GetScriptsAsyncWithHttpInfo(pageSize, pageNumber, expand, name, feature);
              return response.Data;
 
         }
@@ -2108,7 +2273,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param>
         /// <param name="feature">Feature</param>
         /// <returns>Task of ApiResponse (ScriptEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null)
         {
             
     
@@ -2116,18 +2281,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2154,14 +2325,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetScripts: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetScripts: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ScriptEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2174,9 +2347,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>Script</returns>
-        public Script Create (Body2 body = null)
+        public Script PostScripts (Body2 body = null)
         {
-             ApiResponse<Script> response = CreateWithHttpInfo(body);
+             ApiResponse<Script> response = PostScriptsWithHttpInfo(body);
              return response.Data;
         }
 
@@ -2185,7 +2358,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>ApiResponse of Script</returns>
-        public ApiResponse< Script > CreateWithHttpInfo (Body2 body = null)
+        public ApiResponse< Script > PostScriptsWithHttpInfo (Body2 body = null)
         {
             
     
@@ -2196,15 +2369,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2213,10 +2392,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -2227,14 +2411,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling Create: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostScripts: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling Create: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostScripts: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Script>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2247,9 +2433,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of Script</returns>
-        public async System.Threading.Tasks.Task<Script> CreateAsync (Body2 body = null)
+        public async System.Threading.Tasks.Task<Script> PostScriptsAsync (Body2 body = null)
         {
-             ApiResponse<Script> response = await CreateAsyncWithHttpInfo(body);
+             ApiResponse<Script> response = await PostScriptsAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -2259,7 +2445,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Script)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Script>> CreateAsyncWithHttpInfo (Body2 body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Script>> PostScriptsAsyncWithHttpInfo (Body2 body = null)
         {
             
     
@@ -2267,18 +2453,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2301,14 +2493,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling Create: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostScripts: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling Create: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostScripts: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Script>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

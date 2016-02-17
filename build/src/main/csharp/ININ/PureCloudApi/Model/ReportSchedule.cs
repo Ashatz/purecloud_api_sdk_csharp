@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class ReportSchedule :  IEquatable<ReportSchedule>
+    public partial class ReportSchedule :  IEquatable<ReportSchedule>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportSchedule" /> class.
@@ -206,7 +205,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ReportSchedule instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ReportSchedule to be compared</param>
+        /// <param name="other">Instance of ReportSchedule to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ReportSchedule other)
         {
@@ -315,61 +314,59 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.QuartzCronExpression != null)
-                    hash = hash * 57 + this.QuartzCronExpression.GetHashCode();
+                    hash = hash * 59 + this.QuartzCronExpression.GetHashCode();
                 
                 if (this.NextFireTime != null)
-                    hash = hash * 57 + this.NextFireTime.GetHashCode();
+                    hash = hash * 59 + this.NextFireTime.GetHashCode();
                 
                 if (this.DateCreated != null)
-                    hash = hash * 57 + this.DateCreated.GetHashCode();
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
                 
                 if (this.DateModified != null)
-                    hash = hash * 57 + this.DateModified.GetHashCode();
+                    hash = hash * 59 + this.DateModified.GetHashCode();
                 
                 if (this.Description != null)
-                    hash = hash * 57 + this.Description.GetHashCode();
+                    hash = hash * 59 + this.Description.GetHashCode();
                 
                 if (this.TimeZone != null)
-                    hash = hash * 57 + this.TimeZone.GetHashCode();
+                    hash = hash * 59 + this.TimeZone.GetHashCode();
                 
                 if (this.TimePeriod != null)
-                    hash = hash * 57 + this.TimePeriod.GetHashCode();
+                    hash = hash * 59 + this.TimePeriod.GetHashCode();
                 
                 if (this.Interval != null)
-                    hash = hash * 57 + this.Interval.GetHashCode();
+                    hash = hash * 59 + this.Interval.GetHashCode();
                 
                 if (this.ReportFormat != null)
-                    hash = hash * 57 + this.ReportFormat.GetHashCode();
+                    hash = hash * 59 + this.ReportFormat.GetHashCode();
                 
                 if (this.Locale != null)
-                    hash = hash * 57 + this.Locale.GetHashCode();
+                    hash = hash * 59 + this.Locale.GetHashCode();
                 
                 if (this.Enabled != null)
-                    hash = hash * 57 + this.Enabled.GetHashCode();
+                    hash = hash * 59 + this.Enabled.GetHashCode();
                 
                 if (this.ReportId != null)
-                    hash = hash * 57 + this.ReportId.GetHashCode();
+                    hash = hash * 59 + this.ReportId.GetHashCode();
                 
                 if (this.Parameters != null)
-                    hash = hash * 57 + this.Parameters.GetHashCode();
+                    hash = hash * 59 + this.Parameters.GetHashCode();
                 
                 if (this.LastRun != null)
-                    hash = hash * 57 + this.LastRun.GetHashCode();
+                    hash = hash * 59 + this.LastRun.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

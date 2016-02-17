@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class AgentActivity :  IEquatable<AgentActivity>
+    public partial class AgentActivity :  IEquatable<AgentActivity>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentActivity" /> class.
@@ -122,7 +121,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if AgentActivity instances are equal
         /// </summary>
-        /// <param name="obj">Instance of AgentActivity to be compared</param>
+        /// <param name="other">Instance of AgentActivity to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(AgentActivity other)
         {
@@ -181,31 +180,29 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Agent != null)
-                    hash = hash * 57 + this.Agent.GetHashCode();
+                    hash = hash * 59 + this.Agent.GetHashCode();
                 
                 if (this.NumEvaluations != null)
-                    hash = hash * 57 + this.NumEvaluations.GetHashCode();
+                    hash = hash * 59 + this.NumEvaluations.GetHashCode();
                 
                 if (this.AverageEvaluationScore != null)
-                    hash = hash * 57 + this.AverageEvaluationScore.GetHashCode();
+                    hash = hash * 59 + this.AverageEvaluationScore.GetHashCode();
                 
                 if (this.AgentEvaluatorActivityList != null)
-                    hash = hash * 57 + this.AgentEvaluatorActivityList.GetHashCode();
+                    hash = hash * 59 + this.AgentEvaluatorActivityList.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

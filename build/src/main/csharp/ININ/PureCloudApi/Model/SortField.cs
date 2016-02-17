@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class SortField :  IEquatable<SortField>
+    public partial class SortField :  IEquatable<SortField>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SortField" /> class.
@@ -80,7 +79,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if SortField instances are equal
         /// </summary>
-        /// <param name="obj">Instance of SortField to be compared</param>
+        /// <param name="other">Instance of SortField to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(SortField other)
         {
@@ -114,16 +113,14 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.SortType != null)
-                    hash = hash * 57 + this.SortType.GetHashCode();
+                    hash = hash * 59 + this.SortType.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

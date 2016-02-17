@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class User :  IEquatable<User>
+    public partial class User :  IEquatable<User>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="User" /> class.
@@ -267,7 +266,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if User instances are equal
         /// </summary>
-        /// <param name="obj">Instance of User to be compared</param>
+        /// <param name="other">Instance of User to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(User other)
         {
@@ -416,85 +415,83 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Username != null)
-                    hash = hash * 57 + this.Username.GetHashCode();
+                    hash = hash * 59 + this.Username.GetHashCode();
                 
                 if (this.Email != null)
-                    hash = hash * 57 + this.Email.GetHashCode();
+                    hash = hash * 59 + this.Email.GetHashCode();
                 
                 if (this.DisplayName != null)
-                    hash = hash * 57 + this.DisplayName.GetHashCode();
+                    hash = hash * 59 + this.DisplayName.GetHashCode();
                 
                 if (this.PhoneNumber != null)
-                    hash = hash * 57 + this.PhoneNumber.GetHashCode();
+                    hash = hash * 59 + this.PhoneNumber.GetHashCode();
                 
                 if (this.UserImages != null)
-                    hash = hash * 57 + this.UserImages.GetHashCode();
+                    hash = hash * 59 + this.UserImages.GetHashCode();
                 
                 if (this.Chat != null)
-                    hash = hash * 57 + this.Chat.GetHashCode();
+                    hash = hash * 59 + this.Chat.GetHashCode();
                 
                 if (this.Roles != null)
-                    hash = hash * 57 + this.Roles.GetHashCode();
+                    hash = hash * 59 + this.Roles.GetHashCode();
                 
                 if (this.VoicemailEnabled != null)
-                    hash = hash * 57 + this.VoicemailEnabled.GetHashCode();
+                    hash = hash * 59 + this.VoicemailEnabled.GetHashCode();
                 
                 if (this.Department != null)
-                    hash = hash * 57 + this.Department.GetHashCode();
+                    hash = hash * 59 + this.Department.GetHashCode();
                 
                 if (this.Title != null)
-                    hash = hash * 57 + this.Title.GetHashCode();
+                    hash = hash * 59 + this.Title.GetHashCode();
                 
                 if (this.RoutingStatus != null)
-                    hash = hash * 57 + this.RoutingStatus.GetHashCode();
+                    hash = hash * 59 + this.RoutingStatus.GetHashCode();
                 
                 if (this.Password != null)
-                    hash = hash * 57 + this.Password.GetHashCode();
+                    hash = hash * 59 + this.Password.GetHashCode();
                 
                 if (this.PrimaryPresence != null)
-                    hash = hash * 57 + this.PrimaryPresence.GetHashCode();
+                    hash = hash * 59 + this.PrimaryPresence.GetHashCode();
                 
                 if (this.Conversations != null)
-                    hash = hash * 57 + this.Conversations.GetHashCode();
+                    hash = hash * 59 + this.Conversations.GetHashCode();
                 
                 if (this.ConversationSummary != null)
-                    hash = hash * 57 + this.ConversationSummary.GetHashCode();
+                    hash = hash * 59 + this.ConversationSummary.GetHashCode();
                 
                 if (this.OutOfOffice != null)
-                    hash = hash * 57 + this.OutOfOffice.GetHashCode();
+                    hash = hash * 59 + this.OutOfOffice.GetHashCode();
                 
                 if (this.Geolocation != null)
-                    hash = hash * 57 + this.Geolocation.GetHashCode();
+                    hash = hash * 59 + this.Geolocation.GetHashCode();
                 
                 if (this.Permissions != null)
-                    hash = hash * 57 + this.Permissions.GetHashCode();
+                    hash = hash * 59 + this.Permissions.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 if (this.RequestedStatus != null)
-                    hash = hash * 57 + this.RequestedStatus.GetHashCode();
+                    hash = hash * 59 + this.RequestedStatus.GetHashCode();
                 
                 if (this.DefaultStationUri != null)
-                    hash = hash * 57 + this.DefaultStationUri.GetHashCode();
+                    hash = hash * 59 + this.DefaultStationUri.GetHashCode();
                 
                 if (this.StationUri != null)
-                    hash = hash * 57 + this.StationUri.GetHashCode();
+                    hash = hash * 59 + this.StationUri.GetHashCode();
                 
                 if (this.LastStationUri != null)
-                    hash = hash * 57 + this.LastStationUri.GetHashCode();
+                    hash = hash * 59 + this.LastStationUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

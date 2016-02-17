@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class TwitterExpressionBuffer :  IEquatable<TwitterExpressionBuffer>
+    public partial class TwitterExpressionBuffer :  IEquatable<TwitterExpressionBuffer>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TwitterExpressionBuffer" /> class.
@@ -73,7 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if TwitterExpressionBuffer instances are equal
         /// </summary>
-        /// <param name="obj">Instance of TwitterExpressionBuffer to be compared</param>
+        /// <param name="other">Instance of TwitterExpressionBuffer to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(TwitterExpressionBuffer other)
         {
@@ -102,13 +101,11 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.BufferContent != null)
-                    hash = hash * 57 + this.BufferContent.GetHashCode();
+                    hash = hash * 59 + this.BufferContent.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

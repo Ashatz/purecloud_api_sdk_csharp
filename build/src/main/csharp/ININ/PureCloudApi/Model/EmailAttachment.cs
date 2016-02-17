@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class EmailAttachment :  IEquatable<EmailAttachment>
+    public partial class EmailAttachment :  IEquatable<EmailAttachment>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailAttachment" /> class.
@@ -104,7 +103,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if EmailAttachment instances are equal
         /// </summary>
-        /// <param name="obj">Instance of EmailAttachment to be compared</param>
+        /// <param name="other">Instance of EmailAttachment to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(EmailAttachment other)
         {
@@ -153,25 +152,23 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.ContentPath != null)
-                    hash = hash * 57 + this.ContentPath.GetHashCode();
+                    hash = hash * 59 + this.ContentPath.GetHashCode();
                 
                 if (this.ContentType != null)
-                    hash = hash * 57 + this.ContentType.GetHashCode();
+                    hash = hash * 59 + this.ContentType.GetHashCode();
                 
                 if (this.AttachmentId != null)
-                    hash = hash * 57 + this.AttachmentId.GetHashCode();
+                    hash = hash * 59 + this.AttachmentId.GetHashCode();
                 
                 if (this.ContentLength != null)
-                    hash = hash * 57 + this.ContentLength.GetHashCode();
+                    hash = hash * 59 + this.ContentLength.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

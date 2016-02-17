@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class DurationCondition :  IEquatable<DurationCondition>
+    public partial class DurationCondition :  IEquatable<DurationCondition>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DurationCondition" /> class.
@@ -88,7 +87,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DurationCondition instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DurationCondition to be compared</param>
+        /// <param name="other">Instance of DurationCondition to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DurationCondition other)
         {
@@ -127,19 +126,17 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.DurationTarget != null)
-                    hash = hash * 57 + this.DurationTarget.GetHashCode();
+                    hash = hash * 59 + this.DurationTarget.GetHashCode();
                 
                 if (this.DurationOperator != null)
-                    hash = hash * 57 + this.DurationOperator.GetHashCode();
+                    hash = hash * 59 + this.DurationOperator.GetHashCode();
                 
                 if (this.DurationRange != null)
-                    hash = hash * 57 + this.DurationRange.GetHashCode();
+                    hash = hash * 59 + this.DurationRange.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

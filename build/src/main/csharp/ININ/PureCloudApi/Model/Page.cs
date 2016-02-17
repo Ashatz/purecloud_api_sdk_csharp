@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Page :  IEquatable<Page>
+    public partial class Page :  IEquatable<Page>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Page" /> class.
@@ -132,7 +131,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Page instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Page to be compared</param>
+        /// <param name="other">Instance of Page to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Page other)
         {
@@ -196,34 +195,32 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.VersionId != null)
-                    hash = hash * 57 + this.VersionId.GetHashCode();
+                    hash = hash * 59 + this.VersionId.GetHashCode();
                 
                 if (this.CreatedDate != null)
-                    hash = hash * 57 + this.CreatedDate.GetHashCode();
+                    hash = hash * 59 + this.CreatedDate.GetHashCode();
                 
                 if (this.ModifiedDate != null)
-                    hash = hash * 57 + this.ModifiedDate.GetHashCode();
+                    hash = hash * 59 + this.ModifiedDate.GetHashCode();
                 
                 if (this.RootContainer != null)
-                    hash = hash * 57 + this.RootContainer.GetHashCode();
+                    hash = hash * 59 + this.RootContainer.GetHashCode();
                 
                 if (this.Properties != null)
-                    hash = hash * 57 + this.Properties.GetHashCode();
+                    hash = hash * 59 + this.Properties.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Annotation :  IEquatable<Annotation>
+    public partial class Annotation :  IEquatable<Annotation>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Annotation" /> class.
@@ -130,7 +129,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Annotation instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Annotation to be compared</param>
+        /// <param name="other">Instance of Annotation to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Annotation other)
         {
@@ -194,34 +193,32 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
+                    hash = hash * 59 + this.Type.GetHashCode();
                 
                 if (this.Location != null)
-                    hash = hash * 57 + this.Location.GetHashCode();
+                    hash = hash * 59 + this.Location.GetHashCode();
                 
                 if (this.DurationMs != null)
-                    hash = hash * 57 + this.DurationMs.GetHashCode();
+                    hash = hash * 59 + this.DurationMs.GetHashCode();
                 
                 if (this.User != null)
-                    hash = hash * 57 + this.User.GetHashCode();
+                    hash = hash * 59 + this.User.GetHashCode();
                 
                 if (this.Description != null)
-                    hash = hash * 57 + this.Description.GetHashCode();
+                    hash = hash * 59 + this.Description.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

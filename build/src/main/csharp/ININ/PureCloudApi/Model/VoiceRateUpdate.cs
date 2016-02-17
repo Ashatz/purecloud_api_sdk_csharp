@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class VoiceRateUpdate :  IEquatable<VoiceRateUpdate>
+    public partial class VoiceRateUpdate :  IEquatable<VoiceRateUpdate>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="VoiceRateUpdate" /> class.
@@ -180,7 +179,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if VoiceRateUpdate instances are equal
         /// </summary>
-        /// <param name="obj">Instance of VoiceRateUpdate to be compared</param>
+        /// <param name="other">Instance of VoiceRateUpdate to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(VoiceRateUpdate other)
         {
@@ -269,49 +268,47 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Currency != null)
-                    hash = hash * 57 + this.Currency.GetHashCode();
+                    hash = hash * 59 + this.Currency.GetHashCode();
                 
                 if (this.InboundTollFree != null)
-                    hash = hash * 57 + this.InboundTollFree.GetHashCode();
+                    hash = hash * 59 + this.InboundTollFree.GetHashCode();
                 
                 if (this.Extended != null)
-                    hash = hash * 57 + this.Extended.GetHashCode();
+                    hash = hash * 59 + this.Extended.GetHashCode();
                 
                 if (this.InboundTolled != null)
-                    hash = hash * 57 + this.InboundTolled.GetHashCode();
+                    hash = hash * 59 + this.InboundTolled.GetHashCode();
                 
                 if (this.OutboundLocal != null)
-                    hash = hash * 57 + this.OutboundLocal.GetHashCode();
+                    hash = hash * 59 + this.OutboundLocal.GetHashCode();
                 
                 if (this.OutboundIntraState != null)
-                    hash = hash * 57 + this.OutboundIntraState.GetHashCode();
+                    hash = hash * 59 + this.OutboundIntraState.GetHashCode();
                 
                 if (this.OutboundInterState != null)
-                    hash = hash * 57 + this.OutboundInterState.GetHashCode();
+                    hash = hash * 59 + this.OutboundInterState.GetHashCode();
                 
                 if (this.OutboundInternational != null)
-                    hash = hash * 57 + this.OutboundInternational.GetHashCode();
+                    hash = hash * 59 + this.OutboundInternational.GetHashCode();
                 
                 if (this.AmendmentDate != null)
-                    hash = hash * 57 + this.AmendmentDate.GetHashCode();
+                    hash = hash * 59 + this.AmendmentDate.GetHashCode();
                 
                 if (this.EffectiveDate != null)
-                    hash = hash * 57 + this.EffectiveDate.GetHashCode();
+                    hash = hash * 59 + this.EffectiveDate.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

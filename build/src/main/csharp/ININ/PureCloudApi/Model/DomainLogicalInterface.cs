@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class DomainLogicalInterface :  IEquatable<DomainLogicalInterface>
+    public partial class DomainLogicalInterface :  IEquatable<DomainLogicalInterface>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainLogicalInterface" /> class.
@@ -354,7 +353,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DomainLogicalInterface instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DomainLogicalInterface to be compared</param>
+        /// <param name="other">Instance of DomainLogicalInterface to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DomainLogicalInterface other)
         {
@@ -553,115 +552,113 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Description != null)
-                    hash = hash * 57 + this.Description.GetHashCode();
+                    hash = hash * 59 + this.Description.GetHashCode();
                 
                 if (this.Version != null)
-                    hash = hash * 57 + this.Version.GetHashCode();
+                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 if (this.DateCreated != null)
-                    hash = hash * 57 + this.DateCreated.GetHashCode();
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
                 
                 if (this.DateModified != null)
-                    hash = hash * 57 + this.DateModified.GetHashCode();
+                    hash = hash * 59 + this.DateModified.GetHashCode();
                 
                 if (this.ModifiedBy != null)
-                    hash = hash * 57 + this.ModifiedBy.GetHashCode();
+                    hash = hash * 59 + this.ModifiedBy.GetHashCode();
                 
                 if (this.CreatedBy != null)
-                    hash = hash * 57 + this.CreatedBy.GetHashCode();
+                    hash = hash * 59 + this.CreatedBy.GetHashCode();
                 
                 if (this.State != null)
-                    hash = hash * 57 + this.State.GetHashCode();
+                    hash = hash * 59 + this.State.GetHashCode();
                 
                 if (this.ModifiedByApp != null)
-                    hash = hash * 57 + this.ModifiedByApp.GetHashCode();
+                    hash = hash * 59 + this.ModifiedByApp.GetHashCode();
                 
                 if (this.CreatedByApp != null)
-                    hash = hash * 57 + this.CreatedByApp.GetHashCode();
+                    hash = hash * 59 + this.CreatedByApp.GetHashCode();
                 
                 if (this.EdgeUri != null)
-                    hash = hash * 57 + this.EdgeUri.GetHashCode();
+                    hash = hash * 59 + this.EdgeUri.GetHashCode();
                 
                 if (this.EdgeAssignedId != null)
-                    hash = hash * 57 + this.EdgeAssignedId.GetHashCode();
+                    hash = hash * 59 + this.EdgeAssignedId.GetHashCode();
                 
                 if (this.FriendlyName != null)
-                    hash = hash * 57 + this.FriendlyName.GetHashCode();
+                    hash = hash * 59 + this.FriendlyName.GetHashCode();
                 
                 if (this.VlanTagId != null)
-                    hash = hash * 57 + this.VlanTagId.GetHashCode();
+                    hash = hash * 59 + this.VlanTagId.GetHashCode();
                 
                 if (this.HardwareAddress != null)
-                    hash = hash * 57 + this.HardwareAddress.GetHashCode();
+                    hash = hash * 59 + this.HardwareAddress.GetHashCode();
                 
                 if (this.PhysicalAdapterId != null)
-                    hash = hash * 57 + this.PhysicalAdapterId.GetHashCode();
+                    hash = hash * 59 + this.PhysicalAdapterId.GetHashCode();
                 
                 if (this.IpAddress != null)
-                    hash = hash * 57 + this.IpAddress.GetHashCode();
+                    hash = hash * 59 + this.IpAddress.GetHashCode();
                 
                 if (this.Gateway != null)
-                    hash = hash * 57 + this.Gateway.GetHashCode();
+                    hash = hash * 59 + this.Gateway.GetHashCode();
                 
                 if (this.PrimaryDns != null)
-                    hash = hash * 57 + this.PrimaryDns.GetHashCode();
+                    hash = hash * 59 + this.PrimaryDns.GetHashCode();
                 
                 if (this.SecondaryDns != null)
-                    hash = hash * 57 + this.SecondaryDns.GetHashCode();
+                    hash = hash * 59 + this.SecondaryDns.GetHashCode();
                 
                 if (this.IfStatus != null)
-                    hash = hash * 57 + this.IfStatus.GetHashCode();
+                    hash = hash * 59 + this.IfStatus.GetHashCode();
                 
                 if (this.Routes != null)
-                    hash = hash * 57 + this.Routes.GetHashCode();
+                    hash = hash * 59 + this.Routes.GetHashCode();
                 
                 if (this.Addresses != null)
-                    hash = hash * 57 + this.Addresses.GetHashCode();
+                    hash = hash * 59 + this.Addresses.GetHashCode();
                 
                 if (this.Ipv4Capabilities != null)
-                    hash = hash * 57 + this.Ipv4Capabilities.GetHashCode();
+                    hash = hash * 59 + this.Ipv4Capabilities.GetHashCode();
                 
                 if (this.Ipv6Capabilities != null)
-                    hash = hash * 57 + this.Ipv6Capabilities.GetHashCode();
+                    hash = hash * 59 + this.Ipv6Capabilities.GetHashCode();
                 
                 if (this.CurrentState != null)
-                    hash = hash * 57 + this.CurrentState.GetHashCode();
+                    hash = hash * 59 + this.CurrentState.GetHashCode();
                 
                 if (this.LastModifiedUserId != null)
-                    hash = hash * 57 + this.LastModifiedUserId.GetHashCode();
+                    hash = hash * 59 + this.LastModifiedUserId.GetHashCode();
                 
                 if (this.LastModifiedCorrelationId != null)
-                    hash = hash * 57 + this.LastModifiedCorrelationId.GetHashCode();
+                    hash = hash * 59 + this.LastModifiedCorrelationId.GetHashCode();
                 
                 if (this.CommandResponses != null)
-                    hash = hash * 57 + this.CommandResponses.GetHashCode();
+                    hash = hash * 59 + this.CommandResponses.GetHashCode();
                 
                 if (this.InheritPhoneTrunkBases != null)
-                    hash = hash * 57 + this.InheritPhoneTrunkBases.GetHashCode();
+                    hash = hash * 59 + this.InheritPhoneTrunkBases.GetHashCode();
                 
                 if (this.UseForInternalEdgeCommunication != null)
-                    hash = hash * 57 + this.UseForInternalEdgeCommunication.GetHashCode();
+                    hash = hash * 59 + this.UseForInternalEdgeCommunication.GetHashCode();
                 
                 if (this.ExternalTrunkBaseAssignments != null)
-                    hash = hash * 57 + this.ExternalTrunkBaseAssignments.GetHashCode();
+                    hash = hash * 59 + this.ExternalTrunkBaseAssignments.GetHashCode();
                 
                 if (this.PhoneTrunkBaseAssignments != null)
-                    hash = hash * 57 + this.PhoneTrunkBaseAssignments.GetHashCode();
+                    hash = hash * 59 + this.PhoneTrunkBaseAssignments.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

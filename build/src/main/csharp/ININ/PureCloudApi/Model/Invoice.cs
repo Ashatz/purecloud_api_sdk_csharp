@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Invoice :  IEquatable<Invoice>
+    public partial class Invoice :  IEquatable<Invoice>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Invoice" /> class.
@@ -140,7 +139,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Invoice instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Invoice to be compared</param>
+        /// <param name="other">Instance of Invoice to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Invoice other)
         {
@@ -209,37 +208,35 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.InvoiceNumber != null)
-                    hash = hash * 57 + this.InvoiceNumber.GetHashCode();
+                    hash = hash * 59 + this.InvoiceNumber.GetHashCode();
                 
                 if (this.InvoiceDate != null)
-                    hash = hash * 57 + this.InvoiceDate.GetHashCode();
+                    hash = hash * 59 + this.InvoiceDate.GetHashCode();
                 
                 if (this.DueDate != null)
-                    hash = hash * 57 + this.DueDate.GetHashCode();
+                    hash = hash * 59 + this.DueDate.GetHashCode();
                 
                 if (this.Amount != null)
-                    hash = hash * 57 + this.Amount.GetHashCode();
+                    hash = hash * 59 + this.Amount.GetHashCode();
                 
                 if (this.Balance != null)
-                    hash = hash * 57 + this.Balance.GetHashCode();
+                    hash = hash * 59 + this.Balance.GetHashCode();
                 
                 if (this.Status != null)
-                    hash = hash * 57 + this.Status.GetHashCode();
+                    hash = hash * 59 + this.Status.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -1,11 +1,11 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 using ININ.PureCloudApi.Client;
 using ININ.PureCloudApi.Model;
-
 
 namespace ININ.PureCloudApi.Api
 {
@@ -77,7 +77,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="download">requesting a download format of the recording</param>
         /// <param name="fileName">the name of the downloaded fileName</param>
         /// <returns></returns>
-        void GetConversationRecordingsByRecordingId (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null);
+        void GetConversationRecording (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null);
   
         /// <summary>
         /// Gets a specific recording.
@@ -92,7 +92,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="download">requesting a download format of the recording</param>
         /// <param name="fileName">the name of the downloaded fileName</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetConversationRecordingsByRecordingIdWithHttpInfo (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null);
+        ApiResponse<Object> GetConversationRecordingWithHttpInfo (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null);
 
         /// <summary>
         /// Gets a specific recording.
@@ -107,7 +107,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="download">requesting a download format of the recording</param>
         /// <param name="fileName">the name of the downloaded fileName</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetConversationRecordingsByRecordingIdAsync (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null);
+        System.Threading.Tasks.Task GetConversationRecordingAsync (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null);
 
         /// <summary>
         /// Gets a specific recording.
@@ -122,7 +122,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="download">requesting a download format of the recording</param>
         /// <param name="fileName">the name of the downloaded fileName</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetConversationRecordingsByRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetConversationRecordingAsyncWithHttpInfo (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null);
         
         /// <summary>
         /// Updates the retention records on a recording.
@@ -135,7 +135,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">recording</param>
         /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param>
         /// <returns></returns>
-        void UpdateConversationRecordingsByRecordingId (string conversationId, string recordingId, Recording body, int? restoreDays = null);
+        void PutConversationRecording (string conversationId, string recordingId, Recording body, int? restoreDays = null);
   
         /// <summary>
         /// Updates the retention records on a recording.
@@ -148,7 +148,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">recording</param>
         /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateConversationRecordingsByRecordingIdWithHttpInfo (string conversationId, string recordingId, Recording body, int? restoreDays = null);
+        ApiResponse<Object> PutConversationRecordingWithHttpInfo (string conversationId, string recordingId, Recording body, int? restoreDays = null);
 
         /// <summary>
         /// Updates the retention records on a recording.
@@ -161,7 +161,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">recording</param>
         /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateConversationRecordingsByRecordingIdAsync (string conversationId, string recordingId, Recording body, int? restoreDays = null);
+        System.Threading.Tasks.Task PutConversationRecordingAsync (string conversationId, string recordingId, Recording body, int? restoreDays = null);
 
         /// <summary>
         /// Updates the retention records on a recording.
@@ -174,7 +174,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">recording</param>
         /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateConversationRecordingsByRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId, Recording body, int? restoreDays = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PutConversationRecordingAsyncWithHttpInfo (string conversationId, string recordingId, Recording body, int? restoreDays = null);
         
         /// <summary>
         /// Get annotations for recording
@@ -185,7 +185,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <returns>List&lt;Annotation&gt;</returns>
-        List<Annotation> GetConversationRecordingsByRecordingIdAnnotations (string conversationId, string recordingId);
+        List<Annotation> GetConversationRecordingAnnotations (string conversationId, string recordingId);
   
         /// <summary>
         /// Get annotations for recording
@@ -196,7 +196,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <returns>ApiResponse of List&lt;Annotation&gt;</returns>
-        ApiResponse<List<Annotation>> GetConversationRecordingsByRecordingIdAnnotationsWithHttpInfo (string conversationId, string recordingId);
+        ApiResponse<List<Annotation>> GetConversationRecordingAnnotationsWithHttpInfo (string conversationId, string recordingId);
 
         /// <summary>
         /// Get annotations for recording
@@ -207,7 +207,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <returns>Task of List&lt;Annotation&gt;</returns>
-        System.Threading.Tasks.Task<List<Annotation>> GetConversationRecordingsByRecordingIdAnnotationsAsync (string conversationId, string recordingId);
+        System.Threading.Tasks.Task<List<Annotation>> GetConversationRecordingAnnotationsAsync (string conversationId, string recordingId);
 
         /// <summary>
         /// Get annotations for recording
@@ -218,7 +218,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <returns>Task of ApiResponse (List&lt;Annotation&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<Annotation>>> GetConversationRecordingsByRecordingIdAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId);
+        System.Threading.Tasks.Task<ApiResponse<List<Annotation>>> GetConversationRecordingAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId);
         
         /// <summary>
         /// Create annotation
@@ -230,7 +230,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Annotation</returns>
-        Annotation CreateConversationRecordingsByRecordingIdAnnotations (string conversationId, string recordingId, Annotation body = null);
+        Annotation PostConversationRecordingAnnotations (string conversationId, string recordingId, Annotation body = null);
   
         /// <summary>
         /// Create annotation
@@ -242,7 +242,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">annotation</param>
         /// <returns>ApiResponse of Annotation</returns>
-        ApiResponse<Annotation> CreateConversationRecordingsByRecordingIdAnnotationsWithHttpInfo (string conversationId, string recordingId, Annotation body = null);
+        ApiResponse<Annotation> PostConversationRecordingAnnotationsWithHttpInfo (string conversationId, string recordingId, Annotation body = null);
 
         /// <summary>
         /// Create annotation
@@ -254,7 +254,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of Annotation</returns>
-        System.Threading.Tasks.Task<Annotation> CreateConversationRecordingsByRecordingIdAnnotationsAsync (string conversationId, string recordingId, Annotation body = null);
+        System.Threading.Tasks.Task<Annotation> PostConversationRecordingAnnotationsAsync (string conversationId, string recordingId, Annotation body = null);
 
         /// <summary>
         /// Create annotation
@@ -266,7 +266,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Annotation>> CreateConversationRecordingsByRecordingIdAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId, Annotation body = null);
+        System.Threading.Tasks.Task<ApiResponse<Annotation>> PostConversationRecordingAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId, Annotation body = null);
         
         /// <summary>
         /// Get annotation
@@ -278,7 +278,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Annotation</returns>
-        Annotation GetConversationRecordingsByRecordingIdAnnotationsByAnnotationId (string conversationId, string recordingId, string annotationId);
+        Annotation GetConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId);
   
         /// <summary>
         /// Get annotation
@@ -290,7 +290,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>ApiResponse of Annotation</returns>
-        ApiResponse<Annotation> GetConversationRecordingsByRecordingIdAnnotationsByAnnotationIdWithHttpInfo (string conversationId, string recordingId, string annotationId);
+        ApiResponse<Annotation> GetConversationRecordingAnnotationWithHttpInfo (string conversationId, string recordingId, string annotationId);
 
         /// <summary>
         /// Get annotation
@@ -302,7 +302,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of Annotation</returns>
-        System.Threading.Tasks.Task<Annotation> GetConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsync (string conversationId, string recordingId, string annotationId);
+        System.Threading.Tasks.Task<Annotation> GetConversationRecordingAnnotationAsync (string conversationId, string recordingId, string annotationId);
 
         /// <summary>
         /// Get annotation
@@ -314,7 +314,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Annotation>> GetConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId);
+        System.Threading.Tasks.Task<ApiResponse<Annotation>> GetConversationRecordingAnnotationAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId);
         
         /// <summary>
         /// Update annotation
@@ -327,7 +327,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Annotation</returns>
-        Annotation UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationId (string conversationId, string recordingId, string annotationId, Annotation body = null);
+        Annotation PutConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId, Annotation body = null);
   
         /// <summary>
         /// Update annotation
@@ -340,7 +340,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <param name="body">annotation</param>
         /// <returns>ApiResponse of Annotation</returns>
-        ApiResponse<Annotation> UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationIdWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body = null);
+        ApiResponse<Annotation> PutConversationRecordingAnnotationWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body = null);
 
         /// <summary>
         /// Update annotation
@@ -353,7 +353,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of Annotation</returns>
-        System.Threading.Tasks.Task<Annotation> UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsync (string conversationId, string recordingId, string annotationId, Annotation body = null);
+        System.Threading.Tasks.Task<Annotation> PutConversationRecordingAnnotationAsync (string conversationId, string recordingId, string annotationId, Annotation body = null);
 
         /// <summary>
         /// Update annotation
@@ -366,7 +366,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Annotation>> UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body = null);
+        System.Threading.Tasks.Task<ApiResponse<Annotation>> PutConversationRecordingAnnotationAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body = null);
         
         /// <summary>
         /// Delete annotation
@@ -378,7 +378,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns></returns>
-        void DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationId (string conversationId, string recordingId, string annotationId);
+        void DeleteConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId);
   
         /// <summary>
         /// Delete annotation
@@ -390,7 +390,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationIdWithHttpInfo (string conversationId, string recordingId, string annotationId);
+        ApiResponse<Object> DeleteConversationRecordingAnnotationWithHttpInfo (string conversationId, string recordingId, string annotationId);
 
         /// <summary>
         /// Delete annotation
@@ -402,7 +402,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsync (string conversationId, string recordingId, string annotationId);
+        System.Threading.Tasks.Task DeleteConversationRecordingAnnotationAsync (string conversationId, string recordingId, string annotationId);
 
         /// <summary>
         /// Delete annotation
@@ -414,7 +414,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationRecordingAnnotationAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId);
         
         /// <summary>
         /// Gets a list of Agent Activities
@@ -569,7 +569,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId</param>
         /// <returns>Calibration</returns>
-        Calibration CreateCalibrations (Calibration body = null, string expand = null);
+        Calibration PostCalibrations (Calibration body = null, string expand = null);
   
         /// <summary>
         /// Create a calibration
@@ -580,7 +580,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId</param>
         /// <returns>ApiResponse of Calibration</returns>
-        ApiResponse<Calibration> CreateCalibrationsWithHttpInfo (Calibration body = null, string expand = null);
+        ApiResponse<Calibration> PostCalibrationsWithHttpInfo (Calibration body = null, string expand = null);
 
         /// <summary>
         /// Create a calibration
@@ -591,7 +591,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId</param>
         /// <returns>Task of Calibration</returns>
-        System.Threading.Tasks.Task<Calibration> CreateCalibrationsAsync (Calibration body = null, string expand = null);
+        System.Threading.Tasks.Task<Calibration> PostCalibrationsAsync (Calibration body = null, string expand = null);
 
         /// <summary>
         /// Create a calibration
@@ -602,7 +602,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId</param>
         /// <returns>Task of ApiResponse (Calibration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Calibration>> CreateCalibrationsAsyncWithHttpInfo (Calibration body = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Calibration>> PostCalibrationsAsyncWithHttpInfo (Calibration body = null, string expand = null);
         
         /// <summary>
         /// Get a calibration by id.
@@ -657,7 +657,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="body">Calibration</param>
         /// <returns>Calibration</returns>
-        Calibration UpdateCalibration (string calibrationId, Calibration body = null);
+        Calibration PutCalibration (string calibrationId, Calibration body = null);
   
         /// <summary>
         /// Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
@@ -668,7 +668,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="body">Calibration</param>
         /// <returns>ApiResponse of Calibration</returns>
-        ApiResponse<Calibration> UpdateCalibrationWithHttpInfo (string calibrationId, Calibration body = null);
+        ApiResponse<Calibration> PutCalibrationWithHttpInfo (string calibrationId, Calibration body = null);
 
         /// <summary>
         /// Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
@@ -679,7 +679,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="body">Calibration</param>
         /// <returns>Task of Calibration</returns>
-        System.Threading.Tasks.Task<Calibration> UpdateCalibrationAsync (string calibrationId, Calibration body = null);
+        System.Threading.Tasks.Task<Calibration> PutCalibrationAsync (string calibrationId, Calibration body = null);
 
         /// <summary>
         /// Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
@@ -690,7 +690,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="body">Calibration</param>
         /// <returns>Task of ApiResponse (Calibration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Calibration>> UpdateCalibrationAsyncWithHttpInfo (string calibrationId, Calibration body = null);
+        System.Threading.Tasks.Task<ApiResponse<Calibration>> PutCalibrationAsyncWithHttpInfo (string calibrationId, Calibration body = null);
         
         /// <summary>
         /// Delete a calibration by id.
@@ -810,7 +810,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>Evaluation</returns>
-        Evaluation CreateConversationEvaluations (string conversationId, Evaluation body = null, string expand = null);
+        Evaluation PostConversationEvaluations (string conversationId, Evaluation body = null, string expand = null);
   
         /// <summary>
         /// Create an evaluation
@@ -822,7 +822,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>ApiResponse of Evaluation</returns>
-        ApiResponse<Evaluation> CreateConversationEvaluationsWithHttpInfo (string conversationId, Evaluation body = null, string expand = null);
+        ApiResponse<Evaluation> PostConversationEvaluationsWithHttpInfo (string conversationId, Evaluation body = null, string expand = null);
 
         /// <summary>
         /// Create an evaluation
@@ -834,7 +834,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>Task of Evaluation</returns>
-        System.Threading.Tasks.Task<Evaluation> CreateConversationEvaluationsAsync (string conversationId, Evaluation body = null, string expand = null);
+        System.Threading.Tasks.Task<Evaluation> PostConversationEvaluationsAsync (string conversationId, Evaluation body = null, string expand = null);
 
         /// <summary>
         /// Create an evaluation
@@ -846,7 +846,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Evaluation>> CreateConversationEvaluationsAsyncWithHttpInfo (string conversationId, Evaluation body = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Evaluation>> PostConversationEvaluationsAsyncWithHttpInfo (string conversationId, Evaluation body = null, string expand = null);
         
         /// <summary>
         /// Get an evaluation
@@ -858,7 +858,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param>
         /// <param name="expand">agent, evaluator, evaluationForm</param>
         /// <returns>Evaluation</returns>
-        Evaluation GetConversationEvaluationsByEvaluationId (string conversationId, string evaluationId, string expand = null);
+        Evaluation GetConversationEvaluation (string conversationId, string evaluationId, string expand = null);
   
         /// <summary>
         /// Get an evaluation
@@ -870,7 +870,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param>
         /// <param name="expand">agent, evaluator, evaluationForm</param>
         /// <returns>ApiResponse of Evaluation</returns>
-        ApiResponse<Evaluation> GetConversationEvaluationsByEvaluationIdWithHttpInfo (string conversationId, string evaluationId, string expand = null);
+        ApiResponse<Evaluation> GetConversationEvaluationWithHttpInfo (string conversationId, string evaluationId, string expand = null);
 
         /// <summary>
         /// Get an evaluation
@@ -882,7 +882,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param>
         /// <param name="expand">agent, evaluator, evaluationForm</param>
         /// <returns>Task of Evaluation</returns>
-        System.Threading.Tasks.Task<Evaluation> GetConversationEvaluationsByEvaluationIdAsync (string conversationId, string evaluationId, string expand = null);
+        System.Threading.Tasks.Task<Evaluation> GetConversationEvaluationAsync (string conversationId, string evaluationId, string expand = null);
 
         /// <summary>
         /// Get an evaluation
@@ -894,7 +894,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param>
         /// <param name="expand">agent, evaluator, evaluationForm</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Evaluation>> GetConversationEvaluationsByEvaluationIdAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Evaluation>> GetConversationEvaluationAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null);
         
         /// <summary>
         /// Update an evaluation
@@ -907,7 +907,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>Evaluation</returns>
-        Evaluation UpdateConversationEvaluationsByEvaluationId (string conversationId, string evaluationId, Evaluation body = null, string expand = null);
+        Evaluation PutConversationEvaluation (string conversationId, string evaluationId, Evaluation body = null, string expand = null);
   
         /// <summary>
         /// Update an evaluation
@@ -920,7 +920,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>ApiResponse of Evaluation</returns>
-        ApiResponse<Evaluation> UpdateConversationEvaluationsByEvaluationIdWithHttpInfo (string conversationId, string evaluationId, Evaluation body = null, string expand = null);
+        ApiResponse<Evaluation> PutConversationEvaluationWithHttpInfo (string conversationId, string evaluationId, Evaluation body = null, string expand = null);
 
         /// <summary>
         /// Update an evaluation
@@ -933,7 +933,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>Task of Evaluation</returns>
-        System.Threading.Tasks.Task<Evaluation> UpdateConversationEvaluationsByEvaluationIdAsync (string conversationId, string evaluationId, Evaluation body = null, string expand = null);
+        System.Threading.Tasks.Task<Evaluation> PutConversationEvaluationAsync (string conversationId, string evaluationId, Evaluation body = null, string expand = null);
 
         /// <summary>
         /// Update an evaluation
@@ -946,7 +946,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Evaluation>> UpdateConversationEvaluationsByEvaluationIdAsyncWithHttpInfo (string conversationId, string evaluationId, Evaluation body = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Evaluation>> PutConversationEvaluationAsyncWithHttpInfo (string conversationId, string evaluationId, Evaluation body = null, string expand = null);
         
         /// <summary>
         /// Delete an evaluation
@@ -958,7 +958,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>Evaluation</returns>
-        Evaluation DeleteConversationEvaluationsByEvaluationId (string conversationId, string evaluationId, string expand = null);
+        Evaluation DeleteConversationEvaluation (string conversationId, string evaluationId, string expand = null);
   
         /// <summary>
         /// Delete an evaluation
@@ -970,7 +970,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>ApiResponse of Evaluation</returns>
-        ApiResponse<Evaluation> DeleteConversationEvaluationsByEvaluationIdWithHttpInfo (string conversationId, string evaluationId, string expand = null);
+        ApiResponse<Evaluation> DeleteConversationEvaluationWithHttpInfo (string conversationId, string evaluationId, string expand = null);
 
         /// <summary>
         /// Delete an evaluation
@@ -982,7 +982,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>Task of Evaluation</returns>
-        System.Threading.Tasks.Task<Evaluation> DeleteConversationEvaluationsByEvaluationIdAsync (string conversationId, string evaluationId, string expand = null);
+        System.Threading.Tasks.Task<Evaluation> DeleteConversationEvaluationAsync (string conversationId, string evaluationId, string expand = null);
 
         /// <summary>
         /// Delete an evaluation
@@ -994,7 +994,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Evaluation>> DeleteConversationEvaluationsByEvaluationIdAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Evaluation>> DeleteConversationEvaluationAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null);
         
         /// <summary>
         /// Queries Evaluations and returns a paged list
@@ -1101,7 +1101,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param>
         /// <param name="expand">evaluator,agent</param>
         /// <returns>EvaluationEntityListing</returns>
-        EvaluationEntityListing CreateEvaluationsQuery (EvaluationQueryRequest body = null, string expand = null);
+        EvaluationEntityListing PostEvaluationsQuery (EvaluationQueryRequest body = null, string expand = null);
   
         /// <summary>
         /// Query evaluations
@@ -1112,7 +1112,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param>
         /// <param name="expand">evaluator,agent</param>
         /// <returns>ApiResponse of EvaluationEntityListing</returns>
-        ApiResponse<EvaluationEntityListing> CreateEvaluationsQueryWithHttpInfo (EvaluationQueryRequest body = null, string expand = null);
+        ApiResponse<EvaluationEntityListing> PostEvaluationsQueryWithHttpInfo (EvaluationQueryRequest body = null, string expand = null);
 
         /// <summary>
         /// Query evaluations
@@ -1123,7 +1123,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param>
         /// <param name="expand">evaluator,agent</param>
         /// <returns>Task of EvaluationEntityListing</returns>
-        System.Threading.Tasks.Task<EvaluationEntityListing> CreateEvaluationsQueryAsync (EvaluationQueryRequest body = null, string expand = null);
+        System.Threading.Tasks.Task<EvaluationEntityListing> PostEvaluationsQueryAsync (EvaluationQueryRequest body = null, string expand = null);
 
         /// <summary>
         /// Query evaluations
@@ -1134,7 +1134,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param>
         /// <param name="expand">evaluator,agent</param>
         /// <returns>Task of ApiResponse (EvaluationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> CreateEvaluationsQueryAsyncWithHttpInfo (EvaluationQueryRequest body = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> PostEvaluationsQueryAsyncWithHttpInfo (EvaluationQueryRequest body = null, string expand = null);
         
         /// <summary>
         /// Score evaluation
@@ -1144,7 +1144,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">evaluationAndScoringSet</param>
         /// <returns>EvaluationScoringSet</returns>
-        EvaluationScoringSet CreateEvaluationsScoring (EvaluationFormAndScoringSet body = null);
+        EvaluationScoringSet PostEvaluationsScoring (EvaluationFormAndScoringSet body = null);
   
         /// <summary>
         /// Score evaluation
@@ -1154,7 +1154,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">evaluationAndScoringSet</param>
         /// <returns>ApiResponse of EvaluationScoringSet</returns>
-        ApiResponse<EvaluationScoringSet> CreateEvaluationsScoringWithHttpInfo (EvaluationFormAndScoringSet body = null);
+        ApiResponse<EvaluationScoringSet> PostEvaluationsScoringWithHttpInfo (EvaluationFormAndScoringSet body = null);
 
         /// <summary>
         /// Score evaluation
@@ -1164,7 +1164,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">evaluationAndScoringSet</param>
         /// <returns>Task of EvaluationScoringSet</returns>
-        System.Threading.Tasks.Task<EvaluationScoringSet> CreateEvaluationsScoringAsync (EvaluationFormAndScoringSet body = null);
+        System.Threading.Tasks.Task<EvaluationScoringSet> PostEvaluationsScoringAsync (EvaluationFormAndScoringSet body = null);
 
         /// <summary>
         /// Score evaluation
@@ -1174,7 +1174,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">evaluationAndScoringSet</param>
         /// <returns>Task of ApiResponse (EvaluationScoringSet)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationScoringSet>> CreateEvaluationsScoringAsyncWithHttpInfo (EvaluationFormAndScoringSet body = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationScoringSet>> PostEvaluationsScoringAsyncWithHttpInfo (EvaluationFormAndScoringSet body = null);
         
         /// <summary>
         /// Get an evaluator activity
@@ -1350,7 +1350,8 @@ namespace ININ.PureCloudApi.Api
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationRecordings");
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->GetConversationRecordings");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings";
@@ -1360,15 +1361,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1382,7 +1389,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1393,7 +1399,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -1439,18 +1447,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1475,7 +1489,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
@@ -1500,9 +1516,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="download">requesting a download format of the recording</param> 
         /// <param name="fileName">the name of the downloaded fileName</param> 
         /// <returns></returns>
-        public void GetConversationRecordingsByRecordingId (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null)
+        public void GetConversationRecording (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null)
         {
-             GetConversationRecordingsByRecordingIdWithHttpInfo(conversationId, recordingId, maxWaitMs, formatId, download, fileName);
+             GetConversationRecordingWithHttpInfo(conversationId, recordingId, maxWaitMs, formatId, download, fileName);
         }
 
         /// <summary>
@@ -1515,14 +1531,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="download">requesting a download format of the recording</param> 
         /// <param name="fileName">the name of the downloaded fileName</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetConversationRecordingsByRecordingIdWithHttpInfo (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null)
+        public ApiResponse<Object> GetConversationRecordingWithHttpInfo (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationRecordingsByRecordingId");
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->GetConversationRecording");
             
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling GetConversationRecordingsByRecordingId");
+            if (recordingId == null)
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling QualityApi->GetConversationRecording");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}";
@@ -1532,15 +1550,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1557,7 +1581,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1568,14 +1591,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetConversationRecordingsByRecordingId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationRecording: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetConversationRecordingsByRecordingId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationRecording: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -1593,9 +1618,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="download">requesting a download format of the recording</param>
         /// <param name="fileName">the name of the downloaded fileName</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetConversationRecordingsByRecordingIdAsync (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null)
+        public async System.Threading.Tasks.Task GetConversationRecordingAsync (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null)
         {
-             await GetConversationRecordingsByRecordingIdAsyncWithHttpInfo(conversationId, recordingId, maxWaitMs, formatId, download, fileName);
+             await GetConversationRecordingAsyncWithHttpInfo(conversationId, recordingId, maxWaitMs, formatId, download, fileName);
 
         }
 
@@ -1609,30 +1634,36 @@ namespace ININ.PureCloudApi.Api
         /// <param name="download">requesting a download format of the recording</param>
         /// <param name="fileName">the name of the downloaded fileName</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetConversationRecordingsByRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetConversationRecordingAsyncWithHttpInfo (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationRecordingsByRecordingId");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationRecording");
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling GetConversationRecordingsByRecordingId");
+            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling GetConversationRecording");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1660,14 +1691,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetConversationRecordingsByRecordingId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationRecording: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetConversationRecordingsByRecordingId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationRecording: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -1683,9 +1716,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">recording</param> 
         /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param> 
         /// <returns></returns>
-        public void UpdateConversationRecordingsByRecordingId (string conversationId, string recordingId, Recording body, int? restoreDays = null)
+        public void PutConversationRecording (string conversationId, string recordingId, Recording body, int? restoreDays = null)
         {
-             UpdateConversationRecordingsByRecordingIdWithHttpInfo(conversationId, recordingId, body, restoreDays);
+             PutConversationRecordingWithHttpInfo(conversationId, recordingId, body, restoreDays);
         }
 
         /// <summary>
@@ -1696,17 +1729,20 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">recording</param> 
         /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UpdateConversationRecordingsByRecordingIdWithHttpInfo (string conversationId, string recordingId, Recording body, int? restoreDays = null)
+        public ApiResponse<Object> PutConversationRecordingWithHttpInfo (string conversationId, string recordingId, Recording body, int? restoreDays = null)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling UpdateConversationRecordingsByRecordingId");
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->PutConversationRecording");
             
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling UpdateConversationRecordingsByRecordingId");
+            if (recordingId == null)
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling QualityApi->PutConversationRecording");
             
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling UpdateConversationRecordingsByRecordingId");
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutConversationRecording");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}";
@@ -1716,15 +1752,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1736,10 +1778,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1750,14 +1797,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateConversationRecordingsByRecordingId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutConversationRecording: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateConversationRecordingsByRecordingId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutConversationRecording: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -1773,9 +1822,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">recording</param>
         /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateConversationRecordingsByRecordingIdAsync (string conversationId, string recordingId, Recording body, int? restoreDays = null)
+        public async System.Threading.Tasks.Task PutConversationRecordingAsync (string conversationId, string recordingId, Recording body, int? restoreDays = null)
         {
-             await UpdateConversationRecordingsByRecordingIdAsyncWithHttpInfo(conversationId, recordingId, body, restoreDays);
+             await PutConversationRecordingAsyncWithHttpInfo(conversationId, recordingId, body, restoreDays);
 
         }
 
@@ -1787,32 +1836,38 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">recording</param>
         /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateConversationRecordingsByRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId, Recording body, int? restoreDays = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutConversationRecordingAsyncWithHttpInfo (string conversationId, string recordingId, Recording body, int? restoreDays = null)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling UpdateConversationRecordingsByRecordingId");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling PutConversationRecording");
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling UpdateConversationRecordingsByRecordingId");
+            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling PutConversationRecording");
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling UpdateConversationRecordingsByRecordingId");
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PutConversationRecording");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1838,14 +1893,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateConversationRecordingsByRecordingId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutConversationRecording: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateConversationRecordingsByRecordingId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutConversationRecording: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -1859,9 +1916,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param> 
         /// <param name="recordingId">Recording ID</param> 
         /// <returns>List&lt;Annotation&gt;</returns>
-        public List<Annotation> GetConversationRecordingsByRecordingIdAnnotations (string conversationId, string recordingId)
+        public List<Annotation> GetConversationRecordingAnnotations (string conversationId, string recordingId)
         {
-             ApiResponse<List<Annotation>> response = GetConversationRecordingsByRecordingIdAnnotationsWithHttpInfo(conversationId, recordingId);
+             ApiResponse<List<Annotation>> response = GetConversationRecordingAnnotationsWithHttpInfo(conversationId, recordingId);
              return response.Data;
         }
 
@@ -1871,14 +1928,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param> 
         /// <param name="recordingId">Recording ID</param> 
         /// <returns>ApiResponse of List&lt;Annotation&gt;</returns>
-        public ApiResponse< List<Annotation> > GetConversationRecordingsByRecordingIdAnnotationsWithHttpInfo (string conversationId, string recordingId)
+        public ApiResponse< List<Annotation> > GetConversationRecordingAnnotationsWithHttpInfo (string conversationId, string recordingId)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationRecordingsByRecordingIdAnnotations");
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->GetConversationRecordingAnnotations");
             
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling GetConversationRecordingsByRecordingIdAnnotations");
+            if (recordingId == null)
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling QualityApi->GetConversationRecordingAnnotations");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations";
@@ -1888,15 +1947,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -1909,7 +1974,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -1920,14 +1984,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetConversationRecordingsByRecordingIdAnnotations: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationRecordingAnnotations: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetConversationRecordingsByRecordingIdAnnotations: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationRecordingAnnotations: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<List<Annotation>>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1941,9 +2007,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <returns>Task of List&lt;Annotation&gt;</returns>
-        public async System.Threading.Tasks.Task<List<Annotation>> GetConversationRecordingsByRecordingIdAnnotationsAsync (string conversationId, string recordingId)
+        public async System.Threading.Tasks.Task<List<Annotation>> GetConversationRecordingAnnotationsAsync (string conversationId, string recordingId)
         {
-             ApiResponse<List<Annotation>> response = await GetConversationRecordingsByRecordingIdAnnotationsAsyncWithHttpInfo(conversationId, recordingId);
+             ApiResponse<List<Annotation>> response = await GetConversationRecordingAnnotationsAsyncWithHttpInfo(conversationId, recordingId);
              return response.Data;
 
         }
@@ -1954,30 +2020,36 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <returns>Task of ApiResponse (List&lt;Annotation&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<Annotation>>> GetConversationRecordingsByRecordingIdAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Annotation>>> GetConversationRecordingAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationRecordingsByRecordingIdAnnotations");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationRecordingAnnotations");
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling GetConversationRecordingsByRecordingIdAnnotations");
+            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling GetConversationRecordingAnnotations");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2001,14 +2073,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetConversationRecordingsByRecordingIdAnnotations: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationRecordingAnnotations: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetConversationRecordingsByRecordingIdAnnotations: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationRecordingAnnotations: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<List<Annotation>>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2023,9 +2097,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param> 
         /// <param name="body">annotation</param> 
         /// <returns>Annotation</returns>
-        public Annotation CreateConversationRecordingsByRecordingIdAnnotations (string conversationId, string recordingId, Annotation body = null)
+        public Annotation PostConversationRecordingAnnotations (string conversationId, string recordingId, Annotation body = null)
         {
-             ApiResponse<Annotation> response = CreateConversationRecordingsByRecordingIdAnnotationsWithHttpInfo(conversationId, recordingId, body);
+             ApiResponse<Annotation> response = PostConversationRecordingAnnotationsWithHttpInfo(conversationId, recordingId, body);
              return response.Data;
         }
 
@@ -2036,14 +2110,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param> 
         /// <param name="body">annotation</param> 
         /// <returns>ApiResponse of Annotation</returns>
-        public ApiResponse< Annotation > CreateConversationRecordingsByRecordingIdAnnotationsWithHttpInfo (string conversationId, string recordingId, Annotation body = null)
+        public ApiResponse< Annotation > PostConversationRecordingAnnotationsWithHttpInfo (string conversationId, string recordingId, Annotation body = null)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling CreateConversationRecordingsByRecordingIdAnnotations");
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->PostConversationRecordingAnnotations");
             
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling CreateConversationRecordingsByRecordingIdAnnotations");
+            if (recordingId == null)
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling QualityApi->PostConversationRecordingAnnotations");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations";
@@ -2053,15 +2129,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2072,10 +2154,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -2086,14 +2173,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateConversationRecordingsByRecordingIdAnnotations: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostConversationRecordingAnnotations: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateConversationRecordingsByRecordingIdAnnotations: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostConversationRecordingAnnotations: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Annotation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2108,9 +2197,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of Annotation</returns>
-        public async System.Threading.Tasks.Task<Annotation> CreateConversationRecordingsByRecordingIdAnnotationsAsync (string conversationId, string recordingId, Annotation body = null)
+        public async System.Threading.Tasks.Task<Annotation> PostConversationRecordingAnnotationsAsync (string conversationId, string recordingId, Annotation body = null)
         {
-             ApiResponse<Annotation> response = await CreateConversationRecordingsByRecordingIdAnnotationsAsyncWithHttpInfo(conversationId, recordingId, body);
+             ApiResponse<Annotation> response = await PostConversationRecordingAnnotationsAsyncWithHttpInfo(conversationId, recordingId, body);
              return response.Data;
 
         }
@@ -2122,30 +2211,36 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Annotation>> CreateConversationRecordingsByRecordingIdAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId, Annotation body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Annotation>> PostConversationRecordingAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId, Annotation body = null)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling CreateConversationRecordingsByRecordingIdAnnotations");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling PostConversationRecordingAnnotations");
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling CreateConversationRecordingsByRecordingIdAnnotations");
+            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling PostConversationRecordingAnnotations");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2170,14 +2265,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateConversationRecordingsByRecordingIdAnnotations: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostConversationRecordingAnnotations: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateConversationRecordingsByRecordingIdAnnotations: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostConversationRecordingAnnotations: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Annotation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2192,9 +2289,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param> 
         /// <param name="annotationId">Annotation ID</param> 
         /// <returns>Annotation</returns>
-        public Annotation GetConversationRecordingsByRecordingIdAnnotationsByAnnotationId (string conversationId, string recordingId, string annotationId)
+        public Annotation GetConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId)
         {
-             ApiResponse<Annotation> response = GetConversationRecordingsByRecordingIdAnnotationsByAnnotationIdWithHttpInfo(conversationId, recordingId, annotationId);
+             ApiResponse<Annotation> response = GetConversationRecordingAnnotationWithHttpInfo(conversationId, recordingId, annotationId);
              return response.Data;
         }
 
@@ -2205,17 +2302,20 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param> 
         /// <param name="annotationId">Annotation ID</param> 
         /// <returns>ApiResponse of Annotation</returns>
-        public ApiResponse< Annotation > GetConversationRecordingsByRecordingIdAnnotationsByAnnotationIdWithHttpInfo (string conversationId, string recordingId, string annotationId)
+        public ApiResponse< Annotation > GetConversationRecordingAnnotationWithHttpInfo (string conversationId, string recordingId, string annotationId)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->GetConversationRecordingAnnotation");
             
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling GetConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
+            if (recordingId == null)
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling QualityApi->GetConversationRecordingAnnotation");
             
             // verify the required parameter 'annotationId' is set
-            if (annotationId == null) throw new ApiException(400, "Missing required parameter 'annotationId' when calling GetConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
+            if (annotationId == null)
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling QualityApi->GetConversationRecordingAnnotation");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
@@ -2225,15 +2325,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2247,7 +2353,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -2258,14 +2363,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetConversationRecordingsByRecordingIdAnnotationsByAnnotationId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationRecordingAnnotation: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetConversationRecordingsByRecordingIdAnnotationsByAnnotationId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationRecordingAnnotation: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Annotation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2280,9 +2387,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of Annotation</returns>
-        public async System.Threading.Tasks.Task<Annotation> GetConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsync (string conversationId, string recordingId, string annotationId)
+        public async System.Threading.Tasks.Task<Annotation> GetConversationRecordingAnnotationAsync (string conversationId, string recordingId, string annotationId)
         {
-             ApiResponse<Annotation> response = await GetConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsyncWithHttpInfo(conversationId, recordingId, annotationId);
+             ApiResponse<Annotation> response = await GetConversationRecordingAnnotationAsyncWithHttpInfo(conversationId, recordingId, annotationId);
              return response.Data;
 
         }
@@ -2294,32 +2401,38 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Annotation>> GetConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId)
+        public async System.Threading.Tasks.Task<ApiResponse<Annotation>> GetConversationRecordingAnnotationAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationRecordingAnnotation");
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling GetConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
+            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling GetConversationRecordingAnnotation");
             // verify the required parameter 'annotationId' is set
-            if (annotationId == null) throw new ApiException(400, "Missing required parameter 'annotationId' when calling GetConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
+            if (annotationId == null) throw new ApiException(400, "Missing required parameter 'annotationId' when calling GetConversationRecordingAnnotation");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2344,14 +2457,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetConversationRecordingsByRecordingIdAnnotationsByAnnotationId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationRecordingAnnotation: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetConversationRecordingsByRecordingIdAnnotationsByAnnotationId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationRecordingAnnotation: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Annotation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2367,9 +2482,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="annotationId">Annotation ID</param> 
         /// <param name="body">annotation</param> 
         /// <returns>Annotation</returns>
-        public Annotation UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationId (string conversationId, string recordingId, string annotationId, Annotation body = null)
+        public Annotation PutConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId, Annotation body = null)
         {
-             ApiResponse<Annotation> response = UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationIdWithHttpInfo(conversationId, recordingId, annotationId, body);
+             ApiResponse<Annotation> response = PutConversationRecordingAnnotationWithHttpInfo(conversationId, recordingId, annotationId, body);
              return response.Data;
         }
 
@@ -2381,17 +2496,20 @@ namespace ININ.PureCloudApi.Api
         /// <param name="annotationId">Annotation ID</param> 
         /// <param name="body">annotation</param> 
         /// <returns>ApiResponse of Annotation</returns>
-        public ApiResponse< Annotation > UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationIdWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body = null)
+        public ApiResponse< Annotation > PutConversationRecordingAnnotationWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body = null)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->PutConversationRecordingAnnotation");
             
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
+            if (recordingId == null)
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling QualityApi->PutConversationRecordingAnnotation");
             
             // verify the required parameter 'annotationId' is set
-            if (annotationId == null) throw new ApiException(400, "Missing required parameter 'annotationId' when calling UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
+            if (annotationId == null)
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling QualityApi->PutConversationRecordingAnnotation");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
@@ -2401,15 +2519,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2421,10 +2545,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -2435,14 +2564,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutConversationRecordingAnnotation: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutConversationRecordingAnnotation: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Annotation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2458,9 +2589,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of Annotation</returns>
-        public async System.Threading.Tasks.Task<Annotation> UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsync (string conversationId, string recordingId, string annotationId, Annotation body = null)
+        public async System.Threading.Tasks.Task<Annotation> PutConversationRecordingAnnotationAsync (string conversationId, string recordingId, string annotationId, Annotation body = null)
         {
-             ApiResponse<Annotation> response = await UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsyncWithHttpInfo(conversationId, recordingId, annotationId, body);
+             ApiResponse<Annotation> response = await PutConversationRecordingAnnotationAsyncWithHttpInfo(conversationId, recordingId, annotationId, body);
              return response.Data;
 
         }
@@ -2473,32 +2604,38 @@ namespace ININ.PureCloudApi.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Annotation>> UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Annotation>> PutConversationRecordingAnnotationAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body = null)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling PutConversationRecordingAnnotation");
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
+            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling PutConversationRecordingAnnotation");
             // verify the required parameter 'annotationId' is set
-            if (annotationId == null) throw new ApiException(400, "Missing required parameter 'annotationId' when calling UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
+            if (annotationId == null) throw new ApiException(400, "Missing required parameter 'annotationId' when calling PutConversationRecordingAnnotation");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2524,14 +2661,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutConversationRecordingAnnotation: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutConversationRecordingAnnotation: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Annotation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2546,9 +2685,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param> 
         /// <param name="annotationId">Annotation ID</param> 
         /// <returns></returns>
-        public void DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationId (string conversationId, string recordingId, string annotationId)
+        public void DeleteConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId)
         {
-             DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationIdWithHttpInfo(conversationId, recordingId, annotationId);
+             DeleteConversationRecordingAnnotationWithHttpInfo(conversationId, recordingId, annotationId);
         }
 
         /// <summary>
@@ -2558,17 +2697,20 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param> 
         /// <param name="annotationId">Annotation ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationIdWithHttpInfo (string conversationId, string recordingId, string annotationId)
+        public ApiResponse<Object> DeleteConversationRecordingAnnotationWithHttpInfo (string conversationId, string recordingId, string annotationId)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->DeleteConversationRecordingAnnotation");
             
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
+            if (recordingId == null)
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling QualityApi->DeleteConversationRecordingAnnotation");
             
             // verify the required parameter 'annotationId' is set
-            if (annotationId == null) throw new ApiException(400, "Missing required parameter 'annotationId' when calling DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
+            if (annotationId == null)
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling QualityApi->DeleteConversationRecordingAnnotation");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
@@ -2578,15 +2720,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2600,7 +2748,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -2611,14 +2758,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteConversationRecordingAnnotation: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteConversationRecordingAnnotation: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -2633,9 +2782,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsync (string conversationId, string recordingId, string annotationId)
+        public async System.Threading.Tasks.Task DeleteConversationRecordingAnnotationAsync (string conversationId, string recordingId, string annotationId)
         {
-             await DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsyncWithHttpInfo(conversationId, recordingId, annotationId);
+             await DeleteConversationRecordingAnnotationAsyncWithHttpInfo(conversationId, recordingId, annotationId);
 
         }
 
@@ -2646,32 +2795,38 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationRecordingAnnotationAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling DeleteConversationRecordingAnnotation");
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
+            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling DeleteConversationRecordingAnnotation");
             // verify the required parameter 'annotationId' is set
-            if (annotationId == null) throw new ApiException(400, "Missing required parameter 'annotationId' when calling DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
+            if (annotationId == null) throw new ApiException(400, "Missing required parameter 'annotationId' when calling DeleteConversationRecordingAnnotation");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2696,14 +2851,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteConversationRecordingAnnotation: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteConversationRecordingAnnotation: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -2756,15 +2913,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2785,7 +2948,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -2796,7 +2958,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -2854,18 +3018,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2897,7 +3067,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
@@ -2953,15 +3125,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -2980,7 +3158,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -2991,7 +3168,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -3045,18 +3224,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3086,7 +3271,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
@@ -3107,9 +3294,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param> 
         /// <param name="expand">calibratorId</param> 
         /// <returns>Calibration</returns>
-        public Calibration CreateCalibrations (Calibration body = null, string expand = null)
+        public Calibration PostCalibrations (Calibration body = null, string expand = null)
         {
-             ApiResponse<Calibration> response = CreateCalibrationsWithHttpInfo(body, expand);
+             ApiResponse<Calibration> response = PostCalibrationsWithHttpInfo(body, expand);
              return response.Data;
         }
 
@@ -3119,7 +3306,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param> 
         /// <param name="expand">calibratorId</param> 
         /// <returns>ApiResponse of Calibration</returns>
-        public ApiResponse< Calibration > CreateCalibrationsWithHttpInfo (Calibration body = null, string expand = null)
+        public ApiResponse< Calibration > PostCalibrationsWithHttpInfo (Calibration body = null, string expand = null)
         {
             
     
@@ -3130,15 +3317,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3148,10 +3341,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -3162,14 +3360,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateCalibrations: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostCalibrations: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateCalibrations: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostCalibrations: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Calibration>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3183,9 +3383,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId</param>
         /// <returns>Task of Calibration</returns>
-        public async System.Threading.Tasks.Task<Calibration> CreateCalibrationsAsync (Calibration body = null, string expand = null)
+        public async System.Threading.Tasks.Task<Calibration> PostCalibrationsAsync (Calibration body = null, string expand = null)
         {
-             ApiResponse<Calibration> response = await CreateCalibrationsAsyncWithHttpInfo(body, expand);
+             ApiResponse<Calibration> response = await PostCalibrationsAsyncWithHttpInfo(body, expand);
              return response.Data;
 
         }
@@ -3196,7 +3396,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId</param>
         /// <returns>Task of ApiResponse (Calibration)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Calibration>> CreateCalibrationsAsyncWithHttpInfo (Calibration body = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Calibration>> PostCalibrationsAsyncWithHttpInfo (Calibration body = null, string expand = null)
         {
             
     
@@ -3204,18 +3404,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3239,14 +3445,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateCalibrations: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostCalibrations: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateCalibrations: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostCalibrations: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Calibration>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3276,7 +3484,8 @@ namespace ININ.PureCloudApi.Api
         {
             
             // verify the required parameter 'calibrationId' is set
-            if (calibrationId == null) throw new ApiException(400, "Missing required parameter 'calibrationId' when calling GetCalibration");
+            if (calibrationId == null)
+                throw new ApiException(400, "Missing required parameter 'calibrationId' when calling QualityApi->GetCalibration");
             
     
             var path_ = "/api/v1/quality/calibrations/{calibrationId}";
@@ -3286,15 +3495,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3307,7 +3522,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -3318,7 +3532,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -3362,18 +3578,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3397,7 +3619,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
@@ -3418,9 +3642,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param> 
         /// <param name="body">Calibration</param> 
         /// <returns>Calibration</returns>
-        public Calibration UpdateCalibration (string calibrationId, Calibration body = null)
+        public Calibration PutCalibration (string calibrationId, Calibration body = null)
         {
-             ApiResponse<Calibration> response = UpdateCalibrationWithHttpInfo(calibrationId, body);
+             ApiResponse<Calibration> response = PutCalibrationWithHttpInfo(calibrationId, body);
              return response.Data;
         }
 
@@ -3430,11 +3654,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param> 
         /// <param name="body">Calibration</param> 
         /// <returns>ApiResponse of Calibration</returns>
-        public ApiResponse< Calibration > UpdateCalibrationWithHttpInfo (string calibrationId, Calibration body = null)
+        public ApiResponse< Calibration > PutCalibrationWithHttpInfo (string calibrationId, Calibration body = null)
         {
             
             // verify the required parameter 'calibrationId' is set
-            if (calibrationId == null) throw new ApiException(400, "Missing required parameter 'calibrationId' when calling UpdateCalibration");
+            if (calibrationId == null)
+                throw new ApiException(400, "Missing required parameter 'calibrationId' when calling QualityApi->PutCalibration");
             
     
             var path_ = "/api/v1/quality/calibrations/{calibrationId}";
@@ -3444,15 +3669,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3462,10 +3693,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -3476,14 +3712,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateCalibration: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutCalibration: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateCalibration: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutCalibration: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Calibration>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3497,9 +3735,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="body">Calibration</param>
         /// <returns>Task of Calibration</returns>
-        public async System.Threading.Tasks.Task<Calibration> UpdateCalibrationAsync (string calibrationId, Calibration body = null)
+        public async System.Threading.Tasks.Task<Calibration> PutCalibrationAsync (string calibrationId, Calibration body = null)
         {
-             ApiResponse<Calibration> response = await UpdateCalibrationAsyncWithHttpInfo(calibrationId, body);
+             ApiResponse<Calibration> response = await PutCalibrationAsyncWithHttpInfo(calibrationId, body);
              return response.Data;
 
         }
@@ -3510,28 +3748,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="body">Calibration</param>
         /// <returns>Task of ApiResponse (Calibration)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Calibration>> UpdateCalibrationAsyncWithHttpInfo (string calibrationId, Calibration body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Calibration>> PutCalibrationAsyncWithHttpInfo (string calibrationId, Calibration body = null)
         {
             // verify the required parameter 'calibrationId' is set
-            if (calibrationId == null) throw new ApiException(400, "Missing required parameter 'calibrationId' when calling UpdateCalibration");
+            if (calibrationId == null) throw new ApiException(400, "Missing required parameter 'calibrationId' when calling PutCalibration");
             
     
             var path_ = "/api/v1/quality/calibrations/{calibrationId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3555,14 +3799,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateCalibration: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutCalibration: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateCalibration: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutCalibration: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Calibration>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3592,7 +3838,8 @@ namespace ININ.PureCloudApi.Api
         {
             
             // verify the required parameter 'calibrationId' is set
-            if (calibrationId == null) throw new ApiException(400, "Missing required parameter 'calibrationId' when calling DeleteCalibration");
+            if (calibrationId == null)
+                throw new ApiException(400, "Missing required parameter 'calibrationId' when calling QualityApi->DeleteCalibration");
             
     
             var path_ = "/api/v1/quality/calibrations/{calibrationId}";
@@ -3602,15 +3849,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3623,7 +3876,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -3634,7 +3886,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -3678,18 +3932,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3713,7 +3973,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
@@ -3760,7 +4022,8 @@ namespace ININ.PureCloudApi.Api
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationAudits");
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->GetConversationAudits");
             
     
             var path_ = "/api/v1/quality/conversations/{conversationId}/audits";
@@ -3770,15 +4033,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3796,7 +4065,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -3807,7 +4075,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -3861,18 +4131,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3901,7 +4177,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
@@ -3923,9 +4201,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param> 
         /// <param name="expand">evaluatorId</param> 
         /// <returns>Evaluation</returns>
-        public Evaluation CreateConversationEvaluations (string conversationId, Evaluation body = null, string expand = null)
+        public Evaluation PostConversationEvaluations (string conversationId, Evaluation body = null, string expand = null)
         {
-             ApiResponse<Evaluation> response = CreateConversationEvaluationsWithHttpInfo(conversationId, body, expand);
+             ApiResponse<Evaluation> response = PostConversationEvaluationsWithHttpInfo(conversationId, body, expand);
              return response.Data;
         }
 
@@ -3936,11 +4214,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param> 
         /// <param name="expand">evaluatorId</param> 
         /// <returns>ApiResponse of Evaluation</returns>
-        public ApiResponse< Evaluation > CreateConversationEvaluationsWithHttpInfo (string conversationId, Evaluation body = null, string expand = null)
+        public ApiResponse< Evaluation > PostConversationEvaluationsWithHttpInfo (string conversationId, Evaluation body = null, string expand = null)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling CreateConversationEvaluations");
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->PostConversationEvaluations");
             
     
             var path_ = "/api/v1/quality/conversations/{conversationId}/evaluations";
@@ -3950,15 +4229,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -3969,10 +4254,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -3983,14 +4273,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateConversationEvaluations: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostConversationEvaluations: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateConversationEvaluations: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostConversationEvaluations: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Evaluation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4005,9 +4297,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>Task of Evaluation</returns>
-        public async System.Threading.Tasks.Task<Evaluation> CreateConversationEvaluationsAsync (string conversationId, Evaluation body = null, string expand = null)
+        public async System.Threading.Tasks.Task<Evaluation> PostConversationEvaluationsAsync (string conversationId, Evaluation body = null, string expand = null)
         {
-             ApiResponse<Evaluation> response = await CreateConversationEvaluationsAsyncWithHttpInfo(conversationId, body, expand);
+             ApiResponse<Evaluation> response = await PostConversationEvaluationsAsyncWithHttpInfo(conversationId, body, expand);
              return response.Data;
 
         }
@@ -4019,28 +4311,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> CreateConversationEvaluationsAsyncWithHttpInfo (string conversationId, Evaluation body = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> PostConversationEvaluationsAsyncWithHttpInfo (string conversationId, Evaluation body = null, string expand = null)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling CreateConversationEvaluations");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling PostConversationEvaluations");
             
     
             var path_ = "/api/v1/quality/conversations/{conversationId}/evaluations";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -4065,14 +4363,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateConversationEvaluations: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostConversationEvaluations: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateConversationEvaluations: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostConversationEvaluations: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Evaluation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4087,9 +4387,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param> 
         /// <param name="expand">agent, evaluator, evaluationForm</param> 
         /// <returns>Evaluation</returns>
-        public Evaluation GetConversationEvaluationsByEvaluationId (string conversationId, string evaluationId, string expand = null)
+        public Evaluation GetConversationEvaluation (string conversationId, string evaluationId, string expand = null)
         {
-             ApiResponse<Evaluation> response = GetConversationEvaluationsByEvaluationIdWithHttpInfo(conversationId, evaluationId, expand);
+             ApiResponse<Evaluation> response = GetConversationEvaluationWithHttpInfo(conversationId, evaluationId, expand);
              return response.Data;
         }
 
@@ -4100,14 +4400,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param> 
         /// <param name="expand">agent, evaluator, evaluationForm</param> 
         /// <returns>ApiResponse of Evaluation</returns>
-        public ApiResponse< Evaluation > GetConversationEvaluationsByEvaluationIdWithHttpInfo (string conversationId, string evaluationId, string expand = null)
+        public ApiResponse< Evaluation > GetConversationEvaluationWithHttpInfo (string conversationId, string evaluationId, string expand = null)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationEvaluationsByEvaluationId");
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->GetConversationEvaluation");
             
             // verify the required parameter 'evaluationId' is set
-            if (evaluationId == null) throw new ApiException(400, "Missing required parameter 'evaluationId' when calling GetConversationEvaluationsByEvaluationId");
+            if (evaluationId == null)
+                throw new ApiException(400, "Missing required parameter 'evaluationId' when calling QualityApi->GetConversationEvaluation");
             
     
             var path_ = "/api/v1/quality/conversations/{conversationId}/evaluations/{evaluationId}";
@@ -4117,15 +4419,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -4139,7 +4447,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -4150,14 +4457,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetConversationEvaluationsByEvaluationId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationEvaluation: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetConversationEvaluationsByEvaluationId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationEvaluation: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Evaluation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4172,9 +4481,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param>
         /// <param name="expand">agent, evaluator, evaluationForm</param>
         /// <returns>Task of Evaluation</returns>
-        public async System.Threading.Tasks.Task<Evaluation> GetConversationEvaluationsByEvaluationIdAsync (string conversationId, string evaluationId, string expand = null)
+        public async System.Threading.Tasks.Task<Evaluation> GetConversationEvaluationAsync (string conversationId, string evaluationId, string expand = null)
         {
-             ApiResponse<Evaluation> response = await GetConversationEvaluationsByEvaluationIdAsyncWithHttpInfo(conversationId, evaluationId, expand);
+             ApiResponse<Evaluation> response = await GetConversationEvaluationAsyncWithHttpInfo(conversationId, evaluationId, expand);
              return response.Data;
 
         }
@@ -4186,30 +4495,36 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param>
         /// <param name="expand">agent, evaluator, evaluationForm</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> GetConversationEvaluationsByEvaluationIdAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> GetConversationEvaluationAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationEvaluationsByEvaluationId");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationEvaluation");
             // verify the required parameter 'evaluationId' is set
-            if (evaluationId == null) throw new ApiException(400, "Missing required parameter 'evaluationId' when calling GetConversationEvaluationsByEvaluationId");
+            if (evaluationId == null) throw new ApiException(400, "Missing required parameter 'evaluationId' when calling GetConversationEvaluation");
             
     
             var path_ = "/api/v1/quality/conversations/{conversationId}/evaluations/{evaluationId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -4234,14 +4549,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetConversationEvaluationsByEvaluationId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationEvaluation: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetConversationEvaluationsByEvaluationId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationEvaluation: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Evaluation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4257,9 +4574,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param> 
         /// <param name="expand">evaluatorId</param> 
         /// <returns>Evaluation</returns>
-        public Evaluation UpdateConversationEvaluationsByEvaluationId (string conversationId, string evaluationId, Evaluation body = null, string expand = null)
+        public Evaluation PutConversationEvaluation (string conversationId, string evaluationId, Evaluation body = null, string expand = null)
         {
-             ApiResponse<Evaluation> response = UpdateConversationEvaluationsByEvaluationIdWithHttpInfo(conversationId, evaluationId, body, expand);
+             ApiResponse<Evaluation> response = PutConversationEvaluationWithHttpInfo(conversationId, evaluationId, body, expand);
              return response.Data;
         }
 
@@ -4271,14 +4588,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param> 
         /// <param name="expand">evaluatorId</param> 
         /// <returns>ApiResponse of Evaluation</returns>
-        public ApiResponse< Evaluation > UpdateConversationEvaluationsByEvaluationIdWithHttpInfo (string conversationId, string evaluationId, Evaluation body = null, string expand = null)
+        public ApiResponse< Evaluation > PutConversationEvaluationWithHttpInfo (string conversationId, string evaluationId, Evaluation body = null, string expand = null)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling UpdateConversationEvaluationsByEvaluationId");
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->PutConversationEvaluation");
             
             // verify the required parameter 'evaluationId' is set
-            if (evaluationId == null) throw new ApiException(400, "Missing required parameter 'evaluationId' when calling UpdateConversationEvaluationsByEvaluationId");
+            if (evaluationId == null)
+                throw new ApiException(400, "Missing required parameter 'evaluationId' when calling QualityApi->PutConversationEvaluation");
             
     
             var path_ = "/api/v1/quality/conversations/{conversationId}/evaluations/{evaluationId}";
@@ -4288,15 +4607,121 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (conversationId != null) pathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+            if (evaluationId != null) pathParams.Add("evaluationId", Configuration.ApiClient.ParameterToString(evaluationId)); // path parameter
+            
+            if (expand != null) queryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            
+            
+            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling PutConversationEvaluation: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling PutConversationEvaluation: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<Evaluation>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Evaluation) Configuration.ApiClient.Deserialize(response, typeof(Evaluation)));
+            
+        }
+    
+        /// <summary>
+        /// Update an evaluation 
+        /// </summary>
+        /// <param name="conversationId"></param>
+        /// <param name="evaluationId"></param>
+        /// <param name="body">evaluation</param>
+        /// <param name="expand">evaluatorId</param>
+        /// <returns>Task of Evaluation</returns>
+        public async System.Threading.Tasks.Task<Evaluation> PutConversationEvaluationAsync (string conversationId, string evaluationId, Evaluation body = null, string expand = null)
+        {
+             ApiResponse<Evaluation> response = await PutConversationEvaluationAsyncWithHttpInfo(conversationId, evaluationId, body, expand);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Update an evaluation 
+        /// </summary>
+        /// <param name="conversationId"></param>
+        /// <param name="evaluationId"></param>
+        /// <param name="body">evaluation</param>
+        /// <param name="expand">evaluatorId</param>
+        /// <returns>Task of ApiResponse (Evaluation)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> PutConversationEvaluationAsyncWithHttpInfo (string conversationId, string evaluationId, Evaluation body = null, string expand = null)
+        {
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling PutConversationEvaluation");
+            // verify the required parameter 'evaluationId' is set
+            if (evaluationId == null) throw new ApiException(400, "Missing required parameter 'evaluationId' when calling PutConversationEvaluation");
+            
+    
+            var path_ = "/api/v1/quality/conversations/{conversationId}/evaluations/{evaluationId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -4320,103 +4745,18 @@ namespace ININ.PureCloudApi.Api
                 headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
             
-    
-            // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
-
-            int statusCode = (int) response.StatusCode;
-    
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateConversationEvaluationsByEvaluationId: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateConversationEvaluationsByEvaluationId: " + response.ErrorMessage, response.ErrorMessage);
-    
-            return new ApiResponse<Evaluation>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Evaluation) Configuration.ApiClient.Deserialize(response, typeof(Evaluation)));
-            
-        }
-    
-        /// <summary>
-        /// Update an evaluation 
-        /// </summary>
-        /// <param name="conversationId"></param>
-        /// <param name="evaluationId"></param>
-        /// <param name="body">evaluation</param>
-        /// <param name="expand">evaluatorId</param>
-        /// <returns>Task of Evaluation</returns>
-        public async System.Threading.Tasks.Task<Evaluation> UpdateConversationEvaluationsByEvaluationIdAsync (string conversationId, string evaluationId, Evaluation body = null, string expand = null)
-        {
-             ApiResponse<Evaluation> response = await UpdateConversationEvaluationsByEvaluationIdAsyncWithHttpInfo(conversationId, evaluationId, body, expand);
-             return response.Data;
-
-        }
-
-        /// <summary>
-        /// Update an evaluation 
-        /// </summary>
-        /// <param name="conversationId"></param>
-        /// <param name="evaluationId"></param>
-        /// <param name="body">evaluation</param>
-        /// <param name="expand">evaluatorId</param>
-        /// <returns>Task of ApiResponse (Evaluation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> UpdateConversationEvaluationsByEvaluationIdAsyncWithHttpInfo (string conversationId, string evaluationId, Evaluation body = null, string expand = null)
-        {
-            // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling UpdateConversationEvaluationsByEvaluationId");
-            // verify the required parameter 'evaluationId' is set
-            if (evaluationId == null) throw new ApiException(400, "Missing required parameter 'evaluationId' when calling UpdateConversationEvaluationsByEvaluationId");
-            
-    
-            var path_ = "/api/v1/quality/conversations/{conversationId}/evaluations/{evaluationId}";
-    
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
-
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
-                "application/json"
-            };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
-            if (conversationId != null) pathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
-            if (evaluationId != null) pathParams.Add("evaluationId", Configuration.ApiClient.ParameterToString(evaluationId)); // path parameter
-            
-            if (expand != null) queryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
-
-            
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling UpdateConversationEvaluationsByEvaluationId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutConversationEvaluation: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling UpdateConversationEvaluationsByEvaluationId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutConversationEvaluation: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Evaluation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4431,9 +4771,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param> 
         /// <param name="expand">evaluatorId</param> 
         /// <returns>Evaluation</returns>
-        public Evaluation DeleteConversationEvaluationsByEvaluationId (string conversationId, string evaluationId, string expand = null)
+        public Evaluation DeleteConversationEvaluation (string conversationId, string evaluationId, string expand = null)
         {
-             ApiResponse<Evaluation> response = DeleteConversationEvaluationsByEvaluationIdWithHttpInfo(conversationId, evaluationId, expand);
+             ApiResponse<Evaluation> response = DeleteConversationEvaluationWithHttpInfo(conversationId, evaluationId, expand);
              return response.Data;
         }
 
@@ -4444,14 +4784,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param> 
         /// <param name="expand">evaluatorId</param> 
         /// <returns>ApiResponse of Evaluation</returns>
-        public ApiResponse< Evaluation > DeleteConversationEvaluationsByEvaluationIdWithHttpInfo (string conversationId, string evaluationId, string expand = null)
+        public ApiResponse< Evaluation > DeleteConversationEvaluationWithHttpInfo (string conversationId, string evaluationId, string expand = null)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling DeleteConversationEvaluationsByEvaluationId");
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->DeleteConversationEvaluation");
             
             // verify the required parameter 'evaluationId' is set
-            if (evaluationId == null) throw new ApiException(400, "Missing required parameter 'evaluationId' when calling DeleteConversationEvaluationsByEvaluationId");
+            if (evaluationId == null)
+                throw new ApiException(400, "Missing required parameter 'evaluationId' when calling QualityApi->DeleteConversationEvaluation");
             
     
             var path_ = "/api/v1/quality/conversations/{conversationId}/evaluations/{evaluationId}";
@@ -4461,15 +4803,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -4483,7 +4831,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -4494,14 +4841,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteConversationEvaluationsByEvaluationId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteConversationEvaluation: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteConversationEvaluationsByEvaluationId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteConversationEvaluation: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Evaluation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4516,9 +4865,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>Task of Evaluation</returns>
-        public async System.Threading.Tasks.Task<Evaluation> DeleteConversationEvaluationsByEvaluationIdAsync (string conversationId, string evaluationId, string expand = null)
+        public async System.Threading.Tasks.Task<Evaluation> DeleteConversationEvaluationAsync (string conversationId, string evaluationId, string expand = null)
         {
-             ApiResponse<Evaluation> response = await DeleteConversationEvaluationsByEvaluationIdAsyncWithHttpInfo(conversationId, evaluationId, expand);
+             ApiResponse<Evaluation> response = await DeleteConversationEvaluationAsyncWithHttpInfo(conversationId, evaluationId, expand);
              return response.Data;
 
         }
@@ -4530,30 +4879,36 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> DeleteConversationEvaluationsByEvaluationIdAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> DeleteConversationEvaluationAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling DeleteConversationEvaluationsByEvaluationId");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling DeleteConversationEvaluation");
             // verify the required parameter 'evaluationId' is set
-            if (evaluationId == null) throw new ApiException(400, "Missing required parameter 'evaluationId' when calling DeleteConversationEvaluationsByEvaluationId");
+            if (evaluationId == null) throw new ApiException(400, "Missing required parameter 'evaluationId' when calling DeleteConversationEvaluation");
             
     
             var path_ = "/api/v1/quality/conversations/{conversationId}/evaluations/{evaluationId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -4578,14 +4933,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteConversationEvaluationsByEvaluationId: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteConversationEvaluation: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteConversationEvaluationsByEvaluationId: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteConversationEvaluation: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Evaluation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4648,15 +5005,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -4682,7 +5045,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -4693,7 +5055,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -4761,18 +5125,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -4809,7 +5179,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
@@ -4830,9 +5202,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param> 
         /// <param name="expand">evaluator,agent</param> 
         /// <returns>EvaluationEntityListing</returns>
-        public EvaluationEntityListing CreateEvaluationsQuery (EvaluationQueryRequest body = null, string expand = null)
+        public EvaluationEntityListing PostEvaluationsQuery (EvaluationQueryRequest body = null, string expand = null)
         {
-             ApiResponse<EvaluationEntityListing> response = CreateEvaluationsQueryWithHttpInfo(body, expand);
+             ApiResponse<EvaluationEntityListing> response = PostEvaluationsQueryWithHttpInfo(body, expand);
              return response.Data;
         }
 
@@ -4842,7 +5214,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param> 
         /// <param name="expand">evaluator,agent</param> 
         /// <returns>ApiResponse of EvaluationEntityListing</returns>
-        public ApiResponse< EvaluationEntityListing > CreateEvaluationsQueryWithHttpInfo (EvaluationQueryRequest body = null, string expand = null)
+        public ApiResponse< EvaluationEntityListing > PostEvaluationsQueryWithHttpInfo (EvaluationQueryRequest body = null, string expand = null)
         {
             
     
@@ -4853,15 +5225,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -4871,10 +5249,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -4885,14 +5268,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateEvaluationsQuery: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostEvaluationsQuery: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateEvaluationsQuery: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostEvaluationsQuery: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EvaluationEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4906,9 +5291,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param>
         /// <param name="expand">evaluator,agent</param>
         /// <returns>Task of EvaluationEntityListing</returns>
-        public async System.Threading.Tasks.Task<EvaluationEntityListing> CreateEvaluationsQueryAsync (EvaluationQueryRequest body = null, string expand = null)
+        public async System.Threading.Tasks.Task<EvaluationEntityListing> PostEvaluationsQueryAsync (EvaluationQueryRequest body = null, string expand = null)
         {
-             ApiResponse<EvaluationEntityListing> response = await CreateEvaluationsQueryAsyncWithHttpInfo(body, expand);
+             ApiResponse<EvaluationEntityListing> response = await PostEvaluationsQueryAsyncWithHttpInfo(body, expand);
              return response.Data;
 
         }
@@ -4919,7 +5304,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param>
         /// <param name="expand">evaluator,agent</param>
         /// <returns>Task of ApiResponse (EvaluationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> CreateEvaluationsQueryAsyncWithHttpInfo (EvaluationQueryRequest body = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> PostEvaluationsQueryAsyncWithHttpInfo (EvaluationQueryRequest body = null, string expand = null)
         {
             
     
@@ -4927,18 +5312,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -4962,14 +5353,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateEvaluationsQuery: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostEvaluationsQuery: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateEvaluationsQuery: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostEvaluationsQuery: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EvaluationEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4982,9 +5375,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">evaluationAndScoringSet</param> 
         /// <returns>EvaluationScoringSet</returns>
-        public EvaluationScoringSet CreateEvaluationsScoring (EvaluationFormAndScoringSet body = null)
+        public EvaluationScoringSet PostEvaluationsScoring (EvaluationFormAndScoringSet body = null)
         {
-             ApiResponse<EvaluationScoringSet> response = CreateEvaluationsScoringWithHttpInfo(body);
+             ApiResponse<EvaluationScoringSet> response = PostEvaluationsScoringWithHttpInfo(body);
              return response.Data;
         }
 
@@ -4993,7 +5386,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">evaluationAndScoringSet</param> 
         /// <returns>ApiResponse of EvaluationScoringSet</returns>
-        public ApiResponse< EvaluationScoringSet > CreateEvaluationsScoringWithHttpInfo (EvaluationFormAndScoringSet body = null)
+        public ApiResponse< EvaluationScoringSet > PostEvaluationsScoringWithHttpInfo (EvaluationFormAndScoringSet body = null)
         {
             
     
@@ -5004,15 +5397,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -5021,10 +5420,15 @@ namespace ININ.PureCloudApi.Api
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -5035,14 +5439,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateEvaluationsScoring: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostEvaluationsScoring: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateEvaluationsScoring: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostEvaluationsScoring: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EvaluationScoringSet>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5055,9 +5461,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">evaluationAndScoringSet</param>
         /// <returns>Task of EvaluationScoringSet</returns>
-        public async System.Threading.Tasks.Task<EvaluationScoringSet> CreateEvaluationsScoringAsync (EvaluationFormAndScoringSet body = null)
+        public async System.Threading.Tasks.Task<EvaluationScoringSet> PostEvaluationsScoringAsync (EvaluationFormAndScoringSet body = null)
         {
-             ApiResponse<EvaluationScoringSet> response = await CreateEvaluationsScoringAsyncWithHttpInfo(body);
+             ApiResponse<EvaluationScoringSet> response = await PostEvaluationsScoringAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -5067,7 +5473,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">evaluationAndScoringSet</param>
         /// <returns>Task of ApiResponse (EvaluationScoringSet)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationScoringSet>> CreateEvaluationsScoringAsyncWithHttpInfo (EvaluationFormAndScoringSet body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationScoringSet>> PostEvaluationsScoringAsyncWithHttpInfo (EvaluationFormAndScoringSet body = null)
         {
             
     
@@ -5075,18 +5481,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -5109,14 +5521,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling CreateEvaluationsScoring: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostEvaluationsScoring: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling CreateEvaluationsScoring: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostEvaluationsScoring: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EvaluationScoringSet>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5167,15 +5581,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -5195,7 +5615,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -5206,7 +5625,9 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
@@ -5262,18 +5683,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -5304,7 +5731,9 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  

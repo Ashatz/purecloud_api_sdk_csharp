@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class ImportStatus :  IEquatable<ImportStatus>
+    public partial class ImportStatus :  IEquatable<ImportStatus>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ImportStatus" /> class.
@@ -104,7 +103,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ImportStatus instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ImportStatus to be compared</param>
+        /// <param name="other">Instance of ImportStatus to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ImportStatus other)
         {
@@ -153,25 +152,23 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.State != null)
-                    hash = hash * 57 + this.State.GetHashCode();
+                    hash = hash * 59 + this.State.GetHashCode();
                 
                 if (this.TotalRecords != null)
-                    hash = hash * 57 + this.TotalRecords.GetHashCode();
+                    hash = hash * 59 + this.TotalRecords.GetHashCode();
                 
                 if (this.CompletedRecords != null)
-                    hash = hash * 57 + this.CompletedRecords.GetHashCode();
+                    hash = hash * 59 + this.CompletedRecords.GetHashCode();
                 
                 if (this.PercentComplete != null)
-                    hash = hash * 57 + this.PercentComplete.GetHashCode();
+                    hash = hash * 59 + this.PercentComplete.GetHashCode();
                 
                 if (this.FailureReason != null)
-                    hash = hash * 57 + this.FailureReason.GetHashCode();
+                    hash = hash * 59 + this.FailureReason.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// Details about a WorkItem
     /// </summary>
     [DataContract]
-    public class WorkItemDetails :  IEquatable<WorkItemDetails>
+    public partial class WorkItemDetails :  IEquatable<WorkItemDetails>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkItemDetails" /> class.
@@ -242,7 +241,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if WorkItemDetails instances are equal
         /// </summary>
-        /// <param name="obj">Instance of WorkItemDetails to be compared</param>
+        /// <param name="other">Instance of WorkItemDetails to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(WorkItemDetails other)
         {
@@ -366,70 +365,68 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.WorkItemDefinition != null)
-                    hash = hash * 57 + this.WorkItemDefinition.GetHashCode();
+                    hash = hash * 59 + this.WorkItemDefinition.GetHashCode();
                 
                 if (this.FlowExecId != null)
-                    hash = hash * 57 + this.FlowExecId.GetHashCode();
+                    hash = hash * 59 + this.FlowExecId.GetHashCode();
                 
                 if (this.FlowConfigId != null)
-                    hash = hash * 57 + this.FlowConfigId.GetHashCode();
+                    hash = hash * 59 + this.FlowConfigId.GetHashCode();
                 
                 if (this.FlowCreateTime != null)
-                    hash = hash * 57 + this.FlowCreateTime.GetHashCode();
+                    hash = hash * 59 + this.FlowCreateTime.GetHashCode();
                 
                 if (this.CreateTime != null)
-                    hash = hash * 57 + this.CreateTime.GetHashCode();
+                    hash = hash * 59 + this.CreateTime.GetHashCode();
                 
                 if (this.Owner != null)
-                    hash = hash * 57 + this.Owner.GetHashCode();
+                    hash = hash * 59 + this.Owner.GetHashCode();
                 
                 if (this.OfferedToUsers != null)
-                    hash = hash * 57 + this.OfferedToUsers.GetHashCode();
+                    hash = hash * 59 + this.OfferedToUsers.GetHashCode();
                 
                 if (this.OfferedToQueues != null)
-                    hash = hash * 57 + this.OfferedToQueues.GetHashCode();
+                    hash = hash * 59 + this.OfferedToQueues.GetHashCode();
                 
                 if (this.Title != null)
-                    hash = hash * 57 + this.Title.GetHashCode();
+                    hash = hash * 59 + this.Title.GetHashCode();
                 
                 if (this.Subtitle != null)
-                    hash = hash * 57 + this.Subtitle.GetHashCode();
+                    hash = hash * 59 + this.Subtitle.GetHashCode();
                 
                 if (this.AssociatedDocuments != null)
-                    hash = hash * 57 + this.AssociatedDocuments.GetHashCode();
+                    hash = hash * 59 + this.AssociatedDocuments.GetHashCode();
                 
                 if (this.AvailableActions != null)
-                    hash = hash * 57 + this.AvailableActions.GetHashCode();
+                    hash = hash * 59 + this.AvailableActions.GetHashCode();
                 
                 if (this.DataValueInfo != null)
-                    hash = hash * 57 + this.DataValueInfo.GetHashCode();
+                    hash = hash * 59 + this.DataValueInfo.GetHashCode();
                 
                 if (this.WorkItemCache != null)
-                    hash = hash * 57 + this.WorkItemCache.GetHashCode();
+                    hash = hash * 59 + this.WorkItemCache.GetHashCode();
                 
                 if (this.LastOfferedTime != null)
-                    hash = hash * 57 + this.LastOfferedTime.GetHashCode();
+                    hash = hash * 59 + this.LastOfferedTime.GetHashCode();
                 
                 if (this.LastOwnershipUpdateTime != null)
-                    hash = hash * 57 + this.LastOwnershipUpdateTime.GetHashCode();
+                    hash = hash * 59 + this.LastOwnershipUpdateTime.GetHashCode();
                 
                 if (this.CurrentTaskStartTime != null)
-                    hash = hash * 57 + this.CurrentTaskStartTime.GetHashCode();
+                    hash = hash * 59 + this.CurrentTaskStartTime.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

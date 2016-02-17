@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class EvaluationScoringSet :  IEquatable<EvaluationScoringSet>
+    public partial class EvaluationScoringSet :  IEquatable<EvaluationScoringSet>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationScoringSet" /> class.
@@ -113,7 +112,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if EvaluationScoringSet instances are equal
         /// </summary>
-        /// <param name="obj">Instance of EvaluationScoringSet to be compared</param>
+        /// <param name="other">Instance of EvaluationScoringSet to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(EvaluationScoringSet other)
         {
@@ -167,28 +166,26 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.TotalScore != null)
-                    hash = hash * 57 + this.TotalScore.GetHashCode();
+                    hash = hash * 59 + this.TotalScore.GetHashCode();
                 
                 if (this.TotalCriticalScore != null)
-                    hash = hash * 57 + this.TotalCriticalScore.GetHashCode();
+                    hash = hash * 59 + this.TotalCriticalScore.GetHashCode();
                 
                 if (this.QuestionGroupScores != null)
-                    hash = hash * 57 + this.QuestionGroupScores.GetHashCode();
+                    hash = hash * 59 + this.QuestionGroupScores.GetHashCode();
                 
                 if (this.AnyFailedKillQuestions != null)
-                    hash = hash * 57 + this.AnyFailedKillQuestions.GetHashCode();
+                    hash = hash * 59 + this.AnyFailedKillQuestions.GetHashCode();
                 
                 if (this.Comments != null)
-                    hash = hash * 57 + this.Comments.GetHashCode();
+                    hash = hash * 59 + this.Comments.GetHashCode();
                 
                 if (this.AgentComments != null)
-                    hash = hash * 57 + this.AgentComments.GetHashCode();
+                    hash = hash * 59 + this.AgentComments.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

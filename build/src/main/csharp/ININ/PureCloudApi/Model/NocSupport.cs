@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class NocSupport :  IEquatable<NocSupport>
+    public partial class NocSupport :  IEquatable<NocSupport>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="NocSupport" /> class.
@@ -80,7 +79,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if NocSupport instances are equal
         /// </summary>
-        /// <param name="obj">Instance of NocSupport to be compared</param>
+        /// <param name="other">Instance of NocSupport to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(NocSupport other)
         {
@@ -114,16 +113,14 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Phone != null)
-                    hash = hash * 57 + this.Phone.GetHashCode();
+                    hash = hash * 59 + this.Phone.GetHashCode();
                 
                 if (this.Email != null)
-                    hash = hash * 57 + this.Email.GetHashCode();
+                    hash = hash * 59 + this.Email.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

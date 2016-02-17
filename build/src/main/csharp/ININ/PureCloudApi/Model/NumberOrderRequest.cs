@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class NumberOrderRequest :  IEquatable<NumberOrderRequest>
+    public partial class NumberOrderRequest :  IEquatable<NumberOrderRequest>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="NumberOrderRequest" /> class.
@@ -106,7 +105,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if NumberOrderRequest instances are equal
         /// </summary>
-        /// <param name="obj">Instance of NumberOrderRequest to be compared</param>
+        /// <param name="other">Instance of NumberOrderRequest to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(NumberOrderRequest other)
         {
@@ -155,25 +154,23 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.OrderTns != null)
-                    hash = hash * 57 + this.OrderTns.GetHashCode();
+                    hash = hash * 59 + this.OrderTns.GetHashCode();
                 
                 if (this.ReservationIds != null)
-                    hash = hash * 57 + this.ReservationIds.GetHashCode();
+                    hash = hash * 59 + this.ReservationIds.GetHashCode();
                 
                 if (this.OrderId != null)
-                    hash = hash * 57 + this.OrderId.GetHashCode();
+                    hash = hash * 59 + this.OrderId.GetHashCode();
                 
                 if (this.EffectiveDate != null)
-                    hash = hash * 57 + this.EffectiveDate.GetHashCode();
+                    hash = hash * 59 + this.EffectiveDate.GetHashCode();
                 
                 if (this.PhoneNumberType != null)
-                    hash = hash * 57 + this.PhoneNumberType.GetHashCode();
+                    hash = hash * 59 + this.PhoneNumberType.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

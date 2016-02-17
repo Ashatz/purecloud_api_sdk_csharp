@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class SocialAccount :  IEquatable<SocialAccount>
+    public partial class SocialAccount :  IEquatable<SocialAccount>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SocialAccount" /> class.
@@ -174,7 +173,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if SocialAccount instances are equal
         /// </summary>
-        /// <param name="obj">Instance of SocialAccount to be compared</param>
+        /// <param name="other">Instance of SocialAccount to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(SocialAccount other)
         {
@@ -258,46 +257,44 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.DateCreated != null)
-                    hash = hash * 57 + this.DateCreated.GetHashCode();
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
                 
                 if (this.DateModified != null)
-                    hash = hash * 57 + this.DateModified.GetHashCode();
+                    hash = hash * 59 + this.DateModified.GetHashCode();
                 
                 if (this.Enabled != null)
-                    hash = hash * 57 + this.Enabled.GetHashCode();
+                    hash = hash * 59 + this.Enabled.GetHashCode();
                 
                 if (this.Authorized != null)
-                    hash = hash * 57 + this.Authorized.GetHashCode();
+                    hash = hash * 59 + this.Authorized.GetHashCode();
                 
                 if (this.SocialHub != null)
-                    hash = hash * 57 + this.SocialHub.GetHashCode();
+                    hash = hash * 59 + this.SocialHub.GetHashCode();
                 
                 if (this.AccessToken != null)
-                    hash = hash * 57 + this.AccessToken.GetHashCode();
+                    hash = hash * 59 + this.AccessToken.GetHashCode();
                 
                 if (this.AccessTokenSecret != null)
-                    hash = hash * 57 + this.AccessTokenSecret.GetHashCode();
+                    hash = hash * 59 + this.AccessTokenSecret.GetHashCode();
                 
                 if (this.TwitterId != null)
-                    hash = hash * 57 + this.TwitterId.GetHashCode();
+                    hash = hash * 59 + this.TwitterId.GetHashCode();
                 
                 if (this.StreamingEnabled != null)
-                    hash = hash * 57 + this.StreamingEnabled.GetHashCode();
+                    hash = hash * 59 + this.StreamingEnabled.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// Used to return response query results
     /// </summary>
     [DataContract]
-    public class ResponseQueryResults :  IEquatable<ResponseQueryResults>
+    public partial class ResponseQueryResults :  IEquatable<ResponseQueryResults>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseQueryResults" /> class.
@@ -73,7 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ResponseQueryResults instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ResponseQueryResults to be compared</param>
+        /// <param name="other">Instance of ResponseQueryResults to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ResponseQueryResults other)
         {
@@ -102,13 +101,11 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Results != null)
-                    hash = hash * 57 + this.Results.GetHashCode();
+                    hash = hash * 59 + this.Results.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

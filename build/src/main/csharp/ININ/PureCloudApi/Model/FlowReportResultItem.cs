@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// Report for one active (running) process found in result to a report request.
     /// </summary>
     [DataContract]
-    public class FlowReportResultItem :  IEquatable<FlowReportResultItem>
+    public partial class FlowReportResultItem :  IEquatable<FlowReportResultItem>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowReportResultItem" /> class.
@@ -172,7 +171,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if FlowReportResultItem instances are equal
         /// </summary>
-        /// <param name="obj">Instance of FlowReportResultItem to be compared</param>
+        /// <param name="other">Instance of FlowReportResultItem to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(FlowReportResultItem other)
         {
@@ -256,46 +255,44 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.FlowExecId != null)
-                    hash = hash * 57 + this.FlowExecId.GetHashCode();
+                    hash = hash * 59 + this.FlowExecId.GetHashCode();
                 
                 if (this.FlowConfigId != null)
-                    hash = hash * 57 + this.FlowConfigId.GetHashCode();
+                    hash = hash * 59 + this.FlowConfigId.GetHashCode();
                 
                 if (this.FlowInstanceName != null)
-                    hash = hash * 57 + this.FlowInstanceName.GetHashCode();
+                    hash = hash * 59 + this.FlowInstanceName.GetHashCode();
                 
                 if (this.AssociatedDocument != null)
-                    hash = hash * 57 + this.AssociatedDocument.GetHashCode();
+                    hash = hash * 59 + this.AssociatedDocument.GetHashCode();
                 
                 if (this.FlowStatus != null)
-                    hash = hash * 57 + this.FlowStatus.GetHashCode();
+                    hash = hash * 59 + this.FlowStatus.GetHashCode();
                 
                 if (this.CurrentState != null)
-                    hash = hash * 57 + this.CurrentState.GetHashCode();
+                    hash = hash * 59 + this.CurrentState.GetHashCode();
                 
                 if (this.StartDateTime != null)
-                    hash = hash * 57 + this.StartDateTime.GetHashCode();
+                    hash = hash * 59 + this.StartDateTime.GetHashCode();
                 
                 if (this.EndDateTime != null)
-                    hash = hash * 57 + this.EndDateTime.GetHashCode();
+                    hash = hash * 59 + this.EndDateTime.GetHashCode();
                 
                 if (this.WorkItemUserAssignees != null)
-                    hash = hash * 57 + this.WorkItemUserAssignees.GetHashCode();
+                    hash = hash * 59 + this.WorkItemUserAssignees.GetHashCode();
                 
                 if (this.CompletedUser != null)
-                    hash = hash * 57 + this.CompletedUser.GetHashCode();
+                    hash = hash * 59 + this.CompletedUser.GetHashCode();
                 
                 if (this.CompletionReason != null)
-                    hash = hash * 57 + this.CompletionReason.GetHashCode();
+                    hash = hash * 59 + this.CompletionReason.GetHashCode();
                 
                 if (this.FlowErrorInfo != null)
-                    hash = hash * 57 + this.FlowErrorInfo.GetHashCode();
+                    hash = hash * 59 + this.FlowErrorInfo.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

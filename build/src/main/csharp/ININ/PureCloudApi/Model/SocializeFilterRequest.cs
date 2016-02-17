@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class SocializeFilterRequest :  IEquatable<SocializeFilterRequest>
+    public partial class SocializeFilterRequest :  IEquatable<SocializeFilterRequest>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SocializeFilterRequest" /> class.
@@ -105,7 +104,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if SocializeFilterRequest instances are equal
         /// </summary>
-        /// <param name="obj">Instance of SocializeFilterRequest to be compared</param>
+        /// <param name="other">Instance of SocializeFilterRequest to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(SocializeFilterRequest other)
         {
@@ -154,25 +153,23 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Filters != null)
-                    hash = hash * 57 + this.Filters.GetHashCode();
+                    hash = hash * 59 + this.Filters.GetHashCode();
                 
                 if (this.PageSize != null)
-                    hash = hash * 57 + this.PageSize.GetHashCode();
+                    hash = hash * 59 + this.PageSize.GetHashCode();
                 
                 if (this.PageNumber != null)
-                    hash = hash * 57 + this.PageNumber.GetHashCode();
+                    hash = hash * 59 + this.PageNumber.GetHashCode();
                 
                 if (this.SortBy != null)
-                    hash = hash * 57 + this.SortBy.GetHashCode();
+                    hash = hash * 59 + this.SortBy.GetHashCode();
                 
                 if (this.SortOrder != null)
-                    hash = hash * 57 + this.SortOrder.GetHashCode();
+                    hash = hash * 59 + this.SortOrder.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

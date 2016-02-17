@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class ServerDate :  IEquatable<ServerDate>
+    public partial class ServerDate :  IEquatable<ServerDate>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ServerDate" /> class.
@@ -73,7 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ServerDate instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ServerDate to be compared</param>
+        /// <param name="other">Instance of ServerDate to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ServerDate other)
         {
@@ -102,13 +101,11 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.CurrentDate != null)
-                    hash = hash * 57 + this.CurrentDate.GetHashCode();
+                    hash = hash * 59 + this.CurrentDate.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

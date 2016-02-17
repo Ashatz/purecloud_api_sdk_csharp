@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class EvaluationQueryRequest :  IEquatable<EvaluationQueryRequest>
+    public partial class EvaluationQueryRequest :  IEquatable<EvaluationQueryRequest>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationQueryRequest" /> class.
@@ -155,7 +154,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if EvaluationQueryRequest instances are equal
         /// </summary>
-        /// <param name="obj">Instance of EvaluationQueryRequest to be compared</param>
+        /// <param name="other">Instance of EvaluationQueryRequest to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(EvaluationQueryRequest other)
         {
@@ -234,43 +233,41 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.ConversationId != null)
-                    hash = hash * 57 + this.ConversationId.GetHashCode();
+                    hash = hash * 59 + this.ConversationId.GetHashCode();
                 
                 if (this.UserType != null)
-                    hash = hash * 57 + this.UserType.GetHashCode();
+                    hash = hash * 59 + this.UserType.GetHashCode();
                 
                 if (this.CurrentUserId != null)
-                    hash = hash * 57 + this.CurrentUserId.GetHashCode();
+                    hash = hash * 59 + this.CurrentUserId.GetHashCode();
                 
                 if (this.AgentId != null)
-                    hash = hash * 57 + this.AgentId.GetHashCode();
+                    hash = hash * 59 + this.AgentId.GetHashCode();
                 
                 if (this.QueueId != null)
-                    hash = hash * 57 + this.QueueId.GetHashCode();
+                    hash = hash * 59 + this.QueueId.GetHashCode();
                 
                 if (this.Interval != null)
-                    hash = hash * 57 + this.Interval.GetHashCode();
+                    hash = hash * 59 + this.Interval.GetHashCode();
                 
                 if (this.EvaluationState != null)
-                    hash = hash * 57 + this.EvaluationState.GetHashCode();
+                    hash = hash * 59 + this.EvaluationState.GetHashCode();
                 
                 if (this.IsReleased != null)
-                    hash = hash * 57 + this.IsReleased.GetHashCode();
+                    hash = hash * 59 + this.IsReleased.GetHashCode();
                 
                 if (this.AgentHasRead != null)
-                    hash = hash * 57 + this.AgentHasRead.GetHashCode();
+                    hash = hash * 59 + this.AgentHasRead.GetHashCode();
                 
                 if (this.ExpandAnswerTotalScores != null)
-                    hash = hash * 57 + this.ExpandAnswerTotalScores.GetHashCode();
+                    hash = hash * 59 + this.ExpandAnswerTotalScores.GetHashCode();
                 
                 if (this.Maximum != null)
-                    hash = hash * 57 + this.Maximum.GetHashCode();
+                    hash = hash * 59 + this.Maximum.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// Used as the body to the transferWorkItem request.
     /// </summary>
     [DataContract]
-    public class WorkItemTransferRequest :  IEquatable<WorkItemTransferRequest>
+    public partial class WorkItemTransferRequest :  IEquatable<WorkItemTransferRequest>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkItemTransferRequest" /> class.
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if WorkItemTransferRequest instances are equal
         /// </summary>
-        /// <param name="obj">Instance of WorkItemTransferRequest to be compared</param>
+        /// <param name="other">Instance of WorkItemTransferRequest to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(WorkItemTransferRequest other)
         {
@@ -116,16 +115,14 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.TransferTargetType != null)
-                    hash = hash * 57 + this.TransferTargetType.GetHashCode();
+                    hash = hash * 59 + this.TransferTargetType.GetHashCode();
                 
                 if (this.TransferTarget != null)
-                    hash = hash * 57 + this.TransferTarget.GetHashCode();
+                    hash = hash * 59 + this.TransferTarget.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

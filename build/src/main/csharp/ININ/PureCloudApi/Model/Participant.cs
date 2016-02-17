@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Participant :  IEquatable<Participant>
+    public partial class Participant :  IEquatable<Participant>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Participant" /> class.
@@ -326,7 +325,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Participant instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Participant to be compared</param>
+        /// <param name="other">Instance of Participant to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Participant other)
         {
@@ -510,106 +509,104 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.StartTime != null)
-                    hash = hash * 57 + this.StartTime.GetHashCode();
+                    hash = hash * 59 + this.StartTime.GetHashCode();
                 
                 if (this.EndTime != null)
-                    hash = hash * 57 + this.EndTime.GetHashCode();
+                    hash = hash * 59 + this.EndTime.GetHashCode();
                 
                 if (this.ConnectedTime != null)
-                    hash = hash * 57 + this.ConnectedTime.GetHashCode();
+                    hash = hash * 59 + this.ConnectedTime.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.UserUri != null)
-                    hash = hash * 57 + this.UserUri.GetHashCode();
+                    hash = hash * 59 + this.UserUri.GetHashCode();
                 
                 if (this.UserId != null)
-                    hash = hash * 57 + this.UserId.GetHashCode();
+                    hash = hash * 59 + this.UserId.GetHashCode();
                 
                 if (this.QueueId != null)
-                    hash = hash * 57 + this.QueueId.GetHashCode();
+                    hash = hash * 59 + this.QueueId.GetHashCode();
                 
                 if (this.GroupId != null)
-                    hash = hash * 57 + this.GroupId.GetHashCode();
+                    hash = hash * 59 + this.GroupId.GetHashCode();
                 
                 if (this.QueueName != null)
-                    hash = hash * 57 + this.QueueName.GetHashCode();
+                    hash = hash * 59 + this.QueueName.GetHashCode();
                 
                 if (this.Purpose != null)
-                    hash = hash * 57 + this.Purpose.GetHashCode();
+                    hash = hash * 59 + this.Purpose.GetHashCode();
                 
                 if (this.ParticipantType != null)
-                    hash = hash * 57 + this.ParticipantType.GetHashCode();
+                    hash = hash * 59 + this.ParticipantType.GetHashCode();
                 
                 if (this.ConsultParticipantId != null)
-                    hash = hash * 57 + this.ConsultParticipantId.GetHashCode();
+                    hash = hash * 59 + this.ConsultParticipantId.GetHashCode();
                 
                 if (this.Address != null)
-                    hash = hash * 57 + this.Address.GetHashCode();
+                    hash = hash * 59 + this.Address.GetHashCode();
                 
                 if (this.Ani != null)
-                    hash = hash * 57 + this.Ani.GetHashCode();
+                    hash = hash * 59 + this.Ani.GetHashCode();
                 
                 if (this.Dnis != null)
-                    hash = hash * 57 + this.Dnis.GetHashCode();
+                    hash = hash * 59 + this.Dnis.GetHashCode();
                 
                 if (this.Locale != null)
-                    hash = hash * 57 + this.Locale.GetHashCode();
+                    hash = hash * 59 + this.Locale.GetHashCode();
                 
                 if (this.WrapupRequired != null)
-                    hash = hash * 57 + this.WrapupRequired.GetHashCode();
+                    hash = hash * 59 + this.WrapupRequired.GetHashCode();
                 
                 if (this.WrapupExpected != null)
-                    hash = hash * 57 + this.WrapupExpected.GetHashCode();
+                    hash = hash * 59 + this.WrapupExpected.GetHashCode();
                 
                 if (this.WrapupPrompt != null)
-                    hash = hash * 57 + this.WrapupPrompt.GetHashCode();
+                    hash = hash * 59 + this.WrapupPrompt.GetHashCode();
                 
                 if (this.WrapupTimeoutMs != null)
-                    hash = hash * 57 + this.WrapupTimeoutMs.GetHashCode();
+                    hash = hash * 59 + this.WrapupTimeoutMs.GetHashCode();
                 
                 if (this.WrapupSkipped != null)
-                    hash = hash * 57 + this.WrapupSkipped.GetHashCode();
+                    hash = hash * 59 + this.WrapupSkipped.GetHashCode();
                 
                 if (this.Wrapup != null)
-                    hash = hash * 57 + this.Wrapup.GetHashCode();
+                    hash = hash * 59 + this.Wrapup.GetHashCode();
                 
                 if (this.MonitoredParticipantId != null)
-                    hash = hash * 57 + this.MonitoredParticipantId.GetHashCode();
+                    hash = hash * 59 + this.MonitoredParticipantId.GetHashCode();
                 
                 if (this.Attributes != null)
-                    hash = hash * 57 + this.Attributes.GetHashCode();
+                    hash = hash * 59 + this.Attributes.GetHashCode();
                 
                 if (this.Calls != null)
-                    hash = hash * 57 + this.Calls.GetHashCode();
+                    hash = hash * 59 + this.Calls.GetHashCode();
                 
                 if (this.Callbacks != null)
-                    hash = hash * 57 + this.Callbacks.GetHashCode();
+                    hash = hash * 59 + this.Callbacks.GetHashCode();
                 
                 if (this.Chats != null)
-                    hash = hash * 57 + this.Chats.GetHashCode();
+                    hash = hash * 59 + this.Chats.GetHashCode();
                 
                 if (this.Emails != null)
-                    hash = hash * 57 + this.Emails.GetHashCode();
+                    hash = hash * 59 + this.Emails.GetHashCode();
                 
                 if (this.SocialExpressions != null)
-                    hash = hash * 57 + this.SocialExpressions.GetHashCode();
+                    hash = hash * 59 + this.SocialExpressions.GetHashCode();
                 
                 if (this.Videos != null)
-                    hash = hash * 57 + this.Videos.GetHashCode();
+                    hash = hash * 59 + this.Videos.GetHashCode();
                 
                 if (this.Evaluations != null)
-                    hash = hash * 57 + this.Evaluations.GetHashCode();
+                    hash = hash * 59 + this.Evaluations.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Group :  IEquatable<Group>
+    public partial class Group :  IEquatable<Group>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Group" /> class.
@@ -130,7 +129,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Group instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Group to be compared</param>
+        /// <param name="other">Instance of Group to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Group other)
         {
@@ -194,34 +193,32 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Description != null)
-                    hash = hash * 57 + this.Description.GetHashCode();
+                    hash = hash * 59 + this.Description.GetHashCode();
                 
                 if (this.MemberCount != null)
-                    hash = hash * 57 + this.MemberCount.GetHashCode();
+                    hash = hash * 59 + this.MemberCount.GetHashCode();
                 
                 if (this.GroupType != null)
-                    hash = hash * 57 + this.GroupType.GetHashCode();
+                    hash = hash * 59 + this.GroupType.GetHashCode();
                 
                 if (this.GroupImages != null)
-                    hash = hash * 57 + this.GroupImages.GetHashCode();
+                    hash = hash * 59 + this.GroupImages.GetHashCode();
                 
                 if (this.GroupState != null)
-                    hash = hash * 57 + this.GroupState.GetHashCode();
+                    hash = hash * 59 + this.GroupState.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

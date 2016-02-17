@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Carrier :  IEquatable<Carrier>
+    public partial class Carrier :  IEquatable<Carrier>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Carrier" /> class.
@@ -130,7 +129,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Carrier instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Carrier to be compared</param>
+        /// <param name="other">Instance of Carrier to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Carrier other)
         {
@@ -194,34 +193,32 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.AccountManager != null)
-                    hash = hash * 57 + this.AccountManager.GetHashCode();
+                    hash = hash * 59 + this.AccountManager.GetHashCode();
                 
                 if (this.Support != null)
-                    hash = hash * 57 + this.Support.GetHashCode();
+                    hash = hash * 59 + this.Support.GetHashCode();
                 
                 if (this.NocSupport != null)
-                    hash = hash * 57 + this.NocSupport.GetHashCode();
+                    hash = hash * 59 + this.NocSupport.GetHashCode();
                 
                 if (this.Services != null)
-                    hash = hash * 57 + this.Services.GetHashCode();
+                    hash = hash * 59 + this.Services.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 if (this.Address != null)
-                    hash = hash * 57 + this.Address.GetHashCode();
+                    hash = hash * 59 + this.Address.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

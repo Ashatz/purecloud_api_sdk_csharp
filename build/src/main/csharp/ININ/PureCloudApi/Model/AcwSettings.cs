@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class AcwSettings :  IEquatable<AcwSettings>
+    public partial class AcwSettings :  IEquatable<AcwSettings>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="AcwSettings" /> class.
@@ -80,7 +79,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if AcwSettings instances are equal
         /// </summary>
-        /// <param name="obj">Instance of AcwSettings to be compared</param>
+        /// <param name="other">Instance of AcwSettings to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(AcwSettings other)
         {
@@ -114,16 +113,14 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.WrapupPrompt != null)
-                    hash = hash * 57 + this.WrapupPrompt.GetHashCode();
+                    hash = hash * 59 + this.WrapupPrompt.GetHashCode();
                 
                 if (this.TimeoutMs != null)
-                    hash = hash * 57 + this.TimeoutMs.GetHashCode();
+                    hash = hash * 59 + this.TimeoutMs.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

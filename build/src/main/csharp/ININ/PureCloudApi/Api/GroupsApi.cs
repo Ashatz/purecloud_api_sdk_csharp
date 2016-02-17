@@ -1,11 +1,11 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 using ININ.PureCloudApi.Client;
 using ININ.PureCloudApi.Model;
-
 
 namespace ININ.PureCloudApi.Api
 {
@@ -26,7 +26,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="name">Name</param>
         /// <returns>GroupEntityListing</returns>
-        GroupEntityListing Get (int? pageSize = null, int? pageNumber = null, string name = null);
+        GroupEntityListing GetGroups (int? pageSize = null, int? pageNumber = null, string name = null);
   
         /// <summary>
         /// Get a group list
@@ -38,7 +38,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="name">Name</param>
         /// <returns>ApiResponse of GroupEntityListing</returns>
-        ApiResponse<GroupEntityListing> GetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null);
+        ApiResponse<GroupEntityListing> GetGroupsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null);
 
         /// <summary>
         /// Get a group list
@@ -50,7 +50,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="name">Name</param>
         /// <returns>Task of GroupEntityListing</returns>
-        System.Threading.Tasks.Task<GroupEntityListing> GetAsync (int? pageSize = null, int? pageNumber = null, string name = null);
+        System.Threading.Tasks.Task<GroupEntityListing> GetGroupsAsync (int? pageSize = null, int? pageNumber = null, string name = null);
 
         /// <summary>
         /// Get a group list
@@ -62,7 +62,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="name">Name</param>
         /// <returns>Task of ApiResponse (GroupEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GroupEntityListing>> GetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<GroupEntityListing>> GetGroupsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null);
         
         /// <summary>
         /// Get group
@@ -72,7 +72,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="groupId">Group ID</param>
         /// <returns>Group</returns>
-        Group GetGroup (string groupId);
+        Group Get (string groupId);
   
         /// <summary>
         /// Get group
@@ -82,7 +82,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="groupId">Group ID</param>
         /// <returns>ApiResponse of Group</returns>
-        ApiResponse<Group> GetGroupWithHttpInfo (string groupId);
+        ApiResponse<Group> GetWithHttpInfo (string groupId);
 
         /// <summary>
         /// Get group
@@ -92,7 +92,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of Group</returns>
-        System.Threading.Tasks.Task<Group> GetGroupAsync (string groupId);
+        System.Threading.Tasks.Task<Group> GetAsync (string groupId);
 
         /// <summary>
         /// Get group
@@ -102,7 +102,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of ApiResponse (Group)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Group>> GetGroupAsyncWithHttpInfo (string groupId);
+        System.Threading.Tasks.Task<ApiResponse<Group>> GetAsyncWithHttpInfo (string groupId);
         
         /// <summary>
         /// Get group members
@@ -114,7 +114,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>UserEntityListing</returns>
-        UserEntityListing GetGroupMembers (string groupId, int? pageSize = null, int? pageNumber = null);
+        UserEntityListing GetMembers (string groupId, int? pageSize = null, int? pageNumber = null);
   
         /// <summary>
         /// Get group members
@@ -126,7 +126,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
-        ApiResponse<UserEntityListing> GetGroupMembersWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null);
+        ApiResponse<UserEntityListing> GetMembersWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get group members
@@ -138,7 +138,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of UserEntityListing</returns>
-        System.Threading.Tasks.Task<UserEntityListing> GetGroupMembersAsync (string groupId, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<UserEntityListing> GetMembersAsync (string groupId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get group members
@@ -150,7 +150,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetGroupMembersAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetMembersAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null);
         
     }
   
@@ -237,9 +237,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="name">Name</param> 
         /// <returns>GroupEntityListing</returns>
-        public GroupEntityListing Get (int? pageSize = null, int? pageNumber = null, string name = null)
+        public GroupEntityListing GetGroups (int? pageSize = null, int? pageNumber = null, string name = null)
         {
-             ApiResponse<GroupEntityListing> response = GetWithHttpInfo(pageSize, pageNumber, name);
+             ApiResponse<GroupEntityListing> response = GetGroupsWithHttpInfo(pageSize, pageNumber, name);
              return response.Data;
         }
 
@@ -250,7 +250,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="name">Name</param> 
         /// <returns>ApiResponse of GroupEntityListing</returns>
-        public ApiResponse< GroupEntityListing > GetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null)
+        public ApiResponse< GroupEntityListing > GetGroupsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null)
         {
             
     
@@ -261,15 +261,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -283,7 +289,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -294,14 +299,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetGroups: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetGroups: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<GroupEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -316,9 +323,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="name">Name</param>
         /// <returns>Task of GroupEntityListing</returns>
-        public async System.Threading.Tasks.Task<GroupEntityListing> GetAsync (int? pageSize = null, int? pageNumber = null, string name = null)
+        public async System.Threading.Tasks.Task<GroupEntityListing> GetGroupsAsync (int? pageSize = null, int? pageNumber = null, string name = null)
         {
-             ApiResponse<GroupEntityListing> response = await GetAsyncWithHttpInfo(pageSize, pageNumber, name);
+             ApiResponse<GroupEntityListing> response = await GetGroupsAsyncWithHttpInfo(pageSize, pageNumber, name);
              return response.Data;
 
         }
@@ -330,7 +337,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="name">Name</param>
         /// <returns>Task of ApiResponse (GroupEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GroupEntityListing>> GetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<GroupEntityListing>> GetGroupsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null)
         {
             
     
@@ -338,18 +345,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -374,14 +387,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetGroups: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetGroups: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<GroupEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -394,9 +409,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="groupId">Group ID</param> 
         /// <returns>Group</returns>
-        public Group GetGroup (string groupId)
+        public Group Get (string groupId)
         {
-             ApiResponse<Group> response = GetGroupWithHttpInfo(groupId);
+             ApiResponse<Group> response = GetWithHttpInfo(groupId);
              return response.Data;
         }
 
@@ -405,11 +420,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="groupId">Group ID</param> 
         /// <returns>ApiResponse of Group</returns>
-        public ApiResponse< Group > GetGroupWithHttpInfo (string groupId)
+        public ApiResponse< Group > GetWithHttpInfo (string groupId)
         {
             
             // verify the required parameter 'groupId' is set
-            if (groupId == null) throw new ApiException(400, "Missing required parameter 'groupId' when calling GetGroup");
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->Get");
             
     
             var path_ = "/api/v1/groups/{groupId}";
@@ -419,15 +435,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -439,7 +461,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -450,14 +471,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetGroup: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetGroup: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Group>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -470,9 +493,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of Group</returns>
-        public async System.Threading.Tasks.Task<Group> GetGroupAsync (string groupId)
+        public async System.Threading.Tasks.Task<Group> GetAsync (string groupId)
         {
-             ApiResponse<Group> response = await GetGroupAsyncWithHttpInfo(groupId);
+             ApiResponse<Group> response = await GetAsyncWithHttpInfo(groupId);
              return response.Data;
 
         }
@@ -482,28 +505,34 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of ApiResponse (Group)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Group>> GetGroupAsyncWithHttpInfo (string groupId)
+        public async System.Threading.Tasks.Task<ApiResponse<Group>> GetAsyncWithHttpInfo (string groupId)
         {
             // verify the required parameter 'groupId' is set
-            if (groupId == null) throw new ApiException(400, "Missing required parameter 'groupId' when calling GetGroup");
+            if (groupId == null) throw new ApiException(400, "Missing required parameter 'groupId' when calling Get");
             
     
             var path_ = "/api/v1/groups/{groupId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -526,14 +555,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetGroup: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetGroup: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Group>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -548,9 +579,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>UserEntityListing</returns>
-        public UserEntityListing GetGroupMembers (string groupId, int? pageSize = null, int? pageNumber = null)
+        public UserEntityListing GetMembers (string groupId, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<UserEntityListing> response = GetGroupMembersWithHttpInfo(groupId, pageSize, pageNumber);
+             ApiResponse<UserEntityListing> response = GetMembersWithHttpInfo(groupId, pageSize, pageNumber);
              return response.Data;
         }
 
@@ -561,11 +592,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>ApiResponse of UserEntityListing</returns>
-        public ApiResponse< UserEntityListing > GetGroupMembersWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< UserEntityListing > GetMembersWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null)
         {
             
             // verify the required parameter 'groupId' is set
-            if (groupId == null) throw new ApiException(400, "Missing required parameter 'groupId' when calling GetGroupMembers");
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->GetMembers");
             
     
             var path_ = "/api/v1/groups/{groupId}/members";
@@ -575,15 +607,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -597,7 +635,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -608,14 +645,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetGroupMembers: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetMembers: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetGroupMembers: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetMembers: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<UserEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -630,9 +669,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of UserEntityListing</returns>
-        public async System.Threading.Tasks.Task<UserEntityListing> GetGroupMembersAsync (string groupId, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<UserEntityListing> GetMembersAsync (string groupId, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<UserEntityListing> response = await GetGroupMembersAsyncWithHttpInfo(groupId, pageSize, pageNumber);
+             ApiResponse<UserEntityListing> response = await GetMembersAsyncWithHttpInfo(groupId, pageSize, pageNumber);
              return response.Data;
 
         }
@@ -644,28 +683,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetGroupMembersAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetMembersAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null)
         {
             // verify the required parameter 'groupId' is set
-            if (groupId == null) throw new ApiException(400, "Missing required parameter 'groupId' when calling GetGroupMembers");
+            if (groupId == null) throw new ApiException(400, "Missing required parameter 'groupId' when calling GetMembers");
             
     
             var path_ = "/api/v1/groups/{groupId}/members";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -690,14 +735,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetGroupMembers: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetMembers: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetGroupMembers: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetMembers: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<UserEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

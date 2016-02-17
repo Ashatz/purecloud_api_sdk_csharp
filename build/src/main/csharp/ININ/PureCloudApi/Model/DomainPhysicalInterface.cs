@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class DomainPhysicalInterface :  IEquatable<DomainPhysicalInterface>
+    public partial class DomainPhysicalInterface :  IEquatable<DomainPhysicalInterface>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainPhysicalInterface" /> class.
@@ -130,7 +129,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DomainPhysicalInterface instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DomainPhysicalInterface to be compared</param>
+        /// <param name="other">Instance of DomainPhysicalInterface to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DomainPhysicalInterface other)
         {
@@ -194,34 +193,32 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.EdgeUri != null)
-                    hash = hash * 57 + this.EdgeUri.GetHashCode();
+                    hash = hash * 59 + this.EdgeUri.GetHashCode();
                 
                 if (this.FriendlyName != null)
-                    hash = hash * 57 + this.FriendlyName.GetHashCode();
+                    hash = hash * 59 + this.FriendlyName.GetHashCode();
                 
                 if (this.HardwareAddress != null)
-                    hash = hash * 57 + this.HardwareAddress.GetHashCode();
+                    hash = hash * 59 + this.HardwareAddress.GetHashCode();
                 
                 if (this.PortLabel != null)
-                    hash = hash * 57 + this.PortLabel.GetHashCode();
+                    hash = hash * 59 + this.PortLabel.GetHashCode();
                 
                 if (this.PhysicalCapabilities != null)
-                    hash = hash * 57 + this.PhysicalCapabilities.GetHashCode();
+                    hash = hash * 59 + this.PhysicalCapabilities.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

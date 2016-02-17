@@ -1,11 +1,11 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 using ININ.PureCloudApi.Client;
 using ININ.PureCloudApi.Model;
-
 
 namespace ININ.PureCloudApi.Api
 {
@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>LocationEntityListing</returns>
-        LocationEntityListing Get (string state = null, string name = null, int? pageSize = null, int? pageNumber = null);
+        LocationEntityListing GetLocations (string state = null, string name = null, int? pageSize = null, int? pageNumber = null);
   
         /// <summary>
         /// Get the list of locations.
@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>ApiResponse of LocationEntityListing</returns>
-        ApiResponse<LocationEntityListing> GetWithHttpInfo (string state = null, string name = null, int? pageSize = null, int? pageNumber = null);
+        ApiResponse<LocationEntityListing> GetLocationsWithHttpInfo (string state = null, string name = null, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get the list of locations.
@@ -53,7 +53,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of LocationEntityListing</returns>
-        System.Threading.Tasks.Task<LocationEntityListing> GetAsync (string state = null, string name = null, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<LocationEntityListing> GetLocationsAsync (string state = null, string name = null, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get the list of locations.
@@ -66,7 +66,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (LocationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LocationEntityListing>> GetAsyncWithHttpInfo (string state = null, string name = null, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<LocationEntityListing>> GetLocationsAsyncWithHttpInfo (string state = null, string name = null, int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
         /// Get Location by ID.
@@ -76,7 +76,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="locationId">Location ID</param>
         /// <returns>Location</returns>
-        Location GetLocation (string locationId);
+        Location Get (string locationId);
   
         /// <summary>
         /// Get Location by ID.
@@ -86,7 +86,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="locationId">Location ID</param>
         /// <returns>ApiResponse of Location</returns>
-        ApiResponse<Location> GetLocationWithHttpInfo (string locationId);
+        ApiResponse<Location> GetWithHttpInfo (string locationId);
 
         /// <summary>
         /// Get Location by ID.
@@ -96,7 +96,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="locationId">Location ID</param>
         /// <returns>Task of Location</returns>
-        System.Threading.Tasks.Task<Location> GetLocationAsync (string locationId);
+        System.Threading.Tasks.Task<Location> GetAsync (string locationId);
 
         /// <summary>
         /// Get Location by ID.
@@ -106,7 +106,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="locationId">Location ID</param>
         /// <returns>Task of ApiResponse (Location)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Location>> GetLocationAsyncWithHttpInfo (string locationId);
+        System.Threading.Tasks.Task<ApiResponse<Location>> GetAsyncWithHttpInfo (string locationId);
         
     }
   
@@ -194,9 +194,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>LocationEntityListing</returns>
-        public LocationEntityListing Get (string state = null, string name = null, int? pageSize = null, int? pageNumber = null)
+        public LocationEntityListing GetLocations (string state = null, string name = null, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<LocationEntityListing> response = GetWithHttpInfo(state, name, pageSize, pageNumber);
+             ApiResponse<LocationEntityListing> response = GetLocationsWithHttpInfo(state, name, pageSize, pageNumber);
              return response.Data;
         }
 
@@ -208,7 +208,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>ApiResponse of LocationEntityListing</returns>
-        public ApiResponse< LocationEntityListing > GetWithHttpInfo (string state = null, string name = null, int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< LocationEntityListing > GetLocationsWithHttpInfo (string state = null, string name = null, int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -219,15 +219,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -242,7 +248,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -253,14 +258,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetLocations: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetLocations: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<LocationEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -276,9 +283,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of LocationEntityListing</returns>
-        public async System.Threading.Tasks.Task<LocationEntityListing> GetAsync (string state = null, string name = null, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<LocationEntityListing> GetLocationsAsync (string state = null, string name = null, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<LocationEntityListing> response = await GetAsyncWithHttpInfo(state, name, pageSize, pageNumber);
+             ApiResponse<LocationEntityListing> response = await GetLocationsAsyncWithHttpInfo(state, name, pageSize, pageNumber);
              return response.Data;
 
         }
@@ -291,7 +298,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (LocationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LocationEntityListing>> GetAsyncWithHttpInfo (string state = null, string name = null, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<LocationEntityListing>> GetLocationsAsyncWithHttpInfo (string state = null, string name = null, int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -299,18 +306,24 @@ namespace ININ.PureCloudApi.Api
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -336,14 +349,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetLocations: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetLocations: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<LocationEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -356,9 +371,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="locationId">Location ID</param> 
         /// <returns>Location</returns>
-        public Location GetLocation (string locationId)
+        public Location Get (string locationId)
         {
-             ApiResponse<Location> response = GetLocationWithHttpInfo(locationId);
+             ApiResponse<Location> response = GetWithHttpInfo(locationId);
              return response.Data;
         }
 
@@ -367,11 +382,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="locationId">Location ID</param> 
         /// <returns>ApiResponse of Location</returns>
-        public ApiResponse< Location > GetLocationWithHttpInfo (string locationId)
+        public ApiResponse< Location > GetWithHttpInfo (string locationId)
         {
             
             // verify the required parameter 'locationId' is set
-            if (locationId == null) throw new ApiException(400, "Missing required parameter 'locationId' when calling GetLocation");
+            if (locationId == null)
+                throw new ApiException(400, "Missing required parameter 'locationId' when calling LocationsApi->Get");
             
     
             var path_ = "/api/v1/locations/{locationId}";
@@ -381,15 +397,21 @@ namespace ININ.PureCloudApi.Api
             var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -401,7 +423,6 @@ namespace ININ.PureCloudApi.Api
             
             
 
-            
             // authentication (PureCloud Auth) required
             
             // oauth required
@@ -412,14 +433,16 @@ namespace ININ.PureCloudApi.Api
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetLocation: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetLocation: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Location>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -432,9 +455,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="locationId">Location ID</param>
         /// <returns>Task of Location</returns>
-        public async System.Threading.Tasks.Task<Location> GetLocationAsync (string locationId)
+        public async System.Threading.Tasks.Task<Location> GetAsync (string locationId)
         {
-             ApiResponse<Location> response = await GetLocationAsyncWithHttpInfo(locationId);
+             ApiResponse<Location> response = await GetAsyncWithHttpInfo(locationId);
              return response.Data;
 
         }
@@ -444,28 +467,34 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="locationId">Location ID</param>
         /// <returns>Task of ApiResponse (Location)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Location>> GetLocationAsyncWithHttpInfo (string locationId)
+        public async System.Threading.Tasks.Task<ApiResponse<Location>> GetAsyncWithHttpInfo (string locationId)
         {
             // verify the required parameter 'locationId' is set
-            if (locationId == null) throw new ApiException(400, "Missing required parameter 'locationId' when calling GetLocation");
+            if (locationId == null) throw new ApiException(400, "Missing required parameter 'locationId' when calling Get");
             
     
             var path_ = "/api/v1/locations/{locationId}";
     
             var pathParams = new Dictionary<String, String>();
             var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var formParams = new Dictionary<String, String>();
             var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
+            Object postBody = null;
 
-            // to determine the Accept header
-            String[] http_header_accepts = new String[] {
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
                 "application/json"
             };
-            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
-            if (http_header_accept != null)
-                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
@@ -488,14 +517,16 @@ namespace ININ.PureCloudApi.Api
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
 
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetLocation: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetLocation: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Location>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

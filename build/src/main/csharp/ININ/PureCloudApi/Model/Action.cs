@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Action :  IEquatable<Action>
+    public partial class Action :  IEquatable<Action>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Action" /> class.
@@ -96,7 +95,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Action instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Action to be compared</param>
+        /// <param name="other">Instance of Action to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Action other)
         {
@@ -140,22 +139,20 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
+                    hash = hash * 59 + this.Type.GetHashCode();
                 
                 if (this.ActionTypeName != null)
-                    hash = hash * 57 + this.ActionTypeName.GetHashCode();
+                    hash = hash * 59 + this.ActionTypeName.GetHashCode();
                 
                 if (this.UpdateOption != null)
-                    hash = hash * 57 + this.UpdateOption.GetHashCode();
+                    hash = hash * 59 + this.UpdateOption.GetHashCode();
                 
                 if (this.Properties != null)
-                    hash = hash * 57 + this.Properties.GetHashCode();
+                    hash = hash * 59 + this.Properties.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

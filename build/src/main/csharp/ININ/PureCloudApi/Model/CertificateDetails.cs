@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// Represents the details of a parsed certificate.
     /// </summary>
     [DataContract]
-    public class CertificateDetails :  IEquatable<CertificateDetails>
+    public partial class CertificateDetails :  IEquatable<CertificateDetails>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CertificateDetails" /> class.
@@ -128,7 +127,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if CertificateDetails instances are equal
         /// </summary>
-        /// <param name="obj">Instance of CertificateDetails to be compared</param>
+        /// <param name="other">Instance of CertificateDetails to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(CertificateDetails other)
         {
@@ -187,31 +186,29 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Issuer != null)
-                    hash = hash * 57 + this.Issuer.GetHashCode();
+                    hash = hash * 59 + this.Issuer.GetHashCode();
                 
                 if (this.Subject != null)
-                    hash = hash * 57 + this.Subject.GetHashCode();
+                    hash = hash * 59 + this.Subject.GetHashCode();
                 
                 if (this.ExpirationDate != null)
-                    hash = hash * 57 + this.ExpirationDate.GetHashCode();
+                    hash = hash * 59 + this.ExpirationDate.GetHashCode();
                 
                 if (this.IssueDate != null)
-                    hash = hash * 57 + this.IssueDate.GetHashCode();
+                    hash = hash * 59 + this.IssueDate.GetHashCode();
                 
                 if (this.Expired != null)
-                    hash = hash * 57 + this.Expired.GetHashCode();
+                    hash = hash * 59 + this.Expired.GetHashCode();
                 
                 if (this.SignatureValid != null)
-                    hash = hash * 57 + this.SignatureValid.GetHashCode();
+                    hash = hash * 59 + this.SignatureValid.GetHashCode();
                 
                 if (this.Valid != null)
-                    hash = hash * 57 + this.Valid.GetHashCode();
+                    hash = hash * 59 + this.Valid.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class DeltaResponse :  IEquatable<DeltaResponse>
+    public partial class DeltaResponse :  IEquatable<DeltaResponse>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="DeltaResponse" /> class.
@@ -89,7 +88,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if DeltaResponse instances are equal
         /// </summary>
-        /// <param name="obj">Instance of DeltaResponse to be compared</param>
+        /// <param name="other">Instance of DeltaResponse to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(DeltaResponse other)
         {
@@ -128,19 +127,17 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.ContextToken != null)
-                    hash = hash * 57 + this.ContextToken.GetHashCode();
+                    hash = hash * 59 + this.ContextToken.GetHashCode();
                 
                 if (this.Documents != null)
-                    hash = hash * 57 + this.Documents.GetHashCode();
+                    hash = hash * 59 + this.Documents.GetHashCode();
                 
                 if (this.HasMore != null)
-                    hash = hash * 57 + this.HasMore.GetHashCode();
+                    hash = hash * 59 + this.HasMore.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

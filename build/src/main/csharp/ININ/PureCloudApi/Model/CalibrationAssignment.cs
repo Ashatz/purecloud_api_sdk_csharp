@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class CalibrationAssignment :  IEquatable<CalibrationAssignment>
+    public partial class CalibrationAssignment :  IEquatable<CalibrationAssignment>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CalibrationAssignment" /> class.
@@ -96,7 +95,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if CalibrationAssignment instances are equal
         /// </summary>
-        /// <param name="obj">Instance of CalibrationAssignment to be compared</param>
+        /// <param name="other">Instance of CalibrationAssignment to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(CalibrationAssignment other)
         {
@@ -140,22 +139,20 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Calibrator != null)
-                    hash = hash * 57 + this.Calibrator.GetHashCode();
+                    hash = hash * 59 + this.Calibrator.GetHashCode();
                 
                 if (this.Evaluators != null)
-                    hash = hash * 57 + this.Evaluators.GetHashCode();
+                    hash = hash * 59 + this.Evaluators.GetHashCode();
                 
                 if (this.EvaluationForm != null)
-                    hash = hash * 57 + this.EvaluationForm.GetHashCode();
+                    hash = hash * 59 + this.EvaluationForm.GetHashCode();
                 
                 if (this.ExpertEvaluator != null)
-                    hash = hash * 57 + this.ExpertEvaluator.GetHashCode();
+                    hash = hash * 59 + this.ExpertEvaluator.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

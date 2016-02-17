@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class ColumnCollapse :  IEquatable<ColumnCollapse>
+    public partial class ColumnCollapse :  IEquatable<ColumnCollapse>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ColumnCollapse" /> class.
@@ -80,7 +79,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ColumnCollapse instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ColumnCollapse to be compared</param>
+        /// <param name="other">Instance of ColumnCollapse to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ColumnCollapse other)
         {
@@ -114,16 +113,14 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Label != null)
-                    hash = hash * 57 + this.Label.GetHashCode();
+                    hash = hash * 59 + this.Label.GetHashCode();
                 
                 if (this.Columns != null)
-                    hash = hash * 57 + this.Columns.GetHashCode();
+                    hash = hash * 59 + this.Columns.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

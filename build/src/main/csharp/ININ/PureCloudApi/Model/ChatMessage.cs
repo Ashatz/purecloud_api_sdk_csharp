@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class ChatMessage :  IEquatable<ChatMessage>
+    public partial class ChatMessage :  IEquatable<ChatMessage>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatMessage" /> class.
@@ -136,7 +135,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if ChatMessage instances are equal
         /// </summary>
-        /// <param name="obj">Instance of ChatMessage to be compared</param>
+        /// <param name="other">Instance of ChatMessage to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(ChatMessage other)
         {
@@ -205,37 +204,35 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Body != null)
-                    hash = hash * 57 + this.Body.GetHashCode();
+                    hash = hash * 59 + this.Body.GetHashCode();
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.To != null)
-                    hash = hash * 57 + this.To.GetHashCode();
+                    hash = hash * 59 + this.To.GetHashCode();
                 
                 if (this.From != null)
-                    hash = hash * 57 + this.From.GetHashCode();
+                    hash = hash * 59 + this.From.GetHashCode();
                 
                 if (this.Utc != null)
-                    hash = hash * 57 + this.Utc.GetHashCode();
+                    hash = hash * 59 + this.Utc.GetHashCode();
                 
                 if (this.Chat != null)
-                    hash = hash * 57 + this.Chat.GetHashCode();
+                    hash = hash * 59 + this.Chat.GetHashCode();
                 
                 if (this.Message != null)
-                    hash = hash * 57 + this.Message.GetHashCode();
+                    hash = hash * 59 + this.Message.GetHashCode();
                 
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
+                    hash = hash * 59 + this.Type.GetHashCode();
                 
                 if (this.User != null)
-                    hash = hash * 57 + this.User.GetHashCode();
+                    hash = hash * 59 + this.User.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

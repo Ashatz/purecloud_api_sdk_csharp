@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Chat :  IEquatable<Chat>
+    public partial class Chat :  IEquatable<Chat>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Chat" /> class.
@@ -72,7 +71,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Chat instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Chat to be compared</param>
+        /// <param name="other">Instance of Chat to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Chat other)
         {
@@ -101,13 +100,11 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.JabberId != null)
-                    hash = hash * 57 + this.JabberId.GetHashCode();
+                    hash = hash * 59 + this.JabberId.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

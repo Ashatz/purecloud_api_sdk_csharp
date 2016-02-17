@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public class Address :  IEquatable<Address>
+    public partial class Address :  IEquatable<Address>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Address" /> class.
@@ -130,7 +129,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if Address instances are equal
         /// </summary>
-        /// <param name="obj">Instance of Address to be compared</param>
+        /// <param name="other">Instance of Address to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(Address other)
         {
@@ -194,34 +193,32 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Street != null)
-                    hash = hash * 57 + this.Street.GetHashCode();
+                    hash = hash * 59 + this.Street.GetHashCode();
                 
                 if (this.City != null)
-                    hash = hash * 57 + this.City.GetHashCode();
+                    hash = hash * 59 + this.City.GetHashCode();
                 
                 if (this.CountryName != null)
-                    hash = hash * 57 + this.CountryName.GetHashCode();
+                    hash = hash * 59 + this.CountryName.GetHashCode();
                 
                 if (this.StateName != null)
-                    hash = hash * 57 + this.StateName.GetHashCode();
+                    hash = hash * 59 + this.StateName.GetHashCode();
                 
                 if (this.PostalCode != null)
-                    hash = hash * 57 + this.PostalCode.GetHashCode();
+                    hash = hash * 59 + this.PostalCode.GetHashCode();
                 
                 if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }

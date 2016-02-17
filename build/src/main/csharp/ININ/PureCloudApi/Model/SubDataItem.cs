@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
-
-
 
 namespace ININ.PureCloudApi.Model
 {
@@ -16,7 +15,7 @@ namespace ININ.PureCloudApi.Model
     /// An additional data element that was set by the user for this event.
     /// </summary>
     [DataContract]
-    public class SubDataItem :  IEquatable<SubDataItem>
+    public partial class SubDataItem :  IEquatable<SubDataItem>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SubDataItem" /> class.
@@ -109,7 +108,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Returns true if SubDataItem instances are equal
         /// </summary>
-        /// <param name="obj">Instance of SubDataItem to be compared</param>
+        /// <param name="other">Instance of SubDataItem to be compared</param>
         /// <returns>Boolean</returns>
         public bool Equals(SubDataItem other)
         {
@@ -158,25 +157,23 @@ namespace ININ.PureCloudApi.Model
                 // Suitable nullity checks etc, of course :)
                 
                 if (this.Id != null)
-                    hash = hash * 57 + this.Id.GetHashCode();
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Type != null)
-                    hash = hash * 57 + this.Type.GetHashCode();
+                    hash = hash * 59 + this.Type.GetHashCode();
                 
                 if (this.Value != null)
-                    hash = hash * 57 + this.Value.GetHashCode();
+                    hash = hash * 59 + this.Value.GetHashCode();
                 
                 if (this.Prompt != null)
-                    hash = hash * 57 + this.Prompt.GetHashCode();
+                    hash = hash * 59 + this.Prompt.GetHashCode();
                 
                 if (this.DisplayValue != null)
-                    hash = hash * 57 + this.DisplayValue.GetHashCode();
+                    hash = hash * 59 + this.DisplayValue.GetHashCode();
                 
                 return hash;
             }
         }
 
     }
-
-
 }
