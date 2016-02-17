@@ -5,19 +5,12 @@ var pclib = require('purecloud-api-sdk-common');
 
 var pclibSwaggerVersion = pclib.swaggerVersioning();
 var progressTracker = 0;
-var oldSwaggerPath = 'lib/swagger-old.json';
-var newSwaggerPath = 'lib/swagger.json';
-var versionFilePath = 'buildScripts/version.json';
+var swaggerFilePath = 'swagger.json';
+var versionFilePath = 'version.json';
 
 downloadFile(
 	'http://repo1.maven.org/maven2/io/swagger/swagger-codegen-cli/2.1.4/swagger-codegen-cli-2.1.4.jar',
 	'bin/swagger-codegen-cli.jar')
-	.then(function() {
-		//TODO: allow this to proceed once the swagger file is fixed
-		return;
-		// Download the latest swagger
-		return downloadFile('https://api.mypurecloud.com/api/v1/docs/swagger', newSwaggerPath);
-	})
 	.then(updateVersion)
 	.then(writeConfig)
 	.then(function() {
@@ -134,7 +127,7 @@ function downloadFile(url, output, append) {
 function updateVersion() {
 	var deferred = Q.defer();
 
-	pclib.updateSwaggerAndVersion("swagger.json", "version.json", "mypurecloud.com", function(hasChanges){
+	pclib.updateSwaggerAndVersion(swaggerFilePath, versionFilePath, "mypurecloud.com", function(hasChanges){
         var version = pclibSwaggerVersion.getVersionString("version.json");
 
         if(hasChanges){
