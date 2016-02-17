@@ -50,6 +50,7 @@ function writeConfig() {
 
 	var v = pclibSwaggerVersion.getVersionString("version.json") + '.' + process.env['BUILD_NUMBER'];
 	console.log('Package version: ' + v);
+	mkdirp.sync('bin');
 	fs.writeFileSync('bin/VERSION', v, 'UTF-8');
 	var config = {
 		"packageName":"ININ.PureCloudApi",
