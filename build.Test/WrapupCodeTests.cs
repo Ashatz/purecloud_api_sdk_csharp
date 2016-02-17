@@ -54,48 +54,57 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'Code' 
+        /// Test the property 'Name' 
         /// </summary>
         [Test]
-        public void CodeTest()
+        public void NameTest()
         {
-            // TODO: unit test for the property 'Code' 
+            // TODO: unit test for the property 'Name' 
         }
         
         /// <summary>
-        /// Test the property 'Label' 
+        /// Test the property 'DateCreated' 
         /// </summary>
         [Test]
-        public void LabelTest()
+        public void DateCreatedTest()
         {
-            // TODO: unit test for the property 'Label' 
+            // TODO: unit test for the property 'DateCreated' 
         }
         
         /// <summary>
-        /// Test the property 'Notes' 
+        /// Test the property 'DateModified' 
         /// </summary>
         [Test]
-        public void NotesTest()
+        public void DateModifiedTest()
         {
-            // TODO: unit test for the property 'Notes' 
+            // TODO: unit test for the property 'DateModified' 
         }
         
         /// <summary>
-        /// Test the property 'Tags' 
+        /// Test the property 'ModifiedBy' 
         /// </summary>
         [Test]
-        public void TagsTest()
+        public void ModifiedByTest()
         {
-            // TODO: unit test for the property 'Tags' 
+            // TODO: unit test for the property 'ModifiedBy' 
         }
         
         /// <summary>
-        /// Test the property 'Duration' 
+        /// Test the property 'CreatedBy' 
         /// </summary>
         [Test]
-        public void DurationTest()
+        public void CreatedByTest()
         {
-            // TODO: unit test for the property 'Duration' 
+            // TODO: unit test for the property 'CreatedBy' 
+        }
+        
+        /// <summary>
+        /// Test the property 'SelfUri' 
+        /// </summary>
+        [Test]
+        public void SelfUriTest()
+        {
+            // TODO: unit test for the property 'SelfUri' 
         }
         
 
