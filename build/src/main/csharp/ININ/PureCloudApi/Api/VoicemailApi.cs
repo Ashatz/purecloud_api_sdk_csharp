@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="userId">User ID</param>
         /// <returns>VoicemailUserPolicy</returns>
-        VoicemailUserPolicy ConfigurationUservoicemailpoliciesUseridGet (string userId);
+        VoicemailUserPolicy GetUservoicemailpoliciesUser (string userId);
   
         /// <summary>
         /// Get a user&#39;s voicemail policy
@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
-        ApiResponse<VoicemailUserPolicy> ConfigurationUservoicemailpoliciesUseridGetWithHttpInfo (string userId);
+        ApiResponse<VoicemailUserPolicy> GetUservoicemailpoliciesUserWithHttpInfo (string userId);
 
         /// <summary>
         /// Get a user&#39;s voicemail policy
@@ -44,7 +44,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="userId">User ID</param>
         /// <returns>Task of VoicemailUserPolicy</returns>
-        System.Threading.Tasks.Task<VoicemailUserPolicy> ConfigurationUservoicemailpoliciesUseridGetAsync (string userId);
+        System.Threading.Tasks.Task<VoicemailUserPolicy> GetUservoicemailpoliciesUserAsync (string userId);
 
         /// <summary>
         /// Get a user&#39;s voicemail policy
@@ -54,7 +54,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> ConfigurationUservoicemailpoliciesUseridGetAsyncWithHttpInfo (string userId);
+        System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> GetUservoicemailpoliciesUserAsyncWithHttpInfo (string userId);
         
         /// <summary>
         /// Update a user&#39;s voicemail policy
@@ -65,7 +65,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>VoicemailUserPolicy</returns>
-        VoicemailUserPolicy ConfigurationUservoicemailpoliciesUseridPatch (string userId, VoicemailUserPolicy body);
+        VoicemailUserPolicy PatchUservoicemailpoliciesUser (string userId, VoicemailUserPolicy body);
   
         /// <summary>
         /// Update a user&#39;s voicemail policy
@@ -76,7 +76,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
-        ApiResponse<VoicemailUserPolicy> ConfigurationUservoicemailpoliciesUseridPatchWithHttpInfo (string userId, VoicemailUserPolicy body);
+        ApiResponse<VoicemailUserPolicy> PatchUservoicemailpoliciesUserWithHttpInfo (string userId, VoicemailUserPolicy body);
 
         /// <summary>
         /// Update a user&#39;s voicemail policy
@@ -87,7 +87,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>Task of VoicemailUserPolicy</returns>
-        System.Threading.Tasks.Task<VoicemailUserPolicy> ConfigurationUservoicemailpoliciesUseridPatchAsync (string userId, VoicemailUserPolicy body);
+        System.Threading.Tasks.Task<VoicemailUserPolicy> PatchUservoicemailpoliciesUserAsync (string userId, VoicemailUserPolicy body);
 
         /// <summary>
         /// Update a user&#39;s voicemail policy
@@ -98,7 +98,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> ConfigurationUservoicemailpoliciesUseridPatchAsyncWithHttpInfo (string userId, VoicemailUserPolicy body);
+        System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> PatchUservoicemailpoliciesUserAsyncWithHttpInfo (string userId, VoicemailUserPolicy body);
         
         /// <summary>
         /// Get a policy
@@ -107,7 +107,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>VoicemailOrganizationPolicy</returns>
-        VoicemailOrganizationPolicy ConfigurationVoicemailpolicyGet ();
+        VoicemailOrganizationPolicy GetVoicemailpolicy ();
   
         /// <summary>
         /// Get a policy
@@ -116,7 +116,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of VoicemailOrganizationPolicy</returns>
-        ApiResponse<VoicemailOrganizationPolicy> ConfigurationVoicemailpolicyGetWithHttpInfo ();
+        ApiResponse<VoicemailOrganizationPolicy> GetVoicemailpolicyWithHttpInfo ();
 
         /// <summary>
         /// Get a policy
@@ -125,7 +125,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of VoicemailOrganizationPolicy</returns>
-        System.Threading.Tasks.Task<VoicemailOrganizationPolicy> ConfigurationVoicemailpolicyGetAsync ();
+        System.Threading.Tasks.Task<VoicemailOrganizationPolicy> GetVoicemailpolicyAsync ();
 
         /// <summary>
         /// Get a policy
@@ -134,7 +134,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse (VoicemailOrganizationPolicy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> ConfigurationVoicemailpolicyGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> GetVoicemailpolicyAsyncWithHttpInfo ();
         
         /// <summary>
         /// Update a policy
@@ -144,7 +144,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Policy</param>
         /// <returns>VoicemailOrganizationPolicy</returns>
-        VoicemailOrganizationPolicy ConfigurationVoicemailpolicyPut (VoicemailOrganizationPolicy body = null);
+        VoicemailOrganizationPolicy UpdateVoicemailpolicy (VoicemailOrganizationPolicy body = null);
   
         /// <summary>
         /// Update a policy
@@ -154,7 +154,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of VoicemailOrganizationPolicy</returns>
-        ApiResponse<VoicemailOrganizationPolicy> ConfigurationVoicemailpolicyPutWithHttpInfo (VoicemailOrganizationPolicy body = null);
+        ApiResponse<VoicemailOrganizationPolicy> UpdateVoicemailpolicyWithHttpInfo (VoicemailOrganizationPolicy body = null);
 
         /// <summary>
         /// Update a policy
@@ -164,7 +164,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Policy</param>
         /// <returns>Task of VoicemailOrganizationPolicy</returns>
-        System.Threading.Tasks.Task<VoicemailOrganizationPolicy> ConfigurationVoicemailpolicyPutAsync (VoicemailOrganizationPolicy body = null);
+        System.Threading.Tasks.Task<VoicemailOrganizationPolicy> UpdateVoicemailpolicyAsync (VoicemailOrganizationPolicy body = null);
 
         /// <summary>
         /// Update a policy
@@ -174,7 +174,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (VoicemailOrganizationPolicy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> ConfigurationVoicemailpolicyPutAsyncWithHttpInfo (VoicemailOrganizationPolicy body = null);
+        System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> UpdateVoicemailpolicyAsyncWithHttpInfo (VoicemailOrganizationPolicy body = null);
         
         /// <summary>
         /// Get mailbox information
@@ -183,7 +183,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>VoicemailMailboxInfo</returns>
-        VoicemailMailboxInfo VoicemailMailboxGet ();
+        VoicemailMailboxInfo GetMailbox ();
   
         /// <summary>
         /// Get mailbox information
@@ -192,7 +192,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of VoicemailMailboxInfo</returns>
-        ApiResponse<VoicemailMailboxInfo> VoicemailMailboxGetWithHttpInfo ();
+        ApiResponse<VoicemailMailboxInfo> GetMailboxWithHttpInfo ();
 
         /// <summary>
         /// Get mailbox information
@@ -201,7 +201,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of VoicemailMailboxInfo</returns>
-        System.Threading.Tasks.Task<VoicemailMailboxInfo> VoicemailMailboxGetAsync ();
+        System.Threading.Tasks.Task<VoicemailMailboxInfo> GetMailboxAsync ();
 
         /// <summary>
         /// Get mailbox information
@@ -210,7 +210,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse (VoicemailMailboxInfo)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VoicemailMailboxInfo>> VoicemailMailboxGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<VoicemailMailboxInfo>> GetMailboxAsyncWithHttpInfo ();
         
         /// <summary>
         /// List voicemail messages
@@ -219,7 +219,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>VoicemailMessageEntityListing</returns>
-        VoicemailMessageEntityListing VoicemailMessagesGet ();
+        VoicemailMessageEntityListing GetMessages ();
   
         /// <summary>
         /// List voicemail messages
@@ -228,7 +228,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of VoicemailMessageEntityListing</returns>
-        ApiResponse<VoicemailMessageEntityListing> VoicemailMessagesGetWithHttpInfo ();
+        ApiResponse<VoicemailMessageEntityListing> GetMessagesWithHttpInfo ();
 
         /// <summary>
         /// List voicemail messages
@@ -237,7 +237,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of VoicemailMessageEntityListing</returns>
-        System.Threading.Tasks.Task<VoicemailMessageEntityListing> VoicemailMessagesGetAsync ();
+        System.Threading.Tasks.Task<VoicemailMessageEntityListing> GetMessagesAsync ();
 
         /// <summary>
         /// List voicemail messages
@@ -246,7 +246,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse (VoicemailMessageEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> VoicemailMessagesGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetMessagesAsyncWithHttpInfo ();
         
         /// <summary>
         /// Delete all voicemail messages
@@ -255,7 +255,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>string</returns>
-        string VoicemailMessagesDelete ();
+        string DeleteMessages ();
   
         /// <summary>
         /// Delete all voicemail messages
@@ -264,7 +264,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> VoicemailMessagesDeleteWithHttpInfo ();
+        ApiResponse<string> DeleteMessagesWithHttpInfo ();
 
         /// <summary>
         /// Delete all voicemail messages
@@ -273,7 +273,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> VoicemailMessagesDeleteAsync ();
+        System.Threading.Tasks.Task<string> DeleteMessagesAsync ();
 
         /// <summary>
         /// Delete all voicemail messages
@@ -282,7 +282,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> VoicemailMessagesDeleteAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteMessagesAsyncWithHttpInfo ();
         
         /// <summary>
         /// Get message.
@@ -292,7 +292,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="messageId">Message ID</param>
         /// <returns>VoicemailMessage</returns>
-        VoicemailMessage VoicemailMessagesMessageidGet (string messageId);
+        VoicemailMessage GetMessage (string messageId);
   
         /// <summary>
         /// Get message.
@@ -302,7 +302,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="messageId">Message ID</param>
         /// <returns>ApiResponse of VoicemailMessage</returns>
-        ApiResponse<VoicemailMessage> VoicemailMessagesMessageidGetWithHttpInfo (string messageId);
+        ApiResponse<VoicemailMessage> GetMessageWithHttpInfo (string messageId);
 
         /// <summary>
         /// Get message.
@@ -312,7 +312,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="messageId">Message ID</param>
         /// <returns>Task of VoicemailMessage</returns>
-        System.Threading.Tasks.Task<VoicemailMessage> VoicemailMessagesMessageidGetAsync (string messageId);
+        System.Threading.Tasks.Task<VoicemailMessage> GetMessageAsync (string messageId);
 
         /// <summary>
         /// Get message.
@@ -322,7 +322,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="messageId">Message ID</param>
         /// <returns>Task of ApiResponse (VoicemailMessage)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> VoicemailMessagesMessageidGetAsyncWithHttpInfo (string messageId);
+        System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> GetMessageAsyncWithHttpInfo (string messageId);
         
         /// <summary>
         /// Update a message.
@@ -333,7 +333,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="messageId">Message ID</param>
         /// <param name="body">VoicemailMessage</param>
         /// <returns>VoicemailMessage</returns>
-        VoicemailMessage VoicemailMessagesMessageidPut (string messageId, VoicemailMessage body = null);
+        VoicemailMessage UpdateMessage (string messageId, VoicemailMessage body = null);
   
         /// <summary>
         /// Update a message.
@@ -344,7 +344,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="messageId">Message ID</param>
         /// <param name="body">VoicemailMessage</param>
         /// <returns>ApiResponse of VoicemailMessage</returns>
-        ApiResponse<VoicemailMessage> VoicemailMessagesMessageidPutWithHttpInfo (string messageId, VoicemailMessage body = null);
+        ApiResponse<VoicemailMessage> UpdateMessageWithHttpInfo (string messageId, VoicemailMessage body = null);
 
         /// <summary>
         /// Update a message.
@@ -355,7 +355,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="messageId">Message ID</param>
         /// <param name="body">VoicemailMessage</param>
         /// <returns>Task of VoicemailMessage</returns>
-        System.Threading.Tasks.Task<VoicemailMessage> VoicemailMessagesMessageidPutAsync (string messageId, VoicemailMessage body = null);
+        System.Threading.Tasks.Task<VoicemailMessage> UpdateMessageAsync (string messageId, VoicemailMessage body = null);
 
         /// <summary>
         /// Update a message.
@@ -366,7 +366,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="messageId">Message ID</param>
         /// <param name="body">VoicemailMessage</param>
         /// <returns>Task of ApiResponse (VoicemailMessage)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> VoicemailMessagesMessageidPutAsyncWithHttpInfo (string messageId, VoicemailMessage body = null);
+        System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> UpdateMessageAsyncWithHttpInfo (string messageId, VoicemailMessage body = null);
         
         /// <summary>
         /// Delete a message.
@@ -376,7 +376,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="messageId">Message ID</param>
         /// <returns>string</returns>
-        string VoicemailMessagesMessageidDelete (string messageId);
+        string DeleteMessage (string messageId);
   
         /// <summary>
         /// Delete a message.
@@ -386,7 +386,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="messageId">Message ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> VoicemailMessagesMessageidDeleteWithHttpInfo (string messageId);
+        ApiResponse<string> DeleteMessageWithHttpInfo (string messageId);
 
         /// <summary>
         /// Delete a message.
@@ -396,7 +396,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="messageId">Message ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> VoicemailMessagesMessageidDeleteAsync (string messageId);
+        System.Threading.Tasks.Task<string> DeleteMessageAsync (string messageId);
 
         /// <summary>
         /// Delete a message.
@@ -406,7 +406,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="messageId">Message ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> VoicemailMessagesMessageidDeleteAsyncWithHttpInfo (string messageId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteMessageAsyncWithHttpInfo (string messageId);
         
         /// <summary>
         /// Get media playback URI for this message
@@ -417,7 +417,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="messageId">Message ID</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <returns>VoicemailMediaInfo</returns>
-        VoicemailMediaInfo VoicemailMessagesMessageidMediaGet (string messageId, string formatId = null);
+        VoicemailMediaInfo GetMessageMedia (string messageId, string formatId = null);
   
         /// <summary>
         /// Get media playback URI for this message
@@ -428,7 +428,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="messageId">Message ID</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <returns>ApiResponse of VoicemailMediaInfo</returns>
-        ApiResponse<VoicemailMediaInfo> VoicemailMessagesMessageidMediaGetWithHttpInfo (string messageId, string formatId = null);
+        ApiResponse<VoicemailMediaInfo> GetMessageMediaWithHttpInfo (string messageId, string formatId = null);
 
         /// <summary>
         /// Get media playback URI for this message
@@ -439,7 +439,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="messageId">Message ID</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <returns>Task of VoicemailMediaInfo</returns>
-        System.Threading.Tasks.Task<VoicemailMediaInfo> VoicemailMessagesMessageidMediaGetAsync (string messageId, string formatId = null);
+        System.Threading.Tasks.Task<VoicemailMediaInfo> GetMessageMediaAsync (string messageId, string formatId = null);
 
         /// <summary>
         /// Get media playback URI for this message
@@ -450,7 +450,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="messageId">Message ID</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <returns>Task of ApiResponse (VoicemailMediaInfo)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VoicemailMediaInfo>> VoicemailMessagesMessageidMediaGetAsyncWithHttpInfo (string messageId, string formatId = null);
+        System.Threading.Tasks.Task<ApiResponse<VoicemailMediaInfo>> GetMessageMediaAsyncWithHttpInfo (string messageId, string formatId = null);
         
     }
   
@@ -535,9 +535,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="userId">User ID</param> 
         /// <returns>VoicemailUserPolicy</returns>
-        public VoicemailUserPolicy ConfigurationUservoicemailpoliciesUseridGet (string userId)
+        public VoicemailUserPolicy GetUservoicemailpoliciesUser (string userId)
         {
-             ApiResponse<VoicemailUserPolicy> response = ConfigurationUservoicemailpoliciesUseridGetWithHttpInfo(userId);
+             ApiResponse<VoicemailUserPolicy> response = GetUservoicemailpoliciesUserWithHttpInfo(userId);
              return response.Data;
         }
 
@@ -546,11 +546,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="userId">User ID</param> 
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
-        public ApiResponse< VoicemailUserPolicy > ConfigurationUservoicemailpoliciesUseridGetWithHttpInfo (string userId)
+        public ApiResponse< VoicemailUserPolicy > GetUservoicemailpoliciesUserWithHttpInfo (string userId)
         {
             
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling ConfigurationUservoicemailpoliciesUseridGet");
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling GetUservoicemailpoliciesUser");
             
     
             var path_ = "/api/v1/configuration/uservoicemailpolicies/{userId}";
@@ -596,9 +596,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConfigurationUservoicemailpoliciesUseridGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetUservoicemailpoliciesUser: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConfigurationUservoicemailpoliciesUseridGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetUservoicemailpoliciesUser: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<VoicemailUserPolicy>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -611,9 +611,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="userId">User ID</param>
         /// <returns>Task of VoicemailUserPolicy</returns>
-        public async System.Threading.Tasks.Task<VoicemailUserPolicy> ConfigurationUservoicemailpoliciesUseridGetAsync (string userId)
+        public async System.Threading.Tasks.Task<VoicemailUserPolicy> GetUservoicemailpoliciesUserAsync (string userId)
         {
-             ApiResponse<VoicemailUserPolicy> response = await ConfigurationUservoicemailpoliciesUseridGetAsyncWithHttpInfo(userId);
+             ApiResponse<VoicemailUserPolicy> response = await GetUservoicemailpoliciesUserAsyncWithHttpInfo(userId);
              return response.Data;
 
         }
@@ -623,10 +623,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> ConfigurationUservoicemailpoliciesUseridGetAsyncWithHttpInfo (string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> GetUservoicemailpoliciesUserAsyncWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling ConfigurationUservoicemailpoliciesUseridGet");
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling GetUservoicemailpoliciesUser");
             
     
             var path_ = "/api/v1/configuration/uservoicemailpolicies/{userId}";
@@ -672,9 +672,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConfigurationUservoicemailpoliciesUseridGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetUservoicemailpoliciesUser: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConfigurationUservoicemailpoliciesUseridGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetUservoicemailpoliciesUser: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<VoicemailUserPolicy>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -688,9 +688,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param> 
         /// <param name="body">The user&#39;s voicemail policy</param> 
         /// <returns>VoicemailUserPolicy</returns>
-        public VoicemailUserPolicy ConfigurationUservoicemailpoliciesUseridPatch (string userId, VoicemailUserPolicy body)
+        public VoicemailUserPolicy PatchUservoicemailpoliciesUser (string userId, VoicemailUserPolicy body)
         {
-             ApiResponse<VoicemailUserPolicy> response = ConfigurationUservoicemailpoliciesUseridPatchWithHttpInfo(userId, body);
+             ApiResponse<VoicemailUserPolicy> response = PatchUservoicemailpoliciesUserWithHttpInfo(userId, body);
              return response.Data;
         }
 
@@ -700,14 +700,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param> 
         /// <param name="body">The user&#39;s voicemail policy</param> 
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
-        public ApiResponse< VoicemailUserPolicy > ConfigurationUservoicemailpoliciesUseridPatchWithHttpInfo (string userId, VoicemailUserPolicy body)
+        public ApiResponse< VoicemailUserPolicy > PatchUservoicemailpoliciesUserWithHttpInfo (string userId, VoicemailUserPolicy body)
         {
             
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling ConfigurationUservoicemailpoliciesUseridPatch");
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling PatchUservoicemailpoliciesUser");
             
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling ConfigurationUservoicemailpoliciesUseridPatch");
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PatchUservoicemailpoliciesUser");
             
     
             var path_ = "/api/v1/configuration/uservoicemailpolicies/{userId}";
@@ -754,9 +754,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConfigurationUservoicemailpoliciesUseridPatch: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PatchUservoicemailpoliciesUser: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConfigurationUservoicemailpoliciesUseridPatch: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PatchUservoicemailpoliciesUser: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<VoicemailUserPolicy>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -770,9 +770,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>Task of VoicemailUserPolicy</returns>
-        public async System.Threading.Tasks.Task<VoicemailUserPolicy> ConfigurationUservoicemailpoliciesUseridPatchAsync (string userId, VoicemailUserPolicy body)
+        public async System.Threading.Tasks.Task<VoicemailUserPolicy> PatchUservoicemailpoliciesUserAsync (string userId, VoicemailUserPolicy body)
         {
-             ApiResponse<VoicemailUserPolicy> response = await ConfigurationUservoicemailpoliciesUseridPatchAsyncWithHttpInfo(userId, body);
+             ApiResponse<VoicemailUserPolicy> response = await PatchUservoicemailpoliciesUserAsyncWithHttpInfo(userId, body);
              return response.Data;
 
         }
@@ -783,12 +783,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> ConfigurationUservoicemailpoliciesUseridPatchAsyncWithHttpInfo (string userId, VoicemailUserPolicy body)
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> PatchUservoicemailpoliciesUserAsyncWithHttpInfo (string userId, VoicemailUserPolicy body)
         {
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling ConfigurationUservoicemailpoliciesUseridPatch");
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling PatchUservoicemailpoliciesUser");
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling ConfigurationUservoicemailpoliciesUseridPatch");
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PatchUservoicemailpoliciesUser");
             
     
             var path_ = "/api/v1/configuration/uservoicemailpolicies/{userId}";
@@ -835,9 +835,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConfigurationUservoicemailpoliciesUseridPatch: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PatchUservoicemailpoliciesUser: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConfigurationUservoicemailpoliciesUseridPatch: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PatchUservoicemailpoliciesUser: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<VoicemailUserPolicy>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -849,9 +849,9 @@ namespace ININ.PureCloudApi.Api
         /// Get a policy 
         /// </summary>
         /// <returns>VoicemailOrganizationPolicy</returns>
-        public VoicemailOrganizationPolicy ConfigurationVoicemailpolicyGet ()
+        public VoicemailOrganizationPolicy GetVoicemailpolicy ()
         {
-             ApiResponse<VoicemailOrganizationPolicy> response = ConfigurationVoicemailpolicyGetWithHttpInfo();
+             ApiResponse<VoicemailOrganizationPolicy> response = GetVoicemailpolicyWithHttpInfo();
              return response.Data;
         }
 
@@ -859,7 +859,7 @@ namespace ININ.PureCloudApi.Api
         /// Get a policy 
         /// </summary>
         /// <returns>ApiResponse of VoicemailOrganizationPolicy</returns>
-        public ApiResponse< VoicemailOrganizationPolicy > ConfigurationVoicemailpolicyGetWithHttpInfo ()
+        public ApiResponse< VoicemailOrganizationPolicy > GetVoicemailpolicyWithHttpInfo ()
         {
             
     
@@ -905,9 +905,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConfigurationVoicemailpolicyGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetVoicemailpolicy: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConfigurationVoicemailpolicyGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetVoicemailpolicy: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<VoicemailOrganizationPolicy>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -919,9 +919,9 @@ namespace ININ.PureCloudApi.Api
         /// Get a policy 
         /// </summary>
         /// <returns>Task of VoicemailOrganizationPolicy</returns>
-        public async System.Threading.Tasks.Task<VoicemailOrganizationPolicy> ConfigurationVoicemailpolicyGetAsync ()
+        public async System.Threading.Tasks.Task<VoicemailOrganizationPolicy> GetVoicemailpolicyAsync ()
         {
-             ApiResponse<VoicemailOrganizationPolicy> response = await ConfigurationVoicemailpolicyGetAsyncWithHttpInfo();
+             ApiResponse<VoicemailOrganizationPolicy> response = await GetVoicemailpolicyAsyncWithHttpInfo();
              return response.Data;
 
         }
@@ -930,7 +930,7 @@ namespace ININ.PureCloudApi.Api
         /// Get a policy 
         /// </summary>
         /// <returns>Task of ApiResponse (VoicemailOrganizationPolicy)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> ConfigurationVoicemailpolicyGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> GetVoicemailpolicyAsyncWithHttpInfo ()
         {
             
     
@@ -976,9 +976,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConfigurationVoicemailpolicyGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetVoicemailpolicy: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConfigurationVoicemailpolicyGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetVoicemailpolicy: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<VoicemailOrganizationPolicy>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -991,9 +991,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Policy</param> 
         /// <returns>VoicemailOrganizationPolicy</returns>
-        public VoicemailOrganizationPolicy ConfigurationVoicemailpolicyPut (VoicemailOrganizationPolicy body = null)
+        public VoicemailOrganizationPolicy UpdateVoicemailpolicy (VoicemailOrganizationPolicy body = null)
         {
-             ApiResponse<VoicemailOrganizationPolicy> response = ConfigurationVoicemailpolicyPutWithHttpInfo(body);
+             ApiResponse<VoicemailOrganizationPolicy> response = UpdateVoicemailpolicyWithHttpInfo(body);
              return response.Data;
         }
 
@@ -1002,7 +1002,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Policy</param> 
         /// <returns>ApiResponse of VoicemailOrganizationPolicy</returns>
-        public ApiResponse< VoicemailOrganizationPolicy > ConfigurationVoicemailpolicyPutWithHttpInfo (VoicemailOrganizationPolicy body = null)
+        public ApiResponse< VoicemailOrganizationPolicy > UpdateVoicemailpolicyWithHttpInfo (VoicemailOrganizationPolicy body = null)
         {
             
     
@@ -1049,9 +1049,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConfigurationVoicemailpolicyPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateVoicemailpolicy: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConfigurationVoicemailpolicyPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateVoicemailpolicy: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<VoicemailOrganizationPolicy>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1064,9 +1064,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Policy</param>
         /// <returns>Task of VoicemailOrganizationPolicy</returns>
-        public async System.Threading.Tasks.Task<VoicemailOrganizationPolicy> ConfigurationVoicemailpolicyPutAsync (VoicemailOrganizationPolicy body = null)
+        public async System.Threading.Tasks.Task<VoicemailOrganizationPolicy> UpdateVoicemailpolicyAsync (VoicemailOrganizationPolicy body = null)
         {
-             ApiResponse<VoicemailOrganizationPolicy> response = await ConfigurationVoicemailpolicyPutAsyncWithHttpInfo(body);
+             ApiResponse<VoicemailOrganizationPolicy> response = await UpdateVoicemailpolicyAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -1076,7 +1076,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (VoicemailOrganizationPolicy)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> ConfigurationVoicemailpolicyPutAsyncWithHttpInfo (VoicemailOrganizationPolicy body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> UpdateVoicemailpolicyAsyncWithHttpInfo (VoicemailOrganizationPolicy body = null)
         {
             
     
@@ -1123,9 +1123,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConfigurationVoicemailpolicyPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateVoicemailpolicy: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConfigurationVoicemailpolicyPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateVoicemailpolicy: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<VoicemailOrganizationPolicy>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1137,9 +1137,9 @@ namespace ININ.PureCloudApi.Api
         /// Get mailbox information 
         /// </summary>
         /// <returns>VoicemailMailboxInfo</returns>
-        public VoicemailMailboxInfo VoicemailMailboxGet ()
+        public VoicemailMailboxInfo GetMailbox ()
         {
-             ApiResponse<VoicemailMailboxInfo> response = VoicemailMailboxGetWithHttpInfo();
+             ApiResponse<VoicemailMailboxInfo> response = GetMailboxWithHttpInfo();
              return response.Data;
         }
 
@@ -1147,7 +1147,7 @@ namespace ININ.PureCloudApi.Api
         /// Get mailbox information 
         /// </summary>
         /// <returns>ApiResponse of VoicemailMailboxInfo</returns>
-        public ApiResponse< VoicemailMailboxInfo > VoicemailMailboxGetWithHttpInfo ()
+        public ApiResponse< VoicemailMailboxInfo > GetMailboxWithHttpInfo ()
         {
             
     
@@ -1193,9 +1193,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling VoicemailMailboxGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetMailbox: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling VoicemailMailboxGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetMailbox: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<VoicemailMailboxInfo>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1207,9 +1207,9 @@ namespace ININ.PureCloudApi.Api
         /// Get mailbox information 
         /// </summary>
         /// <returns>Task of VoicemailMailboxInfo</returns>
-        public async System.Threading.Tasks.Task<VoicemailMailboxInfo> VoicemailMailboxGetAsync ()
+        public async System.Threading.Tasks.Task<VoicemailMailboxInfo> GetMailboxAsync ()
         {
-             ApiResponse<VoicemailMailboxInfo> response = await VoicemailMailboxGetAsyncWithHttpInfo();
+             ApiResponse<VoicemailMailboxInfo> response = await GetMailboxAsyncWithHttpInfo();
              return response.Data;
 
         }
@@ -1218,7 +1218,7 @@ namespace ININ.PureCloudApi.Api
         /// Get mailbox information 
         /// </summary>
         /// <returns>Task of ApiResponse (VoicemailMailboxInfo)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VoicemailMailboxInfo>> VoicemailMailboxGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailMailboxInfo>> GetMailboxAsyncWithHttpInfo ()
         {
             
     
@@ -1264,9 +1264,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling VoicemailMailboxGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetMailbox: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling VoicemailMailboxGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetMailbox: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<VoicemailMailboxInfo>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1278,9 +1278,9 @@ namespace ININ.PureCloudApi.Api
         /// List voicemail messages 
         /// </summary>
         /// <returns>VoicemailMessageEntityListing</returns>
-        public VoicemailMessageEntityListing VoicemailMessagesGet ()
+        public VoicemailMessageEntityListing GetMessages ()
         {
-             ApiResponse<VoicemailMessageEntityListing> response = VoicemailMessagesGetWithHttpInfo();
+             ApiResponse<VoicemailMessageEntityListing> response = GetMessagesWithHttpInfo();
              return response.Data;
         }
 
@@ -1288,7 +1288,7 @@ namespace ININ.PureCloudApi.Api
         /// List voicemail messages 
         /// </summary>
         /// <returns>ApiResponse of VoicemailMessageEntityListing</returns>
-        public ApiResponse< VoicemailMessageEntityListing > VoicemailMessagesGetWithHttpInfo ()
+        public ApiResponse< VoicemailMessageEntityListing > GetMessagesWithHttpInfo ()
         {
             
     
@@ -1334,9 +1334,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling VoicemailMessagesGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetMessages: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling VoicemailMessagesGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetMessages: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<VoicemailMessageEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1348,9 +1348,9 @@ namespace ININ.PureCloudApi.Api
         /// List voicemail messages 
         /// </summary>
         /// <returns>Task of VoicemailMessageEntityListing</returns>
-        public async System.Threading.Tasks.Task<VoicemailMessageEntityListing> VoicemailMessagesGetAsync ()
+        public async System.Threading.Tasks.Task<VoicemailMessageEntityListing> GetMessagesAsync ()
         {
-             ApiResponse<VoicemailMessageEntityListing> response = await VoicemailMessagesGetAsyncWithHttpInfo();
+             ApiResponse<VoicemailMessageEntityListing> response = await GetMessagesAsyncWithHttpInfo();
              return response.Data;
 
         }
@@ -1359,7 +1359,7 @@ namespace ININ.PureCloudApi.Api
         /// List voicemail messages 
         /// </summary>
         /// <returns>Task of ApiResponse (VoicemailMessageEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> VoicemailMessagesGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetMessagesAsyncWithHttpInfo ()
         {
             
     
@@ -1405,9 +1405,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling VoicemailMessagesGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetMessages: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling VoicemailMessagesGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetMessages: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<VoicemailMessageEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1419,9 +1419,9 @@ namespace ININ.PureCloudApi.Api
         /// Delete all voicemail messages 
         /// </summary>
         /// <returns>string</returns>
-        public string VoicemailMessagesDelete ()
+        public string DeleteMessages ()
         {
-             ApiResponse<string> response = VoicemailMessagesDeleteWithHttpInfo();
+             ApiResponse<string> response = DeleteMessagesWithHttpInfo();
              return response.Data;
         }
 
@@ -1429,7 +1429,7 @@ namespace ININ.PureCloudApi.Api
         /// Delete all voicemail messages 
         /// </summary>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > VoicemailMessagesDeleteWithHttpInfo ()
+        public ApiResponse< string > DeleteMessagesWithHttpInfo ()
         {
             
     
@@ -1475,9 +1475,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling VoicemailMessagesDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteMessages: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling VoicemailMessagesDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteMessages: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1489,9 +1489,9 @@ namespace ININ.PureCloudApi.Api
         /// Delete all voicemail messages 
         /// </summary>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> VoicemailMessagesDeleteAsync ()
+        public async System.Threading.Tasks.Task<string> DeleteMessagesAsync ()
         {
-             ApiResponse<string> response = await VoicemailMessagesDeleteAsyncWithHttpInfo();
+             ApiResponse<string> response = await DeleteMessagesAsyncWithHttpInfo();
              return response.Data;
 
         }
@@ -1500,7 +1500,7 @@ namespace ININ.PureCloudApi.Api
         /// Delete all voicemail messages 
         /// </summary>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> VoicemailMessagesDeleteAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteMessagesAsyncWithHttpInfo ()
         {
             
     
@@ -1546,9 +1546,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling VoicemailMessagesDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteMessages: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling VoicemailMessagesDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteMessages: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1561,9 +1561,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="messageId">Message ID</param> 
         /// <returns>VoicemailMessage</returns>
-        public VoicemailMessage VoicemailMessagesMessageidGet (string messageId)
+        public VoicemailMessage GetMessage (string messageId)
         {
-             ApiResponse<VoicemailMessage> response = VoicemailMessagesMessageidGetWithHttpInfo(messageId);
+             ApiResponse<VoicemailMessage> response = GetMessageWithHttpInfo(messageId);
              return response.Data;
         }
 
@@ -1572,11 +1572,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="messageId">Message ID</param> 
         /// <returns>ApiResponse of VoicemailMessage</returns>
-        public ApiResponse< VoicemailMessage > VoicemailMessagesMessageidGetWithHttpInfo (string messageId)
+        public ApiResponse< VoicemailMessage > GetMessageWithHttpInfo (string messageId)
         {
             
             // verify the required parameter 'messageId' is set
-            if (messageId == null) throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailMessagesMessageidGet");
+            if (messageId == null) throw new ApiException(400, "Missing required parameter 'messageId' when calling GetMessage");
             
     
             var path_ = "/api/v1/voicemail/messages/{messageId}";
@@ -1622,9 +1622,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling VoicemailMessagesMessageidGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetMessage: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling VoicemailMessagesMessageidGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetMessage: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<VoicemailMessage>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1637,9 +1637,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="messageId">Message ID</param>
         /// <returns>Task of VoicemailMessage</returns>
-        public async System.Threading.Tasks.Task<VoicemailMessage> VoicemailMessagesMessageidGetAsync (string messageId)
+        public async System.Threading.Tasks.Task<VoicemailMessage> GetMessageAsync (string messageId)
         {
-             ApiResponse<VoicemailMessage> response = await VoicemailMessagesMessageidGetAsyncWithHttpInfo(messageId);
+             ApiResponse<VoicemailMessage> response = await GetMessageAsyncWithHttpInfo(messageId);
              return response.Data;
 
         }
@@ -1649,10 +1649,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="messageId">Message ID</param>
         /// <returns>Task of ApiResponse (VoicemailMessage)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> VoicemailMessagesMessageidGetAsyncWithHttpInfo (string messageId)
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> GetMessageAsyncWithHttpInfo (string messageId)
         {
             // verify the required parameter 'messageId' is set
-            if (messageId == null) throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailMessagesMessageidGet");
+            if (messageId == null) throw new ApiException(400, "Missing required parameter 'messageId' when calling GetMessage");
             
     
             var path_ = "/api/v1/voicemail/messages/{messageId}";
@@ -1698,9 +1698,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling VoicemailMessagesMessageidGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetMessage: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling VoicemailMessagesMessageidGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetMessage: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<VoicemailMessage>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1714,9 +1714,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="messageId">Message ID</param> 
         /// <param name="body">VoicemailMessage</param> 
         /// <returns>VoicemailMessage</returns>
-        public VoicemailMessage VoicemailMessagesMessageidPut (string messageId, VoicemailMessage body = null)
+        public VoicemailMessage UpdateMessage (string messageId, VoicemailMessage body = null)
         {
-             ApiResponse<VoicemailMessage> response = VoicemailMessagesMessageidPutWithHttpInfo(messageId, body);
+             ApiResponse<VoicemailMessage> response = UpdateMessageWithHttpInfo(messageId, body);
              return response.Data;
         }
 
@@ -1726,11 +1726,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="messageId">Message ID</param> 
         /// <param name="body">VoicemailMessage</param> 
         /// <returns>ApiResponse of VoicemailMessage</returns>
-        public ApiResponse< VoicemailMessage > VoicemailMessagesMessageidPutWithHttpInfo (string messageId, VoicemailMessage body = null)
+        public ApiResponse< VoicemailMessage > UpdateMessageWithHttpInfo (string messageId, VoicemailMessage body = null)
         {
             
             // verify the required parameter 'messageId' is set
-            if (messageId == null) throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailMessagesMessageidPut");
+            if (messageId == null) throw new ApiException(400, "Missing required parameter 'messageId' when calling UpdateMessage");
             
     
             var path_ = "/api/v1/voicemail/messages/{messageId}";
@@ -1777,9 +1777,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling VoicemailMessagesMessageidPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateMessage: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling VoicemailMessagesMessageidPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateMessage: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<VoicemailMessage>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1793,9 +1793,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="messageId">Message ID</param>
         /// <param name="body">VoicemailMessage</param>
         /// <returns>Task of VoicemailMessage</returns>
-        public async System.Threading.Tasks.Task<VoicemailMessage> VoicemailMessagesMessageidPutAsync (string messageId, VoicemailMessage body = null)
+        public async System.Threading.Tasks.Task<VoicemailMessage> UpdateMessageAsync (string messageId, VoicemailMessage body = null)
         {
-             ApiResponse<VoicemailMessage> response = await VoicemailMessagesMessageidPutAsyncWithHttpInfo(messageId, body);
+             ApiResponse<VoicemailMessage> response = await UpdateMessageAsyncWithHttpInfo(messageId, body);
              return response.Data;
 
         }
@@ -1806,10 +1806,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="messageId">Message ID</param>
         /// <param name="body">VoicemailMessage</param>
         /// <returns>Task of ApiResponse (VoicemailMessage)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> VoicemailMessagesMessageidPutAsyncWithHttpInfo (string messageId, VoicemailMessage body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> UpdateMessageAsyncWithHttpInfo (string messageId, VoicemailMessage body = null)
         {
             // verify the required parameter 'messageId' is set
-            if (messageId == null) throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailMessagesMessageidPut");
+            if (messageId == null) throw new ApiException(400, "Missing required parameter 'messageId' when calling UpdateMessage");
             
     
             var path_ = "/api/v1/voicemail/messages/{messageId}";
@@ -1856,9 +1856,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling VoicemailMessagesMessageidPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateMessage: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling VoicemailMessagesMessageidPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateMessage: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<VoicemailMessage>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1871,9 +1871,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="messageId">Message ID</param> 
         /// <returns>string</returns>
-        public string VoicemailMessagesMessageidDelete (string messageId)
+        public string DeleteMessage (string messageId)
         {
-             ApiResponse<string> response = VoicemailMessagesMessageidDeleteWithHttpInfo(messageId);
+             ApiResponse<string> response = DeleteMessageWithHttpInfo(messageId);
              return response.Data;
         }
 
@@ -1882,11 +1882,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="messageId">Message ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > VoicemailMessagesMessageidDeleteWithHttpInfo (string messageId)
+        public ApiResponse< string > DeleteMessageWithHttpInfo (string messageId)
         {
             
             // verify the required parameter 'messageId' is set
-            if (messageId == null) throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailMessagesMessageidDelete");
+            if (messageId == null) throw new ApiException(400, "Missing required parameter 'messageId' when calling DeleteMessage");
             
     
             var path_ = "/api/v1/voicemail/messages/{messageId}";
@@ -1932,9 +1932,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling VoicemailMessagesMessageidDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteMessage: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling VoicemailMessagesMessageidDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteMessage: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1947,9 +1947,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="messageId">Message ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> VoicemailMessagesMessageidDeleteAsync (string messageId)
+        public async System.Threading.Tasks.Task<string> DeleteMessageAsync (string messageId)
         {
-             ApiResponse<string> response = await VoicemailMessagesMessageidDeleteAsyncWithHttpInfo(messageId);
+             ApiResponse<string> response = await DeleteMessageAsyncWithHttpInfo(messageId);
              return response.Data;
 
         }
@@ -1959,10 +1959,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="messageId">Message ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> VoicemailMessagesMessageidDeleteAsyncWithHttpInfo (string messageId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteMessageAsyncWithHttpInfo (string messageId)
         {
             // verify the required parameter 'messageId' is set
-            if (messageId == null) throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailMessagesMessageidDelete");
+            if (messageId == null) throw new ApiException(400, "Missing required parameter 'messageId' when calling DeleteMessage");
             
     
             var path_ = "/api/v1/voicemail/messages/{messageId}";
@@ -2008,9 +2008,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling VoicemailMessagesMessageidDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteMessage: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling VoicemailMessagesMessageidDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteMessage: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2024,9 +2024,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="messageId">Message ID</param> 
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param> 
         /// <returns>VoicemailMediaInfo</returns>
-        public VoicemailMediaInfo VoicemailMessagesMessageidMediaGet (string messageId, string formatId = null)
+        public VoicemailMediaInfo GetMessageMedia (string messageId, string formatId = null)
         {
-             ApiResponse<VoicemailMediaInfo> response = VoicemailMessagesMessageidMediaGetWithHttpInfo(messageId, formatId);
+             ApiResponse<VoicemailMediaInfo> response = GetMessageMediaWithHttpInfo(messageId, formatId);
              return response.Data;
         }
 
@@ -2036,11 +2036,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="messageId">Message ID</param> 
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param> 
         /// <returns>ApiResponse of VoicemailMediaInfo</returns>
-        public ApiResponse< VoicemailMediaInfo > VoicemailMessagesMessageidMediaGetWithHttpInfo (string messageId, string formatId = null)
+        public ApiResponse< VoicemailMediaInfo > GetMessageMediaWithHttpInfo (string messageId, string formatId = null)
         {
             
             // verify the required parameter 'messageId' is set
-            if (messageId == null) throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailMessagesMessageidMediaGet");
+            if (messageId == null) throw new ApiException(400, "Missing required parameter 'messageId' when calling GetMessageMedia");
             
     
             var path_ = "/api/v1/voicemail/messages/{messageId}/media";
@@ -2087,9 +2087,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling VoicemailMessagesMessageidMediaGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetMessageMedia: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling VoicemailMessagesMessageidMediaGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetMessageMedia: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<VoicemailMediaInfo>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2103,9 +2103,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="messageId">Message ID</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <returns>Task of VoicemailMediaInfo</returns>
-        public async System.Threading.Tasks.Task<VoicemailMediaInfo> VoicemailMessagesMessageidMediaGetAsync (string messageId, string formatId = null)
+        public async System.Threading.Tasks.Task<VoicemailMediaInfo> GetMessageMediaAsync (string messageId, string formatId = null)
         {
-             ApiResponse<VoicemailMediaInfo> response = await VoicemailMessagesMessageidMediaGetAsyncWithHttpInfo(messageId, formatId);
+             ApiResponse<VoicemailMediaInfo> response = await GetMessageMediaAsyncWithHttpInfo(messageId, formatId);
              return response.Data;
 
         }
@@ -2116,10 +2116,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="messageId">Message ID</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <returns>Task of ApiResponse (VoicemailMediaInfo)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VoicemailMediaInfo>> VoicemailMessagesMessageidMediaGetAsyncWithHttpInfo (string messageId, string formatId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailMediaInfo>> GetMessageMediaAsyncWithHttpInfo (string messageId, string formatId = null)
         {
             // verify the required parameter 'messageId' is set
-            if (messageId == null) throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailMessagesMessageidMediaGet");
+            if (messageId == null) throw new ApiException(400, "Missing required parameter 'messageId' when calling GetMessageMedia");
             
     
             var path_ = "/api/v1/voicemail/messages/{messageId}/media";
@@ -2166,9 +2166,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling VoicemailMessagesMessageidMediaGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetMessageMedia: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling VoicemailMessagesMessageidMediaGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetMessageMedia: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<VoicemailMediaInfo>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

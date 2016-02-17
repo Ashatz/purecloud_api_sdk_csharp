@@ -116,6 +116,14 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
+        /// The operator queue the gistener will route to.
+        /// </summary>
+        /// <value>The operator queue the gistener will route to.</value>
+        [DataMember(Name="queue", EmitDefaultValue=false)]
+        public Queue Queue { get; set; }
+  
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -143,6 +151,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ExactPhrase: ").Append(ExactPhrase).Append("\n");
             sb.Append("  GroupTags: ").Append(GroupTags).Append("\n");
             sb.Append("  SocialAccount: ").Append(SocialAccount).Append("\n");
+            sb.Append("  Queue: ").Append(Queue).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
@@ -237,6 +246,11 @@ namespace ININ.PureCloudApi.Model
                     this.SocialAccount.Equals(other.SocialAccount)
                 ) && 
                 (
+                    this.Queue == other.Queue ||
+                    this.Queue != null &&
+                    this.Queue.Equals(other.Queue)
+                ) && 
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -287,6 +301,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.SocialAccount != null)
                     hash = hash * 57 + this.SocialAccount.GetHashCode();
+                
+                if (this.Queue != null)
+                    hash = hash * 57 + this.Queue.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 57 + this.SelfUri.GetHashCode();

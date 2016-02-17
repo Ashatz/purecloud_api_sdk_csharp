@@ -23,7 +23,6 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         public TermAttribute()
         {
-            this.MultipleValues = false;
             
         }
 
@@ -33,13 +32,6 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets WorkspaceId
-        /// </summary>
-        [DataMember(Name="workspaceId", EmitDefaultValue=false)]
-        public string WorkspaceId { get; set; }
   
         
         /// <summary>
@@ -56,27 +48,6 @@ namespace ININ.PureCloudApi.Model
         public string Type { get; set; }
   
         
-        /// <summary>
-        /// Gets or Sets Restrictions
-        /// </summary>
-        [DataMember(Name="restrictions", EmitDefaultValue=false)]
-        public AttributeRestrictions Restrictions { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Format
-        /// </summary>
-        [DataMember(Name="format", EmitDefaultValue=false)]
-        public string Format { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets MultipleValues
-        /// </summary>
-        [DataMember(Name="multipleValues", EmitDefaultValue=false)]
-        public bool? MultipleValues { get; set; }
-  
-        
   
         /// <summary>
         /// Returns the string presentation of the object
@@ -87,12 +58,8 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class TermAttribute {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  WorkspaceId: ").Append(WorkspaceId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  Restrictions: ").Append(Restrictions).Append("\n");
-            sb.Append("  Format: ").Append(Format).Append("\n");
-            sb.Append("  MultipleValues: ").Append(MultipleValues).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -136,11 +103,6 @@ namespace ININ.PureCloudApi.Model
                     this.Id.Equals(other.Id)
                 ) && 
                 (
-                    this.WorkspaceId == other.WorkspaceId ||
-                    this.WorkspaceId != null &&
-                    this.WorkspaceId.Equals(other.WorkspaceId)
-                ) && 
-                (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
@@ -149,21 +111,6 @@ namespace ININ.PureCloudApi.Model
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
-                (
-                    this.Restrictions == other.Restrictions ||
-                    this.Restrictions != null &&
-                    this.Restrictions.Equals(other.Restrictions)
-                ) && 
-                (
-                    this.Format == other.Format ||
-                    this.Format != null &&
-                    this.Format.Equals(other.Format)
-                ) && 
-                (
-                    this.MultipleValues == other.MultipleValues ||
-                    this.MultipleValues != null &&
-                    this.MultipleValues.Equals(other.MultipleValues)
                 );
         }
 
@@ -182,23 +129,11 @@ namespace ININ.PureCloudApi.Model
                 if (this.Id != null)
                     hash = hash * 57 + this.Id.GetHashCode();
                 
-                if (this.WorkspaceId != null)
-                    hash = hash * 57 + this.WorkspaceId.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 57 + this.Name.GetHashCode();
                 
                 if (this.Type != null)
                     hash = hash * 57 + this.Type.GetHashCode();
-                
-                if (this.Restrictions != null)
-                    hash = hash * 57 + this.Restrictions.GetHashCode();
-                
-                if (this.Format != null)
-                    hash = hash * 57 + this.Format.GetHashCode();
-                
-                if (this.MultipleValues != null)
-                    hash = hash * 57 + this.MultipleValues.GetHashCode();
                 
                 return hash;
             }

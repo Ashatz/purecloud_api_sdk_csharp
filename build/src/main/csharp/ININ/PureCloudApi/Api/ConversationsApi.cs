@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="communicationType">Call or Chat communication filtering</param>
         /// <returns>ConversationEntityListing</returns>
-        ConversationEntityListing ConversationsGet (string communicationType = null);
+        ConversationEntityListing Get (string communicationType = null);
   
         /// <summary>
         /// Get conversations
@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="communicationType">Call or Chat communication filtering</param>
         /// <returns>ApiResponse of ConversationEntityListing</returns>
-        ApiResponse<ConversationEntityListing> ConversationsGetWithHttpInfo (string communicationType = null);
+        ApiResponse<ConversationEntityListing> GetWithHttpInfo (string communicationType = null);
 
         /// <summary>
         /// Get conversations
@@ -44,7 +44,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="communicationType">Call or Chat communication filtering</param>
         /// <returns>Task of ConversationEntityListing</returns>
-        System.Threading.Tasks.Task<ConversationEntityListing> ConversationsGetAsync (string communicationType = null);
+        System.Threading.Tasks.Task<ConversationEntityListing> GetAsync (string communicationType = null);
 
         /// <summary>
         /// Get conversations
@@ -54,7 +54,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="communicationType">Call or Chat communication filtering</param>
         /// <returns>Task of ApiResponse (ConversationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConversationEntityListing>> ConversationsGetAsyncWithHttpInfo (string communicationType = null);
+        System.Threading.Tasks.Task<ApiResponse<ConversationEntityListing>> GetAsyncWithHttpInfo (string communicationType = null);
         
         /// <summary>
         /// Create conversation
@@ -71,7 +71,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="skillIds">Skill ids to use for routing when calling a queue</param>
         /// <param name="body"></param>
         /// <returns>ConversationResponse</returns>
-        ConversationResponse ConversationsPost (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null);
+        ConversationResponse Create (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null);
   
         /// <summary>
         /// Create conversation
@@ -88,7 +88,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="skillIds">Skill ids to use for routing when calling a queue</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of ConversationResponse</returns>
-        ApiResponse<ConversationResponse> ConversationsPostWithHttpInfo (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null);
+        ApiResponse<ConversationResponse> CreateWithHttpInfo (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null);
 
         /// <summary>
         /// Create conversation
@@ -105,7 +105,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="skillIds">Skill ids to use for routing when calling a queue</param>
         /// <param name="body"></param>
         /// <returns>Task of ConversationResponse</returns>
-        System.Threading.Tasks.Task<ConversationResponse> ConversationsPostAsync (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null);
+        System.Threading.Tasks.Task<ConversationResponse> CreateAsync (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null);
 
         /// <summary>
         /// Create conversation
@@ -122,7 +122,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="skillIds">Skill ids to use for routing when calling a queue</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (ConversationResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConversationResponse>> ConversationsPostAsyncWithHttpInfo (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null);
+        System.Threading.Tasks.Task<ApiResponse<ConversationResponse>> CreateAsyncWithHttpInfo (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null);
         
         /// <summary>
         /// Create Fax Conversation
@@ -132,7 +132,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Fax</param>
         /// <returns>FaxSendResponse</returns>
-        FaxSendResponse ConversationsFaxPost (FaxSendRequest body = null);
+        FaxSendResponse CreateFax (FaxSendRequest body = null);
   
         /// <summary>
         /// Create Fax Conversation
@@ -142,7 +142,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Fax</param>
         /// <returns>ApiResponse of FaxSendResponse</returns>
-        ApiResponse<FaxSendResponse> ConversationsFaxPostWithHttpInfo (FaxSendRequest body = null);
+        ApiResponse<FaxSendResponse> CreateFaxWithHttpInfo (FaxSendRequest body = null);
 
         /// <summary>
         /// Create Fax Conversation
@@ -152,7 +152,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Fax</param>
         /// <returns>Task of FaxSendResponse</returns>
-        System.Threading.Tasks.Task<FaxSendResponse> ConversationsFaxPostAsync (FaxSendRequest body = null);
+        System.Threading.Tasks.Task<FaxSendResponse> CreateFaxAsync (FaxSendRequest body = null);
 
         /// <summary>
         /// Create Fax Conversation
@@ -162,7 +162,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Fax</param>
         /// <returns>Task of ApiResponse (FaxSendResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FaxSendResponse>> ConversationsFaxPostAsyncWithHttpInfo (FaxSendRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<FaxSendResponse>> CreateFaxAsyncWithHttpInfo (FaxSendRequest body = null);
         
         /// <summary>
         /// Get the maximum number of participants that this user can have on a conference
@@ -171,7 +171,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>MaxParticipants</returns>
-        MaxParticipants ConversationsMaximumconferencepartiesGet ();
+        MaxParticipants GetMaximumconferenceparties ();
   
         /// <summary>
         /// Get the maximum number of participants that this user can have on a conference
@@ -180,7 +180,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of MaxParticipants</returns>
-        ApiResponse<MaxParticipants> ConversationsMaximumconferencepartiesGetWithHttpInfo ();
+        ApiResponse<MaxParticipants> GetMaximumconferencepartiesWithHttpInfo ();
 
         /// <summary>
         /// Get the maximum number of participants that this user can have on a conference
@@ -189,7 +189,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of MaxParticipants</returns>
-        System.Threading.Tasks.Task<MaxParticipants> ConversationsMaximumconferencepartiesGetAsync ();
+        System.Threading.Tasks.Task<MaxParticipants> GetMaximumconferencepartiesAsync ();
 
         /// <summary>
         /// Get the maximum number of participants that this user can have on a conference
@@ -198,7 +198,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse (MaxParticipants)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MaxParticipants>> ConversationsMaximumconferencepartiesGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<MaxParticipants>> GetMaximumconferencepartiesAsyncWithHttpInfo ();
         
         /// <summary>
         /// Query historical conversations
@@ -206,9 +206,9 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="body"></param>
+        /// <param name="body">Query parameters</param>
         /// <returns>ConversationQueryResponse</returns>
-        ConversationQueryResponse ConversationsQueryPost (ConversationHistoricalQueryRequestBody body = null);
+        ConversationQueryResponse CreateQuery (ConversationHistoricalQueryRequestBody body);
   
         /// <summary>
         /// Query historical conversations
@@ -216,9 +216,9 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="body"></param>
+        /// <param name="body">Query parameters</param>
         /// <returns>ApiResponse of ConversationQueryResponse</returns>
-        ApiResponse<ConversationQueryResponse> ConversationsQueryPostWithHttpInfo (ConversationHistoricalQueryRequestBody body = null);
+        ApiResponse<ConversationQueryResponse> CreateQueryWithHttpInfo (ConversationHistoricalQueryRequestBody body);
 
         /// <summary>
         /// Query historical conversations
@@ -226,9 +226,9 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="body"></param>
+        /// <param name="body">Query parameters</param>
         /// <returns>Task of ConversationQueryResponse</returns>
-        System.Threading.Tasks.Task<ConversationQueryResponse> ConversationsQueryPostAsync (ConversationHistoricalQueryRequestBody body = null);
+        System.Threading.Tasks.Task<ConversationQueryResponse> CreateQueryAsync (ConversationHistoricalQueryRequestBody body);
 
         /// <summary>
         /// Query historical conversations
@@ -236,9 +236,9 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="body"></param>
+        /// <param name="body">Query parameters</param>
         /// <returns>Task of ApiResponse (ConversationQueryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConversationQueryResponse>> ConversationsQueryPostAsyncWithHttpInfo (ConversationHistoricalQueryRequestBody body = null);
+        System.Threading.Tasks.Task<ApiResponse<ConversationQueryResponse>> CreateQueryAsyncWithHttpInfo (ConversationHistoricalQueryRequestBody body);
         
         /// <summary>
         /// Query historical conversations with a date/time anchor
@@ -246,10 +246,10 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="anchor">Anchor</param>
-        /// <param name="body"></param>
+        /// <param name="anchor">A point in time within the interval for the query that bounds the query. In the form of YYYYMMDDHHmmssSSSZX where YYYY is the 4-digit year, MM is the 2-digit month, DD is the 2-digit day-of-month, HH is the 2-digit hour-of-day (00-23), mm is the 2-digit minute, ss is the 2-digit second, SSS is the 3-digit millisecond, Z is the UTC offset expressed as &#39;Z&#39;, &#39;+nnnn&#39;, &#39;-nnnn&#39;, &#39;+nn:nn&#39;, &#39;-nn:nn&#39;, and X is either &#39;A&#39; (for the anchor point being at the earliest point in the query) or &#39;D&#39; (for the anchor point being the latest point in the query</param>
+        /// <param name="body">Query parameters</param>
         /// <returns>ConversationQueryResponse</returns>
-        ConversationQueryResponse ConversationsQueryAnchorPost (string anchor, ConversationHistoricalQueryRequestBody body = null);
+        ConversationQueryResponse CreateQueryAnchor (string anchor, ConversationHistoricalQueryRequestBody body);
   
         /// <summary>
         /// Query historical conversations with a date/time anchor
@@ -257,10 +257,10 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="anchor">Anchor</param>
-        /// <param name="body"></param>
+        /// <param name="anchor">A point in time within the interval for the query that bounds the query. In the form of YYYYMMDDHHmmssSSSZX where YYYY is the 4-digit year, MM is the 2-digit month, DD is the 2-digit day-of-month, HH is the 2-digit hour-of-day (00-23), mm is the 2-digit minute, ss is the 2-digit second, SSS is the 3-digit millisecond, Z is the UTC offset expressed as &#39;Z&#39;, &#39;+nnnn&#39;, &#39;-nnnn&#39;, &#39;+nn:nn&#39;, &#39;-nn:nn&#39;, and X is either &#39;A&#39; (for the anchor point being at the earliest point in the query) or &#39;D&#39; (for the anchor point being the latest point in the query</param>
+        /// <param name="body">Query parameters</param>
         /// <returns>ApiResponse of ConversationQueryResponse</returns>
-        ApiResponse<ConversationQueryResponse> ConversationsQueryAnchorPostWithHttpInfo (string anchor, ConversationHistoricalQueryRequestBody body = null);
+        ApiResponse<ConversationQueryResponse> CreateQueryAnchorWithHttpInfo (string anchor, ConversationHistoricalQueryRequestBody body);
 
         /// <summary>
         /// Query historical conversations with a date/time anchor
@@ -268,10 +268,10 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="anchor">Anchor</param>
-        /// <param name="body"></param>
+        /// <param name="anchor">A point in time within the interval for the query that bounds the query. In the form of YYYYMMDDHHmmssSSSZX where YYYY is the 4-digit year, MM is the 2-digit month, DD is the 2-digit day-of-month, HH is the 2-digit hour-of-day (00-23), mm is the 2-digit minute, ss is the 2-digit second, SSS is the 3-digit millisecond, Z is the UTC offset expressed as &#39;Z&#39;, &#39;+nnnn&#39;, &#39;-nnnn&#39;, &#39;+nn:nn&#39;, &#39;-nn:nn&#39;, and X is either &#39;A&#39; (for the anchor point being at the earliest point in the query) or &#39;D&#39; (for the anchor point being the latest point in the query</param>
+        /// <param name="body">Query parameters</param>
         /// <returns>Task of ConversationQueryResponse</returns>
-        System.Threading.Tasks.Task<ConversationQueryResponse> ConversationsQueryAnchorPostAsync (string anchor, ConversationHistoricalQueryRequestBody body = null);
+        System.Threading.Tasks.Task<ConversationQueryResponse> CreateQueryAnchorAsync (string anchor, ConversationHistoricalQueryRequestBody body);
 
         /// <summary>
         /// Query historical conversations with a date/time anchor
@@ -279,10 +279,10 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="anchor">Anchor</param>
-        /// <param name="body"></param>
+        /// <param name="anchor">A point in time within the interval for the query that bounds the query. In the form of YYYYMMDDHHmmssSSSZX where YYYY is the 4-digit year, MM is the 2-digit month, DD is the 2-digit day-of-month, HH is the 2-digit hour-of-day (00-23), mm is the 2-digit minute, ss is the 2-digit second, SSS is the 3-digit millisecond, Z is the UTC offset expressed as &#39;Z&#39;, &#39;+nnnn&#39;, &#39;-nnnn&#39;, &#39;+nn:nn&#39;, &#39;-nn:nn&#39;, and X is either &#39;A&#39; (for the anchor point being at the earliest point in the query) or &#39;D&#39; (for the anchor point being the latest point in the query</param>
+        /// <param name="body">Query parameters</param>
         /// <returns>Task of ApiResponse (ConversationQueryResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConversationQueryResponse>> ConversationsQueryAnchorPostAsyncWithHttpInfo (string anchor, ConversationHistoricalQueryRequestBody body = null);
+        System.Threading.Tasks.Task<ApiResponse<ConversationQueryResponse>> CreateQueryAnchorAsyncWithHttpInfo (string anchor, ConversationHistoricalQueryRequestBody body);
         
         /// <summary>
         /// Get conversation
@@ -292,7 +292,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Conversation</returns>
-        Conversation ConversationsConversationidGet (string conversationId);
+        Conversation GetConversation (string conversationId);
   
         /// <summary>
         /// Get conversation
@@ -302,7 +302,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>ApiResponse of Conversation</returns>
-        ApiResponse<Conversation> ConversationsConversationidGetWithHttpInfo (string conversationId);
+        ApiResponse<Conversation> GetConversationWithHttpInfo (string conversationId);
 
         /// <summary>
         /// Get conversation
@@ -312,7 +312,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of Conversation</returns>
-        System.Threading.Tasks.Task<Conversation> ConversationsConversationidGetAsync (string conversationId);
+        System.Threading.Tasks.Task<Conversation> GetConversationAsync (string conversationId);
 
         /// <summary>
         /// Get conversation
@@ -322,7 +322,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of ApiResponse (Conversation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Conversation>> ConversationsConversationidGetAsyncWithHttpInfo (string conversationId);
+        System.Threading.Tasks.Task<ApiResponse<Conversation>> GetConversationAsyncWithHttpInfo (string conversationId);
         
         /// <summary>
         /// Update conversation
@@ -333,7 +333,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Conversation</param>
         /// <returns>Conversation</returns>
-        Conversation ConversationsConversationidPut (string conversationId, Conversation body = null);
+        Conversation UpdateConversation (string conversationId, Conversation body = null);
   
         /// <summary>
         /// Update conversation
@@ -344,7 +344,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Conversation</param>
         /// <returns>ApiResponse of Conversation</returns>
-        ApiResponse<Conversation> ConversationsConversationidPutWithHttpInfo (string conversationId, Conversation body = null);
+        ApiResponse<Conversation> UpdateConversationWithHttpInfo (string conversationId, Conversation body = null);
 
         /// <summary>
         /// Update conversation
@@ -355,7 +355,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of Conversation</returns>
-        System.Threading.Tasks.Task<Conversation> ConversationsConversationidPutAsync (string conversationId, Conversation body = null);
+        System.Threading.Tasks.Task<Conversation> UpdateConversationAsync (string conversationId, Conversation body = null);
 
         /// <summary>
         /// Update conversation
@@ -366,7 +366,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of ApiResponse (Conversation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Conversation>> ConversationsConversationidPutAsyncWithHttpInfo (string conversationId, Conversation body = null);
+        System.Threading.Tasks.Task<ApiResponse<Conversation>> UpdateConversationAsyncWithHttpInfo (string conversationId, Conversation body = null);
         
         /// <summary>
         /// Get conversation messages
@@ -376,7 +376,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>EmailMessageListing</returns>
-        EmailMessageListing ConversationsConversationidMessagesGet (string conversationId);
+        EmailMessageListing GetConversationMessages (string conversationId);
   
         /// <summary>
         /// Get conversation messages
@@ -386,7 +386,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>ApiResponse of EmailMessageListing</returns>
-        ApiResponse<EmailMessageListing> ConversationsConversationidMessagesGetWithHttpInfo (string conversationId);
+        ApiResponse<EmailMessageListing> GetConversationMessagesWithHttpInfo (string conversationId);
 
         /// <summary>
         /// Get conversation messages
@@ -396,7 +396,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of EmailMessageListing</returns>
-        System.Threading.Tasks.Task<EmailMessageListing> ConversationsConversationidMessagesGetAsync (string conversationId);
+        System.Threading.Tasks.Task<EmailMessageListing> GetConversationMessagesAsync (string conversationId);
 
         /// <summary>
         /// Get conversation messages
@@ -406,7 +406,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of ApiResponse (EmailMessageListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EmailMessageListing>> ConversationsConversationidMessagesGetAsyncWithHttpInfo (string conversationId);
+        System.Threading.Tasks.Task<ApiResponse<EmailMessageListing>> GetConversationMessagesAsyncWithHttpInfo (string conversationId);
         
         /// <summary>
         /// Send an email reply
@@ -417,7 +417,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Reply</param>
         /// <returns>EmailMessage</returns>
-        EmailMessage ConversationsConversationidMessagesPost (string conversationId, EmailMessage body = null);
+        EmailMessage CreateConversationMessages (string conversationId, EmailMessage body = null);
   
         /// <summary>
         /// Send an email reply
@@ -428,7 +428,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Reply</param>
         /// <returns>ApiResponse of EmailMessage</returns>
-        ApiResponse<EmailMessage> ConversationsConversationidMessagesPostWithHttpInfo (string conversationId, EmailMessage body = null);
+        ApiResponse<EmailMessage> CreateConversationMessagesWithHttpInfo (string conversationId, EmailMessage body = null);
 
         /// <summary>
         /// Send an email reply
@@ -439,7 +439,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Reply</param>
         /// <returns>Task of EmailMessage</returns>
-        System.Threading.Tasks.Task<EmailMessage> ConversationsConversationidMessagesPostAsync (string conversationId, EmailMessage body = null);
+        System.Threading.Tasks.Task<EmailMessage> CreateConversationMessagesAsync (string conversationId, EmailMessage body = null);
 
         /// <summary>
         /// Send an email reply
@@ -450,7 +450,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Reply</param>
         /// <returns>Task of ApiResponse (EmailMessage)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EmailMessage>> ConversationsConversationidMessagesPostAsyncWithHttpInfo (string conversationId, EmailMessage body = null);
+        System.Threading.Tasks.Task<ApiResponse<EmailMessage>> CreateConversationMessagesAsyncWithHttpInfo (string conversationId, EmailMessage body = null);
         
         /// <summary>
         /// Get conversation draft reply
@@ -460,7 +460,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>EmailMessage</returns>
-        EmailMessage ConversationsConversationidMessagesDraftGet (string conversationId);
+        EmailMessage GetConversationMessagesDraft (string conversationId);
   
         /// <summary>
         /// Get conversation draft reply
@@ -470,7 +470,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>ApiResponse of EmailMessage</returns>
-        ApiResponse<EmailMessage> ConversationsConversationidMessagesDraftGetWithHttpInfo (string conversationId);
+        ApiResponse<EmailMessage> GetConversationMessagesDraftWithHttpInfo (string conversationId);
 
         /// <summary>
         /// Get conversation draft reply
@@ -480,7 +480,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of EmailMessage</returns>
-        System.Threading.Tasks.Task<EmailMessage> ConversationsConversationidMessagesDraftGetAsync (string conversationId);
+        System.Threading.Tasks.Task<EmailMessage> GetConversationMessagesDraftAsync (string conversationId);
 
         /// <summary>
         /// Get conversation draft reply
@@ -490,7 +490,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of ApiResponse (EmailMessage)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EmailMessage>> ConversationsConversationidMessagesDraftGetAsyncWithHttpInfo (string conversationId);
+        System.Threading.Tasks.Task<ApiResponse<EmailMessage>> GetConversationMessagesDraftAsyncWithHttpInfo (string conversationId);
         
         /// <summary>
         /// Update conversation draft reply
@@ -501,7 +501,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Draft</param>
         /// <returns>EmailMessage</returns>
-        EmailMessage ConversationsConversationidMessagesDraftPut (string conversationId, EmailMessage body = null);
+        EmailMessage UpdateConversationMessagesDraft (string conversationId, EmailMessage body = null);
   
         /// <summary>
         /// Update conversation draft reply
@@ -512,7 +512,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Draft</param>
         /// <returns>ApiResponse of EmailMessage</returns>
-        ApiResponse<EmailMessage> ConversationsConversationidMessagesDraftPutWithHttpInfo (string conversationId, EmailMessage body = null);
+        ApiResponse<EmailMessage> UpdateConversationMessagesDraftWithHttpInfo (string conversationId, EmailMessage body = null);
 
         /// <summary>
         /// Update conversation draft reply
@@ -523,7 +523,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Draft</param>
         /// <returns>Task of EmailMessage</returns>
-        System.Threading.Tasks.Task<EmailMessage> ConversationsConversationidMessagesDraftPutAsync (string conversationId, EmailMessage body = null);
+        System.Threading.Tasks.Task<EmailMessage> UpdateConversationMessagesDraftAsync (string conversationId, EmailMessage body = null);
 
         /// <summary>
         /// Update conversation draft reply
@@ -534,7 +534,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Draft</param>
         /// <returns>Task of ApiResponse (EmailMessage)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EmailMessage>> ConversationsConversationidMessagesDraftPutAsyncWithHttpInfo (string conversationId, EmailMessage body = null);
+        System.Threading.Tasks.Task<ApiResponse<EmailMessage>> UpdateConversationMessagesDraftAsyncWithHttpInfo (string conversationId, EmailMessage body = null);
         
         /// <summary>
         /// Delete attachment from draft
@@ -545,7 +545,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="attachmentId">attachment ID</param>
         /// <returns>string</returns>
-        string ConversationsConversationidMessagesDraftAttachmentsAttachmentidDelete (string conversationId, string attachmentId);
+        string DeleteConversationMessagesDraftAttachmentsByAttachmentId (string conversationId, string attachmentId);
   
         /// <summary>
         /// Delete attachment from draft
@@ -556,7 +556,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="attachmentId">attachment ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> ConversationsConversationidMessagesDraftAttachmentsAttachmentidDeleteWithHttpInfo (string conversationId, string attachmentId);
+        ApiResponse<string> DeleteConversationMessagesDraftAttachmentsByAttachmentIdWithHttpInfo (string conversationId, string attachmentId);
 
         /// <summary>
         /// Delete attachment from draft
@@ -567,7 +567,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="attachmentId">attachment ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> ConversationsConversationidMessagesDraftAttachmentsAttachmentidDeleteAsync (string conversationId, string attachmentId);
+        System.Threading.Tasks.Task<string> DeleteConversationMessagesDraftAttachmentsByAttachmentIdAsync (string conversationId, string attachmentId);
 
         /// <summary>
         /// Delete attachment from draft
@@ -578,7 +578,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="attachmentId">attachment ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> ConversationsConversationidMessagesDraftAttachmentsAttachmentidDeleteAsyncWithHttpInfo (string conversationId, string attachmentId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteConversationMessagesDraftAttachmentsByAttachmentIdAsyncWithHttpInfo (string conversationId, string attachmentId);
         
         /// <summary>
         /// Get conversation message
@@ -589,7 +589,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="id">message ID</param>
         /// <returns>EmailMessage</returns>
-        EmailMessage ConversationsConversationidMessagesIdGet (string conversationId, string id);
+        EmailMessage GetConversationMessagesById (string conversationId, string id);
   
         /// <summary>
         /// Get conversation message
@@ -600,7 +600,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="id">message ID</param>
         /// <returns>ApiResponse of EmailMessage</returns>
-        ApiResponse<EmailMessage> ConversationsConversationidMessagesIdGetWithHttpInfo (string conversationId, string id);
+        ApiResponse<EmailMessage> GetConversationMessagesByIdWithHttpInfo (string conversationId, string id);
 
         /// <summary>
         /// Get conversation message
@@ -611,7 +611,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="id">message ID</param>
         /// <returns>Task of EmailMessage</returns>
-        System.Threading.Tasks.Task<EmailMessage> ConversationsConversationidMessagesIdGetAsync (string conversationId, string id);
+        System.Threading.Tasks.Task<EmailMessage> GetConversationMessagesByIdAsync (string conversationId, string id);
 
         /// <summary>
         /// Get conversation message
@@ -622,7 +622,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="id">message ID</param>
         /// <returns>Task of ApiResponse (EmailMessage)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EmailMessage>> ConversationsConversationidMessagesIdGetAsyncWithHttpInfo (string conversationId, string id);
+        System.Threading.Tasks.Task<ApiResponse<EmailMessage>> GetConversationMessagesByIdAsyncWithHttpInfo (string conversationId, string id);
         
         /// <summary>
         /// Add participants to a conversation
@@ -633,7 +633,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Conversation</param>
         /// <returns>Conversation</returns>
-        Conversation ConversationsConversationidParticipantsPost (string conversationId, Conversation body = null);
+        Conversation CreateConversationParticipants (string conversationId, Conversation body = null);
   
         /// <summary>
         /// Add participants to a conversation
@@ -644,7 +644,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Conversation</param>
         /// <returns>ApiResponse of Conversation</returns>
-        ApiResponse<Conversation> ConversationsConversationidParticipantsPostWithHttpInfo (string conversationId, Conversation body = null);
+        ApiResponse<Conversation> CreateConversationParticipantsWithHttpInfo (string conversationId, Conversation body = null);
 
         /// <summary>
         /// Add participants to a conversation
@@ -655,7 +655,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of Conversation</returns>
-        System.Threading.Tasks.Task<Conversation> ConversationsConversationidParticipantsPostAsync (string conversationId, Conversation body = null);
+        System.Threading.Tasks.Task<Conversation> CreateConversationParticipantsAsync (string conversationId, Conversation body = null);
 
         /// <summary>
         /// Add participants to a conversation
@@ -666,7 +666,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of ApiResponse (Conversation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Conversation>> ConversationsConversationidParticipantsPostAsyncWithHttpInfo (string conversationId, Conversation body = null);
+        System.Threading.Tasks.Task<ApiResponse<Conversation>> CreateConversationParticipantsAsyncWithHttpInfo (string conversationId, Conversation body = null);
         
         /// <summary>
         /// Update a participant.
@@ -678,7 +678,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participant ID</param>
         /// <param name="body"></param>
         /// <returns></returns>
-        void ConversationsConversationidParticipantsParticipantidPut (string conversationId, string participantId, ParticipantRequest body = null);
+        void UpdateConversationParticipantsByParticipantId (string conversationId, string participantId, ParticipantRequest body = null);
   
         /// <summary>
         /// Update a participant.
@@ -690,7 +690,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participant ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ConversationsConversationidParticipantsParticipantidPutWithHttpInfo (string conversationId, string participantId, ParticipantRequest body = null);
+        ApiResponse<Object> UpdateConversationParticipantsByParticipantIdWithHttpInfo (string conversationId, string participantId, ParticipantRequest body = null);
 
         /// <summary>
         /// Update a participant.
@@ -702,7 +702,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participant ID</param>
         /// <param name="body"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ConversationsConversationidParticipantsParticipantidPutAsync (string conversationId, string participantId, ParticipantRequest body = null);
+        System.Threading.Tasks.Task UpdateConversationParticipantsByParticipantIdAsync (string conversationId, string participantId, ParticipantRequest body = null);
 
         /// <summary>
         /// Update a participant.
@@ -714,7 +714,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participant ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ConversationsConversationidParticipantsParticipantidPutAsyncWithHttpInfo (string conversationId, string participantId, ParticipantRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateConversationParticipantsByParticipantIdAsyncWithHttpInfo (string conversationId, string participantId, ParticipantRequest body = null);
         
         /// <summary>
         /// Update the attributes on a conversation participant.
@@ -726,7 +726,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participant ID</param>
         /// <param name="body"></param>
         /// <returns></returns>
-        void ConversationsConversationidParticipantsParticipantidAttributesPut (string conversationId, string participantId, ParticipantAttributes body = null);
+        void UpdateConversationParticipantsByParticipantIdAttributes (string conversationId, string participantId, ParticipantAttributes body = null);
   
         /// <summary>
         /// Update the attributes on a conversation participant.
@@ -738,7 +738,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participant ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ConversationsConversationidParticipantsParticipantidAttributesPutWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null);
+        ApiResponse<Object> UpdateConversationParticipantsByParticipantIdAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null);
 
         /// <summary>
         /// Update the attributes on a conversation participant.
@@ -750,7 +750,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participant ID</param>
         /// <param name="body"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ConversationsConversationidParticipantsParticipantidAttributesPutAsync (string conversationId, string participantId, ParticipantAttributes body = null);
+        System.Threading.Tasks.Task UpdateConversationParticipantsByParticipantIdAttributesAsync (string conversationId, string participantId, ParticipantAttributes body = null);
 
         /// <summary>
         /// Update the attributes on a conversation participant.
@@ -762,7 +762,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participant ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ConversationsConversationidParticipantsParticipantidAttributesPutAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateConversationParticipantsByParticipantIdAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null);
         
         /// <summary>
         /// Change who can speak
@@ -774,7 +774,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">The object of the transfer</param>
         /// <param name="body">new speak to</param>
         /// <returns>ConsultTransferResponse</returns>
-        ConsultTransferResponse ConversationsConversationidParticipantsParticipantidConsultPut (string conversationId, string participantId, ConsultTransferUpdate body = null);
+        ConsultTransferResponse UpdateConversationParticipantsByParticipantIdConsult (string conversationId, string participantId, ConsultTransferUpdate body = null);
   
         /// <summary>
         /// Change who can speak
@@ -786,7 +786,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">The object of the transfer</param>
         /// <param name="body">new speak to</param>
         /// <returns>ApiResponse of ConsultTransferResponse</returns>
-        ApiResponse<ConsultTransferResponse> ConversationsConversationidParticipantsParticipantidConsultPutWithHttpInfo (string conversationId, string participantId, ConsultTransferUpdate body = null);
+        ApiResponse<ConsultTransferResponse> UpdateConversationParticipantsByParticipantIdConsultWithHttpInfo (string conversationId, string participantId, ConsultTransferUpdate body = null);
 
         /// <summary>
         /// Change who can speak
@@ -798,7 +798,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">The object of the transfer</param>
         /// <param name="body">new speak to</param>
         /// <returns>Task of ConsultTransferResponse</returns>
-        System.Threading.Tasks.Task<ConsultTransferResponse> ConversationsConversationidParticipantsParticipantidConsultPutAsync (string conversationId, string participantId, ConsultTransferUpdate body = null);
+        System.Threading.Tasks.Task<ConsultTransferResponse> UpdateConversationParticipantsByParticipantIdConsultAsync (string conversationId, string participantId, ConsultTransferUpdate body = null);
 
         /// <summary>
         /// Change who can speak
@@ -810,7 +810,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">The object of the transfer</param>
         /// <param name="body">new speak to</param>
         /// <returns>Task of ApiResponse (ConsultTransferResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConsultTransferResponse>> ConversationsConversationidParticipantsParticipantidConsultPutAsyncWithHttpInfo (string conversationId, string participantId, ConsultTransferUpdate body = null);
+        System.Threading.Tasks.Task<ApiResponse<ConsultTransferResponse>> UpdateConversationParticipantsByParticipantIdConsultAsyncWithHttpInfo (string conversationId, string participantId, ConsultTransferUpdate body = null);
         
         /// <summary>
         /// Initiate and update consult transfer
@@ -822,7 +822,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">The object of the transfer</param>
         /// <param name="body">Destination address &amp; initial speak to</param>
         /// <returns>ConsultTransferResponse</returns>
-        ConsultTransferResponse ConversationsConversationidParticipantsParticipantidConsultPost (string conversationId, string participantId, ConsultTransfer body = null);
+        ConsultTransferResponse CreateConversationParticipantsByParticipantIdConsult (string conversationId, string participantId, ConsultTransfer body = null);
   
         /// <summary>
         /// Initiate and update consult transfer
@@ -834,7 +834,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">The object of the transfer</param>
         /// <param name="body">Destination address &amp; initial speak to</param>
         /// <returns>ApiResponse of ConsultTransferResponse</returns>
-        ApiResponse<ConsultTransferResponse> ConversationsConversationidParticipantsParticipantidConsultPostWithHttpInfo (string conversationId, string participantId, ConsultTransfer body = null);
+        ApiResponse<ConsultTransferResponse> CreateConversationParticipantsByParticipantIdConsultWithHttpInfo (string conversationId, string participantId, ConsultTransfer body = null);
 
         /// <summary>
         /// Initiate and update consult transfer
@@ -846,7 +846,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">The object of the transfer</param>
         /// <param name="body">Destination address &amp; initial speak to</param>
         /// <returns>Task of ConsultTransferResponse</returns>
-        System.Threading.Tasks.Task<ConsultTransferResponse> ConversationsConversationidParticipantsParticipantidConsultPostAsync (string conversationId, string participantId, ConsultTransfer body = null);
+        System.Threading.Tasks.Task<ConsultTransferResponse> CreateConversationParticipantsByParticipantIdConsultAsync (string conversationId, string participantId, ConsultTransfer body = null);
 
         /// <summary>
         /// Initiate and update consult transfer
@@ -858,7 +858,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">The object of the transfer</param>
         /// <param name="body">Destination address &amp; initial speak to</param>
         /// <returns>Task of ApiResponse (ConsultTransferResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConsultTransferResponse>> ConversationsConversationidParticipantsParticipantidConsultPostAsyncWithHttpInfo (string conversationId, string participantId, ConsultTransfer body = null);
+        System.Threading.Tasks.Task<ApiResponse<ConsultTransferResponse>> CreateConversationParticipantsByParticipantIdConsultAsyncWithHttpInfo (string conversationId, string participantId, ConsultTransfer body = null);
         
         /// <summary>
         /// Cancel the transfer
@@ -869,7 +869,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">The object of the transfer</param>
         /// <returns>string</returns>
-        string ConversationsConversationidParticipantsParticipantidConsultDelete (string conversationId, string participantId);
+        string DeleteConversationParticipantsByParticipantIdConsult (string conversationId, string participantId);
   
         /// <summary>
         /// Cancel the transfer
@@ -880,7 +880,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">The object of the transfer</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> ConversationsConversationidParticipantsParticipantidConsultDeleteWithHttpInfo (string conversationId, string participantId);
+        ApiResponse<string> DeleteConversationParticipantsByParticipantIdConsultWithHttpInfo (string conversationId, string participantId);
 
         /// <summary>
         /// Cancel the transfer
@@ -891,7 +891,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">The object of the transfer</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> ConversationsConversationidParticipantsParticipantidConsultDeleteAsync (string conversationId, string participantId);
+        System.Threading.Tasks.Task<string> DeleteConversationParticipantsByParticipantIdConsultAsync (string conversationId, string participantId);
 
         /// <summary>
         /// Cancel the transfer
@@ -902,7 +902,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">The object of the transfer</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> ConversationsConversationidParticipantsParticipantidConsultDeleteAsyncWithHttpInfo (string conversationId, string participantId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteConversationParticipantsByParticipantIdConsultAsyncWithHttpInfo (string conversationId, string participantId);
         
         /// <summary>
         /// Listen in on the conversation from the point of view of a given participant.
@@ -913,7 +913,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <returns></returns>
-        void ConversationsConversationidParticipantsParticipantidMonitorPost (string conversationId, string participantId);
+        void CreateConversationParticipantsByParticipantIdMonitor (string conversationId, string participantId);
   
         /// <summary>
         /// Listen in on the conversation from the point of view of a given participant.
@@ -924,7 +924,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ConversationsConversationidParticipantsParticipantidMonitorPostWithHttpInfo (string conversationId, string participantId);
+        ApiResponse<Object> CreateConversationParticipantsByParticipantIdMonitorWithHttpInfo (string conversationId, string participantId);
 
         /// <summary>
         /// Listen in on the conversation from the point of view of a given participant.
@@ -935,7 +935,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ConversationsConversationidParticipantsParticipantidMonitorPostAsync (string conversationId, string participantId);
+        System.Threading.Tasks.Task CreateConversationParticipantsByParticipantIdMonitorAsync (string conversationId, string participantId);
 
         /// <summary>
         /// Listen in on the conversation from the point of view of a given participant.
@@ -946,7 +946,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ConversationsConversationidParticipantsParticipantidMonitorPostAsyncWithHttpInfo (string conversationId, string participantId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreateConversationParticipantsByParticipantIdMonitorAsyncWithHttpInfo (string conversationId, string participantId);
         
         /// <summary>
         /// Replace this participant with the specified user and/or address
@@ -962,7 +962,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">The id of the queue that will replace this participant.</param>
         /// <param name="voicemail">Indicates this participant will be replaced by the voicemail inbox of the participant.</param>
         /// <returns></returns>
-        void ConversationsConversationidParticipantsParticipantidReplacePost (string conversationId, string participantId, string userId = null, string address = null, string username = null, string queueId = null, bool? voicemail = null);
+        void CreateConversationParticipantsByParticipantIdReplace (string conversationId, string participantId, string userId = null, string address = null, string username = null, string queueId = null, bool? voicemail = null);
   
         /// <summary>
         /// Replace this participant with the specified user and/or address
@@ -978,7 +978,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">The id of the queue that will replace this participant.</param>
         /// <param name="voicemail">Indicates this participant will be replaced by the voicemail inbox of the participant.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ConversationsConversationidParticipantsParticipantidReplacePostWithHttpInfo (string conversationId, string participantId, string userId = null, string address = null, string username = null, string queueId = null, bool? voicemail = null);
+        ApiResponse<Object> CreateConversationParticipantsByParticipantIdReplaceWithHttpInfo (string conversationId, string participantId, string userId = null, string address = null, string username = null, string queueId = null, bool? voicemail = null);
 
         /// <summary>
         /// Replace this participant with the specified user and/or address
@@ -994,7 +994,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">The id of the queue that will replace this participant.</param>
         /// <param name="voicemail">Indicates this participant will be replaced by the voicemail inbox of the participant.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ConversationsConversationidParticipantsParticipantidReplacePostAsync (string conversationId, string participantId, string userId = null, string address = null, string username = null, string queueId = null, bool? voicemail = null);
+        System.Threading.Tasks.Task CreateConversationParticipantsByParticipantIdReplaceAsync (string conversationId, string participantId, string userId = null, string address = null, string username = null, string queueId = null, bool? voicemail = null);
 
         /// <summary>
         /// Replace this participant with the specified user and/or address
@@ -1010,7 +1010,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">The id of the queue that will replace this participant.</param>
         /// <param name="voicemail">Indicates this participant will be replaced by the voicemail inbox of the participant.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ConversationsConversationidParticipantsParticipantidReplacePostAsyncWithHttpInfo (string conversationId, string participantId, string userId = null, string address = null, string username = null, string queueId = null, bool? voicemail = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreateConversationParticipantsByParticipantIdReplaceAsyncWithHttpInfo (string conversationId, string participantId, string userId = null, string address = null, string username = null, string queueId = null, bool? voicemail = null);
         
         /// <summary>
         /// Get the wrap-up for this conversation participant.
@@ -1022,7 +1022,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participant ID</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional.</param>
         /// <returns>WrapupCode</returns>
-        WrapupCode ConversationsConversationidParticipantsParticipantidWrapupGet (string conversationId, string participantId, bool? provisional = null);
+        WrapupCode GetConversationParticipantsByParticipantIdWrapup (string conversationId, string participantId, bool? provisional = null);
   
         /// <summary>
         /// Get the wrap-up for this conversation participant.
@@ -1034,7 +1034,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participant ID</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional.</param>
         /// <returns>ApiResponse of WrapupCode</returns>
-        ApiResponse<WrapupCode> ConversationsConversationidParticipantsParticipantidWrapupGetWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
+        ApiResponse<WrapupCode> GetConversationParticipantsByParticipantIdWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation participant.
@@ -1046,7 +1046,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participant ID</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional.</param>
         /// <returns>Task of WrapupCode</returns>
-        System.Threading.Tasks.Task<WrapupCode> ConversationsConversationidParticipantsParticipantidWrapupGetAsync (string conversationId, string participantId, bool? provisional = null);
+        System.Threading.Tasks.Task<WrapupCode> GetConversationParticipantsByParticipantIdWrapupAsync (string conversationId, string participantId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation participant.
@@ -1058,7 +1058,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participant ID</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional.</param>
         /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> ConversationsConversationidParticipantsParticipantidWrapupGetAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
+        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetConversationParticipantsByParticipantIdWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
         
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
@@ -1069,7 +1069,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <returns>WrapupCode</returns>
-        WrapupCode ConversationsConversationidParticipantsParticipantidWrapupcodesGet (string conversationId, string participantId);
+        WrapupCode GetConversationParticipantsByParticipantIdWrapupcodes (string conversationId, string participantId);
   
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
@@ -1080,7 +1080,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <returns>ApiResponse of WrapupCode</returns>
-        ApiResponse<WrapupCode> ConversationsConversationidParticipantsParticipantidWrapupcodesGetWithHttpInfo (string conversationId, string participantId);
+        ApiResponse<WrapupCode> GetConversationParticipantsByParticipantIdWrapupcodesWithHttpInfo (string conversationId, string participantId);
 
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
@@ -1091,7 +1091,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <returns>Task of WrapupCode</returns>
-        System.Threading.Tasks.Task<WrapupCode> ConversationsConversationidParticipantsParticipantidWrapupcodesGetAsync (string conversationId, string participantId);
+        System.Threading.Tasks.Task<WrapupCode> GetConversationParticipantsByParticipantIdWrapupcodesAsync (string conversationId, string participantId);
 
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
@@ -1102,7 +1102,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> ConversationsConversationidParticipantsParticipantidWrapupcodesGetAsyncWithHttpInfo (string conversationId, string participantId);
+        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetConversationParticipantsByParticipantIdWrapupcodesAsyncWithHttpInfo (string conversationId, string participantId);
         
         /// <summary>
         /// Get possible tags for Conversation
@@ -1112,7 +1112,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Tag</returns>
-        Tag ConversationsConversationidTagsGet (string conversationId);
+        Tag GetConversationTags (string conversationId);
   
         /// <summary>
         /// Get possible tags for Conversation
@@ -1122,7 +1122,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>ApiResponse of Tag</returns>
-        ApiResponse<Tag> ConversationsConversationidTagsGetWithHttpInfo (string conversationId);
+        ApiResponse<Tag> GetConversationTagsWithHttpInfo (string conversationId);
 
         /// <summary>
         /// Get possible tags for Conversation
@@ -1132,7 +1132,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of Tag</returns>
-        System.Threading.Tasks.Task<Tag> ConversationsConversationidTagsGetAsync (string conversationId);
+        System.Threading.Tasks.Task<Tag> GetConversationTagsAsync (string conversationId);
 
         /// <summary>
         /// Get possible tags for Conversation
@@ -1142,7 +1142,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of ApiResponse (Tag)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Tag>> ConversationsConversationidTagsGetAsyncWithHttpInfo (string conversationId);
+        System.Threading.Tasks.Task<ApiResponse<Tag>> GetConversationTagsAsyncWithHttpInfo (string conversationId);
         
         /// <summary>
         /// Get possible wrap-up codes for Conversation
@@ -1152,7 +1152,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>WrapupCode</returns>
-        WrapupCode ConversationsConversationidWrapupcodesGet (string conversationId);
+        WrapupCode GetConversationWrapupcodes (string conversationId);
   
         /// <summary>
         /// Get possible wrap-up codes for Conversation
@@ -1162,7 +1162,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>ApiResponse of WrapupCode</returns>
-        ApiResponse<WrapupCode> ConversationsConversationidWrapupcodesGetWithHttpInfo (string conversationId);
+        ApiResponse<WrapupCode> GetConversationWrapupcodesWithHttpInfo (string conversationId);
 
         /// <summary>
         /// Get possible wrap-up codes for Conversation
@@ -1172,7 +1172,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of WrapupCode</returns>
-        System.Threading.Tasks.Task<WrapupCode> ConversationsConversationidWrapupcodesGetAsync (string conversationId);
+        System.Threading.Tasks.Task<WrapupCode> GetConversationWrapupcodesAsync (string conversationId);
 
         /// <summary>
         /// Get possible wrap-up codes for Conversation
@@ -1182,7 +1182,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> ConversationsConversationidWrapupcodesGetAsyncWithHttpInfo (string conversationId);
+        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetConversationWrapupcodesAsyncWithHttpInfo (string conversationId);
         
     }
   
@@ -1267,9 +1267,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="communicationType">Call or Chat communication filtering</param> 
         /// <returns>ConversationEntityListing</returns>
-        public ConversationEntityListing ConversationsGet (string communicationType = null)
+        public ConversationEntityListing Get (string communicationType = null)
         {
-             ApiResponse<ConversationEntityListing> response = ConversationsGetWithHttpInfo(communicationType);
+             ApiResponse<ConversationEntityListing> response = GetWithHttpInfo(communicationType);
              return response.Data;
         }
 
@@ -1278,7 +1278,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="communicationType">Call or Chat communication filtering</param> 
         /// <returns>ApiResponse of ConversationEntityListing</returns>
-        public ApiResponse< ConversationEntityListing > ConversationsGetWithHttpInfo (string communicationType = null)
+        public ApiResponse< ConversationEntityListing > GetWithHttpInfo (string communicationType = null)
         {
             
     
@@ -1325,9 +1325,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ConversationEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1340,9 +1340,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="communicationType">Call or Chat communication filtering</param>
         /// <returns>Task of ConversationEntityListing</returns>
-        public async System.Threading.Tasks.Task<ConversationEntityListing> ConversationsGetAsync (string communicationType = null)
+        public async System.Threading.Tasks.Task<ConversationEntityListing> GetAsync (string communicationType = null)
         {
-             ApiResponse<ConversationEntityListing> response = await ConversationsGetAsyncWithHttpInfo(communicationType);
+             ApiResponse<ConversationEntityListing> response = await GetAsyncWithHttpInfo(communicationType);
              return response.Data;
 
         }
@@ -1352,7 +1352,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="communicationType">Call or Chat communication filtering</param>
         /// <returns>Task of ApiResponse (ConversationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ConversationEntityListing>> ConversationsGetAsyncWithHttpInfo (string communicationType = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ConversationEntityListing>> GetAsyncWithHttpInfo (string communicationType = null)
         {
             
     
@@ -1399,9 +1399,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ConversationEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1421,9 +1421,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="skillIds">Skill ids to use for routing when calling a queue</param> 
         /// <param name="body"></param> 
         /// <returns>ConversationResponse</returns>
-        public ConversationResponse ConversationsPost (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null)
+        public ConversationResponse Create (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null)
         {
-             ApiResponse<ConversationResponse> response = ConversationsPostWithHttpInfo(call, callFrom, callQueueId, callUserId, priority, languageId, skillIds, body);
+             ApiResponse<ConversationResponse> response = CreateWithHttpInfo(call, callFrom, callQueueId, callUserId, priority, languageId, skillIds, body);
              return response.Data;
         }
 
@@ -1439,7 +1439,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="skillIds">Skill ids to use for routing when calling a queue</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of ConversationResponse</returns>
-        public ApiResponse< ConversationResponse > ConversationsPostWithHttpInfo (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null)
+        public ApiResponse< ConversationResponse > CreateWithHttpInfo (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null)
         {
             
     
@@ -1493,9 +1493,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Create: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Create: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ConversationResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1515,9 +1515,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="skillIds">Skill ids to use for routing when calling a queue</param>
         /// <param name="body"></param>
         /// <returns>Task of ConversationResponse</returns>
-        public async System.Threading.Tasks.Task<ConversationResponse> ConversationsPostAsync (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null)
+        public async System.Threading.Tasks.Task<ConversationResponse> CreateAsync (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null)
         {
-             ApiResponse<ConversationResponse> response = await ConversationsPostAsyncWithHttpInfo(call, callFrom, callQueueId, callUserId, priority, languageId, skillIds, body);
+             ApiResponse<ConversationResponse> response = await CreateAsyncWithHttpInfo(call, callFrom, callQueueId, callUserId, priority, languageId, skillIds, body);
              return response.Data;
 
         }
@@ -1534,7 +1534,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="skillIds">Skill ids to use for routing when calling a queue</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (ConversationResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ConversationResponse>> ConversationsPostAsyncWithHttpInfo (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ConversationResponse>> CreateAsyncWithHttpInfo (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null)
         {
             
     
@@ -1588,9 +1588,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Create: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Create: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ConversationResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1603,9 +1603,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Fax</param> 
         /// <returns>FaxSendResponse</returns>
-        public FaxSendResponse ConversationsFaxPost (FaxSendRequest body = null)
+        public FaxSendResponse CreateFax (FaxSendRequest body = null)
         {
-             ApiResponse<FaxSendResponse> response = ConversationsFaxPostWithHttpInfo(body);
+             ApiResponse<FaxSendResponse> response = CreateFaxWithHttpInfo(body);
              return response.Data;
         }
 
@@ -1614,7 +1614,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Fax</param> 
         /// <returns>ApiResponse of FaxSendResponse</returns>
-        public ApiResponse< FaxSendResponse > ConversationsFaxPostWithHttpInfo (FaxSendRequest body = null)
+        public ApiResponse< FaxSendResponse > CreateFaxWithHttpInfo (FaxSendRequest body = null)
         {
             
     
@@ -1661,9 +1661,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsFaxPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateFax: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsFaxPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateFax: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<FaxSendResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1676,9 +1676,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Fax</param>
         /// <returns>Task of FaxSendResponse</returns>
-        public async System.Threading.Tasks.Task<FaxSendResponse> ConversationsFaxPostAsync (FaxSendRequest body = null)
+        public async System.Threading.Tasks.Task<FaxSendResponse> CreateFaxAsync (FaxSendRequest body = null)
         {
-             ApiResponse<FaxSendResponse> response = await ConversationsFaxPostAsyncWithHttpInfo(body);
+             ApiResponse<FaxSendResponse> response = await CreateFaxAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -1688,7 +1688,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Fax</param>
         /// <returns>Task of ApiResponse (FaxSendResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FaxSendResponse>> ConversationsFaxPostAsyncWithHttpInfo (FaxSendRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<FaxSendResponse>> CreateFaxAsyncWithHttpInfo (FaxSendRequest body = null)
         {
             
     
@@ -1735,9 +1735,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsFaxPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateFax: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsFaxPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateFax: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<FaxSendResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1749,9 +1749,9 @@ namespace ININ.PureCloudApi.Api
         /// Get the maximum number of participants that this user can have on a conference 
         /// </summary>
         /// <returns>MaxParticipants</returns>
-        public MaxParticipants ConversationsMaximumconferencepartiesGet ()
+        public MaxParticipants GetMaximumconferenceparties ()
         {
-             ApiResponse<MaxParticipants> response = ConversationsMaximumconferencepartiesGetWithHttpInfo();
+             ApiResponse<MaxParticipants> response = GetMaximumconferencepartiesWithHttpInfo();
              return response.Data;
         }
 
@@ -1759,7 +1759,7 @@ namespace ININ.PureCloudApi.Api
         /// Get the maximum number of participants that this user can have on a conference 
         /// </summary>
         /// <returns>ApiResponse of MaxParticipants</returns>
-        public ApiResponse< MaxParticipants > ConversationsMaximumconferencepartiesGetWithHttpInfo ()
+        public ApiResponse< MaxParticipants > GetMaximumconferencepartiesWithHttpInfo ()
         {
             
     
@@ -1805,9 +1805,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsMaximumconferencepartiesGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetMaximumconferenceparties: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsMaximumconferencepartiesGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetMaximumconferenceparties: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<MaxParticipants>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1819,9 +1819,9 @@ namespace ININ.PureCloudApi.Api
         /// Get the maximum number of participants that this user can have on a conference 
         /// </summary>
         /// <returns>Task of MaxParticipants</returns>
-        public async System.Threading.Tasks.Task<MaxParticipants> ConversationsMaximumconferencepartiesGetAsync ()
+        public async System.Threading.Tasks.Task<MaxParticipants> GetMaximumconferencepartiesAsync ()
         {
-             ApiResponse<MaxParticipants> response = await ConversationsMaximumconferencepartiesGetAsyncWithHttpInfo();
+             ApiResponse<MaxParticipants> response = await GetMaximumconferencepartiesAsyncWithHttpInfo();
              return response.Data;
 
         }
@@ -1830,7 +1830,7 @@ namespace ININ.PureCloudApi.Api
         /// Get the maximum number of participants that this user can have on a conference 
         /// </summary>
         /// <returns>Task of ApiResponse (MaxParticipants)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MaxParticipants>> ConversationsMaximumconferencepartiesGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<MaxParticipants>> GetMaximumconferencepartiesAsyncWithHttpInfo ()
         {
             
     
@@ -1876,9 +1876,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsMaximumconferencepartiesGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetMaximumconferenceparties: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsMaximumconferencepartiesGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetMaximumconferenceparties: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<MaxParticipants>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1889,21 +1889,24 @@ namespace ININ.PureCloudApi.Api
         /// <summary>
         /// Query historical conversations 
         /// </summary>
-        /// <param name="body"></param> 
+        /// <param name="body">Query parameters</param> 
         /// <returns>ConversationQueryResponse</returns>
-        public ConversationQueryResponse ConversationsQueryPost (ConversationHistoricalQueryRequestBody body = null)
+        public ConversationQueryResponse CreateQuery (ConversationHistoricalQueryRequestBody body)
         {
-             ApiResponse<ConversationQueryResponse> response = ConversationsQueryPostWithHttpInfo(body);
+             ApiResponse<ConversationQueryResponse> response = CreateQueryWithHttpInfo(body);
              return response.Data;
         }
 
         /// <summary>
         /// Query historical conversations 
         /// </summary>
-        /// <param name="body"></param> 
+        /// <param name="body">Query parameters</param> 
         /// <returns>ApiResponse of ConversationQueryResponse</returns>
-        public ApiResponse< ConversationQueryResponse > ConversationsQueryPostWithHttpInfo (ConversationHistoricalQueryRequestBody body = null)
+        public ApiResponse< ConversationQueryResponse > CreateQueryWithHttpInfo (ConversationHistoricalQueryRequestBody body)
         {
+            
+            // verify the required parameter 'body' is set
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling CreateQuery");
             
     
             var path_ = "/api/v1/conversations/query";
@@ -1949,9 +1952,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsQueryPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateQuery: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsQueryPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateQuery: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ConversationQueryResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1962,11 +1965,11 @@ namespace ININ.PureCloudApi.Api
         /// <summary>
         /// Query historical conversations 
         /// </summary>
-        /// <param name="body"></param>
+        /// <param name="body">Query parameters</param>
         /// <returns>Task of ConversationQueryResponse</returns>
-        public async System.Threading.Tasks.Task<ConversationQueryResponse> ConversationsQueryPostAsync (ConversationHistoricalQueryRequestBody body = null)
+        public async System.Threading.Tasks.Task<ConversationQueryResponse> CreateQueryAsync (ConversationHistoricalQueryRequestBody body)
         {
-             ApiResponse<ConversationQueryResponse> response = await ConversationsQueryPostAsyncWithHttpInfo(body);
+             ApiResponse<ConversationQueryResponse> response = await CreateQueryAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -1974,10 +1977,12 @@ namespace ININ.PureCloudApi.Api
         /// <summary>
         /// Query historical conversations 
         /// </summary>
-        /// <param name="body"></param>
+        /// <param name="body">Query parameters</param>
         /// <returns>Task of ApiResponse (ConversationQueryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ConversationQueryResponse>> ConversationsQueryPostAsyncWithHttpInfo (ConversationHistoricalQueryRequestBody body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ConversationQueryResponse>> CreateQueryAsyncWithHttpInfo (ConversationHistoricalQueryRequestBody body)
         {
+            // verify the required parameter 'body' is set
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling CreateQuery");
             
     
             var path_ = "/api/v1/conversations/query";
@@ -2023,9 +2028,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsQueryPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateQuery: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsQueryPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateQuery: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ConversationQueryResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2036,26 +2041,29 @@ namespace ININ.PureCloudApi.Api
         /// <summary>
         /// Query historical conversations with a date/time anchor 
         /// </summary>
-        /// <param name="anchor">Anchor</param> 
-        /// <param name="body"></param> 
+        /// <param name="anchor">A point in time within the interval for the query that bounds the query. In the form of YYYYMMDDHHmmssSSSZX where YYYY is the 4-digit year, MM is the 2-digit month, DD is the 2-digit day-of-month, HH is the 2-digit hour-of-day (00-23), mm is the 2-digit minute, ss is the 2-digit second, SSS is the 3-digit millisecond, Z is the UTC offset expressed as &#39;Z&#39;, &#39;+nnnn&#39;, &#39;-nnnn&#39;, &#39;+nn:nn&#39;, &#39;-nn:nn&#39;, and X is either &#39;A&#39; (for the anchor point being at the earliest point in the query) or &#39;D&#39; (for the anchor point being the latest point in the query</param> 
+        /// <param name="body">Query parameters</param> 
         /// <returns>ConversationQueryResponse</returns>
-        public ConversationQueryResponse ConversationsQueryAnchorPost (string anchor, ConversationHistoricalQueryRequestBody body = null)
+        public ConversationQueryResponse CreateQueryAnchor (string anchor, ConversationHistoricalQueryRequestBody body)
         {
-             ApiResponse<ConversationQueryResponse> response = ConversationsQueryAnchorPostWithHttpInfo(anchor, body);
+             ApiResponse<ConversationQueryResponse> response = CreateQueryAnchorWithHttpInfo(anchor, body);
              return response.Data;
         }
 
         /// <summary>
         /// Query historical conversations with a date/time anchor 
         /// </summary>
-        /// <param name="anchor">Anchor</param> 
-        /// <param name="body"></param> 
+        /// <param name="anchor">A point in time within the interval for the query that bounds the query. In the form of YYYYMMDDHHmmssSSSZX where YYYY is the 4-digit year, MM is the 2-digit month, DD is the 2-digit day-of-month, HH is the 2-digit hour-of-day (00-23), mm is the 2-digit minute, ss is the 2-digit second, SSS is the 3-digit millisecond, Z is the UTC offset expressed as &#39;Z&#39;, &#39;+nnnn&#39;, &#39;-nnnn&#39;, &#39;+nn:nn&#39;, &#39;-nn:nn&#39;, and X is either &#39;A&#39; (for the anchor point being at the earliest point in the query) or &#39;D&#39; (for the anchor point being the latest point in the query</param> 
+        /// <param name="body">Query parameters</param> 
         /// <returns>ApiResponse of ConversationQueryResponse</returns>
-        public ApiResponse< ConversationQueryResponse > ConversationsQueryAnchorPostWithHttpInfo (string anchor, ConversationHistoricalQueryRequestBody body = null)
+        public ApiResponse< ConversationQueryResponse > CreateQueryAnchorWithHttpInfo (string anchor, ConversationHistoricalQueryRequestBody body)
         {
             
             // verify the required parameter 'anchor' is set
-            if (anchor == null) throw new ApiException(400, "Missing required parameter 'anchor' when calling ConversationsQueryAnchorPost");
+            if (anchor == null) throw new ApiException(400, "Missing required parameter 'anchor' when calling CreateQueryAnchor");
+            
+            // verify the required parameter 'body' is set
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling CreateQueryAnchor");
             
     
             var path_ = "/api/v1/conversations/query/{anchor}";
@@ -2102,9 +2110,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsQueryAnchorPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateQueryAnchor: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsQueryAnchorPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateQueryAnchor: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ConversationQueryResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2115,12 +2123,12 @@ namespace ININ.PureCloudApi.Api
         /// <summary>
         /// Query historical conversations with a date/time anchor 
         /// </summary>
-        /// <param name="anchor">Anchor</param>
-        /// <param name="body"></param>
+        /// <param name="anchor">A point in time within the interval for the query that bounds the query. In the form of YYYYMMDDHHmmssSSSZX where YYYY is the 4-digit year, MM is the 2-digit month, DD is the 2-digit day-of-month, HH is the 2-digit hour-of-day (00-23), mm is the 2-digit minute, ss is the 2-digit second, SSS is the 3-digit millisecond, Z is the UTC offset expressed as &#39;Z&#39;, &#39;+nnnn&#39;, &#39;-nnnn&#39;, &#39;+nn:nn&#39;, &#39;-nn:nn&#39;, and X is either &#39;A&#39; (for the anchor point being at the earliest point in the query) or &#39;D&#39; (for the anchor point being the latest point in the query</param>
+        /// <param name="body">Query parameters</param>
         /// <returns>Task of ConversationQueryResponse</returns>
-        public async System.Threading.Tasks.Task<ConversationQueryResponse> ConversationsQueryAnchorPostAsync (string anchor, ConversationHistoricalQueryRequestBody body = null)
+        public async System.Threading.Tasks.Task<ConversationQueryResponse> CreateQueryAnchorAsync (string anchor, ConversationHistoricalQueryRequestBody body)
         {
-             ApiResponse<ConversationQueryResponse> response = await ConversationsQueryAnchorPostAsyncWithHttpInfo(anchor, body);
+             ApiResponse<ConversationQueryResponse> response = await CreateQueryAnchorAsyncWithHttpInfo(anchor, body);
              return response.Data;
 
         }
@@ -2128,13 +2136,15 @@ namespace ININ.PureCloudApi.Api
         /// <summary>
         /// Query historical conversations with a date/time anchor 
         /// </summary>
-        /// <param name="anchor">Anchor</param>
-        /// <param name="body"></param>
+        /// <param name="anchor">A point in time within the interval for the query that bounds the query. In the form of YYYYMMDDHHmmssSSSZX where YYYY is the 4-digit year, MM is the 2-digit month, DD is the 2-digit day-of-month, HH is the 2-digit hour-of-day (00-23), mm is the 2-digit minute, ss is the 2-digit second, SSS is the 3-digit millisecond, Z is the UTC offset expressed as &#39;Z&#39;, &#39;+nnnn&#39;, &#39;-nnnn&#39;, &#39;+nn:nn&#39;, &#39;-nn:nn&#39;, and X is either &#39;A&#39; (for the anchor point being at the earliest point in the query) or &#39;D&#39; (for the anchor point being the latest point in the query</param>
+        /// <param name="body">Query parameters</param>
         /// <returns>Task of ApiResponse (ConversationQueryResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ConversationQueryResponse>> ConversationsQueryAnchorPostAsyncWithHttpInfo (string anchor, ConversationHistoricalQueryRequestBody body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ConversationQueryResponse>> CreateQueryAnchorAsyncWithHttpInfo (string anchor, ConversationHistoricalQueryRequestBody body)
         {
             // verify the required parameter 'anchor' is set
-            if (anchor == null) throw new ApiException(400, "Missing required parameter 'anchor' when calling ConversationsQueryAnchorPost");
+            if (anchor == null) throw new ApiException(400, "Missing required parameter 'anchor' when calling CreateQueryAnchor");
+            // verify the required parameter 'body' is set
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling CreateQueryAnchor");
             
     
             var path_ = "/api/v1/conversations/query/{anchor}";
@@ -2181,9 +2191,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsQueryAnchorPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateQueryAnchor: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsQueryAnchorPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateQueryAnchor: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ConversationQueryResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2196,9 +2206,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="conversationId">conversation ID</param> 
         /// <returns>Conversation</returns>
-        public Conversation ConversationsConversationidGet (string conversationId)
+        public Conversation GetConversation (string conversationId)
         {
-             ApiResponse<Conversation> response = ConversationsConversationidGetWithHttpInfo(conversationId);
+             ApiResponse<Conversation> response = GetConversationWithHttpInfo(conversationId);
              return response.Data;
         }
 
@@ -2207,11 +2217,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="conversationId">conversation ID</param> 
         /// <returns>ApiResponse of Conversation</returns>
-        public ApiResponse< Conversation > ConversationsConversationidGetWithHttpInfo (string conversationId)
+        public ApiResponse< Conversation > GetConversationWithHttpInfo (string conversationId)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidGet");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversation");
             
     
             var path_ = "/api/v1/conversations/{conversationId}";
@@ -2257,9 +2267,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversation: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversation: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Conversation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2272,9 +2282,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of Conversation</returns>
-        public async System.Threading.Tasks.Task<Conversation> ConversationsConversationidGetAsync (string conversationId)
+        public async System.Threading.Tasks.Task<Conversation> GetConversationAsync (string conversationId)
         {
-             ApiResponse<Conversation> response = await ConversationsConversationidGetAsyncWithHttpInfo(conversationId);
+             ApiResponse<Conversation> response = await GetConversationAsyncWithHttpInfo(conversationId);
              return response.Data;
 
         }
@@ -2284,10 +2294,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of ApiResponse (Conversation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Conversation>> ConversationsConversationidGetAsyncWithHttpInfo (string conversationId)
+        public async System.Threading.Tasks.Task<ApiResponse<Conversation>> GetConversationAsyncWithHttpInfo (string conversationId)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidGet");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversation");
             
     
             var path_ = "/api/v1/conversations/{conversationId}";
@@ -2333,9 +2343,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversation: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversation: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Conversation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2349,9 +2359,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param> 
         /// <param name="body">Conversation</param> 
         /// <returns>Conversation</returns>
-        public Conversation ConversationsConversationidPut (string conversationId, Conversation body = null)
+        public Conversation UpdateConversation (string conversationId, Conversation body = null)
         {
-             ApiResponse<Conversation> response = ConversationsConversationidPutWithHttpInfo(conversationId, body);
+             ApiResponse<Conversation> response = UpdateConversationWithHttpInfo(conversationId, body);
              return response.Data;
         }
 
@@ -2361,11 +2371,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param> 
         /// <param name="body">Conversation</param> 
         /// <returns>ApiResponse of Conversation</returns>
-        public ApiResponse< Conversation > ConversationsConversationidPutWithHttpInfo (string conversationId, Conversation body = null)
+        public ApiResponse< Conversation > UpdateConversationWithHttpInfo (string conversationId, Conversation body = null)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidPut");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling UpdateConversation");
             
     
             var path_ = "/api/v1/conversations/{conversationId}";
@@ -2412,9 +2422,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateConversation: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateConversation: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Conversation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2428,9 +2438,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of Conversation</returns>
-        public async System.Threading.Tasks.Task<Conversation> ConversationsConversationidPutAsync (string conversationId, Conversation body = null)
+        public async System.Threading.Tasks.Task<Conversation> UpdateConversationAsync (string conversationId, Conversation body = null)
         {
-             ApiResponse<Conversation> response = await ConversationsConversationidPutAsyncWithHttpInfo(conversationId, body);
+             ApiResponse<Conversation> response = await UpdateConversationAsyncWithHttpInfo(conversationId, body);
              return response.Data;
 
         }
@@ -2441,10 +2451,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of ApiResponse (Conversation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Conversation>> ConversationsConversationidPutAsyncWithHttpInfo (string conversationId, Conversation body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Conversation>> UpdateConversationAsyncWithHttpInfo (string conversationId, Conversation body = null)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidPut");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling UpdateConversation");
             
     
             var path_ = "/api/v1/conversations/{conversationId}";
@@ -2491,9 +2501,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateConversation: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateConversation: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Conversation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2506,9 +2516,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="conversationId">conversation ID</param> 
         /// <returns>EmailMessageListing</returns>
-        public EmailMessageListing ConversationsConversationidMessagesGet (string conversationId)
+        public EmailMessageListing GetConversationMessages (string conversationId)
         {
-             ApiResponse<EmailMessageListing> response = ConversationsConversationidMessagesGetWithHttpInfo(conversationId);
+             ApiResponse<EmailMessageListing> response = GetConversationMessagesWithHttpInfo(conversationId);
              return response.Data;
         }
 
@@ -2517,11 +2527,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="conversationId">conversation ID</param> 
         /// <returns>ApiResponse of EmailMessageListing</returns>
-        public ApiResponse< EmailMessageListing > ConversationsConversationidMessagesGetWithHttpInfo (string conversationId)
+        public ApiResponse< EmailMessageListing > GetConversationMessagesWithHttpInfo (string conversationId)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidMessagesGet");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationMessages");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/messages";
@@ -2567,9 +2577,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidMessagesGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationMessages: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidMessagesGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationMessages: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EmailMessageListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2582,9 +2592,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of EmailMessageListing</returns>
-        public async System.Threading.Tasks.Task<EmailMessageListing> ConversationsConversationidMessagesGetAsync (string conversationId)
+        public async System.Threading.Tasks.Task<EmailMessageListing> GetConversationMessagesAsync (string conversationId)
         {
-             ApiResponse<EmailMessageListing> response = await ConversationsConversationidMessagesGetAsyncWithHttpInfo(conversationId);
+             ApiResponse<EmailMessageListing> response = await GetConversationMessagesAsyncWithHttpInfo(conversationId);
              return response.Data;
 
         }
@@ -2594,10 +2604,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of ApiResponse (EmailMessageListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EmailMessageListing>> ConversationsConversationidMessagesGetAsyncWithHttpInfo (string conversationId)
+        public async System.Threading.Tasks.Task<ApiResponse<EmailMessageListing>> GetConversationMessagesAsyncWithHttpInfo (string conversationId)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidMessagesGet");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationMessages");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/messages";
@@ -2643,9 +2653,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidMessagesGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationMessages: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidMessagesGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationMessages: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EmailMessageListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2659,9 +2669,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param> 
         /// <param name="body">Reply</param> 
         /// <returns>EmailMessage</returns>
-        public EmailMessage ConversationsConversationidMessagesPost (string conversationId, EmailMessage body = null)
+        public EmailMessage CreateConversationMessages (string conversationId, EmailMessage body = null)
         {
-             ApiResponse<EmailMessage> response = ConversationsConversationidMessagesPostWithHttpInfo(conversationId, body);
+             ApiResponse<EmailMessage> response = CreateConversationMessagesWithHttpInfo(conversationId, body);
              return response.Data;
         }
 
@@ -2671,11 +2681,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param> 
         /// <param name="body">Reply</param> 
         /// <returns>ApiResponse of EmailMessage</returns>
-        public ApiResponse< EmailMessage > ConversationsConversationidMessagesPostWithHttpInfo (string conversationId, EmailMessage body = null)
+        public ApiResponse< EmailMessage > CreateConversationMessagesWithHttpInfo (string conversationId, EmailMessage body = null)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidMessagesPost");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling CreateConversationMessages");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/messages";
@@ -2722,9 +2732,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidMessagesPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateConversationMessages: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidMessagesPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateConversationMessages: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EmailMessage>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2738,9 +2748,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Reply</param>
         /// <returns>Task of EmailMessage</returns>
-        public async System.Threading.Tasks.Task<EmailMessage> ConversationsConversationidMessagesPostAsync (string conversationId, EmailMessage body = null)
+        public async System.Threading.Tasks.Task<EmailMessage> CreateConversationMessagesAsync (string conversationId, EmailMessage body = null)
         {
-             ApiResponse<EmailMessage> response = await ConversationsConversationidMessagesPostAsyncWithHttpInfo(conversationId, body);
+             ApiResponse<EmailMessage> response = await CreateConversationMessagesAsyncWithHttpInfo(conversationId, body);
              return response.Data;
 
         }
@@ -2751,10 +2761,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Reply</param>
         /// <returns>Task of ApiResponse (EmailMessage)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EmailMessage>> ConversationsConversationidMessagesPostAsyncWithHttpInfo (string conversationId, EmailMessage body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EmailMessage>> CreateConversationMessagesAsyncWithHttpInfo (string conversationId, EmailMessage body = null)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidMessagesPost");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling CreateConversationMessages");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/messages";
@@ -2801,9 +2811,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidMessagesPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateConversationMessages: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidMessagesPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateConversationMessages: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EmailMessage>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2816,9 +2826,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="conversationId">conversation ID</param> 
         /// <returns>EmailMessage</returns>
-        public EmailMessage ConversationsConversationidMessagesDraftGet (string conversationId)
+        public EmailMessage GetConversationMessagesDraft (string conversationId)
         {
-             ApiResponse<EmailMessage> response = ConversationsConversationidMessagesDraftGetWithHttpInfo(conversationId);
+             ApiResponse<EmailMessage> response = GetConversationMessagesDraftWithHttpInfo(conversationId);
              return response.Data;
         }
 
@@ -2827,11 +2837,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="conversationId">conversation ID</param> 
         /// <returns>ApiResponse of EmailMessage</returns>
-        public ApiResponse< EmailMessage > ConversationsConversationidMessagesDraftGetWithHttpInfo (string conversationId)
+        public ApiResponse< EmailMessage > GetConversationMessagesDraftWithHttpInfo (string conversationId)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidMessagesDraftGet");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationMessagesDraft");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/messages/draft";
@@ -2877,9 +2887,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidMessagesDraftGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationMessagesDraft: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidMessagesDraftGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationMessagesDraft: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EmailMessage>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2892,9 +2902,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of EmailMessage</returns>
-        public async System.Threading.Tasks.Task<EmailMessage> ConversationsConversationidMessagesDraftGetAsync (string conversationId)
+        public async System.Threading.Tasks.Task<EmailMessage> GetConversationMessagesDraftAsync (string conversationId)
         {
-             ApiResponse<EmailMessage> response = await ConversationsConversationidMessagesDraftGetAsyncWithHttpInfo(conversationId);
+             ApiResponse<EmailMessage> response = await GetConversationMessagesDraftAsyncWithHttpInfo(conversationId);
              return response.Data;
 
         }
@@ -2904,10 +2914,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of ApiResponse (EmailMessage)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EmailMessage>> ConversationsConversationidMessagesDraftGetAsyncWithHttpInfo (string conversationId)
+        public async System.Threading.Tasks.Task<ApiResponse<EmailMessage>> GetConversationMessagesDraftAsyncWithHttpInfo (string conversationId)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidMessagesDraftGet");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationMessagesDraft");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/messages/draft";
@@ -2953,9 +2963,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidMessagesDraftGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationMessagesDraft: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidMessagesDraftGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationMessagesDraft: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EmailMessage>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2969,9 +2979,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param> 
         /// <param name="body">Draft</param> 
         /// <returns>EmailMessage</returns>
-        public EmailMessage ConversationsConversationidMessagesDraftPut (string conversationId, EmailMessage body = null)
+        public EmailMessage UpdateConversationMessagesDraft (string conversationId, EmailMessage body = null)
         {
-             ApiResponse<EmailMessage> response = ConversationsConversationidMessagesDraftPutWithHttpInfo(conversationId, body);
+             ApiResponse<EmailMessage> response = UpdateConversationMessagesDraftWithHttpInfo(conversationId, body);
              return response.Data;
         }
 
@@ -2981,11 +2991,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param> 
         /// <param name="body">Draft</param> 
         /// <returns>ApiResponse of EmailMessage</returns>
-        public ApiResponse< EmailMessage > ConversationsConversationidMessagesDraftPutWithHttpInfo (string conversationId, EmailMessage body = null)
+        public ApiResponse< EmailMessage > UpdateConversationMessagesDraftWithHttpInfo (string conversationId, EmailMessage body = null)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidMessagesDraftPut");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling UpdateConversationMessagesDraft");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/messages/draft";
@@ -3032,9 +3042,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidMessagesDraftPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateConversationMessagesDraft: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidMessagesDraftPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateConversationMessagesDraft: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EmailMessage>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3048,9 +3058,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Draft</param>
         /// <returns>Task of EmailMessage</returns>
-        public async System.Threading.Tasks.Task<EmailMessage> ConversationsConversationidMessagesDraftPutAsync (string conversationId, EmailMessage body = null)
+        public async System.Threading.Tasks.Task<EmailMessage> UpdateConversationMessagesDraftAsync (string conversationId, EmailMessage body = null)
         {
-             ApiResponse<EmailMessage> response = await ConversationsConversationidMessagesDraftPutAsyncWithHttpInfo(conversationId, body);
+             ApiResponse<EmailMessage> response = await UpdateConversationMessagesDraftAsyncWithHttpInfo(conversationId, body);
              return response.Data;
 
         }
@@ -3061,10 +3071,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Draft</param>
         /// <returns>Task of ApiResponse (EmailMessage)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EmailMessage>> ConversationsConversationidMessagesDraftPutAsyncWithHttpInfo (string conversationId, EmailMessage body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EmailMessage>> UpdateConversationMessagesDraftAsyncWithHttpInfo (string conversationId, EmailMessage body = null)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidMessagesDraftPut");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling UpdateConversationMessagesDraft");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/messages/draft";
@@ -3111,9 +3121,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidMessagesDraftPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateConversationMessagesDraft: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidMessagesDraftPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateConversationMessagesDraft: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EmailMessage>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3127,9 +3137,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param> 
         /// <param name="attachmentId">attachment ID</param> 
         /// <returns>string</returns>
-        public string ConversationsConversationidMessagesDraftAttachmentsAttachmentidDelete (string conversationId, string attachmentId)
+        public string DeleteConversationMessagesDraftAttachmentsByAttachmentId (string conversationId, string attachmentId)
         {
-             ApiResponse<string> response = ConversationsConversationidMessagesDraftAttachmentsAttachmentidDeleteWithHttpInfo(conversationId, attachmentId);
+             ApiResponse<string> response = DeleteConversationMessagesDraftAttachmentsByAttachmentIdWithHttpInfo(conversationId, attachmentId);
              return response.Data;
         }
 
@@ -3139,14 +3149,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param> 
         /// <param name="attachmentId">attachment ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > ConversationsConversationidMessagesDraftAttachmentsAttachmentidDeleteWithHttpInfo (string conversationId, string attachmentId)
+        public ApiResponse< string > DeleteConversationMessagesDraftAttachmentsByAttachmentIdWithHttpInfo (string conversationId, string attachmentId)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidMessagesDraftAttachmentsAttachmentidDelete");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling DeleteConversationMessagesDraftAttachmentsByAttachmentId");
             
             // verify the required parameter 'attachmentId' is set
-            if (attachmentId == null) throw new ApiException(400, "Missing required parameter 'attachmentId' when calling ConversationsConversationidMessagesDraftAttachmentsAttachmentidDelete");
+            if (attachmentId == null) throw new ApiException(400, "Missing required parameter 'attachmentId' when calling DeleteConversationMessagesDraftAttachmentsByAttachmentId");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/messages/draft/attachments/{attachmentId}";
@@ -3193,9 +3203,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidMessagesDraftAttachmentsAttachmentidDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteConversationMessagesDraftAttachmentsByAttachmentId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidMessagesDraftAttachmentsAttachmentidDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteConversationMessagesDraftAttachmentsByAttachmentId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3209,9 +3219,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="attachmentId">attachment ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> ConversationsConversationidMessagesDraftAttachmentsAttachmentidDeleteAsync (string conversationId, string attachmentId)
+        public async System.Threading.Tasks.Task<string> DeleteConversationMessagesDraftAttachmentsByAttachmentIdAsync (string conversationId, string attachmentId)
         {
-             ApiResponse<string> response = await ConversationsConversationidMessagesDraftAttachmentsAttachmentidDeleteAsyncWithHttpInfo(conversationId, attachmentId);
+             ApiResponse<string> response = await DeleteConversationMessagesDraftAttachmentsByAttachmentIdAsyncWithHttpInfo(conversationId, attachmentId);
              return response.Data;
 
         }
@@ -3222,12 +3232,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="attachmentId">attachment ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> ConversationsConversationidMessagesDraftAttachmentsAttachmentidDeleteAsyncWithHttpInfo (string conversationId, string attachmentId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteConversationMessagesDraftAttachmentsByAttachmentIdAsyncWithHttpInfo (string conversationId, string attachmentId)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidMessagesDraftAttachmentsAttachmentidDelete");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling DeleteConversationMessagesDraftAttachmentsByAttachmentId");
             // verify the required parameter 'attachmentId' is set
-            if (attachmentId == null) throw new ApiException(400, "Missing required parameter 'attachmentId' when calling ConversationsConversationidMessagesDraftAttachmentsAttachmentidDelete");
+            if (attachmentId == null) throw new ApiException(400, "Missing required parameter 'attachmentId' when calling DeleteConversationMessagesDraftAttachmentsByAttachmentId");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/messages/draft/attachments/{attachmentId}";
@@ -3274,9 +3284,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidMessagesDraftAttachmentsAttachmentidDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteConversationMessagesDraftAttachmentsByAttachmentId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidMessagesDraftAttachmentsAttachmentidDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteConversationMessagesDraftAttachmentsByAttachmentId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3290,9 +3300,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param> 
         /// <param name="id">message ID</param> 
         /// <returns>EmailMessage</returns>
-        public EmailMessage ConversationsConversationidMessagesIdGet (string conversationId, string id)
+        public EmailMessage GetConversationMessagesById (string conversationId, string id)
         {
-             ApiResponse<EmailMessage> response = ConversationsConversationidMessagesIdGetWithHttpInfo(conversationId, id);
+             ApiResponse<EmailMessage> response = GetConversationMessagesByIdWithHttpInfo(conversationId, id);
              return response.Data;
         }
 
@@ -3302,14 +3312,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param> 
         /// <param name="id">message ID</param> 
         /// <returns>ApiResponse of EmailMessage</returns>
-        public ApiResponse< EmailMessage > ConversationsConversationidMessagesIdGetWithHttpInfo (string conversationId, string id)
+        public ApiResponse< EmailMessage > GetConversationMessagesByIdWithHttpInfo (string conversationId, string id)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidMessagesIdGet");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationMessagesById");
             
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConversationsConversationidMessagesIdGet");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetConversationMessagesById");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/messages/{id}";
@@ -3356,9 +3366,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidMessagesIdGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationMessagesById: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidMessagesIdGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationMessagesById: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EmailMessage>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3372,9 +3382,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="id">message ID</param>
         /// <returns>Task of EmailMessage</returns>
-        public async System.Threading.Tasks.Task<EmailMessage> ConversationsConversationidMessagesIdGetAsync (string conversationId, string id)
+        public async System.Threading.Tasks.Task<EmailMessage> GetConversationMessagesByIdAsync (string conversationId, string id)
         {
-             ApiResponse<EmailMessage> response = await ConversationsConversationidMessagesIdGetAsyncWithHttpInfo(conversationId, id);
+             ApiResponse<EmailMessage> response = await GetConversationMessagesByIdAsyncWithHttpInfo(conversationId, id);
              return response.Data;
 
         }
@@ -3385,12 +3395,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="id">message ID</param>
         /// <returns>Task of ApiResponse (EmailMessage)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EmailMessage>> ConversationsConversationidMessagesIdGetAsyncWithHttpInfo (string conversationId, string id)
+        public async System.Threading.Tasks.Task<ApiResponse<EmailMessage>> GetConversationMessagesByIdAsyncWithHttpInfo (string conversationId, string id)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidMessagesIdGet");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationMessagesById");
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling ConversationsConversationidMessagesIdGet");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetConversationMessagesById");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/messages/{id}";
@@ -3437,9 +3447,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidMessagesIdGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationMessagesById: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidMessagesIdGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationMessagesById: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EmailMessage>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3453,9 +3463,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param> 
         /// <param name="body">Conversation</param> 
         /// <returns>Conversation</returns>
-        public Conversation ConversationsConversationidParticipantsPost (string conversationId, Conversation body = null)
+        public Conversation CreateConversationParticipants (string conversationId, Conversation body = null)
         {
-             ApiResponse<Conversation> response = ConversationsConversationidParticipantsPostWithHttpInfo(conversationId, body);
+             ApiResponse<Conversation> response = CreateConversationParticipantsWithHttpInfo(conversationId, body);
              return response.Data;
         }
 
@@ -3465,11 +3475,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param> 
         /// <param name="body">Conversation</param> 
         /// <returns>ApiResponse of Conversation</returns>
-        public ApiResponse< Conversation > ConversationsConversationidParticipantsPostWithHttpInfo (string conversationId, Conversation body = null)
+        public ApiResponse< Conversation > CreateConversationParticipantsWithHttpInfo (string conversationId, Conversation body = null)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidParticipantsPost");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling CreateConversationParticipants");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/participants";
@@ -3516,9 +3526,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateConversationParticipants: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateConversationParticipants: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Conversation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3532,9 +3542,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of Conversation</returns>
-        public async System.Threading.Tasks.Task<Conversation> ConversationsConversationidParticipantsPostAsync (string conversationId, Conversation body = null)
+        public async System.Threading.Tasks.Task<Conversation> CreateConversationParticipantsAsync (string conversationId, Conversation body = null)
         {
-             ApiResponse<Conversation> response = await ConversationsConversationidParticipantsPostAsyncWithHttpInfo(conversationId, body);
+             ApiResponse<Conversation> response = await CreateConversationParticipantsAsyncWithHttpInfo(conversationId, body);
              return response.Data;
 
         }
@@ -3545,10 +3555,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="body">Conversation</param>
         /// <returns>Task of ApiResponse (Conversation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Conversation>> ConversationsConversationidParticipantsPostAsyncWithHttpInfo (string conversationId, Conversation body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Conversation>> CreateConversationParticipantsAsyncWithHttpInfo (string conversationId, Conversation body = null)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidParticipantsPost");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling CreateConversationParticipants");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/participants";
@@ -3595,9 +3605,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateConversationParticipants: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateConversationParticipants: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Conversation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3612,9 +3622,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participant ID</param> 
         /// <param name="body"></param> 
         /// <returns></returns>
-        public void ConversationsConversationidParticipantsParticipantidPut (string conversationId, string participantId, ParticipantRequest body = null)
+        public void UpdateConversationParticipantsByParticipantId (string conversationId, string participantId, ParticipantRequest body = null)
         {
-             ConversationsConversationidParticipantsParticipantidPutWithHttpInfo(conversationId, participantId, body);
+             UpdateConversationParticipantsByParticipantIdWithHttpInfo(conversationId, participantId, body);
         }
 
         /// <summary>
@@ -3624,14 +3634,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participant ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> ConversationsConversationidParticipantsParticipantidPutWithHttpInfo (string conversationId, string participantId, ParticipantRequest body = null)
+        public ApiResponse<Object> UpdateConversationParticipantsByParticipantIdWithHttpInfo (string conversationId, string participantId, ParticipantRequest body = null)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidParticipantsParticipantidPut");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling UpdateConversationParticipantsByParticipantId");
             
             // verify the required parameter 'participantId' is set
-            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsConversationidParticipantsParticipantidPut");
+            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling UpdateConversationParticipantsByParticipantId");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/participants/{participantId}";
@@ -3679,9 +3689,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateConversationParticipantsByParticipantId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateConversationParticipantsByParticipantId: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -3696,9 +3706,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participant ID</param>
         /// <param name="body"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ConversationsConversationidParticipantsParticipantidPutAsync (string conversationId, string participantId, ParticipantRequest body = null)
+        public async System.Threading.Tasks.Task UpdateConversationParticipantsByParticipantIdAsync (string conversationId, string participantId, ParticipantRequest body = null)
         {
-             await ConversationsConversationidParticipantsParticipantidPutAsyncWithHttpInfo(conversationId, participantId, body);
+             await UpdateConversationParticipantsByParticipantIdAsyncWithHttpInfo(conversationId, participantId, body);
 
         }
 
@@ -3709,12 +3719,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participant ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ConversationsConversationidParticipantsParticipantidPutAsyncWithHttpInfo (string conversationId, string participantId, ParticipantRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateConversationParticipantsByParticipantIdAsyncWithHttpInfo (string conversationId, string participantId, ParticipantRequest body = null)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidParticipantsParticipantidPut");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling UpdateConversationParticipantsByParticipantId");
             // verify the required parameter 'participantId' is set
-            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsConversationidParticipantsParticipantidPut");
+            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling UpdateConversationParticipantsByParticipantId");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/participants/{participantId}";
@@ -3762,9 +3772,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateConversationParticipantsByParticipantId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateConversationParticipantsByParticipantId: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -3779,9 +3789,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participant ID</param> 
         /// <param name="body"></param> 
         /// <returns></returns>
-        public void ConversationsConversationidParticipantsParticipantidAttributesPut (string conversationId, string participantId, ParticipantAttributes body = null)
+        public void UpdateConversationParticipantsByParticipantIdAttributes (string conversationId, string participantId, ParticipantAttributes body = null)
         {
-             ConversationsConversationidParticipantsParticipantidAttributesPutWithHttpInfo(conversationId, participantId, body);
+             UpdateConversationParticipantsByParticipantIdAttributesWithHttpInfo(conversationId, participantId, body);
         }
 
         /// <summary>
@@ -3791,14 +3801,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participant ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> ConversationsConversationidParticipantsParticipantidAttributesPutWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null)
+        public ApiResponse<Object> UpdateConversationParticipantsByParticipantIdAttributesWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidParticipantsParticipantidAttributesPut");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling UpdateConversationParticipantsByParticipantIdAttributes");
             
             // verify the required parameter 'participantId' is set
-            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsConversationidParticipantsParticipantidAttributesPut");
+            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling UpdateConversationParticipantsByParticipantIdAttributes");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/participants/{participantId}/attributes";
@@ -3846,9 +3856,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidAttributesPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateConversationParticipantsByParticipantIdAttributes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidAttributesPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateConversationParticipantsByParticipantIdAttributes: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -3863,9 +3873,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participant ID</param>
         /// <param name="body"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ConversationsConversationidParticipantsParticipantidAttributesPutAsync (string conversationId, string participantId, ParticipantAttributes body = null)
+        public async System.Threading.Tasks.Task UpdateConversationParticipantsByParticipantIdAttributesAsync (string conversationId, string participantId, ParticipantAttributes body = null)
         {
-             await ConversationsConversationidParticipantsParticipantidAttributesPutAsyncWithHttpInfo(conversationId, participantId, body);
+             await UpdateConversationParticipantsByParticipantIdAttributesAsyncWithHttpInfo(conversationId, participantId, body);
 
         }
 
@@ -3876,12 +3886,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participant ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ConversationsConversationidParticipantsParticipantidAttributesPutAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateConversationParticipantsByParticipantIdAttributesAsyncWithHttpInfo (string conversationId, string participantId, ParticipantAttributes body = null)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidParticipantsParticipantidAttributesPut");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling UpdateConversationParticipantsByParticipantIdAttributes");
             // verify the required parameter 'participantId' is set
-            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsConversationidParticipantsParticipantidAttributesPut");
+            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling UpdateConversationParticipantsByParticipantIdAttributes");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/participants/{participantId}/attributes";
@@ -3929,9 +3939,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidAttributesPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateConversationParticipantsByParticipantIdAttributes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidAttributesPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateConversationParticipantsByParticipantIdAttributes: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -3946,9 +3956,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">The object of the transfer</param> 
         /// <param name="body">new speak to</param> 
         /// <returns>ConsultTransferResponse</returns>
-        public ConsultTransferResponse ConversationsConversationidParticipantsParticipantidConsultPut (string conversationId, string participantId, ConsultTransferUpdate body = null)
+        public ConsultTransferResponse UpdateConversationParticipantsByParticipantIdConsult (string conversationId, string participantId, ConsultTransferUpdate body = null)
         {
-             ApiResponse<ConsultTransferResponse> response = ConversationsConversationidParticipantsParticipantidConsultPutWithHttpInfo(conversationId, participantId, body);
+             ApiResponse<ConsultTransferResponse> response = UpdateConversationParticipantsByParticipantIdConsultWithHttpInfo(conversationId, participantId, body);
              return response.Data;
         }
 
@@ -3959,14 +3969,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">The object of the transfer</param> 
         /// <param name="body">new speak to</param> 
         /// <returns>ApiResponse of ConsultTransferResponse</returns>
-        public ApiResponse< ConsultTransferResponse > ConversationsConversationidParticipantsParticipantidConsultPutWithHttpInfo (string conversationId, string participantId, ConsultTransferUpdate body = null)
+        public ApiResponse< ConsultTransferResponse > UpdateConversationParticipantsByParticipantIdConsultWithHttpInfo (string conversationId, string participantId, ConsultTransferUpdate body = null)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidParticipantsParticipantidConsultPut");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling UpdateConversationParticipantsByParticipantIdConsult");
             
             // verify the required parameter 'participantId' is set
-            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsConversationidParticipantsParticipantidConsultPut");
+            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling UpdateConversationParticipantsByParticipantIdConsult");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/participants/{participantId}/consult";
@@ -4014,9 +4024,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidConsultPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateConversationParticipantsByParticipantIdConsult: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidConsultPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateConversationParticipantsByParticipantIdConsult: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ConsultTransferResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4031,9 +4041,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">The object of the transfer</param>
         /// <param name="body">new speak to</param>
         /// <returns>Task of ConsultTransferResponse</returns>
-        public async System.Threading.Tasks.Task<ConsultTransferResponse> ConversationsConversationidParticipantsParticipantidConsultPutAsync (string conversationId, string participantId, ConsultTransferUpdate body = null)
+        public async System.Threading.Tasks.Task<ConsultTransferResponse> UpdateConversationParticipantsByParticipantIdConsultAsync (string conversationId, string participantId, ConsultTransferUpdate body = null)
         {
-             ApiResponse<ConsultTransferResponse> response = await ConversationsConversationidParticipantsParticipantidConsultPutAsyncWithHttpInfo(conversationId, participantId, body);
+             ApiResponse<ConsultTransferResponse> response = await UpdateConversationParticipantsByParticipantIdConsultAsyncWithHttpInfo(conversationId, participantId, body);
              return response.Data;
 
         }
@@ -4045,12 +4055,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">The object of the transfer</param>
         /// <param name="body">new speak to</param>
         /// <returns>Task of ApiResponse (ConsultTransferResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ConsultTransferResponse>> ConversationsConversationidParticipantsParticipantidConsultPutAsyncWithHttpInfo (string conversationId, string participantId, ConsultTransferUpdate body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ConsultTransferResponse>> UpdateConversationParticipantsByParticipantIdConsultAsyncWithHttpInfo (string conversationId, string participantId, ConsultTransferUpdate body = null)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidParticipantsParticipantidConsultPut");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling UpdateConversationParticipantsByParticipantIdConsult");
             // verify the required parameter 'participantId' is set
-            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsConversationidParticipantsParticipantidConsultPut");
+            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling UpdateConversationParticipantsByParticipantIdConsult");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/participants/{participantId}/consult";
@@ -4098,9 +4108,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidConsultPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateConversationParticipantsByParticipantIdConsult: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidConsultPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateConversationParticipantsByParticipantIdConsult: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ConsultTransferResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4115,9 +4125,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">The object of the transfer</param> 
         /// <param name="body">Destination address &amp; initial speak to</param> 
         /// <returns>ConsultTransferResponse</returns>
-        public ConsultTransferResponse ConversationsConversationidParticipantsParticipantidConsultPost (string conversationId, string participantId, ConsultTransfer body = null)
+        public ConsultTransferResponse CreateConversationParticipantsByParticipantIdConsult (string conversationId, string participantId, ConsultTransfer body = null)
         {
-             ApiResponse<ConsultTransferResponse> response = ConversationsConversationidParticipantsParticipantidConsultPostWithHttpInfo(conversationId, participantId, body);
+             ApiResponse<ConsultTransferResponse> response = CreateConversationParticipantsByParticipantIdConsultWithHttpInfo(conversationId, participantId, body);
              return response.Data;
         }
 
@@ -4128,14 +4138,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">The object of the transfer</param> 
         /// <param name="body">Destination address &amp; initial speak to</param> 
         /// <returns>ApiResponse of ConsultTransferResponse</returns>
-        public ApiResponse< ConsultTransferResponse > ConversationsConversationidParticipantsParticipantidConsultPostWithHttpInfo (string conversationId, string participantId, ConsultTransfer body = null)
+        public ApiResponse< ConsultTransferResponse > CreateConversationParticipantsByParticipantIdConsultWithHttpInfo (string conversationId, string participantId, ConsultTransfer body = null)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidParticipantsParticipantidConsultPost");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling CreateConversationParticipantsByParticipantIdConsult");
             
             // verify the required parameter 'participantId' is set
-            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsConversationidParticipantsParticipantidConsultPost");
+            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling CreateConversationParticipantsByParticipantIdConsult");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/participants/{participantId}/consult";
@@ -4183,9 +4193,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidConsultPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateConversationParticipantsByParticipantIdConsult: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidConsultPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateConversationParticipantsByParticipantIdConsult: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ConsultTransferResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4200,9 +4210,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">The object of the transfer</param>
         /// <param name="body">Destination address &amp; initial speak to</param>
         /// <returns>Task of ConsultTransferResponse</returns>
-        public async System.Threading.Tasks.Task<ConsultTransferResponse> ConversationsConversationidParticipantsParticipantidConsultPostAsync (string conversationId, string participantId, ConsultTransfer body = null)
+        public async System.Threading.Tasks.Task<ConsultTransferResponse> CreateConversationParticipantsByParticipantIdConsultAsync (string conversationId, string participantId, ConsultTransfer body = null)
         {
-             ApiResponse<ConsultTransferResponse> response = await ConversationsConversationidParticipantsParticipantidConsultPostAsyncWithHttpInfo(conversationId, participantId, body);
+             ApiResponse<ConsultTransferResponse> response = await CreateConversationParticipantsByParticipantIdConsultAsyncWithHttpInfo(conversationId, participantId, body);
              return response.Data;
 
         }
@@ -4214,12 +4224,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">The object of the transfer</param>
         /// <param name="body">Destination address &amp; initial speak to</param>
         /// <returns>Task of ApiResponse (ConsultTransferResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ConsultTransferResponse>> ConversationsConversationidParticipantsParticipantidConsultPostAsyncWithHttpInfo (string conversationId, string participantId, ConsultTransfer body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ConsultTransferResponse>> CreateConversationParticipantsByParticipantIdConsultAsyncWithHttpInfo (string conversationId, string participantId, ConsultTransfer body = null)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidParticipantsParticipantidConsultPost");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling CreateConversationParticipantsByParticipantIdConsult");
             // verify the required parameter 'participantId' is set
-            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsConversationidParticipantsParticipantidConsultPost");
+            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling CreateConversationParticipantsByParticipantIdConsult");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/participants/{participantId}/consult";
@@ -4267,9 +4277,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidConsultPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateConversationParticipantsByParticipantIdConsult: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidConsultPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateConversationParticipantsByParticipantIdConsult: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ConsultTransferResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4283,9 +4293,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param> 
         /// <param name="participantId">The object of the transfer</param> 
         /// <returns>string</returns>
-        public string ConversationsConversationidParticipantsParticipantidConsultDelete (string conversationId, string participantId)
+        public string DeleteConversationParticipantsByParticipantIdConsult (string conversationId, string participantId)
         {
-             ApiResponse<string> response = ConversationsConversationidParticipantsParticipantidConsultDeleteWithHttpInfo(conversationId, participantId);
+             ApiResponse<string> response = DeleteConversationParticipantsByParticipantIdConsultWithHttpInfo(conversationId, participantId);
              return response.Data;
         }
 
@@ -4295,14 +4305,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param> 
         /// <param name="participantId">The object of the transfer</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > ConversationsConversationidParticipantsParticipantidConsultDeleteWithHttpInfo (string conversationId, string participantId)
+        public ApiResponse< string > DeleteConversationParticipantsByParticipantIdConsultWithHttpInfo (string conversationId, string participantId)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidParticipantsParticipantidConsultDelete");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling DeleteConversationParticipantsByParticipantIdConsult");
             
             // verify the required parameter 'participantId' is set
-            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsConversationidParticipantsParticipantidConsultDelete");
+            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling DeleteConversationParticipantsByParticipantIdConsult");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/participants/{participantId}/consult";
@@ -4349,9 +4359,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidConsultDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteConversationParticipantsByParticipantIdConsult: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidConsultDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteConversationParticipantsByParticipantIdConsult: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4365,9 +4375,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">The object of the transfer</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> ConversationsConversationidParticipantsParticipantidConsultDeleteAsync (string conversationId, string participantId)
+        public async System.Threading.Tasks.Task<string> DeleteConversationParticipantsByParticipantIdConsultAsync (string conversationId, string participantId)
         {
-             ApiResponse<string> response = await ConversationsConversationidParticipantsParticipantidConsultDeleteAsyncWithHttpInfo(conversationId, participantId);
+             ApiResponse<string> response = await DeleteConversationParticipantsByParticipantIdConsultAsyncWithHttpInfo(conversationId, participantId);
              return response.Data;
 
         }
@@ -4378,12 +4388,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">The object of the transfer</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> ConversationsConversationidParticipantsParticipantidConsultDeleteAsyncWithHttpInfo (string conversationId, string participantId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteConversationParticipantsByParticipantIdConsultAsyncWithHttpInfo (string conversationId, string participantId)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidParticipantsParticipantidConsultDelete");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling DeleteConversationParticipantsByParticipantIdConsult");
             // verify the required parameter 'participantId' is set
-            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsConversationidParticipantsParticipantidConsultDelete");
+            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling DeleteConversationParticipantsByParticipantIdConsult");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/participants/{participantId}/consult";
@@ -4430,9 +4440,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidConsultDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteConversationParticipantsByParticipantIdConsult: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidConsultDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteConversationParticipantsByParticipantIdConsult: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4446,9 +4456,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param> 
         /// <param name="participantId">participant ID</param> 
         /// <returns></returns>
-        public void ConversationsConversationidParticipantsParticipantidMonitorPost (string conversationId, string participantId)
+        public void CreateConversationParticipantsByParticipantIdMonitor (string conversationId, string participantId)
         {
-             ConversationsConversationidParticipantsParticipantidMonitorPostWithHttpInfo(conversationId, participantId);
+             CreateConversationParticipantsByParticipantIdMonitorWithHttpInfo(conversationId, participantId);
         }
 
         /// <summary>
@@ -4457,14 +4467,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param> 
         /// <param name="participantId">participant ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> ConversationsConversationidParticipantsParticipantidMonitorPostWithHttpInfo (string conversationId, string participantId)
+        public ApiResponse<Object> CreateConversationParticipantsByParticipantIdMonitorWithHttpInfo (string conversationId, string participantId)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidParticipantsParticipantidMonitorPost");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling CreateConversationParticipantsByParticipantIdMonitor");
             
             // verify the required parameter 'participantId' is set
-            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsConversationidParticipantsParticipantidMonitorPost");
+            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling CreateConversationParticipantsByParticipantIdMonitor");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/participants/{participantId}/monitor";
@@ -4511,9 +4521,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidMonitorPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateConversationParticipantsByParticipantIdMonitor: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidMonitorPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateConversationParticipantsByParticipantIdMonitor: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -4527,9 +4537,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ConversationsConversationidParticipantsParticipantidMonitorPostAsync (string conversationId, string participantId)
+        public async System.Threading.Tasks.Task CreateConversationParticipantsByParticipantIdMonitorAsync (string conversationId, string participantId)
         {
-             await ConversationsConversationidParticipantsParticipantidMonitorPostAsyncWithHttpInfo(conversationId, participantId);
+             await CreateConversationParticipantsByParticipantIdMonitorAsyncWithHttpInfo(conversationId, participantId);
 
         }
 
@@ -4539,12 +4549,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ConversationsConversationidParticipantsParticipantidMonitorPostAsyncWithHttpInfo (string conversationId, string participantId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateConversationParticipantsByParticipantIdMonitorAsyncWithHttpInfo (string conversationId, string participantId)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidParticipantsParticipantidMonitorPost");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling CreateConversationParticipantsByParticipantIdMonitor");
             // verify the required parameter 'participantId' is set
-            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsConversationidParticipantsParticipantidMonitorPost");
+            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling CreateConversationParticipantsByParticipantIdMonitor");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/participants/{participantId}/monitor";
@@ -4591,9 +4601,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidMonitorPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateConversationParticipantsByParticipantIdMonitor: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidMonitorPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateConversationParticipantsByParticipantIdMonitor: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -4612,9 +4622,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">The id of the queue that will replace this participant.</param> 
         /// <param name="voicemail">Indicates this participant will be replaced by the voicemail inbox of the participant.</param> 
         /// <returns></returns>
-        public void ConversationsConversationidParticipantsParticipantidReplacePost (string conversationId, string participantId, string userId = null, string address = null, string username = null, string queueId = null, bool? voicemail = null)
+        public void CreateConversationParticipantsByParticipantIdReplace (string conversationId, string participantId, string userId = null, string address = null, string username = null, string queueId = null, bool? voicemail = null)
         {
-             ConversationsConversationidParticipantsParticipantidReplacePostWithHttpInfo(conversationId, participantId, userId, address, username, queueId, voicemail);
+             CreateConversationParticipantsByParticipantIdReplaceWithHttpInfo(conversationId, participantId, userId, address, username, queueId, voicemail);
         }
 
         /// <summary>
@@ -4628,14 +4638,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">The id of the queue that will replace this participant.</param> 
         /// <param name="voicemail">Indicates this participant will be replaced by the voicemail inbox of the participant.</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> ConversationsConversationidParticipantsParticipantidReplacePostWithHttpInfo (string conversationId, string participantId, string userId = null, string address = null, string username = null, string queueId = null, bool? voicemail = null)
+        public ApiResponse<Object> CreateConversationParticipantsByParticipantIdReplaceWithHttpInfo (string conversationId, string participantId, string userId = null, string address = null, string username = null, string queueId = null, bool? voicemail = null)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidParticipantsParticipantidReplacePost");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling CreateConversationParticipantsByParticipantIdReplace");
             
             // verify the required parameter 'participantId' is set
-            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsConversationidParticipantsParticipantidReplacePost");
+            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling CreateConversationParticipantsByParticipantIdReplace");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/participants/{participantId}/replace";
@@ -4687,9 +4697,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidReplacePost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateConversationParticipantsByParticipantIdReplace: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidReplacePost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateConversationParticipantsByParticipantIdReplace: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -4708,9 +4718,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">The id of the queue that will replace this participant.</param>
         /// <param name="voicemail">Indicates this participant will be replaced by the voicemail inbox of the participant.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ConversationsConversationidParticipantsParticipantidReplacePostAsync (string conversationId, string participantId, string userId = null, string address = null, string username = null, string queueId = null, bool? voicemail = null)
+        public async System.Threading.Tasks.Task CreateConversationParticipantsByParticipantIdReplaceAsync (string conversationId, string participantId, string userId = null, string address = null, string username = null, string queueId = null, bool? voicemail = null)
         {
-             await ConversationsConversationidParticipantsParticipantidReplacePostAsyncWithHttpInfo(conversationId, participantId, userId, address, username, queueId, voicemail);
+             await CreateConversationParticipantsByParticipantIdReplaceAsyncWithHttpInfo(conversationId, participantId, userId, address, username, queueId, voicemail);
 
         }
 
@@ -4725,12 +4735,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">The id of the queue that will replace this participant.</param>
         /// <param name="voicemail">Indicates this participant will be replaced by the voicemail inbox of the participant.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ConversationsConversationidParticipantsParticipantidReplacePostAsyncWithHttpInfo (string conversationId, string participantId, string userId = null, string address = null, string username = null, string queueId = null, bool? voicemail = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateConversationParticipantsByParticipantIdReplaceAsyncWithHttpInfo (string conversationId, string participantId, string userId = null, string address = null, string username = null, string queueId = null, bool? voicemail = null)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidParticipantsParticipantidReplacePost");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling CreateConversationParticipantsByParticipantIdReplace");
             // verify the required parameter 'participantId' is set
-            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsConversationidParticipantsParticipantidReplacePost");
+            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling CreateConversationParticipantsByParticipantIdReplace");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/participants/{participantId}/replace";
@@ -4782,9 +4792,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidReplacePost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateConversationParticipantsByParticipantIdReplace: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidReplacePost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateConversationParticipantsByParticipantIdReplace: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -4799,9 +4809,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participant ID</param> 
         /// <param name="provisional">Indicates if the wrap-up code is provisional.</param> 
         /// <returns>WrapupCode</returns>
-        public WrapupCode ConversationsConversationidParticipantsParticipantidWrapupGet (string conversationId, string participantId, bool? provisional = null)
+        public WrapupCode GetConversationParticipantsByParticipantIdWrapup (string conversationId, string participantId, bool? provisional = null)
         {
-             ApiResponse<WrapupCode> response = ConversationsConversationidParticipantsParticipantidWrapupGetWithHttpInfo(conversationId, participantId, provisional);
+             ApiResponse<WrapupCode> response = GetConversationParticipantsByParticipantIdWrapupWithHttpInfo(conversationId, participantId, provisional);
              return response.Data;
         }
 
@@ -4812,14 +4822,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participant ID</param> 
         /// <param name="provisional">Indicates if the wrap-up code is provisional.</param> 
         /// <returns>ApiResponse of WrapupCode</returns>
-        public ApiResponse< WrapupCode > ConversationsConversationidParticipantsParticipantidWrapupGetWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
+        public ApiResponse< WrapupCode > GetConversationParticipantsByParticipantIdWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidParticipantsParticipantidWrapupGet");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationParticipantsByParticipantIdWrapup");
             
             // verify the required parameter 'participantId' is set
-            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsConversationidParticipantsParticipantidWrapupGet");
+            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling GetConversationParticipantsByParticipantIdWrapup");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/participants/{participantId}/wrapup";
@@ -4867,9 +4877,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidWrapupGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationParticipantsByParticipantIdWrapup: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidWrapupGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationParticipantsByParticipantIdWrapup: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<WrapupCode>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4884,9 +4894,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participant ID</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional.</param>
         /// <returns>Task of WrapupCode</returns>
-        public async System.Threading.Tasks.Task<WrapupCode> ConversationsConversationidParticipantsParticipantidWrapupGetAsync (string conversationId, string participantId, bool? provisional = null)
+        public async System.Threading.Tasks.Task<WrapupCode> GetConversationParticipantsByParticipantIdWrapupAsync (string conversationId, string participantId, bool? provisional = null)
         {
-             ApiResponse<WrapupCode> response = await ConversationsConversationidParticipantsParticipantidWrapupGetAsyncWithHttpInfo(conversationId, participantId, provisional);
+             ApiResponse<WrapupCode> response = await GetConversationParticipantsByParticipantIdWrapupAsyncWithHttpInfo(conversationId, participantId, provisional);
              return response.Data;
 
         }
@@ -4898,12 +4908,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="participantId">participant ID</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional.</param>
         /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> ConversationsConversationidParticipantsParticipantidWrapupGetAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetConversationParticipantsByParticipantIdWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidParticipantsParticipantidWrapupGet");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationParticipantsByParticipantIdWrapup");
             // verify the required parameter 'participantId' is set
-            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsConversationidParticipantsParticipantidWrapupGet");
+            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling GetConversationParticipantsByParticipantIdWrapup");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/participants/{participantId}/wrapup";
@@ -4951,9 +4961,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidWrapupGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationParticipantsByParticipantIdWrapup: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidWrapupGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationParticipantsByParticipantIdWrapup: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<WrapupCode>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4967,9 +4977,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param> 
         /// <param name="participantId">participant ID</param> 
         /// <returns>WrapupCode</returns>
-        public WrapupCode ConversationsConversationidParticipantsParticipantidWrapupcodesGet (string conversationId, string participantId)
+        public WrapupCode GetConversationParticipantsByParticipantIdWrapupcodes (string conversationId, string participantId)
         {
-             ApiResponse<WrapupCode> response = ConversationsConversationidParticipantsParticipantidWrapupcodesGetWithHttpInfo(conversationId, participantId);
+             ApiResponse<WrapupCode> response = GetConversationParticipantsByParticipantIdWrapupcodesWithHttpInfo(conversationId, participantId);
              return response.Data;
         }
 
@@ -4979,14 +4989,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param> 
         /// <param name="participantId">participant ID</param> 
         /// <returns>ApiResponse of WrapupCode</returns>
-        public ApiResponse< WrapupCode > ConversationsConversationidParticipantsParticipantidWrapupcodesGetWithHttpInfo (string conversationId, string participantId)
+        public ApiResponse< WrapupCode > GetConversationParticipantsByParticipantIdWrapupcodesWithHttpInfo (string conversationId, string participantId)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidParticipantsParticipantidWrapupcodesGet");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationParticipantsByParticipantIdWrapupcodes");
             
             // verify the required parameter 'participantId' is set
-            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsConversationidParticipantsParticipantidWrapupcodesGet");
+            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling GetConversationParticipantsByParticipantIdWrapupcodes");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/participants/{participantId}/wrapupcodes";
@@ -5033,9 +5043,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidWrapupcodesGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationParticipantsByParticipantIdWrapupcodes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidWrapupcodesGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationParticipantsByParticipantIdWrapupcodes: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<WrapupCode>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5049,9 +5059,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <returns>Task of WrapupCode</returns>
-        public async System.Threading.Tasks.Task<WrapupCode> ConversationsConversationidParticipantsParticipantidWrapupcodesGetAsync (string conversationId, string participantId)
+        public async System.Threading.Tasks.Task<WrapupCode> GetConversationParticipantsByParticipantIdWrapupcodesAsync (string conversationId, string participantId)
         {
-             ApiResponse<WrapupCode> response = await ConversationsConversationidParticipantsParticipantidWrapupcodesGetAsyncWithHttpInfo(conversationId, participantId);
+             ApiResponse<WrapupCode> response = await GetConversationParticipantsByParticipantIdWrapupcodesAsyncWithHttpInfo(conversationId, participantId);
              return response.Data;
 
         }
@@ -5062,12 +5072,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> ConversationsConversationidParticipantsParticipantidWrapupcodesGetAsyncWithHttpInfo (string conversationId, string participantId)
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetConversationParticipantsByParticipantIdWrapupcodesAsyncWithHttpInfo (string conversationId, string participantId)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidParticipantsParticipantidWrapupcodesGet");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationParticipantsByParticipantIdWrapupcodes");
             // verify the required parameter 'participantId' is set
-            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsConversationidParticipantsParticipantidWrapupcodesGet");
+            if (participantId == null) throw new ApiException(400, "Missing required parameter 'participantId' when calling GetConversationParticipantsByParticipantIdWrapupcodes");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/participants/{participantId}/wrapupcodes";
@@ -5114,9 +5124,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidWrapupcodesGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationParticipantsByParticipantIdWrapupcodes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidParticipantsParticipantidWrapupcodesGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationParticipantsByParticipantIdWrapupcodes: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<WrapupCode>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5129,9 +5139,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="conversationId">conversation ID</param> 
         /// <returns>Tag</returns>
-        public Tag ConversationsConversationidTagsGet (string conversationId)
+        public Tag GetConversationTags (string conversationId)
         {
-             ApiResponse<Tag> response = ConversationsConversationidTagsGetWithHttpInfo(conversationId);
+             ApiResponse<Tag> response = GetConversationTagsWithHttpInfo(conversationId);
              return response.Data;
         }
 
@@ -5140,11 +5150,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="conversationId">conversation ID</param> 
         /// <returns>ApiResponse of Tag</returns>
-        public ApiResponse< Tag > ConversationsConversationidTagsGetWithHttpInfo (string conversationId)
+        public ApiResponse< Tag > GetConversationTagsWithHttpInfo (string conversationId)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidTagsGet");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationTags");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/tags";
@@ -5190,9 +5200,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidTagsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationTags: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidTagsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationTags: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Tag>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5205,9 +5215,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of Tag</returns>
-        public async System.Threading.Tasks.Task<Tag> ConversationsConversationidTagsGetAsync (string conversationId)
+        public async System.Threading.Tasks.Task<Tag> GetConversationTagsAsync (string conversationId)
         {
-             ApiResponse<Tag> response = await ConversationsConversationidTagsGetAsyncWithHttpInfo(conversationId);
+             ApiResponse<Tag> response = await GetConversationTagsAsyncWithHttpInfo(conversationId);
              return response.Data;
 
         }
@@ -5217,10 +5227,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of ApiResponse (Tag)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Tag>> ConversationsConversationidTagsGetAsyncWithHttpInfo (string conversationId)
+        public async System.Threading.Tasks.Task<ApiResponse<Tag>> GetConversationTagsAsyncWithHttpInfo (string conversationId)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidTagsGet");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationTags");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/tags";
@@ -5266,9 +5276,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidTagsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationTags: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidTagsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationTags: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Tag>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5281,9 +5291,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="conversationId">conversation ID</param> 
         /// <returns>WrapupCode</returns>
-        public WrapupCode ConversationsConversationidWrapupcodesGet (string conversationId)
+        public WrapupCode GetConversationWrapupcodes (string conversationId)
         {
-             ApiResponse<WrapupCode> response = ConversationsConversationidWrapupcodesGetWithHttpInfo(conversationId);
+             ApiResponse<WrapupCode> response = GetConversationWrapupcodesWithHttpInfo(conversationId);
              return response.Data;
         }
 
@@ -5292,11 +5302,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="conversationId">conversation ID</param> 
         /// <returns>ApiResponse of WrapupCode</returns>
-        public ApiResponse< WrapupCode > ConversationsConversationidWrapupcodesGetWithHttpInfo (string conversationId)
+        public ApiResponse< WrapupCode > GetConversationWrapupcodesWithHttpInfo (string conversationId)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidWrapupcodesGet");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationWrapupcodes");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/wrapupcodes";
@@ -5342,9 +5352,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidWrapupcodesGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationWrapupcodes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidWrapupcodesGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationWrapupcodes: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<WrapupCode>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5357,9 +5367,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of WrapupCode</returns>
-        public async System.Threading.Tasks.Task<WrapupCode> ConversationsConversationidWrapupcodesGetAsync (string conversationId)
+        public async System.Threading.Tasks.Task<WrapupCode> GetConversationWrapupcodesAsync (string conversationId)
         {
-             ApiResponse<WrapupCode> response = await ConversationsConversationidWrapupcodesGetAsyncWithHttpInfo(conversationId);
+             ApiResponse<WrapupCode> response = await GetConversationWrapupcodesAsyncWithHttpInfo(conversationId);
              return response.Data;
 
         }
@@ -5369,10 +5379,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> ConversationsConversationidWrapupcodesGetAsyncWithHttpInfo (string conversationId)
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetConversationWrapupcodesAsyncWithHttpInfo (string conversationId)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidWrapupcodesGet");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationWrapupcodes");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/wrapupcodes";
@@ -5418,9 +5428,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidWrapupcodesGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationWrapupcodes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidWrapupcodesGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationWrapupcodes: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<WrapupCode>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

@@ -26,7 +26,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="name">Name</param>
         /// <returns>GroupEntityListing</returns>
-        GroupEntityListing GroupsGet (int? pageSize = null, int? pageNumber = null, string name = null);
+        GroupEntityListing Get (int? pageSize = null, int? pageNumber = null, string name = null);
   
         /// <summary>
         /// Get a group list
@@ -38,7 +38,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="name">Name</param>
         /// <returns>ApiResponse of GroupEntityListing</returns>
-        ApiResponse<GroupEntityListing> GroupsGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null);
+        ApiResponse<GroupEntityListing> GetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null);
 
         /// <summary>
         /// Get a group list
@@ -50,7 +50,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="name">Name</param>
         /// <returns>Task of GroupEntityListing</returns>
-        System.Threading.Tasks.Task<GroupEntityListing> GroupsGetAsync (int? pageSize = null, int? pageNumber = null, string name = null);
+        System.Threading.Tasks.Task<GroupEntityListing> GetAsync (int? pageSize = null, int? pageNumber = null, string name = null);
 
         /// <summary>
         /// Get a group list
@@ -62,7 +62,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="name">Name</param>
         /// <returns>Task of ApiResponse (GroupEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GroupEntityListing>> GroupsGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<GroupEntityListing>> GetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null);
         
         /// <summary>
         /// Get group
@@ -72,7 +72,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="groupId">Group ID</param>
         /// <returns>Group</returns>
-        Group GroupsGroupidGet (string groupId);
+        Group GetGroup (string groupId);
   
         /// <summary>
         /// Get group
@@ -82,7 +82,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="groupId">Group ID</param>
         /// <returns>ApiResponse of Group</returns>
-        ApiResponse<Group> GroupsGroupidGetWithHttpInfo (string groupId);
+        ApiResponse<Group> GetGroupWithHttpInfo (string groupId);
 
         /// <summary>
         /// Get group
@@ -92,7 +92,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of Group</returns>
-        System.Threading.Tasks.Task<Group> GroupsGroupidGetAsync (string groupId);
+        System.Threading.Tasks.Task<Group> GetGroupAsync (string groupId);
 
         /// <summary>
         /// Get group
@@ -102,7 +102,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of ApiResponse (Group)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Group>> GroupsGroupidGetAsyncWithHttpInfo (string groupId);
+        System.Threading.Tasks.Task<ApiResponse<Group>> GetGroupAsyncWithHttpInfo (string groupId);
         
         /// <summary>
         /// Get group members
@@ -114,7 +114,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>UserEntityListing</returns>
-        UserEntityListing GroupsGroupidMembersGet (string groupId, int? pageSize = null, int? pageNumber = null);
+        UserEntityListing GetGroupMembers (string groupId, int? pageSize = null, int? pageNumber = null);
   
         /// <summary>
         /// Get group members
@@ -126,7 +126,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
-        ApiResponse<UserEntityListing> GroupsGroupidMembersGetWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null);
+        ApiResponse<UserEntityListing> GetGroupMembersWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get group members
@@ -138,7 +138,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of UserEntityListing</returns>
-        System.Threading.Tasks.Task<UserEntityListing> GroupsGroupidMembersGetAsync (string groupId, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<UserEntityListing> GetGroupMembersAsync (string groupId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get group members
@@ -150,7 +150,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GroupsGroupidMembersGetAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetGroupMembersAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null);
         
     }
   
@@ -237,9 +237,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="name">Name</param> 
         /// <returns>GroupEntityListing</returns>
-        public GroupEntityListing GroupsGet (int? pageSize = null, int? pageNumber = null, string name = null)
+        public GroupEntityListing Get (int? pageSize = null, int? pageNumber = null, string name = null)
         {
-             ApiResponse<GroupEntityListing> response = GroupsGetWithHttpInfo(pageSize, pageNumber, name);
+             ApiResponse<GroupEntityListing> response = GetWithHttpInfo(pageSize, pageNumber, name);
              return response.Data;
         }
 
@@ -250,7 +250,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="name">Name</param> 
         /// <returns>ApiResponse of GroupEntityListing</returns>
-        public ApiResponse< GroupEntityListing > GroupsGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null)
+        public ApiResponse< GroupEntityListing > GetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null)
         {
             
     
@@ -299,9 +299,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GroupsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GroupsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<GroupEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -316,9 +316,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="name">Name</param>
         /// <returns>Task of GroupEntityListing</returns>
-        public async System.Threading.Tasks.Task<GroupEntityListing> GroupsGetAsync (int? pageSize = null, int? pageNumber = null, string name = null)
+        public async System.Threading.Tasks.Task<GroupEntityListing> GetAsync (int? pageSize = null, int? pageNumber = null, string name = null)
         {
-             ApiResponse<GroupEntityListing> response = await GroupsGetAsyncWithHttpInfo(pageSize, pageNumber, name);
+             ApiResponse<GroupEntityListing> response = await GetAsyncWithHttpInfo(pageSize, pageNumber, name);
              return response.Data;
 
         }
@@ -330,7 +330,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="name">Name</param>
         /// <returns>Task of ApiResponse (GroupEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GroupEntityListing>> GroupsGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<GroupEntityListing>> GetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null)
         {
             
     
@@ -379,9 +379,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GroupsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GroupsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<GroupEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -394,9 +394,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="groupId">Group ID</param> 
         /// <returns>Group</returns>
-        public Group GroupsGroupidGet (string groupId)
+        public Group GetGroup (string groupId)
         {
-             ApiResponse<Group> response = GroupsGroupidGetWithHttpInfo(groupId);
+             ApiResponse<Group> response = GetGroupWithHttpInfo(groupId);
              return response.Data;
         }
 
@@ -405,11 +405,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="groupId">Group ID</param> 
         /// <returns>ApiResponse of Group</returns>
-        public ApiResponse< Group > GroupsGroupidGetWithHttpInfo (string groupId)
+        public ApiResponse< Group > GetGroupWithHttpInfo (string groupId)
         {
             
             // verify the required parameter 'groupId' is set
-            if (groupId == null) throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsGroupidGet");
+            if (groupId == null) throw new ApiException(400, "Missing required parameter 'groupId' when calling GetGroup");
             
     
             var path_ = "/api/v1/groups/{groupId}";
@@ -455,9 +455,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GroupsGroupidGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetGroup: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GroupsGroupidGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetGroup: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Group>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -470,9 +470,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of Group</returns>
-        public async System.Threading.Tasks.Task<Group> GroupsGroupidGetAsync (string groupId)
+        public async System.Threading.Tasks.Task<Group> GetGroupAsync (string groupId)
         {
-             ApiResponse<Group> response = await GroupsGroupidGetAsyncWithHttpInfo(groupId);
+             ApiResponse<Group> response = await GetGroupAsyncWithHttpInfo(groupId);
              return response.Data;
 
         }
@@ -482,10 +482,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of ApiResponse (Group)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Group>> GroupsGroupidGetAsyncWithHttpInfo (string groupId)
+        public async System.Threading.Tasks.Task<ApiResponse<Group>> GetGroupAsyncWithHttpInfo (string groupId)
         {
             // verify the required parameter 'groupId' is set
-            if (groupId == null) throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsGroupidGet");
+            if (groupId == null) throw new ApiException(400, "Missing required parameter 'groupId' when calling GetGroup");
             
     
             var path_ = "/api/v1/groups/{groupId}";
@@ -531,9 +531,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GroupsGroupidGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetGroup: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GroupsGroupidGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetGroup: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Group>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -548,9 +548,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>UserEntityListing</returns>
-        public UserEntityListing GroupsGroupidMembersGet (string groupId, int? pageSize = null, int? pageNumber = null)
+        public UserEntityListing GetGroupMembers (string groupId, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<UserEntityListing> response = GroupsGroupidMembersGetWithHttpInfo(groupId, pageSize, pageNumber);
+             ApiResponse<UserEntityListing> response = GetGroupMembersWithHttpInfo(groupId, pageSize, pageNumber);
              return response.Data;
         }
 
@@ -561,11 +561,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>ApiResponse of UserEntityListing</returns>
-        public ApiResponse< UserEntityListing > GroupsGroupidMembersGetWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< UserEntityListing > GetGroupMembersWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null)
         {
             
             // verify the required parameter 'groupId' is set
-            if (groupId == null) throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsGroupidMembersGet");
+            if (groupId == null) throw new ApiException(400, "Missing required parameter 'groupId' when calling GetGroupMembers");
             
     
             var path_ = "/api/v1/groups/{groupId}/members";
@@ -613,9 +613,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GroupsGroupidMembersGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetGroupMembers: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GroupsGroupidMembersGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetGroupMembers: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<UserEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -630,9 +630,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of UserEntityListing</returns>
-        public async System.Threading.Tasks.Task<UserEntityListing> GroupsGroupidMembersGetAsync (string groupId, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<UserEntityListing> GetGroupMembersAsync (string groupId, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<UserEntityListing> response = await GroupsGroupidMembersGetAsyncWithHttpInfo(groupId, pageSize, pageNumber);
+             ApiResponse<UserEntityListing> response = await GetGroupMembersAsyncWithHttpInfo(groupId, pageSize, pageNumber);
              return response.Data;
 
         }
@@ -644,10 +644,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GroupsGroupidMembersGetAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetGroupMembersAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null)
         {
             // verify the required parameter 'groupId' is set
-            if (groupId == null) throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsGroupidMembersGet");
+            if (groupId == null) throw new ApiException(400, "Missing required parameter 'groupId' when calling GetGroupMembers");
             
     
             var path_ = "/api/v1/groups/{groupId}/members";
@@ -695,9 +695,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GroupsGroupidMembersGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetGroupMembers: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GroupsGroupidMembersGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetGroupMembers: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<UserEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>InboundDomainEntityListing</returns>
-        InboundDomainEntityListing RoutingEmailDomainsGet ();
+        InboundDomainEntityListing GetEmailDomains ();
   
         /// <summary>
         /// Get domains
@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of InboundDomainEntityListing</returns>
-        ApiResponse<InboundDomainEntityListing> RoutingEmailDomainsGetWithHttpInfo ();
+        ApiResponse<InboundDomainEntityListing> GetEmailDomainsWithHttpInfo ();
 
         /// <summary>
         /// Get domains
@@ -41,7 +41,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of InboundDomainEntityListing</returns>
-        System.Threading.Tasks.Task<InboundDomainEntityListing> RoutingEmailDomainsGetAsync ();
+        System.Threading.Tasks.Task<InboundDomainEntityListing> GetEmailDomainsAsync ();
 
         /// <summary>
         /// Get domains
@@ -50,7 +50,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse (InboundDomainEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InboundDomainEntityListing>> RoutingEmailDomainsGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<InboundDomainEntityListing>> GetEmailDomainsAsyncWithHttpInfo ();
         
         /// <summary>
         /// Create a domain
@@ -60,7 +60,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Domain</param>
         /// <returns>InboundDomain</returns>
-        InboundDomain RoutingEmailDomainsPost (InboundDomain body = null);
+        InboundDomain CreateEmailDomains (InboundDomain body = null);
   
         /// <summary>
         /// Create a domain
@@ -70,7 +70,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Domain</param>
         /// <returns>ApiResponse of InboundDomain</returns>
-        ApiResponse<InboundDomain> RoutingEmailDomainsPostWithHttpInfo (InboundDomain body = null);
+        ApiResponse<InboundDomain> CreateEmailDomainsWithHttpInfo (InboundDomain body = null);
 
         /// <summary>
         /// Create a domain
@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Domain</param>
         /// <returns>Task of InboundDomain</returns>
-        System.Threading.Tasks.Task<InboundDomain> RoutingEmailDomainsPostAsync (InboundDomain body = null);
+        System.Threading.Tasks.Task<InboundDomain> CreateEmailDomainsAsync (InboundDomain body = null);
 
         /// <summary>
         /// Create a domain
@@ -90,7 +90,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Domain</param>
         /// <returns>Task of ApiResponse (InboundDomain)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InboundDomain>> RoutingEmailDomainsPostAsyncWithHttpInfo (InboundDomain body = null);
+        System.Threading.Tasks.Task<ApiResponse<InboundDomain>> CreateEmailDomainsAsyncWithHttpInfo (InboundDomain body = null);
         
         /// <summary>
         /// Get routes
@@ -100,7 +100,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="domain">email domain</param>
         /// <returns>InboundRouteEntityListing</returns>
-        InboundRouteEntityListing RoutingEmailDomainsDomainRoutesGet (string domain);
+        InboundRouteEntityListing GetEmailDomainRoutes (string domain);
   
         /// <summary>
         /// Get routes
@@ -110,7 +110,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="domain">email domain</param>
         /// <returns>ApiResponse of InboundRouteEntityListing</returns>
-        ApiResponse<InboundRouteEntityListing> RoutingEmailDomainsDomainRoutesGetWithHttpInfo (string domain);
+        ApiResponse<InboundRouteEntityListing> GetEmailDomainRoutesWithHttpInfo (string domain);
 
         /// <summary>
         /// Get routes
@@ -120,7 +120,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="domain">email domain</param>
         /// <returns>Task of InboundRouteEntityListing</returns>
-        System.Threading.Tasks.Task<InboundRouteEntityListing> RoutingEmailDomainsDomainRoutesGetAsync (string domain);
+        System.Threading.Tasks.Task<InboundRouteEntityListing> GetEmailDomainRoutesAsync (string domain);
 
         /// <summary>
         /// Get routes
@@ -130,7 +130,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="domain">email domain</param>
         /// <returns>Task of ApiResponse (InboundRouteEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InboundRouteEntityListing>> RoutingEmailDomainsDomainRoutesGetAsyncWithHttpInfo (string domain);
+        System.Threading.Tasks.Task<ApiResponse<InboundRouteEntityListing>> GetEmailDomainRoutesAsyncWithHttpInfo (string domain);
         
         /// <summary>
         /// Create a route
@@ -141,7 +141,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domain">email domain</param>
         /// <param name="body">Route</param>
         /// <returns>InboundRoute</returns>
-        InboundRoute RoutingEmailDomainsDomainRoutesPost (string domain, InboundRoute body = null);
+        InboundRoute CreateEmailDomainRoutes (string domain, InboundRoute body = null);
   
         /// <summary>
         /// Create a route
@@ -152,7 +152,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domain">email domain</param>
         /// <param name="body">Route</param>
         /// <returns>ApiResponse of InboundRoute</returns>
-        ApiResponse<InboundRoute> RoutingEmailDomainsDomainRoutesPostWithHttpInfo (string domain, InboundRoute body = null);
+        ApiResponse<InboundRoute> CreateEmailDomainRoutesWithHttpInfo (string domain, InboundRoute body = null);
 
         /// <summary>
         /// Create a route
@@ -163,7 +163,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domain">email domain</param>
         /// <param name="body">Route</param>
         /// <returns>Task of InboundRoute</returns>
-        System.Threading.Tasks.Task<InboundRoute> RoutingEmailDomainsDomainRoutesPostAsync (string domain, InboundRoute body = null);
+        System.Threading.Tasks.Task<InboundRoute> CreateEmailDomainRoutesAsync (string domain, InboundRoute body = null);
 
         /// <summary>
         /// Create a route
@@ -174,7 +174,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domain">email domain</param>
         /// <param name="body">Route</param>
         /// <returns>Task of ApiResponse (InboundRoute)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InboundRoute>> RoutingEmailDomainsDomainRoutesPostAsyncWithHttpInfo (string domain, InboundRoute body = null);
+        System.Threading.Tasks.Task<ApiResponse<InboundRoute>> CreateEmailDomainRoutesAsyncWithHttpInfo (string domain, InboundRoute body = null);
         
         /// <summary>
         /// Get a route
@@ -185,7 +185,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domain">email domain</param>
         /// <param name="id">route ID</param>
         /// <returns>InboundRoute</returns>
-        InboundRoute RoutingEmailDomainsDomainRoutesIdGet (string domain, string id);
+        InboundRoute GetEmailDomainRoutesById (string domain, string id);
   
         /// <summary>
         /// Get a route
@@ -196,7 +196,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domain">email domain</param>
         /// <param name="id">route ID</param>
         /// <returns>ApiResponse of InboundRoute</returns>
-        ApiResponse<InboundRoute> RoutingEmailDomainsDomainRoutesIdGetWithHttpInfo (string domain, string id);
+        ApiResponse<InboundRoute> GetEmailDomainRoutesByIdWithHttpInfo (string domain, string id);
 
         /// <summary>
         /// Get a route
@@ -207,7 +207,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domain">email domain</param>
         /// <param name="id">route ID</param>
         /// <returns>Task of InboundRoute</returns>
-        System.Threading.Tasks.Task<InboundRoute> RoutingEmailDomainsDomainRoutesIdGetAsync (string domain, string id);
+        System.Threading.Tasks.Task<InboundRoute> GetEmailDomainRoutesByIdAsync (string domain, string id);
 
         /// <summary>
         /// Get a route
@@ -218,7 +218,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domain">email domain</param>
         /// <param name="id">route ID</param>
         /// <returns>Task of ApiResponse (InboundRoute)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InboundRoute>> RoutingEmailDomainsDomainRoutesIdGetAsyncWithHttpInfo (string domain, string id);
+        System.Threading.Tasks.Task<ApiResponse<InboundRoute>> GetEmailDomainRoutesByIdAsyncWithHttpInfo (string domain, string id);
         
         /// <summary>
         /// Update a route
@@ -230,7 +230,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">route ID</param>
         /// <param name="body">Route</param>
         /// <returns>InboundRoute</returns>
-        InboundRoute RoutingEmailDomainsDomainRoutesIdPut (string domain, string id, InboundRoute body = null);
+        InboundRoute UpdateEmailDomainRoutesById (string domain, string id, InboundRoute body = null);
   
         /// <summary>
         /// Update a route
@@ -242,7 +242,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">route ID</param>
         /// <param name="body">Route</param>
         /// <returns>ApiResponse of InboundRoute</returns>
-        ApiResponse<InboundRoute> RoutingEmailDomainsDomainRoutesIdPutWithHttpInfo (string domain, string id, InboundRoute body = null);
+        ApiResponse<InboundRoute> UpdateEmailDomainRoutesByIdWithHttpInfo (string domain, string id, InboundRoute body = null);
 
         /// <summary>
         /// Update a route
@@ -254,7 +254,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">route ID</param>
         /// <param name="body">Route</param>
         /// <returns>Task of InboundRoute</returns>
-        System.Threading.Tasks.Task<InboundRoute> RoutingEmailDomainsDomainRoutesIdPutAsync (string domain, string id, InboundRoute body = null);
+        System.Threading.Tasks.Task<InboundRoute> UpdateEmailDomainRoutesByIdAsync (string domain, string id, InboundRoute body = null);
 
         /// <summary>
         /// Update a route
@@ -266,7 +266,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">route ID</param>
         /// <param name="body">Route</param>
         /// <returns>Task of ApiResponse (InboundRoute)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InboundRoute>> RoutingEmailDomainsDomainRoutesIdPutAsyncWithHttpInfo (string domain, string id, InboundRoute body = null);
+        System.Threading.Tasks.Task<ApiResponse<InboundRoute>> UpdateEmailDomainRoutesByIdAsyncWithHttpInfo (string domain, string id, InboundRoute body = null);
         
         /// <summary>
         /// Delete a route
@@ -277,7 +277,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domain">email domain</param>
         /// <param name="id">route ID</param>
         /// <returns>string</returns>
-        string RoutingEmailDomainsDomainRoutesIdDelete (string domain, string id);
+        string DeleteEmailDomainRoutesById (string domain, string id);
   
         /// <summary>
         /// Delete a route
@@ -288,7 +288,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domain">email domain</param>
         /// <param name="id">route ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> RoutingEmailDomainsDomainRoutesIdDeleteWithHttpInfo (string domain, string id);
+        ApiResponse<string> DeleteEmailDomainRoutesByIdWithHttpInfo (string domain, string id);
 
         /// <summary>
         /// Delete a route
@@ -299,7 +299,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domain">email domain</param>
         /// <param name="id">route ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> RoutingEmailDomainsDomainRoutesIdDeleteAsync (string domain, string id);
+        System.Threading.Tasks.Task<string> DeleteEmailDomainRoutesByIdAsync (string domain, string id);
 
         /// <summary>
         /// Delete a route
@@ -310,7 +310,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domain">email domain</param>
         /// <param name="id">route ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> RoutingEmailDomainsDomainRoutesIdDeleteAsyncWithHttpInfo (string domain, string id);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteEmailDomainRoutesByIdAsyncWithHttpInfo (string domain, string id);
         
         /// <summary>
         /// Delete a domain
@@ -320,7 +320,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">domain ID</param>
         /// <returns>string</returns>
-        string RoutingEmailDomainsIdDelete (string id);
+        string DeleteEmailDomainsId (string id);
   
         /// <summary>
         /// Delete a domain
@@ -330,7 +330,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">domain ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> RoutingEmailDomainsIdDeleteWithHttpInfo (string id);
+        ApiResponse<string> DeleteEmailDomainsIdWithHttpInfo (string id);
 
         /// <summary>
         /// Delete a domain
@@ -340,7 +340,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">domain ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> RoutingEmailDomainsIdDeleteAsync (string id);
+        System.Threading.Tasks.Task<string> DeleteEmailDomainsIdAsync (string id);
 
         /// <summary>
         /// Delete a domain
@@ -350,7 +350,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">domain ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> RoutingEmailDomainsIdDeleteAsyncWithHttpInfo (string id);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteEmailDomainsIdAsyncWithHttpInfo (string id);
         
         /// <summary>
         /// Get email setup
@@ -359,7 +359,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>EmailSetup</returns>
-        EmailSetup RoutingEmailSetupGet ();
+        EmailSetup GetEmailSetup ();
   
         /// <summary>
         /// Get email setup
@@ -368,7 +368,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of EmailSetup</returns>
-        ApiResponse<EmailSetup> RoutingEmailSetupGetWithHttpInfo ();
+        ApiResponse<EmailSetup> GetEmailSetupWithHttpInfo ();
 
         /// <summary>
         /// Get email setup
@@ -377,7 +377,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of EmailSetup</returns>
-        System.Threading.Tasks.Task<EmailSetup> RoutingEmailSetupGetAsync ();
+        System.Threading.Tasks.Task<EmailSetup> GetEmailSetupAsync ();
 
         /// <summary>
         /// Get email setup
@@ -386,7 +386,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse (EmailSetup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EmailSetup>> RoutingEmailSetupGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<EmailSetup>> GetEmailSetupAsyncWithHttpInfo ();
         
         /// <summary>
         /// Get list of queues.
@@ -401,7 +401,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param>
         /// <param name="active">Active</param>
         /// <returns>QueueEntityListing</returns>
-        QueueEntityListing RoutingQueuesGet (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null);
+        QueueEntityListing GetQueues (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null);
   
         /// <summary>
         /// Get list of queues.
@@ -416,7 +416,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param>
         /// <param name="active">Active</param>
         /// <returns>ApiResponse of QueueEntityListing</returns>
-        ApiResponse<QueueEntityListing> RoutingQueuesGetWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null);
+        ApiResponse<QueueEntityListing> GetQueuesWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null);
 
         /// <summary>
         /// Get list of queues.
@@ -431,7 +431,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param>
         /// <param name="active">Active</param>
         /// <returns>Task of QueueEntityListing</returns>
-        System.Threading.Tasks.Task<QueueEntityListing> RoutingQueuesGetAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null);
+        System.Threading.Tasks.Task<QueueEntityListing> GetQueuesAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null);
 
         /// <summary>
         /// Get list of queues.
@@ -446,7 +446,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param>
         /// <param name="active">Active</param>
         /// <returns>Task of ApiResponse (QueueEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> RoutingQueuesGetAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null);
+        System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetQueuesAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null);
         
         /// <summary>
         /// Create queue
@@ -457,7 +457,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>Queue</returns>
-        Queue RoutingQueuesPost (string queueId, Queue body = null);
+        Queue CreateQueues (string queueId, Queue body = null);
   
         /// <summary>
         /// Create queue
@@ -468,7 +468,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>ApiResponse of Queue</returns>
-        ApiResponse<Queue> RoutingQueuesPostWithHttpInfo (string queueId, Queue body = null);
+        ApiResponse<Queue> CreateQueuesWithHttpInfo (string queueId, Queue body = null);
 
         /// <summary>
         /// Create queue
@@ -479,7 +479,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>Task of Queue</returns>
-        System.Threading.Tasks.Task<Queue> RoutingQueuesPostAsync (string queueId, Queue body = null);
+        System.Threading.Tasks.Task<Queue> CreateQueuesAsync (string queueId, Queue body = null);
 
         /// <summary>
         /// Create queue
@@ -490,7 +490,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>Task of ApiResponse (Queue)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Queue>> RoutingQueuesPostAsyncWithHttpInfo (string queueId, Queue body = null);
+        System.Threading.Tasks.Task<ApiResponse<Queue>> CreateQueuesAsyncWithHttpInfo (string queueId, Queue body = null);
         
         /// <summary>
         /// Get details about this queue.
@@ -500,7 +500,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="queueId">Queue ID</param>
         /// <returns>Queue</returns>
-        Queue RoutingQueuesQueueidGet (string queueId);
+        Queue GetQueue (string queueId);
   
         /// <summary>
         /// Get details about this queue.
@@ -510,7 +510,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="queueId">Queue ID</param>
         /// <returns>ApiResponse of Queue</returns>
-        ApiResponse<Queue> RoutingQueuesQueueidGetWithHttpInfo (string queueId);
+        ApiResponse<Queue> GetQueueWithHttpInfo (string queueId);
 
         /// <summary>
         /// Get details about this queue.
@@ -520,7 +520,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="queueId">Queue ID</param>
         /// <returns>Task of Queue</returns>
-        System.Threading.Tasks.Task<Queue> RoutingQueuesQueueidGetAsync (string queueId);
+        System.Threading.Tasks.Task<Queue> GetQueueAsync (string queueId);
 
         /// <summary>
         /// Get details about this queue.
@@ -530,7 +530,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="queueId">Queue ID</param>
         /// <returns>Task of ApiResponse (Queue)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Queue>> RoutingQueuesQueueidGetAsyncWithHttpInfo (string queueId);
+        System.Threading.Tasks.Task<ApiResponse<Queue>> GetQueueAsyncWithHttpInfo (string queueId);
         
         /// <summary>
         /// Update a queue
@@ -541,7 +541,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>Queue</returns>
-        Queue RoutingQueuesQueueidPut (string queueId, Queue body = null);
+        Queue UpdateQueue (string queueId, Queue body = null);
   
         /// <summary>
         /// Update a queue
@@ -552,7 +552,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>ApiResponse of Queue</returns>
-        ApiResponse<Queue> RoutingQueuesQueueidPutWithHttpInfo (string queueId, Queue body = null);
+        ApiResponse<Queue> UpdateQueueWithHttpInfo (string queueId, Queue body = null);
 
         /// <summary>
         /// Update a queue
@@ -563,7 +563,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>Task of Queue</returns>
-        System.Threading.Tasks.Task<Queue> RoutingQueuesQueueidPutAsync (string queueId, Queue body = null);
+        System.Threading.Tasks.Task<Queue> UpdateQueueAsync (string queueId, Queue body = null);
 
         /// <summary>
         /// Update a queue
@@ -574,7 +574,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>Task of ApiResponse (Queue)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Queue>> RoutingQueuesQueueidPutAsyncWithHttpInfo (string queueId, Queue body = null);
+        System.Threading.Tasks.Task<ApiResponse<Queue>> UpdateQueueAsyncWithHttpInfo (string queueId, Queue body = null);
         
         /// <summary>
         /// Delete a queue
@@ -583,8 +583,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <param name="queueId">Queue ID</param>
+        /// <param name="forceDelete"></param>
         /// <returns>string</returns>
-        string RoutingQueuesQueueidDelete (string queueId);
+        string DeleteQueue (string queueId, bool? forceDelete = null);
   
         /// <summary>
         /// Delete a queue
@@ -593,8 +594,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <param name="queueId">Queue ID</param>
+        /// <param name="forceDelete"></param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> RoutingQueuesQueueidDeleteWithHttpInfo (string queueId);
+        ApiResponse<string> DeleteQueueWithHttpInfo (string queueId, bool? forceDelete = null);
 
         /// <summary>
         /// Delete a queue
@@ -603,8 +605,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <param name="queueId">Queue ID</param>
+        /// <param name="forceDelete"></param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> RoutingQueuesQueueidDeleteAsync (string queueId);
+        System.Threading.Tasks.Task<string> DeleteQueueAsync (string queueId, bool? forceDelete = null);
 
         /// <summary>
         /// Delete a queue
@@ -613,8 +616,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <param name="queueId">Queue ID</param>
+        /// <param name="forceDelete"></param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> RoutingQueuesQueueidDeleteAsyncWithHttpInfo (string queueId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteQueueAsyncWithHttpInfo (string queueId, bool? forceDelete = null);
         
         /// <summary>
         /// Get members in a queue
@@ -630,7 +634,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="joined">Joined</param>
         /// <param name="expand">expand</param>
         /// <returns>QueueMemberEntityListing</returns>
-        QueueMemberEntityListing RoutingQueuesQueueidMembersGet (string queueId, int? pageSize = null, int? pageNumber = null, string userId = null, string statusId = null, bool? joined = null, string expand = null);
+        QueueMemberEntityListing GetQueueMembers (string queueId, int? pageSize = null, int? pageNumber = null, string userId = null, string statusId = null, bool? joined = null, string expand = null);
   
         /// <summary>
         /// Get members in a queue
@@ -646,7 +650,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="joined">Joined</param>
         /// <param name="expand">expand</param>
         /// <returns>ApiResponse of QueueMemberEntityListing</returns>
-        ApiResponse<QueueMemberEntityListing> RoutingQueuesQueueidMembersGetWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string userId = null, string statusId = null, bool? joined = null, string expand = null);
+        ApiResponse<QueueMemberEntityListing> GetQueueMembersWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string userId = null, string statusId = null, bool? joined = null, string expand = null);
 
         /// <summary>
         /// Get members in a queue
@@ -662,7 +666,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="joined">Joined</param>
         /// <param name="expand">expand</param>
         /// <returns>Task of QueueMemberEntityListing</returns>
-        System.Threading.Tasks.Task<QueueMemberEntityListing> RoutingQueuesQueueidMembersGetAsync (string queueId, int? pageSize = null, int? pageNumber = null, string userId = null, string statusId = null, bool? joined = null, string expand = null);
+        System.Threading.Tasks.Task<QueueMemberEntityListing> GetQueueMembersAsync (string queueId, int? pageSize = null, int? pageNumber = null, string userId = null, string statusId = null, bool? joined = null, string expand = null);
 
         /// <summary>
         /// Get members in a queue
@@ -678,7 +682,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="joined">Joined</param>
         /// <param name="expand">expand</param>
         /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> RoutingQueuesQueueidMembersGetAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string userId = null, string statusId = null, bool? joined = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> GetQueueMembersAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string userId = null, string statusId = null, bool? joined = null, string expand = null);
         
         /// <summary>
         /// Join or unjoin a user to the queue.
@@ -690,7 +694,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member/User ID</param>
         /// <param name="body">To join queue ~ \&quot;joined\&quot;:true</param>
         /// <returns>QueueMember</returns>
-        QueueMember RoutingQueuesQueueidMembersMemberidPut (string queueId, string memberId, QueueMember body = null);
+        QueueMember UpdateQueueMembersByMemberId (string queueId, string memberId, QueueMember body = null);
   
         /// <summary>
         /// Join or unjoin a user to the queue.
@@ -702,7 +706,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member/User ID</param>
         /// <param name="body">To join queue ~ \&quot;joined\&quot;:true</param>
         /// <returns>ApiResponse of QueueMember</returns>
-        ApiResponse<QueueMember> RoutingQueuesQueueidMembersMemberidPutWithHttpInfo (string queueId, string memberId, QueueMember body = null);
+        ApiResponse<QueueMember> UpdateQueueMembersByMemberIdWithHttpInfo (string queueId, string memberId, QueueMember body = null);
 
         /// <summary>
         /// Join or unjoin a user to the queue.
@@ -714,7 +718,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member/User ID</param>
         /// <param name="body">To join queue ~ \&quot;joined\&quot;:true</param>
         /// <returns>Task of QueueMember</returns>
-        System.Threading.Tasks.Task<QueueMember> RoutingQueuesQueueidMembersMemberidPutAsync (string queueId, string memberId, QueueMember body = null);
+        System.Threading.Tasks.Task<QueueMember> UpdateQueueMembersByMemberIdAsync (string queueId, string memberId, QueueMember body = null);
 
         /// <summary>
         /// Join or unjoin a user to the queue.
@@ -726,7 +730,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member/User ID</param>
         /// <param name="body">To join queue ~ \&quot;joined\&quot;:true</param>
         /// <returns>Task of ApiResponse (QueueMember)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueueMember>> RoutingQueuesQueueidMembersMemberidPutAsyncWithHttpInfo (string queueId, string memberId, QueueMember body = null);
+        System.Threading.Tasks.Task<ApiResponse<QueueMember>> UpdateQueueMembersByMemberIdAsyncWithHttpInfo (string queueId, string memberId, QueueMember body = null);
         
         /// <summary>
         /// Get the members of this queue
@@ -741,7 +745,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">expand</param>
         /// <param name="directMembers">Only get users that are direct members of the queue</param>
         /// <returns>QueueMember</returns>
-        QueueMember RoutingQueuesQueueidUsersGet (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null);
+        QueueMember GetQueueUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null);
   
         /// <summary>
         /// Get the members of this queue
@@ -756,7 +760,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">expand</param>
         /// <param name="directMembers">Only get users that are direct members of the queue</param>
         /// <returns>ApiResponse of QueueMember</returns>
-        ApiResponse<QueueMember> RoutingQueuesQueueidUsersGetWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null);
+        ApiResponse<QueueMember> GetQueueUsersWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null);
 
         /// <summary>
         /// Get the members of this queue
@@ -771,7 +775,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">expand</param>
         /// <param name="directMembers">Only get users that are direct members of the queue</param>
         /// <returns>Task of QueueMember</returns>
-        System.Threading.Tasks.Task<QueueMember> RoutingQueuesQueueidUsersGetAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null);
+        System.Threading.Tasks.Task<QueueMember> GetQueueUsersAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null);
 
         /// <summary>
         /// Get the members of this queue
@@ -786,7 +790,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">expand</param>
         /// <param name="directMembers">Only get users that are direct members of the queue</param>
         /// <returns>Task of ApiResponse (QueueMember)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueueMember>> RoutingQueuesQueueidUsersGetAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null);
+        System.Threading.Tasks.Task<ApiResponse<QueueMember>> GetQueueUsersAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null);
         
         /// <summary>
         /// Bulk add or delete up to 100 queue members
@@ -798,7 +802,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Queue Members</param>
         /// <param name="delete">True to delete queue members</param>
         /// <returns>QueueMember</returns>
-        QueueMember RoutingQueuesQueueidUsersPost (string queueId, List<QueueMember> body = null, bool? delete = null);
+        QueueMember CreateQueueUsers (string queueId, List<QueueMember> body = null, bool? delete = null);
   
         /// <summary>
         /// Bulk add or delete up to 100 queue members
@@ -810,7 +814,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Queue Members</param>
         /// <param name="delete">True to delete queue members</param>
         /// <returns>ApiResponse of QueueMember</returns>
-        ApiResponse<QueueMember> RoutingQueuesQueueidUsersPostWithHttpInfo (string queueId, List<QueueMember> body = null, bool? delete = null);
+        ApiResponse<QueueMember> CreateQueueUsersWithHttpInfo (string queueId, List<QueueMember> body = null, bool? delete = null);
 
         /// <summary>
         /// Bulk add or delete up to 100 queue members
@@ -822,7 +826,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Queue Members</param>
         /// <param name="delete">True to delete queue members</param>
         /// <returns>Task of QueueMember</returns>
-        System.Threading.Tasks.Task<QueueMember> RoutingQueuesQueueidUsersPostAsync (string queueId, List<QueueMember> body = null, bool? delete = null);
+        System.Threading.Tasks.Task<QueueMember> CreateQueueUsersAsync (string queueId, List<QueueMember> body = null, bool? delete = null);
 
         /// <summary>
         /// Bulk add or delete up to 100 queue members
@@ -834,7 +838,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Queue Members</param>
         /// <param name="delete">True to delete queue members</param>
         /// <returns>Task of ApiResponse (QueueMember)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueueMember>> RoutingQueuesQueueidUsersPostAsyncWithHttpInfo (string queueId, List<QueueMember> body = null, bool? delete = null);
+        System.Threading.Tasks.Task<ApiResponse<QueueMember>> CreateQueueUsersAsyncWithHttpInfo (string queueId, List<QueueMember> body = null, bool? delete = null);
         
         /// <summary>
         /// Join or unjoin a set of users for a queue
@@ -845,7 +849,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
         /// <returns>QueueMember</returns>
-        QueueMember RoutingQueuesQueueidUsersPatch (string queueId, List<QueueMember> body = null);
+        QueueMember PatchQueueUsers (string queueId, List<QueueMember> body = null);
   
         /// <summary>
         /// Join or unjoin a set of users for a queue
@@ -856,7 +860,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
         /// <returns>ApiResponse of QueueMember</returns>
-        ApiResponse<QueueMember> RoutingQueuesQueueidUsersPatchWithHttpInfo (string queueId, List<QueueMember> body = null);
+        ApiResponse<QueueMember> PatchQueueUsersWithHttpInfo (string queueId, List<QueueMember> body = null);
 
         /// <summary>
         /// Join or unjoin a set of users for a queue
@@ -867,7 +871,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
         /// <returns>Task of QueueMember</returns>
-        System.Threading.Tasks.Task<QueueMember> RoutingQueuesQueueidUsersPatchAsync (string queueId, List<QueueMember> body = null);
+        System.Threading.Tasks.Task<QueueMember> PatchQueueUsersAsync (string queueId, List<QueueMember> body = null);
 
         /// <summary>
         /// Join or unjoin a set of users for a queue
@@ -878,7 +882,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
         /// <returns>Task of ApiResponse (QueueMember)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueueMember>> RoutingQueuesQueueidUsersPatchAsyncWithHttpInfo (string queueId, List<QueueMember> body = null);
+        System.Threading.Tasks.Task<ApiResponse<QueueMember>> PatchQueueUsersAsyncWithHttpInfo (string queueId, List<QueueMember> body = null);
         
         /// <summary>
         /// Delete queue member
@@ -889,7 +893,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>string</returns>
-        string RoutingQueuesQueueidUsersMemberidDelete (string queueId, string memberId);
+        string DeleteQueueUsersByMemberId (string queueId, string memberId);
   
         /// <summary>
         /// Delete queue member
@@ -900,7 +904,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> RoutingQueuesQueueidUsersMemberidDeleteWithHttpInfo (string queueId, string memberId);
+        ApiResponse<string> DeleteQueueUsersByMemberIdWithHttpInfo (string queueId, string memberId);
 
         /// <summary>
         /// Delete queue member
@@ -911,7 +915,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> RoutingQueuesQueueidUsersMemberidDeleteAsync (string queueId, string memberId);
+        System.Threading.Tasks.Task<string> DeleteQueueUsersByMemberIdAsync (string queueId, string memberId);
 
         /// <summary>
         /// Delete queue member
@@ -922,7 +926,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> RoutingQueuesQueueidUsersMemberidDeleteAsyncWithHttpInfo (string queueId, string memberId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteQueueUsersByMemberIdAsyncWithHttpInfo (string queueId, string memberId);
         
         /// <summary>
         /// Update the ring number of joined status for a User in a Queue
@@ -934,7 +938,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
         /// <returns>QueueMember</returns>
-        QueueMember RoutingQueuesQueueidUsersMemberidPatch (string queueId, string memberId, QueueMember body = null);
+        QueueMember PatchQueueUsersByMemberId (string queueId, string memberId, QueueMember body = null);
   
         /// <summary>
         /// Update the ring number of joined status for a User in a Queue
@@ -946,7 +950,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
         /// <returns>ApiResponse of QueueMember</returns>
-        ApiResponse<QueueMember> RoutingQueuesQueueidUsersMemberidPatchWithHttpInfo (string queueId, string memberId, QueueMember body = null);
+        ApiResponse<QueueMember> PatchQueueUsersByMemberIdWithHttpInfo (string queueId, string memberId, QueueMember body = null);
 
         /// <summary>
         /// Update the ring number of joined status for a User in a Queue
@@ -958,7 +962,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
         /// <returns>Task of QueueMember</returns>
-        System.Threading.Tasks.Task<QueueMember> RoutingQueuesQueueidUsersMemberidPatchAsync (string queueId, string memberId, QueueMember body = null);
+        System.Threading.Tasks.Task<QueueMember> PatchQueueUsersByMemberIdAsync (string queueId, string memberId, QueueMember body = null);
 
         /// <summary>
         /// Update the ring number of joined status for a User in a Queue
@@ -970,7 +974,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
         /// <returns>Task of ApiResponse (QueueMember)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueueMember>> RoutingQueuesQueueidUsersMemberidPatchAsyncWithHttpInfo (string queueId, string memberId, QueueMember body = null);
+        System.Threading.Tasks.Task<ApiResponse<QueueMember>> PatchQueueUsersByMemberIdAsyncWithHttpInfo (string queueId, string memberId, QueueMember body = null);
         
         /// <summary>
         /// Get the wrap-up codes for a queue
@@ -981,7 +985,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <returns>WrapupCode</returns>
-        WrapupCode RoutingQueuesQueueidWrapupcodesGet (string queueId, string codeId);
+        WrapupCode GetQueueWrapupcodes (string queueId, string codeId);
   
         /// <summary>
         /// Get the wrap-up codes for a queue
@@ -992,7 +996,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <returns>ApiResponse of WrapupCode</returns>
-        ApiResponse<WrapupCode> RoutingQueuesQueueidWrapupcodesGetWithHttpInfo (string queueId, string codeId);
+        ApiResponse<WrapupCode> GetQueueWrapupcodesWithHttpInfo (string queueId, string codeId);
 
         /// <summary>
         /// Get the wrap-up codes for a queue
@@ -1003,7 +1007,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <returns>Task of WrapupCode</returns>
-        System.Threading.Tasks.Task<WrapupCode> RoutingQueuesQueueidWrapupcodesGetAsync (string queueId, string codeId);
+        System.Threading.Tasks.Task<WrapupCode> GetQueueWrapupcodesAsync (string queueId, string codeId);
 
         /// <summary>
         /// Get the wrap-up codes for a queue
@@ -1014,7 +1018,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> RoutingQueuesQueueidWrapupcodesGetAsyncWithHttpInfo (string queueId, string codeId);
+        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetQueueWrapupcodesAsyncWithHttpInfo (string queueId, string codeId);
         
         /// <summary>
         /// Add up to 100 wrap-up codes to a queue
@@ -1026,7 +1030,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="codeId">Code ID</param>
         /// <param name="body"></param>
         /// <returns>WrapupCode</returns>
-        WrapupCode RoutingQueuesQueueidWrapupcodesPost (string queueId, string codeId, List<WrapupCode> body = null);
+        WrapupCode CreateQueueWrapupcodes (string queueId, string codeId, List<WrapupCode> body = null);
   
         /// <summary>
         /// Add up to 100 wrap-up codes to a queue
@@ -1038,7 +1042,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="codeId">Code ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of WrapupCode</returns>
-        ApiResponse<WrapupCode> RoutingQueuesQueueidWrapupcodesPostWithHttpInfo (string queueId, string codeId, List<WrapupCode> body = null);
+        ApiResponse<WrapupCode> CreateQueueWrapupcodesWithHttpInfo (string queueId, string codeId, List<WrapupCode> body = null);
 
         /// <summary>
         /// Add up to 100 wrap-up codes to a queue
@@ -1050,7 +1054,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="codeId">Code ID</param>
         /// <param name="body"></param>
         /// <returns>Task of WrapupCode</returns>
-        System.Threading.Tasks.Task<WrapupCode> RoutingQueuesQueueidWrapupcodesPostAsync (string queueId, string codeId, List<WrapupCode> body = null);
+        System.Threading.Tasks.Task<WrapupCode> CreateQueueWrapupcodesAsync (string queueId, string codeId, List<WrapupCode> body = null);
 
         /// <summary>
         /// Add up to 100 wrap-up codes to a queue
@@ -1062,7 +1066,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="codeId">Code ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> RoutingQueuesQueueidWrapupcodesPostAsyncWithHttpInfo (string queueId, string codeId, List<WrapupCode> body = null);
+        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> CreateQueueWrapupcodesAsyncWithHttpInfo (string queueId, string codeId, List<WrapupCode> body = null);
         
         /// <summary>
         /// Delete a wrap-up code from a queue
@@ -1073,7 +1077,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <returns>string</returns>
-        string RoutingQueuesQueueidWrapupcodesCodeidDelete (string queueId, string codeId);
+        string DeleteQueueWrapupcodesByCodeId (string queueId, string codeId);
   
         /// <summary>
         /// Delete a wrap-up code from a queue
@@ -1084,7 +1088,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> RoutingQueuesQueueidWrapupcodesCodeidDeleteWithHttpInfo (string queueId, string codeId);
+        ApiResponse<string> DeleteQueueWrapupcodesByCodeIdWithHttpInfo (string queueId, string codeId);
 
         /// <summary>
         /// Delete a wrap-up code from a queue
@@ -1095,7 +1099,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> RoutingQueuesQueueidWrapupcodesCodeidDeleteAsync (string queueId, string codeId);
+        System.Threading.Tasks.Task<string> DeleteQueueWrapupcodesByCodeIdAsync (string queueId, string codeId);
 
         /// <summary>
         /// Delete a wrap-up code from a queue
@@ -1106,7 +1110,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> RoutingQueuesQueueidWrapupcodesCodeidDeleteAsyncWithHttpInfo (string queueId, string codeId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteQueueWrapupcodesByCodeIdAsyncWithHttpInfo (string queueId, string codeId);
         
         /// <summary>
         /// Get the list of skills.
@@ -1119,7 +1123,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="name">Name</param>
         /// <returns>SkillEntityListing</returns>
-        SkillEntityListing RoutingSkillsGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
+        SkillEntityListing GetSkills (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
   
         /// <summary>
         /// Get the list of skills.
@@ -1132,7 +1136,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="name">Name</param>
         /// <returns>ApiResponse of SkillEntityListing</returns>
-        ApiResponse<SkillEntityListing> RoutingSkillsGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
+        ApiResponse<SkillEntityListing> GetSkillsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
 
         /// <summary>
         /// Get the list of skills.
@@ -1145,7 +1149,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="name">Name</param>
         /// <returns>Task of SkillEntityListing</returns>
-        System.Threading.Tasks.Task<SkillEntityListing> RoutingSkillsGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
+        System.Threading.Tasks.Task<SkillEntityListing> GetSkillsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
 
         /// <summary>
         /// Get the list of skills.
@@ -1158,7 +1162,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="name">Name</param>
         /// <returns>Task of ApiResponse (SkillEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SkillEntityListing>> RoutingSkillsGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<SkillEntityListing>> GetSkillsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
         
         /// <summary>
         /// Get the utilization settings.
@@ -1167,7 +1171,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Utilization</returns>
-        Utilization RoutingUtilizationGet ();
+        Utilization GetUtilization ();
   
         /// <summary>
         /// Get the utilization settings.
@@ -1176,7 +1180,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of Utilization</returns>
-        ApiResponse<Utilization> RoutingUtilizationGetWithHttpInfo ();
+        ApiResponse<Utilization> GetUtilizationWithHttpInfo ();
 
         /// <summary>
         /// Get the utilization settings.
@@ -1185,7 +1189,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of Utilization</returns>
-        System.Threading.Tasks.Task<Utilization> RoutingUtilizationGetAsync ();
+        System.Threading.Tasks.Task<Utilization> GetUtilizationAsync ();
 
         /// <summary>
         /// Get the utilization settings.
@@ -1194,7 +1198,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse (Utilization)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Utilization>> RoutingUtilizationGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<Utilization>> GetUtilizationAsyncWithHttpInfo ();
         
         /// <summary>
         /// Update the utilization settings.
@@ -1204,7 +1208,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">utilization</param>
         /// <returns>Utilization</returns>
-        Utilization RoutingUtilizationPut (Utilization body = null);
+        Utilization UpdateUtilization (Utilization body = null);
   
         /// <summary>
         /// Update the utilization settings.
@@ -1214,7 +1218,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">utilization</param>
         /// <returns>ApiResponse of Utilization</returns>
-        ApiResponse<Utilization> RoutingUtilizationPutWithHttpInfo (Utilization body = null);
+        ApiResponse<Utilization> UpdateUtilizationWithHttpInfo (Utilization body = null);
 
         /// <summary>
         /// Update the utilization settings.
@@ -1224,7 +1228,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">utilization</param>
         /// <returns>Task of Utilization</returns>
-        System.Threading.Tasks.Task<Utilization> RoutingUtilizationPutAsync (Utilization body = null);
+        System.Threading.Tasks.Task<Utilization> UpdateUtilizationAsync (Utilization body = null);
 
         /// <summary>
         /// Update the utilization settings.
@@ -1234,7 +1238,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">utilization</param>
         /// <returns>Task of ApiResponse (Utilization)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Utilization>> RoutingUtilizationPutAsyncWithHttpInfo (Utilization body = null);
+        System.Threading.Tasks.Task<ApiResponse<Utilization>> UpdateUtilizationAsyncWithHttpInfo (Utilization body = null);
         
         /// <summary>
         /// Delete utilization settings and revert to system defaults.
@@ -1243,7 +1247,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>string</returns>
-        string RoutingUtilizationDelete ();
+        string DeleteUtilization ();
   
         /// <summary>
         /// Delete utilization settings and revert to system defaults.
@@ -1252,7 +1256,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> RoutingUtilizationDeleteWithHttpInfo ();
+        ApiResponse<string> DeleteUtilizationWithHttpInfo ();
 
         /// <summary>
         /// Delete utilization settings and revert to system defaults.
@@ -1261,7 +1265,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> RoutingUtilizationDeleteAsync ();
+        System.Threading.Tasks.Task<string> DeleteUtilizationAsync ();
 
         /// <summary>
         /// Delete utilization settings and revert to system defaults.
@@ -1270,7 +1274,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> RoutingUtilizationDeleteAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteUtilizationAsyncWithHttpInfo ();
         
         /// <summary>
         /// Get list of wrapup codes.
@@ -1282,7 +1286,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortBy">Sort by</param>
         /// <returns>WrapupCodeEntityListing</returns>
-        WrapupCodeEntityListing RoutingWrapupcodesGet (int? pageSize = null, int? pageNumber = null, string sortBy = null);
+        WrapupCodeEntityListing GetWrapupcodes (int? pageSize = null, int? pageNumber = null, string sortBy = null);
   
         /// <summary>
         /// Get list of wrapup codes.
@@ -1294,7 +1298,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortBy">Sort by</param>
         /// <returns>ApiResponse of WrapupCodeEntityListing</returns>
-        ApiResponse<WrapupCodeEntityListing> RoutingWrapupcodesGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null);
+        ApiResponse<WrapupCodeEntityListing> GetWrapupcodesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null);
 
         /// <summary>
         /// Get list of wrapup codes.
@@ -1306,7 +1310,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortBy">Sort by</param>
         /// <returns>Task of WrapupCodeEntityListing</returns>
-        System.Threading.Tasks.Task<WrapupCodeEntityListing> RoutingWrapupcodesGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null);
+        System.Threading.Tasks.Task<WrapupCodeEntityListing> GetWrapupcodesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null);
 
         /// <summary>
         /// Get list of wrapup codes.
@@ -1318,7 +1322,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortBy">Sort by</param>
         /// <returns>Task of ApiResponse (WrapupCodeEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> RoutingWrapupcodesGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null);
+        System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetWrapupcodesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null);
         
         /// <summary>
         /// Create a wrap-up code
@@ -1328,7 +1332,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">WrapupCode</param>
         /// <returns>CallableTimeSet</returns>
-        CallableTimeSet RoutingWrapupcodesPost (WrapupCode body = null);
+        CallableTimeSet CreateWrapupcodes (WrapupCode body = null);
   
         /// <summary>
         /// Create a wrap-up code
@@ -1338,7 +1342,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">WrapupCode</param>
         /// <returns>ApiResponse of CallableTimeSet</returns>
-        ApiResponse<CallableTimeSet> RoutingWrapupcodesPostWithHttpInfo (WrapupCode body = null);
+        ApiResponse<CallableTimeSet> CreateWrapupcodesWithHttpInfo (WrapupCode body = null);
 
         /// <summary>
         /// Create a wrap-up code
@@ -1348,7 +1352,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">WrapupCode</param>
         /// <returns>Task of CallableTimeSet</returns>
-        System.Threading.Tasks.Task<CallableTimeSet> RoutingWrapupcodesPostAsync (WrapupCode body = null);
+        System.Threading.Tasks.Task<CallableTimeSet> CreateWrapupcodesAsync (WrapupCode body = null);
 
         /// <summary>
         /// Create a wrap-up code
@@ -1358,7 +1362,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">WrapupCode</param>
         /// <returns>Task of ApiResponse (CallableTimeSet)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> RoutingWrapupcodesPostAsyncWithHttpInfo (WrapupCode body = null);
+        System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> CreateWrapupcodesAsyncWithHttpInfo (WrapupCode body = null);
         
         /// <summary>
         /// Get details about this wrap-up code.
@@ -1368,7 +1372,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>WrapupCode</returns>
-        WrapupCode RoutingWrapupcodesCodeidGet (string codeId);
+        WrapupCode GetWrapupcodesCode (string codeId);
   
         /// <summary>
         /// Get details about this wrap-up code.
@@ -1378,7 +1382,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>ApiResponse of WrapupCode</returns>
-        ApiResponse<WrapupCode> RoutingWrapupcodesCodeidGetWithHttpInfo (string codeId);
+        ApiResponse<WrapupCode> GetWrapupcodesCodeWithHttpInfo (string codeId);
 
         /// <summary>
         /// Get details about this wrap-up code.
@@ -1388,7 +1392,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>Task of WrapupCode</returns>
-        System.Threading.Tasks.Task<WrapupCode> RoutingWrapupcodesCodeidGetAsync (string codeId);
+        System.Threading.Tasks.Task<WrapupCode> GetWrapupcodesCodeAsync (string codeId);
 
         /// <summary>
         /// Get details about this wrap-up code.
@@ -1398,7 +1402,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> RoutingWrapupcodesCodeidGetAsyncWithHttpInfo (string codeId);
+        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetWrapupcodesCodeAsyncWithHttpInfo (string codeId);
         
         /// <summary>
         /// Update wrap-up code
@@ -1409,7 +1413,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="codeId">Wrapup Code ID</param>
         /// <param name="body">WrapupCode</param>
         /// <returns>WrapupCode</returns>
-        WrapupCode RoutingWrapupcodesCodeidPut (string codeId, WrapupCode body = null);
+        WrapupCode UpdateWrapupcodesCode (string codeId, WrapupCode body = null);
   
         /// <summary>
         /// Update wrap-up code
@@ -1420,7 +1424,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="codeId">Wrapup Code ID</param>
         /// <param name="body">WrapupCode</param>
         /// <returns>ApiResponse of WrapupCode</returns>
-        ApiResponse<WrapupCode> RoutingWrapupcodesCodeidPutWithHttpInfo (string codeId, WrapupCode body = null);
+        ApiResponse<WrapupCode> UpdateWrapupcodesCodeWithHttpInfo (string codeId, WrapupCode body = null);
 
         /// <summary>
         /// Update wrap-up code
@@ -1431,7 +1435,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="codeId">Wrapup Code ID</param>
         /// <param name="body">WrapupCode</param>
         /// <returns>Task of WrapupCode</returns>
-        System.Threading.Tasks.Task<WrapupCode> RoutingWrapupcodesCodeidPutAsync (string codeId, WrapupCode body = null);
+        System.Threading.Tasks.Task<WrapupCode> UpdateWrapupcodesCodeAsync (string codeId, WrapupCode body = null);
 
         /// <summary>
         /// Update wrap-up code
@@ -1442,7 +1446,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="codeId">Wrapup Code ID</param>
         /// <param name="body">WrapupCode</param>
         /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> RoutingWrapupcodesCodeidPutAsyncWithHttpInfo (string codeId, WrapupCode body = null);
+        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> UpdateWrapupcodesCodeAsyncWithHttpInfo (string codeId, WrapupCode body = null);
         
         /// <summary>
         /// Delete wrap-up code
@@ -1452,7 +1456,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>string</returns>
-        string RoutingWrapupcodesCodeidDelete (string codeId);
+        string DeleteWrapupcodesCode (string codeId);
   
         /// <summary>
         /// Delete wrap-up code
@@ -1462,7 +1466,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> RoutingWrapupcodesCodeidDeleteWithHttpInfo (string codeId);
+        ApiResponse<string> DeleteWrapupcodesCodeWithHttpInfo (string codeId);
 
         /// <summary>
         /// Delete wrap-up code
@@ -1472,7 +1476,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> RoutingWrapupcodesCodeidDeleteAsync (string codeId);
+        System.Threading.Tasks.Task<string> DeleteWrapupcodesCodeAsync (string codeId);
 
         /// <summary>
         /// Delete wrap-up code
@@ -1482,7 +1486,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> RoutingWrapupcodesCodeidDeleteAsyncWithHttpInfo (string codeId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteWrapupcodesCodeAsyncWithHttpInfo (string codeId);
         
     }
   
@@ -1566,9 +1570,9 @@ namespace ININ.PureCloudApi.Api
         /// Get domains 
         /// </summary>
         /// <returns>InboundDomainEntityListing</returns>
-        public InboundDomainEntityListing RoutingEmailDomainsGet ()
+        public InboundDomainEntityListing GetEmailDomains ()
         {
-             ApiResponse<InboundDomainEntityListing> response = RoutingEmailDomainsGetWithHttpInfo();
+             ApiResponse<InboundDomainEntityListing> response = GetEmailDomainsWithHttpInfo();
              return response.Data;
         }
 
@@ -1576,7 +1580,7 @@ namespace ININ.PureCloudApi.Api
         /// Get domains 
         /// </summary>
         /// <returns>ApiResponse of InboundDomainEntityListing</returns>
-        public ApiResponse< InboundDomainEntityListing > RoutingEmailDomainsGetWithHttpInfo ()
+        public ApiResponse< InboundDomainEntityListing > GetEmailDomainsWithHttpInfo ()
         {
             
     
@@ -1622,9 +1626,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEmailDomains: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEmailDomains: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<InboundDomainEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1636,9 +1640,9 @@ namespace ININ.PureCloudApi.Api
         /// Get domains 
         /// </summary>
         /// <returns>Task of InboundDomainEntityListing</returns>
-        public async System.Threading.Tasks.Task<InboundDomainEntityListing> RoutingEmailDomainsGetAsync ()
+        public async System.Threading.Tasks.Task<InboundDomainEntityListing> GetEmailDomainsAsync ()
         {
-             ApiResponse<InboundDomainEntityListing> response = await RoutingEmailDomainsGetAsyncWithHttpInfo();
+             ApiResponse<InboundDomainEntityListing> response = await GetEmailDomainsAsyncWithHttpInfo();
              return response.Data;
 
         }
@@ -1647,7 +1651,7 @@ namespace ININ.PureCloudApi.Api
         /// Get domains 
         /// </summary>
         /// <returns>Task of ApiResponse (InboundDomainEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InboundDomainEntityListing>> RoutingEmailDomainsGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<InboundDomainEntityListing>> GetEmailDomainsAsyncWithHttpInfo ()
         {
             
     
@@ -1693,9 +1697,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEmailDomains: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEmailDomains: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<InboundDomainEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1708,9 +1712,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Domain</param> 
         /// <returns>InboundDomain</returns>
-        public InboundDomain RoutingEmailDomainsPost (InboundDomain body = null)
+        public InboundDomain CreateEmailDomains (InboundDomain body = null)
         {
-             ApiResponse<InboundDomain> response = RoutingEmailDomainsPostWithHttpInfo(body);
+             ApiResponse<InboundDomain> response = CreateEmailDomainsWithHttpInfo(body);
              return response.Data;
         }
 
@@ -1719,7 +1723,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Domain</param> 
         /// <returns>ApiResponse of InboundDomain</returns>
-        public ApiResponse< InboundDomain > RoutingEmailDomainsPostWithHttpInfo (InboundDomain body = null)
+        public ApiResponse< InboundDomain > CreateEmailDomainsWithHttpInfo (InboundDomain body = null)
         {
             
     
@@ -1766,9 +1770,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateEmailDomains: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateEmailDomains: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<InboundDomain>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1781,9 +1785,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Domain</param>
         /// <returns>Task of InboundDomain</returns>
-        public async System.Threading.Tasks.Task<InboundDomain> RoutingEmailDomainsPostAsync (InboundDomain body = null)
+        public async System.Threading.Tasks.Task<InboundDomain> CreateEmailDomainsAsync (InboundDomain body = null)
         {
-             ApiResponse<InboundDomain> response = await RoutingEmailDomainsPostAsyncWithHttpInfo(body);
+             ApiResponse<InboundDomain> response = await CreateEmailDomainsAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -1793,7 +1797,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Domain</param>
         /// <returns>Task of ApiResponse (InboundDomain)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InboundDomain>> RoutingEmailDomainsPostAsyncWithHttpInfo (InboundDomain body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<InboundDomain>> CreateEmailDomainsAsyncWithHttpInfo (InboundDomain body = null)
         {
             
     
@@ -1840,9 +1844,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateEmailDomains: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateEmailDomains: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<InboundDomain>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1855,9 +1859,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="domain">email domain</param> 
         /// <returns>InboundRouteEntityListing</returns>
-        public InboundRouteEntityListing RoutingEmailDomainsDomainRoutesGet (string domain)
+        public InboundRouteEntityListing GetEmailDomainRoutes (string domain)
         {
-             ApiResponse<InboundRouteEntityListing> response = RoutingEmailDomainsDomainRoutesGetWithHttpInfo(domain);
+             ApiResponse<InboundRouteEntityListing> response = GetEmailDomainRoutesWithHttpInfo(domain);
              return response.Data;
         }
 
@@ -1866,11 +1870,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="domain">email domain</param> 
         /// <returns>ApiResponse of InboundRouteEntityListing</returns>
-        public ApiResponse< InboundRouteEntityListing > RoutingEmailDomainsDomainRoutesGetWithHttpInfo (string domain)
+        public ApiResponse< InboundRouteEntityListing > GetEmailDomainRoutesWithHttpInfo (string domain)
         {
             
             // verify the required parameter 'domain' is set
-            if (domain == null) throw new ApiException(400, "Missing required parameter 'domain' when calling RoutingEmailDomainsDomainRoutesGet");
+            if (domain == null) throw new ApiException(400, "Missing required parameter 'domain' when calling GetEmailDomainRoutes");
             
     
             var path_ = "/api/v1/routing/email/domains/{domain}/routes";
@@ -1916,9 +1920,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsDomainRoutesGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEmailDomainRoutes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsDomainRoutesGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEmailDomainRoutes: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<InboundRouteEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1931,9 +1935,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="domain">email domain</param>
         /// <returns>Task of InboundRouteEntityListing</returns>
-        public async System.Threading.Tasks.Task<InboundRouteEntityListing> RoutingEmailDomainsDomainRoutesGetAsync (string domain)
+        public async System.Threading.Tasks.Task<InboundRouteEntityListing> GetEmailDomainRoutesAsync (string domain)
         {
-             ApiResponse<InboundRouteEntityListing> response = await RoutingEmailDomainsDomainRoutesGetAsyncWithHttpInfo(domain);
+             ApiResponse<InboundRouteEntityListing> response = await GetEmailDomainRoutesAsyncWithHttpInfo(domain);
              return response.Data;
 
         }
@@ -1943,10 +1947,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="domain">email domain</param>
         /// <returns>Task of ApiResponse (InboundRouteEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InboundRouteEntityListing>> RoutingEmailDomainsDomainRoutesGetAsyncWithHttpInfo (string domain)
+        public async System.Threading.Tasks.Task<ApiResponse<InboundRouteEntityListing>> GetEmailDomainRoutesAsyncWithHttpInfo (string domain)
         {
             // verify the required parameter 'domain' is set
-            if (domain == null) throw new ApiException(400, "Missing required parameter 'domain' when calling RoutingEmailDomainsDomainRoutesGet");
+            if (domain == null) throw new ApiException(400, "Missing required parameter 'domain' when calling GetEmailDomainRoutes");
             
     
             var path_ = "/api/v1/routing/email/domains/{domain}/routes";
@@ -1992,9 +1996,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsDomainRoutesGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEmailDomainRoutes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsDomainRoutesGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEmailDomainRoutes: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<InboundRouteEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2008,9 +2012,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domain">email domain</param> 
         /// <param name="body">Route</param> 
         /// <returns>InboundRoute</returns>
-        public InboundRoute RoutingEmailDomainsDomainRoutesPost (string domain, InboundRoute body = null)
+        public InboundRoute CreateEmailDomainRoutes (string domain, InboundRoute body = null)
         {
-             ApiResponse<InboundRoute> response = RoutingEmailDomainsDomainRoutesPostWithHttpInfo(domain, body);
+             ApiResponse<InboundRoute> response = CreateEmailDomainRoutesWithHttpInfo(domain, body);
              return response.Data;
         }
 
@@ -2020,11 +2024,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domain">email domain</param> 
         /// <param name="body">Route</param> 
         /// <returns>ApiResponse of InboundRoute</returns>
-        public ApiResponse< InboundRoute > RoutingEmailDomainsDomainRoutesPostWithHttpInfo (string domain, InboundRoute body = null)
+        public ApiResponse< InboundRoute > CreateEmailDomainRoutesWithHttpInfo (string domain, InboundRoute body = null)
         {
             
             // verify the required parameter 'domain' is set
-            if (domain == null) throw new ApiException(400, "Missing required parameter 'domain' when calling RoutingEmailDomainsDomainRoutesPost");
+            if (domain == null) throw new ApiException(400, "Missing required parameter 'domain' when calling CreateEmailDomainRoutes");
             
     
             var path_ = "/api/v1/routing/email/domains/{domain}/routes";
@@ -2071,9 +2075,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsDomainRoutesPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateEmailDomainRoutes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsDomainRoutesPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateEmailDomainRoutes: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<InboundRoute>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2087,9 +2091,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domain">email domain</param>
         /// <param name="body">Route</param>
         /// <returns>Task of InboundRoute</returns>
-        public async System.Threading.Tasks.Task<InboundRoute> RoutingEmailDomainsDomainRoutesPostAsync (string domain, InboundRoute body = null)
+        public async System.Threading.Tasks.Task<InboundRoute> CreateEmailDomainRoutesAsync (string domain, InboundRoute body = null)
         {
-             ApiResponse<InboundRoute> response = await RoutingEmailDomainsDomainRoutesPostAsyncWithHttpInfo(domain, body);
+             ApiResponse<InboundRoute> response = await CreateEmailDomainRoutesAsyncWithHttpInfo(domain, body);
              return response.Data;
 
         }
@@ -2100,10 +2104,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domain">email domain</param>
         /// <param name="body">Route</param>
         /// <returns>Task of ApiResponse (InboundRoute)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InboundRoute>> RoutingEmailDomainsDomainRoutesPostAsyncWithHttpInfo (string domain, InboundRoute body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<InboundRoute>> CreateEmailDomainRoutesAsyncWithHttpInfo (string domain, InboundRoute body = null)
         {
             // verify the required parameter 'domain' is set
-            if (domain == null) throw new ApiException(400, "Missing required parameter 'domain' when calling RoutingEmailDomainsDomainRoutesPost");
+            if (domain == null) throw new ApiException(400, "Missing required parameter 'domain' when calling CreateEmailDomainRoutes");
             
     
             var path_ = "/api/v1/routing/email/domains/{domain}/routes";
@@ -2150,9 +2154,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsDomainRoutesPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateEmailDomainRoutes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsDomainRoutesPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateEmailDomainRoutes: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<InboundRoute>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2166,9 +2170,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domain">email domain</param> 
         /// <param name="id">route ID</param> 
         /// <returns>InboundRoute</returns>
-        public InboundRoute RoutingEmailDomainsDomainRoutesIdGet (string domain, string id)
+        public InboundRoute GetEmailDomainRoutesById (string domain, string id)
         {
-             ApiResponse<InboundRoute> response = RoutingEmailDomainsDomainRoutesIdGetWithHttpInfo(domain, id);
+             ApiResponse<InboundRoute> response = GetEmailDomainRoutesByIdWithHttpInfo(domain, id);
              return response.Data;
         }
 
@@ -2178,14 +2182,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domain">email domain</param> 
         /// <param name="id">route ID</param> 
         /// <returns>ApiResponse of InboundRoute</returns>
-        public ApiResponse< InboundRoute > RoutingEmailDomainsDomainRoutesIdGetWithHttpInfo (string domain, string id)
+        public ApiResponse< InboundRoute > GetEmailDomainRoutesByIdWithHttpInfo (string domain, string id)
         {
             
             // verify the required parameter 'domain' is set
-            if (domain == null) throw new ApiException(400, "Missing required parameter 'domain' when calling RoutingEmailDomainsDomainRoutesIdGet");
+            if (domain == null) throw new ApiException(400, "Missing required parameter 'domain' when calling GetEmailDomainRoutesById");
             
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling RoutingEmailDomainsDomainRoutesIdGet");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetEmailDomainRoutesById");
             
     
             var path_ = "/api/v1/routing/email/domains/{domain}/routes/{id}";
@@ -2232,9 +2236,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsDomainRoutesIdGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEmailDomainRoutesById: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsDomainRoutesIdGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEmailDomainRoutesById: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<InboundRoute>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2248,9 +2252,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domain">email domain</param>
         /// <param name="id">route ID</param>
         /// <returns>Task of InboundRoute</returns>
-        public async System.Threading.Tasks.Task<InboundRoute> RoutingEmailDomainsDomainRoutesIdGetAsync (string domain, string id)
+        public async System.Threading.Tasks.Task<InboundRoute> GetEmailDomainRoutesByIdAsync (string domain, string id)
         {
-             ApiResponse<InboundRoute> response = await RoutingEmailDomainsDomainRoutesIdGetAsyncWithHttpInfo(domain, id);
+             ApiResponse<InboundRoute> response = await GetEmailDomainRoutesByIdAsyncWithHttpInfo(domain, id);
              return response.Data;
 
         }
@@ -2261,12 +2265,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domain">email domain</param>
         /// <param name="id">route ID</param>
         /// <returns>Task of ApiResponse (InboundRoute)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InboundRoute>> RoutingEmailDomainsDomainRoutesIdGetAsyncWithHttpInfo (string domain, string id)
+        public async System.Threading.Tasks.Task<ApiResponse<InboundRoute>> GetEmailDomainRoutesByIdAsyncWithHttpInfo (string domain, string id)
         {
             // verify the required parameter 'domain' is set
-            if (domain == null) throw new ApiException(400, "Missing required parameter 'domain' when calling RoutingEmailDomainsDomainRoutesIdGet");
+            if (domain == null) throw new ApiException(400, "Missing required parameter 'domain' when calling GetEmailDomainRoutesById");
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling RoutingEmailDomainsDomainRoutesIdGet");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetEmailDomainRoutesById");
             
     
             var path_ = "/api/v1/routing/email/domains/{domain}/routes/{id}";
@@ -2313,9 +2317,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsDomainRoutesIdGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEmailDomainRoutesById: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsDomainRoutesIdGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEmailDomainRoutesById: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<InboundRoute>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2330,9 +2334,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">route ID</param> 
         /// <param name="body">Route</param> 
         /// <returns>InboundRoute</returns>
-        public InboundRoute RoutingEmailDomainsDomainRoutesIdPut (string domain, string id, InboundRoute body = null)
+        public InboundRoute UpdateEmailDomainRoutesById (string domain, string id, InboundRoute body = null)
         {
-             ApiResponse<InboundRoute> response = RoutingEmailDomainsDomainRoutesIdPutWithHttpInfo(domain, id, body);
+             ApiResponse<InboundRoute> response = UpdateEmailDomainRoutesByIdWithHttpInfo(domain, id, body);
              return response.Data;
         }
 
@@ -2343,14 +2347,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">route ID</param> 
         /// <param name="body">Route</param> 
         /// <returns>ApiResponse of InboundRoute</returns>
-        public ApiResponse< InboundRoute > RoutingEmailDomainsDomainRoutesIdPutWithHttpInfo (string domain, string id, InboundRoute body = null)
+        public ApiResponse< InboundRoute > UpdateEmailDomainRoutesByIdWithHttpInfo (string domain, string id, InboundRoute body = null)
         {
             
             // verify the required parameter 'domain' is set
-            if (domain == null) throw new ApiException(400, "Missing required parameter 'domain' when calling RoutingEmailDomainsDomainRoutesIdPut");
+            if (domain == null) throw new ApiException(400, "Missing required parameter 'domain' when calling UpdateEmailDomainRoutesById");
             
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling RoutingEmailDomainsDomainRoutesIdPut");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling UpdateEmailDomainRoutesById");
             
     
             var path_ = "/api/v1/routing/email/domains/{domain}/routes/{id}";
@@ -2398,9 +2402,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsDomainRoutesIdPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateEmailDomainRoutesById: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsDomainRoutesIdPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateEmailDomainRoutesById: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<InboundRoute>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2415,9 +2419,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">route ID</param>
         /// <param name="body">Route</param>
         /// <returns>Task of InboundRoute</returns>
-        public async System.Threading.Tasks.Task<InboundRoute> RoutingEmailDomainsDomainRoutesIdPutAsync (string domain, string id, InboundRoute body = null)
+        public async System.Threading.Tasks.Task<InboundRoute> UpdateEmailDomainRoutesByIdAsync (string domain, string id, InboundRoute body = null)
         {
-             ApiResponse<InboundRoute> response = await RoutingEmailDomainsDomainRoutesIdPutAsyncWithHttpInfo(domain, id, body);
+             ApiResponse<InboundRoute> response = await UpdateEmailDomainRoutesByIdAsyncWithHttpInfo(domain, id, body);
              return response.Data;
 
         }
@@ -2429,12 +2433,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">route ID</param>
         /// <param name="body">Route</param>
         /// <returns>Task of ApiResponse (InboundRoute)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InboundRoute>> RoutingEmailDomainsDomainRoutesIdPutAsyncWithHttpInfo (string domain, string id, InboundRoute body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<InboundRoute>> UpdateEmailDomainRoutesByIdAsyncWithHttpInfo (string domain, string id, InboundRoute body = null)
         {
             // verify the required parameter 'domain' is set
-            if (domain == null) throw new ApiException(400, "Missing required parameter 'domain' when calling RoutingEmailDomainsDomainRoutesIdPut");
+            if (domain == null) throw new ApiException(400, "Missing required parameter 'domain' when calling UpdateEmailDomainRoutesById");
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling RoutingEmailDomainsDomainRoutesIdPut");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling UpdateEmailDomainRoutesById");
             
     
             var path_ = "/api/v1/routing/email/domains/{domain}/routes/{id}";
@@ -2482,9 +2486,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsDomainRoutesIdPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateEmailDomainRoutesById: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsDomainRoutesIdPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateEmailDomainRoutesById: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<InboundRoute>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2498,9 +2502,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domain">email domain</param> 
         /// <param name="id">route ID</param> 
         /// <returns>string</returns>
-        public string RoutingEmailDomainsDomainRoutesIdDelete (string domain, string id)
+        public string DeleteEmailDomainRoutesById (string domain, string id)
         {
-             ApiResponse<string> response = RoutingEmailDomainsDomainRoutesIdDeleteWithHttpInfo(domain, id);
+             ApiResponse<string> response = DeleteEmailDomainRoutesByIdWithHttpInfo(domain, id);
              return response.Data;
         }
 
@@ -2510,14 +2514,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domain">email domain</param> 
         /// <param name="id">route ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > RoutingEmailDomainsDomainRoutesIdDeleteWithHttpInfo (string domain, string id)
+        public ApiResponse< string > DeleteEmailDomainRoutesByIdWithHttpInfo (string domain, string id)
         {
             
             // verify the required parameter 'domain' is set
-            if (domain == null) throw new ApiException(400, "Missing required parameter 'domain' when calling RoutingEmailDomainsDomainRoutesIdDelete");
+            if (domain == null) throw new ApiException(400, "Missing required parameter 'domain' when calling DeleteEmailDomainRoutesById");
             
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling RoutingEmailDomainsDomainRoutesIdDelete");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteEmailDomainRoutesById");
             
     
             var path_ = "/api/v1/routing/email/domains/{domain}/routes/{id}";
@@ -2564,9 +2568,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsDomainRoutesIdDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteEmailDomainRoutesById: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsDomainRoutesIdDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteEmailDomainRoutesById: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2580,9 +2584,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domain">email domain</param>
         /// <param name="id">route ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> RoutingEmailDomainsDomainRoutesIdDeleteAsync (string domain, string id)
+        public async System.Threading.Tasks.Task<string> DeleteEmailDomainRoutesByIdAsync (string domain, string id)
         {
-             ApiResponse<string> response = await RoutingEmailDomainsDomainRoutesIdDeleteAsyncWithHttpInfo(domain, id);
+             ApiResponse<string> response = await DeleteEmailDomainRoutesByIdAsyncWithHttpInfo(domain, id);
              return response.Data;
 
         }
@@ -2593,12 +2597,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="domain">email domain</param>
         /// <param name="id">route ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> RoutingEmailDomainsDomainRoutesIdDeleteAsyncWithHttpInfo (string domain, string id)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteEmailDomainRoutesByIdAsyncWithHttpInfo (string domain, string id)
         {
             // verify the required parameter 'domain' is set
-            if (domain == null) throw new ApiException(400, "Missing required parameter 'domain' when calling RoutingEmailDomainsDomainRoutesIdDelete");
+            if (domain == null) throw new ApiException(400, "Missing required parameter 'domain' when calling DeleteEmailDomainRoutesById");
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling RoutingEmailDomainsDomainRoutesIdDelete");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteEmailDomainRoutesById");
             
     
             var path_ = "/api/v1/routing/email/domains/{domain}/routes/{id}";
@@ -2645,9 +2649,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsDomainRoutesIdDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteEmailDomainRoutesById: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsDomainRoutesIdDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteEmailDomainRoutesById: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2660,9 +2664,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">domain ID</param> 
         /// <returns>string</returns>
-        public string RoutingEmailDomainsIdDelete (string id)
+        public string DeleteEmailDomainsId (string id)
         {
-             ApiResponse<string> response = RoutingEmailDomainsIdDeleteWithHttpInfo(id);
+             ApiResponse<string> response = DeleteEmailDomainsIdWithHttpInfo(id);
              return response.Data;
         }
 
@@ -2671,11 +2675,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">domain ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > RoutingEmailDomainsIdDeleteWithHttpInfo (string id)
+        public ApiResponse< string > DeleteEmailDomainsIdWithHttpInfo (string id)
         {
             
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling RoutingEmailDomainsIdDelete");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteEmailDomainsId");
             
     
             var path_ = "/api/v1/routing/email/domains/{id}";
@@ -2721,9 +2725,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsIdDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteEmailDomainsId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsIdDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteEmailDomainsId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2736,9 +2740,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">domain ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> RoutingEmailDomainsIdDeleteAsync (string id)
+        public async System.Threading.Tasks.Task<string> DeleteEmailDomainsIdAsync (string id)
         {
-             ApiResponse<string> response = await RoutingEmailDomainsIdDeleteAsyncWithHttpInfo(id);
+             ApiResponse<string> response = await DeleteEmailDomainsIdAsyncWithHttpInfo(id);
              return response.Data;
 
         }
@@ -2748,10 +2752,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">domain ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> RoutingEmailDomainsIdDeleteAsyncWithHttpInfo (string id)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteEmailDomainsIdAsyncWithHttpInfo (string id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling RoutingEmailDomainsIdDelete");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteEmailDomainsId");
             
     
             var path_ = "/api/v1/routing/email/domains/{id}";
@@ -2797,9 +2801,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsIdDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteEmailDomainsId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingEmailDomainsIdDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteEmailDomainsId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2811,9 +2815,9 @@ namespace ININ.PureCloudApi.Api
         /// Get email setup 
         /// </summary>
         /// <returns>EmailSetup</returns>
-        public EmailSetup RoutingEmailSetupGet ()
+        public EmailSetup GetEmailSetup ()
         {
-             ApiResponse<EmailSetup> response = RoutingEmailSetupGetWithHttpInfo();
+             ApiResponse<EmailSetup> response = GetEmailSetupWithHttpInfo();
              return response.Data;
         }
 
@@ -2821,7 +2825,7 @@ namespace ININ.PureCloudApi.Api
         /// Get email setup 
         /// </summary>
         /// <returns>ApiResponse of EmailSetup</returns>
-        public ApiResponse< EmailSetup > RoutingEmailSetupGetWithHttpInfo ()
+        public ApiResponse< EmailSetup > GetEmailSetupWithHttpInfo ()
         {
             
     
@@ -2867,9 +2871,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingEmailSetupGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEmailSetup: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingEmailSetupGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEmailSetup: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EmailSetup>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2881,9 +2885,9 @@ namespace ININ.PureCloudApi.Api
         /// Get email setup 
         /// </summary>
         /// <returns>Task of EmailSetup</returns>
-        public async System.Threading.Tasks.Task<EmailSetup> RoutingEmailSetupGetAsync ()
+        public async System.Threading.Tasks.Task<EmailSetup> GetEmailSetupAsync ()
         {
-             ApiResponse<EmailSetup> response = await RoutingEmailSetupGetAsyncWithHttpInfo();
+             ApiResponse<EmailSetup> response = await GetEmailSetupAsyncWithHttpInfo();
              return response.Data;
 
         }
@@ -2892,7 +2896,7 @@ namespace ININ.PureCloudApi.Api
         /// Get email setup 
         /// </summary>
         /// <returns>Task of ApiResponse (EmailSetup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EmailSetup>> RoutingEmailSetupGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<EmailSetup>> GetEmailSetupAsyncWithHttpInfo ()
         {
             
     
@@ -2938,9 +2942,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingEmailSetupGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEmailSetup: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingEmailSetupGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEmailSetup: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EmailSetup>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2958,9 +2962,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param> 
         /// <param name="active">Active</param> 
         /// <returns>QueueEntityListing</returns>
-        public QueueEntityListing RoutingQueuesGet (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null)
+        public QueueEntityListing GetQueues (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null)
         {
-             ApiResponse<QueueEntityListing> response = RoutingQueuesGetWithHttpInfo(queueId, pageSize, pageNumber, sortBy, name, active);
+             ApiResponse<QueueEntityListing> response = GetQueuesWithHttpInfo(queueId, pageSize, pageNumber, sortBy, name, active);
              return response.Data;
         }
 
@@ -2974,11 +2978,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param> 
         /// <param name="active">Active</param> 
         /// <returns>ApiResponse of QueueEntityListing</returns>
-        public ApiResponse< QueueEntityListing > RoutingQueuesGetWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null)
+        public ApiResponse< QueueEntityListing > GetQueuesWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null)
         {
             
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesGet");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling GetQueues");
             
     
             var path_ = "/api/v1/routing/queues";
@@ -3029,9 +3033,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetQueues: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetQueues: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<QueueEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3049,9 +3053,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param>
         /// <param name="active">Active</param>
         /// <returns>Task of QueueEntityListing</returns>
-        public async System.Threading.Tasks.Task<QueueEntityListing> RoutingQueuesGetAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null)
+        public async System.Threading.Tasks.Task<QueueEntityListing> GetQueuesAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null)
         {
-             ApiResponse<QueueEntityListing> response = await RoutingQueuesGetAsyncWithHttpInfo(queueId, pageSize, pageNumber, sortBy, name, active);
+             ApiResponse<QueueEntityListing> response = await GetQueuesAsyncWithHttpInfo(queueId, pageSize, pageNumber, sortBy, name, active);
              return response.Data;
 
         }
@@ -3066,10 +3070,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param>
         /// <param name="active">Active</param>
         /// <returns>Task of ApiResponse (QueueEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> RoutingQueuesGetAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null)
+        public async System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetQueuesAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null)
         {
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesGet");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling GetQueues");
             
     
             var path_ = "/api/v1/routing/queues";
@@ -3120,9 +3124,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetQueues: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetQueues: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<QueueEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3136,9 +3140,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param> 
         /// <param name="body">Queue</param> 
         /// <returns>Queue</returns>
-        public Queue RoutingQueuesPost (string queueId, Queue body = null)
+        public Queue CreateQueues (string queueId, Queue body = null)
         {
-             ApiResponse<Queue> response = RoutingQueuesPostWithHttpInfo(queueId, body);
+             ApiResponse<Queue> response = CreateQueuesWithHttpInfo(queueId, body);
              return response.Data;
         }
 
@@ -3148,11 +3152,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param> 
         /// <param name="body">Queue</param> 
         /// <returns>ApiResponse of Queue</returns>
-        public ApiResponse< Queue > RoutingQueuesPostWithHttpInfo (string queueId, Queue body = null)
+        public ApiResponse< Queue > CreateQueuesWithHttpInfo (string queueId, Queue body = null)
         {
             
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesPost");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling CreateQueues");
             
     
             var path_ = "/api/v1/routing/queues";
@@ -3199,9 +3203,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateQueues: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateQueues: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Queue>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3215,9 +3219,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>Task of Queue</returns>
-        public async System.Threading.Tasks.Task<Queue> RoutingQueuesPostAsync (string queueId, Queue body = null)
+        public async System.Threading.Tasks.Task<Queue> CreateQueuesAsync (string queueId, Queue body = null)
         {
-             ApiResponse<Queue> response = await RoutingQueuesPostAsyncWithHttpInfo(queueId, body);
+             ApiResponse<Queue> response = await CreateQueuesAsyncWithHttpInfo(queueId, body);
              return response.Data;
 
         }
@@ -3228,10 +3232,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>Task of ApiResponse (Queue)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Queue>> RoutingQueuesPostAsyncWithHttpInfo (string queueId, Queue body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Queue>> CreateQueuesAsyncWithHttpInfo (string queueId, Queue body = null)
         {
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesPost");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling CreateQueues");
             
     
             var path_ = "/api/v1/routing/queues";
@@ -3278,9 +3282,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateQueues: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateQueues: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Queue>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3293,9 +3297,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="queueId">Queue ID</param> 
         /// <returns>Queue</returns>
-        public Queue RoutingQueuesQueueidGet (string queueId)
+        public Queue GetQueue (string queueId)
         {
-             ApiResponse<Queue> response = RoutingQueuesQueueidGetWithHttpInfo(queueId);
+             ApiResponse<Queue> response = GetQueueWithHttpInfo(queueId);
              return response.Data;
         }
 
@@ -3304,11 +3308,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="queueId">Queue ID</param> 
         /// <returns>ApiResponse of Queue</returns>
-        public ApiResponse< Queue > RoutingQueuesQueueidGetWithHttpInfo (string queueId)
+        public ApiResponse< Queue > GetQueueWithHttpInfo (string queueId)
         {
             
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesQueueidGet");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling GetQueue");
             
     
             var path_ = "/api/v1/routing/queues/{queueId}";
@@ -3354,9 +3358,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetQueue: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetQueue: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Queue>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3369,9 +3373,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="queueId">Queue ID</param>
         /// <returns>Task of Queue</returns>
-        public async System.Threading.Tasks.Task<Queue> RoutingQueuesQueueidGetAsync (string queueId)
+        public async System.Threading.Tasks.Task<Queue> GetQueueAsync (string queueId)
         {
-             ApiResponse<Queue> response = await RoutingQueuesQueueidGetAsyncWithHttpInfo(queueId);
+             ApiResponse<Queue> response = await GetQueueAsyncWithHttpInfo(queueId);
              return response.Data;
 
         }
@@ -3381,10 +3385,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="queueId">Queue ID</param>
         /// <returns>Task of ApiResponse (Queue)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Queue>> RoutingQueuesQueueidGetAsyncWithHttpInfo (string queueId)
+        public async System.Threading.Tasks.Task<ApiResponse<Queue>> GetQueueAsyncWithHttpInfo (string queueId)
         {
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesQueueidGet");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling GetQueue");
             
     
             var path_ = "/api/v1/routing/queues/{queueId}";
@@ -3430,9 +3434,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetQueue: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetQueue: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Queue>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3446,9 +3450,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param> 
         /// <param name="body">Queue</param> 
         /// <returns>Queue</returns>
-        public Queue RoutingQueuesQueueidPut (string queueId, Queue body = null)
+        public Queue UpdateQueue (string queueId, Queue body = null)
         {
-             ApiResponse<Queue> response = RoutingQueuesQueueidPutWithHttpInfo(queueId, body);
+             ApiResponse<Queue> response = UpdateQueueWithHttpInfo(queueId, body);
              return response.Data;
         }
 
@@ -3458,11 +3462,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param> 
         /// <param name="body">Queue</param> 
         /// <returns>ApiResponse of Queue</returns>
-        public ApiResponse< Queue > RoutingQueuesQueueidPutWithHttpInfo (string queueId, Queue body = null)
+        public ApiResponse< Queue > UpdateQueueWithHttpInfo (string queueId, Queue body = null)
         {
             
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesQueueidPut");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling UpdateQueue");
             
     
             var path_ = "/api/v1/routing/queues/{queueId}";
@@ -3509,9 +3513,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateQueue: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateQueue: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Queue>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3525,9 +3529,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>Task of Queue</returns>
-        public async System.Threading.Tasks.Task<Queue> RoutingQueuesQueueidPutAsync (string queueId, Queue body = null)
+        public async System.Threading.Tasks.Task<Queue> UpdateQueueAsync (string queueId, Queue body = null)
         {
-             ApiResponse<Queue> response = await RoutingQueuesQueueidPutAsyncWithHttpInfo(queueId, body);
+             ApiResponse<Queue> response = await UpdateQueueAsyncWithHttpInfo(queueId, body);
              return response.Data;
 
         }
@@ -3538,10 +3542,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>Task of ApiResponse (Queue)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Queue>> RoutingQueuesQueueidPutAsyncWithHttpInfo (string queueId, Queue body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Queue>> UpdateQueueAsyncWithHttpInfo (string queueId, Queue body = null)
         {
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesQueueidPut");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling UpdateQueue");
             
     
             var path_ = "/api/v1/routing/queues/{queueId}";
@@ -3588,9 +3592,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateQueue: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateQueue: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Queue>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3602,10 +3606,11 @@ namespace ININ.PureCloudApi.Api
         /// Delete a queue 
         /// </summary>
         /// <param name="queueId">Queue ID</param> 
+        /// <param name="forceDelete"></param> 
         /// <returns>string</returns>
-        public string RoutingQueuesQueueidDelete (string queueId)
+        public string DeleteQueue (string queueId, bool? forceDelete = null)
         {
-             ApiResponse<string> response = RoutingQueuesQueueidDeleteWithHttpInfo(queueId);
+             ApiResponse<string> response = DeleteQueueWithHttpInfo(queueId, forceDelete);
              return response.Data;
         }
 
@@ -3613,12 +3618,13 @@ namespace ININ.PureCloudApi.Api
         /// Delete a queue 
         /// </summary>
         /// <param name="queueId">Queue ID</param> 
+        /// <param name="forceDelete"></param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > RoutingQueuesQueueidDeleteWithHttpInfo (string queueId)
+        public ApiResponse< string > DeleteQueueWithHttpInfo (string queueId, bool? forceDelete = null)
         {
             
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesQueueidDelete");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling DeleteQueue");
             
     
             var path_ = "/api/v1/routing/queues/{queueId}";
@@ -3643,6 +3649,7 @@ namespace ININ.PureCloudApi.Api
             pathParams.Add("format", "json");
             if (queueId != null) pathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
             
+            if (forceDelete != null) queryParams.Add("forceDelete", Configuration.ApiClient.ParameterToString(forceDelete)); // query parameter
             
             
             
@@ -3664,9 +3671,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteQueue: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteQueue: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3678,10 +3685,11 @@ namespace ININ.PureCloudApi.Api
         /// Delete a queue 
         /// </summary>
         /// <param name="queueId">Queue ID</param>
+        /// <param name="forceDelete"></param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> RoutingQueuesQueueidDeleteAsync (string queueId)
+        public async System.Threading.Tasks.Task<string> DeleteQueueAsync (string queueId, bool? forceDelete = null)
         {
-             ApiResponse<string> response = await RoutingQueuesQueueidDeleteAsyncWithHttpInfo(queueId);
+             ApiResponse<string> response = await DeleteQueueAsyncWithHttpInfo(queueId, forceDelete);
              return response.Data;
 
         }
@@ -3690,11 +3698,12 @@ namespace ININ.PureCloudApi.Api
         /// Delete a queue 
         /// </summary>
         /// <param name="queueId">Queue ID</param>
+        /// <param name="forceDelete"></param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> RoutingQueuesQueueidDeleteAsyncWithHttpInfo (string queueId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteQueueAsyncWithHttpInfo (string queueId, bool? forceDelete = null)
         {
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesQueueidDelete");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling DeleteQueue");
             
     
             var path_ = "/api/v1/routing/queues/{queueId}";
@@ -3719,6 +3728,7 @@ namespace ININ.PureCloudApi.Api
             pathParams.Add("format", "json");
             if (queueId != null) pathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
             
+            if (forceDelete != null) queryParams.Add("forceDelete", Configuration.ApiClient.ParameterToString(forceDelete)); // query parameter
             
             
             
@@ -3740,9 +3750,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteQueue: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteQueue: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3761,9 +3771,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="joined">Joined</param> 
         /// <param name="expand">expand</param> 
         /// <returns>QueueMemberEntityListing</returns>
-        public QueueMemberEntityListing RoutingQueuesQueueidMembersGet (string queueId, int? pageSize = null, int? pageNumber = null, string userId = null, string statusId = null, bool? joined = null, string expand = null)
+        public QueueMemberEntityListing GetQueueMembers (string queueId, int? pageSize = null, int? pageNumber = null, string userId = null, string statusId = null, bool? joined = null, string expand = null)
         {
-             ApiResponse<QueueMemberEntityListing> response = RoutingQueuesQueueidMembersGetWithHttpInfo(queueId, pageSize, pageNumber, userId, statusId, joined, expand);
+             ApiResponse<QueueMemberEntityListing> response = GetQueueMembersWithHttpInfo(queueId, pageSize, pageNumber, userId, statusId, joined, expand);
              return response.Data;
         }
 
@@ -3778,11 +3788,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="joined">Joined</param> 
         /// <param name="expand">expand</param> 
         /// <returns>ApiResponse of QueueMemberEntityListing</returns>
-        public ApiResponse< QueueMemberEntityListing > RoutingQueuesQueueidMembersGetWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string userId = null, string statusId = null, bool? joined = null, string expand = null)
+        public ApiResponse< QueueMemberEntityListing > GetQueueMembersWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string userId = null, string statusId = null, bool? joined = null, string expand = null)
         {
             
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesQueueidMembersGet");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling GetQueueMembers");
             
     
             var path_ = "/api/v1/routing/queues/{queueId}/members";
@@ -3834,9 +3844,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidMembersGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetQueueMembers: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidMembersGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetQueueMembers: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<QueueMemberEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3855,9 +3865,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="joined">Joined</param>
         /// <param name="expand">expand</param>
         /// <returns>Task of QueueMemberEntityListing</returns>
-        public async System.Threading.Tasks.Task<QueueMemberEntityListing> RoutingQueuesQueueidMembersGetAsync (string queueId, int? pageSize = null, int? pageNumber = null, string userId = null, string statusId = null, bool? joined = null, string expand = null)
+        public async System.Threading.Tasks.Task<QueueMemberEntityListing> GetQueueMembersAsync (string queueId, int? pageSize = null, int? pageNumber = null, string userId = null, string statusId = null, bool? joined = null, string expand = null)
         {
-             ApiResponse<QueueMemberEntityListing> response = await RoutingQueuesQueueidMembersGetAsyncWithHttpInfo(queueId, pageSize, pageNumber, userId, statusId, joined, expand);
+             ApiResponse<QueueMemberEntityListing> response = await GetQueueMembersAsyncWithHttpInfo(queueId, pageSize, pageNumber, userId, statusId, joined, expand);
              return response.Data;
 
         }
@@ -3873,10 +3883,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="joined">Joined</param>
         /// <param name="expand">expand</param>
         /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> RoutingQueuesQueueidMembersGetAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string userId = null, string statusId = null, bool? joined = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> GetQueueMembersAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string userId = null, string statusId = null, bool? joined = null, string expand = null)
         {
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesQueueidMembersGet");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling GetQueueMembers");
             
     
             var path_ = "/api/v1/routing/queues/{queueId}/members";
@@ -3928,9 +3938,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidMembersGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetQueueMembers: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidMembersGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetQueueMembers: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<QueueMemberEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3945,9 +3955,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member/User ID</param> 
         /// <param name="body">To join queue ~ \&quot;joined\&quot;:true</param> 
         /// <returns>QueueMember</returns>
-        public QueueMember RoutingQueuesQueueidMembersMemberidPut (string queueId, string memberId, QueueMember body = null)
+        public QueueMember UpdateQueueMembersByMemberId (string queueId, string memberId, QueueMember body = null)
         {
-             ApiResponse<QueueMember> response = RoutingQueuesQueueidMembersMemberidPutWithHttpInfo(queueId, memberId, body);
+             ApiResponse<QueueMember> response = UpdateQueueMembersByMemberIdWithHttpInfo(queueId, memberId, body);
              return response.Data;
         }
 
@@ -3958,14 +3968,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member/User ID</param> 
         /// <param name="body">To join queue ~ \&quot;joined\&quot;:true</param> 
         /// <returns>ApiResponse of QueueMember</returns>
-        public ApiResponse< QueueMember > RoutingQueuesQueueidMembersMemberidPutWithHttpInfo (string queueId, string memberId, QueueMember body = null)
+        public ApiResponse< QueueMember > UpdateQueueMembersByMemberIdWithHttpInfo (string queueId, string memberId, QueueMember body = null)
         {
             
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesQueueidMembersMemberidPut");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling UpdateQueueMembersByMemberId");
             
             // verify the required parameter 'memberId' is set
-            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling RoutingQueuesQueueidMembersMemberidPut");
+            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling UpdateQueueMembersByMemberId");
             
     
             var path_ = "/api/v1/routing/queues/{queueId}/members/{memberId}";
@@ -4013,9 +4023,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidMembersMemberidPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateQueueMembersByMemberId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidMembersMemberidPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateQueueMembersByMemberId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<QueueMember>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4030,9 +4040,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member/User ID</param>
         /// <param name="body">To join queue ~ \&quot;joined\&quot;:true</param>
         /// <returns>Task of QueueMember</returns>
-        public async System.Threading.Tasks.Task<QueueMember> RoutingQueuesQueueidMembersMemberidPutAsync (string queueId, string memberId, QueueMember body = null)
+        public async System.Threading.Tasks.Task<QueueMember> UpdateQueueMembersByMemberIdAsync (string queueId, string memberId, QueueMember body = null)
         {
-             ApiResponse<QueueMember> response = await RoutingQueuesQueueidMembersMemberidPutAsyncWithHttpInfo(queueId, memberId, body);
+             ApiResponse<QueueMember> response = await UpdateQueueMembersByMemberIdAsyncWithHttpInfo(queueId, memberId, body);
              return response.Data;
 
         }
@@ -4044,12 +4054,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member/User ID</param>
         /// <param name="body">To join queue ~ \&quot;joined\&quot;:true</param>
         /// <returns>Task of ApiResponse (QueueMember)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueueMember>> RoutingQueuesQueueidMembersMemberidPutAsyncWithHttpInfo (string queueId, string memberId, QueueMember body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<QueueMember>> UpdateQueueMembersByMemberIdAsyncWithHttpInfo (string queueId, string memberId, QueueMember body = null)
         {
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesQueueidMembersMemberidPut");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling UpdateQueueMembersByMemberId");
             // verify the required parameter 'memberId' is set
-            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling RoutingQueuesQueueidMembersMemberidPut");
+            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling UpdateQueueMembersByMemberId");
             
     
             var path_ = "/api/v1/routing/queues/{queueId}/members/{memberId}";
@@ -4097,9 +4107,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidMembersMemberidPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateQueueMembersByMemberId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidMembersMemberidPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateQueueMembersByMemberId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<QueueMember>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4117,9 +4127,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">expand</param> 
         /// <param name="directMembers">Only get users that are direct members of the queue</param> 
         /// <returns>QueueMember</returns>
-        public QueueMember RoutingQueuesQueueidUsersGet (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
+        public QueueMember GetQueueUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
         {
-             ApiResponse<QueueMember> response = RoutingQueuesQueueidUsersGetWithHttpInfo(queueId, pageSize, pageNumber, sortBy, expand, directMembers);
+             ApiResponse<QueueMember> response = GetQueueUsersWithHttpInfo(queueId, pageSize, pageNumber, sortBy, expand, directMembers);
              return response.Data;
         }
 
@@ -4133,11 +4143,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">expand</param> 
         /// <param name="directMembers">Only get users that are direct members of the queue</param> 
         /// <returns>ApiResponse of QueueMember</returns>
-        public ApiResponse< QueueMember > RoutingQueuesQueueidUsersGetWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
+        public ApiResponse< QueueMember > GetQueueUsersWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
         {
             
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesQueueidUsersGet");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling GetQueueUsers");
             
     
             var path_ = "/api/v1/routing/queues/{queueId}/users";
@@ -4188,9 +4198,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidUsersGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetQueueUsers: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidUsersGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetQueueUsers: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<QueueMember>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4208,9 +4218,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">expand</param>
         /// <param name="directMembers">Only get users that are direct members of the queue</param>
         /// <returns>Task of QueueMember</returns>
-        public async System.Threading.Tasks.Task<QueueMember> RoutingQueuesQueueidUsersGetAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
+        public async System.Threading.Tasks.Task<QueueMember> GetQueueUsersAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
         {
-             ApiResponse<QueueMember> response = await RoutingQueuesQueueidUsersGetAsyncWithHttpInfo(queueId, pageSize, pageNumber, sortBy, expand, directMembers);
+             ApiResponse<QueueMember> response = await GetQueueUsersAsyncWithHttpInfo(queueId, pageSize, pageNumber, sortBy, expand, directMembers);
              return response.Data;
 
         }
@@ -4225,10 +4235,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">expand</param>
         /// <param name="directMembers">Only get users that are direct members of the queue</param>
         /// <returns>Task of ApiResponse (QueueMember)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueueMember>> RoutingQueuesQueueidUsersGetAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
+        public async System.Threading.Tasks.Task<ApiResponse<QueueMember>> GetQueueUsersAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string expand = null, bool? directMembers = null)
         {
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesQueueidUsersGet");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling GetQueueUsers");
             
     
             var path_ = "/api/v1/routing/queues/{queueId}/users";
@@ -4279,9 +4289,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidUsersGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetQueueUsers: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidUsersGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetQueueUsers: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<QueueMember>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4296,9 +4306,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Queue Members</param> 
         /// <param name="delete">True to delete queue members</param> 
         /// <returns>QueueMember</returns>
-        public QueueMember RoutingQueuesQueueidUsersPost (string queueId, List<QueueMember> body = null, bool? delete = null)
+        public QueueMember CreateQueueUsers (string queueId, List<QueueMember> body = null, bool? delete = null)
         {
-             ApiResponse<QueueMember> response = RoutingQueuesQueueidUsersPostWithHttpInfo(queueId, body, delete);
+             ApiResponse<QueueMember> response = CreateQueueUsersWithHttpInfo(queueId, body, delete);
              return response.Data;
         }
 
@@ -4309,11 +4319,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Queue Members</param> 
         /// <param name="delete">True to delete queue members</param> 
         /// <returns>ApiResponse of QueueMember</returns>
-        public ApiResponse< QueueMember > RoutingQueuesQueueidUsersPostWithHttpInfo (string queueId, List<QueueMember> body = null, bool? delete = null)
+        public ApiResponse< QueueMember > CreateQueueUsersWithHttpInfo (string queueId, List<QueueMember> body = null, bool? delete = null)
         {
             
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesQueueidUsersPost");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling CreateQueueUsers");
             
     
             var path_ = "/api/v1/routing/queues/{queueId}/users";
@@ -4361,9 +4371,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidUsersPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateQueueUsers: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidUsersPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateQueueUsers: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<QueueMember>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4378,9 +4388,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Queue Members</param>
         /// <param name="delete">True to delete queue members</param>
         /// <returns>Task of QueueMember</returns>
-        public async System.Threading.Tasks.Task<QueueMember> RoutingQueuesQueueidUsersPostAsync (string queueId, List<QueueMember> body = null, bool? delete = null)
+        public async System.Threading.Tasks.Task<QueueMember> CreateQueueUsersAsync (string queueId, List<QueueMember> body = null, bool? delete = null)
         {
-             ApiResponse<QueueMember> response = await RoutingQueuesQueueidUsersPostAsyncWithHttpInfo(queueId, body, delete);
+             ApiResponse<QueueMember> response = await CreateQueueUsersAsyncWithHttpInfo(queueId, body, delete);
              return response.Data;
 
         }
@@ -4392,10 +4402,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Queue Members</param>
         /// <param name="delete">True to delete queue members</param>
         /// <returns>Task of ApiResponse (QueueMember)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueueMember>> RoutingQueuesQueueidUsersPostAsyncWithHttpInfo (string queueId, List<QueueMember> body = null, bool? delete = null)
+        public async System.Threading.Tasks.Task<ApiResponse<QueueMember>> CreateQueueUsersAsyncWithHttpInfo (string queueId, List<QueueMember> body = null, bool? delete = null)
         {
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesQueueidUsersPost");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling CreateQueueUsers");
             
     
             var path_ = "/api/v1/routing/queues/{queueId}/users";
@@ -4443,9 +4453,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidUsersPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateQueueUsers: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidUsersPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateQueueUsers: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<QueueMember>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4459,9 +4469,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param> 
         /// <param name="body">Queue Members</param> 
         /// <returns>QueueMember</returns>
-        public QueueMember RoutingQueuesQueueidUsersPatch (string queueId, List<QueueMember> body = null)
+        public QueueMember PatchQueueUsers (string queueId, List<QueueMember> body = null)
         {
-             ApiResponse<QueueMember> response = RoutingQueuesQueueidUsersPatchWithHttpInfo(queueId, body);
+             ApiResponse<QueueMember> response = PatchQueueUsersWithHttpInfo(queueId, body);
              return response.Data;
         }
 
@@ -4471,11 +4481,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param> 
         /// <param name="body">Queue Members</param> 
         /// <returns>ApiResponse of QueueMember</returns>
-        public ApiResponse< QueueMember > RoutingQueuesQueueidUsersPatchWithHttpInfo (string queueId, List<QueueMember> body = null)
+        public ApiResponse< QueueMember > PatchQueueUsersWithHttpInfo (string queueId, List<QueueMember> body = null)
         {
             
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesQueueidUsersPatch");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling PatchQueueUsers");
             
     
             var path_ = "/api/v1/routing/queues/{queueId}/users";
@@ -4522,9 +4532,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidUsersPatch: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PatchQueueUsers: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidUsersPatch: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PatchQueueUsers: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<QueueMember>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4538,9 +4548,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
         /// <returns>Task of QueueMember</returns>
-        public async System.Threading.Tasks.Task<QueueMember> RoutingQueuesQueueidUsersPatchAsync (string queueId, List<QueueMember> body = null)
+        public async System.Threading.Tasks.Task<QueueMember> PatchQueueUsersAsync (string queueId, List<QueueMember> body = null)
         {
-             ApiResponse<QueueMember> response = await RoutingQueuesQueueidUsersPatchAsyncWithHttpInfo(queueId, body);
+             ApiResponse<QueueMember> response = await PatchQueueUsersAsyncWithHttpInfo(queueId, body);
              return response.Data;
 
         }
@@ -4551,10 +4561,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue Members</param>
         /// <returns>Task of ApiResponse (QueueMember)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueueMember>> RoutingQueuesQueueidUsersPatchAsyncWithHttpInfo (string queueId, List<QueueMember> body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<QueueMember>> PatchQueueUsersAsyncWithHttpInfo (string queueId, List<QueueMember> body = null)
         {
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesQueueidUsersPatch");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling PatchQueueUsers");
             
     
             var path_ = "/api/v1/routing/queues/{queueId}/users";
@@ -4601,9 +4611,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidUsersPatch: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PatchQueueUsers: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidUsersPatch: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PatchQueueUsers: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<QueueMember>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4617,9 +4627,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param> 
         /// <param name="memberId">Member ID</param> 
         /// <returns>string</returns>
-        public string RoutingQueuesQueueidUsersMemberidDelete (string queueId, string memberId)
+        public string DeleteQueueUsersByMemberId (string queueId, string memberId)
         {
-             ApiResponse<string> response = RoutingQueuesQueueidUsersMemberidDeleteWithHttpInfo(queueId, memberId);
+             ApiResponse<string> response = DeleteQueueUsersByMemberIdWithHttpInfo(queueId, memberId);
              return response.Data;
         }
 
@@ -4629,14 +4639,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param> 
         /// <param name="memberId">Member ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > RoutingQueuesQueueidUsersMemberidDeleteWithHttpInfo (string queueId, string memberId)
+        public ApiResponse< string > DeleteQueueUsersByMemberIdWithHttpInfo (string queueId, string memberId)
         {
             
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesQueueidUsersMemberidDelete");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling DeleteQueueUsersByMemberId");
             
             // verify the required parameter 'memberId' is set
-            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling RoutingQueuesQueueidUsersMemberidDelete");
+            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling DeleteQueueUsersByMemberId");
             
     
             var path_ = "/api/v1/routing/queues/{queueId}/users/{memberId}";
@@ -4683,9 +4693,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidUsersMemberidDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteQueueUsersByMemberId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidUsersMemberidDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteQueueUsersByMemberId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4699,9 +4709,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> RoutingQueuesQueueidUsersMemberidDeleteAsync (string queueId, string memberId)
+        public async System.Threading.Tasks.Task<string> DeleteQueueUsersByMemberIdAsync (string queueId, string memberId)
         {
-             ApiResponse<string> response = await RoutingQueuesQueueidUsersMemberidDeleteAsyncWithHttpInfo(queueId, memberId);
+             ApiResponse<string> response = await DeleteQueueUsersByMemberIdAsyncWithHttpInfo(queueId, memberId);
              return response.Data;
 
         }
@@ -4712,12 +4722,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> RoutingQueuesQueueidUsersMemberidDeleteAsyncWithHttpInfo (string queueId, string memberId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteQueueUsersByMemberIdAsyncWithHttpInfo (string queueId, string memberId)
         {
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesQueueidUsersMemberidDelete");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling DeleteQueueUsersByMemberId");
             // verify the required parameter 'memberId' is set
-            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling RoutingQueuesQueueidUsersMemberidDelete");
+            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling DeleteQueueUsersByMemberId");
             
     
             var path_ = "/api/v1/routing/queues/{queueId}/users/{memberId}";
@@ -4764,9 +4774,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidUsersMemberidDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteQueueUsersByMemberId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidUsersMemberidDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteQueueUsersByMemberId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4781,9 +4791,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param> 
         /// <param name="body">Queue Member</param> 
         /// <returns>QueueMember</returns>
-        public QueueMember RoutingQueuesQueueidUsersMemberidPatch (string queueId, string memberId, QueueMember body = null)
+        public QueueMember PatchQueueUsersByMemberId (string queueId, string memberId, QueueMember body = null)
         {
-             ApiResponse<QueueMember> response = RoutingQueuesQueueidUsersMemberidPatchWithHttpInfo(queueId, memberId, body);
+             ApiResponse<QueueMember> response = PatchQueueUsersByMemberIdWithHttpInfo(queueId, memberId, body);
              return response.Data;
         }
 
@@ -4794,14 +4804,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param> 
         /// <param name="body">Queue Member</param> 
         /// <returns>ApiResponse of QueueMember</returns>
-        public ApiResponse< QueueMember > RoutingQueuesQueueidUsersMemberidPatchWithHttpInfo (string queueId, string memberId, QueueMember body = null)
+        public ApiResponse< QueueMember > PatchQueueUsersByMemberIdWithHttpInfo (string queueId, string memberId, QueueMember body = null)
         {
             
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesQueueidUsersMemberidPatch");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling PatchQueueUsersByMemberId");
             
             // verify the required parameter 'memberId' is set
-            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling RoutingQueuesQueueidUsersMemberidPatch");
+            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling PatchQueueUsersByMemberId");
             
     
             var path_ = "/api/v1/routing/queues/{queueId}/users/{memberId}";
@@ -4849,9 +4859,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidUsersMemberidPatch: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PatchQueueUsersByMemberId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidUsersMemberidPatch: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PatchQueueUsersByMemberId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<QueueMember>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4866,9 +4876,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
         /// <returns>Task of QueueMember</returns>
-        public async System.Threading.Tasks.Task<QueueMember> RoutingQueuesQueueidUsersMemberidPatchAsync (string queueId, string memberId, QueueMember body = null)
+        public async System.Threading.Tasks.Task<QueueMember> PatchQueueUsersByMemberIdAsync (string queueId, string memberId, QueueMember body = null)
         {
-             ApiResponse<QueueMember> response = await RoutingQueuesQueueidUsersMemberidPatchAsyncWithHttpInfo(queueId, memberId, body);
+             ApiResponse<QueueMember> response = await PatchQueueUsersByMemberIdAsyncWithHttpInfo(queueId, memberId, body);
              return response.Data;
 
         }
@@ -4880,12 +4890,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Queue Member</param>
         /// <returns>Task of ApiResponse (QueueMember)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueueMember>> RoutingQueuesQueueidUsersMemberidPatchAsyncWithHttpInfo (string queueId, string memberId, QueueMember body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<QueueMember>> PatchQueueUsersByMemberIdAsyncWithHttpInfo (string queueId, string memberId, QueueMember body = null)
         {
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesQueueidUsersMemberidPatch");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling PatchQueueUsersByMemberId");
             // verify the required parameter 'memberId' is set
-            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling RoutingQueuesQueueidUsersMemberidPatch");
+            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling PatchQueueUsersByMemberId");
             
     
             var path_ = "/api/v1/routing/queues/{queueId}/users/{memberId}";
@@ -4933,9 +4943,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidUsersMemberidPatch: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PatchQueueUsersByMemberId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidUsersMemberidPatch: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PatchQueueUsersByMemberId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<QueueMember>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4949,9 +4959,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param> 
         /// <param name="codeId">Code ID</param> 
         /// <returns>WrapupCode</returns>
-        public WrapupCode RoutingQueuesQueueidWrapupcodesGet (string queueId, string codeId)
+        public WrapupCode GetQueueWrapupcodes (string queueId, string codeId)
         {
-             ApiResponse<WrapupCode> response = RoutingQueuesQueueidWrapupcodesGetWithHttpInfo(queueId, codeId);
+             ApiResponse<WrapupCode> response = GetQueueWrapupcodesWithHttpInfo(queueId, codeId);
              return response.Data;
         }
 
@@ -4961,14 +4971,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param> 
         /// <param name="codeId">Code ID</param> 
         /// <returns>ApiResponse of WrapupCode</returns>
-        public ApiResponse< WrapupCode > RoutingQueuesQueueidWrapupcodesGetWithHttpInfo (string queueId, string codeId)
+        public ApiResponse< WrapupCode > GetQueueWrapupcodesWithHttpInfo (string queueId, string codeId)
         {
             
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesQueueidWrapupcodesGet");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling GetQueueWrapupcodes");
             
             // verify the required parameter 'codeId' is set
-            if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingQueuesQueueidWrapupcodesGet");
+            if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling GetQueueWrapupcodes");
             
     
             var path_ = "/api/v1/routing/queues/{queueId}/wrapupcodes";
@@ -5015,9 +5025,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidWrapupcodesGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetQueueWrapupcodes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidWrapupcodesGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetQueueWrapupcodes: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<WrapupCode>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5031,9 +5041,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <returns>Task of WrapupCode</returns>
-        public async System.Threading.Tasks.Task<WrapupCode> RoutingQueuesQueueidWrapupcodesGetAsync (string queueId, string codeId)
+        public async System.Threading.Tasks.Task<WrapupCode> GetQueueWrapupcodesAsync (string queueId, string codeId)
         {
-             ApiResponse<WrapupCode> response = await RoutingQueuesQueueidWrapupcodesGetAsyncWithHttpInfo(queueId, codeId);
+             ApiResponse<WrapupCode> response = await GetQueueWrapupcodesAsyncWithHttpInfo(queueId, codeId);
              return response.Data;
 
         }
@@ -5044,12 +5054,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> RoutingQueuesQueueidWrapupcodesGetAsyncWithHttpInfo (string queueId, string codeId)
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetQueueWrapupcodesAsyncWithHttpInfo (string queueId, string codeId)
         {
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesQueueidWrapupcodesGet");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling GetQueueWrapupcodes");
             // verify the required parameter 'codeId' is set
-            if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingQueuesQueueidWrapupcodesGet");
+            if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling GetQueueWrapupcodes");
             
     
             var path_ = "/api/v1/routing/queues/{queueId}/wrapupcodes";
@@ -5096,9 +5106,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidWrapupcodesGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetQueueWrapupcodes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidWrapupcodesGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetQueueWrapupcodes: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<WrapupCode>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5113,9 +5123,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="codeId">Code ID</param> 
         /// <param name="body"></param> 
         /// <returns>WrapupCode</returns>
-        public WrapupCode RoutingQueuesQueueidWrapupcodesPost (string queueId, string codeId, List<WrapupCode> body = null)
+        public WrapupCode CreateQueueWrapupcodes (string queueId, string codeId, List<WrapupCode> body = null)
         {
-             ApiResponse<WrapupCode> response = RoutingQueuesQueueidWrapupcodesPostWithHttpInfo(queueId, codeId, body);
+             ApiResponse<WrapupCode> response = CreateQueueWrapupcodesWithHttpInfo(queueId, codeId, body);
              return response.Data;
         }
 
@@ -5126,14 +5136,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="codeId">Code ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of WrapupCode</returns>
-        public ApiResponse< WrapupCode > RoutingQueuesQueueidWrapupcodesPostWithHttpInfo (string queueId, string codeId, List<WrapupCode> body = null)
+        public ApiResponse< WrapupCode > CreateQueueWrapupcodesWithHttpInfo (string queueId, string codeId, List<WrapupCode> body = null)
         {
             
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesQueueidWrapupcodesPost");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling CreateQueueWrapupcodes");
             
             // verify the required parameter 'codeId' is set
-            if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingQueuesQueueidWrapupcodesPost");
+            if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling CreateQueueWrapupcodes");
             
     
             var path_ = "/api/v1/routing/queues/{queueId}/wrapupcodes";
@@ -5181,9 +5191,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidWrapupcodesPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateQueueWrapupcodes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidWrapupcodesPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateQueueWrapupcodes: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<WrapupCode>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5198,9 +5208,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="codeId">Code ID</param>
         /// <param name="body"></param>
         /// <returns>Task of WrapupCode</returns>
-        public async System.Threading.Tasks.Task<WrapupCode> RoutingQueuesQueueidWrapupcodesPostAsync (string queueId, string codeId, List<WrapupCode> body = null)
+        public async System.Threading.Tasks.Task<WrapupCode> CreateQueueWrapupcodesAsync (string queueId, string codeId, List<WrapupCode> body = null)
         {
-             ApiResponse<WrapupCode> response = await RoutingQueuesQueueidWrapupcodesPostAsyncWithHttpInfo(queueId, codeId, body);
+             ApiResponse<WrapupCode> response = await CreateQueueWrapupcodesAsyncWithHttpInfo(queueId, codeId, body);
              return response.Data;
 
         }
@@ -5212,12 +5222,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="codeId">Code ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> RoutingQueuesQueueidWrapupcodesPostAsyncWithHttpInfo (string queueId, string codeId, List<WrapupCode> body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> CreateQueueWrapupcodesAsyncWithHttpInfo (string queueId, string codeId, List<WrapupCode> body = null)
         {
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesQueueidWrapupcodesPost");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling CreateQueueWrapupcodes");
             // verify the required parameter 'codeId' is set
-            if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingQueuesQueueidWrapupcodesPost");
+            if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling CreateQueueWrapupcodes");
             
     
             var path_ = "/api/v1/routing/queues/{queueId}/wrapupcodes";
@@ -5265,9 +5275,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidWrapupcodesPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateQueueWrapupcodes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidWrapupcodesPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateQueueWrapupcodes: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<WrapupCode>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5281,9 +5291,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param> 
         /// <param name="codeId">Code ID</param> 
         /// <returns>string</returns>
-        public string RoutingQueuesQueueidWrapupcodesCodeidDelete (string queueId, string codeId)
+        public string DeleteQueueWrapupcodesByCodeId (string queueId, string codeId)
         {
-             ApiResponse<string> response = RoutingQueuesQueueidWrapupcodesCodeidDeleteWithHttpInfo(queueId, codeId);
+             ApiResponse<string> response = DeleteQueueWrapupcodesByCodeIdWithHttpInfo(queueId, codeId);
              return response.Data;
         }
 
@@ -5293,14 +5303,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param> 
         /// <param name="codeId">Code ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > RoutingQueuesQueueidWrapupcodesCodeidDeleteWithHttpInfo (string queueId, string codeId)
+        public ApiResponse< string > DeleteQueueWrapupcodesByCodeIdWithHttpInfo (string queueId, string codeId)
         {
             
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesQueueidWrapupcodesCodeidDelete");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling DeleteQueueWrapupcodesByCodeId");
             
             // verify the required parameter 'codeId' is set
-            if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingQueuesQueueidWrapupcodesCodeidDelete");
+            if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling DeleteQueueWrapupcodesByCodeId");
             
     
             var path_ = "/api/v1/routing/queues/{queueId}/wrapupcodes/{codeId}";
@@ -5347,9 +5357,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidWrapupcodesCodeidDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteQueueWrapupcodesByCodeId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidWrapupcodesCodeidDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteQueueWrapupcodesByCodeId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5363,9 +5373,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> RoutingQueuesQueueidWrapupcodesCodeidDeleteAsync (string queueId, string codeId)
+        public async System.Threading.Tasks.Task<string> DeleteQueueWrapupcodesByCodeIdAsync (string queueId, string codeId)
         {
-             ApiResponse<string> response = await RoutingQueuesQueueidWrapupcodesCodeidDeleteAsyncWithHttpInfo(queueId, codeId);
+             ApiResponse<string> response = await DeleteQueueWrapupcodesByCodeIdAsyncWithHttpInfo(queueId, codeId);
              return response.Data;
 
         }
@@ -5376,12 +5386,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> RoutingQueuesQueueidWrapupcodesCodeidDeleteAsyncWithHttpInfo (string queueId, string codeId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteQueueWrapupcodesByCodeIdAsyncWithHttpInfo (string queueId, string codeId)
         {
             // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingQueuesQueueidWrapupcodesCodeidDelete");
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling DeleteQueueWrapupcodesByCodeId");
             // verify the required parameter 'codeId' is set
-            if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingQueuesQueueidWrapupcodesCodeidDelete");
+            if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling DeleteQueueWrapupcodesByCodeId");
             
     
             var path_ = "/api/v1/routing/queues/{queueId}/wrapupcodes/{codeId}";
@@ -5428,9 +5438,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidWrapupcodesCodeidDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteQueueWrapupcodesByCodeId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingQueuesQueueidWrapupcodesCodeidDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteQueueWrapupcodesByCodeId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5446,9 +5456,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param> 
         /// <param name="name">Name</param> 
         /// <returns>SkillEntityListing</returns>
-        public SkillEntityListing RoutingSkillsGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
+        public SkillEntityListing GetSkills (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
         {
-             ApiResponse<SkillEntityListing> response = RoutingSkillsGetWithHttpInfo(pageSize, pageNumber, sortBy, name);
+             ApiResponse<SkillEntityListing> response = GetSkillsWithHttpInfo(pageSize, pageNumber, sortBy, name);
              return response.Data;
         }
 
@@ -5460,7 +5470,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param> 
         /// <param name="name">Name</param> 
         /// <returns>ApiResponse of SkillEntityListing</returns>
-        public ApiResponse< SkillEntityListing > RoutingSkillsGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
+        public ApiResponse< SkillEntityListing > GetSkillsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
         {
             
     
@@ -5510,9 +5520,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingSkillsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSkills: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingSkillsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSkills: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<SkillEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5528,9 +5538,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="name">Name</param>
         /// <returns>Task of SkillEntityListing</returns>
-        public async System.Threading.Tasks.Task<SkillEntityListing> RoutingSkillsGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
+        public async System.Threading.Tasks.Task<SkillEntityListing> GetSkillsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
         {
-             ApiResponse<SkillEntityListing> response = await RoutingSkillsGetAsyncWithHttpInfo(pageSize, pageNumber, sortBy, name);
+             ApiResponse<SkillEntityListing> response = await GetSkillsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, name);
              return response.Data;
 
         }
@@ -5543,7 +5553,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="name">Name</param>
         /// <returns>Task of ApiResponse (SkillEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SkillEntityListing>> RoutingSkillsGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SkillEntityListing>> GetSkillsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
         {
             
     
@@ -5593,9 +5603,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingSkillsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSkills: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingSkillsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSkills: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<SkillEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5607,9 +5617,9 @@ namespace ININ.PureCloudApi.Api
         /// Get the utilization settings. 
         /// </summary>
         /// <returns>Utilization</returns>
-        public Utilization RoutingUtilizationGet ()
+        public Utilization GetUtilization ()
         {
-             ApiResponse<Utilization> response = RoutingUtilizationGetWithHttpInfo();
+             ApiResponse<Utilization> response = GetUtilizationWithHttpInfo();
              return response.Data;
         }
 
@@ -5617,7 +5627,7 @@ namespace ININ.PureCloudApi.Api
         /// Get the utilization settings. 
         /// </summary>
         /// <returns>ApiResponse of Utilization</returns>
-        public ApiResponse< Utilization > RoutingUtilizationGetWithHttpInfo ()
+        public ApiResponse< Utilization > GetUtilizationWithHttpInfo ()
         {
             
     
@@ -5663,9 +5673,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingUtilizationGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetUtilization: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingUtilizationGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetUtilization: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Utilization>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5677,9 +5687,9 @@ namespace ININ.PureCloudApi.Api
         /// Get the utilization settings. 
         /// </summary>
         /// <returns>Task of Utilization</returns>
-        public async System.Threading.Tasks.Task<Utilization> RoutingUtilizationGetAsync ()
+        public async System.Threading.Tasks.Task<Utilization> GetUtilizationAsync ()
         {
-             ApiResponse<Utilization> response = await RoutingUtilizationGetAsyncWithHttpInfo();
+             ApiResponse<Utilization> response = await GetUtilizationAsyncWithHttpInfo();
              return response.Data;
 
         }
@@ -5688,7 +5698,7 @@ namespace ININ.PureCloudApi.Api
         /// Get the utilization settings. 
         /// </summary>
         /// <returns>Task of ApiResponse (Utilization)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Utilization>> RoutingUtilizationGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<Utilization>> GetUtilizationAsyncWithHttpInfo ()
         {
             
     
@@ -5734,9 +5744,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingUtilizationGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetUtilization: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingUtilizationGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetUtilization: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Utilization>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5749,9 +5759,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">utilization</param> 
         /// <returns>Utilization</returns>
-        public Utilization RoutingUtilizationPut (Utilization body = null)
+        public Utilization UpdateUtilization (Utilization body = null)
         {
-             ApiResponse<Utilization> response = RoutingUtilizationPutWithHttpInfo(body);
+             ApiResponse<Utilization> response = UpdateUtilizationWithHttpInfo(body);
              return response.Data;
         }
 
@@ -5760,7 +5770,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">utilization</param> 
         /// <returns>ApiResponse of Utilization</returns>
-        public ApiResponse< Utilization > RoutingUtilizationPutWithHttpInfo (Utilization body = null)
+        public ApiResponse< Utilization > UpdateUtilizationWithHttpInfo (Utilization body = null)
         {
             
     
@@ -5807,9 +5817,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingUtilizationPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateUtilization: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingUtilizationPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateUtilization: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Utilization>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5822,9 +5832,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">utilization</param>
         /// <returns>Task of Utilization</returns>
-        public async System.Threading.Tasks.Task<Utilization> RoutingUtilizationPutAsync (Utilization body = null)
+        public async System.Threading.Tasks.Task<Utilization> UpdateUtilizationAsync (Utilization body = null)
         {
-             ApiResponse<Utilization> response = await RoutingUtilizationPutAsyncWithHttpInfo(body);
+             ApiResponse<Utilization> response = await UpdateUtilizationAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -5834,7 +5844,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">utilization</param>
         /// <returns>Task of ApiResponse (Utilization)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Utilization>> RoutingUtilizationPutAsyncWithHttpInfo (Utilization body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Utilization>> UpdateUtilizationAsyncWithHttpInfo (Utilization body = null)
         {
             
     
@@ -5881,9 +5891,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingUtilizationPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateUtilization: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingUtilizationPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateUtilization: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Utilization>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5895,9 +5905,9 @@ namespace ININ.PureCloudApi.Api
         /// Delete utilization settings and revert to system defaults. 
         /// </summary>
         /// <returns>string</returns>
-        public string RoutingUtilizationDelete ()
+        public string DeleteUtilization ()
         {
-             ApiResponse<string> response = RoutingUtilizationDeleteWithHttpInfo();
+             ApiResponse<string> response = DeleteUtilizationWithHttpInfo();
              return response.Data;
         }
 
@@ -5905,7 +5915,7 @@ namespace ININ.PureCloudApi.Api
         /// Delete utilization settings and revert to system defaults. 
         /// </summary>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > RoutingUtilizationDeleteWithHttpInfo ()
+        public ApiResponse< string > DeleteUtilizationWithHttpInfo ()
         {
             
     
@@ -5951,9 +5961,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingUtilizationDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteUtilization: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingUtilizationDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteUtilization: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5965,9 +5975,9 @@ namespace ININ.PureCloudApi.Api
         /// Delete utilization settings and revert to system defaults. 
         /// </summary>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> RoutingUtilizationDeleteAsync ()
+        public async System.Threading.Tasks.Task<string> DeleteUtilizationAsync ()
         {
-             ApiResponse<string> response = await RoutingUtilizationDeleteAsyncWithHttpInfo();
+             ApiResponse<string> response = await DeleteUtilizationAsyncWithHttpInfo();
              return response.Data;
 
         }
@@ -5976,7 +5986,7 @@ namespace ININ.PureCloudApi.Api
         /// Delete utilization settings and revert to system defaults. 
         /// </summary>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> RoutingUtilizationDeleteAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteUtilizationAsyncWithHttpInfo ()
         {
             
     
@@ -6022,9 +6032,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingUtilizationDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteUtilization: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingUtilizationDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteUtilization: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6039,9 +6049,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="sortBy">Sort by</param> 
         /// <returns>WrapupCodeEntityListing</returns>
-        public WrapupCodeEntityListing RoutingWrapupcodesGet (int? pageSize = null, int? pageNumber = null, string sortBy = null)
+        public WrapupCodeEntityListing GetWrapupcodes (int? pageSize = null, int? pageNumber = null, string sortBy = null)
         {
-             ApiResponse<WrapupCodeEntityListing> response = RoutingWrapupcodesGetWithHttpInfo(pageSize, pageNumber, sortBy);
+             ApiResponse<WrapupCodeEntityListing> response = GetWrapupcodesWithHttpInfo(pageSize, pageNumber, sortBy);
              return response.Data;
         }
 
@@ -6052,7 +6062,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="sortBy">Sort by</param> 
         /// <returns>ApiResponse of WrapupCodeEntityListing</returns>
-        public ApiResponse< WrapupCodeEntityListing > RoutingWrapupcodesGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null)
+        public ApiResponse< WrapupCodeEntityListing > GetWrapupcodesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null)
         {
             
     
@@ -6101,9 +6111,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingWrapupcodesGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetWrapupcodes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingWrapupcodesGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetWrapupcodes: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<WrapupCodeEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6118,9 +6128,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortBy">Sort by</param>
         /// <returns>Task of WrapupCodeEntityListing</returns>
-        public async System.Threading.Tasks.Task<WrapupCodeEntityListing> RoutingWrapupcodesGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null)
+        public async System.Threading.Tasks.Task<WrapupCodeEntityListing> GetWrapupcodesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null)
         {
-             ApiResponse<WrapupCodeEntityListing> response = await RoutingWrapupcodesGetAsyncWithHttpInfo(pageSize, pageNumber, sortBy);
+             ApiResponse<WrapupCodeEntityListing> response = await GetWrapupcodesAsyncWithHttpInfo(pageSize, pageNumber, sortBy);
              return response.Data;
 
         }
@@ -6132,7 +6142,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortBy">Sort by</param>
         /// <returns>Task of ApiResponse (WrapupCodeEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> RoutingWrapupcodesGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetWrapupcodesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null)
         {
             
     
@@ -6181,9 +6191,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingWrapupcodesGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetWrapupcodes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingWrapupcodesGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetWrapupcodes: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<WrapupCodeEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6196,9 +6206,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">WrapupCode</param> 
         /// <returns>CallableTimeSet</returns>
-        public CallableTimeSet RoutingWrapupcodesPost (WrapupCode body = null)
+        public CallableTimeSet CreateWrapupcodes (WrapupCode body = null)
         {
-             ApiResponse<CallableTimeSet> response = RoutingWrapupcodesPostWithHttpInfo(body);
+             ApiResponse<CallableTimeSet> response = CreateWrapupcodesWithHttpInfo(body);
              return response.Data;
         }
 
@@ -6207,7 +6217,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">WrapupCode</param> 
         /// <returns>ApiResponse of CallableTimeSet</returns>
-        public ApiResponse< CallableTimeSet > RoutingWrapupcodesPostWithHttpInfo (WrapupCode body = null)
+        public ApiResponse< CallableTimeSet > CreateWrapupcodesWithHttpInfo (WrapupCode body = null)
         {
             
     
@@ -6254,9 +6264,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingWrapupcodesPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateWrapupcodes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingWrapupcodesPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateWrapupcodes: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<CallableTimeSet>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6269,9 +6279,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">WrapupCode</param>
         /// <returns>Task of CallableTimeSet</returns>
-        public async System.Threading.Tasks.Task<CallableTimeSet> RoutingWrapupcodesPostAsync (WrapupCode body = null)
+        public async System.Threading.Tasks.Task<CallableTimeSet> CreateWrapupcodesAsync (WrapupCode body = null)
         {
-             ApiResponse<CallableTimeSet> response = await RoutingWrapupcodesPostAsyncWithHttpInfo(body);
+             ApiResponse<CallableTimeSet> response = await CreateWrapupcodesAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -6281,7 +6291,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">WrapupCode</param>
         /// <returns>Task of ApiResponse (CallableTimeSet)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> RoutingWrapupcodesPostAsyncWithHttpInfo (WrapupCode body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> CreateWrapupcodesAsyncWithHttpInfo (WrapupCode body = null)
         {
             
     
@@ -6328,9 +6338,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingWrapupcodesPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateWrapupcodes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingWrapupcodesPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateWrapupcodes: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<CallableTimeSet>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6343,9 +6353,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="codeId">Wrapup Code ID</param> 
         /// <returns>WrapupCode</returns>
-        public WrapupCode RoutingWrapupcodesCodeidGet (string codeId)
+        public WrapupCode GetWrapupcodesCode (string codeId)
         {
-             ApiResponse<WrapupCode> response = RoutingWrapupcodesCodeidGetWithHttpInfo(codeId);
+             ApiResponse<WrapupCode> response = GetWrapupcodesCodeWithHttpInfo(codeId);
              return response.Data;
         }
 
@@ -6354,11 +6364,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="codeId">Wrapup Code ID</param> 
         /// <returns>ApiResponse of WrapupCode</returns>
-        public ApiResponse< WrapupCode > RoutingWrapupcodesCodeidGetWithHttpInfo (string codeId)
+        public ApiResponse< WrapupCode > GetWrapupcodesCodeWithHttpInfo (string codeId)
         {
             
             // verify the required parameter 'codeId' is set
-            if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingWrapupcodesCodeidGet");
+            if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling GetWrapupcodesCode");
             
     
             var path_ = "/api/v1/routing/wrapupcodes/{codeId}";
@@ -6404,9 +6414,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingWrapupcodesCodeidGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetWrapupcodesCode: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingWrapupcodesCodeidGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetWrapupcodesCode: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<WrapupCode>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6419,9 +6429,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>Task of WrapupCode</returns>
-        public async System.Threading.Tasks.Task<WrapupCode> RoutingWrapupcodesCodeidGetAsync (string codeId)
+        public async System.Threading.Tasks.Task<WrapupCode> GetWrapupcodesCodeAsync (string codeId)
         {
-             ApiResponse<WrapupCode> response = await RoutingWrapupcodesCodeidGetAsyncWithHttpInfo(codeId);
+             ApiResponse<WrapupCode> response = await GetWrapupcodesCodeAsyncWithHttpInfo(codeId);
              return response.Data;
 
         }
@@ -6431,10 +6441,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> RoutingWrapupcodesCodeidGetAsyncWithHttpInfo (string codeId)
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetWrapupcodesCodeAsyncWithHttpInfo (string codeId)
         {
             // verify the required parameter 'codeId' is set
-            if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingWrapupcodesCodeidGet");
+            if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling GetWrapupcodesCode");
             
     
             var path_ = "/api/v1/routing/wrapupcodes/{codeId}";
@@ -6480,9 +6490,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingWrapupcodesCodeidGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetWrapupcodesCode: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingWrapupcodesCodeidGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetWrapupcodesCode: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<WrapupCode>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6496,9 +6506,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="codeId">Wrapup Code ID</param> 
         /// <param name="body">WrapupCode</param> 
         /// <returns>WrapupCode</returns>
-        public WrapupCode RoutingWrapupcodesCodeidPut (string codeId, WrapupCode body = null)
+        public WrapupCode UpdateWrapupcodesCode (string codeId, WrapupCode body = null)
         {
-             ApiResponse<WrapupCode> response = RoutingWrapupcodesCodeidPutWithHttpInfo(codeId, body);
+             ApiResponse<WrapupCode> response = UpdateWrapupcodesCodeWithHttpInfo(codeId, body);
              return response.Data;
         }
 
@@ -6508,11 +6518,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="codeId">Wrapup Code ID</param> 
         /// <param name="body">WrapupCode</param> 
         /// <returns>ApiResponse of WrapupCode</returns>
-        public ApiResponse< WrapupCode > RoutingWrapupcodesCodeidPutWithHttpInfo (string codeId, WrapupCode body = null)
+        public ApiResponse< WrapupCode > UpdateWrapupcodesCodeWithHttpInfo (string codeId, WrapupCode body = null)
         {
             
             // verify the required parameter 'codeId' is set
-            if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingWrapupcodesCodeidPut");
+            if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling UpdateWrapupcodesCode");
             
     
             var path_ = "/api/v1/routing/wrapupcodes/{codeId}";
@@ -6559,9 +6569,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingWrapupcodesCodeidPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateWrapupcodesCode: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingWrapupcodesCodeidPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateWrapupcodesCode: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<WrapupCode>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6575,9 +6585,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="codeId">Wrapup Code ID</param>
         /// <param name="body">WrapupCode</param>
         /// <returns>Task of WrapupCode</returns>
-        public async System.Threading.Tasks.Task<WrapupCode> RoutingWrapupcodesCodeidPutAsync (string codeId, WrapupCode body = null)
+        public async System.Threading.Tasks.Task<WrapupCode> UpdateWrapupcodesCodeAsync (string codeId, WrapupCode body = null)
         {
-             ApiResponse<WrapupCode> response = await RoutingWrapupcodesCodeidPutAsyncWithHttpInfo(codeId, body);
+             ApiResponse<WrapupCode> response = await UpdateWrapupcodesCodeAsyncWithHttpInfo(codeId, body);
              return response.Data;
 
         }
@@ -6588,10 +6598,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="codeId">Wrapup Code ID</param>
         /// <param name="body">WrapupCode</param>
         /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> RoutingWrapupcodesCodeidPutAsyncWithHttpInfo (string codeId, WrapupCode body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> UpdateWrapupcodesCodeAsyncWithHttpInfo (string codeId, WrapupCode body = null)
         {
             // verify the required parameter 'codeId' is set
-            if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingWrapupcodesCodeidPut");
+            if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling UpdateWrapupcodesCode");
             
     
             var path_ = "/api/v1/routing/wrapupcodes/{codeId}";
@@ -6638,9 +6648,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingWrapupcodesCodeidPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateWrapupcodesCode: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingWrapupcodesCodeidPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateWrapupcodesCode: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<WrapupCode>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6653,9 +6663,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="codeId">Wrapup Code ID</param> 
         /// <returns>string</returns>
-        public string RoutingWrapupcodesCodeidDelete (string codeId)
+        public string DeleteWrapupcodesCode (string codeId)
         {
-             ApiResponse<string> response = RoutingWrapupcodesCodeidDeleteWithHttpInfo(codeId);
+             ApiResponse<string> response = DeleteWrapupcodesCodeWithHttpInfo(codeId);
              return response.Data;
         }
 
@@ -6664,11 +6674,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="codeId">Wrapup Code ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > RoutingWrapupcodesCodeidDeleteWithHttpInfo (string codeId)
+        public ApiResponse< string > DeleteWrapupcodesCodeWithHttpInfo (string codeId)
         {
             
             // verify the required parameter 'codeId' is set
-            if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingWrapupcodesCodeidDelete");
+            if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling DeleteWrapupcodesCode");
             
     
             var path_ = "/api/v1/routing/wrapupcodes/{codeId}";
@@ -6714,9 +6724,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingWrapupcodesCodeidDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteWrapupcodesCode: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingWrapupcodesCodeidDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteWrapupcodesCode: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6729,9 +6739,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> RoutingWrapupcodesCodeidDeleteAsync (string codeId)
+        public async System.Threading.Tasks.Task<string> DeleteWrapupcodesCodeAsync (string codeId)
         {
-             ApiResponse<string> response = await RoutingWrapupcodesCodeidDeleteAsyncWithHttpInfo(codeId);
+             ApiResponse<string> response = await DeleteWrapupcodesCodeAsyncWithHttpInfo(codeId);
              return response.Data;
 
         }
@@ -6741,10 +6751,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="codeId">Wrapup Code ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> RoutingWrapupcodesCodeidDeleteAsyncWithHttpInfo (string codeId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteWrapupcodesCodeAsyncWithHttpInfo (string codeId)
         {
             // verify the required parameter 'codeId' is set
-            if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingWrapupcodesCodeidDelete");
+            if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling DeleteWrapupcodesCode");
             
     
             var path_ = "/api/v1/routing/wrapupcodes/{codeId}";
@@ -6790,9 +6800,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling RoutingWrapupcodesCodeidDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteWrapupcodesCode: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling RoutingWrapupcodesCodeidDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteWrapupcodesCode: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

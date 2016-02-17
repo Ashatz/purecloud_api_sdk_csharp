@@ -27,6 +27,7 @@ namespace ININ.PureCloudApi.Model
             this.Registers = false;
             this.DualRegisters = false;
             this.AllowReboot = false;
+            this.NoRebalance = false;
             
         }
 
@@ -66,6 +67,13 @@ namespace ININ.PureCloudApi.Model
         public bool? AllowReboot { get; set; }
   
         
+        /// <summary>
+        /// Gets or Sets NoRebalance
+        /// </summary>
+        [DataMember(Name="noRebalance", EmitDefaultValue=false)]
+        public bool? NoRebalance { get; set; }
+  
+        
   
         /// <summary>
         /// Returns the string presentation of the object
@@ -80,6 +88,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DualRegisters: ").Append(DualRegisters).Append("\n");
             sb.Append("  HardwareIdType: ").Append(HardwareIdType).Append("\n");
             sb.Append("  AllowReboot: ").Append(AllowReboot).Append("\n");
+            sb.Append("  NoRebalance: ").Append(NoRebalance).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -141,6 +150,11 @@ namespace ININ.PureCloudApi.Model
                     this.AllowReboot == other.AllowReboot ||
                     this.AllowReboot != null &&
                     this.AllowReboot.Equals(other.AllowReboot)
+                ) && 
+                (
+                    this.NoRebalance == other.NoRebalance ||
+                    this.NoRebalance != null &&
+                    this.NoRebalance.Equals(other.NoRebalance)
                 );
         }
 
@@ -170,6 +184,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.AllowReboot != null)
                     hash = hash * 57 + this.AllowReboot.GetHashCode();
+                
+                if (this.NoRebalance != null)
+                    hash = hash * 57 + this.NoRebalance.GetHashCode();
                 
                 return hash;
             }

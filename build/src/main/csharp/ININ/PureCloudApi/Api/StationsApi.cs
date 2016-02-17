@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="name">Name</param>
         /// <returns>StationEntityListing</returns>
-        StationEntityListing StationsGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
+        StationEntityListing Get (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
   
         /// <summary>
         /// Get the list of available stations.
@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="name">Name</param>
         /// <returns>ApiResponse of StationEntityListing</returns>
-        ApiResponse<StationEntityListing> StationsGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
+        ApiResponse<StationEntityListing> GetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
 
         /// <summary>
         /// Get the list of available stations.
@@ -53,7 +53,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="name">Name</param>
         /// <returns>Task of StationEntityListing</returns>
-        System.Threading.Tasks.Task<StationEntityListing> StationsGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
+        System.Threading.Tasks.Task<StationEntityListing> GetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
 
         /// <summary>
         /// Get the list of available stations.
@@ -66,7 +66,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="name">Name</param>
         /// <returns>Task of ApiResponse (StationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StationEntityListing>> StationsGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<StationEntityListing>> GetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
         
         /// <summary>
         /// Get station.
@@ -76,7 +76,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">Station ID</param>
         /// <returns>UserStationResource</returns>
-        UserStationResource StationsIdGet (string id);
+        UserStationResource GetId (string id);
   
         /// <summary>
         /// Get station.
@@ -86,7 +86,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">Station ID</param>
         /// <returns>ApiResponse of UserStationResource</returns>
-        ApiResponse<UserStationResource> StationsIdGetWithHttpInfo (string id);
+        ApiResponse<UserStationResource> GetIdWithHttpInfo (string id);
 
         /// <summary>
         /// Get station.
@@ -96,7 +96,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">Station ID</param>
         /// <returns>Task of UserStationResource</returns>
-        System.Threading.Tasks.Task<UserStationResource> StationsIdGetAsync (string id);
+        System.Threading.Tasks.Task<UserStationResource> GetIdAsync (string id);
 
         /// <summary>
         /// Get station.
@@ -106,7 +106,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">Station ID</param>
         /// <returns>Task of ApiResponse (UserStationResource)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserStationResource>> StationsIdGetAsyncWithHttpInfo (string id);
+        System.Threading.Tasks.Task<ApiResponse<UserStationResource>> GetIdAsyncWithHttpInfo (string id);
         
         /// <summary>
         /// Unassigns the user assigned to this station
@@ -116,7 +116,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">Station ID</param>
         /// <returns>string</returns>
-        string StationsIdAssociateduserDelete (string id);
+        string DeleteIdAssociateduser (string id);
   
         /// <summary>
         /// Unassigns the user assigned to this station
@@ -126,7 +126,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">Station ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> StationsIdAssociateduserDeleteWithHttpInfo (string id);
+        ApiResponse<string> DeleteIdAssociateduserWithHttpInfo (string id);
 
         /// <summary>
         /// Unassigns the user assigned to this station
@@ -136,7 +136,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">Station ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> StationsIdAssociateduserDeleteAsync (string id);
+        System.Threading.Tasks.Task<string> DeleteIdAssociateduserAsync (string id);
 
         /// <summary>
         /// Unassigns the user assigned to this station
@@ -146,7 +146,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">Station ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> StationsIdAssociateduserDeleteAsyncWithHttpInfo (string id);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteIdAssociateduserAsyncWithHttpInfo (string id);
         
     }
   
@@ -234,9 +234,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param> 
         /// <param name="name">Name</param> 
         /// <returns>StationEntityListing</returns>
-        public StationEntityListing StationsGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
+        public StationEntityListing Get (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
         {
-             ApiResponse<StationEntityListing> response = StationsGetWithHttpInfo(pageSize, pageNumber, sortBy, name);
+             ApiResponse<StationEntityListing> response = GetWithHttpInfo(pageSize, pageNumber, sortBy, name);
              return response.Data;
         }
 
@@ -248,7 +248,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param> 
         /// <param name="name">Name</param> 
         /// <returns>ApiResponse of StationEntityListing</returns>
-        public ApiResponse< StationEntityListing > StationsGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
+        public ApiResponse< StationEntityListing > GetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
         {
             
     
@@ -298,9 +298,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling StationsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling StationsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<StationEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -316,9 +316,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="name">Name</param>
         /// <returns>Task of StationEntityListing</returns>
-        public async System.Threading.Tasks.Task<StationEntityListing> StationsGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
+        public async System.Threading.Tasks.Task<StationEntityListing> GetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
         {
-             ApiResponse<StationEntityListing> response = await StationsGetAsyncWithHttpInfo(pageSize, pageNumber, sortBy, name);
+             ApiResponse<StationEntityListing> response = await GetAsyncWithHttpInfo(pageSize, pageNumber, sortBy, name);
              return response.Data;
 
         }
@@ -331,7 +331,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="name">Name</param>
         /// <returns>Task of ApiResponse (StationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StationEntityListing>> StationsGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<StationEntityListing>> GetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
         {
             
     
@@ -381,9 +381,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling StationsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling StationsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<StationEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -396,9 +396,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">Station ID</param> 
         /// <returns>UserStationResource</returns>
-        public UserStationResource StationsIdGet (string id)
+        public UserStationResource GetId (string id)
         {
-             ApiResponse<UserStationResource> response = StationsIdGetWithHttpInfo(id);
+             ApiResponse<UserStationResource> response = GetIdWithHttpInfo(id);
              return response.Data;
         }
 
@@ -407,11 +407,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">Station ID</param> 
         /// <returns>ApiResponse of UserStationResource</returns>
-        public ApiResponse< UserStationResource > StationsIdGetWithHttpInfo (string id)
+        public ApiResponse< UserStationResource > GetIdWithHttpInfo (string id)
         {
             
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling StationsIdGet");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetId");
             
     
             var path_ = "/api/v1/stations/{id}";
@@ -457,9 +457,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling StationsIdGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling StationsIdGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<UserStationResource>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -472,9 +472,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">Station ID</param>
         /// <returns>Task of UserStationResource</returns>
-        public async System.Threading.Tasks.Task<UserStationResource> StationsIdGetAsync (string id)
+        public async System.Threading.Tasks.Task<UserStationResource> GetIdAsync (string id)
         {
-             ApiResponse<UserStationResource> response = await StationsIdGetAsyncWithHttpInfo(id);
+             ApiResponse<UserStationResource> response = await GetIdAsyncWithHttpInfo(id);
              return response.Data;
 
         }
@@ -484,10 +484,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">Station ID</param>
         /// <returns>Task of ApiResponse (UserStationResource)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserStationResource>> StationsIdGetAsyncWithHttpInfo (string id)
+        public async System.Threading.Tasks.Task<ApiResponse<UserStationResource>> GetIdAsyncWithHttpInfo (string id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling StationsIdGet");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetId");
             
     
             var path_ = "/api/v1/stations/{id}";
@@ -533,9 +533,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling StationsIdGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling StationsIdGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<UserStationResource>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -548,9 +548,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">Station ID</param> 
         /// <returns>string</returns>
-        public string StationsIdAssociateduserDelete (string id)
+        public string DeleteIdAssociateduser (string id)
         {
-             ApiResponse<string> response = StationsIdAssociateduserDeleteWithHttpInfo(id);
+             ApiResponse<string> response = DeleteIdAssociateduserWithHttpInfo(id);
              return response.Data;
         }
 
@@ -559,11 +559,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">Station ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > StationsIdAssociateduserDeleteWithHttpInfo (string id)
+        public ApiResponse< string > DeleteIdAssociateduserWithHttpInfo (string id)
         {
             
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling StationsIdAssociateduserDelete");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteIdAssociateduser");
             
     
             var path_ = "/api/v1/stations/{id}/associateduser";
@@ -609,9 +609,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling StationsIdAssociateduserDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteIdAssociateduser: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling StationsIdAssociateduserDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteIdAssociateduser: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -624,9 +624,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">Station ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> StationsIdAssociateduserDeleteAsync (string id)
+        public async System.Threading.Tasks.Task<string> DeleteIdAssociateduserAsync (string id)
         {
-             ApiResponse<string> response = await StationsIdAssociateduserDeleteAsyncWithHttpInfo(id);
+             ApiResponse<string> response = await DeleteIdAssociateduserAsyncWithHttpInfo(id);
              return response.Data;
 
         }
@@ -636,10 +636,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">Station ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> StationsIdAssociateduserDeleteAsyncWithHttpInfo (string id)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteIdAssociateduserAsyncWithHttpInfo (string id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling StationsIdAssociateduserDelete");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteIdAssociateduser");
             
     
             var path_ = "/api/v1/stations/{id}/associateduser";
@@ -685,9 +685,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling StationsIdAssociateduserDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteIdAssociateduser: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling StationsIdAssociateduserDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteIdAssociateduser: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

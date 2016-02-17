@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Search request options</param>
         /// <returns>ChatSearchListing</returns>
-        ChatSearchListing SearchChatsPost (ChatSearchRequest body = null);
+        ChatSearchListing CreateChats (ChatSearchRequest body = null);
   
         /// <summary>
         /// Search chat history
@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of ChatSearchListing</returns>
-        ApiResponse<ChatSearchListing> SearchChatsPostWithHttpInfo (ChatSearchRequest body = null);
+        ApiResponse<ChatSearchListing> CreateChatsWithHttpInfo (ChatSearchRequest body = null);
 
         /// <summary>
         /// Search chat history
@@ -44,7 +44,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ChatSearchListing</returns>
-        System.Threading.Tasks.Task<ChatSearchListing> SearchChatsPostAsync (ChatSearchRequest body = null);
+        System.Threading.Tasks.Task<ChatSearchListing> CreateChatsAsync (ChatSearchRequest body = null);
 
         /// <summary>
         /// Search chat history
@@ -54,7 +54,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (ChatSearchListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ChatSearchListing>> SearchChatsPostAsyncWithHttpInfo (ChatSearchRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<ChatSearchListing>> CreateChatsAsyncWithHttpInfo (ChatSearchRequest body = null);
         
     }
   
@@ -139,9 +139,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Search request options</param> 
         /// <returns>ChatSearchListing</returns>
-        public ChatSearchListing SearchChatsPost (ChatSearchRequest body = null)
+        public ChatSearchListing CreateChats (ChatSearchRequest body = null)
         {
-             ApiResponse<ChatSearchListing> response = SearchChatsPostWithHttpInfo(body);
+             ApiResponse<ChatSearchListing> response = CreateChatsWithHttpInfo(body);
              return response.Data;
         }
 
@@ -150,7 +150,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Search request options</param> 
         /// <returns>ApiResponse of ChatSearchListing</returns>
-        public ApiResponse< ChatSearchListing > SearchChatsPostWithHttpInfo (ChatSearchRequest body = null)
+        public ApiResponse< ChatSearchListing > CreateChatsWithHttpInfo (ChatSearchRequest body = null)
         {
             
     
@@ -197,9 +197,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling SearchChatsPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateChats: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling SearchChatsPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateChats: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ChatSearchListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -212,9 +212,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ChatSearchListing</returns>
-        public async System.Threading.Tasks.Task<ChatSearchListing> SearchChatsPostAsync (ChatSearchRequest body = null)
+        public async System.Threading.Tasks.Task<ChatSearchListing> CreateChatsAsync (ChatSearchRequest body = null)
         {
-             ApiResponse<ChatSearchListing> response = await SearchChatsPostAsyncWithHttpInfo(body);
+             ApiResponse<ChatSearchListing> response = await CreateChatsAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -224,7 +224,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (ChatSearchListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ChatSearchListing>> SearchChatsPostAsyncWithHttpInfo (ChatSearchRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ChatSearchListing>> CreateChatsAsyncWithHttpInfo (ChatSearchRequest body = null)
         {
             
     
@@ -271,9 +271,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling SearchChatsPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateChats: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling SearchChatsPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateChats: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ChatSearchListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

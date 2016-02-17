@@ -50,6 +50,14 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
+        /// An inbound carrier specific domain (i.e. lb.domain.com)
+        /// </summary>
+        /// <value>An inbound carrier specific domain (i.e. lb.domain.com)</value>
+        [DataMember(Name="domains", EmitDefaultValue=false)]
+        public List<string> Domains { get; set; }
+  
+        
+        /// <summary>
         /// Gets or Sets ServiceTypes
         /// </summary>
         [DataMember(Name="serviceTypes", EmitDefaultValue=false)]
@@ -104,6 +112,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  Domains: ").Append(Domains).Append("\n");
             sb.Append("  ServiceTypes: ").Append(ServiceTypes).Append("\n");
             sb.Append("  Gateways: ").Append(Gateways).Append("\n");
             sb.Append("  Dns: ").Append(Dns).Append("\n");
@@ -163,6 +172,11 @@ namespace ININ.PureCloudApi.Model
                     this.Status.Equals(other.Status)
                 ) && 
                 (
+                    this.Domains == other.Domains ||
+                    this.Domains != null &&
+                    this.Domains.SequenceEqual(other.Domains)
+                ) && 
+                (
                     this.ServiceTypes == other.ServiceTypes ||
                     this.ServiceTypes != null &&
                     this.ServiceTypes.SequenceEqual(other.ServiceTypes)
@@ -214,6 +228,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.Status != null)
                     hash = hash * 57 + this.Status.GetHashCode();
+                
+                if (this.Domains != null)
+                    hash = hash * 57 + this.Domains.GetHashCode();
                 
                 if (this.ServiceTypes != null)
                     hash = hash * 57 + this.ServiceTypes.GetHashCode();

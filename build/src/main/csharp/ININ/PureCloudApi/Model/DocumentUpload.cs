@@ -62,13 +62,6 @@ namespace ININ.PureCloudApi.Model
         public List<AttributeValue> Attributes { get; set; }
   
         
-        /// <summary>
-        /// Gets or Sets AttributeGroupInstances
-        /// </summary>
-        [DataMember(Name="attributeGroupInstances", EmitDefaultValue=false)]
-        public List<AttributeGroupInstance> AttributeGroupInstances { get; set; }
-  
-        
   
         /// <summary>
         /// Returns the string presentation of the object
@@ -83,7 +76,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Tags: ").Append(Tags).Append("\n");
             sb.Append("  TagIds: ").Append(TagIds).Append("\n");
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
-            sb.Append("  AttributeGroupInstances: ").Append(AttributeGroupInstances).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -145,11 +137,6 @@ namespace ININ.PureCloudApi.Model
                     this.Attributes == other.Attributes ||
                     this.Attributes != null &&
                     this.Attributes.SequenceEqual(other.Attributes)
-                ) && 
-                (
-                    this.AttributeGroupInstances == other.AttributeGroupInstances ||
-                    this.AttributeGroupInstances != null &&
-                    this.AttributeGroupInstances.SequenceEqual(other.AttributeGroupInstances)
                 );
         }
 
@@ -179,9 +166,6 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.Attributes != null)
                     hash = hash * 57 + this.Attributes.GetHashCode();
-                
-                if (this.AttributeGroupInstances != null)
-                    hash = hash * 57 + this.AttributeGroupInstances.GetHashCode();
                 
                 return hash;
             }

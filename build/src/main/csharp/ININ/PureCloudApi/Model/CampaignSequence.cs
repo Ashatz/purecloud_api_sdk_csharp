@@ -23,6 +23,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         public CampaignSequence()
         {
+            this.Repeat = false;
             
         }
 
@@ -94,6 +95,13 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
+        /// Gets or Sets Repeat
+        /// </summary>
+        [DataMember(Name="repeat", EmitDefaultValue=false)]
+        public bool? Repeat { get; set; }
+  
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -119,6 +127,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  CurrentCampaign: ").Append(CurrentCampaign).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  StopMessage: ").Append(StopMessage).Append("\n");
+            sb.Append("  Repeat: ").Append(Repeat).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
@@ -203,6 +212,11 @@ namespace ININ.PureCloudApi.Model
                     this.StopMessage.Equals(other.StopMessage)
                 ) && 
                 (
+                    this.Repeat == other.Repeat ||
+                    this.Repeat != null &&
+                    this.Repeat.Equals(other.Repeat)
+                ) && 
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -247,6 +261,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.StopMessage != null)
                     hash = hash * 57 + this.StopMessage.GetHashCode();
+                
+                if (this.Repeat != null)
+                    hash = hash * 57 + this.Repeat.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 57 + this.SelfUri.GetHashCode();

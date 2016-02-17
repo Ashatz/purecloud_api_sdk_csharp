@@ -43,46 +43,57 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The time when the conversation started. This will be the time when the first participant joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The time when the conversation started. This will be the time when the first participant joined the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public DateTime? StartTime { get; set; }
   
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The time when the conversation ended. This will be the time when the last participant left the conversation, or null when the conversation is still active. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The time when the conversation ended. This will be the time when the last participant left the conversation, or null when the conversation is still active. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public DateTime? EndTime { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets Participants
+        /// The address of the conversation as seen from an external participant. For phone calls this will be the DNIS for inbound calls and the ANI for outbound calls. For other media types this will be the address of the destination participant for inbound and the address of the initiating participant for outbound.
         /// </summary>
+        /// <value>The address of the conversation as seen from an external participant. For phone calls this will be the DNIS for inbound calls and the ANI for outbound calls. For other media types this will be the address of the destination participant for inbound and the address of the initiating participant for outbound.</value>
+        [DataMember(Name="address", EmitDefaultValue=false)]
+        public string Address { get; set; }
+  
+        
+        /// <summary>
+        /// The list of all participants in the conversation.
+        /// </summary>
+        /// <value>The list of all participants in the conversation.</value>
         [DataMember(Name="participants", EmitDefaultValue=false)]
         public List<Participant> Participants { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets ConversationIds
+        /// A list of conversations to merge into this conversation to create a conference. This field is null except when being used to create a conference.
         /// </summary>
+        /// <value>A list of conversations to merge into this conversation to create a conference. This field is null except when being used to create a conference.</value>
         [DataMember(Name="conversationIds", EmitDefaultValue=false)]
         public List<string> ConversationIds { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets MaxParticipants
+        /// If this is a conference conversation, then this field indicates the maximum number of participants allowed to participant in the conference.
         /// </summary>
+        /// <value>If this is a conference conversation, then this field indicates the maximum number of participants allowed to participant in the conference.</value>
         [DataMember(Name="maxParticipants", EmitDefaultValue=false)]
         public int? MaxParticipants { get; set; }
   
         
         /// <summary>
-        /// On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording
+        /// On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording.
         /// </summary>
-        /// <value>On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording</value>
+        /// <value>On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording.</value>
         [DataMember(Name="recordingState", EmitDefaultValue=false)]
         public string RecordingState { get; set; }
   
@@ -108,6 +119,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
+            sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("  ConversationIds: ").Append(ConversationIds).Append("\n");
             sb.Append("  MaxParticipants: ").Append(MaxParticipants).Append("\n");
@@ -171,6 +183,11 @@ namespace ININ.PureCloudApi.Model
                     this.EndTime.Equals(other.EndTime)
                 ) && 
                 (
+                    this.Address == other.Address ||
+                    this.Address != null &&
+                    this.Address.Equals(other.Address)
+                ) && 
+                (
                     this.Participants == other.Participants ||
                     this.Participants != null &&
                     this.Participants.SequenceEqual(other.Participants)
@@ -220,6 +237,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.EndTime != null)
                     hash = hash * 57 + this.EndTime.GetHashCode();
+                
+                if (this.Address != null)
+                    hash = hash * 57 + this.Address.GetHashCode();
                 
                 if (this.Participants != null)
                     hash = hash * 57 + this.Participants.GetHashCode();

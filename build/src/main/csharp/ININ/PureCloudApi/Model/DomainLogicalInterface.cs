@@ -23,6 +23,8 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         public DomainLogicalInterface()
         {
+            this.InheritPhoneTrunkBases = false;
+            this.UseForInternalEdgeCommunication = false;
             
         }
 
@@ -241,6 +243,38 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
+        /// Phone trunk base assignment will be inherited from the Edge Group.
+        /// </summary>
+        /// <value>Phone trunk base assignment will be inherited from the Edge Group.</value>
+        [DataMember(Name="inheritPhoneTrunkBases", EmitDefaultValue=false)]
+        public bool? InheritPhoneTrunkBases { get; set; }
+  
+        
+        /// <summary>
+        /// This interface will be used for all internal edge-to-edge communication using settings from the edgeTrunkBaseAssignment on the Edge Group.
+        /// </summary>
+        /// <value>This interface will be used for all internal edge-to-edge communication using settings from the edgeTrunkBaseAssignment on the Edge Group.</value>
+        [DataMember(Name="useForInternalEdgeCommunication", EmitDefaultValue=false)]
+        public bool? UseForInternalEdgeCommunication { get; set; }
+  
+        
+        /// <summary>
+        /// External trunk base settings to use for external communication from this interface.
+        /// </summary>
+        /// <value>External trunk base settings to use for external communication from this interface.</value>
+        [DataMember(Name="externalTrunkBaseAssignments", EmitDefaultValue=false)]
+        public List<TrunkBaseAssignment> ExternalTrunkBaseAssignments { get; set; }
+  
+        
+        /// <summary>
+        /// Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \"inheritPhoneTrunkBases\" is true.
+        /// </summary>
+        /// <value>Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \"inheritPhoneTrunkBases\" is true.</value>
+        [DataMember(Name="phoneTrunkBaseAssignments", EmitDefaultValue=false)]
+        public List<TrunkBaseAssignment> PhoneTrunkBaseAssignments { get; set; }
+  
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -287,6 +321,10 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  LastModifiedUserId: ").Append(LastModifiedUserId).Append("\n");
             sb.Append("  LastModifiedCorrelationId: ").Append(LastModifiedCorrelationId).Append("\n");
             sb.Append("  CommandResponses: ").Append(CommandResponses).Append("\n");
+            sb.Append("  InheritPhoneTrunkBases: ").Append(InheritPhoneTrunkBases).Append("\n");
+            sb.Append("  UseForInternalEdgeCommunication: ").Append(UseForInternalEdgeCommunication).Append("\n");
+            sb.Append("  ExternalTrunkBaseAssignments: ").Append(ExternalTrunkBaseAssignments).Append("\n");
+            sb.Append("  PhoneTrunkBaseAssignments: ").Append(PhoneTrunkBaseAssignments).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
@@ -476,6 +514,26 @@ namespace ININ.PureCloudApi.Model
                     this.CommandResponses.SequenceEqual(other.CommandResponses)
                 ) && 
                 (
+                    this.InheritPhoneTrunkBases == other.InheritPhoneTrunkBases ||
+                    this.InheritPhoneTrunkBases != null &&
+                    this.InheritPhoneTrunkBases.Equals(other.InheritPhoneTrunkBases)
+                ) && 
+                (
+                    this.UseForInternalEdgeCommunication == other.UseForInternalEdgeCommunication ||
+                    this.UseForInternalEdgeCommunication != null &&
+                    this.UseForInternalEdgeCommunication.Equals(other.UseForInternalEdgeCommunication)
+                ) && 
+                (
+                    this.ExternalTrunkBaseAssignments == other.ExternalTrunkBaseAssignments ||
+                    this.ExternalTrunkBaseAssignments != null &&
+                    this.ExternalTrunkBaseAssignments.SequenceEqual(other.ExternalTrunkBaseAssignments)
+                ) && 
+                (
+                    this.PhoneTrunkBaseAssignments == other.PhoneTrunkBaseAssignments ||
+                    this.PhoneTrunkBaseAssignments != null &&
+                    this.PhoneTrunkBaseAssignments.SequenceEqual(other.PhoneTrunkBaseAssignments)
+                ) && 
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -583,6 +641,18 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.CommandResponses != null)
                     hash = hash * 57 + this.CommandResponses.GetHashCode();
+                
+                if (this.InheritPhoneTrunkBases != null)
+                    hash = hash * 57 + this.InheritPhoneTrunkBases.GetHashCode();
+                
+                if (this.UseForInternalEdgeCommunication != null)
+                    hash = hash * 57 + this.UseForInternalEdgeCommunication.GetHashCode();
+                
+                if (this.ExternalTrunkBaseAssignments != null)
+                    hash = hash * 57 + this.ExternalTrunkBaseAssignments.GetHashCode();
+                
+                if (this.PhoneTrunkBaseAssignments != null)
+                    hash = hash * 57 + this.PhoneTrunkBaseAssignments.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 57 + this.SelfUri.GetHashCode();
