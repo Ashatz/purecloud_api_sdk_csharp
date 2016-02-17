@@ -51,7 +51,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<AvailableTopic> Entities { get; set; }
+        public List<ChannelTopic> Entities { get; set; }
   
         
         /// <summary>
