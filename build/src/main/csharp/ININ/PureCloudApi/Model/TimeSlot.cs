@@ -27,17 +27,15 @@ namespace ININ.PureCloudApi.Model
 
         
         /// <summary>
-        /// start time in xx:xx:xx.xxx format
+        /// Gets or Sets StartTime
         /// </summary>
-        /// <value>start time in xx:xx:xx.xxx format</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public string StartTime { get; set; }
   
         
         /// <summary>
-        /// stop time in xx:xx:xx.xxx format
+        /// Gets or Sets StopTime
         /// </summary>
-        /// <value>stop time in xx:xx:xx.xxx format</value>
         [DataMember(Name="stopTime", EmitDefaultValue=false)]
         public string StopTime { get; set; }
   
