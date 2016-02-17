@@ -133,8 +133,25 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
-        /// Gets or Sets Redacted
+        /// Only used for email evaluations. Will be null for all other evaluations.
         /// </summary>
+        /// <value>Only used for email evaluations. Will be null for all other evaluations.</value>
+        [DataMember(Name="resourceId", EmitDefaultValue=false)]
+        public string ResourceId { get; set; }
+  
+        
+        /// <summary>
+        /// The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources.
+        /// </summary>
+        /// <value>The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources.</value>
+        [DataMember(Name="resourceType", EmitDefaultValue=false)]
+        public string ResourceType { get; set; }
+  
+        
+        /// <summary>
+        /// Is only true when the user making the request does not have sufficient permissions to see evaluation
+        /// </summary>
+        /// <value>Is only true when the user making the request does not have sufficient permissions to see evaluation</value>
         [DataMember(Name="redacted", EmitDefaultValue=false)]
         public bool? Redacted { get; set; }
   
@@ -177,6 +194,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  AssignedDate: ").Append(AssignedDate).Append("\n");
             sb.Append("  ChangedDate: ").Append(ChangedDate).Append("\n");
             sb.Append("  Queue: ").Append(Queue).Append("\n");
+            sb.Append("  ResourceId: ").Append(ResourceId).Append("\n");
+            sb.Append("  ResourceType: ").Append(ResourceType).Append("\n");
             sb.Append("  Redacted: ").Append(Redacted).Append("\n");
             sb.Append("  IsScoringIndex: ").Append(IsScoringIndex).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -288,6 +307,16 @@ namespace ININ.PureCloudApi.Model
                     this.Queue.Equals(other.Queue)
                 ) && 
                 (
+                    this.ResourceId == other.ResourceId ||
+                    this.ResourceId != null &&
+                    this.ResourceId.Equals(other.ResourceId)
+                ) && 
+                (
+                    this.ResourceType == other.ResourceType ||
+                    this.ResourceType != null &&
+                    this.ResourceType.Equals(other.ResourceType)
+                ) && 
+                (
                     this.Redacted == other.Redacted ||
                     this.Redacted != null &&
                     this.Redacted.Equals(other.Redacted)
@@ -357,6 +386,12 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.Queue != null)
                     hash = hash * 57 + this.Queue.GetHashCode();
+                
+                if (this.ResourceId != null)
+                    hash = hash * 57 + this.ResourceId.GetHashCode();
+                
+                if (this.ResourceType != null)
+                    hash = hash * 57 + this.ResourceType.GetHashCode();
                 
                 if (this.Redacted != null)
                     hash = hash * 57 + this.Redacted.GetHashCode();

@@ -108,17 +108,17 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
-        /// The start date for this schedule. If this is set to a value that does not match the rrule, the date portion will be updated to match the date of the next possible recurrence. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>The start date for this schedule. If this is set to a value that does not match the rrule, the date portion will be updated to match the date of the next possible recurrence. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="start", EmitDefaultValue=false)]
         public DateTime? Start { get; set; }
   
         
         /// <summary>
-        /// The end date for this schedule. This date will also be modifiedif the start date is modified to match the recurrence rule. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>The end date for this schedule. This date will also be modifiedif the start date is modified to match the recurrence rule. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="end", EmitDefaultValue=false)]
         public DateTime? End { get; set; }
   

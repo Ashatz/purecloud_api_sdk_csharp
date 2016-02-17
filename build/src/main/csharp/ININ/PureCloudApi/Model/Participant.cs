@@ -216,6 +216,13 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
+        /// Gets or Sets Callbacks
+        /// </summary>
+        [DataMember(Name="callbacks", EmitDefaultValue=false)]
+        public List<Callback> Callbacks { get; set; }
+  
+        
+        /// <summary>
         /// Gets or Sets Chats
         /// </summary>
         [DataMember(Name="chats", EmitDefaultValue=false)]
@@ -285,6 +292,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  MonitoredParticipantId: ").Append(MonitoredParticipantId).Append("\n");
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
             sb.Append("  Calls: ").Append(Calls).Append("\n");
+            sb.Append("  Callbacks: ").Append(Callbacks).Append("\n");
             sb.Append("  Chats: ").Append(Chats).Append("\n");
             sb.Append("  Emails: ").Append(Emails).Append("\n");
             sb.Append("  SocialExpressions: ").Append(SocialExpressions).Append("\n");
@@ -458,6 +466,11 @@ namespace ININ.PureCloudApi.Model
                     this.Calls.SequenceEqual(other.Calls)
                 ) && 
                 (
+                    this.Callbacks == other.Callbacks ||
+                    this.Callbacks != null &&
+                    this.Callbacks.SequenceEqual(other.Callbacks)
+                ) && 
+                (
                     this.Chats == other.Chats ||
                     this.Chats != null &&
                     this.Chats.SequenceEqual(other.Chats)
@@ -573,6 +586,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.Calls != null)
                     hash = hash * 57 + this.Calls.GetHashCode();
+                
+                if (this.Callbacks != null)
+                    hash = hash * 57 + this.Callbacks.GetHashCode();
                 
                 if (this.Chats != null)
                     hash = hash * 57 + this.Chats.GetHashCode();

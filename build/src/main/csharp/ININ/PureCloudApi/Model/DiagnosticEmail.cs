@@ -36,6 +36,13 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
+        /// Gets or Sets Subject
+        /// </summary>
+        [DataMember(Name="subject", EmitDefaultValue=false)]
+        public string Subject { get; set; }
+  
+        
+        /// <summary>
         /// Gets or Sets Topic
         /// </summary>
         [DataMember(Name="topic", EmitDefaultValue=false)]
@@ -80,6 +87,7 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class DiagnosticEmail {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Subject: ").Append(Subject).Append("\n");
             sb.Append("  Topic: ").Append(Topic).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Priority: ").Append(Priority).Append("\n");
@@ -128,6 +136,11 @@ namespace ININ.PureCloudApi.Model
                     this.Id.Equals(other.Id)
                 ) && 
                 (
+                    this.Subject == other.Subject ||
+                    this.Subject != null &&
+                    this.Subject.Equals(other.Subject)
+                ) && 
+                (
                     this.Topic == other.Topic ||
                     this.Topic != null &&
                     this.Topic.Equals(other.Topic)
@@ -168,6 +181,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.Id != null)
                     hash = hash * 57 + this.Id.GetHashCode();
+                
+                if (this.Subject != null)
+                    hash = hash * 57 + this.Subject.GetHashCode();
                 
                 if (this.Topic != null)
                     hash = hash * 57 + this.Topic.GetHashCode();

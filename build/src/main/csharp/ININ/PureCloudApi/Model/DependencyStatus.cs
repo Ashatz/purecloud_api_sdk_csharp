@@ -50,6 +50,13 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
+        /// Gets or Sets BuildId
+        /// </summary>
+        [DataMember(Name="buildId", EmitDefaultValue=false)]
+        public string BuildId { get; set; }
+  
+        
+        /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
@@ -73,6 +80,13 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
+        /// Gets or Sets FailedObjects
+        /// </summary>
+        [DataMember(Name="failedObjects", EmitDefaultValue=false)]
+        public List<FailedObject> FailedObjects { get; set; }
+  
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -92,9 +106,11 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
+            sb.Append("  BuildId: ").Append(BuildId).Append("\n");
             sb.Append("  DateStarted: ").Append(DateStarted).Append("\n");
             sb.Append("  DateCompleted: ").Append(DateCompleted).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  FailedObjects: ").Append(FailedObjects).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
@@ -149,6 +165,11 @@ namespace ININ.PureCloudApi.Model
                     this.User.Equals(other.User)
                 ) && 
                 (
+                    this.BuildId == other.BuildId ||
+                    this.BuildId != null &&
+                    this.BuildId.Equals(other.BuildId)
+                ) && 
+                (
                     this.DateStarted == other.DateStarted ||
                     this.DateStarted != null &&
                     this.DateStarted.Equals(other.DateStarted)
@@ -162,6 +183,11 @@ namespace ININ.PureCloudApi.Model
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
+                ) && 
+                (
+                    this.FailedObjects == other.FailedObjects ||
+                    this.FailedObjects != null &&
+                    this.FailedObjects.SequenceEqual(other.FailedObjects)
                 ) && 
                 (
                     this.SelfUri == other.SelfUri ||
@@ -191,6 +217,9 @@ namespace ININ.PureCloudApi.Model
                 if (this.User != null)
                     hash = hash * 57 + this.User.GetHashCode();
                 
+                if (this.BuildId != null)
+                    hash = hash * 57 + this.BuildId.GetHashCode();
+                
                 if (this.DateStarted != null)
                     hash = hash * 57 + this.DateStarted.GetHashCode();
                 
@@ -199,6 +228,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.Status != null)
                     hash = hash * 57 + this.Status.GetHashCode();
+                
+                if (this.FailedObjects != null)
+                    hash = hash * 57 + this.FailedObjects.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 57 + this.SelfUri.GetHashCode();

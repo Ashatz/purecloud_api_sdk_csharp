@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>OAuthProviderEntityListing</returns>
-        OAuthProviderEntityListing IdentityprovidersGet ();
+        OAuthProviderEntityListing Get ();
   
         /// <summary>
         /// The list of identity providers
@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of OAuthProviderEntityListing</returns>
-        ApiResponse<OAuthProviderEntityListing> IdentityprovidersGetWithHttpInfo ();
+        ApiResponse<OAuthProviderEntityListing> GetWithHttpInfo ();
 
         /// <summary>
         /// The list of identity providers
@@ -41,7 +41,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of OAuthProviderEntityListing</returns>
-        System.Threading.Tasks.Task<OAuthProviderEntityListing> IdentityprovidersGetAsync ();
+        System.Threading.Tasks.Task<OAuthProviderEntityListing> GetAsync ();
 
         /// <summary>
         /// The list of identity providers
@@ -50,7 +50,119 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse (OAuthProviderEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OAuthProviderEntityListing>> IdentityprovidersGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<OAuthProviderEntityListing>> GetAsyncWithHttpInfo ();
+        
+        /// <summary>
+        /// Get Okta Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <returns>Okta</returns>
+        Okta GetOkta ();
+  
+        /// <summary>
+        /// Get Okta Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <returns>ApiResponse of Okta</returns>
+        ApiResponse<Okta> GetOktaWithHttpInfo ();
+
+        /// <summary>
+        /// Get Okta Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <returns>Task of Okta</returns>
+        System.Threading.Tasks.Task<Okta> GetOktaAsync ();
+
+        /// <summary>
+        /// Get Okta Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <returns>Task of ApiResponse (Okta)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Okta>> GetOktaAsyncWithHttpInfo ();
+        
+        /// <summary>
+        /// Update/Create Okta Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="body">Provider</param>
+        /// <returns></returns>
+        void UpdateOkta (Okta body = null);
+  
+        /// <summary>
+        /// Update/Create Okta Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="body">Provider</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> UpdateOktaWithHttpInfo (Okta body = null);
+
+        /// <summary>
+        /// Update/Create Okta Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="body">Provider</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task UpdateOktaAsync (Okta body = null);
+
+        /// <summary>
+        /// Update/Create Okta Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="body">Provider</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateOktaAsyncWithHttpInfo (Okta body = null);
+        
+        /// <summary>
+        /// Delete Okta Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <returns></returns>
+        void DeleteOkta ();
+  
+        /// <summary>
+        /// Delete Okta Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteOktaWithHttpInfo ();
+
+        /// <summary>
+        /// Delete Okta Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteOktaAsync ();
+
+        /// <summary>
+        /// Delete Okta Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOktaAsyncWithHttpInfo ();
         
         /// <summary>
         /// Get OneLogin Identity Provider
@@ -59,7 +171,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>OneLogin</returns>
-        OneLogin IdentityprovidersOneloginGet ();
+        OneLogin GetOnelogin ();
   
         /// <summary>
         /// Get OneLogin Identity Provider
@@ -68,7 +180,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of OneLogin</returns>
-        ApiResponse<OneLogin> IdentityprovidersOneloginGetWithHttpInfo ();
+        ApiResponse<OneLogin> GetOneloginWithHttpInfo ();
 
         /// <summary>
         /// Get OneLogin Identity Provider
@@ -77,7 +189,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of OneLogin</returns>
-        System.Threading.Tasks.Task<OneLogin> IdentityprovidersOneloginGetAsync ();
+        System.Threading.Tasks.Task<OneLogin> GetOneloginAsync ();
 
         /// <summary>
         /// Get OneLogin Identity Provider
@@ -86,7 +198,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse (OneLogin)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OneLogin>> IdentityprovidersOneloginGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<OneLogin>> GetOneloginAsyncWithHttpInfo ();
         
         /// <summary>
         /// Update/Create OneLogin Identity Provider
@@ -96,7 +208,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Provider</param>
         /// <returns></returns>
-        void IdentityprovidersOneloginPut (OneLogin body = null);
+        void UpdateOnelogin (OneLogin body = null);
   
         /// <summary>
         /// Update/Create OneLogin Identity Provider
@@ -106,7 +218,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> IdentityprovidersOneloginPutWithHttpInfo (OneLogin body = null);
+        ApiResponse<Object> UpdateOneloginWithHttpInfo (OneLogin body = null);
 
         /// <summary>
         /// Update/Create OneLogin Identity Provider
@@ -116,7 +228,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Provider</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task IdentityprovidersOneloginPutAsync (OneLogin body = null);
+        System.Threading.Tasks.Task UpdateOneloginAsync (OneLogin body = null);
 
         /// <summary>
         /// Update/Create OneLogin Identity Provider
@@ -126,7 +238,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> IdentityprovidersOneloginPutAsyncWithHttpInfo (OneLogin body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateOneloginAsyncWithHttpInfo (OneLogin body = null);
         
         /// <summary>
         /// Delete OneLogin Identity Provider
@@ -135,7 +247,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns></returns>
-        void IdentityprovidersOneloginDelete ();
+        void DeleteOnelogin ();
   
         /// <summary>
         /// Delete OneLogin Identity Provider
@@ -144,7 +256,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> IdentityprovidersOneloginDeleteWithHttpInfo ();
+        ApiResponse<Object> DeleteOneloginWithHttpInfo ();
 
         /// <summary>
         /// Delete OneLogin Identity Provider
@@ -153,7 +265,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task IdentityprovidersOneloginDeleteAsync ();
+        System.Threading.Tasks.Task DeleteOneloginAsync ();
 
         /// <summary>
         /// Delete OneLogin Identity Provider
@@ -162,7 +274,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> IdentityprovidersOneloginDeleteAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOneloginAsyncWithHttpInfo ();
         
         /// <summary>
         /// Get PureCloud Identity Provider
@@ -171,7 +283,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>PureCloud</returns>
-        PureCloud IdentityprovidersPurecloudGet ();
+        PureCloud GetPurecloud ();
   
         /// <summary>
         /// Get PureCloud Identity Provider
@@ -180,7 +292,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of PureCloud</returns>
-        ApiResponse<PureCloud> IdentityprovidersPurecloudGetWithHttpInfo ();
+        ApiResponse<PureCloud> GetPurecloudWithHttpInfo ();
 
         /// <summary>
         /// Get PureCloud Identity Provider
@@ -189,7 +301,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of PureCloud</returns>
-        System.Threading.Tasks.Task<PureCloud> IdentityprovidersPurecloudGetAsync ();
+        System.Threading.Tasks.Task<PureCloud> GetPurecloudAsync ();
 
         /// <summary>
         /// Get PureCloud Identity Provider
@@ -198,7 +310,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse (PureCloud)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PureCloud>> IdentityprovidersPurecloudGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<PureCloud>> GetPurecloudAsyncWithHttpInfo ();
         
         /// <summary>
         /// Update/Create PureCloud Identity Provider
@@ -208,7 +320,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Provider</param>
         /// <returns></returns>
-        void IdentityprovidersPurecloudPut (PureCloud body = null);
+        void UpdatePurecloud (PureCloud body = null);
   
         /// <summary>
         /// Update/Create PureCloud Identity Provider
@@ -218,7 +330,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> IdentityprovidersPurecloudPutWithHttpInfo (PureCloud body = null);
+        ApiResponse<Object> UpdatePurecloudWithHttpInfo (PureCloud body = null);
 
         /// <summary>
         /// Update/Create PureCloud Identity Provider
@@ -228,7 +340,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Provider</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task IdentityprovidersPurecloudPutAsync (PureCloud body = null);
+        System.Threading.Tasks.Task UpdatePurecloudAsync (PureCloud body = null);
 
         /// <summary>
         /// Update/Create PureCloud Identity Provider
@@ -238,7 +350,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> IdentityprovidersPurecloudPutAsyncWithHttpInfo (PureCloud body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdatePurecloudAsyncWithHttpInfo (PureCloud body = null);
         
         /// <summary>
         /// Delete PureCloud Identity Provider
@@ -247,7 +359,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns></returns>
-        void IdentityprovidersPurecloudDelete ();
+        void DeletePurecloud ();
   
         /// <summary>
         /// Delete PureCloud Identity Provider
@@ -256,7 +368,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> IdentityprovidersPurecloudDeleteWithHttpInfo ();
+        ApiResponse<Object> DeletePurecloudWithHttpInfo ();
 
         /// <summary>
         /// Delete PureCloud Identity Provider
@@ -265,7 +377,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task IdentityprovidersPurecloudDeleteAsync ();
+        System.Threading.Tasks.Task DeletePurecloudAsync ();
 
         /// <summary>
         /// Delete PureCloud Identity Provider
@@ -274,7 +386,119 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> IdentityprovidersPurecloudDeleteAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeletePurecloudAsyncWithHttpInfo ();
+        
+        /// <summary>
+        /// Get Salesforce Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <returns>Salesforce</returns>
+        Salesforce GetSalesforce ();
+  
+        /// <summary>
+        /// Get Salesforce Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <returns>ApiResponse of Salesforce</returns>
+        ApiResponse<Salesforce> GetSalesforceWithHttpInfo ();
+
+        /// <summary>
+        /// Get Salesforce Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <returns>Task of Salesforce</returns>
+        System.Threading.Tasks.Task<Salesforce> GetSalesforceAsync ();
+
+        /// <summary>
+        /// Get Salesforce Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <returns>Task of ApiResponse (Salesforce)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Salesforce>> GetSalesforceAsyncWithHttpInfo ();
+        
+        /// <summary>
+        /// Update/Create Salesforce Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="body">Provider</param>
+        /// <returns></returns>
+        void UpdateSalesforce (Salesforce body = null);
+  
+        /// <summary>
+        /// Update/Create Salesforce Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="body">Provider</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> UpdateSalesforceWithHttpInfo (Salesforce body = null);
+
+        /// <summary>
+        /// Update/Create Salesforce Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="body">Provider</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task UpdateSalesforceAsync (Salesforce body = null);
+
+        /// <summary>
+        /// Update/Create Salesforce Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="body">Provider</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateSalesforceAsyncWithHttpInfo (Salesforce body = null);
+        
+        /// <summary>
+        /// Delete Salesforce Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <returns></returns>
+        void DeleteSalesforce ();
+  
+        /// <summary>
+        /// Delete Salesforce Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteSalesforceWithHttpInfo ();
+
+        /// <summary>
+        /// Delete Salesforce Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteSalesforceAsync ();
+
+        /// <summary>
+        /// Delete Salesforce Identity Provider
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSalesforceAsyncWithHttpInfo ();
         
         /// <summary>
         /// Get an identity provider
@@ -283,7 +507,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>OAuthProvider</returns>
-        OAuthProvider IdentityprovidersProvideridGet ();
+        OAuthProvider GetProverId ();
   
         /// <summary>
         /// Get an identity provider
@@ -292,7 +516,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of OAuthProvider</returns>
-        ApiResponse<OAuthProvider> IdentityprovidersProvideridGetWithHttpInfo ();
+        ApiResponse<OAuthProvider> GetProverIdWithHttpInfo ();
 
         /// <summary>
         /// Get an identity provider
@@ -301,7 +525,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of OAuthProvider</returns>
-        System.Threading.Tasks.Task<OAuthProvider> IdentityprovidersProvideridGetAsync ();
+        System.Threading.Tasks.Task<OAuthProvider> GetProverIdAsync ();
 
         /// <summary>
         /// Get an identity provider
@@ -310,7 +534,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse (OAuthProvider)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> IdentityprovidersProvideridGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> GetProverIdAsyncWithHttpInfo ();
         
         /// <summary>
         /// Update an identity provider
@@ -320,7 +544,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Provider</param>
         /// <returns></returns>
-        void IdentityprovidersProvideridPut (OAuthProvider body = null);
+        void UpdateProverId (OAuthProvider body = null);
   
         /// <summary>
         /// Update an identity provider
@@ -330,7 +554,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Provider</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> IdentityprovidersProvideridPutWithHttpInfo (OAuthProvider body = null);
+        ApiResponse<Object> UpdateProverIdWithHttpInfo (OAuthProvider body = null);
 
         /// <summary>
         /// Update an identity provider
@@ -340,7 +564,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Provider</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task IdentityprovidersProvideridPutAsync (OAuthProvider body = null);
+        System.Threading.Tasks.Task UpdateProverIdAsync (OAuthProvider body = null);
 
         /// <summary>
         /// Update an identity provider
@@ -350,7 +574,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> IdentityprovidersProvideridPutAsyncWithHttpInfo (OAuthProvider body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateProverIdAsyncWithHttpInfo (OAuthProvider body = null);
         
         /// <summary>
         /// Delete an identity provider
@@ -359,7 +583,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns></returns>
-        void IdentityprovidersProvideridDelete ();
+        void DeleteProverId ();
   
         /// <summary>
         /// Delete an identity provider
@@ -368,7 +592,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> IdentityprovidersProvideridDeleteWithHttpInfo ();
+        ApiResponse<Object> DeleteProverIdWithHttpInfo ();
 
         /// <summary>
         /// Delete an identity provider
@@ -377,7 +601,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task IdentityprovidersProvideridDeleteAsync ();
+        System.Threading.Tasks.Task DeleteProverIdAsync ();
 
         /// <summary>
         /// Delete an identity provider
@@ -386,7 +610,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> IdentityprovidersProvideridDeleteAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteProverIdAsyncWithHttpInfo ();
         
         /// <summary>
         /// The list of OAuth clients
@@ -395,7 +619,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>OAuthClientEntityListing</returns>
-        OAuthClientEntityListing OauthClientsGet ();
+        OAuthClientEntityListing GetClients ();
   
         /// <summary>
         /// The list of OAuth clients
@@ -404,7 +628,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of OAuthClientEntityListing</returns>
-        ApiResponse<OAuthClientEntityListing> OauthClientsGetWithHttpInfo ();
+        ApiResponse<OAuthClientEntityListing> GetClientsWithHttpInfo ();
 
         /// <summary>
         /// The list of OAuth clients
@@ -413,7 +637,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of OAuthClientEntityListing</returns>
-        System.Threading.Tasks.Task<OAuthClientEntityListing> OauthClientsGetAsync ();
+        System.Threading.Tasks.Task<OAuthClientEntityListing> GetClientsAsync ();
 
         /// <summary>
         /// The list of OAuth clients
@@ -422,7 +646,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse (OAuthClientEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OAuthClientEntityListing>> OauthClientsGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<OAuthClientEntityListing>> GetClientsAsyncWithHttpInfo ();
         
         /// <summary>
         /// Create OAuth client
@@ -432,7 +656,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Client</param>
         /// <returns>OAuthClient</returns>
-        OAuthClient OauthClientsPost (OAuthClient body = null);
+        OAuthClient CreateClients (OAuthClient body = null);
   
         /// <summary>
         /// Create OAuth client
@@ -442,7 +666,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Client</param>
         /// <returns>ApiResponse of OAuthClient</returns>
-        ApiResponse<OAuthClient> OauthClientsPostWithHttpInfo (OAuthClient body = null);
+        ApiResponse<OAuthClient> CreateClientsWithHttpInfo (OAuthClient body = null);
 
         /// <summary>
         /// Create OAuth client
@@ -452,7 +676,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Client</param>
         /// <returns>Task of OAuthClient</returns>
-        System.Threading.Tasks.Task<OAuthClient> OauthClientsPostAsync (OAuthClient body = null);
+        System.Threading.Tasks.Task<OAuthClient> CreateClientsAsync (OAuthClient body = null);
 
         /// <summary>
         /// Create OAuth client
@@ -462,7 +686,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Client</param>
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OAuthClient>> OauthClientsPostAsyncWithHttpInfo (OAuthClient body = null);
+        System.Threading.Tasks.Task<ApiResponse<OAuthClient>> CreateClientsAsyncWithHttpInfo (OAuthClient body = null);
         
         /// <summary>
         /// Get OAuth Client
@@ -472,7 +696,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="clientId">Client ID</param>
         /// <returns>OAuthClient</returns>
-        OAuthClient OauthClientsClientidGet (string clientId);
+        OAuthClient GetClient (string clientId);
   
         /// <summary>
         /// Get OAuth Client
@@ -482,7 +706,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="clientId">Client ID</param>
         /// <returns>ApiResponse of OAuthClient</returns>
-        ApiResponse<OAuthClient> OauthClientsClientidGetWithHttpInfo (string clientId);
+        ApiResponse<OAuthClient> GetClientWithHttpInfo (string clientId);
 
         /// <summary>
         /// Get OAuth Client
@@ -492,7 +716,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of OAuthClient</returns>
-        System.Threading.Tasks.Task<OAuthClient> OauthClientsClientidGetAsync (string clientId);
+        System.Threading.Tasks.Task<OAuthClient> GetClientAsync (string clientId);
 
         /// <summary>
         /// Get OAuth Client
@@ -502,7 +726,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OAuthClient>> OauthClientsClientidGetAsyncWithHttpInfo (string clientId);
+        System.Threading.Tasks.Task<ApiResponse<OAuthClient>> GetClientAsyncWithHttpInfo (string clientId);
         
         /// <summary>
         /// Update OAuth Client
@@ -513,7 +737,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Client</param>
         /// <returns>OAuthClient</returns>
-        OAuthClient OauthClientsClientidPut (string clientId, OAuthClient body = null);
+        OAuthClient UpdateClient (string clientId, OAuthClient body = null);
   
         /// <summary>
         /// Update OAuth Client
@@ -524,7 +748,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Client</param>
         /// <returns>ApiResponse of OAuthClient</returns>
-        ApiResponse<OAuthClient> OauthClientsClientidPutWithHttpInfo (string clientId, OAuthClient body = null);
+        ApiResponse<OAuthClient> UpdateClientWithHttpInfo (string clientId, OAuthClient body = null);
 
         /// <summary>
         /// Update OAuth Client
@@ -535,7 +759,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Client</param>
         /// <returns>Task of OAuthClient</returns>
-        System.Threading.Tasks.Task<OAuthClient> OauthClientsClientidPutAsync (string clientId, OAuthClient body = null);
+        System.Threading.Tasks.Task<OAuthClient> UpdateClientAsync (string clientId, OAuthClient body = null);
 
         /// <summary>
         /// Update OAuth Client
@@ -546,7 +770,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Client</param>
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OAuthClient>> OauthClientsClientidPutAsyncWithHttpInfo (string clientId, OAuthClient body = null);
+        System.Threading.Tasks.Task<ApiResponse<OAuthClient>> UpdateClientAsyncWithHttpInfo (string clientId, OAuthClient body = null);
         
         /// <summary>
         /// Delete OAuth Client
@@ -556,7 +780,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="clientId">Client ID</param>
         /// <returns></returns>
-        void OauthClientsClientidDelete (string clientId);
+        void DeleteClient (string clientId);
   
         /// <summary>
         /// Delete OAuth Client
@@ -566,7 +790,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="clientId">Client ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> OauthClientsClientidDeleteWithHttpInfo (string clientId);
+        ApiResponse<Object> DeleteClientWithHttpInfo (string clientId);
 
         /// <summary>
         /// Delete OAuth Client
@@ -576,7 +800,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task OauthClientsClientidDeleteAsync (string clientId);
+        System.Threading.Tasks.Task DeleteClientAsync (string clientId);
 
         /// <summary>
         /// Delete OAuth Client
@@ -586,7 +810,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> OauthClientsClientidDeleteAsyncWithHttpInfo (string clientId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteClientAsyncWithHttpInfo (string clientId);
         
         /// <summary>
         /// Regenerate Client Secret
@@ -596,7 +820,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="clientId">Client ID</param>
         /// <returns></returns>
-        void OauthClientsClientidSecretPost (string clientId);
+        void CreateClientSecret (string clientId);
   
         /// <summary>
         /// Regenerate Client Secret
@@ -606,7 +830,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="clientId">Client ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> OauthClientsClientidSecretPostWithHttpInfo (string clientId);
+        ApiResponse<Object> CreateClientSecretWithHttpInfo (string clientId);
 
         /// <summary>
         /// Regenerate Client Secret
@@ -616,7 +840,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task OauthClientsClientidSecretPostAsync (string clientId);
+        System.Threading.Tasks.Task CreateClientSecretAsync (string clientId);
 
         /// <summary>
         /// Regenerate Client Secret
@@ -626,7 +850,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> OauthClientsClientidSecretPostAsyncWithHttpInfo (string clientId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreateClientSecretAsyncWithHttpInfo (string clientId);
         
     }
   
@@ -710,9 +934,9 @@ namespace ININ.PureCloudApi.Api
         /// The list of identity providers 
         /// </summary>
         /// <returns>OAuthProviderEntityListing</returns>
-        public OAuthProviderEntityListing IdentityprovidersGet ()
+        public OAuthProviderEntityListing Get ()
         {
-             ApiResponse<OAuthProviderEntityListing> response = IdentityprovidersGetWithHttpInfo();
+             ApiResponse<OAuthProviderEntityListing> response = GetWithHttpInfo();
              return response.Data;
         }
 
@@ -720,7 +944,7 @@ namespace ININ.PureCloudApi.Api
         /// The list of identity providers 
         /// </summary>
         /// <returns>ApiResponse of OAuthProviderEntityListing</returns>
-        public ApiResponse< OAuthProviderEntityListing > IdentityprovidersGetWithHttpInfo ()
+        public ApiResponse< OAuthProviderEntityListing > GetWithHttpInfo ()
         {
             
     
@@ -766,9 +990,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OAuthProviderEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -780,9 +1004,9 @@ namespace ININ.PureCloudApi.Api
         /// The list of identity providers 
         /// </summary>
         /// <returns>Task of OAuthProviderEntityListing</returns>
-        public async System.Threading.Tasks.Task<OAuthProviderEntityListing> IdentityprovidersGetAsync ()
+        public async System.Threading.Tasks.Task<OAuthProviderEntityListing> GetAsync ()
         {
-             ApiResponse<OAuthProviderEntityListing> response = await IdentityprovidersGetAsyncWithHttpInfo();
+             ApiResponse<OAuthProviderEntityListing> response = await GetAsyncWithHttpInfo();
              return response.Data;
 
         }
@@ -791,7 +1015,7 @@ namespace ININ.PureCloudApi.Api
         /// The list of identity providers 
         /// </summary>
         /// <returns>Task of ApiResponse (OAuthProviderEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OAuthProviderEntityListing>> IdentityprovidersGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<OAuthProviderEntityListing>> GetAsyncWithHttpInfo ()
         {
             
     
@@ -837,9 +1061,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OAuthProviderEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -848,12 +1072,437 @@ namespace ININ.PureCloudApi.Api
         }
         
         /// <summary>
+        /// Get Okta Identity Provider 
+        /// </summary>
+        /// <returns>Okta</returns>
+        public Okta GetOkta ()
+        {
+             ApiResponse<Okta> response = GetOktaWithHttpInfo();
+             return response.Data;
+        }
+
+        /// <summary>
+        /// Get Okta Identity Provider 
+        /// </summary>
+        /// <returns>ApiResponse of Okta</returns>
+        public ApiResponse< Okta > GetOktaWithHttpInfo ()
+        {
+            
+    
+            var path_ = "/api/v1/identityproviders/okta";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling GetOkta: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling GetOkta: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<Okta>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Okta) Configuration.ApiClient.Deserialize(response, typeof(Okta)));
+            
+        }
+    
+        /// <summary>
+        /// Get Okta Identity Provider 
+        /// </summary>
+        /// <returns>Task of Okta</returns>
+        public async System.Threading.Tasks.Task<Okta> GetOktaAsync ()
+        {
+             ApiResponse<Okta> response = await GetOktaAsyncWithHttpInfo();
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Get Okta Identity Provider 
+        /// </summary>
+        /// <returns>Task of ApiResponse (Okta)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Okta>> GetOktaAsyncWithHttpInfo ()
+        {
+            
+    
+            var path_ = "/api/v1/identityproviders/okta";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling GetOkta: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling GetOkta: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<Okta>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Okta) Configuration.ApiClient.Deserialize(response, typeof(Okta)));
+            
+        }
+        
+        /// <summary>
+        /// Update/Create Okta Identity Provider 
+        /// </summary>
+        /// <param name="body">Provider</param> 
+        /// <returns></returns>
+        public void UpdateOkta (Okta body = null)
+        {
+             UpdateOktaWithHttpInfo(body);
+        }
+
+        /// <summary>
+        /// Update/Create Okta Identity Provider 
+        /// </summary>
+        /// <param name="body">Provider</param> 
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> UpdateOktaWithHttpInfo (Okta body = null)
+        {
+            
+    
+            var path_ = "/api/v1/identityproviders/okta";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling UpdateOkta: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling UpdateOkta: " + response.ErrorMessage, response.ErrorMessage);
+    
+            
+            return new ApiResponse<Object>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+    
+        /// <summary>
+        /// Update/Create Okta Identity Provider 
+        /// </summary>
+        /// <param name="body">Provider</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task UpdateOktaAsync (Okta body = null)
+        {
+             await UpdateOktaAsyncWithHttpInfo(body);
+
+        }
+
+        /// <summary>
+        /// Update/Create Okta Identity Provider 
+        /// </summary>
+        /// <param name="body">Provider</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateOktaAsyncWithHttpInfo (Okta body = null)
+        {
+            
+    
+            var path_ = "/api/v1/identityproviders/okta";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling UpdateOkta: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling UpdateOkta: " + response.ErrorMessage, response.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+        
+        /// <summary>
+        /// Delete Okta Identity Provider 
+        /// </summary>
+        /// <returns></returns>
+        public void DeleteOkta ()
+        {
+             DeleteOktaWithHttpInfo();
+        }
+
+        /// <summary>
+        /// Delete Okta Identity Provider 
+        /// </summary>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteOktaWithHttpInfo ()
+        {
+            
+    
+            var path_ = "/api/v1/identityproviders/okta";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling DeleteOkta: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling DeleteOkta: " + response.ErrorMessage, response.ErrorMessage);
+    
+            
+            return new ApiResponse<Object>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+    
+        /// <summary>
+        /// Delete Okta Identity Provider 
+        /// </summary>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteOktaAsync ()
+        {
+             await DeleteOktaAsyncWithHttpInfo();
+
+        }
+
+        /// <summary>
+        /// Delete Okta Identity Provider 
+        /// </summary>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOktaAsyncWithHttpInfo ()
+        {
+            
+    
+            var path_ = "/api/v1/identityproviders/okta";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling DeleteOkta: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling DeleteOkta: " + response.ErrorMessage, response.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+        
+        /// <summary>
         /// Get OneLogin Identity Provider 
         /// </summary>
         /// <returns>OneLogin</returns>
-        public OneLogin IdentityprovidersOneloginGet ()
+        public OneLogin GetOnelogin ()
         {
-             ApiResponse<OneLogin> response = IdentityprovidersOneloginGetWithHttpInfo();
+             ApiResponse<OneLogin> response = GetOneloginWithHttpInfo();
              return response.Data;
         }
 
@@ -861,7 +1510,7 @@ namespace ININ.PureCloudApi.Api
         /// Get OneLogin Identity Provider 
         /// </summary>
         /// <returns>ApiResponse of OneLogin</returns>
-        public ApiResponse< OneLogin > IdentityprovidersOneloginGetWithHttpInfo ()
+        public ApiResponse< OneLogin > GetOneloginWithHttpInfo ()
         {
             
     
@@ -907,9 +1556,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersOneloginGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetOnelogin: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersOneloginGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetOnelogin: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OneLogin>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -921,9 +1570,9 @@ namespace ININ.PureCloudApi.Api
         /// Get OneLogin Identity Provider 
         /// </summary>
         /// <returns>Task of OneLogin</returns>
-        public async System.Threading.Tasks.Task<OneLogin> IdentityprovidersOneloginGetAsync ()
+        public async System.Threading.Tasks.Task<OneLogin> GetOneloginAsync ()
         {
-             ApiResponse<OneLogin> response = await IdentityprovidersOneloginGetAsyncWithHttpInfo();
+             ApiResponse<OneLogin> response = await GetOneloginAsyncWithHttpInfo();
              return response.Data;
 
         }
@@ -932,7 +1581,7 @@ namespace ININ.PureCloudApi.Api
         /// Get OneLogin Identity Provider 
         /// </summary>
         /// <returns>Task of ApiResponse (OneLogin)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OneLogin>> IdentityprovidersOneloginGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<OneLogin>> GetOneloginAsyncWithHttpInfo ()
         {
             
     
@@ -978,9 +1627,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersOneloginGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetOnelogin: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersOneloginGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetOnelogin: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OneLogin>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -993,9 +1642,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Provider</param> 
         /// <returns></returns>
-        public void IdentityprovidersOneloginPut (OneLogin body = null)
+        public void UpdateOnelogin (OneLogin body = null)
         {
-             IdentityprovidersOneloginPutWithHttpInfo(body);
+             UpdateOneloginWithHttpInfo(body);
         }
 
         /// <summary>
@@ -1003,7 +1652,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Provider</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> IdentityprovidersOneloginPutWithHttpInfo (OneLogin body = null)
+        public ApiResponse<Object> UpdateOneloginWithHttpInfo (OneLogin body = null)
         {
             
     
@@ -1050,9 +1699,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersOneloginPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateOnelogin: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersOneloginPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateOnelogin: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -1065,9 +1714,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Provider</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task IdentityprovidersOneloginPutAsync (OneLogin body = null)
+        public async System.Threading.Tasks.Task UpdateOneloginAsync (OneLogin body = null)
         {
-             await IdentityprovidersOneloginPutAsyncWithHttpInfo(body);
+             await UpdateOneloginAsyncWithHttpInfo(body);
 
         }
 
@@ -1076,7 +1725,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> IdentityprovidersOneloginPutAsyncWithHttpInfo (OneLogin body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateOneloginAsyncWithHttpInfo (OneLogin body = null)
         {
             
     
@@ -1123,9 +1772,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersOneloginPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateOnelogin: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersOneloginPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateOnelogin: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -1137,16 +1786,16 @@ namespace ININ.PureCloudApi.Api
         /// Delete OneLogin Identity Provider 
         /// </summary>
         /// <returns></returns>
-        public void IdentityprovidersOneloginDelete ()
+        public void DeleteOnelogin ()
         {
-             IdentityprovidersOneloginDeleteWithHttpInfo();
+             DeleteOneloginWithHttpInfo();
         }
 
         /// <summary>
         /// Delete OneLogin Identity Provider 
         /// </summary>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> IdentityprovidersOneloginDeleteWithHttpInfo ()
+        public ApiResponse<Object> DeleteOneloginWithHttpInfo ()
         {
             
     
@@ -1192,9 +1841,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersOneloginDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteOnelogin: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersOneloginDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteOnelogin: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -1206,9 +1855,9 @@ namespace ININ.PureCloudApi.Api
         /// Delete OneLogin Identity Provider 
         /// </summary>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task IdentityprovidersOneloginDeleteAsync ()
+        public async System.Threading.Tasks.Task DeleteOneloginAsync ()
         {
-             await IdentityprovidersOneloginDeleteAsyncWithHttpInfo();
+             await DeleteOneloginAsyncWithHttpInfo();
 
         }
 
@@ -1216,7 +1865,7 @@ namespace ININ.PureCloudApi.Api
         /// Delete OneLogin Identity Provider 
         /// </summary>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> IdentityprovidersOneloginDeleteAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOneloginAsyncWithHttpInfo ()
         {
             
     
@@ -1262,9 +1911,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersOneloginDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteOnelogin: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersOneloginDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteOnelogin: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -1276,9 +1925,9 @@ namespace ININ.PureCloudApi.Api
         /// Get PureCloud Identity Provider 
         /// </summary>
         /// <returns>PureCloud</returns>
-        public PureCloud IdentityprovidersPurecloudGet ()
+        public PureCloud GetPurecloud ()
         {
-             ApiResponse<PureCloud> response = IdentityprovidersPurecloudGetWithHttpInfo();
+             ApiResponse<PureCloud> response = GetPurecloudWithHttpInfo();
              return response.Data;
         }
 
@@ -1286,7 +1935,7 @@ namespace ININ.PureCloudApi.Api
         /// Get PureCloud Identity Provider 
         /// </summary>
         /// <returns>ApiResponse of PureCloud</returns>
-        public ApiResponse< PureCloud > IdentityprovidersPurecloudGetWithHttpInfo ()
+        public ApiResponse< PureCloud > GetPurecloudWithHttpInfo ()
         {
             
     
@@ -1332,9 +1981,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersPurecloudGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetPurecloud: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersPurecloudGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetPurecloud: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<PureCloud>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1346,9 +1995,9 @@ namespace ININ.PureCloudApi.Api
         /// Get PureCloud Identity Provider 
         /// </summary>
         /// <returns>Task of PureCloud</returns>
-        public async System.Threading.Tasks.Task<PureCloud> IdentityprovidersPurecloudGetAsync ()
+        public async System.Threading.Tasks.Task<PureCloud> GetPurecloudAsync ()
         {
-             ApiResponse<PureCloud> response = await IdentityprovidersPurecloudGetAsyncWithHttpInfo();
+             ApiResponse<PureCloud> response = await GetPurecloudAsyncWithHttpInfo();
              return response.Data;
 
         }
@@ -1357,7 +2006,7 @@ namespace ININ.PureCloudApi.Api
         /// Get PureCloud Identity Provider 
         /// </summary>
         /// <returns>Task of ApiResponse (PureCloud)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PureCloud>> IdentityprovidersPurecloudGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<PureCloud>> GetPurecloudAsyncWithHttpInfo ()
         {
             
     
@@ -1403,9 +2052,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersPurecloudGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetPurecloud: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersPurecloudGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetPurecloud: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<PureCloud>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1418,9 +2067,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Provider</param> 
         /// <returns></returns>
-        public void IdentityprovidersPurecloudPut (PureCloud body = null)
+        public void UpdatePurecloud (PureCloud body = null)
         {
-             IdentityprovidersPurecloudPutWithHttpInfo(body);
+             UpdatePurecloudWithHttpInfo(body);
         }
 
         /// <summary>
@@ -1428,7 +2077,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Provider</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> IdentityprovidersPurecloudPutWithHttpInfo (PureCloud body = null)
+        public ApiResponse<Object> UpdatePurecloudWithHttpInfo (PureCloud body = null)
         {
             
     
@@ -1475,9 +2124,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersPurecloudPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdatePurecloud: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersPurecloudPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdatePurecloud: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -1490,9 +2139,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Provider</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task IdentityprovidersPurecloudPutAsync (PureCloud body = null)
+        public async System.Threading.Tasks.Task UpdatePurecloudAsync (PureCloud body = null)
         {
-             await IdentityprovidersPurecloudPutAsyncWithHttpInfo(body);
+             await UpdatePurecloudAsyncWithHttpInfo(body);
 
         }
 
@@ -1501,7 +2150,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> IdentityprovidersPurecloudPutAsyncWithHttpInfo (PureCloud body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdatePurecloudAsyncWithHttpInfo (PureCloud body = null)
         {
             
     
@@ -1548,9 +2197,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersPurecloudPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdatePurecloud: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersPurecloudPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdatePurecloud: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -1562,16 +2211,16 @@ namespace ININ.PureCloudApi.Api
         /// Delete PureCloud Identity Provider 
         /// </summary>
         /// <returns></returns>
-        public void IdentityprovidersPurecloudDelete ()
+        public void DeletePurecloud ()
         {
-             IdentityprovidersPurecloudDeleteWithHttpInfo();
+             DeletePurecloudWithHttpInfo();
         }
 
         /// <summary>
         /// Delete PureCloud Identity Provider 
         /// </summary>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> IdentityprovidersPurecloudDeleteWithHttpInfo ()
+        public ApiResponse<Object> DeletePurecloudWithHttpInfo ()
         {
             
     
@@ -1617,9 +2266,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersPurecloudDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeletePurecloud: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersPurecloudDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeletePurecloud: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -1631,9 +2280,9 @@ namespace ININ.PureCloudApi.Api
         /// Delete PureCloud Identity Provider 
         /// </summary>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task IdentityprovidersPurecloudDeleteAsync ()
+        public async System.Threading.Tasks.Task DeletePurecloudAsync ()
         {
-             await IdentityprovidersPurecloudDeleteAsyncWithHttpInfo();
+             await DeletePurecloudAsyncWithHttpInfo();
 
         }
 
@@ -1641,7 +2290,7 @@ namespace ININ.PureCloudApi.Api
         /// Delete PureCloud Identity Provider 
         /// </summary>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> IdentityprovidersPurecloudDeleteAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeletePurecloudAsyncWithHttpInfo ()
         {
             
     
@@ -1687,9 +2336,434 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersPurecloudDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeletePurecloud: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersPurecloudDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeletePurecloud: " + response.ErrorMessage, response.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+        
+        /// <summary>
+        /// Get Salesforce Identity Provider 
+        /// </summary>
+        /// <returns>Salesforce</returns>
+        public Salesforce GetSalesforce ()
+        {
+             ApiResponse<Salesforce> response = GetSalesforceWithHttpInfo();
+             return response.Data;
+        }
+
+        /// <summary>
+        /// Get Salesforce Identity Provider 
+        /// </summary>
+        /// <returns>ApiResponse of Salesforce</returns>
+        public ApiResponse< Salesforce > GetSalesforceWithHttpInfo ()
+        {
+            
+    
+            var path_ = "/api/v1/identityproviders/salesforce";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling GetSalesforce: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling GetSalesforce: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<Salesforce>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Salesforce) Configuration.ApiClient.Deserialize(response, typeof(Salesforce)));
+            
+        }
+    
+        /// <summary>
+        /// Get Salesforce Identity Provider 
+        /// </summary>
+        /// <returns>Task of Salesforce</returns>
+        public async System.Threading.Tasks.Task<Salesforce> GetSalesforceAsync ()
+        {
+             ApiResponse<Salesforce> response = await GetSalesforceAsyncWithHttpInfo();
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Get Salesforce Identity Provider 
+        /// </summary>
+        /// <returns>Task of ApiResponse (Salesforce)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Salesforce>> GetSalesforceAsyncWithHttpInfo ()
+        {
+            
+    
+            var path_ = "/api/v1/identityproviders/salesforce";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.GET, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling GetSalesforce: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling GetSalesforce: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<Salesforce>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Salesforce) Configuration.ApiClient.Deserialize(response, typeof(Salesforce)));
+            
+        }
+        
+        /// <summary>
+        /// Update/Create Salesforce Identity Provider 
+        /// </summary>
+        /// <param name="body">Provider</param> 
+        /// <returns></returns>
+        public void UpdateSalesforce (Salesforce body = null)
+        {
+             UpdateSalesforceWithHttpInfo(body);
+        }
+
+        /// <summary>
+        /// Update/Create Salesforce Identity Provider 
+        /// </summary>
+        /// <param name="body">Provider</param> 
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> UpdateSalesforceWithHttpInfo (Salesforce body = null)
+        {
+            
+    
+            var path_ = "/api/v1/identityproviders/salesforce";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling UpdateSalesforce: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling UpdateSalesforce: " + response.ErrorMessage, response.ErrorMessage);
+    
+            
+            return new ApiResponse<Object>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+    
+        /// <summary>
+        /// Update/Create Salesforce Identity Provider 
+        /// </summary>
+        /// <param name="body">Provider</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task UpdateSalesforceAsync (Salesforce body = null)
+        {
+             await UpdateSalesforceAsyncWithHttpInfo(body);
+
+        }
+
+        /// <summary>
+        /// Update/Create Salesforce Identity Provider 
+        /// </summary>
+        /// <param name="body">Provider</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateSalesforceAsyncWithHttpInfo (Salesforce body = null)
+        {
+            
+    
+            var path_ = "/api/v1/identityproviders/salesforce";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling UpdateSalesforce: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling UpdateSalesforce: " + response.ErrorMessage, response.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+        
+        /// <summary>
+        /// Delete Salesforce Identity Provider 
+        /// </summary>
+        /// <returns></returns>
+        public void DeleteSalesforce ()
+        {
+             DeleteSalesforceWithHttpInfo();
+        }
+
+        /// <summary>
+        /// Delete Salesforce Identity Provider 
+        /// </summary>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteSalesforceWithHttpInfo ()
+        {
+            
+    
+            var path_ = "/api/v1/identityproviders/salesforce";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling DeleteSalesforce: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling DeleteSalesforce: " + response.ErrorMessage, response.ErrorMessage);
+    
+            
+            return new ApiResponse<Object>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+    
+        /// <summary>
+        /// Delete Salesforce Identity Provider 
+        /// </summary>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteSalesforceAsync ()
+        {
+             await DeleteSalesforceAsyncWithHttpInfo();
+
+        }
+
+        /// <summary>
+        /// Delete Salesforce Identity Provider 
+        /// </summary>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSalesforceAsyncWithHttpInfo ()
+        {
+            
+    
+            var path_ = "/api/v1/identityproviders/salesforce";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling DeleteSalesforce: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling DeleteSalesforce: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -1701,9 +2775,9 @@ namespace ININ.PureCloudApi.Api
         /// Get an identity provider 
         /// </summary>
         /// <returns>OAuthProvider</returns>
-        public OAuthProvider IdentityprovidersProvideridGet ()
+        public OAuthProvider GetProverId ()
         {
-             ApiResponse<OAuthProvider> response = IdentityprovidersProvideridGetWithHttpInfo();
+             ApiResponse<OAuthProvider> response = GetProverIdWithHttpInfo();
              return response.Data;
         }
 
@@ -1711,7 +2785,7 @@ namespace ININ.PureCloudApi.Api
         /// Get an identity provider 
         /// </summary>
         /// <returns>ApiResponse of OAuthProvider</returns>
-        public ApiResponse< OAuthProvider > IdentityprovidersProvideridGetWithHttpInfo ()
+        public ApiResponse< OAuthProvider > GetProverIdWithHttpInfo ()
         {
             
     
@@ -1757,9 +2831,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersProvideridGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProverId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersProvideridGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProverId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OAuthProvider>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1771,9 +2845,9 @@ namespace ININ.PureCloudApi.Api
         /// Get an identity provider 
         /// </summary>
         /// <returns>Task of OAuthProvider</returns>
-        public async System.Threading.Tasks.Task<OAuthProvider> IdentityprovidersProvideridGetAsync ()
+        public async System.Threading.Tasks.Task<OAuthProvider> GetProverIdAsync ()
         {
-             ApiResponse<OAuthProvider> response = await IdentityprovidersProvideridGetAsyncWithHttpInfo();
+             ApiResponse<OAuthProvider> response = await GetProverIdAsyncWithHttpInfo();
              return response.Data;
 
         }
@@ -1782,7 +2856,7 @@ namespace ININ.PureCloudApi.Api
         /// Get an identity provider 
         /// </summary>
         /// <returns>Task of ApiResponse (OAuthProvider)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> IdentityprovidersProvideridGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<OAuthProvider>> GetProverIdAsyncWithHttpInfo ()
         {
             
     
@@ -1828,9 +2902,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersProvideridGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProverId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersProvideridGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProverId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OAuthProvider>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1843,9 +2917,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Provider</param> 
         /// <returns></returns>
-        public void IdentityprovidersProvideridPut (OAuthProvider body = null)
+        public void UpdateProverId (OAuthProvider body = null)
         {
-             IdentityprovidersProvideridPutWithHttpInfo(body);
+             UpdateProverIdWithHttpInfo(body);
         }
 
         /// <summary>
@@ -1853,7 +2927,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Provider</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> IdentityprovidersProvideridPutWithHttpInfo (OAuthProvider body = null)
+        public ApiResponse<Object> UpdateProverIdWithHttpInfo (OAuthProvider body = null)
         {
             
     
@@ -1900,9 +2974,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersProvideridPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateProverId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersProvideridPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateProverId: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -1915,9 +2989,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Provider</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task IdentityprovidersProvideridPutAsync (OAuthProvider body = null)
+        public async System.Threading.Tasks.Task UpdateProverIdAsync (OAuthProvider body = null)
         {
-             await IdentityprovidersProvideridPutAsyncWithHttpInfo(body);
+             await UpdateProverIdAsyncWithHttpInfo(body);
 
         }
 
@@ -1926,7 +3000,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Provider</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> IdentityprovidersProvideridPutAsyncWithHttpInfo (OAuthProvider body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateProverIdAsyncWithHttpInfo (OAuthProvider body = null)
         {
             
     
@@ -1973,9 +3047,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersProvideridPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateProverId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersProvideridPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateProverId: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -1987,16 +3061,16 @@ namespace ININ.PureCloudApi.Api
         /// Delete an identity provider 
         /// </summary>
         /// <returns></returns>
-        public void IdentityprovidersProvideridDelete ()
+        public void DeleteProverId ()
         {
-             IdentityprovidersProvideridDeleteWithHttpInfo();
+             DeleteProverIdWithHttpInfo();
         }
 
         /// <summary>
         /// Delete an identity provider 
         /// </summary>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> IdentityprovidersProvideridDeleteWithHttpInfo ()
+        public ApiResponse<Object> DeleteProverIdWithHttpInfo ()
         {
             
     
@@ -2042,9 +3116,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersProvideridDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteProverId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersProvideridDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteProverId: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -2056,9 +3130,9 @@ namespace ININ.PureCloudApi.Api
         /// Delete an identity provider 
         /// </summary>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task IdentityprovidersProvideridDeleteAsync ()
+        public async System.Threading.Tasks.Task DeleteProverIdAsync ()
         {
-             await IdentityprovidersProvideridDeleteAsyncWithHttpInfo();
+             await DeleteProverIdAsyncWithHttpInfo();
 
         }
 
@@ -2066,7 +3140,7 @@ namespace ININ.PureCloudApi.Api
         /// Delete an identity provider 
         /// </summary>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> IdentityprovidersProvideridDeleteAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteProverIdAsyncWithHttpInfo ()
         {
             
     
@@ -2112,9 +3186,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersProvideridDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteProverId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling IdentityprovidersProvideridDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteProverId: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -2126,9 +3200,9 @@ namespace ININ.PureCloudApi.Api
         /// The list of OAuth clients 
         /// </summary>
         /// <returns>OAuthClientEntityListing</returns>
-        public OAuthClientEntityListing OauthClientsGet ()
+        public OAuthClientEntityListing GetClients ()
         {
-             ApiResponse<OAuthClientEntityListing> response = OauthClientsGetWithHttpInfo();
+             ApiResponse<OAuthClientEntityListing> response = GetClientsWithHttpInfo();
              return response.Data;
         }
 
@@ -2136,7 +3210,7 @@ namespace ININ.PureCloudApi.Api
         /// The list of OAuth clients 
         /// </summary>
         /// <returns>ApiResponse of OAuthClientEntityListing</returns>
-        public ApiResponse< OAuthClientEntityListing > OauthClientsGetWithHttpInfo ()
+        public ApiResponse< OAuthClientEntityListing > GetClientsWithHttpInfo ()
         {
             
     
@@ -2182,9 +3256,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling OauthClientsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetClients: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling OauthClientsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetClients: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OAuthClientEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2196,9 +3270,9 @@ namespace ININ.PureCloudApi.Api
         /// The list of OAuth clients 
         /// </summary>
         /// <returns>Task of OAuthClientEntityListing</returns>
-        public async System.Threading.Tasks.Task<OAuthClientEntityListing> OauthClientsGetAsync ()
+        public async System.Threading.Tasks.Task<OAuthClientEntityListing> GetClientsAsync ()
         {
-             ApiResponse<OAuthClientEntityListing> response = await OauthClientsGetAsyncWithHttpInfo();
+             ApiResponse<OAuthClientEntityListing> response = await GetClientsAsyncWithHttpInfo();
              return response.Data;
 
         }
@@ -2207,7 +3281,7 @@ namespace ININ.PureCloudApi.Api
         /// The list of OAuth clients 
         /// </summary>
         /// <returns>Task of ApiResponse (OAuthClientEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OAuthClientEntityListing>> OauthClientsGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<OAuthClientEntityListing>> GetClientsAsyncWithHttpInfo ()
         {
             
     
@@ -2253,9 +3327,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling OauthClientsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetClients: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling OauthClientsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetClients: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OAuthClientEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2268,9 +3342,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Client</param> 
         /// <returns>OAuthClient</returns>
-        public OAuthClient OauthClientsPost (OAuthClient body = null)
+        public OAuthClient CreateClients (OAuthClient body = null)
         {
-             ApiResponse<OAuthClient> response = OauthClientsPostWithHttpInfo(body);
+             ApiResponse<OAuthClient> response = CreateClientsWithHttpInfo(body);
              return response.Data;
         }
 
@@ -2279,7 +3353,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Client</param> 
         /// <returns>ApiResponse of OAuthClient</returns>
-        public ApiResponse< OAuthClient > OauthClientsPostWithHttpInfo (OAuthClient body = null)
+        public ApiResponse< OAuthClient > CreateClientsWithHttpInfo (OAuthClient body = null)
         {
             
     
@@ -2326,9 +3400,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling OauthClientsPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateClients: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling OauthClientsPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateClients: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OAuthClient>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2341,9 +3415,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Client</param>
         /// <returns>Task of OAuthClient</returns>
-        public async System.Threading.Tasks.Task<OAuthClient> OauthClientsPostAsync (OAuthClient body = null)
+        public async System.Threading.Tasks.Task<OAuthClient> CreateClientsAsync (OAuthClient body = null)
         {
-             ApiResponse<OAuthClient> response = await OauthClientsPostAsyncWithHttpInfo(body);
+             ApiResponse<OAuthClient> response = await CreateClientsAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -2353,7 +3427,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Client</param>
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OAuthClient>> OauthClientsPostAsyncWithHttpInfo (OAuthClient body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OAuthClient>> CreateClientsAsyncWithHttpInfo (OAuthClient body = null)
         {
             
     
@@ -2400,9 +3474,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling OauthClientsPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateClients: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling OauthClientsPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateClients: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OAuthClient>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2415,9 +3489,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="clientId">Client ID</param> 
         /// <returns>OAuthClient</returns>
-        public OAuthClient OauthClientsClientidGet (string clientId)
+        public OAuthClient GetClient (string clientId)
         {
-             ApiResponse<OAuthClient> response = OauthClientsClientidGetWithHttpInfo(clientId);
+             ApiResponse<OAuthClient> response = GetClientWithHttpInfo(clientId);
              return response.Data;
         }
 
@@ -2426,11 +3500,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="clientId">Client ID</param> 
         /// <returns>ApiResponse of OAuthClient</returns>
-        public ApiResponse< OAuthClient > OauthClientsClientidGetWithHttpInfo (string clientId)
+        public ApiResponse< OAuthClient > GetClientWithHttpInfo (string clientId)
         {
             
             // verify the required parameter 'clientId' is set
-            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling OauthClientsClientidGet");
+            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling GetClient");
             
     
             var path_ = "/api/v1/oauth/clients/{clientId}";
@@ -2476,9 +3550,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling OauthClientsClientidGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetClient: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling OauthClientsClientidGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetClient: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OAuthClient>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2491,9 +3565,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of OAuthClient</returns>
-        public async System.Threading.Tasks.Task<OAuthClient> OauthClientsClientidGetAsync (string clientId)
+        public async System.Threading.Tasks.Task<OAuthClient> GetClientAsync (string clientId)
         {
-             ApiResponse<OAuthClient> response = await OauthClientsClientidGetAsyncWithHttpInfo(clientId);
+             ApiResponse<OAuthClient> response = await GetClientAsyncWithHttpInfo(clientId);
              return response.Data;
 
         }
@@ -2503,10 +3577,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OAuthClient>> OauthClientsClientidGetAsyncWithHttpInfo (string clientId)
+        public async System.Threading.Tasks.Task<ApiResponse<OAuthClient>> GetClientAsyncWithHttpInfo (string clientId)
         {
             // verify the required parameter 'clientId' is set
-            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling OauthClientsClientidGet");
+            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling GetClient");
             
     
             var path_ = "/api/v1/oauth/clients/{clientId}";
@@ -2552,9 +3626,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling OauthClientsClientidGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetClient: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling OauthClientsClientidGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetClient: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OAuthClient>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2568,9 +3642,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">Client ID</param> 
         /// <param name="body">Client</param> 
         /// <returns>OAuthClient</returns>
-        public OAuthClient OauthClientsClientidPut (string clientId, OAuthClient body = null)
+        public OAuthClient UpdateClient (string clientId, OAuthClient body = null)
         {
-             ApiResponse<OAuthClient> response = OauthClientsClientidPutWithHttpInfo(clientId, body);
+             ApiResponse<OAuthClient> response = UpdateClientWithHttpInfo(clientId, body);
              return response.Data;
         }
 
@@ -2580,11 +3654,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">Client ID</param> 
         /// <param name="body">Client</param> 
         /// <returns>ApiResponse of OAuthClient</returns>
-        public ApiResponse< OAuthClient > OauthClientsClientidPutWithHttpInfo (string clientId, OAuthClient body = null)
+        public ApiResponse< OAuthClient > UpdateClientWithHttpInfo (string clientId, OAuthClient body = null)
         {
             
             // verify the required parameter 'clientId' is set
-            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling OauthClientsClientidPut");
+            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling UpdateClient");
             
     
             var path_ = "/api/v1/oauth/clients/{clientId}";
@@ -2631,9 +3705,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling OauthClientsClientidPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateClient: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling OauthClientsClientidPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateClient: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OAuthClient>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2647,9 +3721,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Client</param>
         /// <returns>Task of OAuthClient</returns>
-        public async System.Threading.Tasks.Task<OAuthClient> OauthClientsClientidPutAsync (string clientId, OAuthClient body = null)
+        public async System.Threading.Tasks.Task<OAuthClient> UpdateClientAsync (string clientId, OAuthClient body = null)
         {
-             ApiResponse<OAuthClient> response = await OauthClientsClientidPutAsyncWithHttpInfo(clientId, body);
+             ApiResponse<OAuthClient> response = await UpdateClientAsyncWithHttpInfo(clientId, body);
              return response.Data;
 
         }
@@ -2660,10 +3734,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">Client ID</param>
         /// <param name="body">Client</param>
         /// <returns>Task of ApiResponse (OAuthClient)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OAuthClient>> OauthClientsClientidPutAsyncWithHttpInfo (string clientId, OAuthClient body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OAuthClient>> UpdateClientAsyncWithHttpInfo (string clientId, OAuthClient body = null)
         {
             // verify the required parameter 'clientId' is set
-            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling OauthClientsClientidPut");
+            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling UpdateClient");
             
     
             var path_ = "/api/v1/oauth/clients/{clientId}";
@@ -2710,9 +3784,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling OauthClientsClientidPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateClient: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling OauthClientsClientidPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateClient: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OAuthClient>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2725,9 +3799,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="clientId">Client ID</param> 
         /// <returns></returns>
-        public void OauthClientsClientidDelete (string clientId)
+        public void DeleteClient (string clientId)
         {
-             OauthClientsClientidDeleteWithHttpInfo(clientId);
+             DeleteClientWithHttpInfo(clientId);
         }
 
         /// <summary>
@@ -2735,11 +3809,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="clientId">Client ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> OauthClientsClientidDeleteWithHttpInfo (string clientId)
+        public ApiResponse<Object> DeleteClientWithHttpInfo (string clientId)
         {
             
             // verify the required parameter 'clientId' is set
-            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling OauthClientsClientidDelete");
+            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling DeleteClient");
             
     
             var path_ = "/api/v1/oauth/clients/{clientId}";
@@ -2785,9 +3859,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling OauthClientsClientidDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteClient: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling OauthClientsClientidDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteClient: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -2800,9 +3874,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task OauthClientsClientidDeleteAsync (string clientId)
+        public async System.Threading.Tasks.Task DeleteClientAsync (string clientId)
         {
-             await OauthClientsClientidDeleteAsyncWithHttpInfo(clientId);
+             await DeleteClientAsyncWithHttpInfo(clientId);
 
         }
 
@@ -2811,10 +3885,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> OauthClientsClientidDeleteAsyncWithHttpInfo (string clientId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteClientAsyncWithHttpInfo (string clientId)
         {
             // verify the required parameter 'clientId' is set
-            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling OauthClientsClientidDelete");
+            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling DeleteClient");
             
     
             var path_ = "/api/v1/oauth/clients/{clientId}";
@@ -2860,9 +3934,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling OauthClientsClientidDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteClient: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling OauthClientsClientidDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteClient: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -2875,9 +3949,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="clientId">Client ID</param> 
         /// <returns></returns>
-        public void OauthClientsClientidSecretPost (string clientId)
+        public void CreateClientSecret (string clientId)
         {
-             OauthClientsClientidSecretPostWithHttpInfo(clientId);
+             CreateClientSecretWithHttpInfo(clientId);
         }
 
         /// <summary>
@@ -2885,11 +3959,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="clientId">Client ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> OauthClientsClientidSecretPostWithHttpInfo (string clientId)
+        public ApiResponse<Object> CreateClientSecretWithHttpInfo (string clientId)
         {
             
             // verify the required parameter 'clientId' is set
-            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling OauthClientsClientidSecretPost");
+            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling CreateClientSecret");
             
     
             var path_ = "/api/v1/oauth/clients/{clientId}/secret";
@@ -2935,9 +4009,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling OauthClientsClientidSecretPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateClientSecret: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling OauthClientsClientidSecretPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateClientSecret: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -2950,9 +4024,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task OauthClientsClientidSecretPostAsync (string clientId)
+        public async System.Threading.Tasks.Task CreateClientSecretAsync (string clientId)
         {
-             await OauthClientsClientidSecretPostAsyncWithHttpInfo(clientId);
+             await CreateClientSecretAsyncWithHttpInfo(clientId);
 
         }
 
@@ -2961,10 +4035,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="clientId">Client ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> OauthClientsClientidSecretPostAsyncWithHttpInfo (string clientId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateClientSecretAsyncWithHttpInfo (string clientId)
         {
             // verify the required parameter 'clientId' is set
-            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling OauthClientsClientidSecretPost");
+            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling CreateClientSecret");
             
     
             var path_ = "/api/v1/oauth/clients/{clientId}/secret";
@@ -3010,9 +4084,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling OauthClientsClientidSecretPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateClientSecret: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling OauthClientsClientidSecretPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateClientSecret: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,

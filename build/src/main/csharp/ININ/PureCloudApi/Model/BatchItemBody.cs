@@ -27,6 +27,13 @@ namespace ININ.PureCloudApi.Model
         }
 
         
+        /// <summary>
+        /// Gets or Sets Name
+        /// </summary>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+  
+        
   
         /// <summary>
         /// Returns the string presentation of the object
@@ -36,6 +43,7 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BatchItemBody {\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -72,7 +80,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return false;
+            return 
+                (
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
+                );
         }
 
         /// <summary>
@@ -86,6 +99,9 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
+                if (this.Name != null)
+                    hash = hash * 57 + this.Name.GetHashCode();
                 
                 return hash;
             }

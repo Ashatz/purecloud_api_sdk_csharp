@@ -23,9 +23,17 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         public WorkItemActions()
         {
+            this.CanSubmit = false;
             
         }
 
+        
+        /// <summary>
+        /// Gets or Sets CanSubmit
+        /// </summary>
+        [DataMember(Name="canSubmit", EmitDefaultValue=false)]
+        public bool? CanSubmit { get; set; }
+  
         
   
         /// <summary>
@@ -36,6 +44,7 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WorkItemActions {\n");
+            sb.Append("  CanSubmit: ").Append(CanSubmit).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -72,7 +81,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return false;
+            return 
+                (
+                    this.CanSubmit == other.CanSubmit ||
+                    this.CanSubmit != null &&
+                    this.CanSubmit.Equals(other.CanSubmit)
+                );
         }
 
         /// <summary>
@@ -86,6 +100,9 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
+                if (this.CanSubmit != null)
+                    hash = hash * 57 + this.CanSubmit.GetHashCode();
                 
                 return hash;
             }

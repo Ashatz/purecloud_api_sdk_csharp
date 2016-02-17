@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>HIPAAConfig</returns>
-        HIPAAConfig ComplianceHipaaGet ();
+        HIPAAConfig GetHipaa ();
   
         /// <summary>
         /// Get information about HIPAA compliance
@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of HIPAAConfig</returns>
-        ApiResponse<HIPAAConfig> ComplianceHipaaGetWithHttpInfo ();
+        ApiResponse<HIPAAConfig> GetHipaaWithHttpInfo ();
 
         /// <summary>
         /// Get information about HIPAA compliance
@@ -41,7 +41,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of HIPAAConfig</returns>
-        System.Threading.Tasks.Task<HIPAAConfig> ComplianceHipaaGetAsync ();
+        System.Threading.Tasks.Task<HIPAAConfig> GetHipaaAsync ();
 
         /// <summary>
         /// Get information about HIPAA compliance
@@ -50,7 +50,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse (HIPAAConfig)</returns>
-        System.Threading.Tasks.Task<ApiResponse<HIPAAConfig>> ComplianceHipaaGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<HIPAAConfig>> GetHipaaAsyncWithHttpInfo ();
         
         /// <summary>
         /// Update HIPAA compliance options
@@ -60,7 +60,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>HIPAAConfig</returns>
-        HIPAAConfig ComplianceHipaaPut (HIPAAConfig body = null);
+        HIPAAConfig UpdateHipaa (HIPAAConfig body = null);
   
         /// <summary>
         /// Update HIPAA compliance options
@@ -70,7 +70,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>ApiResponse of HIPAAConfig</returns>
-        ApiResponse<HIPAAConfig> ComplianceHipaaPutWithHttpInfo (HIPAAConfig body = null);
+        ApiResponse<HIPAAConfig> UpdateHipaaWithHttpInfo (HIPAAConfig body = null);
 
         /// <summary>
         /// Update HIPAA compliance options
@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of HIPAAConfig</returns>
-        System.Threading.Tasks.Task<HIPAAConfig> ComplianceHipaaPutAsync (HIPAAConfig body = null);
+        System.Threading.Tasks.Task<HIPAAConfig> UpdateHipaaAsync (HIPAAConfig body = null);
 
         /// <summary>
         /// Update HIPAA compliance options
@@ -90,7 +90,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (HIPAAConfig)</returns>
-        System.Threading.Tasks.Task<ApiResponse<HIPAAConfig>> ComplianceHipaaPutAsyncWithHttpInfo (HIPAAConfig body = null);
+        System.Threading.Tasks.Task<ApiResponse<HIPAAConfig>> UpdateHipaaAsyncWithHttpInfo (HIPAAConfig body = null);
         
     }
   
@@ -174,9 +174,9 @@ namespace ININ.PureCloudApi.Api
         /// Get information about HIPAA compliance 
         /// </summary>
         /// <returns>HIPAAConfig</returns>
-        public HIPAAConfig ComplianceHipaaGet ()
+        public HIPAAConfig GetHipaa ()
         {
-             ApiResponse<HIPAAConfig> response = ComplianceHipaaGetWithHttpInfo();
+             ApiResponse<HIPAAConfig> response = GetHipaaWithHttpInfo();
              return response.Data;
         }
 
@@ -184,7 +184,7 @@ namespace ININ.PureCloudApi.Api
         /// Get information about HIPAA compliance 
         /// </summary>
         /// <returns>ApiResponse of HIPAAConfig</returns>
-        public ApiResponse< HIPAAConfig > ComplianceHipaaGetWithHttpInfo ()
+        public ApiResponse< HIPAAConfig > GetHipaaWithHttpInfo ()
         {
             
     
@@ -230,9 +230,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ComplianceHipaaGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetHipaa: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ComplianceHipaaGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetHipaa: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<HIPAAConfig>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -244,9 +244,9 @@ namespace ININ.PureCloudApi.Api
         /// Get information about HIPAA compliance 
         /// </summary>
         /// <returns>Task of HIPAAConfig</returns>
-        public async System.Threading.Tasks.Task<HIPAAConfig> ComplianceHipaaGetAsync ()
+        public async System.Threading.Tasks.Task<HIPAAConfig> GetHipaaAsync ()
         {
-             ApiResponse<HIPAAConfig> response = await ComplianceHipaaGetAsyncWithHttpInfo();
+             ApiResponse<HIPAAConfig> response = await GetHipaaAsyncWithHttpInfo();
              return response.Data;
 
         }
@@ -255,7 +255,7 @@ namespace ININ.PureCloudApi.Api
         /// Get information about HIPAA compliance 
         /// </summary>
         /// <returns>Task of ApiResponse (HIPAAConfig)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<HIPAAConfig>> ComplianceHipaaGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<HIPAAConfig>> GetHipaaAsyncWithHttpInfo ()
         {
             
     
@@ -301,9 +301,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ComplianceHipaaGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetHipaa: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ComplianceHipaaGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetHipaa: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<HIPAAConfig>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -316,9 +316,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>HIPAAConfig</returns>
-        public HIPAAConfig ComplianceHipaaPut (HIPAAConfig body = null)
+        public HIPAAConfig UpdateHipaa (HIPAAConfig body = null)
         {
-             ApiResponse<HIPAAConfig> response = ComplianceHipaaPutWithHttpInfo(body);
+             ApiResponse<HIPAAConfig> response = UpdateHipaaWithHttpInfo(body);
              return response.Data;
         }
 
@@ -327,7 +327,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>ApiResponse of HIPAAConfig</returns>
-        public ApiResponse< HIPAAConfig > ComplianceHipaaPutWithHttpInfo (HIPAAConfig body = null)
+        public ApiResponse< HIPAAConfig > UpdateHipaaWithHttpInfo (HIPAAConfig body = null)
         {
             
     
@@ -374,9 +374,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ComplianceHipaaPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateHipaa: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ComplianceHipaaPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateHipaa: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<HIPAAConfig>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -389,9 +389,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of HIPAAConfig</returns>
-        public async System.Threading.Tasks.Task<HIPAAConfig> ComplianceHipaaPutAsync (HIPAAConfig body = null)
+        public async System.Threading.Tasks.Task<HIPAAConfig> UpdateHipaaAsync (HIPAAConfig body = null)
         {
-             ApiResponse<HIPAAConfig> response = await ComplianceHipaaPutAsyncWithHttpInfo(body);
+             ApiResponse<HIPAAConfig> response = await UpdateHipaaAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -401,7 +401,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (HIPAAConfig)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<HIPAAConfig>> ComplianceHipaaPutAsyncWithHttpInfo (HIPAAConfig body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<HIPAAConfig>> UpdateHipaaAsyncWithHttpInfo (HIPAAConfig body = null)
         {
             
     
@@ -448,9 +448,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ComplianceHipaaPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateHipaa: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ComplianceHipaaPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateHipaa: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<HIPAAConfig>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

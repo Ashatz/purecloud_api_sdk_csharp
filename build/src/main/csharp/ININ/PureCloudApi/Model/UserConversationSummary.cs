@@ -42,6 +42,13 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
+        /// Gets or Sets Callback
+        /// </summary>
+        [DataMember(Name="callback", EmitDefaultValue=false)]
+        public MediaSummary Callback { get; set; }
+  
+        
+        /// <summary>
         /// Gets or Sets Email
         /// </summary>
         [DataMember(Name="email", EmitDefaultValue=false)]
@@ -80,6 +87,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class UserConversationSummary {\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  Call: ").Append(Call).Append("\n");
+            sb.Append("  Callback: ").Append(Callback).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("  Chat: ").Append(Chat).Append("\n");
             sb.Append("  SocialExpression: ").Append(SocialExpression).Append("\n");
@@ -132,6 +140,11 @@ namespace ININ.PureCloudApi.Model
                     this.Call.Equals(other.Call)
                 ) && 
                 (
+                    this.Callback == other.Callback ||
+                    this.Callback != null &&
+                    this.Callback.Equals(other.Callback)
+                ) && 
+                (
                     this.Email == other.Email ||
                     this.Email != null &&
                     this.Email.Equals(other.Email)
@@ -170,6 +183,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.Call != null)
                     hash = hash * 57 + this.Call.GetHashCode();
+                
+                if (this.Callback != null)
+                    hash = hash * 57 + this.Callback.GetHashCode();
                 
                 if (this.Email != null)
                     hash = hash * 57 + this.Email.GetHashCode();

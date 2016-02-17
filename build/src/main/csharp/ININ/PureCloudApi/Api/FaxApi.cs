@@ -25,7 +25,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>FaxDocumentEntityListing</returns>
-        FaxDocumentEntityListing FaxDocumentsGet (int? pageSize = null, int? pageNumber = null);
+        FaxDocumentEntityListing GetDocuments (int? pageSize = null, int? pageNumber = null);
   
         /// <summary>
         /// Get a list of fax documents.
@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>ApiResponse of FaxDocumentEntityListing</returns>
-        ApiResponse<FaxDocumentEntityListing> FaxDocumentsGetWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        ApiResponse<FaxDocumentEntityListing> GetDocumentsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get a list of fax documents.
@@ -47,7 +47,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of FaxDocumentEntityListing</returns>
-        System.Threading.Tasks.Task<FaxDocumentEntityListing> FaxDocumentsGetAsync (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<FaxDocumentEntityListing> GetDocumentsAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get a list of fax documents.
@@ -58,7 +58,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (FaxDocumentEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FaxDocumentEntityListing>> FaxDocumentsGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<FaxDocumentEntityListing>> GetDocumentsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
         /// Get a document.
@@ -68,7 +68,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="documentId">Document ID</param>
         /// <returns>FaxDocument</returns>
-        FaxDocument FaxDocumentsDocumentidGet (string documentId);
+        FaxDocument GetDocument (string documentId);
   
         /// <summary>
         /// Get a document.
@@ -78,7 +78,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="documentId">Document ID</param>
         /// <returns>ApiResponse of FaxDocument</returns>
-        ApiResponse<FaxDocument> FaxDocumentsDocumentidGetWithHttpInfo (string documentId);
+        ApiResponse<FaxDocument> GetDocumentWithHttpInfo (string documentId);
 
         /// <summary>
         /// Get a document.
@@ -88,7 +88,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of FaxDocument</returns>
-        System.Threading.Tasks.Task<FaxDocument> FaxDocumentsDocumentidGetAsync (string documentId);
+        System.Threading.Tasks.Task<FaxDocument> GetDocumentAsync (string documentId);
 
         /// <summary>
         /// Get a document.
@@ -98,7 +98,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of ApiResponse (FaxDocument)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FaxDocument>> FaxDocumentsDocumentidGetAsyncWithHttpInfo (string documentId);
+        System.Threading.Tasks.Task<ApiResponse<FaxDocument>> GetDocumentAsyncWithHttpInfo (string documentId);
         
         /// <summary>
         /// Update a fax document.
@@ -109,7 +109,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="body">Document</param>
         /// <returns>FaxDocument</returns>
-        FaxDocument FaxDocumentsDocumentidPut (string documentId, FaxDocument body = null);
+        FaxDocument UpdateDocument (string documentId, FaxDocument body = null);
   
         /// <summary>
         /// Update a fax document.
@@ -120,7 +120,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="body">Document</param>
         /// <returns>ApiResponse of FaxDocument</returns>
-        ApiResponse<FaxDocument> FaxDocumentsDocumentidPutWithHttpInfo (string documentId, FaxDocument body = null);
+        ApiResponse<FaxDocument> UpdateDocumentWithHttpInfo (string documentId, FaxDocument body = null);
 
         /// <summary>
         /// Update a fax document.
@@ -131,7 +131,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="body">Document</param>
         /// <returns>Task of FaxDocument</returns>
-        System.Threading.Tasks.Task<FaxDocument> FaxDocumentsDocumentidPutAsync (string documentId, FaxDocument body = null);
+        System.Threading.Tasks.Task<FaxDocument> UpdateDocumentAsync (string documentId, FaxDocument body = null);
 
         /// <summary>
         /// Update a fax document.
@@ -142,7 +142,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="body">Document</param>
         /// <returns>Task of ApiResponse (FaxDocument)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FaxDocument>> FaxDocumentsDocumentidPutAsyncWithHttpInfo (string documentId, FaxDocument body = null);
+        System.Threading.Tasks.Task<ApiResponse<FaxDocument>> UpdateDocumentAsyncWithHttpInfo (string documentId, FaxDocument body = null);
         
         /// <summary>
         /// Delete a fax document.
@@ -152,7 +152,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="documentId">Document ID</param>
         /// <returns></returns>
-        void FaxDocumentsDocumentidDelete (string documentId);
+        void DeleteDocument (string documentId);
   
         /// <summary>
         /// Delete a fax document.
@@ -162,7 +162,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="documentId">Document ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> FaxDocumentsDocumentidDeleteWithHttpInfo (string documentId);
+        ApiResponse<Object> DeleteDocumentWithHttpInfo (string documentId);
 
         /// <summary>
         /// Delete a fax document.
@@ -172,7 +172,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task FaxDocumentsDocumentidDeleteAsync (string documentId);
+        System.Threading.Tasks.Task DeleteDocumentAsync (string documentId);
 
         /// <summary>
         /// Delete a fax document.
@@ -182,7 +182,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> FaxDocumentsDocumentidDeleteAsyncWithHttpInfo (string documentId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteDocumentAsyncWithHttpInfo (string documentId);
         
         /// <summary>
         /// Download a fax document.
@@ -192,7 +192,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="documentId">Document ID</param>
         /// <returns>DownloadResponse</returns>
-        DownloadResponse FaxDocumentsDocumentidContentGet (string documentId);
+        DownloadResponse GetDocumentContent (string documentId);
   
         /// <summary>
         /// Download a fax document.
@@ -202,7 +202,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="documentId">Document ID</param>
         /// <returns>ApiResponse of DownloadResponse</returns>
-        ApiResponse<DownloadResponse> FaxDocumentsDocumentidContentGetWithHttpInfo (string documentId);
+        ApiResponse<DownloadResponse> GetDocumentContentWithHttpInfo (string documentId);
 
         /// <summary>
         /// Download a fax document.
@@ -212,7 +212,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of DownloadResponse</returns>
-        System.Threading.Tasks.Task<DownloadResponse> FaxDocumentsDocumentidContentGetAsync (string documentId);
+        System.Threading.Tasks.Task<DownloadResponse> GetDocumentContentAsync (string documentId);
 
         /// <summary>
         /// Download a fax document.
@@ -222,7 +222,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of ApiResponse (DownloadResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> FaxDocumentsDocumentidContentGetAsyncWithHttpInfo (string documentId);
+        System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetDocumentContentAsyncWithHttpInfo (string documentId);
         
         /// <summary>
         /// Get fax summary
@@ -231,7 +231,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>FaxSummary</returns>
-        FaxSummary FaxSummaryGet ();
+        FaxSummary GetSummary ();
   
         /// <summary>
         /// Get fax summary
@@ -240,7 +240,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of FaxSummary</returns>
-        ApiResponse<FaxSummary> FaxSummaryGetWithHttpInfo ();
+        ApiResponse<FaxSummary> GetSummaryWithHttpInfo ();
 
         /// <summary>
         /// Get fax summary
@@ -249,7 +249,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of FaxSummary</returns>
-        System.Threading.Tasks.Task<FaxSummary> FaxSummaryGetAsync ();
+        System.Threading.Tasks.Task<FaxSummary> GetSummaryAsync ();
 
         /// <summary>
         /// Get fax summary
@@ -258,7 +258,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse (FaxSummary)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FaxSummary>> FaxSummaryGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<FaxSummary>> GetSummaryAsyncWithHttpInfo ();
         
     }
   
@@ -344,9 +344,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>FaxDocumentEntityListing</returns>
-        public FaxDocumentEntityListing FaxDocumentsGet (int? pageSize = null, int? pageNumber = null)
+        public FaxDocumentEntityListing GetDocuments (int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<FaxDocumentEntityListing> response = FaxDocumentsGetWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<FaxDocumentEntityListing> response = GetDocumentsWithHttpInfo(pageSize, pageNumber);
              return response.Data;
         }
 
@@ -356,7 +356,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>ApiResponse of FaxDocumentEntityListing</returns>
-        public ApiResponse< FaxDocumentEntityListing > FaxDocumentsGetWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< FaxDocumentEntityListing > GetDocumentsWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -404,9 +404,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling FaxDocumentsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetDocuments: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling FaxDocumentsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetDocuments: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<FaxDocumentEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -420,9 +420,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of FaxDocumentEntityListing</returns>
-        public async System.Threading.Tasks.Task<FaxDocumentEntityListing> FaxDocumentsGetAsync (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<FaxDocumentEntityListing> GetDocumentsAsync (int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<FaxDocumentEntityListing> response = await FaxDocumentsGetAsyncWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<FaxDocumentEntityListing> response = await GetDocumentsAsyncWithHttpInfo(pageSize, pageNumber);
              return response.Data;
 
         }
@@ -433,7 +433,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (FaxDocumentEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FaxDocumentEntityListing>> FaxDocumentsGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<FaxDocumentEntityListing>> GetDocumentsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -481,9 +481,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling FaxDocumentsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetDocuments: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling FaxDocumentsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetDocuments: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<FaxDocumentEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -496,9 +496,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="documentId">Document ID</param> 
         /// <returns>FaxDocument</returns>
-        public FaxDocument FaxDocumentsDocumentidGet (string documentId)
+        public FaxDocument GetDocument (string documentId)
         {
-             ApiResponse<FaxDocument> response = FaxDocumentsDocumentidGetWithHttpInfo(documentId);
+             ApiResponse<FaxDocument> response = GetDocumentWithHttpInfo(documentId);
              return response.Data;
         }
 
@@ -507,11 +507,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="documentId">Document ID</param> 
         /// <returns>ApiResponse of FaxDocument</returns>
-        public ApiResponse< FaxDocument > FaxDocumentsDocumentidGetWithHttpInfo (string documentId)
+        public ApiResponse< FaxDocument > GetDocumentWithHttpInfo (string documentId)
         {
             
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxDocumentsDocumentidGet");
+            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetDocument");
             
     
             var path_ = "/api/v1/fax/documents/{documentId}";
@@ -557,9 +557,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling FaxDocumentsDocumentidGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetDocument: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling FaxDocumentsDocumentidGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetDocument: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<FaxDocument>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -572,9 +572,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of FaxDocument</returns>
-        public async System.Threading.Tasks.Task<FaxDocument> FaxDocumentsDocumentidGetAsync (string documentId)
+        public async System.Threading.Tasks.Task<FaxDocument> GetDocumentAsync (string documentId)
         {
-             ApiResponse<FaxDocument> response = await FaxDocumentsDocumentidGetAsyncWithHttpInfo(documentId);
+             ApiResponse<FaxDocument> response = await GetDocumentAsyncWithHttpInfo(documentId);
              return response.Data;
 
         }
@@ -584,10 +584,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of ApiResponse (FaxDocument)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FaxDocument>> FaxDocumentsDocumentidGetAsyncWithHttpInfo (string documentId)
+        public async System.Threading.Tasks.Task<ApiResponse<FaxDocument>> GetDocumentAsyncWithHttpInfo (string documentId)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxDocumentsDocumentidGet");
+            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetDocument");
             
     
             var path_ = "/api/v1/fax/documents/{documentId}";
@@ -633,9 +633,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling FaxDocumentsDocumentidGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetDocument: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling FaxDocumentsDocumentidGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetDocument: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<FaxDocument>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -649,9 +649,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param> 
         /// <param name="body">Document</param> 
         /// <returns>FaxDocument</returns>
-        public FaxDocument FaxDocumentsDocumentidPut (string documentId, FaxDocument body = null)
+        public FaxDocument UpdateDocument (string documentId, FaxDocument body = null)
         {
-             ApiResponse<FaxDocument> response = FaxDocumentsDocumentidPutWithHttpInfo(documentId, body);
+             ApiResponse<FaxDocument> response = UpdateDocumentWithHttpInfo(documentId, body);
              return response.Data;
         }
 
@@ -661,11 +661,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param> 
         /// <param name="body">Document</param> 
         /// <returns>ApiResponse of FaxDocument</returns>
-        public ApiResponse< FaxDocument > FaxDocumentsDocumentidPutWithHttpInfo (string documentId, FaxDocument body = null)
+        public ApiResponse< FaxDocument > UpdateDocumentWithHttpInfo (string documentId, FaxDocument body = null)
         {
             
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxDocumentsDocumentidPut");
+            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling UpdateDocument");
             
     
             var path_ = "/api/v1/fax/documents/{documentId}";
@@ -712,9 +712,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling FaxDocumentsDocumentidPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateDocument: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling FaxDocumentsDocumentidPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateDocument: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<FaxDocument>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -728,9 +728,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="body">Document</param>
         /// <returns>Task of FaxDocument</returns>
-        public async System.Threading.Tasks.Task<FaxDocument> FaxDocumentsDocumentidPutAsync (string documentId, FaxDocument body = null)
+        public async System.Threading.Tasks.Task<FaxDocument> UpdateDocumentAsync (string documentId, FaxDocument body = null)
         {
-             ApiResponse<FaxDocument> response = await FaxDocumentsDocumentidPutAsyncWithHttpInfo(documentId, body);
+             ApiResponse<FaxDocument> response = await UpdateDocumentAsyncWithHttpInfo(documentId, body);
              return response.Data;
 
         }
@@ -741,10 +741,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="body">Document</param>
         /// <returns>Task of ApiResponse (FaxDocument)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FaxDocument>> FaxDocumentsDocumentidPutAsyncWithHttpInfo (string documentId, FaxDocument body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<FaxDocument>> UpdateDocumentAsyncWithHttpInfo (string documentId, FaxDocument body = null)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxDocumentsDocumentidPut");
+            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling UpdateDocument");
             
     
             var path_ = "/api/v1/fax/documents/{documentId}";
@@ -791,9 +791,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling FaxDocumentsDocumentidPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateDocument: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling FaxDocumentsDocumentidPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateDocument: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<FaxDocument>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -806,9 +806,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="documentId">Document ID</param> 
         /// <returns></returns>
-        public void FaxDocumentsDocumentidDelete (string documentId)
+        public void DeleteDocument (string documentId)
         {
-             FaxDocumentsDocumentidDeleteWithHttpInfo(documentId);
+             DeleteDocumentWithHttpInfo(documentId);
         }
 
         /// <summary>
@@ -816,11 +816,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="documentId">Document ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> FaxDocumentsDocumentidDeleteWithHttpInfo (string documentId)
+        public ApiResponse<Object> DeleteDocumentWithHttpInfo (string documentId)
         {
             
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxDocumentsDocumentidDelete");
+            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling DeleteDocument");
             
     
             var path_ = "/api/v1/fax/documents/{documentId}";
@@ -866,9 +866,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling FaxDocumentsDocumentidDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteDocument: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling FaxDocumentsDocumentidDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteDocument: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -881,9 +881,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task FaxDocumentsDocumentidDeleteAsync (string documentId)
+        public async System.Threading.Tasks.Task DeleteDocumentAsync (string documentId)
         {
-             await FaxDocumentsDocumentidDeleteAsyncWithHttpInfo(documentId);
+             await DeleteDocumentAsyncWithHttpInfo(documentId);
 
         }
 
@@ -892,10 +892,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> FaxDocumentsDocumentidDeleteAsyncWithHttpInfo (string documentId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteDocumentAsyncWithHttpInfo (string documentId)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxDocumentsDocumentidDelete");
+            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling DeleteDocument");
             
     
             var path_ = "/api/v1/fax/documents/{documentId}";
@@ -941,9 +941,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling FaxDocumentsDocumentidDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteDocument: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling FaxDocumentsDocumentidDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteDocument: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -956,9 +956,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="documentId">Document ID</param> 
         /// <returns>DownloadResponse</returns>
-        public DownloadResponse FaxDocumentsDocumentidContentGet (string documentId)
+        public DownloadResponse GetDocumentContent (string documentId)
         {
-             ApiResponse<DownloadResponse> response = FaxDocumentsDocumentidContentGetWithHttpInfo(documentId);
+             ApiResponse<DownloadResponse> response = GetDocumentContentWithHttpInfo(documentId);
              return response.Data;
         }
 
@@ -967,11 +967,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="documentId">Document ID</param> 
         /// <returns>ApiResponse of DownloadResponse</returns>
-        public ApiResponse< DownloadResponse > FaxDocumentsDocumentidContentGetWithHttpInfo (string documentId)
+        public ApiResponse< DownloadResponse > GetDocumentContentWithHttpInfo (string documentId)
         {
             
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxDocumentsDocumentidContentGet");
+            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetDocumentContent");
             
     
             var path_ = "/api/v1/fax/documents/{documentId}/content";
@@ -1017,9 +1017,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling FaxDocumentsDocumentidContentGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetDocumentContent: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling FaxDocumentsDocumentidContentGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetDocumentContent: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DownloadResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1032,9 +1032,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of DownloadResponse</returns>
-        public async System.Threading.Tasks.Task<DownloadResponse> FaxDocumentsDocumentidContentGetAsync (string documentId)
+        public async System.Threading.Tasks.Task<DownloadResponse> GetDocumentContentAsync (string documentId)
         {
-             ApiResponse<DownloadResponse> response = await FaxDocumentsDocumentidContentGetAsyncWithHttpInfo(documentId);
+             ApiResponse<DownloadResponse> response = await GetDocumentContentAsyncWithHttpInfo(documentId);
              return response.Data;
 
         }
@@ -1044,10 +1044,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of ApiResponse (DownloadResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> FaxDocumentsDocumentidContentGetAsyncWithHttpInfo (string documentId)
+        public async System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetDocumentContentAsyncWithHttpInfo (string documentId)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxDocumentsDocumentidContentGet");
+            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetDocumentContent");
             
     
             var path_ = "/api/v1/fax/documents/{documentId}/content";
@@ -1093,9 +1093,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling FaxDocumentsDocumentidContentGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetDocumentContent: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling FaxDocumentsDocumentidContentGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetDocumentContent: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DownloadResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1107,9 +1107,9 @@ namespace ININ.PureCloudApi.Api
         /// Get fax summary 
         /// </summary>
         /// <returns>FaxSummary</returns>
-        public FaxSummary FaxSummaryGet ()
+        public FaxSummary GetSummary ()
         {
-             ApiResponse<FaxSummary> response = FaxSummaryGetWithHttpInfo();
+             ApiResponse<FaxSummary> response = GetSummaryWithHttpInfo();
              return response.Data;
         }
 
@@ -1117,7 +1117,7 @@ namespace ININ.PureCloudApi.Api
         /// Get fax summary 
         /// </summary>
         /// <returns>ApiResponse of FaxSummary</returns>
-        public ApiResponse< FaxSummary > FaxSummaryGetWithHttpInfo ()
+        public ApiResponse< FaxSummary > GetSummaryWithHttpInfo ()
         {
             
     
@@ -1163,9 +1163,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling FaxSummaryGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSummary: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling FaxSummaryGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSummary: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<FaxSummary>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1177,9 +1177,9 @@ namespace ININ.PureCloudApi.Api
         /// Get fax summary 
         /// </summary>
         /// <returns>Task of FaxSummary</returns>
-        public async System.Threading.Tasks.Task<FaxSummary> FaxSummaryGetAsync ()
+        public async System.Threading.Tasks.Task<FaxSummary> GetSummaryAsync ()
         {
-             ApiResponse<FaxSummary> response = await FaxSummaryGetAsyncWithHttpInfo();
+             ApiResponse<FaxSummary> response = await GetSummaryAsyncWithHttpInfo();
              return response.Data;
 
         }
@@ -1188,7 +1188,7 @@ namespace ININ.PureCloudApi.Api
         /// Get fax summary 
         /// </summary>
         /// <returns>Task of ApiResponse (FaxSummary)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FaxSummary>> FaxSummaryGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<FaxSummary>> GetSummaryAsyncWithHttpInfo ()
         {
             
     
@@ -1234,9 +1234,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling FaxSummaryGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSummary: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling FaxSummaryGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSummary: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<FaxSummary>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

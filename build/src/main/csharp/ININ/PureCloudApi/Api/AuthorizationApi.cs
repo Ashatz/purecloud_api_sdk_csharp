@@ -25,7 +25,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>DomainLicenseEntityListing</returns>
-        DomainLicenseEntityListing AuthorizationLicensesGet (int? pageSize = null, int? pageNumber = null);
+        DomainLicenseEntityListing GetLicenses (int? pageSize = null, int? pageNumber = null);
   
         /// <summary>
         /// Retrieve a list of all licenses defined in the system
@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>ApiResponse of DomainLicenseEntityListing</returns>
-        ApiResponse<DomainLicenseEntityListing> AuthorizationLicensesGetWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        ApiResponse<DomainLicenseEntityListing> GetLicensesWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Retrieve a list of all licenses defined in the system
@@ -47,7 +47,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of DomainLicenseEntityListing</returns>
-        System.Threading.Tasks.Task<DomainLicenseEntityListing> AuthorizationLicensesGetAsync (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<DomainLicenseEntityListing> GetLicensesAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Retrieve a list of all licenses defined in the system
@@ -58,7 +58,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (DomainLicenseEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainLicenseEntityListing>> AuthorizationLicensesGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<DomainLicenseEntityListing>> GetLicensesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
         /// Get all permissions.
@@ -69,7 +69,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>PermissionCollectionEntityListing</returns>
-        PermissionCollectionEntityListing AuthorizationPermissionsGet (int? pageSize = null, int? pageNumber = null);
+        PermissionCollectionEntityListing GetPermissions (int? pageSize = null, int? pageNumber = null);
   
         /// <summary>
         /// Get all permissions.
@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>ApiResponse of PermissionCollectionEntityListing</returns>
-        ApiResponse<PermissionCollectionEntityListing> AuthorizationPermissionsGetWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        ApiResponse<PermissionCollectionEntityListing> GetPermissionsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get all permissions.
@@ -91,7 +91,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of PermissionCollectionEntityListing</returns>
-        System.Threading.Tasks.Task<PermissionCollectionEntityListing> AuthorizationPermissionsGetAsync (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<PermissionCollectionEntityListing> GetPermissionsAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get all permissions.
@@ -102,7 +102,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (PermissionCollectionEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PermissionCollectionEntityListing>> AuthorizationPermissionsGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<PermissionCollectionEntityListing>> GetPermissionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
         /// Get the list of enabled products
@@ -111,7 +111,7 @@ namespace ININ.PureCloudApi.Api
         /// Gets the list of enabled products. Some example product names are: collaborateFree, collaboratePro, communicate, and engage.
         /// </remarks>
         /// <returns>OrganizationProductEntityListing</returns>
-        OrganizationProductEntityListing AuthorizationProductsGet ();
+        OrganizationProductEntityListing GetProducts ();
   
         /// <summary>
         /// Get the list of enabled products
@@ -120,7 +120,7 @@ namespace ININ.PureCloudApi.Api
         /// Gets the list of enabled products. Some example product names are: collaborateFree, collaboratePro, communicate, and engage.
         /// </remarks>
         /// <returns>ApiResponse of OrganizationProductEntityListing</returns>
-        ApiResponse<OrganizationProductEntityListing> AuthorizationProductsGetWithHttpInfo ();
+        ApiResponse<OrganizationProductEntityListing> GetProductsWithHttpInfo ();
 
         /// <summary>
         /// Get the list of enabled products
@@ -129,7 +129,7 @@ namespace ININ.PureCloudApi.Api
         /// Gets the list of enabled products. Some example product names are: collaborateFree, collaboratePro, communicate, and engage.
         /// </remarks>
         /// <returns>Task of OrganizationProductEntityListing</returns>
-        System.Threading.Tasks.Task<OrganizationProductEntityListing> AuthorizationProductsGetAsync ();
+        System.Threading.Tasks.Task<OrganizationProductEntityListing> GetProductsAsync ();
 
         /// <summary>
         /// Get the list of enabled products
@@ -138,7 +138,7 @@ namespace ININ.PureCloudApi.Api
         /// Gets the list of enabled products. Some example product names are: collaborateFree, collaboratePro, communicate, and engage.
         /// </remarks>
         /// <returns>Task of ApiResponse (OrganizationProductEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationProductEntityListing>> AuthorizationProductsGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<OrganizationProductEntityListing>> GetProductsAsyncWithHttpInfo ();
         
         /// <summary>
         /// Retrieve a list of all roles defined for the organization
@@ -153,7 +153,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission"></param>
         /// <param name="userCount"></param>
         /// <returns>OrganizationRoleEntityListing</returns>
-        OrganizationRoleEntityListing AuthorizationRolesGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, List<string> permission = null, bool? userCount = null);
+        OrganizationRoleEntityListing GetRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, List<string> permission = null, bool? userCount = null);
   
         /// <summary>
         /// Retrieve a list of all roles defined for the organization
@@ -168,7 +168,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission"></param>
         /// <param name="userCount"></param>
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
-        ApiResponse<OrganizationRoleEntityListing> AuthorizationRolesGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, List<string> permission = null, bool? userCount = null);
+        ApiResponse<OrganizationRoleEntityListing> GetRolesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, List<string> permission = null, bool? userCount = null);
 
         /// <summary>
         /// Retrieve a list of all roles defined for the organization
@@ -183,7 +183,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission"></param>
         /// <param name="userCount"></param>
         /// <returns>Task of OrganizationRoleEntityListing</returns>
-        System.Threading.Tasks.Task<OrganizationRoleEntityListing> AuthorizationRolesGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, List<string> permission = null, bool? userCount = null);
+        System.Threading.Tasks.Task<OrganizationRoleEntityListing> GetRolesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, List<string> permission = null, bool? userCount = null);
 
         /// <summary>
         /// Retrieve a list of all roles defined for the organization
@@ -198,7 +198,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission"></param>
         /// <param name="userCount"></param>
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> AuthorizationRolesGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, List<string> permission = null, bool? userCount = null);
+        System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> GetRolesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, List<string> permission = null, bool? userCount = null);
         
         /// <summary>
         /// Create an organization role.
@@ -208,7 +208,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>DomainOrganizationRole</returns>
-        DomainOrganizationRole AuthorizationRolesPost (DomainOrganizationRole body = null);
+        DomainOrganizationRole CreateRoles (DomainOrganizationRole body = null);
   
         /// <summary>
         /// Create an organization role.
@@ -218,7 +218,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
-        ApiResponse<DomainOrganizationRole> AuthorizationRolesPostWithHttpInfo (DomainOrganizationRole body = null);
+        ApiResponse<DomainOrganizationRole> CreateRolesWithHttpInfo (DomainOrganizationRole body = null);
 
         /// <summary>
         /// Create an organization role.
@@ -228,7 +228,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of DomainOrganizationRole</returns>
-        System.Threading.Tasks.Task<DomainOrganizationRole> AuthorizationRolesPostAsync (DomainOrganizationRole body = null);
+        System.Threading.Tasks.Task<DomainOrganizationRole> CreateRolesAsync (DomainOrganizationRole body = null);
 
         /// <summary>
         /// Create an organization role.
@@ -238,7 +238,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> AuthorizationRolesPostAsyncWithHttpInfo (DomainOrganizationRole body = null);
+        System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> CreateRolesAsyncWithHttpInfo (DomainOrganizationRole body = null);
         
         /// <summary>
         /// Restore specified default roles
@@ -248,7 +248,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>OrganizationRoleEntityListing</returns>
-        OrganizationRoleEntityListing AuthorizationRolesDefaultPut (List<DomainOrganizationRole> body = null);
+        OrganizationRoleEntityListing UpdateRolesDefault (List<DomainOrganizationRole> body = null);
   
         /// <summary>
         /// Restore specified default roles
@@ -258,7 +258,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
-        ApiResponse<OrganizationRoleEntityListing> AuthorizationRolesDefaultPutWithHttpInfo (List<DomainOrganizationRole> body = null);
+        ApiResponse<OrganizationRoleEntityListing> UpdateRolesDefaultWithHttpInfo (List<DomainOrganizationRole> body = null);
 
         /// <summary>
         /// Restore specified default roles
@@ -268,7 +268,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of OrganizationRoleEntityListing</returns>
-        System.Threading.Tasks.Task<OrganizationRoleEntityListing> AuthorizationRolesDefaultPutAsync (List<DomainOrganizationRole> body = null);
+        System.Threading.Tasks.Task<OrganizationRoleEntityListing> UpdateRolesDefaultAsync (List<DomainOrganizationRole> body = null);
 
         /// <summary>
         /// Restore specified default roles
@@ -278,7 +278,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> AuthorizationRolesDefaultPutAsyncWithHttpInfo (List<DomainOrganizationRole> body = null);
+        System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> UpdateRolesDefaultAsyncWithHttpInfo (List<DomainOrganizationRole> body = null);
         
         /// <summary>
         /// Restores all default roles
@@ -288,7 +288,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="force">Restore default roles</param>
         /// <returns>OrganizationRoleEntityListing</returns>
-        OrganizationRoleEntityListing AuthorizationRolesDefaultPost (bool? force = null);
+        OrganizationRoleEntityListing CreateRolesDefault (bool? force = null);
   
         /// <summary>
         /// Restores all default roles
@@ -298,7 +298,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="force">Restore default roles</param>
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
-        ApiResponse<OrganizationRoleEntityListing> AuthorizationRolesDefaultPostWithHttpInfo (bool? force = null);
+        ApiResponse<OrganizationRoleEntityListing> CreateRolesDefaultWithHttpInfo (bool? force = null);
 
         /// <summary>
         /// Restores all default roles
@@ -308,7 +308,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="force">Restore default roles</param>
         /// <returns>Task of OrganizationRoleEntityListing</returns>
-        System.Threading.Tasks.Task<OrganizationRoleEntityListing> AuthorizationRolesDefaultPostAsync (bool? force = null);
+        System.Threading.Tasks.Task<OrganizationRoleEntityListing> CreateRolesDefaultAsync (bool? force = null);
 
         /// <summary>
         /// Restores all default roles
@@ -318,7 +318,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="force">Restore default roles</param>
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> AuthorizationRolesDefaultPostAsyncWithHttpInfo (bool? force = null);
+        System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> CreateRolesDefaultAsyncWithHttpInfo (bool? force = null);
         
         /// <summary>
         /// Get an org role to default role comparison comparison
@@ -329,7 +329,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="leftRoleId">Left Role ID</param>
         /// <param name="rightRoleId">Right Role id</param>
         /// <returns>DomainOrgRoleDifference</returns>
-        DomainOrgRoleDifference AuthorizationRolesLeftroleidComparedefaultRightroleidGet (string leftRoleId, string rightRoleId);
+        DomainOrgRoleDifference GetRolesLeftRoleComparedefaultByRightRoleId (string leftRoleId, string rightRoleId);
   
         /// <summary>
         /// Get an org role to default role comparison comparison
@@ -340,7 +340,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="leftRoleId">Left Role ID</param>
         /// <param name="rightRoleId">Right Role id</param>
         /// <returns>ApiResponse of DomainOrgRoleDifference</returns>
-        ApiResponse<DomainOrgRoleDifference> AuthorizationRolesLeftroleidComparedefaultRightroleidGetWithHttpInfo (string leftRoleId, string rightRoleId);
+        ApiResponse<DomainOrgRoleDifference> GetRolesLeftRoleComparedefaultByRightRoleIdWithHttpInfo (string leftRoleId, string rightRoleId);
 
         /// <summary>
         /// Get an org role to default role comparison comparison
@@ -351,7 +351,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="leftRoleId">Left Role ID</param>
         /// <param name="rightRoleId">Right Role id</param>
         /// <returns>Task of DomainOrgRoleDifference</returns>
-        System.Threading.Tasks.Task<DomainOrgRoleDifference> AuthorizationRolesLeftroleidComparedefaultRightroleidGetAsync (string leftRoleId, string rightRoleId);
+        System.Threading.Tasks.Task<DomainOrgRoleDifference> GetRolesLeftRoleComparedefaultByRightRoleIdAsync (string leftRoleId, string rightRoleId);
 
         /// <summary>
         /// Get an org role to default role comparison comparison
@@ -362,7 +362,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="leftRoleId">Left Role ID</param>
         /// <param name="rightRoleId">Right Role id</param>
         /// <returns>Task of ApiResponse (DomainOrgRoleDifference)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainOrgRoleDifference>> AuthorizationRolesLeftroleidComparedefaultRightroleidGetAsyncWithHttpInfo (string leftRoleId, string rightRoleId);
+        System.Threading.Tasks.Task<ApiResponse<DomainOrgRoleDifference>> GetRolesLeftRoleComparedefaultByRightRoleIdAsyncWithHttpInfo (string leftRoleId, string rightRoleId);
         
         /// <summary>
         /// Get an unsaved org role to default role comparison
@@ -374,7 +374,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="rightRoleId">Right Role id</param>
         /// <param name="body"></param>
         /// <returns>DomainOrgRoleDifference</returns>
-        DomainOrgRoleDifference AuthorizationRolesLeftroleidComparedefaultRightroleidPost (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null);
+        DomainOrgRoleDifference CreateRolesLeftRoleComparedefaultByRightRoleId (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null);
   
         /// <summary>
         /// Get an unsaved org role to default role comparison
@@ -386,7 +386,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="rightRoleId">Right Role id</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of DomainOrgRoleDifference</returns>
-        ApiResponse<DomainOrgRoleDifference> AuthorizationRolesLeftroleidComparedefaultRightroleidPostWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null);
+        ApiResponse<DomainOrgRoleDifference> CreateRolesLeftRoleComparedefaultByRightRoleIdWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null);
 
         /// <summary>
         /// Get an unsaved org role to default role comparison
@@ -398,7 +398,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="rightRoleId">Right Role id</param>
         /// <param name="body"></param>
         /// <returns>Task of DomainOrgRoleDifference</returns>
-        System.Threading.Tasks.Task<DomainOrgRoleDifference> AuthorizationRolesLeftroleidComparedefaultRightroleidPostAsync (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null);
+        System.Threading.Tasks.Task<DomainOrgRoleDifference> CreateRolesLeftRoleComparedefaultByRightRoleIdAsync (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null);
 
         /// <summary>
         /// Get an unsaved org role to default role comparison
@@ -410,7 +410,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="rightRoleId">Right Role id</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DomainOrgRoleDifference)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainOrgRoleDifference>> AuthorizationRolesLeftroleidComparedefaultRightroleidPostAsyncWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null);
+        System.Threading.Tasks.Task<ApiResponse<DomainOrgRoleDifference>> CreateRolesLeftRoleComparedefaultByRightRoleIdAsyncWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null);
         
         /// <summary>
         /// Get a single organization role.
@@ -420,7 +420,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="roleId">Role ID</param>
         /// <returns>DomainOrganizationRole</returns>
-        DomainOrganizationRole AuthorizationRolesRoleidGet (string roleId);
+        DomainOrganizationRole GetRole (string roleId);
   
         /// <summary>
         /// Get a single organization role.
@@ -430,7 +430,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="roleId">Role ID</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
-        ApiResponse<DomainOrganizationRole> AuthorizationRolesRoleidGetWithHttpInfo (string roleId);
+        ApiResponse<DomainOrganizationRole> GetRoleWithHttpInfo (string roleId);
 
         /// <summary>
         /// Get a single organization role.
@@ -440,7 +440,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="roleId">Role ID</param>
         /// <returns>Task of DomainOrganizationRole</returns>
-        System.Threading.Tasks.Task<DomainOrganizationRole> AuthorizationRolesRoleidGetAsync (string roleId);
+        System.Threading.Tasks.Task<DomainOrganizationRole> GetRoleAsync (string roleId);
 
         /// <summary>
         /// Get a single organization role.
@@ -450,7 +450,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="roleId">Role ID</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> AuthorizationRolesRoleidGetAsyncWithHttpInfo (string roleId);
+        System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> GetRoleAsyncWithHttpInfo (string roleId);
         
         /// <summary>
         /// Update an organization role.
@@ -461,7 +461,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>DomainOrganizationRole</returns>
-        DomainOrganizationRole AuthorizationRolesRoleidPut (string roleId, DomainOrganizationRole body = null);
+        DomainOrganizationRole UpdateRole (string roleId, DomainOrganizationRole body = null);
   
         /// <summary>
         /// Update an organization role.
@@ -472,7 +472,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
-        ApiResponse<DomainOrganizationRole> AuthorizationRolesRoleidPutWithHttpInfo (string roleId, DomainOrganizationRole body = null);
+        ApiResponse<DomainOrganizationRole> UpdateRoleWithHttpInfo (string roleId, DomainOrganizationRole body = null);
 
         /// <summary>
         /// Update an organization role.
@@ -483,7 +483,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>Task of DomainOrganizationRole</returns>
-        System.Threading.Tasks.Task<DomainOrganizationRole> AuthorizationRolesRoleidPutAsync (string roleId, DomainOrganizationRole body = null);
+        System.Threading.Tasks.Task<DomainOrganizationRole> UpdateRoleAsync (string roleId, DomainOrganizationRole body = null);
 
         /// <summary>
         /// Update an organization role.
@@ -494,7 +494,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> AuthorizationRolesRoleidPutAsyncWithHttpInfo (string roleId, DomainOrganizationRole body = null);
+        System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> UpdateRoleAsyncWithHttpInfo (string roleId, DomainOrganizationRole body = null);
         
         /// <summary>
         /// Delete an organization role.
@@ -504,7 +504,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="roleId">Role ID</param>
         /// <returns></returns>
-        void AuthorizationRolesRoleidDelete (string roleId);
+        void DeleteRole (string roleId);
   
         /// <summary>
         /// Delete an organization role.
@@ -514,7 +514,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="roleId">Role ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> AuthorizationRolesRoleidDeleteWithHttpInfo (string roleId);
+        ApiResponse<Object> DeleteRoleWithHttpInfo (string roleId);
 
         /// <summary>
         /// Delete an organization role.
@@ -524,7 +524,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="roleId">Role ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task AuthorizationRolesRoleidDeleteAsync (string roleId);
+        System.Threading.Tasks.Task DeleteRoleAsync (string roleId);
 
         /// <summary>
         /// Delete an organization role.
@@ -534,7 +534,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="roleId">Role ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> AuthorizationRolesRoleidDeleteAsyncWithHttpInfo (string roleId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoleAsyncWithHttpInfo (string roleId);
         
         /// <summary>
         /// Patch Organization Role for needsUpdate Field
@@ -545,7 +545,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>DomainOrganizationRole</returns>
-        DomainOrganizationRole AuthorizationRolesRoleidPatch (string roleId, DomainOrganizationRole body = null);
+        DomainOrganizationRole PatchRole (string roleId, DomainOrganizationRole body = null);
   
         /// <summary>
         /// Patch Organization Role for needsUpdate Field
@@ -556,7 +556,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
-        ApiResponse<DomainOrganizationRole> AuthorizationRolesRoleidPatchWithHttpInfo (string roleId, DomainOrganizationRole body = null);
+        ApiResponse<DomainOrganizationRole> PatchRoleWithHttpInfo (string roleId, DomainOrganizationRole body = null);
 
         /// <summary>
         /// Patch Organization Role for needsUpdate Field
@@ -567,7 +567,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>Task of DomainOrganizationRole</returns>
-        System.Threading.Tasks.Task<DomainOrganizationRole> AuthorizationRolesRoleidPatchAsync (string roleId, DomainOrganizationRole body = null);
+        System.Threading.Tasks.Task<DomainOrganizationRole> PatchRoleAsync (string roleId, DomainOrganizationRole body = null);
 
         /// <summary>
         /// Patch Organization Role for needsUpdate Field
@@ -578,7 +578,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> AuthorizationRolesRoleidPatchAsyncWithHttpInfo (string roleId, DomainOrganizationRole body = null);
+        System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PatchRoleAsyncWithHttpInfo (string roleId, DomainOrganizationRole body = null);
         
         /// <summary>
         /// Sets the users for the role
@@ -589,7 +589,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>List&lt;string&gt;</returns>
-        List<string> AuthorizationRolesRoleidUsersAddPut (string roleId, List<string> body = null);
+        List<string> UpdateRoleUsersAdd (string roleId, List<string> body = null);
   
         /// <summary>
         /// Sets the users for the role
@@ -600,7 +600,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        ApiResponse<List<string>> AuthorizationRolesRoleidUsersAddPutWithHttpInfo (string roleId, List<string> body = null);
+        ApiResponse<List<string>> UpdateRoleUsersAddWithHttpInfo (string roleId, List<string> body = null);
 
         /// <summary>
         /// Sets the users for the role
@@ -611,7 +611,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;string&gt;</returns>
-        System.Threading.Tasks.Task<List<string>> AuthorizationRolesRoleidUsersAddPutAsync (string roleId, List<string> body = null);
+        System.Threading.Tasks.Task<List<string>> UpdateRoleUsersAddAsync (string roleId, List<string> body = null);
 
         /// <summary>
         /// Sets the users for the role
@@ -622,7 +622,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<string>>> AuthorizationRolesRoleidUsersAddPutAsyncWithHttpInfo (string roleId, List<string> body = null);
+        System.Threading.Tasks.Task<ApiResponse<List<string>>> UpdateRoleUsersAddAsyncWithHttpInfo (string roleId, List<string> body = null);
         
         /// <summary>
         /// Removes the users from the role
@@ -633,7 +633,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>List&lt;string&gt;</returns>
-        List<string> AuthorizationRolesRoleidUsersRemovePut (string roleId, List<string> body = null);
+        List<string> UpdateRoleUsersRemove (string roleId, List<string> body = null);
   
         /// <summary>
         /// Removes the users from the role
@@ -644,7 +644,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        ApiResponse<List<string>> AuthorizationRolesRoleidUsersRemovePutWithHttpInfo (string roleId, List<string> body = null);
+        ApiResponse<List<string>> UpdateRoleUsersRemoveWithHttpInfo (string roleId, List<string> body = null);
 
         /// <summary>
         /// Removes the users from the role
@@ -655,7 +655,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;string&gt;</returns>
-        System.Threading.Tasks.Task<List<string>> AuthorizationRolesRoleidUsersRemovePutAsync (string roleId, List<string> body = null);
+        System.Threading.Tasks.Task<List<string>> UpdateRoleUsersRemoveAsync (string roleId, List<string> body = null);
 
         /// <summary>
         /// Removes the users from the role
@@ -666,7 +666,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<string>>> AuthorizationRolesRoleidUsersRemovePutAsyncWithHttpInfo (string roleId, List<string> body = null);
+        System.Threading.Tasks.Task<ApiResponse<List<string>>> UpdateRoleUsersRemoveAsyncWithHttpInfo (string roleId, List<string> body = null);
         
         /// <summary>
         /// Get the list of roles for a user.
@@ -676,7 +676,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="userId">User ID</param>
         /// <returns>UserAuthorization</returns>
-        UserAuthorization AuthorizationUsersUseridRolesGet (string userId);
+        UserAuthorization GetUserRoles (string userId);
   
         /// <summary>
         /// Get the list of roles for a user.
@@ -686,7 +686,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
-        ApiResponse<UserAuthorization> AuthorizationUsersUseridRolesGetWithHttpInfo (string userId);
+        ApiResponse<UserAuthorization> GetUserRolesWithHttpInfo (string userId);
 
         /// <summary>
         /// Get the list of roles for a user.
@@ -696,7 +696,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="userId">User ID</param>
         /// <returns>Task of UserAuthorization</returns>
-        System.Threading.Tasks.Task<UserAuthorization> AuthorizationUsersUseridRolesGetAsync (string userId);
+        System.Threading.Tasks.Task<UserAuthorization> GetUserRolesAsync (string userId);
 
         /// <summary>
         /// Get the list of roles for a user.
@@ -706,7 +706,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> AuthorizationUsersUseridRolesGetAsyncWithHttpInfo (string userId);
+        System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> GetUserRolesAsyncWithHttpInfo (string userId);
         
         /// <summary>
         /// Sets the user&#39;s roles
@@ -717,7 +717,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
         /// <returns>List&lt;string&gt;</returns>
-        List<string> AuthorizationUsersUseridRolesPut (string userId, List<string> body = null);
+        List<string> UpdateUserRoles (string userId, List<string> body = null);
   
         /// <summary>
         /// Sets the user&#39;s roles
@@ -728,7 +728,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        ApiResponse<List<string>> AuthorizationUsersUseridRolesPutWithHttpInfo (string userId, List<string> body = null);
+        ApiResponse<List<string>> UpdateUserRolesWithHttpInfo (string userId, List<string> body = null);
 
         /// <summary>
         /// Sets the user&#39;s roles
@@ -739,7 +739,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;string&gt;</returns>
-        System.Threading.Tasks.Task<List<string>> AuthorizationUsersUseridRolesPutAsync (string userId, List<string> body = null);
+        System.Threading.Tasks.Task<List<string>> UpdateUserRolesAsync (string userId, List<string> body = null);
 
         /// <summary>
         /// Sets the user&#39;s roles
@@ -750,7 +750,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<string>>> AuthorizationUsersUseridRolesPutAsyncWithHttpInfo (string userId, List<string> body = null);
+        System.Threading.Tasks.Task<ApiResponse<List<string>>> UpdateUserRolesAsyncWithHttpInfo (string userId, List<string> body = null);
         
         /// <summary>
         /// Removes all the roles from the user.
@@ -760,7 +760,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="userId">User ID</param>
         /// <returns></returns>
-        void AuthorizationUsersUseridRolesDelete (string userId);
+        void DeleteUserRoles (string userId);
   
         /// <summary>
         /// Removes all the roles from the user.
@@ -770,7 +770,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> AuthorizationUsersUseridRolesDeleteWithHttpInfo (string userId);
+        ApiResponse<Object> DeleteUserRolesWithHttpInfo (string userId);
 
         /// <summary>
         /// Removes all the roles from the user.
@@ -780,7 +780,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="userId">User ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task AuthorizationUsersUseridRolesDeleteAsync (string userId);
+        System.Threading.Tasks.Task DeleteUserRolesAsync (string userId);
 
         /// <summary>
         /// Removes all the roles from the user.
@@ -790,7 +790,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> AuthorizationUsersUseridRolesDeleteAsyncWithHttpInfo (string userId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserRolesAsyncWithHttpInfo (string userId);
         
     }
   
@@ -876,9 +876,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>DomainLicenseEntityListing</returns>
-        public DomainLicenseEntityListing AuthorizationLicensesGet (int? pageSize = null, int? pageNumber = null)
+        public DomainLicenseEntityListing GetLicenses (int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<DomainLicenseEntityListing> response = AuthorizationLicensesGetWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<DomainLicenseEntityListing> response = GetLicensesWithHttpInfo(pageSize, pageNumber);
              return response.Data;
         }
 
@@ -888,7 +888,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>ApiResponse of DomainLicenseEntityListing</returns>
-        public ApiResponse< DomainLicenseEntityListing > AuthorizationLicensesGetWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< DomainLicenseEntityListing > GetLicensesWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -936,9 +936,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationLicensesGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetLicenses: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationLicensesGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetLicenses: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DomainLicenseEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -952,9 +952,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of DomainLicenseEntityListing</returns>
-        public async System.Threading.Tasks.Task<DomainLicenseEntityListing> AuthorizationLicensesGetAsync (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<DomainLicenseEntityListing> GetLicensesAsync (int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<DomainLicenseEntityListing> response = await AuthorizationLicensesGetAsyncWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<DomainLicenseEntityListing> response = await GetLicensesAsyncWithHttpInfo(pageSize, pageNumber);
              return response.Data;
 
         }
@@ -965,7 +965,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (DomainLicenseEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainLicenseEntityListing>> AuthorizationLicensesGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainLicenseEntityListing>> GetLicensesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -1013,9 +1013,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationLicensesGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetLicenses: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationLicensesGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetLicenses: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DomainLicenseEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1029,9 +1029,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>PermissionCollectionEntityListing</returns>
-        public PermissionCollectionEntityListing AuthorizationPermissionsGet (int? pageSize = null, int? pageNumber = null)
+        public PermissionCollectionEntityListing GetPermissions (int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<PermissionCollectionEntityListing> response = AuthorizationPermissionsGetWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<PermissionCollectionEntityListing> response = GetPermissionsWithHttpInfo(pageSize, pageNumber);
              return response.Data;
         }
 
@@ -1041,7 +1041,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>ApiResponse of PermissionCollectionEntityListing</returns>
-        public ApiResponse< PermissionCollectionEntityListing > AuthorizationPermissionsGetWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< PermissionCollectionEntityListing > GetPermissionsWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -1089,9 +1089,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationPermissionsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetPermissions: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationPermissionsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetPermissions: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<PermissionCollectionEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1105,9 +1105,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of PermissionCollectionEntityListing</returns>
-        public async System.Threading.Tasks.Task<PermissionCollectionEntityListing> AuthorizationPermissionsGetAsync (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<PermissionCollectionEntityListing> GetPermissionsAsync (int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<PermissionCollectionEntityListing> response = await AuthorizationPermissionsGetAsyncWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<PermissionCollectionEntityListing> response = await GetPermissionsAsyncWithHttpInfo(pageSize, pageNumber);
              return response.Data;
 
         }
@@ -1118,7 +1118,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (PermissionCollectionEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PermissionCollectionEntityListing>> AuthorizationPermissionsGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PermissionCollectionEntityListing>> GetPermissionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -1166,9 +1166,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationPermissionsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetPermissions: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationPermissionsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetPermissions: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<PermissionCollectionEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1180,9 +1180,9 @@ namespace ININ.PureCloudApi.Api
         /// Get the list of enabled products Gets the list of enabled products. Some example product names are: collaborateFree, collaboratePro, communicate, and engage.
         /// </summary>
         /// <returns>OrganizationProductEntityListing</returns>
-        public OrganizationProductEntityListing AuthorizationProductsGet ()
+        public OrganizationProductEntityListing GetProducts ()
         {
-             ApiResponse<OrganizationProductEntityListing> response = AuthorizationProductsGetWithHttpInfo();
+             ApiResponse<OrganizationProductEntityListing> response = GetProductsWithHttpInfo();
              return response.Data;
         }
 
@@ -1190,7 +1190,7 @@ namespace ININ.PureCloudApi.Api
         /// Get the list of enabled products Gets the list of enabled products. Some example product names are: collaborateFree, collaboratePro, communicate, and engage.
         /// </summary>
         /// <returns>ApiResponse of OrganizationProductEntityListing</returns>
-        public ApiResponse< OrganizationProductEntityListing > AuthorizationProductsGetWithHttpInfo ()
+        public ApiResponse< OrganizationProductEntityListing > GetProductsWithHttpInfo ()
         {
             
     
@@ -1236,9 +1236,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationProductsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProducts: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationProductsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProducts: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OrganizationProductEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1250,9 +1250,9 @@ namespace ININ.PureCloudApi.Api
         /// Get the list of enabled products Gets the list of enabled products. Some example product names are: collaborateFree, collaboratePro, communicate, and engage.
         /// </summary>
         /// <returns>Task of OrganizationProductEntityListing</returns>
-        public async System.Threading.Tasks.Task<OrganizationProductEntityListing> AuthorizationProductsGetAsync ()
+        public async System.Threading.Tasks.Task<OrganizationProductEntityListing> GetProductsAsync ()
         {
-             ApiResponse<OrganizationProductEntityListing> response = await AuthorizationProductsGetAsyncWithHttpInfo();
+             ApiResponse<OrganizationProductEntityListing> response = await GetProductsAsyncWithHttpInfo();
              return response.Data;
 
         }
@@ -1261,7 +1261,7 @@ namespace ININ.PureCloudApi.Api
         /// Get the list of enabled products Gets the list of enabled products. Some example product names are: collaborateFree, collaboratePro, communicate, and engage.
         /// </summary>
         /// <returns>Task of ApiResponse (OrganizationProductEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrganizationProductEntityListing>> AuthorizationProductsGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationProductEntityListing>> GetProductsAsyncWithHttpInfo ()
         {
             
     
@@ -1307,9 +1307,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationProductsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProducts: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationProductsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProducts: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OrganizationProductEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1327,9 +1327,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission"></param> 
         /// <param name="userCount"></param> 
         /// <returns>OrganizationRoleEntityListing</returns>
-        public OrganizationRoleEntityListing AuthorizationRolesGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, List<string> permission = null, bool? userCount = null)
+        public OrganizationRoleEntityListing GetRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, List<string> permission = null, bool? userCount = null)
         {
-             ApiResponse<OrganizationRoleEntityListing> response = AuthorizationRolesGetWithHttpInfo(pageSize, pageNumber, sortBy, expand, permission, userCount);
+             ApiResponse<OrganizationRoleEntityListing> response = GetRolesWithHttpInfo(pageSize, pageNumber, sortBy, expand, permission, userCount);
              return response.Data;
         }
 
@@ -1343,7 +1343,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission"></param> 
         /// <param name="userCount"></param> 
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
-        public ApiResponse< OrganizationRoleEntityListing > AuthorizationRolesGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, List<string> permission = null, bool? userCount = null)
+        public ApiResponse< OrganizationRoleEntityListing > GetRolesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, List<string> permission = null, bool? userCount = null)
         {
             
     
@@ -1395,9 +1395,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetRoles: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetRoles: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OrganizationRoleEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1415,9 +1415,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission"></param>
         /// <param name="userCount"></param>
         /// <returns>Task of OrganizationRoleEntityListing</returns>
-        public async System.Threading.Tasks.Task<OrganizationRoleEntityListing> AuthorizationRolesGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, List<string> permission = null, bool? userCount = null)
+        public async System.Threading.Tasks.Task<OrganizationRoleEntityListing> GetRolesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, List<string> permission = null, bool? userCount = null)
         {
-             ApiResponse<OrganizationRoleEntityListing> response = await AuthorizationRolesGetAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, permission, userCount);
+             ApiResponse<OrganizationRoleEntityListing> response = await GetRolesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, permission, userCount);
              return response.Data;
 
         }
@@ -1432,7 +1432,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission"></param>
         /// <param name="userCount"></param>
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> AuthorizationRolesGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, List<string> permission = null, bool? userCount = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> GetRolesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, List<string> permission = null, bool? userCount = null)
         {
             
     
@@ -1484,9 +1484,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetRoles: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetRoles: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OrganizationRoleEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1499,9 +1499,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>DomainOrganizationRole</returns>
-        public DomainOrganizationRole AuthorizationRolesPost (DomainOrganizationRole body = null)
+        public DomainOrganizationRole CreateRoles (DomainOrganizationRole body = null)
         {
-             ApiResponse<DomainOrganizationRole> response = AuthorizationRolesPostWithHttpInfo(body);
+             ApiResponse<DomainOrganizationRole> response = CreateRolesWithHttpInfo(body);
              return response.Data;
         }
 
@@ -1510,7 +1510,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
-        public ApiResponse< DomainOrganizationRole > AuthorizationRolesPostWithHttpInfo (DomainOrganizationRole body = null)
+        public ApiResponse< DomainOrganizationRole > CreateRolesWithHttpInfo (DomainOrganizationRole body = null)
         {
             
     
@@ -1557,9 +1557,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateRoles: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateRoles: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DomainOrganizationRole>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1572,9 +1572,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of DomainOrganizationRole</returns>
-        public async System.Threading.Tasks.Task<DomainOrganizationRole> AuthorizationRolesPostAsync (DomainOrganizationRole body = null)
+        public async System.Threading.Tasks.Task<DomainOrganizationRole> CreateRolesAsync (DomainOrganizationRole body = null)
         {
-             ApiResponse<DomainOrganizationRole> response = await AuthorizationRolesPostAsyncWithHttpInfo(body);
+             ApiResponse<DomainOrganizationRole> response = await CreateRolesAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -1584,7 +1584,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> AuthorizationRolesPostAsyncWithHttpInfo (DomainOrganizationRole body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> CreateRolesAsyncWithHttpInfo (DomainOrganizationRole body = null)
         {
             
     
@@ -1631,9 +1631,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateRoles: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateRoles: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DomainOrganizationRole>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1646,9 +1646,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>OrganizationRoleEntityListing</returns>
-        public OrganizationRoleEntityListing AuthorizationRolesDefaultPut (List<DomainOrganizationRole> body = null)
+        public OrganizationRoleEntityListing UpdateRolesDefault (List<DomainOrganizationRole> body = null)
         {
-             ApiResponse<OrganizationRoleEntityListing> response = AuthorizationRolesDefaultPutWithHttpInfo(body);
+             ApiResponse<OrganizationRoleEntityListing> response = UpdateRolesDefaultWithHttpInfo(body);
              return response.Data;
         }
 
@@ -1657,7 +1657,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
-        public ApiResponse< OrganizationRoleEntityListing > AuthorizationRolesDefaultPutWithHttpInfo (List<DomainOrganizationRole> body = null)
+        public ApiResponse< OrganizationRoleEntityListing > UpdateRolesDefaultWithHttpInfo (List<DomainOrganizationRole> body = null)
         {
             
     
@@ -1704,9 +1704,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesDefaultPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateRolesDefault: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesDefaultPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateRolesDefault: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OrganizationRoleEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1719,9 +1719,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of OrganizationRoleEntityListing</returns>
-        public async System.Threading.Tasks.Task<OrganizationRoleEntityListing> AuthorizationRolesDefaultPutAsync (List<DomainOrganizationRole> body = null)
+        public async System.Threading.Tasks.Task<OrganizationRoleEntityListing> UpdateRolesDefaultAsync (List<DomainOrganizationRole> body = null)
         {
-             ApiResponse<OrganizationRoleEntityListing> response = await AuthorizationRolesDefaultPutAsyncWithHttpInfo(body);
+             ApiResponse<OrganizationRoleEntityListing> response = await UpdateRolesDefaultAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -1731,7 +1731,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> AuthorizationRolesDefaultPutAsyncWithHttpInfo (List<DomainOrganizationRole> body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> UpdateRolesDefaultAsyncWithHttpInfo (List<DomainOrganizationRole> body = null)
         {
             
     
@@ -1778,9 +1778,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesDefaultPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateRolesDefault: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesDefaultPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateRolesDefault: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OrganizationRoleEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1793,9 +1793,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="force">Restore default roles</param> 
         /// <returns>OrganizationRoleEntityListing</returns>
-        public OrganizationRoleEntityListing AuthorizationRolesDefaultPost (bool? force = null)
+        public OrganizationRoleEntityListing CreateRolesDefault (bool? force = null)
         {
-             ApiResponse<OrganizationRoleEntityListing> response = AuthorizationRolesDefaultPostWithHttpInfo(force);
+             ApiResponse<OrganizationRoleEntityListing> response = CreateRolesDefaultWithHttpInfo(force);
              return response.Data;
         }
 
@@ -1804,7 +1804,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="force">Restore default roles</param> 
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
-        public ApiResponse< OrganizationRoleEntityListing > AuthorizationRolesDefaultPostWithHttpInfo (bool? force = null)
+        public ApiResponse< OrganizationRoleEntityListing > CreateRolesDefaultWithHttpInfo (bool? force = null)
         {
             
     
@@ -1851,9 +1851,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesDefaultPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateRolesDefault: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesDefaultPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateRolesDefault: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OrganizationRoleEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1866,9 +1866,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="force">Restore default roles</param>
         /// <returns>Task of OrganizationRoleEntityListing</returns>
-        public async System.Threading.Tasks.Task<OrganizationRoleEntityListing> AuthorizationRolesDefaultPostAsync (bool? force = null)
+        public async System.Threading.Tasks.Task<OrganizationRoleEntityListing> CreateRolesDefaultAsync (bool? force = null)
         {
-             ApiResponse<OrganizationRoleEntityListing> response = await AuthorizationRolesDefaultPostAsyncWithHttpInfo(force);
+             ApiResponse<OrganizationRoleEntityListing> response = await CreateRolesDefaultAsyncWithHttpInfo(force);
              return response.Data;
 
         }
@@ -1878,7 +1878,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="force">Restore default roles</param>
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> AuthorizationRolesDefaultPostAsyncWithHttpInfo (bool? force = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> CreateRolesDefaultAsyncWithHttpInfo (bool? force = null)
         {
             
     
@@ -1925,9 +1925,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesDefaultPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateRolesDefault: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesDefaultPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateRolesDefault: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OrganizationRoleEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1941,9 +1941,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="leftRoleId">Left Role ID</param> 
         /// <param name="rightRoleId">Right Role id</param> 
         /// <returns>DomainOrgRoleDifference</returns>
-        public DomainOrgRoleDifference AuthorizationRolesLeftroleidComparedefaultRightroleidGet (string leftRoleId, string rightRoleId)
+        public DomainOrgRoleDifference GetRolesLeftRoleComparedefaultByRightRoleId (string leftRoleId, string rightRoleId)
         {
-             ApiResponse<DomainOrgRoleDifference> response = AuthorizationRolesLeftroleidComparedefaultRightroleidGetWithHttpInfo(leftRoleId, rightRoleId);
+             ApiResponse<DomainOrgRoleDifference> response = GetRolesLeftRoleComparedefaultByRightRoleIdWithHttpInfo(leftRoleId, rightRoleId);
              return response.Data;
         }
 
@@ -1953,14 +1953,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="leftRoleId">Left Role ID</param> 
         /// <param name="rightRoleId">Right Role id</param> 
         /// <returns>ApiResponse of DomainOrgRoleDifference</returns>
-        public ApiResponse< DomainOrgRoleDifference > AuthorizationRolesLeftroleidComparedefaultRightroleidGetWithHttpInfo (string leftRoleId, string rightRoleId)
+        public ApiResponse< DomainOrgRoleDifference > GetRolesLeftRoleComparedefaultByRightRoleIdWithHttpInfo (string leftRoleId, string rightRoleId)
         {
             
             // verify the required parameter 'leftRoleId' is set
-            if (leftRoleId == null) throw new ApiException(400, "Missing required parameter 'leftRoleId' when calling AuthorizationRolesLeftroleidComparedefaultRightroleidGet");
+            if (leftRoleId == null) throw new ApiException(400, "Missing required parameter 'leftRoleId' when calling GetRolesLeftRoleComparedefaultByRightRoleId");
             
             // verify the required parameter 'rightRoleId' is set
-            if (rightRoleId == null) throw new ApiException(400, "Missing required parameter 'rightRoleId' when calling AuthorizationRolesLeftroleidComparedefaultRightroleidGet");
+            if (rightRoleId == null) throw new ApiException(400, "Missing required parameter 'rightRoleId' when calling GetRolesLeftRoleComparedefaultByRightRoleId");
             
     
             var path_ = "/api/v1/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
@@ -2007,9 +2007,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesLeftroleidComparedefaultRightroleidGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetRolesLeftRoleComparedefaultByRightRoleId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesLeftroleidComparedefaultRightroleidGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetRolesLeftRoleComparedefaultByRightRoleId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DomainOrgRoleDifference>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2023,9 +2023,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="leftRoleId">Left Role ID</param>
         /// <param name="rightRoleId">Right Role id</param>
         /// <returns>Task of DomainOrgRoleDifference</returns>
-        public async System.Threading.Tasks.Task<DomainOrgRoleDifference> AuthorizationRolesLeftroleidComparedefaultRightroleidGetAsync (string leftRoleId, string rightRoleId)
+        public async System.Threading.Tasks.Task<DomainOrgRoleDifference> GetRolesLeftRoleComparedefaultByRightRoleIdAsync (string leftRoleId, string rightRoleId)
         {
-             ApiResponse<DomainOrgRoleDifference> response = await AuthorizationRolesLeftroleidComparedefaultRightroleidGetAsyncWithHttpInfo(leftRoleId, rightRoleId);
+             ApiResponse<DomainOrgRoleDifference> response = await GetRolesLeftRoleComparedefaultByRightRoleIdAsyncWithHttpInfo(leftRoleId, rightRoleId);
              return response.Data;
 
         }
@@ -2036,12 +2036,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="leftRoleId">Left Role ID</param>
         /// <param name="rightRoleId">Right Role id</param>
         /// <returns>Task of ApiResponse (DomainOrgRoleDifference)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainOrgRoleDifference>> AuthorizationRolesLeftroleidComparedefaultRightroleidGetAsyncWithHttpInfo (string leftRoleId, string rightRoleId)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainOrgRoleDifference>> GetRolesLeftRoleComparedefaultByRightRoleIdAsyncWithHttpInfo (string leftRoleId, string rightRoleId)
         {
             // verify the required parameter 'leftRoleId' is set
-            if (leftRoleId == null) throw new ApiException(400, "Missing required parameter 'leftRoleId' when calling AuthorizationRolesLeftroleidComparedefaultRightroleidGet");
+            if (leftRoleId == null) throw new ApiException(400, "Missing required parameter 'leftRoleId' when calling GetRolesLeftRoleComparedefaultByRightRoleId");
             // verify the required parameter 'rightRoleId' is set
-            if (rightRoleId == null) throw new ApiException(400, "Missing required parameter 'rightRoleId' when calling AuthorizationRolesLeftroleidComparedefaultRightroleidGet");
+            if (rightRoleId == null) throw new ApiException(400, "Missing required parameter 'rightRoleId' when calling GetRolesLeftRoleComparedefaultByRightRoleId");
             
     
             var path_ = "/api/v1/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
@@ -2088,9 +2088,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesLeftroleidComparedefaultRightroleidGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetRolesLeftRoleComparedefaultByRightRoleId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesLeftroleidComparedefaultRightroleidGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetRolesLeftRoleComparedefaultByRightRoleId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DomainOrgRoleDifference>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2105,9 +2105,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="rightRoleId">Right Role id</param> 
         /// <param name="body"></param> 
         /// <returns>DomainOrgRoleDifference</returns>
-        public DomainOrgRoleDifference AuthorizationRolesLeftroleidComparedefaultRightroleidPost (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null)
+        public DomainOrgRoleDifference CreateRolesLeftRoleComparedefaultByRightRoleId (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null)
         {
-             ApiResponse<DomainOrgRoleDifference> response = AuthorizationRolesLeftroleidComparedefaultRightroleidPostWithHttpInfo(leftRoleId, rightRoleId, body);
+             ApiResponse<DomainOrgRoleDifference> response = CreateRolesLeftRoleComparedefaultByRightRoleIdWithHttpInfo(leftRoleId, rightRoleId, body);
              return response.Data;
         }
 
@@ -2118,14 +2118,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="rightRoleId">Right Role id</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of DomainOrgRoleDifference</returns>
-        public ApiResponse< DomainOrgRoleDifference > AuthorizationRolesLeftroleidComparedefaultRightroleidPostWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null)
+        public ApiResponse< DomainOrgRoleDifference > CreateRolesLeftRoleComparedefaultByRightRoleIdWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null)
         {
             
             // verify the required parameter 'leftRoleId' is set
-            if (leftRoleId == null) throw new ApiException(400, "Missing required parameter 'leftRoleId' when calling AuthorizationRolesLeftroleidComparedefaultRightroleidPost");
+            if (leftRoleId == null) throw new ApiException(400, "Missing required parameter 'leftRoleId' when calling CreateRolesLeftRoleComparedefaultByRightRoleId");
             
             // verify the required parameter 'rightRoleId' is set
-            if (rightRoleId == null) throw new ApiException(400, "Missing required parameter 'rightRoleId' when calling AuthorizationRolesLeftroleidComparedefaultRightroleidPost");
+            if (rightRoleId == null) throw new ApiException(400, "Missing required parameter 'rightRoleId' when calling CreateRolesLeftRoleComparedefaultByRightRoleId");
             
     
             var path_ = "/api/v1/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
@@ -2173,9 +2173,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesLeftroleidComparedefaultRightroleidPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateRolesLeftRoleComparedefaultByRightRoleId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesLeftroleidComparedefaultRightroleidPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateRolesLeftRoleComparedefaultByRightRoleId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DomainOrgRoleDifference>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2190,9 +2190,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="rightRoleId">Right Role id</param>
         /// <param name="body"></param>
         /// <returns>Task of DomainOrgRoleDifference</returns>
-        public async System.Threading.Tasks.Task<DomainOrgRoleDifference> AuthorizationRolesLeftroleidComparedefaultRightroleidPostAsync (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null)
+        public async System.Threading.Tasks.Task<DomainOrgRoleDifference> CreateRolesLeftRoleComparedefaultByRightRoleIdAsync (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null)
         {
-             ApiResponse<DomainOrgRoleDifference> response = await AuthorizationRolesLeftroleidComparedefaultRightroleidPostAsyncWithHttpInfo(leftRoleId, rightRoleId, body);
+             ApiResponse<DomainOrgRoleDifference> response = await CreateRolesLeftRoleComparedefaultByRightRoleIdAsyncWithHttpInfo(leftRoleId, rightRoleId, body);
              return response.Data;
 
         }
@@ -2204,12 +2204,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="rightRoleId">Right Role id</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DomainOrgRoleDifference)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainOrgRoleDifference>> AuthorizationRolesLeftroleidComparedefaultRightroleidPostAsyncWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainOrgRoleDifference>> CreateRolesLeftRoleComparedefaultByRightRoleIdAsyncWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body = null)
         {
             // verify the required parameter 'leftRoleId' is set
-            if (leftRoleId == null) throw new ApiException(400, "Missing required parameter 'leftRoleId' when calling AuthorizationRolesLeftroleidComparedefaultRightroleidPost");
+            if (leftRoleId == null) throw new ApiException(400, "Missing required parameter 'leftRoleId' when calling CreateRolesLeftRoleComparedefaultByRightRoleId");
             // verify the required parameter 'rightRoleId' is set
-            if (rightRoleId == null) throw new ApiException(400, "Missing required parameter 'rightRoleId' when calling AuthorizationRolesLeftroleidComparedefaultRightroleidPost");
+            if (rightRoleId == null) throw new ApiException(400, "Missing required parameter 'rightRoleId' when calling CreateRolesLeftRoleComparedefaultByRightRoleId");
             
     
             var path_ = "/api/v1/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
@@ -2257,9 +2257,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesLeftroleidComparedefaultRightroleidPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateRolesLeftRoleComparedefaultByRightRoleId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesLeftroleidComparedefaultRightroleidPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateRolesLeftRoleComparedefaultByRightRoleId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DomainOrgRoleDifference>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2272,9 +2272,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="roleId">Role ID</param> 
         /// <returns>DomainOrganizationRole</returns>
-        public DomainOrganizationRole AuthorizationRolesRoleidGet (string roleId)
+        public DomainOrganizationRole GetRole (string roleId)
         {
-             ApiResponse<DomainOrganizationRole> response = AuthorizationRolesRoleidGetWithHttpInfo(roleId);
+             ApiResponse<DomainOrganizationRole> response = GetRoleWithHttpInfo(roleId);
              return response.Data;
         }
 
@@ -2283,11 +2283,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="roleId">Role ID</param> 
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
-        public ApiResponse< DomainOrganizationRole > AuthorizationRolesRoleidGetWithHttpInfo (string roleId)
+        public ApiResponse< DomainOrganizationRole > GetRoleWithHttpInfo (string roleId)
         {
             
             // verify the required parameter 'roleId' is set
-            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationRolesRoleidGet");
+            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling GetRole");
             
     
             var path_ = "/api/v1/authorization/roles/{roleId}";
@@ -2333,9 +2333,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesRoleidGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetRole: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesRoleidGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetRole: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DomainOrganizationRole>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2348,9 +2348,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="roleId">Role ID</param>
         /// <returns>Task of DomainOrganizationRole</returns>
-        public async System.Threading.Tasks.Task<DomainOrganizationRole> AuthorizationRolesRoleidGetAsync (string roleId)
+        public async System.Threading.Tasks.Task<DomainOrganizationRole> GetRoleAsync (string roleId)
         {
-             ApiResponse<DomainOrganizationRole> response = await AuthorizationRolesRoleidGetAsyncWithHttpInfo(roleId);
+             ApiResponse<DomainOrganizationRole> response = await GetRoleAsyncWithHttpInfo(roleId);
              return response.Data;
 
         }
@@ -2360,10 +2360,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="roleId">Role ID</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> AuthorizationRolesRoleidGetAsyncWithHttpInfo (string roleId)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> GetRoleAsyncWithHttpInfo (string roleId)
         {
             // verify the required parameter 'roleId' is set
-            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationRolesRoleidGet");
+            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling GetRole");
             
     
             var path_ = "/api/v1/authorization/roles/{roleId}";
@@ -2409,9 +2409,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesRoleidGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetRole: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesRoleidGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetRole: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DomainOrganizationRole>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2425,9 +2425,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param> 
         /// <param name="body"></param> 
         /// <returns>DomainOrganizationRole</returns>
-        public DomainOrganizationRole AuthorizationRolesRoleidPut (string roleId, DomainOrganizationRole body = null)
+        public DomainOrganizationRole UpdateRole (string roleId, DomainOrganizationRole body = null)
         {
-             ApiResponse<DomainOrganizationRole> response = AuthorizationRolesRoleidPutWithHttpInfo(roleId, body);
+             ApiResponse<DomainOrganizationRole> response = UpdateRoleWithHttpInfo(roleId, body);
              return response.Data;
         }
 
@@ -2437,11 +2437,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
-        public ApiResponse< DomainOrganizationRole > AuthorizationRolesRoleidPutWithHttpInfo (string roleId, DomainOrganizationRole body = null)
+        public ApiResponse< DomainOrganizationRole > UpdateRoleWithHttpInfo (string roleId, DomainOrganizationRole body = null)
         {
             
             // verify the required parameter 'roleId' is set
-            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationRolesRoleidPut");
+            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling UpdateRole");
             
     
             var path_ = "/api/v1/authorization/roles/{roleId}";
@@ -2488,9 +2488,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesRoleidPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateRole: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesRoleidPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateRole: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DomainOrganizationRole>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2504,9 +2504,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>Task of DomainOrganizationRole</returns>
-        public async System.Threading.Tasks.Task<DomainOrganizationRole> AuthorizationRolesRoleidPutAsync (string roleId, DomainOrganizationRole body = null)
+        public async System.Threading.Tasks.Task<DomainOrganizationRole> UpdateRoleAsync (string roleId, DomainOrganizationRole body = null)
         {
-             ApiResponse<DomainOrganizationRole> response = await AuthorizationRolesRoleidPutAsyncWithHttpInfo(roleId, body);
+             ApiResponse<DomainOrganizationRole> response = await UpdateRoleAsyncWithHttpInfo(roleId, body);
              return response.Data;
 
         }
@@ -2517,10 +2517,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> AuthorizationRolesRoleidPutAsyncWithHttpInfo (string roleId, DomainOrganizationRole body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> UpdateRoleAsyncWithHttpInfo (string roleId, DomainOrganizationRole body = null)
         {
             // verify the required parameter 'roleId' is set
-            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationRolesRoleidPut");
+            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling UpdateRole");
             
     
             var path_ = "/api/v1/authorization/roles/{roleId}";
@@ -2567,9 +2567,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesRoleidPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateRole: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesRoleidPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateRole: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DomainOrganizationRole>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2582,9 +2582,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="roleId">Role ID</param> 
         /// <returns></returns>
-        public void AuthorizationRolesRoleidDelete (string roleId)
+        public void DeleteRole (string roleId)
         {
-             AuthorizationRolesRoleidDeleteWithHttpInfo(roleId);
+             DeleteRoleWithHttpInfo(roleId);
         }
 
         /// <summary>
@@ -2592,11 +2592,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="roleId">Role ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> AuthorizationRolesRoleidDeleteWithHttpInfo (string roleId)
+        public ApiResponse<Object> DeleteRoleWithHttpInfo (string roleId)
         {
             
             // verify the required parameter 'roleId' is set
-            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationRolesRoleidDelete");
+            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling DeleteRole");
             
     
             var path_ = "/api/v1/authorization/roles/{roleId}";
@@ -2642,9 +2642,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesRoleidDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteRole: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesRoleidDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteRole: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -2657,9 +2657,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="roleId">Role ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task AuthorizationRolesRoleidDeleteAsync (string roleId)
+        public async System.Threading.Tasks.Task DeleteRoleAsync (string roleId)
         {
-             await AuthorizationRolesRoleidDeleteAsyncWithHttpInfo(roleId);
+             await DeleteRoleAsyncWithHttpInfo(roleId);
 
         }
 
@@ -2668,10 +2668,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="roleId">Role ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> AuthorizationRolesRoleidDeleteAsyncWithHttpInfo (string roleId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoleAsyncWithHttpInfo (string roleId)
         {
             // verify the required parameter 'roleId' is set
-            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationRolesRoleidDelete");
+            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling DeleteRole");
             
     
             var path_ = "/api/v1/authorization/roles/{roleId}";
@@ -2717,9 +2717,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesRoleidDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteRole: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesRoleidDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteRole: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -2733,9 +2733,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param> 
         /// <param name="body"></param> 
         /// <returns>DomainOrganizationRole</returns>
-        public DomainOrganizationRole AuthorizationRolesRoleidPatch (string roleId, DomainOrganizationRole body = null)
+        public DomainOrganizationRole PatchRole (string roleId, DomainOrganizationRole body = null)
         {
-             ApiResponse<DomainOrganizationRole> response = AuthorizationRolesRoleidPatchWithHttpInfo(roleId, body);
+             ApiResponse<DomainOrganizationRole> response = PatchRoleWithHttpInfo(roleId, body);
              return response.Data;
         }
 
@@ -2745,11 +2745,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
-        public ApiResponse< DomainOrganizationRole > AuthorizationRolesRoleidPatchWithHttpInfo (string roleId, DomainOrganizationRole body = null)
+        public ApiResponse< DomainOrganizationRole > PatchRoleWithHttpInfo (string roleId, DomainOrganizationRole body = null)
         {
             
             // verify the required parameter 'roleId' is set
-            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationRolesRoleidPatch");
+            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling PatchRole");
             
     
             var path_ = "/api/v1/authorization/roles/{roleId}";
@@ -2796,9 +2796,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesRoleidPatch: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PatchRole: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesRoleidPatch: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PatchRole: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DomainOrganizationRole>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2812,9 +2812,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>Task of DomainOrganizationRole</returns>
-        public async System.Threading.Tasks.Task<DomainOrganizationRole> AuthorizationRolesRoleidPatchAsync (string roleId, DomainOrganizationRole body = null)
+        public async System.Threading.Tasks.Task<DomainOrganizationRole> PatchRoleAsync (string roleId, DomainOrganizationRole body = null)
         {
-             ApiResponse<DomainOrganizationRole> response = await AuthorizationRolesRoleidPatchAsyncWithHttpInfo(roleId, body);
+             ApiResponse<DomainOrganizationRole> response = await PatchRoleAsyncWithHttpInfo(roleId, body);
              return response.Data;
 
         }
@@ -2825,10 +2825,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> AuthorizationRolesRoleidPatchAsyncWithHttpInfo (string roleId, DomainOrganizationRole body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PatchRoleAsyncWithHttpInfo (string roleId, DomainOrganizationRole body = null)
         {
             // verify the required parameter 'roleId' is set
-            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationRolesRoleidPatch");
+            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling PatchRole");
             
     
             var path_ = "/api/v1/authorization/roles/{roleId}";
@@ -2875,9 +2875,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesRoleidPatch: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PatchRole: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesRoleidPatch: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PatchRole: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DomainOrganizationRole>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2891,9 +2891,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param> 
         /// <param name="body"></param> 
         /// <returns>List&lt;string&gt;</returns>
-        public List<string> AuthorizationRolesRoleidUsersAddPut (string roleId, List<string> body = null)
+        public List<string> UpdateRoleUsersAdd (string roleId, List<string> body = null)
         {
-             ApiResponse<List<string>> response = AuthorizationRolesRoleidUsersAddPutWithHttpInfo(roleId, body);
+             ApiResponse<List<string>> response = UpdateRoleUsersAddWithHttpInfo(roleId, body);
              return response.Data;
         }
 
@@ -2903,11 +2903,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        public ApiResponse< List<string> > AuthorizationRolesRoleidUsersAddPutWithHttpInfo (string roleId, List<string> body = null)
+        public ApiResponse< List<string> > UpdateRoleUsersAddWithHttpInfo (string roleId, List<string> body = null)
         {
             
             // verify the required parameter 'roleId' is set
-            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationRolesRoleidUsersAddPut");
+            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling UpdateRoleUsersAdd");
             
     
             var path_ = "/api/v1/authorization/roles/{roleId}/users/add";
@@ -2954,9 +2954,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesRoleidUsersAddPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateRoleUsersAdd: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesRoleidUsersAddPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateRoleUsersAdd: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<List<string>>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2970,9 +2970,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;string&gt;</returns>
-        public async System.Threading.Tasks.Task<List<string>> AuthorizationRolesRoleidUsersAddPutAsync (string roleId, List<string> body = null)
+        public async System.Threading.Tasks.Task<List<string>> UpdateRoleUsersAddAsync (string roleId, List<string> body = null)
         {
-             ApiResponse<List<string>> response = await AuthorizationRolesRoleidUsersAddPutAsyncWithHttpInfo(roleId, body);
+             ApiResponse<List<string>> response = await UpdateRoleUsersAddAsyncWithHttpInfo(roleId, body);
              return response.Data;
 
         }
@@ -2983,10 +2983,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<string>>> AuthorizationRolesRoleidUsersAddPutAsyncWithHttpInfo (string roleId, List<string> body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<string>>> UpdateRoleUsersAddAsyncWithHttpInfo (string roleId, List<string> body = null)
         {
             // verify the required parameter 'roleId' is set
-            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationRolesRoleidUsersAddPut");
+            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling UpdateRoleUsersAdd");
             
     
             var path_ = "/api/v1/authorization/roles/{roleId}/users/add";
@@ -3033,9 +3033,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesRoleidUsersAddPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateRoleUsersAdd: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesRoleidUsersAddPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateRoleUsersAdd: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<List<string>>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3049,9 +3049,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param> 
         /// <param name="body"></param> 
         /// <returns>List&lt;string&gt;</returns>
-        public List<string> AuthorizationRolesRoleidUsersRemovePut (string roleId, List<string> body = null)
+        public List<string> UpdateRoleUsersRemove (string roleId, List<string> body = null)
         {
-             ApiResponse<List<string>> response = AuthorizationRolesRoleidUsersRemovePutWithHttpInfo(roleId, body);
+             ApiResponse<List<string>> response = UpdateRoleUsersRemoveWithHttpInfo(roleId, body);
              return response.Data;
         }
 
@@ -3061,11 +3061,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        public ApiResponse< List<string> > AuthorizationRolesRoleidUsersRemovePutWithHttpInfo (string roleId, List<string> body = null)
+        public ApiResponse< List<string> > UpdateRoleUsersRemoveWithHttpInfo (string roleId, List<string> body = null)
         {
             
             // verify the required parameter 'roleId' is set
-            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationRolesRoleidUsersRemovePut");
+            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling UpdateRoleUsersRemove");
             
     
             var path_ = "/api/v1/authorization/roles/{roleId}/users/remove";
@@ -3112,9 +3112,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesRoleidUsersRemovePut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateRoleUsersRemove: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesRoleidUsersRemovePut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateRoleUsersRemove: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<List<string>>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3128,9 +3128,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;string&gt;</returns>
-        public async System.Threading.Tasks.Task<List<string>> AuthorizationRolesRoleidUsersRemovePutAsync (string roleId, List<string> body = null)
+        public async System.Threading.Tasks.Task<List<string>> UpdateRoleUsersRemoveAsync (string roleId, List<string> body = null)
         {
-             ApiResponse<List<string>> response = await AuthorizationRolesRoleidUsersRemovePutAsyncWithHttpInfo(roleId, body);
+             ApiResponse<List<string>> response = await UpdateRoleUsersRemoveAsyncWithHttpInfo(roleId, body);
              return response.Data;
 
         }
@@ -3141,10 +3141,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="roleId">Role ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<string>>> AuthorizationRolesRoleidUsersRemovePutAsyncWithHttpInfo (string roleId, List<string> body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<string>>> UpdateRoleUsersRemoveAsyncWithHttpInfo (string roleId, List<string> body = null)
         {
             // verify the required parameter 'roleId' is set
-            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationRolesRoleidUsersRemovePut");
+            if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling UpdateRoleUsersRemove");
             
     
             var path_ = "/api/v1/authorization/roles/{roleId}/users/remove";
@@ -3191,9 +3191,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesRoleidUsersRemovePut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateRoleUsersRemove: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationRolesRoleidUsersRemovePut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateRoleUsersRemove: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<List<string>>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3206,9 +3206,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="userId">User ID</param> 
         /// <returns>UserAuthorization</returns>
-        public UserAuthorization AuthorizationUsersUseridRolesGet (string userId)
+        public UserAuthorization GetUserRoles (string userId)
         {
-             ApiResponse<UserAuthorization> response = AuthorizationUsersUseridRolesGetWithHttpInfo(userId);
+             ApiResponse<UserAuthorization> response = GetUserRolesWithHttpInfo(userId);
              return response.Data;
         }
 
@@ -3217,11 +3217,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="userId">User ID</param> 
         /// <returns>ApiResponse of UserAuthorization</returns>
-        public ApiResponse< UserAuthorization > AuthorizationUsersUseridRolesGetWithHttpInfo (string userId)
+        public ApiResponse< UserAuthorization > GetUserRolesWithHttpInfo (string userId)
         {
             
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling AuthorizationUsersUseridRolesGet");
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling GetUserRoles");
             
     
             var path_ = "/api/v1/authorization/users/{userId}/roles";
@@ -3267,9 +3267,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationUsersUseridRolesGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetUserRoles: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationUsersUseridRolesGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetUserRoles: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<UserAuthorization>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3282,9 +3282,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="userId">User ID</param>
         /// <returns>Task of UserAuthorization</returns>
-        public async System.Threading.Tasks.Task<UserAuthorization> AuthorizationUsersUseridRolesGetAsync (string userId)
+        public async System.Threading.Tasks.Task<UserAuthorization> GetUserRolesAsync (string userId)
         {
-             ApiResponse<UserAuthorization> response = await AuthorizationUsersUseridRolesGetAsyncWithHttpInfo(userId);
+             ApiResponse<UserAuthorization> response = await GetUserRolesAsyncWithHttpInfo(userId);
              return response.Data;
 
         }
@@ -3294,10 +3294,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> AuthorizationUsersUseridRolesGetAsyncWithHttpInfo (string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> GetUserRolesAsyncWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling AuthorizationUsersUseridRolesGet");
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling GetUserRoles");
             
     
             var path_ = "/api/v1/authorization/users/{userId}/roles";
@@ -3343,9 +3343,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationUsersUseridRolesGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetUserRoles: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationUsersUseridRolesGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetUserRoles: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<UserAuthorization>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3359,9 +3359,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param> 
         /// <param name="body"></param> 
         /// <returns>List&lt;string&gt;</returns>
-        public List<string> AuthorizationUsersUseridRolesPut (string userId, List<string> body = null)
+        public List<string> UpdateUserRoles (string userId, List<string> body = null)
         {
-             ApiResponse<List<string>> response = AuthorizationUsersUseridRolesPutWithHttpInfo(userId, body);
+             ApiResponse<List<string>> response = UpdateUserRolesWithHttpInfo(userId, body);
              return response.Data;
         }
 
@@ -3371,11 +3371,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        public ApiResponse< List<string> > AuthorizationUsersUseridRolesPutWithHttpInfo (string userId, List<string> body = null)
+        public ApiResponse< List<string> > UpdateUserRolesWithHttpInfo (string userId, List<string> body = null)
         {
             
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling AuthorizationUsersUseridRolesPut");
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling UpdateUserRoles");
             
     
             var path_ = "/api/v1/authorization/users/{userId}/roles";
@@ -3422,9 +3422,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationUsersUseridRolesPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateUserRoles: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationUsersUseridRolesPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateUserRoles: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<List<string>>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3438,9 +3438,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;string&gt;</returns>
-        public async System.Threading.Tasks.Task<List<string>> AuthorizationUsersUseridRolesPutAsync (string userId, List<string> body = null)
+        public async System.Threading.Tasks.Task<List<string>> UpdateUserRolesAsync (string userId, List<string> body = null)
         {
-             ApiResponse<List<string>> response = await AuthorizationUsersUseridRolesPutAsyncWithHttpInfo(userId, body);
+             ApiResponse<List<string>> response = await UpdateUserRolesAsyncWithHttpInfo(userId, body);
              return response.Data;
 
         }
@@ -3451,10 +3451,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<string>>> AuthorizationUsersUseridRolesPutAsyncWithHttpInfo (string userId, List<string> body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<string>>> UpdateUserRolesAsyncWithHttpInfo (string userId, List<string> body = null)
         {
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling AuthorizationUsersUseridRolesPut");
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling UpdateUserRoles");
             
     
             var path_ = "/api/v1/authorization/users/{userId}/roles";
@@ -3501,9 +3501,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationUsersUseridRolesPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateUserRoles: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationUsersUseridRolesPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateUserRoles: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<List<string>>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3516,9 +3516,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="userId">User ID</param> 
         /// <returns></returns>
-        public void AuthorizationUsersUseridRolesDelete (string userId)
+        public void DeleteUserRoles (string userId)
         {
-             AuthorizationUsersUseridRolesDeleteWithHttpInfo(userId);
+             DeleteUserRolesWithHttpInfo(userId);
         }
 
         /// <summary>
@@ -3526,11 +3526,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="userId">User ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> AuthorizationUsersUseridRolesDeleteWithHttpInfo (string userId)
+        public ApiResponse<Object> DeleteUserRolesWithHttpInfo (string userId)
         {
             
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling AuthorizationUsersUseridRolesDelete");
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling DeleteUserRoles");
             
     
             var path_ = "/api/v1/authorization/users/{userId}/roles";
@@ -3576,9 +3576,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationUsersUseridRolesDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteUserRoles: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationUsersUseridRolesDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteUserRoles: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -3591,9 +3591,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="userId">User ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task AuthorizationUsersUseridRolesDeleteAsync (string userId)
+        public async System.Threading.Tasks.Task DeleteUserRolesAsync (string userId)
         {
-             await AuthorizationUsersUseridRolesDeleteAsyncWithHttpInfo(userId);
+             await DeleteUserRolesAsyncWithHttpInfo(userId);
 
         }
 
@@ -3602,10 +3602,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> AuthorizationUsersUseridRolesDeleteAsyncWithHttpInfo (string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserRolesAsyncWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling AuthorizationUsersUseridRolesDelete");
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling DeleteUserRoles");
             
     
             var path_ = "/api/v1/authorization/users/{userId}/roles";
@@ -3651,9 +3651,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling AuthorizationUsersUseridRolesDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteUserRoles: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling AuthorizationUsersUseridRolesDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteUserRoles: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,

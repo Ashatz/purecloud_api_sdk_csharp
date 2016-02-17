@@ -173,20 +173,6 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
-        /// Gets or Sets Attributes
-        /// </summary>
-        [DataMember(Name="attributes", EmitDefaultValue=false)]
-        public List<AttributeValue> Attributes { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets AttributeGroupInstances
-        /// </summary>
-        [DataMember(Name="attributeGroupInstances", EmitDefaultValue=false)]
-        public List<AttributeGroupInstance> AttributeGroupInstances { get; set; }
-  
-        
-        /// <summary>
         /// Gets or Sets Thumbnails
         /// </summary>
         [DataMember(Name="thumbnails", EmitDefaultValue=false)]
@@ -287,8 +273,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ReceiverAddress: ").Append(ReceiverAddress).Append("\n");
             sb.Append("  Tags: ").Append(Tags).Append("\n");
             sb.Append("  TagValues: ").Append(TagValues).Append("\n");
-            sb.Append("  Attributes: ").Append(Attributes).Append("\n");
-            sb.Append("  AttributeGroupInstances: ").Append(AttributeGroupInstances).Append("\n");
             sb.Append("  Thumbnails: ").Append(Thumbnails).Append("\n");
             sb.Append("  UploadStatus: ").Append(UploadStatus).Append("\n");
             sb.Append("  UploadDestinationUri: ").Append(UploadDestinationUri).Append("\n");
@@ -437,16 +421,6 @@ namespace ININ.PureCloudApi.Model
                     this.TagValues.SequenceEqual(other.TagValues)
                 ) && 
                 (
-                    this.Attributes == other.Attributes ||
-                    this.Attributes != null &&
-                    this.Attributes.SequenceEqual(other.Attributes)
-                ) && 
-                (
-                    this.AttributeGroupInstances == other.AttributeGroupInstances ||
-                    this.AttributeGroupInstances != null &&
-                    this.AttributeGroupInstances.SequenceEqual(other.AttributeGroupInstances)
-                ) && 
-                (
                     this.Thumbnails == other.Thumbnails ||
                     this.Thumbnails != null &&
                     this.Thumbnails.SequenceEqual(other.Thumbnails)
@@ -569,12 +543,6 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.TagValues != null)
                     hash = hash * 57 + this.TagValues.GetHashCode();
-                
-                if (this.Attributes != null)
-                    hash = hash * 57 + this.Attributes.GetHashCode();
-                
-                if (this.AttributeGroupInstances != null)
-                    hash = hash * 57 + this.AttributeGroupInstances.GetHashCode();
                 
                 if (this.Thumbnails != null)
                     hash = hash * 57 + this.Thumbnails.GetHashCode();

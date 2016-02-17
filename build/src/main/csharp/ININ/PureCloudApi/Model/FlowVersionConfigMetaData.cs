@@ -23,7 +23,6 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         public FlowVersionConfigMetaData()
         {
-            this.FlowDefinitionUploaded = false;
             
         }
 
@@ -57,14 +56,6 @@ namespace ININ.PureCloudApi.Model
         /// <value>Uri location for the flow definition contents.</value>
         [DataMember(Name="flowDefinitionUri", EmitDefaultValue=false)]
         public string FlowDefinitionUri { get; set; }
-  
-        
-        /// <summary>
-        /// true if the version has its definition properly uploaded.
-        /// </summary>
-        /// <value>true if the version has its definition properly uploaded.</value>
-        [DataMember(Name="flowDefinitionUploaded", EmitDefaultValue=false)]
-        public bool? FlowDefinitionUploaded { get; set; }
   
         
         /// <summary>
@@ -112,7 +103,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  VersionSpecificComment: ").Append(VersionSpecificComment).Append("\n");
             sb.Append("  FlowDefinitionUri: ").Append(FlowDefinitionUri).Append("\n");
-            sb.Append("  FlowDefinitionUploaded: ").Append(FlowDefinitionUploaded).Append("\n");
             sb.Append("  CreatedByUser: ").Append(CreatedByUser).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -175,11 +165,6 @@ namespace ININ.PureCloudApi.Model
                     this.FlowDefinitionUri.Equals(other.FlowDefinitionUri)
                 ) && 
                 (
-                    this.FlowDefinitionUploaded == other.FlowDefinitionUploaded ||
-                    this.FlowDefinitionUploaded != null &&
-                    this.FlowDefinitionUploaded.Equals(other.FlowDefinitionUploaded)
-                ) && 
-                (
                     this.CreatedByUser == other.CreatedByUser ||
                     this.CreatedByUser != null &&
                     this.CreatedByUser.Equals(other.CreatedByUser)
@@ -224,9 +209,6 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.FlowDefinitionUri != null)
                     hash = hash * 57 + this.FlowDefinitionUri.GetHashCode();
-                
-                if (this.FlowDefinitionUploaded != null)
-                    hash = hash * 57 + this.FlowDefinitionUploaded.GetHashCode();
                 
                 if (this.CreatedByUser != null)
                     hash = hash * 57 + this.CreatedByUser.GetHashCode();

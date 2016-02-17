@@ -32,9 +32,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="description">Description</param>
         /// <param name="nameOrDescription">Name or description</param>
         /// <param name="publishVersionId">Publish version ID</param>
+        /// <param name="editableBy">Editable by</param>
         /// <param name="lockedBy">Locked by</param>
+        /// <param name="deleted">Include deleted</param>
         /// <returns>FlowEntityListing</returns>
-        FlowEntityListing FlowsGet (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string lockedBy = null);
+        FlowEntityListing Get (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null);
   
         /// <summary>
         /// Get a pageable list of flows, filtered by query parameters
@@ -52,9 +54,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="description">Description</param>
         /// <param name="nameOrDescription">Name or description</param>
         /// <param name="publishVersionId">Publish version ID</param>
+        /// <param name="editableBy">Editable by</param>
         /// <param name="lockedBy">Locked by</param>
+        /// <param name="deleted">Include deleted</param>
         /// <returns>ApiResponse of FlowEntityListing</returns>
-        ApiResponse<FlowEntityListing> FlowsGetWithHttpInfo (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string lockedBy = null);
+        ApiResponse<FlowEntityListing> GetWithHttpInfo (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null);
 
         /// <summary>
         /// Get a pageable list of flows, filtered by query parameters
@@ -72,9 +76,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="description">Description</param>
         /// <param name="nameOrDescription">Name or description</param>
         /// <param name="publishVersionId">Publish version ID</param>
+        /// <param name="editableBy">Editable by</param>
         /// <param name="lockedBy">Locked by</param>
+        /// <param name="deleted">Include deleted</param>
         /// <returns>Task of FlowEntityListing</returns>
-        System.Threading.Tasks.Task<FlowEntityListing> FlowsGetAsync (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string lockedBy = null);
+        System.Threading.Tasks.Task<FlowEntityListing> GetAsync (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null);
 
         /// <summary>
         /// Get a pageable list of flows, filtered by query parameters
@@ -92,9 +98,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="description">Description</param>
         /// <param name="nameOrDescription">Name or description</param>
         /// <param name="publishVersionId">Publish version ID</param>
+        /// <param name="editableBy">Editable by</param>
         /// <param name="lockedBy">Locked by</param>
+        /// <param name="deleted">Include deleted</param>
         /// <returns>Task of ApiResponse (FlowEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FlowEntityListing>> FlowsGetAsyncWithHttpInfo (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string lockedBy = null);
+        System.Threading.Tasks.Task<ApiResponse<FlowEntityListing>> GetAsyncWithHttpInfo (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null);
         
         /// <summary>
         /// Create flow
@@ -104,7 +112,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Flow</returns>
-        Flow FlowsPost (Flow body = null);
+        Flow Create (Flow body = null);
   
         /// <summary>
         /// Create flow
@@ -114,7 +122,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Flow</returns>
-        ApiResponse<Flow> FlowsPostWithHttpInfo (Flow body = null);
+        ApiResponse<Flow> CreateWithHttpInfo (Flow body = null);
 
         /// <summary>
         /// Create flow
@@ -124,7 +132,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of Flow</returns>
-        System.Threading.Tasks.Task<Flow> FlowsPostAsync (Flow body = null);
+        System.Threading.Tasks.Task<Flow> CreateAsync (Flow body = null);
 
         /// <summary>
         /// Create flow
@@ -134,7 +142,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Flow)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Flow>> FlowsPostAsyncWithHttpInfo (Flow body = null);
+        System.Threading.Tasks.Task<ApiResponse<Flow>> CreateAsyncWithHttpInfo (Flow body = null);
         
         /// <summary>
         /// Batch-delete a list of flows
@@ -145,7 +153,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">List of Flow IDs</param>
         /// <param name="ignoreDependencies">Ignore Dependencies</param>
         /// <returns></returns>
-        void FlowsDelete (List<string> id, bool? ignoreDependencies = null);
+        void Delete (List<string> id, bool? ignoreDependencies = null);
   
         /// <summary>
         /// Batch-delete a list of flows
@@ -156,7 +164,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">List of Flow IDs</param>
         /// <param name="ignoreDependencies">Ignore Dependencies</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> FlowsDeleteWithHttpInfo (List<string> id, bool? ignoreDependencies = null);
+        ApiResponse<Object> DeleteWithHttpInfo (List<string> id, bool? ignoreDependencies = null);
 
         /// <summary>
         /// Batch-delete a list of flows
@@ -167,7 +175,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">List of Flow IDs</param>
         /// <param name="ignoreDependencies">Ignore Dependencies</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task FlowsDeleteAsync (List<string> id, bool? ignoreDependencies = null);
+        System.Threading.Tasks.Task DeleteAsync (List<string> id, bool? ignoreDependencies = null);
 
         /// <summary>
         /// Batch-delete a list of flows
@@ -178,7 +186,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">List of Flow IDs</param>
         /// <param name="ignoreDependencies">Ignore Dependencies</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> FlowsDeleteAsyncWithHttpInfo (List<string> id, bool? ignoreDependencies = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAsyncWithHttpInfo (List<string> id, bool? ignoreDependencies = null);
         
     }
   
@@ -271,11 +279,13 @@ namespace ININ.PureCloudApi.Api
         /// <param name="description">Description</param> 
         /// <param name="nameOrDescription">Name or description</param> 
         /// <param name="publishVersionId">Publish version ID</param> 
+        /// <param name="editableBy">Editable by</param> 
         /// <param name="lockedBy">Locked by</param> 
+        /// <param name="deleted">Include deleted</param> 
         /// <returns>FlowEntityListing</returns>
-        public FlowEntityListing FlowsGet (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string lockedBy = null)
+        public FlowEntityListing Get (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null)
         {
-             ApiResponse<FlowEntityListing> response = FlowsGetWithHttpInfo(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, lockedBy);
+             ApiResponse<FlowEntityListing> response = GetWithHttpInfo(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, editableBy, lockedBy, deleted);
              return response.Data;
         }
 
@@ -292,9 +302,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="description">Description</param> 
         /// <param name="nameOrDescription">Name or description</param> 
         /// <param name="publishVersionId">Publish version ID</param> 
+        /// <param name="editableBy">Editable by</param> 
         /// <param name="lockedBy">Locked by</param> 
+        /// <param name="deleted">Include deleted</param> 
         /// <returns>ApiResponse of FlowEntityListing</returns>
-        public ApiResponse< FlowEntityListing > FlowsGetWithHttpInfo (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string lockedBy = null)
+        public ApiResponse< FlowEntityListing > GetWithHttpInfo (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null)
         {
             
     
@@ -329,7 +341,9 @@ namespace ININ.PureCloudApi.Api
             if (description != null) queryParams.Add("description", Configuration.ApiClient.ParameterToString(description)); // query parameter
             if (nameOrDescription != null) queryParams.Add("nameOrDescription", Configuration.ApiClient.ParameterToString(nameOrDescription)); // query parameter
             if (publishVersionId != null) queryParams.Add("publishVersionId", Configuration.ApiClient.ParameterToString(publishVersionId)); // query parameter
+            if (editableBy != null) queryParams.Add("editableBy", Configuration.ApiClient.ParameterToString(editableBy)); // query parameter
             if (lockedBy != null) queryParams.Add("lockedBy", Configuration.ApiClient.ParameterToString(lockedBy)); // query parameter
+            if (deleted != null) queryParams.Add("deleted", Configuration.ApiClient.ParameterToString(deleted)); // query parameter
             
             
             
@@ -351,9 +365,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling FlowsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling FlowsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<FlowEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -374,11 +388,13 @@ namespace ININ.PureCloudApi.Api
         /// <param name="description">Description</param>
         /// <param name="nameOrDescription">Name or description</param>
         /// <param name="publishVersionId">Publish version ID</param>
+        /// <param name="editableBy">Editable by</param>
         /// <param name="lockedBy">Locked by</param>
+        /// <param name="deleted">Include deleted</param>
         /// <returns>Task of FlowEntityListing</returns>
-        public async System.Threading.Tasks.Task<FlowEntityListing> FlowsGetAsync (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string lockedBy = null)
+        public async System.Threading.Tasks.Task<FlowEntityListing> GetAsync (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null)
         {
-             ApiResponse<FlowEntityListing> response = await FlowsGetAsyncWithHttpInfo(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, lockedBy);
+             ApiResponse<FlowEntityListing> response = await GetAsyncWithHttpInfo(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, editableBy, lockedBy, deleted);
              return response.Data;
 
         }
@@ -396,9 +412,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="description">Description</param>
         /// <param name="nameOrDescription">Name or description</param>
         /// <param name="publishVersionId">Publish version ID</param>
+        /// <param name="editableBy">Editable by</param>
         /// <param name="lockedBy">Locked by</param>
+        /// <param name="deleted">Include deleted</param>
         /// <returns>Task of ApiResponse (FlowEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FlowEntityListing>> FlowsGetAsyncWithHttpInfo (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string lockedBy = null)
+        public async System.Threading.Tasks.Task<ApiResponse<FlowEntityListing>> GetAsyncWithHttpInfo (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null)
         {
             
     
@@ -433,7 +451,9 @@ namespace ININ.PureCloudApi.Api
             if (description != null) queryParams.Add("description", Configuration.ApiClient.ParameterToString(description)); // query parameter
             if (nameOrDescription != null) queryParams.Add("nameOrDescription", Configuration.ApiClient.ParameterToString(nameOrDescription)); // query parameter
             if (publishVersionId != null) queryParams.Add("publishVersionId", Configuration.ApiClient.ParameterToString(publishVersionId)); // query parameter
+            if (editableBy != null) queryParams.Add("editableBy", Configuration.ApiClient.ParameterToString(editableBy)); // query parameter
             if (lockedBy != null) queryParams.Add("lockedBy", Configuration.ApiClient.ParameterToString(lockedBy)); // query parameter
+            if (deleted != null) queryParams.Add("deleted", Configuration.ApiClient.ParameterToString(deleted)); // query parameter
             
             
             
@@ -455,9 +475,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling FlowsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling FlowsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<FlowEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -470,9 +490,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>Flow</returns>
-        public Flow FlowsPost (Flow body = null)
+        public Flow Create (Flow body = null)
         {
-             ApiResponse<Flow> response = FlowsPostWithHttpInfo(body);
+             ApiResponse<Flow> response = CreateWithHttpInfo(body);
              return response.Data;
         }
 
@@ -481,7 +501,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>ApiResponse of Flow</returns>
-        public ApiResponse< Flow > FlowsPostWithHttpInfo (Flow body = null)
+        public ApiResponse< Flow > CreateWithHttpInfo (Flow body = null)
         {
             
     
@@ -528,9 +548,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling FlowsPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Create: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling FlowsPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Create: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Flow>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -543,9 +563,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of Flow</returns>
-        public async System.Threading.Tasks.Task<Flow> FlowsPostAsync (Flow body = null)
+        public async System.Threading.Tasks.Task<Flow> CreateAsync (Flow body = null)
         {
-             ApiResponse<Flow> response = await FlowsPostAsyncWithHttpInfo(body);
+             ApiResponse<Flow> response = await CreateAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -555,7 +575,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Flow)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Flow>> FlowsPostAsyncWithHttpInfo (Flow body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Flow>> CreateAsyncWithHttpInfo (Flow body = null)
         {
             
     
@@ -602,9 +622,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling FlowsPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Create: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling FlowsPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Create: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Flow>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -618,9 +638,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">List of Flow IDs</param> 
         /// <param name="ignoreDependencies">Ignore Dependencies</param> 
         /// <returns></returns>
-        public void FlowsDelete (List<string> id, bool? ignoreDependencies = null)
+        public void Delete (List<string> id, bool? ignoreDependencies = null)
         {
-             FlowsDeleteWithHttpInfo(id, ignoreDependencies);
+             DeleteWithHttpInfo(id, ignoreDependencies);
         }
 
         /// <summary>
@@ -629,11 +649,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">List of Flow IDs</param> 
         /// <param name="ignoreDependencies">Ignore Dependencies</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> FlowsDeleteWithHttpInfo (List<string> id, bool? ignoreDependencies = null)
+        public ApiResponse<Object> DeleteWithHttpInfo (List<string> id, bool? ignoreDependencies = null)
         {
             
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling FlowsDelete");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Delete");
             
     
             var path_ = "/api/v1/flows";
@@ -680,9 +700,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling FlowsDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Delete: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling FlowsDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Delete: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -696,9 +716,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">List of Flow IDs</param>
         /// <param name="ignoreDependencies">Ignore Dependencies</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task FlowsDeleteAsync (List<string> id, bool? ignoreDependencies = null)
+        public async System.Threading.Tasks.Task DeleteAsync (List<string> id, bool? ignoreDependencies = null)
         {
-             await FlowsDeleteAsyncWithHttpInfo(id, ignoreDependencies);
+             await DeleteAsyncWithHttpInfo(id, ignoreDependencies);
 
         }
 
@@ -708,10 +728,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">List of Flow IDs</param>
         /// <param name="ignoreDependencies">Ignore Dependencies</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> FlowsDeleteAsyncWithHttpInfo (List<string> id, bool? ignoreDependencies = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAsyncWithHttpInfo (List<string> id, bool? ignoreDependencies = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling FlowsDelete");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Delete");
             
     
             var path_ = "/api/v1/flows";
@@ -758,9 +778,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling FlowsDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Delete: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling FlowsDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Delete: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,

@@ -90,7 +90,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets ProviderEndpoint
         /// </summary>
         [DataMember(Name="providerEndpoint", EmitDefaultValue=false)]
-        public string ProviderEndpoint { get; set; }
+        public Endpoint ProviderEndpoint { get; set; }
   
         
         /// <summary>

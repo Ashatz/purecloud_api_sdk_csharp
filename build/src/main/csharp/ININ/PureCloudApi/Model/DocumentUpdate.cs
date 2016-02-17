@@ -50,13 +50,6 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
-        /// Gets or Sets UpdateAttributes
-        /// </summary>
-        [DataMember(Name="updateAttributes", EmitDefaultValue=false)]
-        public List<AttributeValue> UpdateAttributes { get; set; }
-  
-        
-        /// <summary>
         /// Gets or Sets RemoveAttributes
         /// </summary>
         [DataMember(Name="removeAttributes", EmitDefaultValue=false)]
@@ -91,20 +84,6 @@ namespace ININ.PureCloudApi.Model
         public List<string> RemoveTagIds { get; set; }
   
         
-        /// <summary>
-        /// Gets or Sets AddAttributeGroupInstanceIds
-        /// </summary>
-        [DataMember(Name="addAttributeGroupInstanceIds", EmitDefaultValue=false)]
-        public List<string> AddAttributeGroupInstanceIds { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets RemoveAttributeGroupInstanceIds
-        /// </summary>
-        [DataMember(Name="removeAttributeGroupInstanceIds", EmitDefaultValue=false)]
-        public List<string> RemoveAttributeGroupInstanceIds { get; set; }
-  
-        
   
         /// <summary>
         /// Returns the string presentation of the object
@@ -117,14 +96,11 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ChangeNumber: ").Append(ChangeNumber).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Read: ").Append(Read).Append("\n");
-            sb.Append("  UpdateAttributes: ").Append(UpdateAttributes).Append("\n");
             sb.Append("  RemoveAttributes: ").Append(RemoveAttributes).Append("\n");
             sb.Append("  AddTags: ").Append(AddTags).Append("\n");
             sb.Append("  RemoveTags: ").Append(RemoveTags).Append("\n");
             sb.Append("  AddTagIds: ").Append(AddTagIds).Append("\n");
             sb.Append("  RemoveTagIds: ").Append(RemoveTagIds).Append("\n");
-            sb.Append("  AddAttributeGroupInstanceIds: ").Append(AddAttributeGroupInstanceIds).Append("\n");
-            sb.Append("  RemoveAttributeGroupInstanceIds: ").Append(RemoveAttributeGroupInstanceIds).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -178,11 +154,6 @@ namespace ININ.PureCloudApi.Model
                     this.Read.Equals(other.Read)
                 ) && 
                 (
-                    this.UpdateAttributes == other.UpdateAttributes ||
-                    this.UpdateAttributes != null &&
-                    this.UpdateAttributes.SequenceEqual(other.UpdateAttributes)
-                ) && 
-                (
                     this.RemoveAttributes == other.RemoveAttributes ||
                     this.RemoveAttributes != null &&
                     this.RemoveAttributes.SequenceEqual(other.RemoveAttributes)
@@ -206,16 +177,6 @@ namespace ININ.PureCloudApi.Model
                     this.RemoveTagIds == other.RemoveTagIds ||
                     this.RemoveTagIds != null &&
                     this.RemoveTagIds.SequenceEqual(other.RemoveTagIds)
-                ) && 
-                (
-                    this.AddAttributeGroupInstanceIds == other.AddAttributeGroupInstanceIds ||
-                    this.AddAttributeGroupInstanceIds != null &&
-                    this.AddAttributeGroupInstanceIds.SequenceEqual(other.AddAttributeGroupInstanceIds)
-                ) && 
-                (
-                    this.RemoveAttributeGroupInstanceIds == other.RemoveAttributeGroupInstanceIds ||
-                    this.RemoveAttributeGroupInstanceIds != null &&
-                    this.RemoveAttributeGroupInstanceIds.SequenceEqual(other.RemoveAttributeGroupInstanceIds)
                 );
         }
 
@@ -240,9 +201,6 @@ namespace ININ.PureCloudApi.Model
                 if (this.Read != null)
                     hash = hash * 57 + this.Read.GetHashCode();
                 
-                if (this.UpdateAttributes != null)
-                    hash = hash * 57 + this.UpdateAttributes.GetHashCode();
-                
                 if (this.RemoveAttributes != null)
                     hash = hash * 57 + this.RemoveAttributes.GetHashCode();
                 
@@ -257,12 +215,6 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.RemoveTagIds != null)
                     hash = hash * 57 + this.RemoveTagIds.GetHashCode();
-                
-                if (this.AddAttributeGroupInstanceIds != null)
-                    hash = hash * 57 + this.AddAttributeGroupInstanceIds.GetHashCode();
-                
-                if (this.RemoveAttributeGroupInstanceIds != null)
-                    hash = hash * 57 + this.RemoveAttributeGroupInstanceIds.GetHashCode();
                 
                 return hash;
             }

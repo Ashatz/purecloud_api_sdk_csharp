@@ -13,7 +13,7 @@ namespace ININ.PureCloudApi.Model
 {
 
     /// <summary>
-    /// 
+    /// Historical conversation request filter
     /// </summary>
     [DataContract]
     public class ConversationHistoricalQueryRequestFilter :  IEquatable<ConversationHistoricalQueryRequestFilter>
@@ -28,22 +28,25 @@ namespace ININ.PureCloudApi.Model
 
         
         /// <summary>
-        /// Gets or Sets Target
+        /// Filter target
         /// </summary>
+        /// <value>Filter target</value>
         [DataMember(Name="target", EmitDefaultValue=false)]
         public string Target { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets Operator
+        /// Filter operator. For target 'interval' allowable values are '=', 'between', '<=', 'before', '>=', 'after'. For targets 'active', 'agentId', 'connectedOnly', 'dialerCampaignId', 'disconnectType', 'mediaType', 'purpose', 'qualityEvaluationAgent', 'qualityEvaluationForm', 'qualityEvaluator', 'queueId', 'wrapUpCode' allowable value is '='. For target 'duration' allowable values are '=', '<', '<=', '>', '>='. For targets 'ani', 'dnis', 'freeText' allowable value is 'contains'. For targets 'recordingRestored', 'qualityEvaluationCriticalScore', ', qualityEvaluationScore' no operator is required
         /// </summary>
+        /// <value>Filter operator. For target 'interval' allowable values are '=', 'between', '<=', 'before', '>=', 'after'. For targets 'active', 'agentId', 'connectedOnly', 'dialerCampaignId', 'disconnectType', 'mediaType', 'purpose', 'qualityEvaluationAgent', 'qualityEvaluationForm', 'qualityEvaluator', 'queueId', 'wrapUpCode' allowable value is '='. For target 'duration' allowable values are '=', '<', '<=', '>', '>='. For targets 'ani', 'dnis', 'freeText' allowable value is 'contains'. For targets 'recordingRestored', 'qualityEvaluationCriticalScore', ', qualityEvaluationScore' no operator is required</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
         public string Operator { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets Values
+        /// Filter values. For target 'interval' with operators '=' or 'between', only 1 value is allowed in the form of 2 ISO-8601 dates separated by a '/' with no spaces. For target 'interval' with operators '<=', 'before', '>=', 'after', only 1 value is allowed in the form of 1 ISO-8601 date. For targets 'agentId', 'dialerCampaignId', 'qualityEvaluationAgent', 'qualityEvaluationForm', 'qualityEvaluator', 'queueId', 'wrapUpCode' multiple values are allowed. All values are UUIDs. For target 'disconnectType' multiple values are allowed. Values can be one of 'TRANSFER', 'CLIENT', 'REMOTE'. For target 'mediaType' multiple values are allowed. Values can be one of 'VOICE', 'CHAT', 'EMAIL'.For target 'purpose' multiple values are allowed. For targets 'active', 'connectedOnly'1 value is required and it must be either 'true' or 'false'. For target 'duration' 2 values are required for operator '='. For all other operators, 1 value is required. For targets 'ani', 'dnis', 'freeText' only a single value is allowed. For targets 'recordingRestored', 'qualityEvaluationCriticalScore', ', qualityEvaluationScore' no values are required.
         /// </summary>
+        /// <value>Filter values. For target 'interval' with operators '=' or 'between', only 1 value is allowed in the form of 2 ISO-8601 dates separated by a '/' with no spaces. For target 'interval' with operators '<=', 'before', '>=', 'after', only 1 value is allowed in the form of 1 ISO-8601 date. For targets 'agentId', 'dialerCampaignId', 'qualityEvaluationAgent', 'qualityEvaluationForm', 'qualityEvaluator', 'queueId', 'wrapUpCode' multiple values are allowed. All values are UUIDs. For target 'disconnectType' multiple values are allowed. Values can be one of 'TRANSFER', 'CLIENT', 'REMOTE'. For target 'mediaType' multiple values are allowed. Values can be one of 'VOICE', 'CHAT', 'EMAIL'.For target 'purpose' multiple values are allowed. For targets 'active', 'connectedOnly'1 value is required and it must be either 'true' or 'false'. For target 'duration' 2 values are required for operator '='. For all other operators, 1 value is required. For targets 'ani', 'dnis', 'freeText' only a single value is allowed. For targets 'recordingRestored', 'qualityEvaluationCriticalScore', ', qualityEvaluationScore' no values are required.</value>
         [DataMember(Name="values", EmitDefaultValue=false)]
         public List<string> Values { get; set; }
   

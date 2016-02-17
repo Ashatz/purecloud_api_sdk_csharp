@@ -69,7 +69,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Intervals
         /// </summary>
         [DataMember(Name="intervals", EmitDefaultValue=false)]
-        public List<Interval> Intervals { get; set; }
+        public List<CampaignScheduleIntervals> Intervals { get; set; }
   
         
         /// <summary>

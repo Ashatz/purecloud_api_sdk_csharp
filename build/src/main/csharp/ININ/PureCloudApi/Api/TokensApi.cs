@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>string</returns>
-        string TokensMeDelete ();
+        string DeleteMe ();
   
         /// <summary>
         /// Delete  auth token used to make the request.
@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> TokensMeDeleteWithHttpInfo ();
+        ApiResponse<string> DeleteMeWithHttpInfo ();
 
         /// <summary>
         /// Delete  auth token used to make the request.
@@ -41,7 +41,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> TokensMeDeleteAsync ();
+        System.Threading.Tasks.Task<string> DeleteMeAsync ();
 
         /// <summary>
         /// Delete  auth token used to make the request.
@@ -50,7 +50,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> TokensMeDeleteAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteMeAsyncWithHttpInfo ();
         
     }
   
@@ -134,9 +134,9 @@ namespace ININ.PureCloudApi.Api
         /// Delete  auth token used to make the request. 
         /// </summary>
         /// <returns>string</returns>
-        public string TokensMeDelete ()
+        public string DeleteMe ()
         {
-             ApiResponse<string> response = TokensMeDeleteWithHttpInfo();
+             ApiResponse<string> response = DeleteMeWithHttpInfo();
              return response.Data;
         }
 
@@ -144,7 +144,7 @@ namespace ININ.PureCloudApi.Api
         /// Delete  auth token used to make the request. 
         /// </summary>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > TokensMeDeleteWithHttpInfo ()
+        public ApiResponse< string > DeleteMeWithHttpInfo ()
         {
             
     
@@ -190,9 +190,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling TokensMeDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteMe: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling TokensMeDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteMe: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -204,9 +204,9 @@ namespace ININ.PureCloudApi.Api
         /// Delete  auth token used to make the request. 
         /// </summary>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> TokensMeDeleteAsync ()
+        public async System.Threading.Tasks.Task<string> DeleteMeAsync ()
         {
-             ApiResponse<string> response = await TokensMeDeleteAsyncWithHttpInfo();
+             ApiResponse<string> response = await DeleteMeAsyncWithHttpInfo();
              return response.Data;
 
         }
@@ -215,7 +215,7 @@ namespace ININ.PureCloudApi.Api
         /// Delete  auth token used to make the request. 
         /// </summary>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> TokensMeDeleteAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteMeAsyncWithHttpInfo ()
         {
             
     
@@ -261,9 +261,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling TokensMeDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteMe: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling TokensMeDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteMe: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

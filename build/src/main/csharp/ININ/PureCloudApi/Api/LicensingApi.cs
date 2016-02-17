@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="permission">Permission</param>
         /// <returns>List&lt;License&gt;</returns>
-        List<License> LicensingLicensesGet (List<string> permission = null);
+        List<License> GetLicenses (List<string> permission = null);
   
         /// <summary>
         /// Get Licenses required for a set of permissions.
@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="permission">Permission</param>
         /// <returns>ApiResponse of List&lt;License&gt;</returns>
-        ApiResponse<List<License>> LicensingLicensesGetWithHttpInfo (List<string> permission = null);
+        ApiResponse<List<License>> GetLicensesWithHttpInfo (List<string> permission = null);
 
         /// <summary>
         /// Get Licenses required for a set of permissions.
@@ -44,7 +44,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="permission">Permission</param>
         /// <returns>Task of List&lt;License&gt;</returns>
-        System.Threading.Tasks.Task<List<License>> LicensingLicensesGetAsync (List<string> permission = null);
+        System.Threading.Tasks.Task<List<License>> GetLicensesAsync (List<string> permission = null);
 
         /// <summary>
         /// Get Licenses required for a set of permissions.
@@ -54,7 +54,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="permission">Permission</param>
         /// <returns>Task of ApiResponse (List&lt;License&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<License>>> LicensingLicensesGetAsyncWithHttpInfo (List<string> permission = null);
+        System.Threading.Tasks.Task<ApiResponse<List<License>>> GetLicensesAsyncWithHttpInfo (List<string> permission = null);
         
         /// <summary>
         /// Get org license assignments.
@@ -63,7 +63,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>OrgLicenseAssignment</returns>
-        OrgLicenseAssignment LicensingOrgassignmentsGet ();
+        OrgLicenseAssignment GetOrgassignments ();
   
         /// <summary>
         /// Get org license assignments.
@@ -72,7 +72,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of OrgLicenseAssignment</returns>
-        ApiResponse<OrgLicenseAssignment> LicensingOrgassignmentsGetWithHttpInfo ();
+        ApiResponse<OrgLicenseAssignment> GetOrgassignmentsWithHttpInfo ();
 
         /// <summary>
         /// Get org license assignments.
@@ -81,7 +81,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of OrgLicenseAssignment</returns>
-        System.Threading.Tasks.Task<OrgLicenseAssignment> LicensingOrgassignmentsGetAsync ();
+        System.Threading.Tasks.Task<OrgLicenseAssignment> GetOrgassignmentsAsync ();
 
         /// <summary>
         /// Get org license assignments.
@@ -90,7 +90,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse (OrgLicenseAssignment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrgLicenseAssignment>> LicensingOrgassignmentsGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<OrgLicenseAssignment>> GetOrgassignmentsAsyncWithHttpInfo ();
         
         /// <summary>
         /// Get org license assignment.
@@ -100,7 +100,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">ID</param>
         /// <returns>OrgLicenseAssignment</returns>
-        OrgLicenseAssignment LicensingOrgassignmentsIdGet (string id);
+        OrgLicenseAssignment GetOrgassignmentsId (string id);
   
         /// <summary>
         /// Get org license assignment.
@@ -110,7 +110,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">ID</param>
         /// <returns>ApiResponse of OrgLicenseAssignment</returns>
-        ApiResponse<OrgLicenseAssignment> LicensingOrgassignmentsIdGetWithHttpInfo (string id);
+        ApiResponse<OrgLicenseAssignment> GetOrgassignmentsIdWithHttpInfo (string id);
 
         /// <summary>
         /// Get org license assignment.
@@ -120,7 +120,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">ID</param>
         /// <returns>Task of OrgLicenseAssignment</returns>
-        System.Threading.Tasks.Task<OrgLicenseAssignment> LicensingOrgassignmentsIdGetAsync (string id);
+        System.Threading.Tasks.Task<OrgLicenseAssignment> GetOrgassignmentsIdAsync (string id);
 
         /// <summary>
         /// Get org license assignment.
@@ -130,7 +130,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">ID</param>
         /// <returns>Task of ApiResponse (OrgLicenseAssignment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrgLicenseAssignment>> LicensingOrgassignmentsIdGetAsyncWithHttpInfo (string id);
+        System.Threading.Tasks.Task<ApiResponse<OrgLicenseAssignment>> GetOrgassignmentsIdAsyncWithHttpInfo (string id);
         
         /// <summary>
         /// Get Licenses required per permission.
@@ -140,7 +140,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">ID</param>
         /// <returns>List&lt;LicensesByPermission&gt;</returns>
-        List<LicensesByPermission> LicensingPermissionsGet (List<string> id = null);
+        List<LicensesByPermission> GetPermissions (List<string> id = null);
   
         /// <summary>
         /// Get Licenses required per permission.
@@ -150,7 +150,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">ID</param>
         /// <returns>ApiResponse of List&lt;LicensesByPermission&gt;</returns>
-        ApiResponse<List<LicensesByPermission>> LicensingPermissionsGetWithHttpInfo (List<string> id = null);
+        ApiResponse<List<LicensesByPermission>> GetPermissionsWithHttpInfo (List<string> id = null);
 
         /// <summary>
         /// Get Licenses required per permission.
@@ -160,7 +160,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">ID</param>
         /// <returns>Task of List&lt;LicensesByPermission&gt;</returns>
-        System.Threading.Tasks.Task<List<LicensesByPermission>> LicensingPermissionsGetAsync (List<string> id = null);
+        System.Threading.Tasks.Task<List<LicensesByPermission>> GetPermissionsAsync (List<string> id = null);
 
         /// <summary>
         /// Get Licenses required per permission.
@@ -170,7 +170,51 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">ID</param>
         /// <returns>Task of ApiResponse (List&lt;LicensesByPermission&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<LicensesByPermission>>> LicensingPermissionsGetAsyncWithHttpInfo (List<string> id = null);
+        System.Threading.Tasks.Task<ApiResponse<List<LicensesByPermission>>> GetPermissionsAsyncWithHttpInfo (List<string> id = null);
+        
+        /// <summary>
+        /// Get Licenses required per permission.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="id">ID</param>
+        /// <param name="body">The permissions details</param>
+        /// <returns>List&lt;LicensesByPermission&gt;</returns>
+        List<LicensesByPermission> CreatePermissions (List<string> id = null, Permissions body = null);
+  
+        /// <summary>
+        /// Get Licenses required per permission.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="id">ID</param>
+        /// <param name="body">The permissions details</param>
+        /// <returns>ApiResponse of List&lt;LicensesByPermission&gt;</returns>
+        ApiResponse<List<LicensesByPermission>> CreatePermissionsWithHttpInfo (List<string> id = null, Permissions body = null);
+
+        /// <summary>
+        /// Get Licenses required per permission.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="id">ID</param>
+        /// <param name="body">The permissions details</param>
+        /// <returns>Task of List&lt;LicensesByPermission&gt;</returns>
+        System.Threading.Tasks.Task<List<LicensesByPermission>> CreatePermissionsAsync (List<string> id = null, Permissions body = null);
+
+        /// <summary>
+        /// Get Licenses required per permission.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="id">ID</param>
+        /// <param name="body">The permissions details</param>
+        /// <returns>Task of ApiResponse (List&lt;LicensesByPermission&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<LicensesByPermission>>> CreatePermissionsAsyncWithHttpInfo (List<string> id = null, Permissions body = null);
         
         /// <summary>
         /// Get user license assignments.
@@ -179,7 +223,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>UserLicenseAssignment</returns>
-        UserLicenseAssignment LicensingUserassignmentsGet ();
+        UserLicenseAssignment GetUserassignments ();
   
         /// <summary>
         /// Get user license assignments.
@@ -188,7 +232,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of UserLicenseAssignment</returns>
-        ApiResponse<UserLicenseAssignment> LicensingUserassignmentsGetWithHttpInfo ();
+        ApiResponse<UserLicenseAssignment> GetUserassignmentsWithHttpInfo ();
 
         /// <summary>
         /// Get user license assignments.
@@ -197,7 +241,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of UserLicenseAssignment</returns>
-        System.Threading.Tasks.Task<UserLicenseAssignment> LicensingUserassignmentsGetAsync ();
+        System.Threading.Tasks.Task<UserLicenseAssignment> GetUserassignmentsAsync ();
 
         /// <summary>
         /// Get user license assignments.
@@ -206,7 +250,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse (UserLicenseAssignment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserLicenseAssignment>> LicensingUserassignmentsGetAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<UserLicenseAssignment>> GetUserassignmentsAsyncWithHttpInfo ();
         
         /// <summary>
         /// Get user license assignment.
@@ -216,7 +260,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">ID</param>
         /// <returns>UserLicenseAssignment</returns>
-        UserLicenseAssignment LicensingUserassignmentsIdGet (string id);
+        UserLicenseAssignment GetUserassignmentsId (string id);
   
         /// <summary>
         /// Get user license assignment.
@@ -226,7 +270,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">ID</param>
         /// <returns>ApiResponse of UserLicenseAssignment</returns>
-        ApiResponse<UserLicenseAssignment> LicensingUserassignmentsIdGetWithHttpInfo (string id);
+        ApiResponse<UserLicenseAssignment> GetUserassignmentsIdWithHttpInfo (string id);
 
         /// <summary>
         /// Get user license assignment.
@@ -236,7 +280,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">ID</param>
         /// <returns>Task of UserLicenseAssignment</returns>
-        System.Threading.Tasks.Task<UserLicenseAssignment> LicensingUserassignmentsIdGetAsync (string id);
+        System.Threading.Tasks.Task<UserLicenseAssignment> GetUserassignmentsIdAsync (string id);
 
         /// <summary>
         /// Get user license assignment.
@@ -246,7 +290,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">ID</param>
         /// <returns>Task of ApiResponse (UserLicenseAssignment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserLicenseAssignment>> LicensingUserassignmentsIdGetAsyncWithHttpInfo (string id);
+        System.Threading.Tasks.Task<ApiResponse<UserLicenseAssignment>> GetUserassignmentsIdAsyncWithHttpInfo (string id);
         
     }
   
@@ -331,9 +375,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="permission">Permission</param> 
         /// <returns>List&lt;License&gt;</returns>
-        public List<License> LicensingLicensesGet (List<string> permission = null)
+        public List<License> GetLicenses (List<string> permission = null)
         {
-             ApiResponse<List<License>> response = LicensingLicensesGetWithHttpInfo(permission);
+             ApiResponse<List<License>> response = GetLicensesWithHttpInfo(permission);
              return response.Data;
         }
 
@@ -342,7 +386,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="permission">Permission</param> 
         /// <returns>ApiResponse of List&lt;License&gt;</returns>
-        public ApiResponse< List<License> > LicensingLicensesGetWithHttpInfo (List<string> permission = null)
+        public ApiResponse< List<License> > GetLicensesWithHttpInfo (List<string> permission = null)
         {
             
     
@@ -389,9 +433,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling LicensingLicensesGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetLicenses: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling LicensingLicensesGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetLicenses: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<List<License>>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -404,9 +448,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="permission">Permission</param>
         /// <returns>Task of List&lt;License&gt;</returns>
-        public async System.Threading.Tasks.Task<List<License>> LicensingLicensesGetAsync (List<string> permission = null)
+        public async System.Threading.Tasks.Task<List<License>> GetLicensesAsync (List<string> permission = null)
         {
-             ApiResponse<List<License>> response = await LicensingLicensesGetAsyncWithHttpInfo(permission);
+             ApiResponse<List<License>> response = await GetLicensesAsyncWithHttpInfo(permission);
              return response.Data;
 
         }
@@ -416,7 +460,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="permission">Permission</param>
         /// <returns>Task of ApiResponse (List&lt;License&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<License>>> LicensingLicensesGetAsyncWithHttpInfo (List<string> permission = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<License>>> GetLicensesAsyncWithHttpInfo (List<string> permission = null)
         {
             
     
@@ -463,9 +507,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling LicensingLicensesGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetLicenses: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling LicensingLicensesGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetLicenses: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<List<License>>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -477,9 +521,9 @@ namespace ININ.PureCloudApi.Api
         /// Get org license assignments. 
         /// </summary>
         /// <returns>OrgLicenseAssignment</returns>
-        public OrgLicenseAssignment LicensingOrgassignmentsGet ()
+        public OrgLicenseAssignment GetOrgassignments ()
         {
-             ApiResponse<OrgLicenseAssignment> response = LicensingOrgassignmentsGetWithHttpInfo();
+             ApiResponse<OrgLicenseAssignment> response = GetOrgassignmentsWithHttpInfo();
              return response.Data;
         }
 
@@ -487,7 +531,7 @@ namespace ININ.PureCloudApi.Api
         /// Get org license assignments. 
         /// </summary>
         /// <returns>ApiResponse of OrgLicenseAssignment</returns>
-        public ApiResponse< OrgLicenseAssignment > LicensingOrgassignmentsGetWithHttpInfo ()
+        public ApiResponse< OrgLicenseAssignment > GetOrgassignmentsWithHttpInfo ()
         {
             
     
@@ -533,9 +577,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling LicensingOrgassignmentsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetOrgassignments: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling LicensingOrgassignmentsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetOrgassignments: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OrgLicenseAssignment>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -547,9 +591,9 @@ namespace ININ.PureCloudApi.Api
         /// Get org license assignments. 
         /// </summary>
         /// <returns>Task of OrgLicenseAssignment</returns>
-        public async System.Threading.Tasks.Task<OrgLicenseAssignment> LicensingOrgassignmentsGetAsync ()
+        public async System.Threading.Tasks.Task<OrgLicenseAssignment> GetOrgassignmentsAsync ()
         {
-             ApiResponse<OrgLicenseAssignment> response = await LicensingOrgassignmentsGetAsyncWithHttpInfo();
+             ApiResponse<OrgLicenseAssignment> response = await GetOrgassignmentsAsyncWithHttpInfo();
              return response.Data;
 
         }
@@ -558,7 +602,7 @@ namespace ININ.PureCloudApi.Api
         /// Get org license assignments. 
         /// </summary>
         /// <returns>Task of ApiResponse (OrgLicenseAssignment)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrgLicenseAssignment>> LicensingOrgassignmentsGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<OrgLicenseAssignment>> GetOrgassignmentsAsyncWithHttpInfo ()
         {
             
     
@@ -604,9 +648,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling LicensingOrgassignmentsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetOrgassignments: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling LicensingOrgassignmentsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetOrgassignments: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OrgLicenseAssignment>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -619,9 +663,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">ID</param> 
         /// <returns>OrgLicenseAssignment</returns>
-        public OrgLicenseAssignment LicensingOrgassignmentsIdGet (string id)
+        public OrgLicenseAssignment GetOrgassignmentsId (string id)
         {
-             ApiResponse<OrgLicenseAssignment> response = LicensingOrgassignmentsIdGetWithHttpInfo(id);
+             ApiResponse<OrgLicenseAssignment> response = GetOrgassignmentsIdWithHttpInfo(id);
              return response.Data;
         }
 
@@ -630,11 +674,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">ID</param> 
         /// <returns>ApiResponse of OrgLicenseAssignment</returns>
-        public ApiResponse< OrgLicenseAssignment > LicensingOrgassignmentsIdGetWithHttpInfo (string id)
+        public ApiResponse< OrgLicenseAssignment > GetOrgassignmentsIdWithHttpInfo (string id)
         {
             
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling LicensingOrgassignmentsIdGet");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetOrgassignmentsId");
             
     
             var path_ = "/api/v1/licensing/orgassignments/{id}";
@@ -680,9 +724,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling LicensingOrgassignmentsIdGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetOrgassignmentsId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling LicensingOrgassignmentsIdGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetOrgassignmentsId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OrgLicenseAssignment>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -695,9 +739,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">ID</param>
         /// <returns>Task of OrgLicenseAssignment</returns>
-        public async System.Threading.Tasks.Task<OrgLicenseAssignment> LicensingOrgassignmentsIdGetAsync (string id)
+        public async System.Threading.Tasks.Task<OrgLicenseAssignment> GetOrgassignmentsIdAsync (string id)
         {
-             ApiResponse<OrgLicenseAssignment> response = await LicensingOrgassignmentsIdGetAsyncWithHttpInfo(id);
+             ApiResponse<OrgLicenseAssignment> response = await GetOrgassignmentsIdAsyncWithHttpInfo(id);
              return response.Data;
 
         }
@@ -707,10 +751,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">ID</param>
         /// <returns>Task of ApiResponse (OrgLicenseAssignment)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrgLicenseAssignment>> LicensingOrgassignmentsIdGetAsyncWithHttpInfo (string id)
+        public async System.Threading.Tasks.Task<ApiResponse<OrgLicenseAssignment>> GetOrgassignmentsIdAsyncWithHttpInfo (string id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling LicensingOrgassignmentsIdGet");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetOrgassignmentsId");
             
     
             var path_ = "/api/v1/licensing/orgassignments/{id}";
@@ -756,9 +800,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling LicensingOrgassignmentsIdGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetOrgassignmentsId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling LicensingOrgassignmentsIdGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetOrgassignmentsId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OrgLicenseAssignment>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -771,9 +815,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">ID</param> 
         /// <returns>List&lt;LicensesByPermission&gt;</returns>
-        public List<LicensesByPermission> LicensingPermissionsGet (List<string> id = null)
+        public List<LicensesByPermission> GetPermissions (List<string> id = null)
         {
-             ApiResponse<List<LicensesByPermission>> response = LicensingPermissionsGetWithHttpInfo(id);
+             ApiResponse<List<LicensesByPermission>> response = GetPermissionsWithHttpInfo(id);
              return response.Data;
         }
 
@@ -782,7 +826,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">ID</param> 
         /// <returns>ApiResponse of List&lt;LicensesByPermission&gt;</returns>
-        public ApiResponse< List<LicensesByPermission> > LicensingPermissionsGetWithHttpInfo (List<string> id = null)
+        public ApiResponse< List<LicensesByPermission> > GetPermissionsWithHttpInfo (List<string> id = null)
         {
             
     
@@ -829,9 +873,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling LicensingPermissionsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetPermissions: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling LicensingPermissionsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetPermissions: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<List<LicensesByPermission>>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -844,9 +888,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">ID</param>
         /// <returns>Task of List&lt;LicensesByPermission&gt;</returns>
-        public async System.Threading.Tasks.Task<List<LicensesByPermission>> LicensingPermissionsGetAsync (List<string> id = null)
+        public async System.Threading.Tasks.Task<List<LicensesByPermission>> GetPermissionsAsync (List<string> id = null)
         {
-             ApiResponse<List<LicensesByPermission>> response = await LicensingPermissionsGetAsyncWithHttpInfo(id);
+             ApiResponse<List<LicensesByPermission>> response = await GetPermissionsAsyncWithHttpInfo(id);
              return response.Data;
 
         }
@@ -856,7 +900,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">ID</param>
         /// <returns>Task of ApiResponse (List&lt;LicensesByPermission&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<LicensesByPermission>>> LicensingPermissionsGetAsyncWithHttpInfo (List<string> id = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<LicensesByPermission>>> GetPermissionsAsyncWithHttpInfo (List<string> id = null)
         {
             
     
@@ -903,9 +947,162 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling LicensingPermissionsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetPermissions: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling LicensingPermissionsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetPermissions: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<List<LicensesByPermission>>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<LicensesByPermission>) Configuration.ApiClient.Deserialize(response, typeof(List<LicensesByPermission>)));
+            
+        }
+        
+        /// <summary>
+        /// Get Licenses required per permission. 
+        /// </summary>
+        /// <param name="id">ID</param> 
+        /// <param name="body">The permissions details</param> 
+        /// <returns>List&lt;LicensesByPermission&gt;</returns>
+        public List<LicensesByPermission> CreatePermissions (List<string> id = null, Permissions body = null)
+        {
+             ApiResponse<List<LicensesByPermission>> response = CreatePermissionsWithHttpInfo(id, body);
+             return response.Data;
+        }
+
+        /// <summary>
+        /// Get Licenses required per permission. 
+        /// </summary>
+        /// <param name="id">ID</param> 
+        /// <param name="body">The permissions details</param> 
+        /// <returns>ApiResponse of List&lt;LicensesByPermission&gt;</returns>
+        public ApiResponse< List<LicensesByPermission> > CreatePermissionsWithHttpInfo (List<string> id = null, Permissions body = null)
+        {
+            
+    
+            var path_ = "/api/v1/licensing/permissions";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            if (id != null) queryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            
+            
+            
+            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling CreatePermissions: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling CreatePermissions: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<List<LicensesByPermission>>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<LicensesByPermission>) Configuration.ApiClient.Deserialize(response, typeof(List<LicensesByPermission>)));
+            
+        }
+    
+        /// <summary>
+        /// Get Licenses required per permission. 
+        /// </summary>
+        /// <param name="id">ID</param>
+        /// <param name="body">The permissions details</param>
+        /// <returns>Task of List&lt;LicensesByPermission&gt;</returns>
+        public async System.Threading.Tasks.Task<List<LicensesByPermission>> CreatePermissionsAsync (List<string> id = null, Permissions body = null)
+        {
+             ApiResponse<List<LicensesByPermission>> response = await CreatePermissionsAsyncWithHttpInfo(id, body);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Get Licenses required per permission. 
+        /// </summary>
+        /// <param name="id">ID</param>
+        /// <param name="body">The permissions details</param>
+        /// <returns>Task of ApiResponse (List&lt;LicensesByPermission&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<LicensesByPermission>>> CreatePermissionsAsyncWithHttpInfo (List<string> id = null, Permissions body = null)
+        {
+            
+    
+            var path_ = "/api/v1/licensing/permissions";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>();
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            String postBody = null;
+
+            // to determine the Accept header
+            String[] http_header_accepts = new String[] {
+                "application/json"
+            };
+            String http_header_accept = Configuration.ApiClient.SelectHeaderAccept(http_header_accepts);
+            if (http_header_accept != null)
+                headerParams.Add("Accept", Configuration.ApiClient.SelectHeaderAccept(http_header_accepts));
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            if (id != null) queryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            
+            
+            
+            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, Method.POST, queryParams, postBody, headerParams, formParams, fileParams, pathParams);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling CreatePermissions: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling CreatePermissions: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<List<LicensesByPermission>>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -917,9 +1114,9 @@ namespace ININ.PureCloudApi.Api
         /// Get user license assignments. 
         /// </summary>
         /// <returns>UserLicenseAssignment</returns>
-        public UserLicenseAssignment LicensingUserassignmentsGet ()
+        public UserLicenseAssignment GetUserassignments ()
         {
-             ApiResponse<UserLicenseAssignment> response = LicensingUserassignmentsGetWithHttpInfo();
+             ApiResponse<UserLicenseAssignment> response = GetUserassignmentsWithHttpInfo();
              return response.Data;
         }
 
@@ -927,7 +1124,7 @@ namespace ININ.PureCloudApi.Api
         /// Get user license assignments. 
         /// </summary>
         /// <returns>ApiResponse of UserLicenseAssignment</returns>
-        public ApiResponse< UserLicenseAssignment > LicensingUserassignmentsGetWithHttpInfo ()
+        public ApiResponse< UserLicenseAssignment > GetUserassignmentsWithHttpInfo ()
         {
             
     
@@ -973,9 +1170,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling LicensingUserassignmentsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetUserassignments: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling LicensingUserassignmentsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetUserassignments: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<UserLicenseAssignment>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -987,9 +1184,9 @@ namespace ININ.PureCloudApi.Api
         /// Get user license assignments. 
         /// </summary>
         /// <returns>Task of UserLicenseAssignment</returns>
-        public async System.Threading.Tasks.Task<UserLicenseAssignment> LicensingUserassignmentsGetAsync ()
+        public async System.Threading.Tasks.Task<UserLicenseAssignment> GetUserassignmentsAsync ()
         {
-             ApiResponse<UserLicenseAssignment> response = await LicensingUserassignmentsGetAsyncWithHttpInfo();
+             ApiResponse<UserLicenseAssignment> response = await GetUserassignmentsAsyncWithHttpInfo();
              return response.Data;
 
         }
@@ -998,7 +1195,7 @@ namespace ININ.PureCloudApi.Api
         /// Get user license assignments. 
         /// </summary>
         /// <returns>Task of ApiResponse (UserLicenseAssignment)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserLicenseAssignment>> LicensingUserassignmentsGetAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<UserLicenseAssignment>> GetUserassignmentsAsyncWithHttpInfo ()
         {
             
     
@@ -1044,9 +1241,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling LicensingUserassignmentsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetUserassignments: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling LicensingUserassignmentsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetUserassignments: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<UserLicenseAssignment>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1059,9 +1256,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">ID</param> 
         /// <returns>UserLicenseAssignment</returns>
-        public UserLicenseAssignment LicensingUserassignmentsIdGet (string id)
+        public UserLicenseAssignment GetUserassignmentsId (string id)
         {
-             ApiResponse<UserLicenseAssignment> response = LicensingUserassignmentsIdGetWithHttpInfo(id);
+             ApiResponse<UserLicenseAssignment> response = GetUserassignmentsIdWithHttpInfo(id);
              return response.Data;
         }
 
@@ -1070,11 +1267,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">ID</param> 
         /// <returns>ApiResponse of UserLicenseAssignment</returns>
-        public ApiResponse< UserLicenseAssignment > LicensingUserassignmentsIdGetWithHttpInfo (string id)
+        public ApiResponse< UserLicenseAssignment > GetUserassignmentsIdWithHttpInfo (string id)
         {
             
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling LicensingUserassignmentsIdGet");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetUserassignmentsId");
             
     
             var path_ = "/api/v1/licensing/userassignments/{id}";
@@ -1120,9 +1317,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling LicensingUserassignmentsIdGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetUserassignmentsId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling LicensingUserassignmentsIdGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetUserassignmentsId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<UserLicenseAssignment>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1135,9 +1332,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">ID</param>
         /// <returns>Task of UserLicenseAssignment</returns>
-        public async System.Threading.Tasks.Task<UserLicenseAssignment> LicensingUserassignmentsIdGetAsync (string id)
+        public async System.Threading.Tasks.Task<UserLicenseAssignment> GetUserassignmentsIdAsync (string id)
         {
-             ApiResponse<UserLicenseAssignment> response = await LicensingUserassignmentsIdGetAsyncWithHttpInfo(id);
+             ApiResponse<UserLicenseAssignment> response = await GetUserassignmentsIdAsyncWithHttpInfo(id);
              return response.Data;
 
         }
@@ -1147,10 +1344,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">ID</param>
         /// <returns>Task of ApiResponse (UserLicenseAssignment)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserLicenseAssignment>> LicensingUserassignmentsIdGetAsyncWithHttpInfo (string id)
+        public async System.Threading.Tasks.Task<ApiResponse<UserLicenseAssignment>> GetUserassignmentsIdAsyncWithHttpInfo (string id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling LicensingUserassignmentsIdGet");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetUserassignmentsId");
             
     
             var path_ = "/api/v1/licensing/userassignments/{id}";
@@ -1196,9 +1393,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling LicensingUserassignmentsIdGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetUserassignmentsId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling LicensingUserassignmentsIdGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetUserassignmentsId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<UserLicenseAssignment>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

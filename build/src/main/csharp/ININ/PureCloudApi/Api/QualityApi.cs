@@ -26,7 +26,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready.</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <returns>List&lt;Recording&gt;</returns>
-        List<Recording> ConversationsConversationidRecordingsGet (string conversationId, int? maxWaitMs = null, string formatId = null);
+        List<Recording> GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null);
   
         /// <summary>
         /// Get all of a Conversation&#39;s Recordings.
@@ -38,7 +38,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready.</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <returns>ApiResponse of List&lt;Recording&gt;</returns>
-        ApiResponse<List<Recording>> ConversationsConversationidRecordingsGetWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null);
+        ApiResponse<List<Recording>> GetConversationRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null);
 
         /// <summary>
         /// Get all of a Conversation&#39;s Recordings.
@@ -50,7 +50,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready.</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <returns>Task of List&lt;Recording&gt;</returns>
-        System.Threading.Tasks.Task<List<Recording>> ConversationsConversationidRecordingsGetAsync (string conversationId, int? maxWaitMs = null, string formatId = null);
+        System.Threading.Tasks.Task<List<Recording>> GetConversationRecordingsAsync (string conversationId, int? maxWaitMs = null, string formatId = null);
 
         /// <summary>
         /// Get all of a Conversation&#39;s Recordings.
@@ -62,7 +62,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready.</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <returns>Task of ApiResponse (List&lt;Recording&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<Recording>>> ConversationsConversationidRecordingsGetAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null);
+        System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null);
         
         /// <summary>
         /// Gets a specific recording.
@@ -77,7 +77,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="download">requesting a download format of the recording</param>
         /// <param name="fileName">the name of the downloaded fileName</param>
         /// <returns></returns>
-        void ConversationsConversationidRecordingsRecordingidGet (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null);
+        void GetConversationRecordingsByRecordingId (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null);
   
         /// <summary>
         /// Gets a specific recording.
@@ -92,7 +92,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="download">requesting a download format of the recording</param>
         /// <param name="fileName">the name of the downloaded fileName</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ConversationsConversationidRecordingsRecordingidGetWithHttpInfo (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null);
+        ApiResponse<Object> GetConversationRecordingsByRecordingIdWithHttpInfo (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null);
 
         /// <summary>
         /// Gets a specific recording.
@@ -107,7 +107,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="download">requesting a download format of the recording</param>
         /// <param name="fileName">the name of the downloaded fileName</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ConversationsConversationidRecordingsRecordingidGetAsync (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null);
+        System.Threading.Tasks.Task GetConversationRecordingsByRecordingIdAsync (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null);
 
         /// <summary>
         /// Gets a specific recording.
@@ -122,7 +122,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="download">requesting a download format of the recording</param>
         /// <param name="fileName">the name of the downloaded fileName</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ConversationsConversationidRecordingsRecordingidGetAsyncWithHttpInfo (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetConversationRecordingsByRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null);
         
         /// <summary>
         /// Updates the retention records on a recording.
@@ -135,7 +135,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">recording</param>
         /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param>
         /// <returns></returns>
-        void ConversationsConversationidRecordingsRecordingidPut (string conversationId, string recordingId, Recording body, int? restoreDays = null);
+        void UpdateConversationRecordingsByRecordingId (string conversationId, string recordingId, Recording body, int? restoreDays = null);
   
         /// <summary>
         /// Updates the retention records on a recording.
@@ -148,7 +148,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">recording</param>
         /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ConversationsConversationidRecordingsRecordingidPutWithHttpInfo (string conversationId, string recordingId, Recording body, int? restoreDays = null);
+        ApiResponse<Object> UpdateConversationRecordingsByRecordingIdWithHttpInfo (string conversationId, string recordingId, Recording body, int? restoreDays = null);
 
         /// <summary>
         /// Updates the retention records on a recording.
@@ -161,7 +161,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">recording</param>
         /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ConversationsConversationidRecordingsRecordingidPutAsync (string conversationId, string recordingId, Recording body, int? restoreDays = null);
+        System.Threading.Tasks.Task UpdateConversationRecordingsByRecordingIdAsync (string conversationId, string recordingId, Recording body, int? restoreDays = null);
 
         /// <summary>
         /// Updates the retention records on a recording.
@@ -174,7 +174,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">recording</param>
         /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ConversationsConversationidRecordingsRecordingidPutAsyncWithHttpInfo (string conversationId, string recordingId, Recording body, int? restoreDays = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateConversationRecordingsByRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId, Recording body, int? restoreDays = null);
         
         /// <summary>
         /// Get annotations for recording
@@ -185,7 +185,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <returns>List&lt;Annotation&gt;</returns>
-        List<Annotation> ConversationsConversationidRecordingsRecordingidAnnotationsGet (string conversationId, string recordingId);
+        List<Annotation> GetConversationRecordingsByRecordingIdAnnotations (string conversationId, string recordingId);
   
         /// <summary>
         /// Get annotations for recording
@@ -196,7 +196,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <returns>ApiResponse of List&lt;Annotation&gt;</returns>
-        ApiResponse<List<Annotation>> ConversationsConversationidRecordingsRecordingidAnnotationsGetWithHttpInfo (string conversationId, string recordingId);
+        ApiResponse<List<Annotation>> GetConversationRecordingsByRecordingIdAnnotationsWithHttpInfo (string conversationId, string recordingId);
 
         /// <summary>
         /// Get annotations for recording
@@ -207,7 +207,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <returns>Task of List&lt;Annotation&gt;</returns>
-        System.Threading.Tasks.Task<List<Annotation>> ConversationsConversationidRecordingsRecordingidAnnotationsGetAsync (string conversationId, string recordingId);
+        System.Threading.Tasks.Task<List<Annotation>> GetConversationRecordingsByRecordingIdAnnotationsAsync (string conversationId, string recordingId);
 
         /// <summary>
         /// Get annotations for recording
@@ -218,7 +218,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <returns>Task of ApiResponse (List&lt;Annotation&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<Annotation>>> ConversationsConversationidRecordingsRecordingidAnnotationsGetAsyncWithHttpInfo (string conversationId, string recordingId);
+        System.Threading.Tasks.Task<ApiResponse<List<Annotation>>> GetConversationRecordingsByRecordingIdAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId);
         
         /// <summary>
         /// Create annotation
@@ -230,7 +230,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Annotation</returns>
-        Annotation ConversationsConversationidRecordingsRecordingidAnnotationsPost (string conversationId, string recordingId, Annotation body = null);
+        Annotation CreateConversationRecordingsByRecordingIdAnnotations (string conversationId, string recordingId, Annotation body = null);
   
         /// <summary>
         /// Create annotation
@@ -242,7 +242,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">annotation</param>
         /// <returns>ApiResponse of Annotation</returns>
-        ApiResponse<Annotation> ConversationsConversationidRecordingsRecordingidAnnotationsPostWithHttpInfo (string conversationId, string recordingId, Annotation body = null);
+        ApiResponse<Annotation> CreateConversationRecordingsByRecordingIdAnnotationsWithHttpInfo (string conversationId, string recordingId, Annotation body = null);
 
         /// <summary>
         /// Create annotation
@@ -254,7 +254,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of Annotation</returns>
-        System.Threading.Tasks.Task<Annotation> ConversationsConversationidRecordingsRecordingidAnnotationsPostAsync (string conversationId, string recordingId, Annotation body = null);
+        System.Threading.Tasks.Task<Annotation> CreateConversationRecordingsByRecordingIdAnnotationsAsync (string conversationId, string recordingId, Annotation body = null);
 
         /// <summary>
         /// Create annotation
@@ -266,7 +266,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Annotation>> ConversationsConversationidRecordingsRecordingidAnnotationsPostAsyncWithHttpInfo (string conversationId, string recordingId, Annotation body = null);
+        System.Threading.Tasks.Task<ApiResponse<Annotation>> CreateConversationRecordingsByRecordingIdAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId, Annotation body = null);
         
         /// <summary>
         /// Get annotation
@@ -278,7 +278,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Annotation</returns>
-        Annotation ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidGet (string conversationId, string recordingId, string annotationId);
+        Annotation GetConversationRecordingsByRecordingIdAnnotationsByAnnotationId (string conversationId, string recordingId, string annotationId);
   
         /// <summary>
         /// Get annotation
@@ -290,7 +290,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>ApiResponse of Annotation</returns>
-        ApiResponse<Annotation> ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidGetWithHttpInfo (string conversationId, string recordingId, string annotationId);
+        ApiResponse<Annotation> GetConversationRecordingsByRecordingIdAnnotationsByAnnotationIdWithHttpInfo (string conversationId, string recordingId, string annotationId);
 
         /// <summary>
         /// Get annotation
@@ -302,7 +302,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of Annotation</returns>
-        System.Threading.Tasks.Task<Annotation> ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidGetAsync (string conversationId, string recordingId, string annotationId);
+        System.Threading.Tasks.Task<Annotation> GetConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsync (string conversationId, string recordingId, string annotationId);
 
         /// <summary>
         /// Get annotation
@@ -314,7 +314,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Annotation>> ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidGetAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId);
+        System.Threading.Tasks.Task<ApiResponse<Annotation>> GetConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId);
         
         /// <summary>
         /// Update annotation
@@ -327,7 +327,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Annotation</returns>
-        Annotation ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidPut (string conversationId, string recordingId, string annotationId, Annotation body = null);
+        Annotation UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationId (string conversationId, string recordingId, string annotationId, Annotation body = null);
   
         /// <summary>
         /// Update annotation
@@ -340,7 +340,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <param name="body">annotation</param>
         /// <returns>ApiResponse of Annotation</returns>
-        ApiResponse<Annotation> ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidPutWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body = null);
+        ApiResponse<Annotation> UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationIdWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body = null);
 
         /// <summary>
         /// Update annotation
@@ -353,7 +353,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of Annotation</returns>
-        System.Threading.Tasks.Task<Annotation> ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidPutAsync (string conversationId, string recordingId, string annotationId, Annotation body = null);
+        System.Threading.Tasks.Task<Annotation> UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsync (string conversationId, string recordingId, string annotationId, Annotation body = null);
 
         /// <summary>
         /// Update annotation
@@ -366,7 +366,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Annotation>> ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidPutAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body = null);
+        System.Threading.Tasks.Task<ApiResponse<Annotation>> UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body = null);
         
         /// <summary>
         /// Delete annotation
@@ -378,7 +378,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns></returns>
-        void ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidDelete (string conversationId, string recordingId, string annotationId);
+        void DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationId (string conversationId, string recordingId, string annotationId);
   
         /// <summary>
         /// Delete annotation
@@ -390,7 +390,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidDeleteWithHttpInfo (string conversationId, string recordingId, string annotationId);
+        ApiResponse<Object> DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationIdWithHttpInfo (string conversationId, string recordingId, string annotationId);
 
         /// <summary>
         /// Delete annotation
@@ -402,7 +402,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidDeleteAsync (string conversationId, string recordingId, string annotationId);
+        System.Threading.Tasks.Task DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsync (string conversationId, string recordingId, string annotationId);
 
         /// <summary>
         /// Delete annotation
@@ -414,7 +414,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidDeleteAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId);
         
         /// <summary>
         /// Gets a list of Agent Activities
@@ -433,7 +433,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">name</param>
         /// <param name="group">group id</param>
         /// <returns>AgentActivityEntityListing</returns>
-        AgentActivityEntityListing QualityAgentsActivityGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
+        AgentActivityEntityListing GetAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
   
         /// <summary>
         /// Gets a list of Agent Activities
@@ -452,7 +452,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">name</param>
         /// <param name="group">group id</param>
         /// <returns>ApiResponse of AgentActivityEntityListing</returns>
-        ApiResponse<AgentActivityEntityListing> QualityAgentsActivityGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
+        ApiResponse<AgentActivityEntityListing> GetAgentsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
 
         /// <summary>
         /// Gets a list of Agent Activities
@@ -471,7 +471,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">name</param>
         /// <param name="group">group id</param>
         /// <returns>Task of AgentActivityEntityListing</returns>
-        System.Threading.Tasks.Task<AgentActivityEntityListing> QualityAgentsActivityGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
+        System.Threading.Tasks.Task<AgentActivityEntityListing> GetAgentsActivityAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
 
         /// <summary>
         /// Gets a list of Agent Activities
@@ -490,7 +490,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">name</param>
         /// <param name="group">group id</param>
         /// <returns>Task of ApiResponse (AgentActivityEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> QualityAgentsActivityGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
+        System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> GetAgentsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
         
         /// <summary>
         /// Get the list of calibrations
@@ -507,7 +507,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param>
         /// <param name="calibratorId">user id of calibrator</param>
         /// <returns>CalibrationEntityListing</returns>
-        CalibrationEntityListing QualityCalibrationsGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null, string calibratorId = null);
+        CalibrationEntityListing GetCalibrations (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null, string calibratorId = null);
   
         /// <summary>
         /// Get the list of calibrations
@@ -524,7 +524,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param>
         /// <param name="calibratorId">user id of calibrator</param>
         /// <returns>ApiResponse of CalibrationEntityListing</returns>
-        ApiResponse<CalibrationEntityListing> QualityCalibrationsGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null, string calibratorId = null);
+        ApiResponse<CalibrationEntityListing> GetCalibrationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null, string calibratorId = null);
 
         /// <summary>
         /// Get the list of calibrations
@@ -541,7 +541,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param>
         /// <param name="calibratorId">user id of calibrator</param>
         /// <returns>Task of CalibrationEntityListing</returns>
-        System.Threading.Tasks.Task<CalibrationEntityListing> QualityCalibrationsGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null, string calibratorId = null);
+        System.Threading.Tasks.Task<CalibrationEntityListing> GetCalibrationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null, string calibratorId = null);
 
         /// <summary>
         /// Get the list of calibrations
@@ -558,7 +558,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param>
         /// <param name="calibratorId">user id of calibrator</param>
         /// <returns>Task of ApiResponse (CalibrationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CalibrationEntityListing>> QualityCalibrationsGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null, string calibratorId = null);
+        System.Threading.Tasks.Task<ApiResponse<CalibrationEntityListing>> GetCalibrationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null, string calibratorId = null);
         
         /// <summary>
         /// Create a calibration
@@ -569,7 +569,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId</param>
         /// <returns>Calibration</returns>
-        Calibration QualityCalibrationsPost (Calibration body = null, string expand = null);
+        Calibration CreateCalibrations (Calibration body = null, string expand = null);
   
         /// <summary>
         /// Create a calibration
@@ -580,7 +580,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId</param>
         /// <returns>ApiResponse of Calibration</returns>
-        ApiResponse<Calibration> QualityCalibrationsPostWithHttpInfo (Calibration body = null, string expand = null);
+        ApiResponse<Calibration> CreateCalibrationsWithHttpInfo (Calibration body = null, string expand = null);
 
         /// <summary>
         /// Create a calibration
@@ -591,7 +591,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId</param>
         /// <returns>Task of Calibration</returns>
-        System.Threading.Tasks.Task<Calibration> QualityCalibrationsPostAsync (Calibration body = null, string expand = null);
+        System.Threading.Tasks.Task<Calibration> CreateCalibrationsAsync (Calibration body = null, string expand = null);
 
         /// <summary>
         /// Create a calibration
@@ -602,7 +602,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId</param>
         /// <returns>Task of ApiResponse (Calibration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Calibration>> QualityCalibrationsPostAsyncWithHttpInfo (Calibration body = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Calibration>> CreateCalibrationsAsyncWithHttpInfo (Calibration body = null, string expand = null);
         
         /// <summary>
         /// Get a calibration by id.
@@ -613,7 +613,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="calibratorId">calibratorId</param>
         /// <returns>Calibration</returns>
-        Calibration QualityCalibrationsCalibrationidGet (string calibrationId, string calibratorId = null);
+        Calibration GetCalibration (string calibrationId, string calibratorId = null);
   
         /// <summary>
         /// Get a calibration by id.
@@ -624,7 +624,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="calibratorId">calibratorId</param>
         /// <returns>ApiResponse of Calibration</returns>
-        ApiResponse<Calibration> QualityCalibrationsCalibrationidGetWithHttpInfo (string calibrationId, string calibratorId = null);
+        ApiResponse<Calibration> GetCalibrationWithHttpInfo (string calibrationId, string calibratorId = null);
 
         /// <summary>
         /// Get a calibration by id.
@@ -635,7 +635,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="calibratorId">calibratorId</param>
         /// <returns>Task of Calibration</returns>
-        System.Threading.Tasks.Task<Calibration> QualityCalibrationsCalibrationidGetAsync (string calibrationId, string calibratorId = null);
+        System.Threading.Tasks.Task<Calibration> GetCalibrationAsync (string calibrationId, string calibratorId = null);
 
         /// <summary>
         /// Get a calibration by id.
@@ -646,7 +646,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="calibratorId">calibratorId</param>
         /// <returns>Task of ApiResponse (Calibration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Calibration>> QualityCalibrationsCalibrationidGetAsyncWithHttpInfo (string calibrationId, string calibratorId = null);
+        System.Threading.Tasks.Task<ApiResponse<Calibration>> GetCalibrationAsyncWithHttpInfo (string calibrationId, string calibratorId = null);
         
         /// <summary>
         /// Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
@@ -657,7 +657,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="body">Calibration</param>
         /// <returns>Calibration</returns>
-        Calibration QualityCalibrationsCalibrationidPut (string calibrationId, Calibration body = null);
+        Calibration UpdateCalibration (string calibrationId, Calibration body = null);
   
         /// <summary>
         /// Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
@@ -668,7 +668,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="body">Calibration</param>
         /// <returns>ApiResponse of Calibration</returns>
-        ApiResponse<Calibration> QualityCalibrationsCalibrationidPutWithHttpInfo (string calibrationId, Calibration body = null);
+        ApiResponse<Calibration> UpdateCalibrationWithHttpInfo (string calibrationId, Calibration body = null);
 
         /// <summary>
         /// Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
@@ -679,7 +679,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="body">Calibration</param>
         /// <returns>Task of Calibration</returns>
-        System.Threading.Tasks.Task<Calibration> QualityCalibrationsCalibrationidPutAsync (string calibrationId, Calibration body = null);
+        System.Threading.Tasks.Task<Calibration> UpdateCalibrationAsync (string calibrationId, Calibration body = null);
 
         /// <summary>
         /// Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
@@ -690,7 +690,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="body">Calibration</param>
         /// <returns>Task of ApiResponse (Calibration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Calibration>> QualityCalibrationsCalibrationidPutAsyncWithHttpInfo (string calibrationId, Calibration body = null);
+        System.Threading.Tasks.Task<ApiResponse<Calibration>> UpdateCalibrationAsyncWithHttpInfo (string calibrationId, Calibration body = null);
         
         /// <summary>
         /// Delete a calibration by id.
@@ -701,7 +701,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="calibratorId">calibratorId</param>
         /// <returns>Calibration</returns>
-        Calibration QualityCalibrationsCalibrationidDelete (string calibrationId, string calibratorId = null);
+        Calibration DeleteCalibration (string calibrationId, string calibratorId = null);
   
         /// <summary>
         /// Delete a calibration by id.
@@ -712,7 +712,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="calibratorId">calibratorId</param>
         /// <returns>ApiResponse of Calibration</returns>
-        ApiResponse<Calibration> QualityCalibrationsCalibrationidDeleteWithHttpInfo (string calibrationId, string calibratorId = null);
+        ApiResponse<Calibration> DeleteCalibrationWithHttpInfo (string calibrationId, string calibratorId = null);
 
         /// <summary>
         /// Delete a calibration by id.
@@ -723,7 +723,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="calibratorId">calibratorId</param>
         /// <returns>Task of Calibration</returns>
-        System.Threading.Tasks.Task<Calibration> QualityCalibrationsCalibrationidDeleteAsync (string calibrationId, string calibratorId = null);
+        System.Threading.Tasks.Task<Calibration> DeleteCalibrationAsync (string calibrationId, string calibratorId = null);
 
         /// <summary>
         /// Delete a calibration by id.
@@ -734,7 +734,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="calibratorId">calibratorId</param>
         /// <returns>Task of ApiResponse (Calibration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Calibration>> QualityCalibrationsCalibrationidDeleteAsyncWithHttpInfo (string calibrationId, string calibratorId = null);
+        System.Threading.Tasks.Task<ApiResponse<Calibration>> DeleteCalibrationAsyncWithHttpInfo (string calibrationId, string calibratorId = null);
         
         /// <summary>
         /// Get audits for conversation or recording
@@ -750,7 +750,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">id of the recording</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation</param>
         /// <returns>QualityAuditPage</returns>
-        QualityAuditPage QualityConversationsConversationidAuditsGet (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string recordingId = null, string entityType = null);
+        QualityAuditPage GetConversationAudits (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string recordingId = null, string entityType = null);
   
         /// <summary>
         /// Get audits for conversation or recording
@@ -766,7 +766,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">id of the recording</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation</param>
         /// <returns>ApiResponse of QualityAuditPage</returns>
-        ApiResponse<QualityAuditPage> QualityConversationsConversationidAuditsGetWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string recordingId = null, string entityType = null);
+        ApiResponse<QualityAuditPage> GetConversationAuditsWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string recordingId = null, string entityType = null);
 
         /// <summary>
         /// Get audits for conversation or recording
@@ -782,7 +782,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">id of the recording</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation</param>
         /// <returns>Task of QualityAuditPage</returns>
-        System.Threading.Tasks.Task<QualityAuditPage> QualityConversationsConversationidAuditsGetAsync (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string recordingId = null, string entityType = null);
+        System.Threading.Tasks.Task<QualityAuditPage> GetConversationAuditsAsync (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string recordingId = null, string entityType = null);
 
         /// <summary>
         /// Get audits for conversation or recording
@@ -798,7 +798,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">id of the recording</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation</param>
         /// <returns>Task of ApiResponse (QualityAuditPage)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QualityAuditPage>> QualityConversationsConversationidAuditsGetAsyncWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string recordingId = null, string entityType = null);
+        System.Threading.Tasks.Task<ApiResponse<QualityAuditPage>> GetConversationAuditsAsyncWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string recordingId = null, string entityType = null);
         
         /// <summary>
         /// Create an evaluation
@@ -810,7 +810,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>Evaluation</returns>
-        Evaluation QualityConversationsConversationidEvaluationsPost (string conversationId, Evaluation body = null, string expand = null);
+        Evaluation CreateConversationEvaluations (string conversationId, Evaluation body = null, string expand = null);
   
         /// <summary>
         /// Create an evaluation
@@ -822,7 +822,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>ApiResponse of Evaluation</returns>
-        ApiResponse<Evaluation> QualityConversationsConversationidEvaluationsPostWithHttpInfo (string conversationId, Evaluation body = null, string expand = null);
+        ApiResponse<Evaluation> CreateConversationEvaluationsWithHttpInfo (string conversationId, Evaluation body = null, string expand = null);
 
         /// <summary>
         /// Create an evaluation
@@ -834,7 +834,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>Task of Evaluation</returns>
-        System.Threading.Tasks.Task<Evaluation> QualityConversationsConversationidEvaluationsPostAsync (string conversationId, Evaluation body = null, string expand = null);
+        System.Threading.Tasks.Task<Evaluation> CreateConversationEvaluationsAsync (string conversationId, Evaluation body = null, string expand = null);
 
         /// <summary>
         /// Create an evaluation
@@ -846,7 +846,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Evaluation>> QualityConversationsConversationidEvaluationsPostAsyncWithHttpInfo (string conversationId, Evaluation body = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Evaluation>> CreateConversationEvaluationsAsyncWithHttpInfo (string conversationId, Evaluation body = null, string expand = null);
         
         /// <summary>
         /// Get an evaluation
@@ -858,7 +858,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param>
         /// <param name="expand">agent, evaluator, evaluationForm</param>
         /// <returns>Evaluation</returns>
-        Evaluation QualityConversationsConversationidEvaluationsEvaluationidGet (string conversationId, string evaluationId, string expand = null);
+        Evaluation GetConversationEvaluationsByEvaluationId (string conversationId, string evaluationId, string expand = null);
   
         /// <summary>
         /// Get an evaluation
@@ -870,7 +870,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param>
         /// <param name="expand">agent, evaluator, evaluationForm</param>
         /// <returns>ApiResponse of Evaluation</returns>
-        ApiResponse<Evaluation> QualityConversationsConversationidEvaluationsEvaluationidGetWithHttpInfo (string conversationId, string evaluationId, string expand = null);
+        ApiResponse<Evaluation> GetConversationEvaluationsByEvaluationIdWithHttpInfo (string conversationId, string evaluationId, string expand = null);
 
         /// <summary>
         /// Get an evaluation
@@ -882,7 +882,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param>
         /// <param name="expand">agent, evaluator, evaluationForm</param>
         /// <returns>Task of Evaluation</returns>
-        System.Threading.Tasks.Task<Evaluation> QualityConversationsConversationidEvaluationsEvaluationidGetAsync (string conversationId, string evaluationId, string expand = null);
+        System.Threading.Tasks.Task<Evaluation> GetConversationEvaluationsByEvaluationIdAsync (string conversationId, string evaluationId, string expand = null);
 
         /// <summary>
         /// Get an evaluation
@@ -894,7 +894,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param>
         /// <param name="expand">agent, evaluator, evaluationForm</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Evaluation>> QualityConversationsConversationidEvaluationsEvaluationidGetAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Evaluation>> GetConversationEvaluationsByEvaluationIdAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null);
         
         /// <summary>
         /// Update an evaluation
@@ -907,7 +907,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>Evaluation</returns>
-        Evaluation QualityConversationsConversationidEvaluationsEvaluationidPut (string conversationId, string evaluationId, Evaluation body = null, string expand = null);
+        Evaluation UpdateConversationEvaluationsByEvaluationId (string conversationId, string evaluationId, Evaluation body = null, string expand = null);
   
         /// <summary>
         /// Update an evaluation
@@ -920,7 +920,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>ApiResponse of Evaluation</returns>
-        ApiResponse<Evaluation> QualityConversationsConversationidEvaluationsEvaluationidPutWithHttpInfo (string conversationId, string evaluationId, Evaluation body = null, string expand = null);
+        ApiResponse<Evaluation> UpdateConversationEvaluationsByEvaluationIdWithHttpInfo (string conversationId, string evaluationId, Evaluation body = null, string expand = null);
 
         /// <summary>
         /// Update an evaluation
@@ -933,7 +933,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>Task of Evaluation</returns>
-        System.Threading.Tasks.Task<Evaluation> QualityConversationsConversationidEvaluationsEvaluationidPutAsync (string conversationId, string evaluationId, Evaluation body = null, string expand = null);
+        System.Threading.Tasks.Task<Evaluation> UpdateConversationEvaluationsByEvaluationIdAsync (string conversationId, string evaluationId, Evaluation body = null, string expand = null);
 
         /// <summary>
         /// Update an evaluation
@@ -946,7 +946,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Evaluation>> QualityConversationsConversationidEvaluationsEvaluationidPutAsyncWithHttpInfo (string conversationId, string evaluationId, Evaluation body = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Evaluation>> UpdateConversationEvaluationsByEvaluationIdAsyncWithHttpInfo (string conversationId, string evaluationId, Evaluation body = null, string expand = null);
         
         /// <summary>
         /// Delete an evaluation
@@ -958,7 +958,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>Evaluation</returns>
-        Evaluation QualityConversationsConversationidEvaluationsEvaluationidDelete (string conversationId, string evaluationId, string expand = null);
+        Evaluation DeleteConversationEvaluationsByEvaluationId (string conversationId, string evaluationId, string expand = null);
   
         /// <summary>
         /// Delete an evaluation
@@ -970,7 +970,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>ApiResponse of Evaluation</returns>
-        ApiResponse<Evaluation> QualityConversationsConversationidEvaluationsEvaluationidDeleteWithHttpInfo (string conversationId, string evaluationId, string expand = null);
+        ApiResponse<Evaluation> DeleteConversationEvaluationsByEvaluationIdWithHttpInfo (string conversationId, string evaluationId, string expand = null);
 
         /// <summary>
         /// Delete an evaluation
@@ -982,7 +982,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>Task of Evaluation</returns>
-        System.Threading.Tasks.Task<Evaluation> QualityConversationsConversationidEvaluationsEvaluationidDeleteAsync (string conversationId, string evaluationId, string expand = null);
+        System.Threading.Tasks.Task<Evaluation> DeleteConversationEvaluationsByEvaluationIdAsync (string conversationId, string evaluationId, string expand = null);
 
         /// <summary>
         /// Delete an evaluation
@@ -994,7 +994,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Evaluation>> QualityConversationsConversationidEvaluationsEvaluationidDeleteAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Evaluation>> DeleteConversationEvaluationsByEvaluationIdAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null);
         
         /// <summary>
         /// Queries Evaluations and returns a paged list
@@ -1018,7 +1018,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations</param>
         /// <param name="maximum">maximum</param>
         /// <returns>EvaluationEntityListing</returns>
-        EvaluationEntityListing QualityEvaluationsQueryGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null);
+        EvaluationEntityListing GetEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null);
   
         /// <summary>
         /// Queries Evaluations and returns a paged list
@@ -1042,7 +1042,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations</param>
         /// <param name="maximum">maximum</param>
         /// <returns>ApiResponse of EvaluationEntityListing</returns>
-        ApiResponse<EvaluationEntityListing> QualityEvaluationsQueryGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null);
+        ApiResponse<EvaluationEntityListing> GetEvaluationsQueryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null);
 
         /// <summary>
         /// Queries Evaluations and returns a paged list
@@ -1066,7 +1066,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations</param>
         /// <param name="maximum">maximum</param>
         /// <returns>Task of EvaluationEntityListing</returns>
-        System.Threading.Tasks.Task<EvaluationEntityListing> QualityEvaluationsQueryGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null);
+        System.Threading.Tasks.Task<EvaluationEntityListing> GetEvaluationsQueryAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null);
 
         /// <summary>
         /// Queries Evaluations and returns a paged list
@@ -1090,7 +1090,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations</param>
         /// <param name="maximum">maximum</param>
         /// <returns>Task of ApiResponse (EvaluationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> QualityEvaluationsQueryGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetEvaluationsQueryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null);
         
         /// <summary>
         /// Query evaluations
@@ -1101,7 +1101,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param>
         /// <param name="expand">evaluator,agent</param>
         /// <returns>EvaluationEntityListing</returns>
-        EvaluationEntityListing QualityEvaluationsQueryPost (EvaluationQueryRequest body = null, string expand = null);
+        EvaluationEntityListing CreateEvaluationsQuery (EvaluationQueryRequest body = null, string expand = null);
   
         /// <summary>
         /// Query evaluations
@@ -1112,7 +1112,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param>
         /// <param name="expand">evaluator,agent</param>
         /// <returns>ApiResponse of EvaluationEntityListing</returns>
-        ApiResponse<EvaluationEntityListing> QualityEvaluationsQueryPostWithHttpInfo (EvaluationQueryRequest body = null, string expand = null);
+        ApiResponse<EvaluationEntityListing> CreateEvaluationsQueryWithHttpInfo (EvaluationQueryRequest body = null, string expand = null);
 
         /// <summary>
         /// Query evaluations
@@ -1123,7 +1123,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param>
         /// <param name="expand">evaluator,agent</param>
         /// <returns>Task of EvaluationEntityListing</returns>
-        System.Threading.Tasks.Task<EvaluationEntityListing> QualityEvaluationsQueryPostAsync (EvaluationQueryRequest body = null, string expand = null);
+        System.Threading.Tasks.Task<EvaluationEntityListing> CreateEvaluationsQueryAsync (EvaluationQueryRequest body = null, string expand = null);
 
         /// <summary>
         /// Query evaluations
@@ -1134,7 +1134,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param>
         /// <param name="expand">evaluator,agent</param>
         /// <returns>Task of ApiResponse (EvaluationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> QualityEvaluationsQueryPostAsyncWithHttpInfo (EvaluationQueryRequest body = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> CreateEvaluationsQueryAsyncWithHttpInfo (EvaluationQueryRequest body = null, string expand = null);
         
         /// <summary>
         /// Score evaluation
@@ -1144,7 +1144,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">evaluationAndScoringSet</param>
         /// <returns>EvaluationScoringSet</returns>
-        EvaluationScoringSet QualityEvaluationsScoringPost (EvaluationFormAndScoringSet body = null);
+        EvaluationScoringSet CreateEvaluationsScoring (EvaluationFormAndScoringSet body = null);
   
         /// <summary>
         /// Score evaluation
@@ -1154,7 +1154,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">evaluationAndScoringSet</param>
         /// <returns>ApiResponse of EvaluationScoringSet</returns>
-        ApiResponse<EvaluationScoringSet> QualityEvaluationsScoringPostWithHttpInfo (EvaluationFormAndScoringSet body = null);
+        ApiResponse<EvaluationScoringSet> CreateEvaluationsScoringWithHttpInfo (EvaluationFormAndScoringSet body = null);
 
         /// <summary>
         /// Score evaluation
@@ -1164,7 +1164,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">evaluationAndScoringSet</param>
         /// <returns>Task of EvaluationScoringSet</returns>
-        System.Threading.Tasks.Task<EvaluationScoringSet> QualityEvaluationsScoringPostAsync (EvaluationFormAndScoringSet body = null);
+        System.Threading.Tasks.Task<EvaluationScoringSet> CreateEvaluationsScoringAsync (EvaluationFormAndScoringSet body = null);
 
         /// <summary>
         /// Score evaluation
@@ -1174,7 +1174,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">evaluationAndScoringSet</param>
         /// <returns>Task of ApiResponse (EvaluationScoringSet)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationScoringSet>> QualityEvaluationsScoringPostAsyncWithHttpInfo (EvaluationFormAndScoringSet body = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationScoringSet>> CreateEvaluationsScoringAsyncWithHttpInfo (EvaluationFormAndScoringSet body = null);
         
         /// <summary>
         /// Get an evaluator activity
@@ -1192,7 +1192,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission">permission strings</param>
         /// <param name="group">group id</param>
         /// <returns>EvaluatorActivityEntityListing</returns>
-        EvaluatorActivityEntityListing QualityEvaluatorsActivityGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null);
+        EvaluatorActivityEntityListing GetEvaluatorsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null);
   
         /// <summary>
         /// Get an evaluator activity
@@ -1210,7 +1210,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission">permission strings</param>
         /// <param name="group">group id</param>
         /// <returns>ApiResponse of EvaluatorActivityEntityListing</returns>
-        ApiResponse<EvaluatorActivityEntityListing> QualityEvaluatorsActivityGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null);
+        ApiResponse<EvaluatorActivityEntityListing> GetEvaluatorsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null);
 
         /// <summary>
         /// Get an evaluator activity
@@ -1228,7 +1228,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission">permission strings</param>
         /// <param name="group">group id</param>
         /// <returns>Task of EvaluatorActivityEntityListing</returns>
-        System.Threading.Tasks.Task<EvaluatorActivityEntityListing> QualityEvaluatorsActivityGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null);
+        System.Threading.Tasks.Task<EvaluatorActivityEntityListing> GetEvaluatorsActivityAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null);
 
         /// <summary>
         /// Get an evaluator activity
@@ -1246,7 +1246,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission">permission strings</param>
         /// <param name="group">group id</param>
         /// <returns>Task of ApiResponse (EvaluatorActivityEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluatorActivityEntityListing>> QualityEvaluatorsActivityGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluatorActivityEntityListing>> GetEvaluatorsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null);
         
     }
   
@@ -1333,9 +1333,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready.</param> 
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param> 
         /// <returns>List&lt;Recording&gt;</returns>
-        public List<Recording> ConversationsConversationidRecordingsGet (string conversationId, int? maxWaitMs = null, string formatId = null)
+        public List<Recording> GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null)
         {
-             ApiResponse<List<Recording>> response = ConversationsConversationidRecordingsGetWithHttpInfo(conversationId, maxWaitMs, formatId);
+             ApiResponse<List<Recording>> response = GetConversationRecordingsWithHttpInfo(conversationId, maxWaitMs, formatId);
              return response.Data;
         }
 
@@ -1346,11 +1346,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready.</param> 
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param> 
         /// <returns>ApiResponse of List&lt;Recording&gt;</returns>
-        public ApiResponse< List<Recording> > ConversationsConversationidRecordingsGetWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null)
+        public ApiResponse< List<Recording> > GetConversationRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidRecordingsGet");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationRecordings");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings";
@@ -1398,9 +1398,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationRecordings: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationRecordings: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<List<Recording>>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1415,9 +1415,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready.</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <returns>Task of List&lt;Recording&gt;</returns>
-        public async System.Threading.Tasks.Task<List<Recording>> ConversationsConversationidRecordingsGetAsync (string conversationId, int? maxWaitMs = null, string formatId = null)
+        public async System.Threading.Tasks.Task<List<Recording>> GetConversationRecordingsAsync (string conversationId, int? maxWaitMs = null, string formatId = null)
         {
-             ApiResponse<List<Recording>> response = await ConversationsConversationidRecordingsGetAsyncWithHttpInfo(conversationId, maxWaitMs, formatId);
+             ApiResponse<List<Recording>> response = await GetConversationRecordingsAsyncWithHttpInfo(conversationId, maxWaitMs, formatId);
              return response.Data;
 
         }
@@ -1429,10 +1429,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready.</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <returns>Task of ApiResponse (List&lt;Recording&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<Recording>>> ConversationsConversationidRecordingsGetAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidRecordingsGet");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationRecordings");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings";
@@ -1480,9 +1480,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationRecordings: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationRecordings: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<List<Recording>>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1500,9 +1500,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="download">requesting a download format of the recording</param> 
         /// <param name="fileName">the name of the downloaded fileName</param> 
         /// <returns></returns>
-        public void ConversationsConversationidRecordingsRecordingidGet (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null)
+        public void GetConversationRecordingsByRecordingId (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null)
         {
-             ConversationsConversationidRecordingsRecordingidGetWithHttpInfo(conversationId, recordingId, maxWaitMs, formatId, download, fileName);
+             GetConversationRecordingsByRecordingIdWithHttpInfo(conversationId, recordingId, maxWaitMs, formatId, download, fileName);
         }
 
         /// <summary>
@@ -1515,14 +1515,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="download">requesting a download format of the recording</param> 
         /// <param name="fileName">the name of the downloaded fileName</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> ConversationsConversationidRecordingsRecordingidGetWithHttpInfo (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null)
+        public ApiResponse<Object> GetConversationRecordingsByRecordingIdWithHttpInfo (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidRecordingsRecordingidGet");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationRecordingsByRecordingId");
             
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling ConversationsConversationidRecordingsRecordingidGet");
+            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling GetConversationRecordingsByRecordingId");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}";
@@ -1573,9 +1573,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationRecordingsByRecordingId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationRecordingsByRecordingId: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -1593,9 +1593,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="download">requesting a download format of the recording</param>
         /// <param name="fileName">the name of the downloaded fileName</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ConversationsConversationidRecordingsRecordingidGetAsync (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null)
+        public async System.Threading.Tasks.Task GetConversationRecordingsByRecordingIdAsync (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null)
         {
-             await ConversationsConversationidRecordingsRecordingidGetAsyncWithHttpInfo(conversationId, recordingId, maxWaitMs, formatId, download, fileName);
+             await GetConversationRecordingsByRecordingIdAsyncWithHttpInfo(conversationId, recordingId, maxWaitMs, formatId, download, fileName);
 
         }
 
@@ -1609,12 +1609,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="download">requesting a download format of the recording</param>
         /// <param name="fileName">the name of the downloaded fileName</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ConversationsConversationidRecordingsRecordingidGetAsyncWithHttpInfo (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetConversationRecordingsByRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidRecordingsRecordingidGet");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationRecordingsByRecordingId");
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling ConversationsConversationidRecordingsRecordingidGet");
+            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling GetConversationRecordingsByRecordingId");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}";
@@ -1665,9 +1665,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationRecordingsByRecordingId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationRecordingsByRecordingId: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -1683,9 +1683,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">recording</param> 
         /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param> 
         /// <returns></returns>
-        public void ConversationsConversationidRecordingsRecordingidPut (string conversationId, string recordingId, Recording body, int? restoreDays = null)
+        public void UpdateConversationRecordingsByRecordingId (string conversationId, string recordingId, Recording body, int? restoreDays = null)
         {
-             ConversationsConversationidRecordingsRecordingidPutWithHttpInfo(conversationId, recordingId, body, restoreDays);
+             UpdateConversationRecordingsByRecordingIdWithHttpInfo(conversationId, recordingId, body, restoreDays);
         }
 
         /// <summary>
@@ -1696,17 +1696,17 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">recording</param> 
         /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> ConversationsConversationidRecordingsRecordingidPutWithHttpInfo (string conversationId, string recordingId, Recording body, int? restoreDays = null)
+        public ApiResponse<Object> UpdateConversationRecordingsByRecordingIdWithHttpInfo (string conversationId, string recordingId, Recording body, int? restoreDays = null)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidRecordingsRecordingidPut");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling UpdateConversationRecordingsByRecordingId");
             
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling ConversationsConversationidRecordingsRecordingidPut");
+            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling UpdateConversationRecordingsByRecordingId");
             
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsConversationidRecordingsRecordingidPut");
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling UpdateConversationRecordingsByRecordingId");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}";
@@ -1755,9 +1755,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateConversationRecordingsByRecordingId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateConversationRecordingsByRecordingId: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -1773,9 +1773,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">recording</param>
         /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ConversationsConversationidRecordingsRecordingidPutAsync (string conversationId, string recordingId, Recording body, int? restoreDays = null)
+        public async System.Threading.Tasks.Task UpdateConversationRecordingsByRecordingIdAsync (string conversationId, string recordingId, Recording body, int? restoreDays = null)
         {
-             await ConversationsConversationidRecordingsRecordingidPutAsyncWithHttpInfo(conversationId, recordingId, body, restoreDays);
+             await UpdateConversationRecordingsByRecordingIdAsyncWithHttpInfo(conversationId, recordingId, body, restoreDays);
 
         }
 
@@ -1787,14 +1787,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">recording</param>
         /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ConversationsConversationidRecordingsRecordingidPutAsyncWithHttpInfo (string conversationId, string recordingId, Recording body, int? restoreDays = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateConversationRecordingsByRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId, Recording body, int? restoreDays = null)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidRecordingsRecordingidPut");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling UpdateConversationRecordingsByRecordingId");
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling ConversationsConversationidRecordingsRecordingidPut");
+            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling UpdateConversationRecordingsByRecordingId");
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsConversationidRecordingsRecordingidPut");
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling UpdateConversationRecordingsByRecordingId");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}";
@@ -1843,9 +1843,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateConversationRecordingsByRecordingId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateConversationRecordingsByRecordingId: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -1859,9 +1859,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param> 
         /// <param name="recordingId">Recording ID</param> 
         /// <returns>List&lt;Annotation&gt;</returns>
-        public List<Annotation> ConversationsConversationidRecordingsRecordingidAnnotationsGet (string conversationId, string recordingId)
+        public List<Annotation> GetConversationRecordingsByRecordingIdAnnotations (string conversationId, string recordingId)
         {
-             ApiResponse<List<Annotation>> response = ConversationsConversationidRecordingsRecordingidAnnotationsGetWithHttpInfo(conversationId, recordingId);
+             ApiResponse<List<Annotation>> response = GetConversationRecordingsByRecordingIdAnnotationsWithHttpInfo(conversationId, recordingId);
              return response.Data;
         }
 
@@ -1871,14 +1871,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param> 
         /// <param name="recordingId">Recording ID</param> 
         /// <returns>ApiResponse of List&lt;Annotation&gt;</returns>
-        public ApiResponse< List<Annotation> > ConversationsConversationidRecordingsRecordingidAnnotationsGetWithHttpInfo (string conversationId, string recordingId)
+        public ApiResponse< List<Annotation> > GetConversationRecordingsByRecordingIdAnnotationsWithHttpInfo (string conversationId, string recordingId)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidRecordingsRecordingidAnnotationsGet");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationRecordingsByRecordingIdAnnotations");
             
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling ConversationsConversationidRecordingsRecordingidAnnotationsGet");
+            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling GetConversationRecordingsByRecordingIdAnnotations");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations";
@@ -1925,9 +1925,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidAnnotationsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationRecordingsByRecordingIdAnnotations: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidAnnotationsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationRecordingsByRecordingIdAnnotations: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<List<Annotation>>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1941,9 +1941,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <returns>Task of List&lt;Annotation&gt;</returns>
-        public async System.Threading.Tasks.Task<List<Annotation>> ConversationsConversationidRecordingsRecordingidAnnotationsGetAsync (string conversationId, string recordingId)
+        public async System.Threading.Tasks.Task<List<Annotation>> GetConversationRecordingsByRecordingIdAnnotationsAsync (string conversationId, string recordingId)
         {
-             ApiResponse<List<Annotation>> response = await ConversationsConversationidRecordingsRecordingidAnnotationsGetAsyncWithHttpInfo(conversationId, recordingId);
+             ApiResponse<List<Annotation>> response = await GetConversationRecordingsByRecordingIdAnnotationsAsyncWithHttpInfo(conversationId, recordingId);
              return response.Data;
 
         }
@@ -1954,12 +1954,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <returns>Task of ApiResponse (List&lt;Annotation&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<Annotation>>> ConversationsConversationidRecordingsRecordingidAnnotationsGetAsyncWithHttpInfo (string conversationId, string recordingId)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Annotation>>> GetConversationRecordingsByRecordingIdAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidRecordingsRecordingidAnnotationsGet");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationRecordingsByRecordingIdAnnotations");
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling ConversationsConversationidRecordingsRecordingidAnnotationsGet");
+            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling GetConversationRecordingsByRecordingIdAnnotations");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations";
@@ -2006,9 +2006,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidAnnotationsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationRecordingsByRecordingIdAnnotations: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidAnnotationsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationRecordingsByRecordingIdAnnotations: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<List<Annotation>>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2023,9 +2023,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param> 
         /// <param name="body">annotation</param> 
         /// <returns>Annotation</returns>
-        public Annotation ConversationsConversationidRecordingsRecordingidAnnotationsPost (string conversationId, string recordingId, Annotation body = null)
+        public Annotation CreateConversationRecordingsByRecordingIdAnnotations (string conversationId, string recordingId, Annotation body = null)
         {
-             ApiResponse<Annotation> response = ConversationsConversationidRecordingsRecordingidAnnotationsPostWithHttpInfo(conversationId, recordingId, body);
+             ApiResponse<Annotation> response = CreateConversationRecordingsByRecordingIdAnnotationsWithHttpInfo(conversationId, recordingId, body);
              return response.Data;
         }
 
@@ -2036,14 +2036,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param> 
         /// <param name="body">annotation</param> 
         /// <returns>ApiResponse of Annotation</returns>
-        public ApiResponse< Annotation > ConversationsConversationidRecordingsRecordingidAnnotationsPostWithHttpInfo (string conversationId, string recordingId, Annotation body = null)
+        public ApiResponse< Annotation > CreateConversationRecordingsByRecordingIdAnnotationsWithHttpInfo (string conversationId, string recordingId, Annotation body = null)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidRecordingsRecordingidAnnotationsPost");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling CreateConversationRecordingsByRecordingIdAnnotations");
             
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling ConversationsConversationidRecordingsRecordingidAnnotationsPost");
+            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling CreateConversationRecordingsByRecordingIdAnnotations");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations";
@@ -2091,9 +2091,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidAnnotationsPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateConversationRecordingsByRecordingIdAnnotations: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidAnnotationsPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateConversationRecordingsByRecordingIdAnnotations: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Annotation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2108,9 +2108,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of Annotation</returns>
-        public async System.Threading.Tasks.Task<Annotation> ConversationsConversationidRecordingsRecordingidAnnotationsPostAsync (string conversationId, string recordingId, Annotation body = null)
+        public async System.Threading.Tasks.Task<Annotation> CreateConversationRecordingsByRecordingIdAnnotationsAsync (string conversationId, string recordingId, Annotation body = null)
         {
-             ApiResponse<Annotation> response = await ConversationsConversationidRecordingsRecordingidAnnotationsPostAsyncWithHttpInfo(conversationId, recordingId, body);
+             ApiResponse<Annotation> response = await CreateConversationRecordingsByRecordingIdAnnotationsAsyncWithHttpInfo(conversationId, recordingId, body);
              return response.Data;
 
         }
@@ -2122,12 +2122,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Annotation>> ConversationsConversationidRecordingsRecordingidAnnotationsPostAsyncWithHttpInfo (string conversationId, string recordingId, Annotation body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Annotation>> CreateConversationRecordingsByRecordingIdAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId, Annotation body = null)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidRecordingsRecordingidAnnotationsPost");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling CreateConversationRecordingsByRecordingIdAnnotations");
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling ConversationsConversationidRecordingsRecordingidAnnotationsPost");
+            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling CreateConversationRecordingsByRecordingIdAnnotations");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations";
@@ -2175,9 +2175,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidAnnotationsPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateConversationRecordingsByRecordingIdAnnotations: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidAnnotationsPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateConversationRecordingsByRecordingIdAnnotations: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Annotation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2192,9 +2192,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param> 
         /// <param name="annotationId">Annotation ID</param> 
         /// <returns>Annotation</returns>
-        public Annotation ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidGet (string conversationId, string recordingId, string annotationId)
+        public Annotation GetConversationRecordingsByRecordingIdAnnotationsByAnnotationId (string conversationId, string recordingId, string annotationId)
         {
-             ApiResponse<Annotation> response = ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidGetWithHttpInfo(conversationId, recordingId, annotationId);
+             ApiResponse<Annotation> response = GetConversationRecordingsByRecordingIdAnnotationsByAnnotationIdWithHttpInfo(conversationId, recordingId, annotationId);
              return response.Data;
         }
 
@@ -2205,17 +2205,17 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param> 
         /// <param name="annotationId">Annotation ID</param> 
         /// <returns>ApiResponse of Annotation</returns>
-        public ApiResponse< Annotation > ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidGetWithHttpInfo (string conversationId, string recordingId, string annotationId)
+        public ApiResponse< Annotation > GetConversationRecordingsByRecordingIdAnnotationsByAnnotationIdWithHttpInfo (string conversationId, string recordingId, string annotationId)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidGet");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
             
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidGet");
+            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling GetConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
             
             // verify the required parameter 'annotationId' is set
-            if (annotationId == null) throw new ApiException(400, "Missing required parameter 'annotationId' when calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidGet");
+            if (annotationId == null) throw new ApiException(400, "Missing required parameter 'annotationId' when calling GetConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
@@ -2263,9 +2263,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationRecordingsByRecordingIdAnnotationsByAnnotationId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationRecordingsByRecordingIdAnnotationsByAnnotationId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Annotation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2280,9 +2280,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of Annotation</returns>
-        public async System.Threading.Tasks.Task<Annotation> ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidGetAsync (string conversationId, string recordingId, string annotationId)
+        public async System.Threading.Tasks.Task<Annotation> GetConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsync (string conversationId, string recordingId, string annotationId)
         {
-             ApiResponse<Annotation> response = await ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidGetAsyncWithHttpInfo(conversationId, recordingId, annotationId);
+             ApiResponse<Annotation> response = await GetConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsyncWithHttpInfo(conversationId, recordingId, annotationId);
              return response.Data;
 
         }
@@ -2294,14 +2294,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Annotation>> ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidGetAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId)
+        public async System.Threading.Tasks.Task<ApiResponse<Annotation>> GetConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidGet");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidGet");
+            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling GetConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
             // verify the required parameter 'annotationId' is set
-            if (annotationId == null) throw new ApiException(400, "Missing required parameter 'annotationId' when calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidGet");
+            if (annotationId == null) throw new ApiException(400, "Missing required parameter 'annotationId' when calling GetConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
@@ -2349,9 +2349,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationRecordingsByRecordingIdAnnotationsByAnnotationId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationRecordingsByRecordingIdAnnotationsByAnnotationId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Annotation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2367,9 +2367,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="annotationId">Annotation ID</param> 
         /// <param name="body">annotation</param> 
         /// <returns>Annotation</returns>
-        public Annotation ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidPut (string conversationId, string recordingId, string annotationId, Annotation body = null)
+        public Annotation UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationId (string conversationId, string recordingId, string annotationId, Annotation body = null)
         {
-             ApiResponse<Annotation> response = ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidPutWithHttpInfo(conversationId, recordingId, annotationId, body);
+             ApiResponse<Annotation> response = UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationIdWithHttpInfo(conversationId, recordingId, annotationId, body);
              return response.Data;
         }
 
@@ -2381,17 +2381,17 @@ namespace ININ.PureCloudApi.Api
         /// <param name="annotationId">Annotation ID</param> 
         /// <param name="body">annotation</param> 
         /// <returns>ApiResponse of Annotation</returns>
-        public ApiResponse< Annotation > ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidPutWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body = null)
+        public ApiResponse< Annotation > UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationIdWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body = null)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidPut");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
             
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidPut");
+            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
             
             // verify the required parameter 'annotationId' is set
-            if (annotationId == null) throw new ApiException(400, "Missing required parameter 'annotationId' when calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidPut");
+            if (annotationId == null) throw new ApiException(400, "Missing required parameter 'annotationId' when calling UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
@@ -2440,9 +2440,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Annotation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2458,9 +2458,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of Annotation</returns>
-        public async System.Threading.Tasks.Task<Annotation> ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidPutAsync (string conversationId, string recordingId, string annotationId, Annotation body = null)
+        public async System.Threading.Tasks.Task<Annotation> UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsync (string conversationId, string recordingId, string annotationId, Annotation body = null)
         {
-             ApiResponse<Annotation> response = await ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidPutAsyncWithHttpInfo(conversationId, recordingId, annotationId, body);
+             ApiResponse<Annotation> response = await UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsyncWithHttpInfo(conversationId, recordingId, annotationId, body);
              return response.Data;
 
         }
@@ -2473,14 +2473,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <param name="body">annotation</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Annotation>> ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidPutAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Annotation>> UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body = null)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidPut");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidPut");
+            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
             // verify the required parameter 'annotationId' is set
-            if (annotationId == null) throw new ApiException(400, "Missing required parameter 'annotationId' when calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidPut");
+            if (annotationId == null) throw new ApiException(400, "Missing required parameter 'annotationId' when calling UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
@@ -2529,9 +2529,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateConversationRecordingsByRecordingIdAnnotationsByAnnotationId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Annotation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2546,9 +2546,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param> 
         /// <param name="annotationId">Annotation ID</param> 
         /// <returns></returns>
-        public void ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidDelete (string conversationId, string recordingId, string annotationId)
+        public void DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationId (string conversationId, string recordingId, string annotationId)
         {
-             ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidDeleteWithHttpInfo(conversationId, recordingId, annotationId);
+             DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationIdWithHttpInfo(conversationId, recordingId, annotationId);
         }
 
         /// <summary>
@@ -2558,17 +2558,17 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param> 
         /// <param name="annotationId">Annotation ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidDeleteWithHttpInfo (string conversationId, string recordingId, string annotationId)
+        public ApiResponse<Object> DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationIdWithHttpInfo (string conversationId, string recordingId, string annotationId)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidDelete");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
             
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidDelete");
+            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
             
             // verify the required parameter 'annotationId' is set
-            if (annotationId == null) throw new ApiException(400, "Missing required parameter 'annotationId' when calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidDelete");
+            if (annotationId == null) throw new ApiException(400, "Missing required parameter 'annotationId' when calling DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
@@ -2616,9 +2616,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationId: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -2633,9 +2633,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidDeleteAsync (string conversationId, string recordingId, string annotationId)
+        public async System.Threading.Tasks.Task DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsync (string conversationId, string recordingId, string annotationId)
         {
-             await ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidDeleteAsyncWithHttpInfo(conversationId, recordingId, annotationId);
+             await DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsyncWithHttpInfo(conversationId, recordingId, annotationId);
 
         }
 
@@ -2646,14 +2646,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">Recording ID</param>
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidDeleteAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationIdAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidDelete");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidDelete");
+            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
             // verify the required parameter 'annotationId' is set
-            if (annotationId == null) throw new ApiException(400, "Missing required parameter 'annotationId' when calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidDelete");
+            if (annotationId == null) throw new ApiException(400, "Missing required parameter 'annotationId' when calling DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationId");
             
     
             var path_ = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
@@ -2701,9 +2701,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling ConversationsConversationidRecordingsRecordingidAnnotationsAnnotationidDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteConversationRecordingsByRecordingIdAnnotationsByAnnotationId: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -2725,9 +2725,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">name</param> 
         /// <param name="group">group id</param> 
         /// <returns>AgentActivityEntityListing</returns>
-        public AgentActivityEntityListing QualityAgentsActivityGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
+        public AgentActivityEntityListing GetAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
         {
-             ApiResponse<AgentActivityEntityListing> response = QualityAgentsActivityGetWithHttpInfo(pageSize, pageNumber, sortBy, expand, startTime, endTime, agentUserId, evaluatorUserId, name, group);
+             ApiResponse<AgentActivityEntityListing> response = GetAgentsActivityWithHttpInfo(pageSize, pageNumber, sortBy, expand, startTime, endTime, agentUserId, evaluatorUserId, name, group);
              return response.Data;
         }
 
@@ -2745,7 +2745,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">name</param> 
         /// <param name="group">group id</param> 
         /// <returns>ApiResponse of AgentActivityEntityListing</returns>
-        public ApiResponse< AgentActivityEntityListing > QualityAgentsActivityGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
+        public ApiResponse< AgentActivityEntityListing > GetAgentsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
         {
             
     
@@ -2801,9 +2801,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityAgentsActivityGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetAgentsActivity: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityAgentsActivityGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetAgentsActivity: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<AgentActivityEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2825,9 +2825,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">name</param>
         /// <param name="group">group id</param>
         /// <returns>Task of AgentActivityEntityListing</returns>
-        public async System.Threading.Tasks.Task<AgentActivityEntityListing> QualityAgentsActivityGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
+        public async System.Threading.Tasks.Task<AgentActivityEntityListing> GetAgentsActivityAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
         {
-             ApiResponse<AgentActivityEntityListing> response = await QualityAgentsActivityGetAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, startTime, endTime, agentUserId, evaluatorUserId, name, group);
+             ApiResponse<AgentActivityEntityListing> response = await GetAgentsActivityAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, startTime, endTime, agentUserId, evaluatorUserId, name, group);
              return response.Data;
 
         }
@@ -2846,7 +2846,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">name</param>
         /// <param name="group">group id</param>
         /// <returns>Task of ApiResponse (AgentActivityEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> QualityAgentsActivityGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> GetAgentsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
         {
             
     
@@ -2902,9 +2902,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityAgentsActivityGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetAgentsActivity: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityAgentsActivityGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetAgentsActivity: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<AgentActivityEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2924,9 +2924,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param> 
         /// <param name="calibratorId">user id of calibrator</param> 
         /// <returns>CalibrationEntityListing</returns>
-        public CalibrationEntityListing QualityCalibrationsGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null, string calibratorId = null)
+        public CalibrationEntityListing GetCalibrations (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null, string calibratorId = null)
         {
-             ApiResponse<CalibrationEntityListing> response = QualityCalibrationsGetWithHttpInfo(pageSize, pageNumber, sortBy, expand, conversationId, startTime, endTime, calibratorId);
+             ApiResponse<CalibrationEntityListing> response = GetCalibrationsWithHttpInfo(pageSize, pageNumber, sortBy, expand, conversationId, startTime, endTime, calibratorId);
              return response.Data;
         }
 
@@ -2942,7 +2942,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param> 
         /// <param name="calibratorId">user id of calibrator</param> 
         /// <returns>ApiResponse of CalibrationEntityListing</returns>
-        public ApiResponse< CalibrationEntityListing > QualityCalibrationsGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null, string calibratorId = null)
+        public ApiResponse< CalibrationEntityListing > GetCalibrationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null, string calibratorId = null)
         {
             
     
@@ -2996,9 +2996,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityCalibrationsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetCalibrations: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityCalibrationsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetCalibrations: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<CalibrationEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3018,9 +3018,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param>
         /// <param name="calibratorId">user id of calibrator</param>
         /// <returns>Task of CalibrationEntityListing</returns>
-        public async System.Threading.Tasks.Task<CalibrationEntityListing> QualityCalibrationsGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null, string calibratorId = null)
+        public async System.Threading.Tasks.Task<CalibrationEntityListing> GetCalibrationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null, string calibratorId = null)
         {
-             ApiResponse<CalibrationEntityListing> response = await QualityCalibrationsGetAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, conversationId, startTime, endTime, calibratorId);
+             ApiResponse<CalibrationEntityListing> response = await GetCalibrationsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, conversationId, startTime, endTime, calibratorId);
              return response.Data;
 
         }
@@ -3037,7 +3037,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</param>
         /// <param name="calibratorId">user id of calibrator</param>
         /// <returns>Task of ApiResponse (CalibrationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CalibrationEntityListing>> QualityCalibrationsGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null, string calibratorId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CalibrationEntityListing>> GetCalibrationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null, string calibratorId = null)
         {
             
     
@@ -3091,9 +3091,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityCalibrationsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetCalibrations: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityCalibrationsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetCalibrations: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<CalibrationEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3107,9 +3107,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param> 
         /// <param name="expand">calibratorId</param> 
         /// <returns>Calibration</returns>
-        public Calibration QualityCalibrationsPost (Calibration body = null, string expand = null)
+        public Calibration CreateCalibrations (Calibration body = null, string expand = null)
         {
-             ApiResponse<Calibration> response = QualityCalibrationsPostWithHttpInfo(body, expand);
+             ApiResponse<Calibration> response = CreateCalibrationsWithHttpInfo(body, expand);
              return response.Data;
         }
 
@@ -3119,7 +3119,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param> 
         /// <param name="expand">calibratorId</param> 
         /// <returns>ApiResponse of Calibration</returns>
-        public ApiResponse< Calibration > QualityCalibrationsPostWithHttpInfo (Calibration body = null, string expand = null)
+        public ApiResponse< Calibration > CreateCalibrationsWithHttpInfo (Calibration body = null, string expand = null)
         {
             
     
@@ -3167,9 +3167,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityCalibrationsPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateCalibrations: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityCalibrationsPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateCalibrations: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Calibration>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3183,9 +3183,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId</param>
         /// <returns>Task of Calibration</returns>
-        public async System.Threading.Tasks.Task<Calibration> QualityCalibrationsPostAsync (Calibration body = null, string expand = null)
+        public async System.Threading.Tasks.Task<Calibration> CreateCalibrationsAsync (Calibration body = null, string expand = null)
         {
-             ApiResponse<Calibration> response = await QualityCalibrationsPostAsyncWithHttpInfo(body, expand);
+             ApiResponse<Calibration> response = await CreateCalibrationsAsyncWithHttpInfo(body, expand);
              return response.Data;
 
         }
@@ -3196,7 +3196,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">calibration</param>
         /// <param name="expand">calibratorId</param>
         /// <returns>Task of ApiResponse (Calibration)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Calibration>> QualityCalibrationsPostAsyncWithHttpInfo (Calibration body = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Calibration>> CreateCalibrationsAsyncWithHttpInfo (Calibration body = null, string expand = null)
         {
             
     
@@ -3244,9 +3244,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityCalibrationsPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateCalibrations: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityCalibrationsPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateCalibrations: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Calibration>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3260,9 +3260,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param> 
         /// <param name="calibratorId">calibratorId</param> 
         /// <returns>Calibration</returns>
-        public Calibration QualityCalibrationsCalibrationidGet (string calibrationId, string calibratorId = null)
+        public Calibration GetCalibration (string calibrationId, string calibratorId = null)
         {
-             ApiResponse<Calibration> response = QualityCalibrationsCalibrationidGetWithHttpInfo(calibrationId, calibratorId);
+             ApiResponse<Calibration> response = GetCalibrationWithHttpInfo(calibrationId, calibratorId);
              return response.Data;
         }
 
@@ -3272,11 +3272,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param> 
         /// <param name="calibratorId">calibratorId</param> 
         /// <returns>ApiResponse of Calibration</returns>
-        public ApiResponse< Calibration > QualityCalibrationsCalibrationidGetWithHttpInfo (string calibrationId, string calibratorId = null)
+        public ApiResponse< Calibration > GetCalibrationWithHttpInfo (string calibrationId, string calibratorId = null)
         {
             
             // verify the required parameter 'calibrationId' is set
-            if (calibrationId == null) throw new ApiException(400, "Missing required parameter 'calibrationId' when calling QualityCalibrationsCalibrationidGet");
+            if (calibrationId == null) throw new ApiException(400, "Missing required parameter 'calibrationId' when calling GetCalibration");
             
     
             var path_ = "/api/v1/quality/calibrations/{calibrationId}";
@@ -3323,9 +3323,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityCalibrationsCalibrationidGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetCalibration: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityCalibrationsCalibrationidGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetCalibration: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Calibration>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3339,9 +3339,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="calibratorId">calibratorId</param>
         /// <returns>Task of Calibration</returns>
-        public async System.Threading.Tasks.Task<Calibration> QualityCalibrationsCalibrationidGetAsync (string calibrationId, string calibratorId = null)
+        public async System.Threading.Tasks.Task<Calibration> GetCalibrationAsync (string calibrationId, string calibratorId = null)
         {
-             ApiResponse<Calibration> response = await QualityCalibrationsCalibrationidGetAsyncWithHttpInfo(calibrationId, calibratorId);
+             ApiResponse<Calibration> response = await GetCalibrationAsyncWithHttpInfo(calibrationId, calibratorId);
              return response.Data;
 
         }
@@ -3352,10 +3352,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="calibratorId">calibratorId</param>
         /// <returns>Task of ApiResponse (Calibration)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Calibration>> QualityCalibrationsCalibrationidGetAsyncWithHttpInfo (string calibrationId, string calibratorId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Calibration>> GetCalibrationAsyncWithHttpInfo (string calibrationId, string calibratorId = null)
         {
             // verify the required parameter 'calibrationId' is set
-            if (calibrationId == null) throw new ApiException(400, "Missing required parameter 'calibrationId' when calling QualityCalibrationsCalibrationidGet");
+            if (calibrationId == null) throw new ApiException(400, "Missing required parameter 'calibrationId' when calling GetCalibration");
             
     
             var path_ = "/api/v1/quality/calibrations/{calibrationId}";
@@ -3402,9 +3402,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityCalibrationsCalibrationidGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetCalibration: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityCalibrationsCalibrationidGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetCalibration: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Calibration>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3418,9 +3418,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param> 
         /// <param name="body">Calibration</param> 
         /// <returns>Calibration</returns>
-        public Calibration QualityCalibrationsCalibrationidPut (string calibrationId, Calibration body = null)
+        public Calibration UpdateCalibration (string calibrationId, Calibration body = null)
         {
-             ApiResponse<Calibration> response = QualityCalibrationsCalibrationidPutWithHttpInfo(calibrationId, body);
+             ApiResponse<Calibration> response = UpdateCalibrationWithHttpInfo(calibrationId, body);
              return response.Data;
         }
 
@@ -3430,11 +3430,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param> 
         /// <param name="body">Calibration</param> 
         /// <returns>ApiResponse of Calibration</returns>
-        public ApiResponse< Calibration > QualityCalibrationsCalibrationidPutWithHttpInfo (string calibrationId, Calibration body = null)
+        public ApiResponse< Calibration > UpdateCalibrationWithHttpInfo (string calibrationId, Calibration body = null)
         {
             
             // verify the required parameter 'calibrationId' is set
-            if (calibrationId == null) throw new ApiException(400, "Missing required parameter 'calibrationId' when calling QualityCalibrationsCalibrationidPut");
+            if (calibrationId == null) throw new ApiException(400, "Missing required parameter 'calibrationId' when calling UpdateCalibration");
             
     
             var path_ = "/api/v1/quality/calibrations/{calibrationId}";
@@ -3481,9 +3481,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityCalibrationsCalibrationidPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateCalibration: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityCalibrationsCalibrationidPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateCalibration: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Calibration>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3497,9 +3497,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="body">Calibration</param>
         /// <returns>Task of Calibration</returns>
-        public async System.Threading.Tasks.Task<Calibration> QualityCalibrationsCalibrationidPutAsync (string calibrationId, Calibration body = null)
+        public async System.Threading.Tasks.Task<Calibration> UpdateCalibrationAsync (string calibrationId, Calibration body = null)
         {
-             ApiResponse<Calibration> response = await QualityCalibrationsCalibrationidPutAsyncWithHttpInfo(calibrationId, body);
+             ApiResponse<Calibration> response = await UpdateCalibrationAsyncWithHttpInfo(calibrationId, body);
              return response.Data;
 
         }
@@ -3510,10 +3510,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="body">Calibration</param>
         /// <returns>Task of ApiResponse (Calibration)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Calibration>> QualityCalibrationsCalibrationidPutAsyncWithHttpInfo (string calibrationId, Calibration body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Calibration>> UpdateCalibrationAsyncWithHttpInfo (string calibrationId, Calibration body = null)
         {
             // verify the required parameter 'calibrationId' is set
-            if (calibrationId == null) throw new ApiException(400, "Missing required parameter 'calibrationId' when calling QualityCalibrationsCalibrationidPut");
+            if (calibrationId == null) throw new ApiException(400, "Missing required parameter 'calibrationId' when calling UpdateCalibration");
             
     
             var path_ = "/api/v1/quality/calibrations/{calibrationId}";
@@ -3560,9 +3560,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityCalibrationsCalibrationidPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateCalibration: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityCalibrationsCalibrationidPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateCalibration: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Calibration>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3576,9 +3576,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param> 
         /// <param name="calibratorId">calibratorId</param> 
         /// <returns>Calibration</returns>
-        public Calibration QualityCalibrationsCalibrationidDelete (string calibrationId, string calibratorId = null)
+        public Calibration DeleteCalibration (string calibrationId, string calibratorId = null)
         {
-             ApiResponse<Calibration> response = QualityCalibrationsCalibrationidDeleteWithHttpInfo(calibrationId, calibratorId);
+             ApiResponse<Calibration> response = DeleteCalibrationWithHttpInfo(calibrationId, calibratorId);
              return response.Data;
         }
 
@@ -3588,11 +3588,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param> 
         /// <param name="calibratorId">calibratorId</param> 
         /// <returns>ApiResponse of Calibration</returns>
-        public ApiResponse< Calibration > QualityCalibrationsCalibrationidDeleteWithHttpInfo (string calibrationId, string calibratorId = null)
+        public ApiResponse< Calibration > DeleteCalibrationWithHttpInfo (string calibrationId, string calibratorId = null)
         {
             
             // verify the required parameter 'calibrationId' is set
-            if (calibrationId == null) throw new ApiException(400, "Missing required parameter 'calibrationId' when calling QualityCalibrationsCalibrationidDelete");
+            if (calibrationId == null) throw new ApiException(400, "Missing required parameter 'calibrationId' when calling DeleteCalibration");
             
     
             var path_ = "/api/v1/quality/calibrations/{calibrationId}";
@@ -3639,9 +3639,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityCalibrationsCalibrationidDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteCalibration: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityCalibrationsCalibrationidDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteCalibration: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Calibration>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3655,9 +3655,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="calibratorId">calibratorId</param>
         /// <returns>Task of Calibration</returns>
-        public async System.Threading.Tasks.Task<Calibration> QualityCalibrationsCalibrationidDeleteAsync (string calibrationId, string calibratorId = null)
+        public async System.Threading.Tasks.Task<Calibration> DeleteCalibrationAsync (string calibrationId, string calibratorId = null)
         {
-             ApiResponse<Calibration> response = await QualityCalibrationsCalibrationidDeleteAsyncWithHttpInfo(calibrationId, calibratorId);
+             ApiResponse<Calibration> response = await DeleteCalibrationAsyncWithHttpInfo(calibrationId, calibratorId);
              return response.Data;
 
         }
@@ -3668,10 +3668,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="calibrationId">Calibration ID</param>
         /// <param name="calibratorId">calibratorId</param>
         /// <returns>Task of ApiResponse (Calibration)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Calibration>> QualityCalibrationsCalibrationidDeleteAsyncWithHttpInfo (string calibrationId, string calibratorId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Calibration>> DeleteCalibrationAsyncWithHttpInfo (string calibrationId, string calibratorId = null)
         {
             // verify the required parameter 'calibrationId' is set
-            if (calibrationId == null) throw new ApiException(400, "Missing required parameter 'calibrationId' when calling QualityCalibrationsCalibrationidDelete");
+            if (calibrationId == null) throw new ApiException(400, "Missing required parameter 'calibrationId' when calling DeleteCalibration");
             
     
             var path_ = "/api/v1/quality/calibrations/{calibrationId}";
@@ -3718,9 +3718,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityCalibrationsCalibrationidDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteCalibration: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityCalibrationsCalibrationidDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteCalibration: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Calibration>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3739,9 +3739,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">id of the recording</param> 
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation</param> 
         /// <returns>QualityAuditPage</returns>
-        public QualityAuditPage QualityConversationsConversationidAuditsGet (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string recordingId = null, string entityType = null)
+        public QualityAuditPage GetConversationAudits (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string recordingId = null, string entityType = null)
         {
-             ApiResponse<QualityAuditPage> response = QualityConversationsConversationidAuditsGetWithHttpInfo(conversationId, pageSize, pageNumber, sortBy, expand, recordingId, entityType);
+             ApiResponse<QualityAuditPage> response = GetConversationAuditsWithHttpInfo(conversationId, pageSize, pageNumber, sortBy, expand, recordingId, entityType);
              return response.Data;
         }
 
@@ -3756,11 +3756,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">id of the recording</param> 
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation</param> 
         /// <returns>ApiResponse of QualityAuditPage</returns>
-        public ApiResponse< QualityAuditPage > QualityConversationsConversationidAuditsGetWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string recordingId = null, string entityType = null)
+        public ApiResponse< QualityAuditPage > GetConversationAuditsWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string recordingId = null, string entityType = null)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityConversationsConversationidAuditsGet");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationAudits");
             
     
             var path_ = "/api/v1/quality/conversations/{conversationId}/audits";
@@ -3812,9 +3812,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityConversationsConversationidAuditsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationAudits: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityConversationsConversationidAuditsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationAudits: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<QualityAuditPage>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3833,9 +3833,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">id of the recording</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation</param>
         /// <returns>Task of QualityAuditPage</returns>
-        public async System.Threading.Tasks.Task<QualityAuditPage> QualityConversationsConversationidAuditsGetAsync (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string recordingId = null, string entityType = null)
+        public async System.Threading.Tasks.Task<QualityAuditPage> GetConversationAuditsAsync (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string recordingId = null, string entityType = null)
         {
-             ApiResponse<QualityAuditPage> response = await QualityConversationsConversationidAuditsGetAsyncWithHttpInfo(conversationId, pageSize, pageNumber, sortBy, expand, recordingId, entityType);
+             ApiResponse<QualityAuditPage> response = await GetConversationAuditsAsyncWithHttpInfo(conversationId, pageSize, pageNumber, sortBy, expand, recordingId, entityType);
              return response.Data;
 
         }
@@ -3851,10 +3851,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">id of the recording</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation</param>
         /// <returns>Task of ApiResponse (QualityAuditPage)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QualityAuditPage>> QualityConversationsConversationidAuditsGetAsyncWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string recordingId = null, string entityType = null)
+        public async System.Threading.Tasks.Task<ApiResponse<QualityAuditPage>> GetConversationAuditsAsyncWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string recordingId = null, string entityType = null)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityConversationsConversationidAuditsGet");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationAudits");
             
     
             var path_ = "/api/v1/quality/conversations/{conversationId}/audits";
@@ -3906,9 +3906,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityConversationsConversationidAuditsGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationAudits: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityConversationsConversationidAuditsGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationAudits: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<QualityAuditPage>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3923,9 +3923,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param> 
         /// <param name="expand">evaluatorId</param> 
         /// <returns>Evaluation</returns>
-        public Evaluation QualityConversationsConversationidEvaluationsPost (string conversationId, Evaluation body = null, string expand = null)
+        public Evaluation CreateConversationEvaluations (string conversationId, Evaluation body = null, string expand = null)
         {
-             ApiResponse<Evaluation> response = QualityConversationsConversationidEvaluationsPostWithHttpInfo(conversationId, body, expand);
+             ApiResponse<Evaluation> response = CreateConversationEvaluationsWithHttpInfo(conversationId, body, expand);
              return response.Data;
         }
 
@@ -3936,11 +3936,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param> 
         /// <param name="expand">evaluatorId</param> 
         /// <returns>ApiResponse of Evaluation</returns>
-        public ApiResponse< Evaluation > QualityConversationsConversationidEvaluationsPostWithHttpInfo (string conversationId, Evaluation body = null, string expand = null)
+        public ApiResponse< Evaluation > CreateConversationEvaluationsWithHttpInfo (string conversationId, Evaluation body = null, string expand = null)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityConversationsConversationidEvaluationsPost");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling CreateConversationEvaluations");
             
     
             var path_ = "/api/v1/quality/conversations/{conversationId}/evaluations";
@@ -3988,9 +3988,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityConversationsConversationidEvaluationsPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateConversationEvaluations: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityConversationsConversationidEvaluationsPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateConversationEvaluations: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Evaluation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4005,9 +4005,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>Task of Evaluation</returns>
-        public async System.Threading.Tasks.Task<Evaluation> QualityConversationsConversationidEvaluationsPostAsync (string conversationId, Evaluation body = null, string expand = null)
+        public async System.Threading.Tasks.Task<Evaluation> CreateConversationEvaluationsAsync (string conversationId, Evaluation body = null, string expand = null)
         {
-             ApiResponse<Evaluation> response = await QualityConversationsConversationidEvaluationsPostAsyncWithHttpInfo(conversationId, body, expand);
+             ApiResponse<Evaluation> response = await CreateConversationEvaluationsAsyncWithHttpInfo(conversationId, body, expand);
              return response.Data;
 
         }
@@ -4019,10 +4019,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> QualityConversationsConversationidEvaluationsPostAsyncWithHttpInfo (string conversationId, Evaluation body = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> CreateConversationEvaluationsAsyncWithHttpInfo (string conversationId, Evaluation body = null, string expand = null)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityConversationsConversationidEvaluationsPost");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling CreateConversationEvaluations");
             
     
             var path_ = "/api/v1/quality/conversations/{conversationId}/evaluations";
@@ -4070,9 +4070,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityConversationsConversationidEvaluationsPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateConversationEvaluations: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityConversationsConversationidEvaluationsPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateConversationEvaluations: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Evaluation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4087,9 +4087,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param> 
         /// <param name="expand">agent, evaluator, evaluationForm</param> 
         /// <returns>Evaluation</returns>
-        public Evaluation QualityConversationsConversationidEvaluationsEvaluationidGet (string conversationId, string evaluationId, string expand = null)
+        public Evaluation GetConversationEvaluationsByEvaluationId (string conversationId, string evaluationId, string expand = null)
         {
-             ApiResponse<Evaluation> response = QualityConversationsConversationidEvaluationsEvaluationidGetWithHttpInfo(conversationId, evaluationId, expand);
+             ApiResponse<Evaluation> response = GetConversationEvaluationsByEvaluationIdWithHttpInfo(conversationId, evaluationId, expand);
              return response.Data;
         }
 
@@ -4100,14 +4100,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param> 
         /// <param name="expand">agent, evaluator, evaluationForm</param> 
         /// <returns>ApiResponse of Evaluation</returns>
-        public ApiResponse< Evaluation > QualityConversationsConversationidEvaluationsEvaluationidGetWithHttpInfo (string conversationId, string evaluationId, string expand = null)
+        public ApiResponse< Evaluation > GetConversationEvaluationsByEvaluationIdWithHttpInfo (string conversationId, string evaluationId, string expand = null)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityConversationsConversationidEvaluationsEvaluationidGet");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationEvaluationsByEvaluationId");
             
             // verify the required parameter 'evaluationId' is set
-            if (evaluationId == null) throw new ApiException(400, "Missing required parameter 'evaluationId' when calling QualityConversationsConversationidEvaluationsEvaluationidGet");
+            if (evaluationId == null) throw new ApiException(400, "Missing required parameter 'evaluationId' when calling GetConversationEvaluationsByEvaluationId");
             
     
             var path_ = "/api/v1/quality/conversations/{conversationId}/evaluations/{evaluationId}";
@@ -4155,9 +4155,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityConversationsConversationidEvaluationsEvaluationidGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationEvaluationsByEvaluationId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityConversationsConversationidEvaluationsEvaluationidGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationEvaluationsByEvaluationId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Evaluation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4172,9 +4172,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param>
         /// <param name="expand">agent, evaluator, evaluationForm</param>
         /// <returns>Task of Evaluation</returns>
-        public async System.Threading.Tasks.Task<Evaluation> QualityConversationsConversationidEvaluationsEvaluationidGetAsync (string conversationId, string evaluationId, string expand = null)
+        public async System.Threading.Tasks.Task<Evaluation> GetConversationEvaluationsByEvaluationIdAsync (string conversationId, string evaluationId, string expand = null)
         {
-             ApiResponse<Evaluation> response = await QualityConversationsConversationidEvaluationsEvaluationidGetAsyncWithHttpInfo(conversationId, evaluationId, expand);
+             ApiResponse<Evaluation> response = await GetConversationEvaluationsByEvaluationIdAsyncWithHttpInfo(conversationId, evaluationId, expand);
              return response.Data;
 
         }
@@ -4186,12 +4186,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param>
         /// <param name="expand">agent, evaluator, evaluationForm</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> QualityConversationsConversationidEvaluationsEvaluationidGetAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> GetConversationEvaluationsByEvaluationIdAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityConversationsConversationidEvaluationsEvaluationidGet");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationEvaluationsByEvaluationId");
             // verify the required parameter 'evaluationId' is set
-            if (evaluationId == null) throw new ApiException(400, "Missing required parameter 'evaluationId' when calling QualityConversationsConversationidEvaluationsEvaluationidGet");
+            if (evaluationId == null) throw new ApiException(400, "Missing required parameter 'evaluationId' when calling GetConversationEvaluationsByEvaluationId");
             
     
             var path_ = "/api/v1/quality/conversations/{conversationId}/evaluations/{evaluationId}";
@@ -4239,9 +4239,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityConversationsConversationidEvaluationsEvaluationidGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetConversationEvaluationsByEvaluationId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityConversationsConversationidEvaluationsEvaluationidGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetConversationEvaluationsByEvaluationId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Evaluation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4257,9 +4257,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param> 
         /// <param name="expand">evaluatorId</param> 
         /// <returns>Evaluation</returns>
-        public Evaluation QualityConversationsConversationidEvaluationsEvaluationidPut (string conversationId, string evaluationId, Evaluation body = null, string expand = null)
+        public Evaluation UpdateConversationEvaluationsByEvaluationId (string conversationId, string evaluationId, Evaluation body = null, string expand = null)
         {
-             ApiResponse<Evaluation> response = QualityConversationsConversationidEvaluationsEvaluationidPutWithHttpInfo(conversationId, evaluationId, body, expand);
+             ApiResponse<Evaluation> response = UpdateConversationEvaluationsByEvaluationIdWithHttpInfo(conversationId, evaluationId, body, expand);
              return response.Data;
         }
 
@@ -4271,14 +4271,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param> 
         /// <param name="expand">evaluatorId</param> 
         /// <returns>ApiResponse of Evaluation</returns>
-        public ApiResponse< Evaluation > QualityConversationsConversationidEvaluationsEvaluationidPutWithHttpInfo (string conversationId, string evaluationId, Evaluation body = null, string expand = null)
+        public ApiResponse< Evaluation > UpdateConversationEvaluationsByEvaluationIdWithHttpInfo (string conversationId, string evaluationId, Evaluation body = null, string expand = null)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityConversationsConversationidEvaluationsEvaluationidPut");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling UpdateConversationEvaluationsByEvaluationId");
             
             // verify the required parameter 'evaluationId' is set
-            if (evaluationId == null) throw new ApiException(400, "Missing required parameter 'evaluationId' when calling QualityConversationsConversationidEvaluationsEvaluationidPut");
+            if (evaluationId == null) throw new ApiException(400, "Missing required parameter 'evaluationId' when calling UpdateConversationEvaluationsByEvaluationId");
             
     
             var path_ = "/api/v1/quality/conversations/{conversationId}/evaluations/{evaluationId}";
@@ -4327,9 +4327,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityConversationsConversationidEvaluationsEvaluationidPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateConversationEvaluationsByEvaluationId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityConversationsConversationidEvaluationsEvaluationidPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateConversationEvaluationsByEvaluationId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Evaluation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4345,9 +4345,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>Task of Evaluation</returns>
-        public async System.Threading.Tasks.Task<Evaluation> QualityConversationsConversationidEvaluationsEvaluationidPutAsync (string conversationId, string evaluationId, Evaluation body = null, string expand = null)
+        public async System.Threading.Tasks.Task<Evaluation> UpdateConversationEvaluationsByEvaluationIdAsync (string conversationId, string evaluationId, Evaluation body = null, string expand = null)
         {
-             ApiResponse<Evaluation> response = await QualityConversationsConversationidEvaluationsEvaluationidPutAsyncWithHttpInfo(conversationId, evaluationId, body, expand);
+             ApiResponse<Evaluation> response = await UpdateConversationEvaluationsByEvaluationIdAsyncWithHttpInfo(conversationId, evaluationId, body, expand);
              return response.Data;
 
         }
@@ -4360,12 +4360,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">evaluation</param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> QualityConversationsConversationidEvaluationsEvaluationidPutAsyncWithHttpInfo (string conversationId, string evaluationId, Evaluation body = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> UpdateConversationEvaluationsByEvaluationIdAsyncWithHttpInfo (string conversationId, string evaluationId, Evaluation body = null, string expand = null)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityConversationsConversationidEvaluationsEvaluationidPut");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling UpdateConversationEvaluationsByEvaluationId");
             // verify the required parameter 'evaluationId' is set
-            if (evaluationId == null) throw new ApiException(400, "Missing required parameter 'evaluationId' when calling QualityConversationsConversationidEvaluationsEvaluationidPut");
+            if (evaluationId == null) throw new ApiException(400, "Missing required parameter 'evaluationId' when calling UpdateConversationEvaluationsByEvaluationId");
             
     
             var path_ = "/api/v1/quality/conversations/{conversationId}/evaluations/{evaluationId}";
@@ -4414,9 +4414,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityConversationsConversationidEvaluationsEvaluationidPut: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling UpdateConversationEvaluationsByEvaluationId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityConversationsConversationidEvaluationsEvaluationidPut: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling UpdateConversationEvaluationsByEvaluationId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Evaluation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4431,9 +4431,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param> 
         /// <param name="expand">evaluatorId</param> 
         /// <returns>Evaluation</returns>
-        public Evaluation QualityConversationsConversationidEvaluationsEvaluationidDelete (string conversationId, string evaluationId, string expand = null)
+        public Evaluation DeleteConversationEvaluationsByEvaluationId (string conversationId, string evaluationId, string expand = null)
         {
-             ApiResponse<Evaluation> response = QualityConversationsConversationidEvaluationsEvaluationidDeleteWithHttpInfo(conversationId, evaluationId, expand);
+             ApiResponse<Evaluation> response = DeleteConversationEvaluationsByEvaluationIdWithHttpInfo(conversationId, evaluationId, expand);
              return response.Data;
         }
 
@@ -4444,14 +4444,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param> 
         /// <param name="expand">evaluatorId</param> 
         /// <returns>ApiResponse of Evaluation</returns>
-        public ApiResponse< Evaluation > QualityConversationsConversationidEvaluationsEvaluationidDeleteWithHttpInfo (string conversationId, string evaluationId, string expand = null)
+        public ApiResponse< Evaluation > DeleteConversationEvaluationsByEvaluationIdWithHttpInfo (string conversationId, string evaluationId, string expand = null)
         {
             
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityConversationsConversationidEvaluationsEvaluationidDelete");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling DeleteConversationEvaluationsByEvaluationId");
             
             // verify the required parameter 'evaluationId' is set
-            if (evaluationId == null) throw new ApiException(400, "Missing required parameter 'evaluationId' when calling QualityConversationsConversationidEvaluationsEvaluationidDelete");
+            if (evaluationId == null) throw new ApiException(400, "Missing required parameter 'evaluationId' when calling DeleteConversationEvaluationsByEvaluationId");
             
     
             var path_ = "/api/v1/quality/conversations/{conversationId}/evaluations/{evaluationId}";
@@ -4499,9 +4499,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityConversationsConversationidEvaluationsEvaluationidDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteConversationEvaluationsByEvaluationId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityConversationsConversationidEvaluationsEvaluationidDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteConversationEvaluationsByEvaluationId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Evaluation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4516,9 +4516,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>Task of Evaluation</returns>
-        public async System.Threading.Tasks.Task<Evaluation> QualityConversationsConversationidEvaluationsEvaluationidDeleteAsync (string conversationId, string evaluationId, string expand = null)
+        public async System.Threading.Tasks.Task<Evaluation> DeleteConversationEvaluationsByEvaluationIdAsync (string conversationId, string evaluationId, string expand = null)
         {
-             ApiResponse<Evaluation> response = await QualityConversationsConversationidEvaluationsEvaluationidDeleteAsyncWithHttpInfo(conversationId, evaluationId, expand);
+             ApiResponse<Evaluation> response = await DeleteConversationEvaluationsByEvaluationIdAsyncWithHttpInfo(conversationId, evaluationId, expand);
              return response.Data;
 
         }
@@ -4530,12 +4530,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="evaluationId"></param>
         /// <param name="expand">evaluatorId</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> QualityConversationsConversationidEvaluationsEvaluationidDeleteAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> DeleteConversationEvaluationsByEvaluationIdAsyncWithHttpInfo (string conversationId, string evaluationId, string expand = null)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityConversationsConversationidEvaluationsEvaluationidDelete");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling DeleteConversationEvaluationsByEvaluationId");
             // verify the required parameter 'evaluationId' is set
-            if (evaluationId == null) throw new ApiException(400, "Missing required parameter 'evaluationId' when calling QualityConversationsConversationidEvaluationsEvaluationidDelete");
+            if (evaluationId == null) throw new ApiException(400, "Missing required parameter 'evaluationId' when calling DeleteConversationEvaluationsByEvaluationId");
             
     
             var path_ = "/api/v1/quality/conversations/{conversationId}/evaluations/{evaluationId}";
@@ -4583,9 +4583,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityConversationsConversationidEvaluationsEvaluationidDelete: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteConversationEvaluationsByEvaluationId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityConversationsConversationidEvaluationsEvaluationidDelete: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteConversationEvaluationsByEvaluationId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Evaluation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4612,9 +4612,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations</param> 
         /// <param name="maximum">maximum</param> 
         /// <returns>EvaluationEntityListing</returns>
-        public EvaluationEntityListing QualityEvaluationsQueryGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null)
+        public EvaluationEntityListing GetEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null)
         {
-             ApiResponse<EvaluationEntityListing> response = QualityEvaluationsQueryGetWithHttpInfo(pageSize, pageNumber, sortBy, expand, conversationId, agentUserId, evaluatorUserId, queueId, startTime, endTime, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum);
+             ApiResponse<EvaluationEntityListing> response = GetEvaluationsQueryWithHttpInfo(pageSize, pageNumber, sortBy, expand, conversationId, agentUserId, evaluatorUserId, queueId, startTime, endTime, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum);
              return response.Data;
         }
 
@@ -4637,7 +4637,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations</param> 
         /// <param name="maximum">maximum</param> 
         /// <returns>ApiResponse of EvaluationEntityListing</returns>
-        public ApiResponse< EvaluationEntityListing > QualityEvaluationsQueryGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null)
+        public ApiResponse< EvaluationEntityListing > GetEvaluationsQueryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null)
         {
             
     
@@ -4698,9 +4698,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityEvaluationsQueryGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEvaluationsQuery: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityEvaluationsQueryGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEvaluationsQuery: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EvaluationEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4727,9 +4727,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations</param>
         /// <param name="maximum">maximum</param>
         /// <returns>Task of EvaluationEntityListing</returns>
-        public async System.Threading.Tasks.Task<EvaluationEntityListing> QualityEvaluationsQueryGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null)
+        public async System.Threading.Tasks.Task<EvaluationEntityListing> GetEvaluationsQueryAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null)
         {
-             ApiResponse<EvaluationEntityListing> response = await QualityEvaluationsQueryGetAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, conversationId, agentUserId, evaluatorUserId, queueId, startTime, endTime, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum);
+             ApiResponse<EvaluationEntityListing> response = await GetEvaluationsQueryAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, conversationId, agentUserId, evaluatorUserId, queueId, startTime, endTime, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum);
              return response.Data;
 
         }
@@ -4753,7 +4753,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations</param>
         /// <param name="maximum">maximum</param>
         /// <returns>Task of ApiResponse (EvaluationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> QualityEvaluationsQueryGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetEvaluationsQueryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null)
         {
             
     
@@ -4814,9 +4814,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityEvaluationsQueryGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEvaluationsQuery: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityEvaluationsQueryGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEvaluationsQuery: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EvaluationEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4830,9 +4830,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param> 
         /// <param name="expand">evaluator,agent</param> 
         /// <returns>EvaluationEntityListing</returns>
-        public EvaluationEntityListing QualityEvaluationsQueryPost (EvaluationQueryRequest body = null, string expand = null)
+        public EvaluationEntityListing CreateEvaluationsQuery (EvaluationQueryRequest body = null, string expand = null)
         {
-             ApiResponse<EvaluationEntityListing> response = QualityEvaluationsQueryPostWithHttpInfo(body, expand);
+             ApiResponse<EvaluationEntityListing> response = CreateEvaluationsQueryWithHttpInfo(body, expand);
              return response.Data;
         }
 
@@ -4842,7 +4842,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param> 
         /// <param name="expand">evaluator,agent</param> 
         /// <returns>ApiResponse of EvaluationEntityListing</returns>
-        public ApiResponse< EvaluationEntityListing > QualityEvaluationsQueryPostWithHttpInfo (EvaluationQueryRequest body = null, string expand = null)
+        public ApiResponse< EvaluationEntityListing > CreateEvaluationsQueryWithHttpInfo (EvaluationQueryRequest body = null, string expand = null)
         {
             
     
@@ -4890,9 +4890,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityEvaluationsQueryPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateEvaluationsQuery: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityEvaluationsQueryPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateEvaluationsQuery: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EvaluationEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4906,9 +4906,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param>
         /// <param name="expand">evaluator,agent</param>
         /// <returns>Task of EvaluationEntityListing</returns>
-        public async System.Threading.Tasks.Task<EvaluationEntityListing> QualityEvaluationsQueryPostAsync (EvaluationQueryRequest body = null, string expand = null)
+        public async System.Threading.Tasks.Task<EvaluationEntityListing> CreateEvaluationsQueryAsync (EvaluationQueryRequest body = null, string expand = null)
         {
-             ApiResponse<EvaluationEntityListing> response = await QualityEvaluationsQueryPostAsyncWithHttpInfo(body, expand);
+             ApiResponse<EvaluationEntityListing> response = await CreateEvaluationsQueryAsyncWithHttpInfo(body, expand);
              return response.Data;
 
         }
@@ -4919,7 +4919,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param>
         /// <param name="expand">evaluator,agent</param>
         /// <returns>Task of ApiResponse (EvaluationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> QualityEvaluationsQueryPostAsyncWithHttpInfo (EvaluationQueryRequest body = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> CreateEvaluationsQueryAsyncWithHttpInfo (EvaluationQueryRequest body = null, string expand = null)
         {
             
     
@@ -4967,9 +4967,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityEvaluationsQueryPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateEvaluationsQuery: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityEvaluationsQueryPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateEvaluationsQuery: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EvaluationEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4982,9 +4982,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">evaluationAndScoringSet</param> 
         /// <returns>EvaluationScoringSet</returns>
-        public EvaluationScoringSet QualityEvaluationsScoringPost (EvaluationFormAndScoringSet body = null)
+        public EvaluationScoringSet CreateEvaluationsScoring (EvaluationFormAndScoringSet body = null)
         {
-             ApiResponse<EvaluationScoringSet> response = QualityEvaluationsScoringPostWithHttpInfo(body);
+             ApiResponse<EvaluationScoringSet> response = CreateEvaluationsScoringWithHttpInfo(body);
              return response.Data;
         }
 
@@ -4993,7 +4993,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">evaluationAndScoringSet</param> 
         /// <returns>ApiResponse of EvaluationScoringSet</returns>
-        public ApiResponse< EvaluationScoringSet > QualityEvaluationsScoringPostWithHttpInfo (EvaluationFormAndScoringSet body = null)
+        public ApiResponse< EvaluationScoringSet > CreateEvaluationsScoringWithHttpInfo (EvaluationFormAndScoringSet body = null)
         {
             
     
@@ -5040,9 +5040,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityEvaluationsScoringPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateEvaluationsScoring: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityEvaluationsScoringPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateEvaluationsScoring: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EvaluationScoringSet>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5055,9 +5055,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">evaluationAndScoringSet</param>
         /// <returns>Task of EvaluationScoringSet</returns>
-        public async System.Threading.Tasks.Task<EvaluationScoringSet> QualityEvaluationsScoringPostAsync (EvaluationFormAndScoringSet body = null)
+        public async System.Threading.Tasks.Task<EvaluationScoringSet> CreateEvaluationsScoringAsync (EvaluationFormAndScoringSet body = null)
         {
-             ApiResponse<EvaluationScoringSet> response = await QualityEvaluationsScoringPostAsyncWithHttpInfo(body);
+             ApiResponse<EvaluationScoringSet> response = await CreateEvaluationsScoringAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -5067,7 +5067,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">evaluationAndScoringSet</param>
         /// <returns>Task of ApiResponse (EvaluationScoringSet)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationScoringSet>> QualityEvaluationsScoringPostAsyncWithHttpInfo (EvaluationFormAndScoringSet body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationScoringSet>> CreateEvaluationsScoringAsyncWithHttpInfo (EvaluationFormAndScoringSet body = null)
         {
             
     
@@ -5114,9 +5114,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityEvaluationsScoringPost: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling CreateEvaluationsScoring: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityEvaluationsScoringPost: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling CreateEvaluationsScoring: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EvaluationScoringSet>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5137,9 +5137,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission">permission strings</param> 
         /// <param name="group">group id</param> 
         /// <returns>EvaluatorActivityEntityListing</returns>
-        public EvaluatorActivityEntityListing QualityEvaluatorsActivityGet (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null)
+        public EvaluatorActivityEntityListing GetEvaluatorsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null)
         {
-             ApiResponse<EvaluatorActivityEntityListing> response = QualityEvaluatorsActivityGetWithHttpInfo(pageSize, pageNumber, sortBy, expand, startTime, endTime, name, permission, group);
+             ApiResponse<EvaluatorActivityEntityListing> response = GetEvaluatorsActivityWithHttpInfo(pageSize, pageNumber, sortBy, expand, startTime, endTime, name, permission, group);
              return response.Data;
         }
 
@@ -5156,7 +5156,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission">permission strings</param> 
         /// <param name="group">group id</param> 
         /// <returns>ApiResponse of EvaluatorActivityEntityListing</returns>
-        public ApiResponse< EvaluatorActivityEntityListing > QualityEvaluatorsActivityGetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null)
+        public ApiResponse< EvaluatorActivityEntityListing > GetEvaluatorsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null)
         {
             
     
@@ -5211,9 +5211,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityEvaluatorsActivityGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEvaluatorsActivity: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityEvaluatorsActivityGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEvaluatorsActivity: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EvaluatorActivityEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5234,9 +5234,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission">permission strings</param>
         /// <param name="group">group id</param>
         /// <returns>Task of EvaluatorActivityEntityListing</returns>
-        public async System.Threading.Tasks.Task<EvaluatorActivityEntityListing> QualityEvaluatorsActivityGetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null)
+        public async System.Threading.Tasks.Task<EvaluatorActivityEntityListing> GetEvaluatorsActivityAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null)
         {
-             ApiResponse<EvaluatorActivityEntityListing> response = await QualityEvaluatorsActivityGetAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, startTime, endTime, name, permission, group);
+             ApiResponse<EvaluatorActivityEntityListing> response = await GetEvaluatorsActivityAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, startTime, endTime, name, permission, group);
              return response.Data;
 
         }
@@ -5254,7 +5254,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="permission">permission strings</param>
         /// <param name="group">group id</param>
         /// <returns>Task of ApiResponse (EvaluatorActivityEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluatorActivityEntityListing>> QualityEvaluatorsActivityGetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluatorActivityEntityListing>> GetEvaluatorsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null)
         {
             
     
@@ -5309,9 +5309,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling QualityEvaluatorsActivityGet: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEvaluatorsActivity: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling QualityEvaluatorsActivityGet: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEvaluatorsActivity: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EvaluatorActivityEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

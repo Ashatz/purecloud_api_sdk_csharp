@@ -28,56 +28,45 @@ namespace ININ.PureCloudApi.Model
 
         
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// Gets or Sets Id
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets Name
+        /// Gets or Sets Code
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
+        [DataMember(Name="code", EmitDefaultValue=false)]
+        public int? Code { get; set; }
   
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Gets or Sets Label
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
-        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
-        public DateTime? DateCreated { get; set; }
+        [DataMember(Name="label", EmitDefaultValue=false)]
+        public string Label { get; set; }
   
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Gets or Sets Notes
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
-        [DataMember(Name="dateModified", EmitDefaultValue=false)]
-        public DateTime? DateModified { get; set; }
+        [DataMember(Name="notes", EmitDefaultValue=false)]
+        public string Notes { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets ModifiedBy
+        /// Gets or Sets Tags
         /// </summary>
-        [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
-        public string ModifiedBy { get; set; }
+        [DataMember(Name="tags", EmitDefaultValue=false)]
+        public List<string> Tags { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets CreatedBy
+        /// Gets or Sets Duration
         /// </summary>
-        [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public string CreatedBy { get; set; }
-  
-        
-        /// <summary>
-        /// The URI for this object
-        /// </summary>
-        /// <value>The URI for this object</value>
-        [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
+        [DataMember(Name="duration", EmitDefaultValue=false)]
+        public int? Duration { get; set; }
   
         
   
@@ -90,12 +79,11 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class WrapupCode {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
-            sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
-            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            sb.Append("  Code: ").Append(Code).Append("\n");
+            sb.Append("  Label: ").Append(Label).Append("\n");
+            sb.Append("  Notes: ").Append(Notes).Append("\n");
+            sb.Append("  Tags: ").Append(Tags).Append("\n");
+            sb.Append("  Duration: ").Append(Duration).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -139,34 +127,29 @@ namespace ININ.PureCloudApi.Model
                     this.Id.Equals(other.Id)
                 ) && 
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Code == other.Code ||
+                    this.Code != null &&
+                    this.Code.Equals(other.Code)
                 ) && 
                 (
-                    this.DateCreated == other.DateCreated ||
-                    this.DateCreated != null &&
-                    this.DateCreated.Equals(other.DateCreated)
+                    this.Label == other.Label ||
+                    this.Label != null &&
+                    this.Label.Equals(other.Label)
                 ) && 
                 (
-                    this.DateModified == other.DateModified ||
-                    this.DateModified != null &&
-                    this.DateModified.Equals(other.DateModified)
+                    this.Notes == other.Notes ||
+                    this.Notes != null &&
+                    this.Notes.Equals(other.Notes)
                 ) && 
                 (
-                    this.ModifiedBy == other.ModifiedBy ||
-                    this.ModifiedBy != null &&
-                    this.ModifiedBy.Equals(other.ModifiedBy)
+                    this.Tags == other.Tags ||
+                    this.Tags != null &&
+                    this.Tags.SequenceEqual(other.Tags)
                 ) && 
                 (
-                    this.CreatedBy == other.CreatedBy ||
-                    this.CreatedBy != null &&
-                    this.CreatedBy.Equals(other.CreatedBy)
-                ) && 
-                (
-                    this.SelfUri == other.SelfUri ||
-                    this.SelfUri != null &&
-                    this.SelfUri.Equals(other.SelfUri)
+                    this.Duration == other.Duration ||
+                    this.Duration != null &&
+                    this.Duration.Equals(other.Duration)
                 );
         }
 
@@ -185,23 +168,20 @@ namespace ININ.PureCloudApi.Model
                 if (this.Id != null)
                     hash = hash * 57 + this.Id.GetHashCode();
                 
-                if (this.Name != null)
-                    hash = hash * 57 + this.Name.GetHashCode();
+                if (this.Code != null)
+                    hash = hash * 57 + this.Code.GetHashCode();
                 
-                if (this.DateCreated != null)
-                    hash = hash * 57 + this.DateCreated.GetHashCode();
+                if (this.Label != null)
+                    hash = hash * 57 + this.Label.GetHashCode();
                 
-                if (this.DateModified != null)
-                    hash = hash * 57 + this.DateModified.GetHashCode();
+                if (this.Notes != null)
+                    hash = hash * 57 + this.Notes.GetHashCode();
                 
-                if (this.ModifiedBy != null)
-                    hash = hash * 57 + this.ModifiedBy.GetHashCode();
+                if (this.Tags != null)
+                    hash = hash * 57 + this.Tags.GetHashCode();
                 
-                if (this.CreatedBy != null)
-                    hash = hash * 57 + this.CreatedBy.GetHashCode();
-                
-                if (this.SelfUri != null)
-                    hash = hash * 57 + this.SelfUri.GetHashCode();
+                if (this.Duration != null)
+                    hash = hash * 57 + this.Duration.GetHashCode();
                 
                 return hash;
             }
