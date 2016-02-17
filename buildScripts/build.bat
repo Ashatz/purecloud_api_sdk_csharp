@@ -11,7 +11,7 @@ mkdir build
 REM set executable=bin\swagger-codegen-cli.jar
 set executable=lib\swagger-codegen-cli.jar
 set JAVA_OPTS=%JAVA_OPTS% -XX:MaxPermSize=256M -Xmx1024M -DloggerPath=conf/log4j.properties
-set ags=generate -i swagger.json -l csharp -o build -c bin/config-csharp.json
+set ags=generate -i swagger.json -l purecloudcsharp -o build -c bin/config-csharp.json
 
 call java %JAVA_OPTS% -jar %executable% %ags%
 
