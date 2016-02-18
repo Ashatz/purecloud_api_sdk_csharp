@@ -44040,110 +44040,22 @@
         </member>
         <member name="P:ININ.PureCloudApi.Model.Campaign.Id">
             <summary>
-            The globally unique identifier for the object.
+            Gets or Sets Id
             </summary>
-            <value>The globally unique identifier for the object.</value>
         </member>
         <member name="P:ININ.PureCloudApi.Model.Campaign.Name">
             <summary>
             Gets or Sets Name
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.Campaign.DateCreated">
+        <member name="P:ININ.PureCloudApi.Model.Campaign.SelfUri">
             <summary>
-            Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-            </summary>
-            <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Campaign.DateModified">
-            <summary>
-            Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-            </summary>
-            <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Campaign.Version">
-            <summary>
-            Gets or Sets Version
+            Gets or Sets SelfUri
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.Campaign.ContactList">
+        <member name="P:ININ.PureCloudApi.Model.Campaign.PhoneNumberColumns">
             <summary>
-            Gets or Sets ContactList
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Campaign.Queue">
-            <summary>
-            Gets or Sets Queue
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Campaign.DialingMode">
-            <summary>
-            Gets or Sets DialingMode
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Campaign.Script">
-            <summary>
-            Gets or Sets Script
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Campaign.EdgeGroup">
-            <summary>
-            Gets or Sets EdgeGroup
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Campaign.CampaignStatus">
-            <summary>
-            Gets or Sets CampaignStatus
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Campaign.PhoneColumns">
-            <summary>
-            Gets or Sets PhoneColumns
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Campaign.AbandonRate">
-            <summary>
-            Gets or Sets AbandonRate
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Campaign.DncLists">
-            <summary>
-            Gets or Sets DncLists
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Campaign.CallableTimeSet">
-            <summary>
-            Gets or Sets CallableTimeSet
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Campaign.CallAnalysisResponseSet">
-            <summary>
-            Gets or Sets CallAnalysisResponseSet
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Campaign.Errors">
-            <summary>
-            Gets or Sets Errors
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Campaign.CallerName">
-            <summary>
-            Gets or Sets CallerName
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Campaign.CallerAddress">
-            <summary>
-            Gets or Sets CallerAddress
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Campaign.OutboundLineCount">
-            <summary>
-            Gets or Sets OutboundLineCount
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Campaign.RuleSets">
-            <summary>
-            Gets or Sets RuleSets
+            Gets or Sets PhoneNumberColumns
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.Campaign.SkipPreviewDisabled">
@@ -44155,17 +44067,6 @@
             <summary>
             Gets or Sets PreviewTimeOutSeconds
             </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Campaign.SingleNumberPreview">
-            <summary>
-            Gets or Sets SingleNumberPreview
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Campaign.SelfUri">
-            <summary>
-            The URI for this object
-            </summary>
-            <value>The URI for this object</value>
         </member>
         <member name="T:ININ.PureCloudApi.Model.CampaignDiagnostics">
             <summary>
@@ -47141,67 +47042,13 @@
         </member>
         <member name="P:ININ.PureCloudApi.Model.ContactList.Id">
             <summary>
-            The globally unique identifier for the object.
-            </summary>
-            <value>The globally unique identifier for the object.</value>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ContactList.Name">
-            <summary>
-            Gets or Sets Name
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ContactList.DateCreated">
-            <summary>
-            Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-            </summary>
-            <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ContactList.DateModified">
-            <summary>
-            Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-            </summary>
-            <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ContactList.Version">
-            <summary>
-            Gets or Sets Version
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ContactList.ColumnNames">
-            <summary>
-            Gets or Sets ColumnNames
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ContactList.PhoneColumns">
-            <summary>
-            Gets or Sets PhoneColumns
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ContactList.ImportStatus">
-            <summary>
-            Gets or Sets ImportStatus
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ContactList.PreviewModeColumnName">
-            <summary>
-            Gets or Sets PreviewModeColumnName
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ContactList.PreviewModeAcceptedValues">
-            <summary>
-            Gets or Sets PreviewModeAcceptedValues
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ContactList.Size">
-            <summary>
-            Gets or Sets Size
+            Gets or Sets Id
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.ContactList.SelfUri">
             <summary>
-            The URI for this object
+            Gets or Sets SelfUri
             </summary>
-            <value>The URI for this object</value>
         </member>
         <member name="T:ININ.PureCloudApi.Model.ContactListEntityListing">
             <summary>
@@ -69358,11 +69205,6 @@
             Gets or Sets Type
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.PhoneNumberColumn.CallableTimeColumn">
-            <summary>
-            Gets or Sets CallableTimeColumn
-            </summary>
-        </member>
         <member name="T:ININ.PureCloudApi.Model.PhoneNumberStatus">
             <summary>
             
@@ -74222,7 +74064,7 @@
         </member>
         <member name="T:ININ.PureCloudApi.Model.Response">
             <summary>
-            Contains information about a response.
+            
             </summary>
         </member>
         <member name="M:ININ.PureCloudApi.Model.Response.#ctor">
@@ -74262,52 +74104,15 @@
             </summary>
             <returns>Hash code</returns>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.Response.Id">
+        <member name="P:ININ.PureCloudApi.Model.Response.MessageReturned">
             <summary>
-            The globally unique identifier for the object.
-            </summary>
-            <value>The globally unique identifier for the object.</value>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Response.Name">
-            <summary>
-            Gets or Sets Name
+            Gets or Sets MessageReturned
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.Response.Version">
+        <member name="P:ININ.PureCloudApi.Model.Response.Status">
             <summary>
-            Version number required for updates.
+            Gets or Sets Status
             </summary>
-            <value>Version number required for updates.</value>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Response.Libraries">
-            <summary>
-            One or more libraries response is associated with.
-            </summary>
-            <value>One or more libraries response is associated with.</value>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Response.Texts">
-            <summary>
-            One or more texts associated with the response.
-            </summary>
-            <value>One or more texts associated with the response.</value>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Response.CreatedBy">
-            <summary>
-            User that created the response
-            </summary>
-            <value>User that created the response</value>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Response.DateCreated">
-            <summary>
-            The date and time the response was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-            </summary>
-            <value>The date and time the response was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Response.SelfUri">
-            <summary>
-            The URI for this object
-            </summary>
-            <value>The URI for this object</value>
         </member>
         <member name="T:ININ.PureCloudApi.Model.ResponseEntityList">
             <summary>
@@ -75086,70 +74891,33 @@
         </member>
         <member name="P:ININ.PureCloudApi.Model.Rule.Id">
             <summary>
-            The globally unique identifier for the object.
+            Gets or Sets Id
             </summary>
-            <value>The globally unique identifier for the object.</value>
         </member>
         <member name="P:ININ.PureCloudApi.Model.Rule.Name">
             <summary>
             Gets or Sets Name
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.Rule.Title">
+        <member name="P:ININ.PureCloudApi.Model.Rule.Order">
             <summary>
-            Gets or Sets Title
+            Gets or Sets Order
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.Rule.Description">
+        <member name="P:ININ.PureCloudApi.Model.Rule.Category">
             <summary>
-            Gets or Sets Description
+            Gets or Sets Category
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.Rule.Enabled">
+        <member name="P:ININ.PureCloudApi.Model.Rule.Conditions">
             <summary>
-            Gets or Sets Enabled
+            Gets or Sets Conditions
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.Rule.Metric">
+        <member name="P:ININ.PureCloudApi.Model.Rule.Actions">
             <summary>
-            Gets or Sets Metric
+            Gets or Sets Actions
             </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Rule.Entity">
-            <summary>
-            Gets or Sets Entity
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Rule.MetricThresholds">
-            <summary>
-            Gets or Sets MetricThresholds
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Rule.InAlarm">
-            <summary>
-            Gets or Sets InAlarm
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Rule.Occurrence">
-            <summary>
-            Gets or Sets Occurrence
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Rule.MediaType">
-            <summary>
-            Gets or Sets MediaType
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Rule.Statistic">
-            <summary>
-            Gets or Sets Statistic
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Rule.SelfUri">
-            <summary>
-            The URI for this object
-            </summary>
-            <value>The URI for this object</value>
         </member>
         <member name="T:ININ.PureCloudApi.Model.RuleEntityListing">
             <summary>
@@ -80922,13 +80690,15 @@
         </member>
         <member name="P:ININ.PureCloudApi.Model.TimeSlot.StartTime">
             <summary>
-            Gets or Sets StartTime
+            start time in xx:xx:xx.xxx format
             </summary>
+            <value>start time in xx:xx:xx.xxx format</value>
         </member>
         <member name="P:ININ.PureCloudApi.Model.TimeSlot.StopTime">
             <summary>
-            Gets or Sets StopTime
+            stop time in xx:xx:xx.xxx format
             </summary>
+            <value>stop time in xx:xx:xx.xxx format</value>
         </member>
         <member name="P:ININ.PureCloudApi.Model.TimeSlot.Day">
             <summary>
@@ -82612,6 +82382,11 @@
             Gets or Sets RequestedStatus
             </summary>
         </member>
+        <member name="P:ININ.PureCloudApi.Model.User.DefaultStationUri">
+            <summary>
+            Gets or Sets DefaultStationUri
+            </summary>
+        </member>
         <member name="P:ININ.PureCloudApi.Model.User.StationUri">
             <summary>
             Gets or Sets StationUri
@@ -82620,11 +82395,6 @@
         <member name="P:ININ.PureCloudApi.Model.User.LastStationUri">
             <summary>
             Gets or Sets LastStationUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.User.DefaultStationUri">
-            <summary>
-            Gets or Sets DefaultStationUri
             </summary>
         </member>
         <member name="T:ININ.PureCloudApi.Model.UserActionCategory">

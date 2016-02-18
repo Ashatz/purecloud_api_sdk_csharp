@@ -63,102 +63,39 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'Title' 
+        /// Test the property 'Order' 
         /// </summary>
         [Test]
-        public void TitleTest()
+        public void OrderTest()
         {
-            // TODO: unit test for the property 'Title' 
+            // TODO: unit test for the property 'Order' 
         }
         
         /// <summary>
-        /// Test the property 'Description' 
+        /// Test the property 'Category' 
         /// </summary>
         [Test]
-        public void DescriptionTest()
+        public void CategoryTest()
         {
-            // TODO: unit test for the property 'Description' 
+            // TODO: unit test for the property 'Category' 
         }
         
         /// <summary>
-        /// Test the property 'Enabled' 
+        /// Test the property 'Conditions' 
         /// </summary>
         [Test]
-        public void EnabledTest()
+        public void ConditionsTest()
         {
-            // TODO: unit test for the property 'Enabled' 
+            // TODO: unit test for the property 'Conditions' 
         }
         
         /// <summary>
-        /// Test the property 'Metric' 
+        /// Test the property 'Actions' 
         /// </summary>
         [Test]
-        public void MetricTest()
+        public void ActionsTest()
         {
-            // TODO: unit test for the property 'Metric' 
-        }
-        
-        /// <summary>
-        /// Test the property 'Entity' 
-        /// </summary>
-        [Test]
-        public void EntityTest()
-        {
-            // TODO: unit test for the property 'Entity' 
-        }
-        
-        /// <summary>
-        /// Test the property 'MetricThresholds' 
-        /// </summary>
-        [Test]
-        public void MetricThresholdsTest()
-        {
-            // TODO: unit test for the property 'MetricThresholds' 
-        }
-        
-        /// <summary>
-        /// Test the property 'InAlarm' 
-        /// </summary>
-        [Test]
-        public void InAlarmTest()
-        {
-            // TODO: unit test for the property 'InAlarm' 
-        }
-        
-        /// <summary>
-        /// Test the property 'Occurrence' 
-        /// </summary>
-        [Test]
-        public void OccurrenceTest()
-        {
-            // TODO: unit test for the property 'Occurrence' 
-        }
-        
-        /// <summary>
-        /// Test the property 'MediaType' 
-        /// </summary>
-        [Test]
-        public void MediaTypeTest()
-        {
-            // TODO: unit test for the property 'MediaType' 
-        }
-        
-        /// <summary>
-        /// Test the property 'Statistic' 
-        /// </summary>
-        [Test]
-        public void StatisticTest()
-        {
-            // TODO: unit test for the property 'Statistic' 
-        }
-        
-        /// <summary>
-        /// Test the property 'SelfUri' 
-        /// </summary>
-        [Test]
-        public void SelfUriTest()
-        {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'Actions' 
         }
         
 

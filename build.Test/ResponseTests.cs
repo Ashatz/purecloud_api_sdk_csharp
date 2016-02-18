@@ -45,75 +45,21 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'MessageReturned' 
         /// </summary>
         [Test]
-        public void IdTest()
+        public void MessageReturnedTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'MessageReturned' 
         }
         
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Status' 
         /// </summary>
         [Test]
-        public void NameTest()
+        public void StatusTest()
         {
-            // TODO: unit test for the property 'Name' 
-        }
-        
-        /// <summary>
-        /// Test the property 'Version' 
-        /// </summary>
-        [Test]
-        public void VersionTest()
-        {
-            // TODO: unit test for the property 'Version' 
-        }
-        
-        /// <summary>
-        /// Test the property 'Libraries' 
-        /// </summary>
-        [Test]
-        public void LibrariesTest()
-        {
-            // TODO: unit test for the property 'Libraries' 
-        }
-        
-        /// <summary>
-        /// Test the property 'Texts' 
-        /// </summary>
-        [Test]
-        public void TextsTest()
-        {
-            // TODO: unit test for the property 'Texts' 
-        }
-        
-        /// <summary>
-        /// Test the property 'CreatedBy' 
-        /// </summary>
-        [Test]
-        public void CreatedByTest()
-        {
-            // TODO: unit test for the property 'CreatedBy' 
-        }
-        
-        /// <summary>
-        /// Test the property 'DateCreated' 
-        /// </summary>
-        [Test]
-        public void DateCreatedTest()
-        {
-            // TODO: unit test for the property 'DateCreated' 
-        }
-        
-        /// <summary>
-        /// Test the property 'SelfUri' 
-        /// </summary>
-        [Test]
-        public void SelfUriTest()
-        {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'Status' 
         }
         
 
