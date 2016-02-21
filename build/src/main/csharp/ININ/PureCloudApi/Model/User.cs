@@ -184,6 +184,13 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
+        /// Gets or Sets DefaultStationUri
+        /// </summary>
+        [DataMember(Name="defaultStationUri", EmitDefaultValue=false)]
+        public string DefaultStationUri { get; set; }
+  
+        
+        /// <summary>
         /// Gets or Sets StationUri
         /// </summary>
         [DataMember(Name="stationUri", EmitDefaultValue=false)]
@@ -195,13 +202,6 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="lastStationUri", EmitDefaultValue=false)]
         public string LastStationUri { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets DefaultStationUri
-        /// </summary>
-        [DataMember(Name="defaultStationUri", EmitDefaultValue=false)]
-        public string DefaultStationUri { get; set; }
   
         
   
@@ -235,9 +235,9 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Permissions: ").Append(Permissions).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  RequestedStatus: ").Append(RequestedStatus).Append("\n");
+            sb.Append("  DefaultStationUri: ").Append(DefaultStationUri).Append("\n");
             sb.Append("  StationUri: ").Append(StationUri).Append("\n");
             sb.Append("  LastStationUri: ").Append(LastStationUri).Append("\n");
-            sb.Append("  DefaultStationUri: ").Append(DefaultStationUri).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -386,6 +386,11 @@ namespace ININ.PureCloudApi.Model
                     this.RequestedStatus.Equals(other.RequestedStatus)
                 ) && 
                 (
+                    this.DefaultStationUri == other.DefaultStationUri ||
+                    this.DefaultStationUri != null &&
+                    this.DefaultStationUri.Equals(other.DefaultStationUri)
+                ) && 
+                (
                     this.StationUri == other.StationUri ||
                     this.StationUri != null &&
                     this.StationUri.Equals(other.StationUri)
@@ -394,11 +399,6 @@ namespace ININ.PureCloudApi.Model
                     this.LastStationUri == other.LastStationUri ||
                     this.LastStationUri != null &&
                     this.LastStationUri.Equals(other.LastStationUri)
-                ) && 
-                (
-                    this.DefaultStationUri == other.DefaultStationUri ||
-                    this.DefaultStationUri != null &&
-                    this.DefaultStationUri.Equals(other.DefaultStationUri)
                 );
         }
 
@@ -480,14 +480,14 @@ namespace ININ.PureCloudApi.Model
                 if (this.RequestedStatus != null)
                     hash = hash * 59 + this.RequestedStatus.GetHashCode();
                 
+                if (this.DefaultStationUri != null)
+                    hash = hash * 59 + this.DefaultStationUri.GetHashCode();
+                
                 if (this.StationUri != null)
                     hash = hash * 59 + this.StationUri.GetHashCode();
                 
                 if (this.LastStationUri != null)
                     hash = hash * 59 + this.LastStationUri.GetHashCode();
-                
-                if (this.DefaultStationUri != null)
-                    hash = hash * 59 + this.DefaultStationUri.GetHashCode();
                 
                 return hash;
             }

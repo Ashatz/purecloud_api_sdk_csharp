@@ -243,6 +243,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test the property 'DefaultStationUri' 
+        /// </summary>
+        [Test]
+        public void DefaultStationUriTest()
+        {
+            // TODO: unit test for the property 'DefaultStationUri' 
+        }
+        
+        /// <summary>
         /// Test the property 'StationUri' 
         /// </summary>
         [Test]
@@ -258,15 +267,6 @@ namespace ININ.PureCloudApi.Test
         public void LastStationUriTest()
         {
             // TODO: unit test for the property 'LastStationUri' 
-        }
-        
-        /// <summary>
-        /// Test the property 'DefaultStationUri' 
-        /// </summary>
-        [Test]
-        public void DefaultStationUriTest()
-        {
-            // TODO: unit test for the property 'DefaultStationUri' 
         }
         
 

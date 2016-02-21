@@ -62,15 +62,6 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Type' 
         }
         
-        /// <summary>
-        /// Test the property 'CallableTimeColumn' 
-        /// </summary>
-        [Test]
-        public void CallableTimeColumnTest()
-        {
-            // TODO: unit test for the property 'CallableTimeColumn' 
-        }
-        
 
     }
 

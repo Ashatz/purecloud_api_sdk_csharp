@@ -51,7 +51,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<AutomateQueueMember> Entities { get; set; }
+        public List<QueueMember> Entities { get; set; }
   
         
         /// <summary>

@@ -69358,11 +69358,6 @@
             Gets or Sets Type
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.PhoneNumberColumn.CallableTimeColumn">
-            <summary>
-            Gets or Sets CallableTimeColumn
-            </summary>
-        </member>
         <member name="T:ININ.PureCloudApi.Model.PhoneNumberStatus">
             <summary>
             
@@ -82612,6 +82607,11 @@
             Gets or Sets RequestedStatus
             </summary>
         </member>
+        <member name="P:ININ.PureCloudApi.Model.User.DefaultStationUri">
+            <summary>
+            Gets or Sets DefaultStationUri
+            </summary>
+        </member>
         <member name="P:ININ.PureCloudApi.Model.User.StationUri">
             <summary>
             Gets or Sets StationUri
@@ -82620,11 +82620,6 @@
         <member name="P:ININ.PureCloudApi.Model.User.LastStationUri">
             <summary>
             Gets or Sets LastStationUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.User.DefaultStationUri">
-            <summary>
-            Gets or Sets DefaultStationUri
             </summary>
         </member>
         <member name="T:ININ.PureCloudApi.Model.UserActionCategory">
