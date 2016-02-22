@@ -73,7 +73,7 @@ If you're working inside Visual Studio, adding the files to your project allows 
 1. Clone the repo
 2. Add all of the .cs files in the build directory to a project in Visual Studio
 3. Add references for JSON.NET and RestSharp
-4. Build the proejct in Visual Studio
+4. Build the project in Visual Studio
 
 ## SDK Source Code Generation
 
