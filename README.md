@@ -1,7 +1,7 @@
 # PureCloud API SDK - C&#35;
 Documentation can be found at http://developer.mypurecloud.com/api/rest/client-libraries/csharp/latest/
 
-## Install using nuget
+## Install Using nuget
 
 ```
 install-package PureCloudApiSdk
@@ -15,7 +15,7 @@ Pacakage info can be found at http://www.nuget.org/packages/PureCloudApiSdk/
 
 If you've used the [Package Manager Console](https://docs.nuget.org/consume/package-manager-console) to install the package, there are no additional steps. 
 
-If you're building from source, or otherwise not using nuget, reference your version of ININ.PureCloudApi.dll in your project and add references or packages for [RestSharp](http://www.nuget.org/packages/RestSharp/) and [JSON.NET](http://www.nuget.org/packages/Newtonsoft.Json/)
+If you're building from source or otherwise not using nuget, reference your version of ININ.PureCloudApi.dll in your project and add references or install packages for [RestSharp](http://www.nuget.org/packages/RestSharp/) and [JSON.NET](http://www.nuget.org/packages/Newtonsoft.Json/).
 
 ## Authenticating
 
