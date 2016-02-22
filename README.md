@@ -13,7 +13,9 @@ Pacakage info can be found at http://www.nuget.org/packages/PureCloudApiSdk/
 
 ## Referencing the Library
 
-If you've used the [Package Manager Console](https://docs.nuget.org/consume/package-manager-console) to install the package, it will already be referenced. If you're building from source, or otherwise not using nuget, just reference ININ.PureCloudApi.dll in your project.
+If you've used the [Package Manager Console](https://docs.nuget.org/consume/package-manager-console) to install the package, there are no additional steps. 
+
+If you're building from source, or otherwise not using nuget, reference your version of ININ.PureCloudApi.dll in your project and add references or packages for [RestSharp](http://www.nuget.org/packages/RestSharp/) and [JSON.NET](http://www.nuget.org/packages/Newtonsoft.Json/)
 
 ## Authenticating
 
