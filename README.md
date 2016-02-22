@@ -21,7 +21,7 @@ If you're building from source or otherwise not using nuget, reference your vers
 
 ### Authorization Code and Implicit Grant
 
-If the application will be authenticating as a person, the [Authorization Code](http://developer.mypurecloud.com/api/rest/authorization/use-authorization-code.html) or [Implicit Grant](http://developer.mypurecloud.com/api/rest/authorization/use-implicit-grant.html) OAuth 2 flows may be used from a [WebBrowser](https://msdn.microsoft.com/en-us/library/2te2y1x6.aspx) control, or other embedable browser. The authorization code or access token, respectively, can be parsed from the redirect URL in the browser control.
+If the application will be authenticating as a person, the [Authorization Code](http://developer.mypurecloud.com/api/rest/authorization/use-authorization-code.html) or [Implicit Grant](http://developer.mypurecloud.com/api/rest/authorization/use-implicit-grant.html) OAuth 2 flows may be used from a [WebBrowser](https://msdn.microsoft.com/en-us/library/2te2y1x6.aspx) control or other embedable browser. The authorization code or access token, respectively, can be parsed from the redirect URL in the browser control.
 
 ### Client Credentials Grant
 
