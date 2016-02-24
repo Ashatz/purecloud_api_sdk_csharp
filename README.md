@@ -21,11 +21,11 @@ If you're building from source or otherwise not using nuget, reference your vers
 
 ### Authorization Code and Implicit Grant
 
-If the application will be authenticating as a person, the [Authorization Code](http://developer.mypurecloud.com/api/rest/authorization/use-authorization-code.html) or [Implicit Grant](http://developer.mypurecloud.com/api/rest/authorization/use-implicit-grant.html) OAuth 2 flows may be used from a [WebBrowser](https://msdn.microsoft.com/en-us/library/2te2y1x6.aspx) control or other embedable browser. The authorization code or access token, respectively, can be parsed from the redirect URL in the browser control.
+If the application will be authenticating as a person, the [Authorization Code](http://developer.mypurecloud.com/api/rest/authorization/use-authorization-code.html) or [Implicit Grant](http://developer.mypurecloud.com/api/rest/authorization/use-implicit-grant.html) OAuth 2 flows may be used from an embeddable browser. The authorization code or access token, respectively, can be parsed from the redirected URL in the browser control. This process is implemented in the [PureCloud API dotNET OAuth Control](https://github.com/MyPureCloud/purecloud_api_dotnet_oauth_control) project.
 
 ### Client Credentials Grant
 
-For headless applications, the [Client Credentials Grant](http://developer.mypurecloud.com/api/rest/authorization/use-client-credentials.html) can be used via manually making the REST request to /token. 
+For headless non-user applications, the [Client Credentials Grant](http://developer.mypurecloud.com/api/rest/authorization/use-client-credentials.html) can be used via manually making the REST request to /token. 
 
 ### Setting the Access Token
 
