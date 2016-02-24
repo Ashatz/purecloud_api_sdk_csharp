@@ -54,13 +54,6 @@ namespace ININ.PureCloudApi.Model
         public List<string> TagIds { get; set; }
   
         
-        /// <summary>
-        /// Gets or Sets Attributes
-        /// </summary>
-        [DataMember(Name="attributes", EmitDefaultValue=false)]
-        public List<AttributeValue> Attributes { get; set; }
-  
-        
   
         /// <summary>
         /// Returns the string presentation of the object
@@ -74,7 +67,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
             sb.Append("  Tags: ").Append(Tags).Append("\n");
             sb.Append("  TagIds: ").Append(TagIds).Append("\n");
-            sb.Append("  Attributes: ").Append(Attributes).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -131,11 +123,6 @@ namespace ININ.PureCloudApi.Model
                     this.TagIds == other.TagIds ||
                     this.TagIds != null &&
                     this.TagIds.SequenceEqual(other.TagIds)
-                ) && 
-                (
-                    this.Attributes == other.Attributes ||
-                    this.Attributes != null &&
-                    this.Attributes.SequenceEqual(other.Attributes)
                 );
         }
 
@@ -162,9 +149,6 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.TagIds != null)
                     hash = hash * 59 + this.TagIds.GetHashCode();
-                
-                if (this.Attributes != null)
-                    hash = hash * 59 + this.Attributes.GetHashCode();
                 
                 return hash;
             }

@@ -51,7 +51,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<SpreadsheetTransform> Entities { get; set; }
+        public List<ClientSpreadsheetTransform> Entities { get; set; }
   
         
         /// <summary>

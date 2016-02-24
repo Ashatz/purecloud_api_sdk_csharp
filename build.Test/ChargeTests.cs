@@ -107,6 +107,15 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Quantity' 
         }
         
+        /// <summary>
+        /// Test the property 'IncludedUnits' 
+        /// </summary>
+        [Test]
+        public void IncludedUnitsTest()
+        {
+            // TODO: unit test for the property 'IncludedUnits' 
+        }
+        
 
     }
 

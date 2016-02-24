@@ -68,6 +68,13 @@ namespace ININ.PureCloudApi.Model
         public List<FacetFilterItem> Filters { get; set; }
   
         
+        /// <summary>
+        /// Gets or Sets AttributeFilters
+        /// </summary>
+        [DataMember(Name="attributeFilters", EmitDefaultValue=false)]
+        public List<AttributeFilterItem> AttributeFilters { get; set; }
+  
+        
   
         /// <summary>
         /// Returns the string presentation of the object
@@ -83,6 +90,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  FacetNameRequests: ").Append(FacetNameRequests).Append("\n");
             sb.Append("  Sort: ").Append(Sort).Append("\n");
             sb.Append("  Filters: ").Append(Filters).Append("\n");
+            sb.Append("  AttributeFilters: ").Append(AttributeFilters).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -149,6 +157,11 @@ namespace ININ.PureCloudApi.Model
                     this.Filters == other.Filters ||
                     this.Filters != null &&
                     this.Filters.SequenceEqual(other.Filters)
+                ) && 
+                (
+                    this.AttributeFilters == other.AttributeFilters ||
+                    this.AttributeFilters != null &&
+                    this.AttributeFilters.SequenceEqual(other.AttributeFilters)
                 );
         }
 
@@ -181,6 +194,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.Filters != null)
                     hash = hash * 59 + this.Filters.GetHashCode();
+                
+                if (this.AttributeFilters != null)
+                    hash = hash * 59 + this.AttributeFilters.GetHashCode();
                 
                 return hash;
             }

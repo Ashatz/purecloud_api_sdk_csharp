@@ -72,15 +72,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'RemoveAttributes' 
-        /// </summary>
-        [Test]
-        public void RemoveAttributesTest()
-        {
-            // TODO: unit test for the property 'RemoveAttributes' 
-        }
-        
-        /// <summary>
         /// Test the property 'AddTags' 
         /// </summary>
         [Test]
@@ -114,6 +105,24 @@ namespace ININ.PureCloudApi.Test
         public void RemoveTagIdsTest()
         {
             // TODO: unit test for the property 'RemoveTagIds' 
+        }
+        
+        /// <summary>
+        /// Test the property 'UpdateAttributes' 
+        /// </summary>
+        [Test]
+        public void UpdateAttributesTest()
+        {
+            // TODO: unit test for the property 'UpdateAttributes' 
+        }
+        
+        /// <summary>
+        /// Test the property 'RemoveAttributes' 
+        /// </summary>
+        [Test]
+        public void RemoveAttributesTest()
+        {
+            // TODO: unit test for the property 'RemoveAttributes' 
         }
         
 

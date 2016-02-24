@@ -42,8 +42,9 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
-        /// Gets or Sets Period
+        /// Value to set schedule to
         /// </summary>
+        /// <value>Value to set schedule to</value>
         [DataMember(Name="period", EmitDefaultValue=false)]
         public string Period { get; set; }
   

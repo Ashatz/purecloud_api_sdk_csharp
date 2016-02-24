@@ -234,6 +234,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test the property 'IsAnnualPrepay' 
+        /// </summary>
+        [Test]
+        public void IsAnnualPrepayTest()
+        {
+            // TODO: unit test for the property 'IsAnnualPrepay' 
+        }
+        
+        /// <summary>
         /// Test the property 'SelfUri' 
         /// </summary>
         [Test]

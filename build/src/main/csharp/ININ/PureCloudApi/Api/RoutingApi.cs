@@ -394,14 +394,13 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="queueId">Queue ID</param>
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortBy">Sort by</param>
         /// <param name="name">Name</param>
         /// <param name="active">Active</param>
         /// <returns>QueueEntityListing</returns>
-        QueueEntityListing GetQueues (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null);
+        QueueEntityListing GetQueues (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null);
   
         /// <summary>
         /// Get list of queues.
@@ -409,14 +408,13 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="queueId">Queue ID</param>
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortBy">Sort by</param>
         /// <param name="name">Name</param>
         /// <param name="active">Active</param>
         /// <returns>ApiResponse of QueueEntityListing</returns>
-        ApiResponse<QueueEntityListing> GetQueuesWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null);
+        ApiResponse<QueueEntityListing> GetQueuesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null);
 
         /// <summary>
         /// Get list of queues.
@@ -424,14 +422,13 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="queueId">Queue ID</param>
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortBy">Sort by</param>
         /// <param name="name">Name</param>
         /// <param name="active">Active</param>
         /// <returns>Task of QueueEntityListing</returns>
-        System.Threading.Tasks.Task<QueueEntityListing> GetQueuesAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null);
+        System.Threading.Tasks.Task<QueueEntityListing> GetQueuesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null);
 
         /// <summary>
         /// Get list of queues.
@@ -439,14 +436,13 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="queueId">Queue ID</param>
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortBy">Sort by</param>
         /// <param name="name">Name</param>
         /// <param name="active">Active</param>
         /// <returns>Task of ApiResponse (QueueEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetQueuesAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null);
+        System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetQueuesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null);
         
         /// <summary>
         /// Create queue
@@ -454,10 +450,9 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>Queue</returns>
-        Queue PostQueues (string queueId, Queue body = null);
+        Queue PostQueues (Queue body = null);
   
         /// <summary>
         /// Create queue
@@ -465,10 +460,9 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>ApiResponse of Queue</returns>
-        ApiResponse<Queue> PostQueuesWithHttpInfo (string queueId, Queue body = null);
+        ApiResponse<Queue> PostQueuesWithHttpInfo (Queue body = null);
 
         /// <summary>
         /// Create queue
@@ -476,10 +470,9 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>Task of Queue</returns>
-        System.Threading.Tasks.Task<Queue> PostQueuesAsync (string queueId, Queue body = null);
+        System.Threading.Tasks.Task<Queue> PostQueuesAsync (Queue body = null);
 
         /// <summary>
         /// Create queue
@@ -487,10 +480,9 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
-        /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>Task of ApiResponse (Queue)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Queue>> PostQueuesAsyncWithHttpInfo (string queueId, Queue body = null);
+        System.Threading.Tasks.Task<ApiResponse<Queue>> PostQueuesAsyncWithHttpInfo (Queue body = null);
         
         /// <summary>
         /// Get details about this queue.
@@ -3117,35 +3109,29 @@ namespace ININ.PureCloudApi.Api
         /// <summary>
         /// Get list of queues. 
         /// </summary>
-        /// <param name="queueId">Queue ID</param> 
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <param name="sortBy">Sort by</param> 
         /// <param name="name">Name</param> 
         /// <param name="active">Active</param> 
         /// <returns>QueueEntityListing</returns>
-        public QueueEntityListing GetQueues (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null)
+        public QueueEntityListing GetQueues (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null)
         {
-             ApiResponse<QueueEntityListing> response = GetQueuesWithHttpInfo(queueId, pageSize, pageNumber, sortBy, name, active);
+             ApiResponse<QueueEntityListing> response = GetQueuesWithHttpInfo(pageSize, pageNumber, sortBy, name, active);
              return response.Data;
         }
 
         /// <summary>
         /// Get list of queues. 
         /// </summary>
-        /// <param name="queueId">Queue ID</param> 
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <param name="sortBy">Sort by</param> 
         /// <param name="name">Name</param> 
         /// <param name="active">Active</param> 
         /// <returns>ApiResponse of QueueEntityListing</returns>
-        public ApiResponse< QueueEntityListing > GetQueuesWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null)
+        public ApiResponse< QueueEntityListing > GetQueuesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null)
         {
-            
-            // verify the required parameter 'queueId' is set
-            if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueues");
             
     
             var path_ = "/api/v1/routing/queues";
@@ -3174,7 +3160,6 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
-            if (queueId != null) pathParams.Add("QueueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
             
             if (pageSize != null) queryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) queryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
@@ -3216,16 +3201,15 @@ namespace ININ.PureCloudApi.Api
         /// <summary>
         /// Get list of queues. 
         /// </summary>
-        /// <param name="queueId">Queue ID</param>
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortBy">Sort by</param>
         /// <param name="name">Name</param>
         /// <param name="active">Active</param>
         /// <returns>Task of QueueEntityListing</returns>
-        public async System.Threading.Tasks.Task<QueueEntityListing> GetQueuesAsync (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null)
+        public async System.Threading.Tasks.Task<QueueEntityListing> GetQueuesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null)
         {
-             ApiResponse<QueueEntityListing> response = await GetQueuesAsyncWithHttpInfo(queueId, pageSize, pageNumber, sortBy, name, active);
+             ApiResponse<QueueEntityListing> response = await GetQueuesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, name, active);
              return response.Data;
 
         }
@@ -3233,17 +3217,14 @@ namespace ININ.PureCloudApi.Api
         /// <summary>
         /// Get list of queues. 
         /// </summary>
-        /// <param name="queueId">Queue ID</param>
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortBy">Sort by</param>
         /// <param name="name">Name</param>
         /// <param name="active">Active</param>
         /// <returns>Task of ApiResponse (QueueEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetQueuesAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null)
+        public async System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetQueuesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null)
         {
-            // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling GetQueues");
             
     
             var path_ = "/api/v1/routing/queues";
@@ -3272,7 +3253,6 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
-            if (queueId != null) pathParams.Add("QueueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
             
             if (pageSize != null) queryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) queryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
@@ -3315,27 +3295,21 @@ namespace ININ.PureCloudApi.Api
         /// <summary>
         /// Create queue 
         /// </summary>
-        /// <param name="queueId">Queue ID</param> 
         /// <param name="body">Queue</param> 
         /// <returns>Queue</returns>
-        public Queue PostQueues (string queueId, Queue body = null)
+        public Queue PostQueues (Queue body = null)
         {
-             ApiResponse<Queue> response = PostQueuesWithHttpInfo(queueId, body);
+             ApiResponse<Queue> response = PostQueuesWithHttpInfo(body);
              return response.Data;
         }
 
         /// <summary>
         /// Create queue 
         /// </summary>
-        /// <param name="queueId">Queue ID</param> 
         /// <param name="body">Queue</param> 
         /// <returns>ApiResponse of Queue</returns>
-        public ApiResponse< Queue > PostQueuesWithHttpInfo (string queueId, Queue body = null)
+        public ApiResponse< Queue > PostQueuesWithHttpInfo (Queue body = null)
         {
-            
-            // verify the required parameter 'queueId' is set
-            if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PostQueues");
             
     
             var path_ = "/api/v1/routing/queues";
@@ -3364,7 +3338,6 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
-            if (queueId != null) pathParams.Add("QueueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
             
             
             
@@ -3408,12 +3381,11 @@ namespace ININ.PureCloudApi.Api
         /// <summary>
         /// Create queue 
         /// </summary>
-        /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>Task of Queue</returns>
-        public async System.Threading.Tasks.Task<Queue> PostQueuesAsync (string queueId, Queue body = null)
+        public async System.Threading.Tasks.Task<Queue> PostQueuesAsync (Queue body = null)
         {
-             ApiResponse<Queue> response = await PostQueuesAsyncWithHttpInfo(queueId, body);
+             ApiResponse<Queue> response = await PostQueuesAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -3421,13 +3393,10 @@ namespace ININ.PureCloudApi.Api
         /// <summary>
         /// Create queue 
         /// </summary>
-        /// <param name="queueId">Queue ID</param>
         /// <param name="body">Queue</param>
         /// <returns>Task of ApiResponse (Queue)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Queue>> PostQueuesAsyncWithHttpInfo (string queueId, Queue body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Queue>> PostQueuesAsyncWithHttpInfo (Queue body = null)
         {
-            // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling PostQueues");
             
     
             var path_ = "/api/v1/routing/queues";
@@ -3456,7 +3425,6 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             pathParams.Add("format", "json");
-            if (queueId != null) pathParams.Add("QueueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
             
             
             

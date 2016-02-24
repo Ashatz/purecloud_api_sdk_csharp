@@ -50,11 +50,11 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
-        /// The simple work item form data elements to present for this work item
+        /// The simple work item form containging the control to present for this work item
         /// </summary>
-        /// <value>The simple work item form data elements to present for this work item</value>
-        [DataMember(Name="dataElements", EmitDefaultValue=false)]
-        public List<BackendWorkItemDataElement> DataElements { get; set; }
+        /// <value>The simple work item form containging the control to present for this work item</value>
+        [DataMember(Name="form", EmitDefaultValue=false)]
+        public Form Form { get; set; }
   
         
   
@@ -69,7 +69,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  CommandCategories: ").Append(CommandCategories).Append("\n");
-            sb.Append("  DataElements: ").Append(DataElements).Append("\n");
+            sb.Append("  Form: ").Append(Form).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -123,9 +123,9 @@ namespace ININ.PureCloudApi.Model
                     this.CommandCategories.SequenceEqual(other.CommandCategories)
                 ) && 
                 (
-                    this.DataElements == other.DataElements ||
-                    this.DataElements != null &&
-                    this.DataElements.SequenceEqual(other.DataElements)
+                    this.Form == other.Form ||
+                    this.Form != null &&
+                    this.Form.Equals(other.Form)
                 );
         }
 
@@ -150,8 +150,8 @@ namespace ININ.PureCloudApi.Model
                 if (this.CommandCategories != null)
                     hash = hash * 59 + this.CommandCategories.GetHashCode();
                 
-                if (this.DataElements != null)
-                    hash = hash * 59 + this.DataElements.GetHashCode();
+                if (this.Form != null)
+                    hash = hash * 59 + this.Form.GetHashCode();
                 
                 return hash;
             }

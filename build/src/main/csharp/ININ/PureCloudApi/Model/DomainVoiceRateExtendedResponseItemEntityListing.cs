@@ -15,12 +15,12 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public partial class TopicEntityListing :  IEquatable<TopicEntityListing>
+    public partial class DomainVoiceRateExtendedResponseItemEntityListing :  IEquatable<DomainVoiceRateExtendedResponseItemEntityListing>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TopicEntityListing" /> class.
+        /// Initializes a new instance of the <see cref="DomainVoiceRateExtendedResponseItemEntityListing" /> class.
         /// </summary>
-        public TopicEntityListing()
+        public DomainVoiceRateExtendedResponseItemEntityListing()
         {
             
         }
@@ -51,7 +51,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<AvailableTopic> Entities { get; set; }
+        public List<VoiceRateExtended> Entities { get; set; }
   
         
         /// <summary>
@@ -104,7 +104,7 @@ namespace ININ.PureCloudApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TopicEntityListing {\n");
+            sb.Append("class DomainVoiceRateExtendedResponseItemEntityListing {\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
             sb.Append("  Total: ").Append(Total).Append("\n");
@@ -137,15 +137,15 @@ namespace ININ.PureCloudApi.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TopicEntityListing);
+            return this.Equals(obj as DomainVoiceRateExtendedResponseItemEntityListing);
         }
 
         /// <summary>
-        /// Returns true if TopicEntityListing instances are equal
+        /// Returns true if DomainVoiceRateExtendedResponseItemEntityListing instances are equal
         /// </summary>
-        /// <param name="other">Instance of TopicEntityListing to be compared</param>
+        /// <param name="other">Instance of DomainVoiceRateExtendedResponseItemEntityListing to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TopicEntityListing other)
+        public bool Equals(DomainVoiceRateExtendedResponseItemEntityListing other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

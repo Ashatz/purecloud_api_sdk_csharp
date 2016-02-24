@@ -1153,6 +1153,142 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteEdgeLogicalinterfaceAsyncWithHttpInfo (string edgeId, string interfaceId);
         
         /// <summary>
+        /// Create a job to upload a list of Edge logs.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="edgeId">Edge ID</param>
+        /// <param name="body">EdgeLogsJobRequest</param>
+        /// <returns>EdgeLogsJobResponse</returns>
+        EdgeLogsJobResponse PostEdgeLogsJobs (string edgeId, EdgeLogsJobRequest body = null);
+  
+        /// <summary>
+        /// Create a job to upload a list of Edge logs.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="edgeId">Edge ID</param>
+        /// <param name="body">EdgeLogsJobRequest</param>
+        /// <returns>ApiResponse of EdgeLogsJobResponse</returns>
+        ApiResponse<EdgeLogsJobResponse> PostEdgeLogsJobsWithHttpInfo (string edgeId, EdgeLogsJobRequest body = null);
+
+        /// <summary>
+        /// Create a job to upload a list of Edge logs.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="edgeId">Edge ID</param>
+        /// <param name="body">EdgeLogsJobRequest</param>
+        /// <returns>Task of EdgeLogsJobResponse</returns>
+        System.Threading.Tasks.Task<EdgeLogsJobResponse> PostEdgeLogsJobsAsync (string edgeId, EdgeLogsJobRequest body = null);
+
+        /// <summary>
+        /// Create a job to upload a list of Edge logs.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="edgeId">Edge ID</param>
+        /// <param name="body">EdgeLogsJobRequest</param>
+        /// <returns>Task of ApiResponse (EdgeLogsJobResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EdgeLogsJobResponse>> PostEdgeLogsJobsAsyncWithHttpInfo (string edgeId, EdgeLogsJobRequest body = null);
+        
+        /// <summary>
+        /// Get an Edge logs job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="edgeId">Edge ID</param>
+        /// <param name="jobId"></param>
+        /// <returns></returns>
+        void GetEdgeLogsJob (string edgeId, string jobId);
+  
+        /// <summary>
+        /// Get an Edge logs job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="edgeId">Edge ID</param>
+        /// <param name="jobId"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> GetEdgeLogsJobWithHttpInfo (string edgeId, string jobId);
+
+        /// <summary>
+        /// Get an Edge logs job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="edgeId">Edge ID</param>
+        /// <param name="jobId"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task GetEdgeLogsJobAsync (string edgeId, string jobId);
+
+        /// <summary>
+        /// Get an Edge logs job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="edgeId">Edge ID</param>
+        /// <param name="jobId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetEdgeLogsJobAsyncWithHttpInfo (string edgeId, string jobId);
+        
+        /// <summary>
+        /// Request that the specified fileIds be uploaded from the Edge.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="edgeId">Edge ID</param>
+        /// <param name="jobId"></param>
+        /// <param name="body"></param>
+        /// <returns></returns>
+        void PostEdgeLogsJobUpload (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null);
+  
+        /// <summary>
+        /// Request that the specified fileIds be uploaded from the Edge.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="edgeId">Edge ID</param>
+        /// <param name="jobId"></param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostEdgeLogsJobUploadWithHttpInfo (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null);
+
+        /// <summary>
+        /// Request that the specified fileIds be uploaded from the Edge.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="edgeId">Edge ID</param>
+        /// <param name="jobId"></param>
+        /// <param name="body"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostEdgeLogsJobUploadAsync (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null);
+
+        /// <summary>
+        /// Request that the specified fileIds be uploaded from the Edge.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="edgeId">Edge ID</param>
+        /// <param name="jobId"></param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostEdgeLogsJobUploadAsyncWithHttpInfo (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null);
+        
+        /// <summary>
         /// Retrieve a list of all configured physical interfaces from a specific edge.
         /// </summary>
         /// <remarks>
@@ -1324,8 +1460,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body"></param>
-        /// <returns></returns>
-        void PostEdgeSoftwareupdate (string edgeId, DomainEdgeSoftwareUpdateDto body = null);
+        /// <returns>DomainEdgeSoftwareUpdateDto</returns>
+        DomainEdgeSoftwareUpdateDto PostEdgeSoftwareupdate (string edgeId, DomainEdgeSoftwareUpdateDto body = null);
   
         /// <summary>
         /// Starts a software update for this edge.
@@ -1335,8 +1471,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostEdgeSoftwareupdateWithHttpInfo (string edgeId, DomainEdgeSoftwareUpdateDto body = null);
+        /// <returns>ApiResponse of DomainEdgeSoftwareUpdateDto</returns>
+        ApiResponse<DomainEdgeSoftwareUpdateDto> PostEdgeSoftwareupdateWithHttpInfo (string edgeId, DomainEdgeSoftwareUpdateDto body = null);
 
         /// <summary>
         /// Starts a software update for this edge.
@@ -1346,8 +1482,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostEdgeSoftwareupdateAsync (string edgeId, DomainEdgeSoftwareUpdateDto body = null);
+        /// <returns>Task of DomainEdgeSoftwareUpdateDto</returns>
+        System.Threading.Tasks.Task<DomainEdgeSoftwareUpdateDto> PostEdgeSoftwareupdateAsync (string edgeId, DomainEdgeSoftwareUpdateDto body = null);
 
         /// <summary>
         /// Starts a software update for this edge.
@@ -1357,8 +1493,8 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostEdgeSoftwareupdateAsyncWithHttpInfo (string edgeId, DomainEdgeSoftwareUpdateDto body = null);
+        /// <returns>Task of ApiResponse (DomainEdgeSoftwareUpdateDto)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareUpdateDto>> PostEdgeSoftwareupdateAsyncWithHttpInfo (string edgeId, DomainEdgeSoftwareUpdateDto body = null);
         
         /// <summary>
         /// Cancels any in-progress update for this edge.
@@ -8125,6 +8261,554 @@ namespace ININ.PureCloudApi.Api
         }
         
         /// <summary>
+        /// Create a job to upload a list of Edge logs. 
+        /// </summary>
+        /// <param name="edgeId">Edge ID</param> 
+        /// <param name="body">EdgeLogsJobRequest</param> 
+        /// <returns>EdgeLogsJobResponse</returns>
+        public EdgeLogsJobResponse PostEdgeLogsJobs (string edgeId, EdgeLogsJobRequest body = null)
+        {
+             ApiResponse<EdgeLogsJobResponse> response = PostEdgeLogsJobsWithHttpInfo(edgeId, body);
+             return response.Data;
+        }
+
+        /// <summary>
+        /// Create a job to upload a list of Edge logs. 
+        /// </summary>
+        /// <param name="edgeId">Edge ID</param> 
+        /// <param name="body">EdgeLogsJobRequest</param> 
+        /// <returns>ApiResponse of EdgeLogsJobResponse</returns>
+        public ApiResponse< EdgeLogsJobResponse > PostEdgeLogsJobsWithHttpInfo (string edgeId, EdgeLogsJobRequest body = null)
+        {
+            
+            // verify the required parameter 'edgeId' is set
+            if (edgeId == null)
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->PostEdgeLogsJobs");
+            
+    
+            var path_ = "/api/v1/configuration/edges/{edgeId}/logs/jobs";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (edgeId != null) pathParams.Add("edgeId", Configuration.ApiClient.ParameterToString(edgeId)); // path parameter
+            
+            
+            
+            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling PostEdgeLogsJobs: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling PostEdgeLogsJobs: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<EdgeLogsJobResponse>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EdgeLogsJobResponse) Configuration.ApiClient.Deserialize(response, typeof(EdgeLogsJobResponse)));
+            
+        }
+    
+        /// <summary>
+        /// Create a job to upload a list of Edge logs. 
+        /// </summary>
+        /// <param name="edgeId">Edge ID</param>
+        /// <param name="body">EdgeLogsJobRequest</param>
+        /// <returns>Task of EdgeLogsJobResponse</returns>
+        public async System.Threading.Tasks.Task<EdgeLogsJobResponse> PostEdgeLogsJobsAsync (string edgeId, EdgeLogsJobRequest body = null)
+        {
+             ApiResponse<EdgeLogsJobResponse> response = await PostEdgeLogsJobsAsyncWithHttpInfo(edgeId, body);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Create a job to upload a list of Edge logs. 
+        /// </summary>
+        /// <param name="edgeId">Edge ID</param>
+        /// <param name="body">EdgeLogsJobRequest</param>
+        /// <returns>Task of ApiResponse (EdgeLogsJobResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeLogsJobResponse>> PostEdgeLogsJobsAsyncWithHttpInfo (string edgeId, EdgeLogsJobRequest body = null)
+        {
+            // verify the required parameter 'edgeId' is set
+            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling PostEdgeLogsJobs");
+            
+    
+            var path_ = "/api/v1/configuration/edges/{edgeId}/logs/jobs";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (edgeId != null) pathParams.Add("edgeId", Configuration.ApiClient.ParameterToString(edgeId)); // path parameter
+            
+            
+            
+            
+            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling PostEdgeLogsJobs: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling PostEdgeLogsJobs: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<EdgeLogsJobResponse>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EdgeLogsJobResponse) Configuration.ApiClient.Deserialize(response, typeof(EdgeLogsJobResponse)));
+            
+        }
+        
+        /// <summary>
+        /// Get an Edge logs job. 
+        /// </summary>
+        /// <param name="edgeId">Edge ID</param> 
+        /// <param name="jobId"></param> 
+        /// <returns></returns>
+        public void GetEdgeLogsJob (string edgeId, string jobId)
+        {
+             GetEdgeLogsJobWithHttpInfo(edgeId, jobId);
+        }
+
+        /// <summary>
+        /// Get an Edge logs job. 
+        /// </summary>
+        /// <param name="edgeId">Edge ID</param> 
+        /// <param name="jobId"></param> 
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> GetEdgeLogsJobWithHttpInfo (string edgeId, string jobId)
+        {
+            
+            // verify the required parameter 'edgeId' is set
+            if (edgeId == null)
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->GetEdgeLogsJob");
+            
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling ConfigurationApi->GetEdgeLogsJob");
+            
+    
+            var path_ = "/api/v1/configuration/edges/{edgeId}/logs/jobs/{jobId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (edgeId != null) pathParams.Add("edgeId", Configuration.ApiClient.ParameterToString(edgeId)); // path parameter
+            if (jobId != null) pathParams.Add("jobId", Configuration.ApiClient.ParameterToString(jobId)); // path parameter
+            
+            
+            
+            
+            
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling GetEdgeLogsJob: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling GetEdgeLogsJob: " + response.ErrorMessage, response.ErrorMessage);
+    
+            
+            return new ApiResponse<Object>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+    
+        /// <summary>
+        /// Get an Edge logs job. 
+        /// </summary>
+        /// <param name="edgeId">Edge ID</param>
+        /// <param name="jobId"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task GetEdgeLogsJobAsync (string edgeId, string jobId)
+        {
+             await GetEdgeLogsJobAsyncWithHttpInfo(edgeId, jobId);
+
+        }
+
+        /// <summary>
+        /// Get an Edge logs job. 
+        /// </summary>
+        /// <param name="edgeId">Edge ID</param>
+        /// <param name="jobId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetEdgeLogsJobAsyncWithHttpInfo (string edgeId, string jobId)
+        {
+            // verify the required parameter 'edgeId' is set
+            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling GetEdgeLogsJob");
+            // verify the required parameter 'jobId' is set
+            if (jobId == null) throw new ApiException(400, "Missing required parameter 'jobId' when calling GetEdgeLogsJob");
+            
+    
+            var path_ = "/api/v1/configuration/edges/{edgeId}/logs/jobs/{jobId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (edgeId != null) pathParams.Add("edgeId", Configuration.ApiClient.ParameterToString(edgeId)); // path parameter
+            if (jobId != null) pathParams.Add("jobId", Configuration.ApiClient.ParameterToString(jobId)); // path parameter
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling GetEdgeLogsJob: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling GetEdgeLogsJob: " + response.ErrorMessage, response.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+        
+        /// <summary>
+        /// Request that the specified fileIds be uploaded from the Edge. 
+        /// </summary>
+        /// <param name="edgeId">Edge ID</param> 
+        /// <param name="jobId"></param> 
+        /// <param name="body"></param> 
+        /// <returns></returns>
+        public void PostEdgeLogsJobUpload (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null)
+        {
+             PostEdgeLogsJobUploadWithHttpInfo(edgeId, jobId, body);
+        }
+
+        /// <summary>
+        /// Request that the specified fileIds be uploaded from the Edge. 
+        /// </summary>
+        /// <param name="edgeId">Edge ID</param> 
+        /// <param name="jobId"></param> 
+        /// <param name="body"></param> 
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostEdgeLogsJobUploadWithHttpInfo (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null)
+        {
+            
+            // verify the required parameter 'edgeId' is set
+            if (edgeId == null)
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->PostEdgeLogsJobUpload");
+            
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling ConfigurationApi->PostEdgeLogsJobUpload");
+            
+    
+            var path_ = "/api/v1/configuration/edges/{edgeId}/logs/jobs/{jobId}/upload";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (edgeId != null) pathParams.Add("edgeId", Configuration.ApiClient.ParameterToString(edgeId)); // path parameter
+            if (jobId != null) pathParams.Add("jobId", Configuration.ApiClient.ParameterToString(jobId)); // path parameter
+            
+            
+            
+            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling PostEdgeLogsJobUpload: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling PostEdgeLogsJobUpload: " + response.ErrorMessage, response.ErrorMessage);
+    
+            
+            return new ApiResponse<Object>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+    
+        /// <summary>
+        /// Request that the specified fileIds be uploaded from the Edge. 
+        /// </summary>
+        /// <param name="edgeId">Edge ID</param>
+        /// <param name="jobId"></param>
+        /// <param name="body"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostEdgeLogsJobUploadAsync (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null)
+        {
+             await PostEdgeLogsJobUploadAsyncWithHttpInfo(edgeId, jobId, body);
+
+        }
+
+        /// <summary>
+        /// Request that the specified fileIds be uploaded from the Edge. 
+        /// </summary>
+        /// <param name="edgeId">Edge ID</param>
+        /// <param name="jobId"></param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostEdgeLogsJobUploadAsyncWithHttpInfo (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null)
+        {
+            // verify the required parameter 'edgeId' is set
+            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling PostEdgeLogsJobUpload");
+            // verify the required parameter 'jobId' is set
+            if (jobId == null) throw new ApiException(400, "Missing required parameter 'jobId' when calling PostEdgeLogsJobUpload");
+            
+    
+            var path_ = "/api/v1/configuration/edges/{edgeId}/logs/jobs/{jobId}/upload";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (edgeId != null) pathParams.Add("edgeId", Configuration.ApiClient.ParameterToString(edgeId)); // path parameter
+            if (jobId != null) pathParams.Add("jobId", Configuration.ApiClient.ParameterToString(jobId)); // path parameter
+            
+            
+            
+            
+            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling PostEdgeLogsJobUpload: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling PostEdgeLogsJobUpload: " + response.ErrorMessage, response.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+        
+        /// <summary>
         /// Retrieve a list of all configured physical interfaces from a specific edge. 
         /// </summary>
         /// <param name="edgeId">Edge ID</param> 
@@ -8813,10 +9497,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param> 
         /// <param name="body"></param> 
-        /// <returns></returns>
-        public void PostEdgeSoftwareupdate (string edgeId, DomainEdgeSoftwareUpdateDto body = null)
+        /// <returns>DomainEdgeSoftwareUpdateDto</returns>
+        public DomainEdgeSoftwareUpdateDto PostEdgeSoftwareupdate (string edgeId, DomainEdgeSoftwareUpdateDto body = null)
         {
-             PostEdgeSoftwareupdateWithHttpInfo(edgeId, body);
+             ApiResponse<DomainEdgeSoftwareUpdateDto> response = PostEdgeSoftwareupdateWithHttpInfo(edgeId, body);
+             return response.Data;
         }
 
         /// <summary>
@@ -8824,8 +9509,8 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param> 
         /// <param name="body"></param> 
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostEdgeSoftwareupdateWithHttpInfo (string edgeId, DomainEdgeSoftwareUpdateDto body = null)
+        /// <returns>ApiResponse of DomainEdgeSoftwareUpdateDto</returns>
+        public ApiResponse< DomainEdgeSoftwareUpdateDto > PostEdgeSoftwareupdateWithHttpInfo (string edgeId, DomainEdgeSoftwareUpdateDto body = null)
         {
             
             // verify the required parameter 'edgeId' is set
@@ -8894,10 +9579,10 @@ namespace ININ.PureCloudApi.Api
             else if (statusCode == 0)
                 throw new ApiException (statusCode, "Error calling PostEdgeSoftwareupdate: " + response.ErrorMessage, response.ErrorMessage);
     
-            
-            return new ApiResponse<Object>(statusCode,
+            return new ApiResponse<DomainEdgeSoftwareUpdateDto>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
+                (DomainEdgeSoftwareUpdateDto) Configuration.ApiClient.Deserialize(response, typeof(DomainEdgeSoftwareUpdateDto)));
+            
         }
     
         /// <summary>
@@ -8905,10 +9590,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostEdgeSoftwareupdateAsync (string edgeId, DomainEdgeSoftwareUpdateDto body = null)
+        /// <returns>Task of DomainEdgeSoftwareUpdateDto</returns>
+        public async System.Threading.Tasks.Task<DomainEdgeSoftwareUpdateDto> PostEdgeSoftwareupdateAsync (string edgeId, DomainEdgeSoftwareUpdateDto body = null)
         {
-             await PostEdgeSoftwareupdateAsyncWithHttpInfo(edgeId, body);
+             ApiResponse<DomainEdgeSoftwareUpdateDto> response = await PostEdgeSoftwareupdateAsyncWithHttpInfo(edgeId, body);
+             return response.Data;
 
         }
 
@@ -8917,8 +9603,8 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostEdgeSoftwareupdateAsyncWithHttpInfo (string edgeId, DomainEdgeSoftwareUpdateDto body = null)
+        /// <returns>Task of ApiResponse (DomainEdgeSoftwareUpdateDto)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareUpdateDto>> PostEdgeSoftwareupdateAsyncWithHttpInfo (string edgeId, DomainEdgeSoftwareUpdateDto body = null)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling PostEdgeSoftwareupdate");
@@ -8980,10 +9666,10 @@ namespace ININ.PureCloudApi.Api
             else if (statusCode == 0)
                 throw new ApiException (statusCode, "Error calling PostEdgeSoftwareupdate: " + response.ErrorMessage, response.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(statusCode,
+            return new ApiResponse<DomainEdgeSoftwareUpdateDto>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
+                (DomainEdgeSoftwareUpdateDto) Configuration.ApiClient.Deserialize(response, typeof(DomainEdgeSoftwareUpdateDto)));
+            
         }
         
         /// <summary>

@@ -72,7 +72,7 @@ namespace ININ.PureCloudApi.Test
             string id = null; // TODO: replace null with proper value
             
             var response = instance.Get(id);
-            Assert.IsInstanceOf<UserStationResource> (response, "response is UserStationResource"); 
+            Assert.IsInstanceOf<Station> (response, "response is Station"); 
         }
         
         /// <summary>

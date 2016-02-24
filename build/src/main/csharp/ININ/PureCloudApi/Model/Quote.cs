@@ -26,6 +26,7 @@ namespace ININ.PureCloudApi.Model
             this.IsPending = false;
             this.IsFrozen = false;
             this.IncludeVoiceCharges = false;
+            this.IsAnnualPrepay = false;
             
         }
 
@@ -181,6 +182,13 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
+        /// Gets or Sets IsAnnualPrepay
+        /// </summary>
+        [DataMember(Name="isAnnualPrepay", EmitDefaultValue=false)]
+        public bool? IsAnnualPrepay { get; set; }
+  
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -218,6 +226,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ReferralCodes: ").Append(ReferralCodes).Append("\n");
             sb.Append("  DiscountCodes: ").Append(DiscountCodes).Append("\n");
             sb.Append("  SalesPartnerCode: ").Append(SalesPartnerCode).Append("\n");
+            sb.Append("  IsAnnualPrepay: ").Append(IsAnnualPrepay).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
@@ -362,6 +371,11 @@ namespace ININ.PureCloudApi.Model
                     this.SalesPartnerCode.Equals(other.SalesPartnerCode)
                 ) && 
                 (
+                    this.IsAnnualPrepay == other.IsAnnualPrepay ||
+                    this.IsAnnualPrepay != null &&
+                    this.IsAnnualPrepay.Equals(other.IsAnnualPrepay)
+                ) && 
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -442,6 +456,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.SalesPartnerCode != null)
                     hash = hash * 59 + this.SalesPartnerCode.GetHashCode();
+                
+                if (this.IsAnnualPrepay != null)
+                    hash = hash * 59 + this.IsAnnualPrepay.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -15,12 +15,12 @@ namespace ININ.PureCloudApi.Model
     /// 
     /// </summary>
     [DataContract]
-    public partial class BackendWorkItemDataElement :  IEquatable<BackendWorkItemDataElement>
+    public partial class AttributeFilterItem :  IEquatable<AttributeFilterItem>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BackendWorkItemDataElement" /> class.
+        /// Initializes a new instance of the <see cref="AttributeFilterItem" /> class.
         /// </summary>
-        public BackendWorkItemDataElement()
+        public AttributeFilterItem()
         {
             
         }
@@ -34,24 +34,17 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
-        /// Gets or Sets Prompt
+        /// Gets or Sets Operator
         /// </summary>
-        [DataMember(Name="prompt", EmitDefaultValue=false)]
-        public string Prompt { get; set; }
+        [DataMember(Name="operator", EmitDefaultValue=false)]
+        public string Operator { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets DataItemId
+        /// Gets or Sets Values
         /// </summary>
-        [DataMember(Name="dataItemId", EmitDefaultValue=false)]
-        public string DataItemId { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets ControlType
-        /// </summary>
-        [DataMember(Name="controlType", EmitDefaultValue=false)]
-        public string ControlType { get; set; }
+        [DataMember(Name="values", EmitDefaultValue=false)]
+        public List<string> Values { get; set; }
   
         
   
@@ -62,11 +55,10 @@ namespace ININ.PureCloudApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class BackendWorkItemDataElement {\n");
+            sb.Append("class AttributeFilterItem {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Prompt: ").Append(Prompt).Append("\n");
-            sb.Append("  DataItemId: ").Append(DataItemId).Append("\n");
-            sb.Append("  ControlType: ").Append(ControlType).Append("\n");
+            sb.Append("  Operator: ").Append(Operator).Append("\n");
+            sb.Append("  Values: ").Append(Values).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -89,15 +81,15 @@ namespace ININ.PureCloudApi.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BackendWorkItemDataElement);
+            return this.Equals(obj as AttributeFilterItem);
         }
 
         /// <summary>
-        /// Returns true if BackendWorkItemDataElement instances are equal
+        /// Returns true if AttributeFilterItem instances are equal
         /// </summary>
-        /// <param name="other">Instance of BackendWorkItemDataElement to be compared</param>
+        /// <param name="other">Instance of AttributeFilterItem to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BackendWorkItemDataElement other)
+        public bool Equals(AttributeFilterItem other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -110,19 +102,14 @@ namespace ININ.PureCloudApi.Model
                     this.Id.Equals(other.Id)
                 ) && 
                 (
-                    this.Prompt == other.Prompt ||
-                    this.Prompt != null &&
-                    this.Prompt.Equals(other.Prompt)
+                    this.Operator == other.Operator ||
+                    this.Operator != null &&
+                    this.Operator.Equals(other.Operator)
                 ) && 
                 (
-                    this.DataItemId == other.DataItemId ||
-                    this.DataItemId != null &&
-                    this.DataItemId.Equals(other.DataItemId)
-                ) && 
-                (
-                    this.ControlType == other.ControlType ||
-                    this.ControlType != null &&
-                    this.ControlType.Equals(other.ControlType)
+                    this.Values == other.Values ||
+                    this.Values != null &&
+                    this.Values.SequenceEqual(other.Values)
                 );
         }
 
@@ -141,14 +128,11 @@ namespace ININ.PureCloudApi.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
-                if (this.Prompt != null)
-                    hash = hash * 59 + this.Prompt.GetHashCode();
+                if (this.Operator != null)
+                    hash = hash * 59 + this.Operator.GetHashCode();
                 
-                if (this.DataItemId != null)
-                    hash = hash * 59 + this.DataItemId.GetHashCode();
-                
-                if (this.ControlType != null)
-                    hash = hash * 59 + this.ControlType.GetHashCode();
+                if (this.Values != null)
+                    hash = hash * 59 + this.Values.GetHashCode();
                 
                 return hash;
             }

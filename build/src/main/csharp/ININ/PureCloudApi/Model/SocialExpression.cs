@@ -56,6 +56,13 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
+        /// Gets or Sets SocialUserName
+        /// </summary>
+        [DataMember(Name="socialUserName", EmitDefaultValue=false)]
+        public string SocialUserName { get; set; }
+  
+        
+        /// <summary>
         /// Gets or Sets PreviewText
         /// </summary>
         [DataMember(Name="previewText", EmitDefaultValue=false)]
@@ -111,6 +118,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  SocialMediaId: ").Append(SocialMediaId).Append("\n");
             sb.Append("  SocialMediaHub: ").Append(SocialMediaHub).Append("\n");
+            sb.Append("  SocialUserName: ").Append(SocialUserName).Append("\n");
             sb.Append("  PreviewText: ").Append(PreviewText).Append("\n");
             sb.Append("  RecordingId: ").Append(RecordingId).Append("\n");
             sb.Append("  Segments: ").Append(Segments).Append("\n");
@@ -175,6 +183,11 @@ namespace ININ.PureCloudApi.Model
                     this.SocialMediaHub.Equals(other.SocialMediaHub)
                 ) && 
                 (
+                    this.SocialUserName == other.SocialUserName ||
+                    this.SocialUserName != null &&
+                    this.SocialUserName.Equals(other.SocialUserName)
+                ) && 
+                (
                     this.PreviewText == other.PreviewText ||
                     this.PreviewText != null &&
                     this.PreviewText.Equals(other.PreviewText)
@@ -229,6 +242,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.SocialMediaHub != null)
                     hash = hash * 59 + this.SocialMediaHub.GetHashCode();
+                
+                if (this.SocialUserName != null)
+                    hash = hash * 59 + this.SocialUserName.GetHashCode();
                 
                 if (this.PreviewText != null)
                     hash = hash * 59 + this.PreviewText.GetHashCode();

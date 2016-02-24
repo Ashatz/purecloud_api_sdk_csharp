@@ -45,75 +45,75 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Country' 
         /// </summary>
         [Test]
-        public void IdTest()
+        public void CountryTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Country' 
         }
         
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'A1' 
         /// </summary>
         [Test]
-        public void NameTest()
+        public void A1Test()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'A1' 
         }
         
         /// <summary>
-        /// Test the property 'Street' 
+        /// Test the property 'A3' 
         /// </summary>
         [Test]
-        public void StreetTest()
+        public void A3Test()
         {
-            // TODO: unit test for the property 'Street' 
+            // TODO: unit test for the property 'A3' 
         }
         
         /// <summary>
-        /// Test the property 'City' 
+        /// Test the property 'RD' 
         /// </summary>
         [Test]
-        public void CityTest()
+        public void RDTest()
         {
-            // TODO: unit test for the property 'City' 
+            // TODO: unit test for the property 'RD' 
         }
         
         /// <summary>
-        /// Test the property 'CountryName' 
+        /// Test the property 'HNO' 
         /// </summary>
         [Test]
-        public void CountryNameTest()
+        public void HNOTest()
         {
-            // TODO: unit test for the property 'CountryName' 
+            // TODO: unit test for the property 'HNO' 
         }
         
         /// <summary>
-        /// Test the property 'StateName' 
+        /// Test the property 'LOC' 
         /// </summary>
         [Test]
-        public void StateNameTest()
+        public void LOCTest()
         {
-            // TODO: unit test for the property 'StateName' 
+            // TODO: unit test for the property 'LOC' 
         }
         
         /// <summary>
-        /// Test the property 'PostalCode' 
+        /// Test the property 'NAM' 
         /// </summary>
         [Test]
-        public void PostalCodeTest()
+        public void NAMTest()
         {
-            // TODO: unit test for the property 'PostalCode' 
+            // TODO: unit test for the property 'NAM' 
         }
         
         /// <summary>
-        /// Test the property 'SelfUri' 
+        /// Test the property 'PC' 
         /// </summary>
         [Test]
-        public void SelfUriTest()
+        public void PCTest()
         {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'PC' 
         }
         
 

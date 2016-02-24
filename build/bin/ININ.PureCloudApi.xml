@@ -5441,6 +5441,142 @@
             <param name="interfaceId">Interface ID</param>
             <returns>Task of ApiResponse</returns>
         </member>
+        <member name="M:ININ.PureCloudApi.Api.IConfigurationApi.PostEdgeLogsJobs(System.String,ININ.PureCloudApi.Model.EdgeLogsJobRequest)">
+            <summary>
+            Create a job to upload a list of Edge logs.
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <param name="edgeId">Edge ID</param>
+            <param name="body">EdgeLogsJobRequest</param>
+            <returns>EdgeLogsJobResponse</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Api.IConfigurationApi.PostEdgeLogsJobsWithHttpInfo(System.String,ININ.PureCloudApi.Model.EdgeLogsJobRequest)">
+            <summary>
+            Create a job to upload a list of Edge logs.
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <param name="edgeId">Edge ID</param>
+            <param name="body">EdgeLogsJobRequest</param>
+            <returns>ApiResponse of EdgeLogsJobResponse</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Api.IConfigurationApi.PostEdgeLogsJobsAsync(System.String,ININ.PureCloudApi.Model.EdgeLogsJobRequest)">
+            <summary>
+            Create a job to upload a list of Edge logs.
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <param name="edgeId">Edge ID</param>
+            <param name="body">EdgeLogsJobRequest</param>
+            <returns>Task of EdgeLogsJobResponse</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Api.IConfigurationApi.PostEdgeLogsJobsAsyncWithHttpInfo(System.String,ININ.PureCloudApi.Model.EdgeLogsJobRequest)">
+            <summary>
+            Create a job to upload a list of Edge logs.
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <param name="edgeId">Edge ID</param>
+            <param name="body">EdgeLogsJobRequest</param>
+            <returns>Task of ApiResponse (EdgeLogsJobResponse)</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Api.IConfigurationApi.GetEdgeLogsJob(System.String,System.String)">
+            <summary>
+            Get an Edge logs job.
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <param name="edgeId">Edge ID</param>
+            <param name="jobId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Api.IConfigurationApi.GetEdgeLogsJobWithHttpInfo(System.String,System.String)">
+            <summary>
+            Get an Edge logs job.
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <param name="edgeId">Edge ID</param>
+            <param name="jobId"></param>
+            <returns>ApiResponse of Object(void)</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Api.IConfigurationApi.GetEdgeLogsJobAsync(System.String,System.String)">
+            <summary>
+            Get an Edge logs job.
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <param name="edgeId">Edge ID</param>
+            <param name="jobId"></param>
+            <returns>Task of void</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Api.IConfigurationApi.GetEdgeLogsJobAsyncWithHttpInfo(System.String,System.String)">
+            <summary>
+            Get an Edge logs job.
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <param name="edgeId">Edge ID</param>
+            <param name="jobId"></param>
+            <returns>Task of ApiResponse</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Api.IConfigurationApi.PostEdgeLogsJobUpload(System.String,System.String,ININ.PureCloudApi.Model.EdgeLogsJobUploadRequest)">
+            <summary>
+            Request that the specified fileIds be uploaded from the Edge.
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <param name="edgeId">Edge ID</param>
+            <param name="jobId"></param>
+            <param name="body"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Api.IConfigurationApi.PostEdgeLogsJobUploadWithHttpInfo(System.String,System.String,ININ.PureCloudApi.Model.EdgeLogsJobUploadRequest)">
+            <summary>
+            Request that the specified fileIds be uploaded from the Edge.
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <param name="edgeId">Edge ID</param>
+            <param name="jobId"></param>
+            <param name="body"></param>
+            <returns>ApiResponse of Object(void)</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Api.IConfigurationApi.PostEdgeLogsJobUploadAsync(System.String,System.String,ININ.PureCloudApi.Model.EdgeLogsJobUploadRequest)">
+            <summary>
+            Request that the specified fileIds be uploaded from the Edge.
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <param name="edgeId">Edge ID</param>
+            <param name="jobId"></param>
+            <param name="body"></param>
+            <returns>Task of void</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Api.IConfigurationApi.PostEdgeLogsJobUploadAsyncWithHttpInfo(System.String,System.String,ININ.PureCloudApi.Model.EdgeLogsJobUploadRequest)">
+            <summary>
+            Request that the specified fileIds be uploaded from the Edge.
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <param name="edgeId">Edge ID</param>
+            <param name="jobId"></param>
+            <param name="body"></param>
+            <returns>Task of ApiResponse</returns>
+        </member>
         <member name="M:ININ.PureCloudApi.Api.IConfigurationApi.GetEdgePhysicalinterfaces(System.String)">
             <summary>
             Retrieve a list of all configured physical interfaces from a specific edge.
@@ -5614,7 +5750,7 @@
             </remarks>
             <param name="edgeId">Edge ID</param>
             <param name="body"></param>
-            <returns></returns>
+            <returns>DomainEdgeSoftwareUpdateDto</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.IConfigurationApi.PostEdgeSoftwareupdateWithHttpInfo(System.String,ININ.PureCloudApi.Model.DomainEdgeSoftwareUpdateDto)">
             <summary>
@@ -5625,7 +5761,7 @@
             </remarks>
             <param name="edgeId">Edge ID</param>
             <param name="body"></param>
-            <returns>ApiResponse of Object(void)</returns>
+            <returns>ApiResponse of DomainEdgeSoftwareUpdateDto</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.IConfigurationApi.PostEdgeSoftwareupdateAsync(System.String,ININ.PureCloudApi.Model.DomainEdgeSoftwareUpdateDto)">
             <summary>
@@ -5636,7 +5772,7 @@
             </remarks>
             <param name="edgeId">Edge ID</param>
             <param name="body"></param>
-            <returns>Task of void</returns>
+            <returns>Task of DomainEdgeSoftwareUpdateDto</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.IConfigurationApi.PostEdgeSoftwareupdateAsyncWithHttpInfo(System.String,ININ.PureCloudApi.Model.DomainEdgeSoftwareUpdateDto)">
             <summary>
@@ -5647,7 +5783,7 @@
             </remarks>
             <param name="edgeId">Edge ID</param>
             <param name="body"></param>
-            <returns>Task of ApiResponse</returns>
+            <returns>Task of ApiResponse (DomainEdgeSoftwareUpdateDto)</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.IConfigurationApi.DeleteEdgeSoftwareupdate(System.String)">
             <summary>
@@ -8646,6 +8782,106 @@
             <param name="interfaceId">Interface ID</param>
             <returns>Task of ApiResponse</returns>
         </member>
+        <member name="M:ININ.PureCloudApi.Api.ConfigurationApi.PostEdgeLogsJobs(System.String,ININ.PureCloudApi.Model.EdgeLogsJobRequest)">
+            <summary>
+            Create a job to upload a list of Edge logs. 
+            </summary>
+            <param name="edgeId">Edge ID</param> 
+            <param name="body">EdgeLogsJobRequest</param> 
+            <returns>EdgeLogsJobResponse</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Api.ConfigurationApi.PostEdgeLogsJobsWithHttpInfo(System.String,ININ.PureCloudApi.Model.EdgeLogsJobRequest)">
+            <summary>
+            Create a job to upload a list of Edge logs. 
+            </summary>
+            <param name="edgeId">Edge ID</param> 
+            <param name="body">EdgeLogsJobRequest</param> 
+            <returns>ApiResponse of EdgeLogsJobResponse</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Api.ConfigurationApi.PostEdgeLogsJobsAsync(System.String,ININ.PureCloudApi.Model.EdgeLogsJobRequest)">
+            <summary>
+            Create a job to upload a list of Edge logs. 
+            </summary>
+            <param name="edgeId">Edge ID</param>
+            <param name="body">EdgeLogsJobRequest</param>
+            <returns>Task of EdgeLogsJobResponse</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Api.ConfigurationApi.PostEdgeLogsJobsAsyncWithHttpInfo(System.String,ININ.PureCloudApi.Model.EdgeLogsJobRequest)">
+            <summary>
+            Create a job to upload a list of Edge logs. 
+            </summary>
+            <param name="edgeId">Edge ID</param>
+            <param name="body">EdgeLogsJobRequest</param>
+            <returns>Task of ApiResponse (EdgeLogsJobResponse)</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Api.ConfigurationApi.GetEdgeLogsJob(System.String,System.String)">
+            <summary>
+            Get an Edge logs job. 
+            </summary>
+            <param name="edgeId">Edge ID</param> 
+            <param name="jobId"></param> 
+            <returns></returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Api.ConfigurationApi.GetEdgeLogsJobWithHttpInfo(System.String,System.String)">
+            <summary>
+            Get an Edge logs job. 
+            </summary>
+            <param name="edgeId">Edge ID</param> 
+            <param name="jobId"></param> 
+            <returns>ApiResponse of Object(void)</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Api.ConfigurationApi.GetEdgeLogsJobAsync(System.String,System.String)">
+            <summary>
+            Get an Edge logs job. 
+            </summary>
+            <param name="edgeId">Edge ID</param>
+            <param name="jobId"></param>
+            <returns>Task of void</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Api.ConfigurationApi.GetEdgeLogsJobAsyncWithHttpInfo(System.String,System.String)">
+            <summary>
+            Get an Edge logs job. 
+            </summary>
+            <param name="edgeId">Edge ID</param>
+            <param name="jobId"></param>
+            <returns>Task of ApiResponse</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Api.ConfigurationApi.PostEdgeLogsJobUpload(System.String,System.String,ININ.PureCloudApi.Model.EdgeLogsJobUploadRequest)">
+            <summary>
+            Request that the specified fileIds be uploaded from the Edge. 
+            </summary>
+            <param name="edgeId">Edge ID</param> 
+            <param name="jobId"></param> 
+            <param name="body"></param> 
+            <returns></returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Api.ConfigurationApi.PostEdgeLogsJobUploadWithHttpInfo(System.String,System.String,ININ.PureCloudApi.Model.EdgeLogsJobUploadRequest)">
+            <summary>
+            Request that the specified fileIds be uploaded from the Edge. 
+            </summary>
+            <param name="edgeId">Edge ID</param> 
+            <param name="jobId"></param> 
+            <param name="body"></param> 
+            <returns>ApiResponse of Object(void)</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Api.ConfigurationApi.PostEdgeLogsJobUploadAsync(System.String,System.String,ININ.PureCloudApi.Model.EdgeLogsJobUploadRequest)">
+            <summary>
+            Request that the specified fileIds be uploaded from the Edge. 
+            </summary>
+            <param name="edgeId">Edge ID</param>
+            <param name="jobId"></param>
+            <param name="body"></param>
+            <returns>Task of void</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Api.ConfigurationApi.PostEdgeLogsJobUploadAsyncWithHttpInfo(System.String,System.String,ININ.PureCloudApi.Model.EdgeLogsJobUploadRequest)">
+            <summary>
+            Request that the specified fileIds be uploaded from the Edge. 
+            </summary>
+            <param name="edgeId">Edge ID</param>
+            <param name="jobId"></param>
+            <param name="body"></param>
+            <returns>Task of ApiResponse</returns>
+        </member>
         <member name="M:ININ.PureCloudApi.Api.ConfigurationApi.GetEdgePhysicalinterfaces(System.String)">
             <summary>
             Retrieve a list of all configured physical interfaces from a specific edge. 
@@ -8768,7 +9004,7 @@
             </summary>
             <param name="edgeId">Edge ID</param> 
             <param name="body"></param> 
-            <returns></returns>
+            <returns>DomainEdgeSoftwareUpdateDto</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.ConfigurationApi.PostEdgeSoftwareupdateWithHttpInfo(System.String,ININ.PureCloudApi.Model.DomainEdgeSoftwareUpdateDto)">
             <summary>
@@ -8776,7 +9012,7 @@
             </summary>
             <param name="edgeId">Edge ID</param> 
             <param name="body"></param> 
-            <returns>ApiResponse of Object(void)</returns>
+            <returns>ApiResponse of DomainEdgeSoftwareUpdateDto</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.ConfigurationApi.PostEdgeSoftwareupdateAsync(System.String,ININ.PureCloudApi.Model.DomainEdgeSoftwareUpdateDto)">
             <summary>
@@ -8784,7 +9020,7 @@
             </summary>
             <param name="edgeId">Edge ID</param>
             <param name="body"></param>
-            <returns>Task of void</returns>
+            <returns>Task of DomainEdgeSoftwareUpdateDto</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.ConfigurationApi.PostEdgeSoftwareupdateAsyncWithHttpInfo(System.String,ININ.PureCloudApi.Model.DomainEdgeSoftwareUpdateDto)">
             <summary>
@@ -8792,7 +9028,7 @@
             </summary>
             <param name="edgeId">Edge ID</param>
             <param name="body"></param>
-            <returns>Task of ApiResponse</returns>
+            <returns>Task of ApiResponse (DomainEdgeSoftwareUpdateDto)</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.ConfigurationApi.DeleteEdgeSoftwareupdate(System.String)">
             <summary>
@@ -18624,7 +18860,7 @@
             <remarks>
             
             </remarks>
-            <returns>TopicEntityListing</returns>
+            <returns>AvailableTopicEntityListing</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.INotificationsApi.GetAvailabletopicsWithHttpInfo">
             <summary>
@@ -18633,7 +18869,7 @@
             <remarks>
             
             </remarks>
-            <returns>ApiResponse of TopicEntityListing</returns>
+            <returns>ApiResponse of AvailableTopicEntityListing</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.INotificationsApi.GetAvailabletopicsAsync">
             <summary>
@@ -18642,7 +18878,7 @@
             <remarks>
             
             </remarks>
-            <returns>Task of TopicEntityListing</returns>
+            <returns>Task of AvailableTopicEntityListing</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.INotificationsApi.GetAvailabletopicsAsyncWithHttpInfo">
             <summary>
@@ -18651,7 +18887,7 @@
             <remarks>
             
             </remarks>
-            <returns>Task of ApiResponse (TopicEntityListing)</returns>
+            <returns>Task of ApiResponse (AvailableTopicEntityListing)</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.INotificationsApi.GetChannels">
             <summary>
@@ -18733,7 +18969,7 @@
             
             </remarks>
             <param name="channelId">Channel ID</param>
-            <returns>TopicEntityListing</returns>
+            <returns>ChannelTopicEntityListing</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.INotificationsApi.GetChannelSubscriptionsWithHttpInfo(System.String)">
             <summary>
@@ -18743,7 +18979,7 @@
             
             </remarks>
             <param name="channelId">Channel ID</param>
-            <returns>ApiResponse of TopicEntityListing</returns>
+            <returns>ApiResponse of ChannelTopicEntityListing</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.INotificationsApi.GetChannelSubscriptionsAsync(System.String)">
             <summary>
@@ -18753,7 +18989,7 @@
             
             </remarks>
             <param name="channelId">Channel ID</param>
-            <returns>Task of TopicEntityListing</returns>
+            <returns>Task of ChannelTopicEntityListing</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.INotificationsApi.GetChannelSubscriptionsAsyncWithHttpInfo(System.String)">
             <summary>
@@ -18763,7 +18999,7 @@
             
             </remarks>
             <param name="channelId">Channel ID</param>
-            <returns>Task of ApiResponse (TopicEntityListing)</returns>
+            <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.INotificationsApi.PutChannelSubscriptions(System.String,System.Collections.Generic.List{ININ.PureCloudApi.Model.ChannelTopic})">
             <summary>
@@ -18774,7 +19010,7 @@
             </remarks>
             <param name="channelId">Channel ID</param>
             <param name="body">Topic</param>
-            <returns>TopicEntityListing</returns>
+            <returns>ChannelTopicEntityListing</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.INotificationsApi.PutChannelSubscriptionsWithHttpInfo(System.String,System.Collections.Generic.List{ININ.PureCloudApi.Model.ChannelTopic})">
             <summary>
@@ -18785,7 +19021,7 @@
             </remarks>
             <param name="channelId">Channel ID</param>
             <param name="body">Topic</param>
-            <returns>ApiResponse of TopicEntityListing</returns>
+            <returns>ApiResponse of ChannelTopicEntityListing</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.INotificationsApi.PutChannelSubscriptionsAsync(System.String,System.Collections.Generic.List{ININ.PureCloudApi.Model.ChannelTopic})">
             <summary>
@@ -18796,7 +19032,7 @@
             </remarks>
             <param name="channelId">Channel ID</param>
             <param name="body">Topic</param>
-            <returns>Task of TopicEntityListing</returns>
+            <returns>Task of ChannelTopicEntityListing</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.INotificationsApi.PutChannelSubscriptionsAsyncWithHttpInfo(System.String,System.Collections.Generic.List{ININ.PureCloudApi.Model.ChannelTopic})">
             <summary>
@@ -18807,7 +19043,7 @@
             </remarks>
             <param name="channelId">Channel ID</param>
             <param name="body">Topic</param>
-            <returns>Task of ApiResponse (TopicEntityListing)</returns>
+            <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.INotificationsApi.PostChannelSubscriptions(System.String,System.Collections.Generic.List{ININ.PureCloudApi.Model.ChannelTopic})">
             <summary>
@@ -18818,7 +19054,7 @@
             </remarks>
             <param name="channelId">Channel ID</param>
             <param name="body">Topic</param>
-            <returns>TopicEntityListing</returns>
+            <returns>ChannelTopicEntityListing</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.INotificationsApi.PostChannelSubscriptionsWithHttpInfo(System.String,System.Collections.Generic.List{ININ.PureCloudApi.Model.ChannelTopic})">
             <summary>
@@ -18829,7 +19065,7 @@
             </remarks>
             <param name="channelId">Channel ID</param>
             <param name="body">Topic</param>
-            <returns>ApiResponse of TopicEntityListing</returns>
+            <returns>ApiResponse of ChannelTopicEntityListing</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.INotificationsApi.PostChannelSubscriptionsAsync(System.String,System.Collections.Generic.List{ININ.PureCloudApi.Model.ChannelTopic})">
             <summary>
@@ -18840,7 +19076,7 @@
             </remarks>
             <param name="channelId">Channel ID</param>
             <param name="body">Topic</param>
-            <returns>Task of TopicEntityListing</returns>
+            <returns>Task of ChannelTopicEntityListing</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.INotificationsApi.PostChannelSubscriptionsAsyncWithHttpInfo(System.String,System.Collections.Generic.List{ININ.PureCloudApi.Model.ChannelTopic})">
             <summary>
@@ -18851,7 +19087,7 @@
             </remarks>
             <param name="channelId">Channel ID</param>
             <param name="body">Topic</param>
-            <returns>Task of ApiResponse (TopicEntityListing)</returns>
+            <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.INotificationsApi.DeleteChannelSubscriptions(System.String)">
             <summary>
@@ -18942,25 +19178,25 @@
             <summary>
             Get available notification topics. 
             </summary>
-            <returns>TopicEntityListing</returns>
+            <returns>AvailableTopicEntityListing</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.NotificationsApi.GetAvailabletopicsWithHttpInfo">
             <summary>
             Get available notification topics. 
             </summary>
-            <returns>ApiResponse of TopicEntityListing</returns>
+            <returns>ApiResponse of AvailableTopicEntityListing</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.NotificationsApi.GetAvailabletopicsAsync">
             <summary>
             Get available notification topics. 
             </summary>
-            <returns>Task of TopicEntityListing</returns>
+            <returns>Task of AvailableTopicEntityListing</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.NotificationsApi.GetAvailabletopicsAsyncWithHttpInfo">
             <summary>
             Get available notification topics. 
             </summary>
-            <returns>Task of ApiResponse (TopicEntityListing)</returns>
+            <returns>Task of ApiResponse (AvailableTopicEntityListing)</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.NotificationsApi.GetChannels">
             <summary>
@@ -19015,28 +19251,28 @@
             The list of all subscriptions for this channel 
             </summary>
             <param name="channelId">Channel ID</param> 
-            <returns>TopicEntityListing</returns>
+            <returns>ChannelTopicEntityListing</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.NotificationsApi.GetChannelSubscriptionsWithHttpInfo(System.String)">
             <summary>
             The list of all subscriptions for this channel 
             </summary>
             <param name="channelId">Channel ID</param> 
-            <returns>ApiResponse of TopicEntityListing</returns>
+            <returns>ApiResponse of ChannelTopicEntityListing</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.NotificationsApi.GetChannelSubscriptionsAsync(System.String)">
             <summary>
             The list of all subscriptions for this channel 
             </summary>
             <param name="channelId">Channel ID</param>
-            <returns>Task of TopicEntityListing</returns>
+            <returns>Task of ChannelTopicEntityListing</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.NotificationsApi.GetChannelSubscriptionsAsyncWithHttpInfo(System.String)">
             <summary>
             The list of all subscriptions for this channel 
             </summary>
             <param name="channelId">Channel ID</param>
-            <returns>Task of ApiResponse (TopicEntityListing)</returns>
+            <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.NotificationsApi.PutChannelSubscriptions(System.String,System.Collections.Generic.List{ININ.PureCloudApi.Model.ChannelTopic})">
             <summary>
@@ -19044,7 +19280,7 @@
             </summary>
             <param name="channelId">Channel ID</param> 
             <param name="body">Topic</param> 
-            <returns>TopicEntityListing</returns>
+            <returns>ChannelTopicEntityListing</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.NotificationsApi.PutChannelSubscriptionsWithHttpInfo(System.String,System.Collections.Generic.List{ININ.PureCloudApi.Model.ChannelTopic})">
             <summary>
@@ -19052,7 +19288,7 @@
             </summary>
             <param name="channelId">Channel ID</param> 
             <param name="body">Topic</param> 
-            <returns>ApiResponse of TopicEntityListing</returns>
+            <returns>ApiResponse of ChannelTopicEntityListing</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.NotificationsApi.PutChannelSubscriptionsAsync(System.String,System.Collections.Generic.List{ININ.PureCloudApi.Model.ChannelTopic})">
             <summary>
@@ -19060,7 +19296,7 @@
             </summary>
             <param name="channelId">Channel ID</param>
             <param name="body">Topic</param>
-            <returns>Task of TopicEntityListing</returns>
+            <returns>Task of ChannelTopicEntityListing</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.NotificationsApi.PutChannelSubscriptionsAsyncWithHttpInfo(System.String,System.Collections.Generic.List{ININ.PureCloudApi.Model.ChannelTopic})">
             <summary>
@@ -19068,7 +19304,7 @@
             </summary>
             <param name="channelId">Channel ID</param>
             <param name="body">Topic</param>
-            <returns>Task of ApiResponse (TopicEntityListing)</returns>
+            <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.NotificationsApi.PostChannelSubscriptions(System.String,System.Collections.Generic.List{ININ.PureCloudApi.Model.ChannelTopic})">
             <summary>
@@ -19076,7 +19312,7 @@
             </summary>
             <param name="channelId">Channel ID</param> 
             <param name="body">Topic</param> 
-            <returns>TopicEntityListing</returns>
+            <returns>ChannelTopicEntityListing</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.NotificationsApi.PostChannelSubscriptionsWithHttpInfo(System.String,System.Collections.Generic.List{ININ.PureCloudApi.Model.ChannelTopic})">
             <summary>
@@ -19084,7 +19320,7 @@
             </summary>
             <param name="channelId">Channel ID</param> 
             <param name="body">Topic</param> 
-            <returns>ApiResponse of TopicEntityListing</returns>
+            <returns>ApiResponse of ChannelTopicEntityListing</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.NotificationsApi.PostChannelSubscriptionsAsync(System.String,System.Collections.Generic.List{ININ.PureCloudApi.Model.ChannelTopic})">
             <summary>
@@ -19092,7 +19328,7 @@
             </summary>
             <param name="channelId">Channel ID</param>
             <param name="body">Topic</param>
-            <returns>Task of TopicEntityListing</returns>
+            <returns>Task of ChannelTopicEntityListing</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.NotificationsApi.PostChannelSubscriptionsAsyncWithHttpInfo(System.String,System.Collections.Generic.List{ININ.PureCloudApi.Model.ChannelTopic})">
             <summary>
@@ -19100,7 +19336,7 @@
             </summary>
             <param name="channelId">Channel ID</param>
             <param name="body">Topic</param>
-            <returns>Task of ApiResponse (TopicEntityListing)</returns>
+            <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.NotificationsApi.DeleteChannelSubscriptions(System.String)">
             <summary>
@@ -29457,14 +29693,13 @@
             </remarks>
             <returns>Task of ApiResponse (EmailSetup)</returns>
         </member>
-        <member name="M:ININ.PureCloudApi.Api.IRoutingApi.GetQueues(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Boolean})">
+        <member name="M:ININ.PureCloudApi.Api.IRoutingApi.GetQueues(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Boolean})">
             <summary>
             Get list of queues.
             </summary>
             <remarks>
             
             </remarks>
-            <param name="queueId">Queue ID</param>
             <param name="pageSize">Page size</param>
             <param name="pageNumber">Page number</param>
             <param name="sortBy">Sort by</param>
@@ -29472,14 +29707,13 @@
             <param name="active">Active</param>
             <returns>QueueEntityListing</returns>
         </member>
-        <member name="M:ININ.PureCloudApi.Api.IRoutingApi.GetQueuesWithHttpInfo(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Boolean})">
+        <member name="M:ININ.PureCloudApi.Api.IRoutingApi.GetQueuesWithHttpInfo(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Boolean})">
             <summary>
             Get list of queues.
             </summary>
             <remarks>
             
             </remarks>
-            <param name="queueId">Queue ID</param>
             <param name="pageSize">Page size</param>
             <param name="pageNumber">Page number</param>
             <param name="sortBy">Sort by</param>
@@ -29487,14 +29721,13 @@
             <param name="active">Active</param>
             <returns>ApiResponse of QueueEntityListing</returns>
         </member>
-        <member name="M:ININ.PureCloudApi.Api.IRoutingApi.GetQueuesAsync(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Boolean})">
+        <member name="M:ININ.PureCloudApi.Api.IRoutingApi.GetQueuesAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Boolean})">
             <summary>
             Get list of queues.
             </summary>
             <remarks>
             
             </remarks>
-            <param name="queueId">Queue ID</param>
             <param name="pageSize">Page size</param>
             <param name="pageNumber">Page number</param>
             <param name="sortBy">Sort by</param>
@@ -29502,14 +29735,13 @@
             <param name="active">Active</param>
             <returns>Task of QueueEntityListing</returns>
         </member>
-        <member name="M:ININ.PureCloudApi.Api.IRoutingApi.GetQueuesAsyncWithHttpInfo(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Boolean})">
+        <member name="M:ININ.PureCloudApi.Api.IRoutingApi.GetQueuesAsyncWithHttpInfo(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Boolean})">
             <summary>
             Get list of queues.
             </summary>
             <remarks>
             
             </remarks>
-            <param name="queueId">Queue ID</param>
             <param name="pageSize">Page size</param>
             <param name="pageNumber">Page number</param>
             <param name="sortBy">Sort by</param>
@@ -29517,47 +29749,43 @@
             <param name="active">Active</param>
             <returns>Task of ApiResponse (QueueEntityListing)</returns>
         </member>
-        <member name="M:ININ.PureCloudApi.Api.IRoutingApi.PostQueues(System.String,ININ.PureCloudApi.Model.Queue)">
+        <member name="M:ININ.PureCloudApi.Api.IRoutingApi.PostQueues(ININ.PureCloudApi.Model.Queue)">
             <summary>
             Create queue
             </summary>
             <remarks>
             
             </remarks>
-            <param name="queueId">Queue ID</param>
             <param name="body">Queue</param>
             <returns>Queue</returns>
         </member>
-        <member name="M:ININ.PureCloudApi.Api.IRoutingApi.PostQueuesWithHttpInfo(System.String,ININ.PureCloudApi.Model.Queue)">
+        <member name="M:ININ.PureCloudApi.Api.IRoutingApi.PostQueuesWithHttpInfo(ININ.PureCloudApi.Model.Queue)">
             <summary>
             Create queue
             </summary>
             <remarks>
             
             </remarks>
-            <param name="queueId">Queue ID</param>
             <param name="body">Queue</param>
             <returns>ApiResponse of Queue</returns>
         </member>
-        <member name="M:ININ.PureCloudApi.Api.IRoutingApi.PostQueuesAsync(System.String,ININ.PureCloudApi.Model.Queue)">
+        <member name="M:ININ.PureCloudApi.Api.IRoutingApi.PostQueuesAsync(ININ.PureCloudApi.Model.Queue)">
             <summary>
             Create queue
             </summary>
             <remarks>
             
             </remarks>
-            <param name="queueId">Queue ID</param>
             <param name="body">Queue</param>
             <returns>Task of Queue</returns>
         </member>
-        <member name="M:ININ.PureCloudApi.Api.IRoutingApi.PostQueuesAsyncWithHttpInfo(System.String,ININ.PureCloudApi.Model.Queue)">
+        <member name="M:ININ.PureCloudApi.Api.IRoutingApi.PostQueuesAsyncWithHttpInfo(ININ.PureCloudApi.Model.Queue)">
             <summary>
             Create queue
             </summary>
             <remarks>
             
             </remarks>
-            <param name="queueId">Queue ID</param>
             <param name="body">Queue</param>
             <returns>Task of ApiResponse (Queue)</returns>
         </member>
@@ -30866,11 +31094,10 @@
             </summary>
             <returns>Task of ApiResponse (EmailSetup)</returns>
         </member>
-        <member name="M:ININ.PureCloudApi.Api.RoutingApi.GetQueues(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Boolean})">
+        <member name="M:ININ.PureCloudApi.Api.RoutingApi.GetQueues(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Boolean})">
             <summary>
             Get list of queues. 
             </summary>
-            <param name="queueId">Queue ID</param> 
             <param name="pageSize">Page size</param> 
             <param name="pageNumber">Page number</param> 
             <param name="sortBy">Sort by</param> 
@@ -30878,11 +31105,10 @@
             <param name="active">Active</param> 
             <returns>QueueEntityListing</returns>
         </member>
-        <member name="M:ININ.PureCloudApi.Api.RoutingApi.GetQueuesWithHttpInfo(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Boolean})">
+        <member name="M:ININ.PureCloudApi.Api.RoutingApi.GetQueuesWithHttpInfo(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Boolean})">
             <summary>
             Get list of queues. 
             </summary>
-            <param name="queueId">Queue ID</param> 
             <param name="pageSize">Page size</param> 
             <param name="pageNumber">Page number</param> 
             <param name="sortBy">Sort by</param> 
@@ -30890,11 +31116,10 @@
             <param name="active">Active</param> 
             <returns>ApiResponse of QueueEntityListing</returns>
         </member>
-        <member name="M:ININ.PureCloudApi.Api.RoutingApi.GetQueuesAsync(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Boolean})">
+        <member name="M:ININ.PureCloudApi.Api.RoutingApi.GetQueuesAsync(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Boolean})">
             <summary>
             Get list of queues. 
             </summary>
-            <param name="queueId">Queue ID</param>
             <param name="pageSize">Page size</param>
             <param name="pageNumber">Page number</param>
             <param name="sortBy">Sort by</param>
@@ -30902,11 +31127,10 @@
             <param name="active">Active</param>
             <returns>Task of QueueEntityListing</returns>
         </member>
-        <member name="M:ININ.PureCloudApi.Api.RoutingApi.GetQueuesAsyncWithHttpInfo(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Boolean})">
+        <member name="M:ININ.PureCloudApi.Api.RoutingApi.GetQueuesAsyncWithHttpInfo(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Boolean})">
             <summary>
             Get list of queues. 
             </summary>
-            <param name="queueId">Queue ID</param>
             <param name="pageSize">Page size</param>
             <param name="pageNumber">Page number</param>
             <param name="sortBy">Sort by</param>
@@ -30914,35 +31138,31 @@
             <param name="active">Active</param>
             <returns>Task of ApiResponse (QueueEntityListing)</returns>
         </member>
-        <member name="M:ININ.PureCloudApi.Api.RoutingApi.PostQueues(System.String,ININ.PureCloudApi.Model.Queue)">
+        <member name="M:ININ.PureCloudApi.Api.RoutingApi.PostQueues(ININ.PureCloudApi.Model.Queue)">
             <summary>
             Create queue 
             </summary>
-            <param name="queueId">Queue ID</param> 
             <param name="body">Queue</param> 
             <returns>Queue</returns>
         </member>
-        <member name="M:ININ.PureCloudApi.Api.RoutingApi.PostQueuesWithHttpInfo(System.String,ININ.PureCloudApi.Model.Queue)">
+        <member name="M:ININ.PureCloudApi.Api.RoutingApi.PostQueuesWithHttpInfo(ININ.PureCloudApi.Model.Queue)">
             <summary>
             Create queue 
             </summary>
-            <param name="queueId">Queue ID</param> 
             <param name="body">Queue</param> 
             <returns>ApiResponse of Queue</returns>
         </member>
-        <member name="M:ININ.PureCloudApi.Api.RoutingApi.PostQueuesAsync(System.String,ININ.PureCloudApi.Model.Queue)">
+        <member name="M:ININ.PureCloudApi.Api.RoutingApi.PostQueuesAsync(ININ.PureCloudApi.Model.Queue)">
             <summary>
             Create queue 
             </summary>
-            <param name="queueId">Queue ID</param>
             <param name="body">Queue</param>
             <returns>Task of Queue</returns>
         </member>
-        <member name="M:ININ.PureCloudApi.Api.RoutingApi.PostQueuesAsyncWithHttpInfo(System.String,ININ.PureCloudApi.Model.Queue)">
+        <member name="M:ININ.PureCloudApi.Api.RoutingApi.PostQueuesAsyncWithHttpInfo(ININ.PureCloudApi.Model.Queue)">
             <summary>
             Create queue 
             </summary>
-            <param name="queueId">Queue ID</param>
             <param name="body">Queue</param>
             <returns>Task of ApiResponse (Queue)</returns>
         </member>
@@ -32789,7 +33009,7 @@
             
             </remarks>
             <param name="id">Station ID</param>
-            <returns>UserStationResource</returns>
+            <returns>Station</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.IStationsApi.GetWithHttpInfo(System.String)">
             <summary>
@@ -32799,7 +33019,7 @@
             
             </remarks>
             <param name="id">Station ID</param>
-            <returns>ApiResponse of UserStationResource</returns>
+            <returns>ApiResponse of Station</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.IStationsApi.GetAsync(System.String)">
             <summary>
@@ -32809,7 +33029,7 @@
             
             </remarks>
             <param name="id">Station ID</param>
-            <returns>Task of UserStationResource</returns>
+            <returns>Task of Station</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.IStationsApi.GetAsyncWithHttpInfo(System.String)">
             <summary>
@@ -32819,7 +33039,7 @@
             
             </remarks>
             <param name="id">Station ID</param>
-            <returns>Task of ApiResponse (UserStationResource)</returns>
+            <returns>Task of ApiResponse (Station)</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.IStationsApi.DeleteAssociateduser(System.String)">
             <summary>
@@ -32951,28 +33171,28 @@
             Get station. 
             </summary>
             <param name="id">Station ID</param> 
-            <returns>UserStationResource</returns>
+            <returns>Station</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.StationsApi.GetWithHttpInfo(System.String)">
             <summary>
             Get station. 
             </summary>
             <param name="id">Station ID</param> 
-            <returns>ApiResponse of UserStationResource</returns>
+            <returns>ApiResponse of Station</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.StationsApi.GetAsync(System.String)">
             <summary>
             Get station. 
             </summary>
             <param name="id">Station ID</param>
-            <returns>Task of UserStationResource</returns>
+            <returns>Task of Station</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.StationsApi.GetAsyncWithHttpInfo(System.String)">
             <summary>
             Get station. 
             </summary>
             <param name="id">Station ID</param>
-            <returns>Task of ApiResponse (UserStationResource)</returns>
+            <returns>Task of ApiResponse (Station)</returns>
         </member>
         <member name="M:ININ.PureCloudApi.Api.StationsApi.DeleteAssociateduser(System.String)">
             <summary>
@@ -40353,47 +40573,45 @@
             </summary>
             <returns>Hash code</returns>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.Address.Id">
+        <member name="P:ININ.PureCloudApi.Model.Address.Country">
             <summary>
-            The globally unique identifier for the object.
-            </summary>
-            <value>The globally unique identifier for the object.</value>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.Address.Name">
-            <summary>
-            Gets or Sets Name
+            Gets or Sets Country
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.Address.Street">
+        <member name="P:ININ.PureCloudApi.Model.Address.A1">
             <summary>
-            Gets or Sets Street
+            Gets or Sets A1
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.Address.City">
+        <member name="P:ININ.PureCloudApi.Model.Address.A3">
             <summary>
-            Gets or Sets City
+            Gets or Sets A3
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.Address.CountryName">
+        <member name="P:ININ.PureCloudApi.Model.Address.RD">
             <summary>
-            Gets or Sets CountryName
+            Gets or Sets RD
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.Address.StateName">
+        <member name="P:ININ.PureCloudApi.Model.Address.HNO">
             <summary>
-            Gets or Sets StateName
+            Gets or Sets HNO
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.Address.PostalCode">
+        <member name="P:ININ.PureCloudApi.Model.Address.LOC">
             <summary>
-            Gets or Sets PostalCode
+            Gets or Sets LOC
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.Address.SelfUri">
+        <member name="P:ININ.PureCloudApi.Model.Address.NAM">
             <summary>
-            The URI for this object
+            Gets or Sets NAM
             </summary>
-            <value>The URI for this object</value>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.Address.PC">
+            <summary>
+            Gets or Sets PC
+            </summary>
         </member>
         <member name="T:ININ.PureCloudApi.Model.AddressListing">
             <summary>
@@ -41489,6 +41707,63 @@
             Gets or Sets PageCount
             </summary>
         </member>
+        <member name="T:ININ.PureCloudApi.Model.AttributeFilterItem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.AttributeFilterItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ININ.PureCloudApi.Model.AttributeFilterItem"/> class.
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.AttributeFilterItem.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.AttributeFilterItem.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.AttributeFilterItem.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.AttributeFilterItem.Equals(ININ.PureCloudApi.Model.AttributeFilterItem)">
+            <summary>
+            Returns true if AttributeFilterItem instances are equal
+            </summary>
+            <param name="other">Instance of AttributeFilterItem to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.AttributeFilterItem.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.AttributeFilterItem.Id">
+            <summary>
+            Gets or Sets Id
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.AttributeFilterItem.Operator">
+            <summary>
+            Gets or Sets Operator
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.AttributeFilterItem.Values">
+            <summary>
+            Gets or Sets Values
+            </summary>
+        </member>
         <member name="T:ININ.PureCloudApi.Model.AttributeQueryRequest">
             <summary>
             Used to query for attributes
@@ -41548,98 +41823,6 @@
             The page number to start at. The first page is number 1.
             </summary>
             <value>The page number to start at. The first page is number 1.</value>
-        </member>
-        <member name="T:ININ.PureCloudApi.Model.AttributeValue">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.AttributeValue.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:ININ.PureCloudApi.Model.AttributeValue"/> class.
-            </summary>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.AttributeValue.ToString">
-            <summary>
-            Returns the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.AttributeValue.ToJson">
-            <summary>
-            Returns the JSON string presentation of the object
-            </summary>
-            <returns>JSON string presentation of the object</returns>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.AttributeValue.Equals(System.Object)">
-            <summary>
-            Returns true if objects are equal
-            </summary>
-            <param name="obj">Object to be compared</param>
-            <returns>Boolean</returns>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.AttributeValue.Equals(ININ.PureCloudApi.Model.AttributeValue)">
-            <summary>
-            Returns true if AttributeValue instances are equal
-            </summary>
-            <param name="other">Instance of AttributeValue to be compared</param>
-            <returns>Boolean</returns>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.AttributeValue.GetHashCode">
-            <summary>
-            Gets the hash code
-            </summary>
-            <returns>Hash code</returns>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.AttributeValue.S">
-            <summary>
-            Gets or Sets S
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.AttributeValue.N">
-            <summary>
-            Gets or Sets N
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.AttributeValue.B">
-            <summary>
-            Gets or Sets B
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.AttributeValue.M">
-            <summary>
-            Gets or Sets M
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.AttributeValue.L">
-            <summary>
-            Gets or Sets L
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.AttributeValue.Ss">
-            <summary>
-            Gets or Sets Ss
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.AttributeValue.Ns">
-            <summary>
-            Gets or Sets Ns
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.AttributeValue.Bs">
-            <summary>
-            Gets or Sets Bs
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.AttributeValue.Null">
-            <summary>
-            Gets or Sets Null
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.AttributeValue.Bool">
-            <summary>
-            Gets or Sets Bool
-            </summary>
         </member>
         <member name="T:ININ.PureCloudApi.Model.AuditChange">
             <summary>
@@ -42111,6 +42294,98 @@
             </summary>
             <value>The URI for this object</value>
         </member>
+        <member name="T:ININ.PureCloudApi.Model.AutomateQueueMemberEntityListing">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.AutomateQueueMemberEntityListing.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ININ.PureCloudApi.Model.AutomateQueueMemberEntityListing"/> class.
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.AutomateQueueMemberEntityListing.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.AutomateQueueMemberEntityListing.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.AutomateQueueMemberEntityListing.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.AutomateQueueMemberEntityListing.Equals(ININ.PureCloudApi.Model.AutomateQueueMemberEntityListing)">
+            <summary>
+            Returns true if AutomateQueueMemberEntityListing instances are equal
+            </summary>
+            <param name="other">Instance of AutomateQueueMemberEntityListing to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.AutomateQueueMemberEntityListing.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.AutomateQueueMemberEntityListing.PageSize">
+            <summary>
+            Gets or Sets PageSize
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.AutomateQueueMemberEntityListing.PageNumber">
+            <summary>
+            Gets or Sets PageNumber
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.AutomateQueueMemberEntityListing.Total">
+            <summary>
+            Gets or Sets Total
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.AutomateQueueMemberEntityListing.Entities">
+            <summary>
+            Gets or Sets Entities
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.AutomateQueueMemberEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.AutomateQueueMemberEntityListing.FirstUri">
+            <summary>
+            Gets or Sets FirstUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.AutomateQueueMemberEntityListing.PreviousUri">
+            <summary>
+            Gets or Sets PreviousUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.AutomateQueueMemberEntityListing.NextUri">
+            <summary>
+            Gets or Sets NextUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.AutomateQueueMemberEntityListing.LastUri">
+            <summary>
+            Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.AutomateQueueMemberEntityListing.PageCount">
+            <summary>
+            Gets or Sets PageCount
+            </summary>
+        </member>
         <member name="T:ININ.PureCloudApi.Model.AvailableAdditionalService">
             <summary>
             
@@ -42334,6 +42609,98 @@
             </summary>
             <value>The globally unique identifier for the object.</value>
         </member>
+        <member name="T:ININ.PureCloudApi.Model.AvailableTopicEntityListing">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.AvailableTopicEntityListing.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ININ.PureCloudApi.Model.AvailableTopicEntityListing"/> class.
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.AvailableTopicEntityListing.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.AvailableTopicEntityListing.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.AvailableTopicEntityListing.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.AvailableTopicEntityListing.Equals(ININ.PureCloudApi.Model.AvailableTopicEntityListing)">
+            <summary>
+            Returns true if AvailableTopicEntityListing instances are equal
+            </summary>
+            <param name="other">Instance of AvailableTopicEntityListing to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.AvailableTopicEntityListing.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.AvailableTopicEntityListing.PageSize">
+            <summary>
+            Gets or Sets PageSize
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.AvailableTopicEntityListing.PageNumber">
+            <summary>
+            Gets or Sets PageNumber
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.AvailableTopicEntityListing.Total">
+            <summary>
+            Gets or Sets Total
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.AvailableTopicEntityListing.Entities">
+            <summary>
+            Gets or Sets Entities
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.AvailableTopicEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.AvailableTopicEntityListing.FirstUri">
+            <summary>
+            Gets or Sets FirstUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.AvailableTopicEntityListing.PreviousUri">
+            <summary>
+            Gets or Sets PreviousUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.AvailableTopicEntityListing.NextUri">
+            <summary>
+            Gets or Sets NextUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.AvailableTopicEntityListing.LastUri">
+            <summary>
+            Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.AvailableTopicEntityListing.PageCount">
+            <summary>
+            Gets or Sets PageCount
+            </summary>
+        </member>
         <member name="T:ININ.PureCloudApi.Model.BackendFlowAvailableActions">
             <summary>
             
@@ -42379,68 +42746,6 @@
         <member name="P:ININ.PureCloudApi.Model.BackendFlowAvailableActions.CanTerminate">
             <summary>
             Gets or Sets CanTerminate
-            </summary>
-        </member>
-        <member name="T:ININ.PureCloudApi.Model.BackendWorkItemDataElement">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.BackendWorkItemDataElement.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:ININ.PureCloudApi.Model.BackendWorkItemDataElement"/> class.
-            </summary>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.BackendWorkItemDataElement.ToString">
-            <summary>
-            Returns the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.BackendWorkItemDataElement.ToJson">
-            <summary>
-            Returns the JSON string presentation of the object
-            </summary>
-            <returns>JSON string presentation of the object</returns>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.BackendWorkItemDataElement.Equals(System.Object)">
-            <summary>
-            Returns true if objects are equal
-            </summary>
-            <param name="obj">Object to be compared</param>
-            <returns>Boolean</returns>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.BackendWorkItemDataElement.Equals(ININ.PureCloudApi.Model.BackendWorkItemDataElement)">
-            <summary>
-            Returns true if BackendWorkItemDataElement instances are equal
-            </summary>
-            <param name="other">Instance of BackendWorkItemDataElement to be compared</param>
-            <returns>Boolean</returns>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.BackendWorkItemDataElement.GetHashCode">
-            <summary>
-            Gets the hash code
-            </summary>
-            <returns>Hash code</returns>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.BackendWorkItemDataElement.Id">
-            <summary>
-            Gets or Sets Id
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.BackendWorkItemDataElement.Prompt">
-            <summary>
-            Gets or Sets Prompt
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.BackendWorkItemDataElement.DataItemId">
-            <summary>
-            Gets or Sets DataItemId
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.BackendWorkItemDataElement.ControlType">
-            <summary>
-            Gets or Sets ControlType
             </summary>
         </member>
         <member name="T:ININ.PureCloudApi.Model.BasicTransform">
@@ -42997,88 +43302,6 @@
         <member name="P:ININ.PureCloudApi.Model.Bullseye.Rings">
             <summary>
             Gets or Sets Rings
-            </summary>
-        </member>
-        <member name="T:ININ.PureCloudApi.Model.ByteBuffer">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.ByteBuffer.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:ININ.PureCloudApi.Model.ByteBuffer"/> class.
-            </summary>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.ByteBuffer.ToString">
-            <summary>
-            Returns the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.ByteBuffer.ToJson">
-            <summary>
-            Returns the JSON string presentation of the object
-            </summary>
-            <returns>JSON string presentation of the object</returns>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.ByteBuffer.Equals(System.Object)">
-            <summary>
-            Returns true if objects are equal
-            </summary>
-            <param name="obj">Object to be compared</param>
-            <returns>Boolean</returns>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.ByteBuffer.Equals(ININ.PureCloudApi.Model.ByteBuffer)">
-            <summary>
-            Returns true if ByteBuffer instances are equal
-            </summary>
-            <param name="other">Instance of ByteBuffer to be compared</param>
-            <returns>Boolean</returns>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.ByteBuffer.GetHashCode">
-            <summary>
-            Gets the hash code
-            </summary>
-            <returns>Hash code</returns>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ByteBuffer.Short">
-            <summary>
-            Gets or Sets Short
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ByteBuffer.Char">
-            <summary>
-            Gets or Sets Char
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ByteBuffer.Int">
-            <summary>
-            Gets or Sets Int
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ByteBuffer.Long">
-            <summary>
-            Gets or Sets Long
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ByteBuffer.Float">
-            <summary>
-            Gets or Sets Float
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ByteBuffer.Double">
-            <summary>
-            Gets or Sets Double
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ByteBuffer.Direct">
-            <summary>
-            Gets or Sets Direct
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.ByteBuffer.ReadOnly">
-            <summary>
-            Gets or Sets ReadOnly
             </summary>
         </member>
         <member name="T:ININ.PureCloudApi.Model.Calibration">
@@ -45442,6 +45665,98 @@
             </summary>
             <value>The URI for this object</value>
         </member>
+        <member name="T:ININ.PureCloudApi.Model.ChannelTopicEntityListing">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.ChannelTopicEntityListing.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ININ.PureCloudApi.Model.ChannelTopicEntityListing"/> class.
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.ChannelTopicEntityListing.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.ChannelTopicEntityListing.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.ChannelTopicEntityListing.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.ChannelTopicEntityListing.Equals(ININ.PureCloudApi.Model.ChannelTopicEntityListing)">
+            <summary>
+            Returns true if ChannelTopicEntityListing instances are equal
+            </summary>
+            <param name="other">Instance of ChannelTopicEntityListing to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.ChannelTopicEntityListing.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ChannelTopicEntityListing.PageSize">
+            <summary>
+            Gets or Sets PageSize
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ChannelTopicEntityListing.PageNumber">
+            <summary>
+            Gets or Sets PageNumber
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ChannelTopicEntityListing.Total">
+            <summary>
+            Gets or Sets Total
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ChannelTopicEntityListing.Entities">
+            <summary>
+            Gets or Sets Entities
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ChannelTopicEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ChannelTopicEntityListing.FirstUri">
+            <summary>
+            Gets or Sets FirstUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ChannelTopicEntityListing.PreviousUri">
+            <summary>
+            Gets or Sets PreviousUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ChannelTopicEntityListing.NextUri">
+            <summary>
+            Gets or Sets NextUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ChannelTopicEntityListing.LastUri">
+            <summary>
+            Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ChannelTopicEntityListing.PageCount">
+            <summary>
+            Gets or Sets PageCount
+            </summary>
+        </member>
         <member name="T:ININ.PureCloudApi.Model.Charge">
             <summary>
             
@@ -45517,6 +45832,11 @@
         <member name="P:ININ.PureCloudApi.Model.Charge.Quantity">
             <summary>
             Gets or Sets Quantity
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.Charge.IncludedUnits">
+            <summary>
+            Gets or Sets IncludedUnits
             </summary>
         </member>
         <member name="T:ININ.PureCloudApi.Model.Chat">
@@ -46103,6 +46423,88 @@
         <member name="P:ININ.PureCloudApi.Model.ClientSpreadsheetTransform.Sheets">
             <summary>
             Gets or Sets Sheets
+            </summary>
+        </member>
+        <member name="T:ININ.PureCloudApi.Model.ClientTextTableTransform">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.ClientTextTableTransform.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ININ.PureCloudApi.Model.ClientTextTableTransform"/> class.
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.ClientTextTableTransform.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.ClientTextTableTransform.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.ClientTextTableTransform.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.ClientTextTableTransform.Equals(ININ.PureCloudApi.Model.ClientTextTableTransform)">
+            <summary>
+            Returns true if ClientTextTableTransform instances are equal
+            </summary>
+            <param name="other">Instance of ClientTextTableTransform to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.ClientTextTableTransform.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ClientTextTableTransform.Id">
+            <summary>
+            Gets or Sets Id
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ClientTextTableTransform.EndpointId">
+            <summary>
+            Gets or Sets EndpointId
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ClientTextTableTransform.FilenameReplaces">
+            <summary>
+            Gets or Sets FilenameReplaces
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ClientTextTableTransform.Tags">
+            <summary>
+            Gets or Sets Tags
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ClientTextTableTransform.Name">
+            <summary>
+            Gets or Sets Name
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ClientTextTableTransform.Comments">
+            <summary>
+            Gets or Sets Comments
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ClientTextTableTransform.Delimiter">
+            <summary>
+            Gets or Sets Delimiter
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ClientTextTableTransform.Table">
+            <summary>
+            Gets or Sets Table
             </summary>
         </member>
         <member name="T:ININ.PureCloudApi.Model.ClientTransformModel">
@@ -47478,6 +47880,63 @@
             </summary>
             <value>The URI for this object</value>
         </member>
+        <member name="T:ININ.PureCloudApi.Model.ContentAttributeFilterItem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.ContentAttributeFilterItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ININ.PureCloudApi.Model.ContentAttributeFilterItem"/> class.
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.ContentAttributeFilterItem.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.ContentAttributeFilterItem.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.ContentAttributeFilterItem.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.ContentAttributeFilterItem.Equals(ININ.PureCloudApi.Model.ContentAttributeFilterItem)">
+            <summary>
+            Returns true if ContentAttributeFilterItem instances are equal
+            </summary>
+            <param name="other">Instance of ContentAttributeFilterItem to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.ContentAttributeFilterItem.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ContentAttributeFilterItem.Id">
+            <summary>
+            Gets or Sets Id
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ContentAttributeFilterItem.Operator">
+            <summary>
+            Gets or Sets Operator
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ContentAttributeFilterItem.Values">
+            <summary>
+            Gets or Sets Values
+            </summary>
+        </member>
         <member name="T:ININ.PureCloudApi.Model.ContentFacetFilterItem">
             <summary>
             
@@ -47610,6 +48069,11 @@
         <member name="P:ININ.PureCloudApi.Model.ContentQueryRequest.Filters">
             <summary>
             Gets or Sets Filters
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ContentQueryRequest.AttributeFilters">
+            <summary>
+            Gets or Sets AttributeFilters
             </summary>
         </member>
         <member name="T:ININ.PureCloudApi.Model.ContentSortItem">
@@ -47807,6 +48271,135 @@
             The URI for this object
             </summary>
             <value>The URI for this object</value>
+        </member>
+        <member name="T:ININ.PureCloudApi.Model.Control">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.Control.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ININ.PureCloudApi.Model.Control"/> class.
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.Control.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.Control.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.Control.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.Control.Equals(ININ.PureCloudApi.Model.Control)">
+            <summary>
+            Returns true if Control instances are equal
+            </summary>
+            <param name="other">Instance of Control to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.Control.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.Control.Id">
+            <summary>
+            Gets or Sets Id
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.Control.Label">
+            <summary>
+            Gets or Sets Label
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.Control.Options">
+            <summary>
+            Gets or Sets Options
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.Control.Required">
+            <summary>
+            Gets or Sets Required
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.Control.ReadOnly">
+            <summary>
+            Gets or Sets ReadOnly
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.Control.VariableBindingId">
+            <summary>
+            Gets or Sets VariableBindingId
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.Control.Type">
+            <summary>
+            Gets or Sets Type
+            </summary>
+        </member>
+        <member name="T:ININ.PureCloudApi.Model.ControlOptions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.ControlOptions.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ININ.PureCloudApi.Model.ControlOptions"/> class.
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.ControlOptions.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.ControlOptions.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.ControlOptions.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.ControlOptions.Equals(ININ.PureCloudApi.Model.ControlOptions)">
+            <summary>
+            Returns true if ControlOptions instances are equal
+            </summary>
+            <param name="other">Instance of ControlOptions to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.ControlOptions.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ControlOptions.Value">
+            <summary>
+            Gets or Sets Value
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.ControlOptions.Label">
+            <summary>
+            Gets or Sets Label
+            </summary>
         </member>
         <member name="T:ININ.PureCloudApi.Model.Conversation">
             <summary>
@@ -48848,7 +49441,7 @@
         </member>
         <member name="T:ININ.PureCloudApi.Model.DataItem">
             <summary>
-            Data elements associated with a history event
+            
             </summary>
         </member>
         <member name="M:ININ.PureCloudApi.Model.DataItem.#ctor">
@@ -48888,23 +49481,20 @@
             </summary>
             <returns>Hash code</returns>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.DataItem.ParameterName">
+        <member name="P:ININ.PureCloudApi.Model.DataItem.DataItemId">
             <summary>
-            The name of the data element associated with a history event.
+            Gets or Sets DataItemId
             </summary>
-            <value>The name of the data element associated with a history event.</value>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.DataItem.ParameterType">
+        <member name="P:ININ.PureCloudApi.Model.DataItem.Value">
             <summary>
-            The type of the data element associated with a history event.
+            Gets or Sets Value
             </summary>
-            <value>The type of the data element associated with a history event.</value>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.DataItem.ParameterValues">
+        <member name="P:ININ.PureCloudApi.Model.DataItem.Type">
             <summary>
-            The values of the data element associated with a history event.
+            Gets or Sets Type
             </summary>
-            <value>The values of the data element associated with a history event.</value>
         </member>
         <member name="T:ININ.PureCloudApi.Model.DataValueInfo">
             <summary>
@@ -50862,6 +51452,90 @@
             Gets or Sets End
             </summary>
         </member>
+        <member name="T:ININ.PureCloudApi.Model.Discount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.Discount.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ININ.PureCloudApi.Model.Discount"/> class.
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.Discount.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.Discount.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.Discount.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.Discount.Equals(ININ.PureCloudApi.Model.Discount)">
+            <summary>
+            Returns true if Discount instances are equal
+            </summary>
+            <param name="other">Instance of Discount to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.Discount.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.Discount.Id">
+            <summary>
+            The globally unique identifier for the object.
+            </summary>
+            <value>The globally unique identifier for the object.</value>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.Discount.Name">
+            <summary>
+            Gets or Sets Name
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.Discount.AnnualPrePay">
+            <summary>
+            Gets or Sets AnnualPrePay
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.Discount._Discount">
+            <summary>
+            Gets or Sets _Discount
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.Discount.Maximum">
+            <summary>
+            Gets or Sets Maximum
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.Discount.Minimum">
+            <summary>
+            Gets or Sets Minimum
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.Discount.ProductCategory">
+            <summary>
+            Gets or Sets ProductCategory
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.Discount.SelfUri">
+            <summary>
+            The URI for this object
+            </summary>
+            <value>The URI for this object</value>
+        </member>
         <member name="T:ININ.PureCloudApi.Model.DncList">
             <summary>
             
@@ -51253,6 +51927,11 @@
             Gets or Sets TagValues
             </summary>
         </member>
+        <member name="P:ININ.PureCloudApi.Model.Document.Attributes">
+            <summary>
+            Gets or Sets Attributes
+            </summary>
+        </member>
         <member name="P:ININ.PureCloudApi.Model.Document.Thumbnails">
             <summary>
             Gets or Sets Thumbnails
@@ -51304,6 +51983,58 @@
             The URI for this object
             </summary>
             <value>The URI for this object</value>
+        </member>
+        <member name="T:ININ.PureCloudApi.Model.DocumentAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.DocumentAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ININ.PureCloudApi.Model.DocumentAttribute"/> class.
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.DocumentAttribute.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.DocumentAttribute.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.DocumentAttribute.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.DocumentAttribute.Equals(ININ.PureCloudApi.Model.DocumentAttribute)">
+            <summary>
+            Returns true if DocumentAttribute instances are equal
+            </summary>
+            <param name="other">Instance of DocumentAttribute to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.DocumentAttribute.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DocumentAttribute.Attribute">
+            <summary>
+            Gets or Sets Attribute
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DocumentAttribute.Values">
+            <summary>
+            Gets or Sets Values
+            </summary>
         </member>
         <member name="T:ININ.PureCloudApi.Model.DocumentAudit">
             <summary>
@@ -51723,11 +52454,6 @@
             Gets or Sets Read
             </summary>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.DocumentUpdate.RemoveAttributes">
-            <summary>
-            Gets or Sets RemoveAttributes
-            </summary>
-        </member>
         <member name="P:ININ.PureCloudApi.Model.DocumentUpdate.AddTags">
             <summary>
             Gets or Sets AddTags
@@ -51746,6 +52472,16 @@
         <member name="P:ININ.PureCloudApi.Model.DocumentUpdate.RemoveTagIds">
             <summary>
             Gets or Sets RemoveTagIds
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DocumentUpdate.UpdateAttributes">
+            <summary>
+            Gets or Sets UpdateAttributes
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DocumentUpdate.RemoveAttributes">
+            <summary>
+            Gets or Sets RemoveAttributes
             </summary>
         </member>
         <member name="T:ININ.PureCloudApi.Model.DocumentUpload">
@@ -51808,11 +52544,6 @@
         <member name="P:ININ.PureCloudApi.Model.DocumentUpload.TagIds">
             <summary>
             Gets or Sets TagIds
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.DocumentUpload.Attributes">
-            <summary>
-            Gets or Sets Attributes
             </summary>
         </member>
         <member name="T:ININ.PureCloudApi.Model.DomainBillingPeriodEntityListing">
@@ -54227,6 +54958,190 @@
             Gets or Sets PageCount
             </summary>
         </member>
+        <member name="T:ININ.PureCloudApi.Model.DomainVoiceRateExtendedResponseItemEntityListing">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.DomainVoiceRateExtendedResponseItemEntityListing.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ININ.PureCloudApi.Model.DomainVoiceRateExtendedResponseItemEntityListing"/> class.
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.DomainVoiceRateExtendedResponseItemEntityListing.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.DomainVoiceRateExtendedResponseItemEntityListing.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.DomainVoiceRateExtendedResponseItemEntityListing.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.DomainVoiceRateExtendedResponseItemEntityListing.Equals(ININ.PureCloudApi.Model.DomainVoiceRateExtendedResponseItemEntityListing)">
+            <summary>
+            Returns true if DomainVoiceRateExtendedResponseItemEntityListing instances are equal
+            </summary>
+            <param name="other">Instance of DomainVoiceRateExtendedResponseItemEntityListing to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.DomainVoiceRateExtendedResponseItemEntityListing.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainVoiceRateExtendedResponseItemEntityListing.PageSize">
+            <summary>
+            Gets or Sets PageSize
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainVoiceRateExtendedResponseItemEntityListing.PageNumber">
+            <summary>
+            Gets or Sets PageNumber
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainVoiceRateExtendedResponseItemEntityListing.Total">
+            <summary>
+            Gets or Sets Total
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainVoiceRateExtendedResponseItemEntityListing.Entities">
+            <summary>
+            Gets or Sets Entities
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainVoiceRateExtendedResponseItemEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainVoiceRateExtendedResponseItemEntityListing.FirstUri">
+            <summary>
+            Gets or Sets FirstUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainVoiceRateExtendedResponseItemEntityListing.PreviousUri">
+            <summary>
+            Gets or Sets PreviousUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainVoiceRateExtendedResponseItemEntityListing.NextUri">
+            <summary>
+            Gets or Sets NextUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainVoiceRateExtendedResponseItemEntityListing.LastUri">
+            <summary>
+            Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainVoiceRateExtendedResponseItemEntityListing.PageCount">
+            <summary>
+            Gets or Sets PageCount
+            </summary>
+        </member>
+        <member name="T:ININ.PureCloudApi.Model.DomainVoiceRateInternationalResponseItemEntityListing">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.DomainVoiceRateInternationalResponseItemEntityListing.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ININ.PureCloudApi.Model.DomainVoiceRateInternationalResponseItemEntityListing"/> class.
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.DomainVoiceRateInternationalResponseItemEntityListing.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.DomainVoiceRateInternationalResponseItemEntityListing.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.DomainVoiceRateInternationalResponseItemEntityListing.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.DomainVoiceRateInternationalResponseItemEntityListing.Equals(ININ.PureCloudApi.Model.DomainVoiceRateInternationalResponseItemEntityListing)">
+            <summary>
+            Returns true if DomainVoiceRateInternationalResponseItemEntityListing instances are equal
+            </summary>
+            <param name="other">Instance of DomainVoiceRateInternationalResponseItemEntityListing to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.DomainVoiceRateInternationalResponseItemEntityListing.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainVoiceRateInternationalResponseItemEntityListing.PageSize">
+            <summary>
+            Gets or Sets PageSize
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainVoiceRateInternationalResponseItemEntityListing.PageNumber">
+            <summary>
+            Gets or Sets PageNumber
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainVoiceRateInternationalResponseItemEntityListing.Total">
+            <summary>
+            Gets or Sets Total
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainVoiceRateInternationalResponseItemEntityListing.Entities">
+            <summary>
+            Gets or Sets Entities
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainVoiceRateInternationalResponseItemEntityListing.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainVoiceRateInternationalResponseItemEntityListing.FirstUri">
+            <summary>
+            Gets or Sets FirstUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainVoiceRateInternationalResponseItemEntityListing.PreviousUri">
+            <summary>
+            Gets or Sets PreviousUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainVoiceRateInternationalResponseItemEntityListing.NextUri">
+            <summary>
+            Gets or Sets NextUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainVoiceRateInternationalResponseItemEntityListing.LastUri">
+            <summary>
+            Gets or Sets LastUri
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.DomainVoiceRateInternationalResponseItemEntityListing.PageCount">
+            <summary>
+            Gets or Sets PageCount
+            </summary>
+        </member>
         <member name="T:ININ.PureCloudApi.Model.DomainVoiceRateResponseItemEntityListing">
             <summary>
             
@@ -55294,6 +56209,313 @@
             Gets or Sets PageCount
             </summary>
         </member>
+        <member name="T:ININ.PureCloudApi.Model.EdgeLogsJob">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJob.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ININ.PureCloudApi.Model.EdgeLogsJob"/> class.
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJob.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJob.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJob.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJob.Equals(ININ.PureCloudApi.Model.EdgeLogsJob)">
+            <summary>
+            Returns true if EdgeLogsJob instances are equal
+            </summary>
+            <param name="other">Instance of EdgeLogsJob to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJob.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.EdgeLogsJob.Id">
+            <summary>
+            The globally unique identifier for the object.
+            </summary>
+            <value>The globally unique identifier for the object.</value>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.EdgeLogsJob.Name">
+            <summary>
+            Gets or Sets Name
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.EdgeLogsJob.Files">
+            <summary>
+            The files available to upload.
+            </summary>
+            <value>The files available to upload.</value>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.EdgeLogsJob.SelfUri">
+            <summary>
+            The URI for this object
+            </summary>
+            <value>The URI for this object</value>
+        </member>
+        <member name="T:ININ.PureCloudApi.Model.EdgeLogsJobFile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJobFile.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ININ.PureCloudApi.Model.EdgeLogsJobFile"/> class.
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJobFile.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJobFile.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJobFile.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJobFile.Equals(ININ.PureCloudApi.Model.EdgeLogsJobFile)">
+            <summary>
+            Returns true if EdgeLogsJobFile instances are equal
+            </summary>
+            <param name="other">Instance of EdgeLogsJobFile to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJobFile.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.EdgeLogsJobFile.Id">
+            <summary>
+            Gets or Sets Id
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.EdgeLogsJobFile.TimeCreated">
+            <summary>
+            Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+            </summary>
+            <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.EdgeLogsJobFile.TimeModified">
+            <summary>
+            Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+            </summary>
+            <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.EdgeLogsJobFile.SizeBytes">
+            <summary>
+            Gets or Sets SizeBytes
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.EdgeLogsJobFile.DownloadUrl">
+            <summary>
+            Gets or Sets DownloadUrl
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.EdgeLogsJobFile.UploadStatus">
+            <summary>
+            Gets or Sets UploadStatus
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.EdgeLogsJobFile.EdgePath">
+            <summary>
+            Gets or Sets EdgePath
+            </summary>
+        </member>
+        <member name="T:ININ.PureCloudApi.Model.EdgeLogsJobRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJobRequest.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ININ.PureCloudApi.Model.EdgeLogsJobRequest"/> class.
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJobRequest.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJobRequest.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJobRequest.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJobRequest.Equals(ININ.PureCloudApi.Model.EdgeLogsJobRequest)">
+            <summary>
+            Returns true if EdgeLogsJobRequest instances are equal
+            </summary>
+            <param name="other">Instance of EdgeLogsJobRequest to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJobRequest.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.EdgeLogsJobRequest.Path">
+            <summary>
+            Gets or Sets Path
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.EdgeLogsJobRequest.Query">
+            <summary>
+            Gets or Sets Query
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.EdgeLogsJobRequest.Recurse">
+            <summary>
+            Gets or Sets Recurse
+            </summary>
+        </member>
+        <member name="T:ININ.PureCloudApi.Model.EdgeLogsJobResponse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJobResponse.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ININ.PureCloudApi.Model.EdgeLogsJobResponse"/> class.
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJobResponse.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJobResponse.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJobResponse.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJobResponse.Equals(ININ.PureCloudApi.Model.EdgeLogsJobResponse)">
+            <summary>
+            Returns true if EdgeLogsJobResponse instances are equal
+            </summary>
+            <param name="other">Instance of EdgeLogsJobResponse to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJobResponse.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.EdgeLogsJobResponse.Id">
+            <summary>
+            The created job id.
+            </summary>
+            <value>The created job id.</value>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.EdgeLogsJobResponse.Name">
+            <summary>
+            Gets or Sets Name
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.EdgeLogsJobResponse.SelfUri">
+            <summary>
+            The URI for this object
+            </summary>
+            <value>The URI for this object</value>
+        </member>
+        <member name="T:ININ.PureCloudApi.Model.EdgeLogsJobUploadRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJobUploadRequest.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ININ.PureCloudApi.Model.EdgeLogsJobUploadRequest"/> class.
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJobUploadRequest.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJobUploadRequest.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJobUploadRequest.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJobUploadRequest.Equals(ININ.PureCloudApi.Model.EdgeLogsJobUploadRequest)">
+            <summary>
+            Returns true if EdgeLogsJobUploadRequest instances are equal
+            </summary>
+            <param name="other">Instance of EdgeLogsJobUploadRequest to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.EdgeLogsJobUploadRequest.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.EdgeLogsJobUploadRequest.FileIds">
+            <summary>
+            Gets or Sets FileIds
+            </summary>
+        </member>
         <member name="T:ININ.PureCloudApi.Model.EdgeVersionInformation">
             <summary>
             
@@ -56326,9 +57548,9 @@
             </summary>
             <returns>Hash code</returns>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.Entity.Kind">
+        <member name="P:ININ.PureCloudApi.Model.Entity.Type">
             <summary>
-            Gets or Sets Kind
+            Gets or Sets Type
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.Entity.Id">
@@ -56339,6 +57561,11 @@
         <member name="P:ININ.PureCloudApi.Model.Entity.Name">
             <summary>
             Gets or Sets Name
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.Entity.SelfUri">
+            <summary>
+            Gets or Sets SelfUri
             </summary>
         </member>
         <member name="T:ININ.PureCloudApi.Model.Entry">
@@ -59862,19 +61089,14 @@
             </summary>
             <returns>Hash code</returns>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.FlowBodyFormat.Name">
+        <member name="P:ININ.PureCloudApi.Model.FlowBodyFormat.SchemaUri">
             <summary>
-            Gets or Sets Name
+            Gets or Sets SchemaUri
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.FlowBodyFormat.Description">
             <summary>
             Gets or Sets Description
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.FlowBodyFormat.SchemaUri">
-            <summary>
-            Gets or Sets SchemaUri
             </summary>
         </member>
         <member name="T:ININ.PureCloudApi.Model.FlowConfigId">
@@ -61150,12 +62372,6 @@
             </summary>
             <returns>Hash code</returns>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.FlowTerminateRequest.Force">
-            <summary>
-            force the termination of a flow.
-            </summary>
-            <value>force the termination of a flow.</value>
-        </member>
         <member name="P:ININ.PureCloudApi.Model.FlowTerminateRequest.Reason">
             <summary>
             Reason for termination.
@@ -61586,6 +62802,53 @@
         <member name="P:ININ.PureCloudApi.Model.FlowVersionEntityListing.PageCount">
             <summary>
             Gets or Sets PageCount
+            </summary>
+        </member>
+        <member name="T:ININ.PureCloudApi.Model.Form">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.Form.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ININ.PureCloudApi.Model.Form"/> class.
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.Form.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.Form.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.Form.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.Form.Equals(ININ.PureCloudApi.Model.Form)">
+            <summary>
+            Returns true if Form instances are equal
+            </summary>
+            <param name="other">Instance of Form to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.Form.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.Form.Controls">
+            <summary>
+            Gets or Sets Controls
             </summary>
         </member>
         <member name="T:ININ.PureCloudApi.Model.Gateway">
@@ -63603,8 +64866,9 @@
         </member>
         <member name="P:ININ.PureCloudApi.Model.KeyRotationSchedule.Period">
             <summary>
-            Gets or Sets Period
+            Value to set schedule to
             </summary>
+            <value>Value to set schedule to</value>
         </member>
         <member name="P:ININ.PureCloudApi.Model.KeyRotationSchedule.SelfUri">
             <summary>
@@ -71501,6 +72765,11 @@
             Gets or Sets Filters
             </summary>
         </member>
+        <member name="P:ININ.PureCloudApi.Model.QueryRequest.AttributeFilters">
+            <summary>
+            Gets or Sets AttributeFilters
+            </summary>
+        </member>
         <member name="T:ININ.PureCloudApi.Model.QueryResult">
             <summary>
             
@@ -72619,6 +73888,11 @@
         <member name="P:ININ.PureCloudApi.Model.Quote.SalesPartnerCode">
             <summary>
             Gets or Sets SalesPartnerCode
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.Quote.IsAnnualPrepay">
+            <summary>
+            Gets or Sets IsAnnualPrepay
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.Quote.SelfUri">
@@ -78585,6 +79859,11 @@
             Gets or Sets SocialMediaHub
             </summary>
         </member>
+        <member name="P:ININ.PureCloudApi.Model.SocialExpression.SocialUserName">
+            <summary>
+            Gets or Sets SocialUserName
+            </summary>
+        </member>
         <member name="P:ININ.PureCloudApi.Model.SocialExpression.PreviewText">
             <summary>
             Gets or Sets PreviewText
@@ -81087,98 +82366,6 @@
             </summary>
         </member>
         <member name="P:ININ.PureCloudApi.Model.TimeZoneEntityListing.PageCount">
-            <summary>
-            Gets or Sets PageCount
-            </summary>
-        </member>
-        <member name="T:ININ.PureCloudApi.Model.TopicEntityListing">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.TopicEntityListing.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:ININ.PureCloudApi.Model.TopicEntityListing"/> class.
-            </summary>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.TopicEntityListing.ToString">
-            <summary>
-            Returns the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.TopicEntityListing.ToJson">
-            <summary>
-            Returns the JSON string presentation of the object
-            </summary>
-            <returns>JSON string presentation of the object</returns>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.TopicEntityListing.Equals(System.Object)">
-            <summary>
-            Returns true if objects are equal
-            </summary>
-            <param name="obj">Object to be compared</param>
-            <returns>Boolean</returns>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.TopicEntityListing.Equals(ININ.PureCloudApi.Model.TopicEntityListing)">
-            <summary>
-            Returns true if TopicEntityListing instances are equal
-            </summary>
-            <param name="other">Instance of TopicEntityListing to be compared</param>
-            <returns>Boolean</returns>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.TopicEntityListing.GetHashCode">
-            <summary>
-            Gets the hash code
-            </summary>
-            <returns>Hash code</returns>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.TopicEntityListing.PageSize">
-            <summary>
-            Gets or Sets PageSize
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.TopicEntityListing.PageNumber">
-            <summary>
-            Gets or Sets PageNumber
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.TopicEntityListing.Total">
-            <summary>
-            Gets or Sets Total
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.TopicEntityListing.Entities">
-            <summary>
-            Gets or Sets Entities
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.TopicEntityListing.SelfUri">
-            <summary>
-            Gets or Sets SelfUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.TopicEntityListing.FirstUri">
-            <summary>
-            Gets or Sets FirstUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.TopicEntityListing.PreviousUri">
-            <summary>
-            Gets or Sets PreviousUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.TopicEntityListing.NextUri">
-            <summary>
-            Gets or Sets NextUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.TopicEntityListing.LastUri">
-            <summary>
-            Gets or Sets LastUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.TopicEntityListing.PageCount">
             <summary>
             Gets or Sets PageCount
             </summary>
@@ -84380,93 +85567,6 @@
             Gets or Sets PageCount
             </summary>
         </member>
-        <member name="T:ININ.PureCloudApi.Model.UserStationResource">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.UserStationResource.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:ININ.PureCloudApi.Model.UserStationResource"/> class.
-            </summary>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.UserStationResource.ToString">
-            <summary>
-            Returns the string presentation of the object
-            </summary>
-            <returns>String presentation of the object</returns>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.UserStationResource.ToJson">
-            <summary>
-            Returns the JSON string presentation of the object
-            </summary>
-            <returns>JSON string presentation of the object</returns>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.UserStationResource.Equals(System.Object)">
-            <summary>
-            Returns true if objects are equal
-            </summary>
-            <param name="obj">Object to be compared</param>
-            <returns>Boolean</returns>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.UserStationResource.Equals(ININ.PureCloudApi.Model.UserStationResource)">
-            <summary>
-            Returns true if UserStationResource instances are equal
-            </summary>
-            <param name="other">Instance of UserStationResource to be compared</param>
-            <returns>Boolean</returns>
-        </member>
-        <member name="M:ININ.PureCloudApi.Model.UserStationResource.GetHashCode">
-            <summary>
-            Gets the hash code
-            </summary>
-            <returns>Hash code</returns>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.UserStationResource.UserId">
-            <summary>
-            Gets or Sets UserId
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.UserStationResource.StationId">
-            <summary>
-            Gets or Sets StationId
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.UserStationResource.StationName">
-            <summary>
-            Gets or Sets StationName
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.UserStationResource.LocationId">
-            <summary>
-            Gets or Sets LocationId
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.UserStationResource.Provider">
-            <summary>
-            Gets or Sets Provider
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.UserStationResource.AddressGroup">
-            <summary>
-            Gets or Sets AddressGroup
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.UserStationResource.UserUri">
-            <summary>
-            Gets or Sets UserUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.UserStationResource.StationUri">
-            <summary>
-            Gets or Sets StationUri
-            </summary>
-        </member>
-        <member name="P:ININ.PureCloudApi.Model.UserStationResource.DefaultStation">
-            <summary>
-            Gets or Sets DefaultStation
-            </summary>
-        </member>
         <member name="T:ININ.PureCloudApi.Model.UserStatus">
             <summary>
             
@@ -84781,6 +85881,63 @@
         <member name="P:ININ.PureCloudApi.Model.Value.DataItems">
             <summary>
             Gets or Sets DataItems
+            </summary>
+        </member>
+        <member name="T:ININ.PureCloudApi.Model.VendorConnectionRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.VendorConnectionRequest.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ININ.PureCloudApi.Model.VendorConnectionRequest"/> class.
+            </summary>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.VendorConnectionRequest.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.VendorConnectionRequest.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.VendorConnectionRequest.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="obj">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.VendorConnectionRequest.Equals(ININ.PureCloudApi.Model.VendorConnectionRequest)">
+            <summary>
+            Returns true if VendorConnectionRequest instances are equal
+            </summary>
+            <param name="other">Instance of VendorConnectionRequest to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:ININ.PureCloudApi.Model.VendorConnectionRequest.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.VendorConnectionRequest.Publisher">
+            <summary>
+            Gets or Sets Publisher
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.VendorConnectionRequest.Type">
+            <summary>
+            Gets or Sets Type
+            </summary>
+        </member>
+        <member name="P:ININ.PureCloudApi.Model.VendorConnectionRequest.Name">
+            <summary>
+            Gets or Sets Name
             </summary>
         </member>
         <member name="T:ININ.PureCloudApi.Model.Video">
@@ -86703,11 +87860,11 @@
             </summary>
             <value>The commands that can be performed on this work item</value>
         </member>
-        <member name="P:ININ.PureCloudApi.Model.WorkItemDefinition.DataElements">
+        <member name="P:ININ.PureCloudApi.Model.WorkItemDefinition.Form">
             <summary>
-            The simple work item form data elements to present for this work item
+            The simple work item form containging the control to present for this work item
             </summary>
-            <value>The simple work item form data elements to present for this work item</value>
+            <value>The simple work item form containging the control to present for this work item</value>
         </member>
         <member name="T:ININ.PureCloudApi.Model.WorkItemDetails">
             <summary>

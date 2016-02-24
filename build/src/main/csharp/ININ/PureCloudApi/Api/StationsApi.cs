@@ -75,8 +75,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <param name="id">Station ID</param>
-        /// <returns>UserStationResource</returns>
-        UserStationResource Get (string id);
+        /// <returns>Station</returns>
+        Station Get (string id);
   
         /// <summary>
         /// Get station.
@@ -85,8 +85,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <param name="id">Station ID</param>
-        /// <returns>ApiResponse of UserStationResource</returns>
-        ApiResponse<UserStationResource> GetWithHttpInfo (string id);
+        /// <returns>ApiResponse of Station</returns>
+        ApiResponse<Station> GetWithHttpInfo (string id);
 
         /// <summary>
         /// Get station.
@@ -95,8 +95,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <param name="id">Station ID</param>
-        /// <returns>Task of UserStationResource</returns>
-        System.Threading.Tasks.Task<UserStationResource> GetAsync (string id);
+        /// <returns>Task of Station</returns>
+        System.Threading.Tasks.Task<Station> GetAsync (string id);
 
         /// <summary>
         /// Get station.
@@ -105,8 +105,8 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <param name="id">Station ID</param>
-        /// <returns>Task of ApiResponse (UserStationResource)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserStationResource>> GetAsyncWithHttpInfo (string id);
+        /// <returns>Task of ApiResponse (Station)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Station>> GetAsyncWithHttpInfo (string id);
         
         /// <summary>
         /// Unassigns the user assigned to this station
@@ -410,10 +410,10 @@ namespace ININ.PureCloudApi.Api
         /// Get station. 
         /// </summary>
         /// <param name="id">Station ID</param> 
-        /// <returns>UserStationResource</returns>
-        public UserStationResource Get (string id)
+        /// <returns>Station</returns>
+        public Station Get (string id)
         {
-             ApiResponse<UserStationResource> response = GetWithHttpInfo(id);
+             ApiResponse<Station> response = GetWithHttpInfo(id);
              return response.Data;
         }
 
@@ -421,8 +421,8 @@ namespace ININ.PureCloudApi.Api
         /// Get station. 
         /// </summary>
         /// <param name="id">Station ID</param> 
-        /// <returns>ApiResponse of UserStationResource</returns>
-        public ApiResponse< UserStationResource > GetWithHttpInfo (string id)
+        /// <returns>ApiResponse of Station</returns>
+        public ApiResponse< Station > GetWithHttpInfo (string id)
         {
             
             // verify the required parameter 'id' is set
@@ -484,9 +484,9 @@ namespace ININ.PureCloudApi.Api
             else if (statusCode == 0)
                 throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
     
-            return new ApiResponse<UserStationResource>(statusCode,
+            return new ApiResponse<Station>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (UserStationResource) Configuration.ApiClient.Deserialize(response, typeof(UserStationResource)));
+                (Station) Configuration.ApiClient.Deserialize(response, typeof(Station)));
             
         }
     
@@ -494,10 +494,10 @@ namespace ININ.PureCloudApi.Api
         /// Get station. 
         /// </summary>
         /// <param name="id">Station ID</param>
-        /// <returns>Task of UserStationResource</returns>
-        public async System.Threading.Tasks.Task<UserStationResource> GetAsync (string id)
+        /// <returns>Task of Station</returns>
+        public async System.Threading.Tasks.Task<Station> GetAsync (string id)
         {
-             ApiResponse<UserStationResource> response = await GetAsyncWithHttpInfo(id);
+             ApiResponse<Station> response = await GetAsyncWithHttpInfo(id);
              return response.Data;
 
         }
@@ -506,8 +506,8 @@ namespace ININ.PureCloudApi.Api
         /// Get station. 
         /// </summary>
         /// <param name="id">Station ID</param>
-        /// <returns>Task of ApiResponse (UserStationResource)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserStationResource>> GetAsyncWithHttpInfo (string id)
+        /// <returns>Task of ApiResponse (Station)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Station>> GetAsyncWithHttpInfo (string id)
         {
             // verify the required parameter 'id' is set
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Get");
@@ -568,9 +568,9 @@ namespace ININ.PureCloudApi.Api
             else if (statusCode == 0)
                 throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
 
-            return new ApiResponse<UserStationResource>(statusCode,
+            return new ApiResponse<Station>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (UserStationResource) Configuration.ApiClient.Deserialize(response, typeof(UserStationResource)));
+                (Station) Configuration.ApiClient.Deserialize(response, typeof(Station)));
             
         }
         

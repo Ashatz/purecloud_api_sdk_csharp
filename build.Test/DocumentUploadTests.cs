@@ -80,15 +80,6 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'TagIds' 
         }
         
-        /// <summary>
-        /// Test the property 'Attributes' 
-        /// </summary>
-        [Test]
-        public void AttributesTest()
-        {
-            // TODO: unit test for the property 'Attributes' 
-        }
-        
 
     }
 

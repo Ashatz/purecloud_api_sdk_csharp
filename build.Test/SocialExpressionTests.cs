@@ -81,6 +81,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test the property 'SocialUserName' 
+        /// </summary>
+        [Test]
+        public void SocialUserNameTest()
+        {
+            // TODO: unit test for the property 'SocialUserName' 
+        }
+        
+        /// <summary>
         /// Test the property 'PreviewText' 
         /// </summary>
         [Test]

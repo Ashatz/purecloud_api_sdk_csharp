@@ -225,6 +225,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test the property 'Attributes' 
+        /// </summary>
+        [Test]
+        public void AttributesTest()
+        {
+            // TODO: unit test for the property 'Attributes' 
+        }
+        
+        /// <summary>
         /// Test the property 'Thumbnails' 
         /// </summary>
         [Test]

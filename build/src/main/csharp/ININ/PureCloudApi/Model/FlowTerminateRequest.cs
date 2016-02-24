@@ -22,18 +22,9 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         public FlowTerminateRequest()
         {
-            this.Force = false;
             
         }
 
-        
-        /// <summary>
-        /// force the termination of a flow.
-        /// </summary>
-        /// <value>force the termination of a flow.</value>
-        [DataMember(Name="force", EmitDefaultValue=false)]
-        public bool? Force { get; set; }
-  
         
         /// <summary>
         /// Reason for termination.
@@ -52,7 +43,6 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FlowTerminateRequest {\n");
-            sb.Append("  Force: ").Append(Force).Append("\n");
             sb.Append("  Reason: ").Append(Reason).Append("\n");
             
             sb.Append("}\n");
@@ -92,11 +82,6 @@ namespace ININ.PureCloudApi.Model
 
             return 
                 (
-                    this.Force == other.Force ||
-                    this.Force != null &&
-                    this.Force.Equals(other.Force)
-                ) && 
-                (
                     this.Reason == other.Reason ||
                     this.Reason != null &&
                     this.Reason.Equals(other.Reason)
@@ -114,9 +99,6 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
-                if (this.Force != null)
-                    hash = hash * 59 + this.Force.GetHashCode();
                 
                 if (this.Reason != null)
                     hash = hash * 59 + this.Reason.GetHashCode();

@@ -409,6 +409,49 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test PostEdgeLogsJobs
+        /// </summary>
+        [Test]
+        public void PostEdgeLogsJobsTest()
+        {
+            // TODO: add unit test for the method 'PostEdgeLogsJobs'
+            string edgeId = null; // TODO: replace null with proper value
+            EdgeLogsJobRequest body = null; // TODO: replace null with proper value
+            
+            var response = instance.PostEdgeLogsJobs(edgeId, body);
+            Assert.IsInstanceOf<EdgeLogsJobResponse> (response, "response is EdgeLogsJobResponse"); 
+        }
+        
+        /// <summary>
+        /// Test GetEdgeLogsJob
+        /// </summary>
+        [Test]
+        public void GetEdgeLogsJobTest()
+        {
+            // TODO: add unit test for the method 'GetEdgeLogsJob'
+            string edgeId = null; // TODO: replace null with proper value
+            string jobId = null; // TODO: replace null with proper value
+            
+            instance.GetEdgeLogsJob(edgeId, jobId);
+             
+        }
+        
+        /// <summary>
+        /// Test PostEdgeLogsJobUpload
+        /// </summary>
+        [Test]
+        public void PostEdgeLogsJobUploadTest()
+        {
+            // TODO: add unit test for the method 'PostEdgeLogsJobUpload'
+            string edgeId = null; // TODO: replace null with proper value
+            string jobId = null; // TODO: replace null with proper value
+            EdgeLogsJobUploadRequest body = null; // TODO: replace null with proper value
+            
+            instance.PostEdgeLogsJobUpload(edgeId, jobId, body);
+             
+        }
+        
+        /// <summary>
         /// Test GetEdgePhysicalinterfaces
         /// </summary>
         [Test]
@@ -471,8 +514,8 @@ namespace ININ.PureCloudApi.Test
             string edgeId = null; // TODO: replace null with proper value
             DomainEdgeSoftwareUpdateDto body = null; // TODO: replace null with proper value
             
-            instance.PostEdgeSoftwareupdate(edgeId, body);
-             
+            var response = instance.PostEdgeSoftwareupdate(edgeId, body);
+            Assert.IsInstanceOf<DomainEdgeSoftwareUpdateDto> (response, "response is DomainEdgeSoftwareUpdateDto"); 
         }
         
         /// <summary>

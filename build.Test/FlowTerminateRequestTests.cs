@@ -45,15 +45,6 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test the property 'Force' 
-        /// </summary>
-        [Test]
-        public void ForceTest()
-        {
-            // TODO: unit test for the property 'Force' 
-        }
-        
-        /// <summary>
         /// Test the property 'Reason' 
         /// </summary>
         [Test]

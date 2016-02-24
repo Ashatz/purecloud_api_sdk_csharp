@@ -173,14 +173,13 @@ namespace ININ.PureCloudApi.Test
         public void GetQueuesTest()
         {
             // TODO: add unit test for the method 'GetQueues'
-            string queueId = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
             string name = null; // TODO: replace null with proper value
             bool? active = null; // TODO: replace null with proper value
             
-            var response = instance.GetQueues(queueId, pageSize, pageNumber, sortBy, name, active);
+            var response = instance.GetQueues(pageSize, pageNumber, sortBy, name, active);
             Assert.IsInstanceOf<QueueEntityListing> (response, "response is QueueEntityListing"); 
         }
         
@@ -191,10 +190,9 @@ namespace ININ.PureCloudApi.Test
         public void PostQueuesTest()
         {
             // TODO: add unit test for the method 'PostQueues'
-            string queueId = null; // TODO: replace null with proper value
             Queue body = null; // TODO: replace null with proper value
             
-            var response = instance.PostQueues(queueId, body);
+            var response = instance.PostQueues(body);
             Assert.IsInstanceOf<Queue> (response, "response is Queue"); 
         }
         

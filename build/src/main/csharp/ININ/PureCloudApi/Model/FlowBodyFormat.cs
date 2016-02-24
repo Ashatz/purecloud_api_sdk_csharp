@@ -27,10 +27,10 @@ namespace ININ.PureCloudApi.Model
 
         
         /// <summary>
-        /// Gets or Sets Name
+        /// Gets or Sets SchemaUri
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
+        [DataMember(Name="schemaUri", EmitDefaultValue=false)]
+        public string SchemaUri { get; set; }
   
         
         /// <summary>
@@ -38,13 +38,6 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets SchemaUri
-        /// </summary>
-        [DataMember(Name="schemaUri", EmitDefaultValue=false)]
-        public string SchemaUri { get; set; }
   
         
   
@@ -56,9 +49,8 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FlowBodyFormat {\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  SchemaUri: ").Append(SchemaUri).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -97,19 +89,14 @@ namespace ININ.PureCloudApi.Model
 
             return 
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.SchemaUri == other.SchemaUri ||
+                    this.SchemaUri != null &&
+                    this.SchemaUri.Equals(other.SchemaUri)
                 ) && 
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
-                (
-                    this.SchemaUri == other.SchemaUri ||
-                    this.SchemaUri != null &&
-                    this.SchemaUri.Equals(other.SchemaUri)
                 );
         }
 
@@ -125,14 +112,11 @@ namespace ININ.PureCloudApi.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
+                if (this.SchemaUri != null)
+                    hash = hash * 59 + this.SchemaUri.GetHashCode();
                 
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
-                if (this.SchemaUri != null)
-                    hash = hash * 59 + this.SchemaUri.GetHashCode();
                 
                 return hash;
             }

@@ -75,6 +75,13 @@ namespace ININ.PureCloudApi.Model
         public int? Quantity { get; set; }
   
         
+        /// <summary>
+        /// Gets or Sets IncludedUnits
+        /// </summary>
+        [DataMember(Name="includedUnits", EmitDefaultValue=false)]
+        public int? IncludedUnits { get; set; }
+  
+        
   
         /// <summary>
         /// Returns the string presentation of the object
@@ -91,6 +98,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  UnitOfMeasure: ").Append(UnitOfMeasure).Append("\n");
             sb.Append("  BillingPeriod: ").Append(BillingPeriod).Append("\n");
             sb.Append("  Quantity: ").Append(Quantity).Append("\n");
+            sb.Append("  IncludedUnits: ").Append(IncludedUnits).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -162,6 +170,11 @@ namespace ININ.PureCloudApi.Model
                     this.Quantity == other.Quantity ||
                     this.Quantity != null &&
                     this.Quantity.Equals(other.Quantity)
+                ) && 
+                (
+                    this.IncludedUnits == other.IncludedUnits ||
+                    this.IncludedUnits != null &&
+                    this.IncludedUnits.Equals(other.IncludedUnits)
                 );
         }
 
@@ -197,6 +210,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.Quantity != null)
                     hash = hash * 59 + this.Quantity.GetHashCode();
+                
+                if (this.IncludedUnits != null)
+                    hash = hash * 59 + this.IncludedUnits.GetHashCode();
                 
                 return hash;
             }
