@@ -752,6 +752,106 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetMediaretentionpolicies
+        /// </summary>
+        [Test]
+        public void GetMediaretentionpoliciesTest()
+        {
+            // TODO: add unit test for the method 'GetMediaretentionpolicies'
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            string sortBy = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
+            string name = null; // TODO: replace null with proper value
+            bool? enabled = null; // TODO: replace null with proper value
+            bool? summary = null; // TODO: replace null with proper value
+            bool? hasErrors = null; // TODO: replace null with proper value
+            
+            var response = instance.GetMediaretentionpolicies(pageSize, pageNumber, sortBy, expand, name, enabled, summary, hasErrors);
+            Assert.IsInstanceOf<PolicyEntityListing> (response, "response is PolicyEntityListing"); 
+        }
+        
+        /// <summary>
+        /// Test PostMediaretentionpolicies
+        /// </summary>
+        [Test]
+        public void PostMediaretentionpoliciesTest()
+        {
+            // TODO: add unit test for the method 'PostMediaretentionpolicies'
+            Policy body = null; // TODO: replace null with proper value
+            
+            var response = instance.PostMediaretentionpolicies(body);
+            Assert.IsInstanceOf<Policy> (response, "response is Policy"); 
+        }
+        
+        /// <summary>
+        /// Test DeleteMediaretentionpolicies
+        /// </summary>
+        [Test]
+        public void DeleteMediaretentionpoliciesTest()
+        {
+            // TODO: add unit test for the method 'DeleteMediaretentionpolicies'
+            string ids = null; // TODO: replace null with proper value
+            
+            var response = instance.DeleteMediaretentionpolicies(ids);
+            Assert.IsInstanceOf<string> (response, "response is string"); 
+        }
+        
+        /// <summary>
+        /// Test GetMediaretentionpolicie
+        /// </summary>
+        [Test]
+        public void GetMediaretentionpolicieTest()
+        {
+            // TODO: add unit test for the method 'GetMediaretentionpolicie'
+            string policyId = null; // TODO: replace null with proper value
+            
+            var response = instance.GetMediaretentionpolicie(policyId);
+            Assert.IsInstanceOf<Policy> (response, "response is Policy"); 
+        }
+        
+        /// <summary>
+        /// Test PutMediaretentionpolicie
+        /// </summary>
+        [Test]
+        public void PutMediaretentionpolicieTest()
+        {
+            // TODO: add unit test for the method 'PutMediaretentionpolicie'
+            string policyId = null; // TODO: replace null with proper value
+            Policy body = null; // TODO: replace null with proper value
+            
+            var response = instance.PutMediaretentionpolicie(policyId, body);
+            Assert.IsInstanceOf<Policy> (response, "response is Policy"); 
+        }
+        
+        /// <summary>
+        /// Test DeleteMediaretentionpolicie
+        /// </summary>
+        [Test]
+        public void DeleteMediaretentionpolicieTest()
+        {
+            // TODO: add unit test for the method 'DeleteMediaretentionpolicie'
+            string policyId = null; // TODO: replace null with proper value
+            
+            var response = instance.DeleteMediaretentionpolicie(policyId);
+            Assert.IsInstanceOf<string> (response, "response is string"); 
+        }
+        
+        /// <summary>
+        /// Test PatchMediaretentionpolicie
+        /// </summary>
+        [Test]
+        public void PatchMediaretentionpolicieTest()
+        {
+            // TODO: add unit test for the method 'PatchMediaretentionpolicie'
+            string policyId = null; // TODO: replace null with proper value
+            Policy body = null; // TODO: replace null with proper value
+            
+            var response = instance.PatchMediaretentionpolicie(policyId, body);
+            Assert.IsInstanceOf<Policy> (response, "response is Policy"); 
+        }
+        
+        /// <summary>
         /// Test GetOrganization
         /// </summary>
         [Test]

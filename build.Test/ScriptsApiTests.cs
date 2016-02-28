@@ -197,7 +197,7 @@ namespace ININ.PureCloudApi.Test
         public void PostScriptsTest()
         {
             // TODO: add unit test for the method 'PostScripts'
-            Body2 body = null; // TODO: replace null with proper value
+            Body3 body = null; // TODO: replace null with proper value
             
             var response = instance.PostScripts(body);
             Assert.IsInstanceOf<Script> (response, "response is Script"); 

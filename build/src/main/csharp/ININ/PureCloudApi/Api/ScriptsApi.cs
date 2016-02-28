@@ -480,7 +480,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Script</returns>
-        Script PostScripts (Body2 body = null);
+        Script PostScripts (Body3 body = null);
   
         /// <summary>
         /// Create a script.
@@ -490,7 +490,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Script</returns>
-        ApiResponse<Script> PostScriptsWithHttpInfo (Body2 body = null);
+        ApiResponse<Script> PostScriptsWithHttpInfo (Body3 body = null);
 
         /// <summary>
         /// Create a script.
@@ -500,7 +500,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of Script</returns>
-        System.Threading.Tasks.Task<Script> PostScriptsAsync (Body2 body = null);
+        System.Threading.Tasks.Task<Script> PostScriptsAsync (Body3 body = null);
 
         /// <summary>
         /// Create a script.
@@ -510,7 +510,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Script)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Script>> PostScriptsAsyncWithHttpInfo (Body2 body = null);
+        System.Threading.Tasks.Task<ApiResponse<Script>> PostScriptsAsyncWithHttpInfo (Body3 body = null);
         
     }
   
@@ -2347,7 +2347,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>Script</returns>
-        public Script PostScripts (Body2 body = null)
+        public Script PostScripts (Body3 body = null)
         {
              ApiResponse<Script> response = PostScriptsWithHttpInfo(body);
              return response.Data;
@@ -2358,7 +2358,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>ApiResponse of Script</returns>
-        public ApiResponse< Script > PostScriptsWithHttpInfo (Body2 body = null)
+        public ApiResponse< Script > PostScriptsWithHttpInfo (Body3 body = null)
         {
             
     
@@ -2433,7 +2433,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of Script</returns>
-        public async System.Threading.Tasks.Task<Script> PostScriptsAsync (Body2 body = null)
+        public async System.Threading.Tasks.Task<Script> PostScriptsAsync (Body3 body = null)
         {
              ApiResponse<Script> response = await PostScriptsAsyncWithHttpInfo(body);
              return response.Data;
@@ -2445,7 +2445,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Script)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Script>> PostScriptsAsyncWithHttpInfo (Body2 body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Script>> PostScriptsAsyncWithHttpInfo (Body3 body = null)
         {
             
     

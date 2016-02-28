@@ -2225,6 +2225,322 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<Extension>> PutExtensionAsyncWithHttpInfo (string extensionId, Extension body = null);
         
         /// <summary>
+        /// Gets media retention policy list with query options to filter on name and enabled.
+        /// </summary>
+        /// <remarks>
+        /// for a less verbose response, add summary=true to this endpoint
+        /// </remarks>
+        /// <param name="pageSize">The total page size requested</param>
+        /// <param name="pageNumber">The page number requested</param>
+        /// <param name="sortBy">variable name requested to sort by</param>
+        /// <param name="expand">variable name requested by expand list</param>
+        /// <param name="name">the policy name - used for filtering results in searches.</param>
+        /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false</param>
+        /// <param name="summary">provides a less verbose response of policy lists.</param>
+        /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors</param>
+        /// <returns>PolicyEntityListing</returns>
+        PolicyEntityListing GetMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+  
+        /// <summary>
+        /// Gets media retention policy list with query options to filter on name and enabled.
+        /// </summary>
+        /// <remarks>
+        /// for a less verbose response, add summary=true to this endpoint
+        /// </remarks>
+        /// <param name="pageSize">The total page size requested</param>
+        /// <param name="pageNumber">The page number requested</param>
+        /// <param name="sortBy">variable name requested to sort by</param>
+        /// <param name="expand">variable name requested by expand list</param>
+        /// <param name="name">the policy name - used for filtering results in searches.</param>
+        /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false</param>
+        /// <param name="summary">provides a less verbose response of policy lists.</param>
+        /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors</param>
+        /// <returns>ApiResponse of PolicyEntityListing</returns>
+        ApiResponse<PolicyEntityListing> GetMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+
+        /// <summary>
+        /// Gets media retention policy list with query options to filter on name and enabled.
+        /// </summary>
+        /// <remarks>
+        /// for a less verbose response, add summary=true to this endpoint
+        /// </remarks>
+        /// <param name="pageSize">The total page size requested</param>
+        /// <param name="pageNumber">The page number requested</param>
+        /// <param name="sortBy">variable name requested to sort by</param>
+        /// <param name="expand">variable name requested by expand list</param>
+        /// <param name="name">the policy name - used for filtering results in searches.</param>
+        /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false</param>
+        /// <param name="summary">provides a less verbose response of policy lists.</param>
+        /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors</param>
+        /// <returns>Task of PolicyEntityListing</returns>
+        System.Threading.Tasks.Task<PolicyEntityListing> GetMediaretentionpoliciesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+
+        /// <summary>
+        /// Gets media retention policy list with query options to filter on name and enabled.
+        /// </summary>
+        /// <remarks>
+        /// for a less verbose response, add summary=true to this endpoint
+        /// </remarks>
+        /// <param name="pageSize">The total page size requested</param>
+        /// <param name="pageNumber">The page number requested</param>
+        /// <param name="sortBy">variable name requested to sort by</param>
+        /// <param name="expand">variable name requested by expand list</param>
+        /// <param name="name">the policy name - used for filtering results in searches.</param>
+        /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false</param>
+        /// <param name="summary">provides a less verbose response of policy lists.</param>
+        /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors</param>
+        /// <returns>Task of ApiResponse (PolicyEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+        
+        /// <summary>
+        /// Create media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="body">Policy</param>
+        /// <returns>Policy</returns>
+        Policy PostMediaretentionpolicies (Policy body = null);
+  
+        /// <summary>
+        /// Create media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="body">Policy</param>
+        /// <returns>ApiResponse of Policy</returns>
+        ApiResponse<Policy> PostMediaretentionpoliciesWithHttpInfo (Policy body = null);
+
+        /// <summary>
+        /// Create media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="body">Policy</param>
+        /// <returns>Task of Policy</returns>
+        System.Threading.Tasks.Task<Policy> PostMediaretentionpoliciesAsync (Policy body = null);
+
+        /// <summary>
+        /// Create media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="body">Policy</param>
+        /// <returns>Task of ApiResponse (Policy)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Policy>> PostMediaretentionpoliciesAsyncWithHttpInfo (Policy body = null);
+        
+        /// <summary>
+        /// Delete media retention policies
+        /// </summary>
+        /// <remarks>
+        /// Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
+        /// </remarks>
+        /// <param name="ids"></param>
+        /// <returns>string</returns>
+        string DeleteMediaretentionpolicies (string ids);
+  
+        /// <summary>
+        /// Delete media retention policies
+        /// </summary>
+        /// <remarks>
+        /// Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
+        /// </remarks>
+        /// <param name="ids"></param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> DeleteMediaretentionpoliciesWithHttpInfo (string ids);
+
+        /// <summary>
+        /// Delete media retention policies
+        /// </summary>
+        /// <remarks>
+        /// Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
+        /// </remarks>
+        /// <param name="ids"></param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> DeleteMediaretentionpoliciesAsync (string ids);
+
+        /// <summary>
+        /// Delete media retention policies
+        /// </summary>
+        /// <remarks>
+        /// Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
+        /// </remarks>
+        /// <param name="ids"></param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteMediaretentionpoliciesAsyncWithHttpInfo (string ids);
+        
+        /// <summary>
+        /// Get a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="policyId">Policy ID</param>
+        /// <returns>Policy</returns>
+        Policy GetMediaretentionpolicie (string policyId);
+  
+        /// <summary>
+        /// Get a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="policyId">Policy ID</param>
+        /// <returns>ApiResponse of Policy</returns>
+        ApiResponse<Policy> GetMediaretentionpolicieWithHttpInfo (string policyId);
+
+        /// <summary>
+        /// Get a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="policyId">Policy ID</param>
+        /// <returns>Task of Policy</returns>
+        System.Threading.Tasks.Task<Policy> GetMediaretentionpolicieAsync (string policyId);
+
+        /// <summary>
+        /// Get a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="policyId">Policy ID</param>
+        /// <returns>Task of ApiResponse (Policy)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Policy>> GetMediaretentionpolicieAsyncWithHttpInfo (string policyId);
+        
+        /// <summary>
+        /// Update a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="policyId">Policy ID</param>
+        /// <param name="body">Policy</param>
+        /// <returns>Policy</returns>
+        Policy PutMediaretentionpolicie (string policyId, Policy body = null);
+  
+        /// <summary>
+        /// Update a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="policyId">Policy ID</param>
+        /// <param name="body">Policy</param>
+        /// <returns>ApiResponse of Policy</returns>
+        ApiResponse<Policy> PutMediaretentionpolicieWithHttpInfo (string policyId, Policy body = null);
+
+        /// <summary>
+        /// Update a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="policyId">Policy ID</param>
+        /// <param name="body">Policy</param>
+        /// <returns>Task of Policy</returns>
+        System.Threading.Tasks.Task<Policy> PutMediaretentionpolicieAsync (string policyId, Policy body = null);
+
+        /// <summary>
+        /// Update a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="policyId">Policy ID</param>
+        /// <param name="body">Policy</param>
+        /// <returns>Task of ApiResponse (Policy)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Policy>> PutMediaretentionpolicieAsyncWithHttpInfo (string policyId, Policy body = null);
+        
+        /// <summary>
+        /// Delete a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="policyId">Policy ID</param>
+        /// <returns>string</returns>
+        string DeleteMediaretentionpolicie (string policyId);
+  
+        /// <summary>
+        /// Delete a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="policyId">Policy ID</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> DeleteMediaretentionpolicieWithHttpInfo (string policyId);
+
+        /// <summary>
+        /// Delete a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="policyId">Policy ID</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> DeleteMediaretentionpolicieAsync (string policyId);
+
+        /// <summary>
+        /// Delete a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="policyId">Policy ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteMediaretentionpolicieAsyncWithHttpInfo (string policyId);
+        
+        /// <summary>
+        /// Patch a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="policyId">Policy ID</param>
+        /// <param name="body">Policy</param>
+        /// <returns>Policy</returns>
+        Policy PatchMediaretentionpolicie (string policyId, Policy body = null);
+  
+        /// <summary>
+        /// Patch a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="policyId">Policy ID</param>
+        /// <param name="body">Policy</param>
+        /// <returns>ApiResponse of Policy</returns>
+        ApiResponse<Policy> PatchMediaretentionpolicieWithHttpInfo (string policyId, Policy body = null);
+
+        /// <summary>
+        /// Patch a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="policyId">Policy ID</param>
+        /// <param name="body">Policy</param>
+        /// <returns>Task of Policy</returns>
+        System.Threading.Tasks.Task<Policy> PatchMediaretentionpolicieAsync (string policyId, Policy body = null);
+
+        /// <summary>
+        /// Patch a media retention policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <param name="policyId">Policy ID</param>
+        /// <param name="body">Policy</param>
+        /// <returns>Task of ApiResponse (Policy)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Policy>> PatchMediaretentionpolicieAsyncWithHttpInfo (string policyId, Policy body = null);
+        
+        /// <summary>
         /// Get context organization.
         /// </summary>
         /// <remarks>
@@ -12591,6 +12907,1242 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Extension>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Extension) Configuration.ApiClient.Deserialize(response, typeof(Extension)));
+            
+        }
+        
+        /// <summary>
+        /// Gets media retention policy list with query options to filter on name and enabled. for a less verbose response, add summary=true to this endpoint
+        /// </summary>
+        /// <param name="pageSize">The total page size requested</param> 
+        /// <param name="pageNumber">The page number requested</param> 
+        /// <param name="sortBy">variable name requested to sort by</param> 
+        /// <param name="expand">variable name requested by expand list</param> 
+        /// <param name="name">the policy name - used for filtering results in searches.</param> 
+        /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false</param> 
+        /// <param name="summary">provides a less verbose response of policy lists.</param> 
+        /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors</param> 
+        /// <returns>PolicyEntityListing</returns>
+        public PolicyEntityListing GetMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+        {
+             ApiResponse<PolicyEntityListing> response = GetMediaretentionpoliciesWithHttpInfo(pageSize, pageNumber, sortBy, expand, name, enabled, summary, hasErrors);
+             return response.Data;
+        }
+
+        /// <summary>
+        /// Gets media retention policy list with query options to filter on name and enabled. for a less verbose response, add summary=true to this endpoint
+        /// </summary>
+        /// <param name="pageSize">The total page size requested</param> 
+        /// <param name="pageNumber">The page number requested</param> 
+        /// <param name="sortBy">variable name requested to sort by</param> 
+        /// <param name="expand">variable name requested by expand list</param> 
+        /// <param name="name">the policy name - used for filtering results in searches.</param> 
+        /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false</param> 
+        /// <param name="summary">provides a less verbose response of policy lists.</param> 
+        /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors</param> 
+        /// <returns>ApiResponse of PolicyEntityListing</returns>
+        public ApiResponse< PolicyEntityListing > GetMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+        {
+            
+    
+            var path_ = "/api/v1/configuration/mediaretentionpolicies";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            if (pageSize != null) queryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) queryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (sortBy != null) queryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (expand != null) queryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            if (name != null) queryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (enabled != null) queryParams.Add("enabled", Configuration.ApiClient.ParameterToString(enabled)); // query parameter
+            if (summary != null) queryParams.Add("summary", Configuration.ApiClient.ParameterToString(summary)); // query parameter
+            if (hasErrors != null) queryParams.Add("hasErrors", Configuration.ApiClient.ParameterToString(hasErrors)); // query parameter
+            
+            
+            
+            
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling GetMediaretentionpolicies: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling GetMediaretentionpolicies: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<PolicyEntityListing>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PolicyEntityListing) Configuration.ApiClient.Deserialize(response, typeof(PolicyEntityListing)));
+            
+        }
+    
+        /// <summary>
+        /// Gets media retention policy list with query options to filter on name and enabled. for a less verbose response, add summary=true to this endpoint
+        /// </summary>
+        /// <param name="pageSize">The total page size requested</param>
+        /// <param name="pageNumber">The page number requested</param>
+        /// <param name="sortBy">variable name requested to sort by</param>
+        /// <param name="expand">variable name requested by expand list</param>
+        /// <param name="name">the policy name - used for filtering results in searches.</param>
+        /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false</param>
+        /// <param name="summary">provides a less verbose response of policy lists.</param>
+        /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors</param>
+        /// <returns>Task of PolicyEntityListing</returns>
+        public async System.Threading.Tasks.Task<PolicyEntityListing> GetMediaretentionpoliciesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+        {
+             ApiResponse<PolicyEntityListing> response = await GetMediaretentionpoliciesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, name, enabled, summary, hasErrors);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Gets media retention policy list with query options to filter on name and enabled. for a less verbose response, add summary=true to this endpoint
+        /// </summary>
+        /// <param name="pageSize">The total page size requested</param>
+        /// <param name="pageNumber">The page number requested</param>
+        /// <param name="sortBy">variable name requested to sort by</param>
+        /// <param name="expand">variable name requested by expand list</param>
+        /// <param name="name">the policy name - used for filtering results in searches.</param>
+        /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false</param>
+        /// <param name="summary">provides a less verbose response of policy lists.</param>
+        /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors</param>
+        /// <returns>Task of ApiResponse (PolicyEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+        {
+            
+    
+            var path_ = "/api/v1/configuration/mediaretentionpolicies";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            if (pageSize != null) queryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) queryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (sortBy != null) queryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (expand != null) queryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            if (name != null) queryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (enabled != null) queryParams.Add("enabled", Configuration.ApiClient.ParameterToString(enabled)); // query parameter
+            if (summary != null) queryParams.Add("summary", Configuration.ApiClient.ParameterToString(summary)); // query parameter
+            if (hasErrors != null) queryParams.Add("hasErrors", Configuration.ApiClient.ParameterToString(hasErrors)); // query parameter
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling GetMediaretentionpolicies: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling GetMediaretentionpolicies: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<PolicyEntityListing>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PolicyEntityListing) Configuration.ApiClient.Deserialize(response, typeof(PolicyEntityListing)));
+            
+        }
+        
+        /// <summary>
+        /// Create media retention policy 
+        /// </summary>
+        /// <param name="body">Policy</param> 
+        /// <returns>Policy</returns>
+        public Policy PostMediaretentionpolicies (Policy body = null)
+        {
+             ApiResponse<Policy> response = PostMediaretentionpoliciesWithHttpInfo(body);
+             return response.Data;
+        }
+
+        /// <summary>
+        /// Create media retention policy 
+        /// </summary>
+        /// <param name="body">Policy</param> 
+        /// <returns>ApiResponse of Policy</returns>
+        public ApiResponse< Policy > PostMediaretentionpoliciesWithHttpInfo (Policy body = null)
+        {
+            
+    
+            var path_ = "/api/v1/configuration/mediaretentionpolicies";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling PostMediaretentionpolicies: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling PostMediaretentionpolicies: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<Policy>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Policy) Configuration.ApiClient.Deserialize(response, typeof(Policy)));
+            
+        }
+    
+        /// <summary>
+        /// Create media retention policy 
+        /// </summary>
+        /// <param name="body">Policy</param>
+        /// <returns>Task of Policy</returns>
+        public async System.Threading.Tasks.Task<Policy> PostMediaretentionpoliciesAsync (Policy body = null)
+        {
+             ApiResponse<Policy> response = await PostMediaretentionpoliciesAsyncWithHttpInfo(body);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Create media retention policy 
+        /// </summary>
+        /// <param name="body">Policy</param>
+        /// <returns>Task of ApiResponse (Policy)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Policy>> PostMediaretentionpoliciesAsyncWithHttpInfo (Policy body = null)
+        {
+            
+    
+            var path_ = "/api/v1/configuration/mediaretentionpolicies";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.POST, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling PostMediaretentionpolicies: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling PostMediaretentionpolicies: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<Policy>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Policy) Configuration.ApiClient.Deserialize(response, typeof(Policy)));
+            
+        }
+        
+        /// <summary>
+        /// Delete media retention policies Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
+        /// </summary>
+        /// <param name="ids"></param> 
+        /// <returns>string</returns>
+        public string DeleteMediaretentionpolicies (string ids)
+        {
+             ApiResponse<string> response = DeleteMediaretentionpoliciesWithHttpInfo(ids);
+             return response.Data;
+        }
+
+        /// <summary>
+        /// Delete media retention policies Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
+        /// </summary>
+        /// <param name="ids"></param> 
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > DeleteMediaretentionpoliciesWithHttpInfo (string ids)
+        {
+            
+            // verify the required parameter 'ids' is set
+            if (ids == null)
+                throw new ApiException(400, "Missing required parameter 'ids' when calling ConfigurationApi->DeleteMediaretentionpolicies");
+            
+    
+            var path_ = "/api/v1/configuration/mediaretentionpolicies";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            if (ids != null) queryParams.Add("ids", Configuration.ApiClient.ParameterToString(ids)); // query parameter
+            
+            
+            
+            
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling DeleteMediaretentionpolicies: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling DeleteMediaretentionpolicies: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<string>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(response, typeof(string)));
+            
+        }
+    
+        /// <summary>
+        /// Delete media retention policies Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
+        /// </summary>
+        /// <param name="ids"></param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> DeleteMediaretentionpoliciesAsync (string ids)
+        {
+             ApiResponse<string> response = await DeleteMediaretentionpoliciesAsyncWithHttpInfo(ids);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Delete media retention policies Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
+        /// </summary>
+        /// <param name="ids"></param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteMediaretentionpoliciesAsyncWithHttpInfo (string ids)
+        {
+            // verify the required parameter 'ids' is set
+            if (ids == null) throw new ApiException(400, "Missing required parameter 'ids' when calling DeleteMediaretentionpolicies");
+            
+    
+            var path_ = "/api/v1/configuration/mediaretentionpolicies";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            if (ids != null) queryParams.Add("ids", Configuration.ApiClient.ParameterToString(ids)); // query parameter
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling DeleteMediaretentionpolicies: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling DeleteMediaretentionpolicies: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<string>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(response, typeof(string)));
+            
+        }
+        
+        /// <summary>
+        /// Get a media retention policy 
+        /// </summary>
+        /// <param name="policyId">Policy ID</param> 
+        /// <returns>Policy</returns>
+        public Policy GetMediaretentionpolicie (string policyId)
+        {
+             ApiResponse<Policy> response = GetMediaretentionpolicieWithHttpInfo(policyId);
+             return response.Data;
+        }
+
+        /// <summary>
+        /// Get a media retention policy 
+        /// </summary>
+        /// <param name="policyId">Policy ID</param> 
+        /// <returns>ApiResponse of Policy</returns>
+        public ApiResponse< Policy > GetMediaretentionpolicieWithHttpInfo (string policyId)
+        {
+            
+            // verify the required parameter 'policyId' is set
+            if (policyId == null)
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling ConfigurationApi->GetMediaretentionpolicie");
+            
+    
+            var path_ = "/api/v1/configuration/mediaretentionpolicies/{policyId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (policyId != null) pathParams.Add("policyId", Configuration.ApiClient.ParameterToString(policyId)); // path parameter
+            
+            
+            
+            
+            
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling GetMediaretentionpolicie: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling GetMediaretentionpolicie: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<Policy>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Policy) Configuration.ApiClient.Deserialize(response, typeof(Policy)));
+            
+        }
+    
+        /// <summary>
+        /// Get a media retention policy 
+        /// </summary>
+        /// <param name="policyId">Policy ID</param>
+        /// <returns>Task of Policy</returns>
+        public async System.Threading.Tasks.Task<Policy> GetMediaretentionpolicieAsync (string policyId)
+        {
+             ApiResponse<Policy> response = await GetMediaretentionpolicieAsyncWithHttpInfo(policyId);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Get a media retention policy 
+        /// </summary>
+        /// <param name="policyId">Policy ID</param>
+        /// <returns>Task of ApiResponse (Policy)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Policy>> GetMediaretentionpolicieAsyncWithHttpInfo (string policyId)
+        {
+            // verify the required parameter 'policyId' is set
+            if (policyId == null) throw new ApiException(400, "Missing required parameter 'policyId' when calling GetMediaretentionpolicie");
+            
+    
+            var path_ = "/api/v1/configuration/mediaretentionpolicies/{policyId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (policyId != null) pathParams.Add("policyId", Configuration.ApiClient.ParameterToString(policyId)); // path parameter
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling GetMediaretentionpolicie: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling GetMediaretentionpolicie: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<Policy>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Policy) Configuration.ApiClient.Deserialize(response, typeof(Policy)));
+            
+        }
+        
+        /// <summary>
+        /// Update a media retention policy 
+        /// </summary>
+        /// <param name="policyId">Policy ID</param> 
+        /// <param name="body">Policy</param> 
+        /// <returns>Policy</returns>
+        public Policy PutMediaretentionpolicie (string policyId, Policy body = null)
+        {
+             ApiResponse<Policy> response = PutMediaretentionpolicieWithHttpInfo(policyId, body);
+             return response.Data;
+        }
+
+        /// <summary>
+        /// Update a media retention policy 
+        /// </summary>
+        /// <param name="policyId">Policy ID</param> 
+        /// <param name="body">Policy</param> 
+        /// <returns>ApiResponse of Policy</returns>
+        public ApiResponse< Policy > PutMediaretentionpolicieWithHttpInfo (string policyId, Policy body = null)
+        {
+            
+            // verify the required parameter 'policyId' is set
+            if (policyId == null)
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling ConfigurationApi->PutMediaretentionpolicie");
+            
+    
+            var path_ = "/api/v1/configuration/mediaretentionpolicies/{policyId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (policyId != null) pathParams.Add("policyId", Configuration.ApiClient.ParameterToString(policyId)); // path parameter
+            
+            
+            
+            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling PutMediaretentionpolicie: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling PutMediaretentionpolicie: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<Policy>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Policy) Configuration.ApiClient.Deserialize(response, typeof(Policy)));
+            
+        }
+    
+        /// <summary>
+        /// Update a media retention policy 
+        /// </summary>
+        /// <param name="policyId">Policy ID</param>
+        /// <param name="body">Policy</param>
+        /// <returns>Task of Policy</returns>
+        public async System.Threading.Tasks.Task<Policy> PutMediaretentionpolicieAsync (string policyId, Policy body = null)
+        {
+             ApiResponse<Policy> response = await PutMediaretentionpolicieAsyncWithHttpInfo(policyId, body);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Update a media retention policy 
+        /// </summary>
+        /// <param name="policyId">Policy ID</param>
+        /// <param name="body">Policy</param>
+        /// <returns>Task of ApiResponse (Policy)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Policy>> PutMediaretentionpolicieAsyncWithHttpInfo (string policyId, Policy body = null)
+        {
+            // verify the required parameter 'policyId' is set
+            if (policyId == null) throw new ApiException(400, "Missing required parameter 'policyId' when calling PutMediaretentionpolicie");
+            
+    
+            var path_ = "/api/v1/configuration/mediaretentionpolicies/{policyId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (policyId != null) pathParams.Add("policyId", Configuration.ApiClient.ParameterToString(policyId)); // path parameter
+            
+            
+            
+            
+            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling PutMediaretentionpolicie: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling PutMediaretentionpolicie: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<Policy>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Policy) Configuration.ApiClient.Deserialize(response, typeof(Policy)));
+            
+        }
+        
+        /// <summary>
+        /// Delete a media retention policy 
+        /// </summary>
+        /// <param name="policyId">Policy ID</param> 
+        /// <returns>string</returns>
+        public string DeleteMediaretentionpolicie (string policyId)
+        {
+             ApiResponse<string> response = DeleteMediaretentionpolicieWithHttpInfo(policyId);
+             return response.Data;
+        }
+
+        /// <summary>
+        /// Delete a media retention policy 
+        /// </summary>
+        /// <param name="policyId">Policy ID</param> 
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > DeleteMediaretentionpolicieWithHttpInfo (string policyId)
+        {
+            
+            // verify the required parameter 'policyId' is set
+            if (policyId == null)
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling ConfigurationApi->DeleteMediaretentionpolicie");
+            
+    
+            var path_ = "/api/v1/configuration/mediaretentionpolicies/{policyId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (policyId != null) pathParams.Add("policyId", Configuration.ApiClient.ParameterToString(policyId)); // path parameter
+            
+            
+            
+            
+            
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling DeleteMediaretentionpolicie: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling DeleteMediaretentionpolicie: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<string>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(response, typeof(string)));
+            
+        }
+    
+        /// <summary>
+        /// Delete a media retention policy 
+        /// </summary>
+        /// <param name="policyId">Policy ID</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> DeleteMediaretentionpolicieAsync (string policyId)
+        {
+             ApiResponse<string> response = await DeleteMediaretentionpolicieAsyncWithHttpInfo(policyId);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Delete a media retention policy 
+        /// </summary>
+        /// <param name="policyId">Policy ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteMediaretentionpolicieAsyncWithHttpInfo (string policyId)
+        {
+            // verify the required parameter 'policyId' is set
+            if (policyId == null) throw new ApiException(400, "Missing required parameter 'policyId' when calling DeleteMediaretentionpolicie");
+            
+    
+            var path_ = "/api/v1/configuration/mediaretentionpolicies/{policyId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (policyId != null) pathParams.Add("policyId", Configuration.ApiClient.ParameterToString(policyId)); // path parameter
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.DELETE, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling DeleteMediaretentionpolicie: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling DeleteMediaretentionpolicie: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<string>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(response, typeof(string)));
+            
+        }
+        
+        /// <summary>
+        /// Patch a media retention policy 
+        /// </summary>
+        /// <param name="policyId">Policy ID</param> 
+        /// <param name="body">Policy</param> 
+        /// <returns>Policy</returns>
+        public Policy PatchMediaretentionpolicie (string policyId, Policy body = null)
+        {
+             ApiResponse<Policy> response = PatchMediaretentionpolicieWithHttpInfo(policyId, body);
+             return response.Data;
+        }
+
+        /// <summary>
+        /// Patch a media retention policy 
+        /// </summary>
+        /// <param name="policyId">Policy ID</param> 
+        /// <param name="body">Policy</param> 
+        /// <returns>ApiResponse of Policy</returns>
+        public ApiResponse< Policy > PatchMediaretentionpolicieWithHttpInfo (string policyId, Policy body = null)
+        {
+            
+            // verify the required parameter 'policyId' is set
+            if (policyId == null)
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling ConfigurationApi->PatchMediaretentionpolicie");
+            
+    
+            var path_ = "/api/v1/configuration/mediaretentionpolicies/{policyId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (policyId != null) pathParams.Add("policyId", Configuration.ApiClient.ParameterToString(policyId)); // path parameter
+            
+            
+            
+            
+            if (body.GetType() != typeof(byte[]))
+            {
+                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                postBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling PatchMediaretentionpolicie: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling PatchMediaretentionpolicie: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<Policy>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Policy) Configuration.ApiClient.Deserialize(response, typeof(Policy)));
+            
+        }
+    
+        /// <summary>
+        /// Patch a media retention policy 
+        /// </summary>
+        /// <param name="policyId">Policy ID</param>
+        /// <param name="body">Policy</param>
+        /// <returns>Task of Policy</returns>
+        public async System.Threading.Tasks.Task<Policy> PatchMediaretentionpolicieAsync (string policyId, Policy body = null)
+        {
+             ApiResponse<Policy> response = await PatchMediaretentionpolicieAsyncWithHttpInfo(policyId, body);
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Patch a media retention policy 
+        /// </summary>
+        /// <param name="policyId">Policy ID</param>
+        /// <param name="body">Policy</param>
+        /// <returns>Task of ApiResponse (Policy)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Policy>> PatchMediaretentionpolicieAsyncWithHttpInfo (string policyId, Policy body = null)
+        {
+            // verify the required parameter 'policyId' is set
+            if (policyId == null) throw new ApiException(400, "Missing required parameter 'policyId' when calling PatchMediaretentionpolicie");
+            
+    
+            var path_ = "/api/v1/configuration/mediaretentionpolicies/{policyId}";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            if (policyId != null) pathParams.Add("policyId", Configuration.ApiClient.ParameterToString(policyId)); // path parameter
+            
+            
+            
+            
+            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.PATCH, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling PatchMediaretentionpolicie: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling PatchMediaretentionpolicie: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<Policy>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Policy) Configuration.ApiClient.Deserialize(response, typeof(Policy)));
             
         }
         

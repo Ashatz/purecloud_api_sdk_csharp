@@ -12,7 +12,7 @@ namespace ININ.PureCloudApi.Model
 {
 
     /// <summary>
-    /// 
+    /// Data elements associated with a history event
     /// </summary>
     [DataContract]
     public partial class DataItem :  IEquatable<DataItem>
@@ -27,24 +27,27 @@ namespace ININ.PureCloudApi.Model
 
         
         /// <summary>
-        /// Gets or Sets DataItemId
+        /// The name of the data element associated with a history event.
         /// </summary>
-        [DataMember(Name="dataItemId", EmitDefaultValue=false)]
-        public string DataItemId { get; set; }
+        /// <value>The name of the data element associated with a history event.</value>
+        [DataMember(Name="parameterName", EmitDefaultValue=false)]
+        public string ParameterName { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets Value
+        /// The type of the data element associated with a history event.
         /// </summary>
-        [DataMember(Name="value", EmitDefaultValue=false)]
-        public string Value { get; set; }
+        /// <value>The type of the data element associated with a history event.</value>
+        [DataMember(Name="parameterType", EmitDefaultValue=false)]
+        public string ParameterType { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets Type
+        /// The values of the data element associated with a history event.
         /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
+        /// <value>The values of the data element associated with a history event.</value>
+        [DataMember(Name="parameterValues", EmitDefaultValue=false)]
+        public Value ParameterValues { get; set; }
   
         
   
@@ -56,9 +59,9 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DataItem {\n");
-            sb.Append("  DataItemId: ").Append(DataItemId).Append("\n");
-            sb.Append("  Value: ").Append(Value).Append("\n");
-            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  ParameterName: ").Append(ParameterName).Append("\n");
+            sb.Append("  ParameterType: ").Append(ParameterType).Append("\n");
+            sb.Append("  ParameterValues: ").Append(ParameterValues).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -97,19 +100,19 @@ namespace ININ.PureCloudApi.Model
 
             return 
                 (
-                    this.DataItemId == other.DataItemId ||
-                    this.DataItemId != null &&
-                    this.DataItemId.Equals(other.DataItemId)
+                    this.ParameterName == other.ParameterName ||
+                    this.ParameterName != null &&
+                    this.ParameterName.Equals(other.ParameterName)
                 ) && 
                 (
-                    this.Value == other.Value ||
-                    this.Value != null &&
-                    this.Value.Equals(other.Value)
+                    this.ParameterType == other.ParameterType ||
+                    this.ParameterType != null &&
+                    this.ParameterType.Equals(other.ParameterType)
                 ) && 
                 (
-                    this.Type == other.Type ||
-                    this.Type != null &&
-                    this.Type.Equals(other.Type)
+                    this.ParameterValues == other.ParameterValues ||
+                    this.ParameterValues != null &&
+                    this.ParameterValues.Equals(other.ParameterValues)
                 );
         }
 
@@ -125,14 +128,14 @@ namespace ININ.PureCloudApi.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.DataItemId != null)
-                    hash = hash * 59 + this.DataItemId.GetHashCode();
+                if (this.ParameterName != null)
+                    hash = hash * 59 + this.ParameterName.GetHashCode();
                 
-                if (this.Value != null)
-                    hash = hash * 59 + this.Value.GetHashCode();
+                if (this.ParameterType != null)
+                    hash = hash * 59 + this.ParameterType.GetHashCode();
                 
-                if (this.Type != null)
-                    hash = hash * 59 + this.Type.GetHashCode();
+                if (this.ParameterValues != null)
+                    hash = hash * 59 + this.ParameterValues.GetHashCode();
                 
                 return hash;
             }

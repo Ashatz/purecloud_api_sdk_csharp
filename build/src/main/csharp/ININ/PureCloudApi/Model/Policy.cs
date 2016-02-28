@@ -80,15 +80,25 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
-        /// Gets or Sets Conditions
+        /// Conditions and actions per media type
         /// </summary>
+        /// <value>Conditions and actions per media type</value>
+        [DataMember(Name="mediaPolicies", EmitDefaultValue=false)]
+        public MediaPolicies MediaPolicies { get; set; }
+  
+        
+        /// <summary>
+        /// Conditions
+        /// </summary>
+        /// <value>Conditions</value>
         [DataMember(Name="conditions", EmitDefaultValue=false)]
         public PolicyConditions Conditions { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets Actions
+        /// Actions
         /// </summary>
+        /// <value>Actions</value>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public PolicyActions Actions { get; set; }
   
@@ -124,6 +134,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Order: ").Append(Order).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            sb.Append("  MediaPolicies: ").Append(MediaPolicies).Append("\n");
             sb.Append("  Conditions: ").Append(Conditions).Append("\n");
             sb.Append("  Actions: ").Append(Actions).Append("\n");
             sb.Append("  PolicyErrors: ").Append(PolicyErrors).Append("\n");
@@ -201,6 +212,11 @@ namespace ININ.PureCloudApi.Model
                     this.Enabled.Equals(other.Enabled)
                 ) && 
                 (
+                    this.MediaPolicies == other.MediaPolicies ||
+                    this.MediaPolicies != null &&
+                    this.MediaPolicies.Equals(other.MediaPolicies)
+                ) && 
+                (
                     this.Conditions == other.Conditions ||
                     this.Conditions != null &&
                     this.Conditions.Equals(other.Conditions)
@@ -254,6 +270,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
+                
+                if (this.MediaPolicies != null)
+                    hash = hash * 59 + this.MediaPolicies.GetHashCode();
                 
                 if (this.Conditions != null)
                     hash = hash * 59 + this.Conditions.GetHashCode();

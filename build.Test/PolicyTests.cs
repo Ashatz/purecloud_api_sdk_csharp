@@ -108,6 +108,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test the property 'MediaPolicies' 
+        /// </summary>
+        [Test]
+        public void MediaPoliciesTest()
+        {
+            // TODO: unit test for the property 'MediaPolicies' 
+        }
+        
+        /// <summary>
         /// Test the property 'Conditions' 
         /// </summary>
         [Test]

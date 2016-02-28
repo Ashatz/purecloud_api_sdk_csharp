@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>The flow definition body according to the syntax supported by the 'format'.  Use the /processautomation/flows/schemas endpoint to get detailed syntax information for each format.</value>
         [DataMember(Name="body", EmitDefaultValue=false)]
-        public Dictionary<string, LineProperties> Body { get; set; }
+        public Dictionary<string, InlineResponse200> Body { get; set; }
   
         
   

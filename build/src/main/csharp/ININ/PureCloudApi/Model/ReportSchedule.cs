@@ -133,7 +133,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Parameters
         /// </summary>
         [DataMember(Name="parameters", EmitDefaultValue=false)]
-        public Dictionary<string, LineProperties> Parameters { get; set; }
+        public Dictionary<string, InlineResponse200> Parameters { get; set; }
   
         
         /// <summary>

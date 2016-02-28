@@ -59,7 +59,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Properties
         /// </summary>
         [DataMember(Name="properties", EmitDefaultValue=false)]
-        public Dictionary<string, LineProperties> Properties { get; set; }
+        public Dictionary<string, InlineResponse200> Properties { get; set; }
   
         
         /// <summary>

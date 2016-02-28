@@ -27,59 +27,45 @@ namespace ININ.PureCloudApi.Model
 
         
         /// <summary>
-        /// Gets or Sets Country
+        /// Gets or Sets Address1
         /// </summary>
-        [DataMember(Name="country", EmitDefaultValue=false)]
-        public string Country { get; set; }
+        [DataMember(Name="address1", EmitDefaultValue=false)]
+        public string Address1 { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets A1
+        /// Gets or Sets Address2
         /// </summary>
-        [DataMember(Name="A1", EmitDefaultValue=false)]
-        public string A1 { get; set; }
+        [DataMember(Name="address2", EmitDefaultValue=false)]
+        public string Address2 { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets A3
+        /// Gets or Sets City
         /// </summary>
-        [DataMember(Name="A3", EmitDefaultValue=false)]
-        public string A3 { get; set; }
+        [DataMember(Name="city", EmitDefaultValue=false)]
+        public string City { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets RD
+        /// Gets or Sets State
         /// </summary>
-        [DataMember(Name="RD", EmitDefaultValue=false)]
-        public string RD { get; set; }
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public string State { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets HNO
+        /// Gets or Sets PostalCode
         /// </summary>
-        [DataMember(Name="HNO", EmitDefaultValue=false)]
-        public string HNO { get; set; }
+        [DataMember(Name="postalCode", EmitDefaultValue=false)]
+        public string PostalCode { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets LOC
+        /// Gets or Sets CountryCode
         /// </summary>
-        [DataMember(Name="LOC", EmitDefaultValue=false)]
-        public string LOC { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets NAM
-        /// </summary>
-        [DataMember(Name="NAM", EmitDefaultValue=false)]
-        public string NAM { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets PC
-        /// </summary>
-        [DataMember(Name="PC", EmitDefaultValue=false)]
-        public string PC { get; set; }
+        [DataMember(Name="countryCode", EmitDefaultValue=false)]
+        public string CountryCode { get; set; }
   
         
   
@@ -91,14 +77,12 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Address {\n");
-            sb.Append("  Country: ").Append(Country).Append("\n");
-            sb.Append("  A1: ").Append(A1).Append("\n");
-            sb.Append("  A3: ").Append(A3).Append("\n");
-            sb.Append("  RD: ").Append(RD).Append("\n");
-            sb.Append("  HNO: ").Append(HNO).Append("\n");
-            sb.Append("  LOC: ").Append(LOC).Append("\n");
-            sb.Append("  NAM: ").Append(NAM).Append("\n");
-            sb.Append("  PC: ").Append(PC).Append("\n");
+            sb.Append("  Address1: ").Append(Address1).Append("\n");
+            sb.Append("  Address2: ").Append(Address2).Append("\n");
+            sb.Append("  City: ").Append(City).Append("\n");
+            sb.Append("  State: ").Append(State).Append("\n");
+            sb.Append("  PostalCode: ").Append(PostalCode).Append("\n");
+            sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -137,44 +121,34 @@ namespace ININ.PureCloudApi.Model
 
             return 
                 (
-                    this.Country == other.Country ||
-                    this.Country != null &&
-                    this.Country.Equals(other.Country)
+                    this.Address1 == other.Address1 ||
+                    this.Address1 != null &&
+                    this.Address1.Equals(other.Address1)
                 ) && 
                 (
-                    this.A1 == other.A1 ||
-                    this.A1 != null &&
-                    this.A1.Equals(other.A1)
+                    this.Address2 == other.Address2 ||
+                    this.Address2 != null &&
+                    this.Address2.Equals(other.Address2)
                 ) && 
                 (
-                    this.A3 == other.A3 ||
-                    this.A3 != null &&
-                    this.A3.Equals(other.A3)
+                    this.City == other.City ||
+                    this.City != null &&
+                    this.City.Equals(other.City)
                 ) && 
                 (
-                    this.RD == other.RD ||
-                    this.RD != null &&
-                    this.RD.Equals(other.RD)
+                    this.State == other.State ||
+                    this.State != null &&
+                    this.State.Equals(other.State)
                 ) && 
                 (
-                    this.HNO == other.HNO ||
-                    this.HNO != null &&
-                    this.HNO.Equals(other.HNO)
+                    this.PostalCode == other.PostalCode ||
+                    this.PostalCode != null &&
+                    this.PostalCode.Equals(other.PostalCode)
                 ) && 
                 (
-                    this.LOC == other.LOC ||
-                    this.LOC != null &&
-                    this.LOC.Equals(other.LOC)
-                ) && 
-                (
-                    this.NAM == other.NAM ||
-                    this.NAM != null &&
-                    this.NAM.Equals(other.NAM)
-                ) && 
-                (
-                    this.PC == other.PC ||
-                    this.PC != null &&
-                    this.PC.Equals(other.PC)
+                    this.CountryCode == other.CountryCode ||
+                    this.CountryCode != null &&
+                    this.CountryCode.Equals(other.CountryCode)
                 );
         }
 
@@ -190,29 +164,23 @@ namespace ININ.PureCloudApi.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Country != null)
-                    hash = hash * 59 + this.Country.GetHashCode();
+                if (this.Address1 != null)
+                    hash = hash * 59 + this.Address1.GetHashCode();
                 
-                if (this.A1 != null)
-                    hash = hash * 59 + this.A1.GetHashCode();
+                if (this.Address2 != null)
+                    hash = hash * 59 + this.Address2.GetHashCode();
                 
-                if (this.A3 != null)
-                    hash = hash * 59 + this.A3.GetHashCode();
+                if (this.City != null)
+                    hash = hash * 59 + this.City.GetHashCode();
                 
-                if (this.RD != null)
-                    hash = hash * 59 + this.RD.GetHashCode();
+                if (this.State != null)
+                    hash = hash * 59 + this.State.GetHashCode();
                 
-                if (this.HNO != null)
-                    hash = hash * 59 + this.HNO.GetHashCode();
+                if (this.PostalCode != null)
+                    hash = hash * 59 + this.PostalCode.GetHashCode();
                 
-                if (this.LOC != null)
-                    hash = hash * 59 + this.LOC.GetHashCode();
-                
-                if (this.NAM != null)
-                    hash = hash * 59 + this.NAM.GetHashCode();
-                
-                if (this.PC != null)
-                    hash = hash * 59 + this.PC.GetHashCode();
+                if (this.CountryCode != null)
+                    hash = hash * 59 + this.CountryCode.GetHashCode();
                 
                 return hash;
             }
