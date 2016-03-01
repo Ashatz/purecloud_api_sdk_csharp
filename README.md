@@ -1,4 +1,7 @@
 # PureCloud API SDK - C&#35;
+
+[![NuGet Badge](https://buildstats.info/nuget/PureCloudApiSdk)](https://www.nuget.org/packages/PureCloudApiSdk/)
+
 Documentation can be found at http://developer.mypurecloud.com/api/rest/client-libraries/csharp/latest/
 
 ## Install Using nuget
@@ -31,7 +34,7 @@ For headless non-user applications, the [Client Credentials Grant](http://develo
 
 Once an access token has been obtained from one of the above methods, it must be set in the SDK's configuration.
 
-``` csharp
+```
 ININ.PureCloudApi.Client.Configuration.Default.AccessToken = "BL4Cb3EQIQFlqIItaj-zf5eIhAiP96zkucEuOI1g54dKQImd24P99ojbFHtpgUTJdRIkuUYfXMy0afEnZcWnEQ";
 ```
 
