@@ -14,6 +14,8 @@ set ags=generate -i swagger.json -l purecloudcsharp -o build -c bin/config-cshar
 
 call java %JAVA_OPTS% -jar %executable% %ags%
 
+xcopy %WORKSPACE%\repo\Extensions\ %WORKSPACE%\repo\build\src\main\csharp\ININ\PureCloudApi\Extensions\ /S
+
 cd %WORKSPACE%\repo\build
 call compile.bat
 cd %WORKSPACE%\repo
