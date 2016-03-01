@@ -45,12 +45,12 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test the property 'Type' 
+        /// Test the property 'Kind' 
         /// </summary>
         [Test]
-        public void TypeTest()
+        public void KindTest()
         {
-            // TODO: unit test for the property 'Type' 
+            // TODO: unit test for the property 'Kind' 
         }
         
         /// <summary>
@@ -69,15 +69,6 @@ namespace ININ.PureCloudApi.Test
         public void NameTest()
         {
             // TODO: unit test for the property 'Name' 
-        }
-        
-        /// <summary>
-        /// Test the property 'SelfUri' 
-        /// </summary>
-        [Test]
-        public void SelfUriTest()
-        {
-            // TODO: unit test for the property 'SelfUri' 
         }
         
 
