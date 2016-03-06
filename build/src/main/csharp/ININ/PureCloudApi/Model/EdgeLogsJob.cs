@@ -42,9 +42,9 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
-        /// The files available to upload.
+        /// The files available to upload from the Edge to the cloud.
         /// </summary>
-        /// <value>The files available to upload.</value>
+        /// <value>The files available to upload from the Edge to the cloud.</value>
         [DataMember(Name="files", EmitDefaultValue=false)]
         public List<EdgeLogsJobFile> Files { get; set; }
   

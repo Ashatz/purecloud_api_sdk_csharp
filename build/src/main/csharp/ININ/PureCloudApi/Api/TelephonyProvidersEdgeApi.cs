@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param>
         /// <param name="sortBy">Sort by</param>
         /// <returns>EdgeGroupEntityListing</returns>
-        EdgeGroupEntityListing GetTelephonyProvidersEdgeEdgegroups (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
+        EdgeGroupEntityListing GetProvidersEdgeEdgegroups (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
   
         /// <summary>
         /// Get the list of edge groups.
@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param>
         /// <param name="sortBy">Sort by</param>
         /// <returns>ApiResponse of EdgeGroupEntityListing</returns>
-        ApiResponse<EdgeGroupEntityListing> GetTelephonyProvidersEdgeEdgegroupsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
+        ApiResponse<EdgeGroupEntityListing> GetProvidersEdgeEdgegroupsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
 
         /// <summary>
         /// Get the list of edge groups.
@@ -53,7 +53,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param>
         /// <param name="sortBy">Sort by</param>
         /// <returns>Task of EdgeGroupEntityListing</returns>
-        System.Threading.Tasks.Task<EdgeGroupEntityListing> GetTelephonyProvidersEdgeEdgegroupsAsync (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
+        System.Threading.Tasks.Task<EdgeGroupEntityListing> GetProvidersEdgeEdgegroupsAsync (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
 
         /// <summary>
         /// Get the list of edge groups.
@@ -66,7 +66,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param>
         /// <param name="sortBy">Sort by</param>
         /// <returns>Task of ApiResponse (EdgeGroupEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EdgeGroupEntityListing>> GetTelephonyProvidersEdgeEdgegroupsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
+        System.Threading.Tasks.Task<ApiResponse<EdgeGroupEntityListing>> GetProvidersEdgeEdgegroupsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
         
         /// <summary>
         /// Create an edge group.
@@ -76,7 +76,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">EdgeGroup</param>
         /// <returns>EdgeGroup</returns>
-        EdgeGroup PostTelephonyProvidersEdgeEdgegroups (EdgeGroup body = null);
+        EdgeGroup PostProvidersEdgeEdgegroups (EdgeGroup body = null);
   
         /// <summary>
         /// Create an edge group.
@@ -86,7 +86,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">EdgeGroup</param>
         /// <returns>ApiResponse of EdgeGroup</returns>
-        ApiResponse<EdgeGroup> PostTelephonyProvidersEdgeEdgegroupsWithHttpInfo (EdgeGroup body = null);
+        ApiResponse<EdgeGroup> PostProvidersEdgeEdgegroupsWithHttpInfo (EdgeGroup body = null);
 
         /// <summary>
         /// Create an edge group.
@@ -96,7 +96,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">EdgeGroup</param>
         /// <returns>Task of EdgeGroup</returns>
-        System.Threading.Tasks.Task<EdgeGroup> PostTelephonyProvidersEdgeEdgegroupsAsync (EdgeGroup body = null);
+        System.Threading.Tasks.Task<EdgeGroup> PostProvidersEdgeEdgegroupsAsync (EdgeGroup body = null);
 
         /// <summary>
         /// Create an edge group.
@@ -106,7 +106,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">EdgeGroup</param>
         /// <returns>Task of ApiResponse (EdgeGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> PostTelephonyProvidersEdgeEdgegroupsAsyncWithHttpInfo (EdgeGroup body = null);
+        System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> PostProvidersEdgeEdgegroupsAsyncWithHttpInfo (EdgeGroup body = null);
         
         /// <summary>
         /// Get edge group.
@@ -116,7 +116,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <returns>EdgeGroup</returns>
-        EdgeGroup GetTelephonyProvidersEdgeEdgegroup (string edgeGroupId);
+        EdgeGroup GetProvidersEdgeEdgegroupsEdgegroupId (string edgeGroupId);
   
         /// <summary>
         /// Get edge group.
@@ -126,7 +126,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <returns>ApiResponse of EdgeGroup</returns>
-        ApiResponse<EdgeGroup> GetTelephonyProvidersEdgeEdgegroupWithHttpInfo (string edgeGroupId);
+        ApiResponse<EdgeGroup> GetProvidersEdgeEdgegroupsEdgegroupIdWithHttpInfo (string edgeGroupId);
 
         /// <summary>
         /// Get edge group.
@@ -136,7 +136,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <returns>Task of EdgeGroup</returns>
-        System.Threading.Tasks.Task<EdgeGroup> GetTelephonyProvidersEdgeEdgegroupAsync (string edgeGroupId);
+        System.Threading.Tasks.Task<EdgeGroup> GetProvidersEdgeEdgegroupsEdgegroupIdAsync (string edgeGroupId);
 
         /// <summary>
         /// Get edge group.
@@ -146,7 +146,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <returns>Task of ApiResponse (EdgeGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> GetTelephonyProvidersEdgeEdgegroupAsyncWithHttpInfo (string edgeGroupId);
+        System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> GetProvidersEdgeEdgegroupsEdgegroupIdAsyncWithHttpInfo (string edgeGroupId);
         
         /// <summary>
         /// Update an edge group.
@@ -157,7 +157,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <param name="body">EdgeGroup</param>
         /// <returns>EdgeGroup</returns>
-        EdgeGroup PutTelephonyProvidersEdgeEdgegroup (string edgeGroupId, EdgeGroup body = null);
+        EdgeGroup PutProvidersEdgeEdgegroupsEdgegroupId (string edgeGroupId, EdgeGroup body = null);
   
         /// <summary>
         /// Update an edge group.
@@ -168,7 +168,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <param name="body">EdgeGroup</param>
         /// <returns>ApiResponse of EdgeGroup</returns>
-        ApiResponse<EdgeGroup> PutTelephonyProvidersEdgeEdgegroupWithHttpInfo (string edgeGroupId, EdgeGroup body = null);
+        ApiResponse<EdgeGroup> PutProvidersEdgeEdgegroupsEdgegroupIdWithHttpInfo (string edgeGroupId, EdgeGroup body = null);
 
         /// <summary>
         /// Update an edge group.
@@ -179,7 +179,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <param name="body">EdgeGroup</param>
         /// <returns>Task of EdgeGroup</returns>
-        System.Threading.Tasks.Task<EdgeGroup> PutTelephonyProvidersEdgeEdgegroupAsync (string edgeGroupId, EdgeGroup body = null);
+        System.Threading.Tasks.Task<EdgeGroup> PutProvidersEdgeEdgegroupsEdgegroupIdAsync (string edgeGroupId, EdgeGroup body = null);
 
         /// <summary>
         /// Update an edge group.
@@ -190,7 +190,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <param name="body">EdgeGroup</param>
         /// <returns>Task of ApiResponse (EdgeGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> PutTelephonyProvidersEdgeEdgegroupAsyncWithHttpInfo (string edgeGroupId, EdgeGroup body = null);
+        System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> PutProvidersEdgeEdgegroupsEdgegroupIdAsyncWithHttpInfo (string edgeGroupId, EdgeGroup body = null);
         
         /// <summary>
         /// Delete an edge group.
@@ -200,7 +200,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <returns>string</returns>
-        string DeleteTelephonyProvidersEdgeEdgegroup (string edgeGroupId);
+        string DeleteProvidersEdgeEdgegroupsEdgegroupId (string edgeGroupId);
   
         /// <summary>
         /// Delete an edge group.
@@ -210,7 +210,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteTelephonyProvidersEdgeEdgegroupWithHttpInfo (string edgeGroupId);
+        ApiResponse<string> DeleteProvidersEdgeEdgegroupsEdgegroupIdWithHttpInfo (string edgeGroupId);
 
         /// <summary>
         /// Delete an edge group.
@@ -220,7 +220,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgeEdgegroupAsync (string edgeGroupId);
+        System.Threading.Tasks.Task<string> DeleteProvidersEdgeEdgegroupsEdgegroupIdAsync (string edgeGroupId);
 
         /// <summary>
         /// Delete an edge group.
@@ -230,7 +230,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgeEdgegroupAsyncWithHttpInfo (string edgeGroupId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteProvidersEdgeEdgegroupsEdgegroupIdAsyncWithHttpInfo (string edgeGroupId);
         
         /// <summary>
         /// Get a listing of line base settings objects
@@ -243,7 +243,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>LineBaseEntityListing</returns>
-        LineBaseEntityListing GetTelephonyProvidersEdgeLinebasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        LineBaseEntityListing GetProvidersEdgeLinebasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
   
         /// <summary>
         /// Get a listing of line base settings objects
@@ -256,7 +256,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>ApiResponse of LineBaseEntityListing</returns>
-        ApiResponse<LineBaseEntityListing> GetTelephonyProvidersEdgeLinebasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        ApiResponse<LineBaseEntityListing> GetProvidersEdgeLinebasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get a listing of line base settings objects
@@ -269,7 +269,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of LineBaseEntityListing</returns>
-        System.Threading.Tasks.Task<LineBaseEntityListing> GetTelephonyProvidersEdgeLinebasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<LineBaseEntityListing> GetProvidersEdgeLinebasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get a listing of line base settings objects
@@ -282,7 +282,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ApiResponse (LineBaseEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LineBaseEntityListing>> GetTelephonyProvidersEdgeLinebasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<LineBaseEntityListing>> GetProvidersEdgeLinebasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
         
         /// <summary>
         /// Get a line base settings object by ID
@@ -292,7 +292,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="lineBaseId">Line base ID</param>
         /// <returns>LineBase</returns>
-        LineBase GetTelephonyProvidersEdgeLinebasesetting (string lineBaseId);
+        LineBase GetProvidersEdgeLinebasesettingsLinebaseId (string lineBaseId);
   
         /// <summary>
         /// Get a line base settings object by ID
@@ -302,7 +302,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="lineBaseId">Line base ID</param>
         /// <returns>ApiResponse of LineBase</returns>
-        ApiResponse<LineBase> GetTelephonyProvidersEdgeLinebasesettingWithHttpInfo (string lineBaseId);
+        ApiResponse<LineBase> GetProvidersEdgeLinebasesettingsLinebaseIdWithHttpInfo (string lineBaseId);
 
         /// <summary>
         /// Get a line base settings object by ID
@@ -312,7 +312,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="lineBaseId">Line base ID</param>
         /// <returns>Task of LineBase</returns>
-        System.Threading.Tasks.Task<LineBase> GetTelephonyProvidersEdgeLinebasesettingAsync (string lineBaseId);
+        System.Threading.Tasks.Task<LineBase> GetProvidersEdgeLinebasesettingsLinebaseIdAsync (string lineBaseId);
 
         /// <summary>
         /// Get a line base settings object by ID
@@ -322,7 +322,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="lineBaseId">Line base ID</param>
         /// <returns>Task of ApiResponse (LineBase)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LineBase>> GetTelephonyProvidersEdgeLinebasesettingAsyncWithHttpInfo (string lineBaseId);
+        System.Threading.Tasks.Task<ApiResponse<LineBase>> GetProvidersEdgeLinebasesettingsLinebaseIdAsyncWithHttpInfo (string lineBaseId);
         
         /// <summary>
         /// Get a list of Lines
@@ -336,7 +336,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param>
         /// <param name="expand">Fields to expand in the response, comma-separated</param>
         /// <returns>LineEntityListing</returns>
-        LineEntityListing GetTelephonyProvidersEdgeLines (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null);
+        LineEntityListing GetProvidersEdgeLines (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null);
   
         /// <summary>
         /// Get a list of Lines
@@ -350,7 +350,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param>
         /// <param name="expand">Fields to expand in the response, comma-separated</param>
         /// <returns>ApiResponse of LineEntityListing</returns>
-        ApiResponse<LineEntityListing> GetTelephonyProvidersEdgeLinesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null);
+        ApiResponse<LineEntityListing> GetProvidersEdgeLinesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null);
 
         /// <summary>
         /// Get a list of Lines
@@ -364,7 +364,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param>
         /// <param name="expand">Fields to expand in the response, comma-separated</param>
         /// <returns>Task of LineEntityListing</returns>
-        System.Threading.Tasks.Task<LineEntityListing> GetTelephonyProvidersEdgeLinesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null);
+        System.Threading.Tasks.Task<LineEntityListing> GetProvidersEdgeLinesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null);
 
         /// <summary>
         /// Get a list of Lines
@@ -378,7 +378,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param>
         /// <param name="expand">Fields to expand in the response, comma-separated</param>
         /// <returns>Task of ApiResponse (LineEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LineEntityListing>> GetTelephonyProvidersEdgeLinesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<LineEntityListing>> GetProvidersEdgeLinesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null);
         
         /// <summary>
         /// Get a Line instance template based on a Line Base Settings object. This object can then be modified and saved as a new Line instance
@@ -388,7 +388,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="lineBaseSettingsId">The id of a Line Base Settings object upon which to base this Line</param>
         /// <returns>Line</returns>
-        Line GetTelephonyProvidersEdgeLinesTemplate (string lineBaseSettingsId);
+        Line GetProvidersEdgeLinesTemplate (string lineBaseSettingsId);
   
         /// <summary>
         /// Get a Line instance template based on a Line Base Settings object. This object can then be modified and saved as a new Line instance
@@ -398,7 +398,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="lineBaseSettingsId">The id of a Line Base Settings object upon which to base this Line</param>
         /// <returns>ApiResponse of Line</returns>
-        ApiResponse<Line> GetTelephonyProvidersEdgeLinesTemplateWithHttpInfo (string lineBaseSettingsId);
+        ApiResponse<Line> GetProvidersEdgeLinesTemplateWithHttpInfo (string lineBaseSettingsId);
 
         /// <summary>
         /// Get a Line instance template based on a Line Base Settings object. This object can then be modified and saved as a new Line instance
@@ -408,7 +408,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="lineBaseSettingsId">The id of a Line Base Settings object upon which to base this Line</param>
         /// <returns>Task of Line</returns>
-        System.Threading.Tasks.Task<Line> GetTelephonyProvidersEdgeLinesTemplateAsync (string lineBaseSettingsId);
+        System.Threading.Tasks.Task<Line> GetProvidersEdgeLinesTemplateAsync (string lineBaseSettingsId);
 
         /// <summary>
         /// Get a Line instance template based on a Line Base Settings object. This object can then be modified and saved as a new Line instance
@@ -418,7 +418,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="lineBaseSettingsId">The id of a Line Base Settings object upon which to base this Line</param>
         /// <returns>Task of ApiResponse (Line)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Line>> GetTelephonyProvidersEdgeLinesTemplateAsyncWithHttpInfo (string lineBaseSettingsId);
+        System.Threading.Tasks.Task<ApiResponse<Line>> GetProvidersEdgeLinesTemplateAsyncWithHttpInfo (string lineBaseSettingsId);
         
         /// <summary>
         /// Get a Line by ID
@@ -428,7 +428,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="lineId">Line ID</param>
         /// <returns>Line</returns>
-        Line GetTelephonyProvidersEdgeLine (string lineId);
+        Line GetProvidersEdgeLinesLineId (string lineId);
   
         /// <summary>
         /// Get a Line by ID
@@ -438,7 +438,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="lineId">Line ID</param>
         /// <returns>ApiResponse of Line</returns>
-        ApiResponse<Line> GetTelephonyProvidersEdgeLineWithHttpInfo (string lineId);
+        ApiResponse<Line> GetProvidersEdgeLinesLineIdWithHttpInfo (string lineId);
 
         /// <summary>
         /// Get a Line by ID
@@ -448,7 +448,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="lineId">Line ID</param>
         /// <returns>Task of Line</returns>
-        System.Threading.Tasks.Task<Line> GetTelephonyProvidersEdgeLineAsync (string lineId);
+        System.Threading.Tasks.Task<Line> GetProvidersEdgeLinesLineIdAsync (string lineId);
 
         /// <summary>
         /// Get a Line by ID
@@ -458,7 +458,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="lineId">Line ID</param>
         /// <returns>Task of ApiResponse (Line)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Line>> GetTelephonyProvidersEdgeLineAsyncWithHttpInfo (string lineId);
+        System.Threading.Tasks.Task<ApiResponse<Line>> GetProvidersEdgeLinesLineIdAsyncWithHttpInfo (string lineId);
         
         /// <summary>
         /// Get outbound routes
@@ -472,7 +472,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Filter by site.id</param>
         /// <param name="sortBy">Sort by</param>
         /// <returns>OutboundRouteEntityListing</returns>
-        OutboundRouteEntityListing GetTelephonyProvidersEdgeOutboundroutes (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null);
+        OutboundRouteEntityListing GetProvidersEdgeOutboundroutes (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null);
   
         /// <summary>
         /// Get outbound routes
@@ -486,7 +486,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Filter by site.id</param>
         /// <param name="sortBy">Sort by</param>
         /// <returns>ApiResponse of OutboundRouteEntityListing</returns>
-        ApiResponse<OutboundRouteEntityListing> GetTelephonyProvidersEdgeOutboundroutesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null);
+        ApiResponse<OutboundRouteEntityListing> GetProvidersEdgeOutboundroutesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null);
 
         /// <summary>
         /// Get outbound routes
@@ -500,7 +500,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Filter by site.id</param>
         /// <param name="sortBy">Sort by</param>
         /// <returns>Task of OutboundRouteEntityListing</returns>
-        System.Threading.Tasks.Task<OutboundRouteEntityListing> GetTelephonyProvidersEdgeOutboundroutesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null);
+        System.Threading.Tasks.Task<OutboundRouteEntityListing> GetProvidersEdgeOutboundroutesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null);
 
         /// <summary>
         /// Get outbound routes
@@ -514,7 +514,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Filter by site.id</param>
         /// <param name="sortBy">Sort by</param>
         /// <returns>Task of ApiResponse (OutboundRouteEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OutboundRouteEntityListing>> GetTelephonyProvidersEdgeOutboundroutesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null);
+        System.Threading.Tasks.Task<ApiResponse<OutboundRouteEntityListing>> GetProvidersEdgeOutboundroutesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null);
         
         /// <summary>
         /// Create outbound rule
@@ -524,7 +524,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">OutboundRoute</param>
         /// <returns>OutboundRoute</returns>
-        OutboundRoute PostTelephonyProvidersEdgeOutboundroutes (OutboundRoute body = null);
+        OutboundRoute PostProvidersEdgeOutboundroutes (OutboundRoute body = null);
   
         /// <summary>
         /// Create outbound rule
@@ -534,7 +534,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">OutboundRoute</param>
         /// <returns>ApiResponse of OutboundRoute</returns>
-        ApiResponse<OutboundRoute> PostTelephonyProvidersEdgeOutboundroutesWithHttpInfo (OutboundRoute body = null);
+        ApiResponse<OutboundRoute> PostProvidersEdgeOutboundroutesWithHttpInfo (OutboundRoute body = null);
 
         /// <summary>
         /// Create outbound rule
@@ -544,7 +544,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">OutboundRoute</param>
         /// <returns>Task of OutboundRoute</returns>
-        System.Threading.Tasks.Task<OutboundRoute> PostTelephonyProvidersEdgeOutboundroutesAsync (OutboundRoute body = null);
+        System.Threading.Tasks.Task<OutboundRoute> PostProvidersEdgeOutboundroutesAsync (OutboundRoute body = null);
 
         /// <summary>
         /// Create outbound rule
@@ -554,7 +554,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">OutboundRoute</param>
         /// <returns>Task of ApiResponse (OutboundRoute)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> PostTelephonyProvidersEdgeOutboundroutesAsyncWithHttpInfo (OutboundRoute body = null);
+        System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> PostProvidersEdgeOutboundroutesAsyncWithHttpInfo (OutboundRoute body = null);
         
         /// <summary>
         /// Get outbound route
@@ -564,7 +564,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>OutboundRoute</returns>
-        OutboundRoute GetTelephonyProvidersEdgeOutboundroute (string outboundRouteId);
+        OutboundRoute GetProvidersEdgeOutboundroutesOutboundrouteId (string outboundRouteId);
   
         /// <summary>
         /// Get outbound route
@@ -574,7 +574,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>ApiResponse of OutboundRoute</returns>
-        ApiResponse<OutboundRoute> GetTelephonyProvidersEdgeOutboundrouteWithHttpInfo (string outboundRouteId);
+        ApiResponse<OutboundRoute> GetProvidersEdgeOutboundroutesOutboundrouteIdWithHttpInfo (string outboundRouteId);
 
         /// <summary>
         /// Get outbound route
@@ -584,7 +584,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>Task of OutboundRoute</returns>
-        System.Threading.Tasks.Task<OutboundRoute> GetTelephonyProvidersEdgeOutboundrouteAsync (string outboundRouteId);
+        System.Threading.Tasks.Task<OutboundRoute> GetProvidersEdgeOutboundroutesOutboundrouteIdAsync (string outboundRouteId);
 
         /// <summary>
         /// Get outbound route
@@ -594,7 +594,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>Task of ApiResponse (OutboundRoute)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> GetTelephonyProvidersEdgeOutboundrouteAsyncWithHttpInfo (string outboundRouteId);
+        System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> GetProvidersEdgeOutboundroutesOutboundrouteIdAsyncWithHttpInfo (string outboundRouteId);
         
         /// <summary>
         /// Update outbound route
@@ -605,7 +605,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <param name="body">OutboundRoute</param>
         /// <returns>OutboundRoute</returns>
-        OutboundRoute PutTelephonyProvidersEdgeOutboundroute (string outboundRouteId, OutboundRoute body = null);
+        OutboundRoute PutProvidersEdgeOutboundroutesOutboundrouteId (string outboundRouteId, OutboundRoute body = null);
   
         /// <summary>
         /// Update outbound route
@@ -616,7 +616,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <param name="body">OutboundRoute</param>
         /// <returns>ApiResponse of OutboundRoute</returns>
-        ApiResponse<OutboundRoute> PutTelephonyProvidersEdgeOutboundrouteWithHttpInfo (string outboundRouteId, OutboundRoute body = null);
+        ApiResponse<OutboundRoute> PutProvidersEdgeOutboundroutesOutboundrouteIdWithHttpInfo (string outboundRouteId, OutboundRoute body = null);
 
         /// <summary>
         /// Update outbound route
@@ -627,7 +627,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <param name="body">OutboundRoute</param>
         /// <returns>Task of OutboundRoute</returns>
-        System.Threading.Tasks.Task<OutboundRoute> PutTelephonyProvidersEdgeOutboundrouteAsync (string outboundRouteId, OutboundRoute body = null);
+        System.Threading.Tasks.Task<OutboundRoute> PutProvidersEdgeOutboundroutesOutboundrouteIdAsync (string outboundRouteId, OutboundRoute body = null);
 
         /// <summary>
         /// Update outbound route
@@ -638,7 +638,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <param name="body">OutboundRoute</param>
         /// <returns>Task of ApiResponse (OutboundRoute)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> PutTelephonyProvidersEdgeOutboundrouteAsyncWithHttpInfo (string outboundRouteId, OutboundRoute body = null);
+        System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> PutProvidersEdgeOutboundroutesOutboundrouteIdAsyncWithHttpInfo (string outboundRouteId, OutboundRoute body = null);
         
         /// <summary>
         /// Delete Outbound Route
@@ -648,7 +648,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>string</returns>
-        string DeleteTelephonyProvidersEdgeOutboundroute (string outboundRouteId);
+        string DeleteProvidersEdgeOutboundroutesOutboundrouteId (string outboundRouteId);
   
         /// <summary>
         /// Delete Outbound Route
@@ -658,7 +658,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteTelephonyProvidersEdgeOutboundrouteWithHttpInfo (string outboundRouteId);
+        ApiResponse<string> DeleteProvidersEdgeOutboundroutesOutboundrouteIdWithHttpInfo (string outboundRouteId);
 
         /// <summary>
         /// Delete Outbound Route
@@ -668,7 +668,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgeOutboundrouteAsync (string outboundRouteId);
+        System.Threading.Tasks.Task<string> DeleteProvidersEdgeOutboundroutesOutboundrouteIdAsync (string outboundRouteId);
 
         /// <summary>
         /// Delete Outbound Route
@@ -678,7 +678,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgeOutboundrouteAsyncWithHttpInfo (string outboundRouteId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteProvidersEdgeOutboundroutesOutboundrouteIdAsyncWithHttpInfo (string outboundRouteId);
         
         /// <summary>
         /// Get a list of Phone Base Settings objects
@@ -691,7 +691,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>PhoneBaseEntityListing</returns>
-        PhoneBaseEntityListing GetTelephonyProvidersEdgePhonebasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        PhoneBaseEntityListing GetProvidersEdgePhonebasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
   
         /// <summary>
         /// Get a list of Phone Base Settings objects
@@ -704,7 +704,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>ApiResponse of PhoneBaseEntityListing</returns>
-        ApiResponse<PhoneBaseEntityListing> GetTelephonyProvidersEdgePhonebasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        ApiResponse<PhoneBaseEntityListing> GetProvidersEdgePhonebasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get a list of Phone Base Settings objects
@@ -717,7 +717,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of PhoneBaseEntityListing</returns>
-        System.Threading.Tasks.Task<PhoneBaseEntityListing> GetTelephonyProvidersEdgePhonebasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<PhoneBaseEntityListing> GetProvidersEdgePhonebasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get a list of Phone Base Settings objects
@@ -730,7 +730,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ApiResponse (PhoneBaseEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PhoneBaseEntityListing>> GetTelephonyProvidersEdgePhonebasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<PhoneBaseEntityListing>> GetProvidersEdgePhonebasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
         
         /// <summary>
         /// Create a new Phone Base Settings object
@@ -740,7 +740,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>PhoneBase</returns>
-        PhoneBase PostTelephonyProvidersEdgePhonebasesettings (PhoneBase body = null);
+        PhoneBase PostProvidersEdgePhonebasesettings (PhoneBase body = null);
   
         /// <summary>
         /// Create a new Phone Base Settings object
@@ -750,7 +750,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>ApiResponse of PhoneBase</returns>
-        ApiResponse<PhoneBase> PostTelephonyProvidersEdgePhonebasesettingsWithHttpInfo (PhoneBase body = null);
+        ApiResponse<PhoneBase> PostProvidersEdgePhonebasesettingsWithHttpInfo (PhoneBase body = null);
 
         /// <summary>
         /// Create a new Phone Base Settings object
@@ -760,7 +760,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of PhoneBase</returns>
-        System.Threading.Tasks.Task<PhoneBase> PostTelephonyProvidersEdgePhonebasesettingsAsync (PhoneBase body = null);
+        System.Threading.Tasks.Task<PhoneBase> PostProvidersEdgePhonebasesettingsAsync (PhoneBase body = null);
 
         /// <summary>
         /// Create a new Phone Base Settings object
@@ -770,7 +770,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (PhoneBase)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PhoneBase>> PostTelephonyProvidersEdgePhonebasesettingsAsyncWithHttpInfo (PhoneBase body = null);
+        System.Threading.Tasks.Task<ApiResponse<PhoneBase>> PostProvidersEdgePhonebasesettingsAsyncWithHttpInfo (PhoneBase body = null);
         
         /// <summary>
         /// Get a list of available makes and models to create a new Phone Base Settings
@@ -781,7 +781,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>PhoneMetaBaseEntityListing</returns>
-        PhoneMetaBaseEntityListing GetTelephonyProvidersEdgePhonebasesettingsAvailablemetabases (int? pageSize = null, int? pageNumber = null);
+        PhoneMetaBaseEntityListing GetProvidersEdgePhonebasesettingsAvailablemetabases (int? pageSize = null, int? pageNumber = null);
   
         /// <summary>
         /// Get a list of available makes and models to create a new Phone Base Settings
@@ -792,7 +792,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>ApiResponse of PhoneMetaBaseEntityListing</returns>
-        ApiResponse<PhoneMetaBaseEntityListing> GetTelephonyProvidersEdgePhonebasesettingsAvailablemetabasesWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        ApiResponse<PhoneMetaBaseEntityListing> GetProvidersEdgePhonebasesettingsAvailablemetabasesWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get a list of available makes and models to create a new Phone Base Settings
@@ -803,7 +803,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of PhoneMetaBaseEntityListing</returns>
-        System.Threading.Tasks.Task<PhoneMetaBaseEntityListing> GetTelephonyProvidersEdgePhonebasesettingsAvailablemetabasesAsync (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<PhoneMetaBaseEntityListing> GetProvidersEdgePhonebasesettingsAvailablemetabasesAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get a list of available makes and models to create a new Phone Base Settings
@@ -814,7 +814,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (PhoneMetaBaseEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PhoneMetaBaseEntityListing>> GetTelephonyProvidersEdgePhonebasesettingsAvailablemetabasesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<PhoneMetaBaseEntityListing>> GetProvidersEdgePhonebasesettingsAvailablemetabasesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
         /// Get a Phone Base Settings instance template from a given make and model. This object can then be modified and saved as a new Phone Base Settings instance
@@ -824,7 +824,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="phoneMetabaseId">The id of a metabase object upon which to base this Phone Base Settings</param>
         /// <returns>PhoneBase</returns>
-        PhoneBase GetTelephonyProvidersEdgePhonebasesettingsTemplate (string phoneMetabaseId);
+        PhoneBase GetProvidersEdgePhonebasesettingsTemplate (string phoneMetabaseId);
   
         /// <summary>
         /// Get a Phone Base Settings instance template from a given make and model. This object can then be modified and saved as a new Phone Base Settings instance
@@ -834,7 +834,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="phoneMetabaseId">The id of a metabase object upon which to base this Phone Base Settings</param>
         /// <returns>ApiResponse of PhoneBase</returns>
-        ApiResponse<PhoneBase> GetTelephonyProvidersEdgePhonebasesettingsTemplateWithHttpInfo (string phoneMetabaseId);
+        ApiResponse<PhoneBase> GetProvidersEdgePhonebasesettingsTemplateWithHttpInfo (string phoneMetabaseId);
 
         /// <summary>
         /// Get a Phone Base Settings instance template from a given make and model. This object can then be modified and saved as a new Phone Base Settings instance
@@ -844,7 +844,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="phoneMetabaseId">The id of a metabase object upon which to base this Phone Base Settings</param>
         /// <returns>Task of PhoneBase</returns>
-        System.Threading.Tasks.Task<PhoneBase> GetTelephonyProvidersEdgePhonebasesettingsTemplateAsync (string phoneMetabaseId);
+        System.Threading.Tasks.Task<PhoneBase> GetProvidersEdgePhonebasesettingsTemplateAsync (string phoneMetabaseId);
 
         /// <summary>
         /// Get a Phone Base Settings instance template from a given make and model. This object can then be modified and saved as a new Phone Base Settings instance
@@ -854,7 +854,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="phoneMetabaseId">The id of a metabase object upon which to base this Phone Base Settings</param>
         /// <returns>Task of ApiResponse (PhoneBase)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PhoneBase>> GetTelephonyProvidersEdgePhonebasesettingsTemplateAsyncWithHttpInfo (string phoneMetabaseId);
+        System.Threading.Tasks.Task<ApiResponse<PhoneBase>> GetProvidersEdgePhonebasesettingsTemplateAsyncWithHttpInfo (string phoneMetabaseId);
         
         /// <summary>
         /// Get a Phone Base Settings object by ID
@@ -864,7 +864,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <returns>PhoneBase</returns>
-        PhoneBase GetTelephonyProvidersEdgePhonebasesetting (string phoneBaseId);
+        PhoneBase GetProvidersEdgePhonebasesettingsPhonebaseId (string phoneBaseId);
   
         /// <summary>
         /// Get a Phone Base Settings object by ID
@@ -874,7 +874,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <returns>ApiResponse of PhoneBase</returns>
-        ApiResponse<PhoneBase> GetTelephonyProvidersEdgePhonebasesettingWithHttpInfo (string phoneBaseId);
+        ApiResponse<PhoneBase> GetProvidersEdgePhonebasesettingsPhonebaseIdWithHttpInfo (string phoneBaseId);
 
         /// <summary>
         /// Get a Phone Base Settings object by ID
@@ -884,7 +884,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <returns>Task of PhoneBase</returns>
-        System.Threading.Tasks.Task<PhoneBase> GetTelephonyProvidersEdgePhonebasesettingAsync (string phoneBaseId);
+        System.Threading.Tasks.Task<PhoneBase> GetProvidersEdgePhonebasesettingsPhonebaseIdAsync (string phoneBaseId);
 
         /// <summary>
         /// Get a Phone Base Settings object by ID
@@ -894,7 +894,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <returns>Task of ApiResponse (PhoneBase)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PhoneBase>> GetTelephonyProvidersEdgePhonebasesettingAsyncWithHttpInfo (string phoneBaseId);
+        System.Threading.Tasks.Task<ApiResponse<PhoneBase>> GetProvidersEdgePhonebasesettingsPhonebaseIdAsyncWithHttpInfo (string phoneBaseId);
         
         /// <summary>
         /// Update a Phone Base Settings by ID
@@ -905,7 +905,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <param name="body"></param>
         /// <returns>PhoneBase</returns>
-        PhoneBase PutTelephonyProvidersEdgePhonebasesetting (string phoneBaseId, PhoneBase body = null);
+        PhoneBase PutProvidersEdgePhonebasesettingsPhonebaseId (string phoneBaseId, PhoneBase body = null);
   
         /// <summary>
         /// Update a Phone Base Settings by ID
@@ -916,7 +916,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of PhoneBase</returns>
-        ApiResponse<PhoneBase> PutTelephonyProvidersEdgePhonebasesettingWithHttpInfo (string phoneBaseId, PhoneBase body = null);
+        ApiResponse<PhoneBase> PutProvidersEdgePhonebasesettingsPhonebaseIdWithHttpInfo (string phoneBaseId, PhoneBase body = null);
 
         /// <summary>
         /// Update a Phone Base Settings by ID
@@ -927,7 +927,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <param name="body"></param>
         /// <returns>Task of PhoneBase</returns>
-        System.Threading.Tasks.Task<PhoneBase> PutTelephonyProvidersEdgePhonebasesettingAsync (string phoneBaseId, PhoneBase body = null);
+        System.Threading.Tasks.Task<PhoneBase> PutProvidersEdgePhonebasesettingsPhonebaseIdAsync (string phoneBaseId, PhoneBase body = null);
 
         /// <summary>
         /// Update a Phone Base Settings by ID
@@ -938,7 +938,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (PhoneBase)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PhoneBase>> PutTelephonyProvidersEdgePhonebasesettingAsyncWithHttpInfo (string phoneBaseId, PhoneBase body = null);
+        System.Threading.Tasks.Task<ApiResponse<PhoneBase>> PutProvidersEdgePhonebasesettingsPhonebaseIdAsyncWithHttpInfo (string phoneBaseId, PhoneBase body = null);
         
         /// <summary>
         /// Delete a Phone Base Settings by ID
@@ -948,7 +948,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <returns>string</returns>
-        string DeleteTelephonyProvidersEdgePhonebasesetting (string phoneBaseId);
+        string DeleteProvidersEdgePhonebasesettingsPhonebaseId (string phoneBaseId);
   
         /// <summary>
         /// Delete a Phone Base Settings by ID
@@ -958,7 +958,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteTelephonyProvidersEdgePhonebasesettingWithHttpInfo (string phoneBaseId);
+        ApiResponse<string> DeleteProvidersEdgePhonebasesettingsPhonebaseIdWithHttpInfo (string phoneBaseId);
 
         /// <summary>
         /// Delete a Phone Base Settings by ID
@@ -968,7 +968,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgePhonebasesettingAsync (string phoneBaseId);
+        System.Threading.Tasks.Task<string> DeleteProvidersEdgePhonebasesettingsPhonebaseIdAsync (string phoneBaseId);
 
         /// <summary>
         /// Delete a Phone Base Settings by ID
@@ -978,7 +978,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgePhonebasesettingAsyncWithHttpInfo (string phoneBaseId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteProvidersEdgePhonebasesettingsPhonebaseIdAsyncWithHttpInfo (string phoneBaseId);
         
         /// <summary>
         /// Get a list of Phone Instances
@@ -996,7 +996,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Fields to expand in the response, comma-separated</param>
         /// <param name="fields">Fields under properties to get, comma-separated</param>
         /// <returns>PhoneEntityListing</returns>
-        PhoneEntityListing GetTelephonyProvidersEdgePhones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string phoneBaseSettingsId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null);
+        PhoneEntityListing GetProvidersEdgePhones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string phoneBaseSettingsId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null);
   
         /// <summary>
         /// Get a list of Phone Instances
@@ -1014,7 +1014,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Fields to expand in the response, comma-separated</param>
         /// <param name="fields">Fields under properties to get, comma-separated</param>
         /// <returns>ApiResponse of PhoneEntityListing</returns>
-        ApiResponse<PhoneEntityListing> GetTelephonyProvidersEdgePhonesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string phoneBaseSettingsId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null);
+        ApiResponse<PhoneEntityListing> GetProvidersEdgePhonesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string phoneBaseSettingsId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null);
 
         /// <summary>
         /// Get a list of Phone Instances
@@ -1032,7 +1032,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Fields to expand in the response, comma-separated</param>
         /// <param name="fields">Fields under properties to get, comma-separated</param>
         /// <returns>Task of PhoneEntityListing</returns>
-        System.Threading.Tasks.Task<PhoneEntityListing> GetTelephonyProvidersEdgePhonesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string phoneBaseSettingsId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null);
+        System.Threading.Tasks.Task<PhoneEntityListing> GetProvidersEdgePhonesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string phoneBaseSettingsId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null);
 
         /// <summary>
         /// Get a list of Phone Instances
@@ -1050,7 +1050,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Fields to expand in the response, comma-separated</param>
         /// <param name="fields">Fields under properties to get, comma-separated</param>
         /// <returns>Task of ApiResponse (PhoneEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PhoneEntityListing>> GetTelephonyProvidersEdgePhonesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string phoneBaseSettingsId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null);
+        System.Threading.Tasks.Task<ApiResponse<PhoneEntityListing>> GetProvidersEdgePhonesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string phoneBaseSettingsId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null);
         
         /// <summary>
         /// Create a new Phone
@@ -1060,7 +1060,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Phone</returns>
-        Phone PostTelephonyProvidersEdgePhones (Phone body = null);
+        Phone PostProvidersEdgePhones (Phone body = null);
   
         /// <summary>
         /// Create a new Phone
@@ -1070,7 +1070,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Phone</returns>
-        ApiResponse<Phone> PostTelephonyProvidersEdgePhonesWithHttpInfo (Phone body = null);
+        ApiResponse<Phone> PostProvidersEdgePhonesWithHttpInfo (Phone body = null);
 
         /// <summary>
         /// Create a new Phone
@@ -1080,7 +1080,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of Phone</returns>
-        System.Threading.Tasks.Task<Phone> PostTelephonyProvidersEdgePhonesAsync (Phone body = null);
+        System.Threading.Tasks.Task<Phone> PostProvidersEdgePhonesAsync (Phone body = null);
 
         /// <summary>
         /// Create a new Phone
@@ -1090,7 +1090,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Phone)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Phone>> PostTelephonyProvidersEdgePhonesAsyncWithHttpInfo (Phone body = null);
+        System.Threading.Tasks.Task<ApiResponse<Phone>> PostProvidersEdgePhonesAsyncWithHttpInfo (Phone body = null);
         
         /// <summary>
         /// Reboot Multiple Phones
@@ -1100,7 +1100,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">body</param>
         /// <returns></returns>
-        void PostTelephonyProvidersEdgePhonesReboot (PhonesReboot body = null);
+        void PostProvidersEdgePhonesReboot (PhonesReboot body = null);
   
         /// <summary>
         /// Reboot Multiple Phones
@@ -1110,7 +1110,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">body</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostTelephonyProvidersEdgePhonesRebootWithHttpInfo (PhonesReboot body = null);
+        ApiResponse<Object> PostProvidersEdgePhonesRebootWithHttpInfo (PhonesReboot body = null);
 
         /// <summary>
         /// Reboot Multiple Phones
@@ -1120,7 +1120,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">body</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostTelephonyProvidersEdgePhonesRebootAsync (PhonesReboot body = null);
+        System.Threading.Tasks.Task PostProvidersEdgePhonesRebootAsync (PhonesReboot body = null);
 
         /// <summary>
         /// Reboot Multiple Phones
@@ -1130,7 +1130,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostTelephonyProvidersEdgePhonesRebootAsyncWithHttpInfo (PhonesReboot body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostProvidersEdgePhonesRebootAsyncWithHttpInfo (PhonesReboot body = null);
         
         /// <summary>
         /// Get a Phone instance template based on a Phone Base Settings object. This object can then be modified and saved as a new Phone instance
@@ -1140,7 +1140,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="phoneBaseSettingsId">The id of a Phone Base Settings object upon which to base this Phone</param>
         /// <returns>Phone</returns>
-        Phone GetTelephonyProvidersEdgePhonesTemplate (string phoneBaseSettingsId);
+        Phone GetProvidersEdgePhonesTemplate (string phoneBaseSettingsId);
   
         /// <summary>
         /// Get a Phone instance template based on a Phone Base Settings object. This object can then be modified and saved as a new Phone instance
@@ -1150,7 +1150,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="phoneBaseSettingsId">The id of a Phone Base Settings object upon which to base this Phone</param>
         /// <returns>ApiResponse of Phone</returns>
-        ApiResponse<Phone> GetTelephonyProvidersEdgePhonesTemplateWithHttpInfo (string phoneBaseSettingsId);
+        ApiResponse<Phone> GetProvidersEdgePhonesTemplateWithHttpInfo (string phoneBaseSettingsId);
 
         /// <summary>
         /// Get a Phone instance template based on a Phone Base Settings object. This object can then be modified and saved as a new Phone instance
@@ -1160,7 +1160,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="phoneBaseSettingsId">The id of a Phone Base Settings object upon which to base this Phone</param>
         /// <returns>Task of Phone</returns>
-        System.Threading.Tasks.Task<Phone> GetTelephonyProvidersEdgePhonesTemplateAsync (string phoneBaseSettingsId);
+        System.Threading.Tasks.Task<Phone> GetProvidersEdgePhonesTemplateAsync (string phoneBaseSettingsId);
 
         /// <summary>
         /// Get a Phone instance template based on a Phone Base Settings object. This object can then be modified and saved as a new Phone instance
@@ -1170,7 +1170,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="phoneBaseSettingsId">The id of a Phone Base Settings object upon which to base this Phone</param>
         /// <returns>Task of ApiResponse (Phone)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Phone>> GetTelephonyProvidersEdgePhonesTemplateAsyncWithHttpInfo (string phoneBaseSettingsId);
+        System.Threading.Tasks.Task<ApiResponse<Phone>> GetProvidersEdgePhonesTemplateAsyncWithHttpInfo (string phoneBaseSettingsId);
         
         /// <summary>
         /// Get a Phone by ID
@@ -1180,7 +1180,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="phoneId">Phone ID</param>
         /// <returns>Phone</returns>
-        Phone GetTelephonyProvidersEdgePhone (string phoneId);
+        Phone GetProvidersEdgePhonesPhoneId (string phoneId);
   
         /// <summary>
         /// Get a Phone by ID
@@ -1190,7 +1190,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="phoneId">Phone ID</param>
         /// <returns>ApiResponse of Phone</returns>
-        ApiResponse<Phone> GetTelephonyProvidersEdgePhoneWithHttpInfo (string phoneId);
+        ApiResponse<Phone> GetProvidersEdgePhonesPhoneIdWithHttpInfo (string phoneId);
 
         /// <summary>
         /// Get a Phone by ID
@@ -1200,7 +1200,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="phoneId">Phone ID</param>
         /// <returns>Task of Phone</returns>
-        System.Threading.Tasks.Task<Phone> GetTelephonyProvidersEdgePhoneAsync (string phoneId);
+        System.Threading.Tasks.Task<Phone> GetProvidersEdgePhonesPhoneIdAsync (string phoneId);
 
         /// <summary>
         /// Get a Phone by ID
@@ -1210,7 +1210,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="phoneId">Phone ID</param>
         /// <returns>Task of ApiResponse (Phone)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Phone>> GetTelephonyProvidersEdgePhoneAsyncWithHttpInfo (string phoneId);
+        System.Threading.Tasks.Task<ApiResponse<Phone>> GetProvidersEdgePhonesPhoneIdAsyncWithHttpInfo (string phoneId);
         
         /// <summary>
         /// Update a Phone by ID
@@ -1221,7 +1221,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="phoneId">Phone ID</param>
         /// <param name="body"></param>
         /// <returns>Phone</returns>
-        Phone PutTelephonyProvidersEdgePhone (string phoneId, Phone body = null);
+        Phone PutProvidersEdgePhonesPhoneId (string phoneId, Phone body = null);
   
         /// <summary>
         /// Update a Phone by ID
@@ -1232,7 +1232,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="phoneId">Phone ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Phone</returns>
-        ApiResponse<Phone> PutTelephonyProvidersEdgePhoneWithHttpInfo (string phoneId, Phone body = null);
+        ApiResponse<Phone> PutProvidersEdgePhonesPhoneIdWithHttpInfo (string phoneId, Phone body = null);
 
         /// <summary>
         /// Update a Phone by ID
@@ -1243,7 +1243,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="phoneId">Phone ID</param>
         /// <param name="body"></param>
         /// <returns>Task of Phone</returns>
-        System.Threading.Tasks.Task<Phone> PutTelephonyProvidersEdgePhoneAsync (string phoneId, Phone body = null);
+        System.Threading.Tasks.Task<Phone> PutProvidersEdgePhonesPhoneIdAsync (string phoneId, Phone body = null);
 
         /// <summary>
         /// Update a Phone by ID
@@ -1254,7 +1254,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="phoneId">Phone ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Phone)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Phone>> PutTelephonyProvidersEdgePhoneAsyncWithHttpInfo (string phoneId, Phone body = null);
+        System.Threading.Tasks.Task<ApiResponse<Phone>> PutProvidersEdgePhonesPhoneIdAsyncWithHttpInfo (string phoneId, Phone body = null);
         
         /// <summary>
         /// Delete a Phone by ID
@@ -1264,7 +1264,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="phoneId">Phone ID</param>
         /// <returns>string</returns>
-        string DeleteTelephonyProvidersEdgePhone (string phoneId);
+        string DeleteProvidersEdgePhonesPhoneId (string phoneId);
   
         /// <summary>
         /// Delete a Phone by ID
@@ -1274,7 +1274,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="phoneId">Phone ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteTelephonyProvidersEdgePhoneWithHttpInfo (string phoneId);
+        ApiResponse<string> DeleteProvidersEdgePhonesPhoneIdWithHttpInfo (string phoneId);
 
         /// <summary>
         /// Delete a Phone by ID
@@ -1284,7 +1284,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="phoneId">Phone ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgePhoneAsync (string phoneId);
+        System.Threading.Tasks.Task<string> DeleteProvidersEdgePhonesPhoneIdAsync (string phoneId);
 
         /// <summary>
         /// Delete a Phone by ID
@@ -1294,7 +1294,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="phoneId">Phone ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgePhoneAsyncWithHttpInfo (string phoneId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteProvidersEdgePhonesPhoneIdAsyncWithHttpInfo (string phoneId);
         
         /// <summary>
         /// Reboot a Phone
@@ -1304,7 +1304,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="phoneId">Phone Id</param>
         /// <returns></returns>
-        void PostTelephonyProvidersEdgePhoneReboot (string phoneId);
+        void PostProvidersEdgePhonesPhoneIdReboot (string phoneId);
   
         /// <summary>
         /// Reboot a Phone
@@ -1314,7 +1314,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="phoneId">Phone Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostTelephonyProvidersEdgePhoneRebootWithHttpInfo (string phoneId);
+        ApiResponse<Object> PostProvidersEdgePhonesPhoneIdRebootWithHttpInfo (string phoneId);
 
         /// <summary>
         /// Reboot a Phone
@@ -1324,7 +1324,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="phoneId">Phone Id</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostTelephonyProvidersEdgePhoneRebootAsync (string phoneId);
+        System.Threading.Tasks.Task PostProvidersEdgePhonesPhoneIdRebootAsync (string phoneId);
 
         /// <summary>
         /// Reboot a Phone
@@ -1334,7 +1334,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="phoneId">Phone Id</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostTelephonyProvidersEdgePhoneRebootAsyncWithHttpInfo (string phoneId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostProvidersEdgePhonesPhoneIdRebootAsyncWithHttpInfo (string phoneId);
         
         /// <summary>
         /// Get a list of Edge-compatible time zones
@@ -1345,7 +1345,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>TimeZoneEntityListing</returns>
-        TimeZoneEntityListing GetTelephonyProvidersEdgeTimezones (int? pageSize = null, int? pageNumber = null);
+        TimeZoneEntityListing GetProvidersEdgeTimezones (int? pageSize = null, int? pageNumber = null);
   
         /// <summary>
         /// Get a list of Edge-compatible time zones
@@ -1356,7 +1356,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>ApiResponse of TimeZoneEntityListing</returns>
-        ApiResponse<TimeZoneEntityListing> GetTelephonyProvidersEdgeTimezonesWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        ApiResponse<TimeZoneEntityListing> GetProvidersEdgeTimezonesWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get a list of Edge-compatible time zones
@@ -1367,7 +1367,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of TimeZoneEntityListing</returns>
-        System.Threading.Tasks.Task<TimeZoneEntityListing> GetTelephonyProvidersEdgeTimezonesAsync (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<TimeZoneEntityListing> GetProvidersEdgeTimezonesAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get a list of Edge-compatible time zones
@@ -1378,7 +1378,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (TimeZoneEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TimeZoneEntityListing>> GetTelephonyProvidersEdgeTimezonesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<TimeZoneEntityListing>> GetProvidersEdgeTimezonesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
         /// Get Trunk Base Settings listing
@@ -1391,7 +1391,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>TrunkBase</returns>
-        TrunkBase GetTelephonyProvidersEdgeTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        TrunkBase GetProvidersEdgeTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
   
         /// <summary>
         /// Get Trunk Base Settings listing
@@ -1404,7 +1404,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>ApiResponse of TrunkBase</returns>
-        ApiResponse<TrunkBase> GetTelephonyProvidersEdgeTrunkbasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        ApiResponse<TrunkBase> GetProvidersEdgeTrunkbasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get Trunk Base Settings listing
@@ -1417,7 +1417,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of TrunkBase</returns>
-        System.Threading.Tasks.Task<TrunkBase> GetTelephonyProvidersEdgeTrunkbasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<TrunkBase> GetProvidersEdgeTrunkbasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get Trunk Base Settings listing
@@ -1430,7 +1430,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ApiResponse (TrunkBase)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrunkBase>> GetTelephonyProvidersEdgeTrunkbasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<TrunkBase>> GetProvidersEdgeTrunkbasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
         
         /// <summary>
         /// Create a Trunk Base Settings object
@@ -1440,7 +1440,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>TrunkBase</returns>
-        TrunkBase PostTelephonyProvidersEdgeTrunkbasesettings (TrunkBase body = null);
+        TrunkBase PostProvidersEdgeTrunkbasesettings (TrunkBase body = null);
   
         /// <summary>
         /// Create a Trunk Base Settings object
@@ -1450,7 +1450,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>ApiResponse of TrunkBase</returns>
-        ApiResponse<TrunkBase> PostTelephonyProvidersEdgeTrunkbasesettingsWithHttpInfo (TrunkBase body = null);
+        ApiResponse<TrunkBase> PostProvidersEdgeTrunkbasesettingsWithHttpInfo (TrunkBase body = null);
 
         /// <summary>
         /// Create a Trunk Base Settings object
@@ -1460,7 +1460,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of TrunkBase</returns>
-        System.Threading.Tasks.Task<TrunkBase> PostTelephonyProvidersEdgeTrunkbasesettingsAsync (TrunkBase body = null);
+        System.Threading.Tasks.Task<TrunkBase> PostProvidersEdgeTrunkbasesettingsAsync (TrunkBase body = null);
 
         /// <summary>
         /// Create a Trunk Base Settings object
@@ -1470,7 +1470,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (TrunkBase)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrunkBase>> PostTelephonyProvidersEdgeTrunkbasesettingsAsyncWithHttpInfo (TrunkBase body = null);
+        System.Threading.Tasks.Task<ApiResponse<TrunkBase>> PostProvidersEdgeTrunkbasesettingsAsyncWithHttpInfo (TrunkBase body = null);
         
         /// <summary>
         /// Get a list of available makes and models to create a new Trunk Base Settings
@@ -1482,7 +1482,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize"></param>
         /// <param name="pageNumber"></param>
         /// <returns>TrunkMetabaseEntityListing</returns>
-        TrunkMetabaseEntityListing GetTelephonyProvidersEdgeTrunkbasesettingsAvailablemetabases (string type = null, int? pageSize = null, int? pageNumber = null);
+        TrunkMetabaseEntityListing GetProvidersEdgeTrunkbasesettingsAvailablemetabases (string type = null, int? pageSize = null, int? pageNumber = null);
   
         /// <summary>
         /// Get a list of available makes and models to create a new Trunk Base Settings
@@ -1494,7 +1494,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize"></param>
         /// <param name="pageNumber"></param>
         /// <returns>ApiResponse of TrunkMetabaseEntityListing</returns>
-        ApiResponse<TrunkMetabaseEntityListing> GetTelephonyProvidersEdgeTrunkbasesettingsAvailablemetabasesWithHttpInfo (string type = null, int? pageSize = null, int? pageNumber = null);
+        ApiResponse<TrunkMetabaseEntityListing> GetProvidersEdgeTrunkbasesettingsAvailablemetabasesWithHttpInfo (string type = null, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get a list of available makes and models to create a new Trunk Base Settings
@@ -1506,7 +1506,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize"></param>
         /// <param name="pageNumber"></param>
         /// <returns>Task of TrunkMetabaseEntityListing</returns>
-        System.Threading.Tasks.Task<TrunkMetabaseEntityListing> GetTelephonyProvidersEdgeTrunkbasesettingsAvailablemetabasesAsync (string type = null, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<TrunkMetabaseEntityListing> GetProvidersEdgeTrunkbasesettingsAvailablemetabasesAsync (string type = null, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get a list of available makes and models to create a new Trunk Base Settings
@@ -1518,7 +1518,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize"></param>
         /// <param name="pageNumber"></param>
         /// <returns>Task of ApiResponse (TrunkMetabaseEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrunkMetabaseEntityListing>> GetTelephonyProvidersEdgeTrunkbasesettingsAvailablemetabasesAsyncWithHttpInfo (string type = null, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<TrunkMetabaseEntityListing>> GetProvidersEdgeTrunkbasesettingsAvailablemetabasesAsyncWithHttpInfo (string type = null, int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
         /// Get a Trunk Base Settings instance template from a given make and model. This object can then be modified and saved as a new Trunk Base Settings instance
@@ -1528,7 +1528,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="trunkMetabaseId">The id of a metabase object upon which to base this Trunk Base Settings</param>
         /// <returns>TrunkBase</returns>
-        TrunkBase GetTelephonyProvidersEdgeTrunkbasesettingsTemplate (string trunkMetabaseId);
+        TrunkBase GetProvidersEdgeTrunkbasesettingsTemplate (string trunkMetabaseId);
   
         /// <summary>
         /// Get a Trunk Base Settings instance template from a given make and model. This object can then be modified and saved as a new Trunk Base Settings instance
@@ -1538,7 +1538,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="trunkMetabaseId">The id of a metabase object upon which to base this Trunk Base Settings</param>
         /// <returns>ApiResponse of TrunkBase</returns>
-        ApiResponse<TrunkBase> GetTelephonyProvidersEdgeTrunkbasesettingsTemplateWithHttpInfo (string trunkMetabaseId);
+        ApiResponse<TrunkBase> GetProvidersEdgeTrunkbasesettingsTemplateWithHttpInfo (string trunkMetabaseId);
 
         /// <summary>
         /// Get a Trunk Base Settings instance template from a given make and model. This object can then be modified and saved as a new Trunk Base Settings instance
@@ -1548,7 +1548,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="trunkMetabaseId">The id of a metabase object upon which to base this Trunk Base Settings</param>
         /// <returns>Task of TrunkBase</returns>
-        System.Threading.Tasks.Task<TrunkBase> GetTelephonyProvidersEdgeTrunkbasesettingsTemplateAsync (string trunkMetabaseId);
+        System.Threading.Tasks.Task<TrunkBase> GetProvidersEdgeTrunkbasesettingsTemplateAsync (string trunkMetabaseId);
 
         /// <summary>
         /// Get a Trunk Base Settings instance template from a given make and model. This object can then be modified and saved as a new Trunk Base Settings instance
@@ -1558,7 +1558,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="trunkMetabaseId">The id of a metabase object upon which to base this Trunk Base Settings</param>
         /// <returns>Task of ApiResponse (TrunkBase)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrunkBase>> GetTelephonyProvidersEdgeTrunkbasesettingsTemplateAsyncWithHttpInfo (string trunkMetabaseId);
+        System.Threading.Tasks.Task<ApiResponse<TrunkBase>> GetProvidersEdgeTrunkbasesettingsTemplateAsyncWithHttpInfo (string trunkMetabaseId);
         
         /// <summary>
         /// Get a Trunk Base Settings object by ID
@@ -1568,7 +1568,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <returns>TrunkBase</returns>
-        TrunkBase GetTelephonyProvidersEdgeTrunkbasesetting (string trunkBaseSettingsId);
+        TrunkBase GetProvidersEdgeTrunkbasesettingsTrunkbasesettingsId (string trunkBaseSettingsId);
   
         /// <summary>
         /// Get a Trunk Base Settings object by ID
@@ -1578,7 +1578,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <returns>ApiResponse of TrunkBase</returns>
-        ApiResponse<TrunkBase> GetTelephonyProvidersEdgeTrunkbasesettingWithHttpInfo (string trunkBaseSettingsId);
+        ApiResponse<TrunkBase> GetProvidersEdgeTrunkbasesettingsTrunkbasesettingsIdWithHttpInfo (string trunkBaseSettingsId);
 
         /// <summary>
         /// Get a Trunk Base Settings object by ID
@@ -1588,7 +1588,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <returns>Task of TrunkBase</returns>
-        System.Threading.Tasks.Task<TrunkBase> GetTelephonyProvidersEdgeTrunkbasesettingAsync (string trunkBaseSettingsId);
+        System.Threading.Tasks.Task<TrunkBase> GetProvidersEdgeTrunkbasesettingsTrunkbasesettingsIdAsync (string trunkBaseSettingsId);
 
         /// <summary>
         /// Get a Trunk Base Settings object by ID
@@ -1598,7 +1598,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <returns>Task of ApiResponse (TrunkBase)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrunkBase>> GetTelephonyProvidersEdgeTrunkbasesettingAsyncWithHttpInfo (string trunkBaseSettingsId);
+        System.Threading.Tasks.Task<ApiResponse<TrunkBase>> GetProvidersEdgeTrunkbasesettingsTrunkbasesettingsIdAsyncWithHttpInfo (string trunkBaseSettingsId);
         
         /// <summary>
         /// Update a Trunk Base Settings object by ID
@@ -1609,7 +1609,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <param name="body"></param>
         /// <returns>TrunkBase</returns>
-        TrunkBase PutTelephonyProvidersEdgeTrunkbasesetting (string trunkBaseSettingsId, TrunkBase body = null);
+        TrunkBase PutProvidersEdgeTrunkbasesettingsTrunkbasesettingsId (string trunkBaseSettingsId, TrunkBase body = null);
   
         /// <summary>
         /// Update a Trunk Base Settings object by ID
@@ -1620,7 +1620,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of TrunkBase</returns>
-        ApiResponse<TrunkBase> PutTelephonyProvidersEdgeTrunkbasesettingWithHttpInfo (string trunkBaseSettingsId, TrunkBase body = null);
+        ApiResponse<TrunkBase> PutProvidersEdgeTrunkbasesettingsTrunkbasesettingsIdWithHttpInfo (string trunkBaseSettingsId, TrunkBase body = null);
 
         /// <summary>
         /// Update a Trunk Base Settings object by ID
@@ -1631,7 +1631,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <param name="body"></param>
         /// <returns>Task of TrunkBase</returns>
-        System.Threading.Tasks.Task<TrunkBase> PutTelephonyProvidersEdgeTrunkbasesettingAsync (string trunkBaseSettingsId, TrunkBase body = null);
+        System.Threading.Tasks.Task<TrunkBase> PutProvidersEdgeTrunkbasesettingsTrunkbasesettingsIdAsync (string trunkBaseSettingsId, TrunkBase body = null);
 
         /// <summary>
         /// Update a Trunk Base Settings object by ID
@@ -1642,7 +1642,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (TrunkBase)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TrunkBase>> PutTelephonyProvidersEdgeTrunkbasesettingAsyncWithHttpInfo (string trunkBaseSettingsId, TrunkBase body = null);
+        System.Threading.Tasks.Task<ApiResponse<TrunkBase>> PutProvidersEdgeTrunkbasesettingsTrunkbasesettingsIdAsyncWithHttpInfo (string trunkBaseSettingsId, TrunkBase body = null);
         
         /// <summary>
         /// Delete a Trunk Base Settings object by ID
@@ -1652,7 +1652,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <returns>string</returns>
-        string DeleteTelephonyProvidersEdgeTrunkbasesetting (string trunkBaseSettingsId);
+        string DeleteProvidersEdgeTrunkbasesettingsTrunkbasesettingsId (string trunkBaseSettingsId);
   
         /// <summary>
         /// Delete a Trunk Base Settings object by ID
@@ -1662,7 +1662,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteTelephonyProvidersEdgeTrunkbasesettingWithHttpInfo (string trunkBaseSettingsId);
+        ApiResponse<string> DeleteProvidersEdgeTrunkbasesettingsTrunkbasesettingsIdWithHttpInfo (string trunkBaseSettingsId);
 
         /// <summary>
         /// Delete a Trunk Base Settings object by ID
@@ -1672,7 +1672,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgeTrunkbasesettingAsync (string trunkBaseSettingsId);
+        System.Threading.Tasks.Task<string> DeleteProvidersEdgeTrunkbasesettingsTrunkbasesettingsIdAsync (string trunkBaseSettingsId);
 
         /// <summary>
         /// Delete a Trunk Base Settings object by ID
@@ -1682,7 +1682,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgeTrunkbasesettingAsyncWithHttpInfo (string trunkBaseSettingsId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteProvidersEdgeTrunkbasesettingsTrunkbasesettingsIdAsyncWithHttpInfo (string trunkBaseSettingsId);
         
     }
   
@@ -1770,9 +1770,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param> 
         /// <param name="sortBy">Sort by</param> 
         /// <returns>EdgeGroupEntityListing</returns>
-        public EdgeGroupEntityListing GetTelephonyProvidersEdgeEdgegroups (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+        public EdgeGroupEntityListing GetProvidersEdgeEdgegroups (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
         {
-             ApiResponse<EdgeGroupEntityListing> response = GetTelephonyProvidersEdgeEdgegroupsWithHttpInfo(pageSize, pageNumber, name, sortBy);
+             ApiResponse<EdgeGroupEntityListing> response = GetProvidersEdgeEdgegroupsWithHttpInfo(pageSize, pageNumber, name, sortBy);
              return response.Data;
         }
 
@@ -1784,7 +1784,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param> 
         /// <param name="sortBy">Sort by</param> 
         /// <returns>ApiResponse of EdgeGroupEntityListing</returns>
-        public ApiResponse< EdgeGroupEntityListing > GetTelephonyProvidersEdgeEdgegroupsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+        public ApiResponse< EdgeGroupEntityListing > GetProvidersEdgeEdgegroupsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
         {
             
     
@@ -1841,9 +1841,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeEdgegroups: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeEdgegroups: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeEdgegroups: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeEdgegroups: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EdgeGroupEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1859,9 +1859,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param>
         /// <param name="sortBy">Sort by</param>
         /// <returns>Task of EdgeGroupEntityListing</returns>
-        public async System.Threading.Tasks.Task<EdgeGroupEntityListing> GetTelephonyProvidersEdgeEdgegroupsAsync (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+        public async System.Threading.Tasks.Task<EdgeGroupEntityListing> GetProvidersEdgeEdgegroupsAsync (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
         {
-             ApiResponse<EdgeGroupEntityListing> response = await GetTelephonyProvidersEdgeEdgegroupsAsyncWithHttpInfo(pageSize, pageNumber, name, sortBy);
+             ApiResponse<EdgeGroupEntityListing> response = await GetProvidersEdgeEdgegroupsAsyncWithHttpInfo(pageSize, pageNumber, name, sortBy);
              return response.Data;
 
         }
@@ -1874,7 +1874,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param>
         /// <param name="sortBy">Sort by</param>
         /// <returns>Task of ApiResponse (EdgeGroupEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EdgeGroupEntityListing>> GetTelephonyProvidersEdgeEdgegroupsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeGroupEntityListing>> GetProvidersEdgeEdgegroupsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
         {
             
     
@@ -1932,9 +1932,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeEdgegroups: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeEdgegroups: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeEdgegroups: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeEdgegroups: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EdgeGroupEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1947,9 +1947,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">EdgeGroup</param> 
         /// <returns>EdgeGroup</returns>
-        public EdgeGroup PostTelephonyProvidersEdgeEdgegroups (EdgeGroup body = null)
+        public EdgeGroup PostProvidersEdgeEdgegroups (EdgeGroup body = null)
         {
-             ApiResponse<EdgeGroup> response = PostTelephonyProvidersEdgeEdgegroupsWithHttpInfo(body);
+             ApiResponse<EdgeGroup> response = PostProvidersEdgeEdgegroupsWithHttpInfo(body);
              return response.Data;
         }
 
@@ -1958,7 +1958,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">EdgeGroup</param> 
         /// <returns>ApiResponse of EdgeGroup</returns>
-        public ApiResponse< EdgeGroup > PostTelephonyProvidersEdgeEdgegroupsWithHttpInfo (EdgeGroup body = null)
+        public ApiResponse< EdgeGroup > PostProvidersEdgeEdgegroupsWithHttpInfo (EdgeGroup body = null)
         {
             
     
@@ -2018,9 +2018,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostTelephonyProvidersEdgeEdgegroups: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostProvidersEdgeEdgegroups: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostTelephonyProvidersEdgeEdgegroups: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostProvidersEdgeEdgegroups: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EdgeGroup>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2033,9 +2033,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">EdgeGroup</param>
         /// <returns>Task of EdgeGroup</returns>
-        public async System.Threading.Tasks.Task<EdgeGroup> PostTelephonyProvidersEdgeEdgegroupsAsync (EdgeGroup body = null)
+        public async System.Threading.Tasks.Task<EdgeGroup> PostProvidersEdgeEdgegroupsAsync (EdgeGroup body = null)
         {
-             ApiResponse<EdgeGroup> response = await PostTelephonyProvidersEdgeEdgegroupsAsyncWithHttpInfo(body);
+             ApiResponse<EdgeGroup> response = await PostProvidersEdgeEdgegroupsAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -2045,7 +2045,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">EdgeGroup</param>
         /// <returns>Task of ApiResponse (EdgeGroup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> PostTelephonyProvidersEdgeEdgegroupsAsyncWithHttpInfo (EdgeGroup body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> PostProvidersEdgeEdgegroupsAsyncWithHttpInfo (EdgeGroup body = null)
         {
             
     
@@ -2100,9 +2100,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostTelephonyProvidersEdgeEdgegroups: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostProvidersEdgeEdgegroups: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostTelephonyProvidersEdgeEdgegroups: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostProvidersEdgeEdgegroups: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EdgeGroup>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2115,9 +2115,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeGroupId">Edge group ID</param> 
         /// <returns>EdgeGroup</returns>
-        public EdgeGroup GetTelephonyProvidersEdgeEdgegroup (string edgeGroupId)
+        public EdgeGroup GetProvidersEdgeEdgegroupsEdgegroupId (string edgeGroupId)
         {
-             ApiResponse<EdgeGroup> response = GetTelephonyProvidersEdgeEdgegroupWithHttpInfo(edgeGroupId);
+             ApiResponse<EdgeGroup> response = GetProvidersEdgeEdgegroupsEdgegroupIdWithHttpInfo(edgeGroupId);
              return response.Data;
         }
 
@@ -2126,12 +2126,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeGroupId">Edge group ID</param> 
         /// <returns>ApiResponse of EdgeGroup</returns>
-        public ApiResponse< EdgeGroup > GetTelephonyProvidersEdgeEdgegroupWithHttpInfo (string edgeGroupId)
+        public ApiResponse< EdgeGroup > GetProvidersEdgeEdgegroupsEdgegroupIdWithHttpInfo (string edgeGroupId)
         {
             
             // verify the required parameter 'edgeGroupId' is set
             if (edgeGroupId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeGroupId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeEdgegroup");
+                throw new ApiException(400, "Missing required parameter 'edgeGroupId' when calling TelephonyProvidersEdgeApi->GetProvidersEdgeEdgegroupsEdgegroupId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/edgegroups/{edgeGroupId}";
@@ -2184,9 +2184,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeEdgegroup: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeEdgegroupsEdgegroupId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeEdgegroup: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeEdgegroupsEdgegroupId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EdgeGroup>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2199,9 +2199,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <returns>Task of EdgeGroup</returns>
-        public async System.Threading.Tasks.Task<EdgeGroup> GetTelephonyProvidersEdgeEdgegroupAsync (string edgeGroupId)
+        public async System.Threading.Tasks.Task<EdgeGroup> GetProvidersEdgeEdgegroupsEdgegroupIdAsync (string edgeGroupId)
         {
-             ApiResponse<EdgeGroup> response = await GetTelephonyProvidersEdgeEdgegroupAsyncWithHttpInfo(edgeGroupId);
+             ApiResponse<EdgeGroup> response = await GetProvidersEdgeEdgegroupsEdgegroupIdAsyncWithHttpInfo(edgeGroupId);
              return response.Data;
 
         }
@@ -2211,10 +2211,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <returns>Task of ApiResponse (EdgeGroup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> GetTelephonyProvidersEdgeEdgegroupAsyncWithHttpInfo (string edgeGroupId)
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> GetProvidersEdgeEdgegroupsEdgegroupIdAsyncWithHttpInfo (string edgeGroupId)
         {
             // verify the required parameter 'edgeGroupId' is set
-            if (edgeGroupId == null) throw new ApiException(400, "Missing required parameter 'edgeGroupId' when calling GetTelephonyProvidersEdgeEdgegroup");
+            if (edgeGroupId == null) throw new ApiException(400, "Missing required parameter 'edgeGroupId' when calling GetProvidersEdgeEdgegroupsEdgegroupId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/edgegroups/{edgeGroupId}";
@@ -2268,9 +2268,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeEdgegroup: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeEdgegroupsEdgegroupId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeEdgegroup: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeEdgegroupsEdgegroupId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EdgeGroup>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2284,9 +2284,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeGroupId">Edge group ID</param> 
         /// <param name="body">EdgeGroup</param> 
         /// <returns>EdgeGroup</returns>
-        public EdgeGroup PutTelephonyProvidersEdgeEdgegroup (string edgeGroupId, EdgeGroup body = null)
+        public EdgeGroup PutProvidersEdgeEdgegroupsEdgegroupId (string edgeGroupId, EdgeGroup body = null)
         {
-             ApiResponse<EdgeGroup> response = PutTelephonyProvidersEdgeEdgegroupWithHttpInfo(edgeGroupId, body);
+             ApiResponse<EdgeGroup> response = PutProvidersEdgeEdgegroupsEdgegroupIdWithHttpInfo(edgeGroupId, body);
              return response.Data;
         }
 
@@ -2296,12 +2296,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeGroupId">Edge group ID</param> 
         /// <param name="body">EdgeGroup</param> 
         /// <returns>ApiResponse of EdgeGroup</returns>
-        public ApiResponse< EdgeGroup > PutTelephonyProvidersEdgeEdgegroupWithHttpInfo (string edgeGroupId, EdgeGroup body = null)
+        public ApiResponse< EdgeGroup > PutProvidersEdgeEdgegroupsEdgegroupIdWithHttpInfo (string edgeGroupId, EdgeGroup body = null)
         {
             
             // verify the required parameter 'edgeGroupId' is set
             if (edgeGroupId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeGroupId' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgeEdgegroup");
+                throw new ApiException(400, "Missing required parameter 'edgeGroupId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgeEdgegroupsEdgegroupId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/edgegroups/{edgeGroupId}";
@@ -2361,9 +2361,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutTelephonyProvidersEdgeEdgegroup: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutProvidersEdgeEdgegroupsEdgegroupId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutTelephonyProvidersEdgeEdgegroup: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutProvidersEdgeEdgegroupsEdgegroupId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EdgeGroup>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2377,9 +2377,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <param name="body">EdgeGroup</param>
         /// <returns>Task of EdgeGroup</returns>
-        public async System.Threading.Tasks.Task<EdgeGroup> PutTelephonyProvidersEdgeEdgegroupAsync (string edgeGroupId, EdgeGroup body = null)
+        public async System.Threading.Tasks.Task<EdgeGroup> PutProvidersEdgeEdgegroupsEdgegroupIdAsync (string edgeGroupId, EdgeGroup body = null)
         {
-             ApiResponse<EdgeGroup> response = await PutTelephonyProvidersEdgeEdgegroupAsyncWithHttpInfo(edgeGroupId, body);
+             ApiResponse<EdgeGroup> response = await PutProvidersEdgeEdgegroupsEdgegroupIdAsyncWithHttpInfo(edgeGroupId, body);
              return response.Data;
 
         }
@@ -2390,10 +2390,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <param name="body">EdgeGroup</param>
         /// <returns>Task of ApiResponse (EdgeGroup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> PutTelephonyProvidersEdgeEdgegroupAsyncWithHttpInfo (string edgeGroupId, EdgeGroup body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeGroup>> PutProvidersEdgeEdgegroupsEdgegroupIdAsyncWithHttpInfo (string edgeGroupId, EdgeGroup body = null)
         {
             // verify the required parameter 'edgeGroupId' is set
-            if (edgeGroupId == null) throw new ApiException(400, "Missing required parameter 'edgeGroupId' when calling PutTelephonyProvidersEdgeEdgegroup");
+            if (edgeGroupId == null) throw new ApiException(400, "Missing required parameter 'edgeGroupId' when calling PutProvidersEdgeEdgegroupsEdgegroupId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/edgegroups/{edgeGroupId}";
@@ -2448,9 +2448,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutTelephonyProvidersEdgeEdgegroup: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutProvidersEdgeEdgegroupsEdgegroupId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutTelephonyProvidersEdgeEdgegroup: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutProvidersEdgeEdgegroupsEdgegroupId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EdgeGroup>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2463,9 +2463,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeGroupId">Edge group ID</param> 
         /// <returns>string</returns>
-        public string DeleteTelephonyProvidersEdgeEdgegroup (string edgeGroupId)
+        public string DeleteProvidersEdgeEdgegroupsEdgegroupId (string edgeGroupId)
         {
-             ApiResponse<string> response = DeleteTelephonyProvidersEdgeEdgegroupWithHttpInfo(edgeGroupId);
+             ApiResponse<string> response = DeleteProvidersEdgeEdgegroupsEdgegroupIdWithHttpInfo(edgeGroupId);
              return response.Data;
         }
 
@@ -2474,12 +2474,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeGroupId">Edge group ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteTelephonyProvidersEdgeEdgegroupWithHttpInfo (string edgeGroupId)
+        public ApiResponse< string > DeleteProvidersEdgeEdgegroupsEdgegroupIdWithHttpInfo (string edgeGroupId)
         {
             
             // verify the required parameter 'edgeGroupId' is set
             if (edgeGroupId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeGroupId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdgeEdgegroup");
+                throw new ApiException(400, "Missing required parameter 'edgeGroupId' when calling TelephonyProvidersEdgeApi->DeleteProvidersEdgeEdgegroupsEdgegroupId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/edgegroups/{edgeGroupId}";
@@ -2532,9 +2532,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteTelephonyProvidersEdgeEdgegroup: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteProvidersEdgeEdgegroupsEdgegroupId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteTelephonyProvidersEdgeEdgegroup: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteProvidersEdgeEdgegroupsEdgegroupId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2547,9 +2547,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgeEdgegroupAsync (string edgeGroupId)
+        public async System.Threading.Tasks.Task<string> DeleteProvidersEdgeEdgegroupsEdgegroupIdAsync (string edgeGroupId)
         {
-             ApiResponse<string> response = await DeleteTelephonyProvidersEdgeEdgegroupAsyncWithHttpInfo(edgeGroupId);
+             ApiResponse<string> response = await DeleteProvidersEdgeEdgegroupsEdgegroupIdAsyncWithHttpInfo(edgeGroupId);
              return response.Data;
 
         }
@@ -2559,10 +2559,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeGroupId">Edge group ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgeEdgegroupAsyncWithHttpInfo (string edgeGroupId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteProvidersEdgeEdgegroupsEdgegroupIdAsyncWithHttpInfo (string edgeGroupId)
         {
             // verify the required parameter 'edgeGroupId' is set
-            if (edgeGroupId == null) throw new ApiException(400, "Missing required parameter 'edgeGroupId' when calling DeleteTelephonyProvidersEdgeEdgegroup");
+            if (edgeGroupId == null) throw new ApiException(400, "Missing required parameter 'edgeGroupId' when calling DeleteProvidersEdgeEdgegroupsEdgegroupId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/edgegroups/{edgeGroupId}";
@@ -2616,9 +2616,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteTelephonyProvidersEdgeEdgegroup: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteProvidersEdgeEdgegroupsEdgegroupId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteTelephonyProvidersEdgeEdgegroup: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteProvidersEdgeEdgegroupsEdgegroupId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2634,9 +2634,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param> 
         /// <param name="sortOrder">Sort order</param> 
         /// <returns>LineBaseEntityListing</returns>
-        public LineBaseEntityListing GetTelephonyProvidersEdgeLinebasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public LineBaseEntityListing GetProvidersEdgeLinebasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<LineBaseEntityListing> response = GetTelephonyProvidersEdgeLinebasesettingsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder);
+             ApiResponse<LineBaseEntityListing> response = GetProvidersEdgeLinebasesettingsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder);
              return response.Data;
         }
 
@@ -2648,7 +2648,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param> 
         /// <param name="sortOrder">Sort order</param> 
         /// <returns>ApiResponse of LineBaseEntityListing</returns>
-        public ApiResponse< LineBaseEntityListing > GetTelephonyProvidersEdgeLinebasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public ApiResponse< LineBaseEntityListing > GetProvidersEdgeLinebasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
         {
             
     
@@ -2705,9 +2705,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeLinebasesettings: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeLinebasesettings: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeLinebasesettings: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeLinebasesettings: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<LineBaseEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2723,9 +2723,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of LineBaseEntityListing</returns>
-        public async System.Threading.Tasks.Task<LineBaseEntityListing> GetTelephonyProvidersEdgeLinebasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<LineBaseEntityListing> GetProvidersEdgeLinebasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<LineBaseEntityListing> response = await GetTelephonyProvidersEdgeLinebasesettingsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder);
+             ApiResponse<LineBaseEntityListing> response = await GetProvidersEdgeLinebasesettingsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder);
              return response.Data;
 
         }
@@ -2738,7 +2738,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ApiResponse (LineBaseEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LineBaseEntityListing>> GetTelephonyProvidersEdgeLinebasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<LineBaseEntityListing>> GetProvidersEdgeLinebasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
         {
             
     
@@ -2796,9 +2796,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeLinebasesettings: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeLinebasesettings: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeLinebasesettings: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeLinebasesettings: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<LineBaseEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2811,9 +2811,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="lineBaseId">Line base ID</param> 
         /// <returns>LineBase</returns>
-        public LineBase GetTelephonyProvidersEdgeLinebasesetting (string lineBaseId)
+        public LineBase GetProvidersEdgeLinebasesettingsLinebaseId (string lineBaseId)
         {
-             ApiResponse<LineBase> response = GetTelephonyProvidersEdgeLinebasesettingWithHttpInfo(lineBaseId);
+             ApiResponse<LineBase> response = GetProvidersEdgeLinebasesettingsLinebaseIdWithHttpInfo(lineBaseId);
              return response.Data;
         }
 
@@ -2822,12 +2822,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="lineBaseId">Line base ID</param> 
         /// <returns>ApiResponse of LineBase</returns>
-        public ApiResponse< LineBase > GetTelephonyProvidersEdgeLinebasesettingWithHttpInfo (string lineBaseId)
+        public ApiResponse< LineBase > GetProvidersEdgeLinebasesettingsLinebaseIdWithHttpInfo (string lineBaseId)
         {
             
             // verify the required parameter 'lineBaseId' is set
             if (lineBaseId == null)
-                throw new ApiException(400, "Missing required parameter 'lineBaseId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeLinebasesetting");
+                throw new ApiException(400, "Missing required parameter 'lineBaseId' when calling TelephonyProvidersEdgeApi->GetProvidersEdgeLinebasesettingsLinebaseId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/linebasesettings/{lineBaseId}";
@@ -2880,9 +2880,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeLinebasesetting: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeLinebasesettingsLinebaseId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeLinebasesetting: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeLinebasesettingsLinebaseId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<LineBase>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2895,9 +2895,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="lineBaseId">Line base ID</param>
         /// <returns>Task of LineBase</returns>
-        public async System.Threading.Tasks.Task<LineBase> GetTelephonyProvidersEdgeLinebasesettingAsync (string lineBaseId)
+        public async System.Threading.Tasks.Task<LineBase> GetProvidersEdgeLinebasesettingsLinebaseIdAsync (string lineBaseId)
         {
-             ApiResponse<LineBase> response = await GetTelephonyProvidersEdgeLinebasesettingAsyncWithHttpInfo(lineBaseId);
+             ApiResponse<LineBase> response = await GetProvidersEdgeLinebasesettingsLinebaseIdAsyncWithHttpInfo(lineBaseId);
              return response.Data;
 
         }
@@ -2907,10 +2907,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="lineBaseId">Line base ID</param>
         /// <returns>Task of ApiResponse (LineBase)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LineBase>> GetTelephonyProvidersEdgeLinebasesettingAsyncWithHttpInfo (string lineBaseId)
+        public async System.Threading.Tasks.Task<ApiResponse<LineBase>> GetProvidersEdgeLinebasesettingsLinebaseIdAsyncWithHttpInfo (string lineBaseId)
         {
             // verify the required parameter 'lineBaseId' is set
-            if (lineBaseId == null) throw new ApiException(400, "Missing required parameter 'lineBaseId' when calling GetTelephonyProvidersEdgeLinebasesetting");
+            if (lineBaseId == null) throw new ApiException(400, "Missing required parameter 'lineBaseId' when calling GetProvidersEdgeLinebasesettingsLinebaseId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/linebasesettings/{lineBaseId}";
@@ -2964,9 +2964,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeLinebasesetting: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeLinebasesettingsLinebaseId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeLinebasesetting: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeLinebasesettingsLinebaseId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<LineBase>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2983,9 +2983,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param> 
         /// <param name="expand">Fields to expand in the response, comma-separated</param> 
         /// <returns>LineEntityListing</returns>
-        public LineEntityListing GetTelephonyProvidersEdgeLines (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null)
+        public LineEntityListing GetProvidersEdgeLines (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null)
         {
-             ApiResponse<LineEntityListing> response = GetTelephonyProvidersEdgeLinesWithHttpInfo(pageSize, pageNumber, name, sortBy, expand);
+             ApiResponse<LineEntityListing> response = GetProvidersEdgeLinesWithHttpInfo(pageSize, pageNumber, name, sortBy, expand);
              return response.Data;
         }
 
@@ -2998,7 +2998,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param> 
         /// <param name="expand">Fields to expand in the response, comma-separated</param> 
         /// <returns>ApiResponse of LineEntityListing</returns>
-        public ApiResponse< LineEntityListing > GetTelephonyProvidersEdgeLinesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null)
+        public ApiResponse< LineEntityListing > GetProvidersEdgeLinesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null)
         {
             
     
@@ -3056,9 +3056,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeLines: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeLines: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeLines: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeLines: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<LineEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3075,9 +3075,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param>
         /// <param name="expand">Fields to expand in the response, comma-separated</param>
         /// <returns>Task of LineEntityListing</returns>
-        public async System.Threading.Tasks.Task<LineEntityListing> GetTelephonyProvidersEdgeLinesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<LineEntityListing> GetProvidersEdgeLinesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null)
         {
-             ApiResponse<LineEntityListing> response = await GetTelephonyProvidersEdgeLinesAsyncWithHttpInfo(pageSize, pageNumber, name, sortBy, expand);
+             ApiResponse<LineEntityListing> response = await GetProvidersEdgeLinesAsyncWithHttpInfo(pageSize, pageNumber, name, sortBy, expand);
              return response.Data;
 
         }
@@ -3091,7 +3091,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param>
         /// <param name="expand">Fields to expand in the response, comma-separated</param>
         /// <returns>Task of ApiResponse (LineEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LineEntityListing>> GetTelephonyProvidersEdgeLinesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<LineEntityListing>> GetProvidersEdgeLinesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null)
         {
             
     
@@ -3150,9 +3150,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeLines: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeLines: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeLines: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeLines: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<LineEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3165,9 +3165,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="lineBaseSettingsId">The id of a Line Base Settings object upon which to base this Line</param> 
         /// <returns>Line</returns>
-        public Line GetTelephonyProvidersEdgeLinesTemplate (string lineBaseSettingsId)
+        public Line GetProvidersEdgeLinesTemplate (string lineBaseSettingsId)
         {
-             ApiResponse<Line> response = GetTelephonyProvidersEdgeLinesTemplateWithHttpInfo(lineBaseSettingsId);
+             ApiResponse<Line> response = GetProvidersEdgeLinesTemplateWithHttpInfo(lineBaseSettingsId);
              return response.Data;
         }
 
@@ -3176,12 +3176,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="lineBaseSettingsId">The id of a Line Base Settings object upon which to base this Line</param> 
         /// <returns>ApiResponse of Line</returns>
-        public ApiResponse< Line > GetTelephonyProvidersEdgeLinesTemplateWithHttpInfo (string lineBaseSettingsId)
+        public ApiResponse< Line > GetProvidersEdgeLinesTemplateWithHttpInfo (string lineBaseSettingsId)
         {
             
             // verify the required parameter 'lineBaseSettingsId' is set
             if (lineBaseSettingsId == null)
-                throw new ApiException(400, "Missing required parameter 'lineBaseSettingsId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeLinesTemplate");
+                throw new ApiException(400, "Missing required parameter 'lineBaseSettingsId' when calling TelephonyProvidersEdgeApi->GetProvidersEdgeLinesTemplate");
             
     
             var path_ = "/api/v1/telephony/providers/edge/lines/template";
@@ -3234,9 +3234,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeLinesTemplate: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeLinesTemplate: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeLinesTemplate: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeLinesTemplate: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Line>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3249,9 +3249,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="lineBaseSettingsId">The id of a Line Base Settings object upon which to base this Line</param>
         /// <returns>Task of Line</returns>
-        public async System.Threading.Tasks.Task<Line> GetTelephonyProvidersEdgeLinesTemplateAsync (string lineBaseSettingsId)
+        public async System.Threading.Tasks.Task<Line> GetProvidersEdgeLinesTemplateAsync (string lineBaseSettingsId)
         {
-             ApiResponse<Line> response = await GetTelephonyProvidersEdgeLinesTemplateAsyncWithHttpInfo(lineBaseSettingsId);
+             ApiResponse<Line> response = await GetProvidersEdgeLinesTemplateAsyncWithHttpInfo(lineBaseSettingsId);
              return response.Data;
 
         }
@@ -3261,10 +3261,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="lineBaseSettingsId">The id of a Line Base Settings object upon which to base this Line</param>
         /// <returns>Task of ApiResponse (Line)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Line>> GetTelephonyProvidersEdgeLinesTemplateAsyncWithHttpInfo (string lineBaseSettingsId)
+        public async System.Threading.Tasks.Task<ApiResponse<Line>> GetProvidersEdgeLinesTemplateAsyncWithHttpInfo (string lineBaseSettingsId)
         {
             // verify the required parameter 'lineBaseSettingsId' is set
-            if (lineBaseSettingsId == null) throw new ApiException(400, "Missing required parameter 'lineBaseSettingsId' when calling GetTelephonyProvidersEdgeLinesTemplate");
+            if (lineBaseSettingsId == null) throw new ApiException(400, "Missing required parameter 'lineBaseSettingsId' when calling GetProvidersEdgeLinesTemplate");
             
     
             var path_ = "/api/v1/telephony/providers/edge/lines/template";
@@ -3318,9 +3318,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeLinesTemplate: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeLinesTemplate: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeLinesTemplate: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeLinesTemplate: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Line>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3333,9 +3333,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="lineId">Line ID</param> 
         /// <returns>Line</returns>
-        public Line GetTelephonyProvidersEdgeLine (string lineId)
+        public Line GetProvidersEdgeLinesLineId (string lineId)
         {
-             ApiResponse<Line> response = GetTelephonyProvidersEdgeLineWithHttpInfo(lineId);
+             ApiResponse<Line> response = GetProvidersEdgeLinesLineIdWithHttpInfo(lineId);
              return response.Data;
         }
 
@@ -3344,12 +3344,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="lineId">Line ID</param> 
         /// <returns>ApiResponse of Line</returns>
-        public ApiResponse< Line > GetTelephonyProvidersEdgeLineWithHttpInfo (string lineId)
+        public ApiResponse< Line > GetProvidersEdgeLinesLineIdWithHttpInfo (string lineId)
         {
             
             // verify the required parameter 'lineId' is set
             if (lineId == null)
-                throw new ApiException(400, "Missing required parameter 'lineId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeLine");
+                throw new ApiException(400, "Missing required parameter 'lineId' when calling TelephonyProvidersEdgeApi->GetProvidersEdgeLinesLineId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/lines/{lineId}";
@@ -3402,9 +3402,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeLine: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeLinesLineId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeLine: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeLinesLineId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Line>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3417,9 +3417,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="lineId">Line ID</param>
         /// <returns>Task of Line</returns>
-        public async System.Threading.Tasks.Task<Line> GetTelephonyProvidersEdgeLineAsync (string lineId)
+        public async System.Threading.Tasks.Task<Line> GetProvidersEdgeLinesLineIdAsync (string lineId)
         {
-             ApiResponse<Line> response = await GetTelephonyProvidersEdgeLineAsyncWithHttpInfo(lineId);
+             ApiResponse<Line> response = await GetProvidersEdgeLinesLineIdAsyncWithHttpInfo(lineId);
              return response.Data;
 
         }
@@ -3429,10 +3429,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="lineId">Line ID</param>
         /// <returns>Task of ApiResponse (Line)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Line>> GetTelephonyProvidersEdgeLineAsyncWithHttpInfo (string lineId)
+        public async System.Threading.Tasks.Task<ApiResponse<Line>> GetProvidersEdgeLinesLineIdAsyncWithHttpInfo (string lineId)
         {
             // verify the required parameter 'lineId' is set
-            if (lineId == null) throw new ApiException(400, "Missing required parameter 'lineId' when calling GetTelephonyProvidersEdgeLine");
+            if (lineId == null) throw new ApiException(400, "Missing required parameter 'lineId' when calling GetProvidersEdgeLinesLineId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/lines/{lineId}";
@@ -3486,9 +3486,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeLine: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeLinesLineId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeLine: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeLinesLineId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Line>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3505,9 +3505,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Filter by site.id</param> 
         /// <param name="sortBy">Sort by</param> 
         /// <returns>OutboundRouteEntityListing</returns>
-        public OutboundRouteEntityListing GetTelephonyProvidersEdgeOutboundroutes (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null)
+        public OutboundRouteEntityListing GetProvidersEdgeOutboundroutes (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null)
         {
-             ApiResponse<OutboundRouteEntityListing> response = GetTelephonyProvidersEdgeOutboundroutesWithHttpInfo(pageSize, pageNumber, name, siteId, sortBy);
+             ApiResponse<OutboundRouteEntityListing> response = GetProvidersEdgeOutboundroutesWithHttpInfo(pageSize, pageNumber, name, siteId, sortBy);
              return response.Data;
         }
 
@@ -3520,7 +3520,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Filter by site.id</param> 
         /// <param name="sortBy">Sort by</param> 
         /// <returns>ApiResponse of OutboundRouteEntityListing</returns>
-        public ApiResponse< OutboundRouteEntityListing > GetTelephonyProvidersEdgeOutboundroutesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null)
+        public ApiResponse< OutboundRouteEntityListing > GetProvidersEdgeOutboundroutesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null)
         {
             
     
@@ -3578,9 +3578,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeOutboundroutes: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeOutboundroutes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeOutboundroutes: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeOutboundroutes: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OutboundRouteEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3597,9 +3597,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Filter by site.id</param>
         /// <param name="sortBy">Sort by</param>
         /// <returns>Task of OutboundRouteEntityListing</returns>
-        public async System.Threading.Tasks.Task<OutboundRouteEntityListing> GetTelephonyProvidersEdgeOutboundroutesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null)
+        public async System.Threading.Tasks.Task<OutboundRouteEntityListing> GetProvidersEdgeOutboundroutesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null)
         {
-             ApiResponse<OutboundRouteEntityListing> response = await GetTelephonyProvidersEdgeOutboundroutesAsyncWithHttpInfo(pageSize, pageNumber, name, siteId, sortBy);
+             ApiResponse<OutboundRouteEntityListing> response = await GetProvidersEdgeOutboundroutesAsyncWithHttpInfo(pageSize, pageNumber, name, siteId, sortBy);
              return response.Data;
 
         }
@@ -3613,7 +3613,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Filter by site.id</param>
         /// <param name="sortBy">Sort by</param>
         /// <returns>Task of ApiResponse (OutboundRouteEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OutboundRouteEntityListing>> GetTelephonyProvidersEdgeOutboundroutesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OutboundRouteEntityListing>> GetProvidersEdgeOutboundroutesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null)
         {
             
     
@@ -3672,9 +3672,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeOutboundroutes: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeOutboundroutes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeOutboundroutes: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeOutboundroutes: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OutboundRouteEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3687,9 +3687,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">OutboundRoute</param> 
         /// <returns>OutboundRoute</returns>
-        public OutboundRoute PostTelephonyProvidersEdgeOutboundroutes (OutboundRoute body = null)
+        public OutboundRoute PostProvidersEdgeOutboundroutes (OutboundRoute body = null)
         {
-             ApiResponse<OutboundRoute> response = PostTelephonyProvidersEdgeOutboundroutesWithHttpInfo(body);
+             ApiResponse<OutboundRoute> response = PostProvidersEdgeOutboundroutesWithHttpInfo(body);
              return response.Data;
         }
 
@@ -3698,7 +3698,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">OutboundRoute</param> 
         /// <returns>ApiResponse of OutboundRoute</returns>
-        public ApiResponse< OutboundRoute > PostTelephonyProvidersEdgeOutboundroutesWithHttpInfo (OutboundRoute body = null)
+        public ApiResponse< OutboundRoute > PostProvidersEdgeOutboundroutesWithHttpInfo (OutboundRoute body = null)
         {
             
     
@@ -3758,9 +3758,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostTelephonyProvidersEdgeOutboundroutes: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostProvidersEdgeOutboundroutes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostTelephonyProvidersEdgeOutboundroutes: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostProvidersEdgeOutboundroutes: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OutboundRoute>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3773,9 +3773,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">OutboundRoute</param>
         /// <returns>Task of OutboundRoute</returns>
-        public async System.Threading.Tasks.Task<OutboundRoute> PostTelephonyProvidersEdgeOutboundroutesAsync (OutboundRoute body = null)
+        public async System.Threading.Tasks.Task<OutboundRoute> PostProvidersEdgeOutboundroutesAsync (OutboundRoute body = null)
         {
-             ApiResponse<OutboundRoute> response = await PostTelephonyProvidersEdgeOutboundroutesAsyncWithHttpInfo(body);
+             ApiResponse<OutboundRoute> response = await PostProvidersEdgeOutboundroutesAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -3785,7 +3785,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">OutboundRoute</param>
         /// <returns>Task of ApiResponse (OutboundRoute)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> PostTelephonyProvidersEdgeOutboundroutesAsyncWithHttpInfo (OutboundRoute body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> PostProvidersEdgeOutboundroutesAsyncWithHttpInfo (OutboundRoute body = null)
         {
             
     
@@ -3840,9 +3840,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostTelephonyProvidersEdgeOutboundroutes: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostProvidersEdgeOutboundroutes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostTelephonyProvidersEdgeOutboundroutes: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostProvidersEdgeOutboundroutes: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OutboundRoute>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3855,9 +3855,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="outboundRouteId">Outbound route ID</param> 
         /// <returns>OutboundRoute</returns>
-        public OutboundRoute GetTelephonyProvidersEdgeOutboundroute (string outboundRouteId)
+        public OutboundRoute GetProvidersEdgeOutboundroutesOutboundrouteId (string outboundRouteId)
         {
-             ApiResponse<OutboundRoute> response = GetTelephonyProvidersEdgeOutboundrouteWithHttpInfo(outboundRouteId);
+             ApiResponse<OutboundRoute> response = GetProvidersEdgeOutboundroutesOutboundrouteIdWithHttpInfo(outboundRouteId);
              return response.Data;
         }
 
@@ -3866,12 +3866,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="outboundRouteId">Outbound route ID</param> 
         /// <returns>ApiResponse of OutboundRoute</returns>
-        public ApiResponse< OutboundRoute > GetTelephonyProvidersEdgeOutboundrouteWithHttpInfo (string outboundRouteId)
+        public ApiResponse< OutboundRoute > GetProvidersEdgeOutboundroutesOutboundrouteIdWithHttpInfo (string outboundRouteId)
         {
             
             // verify the required parameter 'outboundRouteId' is set
             if (outboundRouteId == null)
-                throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeOutboundroute");
+                throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling TelephonyProvidersEdgeApi->GetProvidersEdgeOutboundroutesOutboundrouteId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/outboundroutes/{outboundRouteId}";
@@ -3924,9 +3924,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeOutboundroute: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeOutboundroutesOutboundrouteId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeOutboundroute: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeOutboundroutesOutboundrouteId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OutboundRoute>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3939,9 +3939,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>Task of OutboundRoute</returns>
-        public async System.Threading.Tasks.Task<OutboundRoute> GetTelephonyProvidersEdgeOutboundrouteAsync (string outboundRouteId)
+        public async System.Threading.Tasks.Task<OutboundRoute> GetProvidersEdgeOutboundroutesOutboundrouteIdAsync (string outboundRouteId)
         {
-             ApiResponse<OutboundRoute> response = await GetTelephonyProvidersEdgeOutboundrouteAsyncWithHttpInfo(outboundRouteId);
+             ApiResponse<OutboundRoute> response = await GetProvidersEdgeOutboundroutesOutboundrouteIdAsyncWithHttpInfo(outboundRouteId);
              return response.Data;
 
         }
@@ -3951,10 +3951,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>Task of ApiResponse (OutboundRoute)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> GetTelephonyProvidersEdgeOutboundrouteAsyncWithHttpInfo (string outboundRouteId)
+        public async System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> GetProvidersEdgeOutboundroutesOutboundrouteIdAsyncWithHttpInfo (string outboundRouteId)
         {
             // verify the required parameter 'outboundRouteId' is set
-            if (outboundRouteId == null) throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling GetTelephonyProvidersEdgeOutboundroute");
+            if (outboundRouteId == null) throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling GetProvidersEdgeOutboundroutesOutboundrouteId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/outboundroutes/{outboundRouteId}";
@@ -4008,9 +4008,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeOutboundroute: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeOutboundroutesOutboundrouteId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeOutboundroute: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeOutboundroutesOutboundrouteId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OutboundRoute>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4024,9 +4024,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="outboundRouteId">Outbound route ID</param> 
         /// <param name="body">OutboundRoute</param> 
         /// <returns>OutboundRoute</returns>
-        public OutboundRoute PutTelephonyProvidersEdgeOutboundroute (string outboundRouteId, OutboundRoute body = null)
+        public OutboundRoute PutProvidersEdgeOutboundroutesOutboundrouteId (string outboundRouteId, OutboundRoute body = null)
         {
-             ApiResponse<OutboundRoute> response = PutTelephonyProvidersEdgeOutboundrouteWithHttpInfo(outboundRouteId, body);
+             ApiResponse<OutboundRoute> response = PutProvidersEdgeOutboundroutesOutboundrouteIdWithHttpInfo(outboundRouteId, body);
              return response.Data;
         }
 
@@ -4036,12 +4036,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="outboundRouteId">Outbound route ID</param> 
         /// <param name="body">OutboundRoute</param> 
         /// <returns>ApiResponse of OutboundRoute</returns>
-        public ApiResponse< OutboundRoute > PutTelephonyProvidersEdgeOutboundrouteWithHttpInfo (string outboundRouteId, OutboundRoute body = null)
+        public ApiResponse< OutboundRoute > PutProvidersEdgeOutboundroutesOutboundrouteIdWithHttpInfo (string outboundRouteId, OutboundRoute body = null)
         {
             
             // verify the required parameter 'outboundRouteId' is set
             if (outboundRouteId == null)
-                throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgeOutboundroute");
+                throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgeOutboundroutesOutboundrouteId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/outboundroutes/{outboundRouteId}";
@@ -4101,9 +4101,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutTelephonyProvidersEdgeOutboundroute: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutProvidersEdgeOutboundroutesOutboundrouteId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutTelephonyProvidersEdgeOutboundroute: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutProvidersEdgeOutboundroutesOutboundrouteId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OutboundRoute>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4117,9 +4117,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <param name="body">OutboundRoute</param>
         /// <returns>Task of OutboundRoute</returns>
-        public async System.Threading.Tasks.Task<OutboundRoute> PutTelephonyProvidersEdgeOutboundrouteAsync (string outboundRouteId, OutboundRoute body = null)
+        public async System.Threading.Tasks.Task<OutboundRoute> PutProvidersEdgeOutboundroutesOutboundrouteIdAsync (string outboundRouteId, OutboundRoute body = null)
         {
-             ApiResponse<OutboundRoute> response = await PutTelephonyProvidersEdgeOutboundrouteAsyncWithHttpInfo(outboundRouteId, body);
+             ApiResponse<OutboundRoute> response = await PutProvidersEdgeOutboundroutesOutboundrouteIdAsyncWithHttpInfo(outboundRouteId, body);
              return response.Data;
 
         }
@@ -4130,10 +4130,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <param name="body">OutboundRoute</param>
         /// <returns>Task of ApiResponse (OutboundRoute)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> PutTelephonyProvidersEdgeOutboundrouteAsyncWithHttpInfo (string outboundRouteId, OutboundRoute body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OutboundRoute>> PutProvidersEdgeOutboundroutesOutboundrouteIdAsyncWithHttpInfo (string outboundRouteId, OutboundRoute body = null)
         {
             // verify the required parameter 'outboundRouteId' is set
-            if (outboundRouteId == null) throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling PutTelephonyProvidersEdgeOutboundroute");
+            if (outboundRouteId == null) throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling PutProvidersEdgeOutboundroutesOutboundrouteId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/outboundroutes/{outboundRouteId}";
@@ -4188,9 +4188,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutTelephonyProvidersEdgeOutboundroute: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutProvidersEdgeOutboundroutesOutboundrouteId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutTelephonyProvidersEdgeOutboundroute: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutProvidersEdgeOutboundroutesOutboundrouteId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OutboundRoute>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4203,9 +4203,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="outboundRouteId">Outbound route ID</param> 
         /// <returns>string</returns>
-        public string DeleteTelephonyProvidersEdgeOutboundroute (string outboundRouteId)
+        public string DeleteProvidersEdgeOutboundroutesOutboundrouteId (string outboundRouteId)
         {
-             ApiResponse<string> response = DeleteTelephonyProvidersEdgeOutboundrouteWithHttpInfo(outboundRouteId);
+             ApiResponse<string> response = DeleteProvidersEdgeOutboundroutesOutboundrouteIdWithHttpInfo(outboundRouteId);
              return response.Data;
         }
 
@@ -4214,12 +4214,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="outboundRouteId">Outbound route ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteTelephonyProvidersEdgeOutboundrouteWithHttpInfo (string outboundRouteId)
+        public ApiResponse< string > DeleteProvidersEdgeOutboundroutesOutboundrouteIdWithHttpInfo (string outboundRouteId)
         {
             
             // verify the required parameter 'outboundRouteId' is set
             if (outboundRouteId == null)
-                throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdgeOutboundroute");
+                throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling TelephonyProvidersEdgeApi->DeleteProvidersEdgeOutboundroutesOutboundrouteId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/outboundroutes/{outboundRouteId}";
@@ -4272,9 +4272,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteTelephonyProvidersEdgeOutboundroute: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteProvidersEdgeOutboundroutesOutboundrouteId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteTelephonyProvidersEdgeOutboundroute: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteProvidersEdgeOutboundroutesOutboundrouteId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4287,9 +4287,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgeOutboundrouteAsync (string outboundRouteId)
+        public async System.Threading.Tasks.Task<string> DeleteProvidersEdgeOutboundroutesOutboundrouteIdAsync (string outboundRouteId)
         {
-             ApiResponse<string> response = await DeleteTelephonyProvidersEdgeOutboundrouteAsyncWithHttpInfo(outboundRouteId);
+             ApiResponse<string> response = await DeleteProvidersEdgeOutboundroutesOutboundrouteIdAsyncWithHttpInfo(outboundRouteId);
              return response.Data;
 
         }
@@ -4299,10 +4299,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="outboundRouteId">Outbound route ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgeOutboundrouteAsyncWithHttpInfo (string outboundRouteId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteProvidersEdgeOutboundroutesOutboundrouteIdAsyncWithHttpInfo (string outboundRouteId)
         {
             // verify the required parameter 'outboundRouteId' is set
-            if (outboundRouteId == null) throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling DeleteTelephonyProvidersEdgeOutboundroute");
+            if (outboundRouteId == null) throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling DeleteProvidersEdgeOutboundroutesOutboundrouteId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/outboundroutes/{outboundRouteId}";
@@ -4356,9 +4356,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteTelephonyProvidersEdgeOutboundroute: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteProvidersEdgeOutboundroutesOutboundrouteId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteTelephonyProvidersEdgeOutboundroute: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteProvidersEdgeOutboundroutesOutboundrouteId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4374,9 +4374,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param> 
         /// <param name="sortOrder">Sort order</param> 
         /// <returns>PhoneBaseEntityListing</returns>
-        public PhoneBaseEntityListing GetTelephonyProvidersEdgePhonebasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public PhoneBaseEntityListing GetProvidersEdgePhonebasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<PhoneBaseEntityListing> response = GetTelephonyProvidersEdgePhonebasesettingsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder);
+             ApiResponse<PhoneBaseEntityListing> response = GetProvidersEdgePhonebasesettingsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder);
              return response.Data;
         }
 
@@ -4388,7 +4388,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param> 
         /// <param name="sortOrder">Sort order</param> 
         /// <returns>ApiResponse of PhoneBaseEntityListing</returns>
-        public ApiResponse< PhoneBaseEntityListing > GetTelephonyProvidersEdgePhonebasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public ApiResponse< PhoneBaseEntityListing > GetProvidersEdgePhonebasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
         {
             
     
@@ -4445,9 +4445,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgePhonebasesettings: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgePhonebasesettings: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgePhonebasesettings: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgePhonebasesettings: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<PhoneBaseEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4463,9 +4463,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of PhoneBaseEntityListing</returns>
-        public async System.Threading.Tasks.Task<PhoneBaseEntityListing> GetTelephonyProvidersEdgePhonebasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<PhoneBaseEntityListing> GetProvidersEdgePhonebasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<PhoneBaseEntityListing> response = await GetTelephonyProvidersEdgePhonebasesettingsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder);
+             ApiResponse<PhoneBaseEntityListing> response = await GetProvidersEdgePhonebasesettingsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder);
              return response.Data;
 
         }
@@ -4478,7 +4478,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ApiResponse (PhoneBaseEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PhoneBaseEntityListing>> GetTelephonyProvidersEdgePhonebasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PhoneBaseEntityListing>> GetProvidersEdgePhonebasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
         {
             
     
@@ -4536,9 +4536,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgePhonebasesettings: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgePhonebasesettings: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgePhonebasesettings: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgePhonebasesettings: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<PhoneBaseEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4551,9 +4551,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>PhoneBase</returns>
-        public PhoneBase PostTelephonyProvidersEdgePhonebasesettings (PhoneBase body = null)
+        public PhoneBase PostProvidersEdgePhonebasesettings (PhoneBase body = null)
         {
-             ApiResponse<PhoneBase> response = PostTelephonyProvidersEdgePhonebasesettingsWithHttpInfo(body);
+             ApiResponse<PhoneBase> response = PostProvidersEdgePhonebasesettingsWithHttpInfo(body);
              return response.Data;
         }
 
@@ -4562,7 +4562,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>ApiResponse of PhoneBase</returns>
-        public ApiResponse< PhoneBase > PostTelephonyProvidersEdgePhonebasesettingsWithHttpInfo (PhoneBase body = null)
+        public ApiResponse< PhoneBase > PostProvidersEdgePhonebasesettingsWithHttpInfo (PhoneBase body = null)
         {
             
     
@@ -4622,9 +4622,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostTelephonyProvidersEdgePhonebasesettings: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostProvidersEdgePhonebasesettings: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostTelephonyProvidersEdgePhonebasesettings: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostProvidersEdgePhonebasesettings: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<PhoneBase>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4637,9 +4637,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of PhoneBase</returns>
-        public async System.Threading.Tasks.Task<PhoneBase> PostTelephonyProvidersEdgePhonebasesettingsAsync (PhoneBase body = null)
+        public async System.Threading.Tasks.Task<PhoneBase> PostProvidersEdgePhonebasesettingsAsync (PhoneBase body = null)
         {
-             ApiResponse<PhoneBase> response = await PostTelephonyProvidersEdgePhonebasesettingsAsyncWithHttpInfo(body);
+             ApiResponse<PhoneBase> response = await PostProvidersEdgePhonebasesettingsAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -4649,7 +4649,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (PhoneBase)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PhoneBase>> PostTelephonyProvidersEdgePhonebasesettingsAsyncWithHttpInfo (PhoneBase body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PhoneBase>> PostProvidersEdgePhonebasesettingsAsyncWithHttpInfo (PhoneBase body = null)
         {
             
     
@@ -4704,9 +4704,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostTelephonyProvidersEdgePhonebasesettings: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostProvidersEdgePhonebasesettings: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostTelephonyProvidersEdgePhonebasesettings: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostProvidersEdgePhonebasesettings: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<PhoneBase>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4720,9 +4720,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>PhoneMetaBaseEntityListing</returns>
-        public PhoneMetaBaseEntityListing GetTelephonyProvidersEdgePhonebasesettingsAvailablemetabases (int? pageSize = null, int? pageNumber = null)
+        public PhoneMetaBaseEntityListing GetProvidersEdgePhonebasesettingsAvailablemetabases (int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<PhoneMetaBaseEntityListing> response = GetTelephonyProvidersEdgePhonebasesettingsAvailablemetabasesWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<PhoneMetaBaseEntityListing> response = GetProvidersEdgePhonebasesettingsAvailablemetabasesWithHttpInfo(pageSize, pageNumber);
              return response.Data;
         }
 
@@ -4732,7 +4732,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>ApiResponse of PhoneMetaBaseEntityListing</returns>
-        public ApiResponse< PhoneMetaBaseEntityListing > GetTelephonyProvidersEdgePhonebasesettingsAvailablemetabasesWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< PhoneMetaBaseEntityListing > GetProvidersEdgePhonebasesettingsAvailablemetabasesWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -4787,9 +4787,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgePhonebasesettingsAvailablemetabases: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgePhonebasesettingsAvailablemetabases: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgePhonebasesettingsAvailablemetabases: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgePhonebasesettingsAvailablemetabases: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<PhoneMetaBaseEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4803,9 +4803,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of PhoneMetaBaseEntityListing</returns>
-        public async System.Threading.Tasks.Task<PhoneMetaBaseEntityListing> GetTelephonyProvidersEdgePhonebasesettingsAvailablemetabasesAsync (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<PhoneMetaBaseEntityListing> GetProvidersEdgePhonebasesettingsAvailablemetabasesAsync (int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<PhoneMetaBaseEntityListing> response = await GetTelephonyProvidersEdgePhonebasesettingsAvailablemetabasesAsyncWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<PhoneMetaBaseEntityListing> response = await GetProvidersEdgePhonebasesettingsAvailablemetabasesAsyncWithHttpInfo(pageSize, pageNumber);
              return response.Data;
 
         }
@@ -4816,7 +4816,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (PhoneMetaBaseEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PhoneMetaBaseEntityListing>> GetTelephonyProvidersEdgePhonebasesettingsAvailablemetabasesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PhoneMetaBaseEntityListing>> GetProvidersEdgePhonebasesettingsAvailablemetabasesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -4872,9 +4872,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgePhonebasesettingsAvailablemetabases: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgePhonebasesettingsAvailablemetabases: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgePhonebasesettingsAvailablemetabases: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgePhonebasesettingsAvailablemetabases: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<PhoneMetaBaseEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4887,9 +4887,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="phoneMetabaseId">The id of a metabase object upon which to base this Phone Base Settings</param> 
         /// <returns>PhoneBase</returns>
-        public PhoneBase GetTelephonyProvidersEdgePhonebasesettingsTemplate (string phoneMetabaseId)
+        public PhoneBase GetProvidersEdgePhonebasesettingsTemplate (string phoneMetabaseId)
         {
-             ApiResponse<PhoneBase> response = GetTelephonyProvidersEdgePhonebasesettingsTemplateWithHttpInfo(phoneMetabaseId);
+             ApiResponse<PhoneBase> response = GetProvidersEdgePhonebasesettingsTemplateWithHttpInfo(phoneMetabaseId);
              return response.Data;
         }
 
@@ -4898,12 +4898,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="phoneMetabaseId">The id of a metabase object upon which to base this Phone Base Settings</param> 
         /// <returns>ApiResponse of PhoneBase</returns>
-        public ApiResponse< PhoneBase > GetTelephonyProvidersEdgePhonebasesettingsTemplateWithHttpInfo (string phoneMetabaseId)
+        public ApiResponse< PhoneBase > GetProvidersEdgePhonebasesettingsTemplateWithHttpInfo (string phoneMetabaseId)
         {
             
             // verify the required parameter 'phoneMetabaseId' is set
             if (phoneMetabaseId == null)
-                throw new ApiException(400, "Missing required parameter 'phoneMetabaseId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgePhonebasesettingsTemplate");
+                throw new ApiException(400, "Missing required parameter 'phoneMetabaseId' when calling TelephonyProvidersEdgeApi->GetProvidersEdgePhonebasesettingsTemplate");
             
     
             var path_ = "/api/v1/telephony/providers/edge/phonebasesettings/template";
@@ -4956,9 +4956,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgePhonebasesettingsTemplate: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgePhonebasesettingsTemplate: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgePhonebasesettingsTemplate: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgePhonebasesettingsTemplate: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<PhoneBase>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4971,9 +4971,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="phoneMetabaseId">The id of a metabase object upon which to base this Phone Base Settings</param>
         /// <returns>Task of PhoneBase</returns>
-        public async System.Threading.Tasks.Task<PhoneBase> GetTelephonyProvidersEdgePhonebasesettingsTemplateAsync (string phoneMetabaseId)
+        public async System.Threading.Tasks.Task<PhoneBase> GetProvidersEdgePhonebasesettingsTemplateAsync (string phoneMetabaseId)
         {
-             ApiResponse<PhoneBase> response = await GetTelephonyProvidersEdgePhonebasesettingsTemplateAsyncWithHttpInfo(phoneMetabaseId);
+             ApiResponse<PhoneBase> response = await GetProvidersEdgePhonebasesettingsTemplateAsyncWithHttpInfo(phoneMetabaseId);
              return response.Data;
 
         }
@@ -4983,10 +4983,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="phoneMetabaseId">The id of a metabase object upon which to base this Phone Base Settings</param>
         /// <returns>Task of ApiResponse (PhoneBase)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PhoneBase>> GetTelephonyProvidersEdgePhonebasesettingsTemplateAsyncWithHttpInfo (string phoneMetabaseId)
+        public async System.Threading.Tasks.Task<ApiResponse<PhoneBase>> GetProvidersEdgePhonebasesettingsTemplateAsyncWithHttpInfo (string phoneMetabaseId)
         {
             // verify the required parameter 'phoneMetabaseId' is set
-            if (phoneMetabaseId == null) throw new ApiException(400, "Missing required parameter 'phoneMetabaseId' when calling GetTelephonyProvidersEdgePhonebasesettingsTemplate");
+            if (phoneMetabaseId == null) throw new ApiException(400, "Missing required parameter 'phoneMetabaseId' when calling GetProvidersEdgePhonebasesettingsTemplate");
             
     
             var path_ = "/api/v1/telephony/providers/edge/phonebasesettings/template";
@@ -5040,9 +5040,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgePhonebasesettingsTemplate: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgePhonebasesettingsTemplate: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgePhonebasesettingsTemplate: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgePhonebasesettingsTemplate: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<PhoneBase>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5055,9 +5055,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="phoneBaseId">Phone base ID</param> 
         /// <returns>PhoneBase</returns>
-        public PhoneBase GetTelephonyProvidersEdgePhonebasesetting (string phoneBaseId)
+        public PhoneBase GetProvidersEdgePhonebasesettingsPhonebaseId (string phoneBaseId)
         {
-             ApiResponse<PhoneBase> response = GetTelephonyProvidersEdgePhonebasesettingWithHttpInfo(phoneBaseId);
+             ApiResponse<PhoneBase> response = GetProvidersEdgePhonebasesettingsPhonebaseIdWithHttpInfo(phoneBaseId);
              return response.Data;
         }
 
@@ -5066,12 +5066,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="phoneBaseId">Phone base ID</param> 
         /// <returns>ApiResponse of PhoneBase</returns>
-        public ApiResponse< PhoneBase > GetTelephonyProvidersEdgePhonebasesettingWithHttpInfo (string phoneBaseId)
+        public ApiResponse< PhoneBase > GetProvidersEdgePhonebasesettingsPhonebaseIdWithHttpInfo (string phoneBaseId)
         {
             
             // verify the required parameter 'phoneBaseId' is set
             if (phoneBaseId == null)
-                throw new ApiException(400, "Missing required parameter 'phoneBaseId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgePhonebasesetting");
+                throw new ApiException(400, "Missing required parameter 'phoneBaseId' when calling TelephonyProvidersEdgeApi->GetProvidersEdgePhonebasesettingsPhonebaseId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/phonebasesettings/{phoneBaseId}";
@@ -5124,9 +5124,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgePhonebasesetting: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgePhonebasesettingsPhonebaseId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgePhonebasesetting: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgePhonebasesettingsPhonebaseId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<PhoneBase>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5139,9 +5139,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <returns>Task of PhoneBase</returns>
-        public async System.Threading.Tasks.Task<PhoneBase> GetTelephonyProvidersEdgePhonebasesettingAsync (string phoneBaseId)
+        public async System.Threading.Tasks.Task<PhoneBase> GetProvidersEdgePhonebasesettingsPhonebaseIdAsync (string phoneBaseId)
         {
-             ApiResponse<PhoneBase> response = await GetTelephonyProvidersEdgePhonebasesettingAsyncWithHttpInfo(phoneBaseId);
+             ApiResponse<PhoneBase> response = await GetProvidersEdgePhonebasesettingsPhonebaseIdAsyncWithHttpInfo(phoneBaseId);
              return response.Data;
 
         }
@@ -5151,10 +5151,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <returns>Task of ApiResponse (PhoneBase)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PhoneBase>> GetTelephonyProvidersEdgePhonebasesettingAsyncWithHttpInfo (string phoneBaseId)
+        public async System.Threading.Tasks.Task<ApiResponse<PhoneBase>> GetProvidersEdgePhonebasesettingsPhonebaseIdAsyncWithHttpInfo (string phoneBaseId)
         {
             // verify the required parameter 'phoneBaseId' is set
-            if (phoneBaseId == null) throw new ApiException(400, "Missing required parameter 'phoneBaseId' when calling GetTelephonyProvidersEdgePhonebasesetting");
+            if (phoneBaseId == null) throw new ApiException(400, "Missing required parameter 'phoneBaseId' when calling GetProvidersEdgePhonebasesettingsPhonebaseId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/phonebasesettings/{phoneBaseId}";
@@ -5208,9 +5208,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgePhonebasesetting: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgePhonebasesettingsPhonebaseId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgePhonebasesetting: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgePhonebasesettingsPhonebaseId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<PhoneBase>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5224,9 +5224,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="phoneBaseId">Phone base ID</param> 
         /// <param name="body"></param> 
         /// <returns>PhoneBase</returns>
-        public PhoneBase PutTelephonyProvidersEdgePhonebasesetting (string phoneBaseId, PhoneBase body = null)
+        public PhoneBase PutProvidersEdgePhonebasesettingsPhonebaseId (string phoneBaseId, PhoneBase body = null)
         {
-             ApiResponse<PhoneBase> response = PutTelephonyProvidersEdgePhonebasesettingWithHttpInfo(phoneBaseId, body);
+             ApiResponse<PhoneBase> response = PutProvidersEdgePhonebasesettingsPhonebaseIdWithHttpInfo(phoneBaseId, body);
              return response.Data;
         }
 
@@ -5236,12 +5236,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="phoneBaseId">Phone base ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of PhoneBase</returns>
-        public ApiResponse< PhoneBase > PutTelephonyProvidersEdgePhonebasesettingWithHttpInfo (string phoneBaseId, PhoneBase body = null)
+        public ApiResponse< PhoneBase > PutProvidersEdgePhonebasesettingsPhonebaseIdWithHttpInfo (string phoneBaseId, PhoneBase body = null)
         {
             
             // verify the required parameter 'phoneBaseId' is set
             if (phoneBaseId == null)
-                throw new ApiException(400, "Missing required parameter 'phoneBaseId' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgePhonebasesetting");
+                throw new ApiException(400, "Missing required parameter 'phoneBaseId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgePhonebasesettingsPhonebaseId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/phonebasesettings/{phoneBaseId}";
@@ -5301,9 +5301,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutTelephonyProvidersEdgePhonebasesetting: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutProvidersEdgePhonebasesettingsPhonebaseId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutTelephonyProvidersEdgePhonebasesetting: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutProvidersEdgePhonebasesettingsPhonebaseId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<PhoneBase>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5317,9 +5317,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <param name="body"></param>
         /// <returns>Task of PhoneBase</returns>
-        public async System.Threading.Tasks.Task<PhoneBase> PutTelephonyProvidersEdgePhonebasesettingAsync (string phoneBaseId, PhoneBase body = null)
+        public async System.Threading.Tasks.Task<PhoneBase> PutProvidersEdgePhonebasesettingsPhonebaseIdAsync (string phoneBaseId, PhoneBase body = null)
         {
-             ApiResponse<PhoneBase> response = await PutTelephonyProvidersEdgePhonebasesettingAsyncWithHttpInfo(phoneBaseId, body);
+             ApiResponse<PhoneBase> response = await PutProvidersEdgePhonebasesettingsPhonebaseIdAsyncWithHttpInfo(phoneBaseId, body);
              return response.Data;
 
         }
@@ -5330,10 +5330,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (PhoneBase)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PhoneBase>> PutTelephonyProvidersEdgePhonebasesettingAsyncWithHttpInfo (string phoneBaseId, PhoneBase body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PhoneBase>> PutProvidersEdgePhonebasesettingsPhonebaseIdAsyncWithHttpInfo (string phoneBaseId, PhoneBase body = null)
         {
             // verify the required parameter 'phoneBaseId' is set
-            if (phoneBaseId == null) throw new ApiException(400, "Missing required parameter 'phoneBaseId' when calling PutTelephonyProvidersEdgePhonebasesetting");
+            if (phoneBaseId == null) throw new ApiException(400, "Missing required parameter 'phoneBaseId' when calling PutProvidersEdgePhonebasesettingsPhonebaseId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/phonebasesettings/{phoneBaseId}";
@@ -5388,9 +5388,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutTelephonyProvidersEdgePhonebasesetting: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutProvidersEdgePhonebasesettingsPhonebaseId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutTelephonyProvidersEdgePhonebasesetting: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutProvidersEdgePhonebasesettingsPhonebaseId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<PhoneBase>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5403,9 +5403,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="phoneBaseId">Phone base ID</param> 
         /// <returns>string</returns>
-        public string DeleteTelephonyProvidersEdgePhonebasesetting (string phoneBaseId)
+        public string DeleteProvidersEdgePhonebasesettingsPhonebaseId (string phoneBaseId)
         {
-             ApiResponse<string> response = DeleteTelephonyProvidersEdgePhonebasesettingWithHttpInfo(phoneBaseId);
+             ApiResponse<string> response = DeleteProvidersEdgePhonebasesettingsPhonebaseIdWithHttpInfo(phoneBaseId);
              return response.Data;
         }
 
@@ -5414,12 +5414,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="phoneBaseId">Phone base ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteTelephonyProvidersEdgePhonebasesettingWithHttpInfo (string phoneBaseId)
+        public ApiResponse< string > DeleteProvidersEdgePhonebasesettingsPhonebaseIdWithHttpInfo (string phoneBaseId)
         {
             
             // verify the required parameter 'phoneBaseId' is set
             if (phoneBaseId == null)
-                throw new ApiException(400, "Missing required parameter 'phoneBaseId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdgePhonebasesetting");
+                throw new ApiException(400, "Missing required parameter 'phoneBaseId' when calling TelephonyProvidersEdgeApi->DeleteProvidersEdgePhonebasesettingsPhonebaseId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/phonebasesettings/{phoneBaseId}";
@@ -5472,9 +5472,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteTelephonyProvidersEdgePhonebasesetting: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteProvidersEdgePhonebasesettingsPhonebaseId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteTelephonyProvidersEdgePhonebasesetting: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteProvidersEdgePhonebasesettingsPhonebaseId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5487,9 +5487,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgePhonebasesettingAsync (string phoneBaseId)
+        public async System.Threading.Tasks.Task<string> DeleteProvidersEdgePhonebasesettingsPhonebaseIdAsync (string phoneBaseId)
         {
-             ApiResponse<string> response = await DeleteTelephonyProvidersEdgePhonebasesettingAsyncWithHttpInfo(phoneBaseId);
+             ApiResponse<string> response = await DeleteProvidersEdgePhonebasesettingsPhonebaseIdAsyncWithHttpInfo(phoneBaseId);
              return response.Data;
 
         }
@@ -5499,10 +5499,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="phoneBaseId">Phone base ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgePhonebasesettingAsyncWithHttpInfo (string phoneBaseId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteProvidersEdgePhonebasesettingsPhonebaseIdAsyncWithHttpInfo (string phoneBaseId)
         {
             // verify the required parameter 'phoneBaseId' is set
-            if (phoneBaseId == null) throw new ApiException(400, "Missing required parameter 'phoneBaseId' when calling DeleteTelephonyProvidersEdgePhonebasesetting");
+            if (phoneBaseId == null) throw new ApiException(400, "Missing required parameter 'phoneBaseId' when calling DeleteProvidersEdgePhonebasesettingsPhonebaseId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/phonebasesettings/{phoneBaseId}";
@@ -5556,9 +5556,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteTelephonyProvidersEdgePhonebasesetting: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteProvidersEdgePhonebasesettingsPhonebaseId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteTelephonyProvidersEdgePhonebasesetting: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteProvidersEdgePhonebasesettingsPhonebaseId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5579,9 +5579,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Fields to expand in the response, comma-separated</param> 
         /// <param name="fields">Fields under properties to get, comma-separated</param> 
         /// <returns>PhoneEntityListing</returns>
-        public PhoneEntityListing GetTelephonyProvidersEdgePhones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string phoneBaseSettingsId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null)
+        public PhoneEntityListing GetProvidersEdgePhones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string phoneBaseSettingsId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null)
         {
-             ApiResponse<PhoneEntityListing> response = GetTelephonyProvidersEdgePhonesWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, siteId, phoneBaseSettingsId, phoneHardwareId, expand, fields);
+             ApiResponse<PhoneEntityListing> response = GetProvidersEdgePhonesWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, siteId, phoneBaseSettingsId, phoneHardwareId, expand, fields);
              return response.Data;
         }
 
@@ -5598,7 +5598,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Fields to expand in the response, comma-separated</param> 
         /// <param name="fields">Fields under properties to get, comma-separated</param> 
         /// <returns>ApiResponse of PhoneEntityListing</returns>
-        public ApiResponse< PhoneEntityListing > GetTelephonyProvidersEdgePhonesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string phoneBaseSettingsId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null)
+        public ApiResponse< PhoneEntityListing > GetProvidersEdgePhonesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string phoneBaseSettingsId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null)
         {
             
     
@@ -5660,9 +5660,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgePhones: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgePhones: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgePhones: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgePhones: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<PhoneEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5683,9 +5683,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Fields to expand in the response, comma-separated</param>
         /// <param name="fields">Fields under properties to get, comma-separated</param>
         /// <returns>Task of PhoneEntityListing</returns>
-        public async System.Threading.Tasks.Task<PhoneEntityListing> GetTelephonyProvidersEdgePhonesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string phoneBaseSettingsId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null)
+        public async System.Threading.Tasks.Task<PhoneEntityListing> GetProvidersEdgePhonesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string phoneBaseSettingsId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null)
         {
-             ApiResponse<PhoneEntityListing> response = await GetTelephonyProvidersEdgePhonesAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, siteId, phoneBaseSettingsId, phoneHardwareId, expand, fields);
+             ApiResponse<PhoneEntityListing> response = await GetProvidersEdgePhonesAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, siteId, phoneBaseSettingsId, phoneHardwareId, expand, fields);
              return response.Data;
 
         }
@@ -5703,7 +5703,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Fields to expand in the response, comma-separated</param>
         /// <param name="fields">Fields under properties to get, comma-separated</param>
         /// <returns>Task of ApiResponse (PhoneEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PhoneEntityListing>> GetTelephonyProvidersEdgePhonesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string phoneBaseSettingsId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PhoneEntityListing>> GetProvidersEdgePhonesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string phoneBaseSettingsId = null, string phoneHardwareId = null, List<string> expand = null, List<string> fields = null)
         {
             
     
@@ -5766,9 +5766,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgePhones: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgePhones: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgePhones: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgePhones: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<PhoneEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5781,9 +5781,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>Phone</returns>
-        public Phone PostTelephonyProvidersEdgePhones (Phone body = null)
+        public Phone PostProvidersEdgePhones (Phone body = null)
         {
-             ApiResponse<Phone> response = PostTelephonyProvidersEdgePhonesWithHttpInfo(body);
+             ApiResponse<Phone> response = PostProvidersEdgePhonesWithHttpInfo(body);
              return response.Data;
         }
 
@@ -5792,7 +5792,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>ApiResponse of Phone</returns>
-        public ApiResponse< Phone > PostTelephonyProvidersEdgePhonesWithHttpInfo (Phone body = null)
+        public ApiResponse< Phone > PostProvidersEdgePhonesWithHttpInfo (Phone body = null)
         {
             
     
@@ -5852,9 +5852,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostTelephonyProvidersEdgePhones: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostProvidersEdgePhones: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostTelephonyProvidersEdgePhones: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostProvidersEdgePhones: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Phone>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5867,9 +5867,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of Phone</returns>
-        public async System.Threading.Tasks.Task<Phone> PostTelephonyProvidersEdgePhonesAsync (Phone body = null)
+        public async System.Threading.Tasks.Task<Phone> PostProvidersEdgePhonesAsync (Phone body = null)
         {
-             ApiResponse<Phone> response = await PostTelephonyProvidersEdgePhonesAsyncWithHttpInfo(body);
+             ApiResponse<Phone> response = await PostProvidersEdgePhonesAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -5879,7 +5879,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Phone)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Phone>> PostTelephonyProvidersEdgePhonesAsyncWithHttpInfo (Phone body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Phone>> PostProvidersEdgePhonesAsyncWithHttpInfo (Phone body = null)
         {
             
     
@@ -5934,9 +5934,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostTelephonyProvidersEdgePhones: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostProvidersEdgePhones: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostTelephonyProvidersEdgePhones: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostProvidersEdgePhones: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Phone>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5949,9 +5949,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">body</param> 
         /// <returns></returns>
-        public void PostTelephonyProvidersEdgePhonesReboot (PhonesReboot body = null)
+        public void PostProvidersEdgePhonesReboot (PhonesReboot body = null)
         {
-             PostTelephonyProvidersEdgePhonesRebootWithHttpInfo(body);
+             PostProvidersEdgePhonesRebootWithHttpInfo(body);
         }
 
         /// <summary>
@@ -5959,7 +5959,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">body</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostTelephonyProvidersEdgePhonesRebootWithHttpInfo (PhonesReboot body = null)
+        public ApiResponse<Object> PostProvidersEdgePhonesRebootWithHttpInfo (PhonesReboot body = null)
         {
             
     
@@ -6019,9 +6019,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostTelephonyProvidersEdgePhonesReboot: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostProvidersEdgePhonesReboot: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostTelephonyProvidersEdgePhonesReboot: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostProvidersEdgePhonesReboot: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -6034,9 +6034,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">body</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostTelephonyProvidersEdgePhonesRebootAsync (PhonesReboot body = null)
+        public async System.Threading.Tasks.Task PostProvidersEdgePhonesRebootAsync (PhonesReboot body = null)
         {
-             await PostTelephonyProvidersEdgePhonesRebootAsyncWithHttpInfo(body);
+             await PostProvidersEdgePhonesRebootAsyncWithHttpInfo(body);
 
         }
 
@@ -6045,7 +6045,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">body</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostTelephonyProvidersEdgePhonesRebootAsyncWithHttpInfo (PhonesReboot body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostProvidersEdgePhonesRebootAsyncWithHttpInfo (PhonesReboot body = null)
         {
             
     
@@ -6100,9 +6100,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostTelephonyProvidersEdgePhonesReboot: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostProvidersEdgePhonesReboot: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostTelephonyProvidersEdgePhonesReboot: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostProvidersEdgePhonesReboot: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -6115,9 +6115,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="phoneBaseSettingsId">The id of a Phone Base Settings object upon which to base this Phone</param> 
         /// <returns>Phone</returns>
-        public Phone GetTelephonyProvidersEdgePhonesTemplate (string phoneBaseSettingsId)
+        public Phone GetProvidersEdgePhonesTemplate (string phoneBaseSettingsId)
         {
-             ApiResponse<Phone> response = GetTelephonyProvidersEdgePhonesTemplateWithHttpInfo(phoneBaseSettingsId);
+             ApiResponse<Phone> response = GetProvidersEdgePhonesTemplateWithHttpInfo(phoneBaseSettingsId);
              return response.Data;
         }
 
@@ -6126,12 +6126,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="phoneBaseSettingsId">The id of a Phone Base Settings object upon which to base this Phone</param> 
         /// <returns>ApiResponse of Phone</returns>
-        public ApiResponse< Phone > GetTelephonyProvidersEdgePhonesTemplateWithHttpInfo (string phoneBaseSettingsId)
+        public ApiResponse< Phone > GetProvidersEdgePhonesTemplateWithHttpInfo (string phoneBaseSettingsId)
         {
             
             // verify the required parameter 'phoneBaseSettingsId' is set
             if (phoneBaseSettingsId == null)
-                throw new ApiException(400, "Missing required parameter 'phoneBaseSettingsId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgePhonesTemplate");
+                throw new ApiException(400, "Missing required parameter 'phoneBaseSettingsId' when calling TelephonyProvidersEdgeApi->GetProvidersEdgePhonesTemplate");
             
     
             var path_ = "/api/v1/telephony/providers/edge/phones/template";
@@ -6184,9 +6184,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgePhonesTemplate: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgePhonesTemplate: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgePhonesTemplate: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgePhonesTemplate: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Phone>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6199,9 +6199,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="phoneBaseSettingsId">The id of a Phone Base Settings object upon which to base this Phone</param>
         /// <returns>Task of Phone</returns>
-        public async System.Threading.Tasks.Task<Phone> GetTelephonyProvidersEdgePhonesTemplateAsync (string phoneBaseSettingsId)
+        public async System.Threading.Tasks.Task<Phone> GetProvidersEdgePhonesTemplateAsync (string phoneBaseSettingsId)
         {
-             ApiResponse<Phone> response = await GetTelephonyProvidersEdgePhonesTemplateAsyncWithHttpInfo(phoneBaseSettingsId);
+             ApiResponse<Phone> response = await GetProvidersEdgePhonesTemplateAsyncWithHttpInfo(phoneBaseSettingsId);
              return response.Data;
 
         }
@@ -6211,10 +6211,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="phoneBaseSettingsId">The id of a Phone Base Settings object upon which to base this Phone</param>
         /// <returns>Task of ApiResponse (Phone)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Phone>> GetTelephonyProvidersEdgePhonesTemplateAsyncWithHttpInfo (string phoneBaseSettingsId)
+        public async System.Threading.Tasks.Task<ApiResponse<Phone>> GetProvidersEdgePhonesTemplateAsyncWithHttpInfo (string phoneBaseSettingsId)
         {
             // verify the required parameter 'phoneBaseSettingsId' is set
-            if (phoneBaseSettingsId == null) throw new ApiException(400, "Missing required parameter 'phoneBaseSettingsId' when calling GetTelephonyProvidersEdgePhonesTemplate");
+            if (phoneBaseSettingsId == null) throw new ApiException(400, "Missing required parameter 'phoneBaseSettingsId' when calling GetProvidersEdgePhonesTemplate");
             
     
             var path_ = "/api/v1/telephony/providers/edge/phones/template";
@@ -6268,9 +6268,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgePhonesTemplate: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgePhonesTemplate: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgePhonesTemplate: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgePhonesTemplate: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Phone>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6283,9 +6283,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="phoneId">Phone ID</param> 
         /// <returns>Phone</returns>
-        public Phone GetTelephonyProvidersEdgePhone (string phoneId)
+        public Phone GetProvidersEdgePhonesPhoneId (string phoneId)
         {
-             ApiResponse<Phone> response = GetTelephonyProvidersEdgePhoneWithHttpInfo(phoneId);
+             ApiResponse<Phone> response = GetProvidersEdgePhonesPhoneIdWithHttpInfo(phoneId);
              return response.Data;
         }
 
@@ -6294,12 +6294,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="phoneId">Phone ID</param> 
         /// <returns>ApiResponse of Phone</returns>
-        public ApiResponse< Phone > GetTelephonyProvidersEdgePhoneWithHttpInfo (string phoneId)
+        public ApiResponse< Phone > GetProvidersEdgePhonesPhoneIdWithHttpInfo (string phoneId)
         {
             
             // verify the required parameter 'phoneId' is set
             if (phoneId == null)
-                throw new ApiException(400, "Missing required parameter 'phoneId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgePhone");
+                throw new ApiException(400, "Missing required parameter 'phoneId' when calling TelephonyProvidersEdgeApi->GetProvidersEdgePhonesPhoneId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/phones/{phoneId}";
@@ -6352,9 +6352,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgePhone: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgePhonesPhoneId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgePhone: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgePhonesPhoneId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Phone>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6367,9 +6367,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="phoneId">Phone ID</param>
         /// <returns>Task of Phone</returns>
-        public async System.Threading.Tasks.Task<Phone> GetTelephonyProvidersEdgePhoneAsync (string phoneId)
+        public async System.Threading.Tasks.Task<Phone> GetProvidersEdgePhonesPhoneIdAsync (string phoneId)
         {
-             ApiResponse<Phone> response = await GetTelephonyProvidersEdgePhoneAsyncWithHttpInfo(phoneId);
+             ApiResponse<Phone> response = await GetProvidersEdgePhonesPhoneIdAsyncWithHttpInfo(phoneId);
              return response.Data;
 
         }
@@ -6379,10 +6379,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="phoneId">Phone ID</param>
         /// <returns>Task of ApiResponse (Phone)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Phone>> GetTelephonyProvidersEdgePhoneAsyncWithHttpInfo (string phoneId)
+        public async System.Threading.Tasks.Task<ApiResponse<Phone>> GetProvidersEdgePhonesPhoneIdAsyncWithHttpInfo (string phoneId)
         {
             // verify the required parameter 'phoneId' is set
-            if (phoneId == null) throw new ApiException(400, "Missing required parameter 'phoneId' when calling GetTelephonyProvidersEdgePhone");
+            if (phoneId == null) throw new ApiException(400, "Missing required parameter 'phoneId' when calling GetProvidersEdgePhonesPhoneId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/phones/{phoneId}";
@@ -6436,9 +6436,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgePhone: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgePhonesPhoneId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgePhone: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgePhonesPhoneId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Phone>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6452,9 +6452,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="phoneId">Phone ID</param> 
         /// <param name="body"></param> 
         /// <returns>Phone</returns>
-        public Phone PutTelephonyProvidersEdgePhone (string phoneId, Phone body = null)
+        public Phone PutProvidersEdgePhonesPhoneId (string phoneId, Phone body = null)
         {
-             ApiResponse<Phone> response = PutTelephonyProvidersEdgePhoneWithHttpInfo(phoneId, body);
+             ApiResponse<Phone> response = PutProvidersEdgePhonesPhoneIdWithHttpInfo(phoneId, body);
              return response.Data;
         }
 
@@ -6464,12 +6464,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="phoneId">Phone ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of Phone</returns>
-        public ApiResponse< Phone > PutTelephonyProvidersEdgePhoneWithHttpInfo (string phoneId, Phone body = null)
+        public ApiResponse< Phone > PutProvidersEdgePhonesPhoneIdWithHttpInfo (string phoneId, Phone body = null)
         {
             
             // verify the required parameter 'phoneId' is set
             if (phoneId == null)
-                throw new ApiException(400, "Missing required parameter 'phoneId' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgePhone");
+                throw new ApiException(400, "Missing required parameter 'phoneId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgePhonesPhoneId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/phones/{phoneId}";
@@ -6529,9 +6529,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutTelephonyProvidersEdgePhone: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutProvidersEdgePhonesPhoneId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutTelephonyProvidersEdgePhone: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutProvidersEdgePhonesPhoneId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Phone>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6545,9 +6545,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="phoneId">Phone ID</param>
         /// <param name="body"></param>
         /// <returns>Task of Phone</returns>
-        public async System.Threading.Tasks.Task<Phone> PutTelephonyProvidersEdgePhoneAsync (string phoneId, Phone body = null)
+        public async System.Threading.Tasks.Task<Phone> PutProvidersEdgePhonesPhoneIdAsync (string phoneId, Phone body = null)
         {
-             ApiResponse<Phone> response = await PutTelephonyProvidersEdgePhoneAsyncWithHttpInfo(phoneId, body);
+             ApiResponse<Phone> response = await PutProvidersEdgePhonesPhoneIdAsyncWithHttpInfo(phoneId, body);
              return response.Data;
 
         }
@@ -6558,10 +6558,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="phoneId">Phone ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Phone)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Phone>> PutTelephonyProvidersEdgePhoneAsyncWithHttpInfo (string phoneId, Phone body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Phone>> PutProvidersEdgePhonesPhoneIdAsyncWithHttpInfo (string phoneId, Phone body = null)
         {
             // verify the required parameter 'phoneId' is set
-            if (phoneId == null) throw new ApiException(400, "Missing required parameter 'phoneId' when calling PutTelephonyProvidersEdgePhone");
+            if (phoneId == null) throw new ApiException(400, "Missing required parameter 'phoneId' when calling PutProvidersEdgePhonesPhoneId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/phones/{phoneId}";
@@ -6616,9 +6616,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutTelephonyProvidersEdgePhone: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutProvidersEdgePhonesPhoneId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutTelephonyProvidersEdgePhone: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutProvidersEdgePhonesPhoneId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Phone>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6631,9 +6631,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="phoneId">Phone ID</param> 
         /// <returns>string</returns>
-        public string DeleteTelephonyProvidersEdgePhone (string phoneId)
+        public string DeleteProvidersEdgePhonesPhoneId (string phoneId)
         {
-             ApiResponse<string> response = DeleteTelephonyProvidersEdgePhoneWithHttpInfo(phoneId);
+             ApiResponse<string> response = DeleteProvidersEdgePhonesPhoneIdWithHttpInfo(phoneId);
              return response.Data;
         }
 
@@ -6642,12 +6642,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="phoneId">Phone ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteTelephonyProvidersEdgePhoneWithHttpInfo (string phoneId)
+        public ApiResponse< string > DeleteProvidersEdgePhonesPhoneIdWithHttpInfo (string phoneId)
         {
             
             // verify the required parameter 'phoneId' is set
             if (phoneId == null)
-                throw new ApiException(400, "Missing required parameter 'phoneId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdgePhone");
+                throw new ApiException(400, "Missing required parameter 'phoneId' when calling TelephonyProvidersEdgeApi->DeleteProvidersEdgePhonesPhoneId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/phones/{phoneId}";
@@ -6700,9 +6700,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteTelephonyProvidersEdgePhone: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteProvidersEdgePhonesPhoneId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteTelephonyProvidersEdgePhone: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteProvidersEdgePhonesPhoneId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6715,9 +6715,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="phoneId">Phone ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgePhoneAsync (string phoneId)
+        public async System.Threading.Tasks.Task<string> DeleteProvidersEdgePhonesPhoneIdAsync (string phoneId)
         {
-             ApiResponse<string> response = await DeleteTelephonyProvidersEdgePhoneAsyncWithHttpInfo(phoneId);
+             ApiResponse<string> response = await DeleteProvidersEdgePhonesPhoneIdAsyncWithHttpInfo(phoneId);
              return response.Data;
 
         }
@@ -6727,10 +6727,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="phoneId">Phone ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgePhoneAsyncWithHttpInfo (string phoneId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteProvidersEdgePhonesPhoneIdAsyncWithHttpInfo (string phoneId)
         {
             // verify the required parameter 'phoneId' is set
-            if (phoneId == null) throw new ApiException(400, "Missing required parameter 'phoneId' when calling DeleteTelephonyProvidersEdgePhone");
+            if (phoneId == null) throw new ApiException(400, "Missing required parameter 'phoneId' when calling DeleteProvidersEdgePhonesPhoneId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/phones/{phoneId}";
@@ -6784,9 +6784,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteTelephonyProvidersEdgePhone: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteProvidersEdgePhonesPhoneId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteTelephonyProvidersEdgePhone: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteProvidersEdgePhonesPhoneId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6799,9 +6799,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="phoneId">Phone Id</param> 
         /// <returns></returns>
-        public void PostTelephonyProvidersEdgePhoneReboot (string phoneId)
+        public void PostProvidersEdgePhonesPhoneIdReboot (string phoneId)
         {
-             PostTelephonyProvidersEdgePhoneRebootWithHttpInfo(phoneId);
+             PostProvidersEdgePhonesPhoneIdRebootWithHttpInfo(phoneId);
         }
 
         /// <summary>
@@ -6809,12 +6809,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="phoneId">Phone Id</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostTelephonyProvidersEdgePhoneRebootWithHttpInfo (string phoneId)
+        public ApiResponse<Object> PostProvidersEdgePhonesPhoneIdRebootWithHttpInfo (string phoneId)
         {
             
             // verify the required parameter 'phoneId' is set
             if (phoneId == null)
-                throw new ApiException(400, "Missing required parameter 'phoneId' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgePhoneReboot");
+                throw new ApiException(400, "Missing required parameter 'phoneId' when calling TelephonyProvidersEdgeApi->PostProvidersEdgePhonesPhoneIdReboot");
             
     
             var path_ = "/api/v1/telephony/providers/edge/phones/{phoneId}/reboot";
@@ -6867,9 +6867,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostTelephonyProvidersEdgePhoneReboot: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostProvidersEdgePhonesPhoneIdReboot: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostTelephonyProvidersEdgePhoneReboot: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostProvidersEdgePhonesPhoneIdReboot: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -6882,9 +6882,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="phoneId">Phone Id</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostTelephonyProvidersEdgePhoneRebootAsync (string phoneId)
+        public async System.Threading.Tasks.Task PostProvidersEdgePhonesPhoneIdRebootAsync (string phoneId)
         {
-             await PostTelephonyProvidersEdgePhoneRebootAsyncWithHttpInfo(phoneId);
+             await PostProvidersEdgePhonesPhoneIdRebootAsyncWithHttpInfo(phoneId);
 
         }
 
@@ -6893,10 +6893,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="phoneId">Phone Id</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostTelephonyProvidersEdgePhoneRebootAsyncWithHttpInfo (string phoneId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostProvidersEdgePhonesPhoneIdRebootAsyncWithHttpInfo (string phoneId)
         {
             // verify the required parameter 'phoneId' is set
-            if (phoneId == null) throw new ApiException(400, "Missing required parameter 'phoneId' when calling PostTelephonyProvidersEdgePhoneReboot");
+            if (phoneId == null) throw new ApiException(400, "Missing required parameter 'phoneId' when calling PostProvidersEdgePhonesPhoneIdReboot");
             
     
             var path_ = "/api/v1/telephony/providers/edge/phones/{phoneId}/reboot";
@@ -6950,9 +6950,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostTelephonyProvidersEdgePhoneReboot: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostProvidersEdgePhonesPhoneIdReboot: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostTelephonyProvidersEdgePhoneReboot: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostProvidersEdgePhonesPhoneIdReboot: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -6966,9 +6966,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>TimeZoneEntityListing</returns>
-        public TimeZoneEntityListing GetTelephonyProvidersEdgeTimezones (int? pageSize = null, int? pageNumber = null)
+        public TimeZoneEntityListing GetProvidersEdgeTimezones (int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<TimeZoneEntityListing> response = GetTelephonyProvidersEdgeTimezonesWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<TimeZoneEntityListing> response = GetProvidersEdgeTimezonesWithHttpInfo(pageSize, pageNumber);
              return response.Data;
         }
 
@@ -6978,7 +6978,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>ApiResponse of TimeZoneEntityListing</returns>
-        public ApiResponse< TimeZoneEntityListing > GetTelephonyProvidersEdgeTimezonesWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< TimeZoneEntityListing > GetProvidersEdgeTimezonesWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -7033,9 +7033,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeTimezones: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeTimezones: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeTimezones: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeTimezones: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<TimeZoneEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7049,9 +7049,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of TimeZoneEntityListing</returns>
-        public async System.Threading.Tasks.Task<TimeZoneEntityListing> GetTelephonyProvidersEdgeTimezonesAsync (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<TimeZoneEntityListing> GetProvidersEdgeTimezonesAsync (int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<TimeZoneEntityListing> response = await GetTelephonyProvidersEdgeTimezonesAsyncWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<TimeZoneEntityListing> response = await GetProvidersEdgeTimezonesAsyncWithHttpInfo(pageSize, pageNumber);
              return response.Data;
 
         }
@@ -7062,7 +7062,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (TimeZoneEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TimeZoneEntityListing>> GetTelephonyProvidersEdgeTimezonesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TimeZoneEntityListing>> GetProvidersEdgeTimezonesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -7118,9 +7118,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeTimezones: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeTimezones: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeTimezones: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeTimezones: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<TimeZoneEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7136,9 +7136,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param> 
         /// <param name="sortOrder">Sort order</param> 
         /// <returns>TrunkBase</returns>
-        public TrunkBase GetTelephonyProvidersEdgeTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public TrunkBase GetProvidersEdgeTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<TrunkBase> response = GetTelephonyProvidersEdgeTrunkbasesettingsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder);
+             ApiResponse<TrunkBase> response = GetProvidersEdgeTrunkbasesettingsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder);
              return response.Data;
         }
 
@@ -7150,7 +7150,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param> 
         /// <param name="sortOrder">Sort order</param> 
         /// <returns>ApiResponse of TrunkBase</returns>
-        public ApiResponse< TrunkBase > GetTelephonyProvidersEdgeTrunkbasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public ApiResponse< TrunkBase > GetProvidersEdgeTrunkbasesettingsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
         {
             
     
@@ -7207,9 +7207,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeTrunkbasesettings: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeTrunkbasesettings: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeTrunkbasesettings: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeTrunkbasesettings: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<TrunkBase>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7225,9 +7225,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of TrunkBase</returns>
-        public async System.Threading.Tasks.Task<TrunkBase> GetTelephonyProvidersEdgeTrunkbasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<TrunkBase> GetProvidersEdgeTrunkbasesettingsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<TrunkBase> response = await GetTelephonyProvidersEdgeTrunkbasesettingsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder);
+             ApiResponse<TrunkBase> response = await GetProvidersEdgeTrunkbasesettingsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder);
              return response.Data;
 
         }
@@ -7240,7 +7240,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Value by which to sort</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ApiResponse (TrunkBase)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrunkBase>> GetTelephonyProvidersEdgeTrunkbasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TrunkBase>> GetProvidersEdgeTrunkbasesettingsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
         {
             
     
@@ -7298,9 +7298,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeTrunkbasesettings: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeTrunkbasesettings: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeTrunkbasesettings: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeTrunkbasesettings: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<TrunkBase>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7313,9 +7313,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>TrunkBase</returns>
-        public TrunkBase PostTelephonyProvidersEdgeTrunkbasesettings (TrunkBase body = null)
+        public TrunkBase PostProvidersEdgeTrunkbasesettings (TrunkBase body = null)
         {
-             ApiResponse<TrunkBase> response = PostTelephonyProvidersEdgeTrunkbasesettingsWithHttpInfo(body);
+             ApiResponse<TrunkBase> response = PostProvidersEdgeTrunkbasesettingsWithHttpInfo(body);
              return response.Data;
         }
 
@@ -7324,7 +7324,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>ApiResponse of TrunkBase</returns>
-        public ApiResponse< TrunkBase > PostTelephonyProvidersEdgeTrunkbasesettingsWithHttpInfo (TrunkBase body = null)
+        public ApiResponse< TrunkBase > PostProvidersEdgeTrunkbasesettingsWithHttpInfo (TrunkBase body = null)
         {
             
     
@@ -7384,9 +7384,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostTelephonyProvidersEdgeTrunkbasesettings: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostProvidersEdgeTrunkbasesettings: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostTelephonyProvidersEdgeTrunkbasesettings: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostProvidersEdgeTrunkbasesettings: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<TrunkBase>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7399,9 +7399,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of TrunkBase</returns>
-        public async System.Threading.Tasks.Task<TrunkBase> PostTelephonyProvidersEdgeTrunkbasesettingsAsync (TrunkBase body = null)
+        public async System.Threading.Tasks.Task<TrunkBase> PostProvidersEdgeTrunkbasesettingsAsync (TrunkBase body = null)
         {
-             ApiResponse<TrunkBase> response = await PostTelephonyProvidersEdgeTrunkbasesettingsAsyncWithHttpInfo(body);
+             ApiResponse<TrunkBase> response = await PostProvidersEdgeTrunkbasesettingsAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -7411,7 +7411,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (TrunkBase)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrunkBase>> PostTelephonyProvidersEdgeTrunkbasesettingsAsyncWithHttpInfo (TrunkBase body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TrunkBase>> PostProvidersEdgeTrunkbasesettingsAsyncWithHttpInfo (TrunkBase body = null)
         {
             
     
@@ -7466,9 +7466,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostTelephonyProvidersEdgeTrunkbasesettings: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostProvidersEdgeTrunkbasesettings: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostTelephonyProvidersEdgeTrunkbasesettings: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostProvidersEdgeTrunkbasesettings: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<TrunkBase>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7483,9 +7483,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize"></param> 
         /// <param name="pageNumber"></param> 
         /// <returns>TrunkMetabaseEntityListing</returns>
-        public TrunkMetabaseEntityListing GetTelephonyProvidersEdgeTrunkbasesettingsAvailablemetabases (string type = null, int? pageSize = null, int? pageNumber = null)
+        public TrunkMetabaseEntityListing GetProvidersEdgeTrunkbasesettingsAvailablemetabases (string type = null, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<TrunkMetabaseEntityListing> response = GetTelephonyProvidersEdgeTrunkbasesettingsAvailablemetabasesWithHttpInfo(type, pageSize, pageNumber);
+             ApiResponse<TrunkMetabaseEntityListing> response = GetProvidersEdgeTrunkbasesettingsAvailablemetabasesWithHttpInfo(type, pageSize, pageNumber);
              return response.Data;
         }
 
@@ -7496,7 +7496,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize"></param> 
         /// <param name="pageNumber"></param> 
         /// <returns>ApiResponse of TrunkMetabaseEntityListing</returns>
-        public ApiResponse< TrunkMetabaseEntityListing > GetTelephonyProvidersEdgeTrunkbasesettingsAvailablemetabasesWithHttpInfo (string type = null, int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< TrunkMetabaseEntityListing > GetProvidersEdgeTrunkbasesettingsAvailablemetabasesWithHttpInfo (string type = null, int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -7552,9 +7552,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeTrunkbasesettingsAvailablemetabases: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeTrunkbasesettingsAvailablemetabases: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeTrunkbasesettingsAvailablemetabases: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeTrunkbasesettingsAvailablemetabases: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<TrunkMetabaseEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7569,9 +7569,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize"></param>
         /// <param name="pageNumber"></param>
         /// <returns>Task of TrunkMetabaseEntityListing</returns>
-        public async System.Threading.Tasks.Task<TrunkMetabaseEntityListing> GetTelephonyProvidersEdgeTrunkbasesettingsAvailablemetabasesAsync (string type = null, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<TrunkMetabaseEntityListing> GetProvidersEdgeTrunkbasesettingsAvailablemetabasesAsync (string type = null, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<TrunkMetabaseEntityListing> response = await GetTelephonyProvidersEdgeTrunkbasesettingsAvailablemetabasesAsyncWithHttpInfo(type, pageSize, pageNumber);
+             ApiResponse<TrunkMetabaseEntityListing> response = await GetProvidersEdgeTrunkbasesettingsAvailablemetabasesAsyncWithHttpInfo(type, pageSize, pageNumber);
              return response.Data;
 
         }
@@ -7583,7 +7583,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize"></param>
         /// <param name="pageNumber"></param>
         /// <returns>Task of ApiResponse (TrunkMetabaseEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrunkMetabaseEntityListing>> GetTelephonyProvidersEdgeTrunkbasesettingsAvailablemetabasesAsyncWithHttpInfo (string type = null, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TrunkMetabaseEntityListing>> GetProvidersEdgeTrunkbasesettingsAvailablemetabasesAsyncWithHttpInfo (string type = null, int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -7640,9 +7640,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeTrunkbasesettingsAvailablemetabases: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeTrunkbasesettingsAvailablemetabases: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeTrunkbasesettingsAvailablemetabases: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeTrunkbasesettingsAvailablemetabases: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<TrunkMetabaseEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7655,9 +7655,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="trunkMetabaseId">The id of a metabase object upon which to base this Trunk Base Settings</param> 
         /// <returns>TrunkBase</returns>
-        public TrunkBase GetTelephonyProvidersEdgeTrunkbasesettingsTemplate (string trunkMetabaseId)
+        public TrunkBase GetProvidersEdgeTrunkbasesettingsTemplate (string trunkMetabaseId)
         {
-             ApiResponse<TrunkBase> response = GetTelephonyProvidersEdgeTrunkbasesettingsTemplateWithHttpInfo(trunkMetabaseId);
+             ApiResponse<TrunkBase> response = GetProvidersEdgeTrunkbasesettingsTemplateWithHttpInfo(trunkMetabaseId);
              return response.Data;
         }
 
@@ -7666,12 +7666,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="trunkMetabaseId">The id of a metabase object upon which to base this Trunk Base Settings</param> 
         /// <returns>ApiResponse of TrunkBase</returns>
-        public ApiResponse< TrunkBase > GetTelephonyProvidersEdgeTrunkbasesettingsTemplateWithHttpInfo (string trunkMetabaseId)
+        public ApiResponse< TrunkBase > GetProvidersEdgeTrunkbasesettingsTemplateWithHttpInfo (string trunkMetabaseId)
         {
             
             // verify the required parameter 'trunkMetabaseId' is set
             if (trunkMetabaseId == null)
-                throw new ApiException(400, "Missing required parameter 'trunkMetabaseId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeTrunkbasesettingsTemplate");
+                throw new ApiException(400, "Missing required parameter 'trunkMetabaseId' when calling TelephonyProvidersEdgeApi->GetProvidersEdgeTrunkbasesettingsTemplate");
             
     
             var path_ = "/api/v1/telephony/providers/edge/trunkbasesettings/template";
@@ -7724,9 +7724,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeTrunkbasesettingsTemplate: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeTrunkbasesettingsTemplate: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeTrunkbasesettingsTemplate: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeTrunkbasesettingsTemplate: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<TrunkBase>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7739,9 +7739,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="trunkMetabaseId">The id of a metabase object upon which to base this Trunk Base Settings</param>
         /// <returns>Task of TrunkBase</returns>
-        public async System.Threading.Tasks.Task<TrunkBase> GetTelephonyProvidersEdgeTrunkbasesettingsTemplateAsync (string trunkMetabaseId)
+        public async System.Threading.Tasks.Task<TrunkBase> GetProvidersEdgeTrunkbasesettingsTemplateAsync (string trunkMetabaseId)
         {
-             ApiResponse<TrunkBase> response = await GetTelephonyProvidersEdgeTrunkbasesettingsTemplateAsyncWithHttpInfo(trunkMetabaseId);
+             ApiResponse<TrunkBase> response = await GetProvidersEdgeTrunkbasesettingsTemplateAsyncWithHttpInfo(trunkMetabaseId);
              return response.Data;
 
         }
@@ -7751,10 +7751,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="trunkMetabaseId">The id of a metabase object upon which to base this Trunk Base Settings</param>
         /// <returns>Task of ApiResponse (TrunkBase)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrunkBase>> GetTelephonyProvidersEdgeTrunkbasesettingsTemplateAsyncWithHttpInfo (string trunkMetabaseId)
+        public async System.Threading.Tasks.Task<ApiResponse<TrunkBase>> GetProvidersEdgeTrunkbasesettingsTemplateAsyncWithHttpInfo (string trunkMetabaseId)
         {
             // verify the required parameter 'trunkMetabaseId' is set
-            if (trunkMetabaseId == null) throw new ApiException(400, "Missing required parameter 'trunkMetabaseId' when calling GetTelephonyProvidersEdgeTrunkbasesettingsTemplate");
+            if (trunkMetabaseId == null) throw new ApiException(400, "Missing required parameter 'trunkMetabaseId' when calling GetProvidersEdgeTrunkbasesettingsTemplate");
             
     
             var path_ = "/api/v1/telephony/providers/edge/trunkbasesettings/template";
@@ -7808,9 +7808,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeTrunkbasesettingsTemplate: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeTrunkbasesettingsTemplate: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeTrunkbasesettingsTemplate: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeTrunkbasesettingsTemplate: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<TrunkBase>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7823,9 +7823,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param> 
         /// <returns>TrunkBase</returns>
-        public TrunkBase GetTelephonyProvidersEdgeTrunkbasesetting (string trunkBaseSettingsId)
+        public TrunkBase GetProvidersEdgeTrunkbasesettingsTrunkbasesettingsId (string trunkBaseSettingsId)
         {
-             ApiResponse<TrunkBase> response = GetTelephonyProvidersEdgeTrunkbasesettingWithHttpInfo(trunkBaseSettingsId);
+             ApiResponse<TrunkBase> response = GetProvidersEdgeTrunkbasesettingsTrunkbasesettingsIdWithHttpInfo(trunkBaseSettingsId);
              return response.Data;
         }
 
@@ -7834,12 +7834,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param> 
         /// <returns>ApiResponse of TrunkBase</returns>
-        public ApiResponse< TrunkBase > GetTelephonyProvidersEdgeTrunkbasesettingWithHttpInfo (string trunkBaseSettingsId)
+        public ApiResponse< TrunkBase > GetProvidersEdgeTrunkbasesettingsTrunkbasesettingsIdWithHttpInfo (string trunkBaseSettingsId)
         {
             
             // verify the required parameter 'trunkBaseSettingsId' is set
             if (trunkBaseSettingsId == null)
-                throw new ApiException(400, "Missing required parameter 'trunkBaseSettingsId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeTrunkbasesetting");
+                throw new ApiException(400, "Missing required parameter 'trunkBaseSettingsId' when calling TelephonyProvidersEdgeApi->GetProvidersEdgeTrunkbasesettingsTrunkbasesettingsId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/trunkbasesettings/{trunkBaseSettingsId}";
@@ -7892,9 +7892,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeTrunkbasesetting: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeTrunkbasesettingsTrunkbasesettingsId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeTrunkbasesetting: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeTrunkbasesettingsTrunkbasesettingsId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<TrunkBase>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7907,9 +7907,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <returns>Task of TrunkBase</returns>
-        public async System.Threading.Tasks.Task<TrunkBase> GetTelephonyProvidersEdgeTrunkbasesettingAsync (string trunkBaseSettingsId)
+        public async System.Threading.Tasks.Task<TrunkBase> GetProvidersEdgeTrunkbasesettingsTrunkbasesettingsIdAsync (string trunkBaseSettingsId)
         {
-             ApiResponse<TrunkBase> response = await GetTelephonyProvidersEdgeTrunkbasesettingAsyncWithHttpInfo(trunkBaseSettingsId);
+             ApiResponse<TrunkBase> response = await GetProvidersEdgeTrunkbasesettingsTrunkbasesettingsIdAsyncWithHttpInfo(trunkBaseSettingsId);
              return response.Data;
 
         }
@@ -7919,10 +7919,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <returns>Task of ApiResponse (TrunkBase)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrunkBase>> GetTelephonyProvidersEdgeTrunkbasesettingAsyncWithHttpInfo (string trunkBaseSettingsId)
+        public async System.Threading.Tasks.Task<ApiResponse<TrunkBase>> GetProvidersEdgeTrunkbasesettingsTrunkbasesettingsIdAsyncWithHttpInfo (string trunkBaseSettingsId)
         {
             // verify the required parameter 'trunkBaseSettingsId' is set
-            if (trunkBaseSettingsId == null) throw new ApiException(400, "Missing required parameter 'trunkBaseSettingsId' when calling GetTelephonyProvidersEdgeTrunkbasesetting");
+            if (trunkBaseSettingsId == null) throw new ApiException(400, "Missing required parameter 'trunkBaseSettingsId' when calling GetProvidersEdgeTrunkbasesettingsTrunkbasesettingsId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/trunkbasesettings/{trunkBaseSettingsId}";
@@ -7976,9 +7976,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeTrunkbasesetting: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeTrunkbasesettingsTrunkbasesettingsId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTelephonyProvidersEdgeTrunkbasesetting: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetProvidersEdgeTrunkbasesettingsTrunkbasesettingsId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<TrunkBase>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7992,9 +7992,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param> 
         /// <param name="body"></param> 
         /// <returns>TrunkBase</returns>
-        public TrunkBase PutTelephonyProvidersEdgeTrunkbasesetting (string trunkBaseSettingsId, TrunkBase body = null)
+        public TrunkBase PutProvidersEdgeTrunkbasesettingsTrunkbasesettingsId (string trunkBaseSettingsId, TrunkBase body = null)
         {
-             ApiResponse<TrunkBase> response = PutTelephonyProvidersEdgeTrunkbasesettingWithHttpInfo(trunkBaseSettingsId, body);
+             ApiResponse<TrunkBase> response = PutProvidersEdgeTrunkbasesettingsTrunkbasesettingsIdWithHttpInfo(trunkBaseSettingsId, body);
              return response.Data;
         }
 
@@ -8004,12 +8004,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of TrunkBase</returns>
-        public ApiResponse< TrunkBase > PutTelephonyProvidersEdgeTrunkbasesettingWithHttpInfo (string trunkBaseSettingsId, TrunkBase body = null)
+        public ApiResponse< TrunkBase > PutProvidersEdgeTrunkbasesettingsTrunkbasesettingsIdWithHttpInfo (string trunkBaseSettingsId, TrunkBase body = null)
         {
             
             // verify the required parameter 'trunkBaseSettingsId' is set
             if (trunkBaseSettingsId == null)
-                throw new ApiException(400, "Missing required parameter 'trunkBaseSettingsId' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgeTrunkbasesetting");
+                throw new ApiException(400, "Missing required parameter 'trunkBaseSettingsId' when calling TelephonyProvidersEdgeApi->PutProvidersEdgeTrunkbasesettingsTrunkbasesettingsId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/trunkbasesettings/{trunkBaseSettingsId}";
@@ -8069,9 +8069,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutTelephonyProvidersEdgeTrunkbasesetting: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutProvidersEdgeTrunkbasesettingsTrunkbasesettingsId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutTelephonyProvidersEdgeTrunkbasesetting: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutProvidersEdgeTrunkbasesettingsTrunkbasesettingsId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<TrunkBase>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8085,9 +8085,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <param name="body"></param>
         /// <returns>Task of TrunkBase</returns>
-        public async System.Threading.Tasks.Task<TrunkBase> PutTelephonyProvidersEdgeTrunkbasesettingAsync (string trunkBaseSettingsId, TrunkBase body = null)
+        public async System.Threading.Tasks.Task<TrunkBase> PutProvidersEdgeTrunkbasesettingsTrunkbasesettingsIdAsync (string trunkBaseSettingsId, TrunkBase body = null)
         {
-             ApiResponse<TrunkBase> response = await PutTelephonyProvidersEdgeTrunkbasesettingAsyncWithHttpInfo(trunkBaseSettingsId, body);
+             ApiResponse<TrunkBase> response = await PutProvidersEdgeTrunkbasesettingsTrunkbasesettingsIdAsyncWithHttpInfo(trunkBaseSettingsId, body);
              return response.Data;
 
         }
@@ -8098,10 +8098,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (TrunkBase)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TrunkBase>> PutTelephonyProvidersEdgeTrunkbasesettingAsyncWithHttpInfo (string trunkBaseSettingsId, TrunkBase body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TrunkBase>> PutProvidersEdgeTrunkbasesettingsTrunkbasesettingsIdAsyncWithHttpInfo (string trunkBaseSettingsId, TrunkBase body = null)
         {
             // verify the required parameter 'trunkBaseSettingsId' is set
-            if (trunkBaseSettingsId == null) throw new ApiException(400, "Missing required parameter 'trunkBaseSettingsId' when calling PutTelephonyProvidersEdgeTrunkbasesetting");
+            if (trunkBaseSettingsId == null) throw new ApiException(400, "Missing required parameter 'trunkBaseSettingsId' when calling PutProvidersEdgeTrunkbasesettingsTrunkbasesettingsId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/trunkbasesettings/{trunkBaseSettingsId}";
@@ -8156,9 +8156,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutTelephonyProvidersEdgeTrunkbasesetting: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutProvidersEdgeTrunkbasesettingsTrunkbasesettingsId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutTelephonyProvidersEdgeTrunkbasesetting: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutProvidersEdgeTrunkbasesettingsTrunkbasesettingsId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<TrunkBase>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8171,9 +8171,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param> 
         /// <returns>string</returns>
-        public string DeleteTelephonyProvidersEdgeTrunkbasesetting (string trunkBaseSettingsId)
+        public string DeleteProvidersEdgeTrunkbasesettingsTrunkbasesettingsId (string trunkBaseSettingsId)
         {
-             ApiResponse<string> response = DeleteTelephonyProvidersEdgeTrunkbasesettingWithHttpInfo(trunkBaseSettingsId);
+             ApiResponse<string> response = DeleteProvidersEdgeTrunkbasesettingsTrunkbasesettingsIdWithHttpInfo(trunkBaseSettingsId);
              return response.Data;
         }
 
@@ -8182,12 +8182,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteTelephonyProvidersEdgeTrunkbasesettingWithHttpInfo (string trunkBaseSettingsId)
+        public ApiResponse< string > DeleteProvidersEdgeTrunkbasesettingsTrunkbasesettingsIdWithHttpInfo (string trunkBaseSettingsId)
         {
             
             // verify the required parameter 'trunkBaseSettingsId' is set
             if (trunkBaseSettingsId == null)
-                throw new ApiException(400, "Missing required parameter 'trunkBaseSettingsId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdgeTrunkbasesetting");
+                throw new ApiException(400, "Missing required parameter 'trunkBaseSettingsId' when calling TelephonyProvidersEdgeApi->DeleteProvidersEdgeTrunkbasesettingsTrunkbasesettingsId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/trunkbasesettings/{trunkBaseSettingsId}";
@@ -8240,9 +8240,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteTelephonyProvidersEdgeTrunkbasesetting: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteProvidersEdgeTrunkbasesettingsTrunkbasesettingsId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteTelephonyProvidersEdgeTrunkbasesetting: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteProvidersEdgeTrunkbasesettingsTrunkbasesettingsId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8255,9 +8255,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgeTrunkbasesettingAsync (string trunkBaseSettingsId)
+        public async System.Threading.Tasks.Task<string> DeleteProvidersEdgeTrunkbasesettingsTrunkbasesettingsIdAsync (string trunkBaseSettingsId)
         {
-             ApiResponse<string> response = await DeleteTelephonyProvidersEdgeTrunkbasesettingAsyncWithHttpInfo(trunkBaseSettingsId);
+             ApiResponse<string> response = await DeleteProvidersEdgeTrunkbasesettingsTrunkbasesettingsIdAsyncWithHttpInfo(trunkBaseSettingsId);
              return response.Data;
 
         }
@@ -8267,10 +8267,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgeTrunkbasesettingAsyncWithHttpInfo (string trunkBaseSettingsId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteProvidersEdgeTrunkbasesettingsTrunkbasesettingsIdAsyncWithHttpInfo (string trunkBaseSettingsId)
         {
             // verify the required parameter 'trunkBaseSettingsId' is set
-            if (trunkBaseSettingsId == null) throw new ApiException(400, "Missing required parameter 'trunkBaseSettingsId' when calling DeleteTelephonyProvidersEdgeTrunkbasesetting");
+            if (trunkBaseSettingsId == null) throw new ApiException(400, "Missing required parameter 'trunkBaseSettingsId' when calling DeleteProvidersEdgeTrunkbasesettingsTrunkbasesettingsId");
             
     
             var path_ = "/api/v1/telephony/providers/edge/trunkbasesettings/{trunkBaseSettingsId}";
@@ -8324,9 +8324,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteTelephonyProvidersEdgeTrunkbasesetting: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteProvidersEdgeTrunkbasesettingsTrunkbasesettingsId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteTelephonyProvidersEdgeTrunkbasesetting: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteProvidersEdgeTrunkbasesettingsTrunkbasesettingsId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

@@ -27,10 +27,18 @@ namespace ININ.PureCloudApi.Model
 
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The globally unique identifier for the object.
         /// </summary>
+        /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+  
+        
+        /// <summary>
+        /// Gets or Sets Name
+        /// </summary>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
   
         
         /// <summary>
@@ -42,39 +50,51 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The time this log file was last modified on the Edge. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The time this log file was last modified on the Edge. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="timeModified", EmitDefaultValue=false)]
         public DateTime? TimeModified { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets SizeBytes
+        /// The size of this file in bytes.
         /// </summary>
+        /// <value>The size of this file in bytes.</value>
         [DataMember(Name="sizeBytes", EmitDefaultValue=false)]
         public double? SizeBytes { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets DownloadUrl
+        /// The status of the upload of this file from the Edge to the cloud.  Use /upload to start an upload.
         /// </summary>
-        [DataMember(Name="downloadUrl", EmitDefaultValue=false)]
-        public string DownloadUrl { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets UploadStatus
-        /// </summary>
+        /// <value>The status of the upload of this file from the Edge to the cloud.  Use /upload to start an upload.</value>
         [DataMember(Name="uploadStatus", EmitDefaultValue=false)]
         public string UploadStatus { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets EdgePath
+        /// The path of this file on the Edge.
         /// </summary>
+        /// <value>The path of this file on the Edge.</value>
         [DataMember(Name="edgePath", EmitDefaultValue=false)]
         public string EdgePath { get; set; }
+  
+        
+        /// <summary>
+        /// The download ID to use with the downloads API.
+        /// </summary>
+        /// <value>The download ID to use with the downloads API.</value>
+        [DataMember(Name="downloadId", EmitDefaultValue=false)]
+        public string DownloadId { get; set; }
+  
+        
+        /// <summary>
+        /// The URI for this object
+        /// </summary>
+        /// <value>The URI for this object</value>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; set; }
   
         
   
@@ -87,12 +107,14 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class EdgeLogsJobFile {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  TimeCreated: ").Append(TimeCreated).Append("\n");
             sb.Append("  TimeModified: ").Append(TimeModified).Append("\n");
             sb.Append("  SizeBytes: ").Append(SizeBytes).Append("\n");
-            sb.Append("  DownloadUrl: ").Append(DownloadUrl).Append("\n");
             sb.Append("  UploadStatus: ").Append(UploadStatus).Append("\n");
             sb.Append("  EdgePath: ").Append(EdgePath).Append("\n");
+            sb.Append("  DownloadId: ").Append(DownloadId).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -136,6 +158,11 @@ namespace ININ.PureCloudApi.Model
                     this.Id.Equals(other.Id)
                 ) && 
                 (
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
+                ) && 
+                (
                     this.TimeCreated == other.TimeCreated ||
                     this.TimeCreated != null &&
                     this.TimeCreated.Equals(other.TimeCreated)
@@ -151,11 +178,6 @@ namespace ININ.PureCloudApi.Model
                     this.SizeBytes.Equals(other.SizeBytes)
                 ) && 
                 (
-                    this.DownloadUrl == other.DownloadUrl ||
-                    this.DownloadUrl != null &&
-                    this.DownloadUrl.Equals(other.DownloadUrl)
-                ) && 
-                (
                     this.UploadStatus == other.UploadStatus ||
                     this.UploadStatus != null &&
                     this.UploadStatus.Equals(other.UploadStatus)
@@ -164,6 +186,16 @@ namespace ININ.PureCloudApi.Model
                     this.EdgePath == other.EdgePath ||
                     this.EdgePath != null &&
                     this.EdgePath.Equals(other.EdgePath)
+                ) && 
+                (
+                    this.DownloadId == other.DownloadId ||
+                    this.DownloadId != null &&
+                    this.DownloadId.Equals(other.DownloadId)
+                ) && 
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -182,6 +214,9 @@ namespace ININ.PureCloudApi.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.TimeCreated != null)
                     hash = hash * 59 + this.TimeCreated.GetHashCode();
                 
@@ -191,14 +226,17 @@ namespace ININ.PureCloudApi.Model
                 if (this.SizeBytes != null)
                     hash = hash * 59 + this.SizeBytes.GetHashCode();
                 
-                if (this.DownloadUrl != null)
-                    hash = hash * 59 + this.DownloadUrl.GetHashCode();
-                
                 if (this.UploadStatus != null)
                     hash = hash * 59 + this.UploadStatus.GetHashCode();
                 
                 if (this.EdgePath != null)
                     hash = hash * 59 + this.EdgePath.GetHashCode();
+                
+                if (this.DownloadId != null)
+                    hash = hash * 59 + this.DownloadId.GetHashCode();
+                
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }

@@ -129,6 +129,20 @@ namespace ININ.PureCloudApi.Model
         public string DocumentId { get; set; }
   
         
+        /// <summary>
+        /// Gets or Sets Self
+        /// </summary>
+        [DataMember(Name="self", EmitDefaultValue=false)]
+        public Address Self { get; set; }
+  
+        
+        /// <summary>
+        /// Gets or Sets Other
+        /// </summary>
+        [DataMember(Name="other", EmitDefaultValue=false)]
+        public Address Other { get; set; }
+  
+        
   
         /// <summary>
         /// Returns the string presentation of the object
@@ -152,6 +166,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
             sb.Append("  DocumentId: ").Append(DocumentId).Append("\n");
+            sb.Append("  Self: ").Append(Self).Append("\n");
+            sb.Append("  Other: ").Append(Other).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -258,6 +274,16 @@ namespace ININ.PureCloudApi.Model
                     this.DocumentId == other.DocumentId ||
                     this.DocumentId != null &&
                     this.DocumentId.Equals(other.DocumentId)
+                ) && 
+                (
+                    this.Self == other.Self ||
+                    this.Self != null &&
+                    this.Self.Equals(other.Self)
+                ) && 
+                (
+                    this.Other == other.Other ||
+                    this.Other != null &&
+                    this.Other.Equals(other.Other)
                 );
         }
 
@@ -314,6 +340,12 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.DocumentId != null)
                     hash = hash * 59 + this.DocumentId.GetHashCode();
+                
+                if (this.Self != null)
+                    hash = hash * 59 + this.Self.GetHashCode();
+                
+                if (this.Other != null)
+                    hash = hash * 59 + this.Other.GetHashCode();
                 
                 return hash;
             }

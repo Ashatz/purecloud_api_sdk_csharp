@@ -96,42 +96,42 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetCallabletimeset
+        /// Test GetCallabletimesetsCallabletimesetId
         /// </summary>
         [Test]
-        public void GetCallabletimesetTest()
+        public void GetCallabletimesetsCallabletimesetIdTest()
         {
-            // TODO: add unit test for the method 'GetCallabletimeset'
+            // TODO: add unit test for the method 'GetCallabletimesetsCallabletimesetId'
             string callableTimeSetId = null; // TODO: replace null with proper value
             
-            var response = instance.GetCallabletimeset(callableTimeSetId);
+            var response = instance.GetCallabletimesetsCallabletimesetId(callableTimeSetId);
             Assert.IsInstanceOf<CallableTimeSet> (response, "response is CallableTimeSet"); 
         }
         
         /// <summary>
-        /// Test PutCallabletimeset
+        /// Test PutCallabletimesetsCallabletimesetId
         /// </summary>
         [Test]
-        public void PutCallabletimesetTest()
+        public void PutCallabletimesetsCallabletimesetIdTest()
         {
-            // TODO: add unit test for the method 'PutCallabletimeset'
+            // TODO: add unit test for the method 'PutCallabletimesetsCallabletimesetId'
             string callableTimeSetId = null; // TODO: replace null with proper value
             CallableTimeSet body = null; // TODO: replace null with proper value
             
-            var response = instance.PutCallabletimeset(callableTimeSetId, body);
+            var response = instance.PutCallabletimesetsCallabletimesetId(callableTimeSetId, body);
             Assert.IsInstanceOf<CallableTimeSet> (response, "response is CallableTimeSet"); 
         }
         
         /// <summary>
-        /// Test DeleteCallabletimeset
+        /// Test DeleteCallabletimesetsCallabletimesetId
         /// </summary>
         [Test]
-        public void DeleteCallabletimesetTest()
+        public void DeleteCallabletimesetsCallabletimesetIdTest()
         {
-            // TODO: add unit test for the method 'DeleteCallabletimeset'
+            // TODO: add unit test for the method 'DeleteCallabletimesetsCallabletimesetId'
             string callableTimeSetId = null; // TODO: replace null with proper value
             
-            var response = instance.DeleteCallabletimeset(callableTimeSetId);
+            var response = instance.DeleteCallabletimesetsCallabletimesetId(callableTimeSetId);
             Assert.IsInstanceOf<string> (response, "response is string"); 
         }
         
@@ -167,42 +167,42 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetCallanalysisresponseset
+        /// Test GetCallanalysisresponsesetsCallanalysissetId
         /// </summary>
         [Test]
-        public void GetCallanalysisresponsesetTest()
+        public void GetCallanalysisresponsesetsCallanalysissetIdTest()
         {
-            // TODO: add unit test for the method 'GetCallanalysisresponseset'
+            // TODO: add unit test for the method 'GetCallanalysisresponsesetsCallanalysissetId'
             string callAnalysisSetId = null; // TODO: replace null with proper value
             
-            var response = instance.GetCallanalysisresponseset(callAnalysisSetId);
+            var response = instance.GetCallanalysisresponsesetsCallanalysissetId(callAnalysisSetId);
             Assert.IsInstanceOf<ResponseSet> (response, "response is ResponseSet"); 
         }
         
         /// <summary>
-        /// Test PutCallanalysisresponseset
+        /// Test PutCallanalysisresponsesetsCallanalysissetId
         /// </summary>
         [Test]
-        public void PutCallanalysisresponsesetTest()
+        public void PutCallanalysisresponsesetsCallanalysissetIdTest()
         {
-            // TODO: add unit test for the method 'PutCallanalysisresponseset'
+            // TODO: add unit test for the method 'PutCallanalysisresponsesetsCallanalysissetId'
             string callAnalysisSetId = null; // TODO: replace null with proper value
             ResponseSet body = null; // TODO: replace null with proper value
             
-            var response = instance.PutCallanalysisresponseset(callAnalysisSetId, body);
+            var response = instance.PutCallanalysisresponsesetsCallanalysissetId(callAnalysisSetId, body);
             Assert.IsInstanceOf<ResponseSet> (response, "response is ResponseSet"); 
         }
         
         /// <summary>
-        /// Test DeleteCallanalysisresponseset
+        /// Test DeleteCallanalysisresponsesetsCallanalysissetId
         /// </summary>
         [Test]
-        public void DeleteCallanalysisresponsesetTest()
+        public void DeleteCallanalysisresponsesetsCallanalysissetIdTest()
         {
-            // TODO: add unit test for the method 'DeleteCallanalysisresponseset'
+            // TODO: add unit test for the method 'DeleteCallanalysisresponsesetsCallanalysissetId'
             string callAnalysisSetId = null; // TODO: replace null with proper value
             
-            var response = instance.DeleteCallanalysisresponseset(callAnalysisSetId);
+            var response = instance.DeleteCallanalysisresponsesetsCallanalysissetId(callAnalysisSetId);
             Assert.IsInstanceOf<string> (response, "response is string"); 
         }
         
@@ -243,97 +243,97 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetCampaign
+        /// Test GetCampaignsCampaignId
         /// </summary>
         [Test]
-        public void GetCampaignTest()
+        public void GetCampaignsCampaignIdTest()
         {
-            // TODO: add unit test for the method 'GetCampaign'
+            // TODO: add unit test for the method 'GetCampaignsCampaignId'
             string campaignId = null; // TODO: replace null with proper value
             
-            var response = instance.GetCampaign(campaignId);
+            var response = instance.GetCampaignsCampaignId(campaignId);
             Assert.IsInstanceOf<Campaign> (response, "response is Campaign"); 
         }
         
         /// <summary>
-        /// Test PutCampaign
+        /// Test PutCampaignsCampaignId
         /// </summary>
         [Test]
-        public void PutCampaignTest()
+        public void PutCampaignsCampaignIdTest()
         {
-            // TODO: add unit test for the method 'PutCampaign'
+            // TODO: add unit test for the method 'PutCampaignsCampaignId'
             string campaignId = null; // TODO: replace null with proper value
             Campaign body = null; // TODO: replace null with proper value
             
-            var response = instance.PutCampaign(campaignId, body);
+            var response = instance.PutCampaignsCampaignId(campaignId, body);
             Assert.IsInstanceOf<Campaign> (response, "response is Campaign"); 
         }
         
         /// <summary>
-        /// Test DeleteCampaign
+        /// Test DeleteCampaignsCampaignId
         /// </summary>
         [Test]
-        public void DeleteCampaignTest()
+        public void DeleteCampaignsCampaignIdTest()
         {
-            // TODO: add unit test for the method 'DeleteCampaign'
+            // TODO: add unit test for the method 'DeleteCampaignsCampaignId'
             string campaignId = null; // TODO: replace null with proper value
             
-            var response = instance.DeleteCampaign(campaignId);
+            var response = instance.DeleteCampaignsCampaignId(campaignId);
             Assert.IsInstanceOf<string> (response, "response is string"); 
         }
         
         /// <summary>
-        /// Test PutCampaignAgent
+        /// Test PutCampaignsCampaignIdAgentsUserId
         /// </summary>
         [Test]
-        public void PutCampaignAgentTest()
+        public void PutCampaignsCampaignIdAgentsUserIdTest()
         {
-            // TODO: add unit test for the method 'PutCampaignAgent'
+            // TODO: add unit test for the method 'PutCampaignsCampaignIdAgentsUserId'
             string campaignId = null; // TODO: replace null with proper value
             string userId = null; // TODO: replace null with proper value
             Agent body = null; // TODO: replace null with proper value
             
-            var response = instance.PutCampaignAgent(campaignId, userId, body);
+            var response = instance.PutCampaignsCampaignIdAgentsUserId(campaignId, userId, body);
             Assert.IsInstanceOf<string> (response, "response is string"); 
         }
         
         /// <summary>
-        /// Test PostCampaignCallbackSchedule
+        /// Test PostCampaignsCampaignIdCallbackSchedule
         /// </summary>
         [Test]
-        public void PostCampaignCallbackScheduleTest()
+        public void PostCampaignsCampaignIdCallbackScheduleTest()
         {
-            // TODO: add unit test for the method 'PostCampaignCallbackSchedule'
+            // TODO: add unit test for the method 'PostCampaignsCampaignIdCallbackSchedule'
             string campaignId = null; // TODO: replace null with proper value
             ContactCallbackRequest body = null; // TODO: replace null with proper value
             
-            var response = instance.PostCampaignCallbackSchedule(campaignId, body);
+            var response = instance.PostCampaignsCampaignIdCallbackSchedule(campaignId, body);
             Assert.IsInstanceOf<ContactCallbackRequest> (response, "response is ContactCallbackRequest"); 
         }
         
         /// <summary>
-        /// Test GetCampaignDiagnostics
+        /// Test GetCampaignsCampaignIdDiagnostics
         /// </summary>
         [Test]
-        public void GetCampaignDiagnosticsTest()
+        public void GetCampaignsCampaignIdDiagnosticsTest()
         {
-            // TODO: add unit test for the method 'GetCampaignDiagnostics'
+            // TODO: add unit test for the method 'GetCampaignsCampaignIdDiagnostics'
             string campaignId = null; // TODO: replace null with proper value
             
-            var response = instance.GetCampaignDiagnostics(campaignId);
+            var response = instance.GetCampaignsCampaignIdDiagnostics(campaignId);
             Assert.IsInstanceOf<CampaignDiagnostics> (response, "response is CampaignDiagnostics"); 
         }
         
         /// <summary>
-        /// Test GetCampaignStats
+        /// Test GetCampaignsCampaignIdStats
         /// </summary>
         [Test]
-        public void GetCampaignStatsTest()
+        public void GetCampaignsCampaignIdStatsTest()
         {
-            // TODO: add unit test for the method 'GetCampaignStats'
+            // TODO: add unit test for the method 'GetCampaignsCampaignIdStats'
             string campaignId = null; // TODO: replace null with proper value
             
-            var response = instance.GetCampaignStats(campaignId);
+            var response = instance.GetCampaignsCampaignIdStats(campaignId);
             Assert.IsInstanceOf<CampaignStats> (response, "response is CampaignStats"); 
         }
         
@@ -385,156 +385,156 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetContactlist
+        /// Test GetContactlistsContactlistId
         /// </summary>
         [Test]
-        public void GetContactlistTest()
+        public void GetContactlistsContactlistIdTest()
         {
-            // TODO: add unit test for the method 'GetContactlist'
+            // TODO: add unit test for the method 'GetContactlistsContactlistId'
             string contactListId = null; // TODO: replace null with proper value
             bool? includeImportStatus = null; // TODO: replace null with proper value
             bool? importStatus = null; // TODO: replace null with proper value
             bool? includeSize = null; // TODO: replace null with proper value
             
-            var response = instance.GetContactlist(contactListId, includeImportStatus, importStatus, includeSize);
+            var response = instance.GetContactlistsContactlistId(contactListId, includeImportStatus, importStatus, includeSize);
             Assert.IsInstanceOf<ContactList> (response, "response is ContactList"); 
         }
         
         /// <summary>
-        /// Test PutContactlist
+        /// Test PutContactlistsContactlistId
         /// </summary>
         [Test]
-        public void PutContactlistTest()
+        public void PutContactlistsContactlistIdTest()
         {
-            // TODO: add unit test for the method 'PutContactlist'
+            // TODO: add unit test for the method 'PutContactlistsContactlistId'
             string contactListId = null; // TODO: replace null with proper value
             ContactList body = null; // TODO: replace null with proper value
             
-            var response = instance.PutContactlist(contactListId, body);
+            var response = instance.PutContactlistsContactlistId(contactListId, body);
             Assert.IsInstanceOf<ContactList> (response, "response is ContactList"); 
         }
         
         /// <summary>
-        /// Test DeleteContactlist
+        /// Test DeleteContactlistsContactlistId
         /// </summary>
         [Test]
-        public void DeleteContactlistTest()
+        public void DeleteContactlistsContactlistIdTest()
         {
-            // TODO: add unit test for the method 'DeleteContactlist'
+            // TODO: add unit test for the method 'DeleteContactlistsContactlistId'
             string contactListId = null; // TODO: replace null with proper value
             
-            var response = instance.DeleteContactlist(contactListId);
+            var response = instance.DeleteContactlistsContactlistId(contactListId);
             Assert.IsInstanceOf<string> (response, "response is string"); 
         }
         
         /// <summary>
-        /// Test PostContactlistContacts
+        /// Test PostContactlistsContactlistIdContacts
         /// </summary>
         [Test]
-        public void PostContactlistContactsTest()
+        public void PostContactlistsContactlistIdContactsTest()
         {
-            // TODO: add unit test for the method 'PostContactlistContacts'
+            // TODO: add unit test for the method 'PostContactlistsContactlistIdContacts'
             string contactListId = null; // TODO: replace null with proper value
             List<Contact> body = null; // TODO: replace null with proper value
             bool? priority = null; // TODO: replace null with proper value
             
-            var response = instance.PostContactlistContacts(contactListId, body, priority);
+            var response = instance.PostContactlistsContactlistIdContacts(contactListId, body, priority);
             Assert.IsInstanceOf<Contact> (response, "response is Contact"); 
         }
         
         /// <summary>
-        /// Test GetContactlistContact
+        /// Test GetContactlistsContactlistIdContactsContactId
         /// </summary>
         [Test]
-        public void GetContactlistContactTest()
+        public void GetContactlistsContactlistIdContactsContactIdTest()
         {
-            // TODO: add unit test for the method 'GetContactlistContact'
+            // TODO: add unit test for the method 'GetContactlistsContactlistIdContactsContactId'
             string contactListId = null; // TODO: replace null with proper value
             string contactId = null; // TODO: replace null with proper value
             
-            var response = instance.GetContactlistContact(contactListId, contactId);
+            var response = instance.GetContactlistsContactlistIdContactsContactId(contactListId, contactId);
             Assert.IsInstanceOf<Contact> (response, "response is Contact"); 
         }
         
         /// <summary>
-        /// Test PutContactlistContact
+        /// Test PutContactlistsContactlistIdContactsContactId
         /// </summary>
         [Test]
-        public void PutContactlistContactTest()
+        public void PutContactlistsContactlistIdContactsContactIdTest()
         {
-            // TODO: add unit test for the method 'PutContactlistContact'
+            // TODO: add unit test for the method 'PutContactlistsContactlistIdContactsContactId'
             string contactListId = null; // TODO: replace null with proper value
             string contactId = null; // TODO: replace null with proper value
             Contact body = null; // TODO: replace null with proper value
             
-            var response = instance.PutContactlistContact(contactListId, contactId, body);
+            var response = instance.PutContactlistsContactlistIdContactsContactId(contactListId, contactId, body);
             Assert.IsInstanceOf<Contact> (response, "response is Contact"); 
         }
         
         /// <summary>
-        /// Test DeleteContactlistContact
+        /// Test DeleteContactlistsContactlistIdContactsContactId
         /// </summary>
         [Test]
-        public void DeleteContactlistContactTest()
+        public void DeleteContactlistsContactlistIdContactsContactIdTest()
         {
-            // TODO: add unit test for the method 'DeleteContactlistContact'
+            // TODO: add unit test for the method 'DeleteContactlistsContactlistIdContactsContactId'
             string contactListId = null; // TODO: replace null with proper value
             string contactId = null; // TODO: replace null with proper value
             
-            var response = instance.DeleteContactlistContact(contactListId, contactId);
+            var response = instance.DeleteContactlistsContactlistIdContactsContactId(contactListId, contactId);
             Assert.IsInstanceOf<string> (response, "response is string"); 
         }
         
         /// <summary>
-        /// Test PostContactlistExport
+        /// Test PostContactlistsContactlistIdExport
         /// </summary>
         [Test]
-        public void PostContactlistExportTest()
+        public void PostContactlistsContactlistIdExportTest()
         {
-            // TODO: add unit test for the method 'PostContactlistExport'
+            // TODO: add unit test for the method 'PostContactlistsContactlistIdExport'
             string contactListId = null; // TODO: replace null with proper value
             
-            var response = instance.PostContactlistExport(contactListId);
+            var response = instance.PostContactlistsContactlistIdExport(contactListId);
             Assert.IsInstanceOf<string> (response, "response is string"); 
         }
         
         /// <summary>
-        /// Test GetContactlistImportstatus
+        /// Test GetContactlistsContactlistIdImportstatus
         /// </summary>
         [Test]
-        public void GetContactlistImportstatusTest()
+        public void GetContactlistsContactlistIdImportstatusTest()
         {
-            // TODO: add unit test for the method 'GetContactlistImportstatus'
+            // TODO: add unit test for the method 'GetContactlistsContactlistIdImportstatus'
             string contactListId = null; // TODO: replace null with proper value
             
-            var response = instance.GetContactlistImportstatus(contactListId);
+            var response = instance.GetContactlistsContactlistIdImportstatus(contactListId);
             Assert.IsInstanceOf<ImportStatus> (response, "response is ImportStatus"); 
         }
         
         /// <summary>
-        /// Test GetContactlistPenetrationrate
+        /// Test GetContactlistsContactlistIdCampaignIdPenetrationrate
         /// </summary>
         [Test]
-        public void GetContactlistPenetrationrateTest()
+        public void GetContactlistsContactlistIdCampaignIdPenetrationrateTest()
         {
-            // TODO: add unit test for the method 'GetContactlistPenetrationrate'
+            // TODO: add unit test for the method 'GetContactlistsContactlistIdCampaignIdPenetrationrate'
             string contactListId = null; // TODO: replace null with proper value
             string campaignId = null; // TODO: replace null with proper value
             
-            var response = instance.GetContactlistPenetrationrate(contactListId, campaignId);
+            var response = instance.GetContactlistsContactlistIdCampaignIdPenetrationrate(contactListId, campaignId);
             Assert.IsInstanceOf<PenetrationRate> (response, "response is PenetrationRate"); 
         }
         
         /// <summary>
-        /// Test PostConversationDnc
+        /// Test PostConversationsConversationIdDnc
         /// </summary>
         [Test]
-        public void PostConversationDncTest()
+        public void PostConversationsConversationIdDncTest()
         {
-            // TODO: add unit test for the method 'PostConversationDnc'
+            // TODO: add unit test for the method 'PostConversationsConversationIdDnc'
             string conversationId = null; // TODO: replace null with proper value
             
-            instance.PostConversationDnc(conversationId);
+            instance.PostConversationsConversationIdDnc(conversationId);
              
         }
         
@@ -573,85 +573,85 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetDnclist
+        /// Test GetDnclistsDnclistId
         /// </summary>
         [Test]
-        public void GetDnclistTest()
+        public void GetDnclistsDnclistIdTest()
         {
-            // TODO: add unit test for the method 'GetDnclist'
+            // TODO: add unit test for the method 'GetDnclistsDnclistId'
             string dncListId = null; // TODO: replace null with proper value
             bool? includeImportStatus = null; // TODO: replace null with proper value
             bool? importStatus = null; // TODO: replace null with proper value
             bool? includeSize = null; // TODO: replace null with proper value
             
-            var response = instance.GetDnclist(dncListId, includeImportStatus, importStatus, includeSize);
+            var response = instance.GetDnclistsDnclistId(dncListId, includeImportStatus, importStatus, includeSize);
             Assert.IsInstanceOf<DncList> (response, "response is DncList"); 
         }
         
         /// <summary>
-        /// Test PutDnclist
+        /// Test PutDnclistsDnclistId
         /// </summary>
         [Test]
-        public void PutDnclistTest()
+        public void PutDnclistsDnclistIdTest()
         {
-            // TODO: add unit test for the method 'PutDnclist'
+            // TODO: add unit test for the method 'PutDnclistsDnclistId'
             string dncListId = null; // TODO: replace null with proper value
             DncList body = null; // TODO: replace null with proper value
             
-            var response = instance.PutDnclist(dncListId, body);
+            var response = instance.PutDnclistsDnclistId(dncListId, body);
             Assert.IsInstanceOf<DncList> (response, "response is DncList"); 
         }
         
         /// <summary>
-        /// Test DeleteDnclist
+        /// Test DeleteDnclistsDnclistId
         /// </summary>
         [Test]
-        public void DeleteDnclistTest()
+        public void DeleteDnclistsDnclistIdTest()
         {
-            // TODO: add unit test for the method 'DeleteDnclist'
+            // TODO: add unit test for the method 'DeleteDnclistsDnclistId'
             string dncListId = null; // TODO: replace null with proper value
             
-            var response = instance.DeleteDnclist(dncListId);
+            var response = instance.DeleteDnclistsDnclistId(dncListId);
             Assert.IsInstanceOf<string> (response, "response is string"); 
         }
         
         /// <summary>
-        /// Test PostDnclistExport
+        /// Test PostDnclistsDnclistIdExport
         /// </summary>
         [Test]
-        public void PostDnclistExportTest()
+        public void PostDnclistsDnclistIdExportTest()
         {
-            // TODO: add unit test for the method 'PostDnclistExport'
+            // TODO: add unit test for the method 'PostDnclistsDnclistIdExport'
             string dncListId = null; // TODO: replace null with proper value
             
-            var response = instance.PostDnclistExport(dncListId);
+            var response = instance.PostDnclistsDnclistIdExport(dncListId);
             Assert.IsInstanceOf<string> (response, "response is string"); 
         }
         
         /// <summary>
-        /// Test GetDnclistImportstatus
+        /// Test GetDnclistsDnclistIdImportstatus
         /// </summary>
         [Test]
-        public void GetDnclistImportstatusTest()
+        public void GetDnclistsDnclistIdImportstatusTest()
         {
-            // TODO: add unit test for the method 'GetDnclistImportstatus'
+            // TODO: add unit test for the method 'GetDnclistsDnclistIdImportstatus'
             string dncListId = null; // TODO: replace null with proper value
             
-            var response = instance.GetDnclistImportstatus(dncListId);
+            var response = instance.GetDnclistsDnclistIdImportstatus(dncListId);
             Assert.IsInstanceOf<ImportStatus> (response, "response is ImportStatus"); 
         }
         
         /// <summary>
-        /// Test PostDnclistPhonenumbers
+        /// Test PostDnclistsDnclistIdPhonenumbers
         /// </summary>
         [Test]
-        public void PostDnclistPhonenumbersTest()
+        public void PostDnclistsDnclistIdPhonenumbersTest()
         {
-            // TODO: add unit test for the method 'PostDnclistPhonenumbers'
+            // TODO: add unit test for the method 'PostDnclistsDnclistIdPhonenumbers'
             string dncListId = null; // TODO: replace null with proper value
             List<string> body = null; // TODO: replace null with proper value
             
-            instance.PostDnclistPhonenumbers(dncListId, body);
+            instance.PostDnclistsDnclistIdPhonenumbers(dncListId, body);
              
         }
         
@@ -668,43 +668,43 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetPreview
+        /// Test GetPreviewsPreviewId
         /// </summary>
         [Test]
-        public void GetPreviewTest()
+        public void GetPreviewsPreviewIdTest()
         {
-            // TODO: add unit test for the method 'GetPreview'
+            // TODO: add unit test for the method 'GetPreviewsPreviewId'
             string previewId = null; // TODO: replace null with proper value
             
-            var response = instance.GetPreview(previewId);
+            var response = instance.GetPreviewsPreviewId(previewId);
             Assert.IsInstanceOf<Preview> (response, "response is Preview"); 
         }
         
         /// <summary>
-        /// Test PostPreviewDispositioncall
+        /// Test PostPreviewsPreviewIdDispositioncall
         /// </summary>
         [Test]
-        public void PostPreviewDispositioncallTest()
+        public void PostPreviewsPreviewIdDispositioncallTest()
         {
-            // TODO: add unit test for the method 'PostPreviewDispositioncall'
+            // TODO: add unit test for the method 'PostPreviewsPreviewIdDispositioncall'
             string previewId = null; // TODO: replace null with proper value
             DialerDispositionCallCommand body = null; // TODO: replace null with proper value
             
-            var response = instance.PostPreviewDispositioncall(previewId, body);
+            var response = instance.PostPreviewsPreviewIdDispositioncall(previewId, body);
             Assert.IsInstanceOf<string> (response, "response is string"); 
         }
         
         /// <summary>
-        /// Test PostPreviewPlacecall
+        /// Test PostPreviewsPreviewIdPlacecall
         /// </summary>
         [Test]
-        public void PostPreviewPlacecallTest()
+        public void PostPreviewsPreviewIdPlacecallTest()
         {
-            // TODO: add unit test for the method 'PostPreviewPlacecall'
+            // TODO: add unit test for the method 'PostPreviewsPreviewIdPlacecall'
             string previewId = null; // TODO: replace null with proper value
             DialerPlaceCallCommand body = null; // TODO: replace null with proper value
             
-            var response = instance.PostPreviewPlacecall(previewId, body);
+            var response = instance.PostPreviewsPreviewIdPlacecall(previewId, body);
             Assert.IsInstanceOf<DialerCall> (response, "response is DialerCall"); 
         }
         
@@ -740,42 +740,42 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetRuleset
+        /// Test GetRulesetsRulesetId
         /// </summary>
         [Test]
-        public void GetRulesetTest()
+        public void GetRulesetsRulesetIdTest()
         {
-            // TODO: add unit test for the method 'GetRuleset'
+            // TODO: add unit test for the method 'GetRulesetsRulesetId'
             string ruleSetId = null; // TODO: replace null with proper value
             
-            var response = instance.GetRuleset(ruleSetId);
+            var response = instance.GetRulesetsRulesetId(ruleSetId);
             Assert.IsInstanceOf<RuleSet> (response, "response is RuleSet"); 
         }
         
         /// <summary>
-        /// Test PutRuleset
+        /// Test PutRulesetsRulesetId
         /// </summary>
         [Test]
-        public void PutRulesetTest()
+        public void PutRulesetsRulesetIdTest()
         {
-            // TODO: add unit test for the method 'PutRuleset'
+            // TODO: add unit test for the method 'PutRulesetsRulesetId'
             string ruleSetId = null; // TODO: replace null with proper value
             RuleSet body = null; // TODO: replace null with proper value
             
-            var response = instance.PutRuleset(ruleSetId, body);
+            var response = instance.PutRulesetsRulesetId(ruleSetId, body);
             Assert.IsInstanceOf<RuleSet> (response, "response is RuleSet"); 
         }
         
         /// <summary>
-        /// Test DeleteRuleset
+        /// Test DeleteRulesetsRulesetId
         /// </summary>
         [Test]
-        public void DeleteRulesetTest()
+        public void DeleteRulesetsRulesetIdTest()
         {
-            // TODO: add unit test for the method 'DeleteRuleset'
+            // TODO: add unit test for the method 'DeleteRulesetsRulesetId'
             string ruleSetId = null; // TODO: replace null with proper value
             
-            var response = instance.DeleteRuleset(ruleSetId);
+            var response = instance.DeleteRulesetsRulesetId(ruleSetId);
             Assert.IsInstanceOf<string> (response, "response is string"); 
         }
         
@@ -792,42 +792,42 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetSchedulesCampaign
+        /// Test GetSchedulesCampaignsCampaignId
         /// </summary>
         [Test]
-        public void GetSchedulesCampaignTest()
+        public void GetSchedulesCampaignsCampaignIdTest()
         {
-            // TODO: add unit test for the method 'GetSchedulesCampaign'
+            // TODO: add unit test for the method 'GetSchedulesCampaignsCampaignId'
             string campaignId = null; // TODO: replace null with proper value
             
-            var response = instance.GetSchedulesCampaign(campaignId);
+            var response = instance.GetSchedulesCampaignsCampaignId(campaignId);
             Assert.IsInstanceOf<CampaignSchedule> (response, "response is CampaignSchedule"); 
         }
         
         /// <summary>
-        /// Test PutSchedulesCampaign
+        /// Test PutSchedulesCampaignsCampaignId
         /// </summary>
         [Test]
-        public void PutSchedulesCampaignTest()
+        public void PutSchedulesCampaignsCampaignIdTest()
         {
-            // TODO: add unit test for the method 'PutSchedulesCampaign'
+            // TODO: add unit test for the method 'PutSchedulesCampaignsCampaignId'
             string campaignId = null; // TODO: replace null with proper value
             CampaignSchedule body = null; // TODO: replace null with proper value
             
-            var response = instance.PutSchedulesCampaign(campaignId, body);
+            var response = instance.PutSchedulesCampaignsCampaignId(campaignId, body);
             Assert.IsInstanceOf<CampaignSchedule> (response, "response is CampaignSchedule"); 
         }
         
         /// <summary>
-        /// Test DeleteSchedulesCampaign
+        /// Test DeleteSchedulesCampaignsCampaignId
         /// </summary>
         [Test]
-        public void DeleteSchedulesCampaignTest()
+        public void DeleteSchedulesCampaignsCampaignIdTest()
         {
-            // TODO: add unit test for the method 'DeleteSchedulesCampaign'
+            // TODO: add unit test for the method 'DeleteSchedulesCampaignsCampaignId'
             string campaignId = null; // TODO: replace null with proper value
             
-            var response = instance.DeleteSchedulesCampaign(campaignId);
+            var response = instance.DeleteSchedulesCampaignsCampaignId(campaignId);
             Assert.IsInstanceOf<string> (response, "response is string"); 
         }
         
@@ -844,42 +844,42 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetSchedulesSequence
+        /// Test GetSchedulesSequencesSequenceId
         /// </summary>
         [Test]
-        public void GetSchedulesSequenceTest()
+        public void GetSchedulesSequencesSequenceIdTest()
         {
-            // TODO: add unit test for the method 'GetSchedulesSequence'
+            // TODO: add unit test for the method 'GetSchedulesSequencesSequenceId'
             string sequenceId = null; // TODO: replace null with proper value
             
-            var response = instance.GetSchedulesSequence(sequenceId);
+            var response = instance.GetSchedulesSequencesSequenceId(sequenceId);
             Assert.IsInstanceOf<SequenceSchedule> (response, "response is SequenceSchedule"); 
         }
         
         /// <summary>
-        /// Test PutSchedulesSequence
+        /// Test PutSchedulesSequencesSequenceId
         /// </summary>
         [Test]
-        public void PutSchedulesSequenceTest()
+        public void PutSchedulesSequencesSequenceIdTest()
         {
-            // TODO: add unit test for the method 'PutSchedulesSequence'
+            // TODO: add unit test for the method 'PutSchedulesSequencesSequenceId'
             string sequenceId = null; // TODO: replace null with proper value
             SequenceSchedule body = null; // TODO: replace null with proper value
             
-            var response = instance.PutSchedulesSequence(sequenceId, body);
+            var response = instance.PutSchedulesSequencesSequenceId(sequenceId, body);
             Assert.IsInstanceOf<SequenceSchedule> (response, "response is SequenceSchedule"); 
         }
         
         /// <summary>
-        /// Test DeleteSchedulesSequence
+        /// Test DeleteSchedulesSequencesSequenceId
         /// </summary>
         [Test]
-        public void DeleteSchedulesSequenceTest()
+        public void DeleteSchedulesSequencesSequenceIdTest()
         {
-            // TODO: add unit test for the method 'DeleteSchedulesSequence'
+            // TODO: add unit test for the method 'DeleteSchedulesSequencesSequenceId'
             string sequenceId = null; // TODO: replace null with proper value
             
-            var response = instance.DeleteSchedulesSequence(sequenceId);
+            var response = instance.DeleteSchedulesSequencesSequenceId(sequenceId);
             Assert.IsInstanceOf<string> (response, "response is string"); 
         }
         
@@ -915,42 +915,42 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetSequence
+        /// Test GetSequencesSequenceId
         /// </summary>
         [Test]
-        public void GetSequenceTest()
+        public void GetSequencesSequenceIdTest()
         {
-            // TODO: add unit test for the method 'GetSequence'
+            // TODO: add unit test for the method 'GetSequencesSequenceId'
             string sequenceId = null; // TODO: replace null with proper value
             
-            var response = instance.GetSequence(sequenceId);
+            var response = instance.GetSequencesSequenceId(sequenceId);
             Assert.IsInstanceOf<CampaignSequence> (response, "response is CampaignSequence"); 
         }
         
         /// <summary>
-        /// Test PutSequence
+        /// Test PutSequencesSequenceId
         /// </summary>
         [Test]
-        public void PutSequenceTest()
+        public void PutSequencesSequenceIdTest()
         {
-            // TODO: add unit test for the method 'PutSequence'
+            // TODO: add unit test for the method 'PutSequencesSequenceId'
             string sequenceId = null; // TODO: replace null with proper value
             CampaignSequence body = null; // TODO: replace null with proper value
             
-            var response = instance.PutSequence(sequenceId, body);
+            var response = instance.PutSequencesSequenceId(sequenceId, body);
             Assert.IsInstanceOf<CampaignSequence> (response, "response is CampaignSequence"); 
         }
         
         /// <summary>
-        /// Test DeleteSequence
+        /// Test DeleteSequencesSequenceId
         /// </summary>
         [Test]
-        public void DeleteSequenceTest()
+        public void DeleteSequencesSequenceIdTest()
         {
-            // TODO: add unit test for the method 'DeleteSequence'
+            // TODO: add unit test for the method 'DeleteSequencesSequenceId'
             string sequenceId = null; // TODO: replace null with proper value
             
-            var response = instance.DeleteSequence(sequenceId);
+            var response = instance.DeleteSequencesSequenceId(sequenceId);
             Assert.IsInstanceOf<string> (response, "response is string"); 
         }
         

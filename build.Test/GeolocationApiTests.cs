@@ -47,56 +47,56 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test GetGeolocationsSettings
+        /// Test GetSettings
         /// </summary>
         [Test]
-        public void GetGeolocationsSettingsTest()
+        public void GetSettingsTest()
         {
-            // TODO: add unit test for the method 'GetGeolocationsSettings'
+            // TODO: add unit test for the method 'GetSettings'
             
-            var response = instance.GetGeolocationsSettings();
+            var response = instance.GetSettings();
             Assert.IsInstanceOf<GeolocationSettings> (response, "response is GeolocationSettings"); 
         }
         
         /// <summary>
-        /// Test PatchGeolocationsSettings
+        /// Test PatchSettings
         /// </summary>
         [Test]
-        public void PatchGeolocationsSettingsTest()
+        public void PatchSettingsTest()
         {
-            // TODO: add unit test for the method 'PatchGeolocationsSettings'
+            // TODO: add unit test for the method 'PatchSettings'
             GeolocationSettings body = null; // TODO: replace null with proper value
             
-            var response = instance.PatchGeolocationsSettings(body);
+            var response = instance.PatchSettings(body);
             Assert.IsInstanceOf<GeolocationSettings> (response, "response is GeolocationSettings"); 
         }
         
         /// <summary>
-        /// Test GetGeolocation
+        /// Test GetUserIdGeolocationsClientId
         /// </summary>
         [Test]
-        public void GetGeolocationTest()
+        public void GetUserIdGeolocationsClientIdTest()
         {
-            // TODO: add unit test for the method 'GetGeolocation'
+            // TODO: add unit test for the method 'GetUserIdGeolocationsClientId'
             string userId = null; // TODO: replace null with proper value
             string clientId = null; // TODO: replace null with proper value
             
-            var response = instance.GetGeolocation(userId, clientId);
+            var response = instance.GetUserIdGeolocationsClientId(userId, clientId);
             Assert.IsInstanceOf<Geolocation> (response, "response is Geolocation"); 
         }
         
         /// <summary>
-        /// Test PatchGeolocation
+        /// Test PatchUserIdGeolocationsClientId
         /// </summary>
         [Test]
-        public void PatchGeolocationTest()
+        public void PatchUserIdGeolocationsClientIdTest()
         {
-            // TODO: add unit test for the method 'PatchGeolocation'
+            // TODO: add unit test for the method 'PatchUserIdGeolocationsClientId'
             string userId = null; // TODO: replace null with proper value
             string clientId = null; // TODO: replace null with proper value
             Geolocation body = null; // TODO: replace null with proper value
             
-            var response = instance.PatchGeolocation(userId, clientId, body);
+            var response = instance.PatchUserIdGeolocationsClientId(userId, clientId, body);
             Assert.IsInstanceOf<Geolocation> (response, "response is Geolocation"); 
         }
         

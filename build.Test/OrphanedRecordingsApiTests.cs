@@ -47,44 +47,44 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test GetOrphanrecordings
+        /// Test Get
         /// </summary>
         [Test]
-        public void GetOrphanrecordingsTest()
+        public void GetTest()
         {
-            // TODO: add unit test for the method 'GetOrphanrecordings'
+            // TODO: add unit test for the method 'Get'
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
             List<string> expand = null; // TODO: replace null with proper value
             
-            var response = instance.GetOrphanrecordings(pageSize, pageNumber, sortBy, expand);
+            var response = instance.Get(pageSize, pageNumber, sortBy, expand);
             Assert.IsInstanceOf<OrphanRecordingListing> (response, "response is OrphanRecordingListing"); 
         }
         
         /// <summary>
-        /// Test GetOrphanrecording
+        /// Test GetOrphanId
         /// </summary>
         [Test]
-        public void GetOrphanrecordingTest()
+        public void GetOrphanIdTest()
         {
-            // TODO: add unit test for the method 'GetOrphanrecording'
+            // TODO: add unit test for the method 'GetOrphanId'
             string orphanId = null; // TODO: replace null with proper value
             
-            var response = instance.GetOrphanrecording(orphanId);
+            var response = instance.GetOrphanId(orphanId);
             Assert.IsInstanceOf<OrphanRecording> (response, "response is OrphanRecording"); 
         }
         
         /// <summary>
-        /// Test DeleteOrphanrecording
+        /// Test DeleteOrphanId
         /// </summary>
         [Test]
-        public void DeleteOrphanrecordingTest()
+        public void DeleteOrphanIdTest()
         {
-            // TODO: add unit test for the method 'DeleteOrphanrecording'
+            // TODO: add unit test for the method 'DeleteOrphanId'
             string orphanId = null; // TODO: replace null with proper value
             
-            var response = instance.DeleteOrphanrecording(orphanId);
+            var response = instance.DeleteOrphanId(orphanId);
             Assert.IsInstanceOf<OrphanRecording> (response, "response is OrphanRecording"); 
         }
         

@@ -132,7 +132,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="channelId">Channel ID</param>
         /// <returns>ChannelTopicEntityListing</returns>
-        ChannelTopicEntityListing GetChannelSubscriptions (string channelId);
+        ChannelTopicEntityListing GetChannelsChannelIdSubscriptions (string channelId);
   
         /// <summary>
         /// The list of all subscriptions for this channel
@@ -142,7 +142,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="channelId">Channel ID</param>
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
-        ApiResponse<ChannelTopicEntityListing> GetChannelSubscriptionsWithHttpInfo (string channelId);
+        ApiResponse<ChannelTopicEntityListing> GetChannelsChannelIdSubscriptionsWithHttpInfo (string channelId);
 
         /// <summary>
         /// The list of all subscriptions for this channel
@@ -152,7 +152,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="channelId">Channel ID</param>
         /// <returns>Task of ChannelTopicEntityListing</returns>
-        System.Threading.Tasks.Task<ChannelTopicEntityListing> GetChannelSubscriptionsAsync (string channelId);
+        System.Threading.Tasks.Task<ChannelTopicEntityListing> GetChannelsChannelIdSubscriptionsAsync (string channelId);
 
         /// <summary>
         /// The list of all subscriptions for this channel
@@ -162,7 +162,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="channelId">Channel ID</param>
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> GetChannelSubscriptionsAsyncWithHttpInfo (string channelId);
+        System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> GetChannelsChannelIdSubscriptionsAsyncWithHttpInfo (string channelId);
         
         /// <summary>
         /// Replace the current list of subscriptions with a new list.
@@ -173,7 +173,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Topic</param>
         /// <returns>ChannelTopicEntityListing</returns>
-        ChannelTopicEntityListing PutChannelSubscriptions (string channelId, List<ChannelTopic> body = null);
+        ChannelTopicEntityListing PutChannelsChannelIdSubscriptions (string channelId, List<ChannelTopic> body = null);
   
         /// <summary>
         /// Replace the current list of subscriptions with a new list.
@@ -184,7 +184,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Topic</param>
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
-        ApiResponse<ChannelTopicEntityListing> PutChannelSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body = null);
+        ApiResponse<ChannelTopicEntityListing> PutChannelsChannelIdSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body = null);
 
         /// <summary>
         /// Replace the current list of subscriptions with a new list.
@@ -195,7 +195,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Topic</param>
         /// <returns>Task of ChannelTopicEntityListing</returns>
-        System.Threading.Tasks.Task<ChannelTopicEntityListing> PutChannelSubscriptionsAsync (string channelId, List<ChannelTopic> body = null);
+        System.Threading.Tasks.Task<ChannelTopicEntityListing> PutChannelsChannelIdSubscriptionsAsync (string channelId, List<ChannelTopic> body = null);
 
         /// <summary>
         /// Replace the current list of subscriptions with a new list.
@@ -206,7 +206,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Topic</param>
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PutChannelSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body = null);
+        System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PutChannelsChannelIdSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body = null);
         
         /// <summary>
         /// Add a list of subscriptions to the existing list of subscriptions
@@ -217,7 +217,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Topic</param>
         /// <returns>ChannelTopicEntityListing</returns>
-        ChannelTopicEntityListing PostChannelSubscriptions (string channelId, List<ChannelTopic> body = null);
+        ChannelTopicEntityListing PostChannelsChannelIdSubscriptions (string channelId, List<ChannelTopic> body = null);
   
         /// <summary>
         /// Add a list of subscriptions to the existing list of subscriptions
@@ -228,7 +228,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Topic</param>
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
-        ApiResponse<ChannelTopicEntityListing> PostChannelSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body = null);
+        ApiResponse<ChannelTopicEntityListing> PostChannelsChannelIdSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body = null);
 
         /// <summary>
         /// Add a list of subscriptions to the existing list of subscriptions
@@ -239,7 +239,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Topic</param>
         /// <returns>Task of ChannelTopicEntityListing</returns>
-        System.Threading.Tasks.Task<ChannelTopicEntityListing> PostChannelSubscriptionsAsync (string channelId, List<ChannelTopic> body = null);
+        System.Threading.Tasks.Task<ChannelTopicEntityListing> PostChannelsChannelIdSubscriptionsAsync (string channelId, List<ChannelTopic> body = null);
 
         /// <summary>
         /// Add a list of subscriptions to the existing list of subscriptions
@@ -250,7 +250,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Topic</param>
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PostChannelSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body = null);
+        System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PostChannelsChannelIdSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body = null);
         
         /// <summary>
         /// Remove all subscriptions
@@ -260,7 +260,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="channelId">Channel ID</param>
         /// <returns>string</returns>
-        string DeleteChannelSubscriptions (string channelId);
+        string DeleteChannelsChannelIdSubscriptions (string channelId);
   
         /// <summary>
         /// Remove all subscriptions
@@ -270,7 +270,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="channelId">Channel ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteChannelSubscriptionsWithHttpInfo (string channelId);
+        ApiResponse<string> DeleteChannelsChannelIdSubscriptionsWithHttpInfo (string channelId);
 
         /// <summary>
         /// Remove all subscriptions
@@ -280,7 +280,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="channelId">Channel ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteChannelSubscriptionsAsync (string channelId);
+        System.Threading.Tasks.Task<string> DeleteChannelsChannelIdSubscriptionsAsync (string channelId);
 
         /// <summary>
         /// Remove all subscriptions
@@ -290,7 +290,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="channelId">Channel ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteChannelSubscriptionsAsyncWithHttpInfo (string channelId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteChannelsChannelIdSubscriptionsAsyncWithHttpInfo (string channelId);
         
     }
   
@@ -843,9 +843,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="channelId">Channel ID</param> 
         /// <returns>ChannelTopicEntityListing</returns>
-        public ChannelTopicEntityListing GetChannelSubscriptions (string channelId)
+        public ChannelTopicEntityListing GetChannelsChannelIdSubscriptions (string channelId)
         {
-             ApiResponse<ChannelTopicEntityListing> response = GetChannelSubscriptionsWithHttpInfo(channelId);
+             ApiResponse<ChannelTopicEntityListing> response = GetChannelsChannelIdSubscriptionsWithHttpInfo(channelId);
              return response.Data;
         }
 
@@ -854,12 +854,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="channelId">Channel ID</param> 
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
-        public ApiResponse< ChannelTopicEntityListing > GetChannelSubscriptionsWithHttpInfo (string channelId)
+        public ApiResponse< ChannelTopicEntityListing > GetChannelsChannelIdSubscriptionsWithHttpInfo (string channelId)
         {
             
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->GetChannelSubscriptions");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->GetChannelsChannelIdSubscriptions");
             
     
             var path_ = "/api/v1/notifications/channels/{channelId}/subscriptions";
@@ -912,9 +912,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetChannelSubscriptions: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetChannelsChannelIdSubscriptions: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetChannelSubscriptions: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetChannelsChannelIdSubscriptions: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ChannelTopicEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -927,9 +927,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="channelId">Channel ID</param>
         /// <returns>Task of ChannelTopicEntityListing</returns>
-        public async System.Threading.Tasks.Task<ChannelTopicEntityListing> GetChannelSubscriptionsAsync (string channelId)
+        public async System.Threading.Tasks.Task<ChannelTopicEntityListing> GetChannelsChannelIdSubscriptionsAsync (string channelId)
         {
-             ApiResponse<ChannelTopicEntityListing> response = await GetChannelSubscriptionsAsyncWithHttpInfo(channelId);
+             ApiResponse<ChannelTopicEntityListing> response = await GetChannelsChannelIdSubscriptionsAsyncWithHttpInfo(channelId);
              return response.Data;
 
         }
@@ -939,10 +939,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="channelId">Channel ID</param>
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> GetChannelSubscriptionsAsyncWithHttpInfo (string channelId)
+        public async System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> GetChannelsChannelIdSubscriptionsAsyncWithHttpInfo (string channelId)
         {
             // verify the required parameter 'channelId' is set
-            if (channelId == null) throw new ApiException(400, "Missing required parameter 'channelId' when calling GetChannelSubscriptions");
+            if (channelId == null) throw new ApiException(400, "Missing required parameter 'channelId' when calling GetChannelsChannelIdSubscriptions");
             
     
             var path_ = "/api/v1/notifications/channels/{channelId}/subscriptions";
@@ -996,9 +996,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetChannelSubscriptions: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetChannelsChannelIdSubscriptions: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetChannelSubscriptions: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetChannelsChannelIdSubscriptions: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ChannelTopicEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1012,9 +1012,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="channelId">Channel ID</param> 
         /// <param name="body">Topic</param> 
         /// <returns>ChannelTopicEntityListing</returns>
-        public ChannelTopicEntityListing PutChannelSubscriptions (string channelId, List<ChannelTopic> body = null)
+        public ChannelTopicEntityListing PutChannelsChannelIdSubscriptions (string channelId, List<ChannelTopic> body = null)
         {
-             ApiResponse<ChannelTopicEntityListing> response = PutChannelSubscriptionsWithHttpInfo(channelId, body);
+             ApiResponse<ChannelTopicEntityListing> response = PutChannelsChannelIdSubscriptionsWithHttpInfo(channelId, body);
              return response.Data;
         }
 
@@ -1024,12 +1024,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="channelId">Channel ID</param> 
         /// <param name="body">Topic</param> 
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
-        public ApiResponse< ChannelTopicEntityListing > PutChannelSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body = null)
+        public ApiResponse< ChannelTopicEntityListing > PutChannelsChannelIdSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body = null)
         {
             
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->PutChannelSubscriptions");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->PutChannelsChannelIdSubscriptions");
             
     
             var path_ = "/api/v1/notifications/channels/{channelId}/subscriptions";
@@ -1089,9 +1089,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutChannelSubscriptions: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutChannelsChannelIdSubscriptions: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutChannelSubscriptions: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutChannelsChannelIdSubscriptions: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ChannelTopicEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1105,9 +1105,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Topic</param>
         /// <returns>Task of ChannelTopicEntityListing</returns>
-        public async System.Threading.Tasks.Task<ChannelTopicEntityListing> PutChannelSubscriptionsAsync (string channelId, List<ChannelTopic> body = null)
+        public async System.Threading.Tasks.Task<ChannelTopicEntityListing> PutChannelsChannelIdSubscriptionsAsync (string channelId, List<ChannelTopic> body = null)
         {
-             ApiResponse<ChannelTopicEntityListing> response = await PutChannelSubscriptionsAsyncWithHttpInfo(channelId, body);
+             ApiResponse<ChannelTopicEntityListing> response = await PutChannelsChannelIdSubscriptionsAsyncWithHttpInfo(channelId, body);
              return response.Data;
 
         }
@@ -1118,10 +1118,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Topic</param>
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PutChannelSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PutChannelsChannelIdSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body = null)
         {
             // verify the required parameter 'channelId' is set
-            if (channelId == null) throw new ApiException(400, "Missing required parameter 'channelId' when calling PutChannelSubscriptions");
+            if (channelId == null) throw new ApiException(400, "Missing required parameter 'channelId' when calling PutChannelsChannelIdSubscriptions");
             
     
             var path_ = "/api/v1/notifications/channels/{channelId}/subscriptions";
@@ -1176,9 +1176,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutChannelSubscriptions: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutChannelsChannelIdSubscriptions: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutChannelSubscriptions: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutChannelsChannelIdSubscriptions: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ChannelTopicEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1192,9 +1192,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="channelId">Channel ID</param> 
         /// <param name="body">Topic</param> 
         /// <returns>ChannelTopicEntityListing</returns>
-        public ChannelTopicEntityListing PostChannelSubscriptions (string channelId, List<ChannelTopic> body = null)
+        public ChannelTopicEntityListing PostChannelsChannelIdSubscriptions (string channelId, List<ChannelTopic> body = null)
         {
-             ApiResponse<ChannelTopicEntityListing> response = PostChannelSubscriptionsWithHttpInfo(channelId, body);
+             ApiResponse<ChannelTopicEntityListing> response = PostChannelsChannelIdSubscriptionsWithHttpInfo(channelId, body);
              return response.Data;
         }
 
@@ -1204,12 +1204,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="channelId">Channel ID</param> 
         /// <param name="body">Topic</param> 
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
-        public ApiResponse< ChannelTopicEntityListing > PostChannelSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body = null)
+        public ApiResponse< ChannelTopicEntityListing > PostChannelsChannelIdSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body = null)
         {
             
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->PostChannelSubscriptions");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->PostChannelsChannelIdSubscriptions");
             
     
             var path_ = "/api/v1/notifications/channels/{channelId}/subscriptions";
@@ -1269,9 +1269,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostChannelSubscriptions: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostChannelsChannelIdSubscriptions: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostChannelSubscriptions: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostChannelsChannelIdSubscriptions: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ChannelTopicEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1285,9 +1285,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Topic</param>
         /// <returns>Task of ChannelTopicEntityListing</returns>
-        public async System.Threading.Tasks.Task<ChannelTopicEntityListing> PostChannelSubscriptionsAsync (string channelId, List<ChannelTopic> body = null)
+        public async System.Threading.Tasks.Task<ChannelTopicEntityListing> PostChannelsChannelIdSubscriptionsAsync (string channelId, List<ChannelTopic> body = null)
         {
-             ApiResponse<ChannelTopicEntityListing> response = await PostChannelSubscriptionsAsyncWithHttpInfo(channelId, body);
+             ApiResponse<ChannelTopicEntityListing> response = await PostChannelsChannelIdSubscriptionsAsyncWithHttpInfo(channelId, body);
              return response.Data;
 
         }
@@ -1298,10 +1298,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="channelId">Channel ID</param>
         /// <param name="body">Topic</param>
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PostChannelSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PostChannelsChannelIdSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body = null)
         {
             // verify the required parameter 'channelId' is set
-            if (channelId == null) throw new ApiException(400, "Missing required parameter 'channelId' when calling PostChannelSubscriptions");
+            if (channelId == null) throw new ApiException(400, "Missing required parameter 'channelId' when calling PostChannelsChannelIdSubscriptions");
             
     
             var path_ = "/api/v1/notifications/channels/{channelId}/subscriptions";
@@ -1356,9 +1356,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostChannelSubscriptions: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostChannelsChannelIdSubscriptions: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostChannelSubscriptions: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostChannelsChannelIdSubscriptions: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ChannelTopicEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1371,9 +1371,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="channelId">Channel ID</param> 
         /// <returns>string</returns>
-        public string DeleteChannelSubscriptions (string channelId)
+        public string DeleteChannelsChannelIdSubscriptions (string channelId)
         {
-             ApiResponse<string> response = DeleteChannelSubscriptionsWithHttpInfo(channelId);
+             ApiResponse<string> response = DeleteChannelsChannelIdSubscriptionsWithHttpInfo(channelId);
              return response.Data;
         }
 
@@ -1382,12 +1382,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="channelId">Channel ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteChannelSubscriptionsWithHttpInfo (string channelId)
+        public ApiResponse< string > DeleteChannelsChannelIdSubscriptionsWithHttpInfo (string channelId)
         {
             
             // verify the required parameter 'channelId' is set
             if (channelId == null)
-                throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->DeleteChannelSubscriptions");
+                throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->DeleteChannelsChannelIdSubscriptions");
             
     
             var path_ = "/api/v1/notifications/channels/{channelId}/subscriptions";
@@ -1440,9 +1440,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteChannelSubscriptions: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteChannelsChannelIdSubscriptions: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteChannelSubscriptions: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteChannelsChannelIdSubscriptions: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1455,9 +1455,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="channelId">Channel ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteChannelSubscriptionsAsync (string channelId)
+        public async System.Threading.Tasks.Task<string> DeleteChannelsChannelIdSubscriptionsAsync (string channelId)
         {
-             ApiResponse<string> response = await DeleteChannelSubscriptionsAsyncWithHttpInfo(channelId);
+             ApiResponse<string> response = await DeleteChannelsChannelIdSubscriptionsAsyncWithHttpInfo(channelId);
              return response.Data;
 
         }
@@ -1467,10 +1467,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="channelId">Channel ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteChannelSubscriptionsAsyncWithHttpInfo (string channelId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteChannelsChannelIdSubscriptionsAsyncWithHttpInfo (string channelId)
         {
             // verify the required parameter 'channelId' is set
-            if (channelId == null) throw new ApiException(400, "Missing required parameter 'channelId' when calling DeleteChannelSubscriptions");
+            if (channelId == null) throw new ApiException(400, "Missing required parameter 'channelId' when calling DeleteChannelsChannelIdSubscriptions");
             
     
             var path_ = "/api/v1/notifications/channels/{channelId}/subscriptions";
@@ -1524,9 +1524,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteChannelSubscriptions: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteChannelsChannelIdSubscriptions: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteChannelSubscriptions: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteChannelsChannelIdSubscriptions: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

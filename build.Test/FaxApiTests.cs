@@ -61,55 +61,55 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetDocument
+        /// Test GetDocumentsDocumentId
         /// </summary>
         [Test]
-        public void GetDocumentTest()
+        public void GetDocumentsDocumentIdTest()
         {
-            // TODO: add unit test for the method 'GetDocument'
+            // TODO: add unit test for the method 'GetDocumentsDocumentId'
             string documentId = null; // TODO: replace null with proper value
             
-            var response = instance.GetDocument(documentId);
+            var response = instance.GetDocumentsDocumentId(documentId);
             Assert.IsInstanceOf<FaxDocument> (response, "response is FaxDocument"); 
         }
         
         /// <summary>
-        /// Test PutDocument
+        /// Test PutDocumentsDocumentId
         /// </summary>
         [Test]
-        public void PutDocumentTest()
+        public void PutDocumentsDocumentIdTest()
         {
-            // TODO: add unit test for the method 'PutDocument'
+            // TODO: add unit test for the method 'PutDocumentsDocumentId'
             string documentId = null; // TODO: replace null with proper value
             FaxDocument body = null; // TODO: replace null with proper value
             
-            var response = instance.PutDocument(documentId, body);
+            var response = instance.PutDocumentsDocumentId(documentId, body);
             Assert.IsInstanceOf<FaxDocument> (response, "response is FaxDocument"); 
         }
         
         /// <summary>
-        /// Test DeleteDocument
+        /// Test DeleteDocumentsDocumentId
         /// </summary>
         [Test]
-        public void DeleteDocumentTest()
+        public void DeleteDocumentsDocumentIdTest()
         {
-            // TODO: add unit test for the method 'DeleteDocument'
+            // TODO: add unit test for the method 'DeleteDocumentsDocumentId'
             string documentId = null; // TODO: replace null with proper value
             
-            instance.DeleteDocument(documentId);
+            instance.DeleteDocumentsDocumentId(documentId);
              
         }
         
         /// <summary>
-        /// Test GetDocumentContent
+        /// Test GetDocumentsDocumentIdContent
         /// </summary>
         [Test]
-        public void GetDocumentContentTest()
+        public void GetDocumentsDocumentIdContentTest()
         {
-            // TODO: add unit test for the method 'GetDocumentContent'
+            // TODO: add unit test for the method 'GetDocumentsDocumentIdContent'
             string documentId = null; // TODO: replace null with proper value
             
-            var response = instance.GetDocumentContent(documentId);
+            var response = instance.GetDocumentsDocumentIdContent(documentId);
             Assert.IsInstanceOf<DownloadResponse> (response, "response is DownloadResponse"); 
         }
         

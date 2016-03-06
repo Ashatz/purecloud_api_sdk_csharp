@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
         /// <returns>OrphanRecordingListing</returns>
-        OrphanRecordingListing GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null);
+        OrphanRecordingListing Get (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null);
   
         /// <summary>
         /// Gets all orphan recordings
@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
         /// <returns>ApiResponse of OrphanRecordingListing</returns>
-        ApiResponse<OrphanRecordingListing> GetOrphanrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null);
+        ApiResponse<OrphanRecordingListing> GetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null);
 
         /// <summary>
         /// Gets all orphan recordings
@@ -53,7 +53,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
         /// <returns>Task of OrphanRecordingListing</returns>
-        System.Threading.Tasks.Task<OrphanRecordingListing> GetOrphanrecordingsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null);
+        System.Threading.Tasks.Task<OrphanRecordingListing> GetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null);
 
         /// <summary>
         /// Gets all orphan recordings
@@ -66,7 +66,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
         /// <returns>Task of ApiResponse (OrphanRecordingListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrphanRecordingListing>> GetOrphanrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<OrphanRecordingListing>> GetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null);
         
         /// <summary>
         /// Gets a single orphan recording
@@ -76,7 +76,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>OrphanRecording</returns>
-        OrphanRecording GetOrphanrecording (string orphanId);
+        OrphanRecording GetOrphanId (string orphanId);
   
         /// <summary>
         /// Gets a single orphan recording
@@ -86,7 +86,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>ApiResponse of OrphanRecording</returns>
-        ApiResponse<OrphanRecording> GetOrphanrecordingWithHttpInfo (string orphanId);
+        ApiResponse<OrphanRecording> GetOrphanIdWithHttpInfo (string orphanId);
 
         /// <summary>
         /// Gets a single orphan recording
@@ -96,7 +96,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of OrphanRecording</returns>
-        System.Threading.Tasks.Task<OrphanRecording> GetOrphanrecordingAsync (string orphanId);
+        System.Threading.Tasks.Task<OrphanRecording> GetOrphanIdAsync (string orphanId);
 
         /// <summary>
         /// Gets a single orphan recording
@@ -106,7 +106,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of ApiResponse (OrphanRecording)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> GetOrphanrecordingAsyncWithHttpInfo (string orphanId);
+        System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> GetOrphanIdAsyncWithHttpInfo (string orphanId);
         
         /// <summary>
         /// deletes a single orphan recording
@@ -116,7 +116,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>OrphanRecording</returns>
-        OrphanRecording DeleteOrphanrecording (string orphanId);
+        OrphanRecording DeleteOrphanId (string orphanId);
   
         /// <summary>
         /// deletes a single orphan recording
@@ -126,7 +126,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>ApiResponse of OrphanRecording</returns>
-        ApiResponse<OrphanRecording> DeleteOrphanrecordingWithHttpInfo (string orphanId);
+        ApiResponse<OrphanRecording> DeleteOrphanIdWithHttpInfo (string orphanId);
 
         /// <summary>
         /// deletes a single orphan recording
@@ -136,7 +136,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of OrphanRecording</returns>
-        System.Threading.Tasks.Task<OrphanRecording> DeleteOrphanrecordingAsync (string orphanId);
+        System.Threading.Tasks.Task<OrphanRecording> DeleteOrphanIdAsync (string orphanId);
 
         /// <summary>
         /// deletes a single orphan recording
@@ -146,7 +146,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of ApiResponse (OrphanRecording)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> DeleteOrphanrecordingAsyncWithHttpInfo (string orphanId);
+        System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> DeleteOrphanIdAsyncWithHttpInfo (string orphanId);
         
     }
   
@@ -234,9 +234,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">variable name requested to sort by</param> 
         /// <param name="expand">variable name requested by expand list</param> 
         /// <returns>OrphanRecordingListing</returns>
-        public OrphanRecordingListing GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null)
+        public OrphanRecordingListing Get (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null)
         {
-             ApiResponse<OrphanRecordingListing> response = GetOrphanrecordingsWithHttpInfo(pageSize, pageNumber, sortBy, expand);
+             ApiResponse<OrphanRecordingListing> response = GetWithHttpInfo(pageSize, pageNumber, sortBy, expand);
              return response.Data;
         }
 
@@ -248,7 +248,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">variable name requested to sort by</param> 
         /// <param name="expand">variable name requested by expand list</param> 
         /// <returns>ApiResponse of OrphanRecordingListing</returns>
-        public ApiResponse< OrphanRecordingListing > GetOrphanrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null)
+        public ApiResponse< OrphanRecordingListing > GetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null)
         {
             
     
@@ -305,9 +305,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetOrphanrecordings: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetOrphanrecordings: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OrphanRecordingListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -323,9 +323,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
         /// <returns>Task of OrphanRecordingListing</returns>
-        public async System.Threading.Tasks.Task<OrphanRecordingListing> GetOrphanrecordingsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<OrphanRecordingListing> GetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null)
         {
-             ApiResponse<OrphanRecordingListing> response = await GetOrphanrecordingsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand);
+             ApiResponse<OrphanRecordingListing> response = await GetAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand);
              return response.Data;
 
         }
@@ -338,7 +338,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
         /// <returns>Task of ApiResponse (OrphanRecordingListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrphanRecordingListing>> GetOrphanrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OrphanRecordingListing>> GetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null)
         {
             
     
@@ -396,9 +396,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetOrphanrecordings: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetOrphanrecordings: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OrphanRecordingListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -411,9 +411,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="orphanId">Orphan ID</param> 
         /// <returns>OrphanRecording</returns>
-        public OrphanRecording GetOrphanrecording (string orphanId)
+        public OrphanRecording GetOrphanId (string orphanId)
         {
-             ApiResponse<OrphanRecording> response = GetOrphanrecordingWithHttpInfo(orphanId);
+             ApiResponse<OrphanRecording> response = GetOrphanIdWithHttpInfo(orphanId);
              return response.Data;
         }
 
@@ -422,12 +422,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="orphanId">Orphan ID</param> 
         /// <returns>ApiResponse of OrphanRecording</returns>
-        public ApiResponse< OrphanRecording > GetOrphanrecordingWithHttpInfo (string orphanId)
+        public ApiResponse< OrphanRecording > GetOrphanIdWithHttpInfo (string orphanId)
         {
             
             // verify the required parameter 'orphanId' is set
             if (orphanId == null)
-                throw new ApiException(400, "Missing required parameter 'orphanId' when calling OrphanedRecordingsApi->GetOrphanrecording");
+                throw new ApiException(400, "Missing required parameter 'orphanId' when calling OrphanedRecordingsApi->GetOrphanId");
             
     
             var path_ = "/api/v1/orphanrecordings/{orphanId}";
@@ -480,9 +480,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetOrphanrecording: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetOrphanId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetOrphanrecording: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetOrphanId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OrphanRecording>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -495,9 +495,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of OrphanRecording</returns>
-        public async System.Threading.Tasks.Task<OrphanRecording> GetOrphanrecordingAsync (string orphanId)
+        public async System.Threading.Tasks.Task<OrphanRecording> GetOrphanIdAsync (string orphanId)
         {
-             ApiResponse<OrphanRecording> response = await GetOrphanrecordingAsyncWithHttpInfo(orphanId);
+             ApiResponse<OrphanRecording> response = await GetOrphanIdAsyncWithHttpInfo(orphanId);
              return response.Data;
 
         }
@@ -507,10 +507,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of ApiResponse (OrphanRecording)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> GetOrphanrecordingAsyncWithHttpInfo (string orphanId)
+        public async System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> GetOrphanIdAsyncWithHttpInfo (string orphanId)
         {
             // verify the required parameter 'orphanId' is set
-            if (orphanId == null) throw new ApiException(400, "Missing required parameter 'orphanId' when calling GetOrphanrecording");
+            if (orphanId == null) throw new ApiException(400, "Missing required parameter 'orphanId' when calling GetOrphanId");
             
     
             var path_ = "/api/v1/orphanrecordings/{orphanId}";
@@ -564,9 +564,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetOrphanrecording: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetOrphanId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetOrphanrecording: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetOrphanId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OrphanRecording>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -579,9 +579,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="orphanId">Orphan ID</param> 
         /// <returns>OrphanRecording</returns>
-        public OrphanRecording DeleteOrphanrecording (string orphanId)
+        public OrphanRecording DeleteOrphanId (string orphanId)
         {
-             ApiResponse<OrphanRecording> response = DeleteOrphanrecordingWithHttpInfo(orphanId);
+             ApiResponse<OrphanRecording> response = DeleteOrphanIdWithHttpInfo(orphanId);
              return response.Data;
         }
 
@@ -590,12 +590,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="orphanId">Orphan ID</param> 
         /// <returns>ApiResponse of OrphanRecording</returns>
-        public ApiResponse< OrphanRecording > DeleteOrphanrecordingWithHttpInfo (string orphanId)
+        public ApiResponse< OrphanRecording > DeleteOrphanIdWithHttpInfo (string orphanId)
         {
             
             // verify the required parameter 'orphanId' is set
             if (orphanId == null)
-                throw new ApiException(400, "Missing required parameter 'orphanId' when calling OrphanedRecordingsApi->DeleteOrphanrecording");
+                throw new ApiException(400, "Missing required parameter 'orphanId' when calling OrphanedRecordingsApi->DeleteOrphanId");
             
     
             var path_ = "/api/v1/orphanrecordings/{orphanId}";
@@ -648,9 +648,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteOrphanrecording: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteOrphanId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteOrphanrecording: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteOrphanId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OrphanRecording>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -663,9 +663,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of OrphanRecording</returns>
-        public async System.Threading.Tasks.Task<OrphanRecording> DeleteOrphanrecordingAsync (string orphanId)
+        public async System.Threading.Tasks.Task<OrphanRecording> DeleteOrphanIdAsync (string orphanId)
         {
-             ApiResponse<OrphanRecording> response = await DeleteOrphanrecordingAsyncWithHttpInfo(orphanId);
+             ApiResponse<OrphanRecording> response = await DeleteOrphanIdAsyncWithHttpInfo(orphanId);
              return response.Data;
 
         }
@@ -675,10 +675,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of ApiResponse (OrphanRecording)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> DeleteOrphanrecordingAsyncWithHttpInfo (string orphanId)
+        public async System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> DeleteOrphanIdAsyncWithHttpInfo (string orphanId)
         {
             // verify the required parameter 'orphanId' is set
-            if (orphanId == null) throw new ApiException(400, "Missing required parameter 'orphanId' when calling DeleteOrphanrecording");
+            if (orphanId == null) throw new ApiException(400, "Missing required parameter 'orphanId' when calling DeleteOrphanId");
             
     
             var path_ = "/api/v1/orphanrecordings/{orphanId}";
@@ -732,9 +732,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteOrphanrecording: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteOrphanId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteOrphanrecording: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteOrphanId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OrphanRecording>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

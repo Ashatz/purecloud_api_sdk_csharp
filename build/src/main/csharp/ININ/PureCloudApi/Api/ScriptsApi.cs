@@ -29,7 +29,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand2">Expand</param>
         /// <param name="name">Name</param>
         /// <returns>EvaluationFormEntityListing</returns>
-        EvaluationFormEntityListing GetQualityForms (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null);
+        EvaluationFormEntityListing GetForms (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null);
   
         /// <summary>
         /// Get the list of evaluation forms
@@ -44,7 +44,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand2">Expand</param>
         /// <param name="name">Name</param>
         /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
-        ApiResponse<EvaluationFormEntityListing> GetQualityFormsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null);
+        ApiResponse<EvaluationFormEntityListing> GetFormsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null);
 
         /// <summary>
         /// Get the list of evaluation forms
@@ -59,7 +59,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand2">Expand</param>
         /// <param name="name">Name</param>
         /// <returns>Task of EvaluationFormEntityListing</returns>
-        System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityFormsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null);
+        System.Threading.Tasks.Task<EvaluationFormEntityListing> GetFormsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null);
 
         /// <summary>
         /// Get the list of evaluation forms
@@ -74,7 +74,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand2">Expand</param>
         /// <param name="name">Name</param>
         /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityFormsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetFormsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null);
         
         /// <summary>
         /// Create an evaluation form.
@@ -84,7 +84,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>EvaluationForm</returns>
-        EvaluationForm PostQualityForms (EvaluationForm body = null);
+        EvaluationForm PostForms (EvaluationForm body = null);
   
         /// <summary>
         /// Create an evaluation form.
@@ -94,7 +94,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>ApiResponse of EvaluationForm</returns>
-        ApiResponse<EvaluationForm> PostQualityFormsWithHttpInfo (EvaluationForm body = null);
+        ApiResponse<EvaluationForm> PostFormsWithHttpInfo (EvaluationForm body = null);
 
         /// <summary>
         /// Create an evaluation form.
@@ -104,7 +104,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of EvaluationForm</returns>
-        System.Threading.Tasks.Task<EvaluationForm> PostQualityFormsAsync (EvaluationForm body = null);
+        System.Threading.Tasks.Task<EvaluationForm> PostFormsAsync (EvaluationForm body = null);
 
         /// <summary>
         /// Create an evaluation form.
@@ -114,7 +114,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostQualityFormsAsyncWithHttpInfo (EvaluationForm body = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostFormsAsyncWithHttpInfo (EvaluationForm body = null);
         
         /// <summary>
         /// Get an evaluation form
@@ -124,7 +124,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="formId">Form ID</param>
         /// <returns>EvaluationForm</returns>
-        EvaluationForm GetQualityForm (string formId);
+        EvaluationForm GetFormsFormId (string formId);
   
         /// <summary>
         /// Get an evaluation form
@@ -134,7 +134,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="formId">Form ID</param>
         /// <returns>ApiResponse of EvaluationForm</returns>
-        ApiResponse<EvaluationForm> GetQualityFormWithHttpInfo (string formId);
+        ApiResponse<EvaluationForm> GetFormsFormIdWithHttpInfo (string formId);
 
         /// <summary>
         /// Get an evaluation form
@@ -144,7 +144,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="formId">Form ID</param>
         /// <returns>Task of EvaluationForm</returns>
-        System.Threading.Tasks.Task<EvaluationForm> GetQualityFormAsync (string formId);
+        System.Threading.Tasks.Task<EvaluationForm> GetFormsFormIdAsync (string formId);
 
         /// <summary>
         /// Get an evaluation form
@@ -154,7 +154,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="formId">Form ID</param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetQualityFormAsyncWithHttpInfo (string formId);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetFormsFormIdAsyncWithHttpInfo (string formId);
         
         /// <summary>
         /// Update an evaluation form.
@@ -165,7 +165,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formId">Form ID</param>
         /// <param name="body"></param>
         /// <returns>EvaluationForm</returns>
-        EvaluationForm PutQualityForm (string formId, EvaluationForm body = null);
+        EvaluationForm PutFormsFormId (string formId, EvaluationForm body = null);
   
         /// <summary>
         /// Update an evaluation form.
@@ -176,7 +176,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formId">Form ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of EvaluationForm</returns>
-        ApiResponse<EvaluationForm> PutQualityFormWithHttpInfo (string formId, EvaluationForm body = null);
+        ApiResponse<EvaluationForm> PutFormsFormIdWithHttpInfo (string formId, EvaluationForm body = null);
 
         /// <summary>
         /// Update an evaluation form.
@@ -187,7 +187,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formId">Form ID</param>
         /// <param name="body"></param>
         /// <returns>Task of EvaluationForm</returns>
-        System.Threading.Tasks.Task<EvaluationForm> PutQualityFormAsync (string formId, EvaluationForm body = null);
+        System.Threading.Tasks.Task<EvaluationForm> PutFormsFormIdAsync (string formId, EvaluationForm body = null);
 
         /// <summary>
         /// Update an evaluation form.
@@ -198,7 +198,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formId">Form ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PutQualityFormAsyncWithHttpInfo (string formId, EvaluationForm body = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PutFormsFormIdAsyncWithHttpInfo (string formId, EvaluationForm body = null);
         
         /// <summary>
         /// Delete an evaluation form.
@@ -208,7 +208,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="formId">Form ID</param>
         /// <returns>string</returns>
-        string DeleteQualityForm (string formId);
+        string DeleteFormsFormId (string formId);
   
         /// <summary>
         /// Delete an evaluation form.
@@ -218,7 +218,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="formId">Form ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteQualityFormWithHttpInfo (string formId);
+        ApiResponse<string> DeleteFormsFormIdWithHttpInfo (string formId);
 
         /// <summary>
         /// Delete an evaluation form.
@@ -228,7 +228,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="formId">Form ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteQualityFormAsync (string formId);
+        System.Threading.Tasks.Task<string> DeleteFormsFormIdAsync (string formId);
 
         /// <summary>
         /// Delete an evaluation form.
@@ -238,7 +238,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="formId">Form ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteQualityFormAsyncWithHttpInfo (string formId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteFormsFormIdAsyncWithHttpInfo (string formId);
         
         /// <summary>
         /// Gets all the revisions for a specific evaluation.
@@ -250,7 +250,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>EvaluationFormEntityListing</returns>
-        EvaluationFormEntityListing GetQualityFormVersions (string formId, int? pageSize = null, int? pageNumber = null);
+        EvaluationFormEntityListing GetFormsFormIdVersions (string formId, int? pageSize = null, int? pageNumber = null);
   
         /// <summary>
         /// Gets all the revisions for a specific evaluation.
@@ -262,7 +262,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
-        ApiResponse<EvaluationFormEntityListing> GetQualityFormVersionsWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null);
+        ApiResponse<EvaluationFormEntityListing> GetFormsFormIdVersionsWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Gets all the revisions for a specific evaluation.
@@ -274,7 +274,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of EvaluationFormEntityListing</returns>
-        System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityFormVersionsAsync (string formId, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<EvaluationFormEntityListing> GetFormsFormIdVersionsAsync (string formId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Gets all the revisions for a specific evaluation.
@@ -286,7 +286,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityFormVersionsAsyncWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetFormsFormIdVersionsAsyncWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
         /// Get the published evaluation forms.
@@ -298,7 +298,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="name">Name</param>
         /// <returns>EvaluationFormEntityListing</returns>
-        EvaluationFormEntityListing GetQualityPublishedforms (int? pageSize = null, int? pageNumber = null, string name = null);
+        EvaluationFormEntityListing GetPublishedforms (int? pageSize = null, int? pageNumber = null, string name = null);
   
         /// <summary>
         /// Get the published evaluation forms.
@@ -310,7 +310,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="name">Name</param>
         /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
-        ApiResponse<EvaluationFormEntityListing> GetQualityPublishedformsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null);
+        ApiResponse<EvaluationFormEntityListing> GetPublishedformsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null);
 
         /// <summary>
         /// Get the published evaluation forms.
@@ -322,7 +322,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="name">Name</param>
         /// <returns>Task of EvaluationFormEntityListing</returns>
-        System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityPublishedformsAsync (int? pageSize = null, int? pageNumber = null, string name = null);
+        System.Threading.Tasks.Task<EvaluationFormEntityListing> GetPublishedformsAsync (int? pageSize = null, int? pageNumber = null, string name = null);
 
         /// <summary>
         /// Get the published evaluation forms.
@@ -334,7 +334,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="name">Name</param>
         /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityPublishedformsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetPublishedformsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null);
         
         /// <summary>
         /// Publish an evaluation form.
@@ -344,7 +344,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>EvaluationForm</returns>
-        EvaluationForm PostQualityPublishedforms (EvaluationForm body = null);
+        EvaluationForm PostPublishedforms (EvaluationForm body = null);
   
         /// <summary>
         /// Publish an evaluation form.
@@ -354,7 +354,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>ApiResponse of EvaluationForm</returns>
-        ApiResponse<EvaluationForm> PostQualityPublishedformsWithHttpInfo (EvaluationForm body = null);
+        ApiResponse<EvaluationForm> PostPublishedformsWithHttpInfo (EvaluationForm body = null);
 
         /// <summary>
         /// Publish an evaluation form.
@@ -364,7 +364,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of EvaluationForm</returns>
-        System.Threading.Tasks.Task<EvaluationForm> PostQualityPublishedformsAsync (EvaluationForm body = null);
+        System.Threading.Tasks.Task<EvaluationForm> PostPublishedformsAsync (EvaluationForm body = null);
 
         /// <summary>
         /// Publish an evaluation form.
@@ -374,7 +374,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostQualityPublishedformsAsyncWithHttpInfo (EvaluationForm body = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostPublishedformsAsyncWithHttpInfo (EvaluationForm body = null);
         
         /// <summary>
         /// Get the published evaluation forms.
@@ -384,7 +384,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="formId">Form ID</param>
         /// <returns>EvaluationForm</returns>
-        EvaluationForm GetQualityPublishedform (string formId);
+        EvaluationForm GetPublishedformsFormId (string formId);
   
         /// <summary>
         /// Get the published evaluation forms.
@@ -394,7 +394,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="formId">Form ID</param>
         /// <returns>ApiResponse of EvaluationForm</returns>
-        ApiResponse<EvaluationForm> GetQualityPublishedformWithHttpInfo (string formId);
+        ApiResponse<EvaluationForm> GetPublishedformsFormIdWithHttpInfo (string formId);
 
         /// <summary>
         /// Get the published evaluation forms.
@@ -404,7 +404,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="formId">Form ID</param>
         /// <returns>Task of EvaluationForm</returns>
-        System.Threading.Tasks.Task<EvaluationForm> GetQualityPublishedformAsync (string formId);
+        System.Threading.Tasks.Task<EvaluationForm> GetPublishedformsFormIdAsync (string formId);
 
         /// <summary>
         /// Get the published evaluation forms.
@@ -414,7 +414,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="formId">Form ID</param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetQualityPublishedformAsyncWithHttpInfo (string formId);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetPublishedformsFormIdAsyncWithHttpInfo (string formId);
         
         /// <summary>
         /// Get the list of scripts
@@ -428,7 +428,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param>
         /// <param name="feature">Feature</param>
         /// <returns>ScriptEntityListing</returns>
-        ScriptEntityListing GetScripts (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null);
+        ScriptEntityListing Get (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null);
   
         /// <summary>
         /// Get the list of scripts
@@ -442,7 +442,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param>
         /// <param name="feature">Feature</param>
         /// <returns>ApiResponse of ScriptEntityListing</returns>
-        ApiResponse<ScriptEntityListing> GetScriptsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null);
+        ApiResponse<ScriptEntityListing> GetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null);
 
         /// <summary>
         /// Get the list of scripts
@@ -456,7 +456,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param>
         /// <param name="feature">Feature</param>
         /// <returns>Task of ScriptEntityListing</returns>
-        System.Threading.Tasks.Task<ScriptEntityListing> GetScriptsAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null);
+        System.Threading.Tasks.Task<ScriptEntityListing> GetAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null);
 
         /// <summary>
         /// Get the list of scripts
@@ -470,7 +470,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param>
         /// <param name="feature">Feature</param>
         /// <returns>Task of ApiResponse (ScriptEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null);
+        System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null);
         
         /// <summary>
         /// Create a script.
@@ -480,7 +480,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Script</returns>
-        Script PostScripts (Body3 body = null);
+        Script Post (Body3 body = null);
   
         /// <summary>
         /// Create a script.
@@ -490,7 +490,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Script</returns>
-        ApiResponse<Script> PostScriptsWithHttpInfo (Body3 body = null);
+        ApiResponse<Script> PostWithHttpInfo (Body3 body = null);
 
         /// <summary>
         /// Create a script.
@@ -500,7 +500,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of Script</returns>
-        System.Threading.Tasks.Task<Script> PostScriptsAsync (Body3 body = null);
+        System.Threading.Tasks.Task<Script> PostAsync (Body3 body = null);
 
         /// <summary>
         /// Create a script.
@@ -510,7 +510,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Script)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Script>> PostScriptsAsyncWithHttpInfo (Body3 body = null);
+        System.Threading.Tasks.Task<ApiResponse<Script>> PostAsyncWithHttpInfo (Body3 body = null);
         
     }
   
@@ -600,9 +600,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand2">Expand</param> 
         /// <param name="name">Name</param> 
         /// <returns>EvaluationFormEntityListing</returns>
-        public EvaluationFormEntityListing GetQualityForms (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null)
+        public EvaluationFormEntityListing GetForms (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null)
         {
-             ApiResponse<EvaluationFormEntityListing> response = GetQualityFormsWithHttpInfo(pageSize, pageNumber, sortBy, expand, expand2, name);
+             ApiResponse<EvaluationFormEntityListing> response = GetFormsWithHttpInfo(pageSize, pageNumber, sortBy, expand, expand2, name);
              return response.Data;
         }
 
@@ -616,7 +616,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand2">Expand</param> 
         /// <param name="name">Name</param> 
         /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
-        public ApiResponse< EvaluationFormEntityListing > GetQualityFormsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null)
+        public ApiResponse< EvaluationFormEntityListing > GetFormsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null)
         {
             
     
@@ -675,9 +675,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetQualityForms: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetForms: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetQualityForms: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetForms: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EvaluationFormEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -695,9 +695,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand2">Expand</param>
         /// <param name="name">Name</param>
         /// <returns>Task of EvaluationFormEntityListing</returns>
-        public async System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityFormsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null)
+        public async System.Threading.Tasks.Task<EvaluationFormEntityListing> GetFormsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null)
         {
-             ApiResponse<EvaluationFormEntityListing> response = await GetQualityFormsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, expand2, name);
+             ApiResponse<EvaluationFormEntityListing> response = await GetFormsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, expand2, name);
              return response.Data;
 
         }
@@ -712,7 +712,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand2">Expand</param>
         /// <param name="name">Name</param>
         /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityFormsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetFormsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string expand2 = null, string name = null)
         {
             
     
@@ -772,9 +772,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetQualityForms: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetForms: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetQualityForms: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetForms: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EvaluationFormEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -787,9 +787,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>EvaluationForm</returns>
-        public EvaluationForm PostQualityForms (EvaluationForm body = null)
+        public EvaluationForm PostForms (EvaluationForm body = null)
         {
-             ApiResponse<EvaluationForm> response = PostQualityFormsWithHttpInfo(body);
+             ApiResponse<EvaluationForm> response = PostFormsWithHttpInfo(body);
              return response.Data;
         }
 
@@ -798,7 +798,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>ApiResponse of EvaluationForm</returns>
-        public ApiResponse< EvaluationForm > PostQualityFormsWithHttpInfo (EvaluationForm body = null)
+        public ApiResponse< EvaluationForm > PostFormsWithHttpInfo (EvaluationForm body = null)
         {
             
     
@@ -858,9 +858,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostQualityForms: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostForms: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostQualityForms: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostForms: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EvaluationForm>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -873,9 +873,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of EvaluationForm</returns>
-        public async System.Threading.Tasks.Task<EvaluationForm> PostQualityFormsAsync (EvaluationForm body = null)
+        public async System.Threading.Tasks.Task<EvaluationForm> PostFormsAsync (EvaluationForm body = null)
         {
-             ApiResponse<EvaluationForm> response = await PostQualityFormsAsyncWithHttpInfo(body);
+             ApiResponse<EvaluationForm> response = await PostFormsAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -885,7 +885,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostQualityFormsAsyncWithHttpInfo (EvaluationForm body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostFormsAsyncWithHttpInfo (EvaluationForm body = null)
         {
             
     
@@ -940,9 +940,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostQualityForms: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostForms: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostQualityForms: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostForms: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EvaluationForm>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -955,9 +955,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="formId">Form ID</param> 
         /// <returns>EvaluationForm</returns>
-        public EvaluationForm GetQualityForm (string formId)
+        public EvaluationForm GetFormsFormId (string formId)
         {
-             ApiResponse<EvaluationForm> response = GetQualityFormWithHttpInfo(formId);
+             ApiResponse<EvaluationForm> response = GetFormsFormIdWithHttpInfo(formId);
              return response.Data;
         }
 
@@ -966,12 +966,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="formId">Form ID</param> 
         /// <returns>ApiResponse of EvaluationForm</returns>
-        public ApiResponse< EvaluationForm > GetQualityFormWithHttpInfo (string formId)
+        public ApiResponse< EvaluationForm > GetFormsFormIdWithHttpInfo (string formId)
         {
             
             // verify the required parameter 'formId' is set
             if (formId == null)
-                throw new ApiException(400, "Missing required parameter 'formId' when calling ScriptsApi->GetQualityForm");
+                throw new ApiException(400, "Missing required parameter 'formId' when calling ScriptsApi->GetFormsFormId");
             
     
             var path_ = "/api/v1/quality/forms/{formId}";
@@ -1024,9 +1024,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetQualityForm: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetFormsFormId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetQualityForm: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetFormsFormId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EvaluationForm>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1039,9 +1039,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="formId">Form ID</param>
         /// <returns>Task of EvaluationForm</returns>
-        public async System.Threading.Tasks.Task<EvaluationForm> GetQualityFormAsync (string formId)
+        public async System.Threading.Tasks.Task<EvaluationForm> GetFormsFormIdAsync (string formId)
         {
-             ApiResponse<EvaluationForm> response = await GetQualityFormAsyncWithHttpInfo(formId);
+             ApiResponse<EvaluationForm> response = await GetFormsFormIdAsyncWithHttpInfo(formId);
              return response.Data;
 
         }
@@ -1051,10 +1051,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="formId">Form ID</param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetQualityFormAsyncWithHttpInfo (string formId)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetFormsFormIdAsyncWithHttpInfo (string formId)
         {
             // verify the required parameter 'formId' is set
-            if (formId == null) throw new ApiException(400, "Missing required parameter 'formId' when calling GetQualityForm");
+            if (formId == null) throw new ApiException(400, "Missing required parameter 'formId' when calling GetFormsFormId");
             
     
             var path_ = "/api/v1/quality/forms/{formId}";
@@ -1108,9 +1108,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetQualityForm: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetFormsFormId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetQualityForm: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetFormsFormId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EvaluationForm>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1124,9 +1124,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formId">Form ID</param> 
         /// <param name="body"></param> 
         /// <returns>EvaluationForm</returns>
-        public EvaluationForm PutQualityForm (string formId, EvaluationForm body = null)
+        public EvaluationForm PutFormsFormId (string formId, EvaluationForm body = null)
         {
-             ApiResponse<EvaluationForm> response = PutQualityFormWithHttpInfo(formId, body);
+             ApiResponse<EvaluationForm> response = PutFormsFormIdWithHttpInfo(formId, body);
              return response.Data;
         }
 
@@ -1136,12 +1136,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formId">Form ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of EvaluationForm</returns>
-        public ApiResponse< EvaluationForm > PutQualityFormWithHttpInfo (string formId, EvaluationForm body = null)
+        public ApiResponse< EvaluationForm > PutFormsFormIdWithHttpInfo (string formId, EvaluationForm body = null)
         {
             
             // verify the required parameter 'formId' is set
             if (formId == null)
-                throw new ApiException(400, "Missing required parameter 'formId' when calling ScriptsApi->PutQualityForm");
+                throw new ApiException(400, "Missing required parameter 'formId' when calling ScriptsApi->PutFormsFormId");
             
     
             var path_ = "/api/v1/quality/forms/{formId}";
@@ -1201,9 +1201,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutQualityForm: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutFormsFormId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutQualityForm: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutFormsFormId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EvaluationForm>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1217,9 +1217,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formId">Form ID</param>
         /// <param name="body"></param>
         /// <returns>Task of EvaluationForm</returns>
-        public async System.Threading.Tasks.Task<EvaluationForm> PutQualityFormAsync (string formId, EvaluationForm body = null)
+        public async System.Threading.Tasks.Task<EvaluationForm> PutFormsFormIdAsync (string formId, EvaluationForm body = null)
         {
-             ApiResponse<EvaluationForm> response = await PutQualityFormAsyncWithHttpInfo(formId, body);
+             ApiResponse<EvaluationForm> response = await PutFormsFormIdAsyncWithHttpInfo(formId, body);
              return response.Data;
 
         }
@@ -1230,10 +1230,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formId">Form ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PutQualityFormAsyncWithHttpInfo (string formId, EvaluationForm body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PutFormsFormIdAsyncWithHttpInfo (string formId, EvaluationForm body = null)
         {
             // verify the required parameter 'formId' is set
-            if (formId == null) throw new ApiException(400, "Missing required parameter 'formId' when calling PutQualityForm");
+            if (formId == null) throw new ApiException(400, "Missing required parameter 'formId' when calling PutFormsFormId");
             
     
             var path_ = "/api/v1/quality/forms/{formId}";
@@ -1288,9 +1288,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutQualityForm: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutFormsFormId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutQualityForm: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutFormsFormId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EvaluationForm>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1303,9 +1303,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="formId">Form ID</param> 
         /// <returns>string</returns>
-        public string DeleteQualityForm (string formId)
+        public string DeleteFormsFormId (string formId)
         {
-             ApiResponse<string> response = DeleteQualityFormWithHttpInfo(formId);
+             ApiResponse<string> response = DeleteFormsFormIdWithHttpInfo(formId);
              return response.Data;
         }
 
@@ -1314,12 +1314,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="formId">Form ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteQualityFormWithHttpInfo (string formId)
+        public ApiResponse< string > DeleteFormsFormIdWithHttpInfo (string formId)
         {
             
             // verify the required parameter 'formId' is set
             if (formId == null)
-                throw new ApiException(400, "Missing required parameter 'formId' when calling ScriptsApi->DeleteQualityForm");
+                throw new ApiException(400, "Missing required parameter 'formId' when calling ScriptsApi->DeleteFormsFormId");
             
     
             var path_ = "/api/v1/quality/forms/{formId}";
@@ -1372,9 +1372,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteQualityForm: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteFormsFormId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteQualityForm: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteFormsFormId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1387,9 +1387,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="formId">Form ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteQualityFormAsync (string formId)
+        public async System.Threading.Tasks.Task<string> DeleteFormsFormIdAsync (string formId)
         {
-             ApiResponse<string> response = await DeleteQualityFormAsyncWithHttpInfo(formId);
+             ApiResponse<string> response = await DeleteFormsFormIdAsyncWithHttpInfo(formId);
              return response.Data;
 
         }
@@ -1399,10 +1399,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="formId">Form ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteQualityFormAsyncWithHttpInfo (string formId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteFormsFormIdAsyncWithHttpInfo (string formId)
         {
             // verify the required parameter 'formId' is set
-            if (formId == null) throw new ApiException(400, "Missing required parameter 'formId' when calling DeleteQualityForm");
+            if (formId == null) throw new ApiException(400, "Missing required parameter 'formId' when calling DeleteFormsFormId");
             
     
             var path_ = "/api/v1/quality/forms/{formId}";
@@ -1456,9 +1456,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteQualityForm: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteFormsFormId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteQualityForm: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteFormsFormId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1473,9 +1473,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>EvaluationFormEntityListing</returns>
-        public EvaluationFormEntityListing GetQualityFormVersions (string formId, int? pageSize = null, int? pageNumber = null)
+        public EvaluationFormEntityListing GetFormsFormIdVersions (string formId, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<EvaluationFormEntityListing> response = GetQualityFormVersionsWithHttpInfo(formId, pageSize, pageNumber);
+             ApiResponse<EvaluationFormEntityListing> response = GetFormsFormIdVersionsWithHttpInfo(formId, pageSize, pageNumber);
              return response.Data;
         }
 
@@ -1486,12 +1486,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
-        public ApiResponse< EvaluationFormEntityListing > GetQualityFormVersionsWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< EvaluationFormEntityListing > GetFormsFormIdVersionsWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null)
         {
             
             // verify the required parameter 'formId' is set
             if (formId == null)
-                throw new ApiException(400, "Missing required parameter 'formId' when calling ScriptsApi->GetQualityFormVersions");
+                throw new ApiException(400, "Missing required parameter 'formId' when calling ScriptsApi->GetFormsFormIdVersions");
             
     
             var path_ = "/api/v1/quality/forms/{formId}/versions";
@@ -1546,9 +1546,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetQualityFormVersions: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetFormsFormIdVersions: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetQualityFormVersions: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetFormsFormIdVersions: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EvaluationFormEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1563,9 +1563,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of EvaluationFormEntityListing</returns>
-        public async System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityFormVersionsAsync (string formId, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<EvaluationFormEntityListing> GetFormsFormIdVersionsAsync (string formId, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<EvaluationFormEntityListing> response = await GetQualityFormVersionsAsyncWithHttpInfo(formId, pageSize, pageNumber);
+             ApiResponse<EvaluationFormEntityListing> response = await GetFormsFormIdVersionsAsyncWithHttpInfo(formId, pageSize, pageNumber);
              return response.Data;
 
         }
@@ -1577,10 +1577,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityFormVersionsAsyncWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetFormsFormIdVersionsAsyncWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null)
         {
             // verify the required parameter 'formId' is set
-            if (formId == null) throw new ApiException(400, "Missing required parameter 'formId' when calling GetQualityFormVersions");
+            if (formId == null) throw new ApiException(400, "Missing required parameter 'formId' when calling GetFormsFormIdVersions");
             
     
             var path_ = "/api/v1/quality/forms/{formId}/versions";
@@ -1636,9 +1636,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetQualityFormVersions: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetFormsFormIdVersions: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetQualityFormVersions: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetFormsFormIdVersions: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EvaluationFormEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1653,9 +1653,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="name">Name</param> 
         /// <returns>EvaluationFormEntityListing</returns>
-        public EvaluationFormEntityListing GetQualityPublishedforms (int? pageSize = null, int? pageNumber = null, string name = null)
+        public EvaluationFormEntityListing GetPublishedforms (int? pageSize = null, int? pageNumber = null, string name = null)
         {
-             ApiResponse<EvaluationFormEntityListing> response = GetQualityPublishedformsWithHttpInfo(pageSize, pageNumber, name);
+             ApiResponse<EvaluationFormEntityListing> response = GetPublishedformsWithHttpInfo(pageSize, pageNumber, name);
              return response.Data;
         }
 
@@ -1666,7 +1666,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="name">Name</param> 
         /// <returns>ApiResponse of EvaluationFormEntityListing</returns>
-        public ApiResponse< EvaluationFormEntityListing > GetQualityPublishedformsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null)
+        public ApiResponse< EvaluationFormEntityListing > GetPublishedformsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null)
         {
             
     
@@ -1722,9 +1722,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetQualityPublishedforms: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetPublishedforms: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetQualityPublishedforms: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetPublishedforms: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EvaluationFormEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1739,9 +1739,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="name">Name</param>
         /// <returns>Task of EvaluationFormEntityListing</returns>
-        public async System.Threading.Tasks.Task<EvaluationFormEntityListing> GetQualityPublishedformsAsync (int? pageSize = null, int? pageNumber = null, string name = null)
+        public async System.Threading.Tasks.Task<EvaluationFormEntityListing> GetPublishedformsAsync (int? pageSize = null, int? pageNumber = null, string name = null)
         {
-             ApiResponse<EvaluationFormEntityListing> response = await GetQualityPublishedformsAsyncWithHttpInfo(pageSize, pageNumber, name);
+             ApiResponse<EvaluationFormEntityListing> response = await GetPublishedformsAsyncWithHttpInfo(pageSize, pageNumber, name);
              return response.Data;
 
         }
@@ -1753,7 +1753,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="name">Name</param>
         /// <returns>Task of ApiResponse (EvaluationFormEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetQualityPublishedformsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormEntityListing>> GetPublishedformsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null)
         {
             
     
@@ -1810,9 +1810,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetQualityPublishedforms: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetPublishedforms: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetQualityPublishedforms: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetPublishedforms: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EvaluationFormEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1825,9 +1825,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>EvaluationForm</returns>
-        public EvaluationForm PostQualityPublishedforms (EvaluationForm body = null)
+        public EvaluationForm PostPublishedforms (EvaluationForm body = null)
         {
-             ApiResponse<EvaluationForm> response = PostQualityPublishedformsWithHttpInfo(body);
+             ApiResponse<EvaluationForm> response = PostPublishedformsWithHttpInfo(body);
              return response.Data;
         }
 
@@ -1836,7 +1836,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>ApiResponse of EvaluationForm</returns>
-        public ApiResponse< EvaluationForm > PostQualityPublishedformsWithHttpInfo (EvaluationForm body = null)
+        public ApiResponse< EvaluationForm > PostPublishedformsWithHttpInfo (EvaluationForm body = null)
         {
             
     
@@ -1896,9 +1896,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostQualityPublishedforms: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostPublishedforms: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostQualityPublishedforms: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostPublishedforms: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EvaluationForm>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1911,9 +1911,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of EvaluationForm</returns>
-        public async System.Threading.Tasks.Task<EvaluationForm> PostQualityPublishedformsAsync (EvaluationForm body = null)
+        public async System.Threading.Tasks.Task<EvaluationForm> PostPublishedformsAsync (EvaluationForm body = null)
         {
-             ApiResponse<EvaluationForm> response = await PostQualityPublishedformsAsyncWithHttpInfo(body);
+             ApiResponse<EvaluationForm> response = await PostPublishedformsAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -1923,7 +1923,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostQualityPublishedformsAsyncWithHttpInfo (EvaluationForm body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostPublishedformsAsyncWithHttpInfo (EvaluationForm body = null)
         {
             
     
@@ -1978,9 +1978,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostQualityPublishedforms: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostPublishedforms: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostQualityPublishedforms: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostPublishedforms: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EvaluationForm>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1993,9 +1993,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="formId">Form ID</param> 
         /// <returns>EvaluationForm</returns>
-        public EvaluationForm GetQualityPublishedform (string formId)
+        public EvaluationForm GetPublishedformsFormId (string formId)
         {
-             ApiResponse<EvaluationForm> response = GetQualityPublishedformWithHttpInfo(formId);
+             ApiResponse<EvaluationForm> response = GetPublishedformsFormIdWithHttpInfo(formId);
              return response.Data;
         }
 
@@ -2004,12 +2004,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="formId">Form ID</param> 
         /// <returns>ApiResponse of EvaluationForm</returns>
-        public ApiResponse< EvaluationForm > GetQualityPublishedformWithHttpInfo (string formId)
+        public ApiResponse< EvaluationForm > GetPublishedformsFormIdWithHttpInfo (string formId)
         {
             
             // verify the required parameter 'formId' is set
             if (formId == null)
-                throw new ApiException(400, "Missing required parameter 'formId' when calling ScriptsApi->GetQualityPublishedform");
+                throw new ApiException(400, "Missing required parameter 'formId' when calling ScriptsApi->GetPublishedformsFormId");
             
     
             var path_ = "/api/v1/quality/publishedforms/{formId}";
@@ -2062,9 +2062,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetQualityPublishedform: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetPublishedformsFormId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetQualityPublishedform: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetPublishedformsFormId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EvaluationForm>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2077,9 +2077,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="formId">Form ID</param>
         /// <returns>Task of EvaluationForm</returns>
-        public async System.Threading.Tasks.Task<EvaluationForm> GetQualityPublishedformAsync (string formId)
+        public async System.Threading.Tasks.Task<EvaluationForm> GetPublishedformsFormIdAsync (string formId)
         {
-             ApiResponse<EvaluationForm> response = await GetQualityPublishedformAsyncWithHttpInfo(formId);
+             ApiResponse<EvaluationForm> response = await GetPublishedformsFormIdAsyncWithHttpInfo(formId);
              return response.Data;
 
         }
@@ -2089,10 +2089,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="formId">Form ID</param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetQualityPublishedformAsyncWithHttpInfo (string formId)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetPublishedformsFormIdAsyncWithHttpInfo (string formId)
         {
             // verify the required parameter 'formId' is set
-            if (formId == null) throw new ApiException(400, "Missing required parameter 'formId' when calling GetQualityPublishedform");
+            if (formId == null) throw new ApiException(400, "Missing required parameter 'formId' when calling GetPublishedformsFormId");
             
     
             var path_ = "/api/v1/quality/publishedforms/{formId}";
@@ -2146,9 +2146,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetQualityPublishedform: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetPublishedformsFormId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetQualityPublishedform: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetPublishedformsFormId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EvaluationForm>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2165,9 +2165,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param> 
         /// <param name="feature">Feature</param> 
         /// <returns>ScriptEntityListing</returns>
-        public ScriptEntityListing GetScripts (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null)
+        public ScriptEntityListing Get (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null)
         {
-             ApiResponse<ScriptEntityListing> response = GetScriptsWithHttpInfo(pageSize, pageNumber, expand, name, feature);
+             ApiResponse<ScriptEntityListing> response = GetWithHttpInfo(pageSize, pageNumber, expand, name, feature);
              return response.Data;
         }
 
@@ -2180,7 +2180,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param> 
         /// <param name="feature">Feature</param> 
         /// <returns>ApiResponse of ScriptEntityListing</returns>
-        public ApiResponse< ScriptEntityListing > GetScriptsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null)
+        public ApiResponse< ScriptEntityListing > GetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null)
         {
             
     
@@ -2238,9 +2238,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetScripts: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetScripts: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ScriptEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2257,9 +2257,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param>
         /// <param name="feature">Feature</param>
         /// <returns>Task of ScriptEntityListing</returns>
-        public async System.Threading.Tasks.Task<ScriptEntityListing> GetScriptsAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null)
+        public async System.Threading.Tasks.Task<ScriptEntityListing> GetAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null)
         {
-             ApiResponse<ScriptEntityListing> response = await GetScriptsAsyncWithHttpInfo(pageSize, pageNumber, expand, name, feature);
+             ApiResponse<ScriptEntityListing> response = await GetAsyncWithHttpInfo(pageSize, pageNumber, expand, name, feature);
              return response.Data;
 
         }
@@ -2273,7 +2273,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="name">Name</param>
         /// <param name="feature">Feature</param>
         /// <returns>Task of ApiResponse (ScriptEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null)
         {
             
     
@@ -2332,9 +2332,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetScripts: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetScripts: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ScriptEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2347,9 +2347,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>Script</returns>
-        public Script PostScripts (Body3 body = null)
+        public Script Post (Body3 body = null)
         {
-             ApiResponse<Script> response = PostScriptsWithHttpInfo(body);
+             ApiResponse<Script> response = PostWithHttpInfo(body);
              return response.Data;
         }
 
@@ -2358,7 +2358,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>ApiResponse of Script</returns>
-        public ApiResponse< Script > PostScriptsWithHttpInfo (Body3 body = null)
+        public ApiResponse< Script > PostWithHttpInfo (Body3 body = null)
         {
             
     
@@ -2418,9 +2418,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostScripts: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Post: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostScripts: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Post: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Script>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2433,9 +2433,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of Script</returns>
-        public async System.Threading.Tasks.Task<Script> PostScriptsAsync (Body3 body = null)
+        public async System.Threading.Tasks.Task<Script> PostAsync (Body3 body = null)
         {
-             ApiResponse<Script> response = await PostScriptsAsyncWithHttpInfo(body);
+             ApiResponse<Script> response = await PostAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -2445,7 +2445,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Script)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Script>> PostScriptsAsyncWithHttpInfo (Body3 body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Script>> PostAsyncWithHttpInfo (Body3 body = null)
         {
             
     
@@ -2500,9 +2500,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostScripts: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Post: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostScripts: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Post: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Script>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

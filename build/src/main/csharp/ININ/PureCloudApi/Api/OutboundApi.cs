@@ -184,7 +184,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>CallableTimeSet</returns>
-        CallableTimeSet GetCallabletimeset (string callableTimeSetId);
+        CallableTimeSet GetCallabletimesetsCallabletimesetId (string callableTimeSetId);
   
         /// <summary>
         /// Get callable time set
@@ -194,7 +194,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>ApiResponse of CallableTimeSet</returns>
-        ApiResponse<CallableTimeSet> GetCallabletimesetWithHttpInfo (string callableTimeSetId);
+        ApiResponse<CallableTimeSet> GetCallabletimesetsCallabletimesetIdWithHttpInfo (string callableTimeSetId);
 
         /// <summary>
         /// Get callable time set
@@ -204,7 +204,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>Task of CallableTimeSet</returns>
-        System.Threading.Tasks.Task<CallableTimeSet> GetCallabletimesetAsync (string callableTimeSetId);
+        System.Threading.Tasks.Task<CallableTimeSet> GetCallabletimesetsCallabletimesetIdAsync (string callableTimeSetId);
 
         /// <summary>
         /// Get callable time set
@@ -214,7 +214,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>Task of ApiResponse (CallableTimeSet)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> GetCallabletimesetAsyncWithHttpInfo (string callableTimeSetId);
+        System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> GetCallabletimesetsCallabletimesetIdAsyncWithHttpInfo (string callableTimeSetId);
         
         /// <summary>
         /// Update callable time set
@@ -225,7 +225,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>CallableTimeSet</returns>
-        CallableTimeSet PutCallabletimeset (string callableTimeSetId, CallableTimeSet body = null);
+        CallableTimeSet PutCallabletimesetsCallabletimesetId (string callableTimeSetId, CallableTimeSet body = null);
   
         /// <summary>
         /// Update callable time set
@@ -236,7 +236,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>ApiResponse of CallableTimeSet</returns>
-        ApiResponse<CallableTimeSet> PutCallabletimesetWithHttpInfo (string callableTimeSetId, CallableTimeSet body = null);
+        ApiResponse<CallableTimeSet> PutCallabletimesetsCallabletimesetIdWithHttpInfo (string callableTimeSetId, CallableTimeSet body = null);
 
         /// <summary>
         /// Update callable time set
@@ -247,7 +247,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>Task of CallableTimeSet</returns>
-        System.Threading.Tasks.Task<CallableTimeSet> PutCallabletimesetAsync (string callableTimeSetId, CallableTimeSet body = null);
+        System.Threading.Tasks.Task<CallableTimeSet> PutCallabletimesetsCallabletimesetIdAsync (string callableTimeSetId, CallableTimeSet body = null);
 
         /// <summary>
         /// Update callable time set
@@ -258,7 +258,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>Task of ApiResponse (CallableTimeSet)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> PutCallabletimesetAsyncWithHttpInfo (string callableTimeSetId, CallableTimeSet body = null);
+        System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> PutCallabletimesetsCallabletimesetIdAsyncWithHttpInfo (string callableTimeSetId, CallableTimeSet body = null);
         
         /// <summary>
         /// Delete callable time set
@@ -268,7 +268,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>string</returns>
-        string DeleteCallabletimeset (string callableTimeSetId);
+        string DeleteCallabletimesetsCallabletimesetId (string callableTimeSetId);
   
         /// <summary>
         /// Delete callable time set
@@ -278,7 +278,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteCallabletimesetWithHttpInfo (string callableTimeSetId);
+        ApiResponse<string> DeleteCallabletimesetsCallabletimesetIdWithHttpInfo (string callableTimeSetId);
 
         /// <summary>
         /// Delete callable time set
@@ -288,7 +288,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteCallabletimesetAsync (string callableTimeSetId);
+        System.Threading.Tasks.Task<string> DeleteCallabletimesetsCallabletimesetIdAsync (string callableTimeSetId);
 
         /// <summary>
         /// Delete callable time set
@@ -298,7 +298,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteCallabletimesetAsyncWithHttpInfo (string callableTimeSetId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteCallabletimesetsCallabletimesetIdAsyncWithHttpInfo (string callableTimeSetId);
         
         /// <summary>
         /// Query a list of dialer call analysis response sets.
@@ -408,7 +408,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>ResponseSet</returns>
-        ResponseSet GetCallanalysisresponseset (string callAnalysisSetId);
+        ResponseSet GetCallanalysisresponsesetsCallanalysissetId (string callAnalysisSetId);
   
         /// <summary>
         /// Get a dialer call analysis response set.
@@ -418,7 +418,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>ApiResponse of ResponseSet</returns>
-        ApiResponse<ResponseSet> GetCallanalysisresponsesetWithHttpInfo (string callAnalysisSetId);
+        ApiResponse<ResponseSet> GetCallanalysisresponsesetsCallanalysissetIdWithHttpInfo (string callAnalysisSetId);
 
         /// <summary>
         /// Get a dialer call analysis response set.
@@ -428,7 +428,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>Task of ResponseSet</returns>
-        System.Threading.Tasks.Task<ResponseSet> GetCallanalysisresponsesetAsync (string callAnalysisSetId);
+        System.Threading.Tasks.Task<ResponseSet> GetCallanalysisresponsesetsCallanalysissetIdAsync (string callAnalysisSetId);
 
         /// <summary>
         /// Get a dialer call analysis response set.
@@ -438,7 +438,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>Task of ApiResponse (ResponseSet)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseSet>> GetCallanalysisresponsesetAsyncWithHttpInfo (string callAnalysisSetId);
+        System.Threading.Tasks.Task<ApiResponse<ResponseSet>> GetCallanalysisresponsesetsCallanalysissetIdAsyncWithHttpInfo (string callAnalysisSetId);
         
         /// <summary>
         /// Update a dialer call analysis response set.
@@ -449,7 +449,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <param name="body">ResponseSet</param>
         /// <returns>ResponseSet</returns>
-        ResponseSet PutCallanalysisresponseset (string callAnalysisSetId, ResponseSet body = null);
+        ResponseSet PutCallanalysisresponsesetsCallanalysissetId (string callAnalysisSetId, ResponseSet body = null);
   
         /// <summary>
         /// Update a dialer call analysis response set.
@@ -460,7 +460,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <param name="body">ResponseSet</param>
         /// <returns>ApiResponse of ResponseSet</returns>
-        ApiResponse<ResponseSet> PutCallanalysisresponsesetWithHttpInfo (string callAnalysisSetId, ResponseSet body = null);
+        ApiResponse<ResponseSet> PutCallanalysisresponsesetsCallanalysissetIdWithHttpInfo (string callAnalysisSetId, ResponseSet body = null);
 
         /// <summary>
         /// Update a dialer call analysis response set.
@@ -471,7 +471,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <param name="body">ResponseSet</param>
         /// <returns>Task of ResponseSet</returns>
-        System.Threading.Tasks.Task<ResponseSet> PutCallanalysisresponsesetAsync (string callAnalysisSetId, ResponseSet body = null);
+        System.Threading.Tasks.Task<ResponseSet> PutCallanalysisresponsesetsCallanalysissetIdAsync (string callAnalysisSetId, ResponseSet body = null);
 
         /// <summary>
         /// Update a dialer call analysis response set.
@@ -482,7 +482,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <param name="body">ResponseSet</param>
         /// <returns>Task of ApiResponse (ResponseSet)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseSet>> PutCallanalysisresponsesetAsyncWithHttpInfo (string callAnalysisSetId, ResponseSet body = null);
+        System.Threading.Tasks.Task<ApiResponse<ResponseSet>> PutCallanalysisresponsesetsCallanalysissetIdAsyncWithHttpInfo (string callAnalysisSetId, ResponseSet body = null);
         
         /// <summary>
         /// Delete a dialer call analysis response set.
@@ -492,7 +492,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>string</returns>
-        string DeleteCallanalysisresponseset (string callAnalysisSetId);
+        string DeleteCallanalysisresponsesetsCallanalysissetId (string callAnalysisSetId);
   
         /// <summary>
         /// Delete a dialer call analysis response set.
@@ -502,7 +502,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteCallanalysisresponsesetWithHttpInfo (string callAnalysisSetId);
+        ApiResponse<string> DeleteCallanalysisresponsesetsCallanalysissetIdWithHttpInfo (string callAnalysisSetId);
 
         /// <summary>
         /// Delete a dialer call analysis response set.
@@ -512,7 +512,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteCallanalysisresponsesetAsync (string callAnalysisSetId);
+        System.Threading.Tasks.Task<string> DeleteCallanalysisresponsesetsCallanalysissetIdAsync (string callAnalysisSetId);
 
         /// <summary>
         /// Delete a dialer call analysis response set.
@@ -522,7 +522,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteCallanalysisresponsesetAsyncWithHttpInfo (string callAnalysisSetId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteCallanalysisresponsesetsCallanalysissetIdAsyncWithHttpInfo (string callAnalysisSetId);
         
         /// <summary>
         /// Query a list of dialer campaigns.
@@ -652,7 +652,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Campaign</returns>
-        Campaign GetCampaign (string campaignId);
+        Campaign GetCampaignsCampaignId (string campaignId);
   
         /// <summary>
         /// Get dialer campaign.
@@ -662,7 +662,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of Campaign</returns>
-        ApiResponse<Campaign> GetCampaignWithHttpInfo (string campaignId);
+        ApiResponse<Campaign> GetCampaignsCampaignIdWithHttpInfo (string campaignId);
 
         /// <summary>
         /// Get dialer campaign.
@@ -672,7 +672,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of Campaign</returns>
-        System.Threading.Tasks.Task<Campaign> GetCampaignAsync (string campaignId);
+        System.Threading.Tasks.Task<Campaign> GetCampaignsCampaignIdAsync (string campaignId);
 
         /// <summary>
         /// Get dialer campaign.
@@ -682,7 +682,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (Campaign)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Campaign>> GetCampaignAsyncWithHttpInfo (string campaignId);
+        System.Threading.Tasks.Task<ApiResponse<Campaign>> GetCampaignsCampaignIdAsyncWithHttpInfo (string campaignId);
         
         /// <summary>
         /// Update a campaign.
@@ -693,7 +693,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">Campaign</param>
         /// <returns>Campaign</returns>
-        Campaign PutCampaign (string campaignId, Campaign body = null);
+        Campaign PutCampaignsCampaignId (string campaignId, Campaign body = null);
   
         /// <summary>
         /// Update a campaign.
@@ -704,7 +704,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">Campaign</param>
         /// <returns>ApiResponse of Campaign</returns>
-        ApiResponse<Campaign> PutCampaignWithHttpInfo (string campaignId, Campaign body = null);
+        ApiResponse<Campaign> PutCampaignsCampaignIdWithHttpInfo (string campaignId, Campaign body = null);
 
         /// <summary>
         /// Update a campaign.
@@ -715,7 +715,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">Campaign</param>
         /// <returns>Task of Campaign</returns>
-        System.Threading.Tasks.Task<Campaign> PutCampaignAsync (string campaignId, Campaign body = null);
+        System.Threading.Tasks.Task<Campaign> PutCampaignsCampaignIdAsync (string campaignId, Campaign body = null);
 
         /// <summary>
         /// Update a campaign.
@@ -726,7 +726,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">Campaign</param>
         /// <returns>Task of ApiResponse (Campaign)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Campaign>> PutCampaignAsyncWithHttpInfo (string campaignId, Campaign body = null);
+        System.Threading.Tasks.Task<ApiResponse<Campaign>> PutCampaignsCampaignIdAsyncWithHttpInfo (string campaignId, Campaign body = null);
         
         /// <summary>
         /// Delete a campaign.
@@ -736,7 +736,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>string</returns>
-        string DeleteCampaign (string campaignId);
+        string DeleteCampaignsCampaignId (string campaignId);
   
         /// <summary>
         /// Delete a campaign.
@@ -746,7 +746,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteCampaignWithHttpInfo (string campaignId);
+        ApiResponse<string> DeleteCampaignsCampaignIdWithHttpInfo (string campaignId);
 
         /// <summary>
         /// Delete a campaign.
@@ -756,7 +756,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteCampaignAsync (string campaignId);
+        System.Threading.Tasks.Task<string> DeleteCampaignsCampaignIdAsync (string campaignId);
 
         /// <summary>
         /// Delete a campaign.
@@ -766,7 +766,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteCampaignAsyncWithHttpInfo (string campaignId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteCampaignsCampaignIdAsyncWithHttpInfo (string campaignId);
         
         /// <summary>
         /// Send notification that an agent&#39;s state changed
@@ -778,7 +778,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">Agent&#39;s user ID</param>
         /// <param name="body">agent</param>
         /// <returns>string</returns>
-        string PutCampaignAgent (string campaignId, string userId, Agent body = null);
+        string PutCampaignsCampaignIdAgentsUserId (string campaignId, string userId, Agent body = null);
   
         /// <summary>
         /// Send notification that an agent&#39;s state changed
@@ -790,7 +790,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">Agent&#39;s user ID</param>
         /// <param name="body">agent</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> PutCampaignAgentWithHttpInfo (string campaignId, string userId, Agent body = null);
+        ApiResponse<string> PutCampaignsCampaignIdAgentsUserIdWithHttpInfo (string campaignId, string userId, Agent body = null);
 
         /// <summary>
         /// Send notification that an agent&#39;s state changed
@@ -802,7 +802,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">Agent&#39;s user ID</param>
         /// <param name="body">agent</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> PutCampaignAgentAsync (string campaignId, string userId, Agent body = null);
+        System.Threading.Tasks.Task<string> PutCampaignsCampaignIdAgentsUserIdAsync (string campaignId, string userId, Agent body = null);
 
         /// <summary>
         /// Send notification that an agent&#39;s state changed
@@ -814,7 +814,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">Agent&#39;s user ID</param>
         /// <param name="body">agent</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> PutCampaignAgentAsyncWithHttpInfo (string campaignId, string userId, Agent body = null);
+        System.Threading.Tasks.Task<ApiResponse<string>> PutCampaignsCampaignIdAgentsUserIdAsyncWithHttpInfo (string campaignId, string userId, Agent body = null);
         
         /// <summary>
         /// Schedule a Callback for a Dialer Campaign
@@ -825,7 +825,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">ContactCallbackRequest</param>
         /// <returns>ContactCallbackRequest</returns>
-        ContactCallbackRequest PostCampaignCallbackSchedule (string campaignId, ContactCallbackRequest body = null);
+        ContactCallbackRequest PostCampaignsCampaignIdCallbackSchedule (string campaignId, ContactCallbackRequest body = null);
   
         /// <summary>
         /// Schedule a Callback for a Dialer Campaign
@@ -836,7 +836,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">ContactCallbackRequest</param>
         /// <returns>ApiResponse of ContactCallbackRequest</returns>
-        ApiResponse<ContactCallbackRequest> PostCampaignCallbackScheduleWithHttpInfo (string campaignId, ContactCallbackRequest body = null);
+        ApiResponse<ContactCallbackRequest> PostCampaignsCampaignIdCallbackScheduleWithHttpInfo (string campaignId, ContactCallbackRequest body = null);
 
         /// <summary>
         /// Schedule a Callback for a Dialer Campaign
@@ -847,7 +847,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">ContactCallbackRequest</param>
         /// <returns>Task of ContactCallbackRequest</returns>
-        System.Threading.Tasks.Task<ContactCallbackRequest> PostCampaignCallbackScheduleAsync (string campaignId, ContactCallbackRequest body = null);
+        System.Threading.Tasks.Task<ContactCallbackRequest> PostCampaignsCampaignIdCallbackScheduleAsync (string campaignId, ContactCallbackRequest body = null);
 
         /// <summary>
         /// Schedule a Callback for a Dialer Campaign
@@ -858,7 +858,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">ContactCallbackRequest</param>
         /// <returns>Task of ApiResponse (ContactCallbackRequest)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContactCallbackRequest>> PostCampaignCallbackScheduleAsyncWithHttpInfo (string campaignId, ContactCallbackRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<ContactCallbackRequest>> PostCampaignsCampaignIdCallbackScheduleAsyncWithHttpInfo (string campaignId, ContactCallbackRequest body = null);
         
         /// <summary>
         /// Get campaign diagnostics
@@ -868,7 +868,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>CampaignDiagnostics</returns>
-        CampaignDiagnostics GetCampaignDiagnostics (string campaignId);
+        CampaignDiagnostics GetCampaignsCampaignIdDiagnostics (string campaignId);
   
         /// <summary>
         /// Get campaign diagnostics
@@ -878,7 +878,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of CampaignDiagnostics</returns>
-        ApiResponse<CampaignDiagnostics> GetCampaignDiagnosticsWithHttpInfo (string campaignId);
+        ApiResponse<CampaignDiagnostics> GetCampaignsCampaignIdDiagnosticsWithHttpInfo (string campaignId);
 
         /// <summary>
         /// Get campaign diagnostics
@@ -888,7 +888,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of CampaignDiagnostics</returns>
-        System.Threading.Tasks.Task<CampaignDiagnostics> GetCampaignDiagnosticsAsync (string campaignId);
+        System.Threading.Tasks.Task<CampaignDiagnostics> GetCampaignsCampaignIdDiagnosticsAsync (string campaignId);
 
         /// <summary>
         /// Get campaign diagnostics
@@ -898,7 +898,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (CampaignDiagnostics)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CampaignDiagnostics>> GetCampaignDiagnosticsAsyncWithHttpInfo (string campaignId);
+        System.Threading.Tasks.Task<ApiResponse<CampaignDiagnostics>> GetCampaignsCampaignIdDiagnosticsAsyncWithHttpInfo (string campaignId);
         
         /// <summary>
         /// Get statistics about a Dialer Campaign
@@ -908,7 +908,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>CampaignStats</returns>
-        CampaignStats GetCampaignStats (string campaignId);
+        CampaignStats GetCampaignsCampaignIdStats (string campaignId);
   
         /// <summary>
         /// Get statistics about a Dialer Campaign
@@ -918,7 +918,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of CampaignStats</returns>
-        ApiResponse<CampaignStats> GetCampaignStatsWithHttpInfo (string campaignId);
+        ApiResponse<CampaignStats> GetCampaignsCampaignIdStatsWithHttpInfo (string campaignId);
 
         /// <summary>
         /// Get statistics about a Dialer Campaign
@@ -928,7 +928,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of CampaignStats</returns>
-        System.Threading.Tasks.Task<CampaignStats> GetCampaignStatsAsync (string campaignId);
+        System.Threading.Tasks.Task<CampaignStats> GetCampaignsCampaignIdStatsAsync (string campaignId);
 
         /// <summary>
         /// Get statistics about a Dialer Campaign
@@ -938,7 +938,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (CampaignStats)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CampaignStats>> GetCampaignStatsAsyncWithHttpInfo (string campaignId);
+        System.Threading.Tasks.Task<ApiResponse<CampaignStats>> GetCampaignsCampaignIdStatsAsyncWithHttpInfo (string campaignId);
         
         /// <summary>
         /// Query a list of contact lists.
@@ -1103,7 +1103,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="importStatus">Import status</param>
         /// <param name="includeSize">Include size</param>
         /// <returns>ContactList</returns>
-        ContactList GetContactlist (string contactListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null);
+        ContactList GetContactlistsContactlistId (string contactListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null);
   
         /// <summary>
         /// Get dialer contactList.
@@ -1116,7 +1116,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="importStatus">Import status</param>
         /// <param name="includeSize">Include size</param>
         /// <returns>ApiResponse of ContactList</returns>
-        ApiResponse<ContactList> GetContactlistWithHttpInfo (string contactListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null);
+        ApiResponse<ContactList> GetContactlistsContactlistIdWithHttpInfo (string contactListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null);
 
         /// <summary>
         /// Get dialer contactList.
@@ -1129,7 +1129,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="importStatus">Import status</param>
         /// <param name="includeSize">Include size</param>
         /// <returns>Task of ContactList</returns>
-        System.Threading.Tasks.Task<ContactList> GetContactlistAsync (string contactListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null);
+        System.Threading.Tasks.Task<ContactList> GetContactlistsContactlistIdAsync (string contactListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null);
 
         /// <summary>
         /// Get dialer contactList.
@@ -1142,7 +1142,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="importStatus">Import status</param>
         /// <param name="includeSize">Include size</param>
         /// <returns>Task of ApiResponse (ContactList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContactList>> GetContactlistAsyncWithHttpInfo (string contactListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null);
+        System.Threading.Tasks.Task<ApiResponse<ContactList>> GetContactlistsContactlistIdAsyncWithHttpInfo (string contactListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null);
         
         /// <summary>
         /// Update a contact list.
@@ -1153,7 +1153,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="body">ContactList</param>
         /// <returns>ContactList</returns>
-        ContactList PutContactlist (string contactListId, ContactList body = null);
+        ContactList PutContactlistsContactlistId (string contactListId, ContactList body = null);
   
         /// <summary>
         /// Update a contact list.
@@ -1164,7 +1164,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="body">ContactList</param>
         /// <returns>ApiResponse of ContactList</returns>
-        ApiResponse<ContactList> PutContactlistWithHttpInfo (string contactListId, ContactList body = null);
+        ApiResponse<ContactList> PutContactlistsContactlistIdWithHttpInfo (string contactListId, ContactList body = null);
 
         /// <summary>
         /// Update a contact list.
@@ -1175,7 +1175,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="body">ContactList</param>
         /// <returns>Task of ContactList</returns>
-        System.Threading.Tasks.Task<ContactList> PutContactlistAsync (string contactListId, ContactList body = null);
+        System.Threading.Tasks.Task<ContactList> PutContactlistsContactlistIdAsync (string contactListId, ContactList body = null);
 
         /// <summary>
         /// Update a contact list.
@@ -1186,7 +1186,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="body">ContactList</param>
         /// <returns>Task of ApiResponse (ContactList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContactList>> PutContactlistAsyncWithHttpInfo (string contactListId, ContactList body = null);
+        System.Threading.Tasks.Task<ApiResponse<ContactList>> PutContactlistsContactlistIdAsyncWithHttpInfo (string contactListId, ContactList body = null);
         
         /// <summary>
         /// Delete a contact list.
@@ -1196,7 +1196,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>string</returns>
-        string DeleteContactlist (string contactListId);
+        string DeleteContactlistsContactlistId (string contactListId);
   
         /// <summary>
         /// Delete a contact list.
@@ -1206,7 +1206,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteContactlistWithHttpInfo (string contactListId);
+        ApiResponse<string> DeleteContactlistsContactlistIdWithHttpInfo (string contactListId);
 
         /// <summary>
         /// Delete a contact list.
@@ -1216,7 +1216,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteContactlistAsync (string contactListId);
+        System.Threading.Tasks.Task<string> DeleteContactlistsContactlistIdAsync (string contactListId);
 
         /// <summary>
         /// Delete a contact list.
@@ -1226,7 +1226,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteContactlistAsyncWithHttpInfo (string contactListId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteContactlistsContactlistIdAsyncWithHttpInfo (string contactListId);
         
         /// <summary>
         /// Add contacts to a contact list.
@@ -1238,7 +1238,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Contact</param>
         /// <param name="priority"></param>
         /// <returns>Contact</returns>
-        Contact PostContactlistContacts (string contactListId, List<Contact> body = null, bool? priority = null);
+        Contact PostContactlistsContactlistIdContacts (string contactListId, List<Contact> body = null, bool? priority = null);
   
         /// <summary>
         /// Add contacts to a contact list.
@@ -1250,7 +1250,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Contact</param>
         /// <param name="priority"></param>
         /// <returns>ApiResponse of Contact</returns>
-        ApiResponse<Contact> PostContactlistContactsWithHttpInfo (string contactListId, List<Contact> body = null, bool? priority = null);
+        ApiResponse<Contact> PostContactlistsContactlistIdContactsWithHttpInfo (string contactListId, List<Contact> body = null, bool? priority = null);
 
         /// <summary>
         /// Add contacts to a contact list.
@@ -1262,7 +1262,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Contact</param>
         /// <param name="priority"></param>
         /// <returns>Task of Contact</returns>
-        System.Threading.Tasks.Task<Contact> PostContactlistContactsAsync (string contactListId, List<Contact> body = null, bool? priority = null);
+        System.Threading.Tasks.Task<Contact> PostContactlistsContactlistIdContactsAsync (string contactListId, List<Contact> body = null, bool? priority = null);
 
         /// <summary>
         /// Add contacts to a contact list.
@@ -1274,7 +1274,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Contact</param>
         /// <param name="priority"></param>
         /// <returns>Task of ApiResponse (Contact)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Contact>> PostContactlistContactsAsyncWithHttpInfo (string contactListId, List<Contact> body = null, bool? priority = null);
+        System.Threading.Tasks.Task<ApiResponse<Contact>> PostContactlistsContactlistIdContactsAsyncWithHttpInfo (string contactListId, List<Contact> body = null, bool? priority = null);
         
         /// <summary>
         /// Get dialer contactList.
@@ -1285,7 +1285,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>Contact</returns>
-        Contact GetContactlistContact (string contactListId, string contactId);
+        Contact GetContactlistsContactlistIdContactsContactId (string contactListId, string contactId);
   
         /// <summary>
         /// Get dialer contactList.
@@ -1296,7 +1296,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>ApiResponse of Contact</returns>
-        ApiResponse<Contact> GetContactlistContactWithHttpInfo (string contactListId, string contactId);
+        ApiResponse<Contact> GetContactlistsContactlistIdContactsContactIdWithHttpInfo (string contactListId, string contactId);
 
         /// <summary>
         /// Get dialer contactList.
@@ -1307,7 +1307,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>Task of Contact</returns>
-        System.Threading.Tasks.Task<Contact> GetContactlistContactAsync (string contactListId, string contactId);
+        System.Threading.Tasks.Task<Contact> GetContactlistsContactlistIdContactsContactIdAsync (string contactListId, string contactId);
 
         /// <summary>
         /// Get dialer contactList.
@@ -1318,7 +1318,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>Task of ApiResponse (Contact)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Contact>> GetContactlistContactAsyncWithHttpInfo (string contactListId, string contactId);
+        System.Threading.Tasks.Task<ApiResponse<Contact>> GetContactlistsContactlistIdContactsContactIdAsyncWithHttpInfo (string contactListId, string contactId);
         
         /// <summary>
         /// Update a contact.
@@ -1330,7 +1330,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">Contact ID</param>
         /// <param name="body">Contact</param>
         /// <returns>Contact</returns>
-        Contact PutContactlistContact (string contactListId, string contactId, Contact body = null);
+        Contact PutContactlistsContactlistIdContactsContactId (string contactListId, string contactId, Contact body = null);
   
         /// <summary>
         /// Update a contact.
@@ -1342,7 +1342,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">Contact ID</param>
         /// <param name="body">Contact</param>
         /// <returns>ApiResponse of Contact</returns>
-        ApiResponse<Contact> PutContactlistContactWithHttpInfo (string contactListId, string contactId, Contact body = null);
+        ApiResponse<Contact> PutContactlistsContactlistIdContactsContactIdWithHttpInfo (string contactListId, string contactId, Contact body = null);
 
         /// <summary>
         /// Update a contact.
@@ -1354,7 +1354,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">Contact ID</param>
         /// <param name="body">Contact</param>
         /// <returns>Task of Contact</returns>
-        System.Threading.Tasks.Task<Contact> PutContactlistContactAsync (string contactListId, string contactId, Contact body = null);
+        System.Threading.Tasks.Task<Contact> PutContactlistsContactlistIdContactsContactIdAsync (string contactListId, string contactId, Contact body = null);
 
         /// <summary>
         /// Update a contact.
@@ -1366,7 +1366,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">Contact ID</param>
         /// <param name="body">Contact</param>
         /// <returns>Task of ApiResponse (Contact)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Contact>> PutContactlistContactAsyncWithHttpInfo (string contactListId, string contactId, Contact body = null);
+        System.Threading.Tasks.Task<ApiResponse<Contact>> PutContactlistsContactlistIdContactsContactIdAsyncWithHttpInfo (string contactListId, string contactId, Contact body = null);
         
         /// <summary>
         /// Delete a contact.
@@ -1377,7 +1377,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>string</returns>
-        string DeleteContactlistContact (string contactListId, string contactId);
+        string DeleteContactlistsContactlistIdContactsContactId (string contactListId, string contactId);
   
         /// <summary>
         /// Delete a contact.
@@ -1388,7 +1388,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteContactlistContactWithHttpInfo (string contactListId, string contactId);
+        ApiResponse<string> DeleteContactlistsContactlistIdContactsContactIdWithHttpInfo (string contactListId, string contactId);
 
         /// <summary>
         /// Delete a contact.
@@ -1399,7 +1399,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteContactlistContactAsync (string contactListId, string contactId);
+        System.Threading.Tasks.Task<string> DeleteContactlistsContactlistIdContactsContactIdAsync (string contactListId, string contactId);
 
         /// <summary>
         /// Delete a contact.
@@ -1410,7 +1410,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteContactlistContactAsyncWithHttpInfo (string contactListId, string contactId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteContactlistsContactlistIdContactsContactIdAsyncWithHttpInfo (string contactListId, string contactId);
         
         /// <summary>
         /// Initiate the export of a contact list.
@@ -1420,7 +1420,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>string</returns>
-        string PostContactlistExport (string contactListId);
+        string PostContactlistsContactlistIdExport (string contactListId);
   
         /// <summary>
         /// Initiate the export of a contact list.
@@ -1430,7 +1430,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> PostContactlistExportWithHttpInfo (string contactListId);
+        ApiResponse<string> PostContactlistsContactlistIdExportWithHttpInfo (string contactListId);
 
         /// <summary>
         /// Initiate the export of a contact list.
@@ -1440,7 +1440,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> PostContactlistExportAsync (string contactListId);
+        System.Threading.Tasks.Task<string> PostContactlistsContactlistIdExportAsync (string contactListId);
 
         /// <summary>
         /// Initiate the export of a contact list.
@@ -1450,7 +1450,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> PostContactlistExportAsyncWithHttpInfo (string contactListId);
+        System.Threading.Tasks.Task<ApiResponse<string>> PostContactlistsContactlistIdExportAsyncWithHttpInfo (string contactListId);
         
         /// <summary>
         /// Get dialer contactList import status.
@@ -1460,7 +1460,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>ImportStatus</returns>
-        ImportStatus GetContactlistImportstatus (string contactListId);
+        ImportStatus GetContactlistsContactlistIdImportstatus (string contactListId);
   
         /// <summary>
         /// Get dialer contactList import status.
@@ -1470,7 +1470,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>ApiResponse of ImportStatus</returns>
-        ApiResponse<ImportStatus> GetContactlistImportstatusWithHttpInfo (string contactListId);
+        ApiResponse<ImportStatus> GetContactlistsContactlistIdImportstatusWithHttpInfo (string contactListId);
 
         /// <summary>
         /// Get dialer contactList import status.
@@ -1480,7 +1480,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of ImportStatus</returns>
-        System.Threading.Tasks.Task<ImportStatus> GetContactlistImportstatusAsync (string contactListId);
+        System.Threading.Tasks.Task<ImportStatus> GetContactlistsContactlistIdImportstatusAsync (string contactListId);
 
         /// <summary>
         /// Get dialer contactList import status.
@@ -1490,7 +1490,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of ApiResponse (ImportStatus)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ImportStatus>> GetContactlistImportstatusAsyncWithHttpInfo (string contactListId);
+        System.Threading.Tasks.Task<ApiResponse<ImportStatus>> GetContactlistsContactlistIdImportstatusAsyncWithHttpInfo (string contactListId);
         
         /// <summary>
         /// Get Dialer campaign&#39;s penetration rate
@@ -1501,7 +1501,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>PenetrationRate</returns>
-        PenetrationRate GetContactlistPenetrationrate (string contactListId, string campaignId);
+        PenetrationRate GetContactlistsContactlistIdCampaignIdPenetrationrate (string contactListId, string campaignId);
   
         /// <summary>
         /// Get Dialer campaign&#39;s penetration rate
@@ -1512,7 +1512,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of PenetrationRate</returns>
-        ApiResponse<PenetrationRate> GetContactlistPenetrationrateWithHttpInfo (string contactListId, string campaignId);
+        ApiResponse<PenetrationRate> GetContactlistsContactlistIdCampaignIdPenetrationrateWithHttpInfo (string contactListId, string campaignId);
 
         /// <summary>
         /// Get Dialer campaign&#39;s penetration rate
@@ -1523,7 +1523,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of PenetrationRate</returns>
-        System.Threading.Tasks.Task<PenetrationRate> GetContactlistPenetrationrateAsync (string contactListId, string campaignId);
+        System.Threading.Tasks.Task<PenetrationRate> GetContactlistsContactlistIdCampaignIdPenetrationrateAsync (string contactListId, string campaignId);
 
         /// <summary>
         /// Get Dialer campaign&#39;s penetration rate
@@ -1534,7 +1534,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (PenetrationRate)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PenetrationRate>> GetContactlistPenetrationrateAsyncWithHttpInfo (string contactListId, string campaignId);
+        System.Threading.Tasks.Task<ApiResponse<PenetrationRate>> GetContactlistsContactlistIdCampaignIdPenetrationrateAsyncWithHttpInfo (string contactListId, string campaignId);
         
         /// <summary>
         /// Add phone numbers to a Dialer DNC list.
@@ -1544,7 +1544,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="conversationId">Conversation ID</param>
         /// <returns></returns>
-        void PostConversationDnc (string conversationId);
+        void PostConversationsConversationIdDnc (string conversationId);
   
         /// <summary>
         /// Add phone numbers to a Dialer DNC list.
@@ -1554,7 +1554,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="conversationId">Conversation ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostConversationDncWithHttpInfo (string conversationId);
+        ApiResponse<Object> PostConversationsConversationIdDncWithHttpInfo (string conversationId);
 
         /// <summary>
         /// Add phone numbers to a Dialer DNC list.
@@ -1564,7 +1564,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="conversationId">Conversation ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostConversationDncAsync (string conversationId);
+        System.Threading.Tasks.Task PostConversationsConversationIdDncAsync (string conversationId);
 
         /// <summary>
         /// Add phone numbers to a Dialer DNC list.
@@ -1574,7 +1574,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="conversationId">Conversation ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationDncAsyncWithHttpInfo (string conversationId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsConversationIdDncAsyncWithHttpInfo (string conversationId);
         
         /// <summary>
         /// Query dialer DNC lists
@@ -1699,7 +1699,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="importStatus">Import status</param>
         /// <param name="includeSize">Include size</param>
         /// <returns>DncList</returns>
-        DncList GetDnclist (string dncListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null);
+        DncList GetDnclistsDnclistId (string dncListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null);
   
         /// <summary>
         /// Get dialer DNC list
@@ -1712,7 +1712,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="importStatus">Import status</param>
         /// <param name="includeSize">Include size</param>
         /// <returns>ApiResponse of DncList</returns>
-        ApiResponse<DncList> GetDnclistWithHttpInfo (string dncListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null);
+        ApiResponse<DncList> GetDnclistsDnclistIdWithHttpInfo (string dncListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null);
 
         /// <summary>
         /// Get dialer DNC list
@@ -1725,7 +1725,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="importStatus">Import status</param>
         /// <param name="includeSize">Include size</param>
         /// <returns>Task of DncList</returns>
-        System.Threading.Tasks.Task<DncList> GetDnclistAsync (string dncListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null);
+        System.Threading.Tasks.Task<DncList> GetDnclistsDnclistIdAsync (string dncListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null);
 
         /// <summary>
         /// Get dialer DNC list
@@ -1738,7 +1738,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="importStatus">Import status</param>
         /// <param name="includeSize">Include size</param>
         /// <returns>Task of ApiResponse (DncList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DncList>> GetDnclistAsyncWithHttpInfo (string dncListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null);
+        System.Threading.Tasks.Task<ApiResponse<DncList>> GetDnclistsDnclistIdAsyncWithHttpInfo (string dncListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null);
         
         /// <summary>
         /// Update dialer DNC list
@@ -1749,7 +1749,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DncList</param>
         /// <returns>DncList</returns>
-        DncList PutDnclist (string dncListId, DncList body = null);
+        DncList PutDnclistsDnclistId (string dncListId, DncList body = null);
   
         /// <summary>
         /// Update dialer DNC list
@@ -1760,7 +1760,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DncList</param>
         /// <returns>ApiResponse of DncList</returns>
-        ApiResponse<DncList> PutDnclistWithHttpInfo (string dncListId, DncList body = null);
+        ApiResponse<DncList> PutDnclistsDnclistIdWithHttpInfo (string dncListId, DncList body = null);
 
         /// <summary>
         /// Update dialer DNC list
@@ -1771,7 +1771,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DncList</param>
         /// <returns>Task of DncList</returns>
-        System.Threading.Tasks.Task<DncList> PutDnclistAsync (string dncListId, DncList body = null);
+        System.Threading.Tasks.Task<DncList> PutDnclistsDnclistIdAsync (string dncListId, DncList body = null);
 
         /// <summary>
         /// Update dialer DNC list
@@ -1782,7 +1782,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DncList</param>
         /// <returns>Task of ApiResponse (DncList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DncList>> PutDnclistAsyncWithHttpInfo (string dncListId, DncList body = null);
+        System.Threading.Tasks.Task<ApiResponse<DncList>> PutDnclistsDnclistIdAsyncWithHttpInfo (string dncListId, DncList body = null);
         
         /// <summary>
         /// Delete dialer DNC list
@@ -1792,7 +1792,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>string</returns>
-        string DeleteDnclist (string dncListId);
+        string DeleteDnclistsDnclistId (string dncListId);
   
         /// <summary>
         /// Delete dialer DNC list
@@ -1802,7 +1802,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteDnclistWithHttpInfo (string dncListId);
+        ApiResponse<string> DeleteDnclistsDnclistIdWithHttpInfo (string dncListId);
 
         /// <summary>
         /// Delete dialer DNC list
@@ -1812,7 +1812,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteDnclistAsync (string dncListId);
+        System.Threading.Tasks.Task<string> DeleteDnclistsDnclistIdAsync (string dncListId);
 
         /// <summary>
         /// Delete dialer DNC list
@@ -1822,7 +1822,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteDnclistAsyncWithHttpInfo (string dncListId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteDnclistsDnclistIdAsyncWithHttpInfo (string dncListId);
         
         /// <summary>
         /// Initiate the export of a dnc list.
@@ -1832,7 +1832,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>string</returns>
-        string PostDnclistExport (string dncListId);
+        string PostDnclistsDnclistIdExport (string dncListId);
   
         /// <summary>
         /// Initiate the export of a dnc list.
@@ -1842,7 +1842,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> PostDnclistExportWithHttpInfo (string dncListId);
+        ApiResponse<string> PostDnclistsDnclistIdExportWithHttpInfo (string dncListId);
 
         /// <summary>
         /// Initiate the export of a dnc list.
@@ -1852,7 +1852,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> PostDnclistExportAsync (string dncListId);
+        System.Threading.Tasks.Task<string> PostDnclistsDnclistIdExportAsync (string dncListId);
 
         /// <summary>
         /// Initiate the export of a dnc list.
@@ -1862,7 +1862,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> PostDnclistExportAsyncWithHttpInfo (string dncListId);
+        System.Threading.Tasks.Task<ApiResponse<string>> PostDnclistsDnclistIdExportAsyncWithHttpInfo (string dncListId);
         
         /// <summary>
         /// Get dialer dncList import status.
@@ -1872,7 +1872,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>ImportStatus</returns>
-        ImportStatus GetDnclistImportstatus (string dncListId);
+        ImportStatus GetDnclistsDnclistIdImportstatus (string dncListId);
   
         /// <summary>
         /// Get dialer dncList import status.
@@ -1882,7 +1882,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>ApiResponse of ImportStatus</returns>
-        ApiResponse<ImportStatus> GetDnclistImportstatusWithHttpInfo (string dncListId);
+        ApiResponse<ImportStatus> GetDnclistsDnclistIdImportstatusWithHttpInfo (string dncListId);
 
         /// <summary>
         /// Get dialer dncList import status.
@@ -1892,7 +1892,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of ImportStatus</returns>
-        System.Threading.Tasks.Task<ImportStatus> GetDnclistImportstatusAsync (string dncListId);
+        System.Threading.Tasks.Task<ImportStatus> GetDnclistsDnclistIdImportstatusAsync (string dncListId);
 
         /// <summary>
         /// Get dialer dncList import status.
@@ -1902,7 +1902,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of ApiResponse (ImportStatus)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ImportStatus>> GetDnclistImportstatusAsyncWithHttpInfo (string dncListId);
+        System.Threading.Tasks.Task<ApiResponse<ImportStatus>> GetDnclistsDnclistIdImportstatusAsyncWithHttpInfo (string dncListId);
         
         /// <summary>
         /// Add phone numbers to a Dialer DNC list.
@@ -1913,7 +1913,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Phone Numbers</param>
         /// <returns></returns>
-        void PostDnclistPhonenumbers (string dncListId, List<string> body = null);
+        void PostDnclistsDnclistIdPhonenumbers (string dncListId, List<string> body = null);
   
         /// <summary>
         /// Add phone numbers to a Dialer DNC list.
@@ -1924,7 +1924,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Phone Numbers</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostDnclistPhonenumbersWithHttpInfo (string dncListId, List<string> body = null);
+        ApiResponse<Object> PostDnclistsDnclistIdPhonenumbersWithHttpInfo (string dncListId, List<string> body = null);
 
         /// <summary>
         /// Add phone numbers to a Dialer DNC list.
@@ -1935,7 +1935,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Phone Numbers</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostDnclistPhonenumbersAsync (string dncListId, List<string> body = null);
+        System.Threading.Tasks.Task PostDnclistsDnclistIdPhonenumbersAsync (string dncListId, List<string> body = null);
 
         /// <summary>
         /// Add phone numbers to a Dialer DNC list.
@@ -1946,7 +1946,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Phone Numbers</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostDnclistPhonenumbersAsyncWithHttpInfo (string dncListId, List<string> body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostDnclistsDnclistIdPhonenumbersAsyncWithHttpInfo (string dncListId, List<string> body = null);
         
         /// <summary>
         /// Get dialer preview for user
@@ -1992,7 +1992,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="previewId">preview ID</param>
         /// <returns>Preview</returns>
-        Preview GetPreview (string previewId);
+        Preview GetPreviewsPreviewId (string previewId);
   
         /// <summary>
         /// Get dialer preview
@@ -2002,7 +2002,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="previewId">preview ID</param>
         /// <returns>ApiResponse of Preview</returns>
-        ApiResponse<Preview> GetPreviewWithHttpInfo (string previewId);
+        ApiResponse<Preview> GetPreviewsPreviewIdWithHttpInfo (string previewId);
 
         /// <summary>
         /// Get dialer preview
@@ -2012,7 +2012,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="previewId">preview ID</param>
         /// <returns>Task of Preview</returns>
-        System.Threading.Tasks.Task<Preview> GetPreviewAsync (string previewId);
+        System.Threading.Tasks.Task<Preview> GetPreviewsPreviewIdAsync (string previewId);
 
         /// <summary>
         /// Get dialer preview
@@ -2022,7 +2022,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="previewId">preview ID</param>
         /// <returns>Task of ApiResponse (Preview)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Preview>> GetPreviewAsyncWithHttpInfo (string previewId);
+        System.Threading.Tasks.Task<ApiResponse<Preview>> GetPreviewsPreviewIdAsyncWithHttpInfo (string previewId);
         
         /// <summary>
         /// Disposition preview call
@@ -2033,7 +2033,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="previewId">preview ID</param>
         /// <param name="body"></param>
         /// <returns>string</returns>
-        string PostPreviewDispositioncall (string previewId, DialerDispositionCallCommand body = null);
+        string PostPreviewsPreviewIdDispositioncall (string previewId, DialerDispositionCallCommand body = null);
   
         /// <summary>
         /// Disposition preview call
@@ -2044,7 +2044,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="previewId">preview ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> PostPreviewDispositioncallWithHttpInfo (string previewId, DialerDispositionCallCommand body = null);
+        ApiResponse<string> PostPreviewsPreviewIdDispositioncallWithHttpInfo (string previewId, DialerDispositionCallCommand body = null);
 
         /// <summary>
         /// Disposition preview call
@@ -2055,7 +2055,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="previewId">preview ID</param>
         /// <param name="body"></param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> PostPreviewDispositioncallAsync (string previewId, DialerDispositionCallCommand body = null);
+        System.Threading.Tasks.Task<string> PostPreviewsPreviewIdDispositioncallAsync (string previewId, DialerDispositionCallCommand body = null);
 
         /// <summary>
         /// Disposition preview call
@@ -2066,7 +2066,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="previewId">preview ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> PostPreviewDispositioncallAsyncWithHttpInfo (string previewId, DialerDispositionCallCommand body = null);
+        System.Threading.Tasks.Task<ApiResponse<string>> PostPreviewsPreviewIdDispositioncallAsyncWithHttpInfo (string previewId, DialerDispositionCallCommand body = null);
         
         /// <summary>
         /// place preview call
@@ -2077,7 +2077,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="previewId">preview ID</param>
         /// <param name="body"></param>
         /// <returns>DialerCall</returns>
-        DialerCall PostPreviewPlacecall (string previewId, DialerPlaceCallCommand body = null);
+        DialerCall PostPreviewsPreviewIdPlacecall (string previewId, DialerPlaceCallCommand body = null);
   
         /// <summary>
         /// place preview call
@@ -2088,7 +2088,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="previewId">preview ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of DialerCall</returns>
-        ApiResponse<DialerCall> PostPreviewPlacecallWithHttpInfo (string previewId, DialerPlaceCallCommand body = null);
+        ApiResponse<DialerCall> PostPreviewsPreviewIdPlacecallWithHttpInfo (string previewId, DialerPlaceCallCommand body = null);
 
         /// <summary>
         /// place preview call
@@ -2099,7 +2099,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="previewId">preview ID</param>
         /// <param name="body"></param>
         /// <returns>Task of DialerCall</returns>
-        System.Threading.Tasks.Task<DialerCall> PostPreviewPlacecallAsync (string previewId, DialerPlaceCallCommand body = null);
+        System.Threading.Tasks.Task<DialerCall> PostPreviewsPreviewIdPlacecallAsync (string previewId, DialerPlaceCallCommand body = null);
 
         /// <summary>
         /// place preview call
@@ -2110,7 +2110,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="previewId">preview ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DialerCall)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DialerCall>> PostPreviewPlacecallAsyncWithHttpInfo (string previewId, DialerPlaceCallCommand body = null);
+        System.Threading.Tasks.Task<ApiResponse<DialerCall>> PostPreviewsPreviewIdPlacecallAsyncWithHttpInfo (string previewId, DialerPlaceCallCommand body = null);
         
         /// <summary>
         /// Query a list of Rule Sets.
@@ -2220,7 +2220,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>RuleSet</returns>
-        RuleSet GetRuleset (string ruleSetId);
+        RuleSet GetRulesetsRulesetId (string ruleSetId);
   
         /// <summary>
         /// Get a Rule Set by ID.
@@ -2230,7 +2230,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>ApiResponse of RuleSet</returns>
-        ApiResponse<RuleSet> GetRulesetWithHttpInfo (string ruleSetId);
+        ApiResponse<RuleSet> GetRulesetsRulesetIdWithHttpInfo (string ruleSetId);
 
         /// <summary>
         /// Get a Rule Set by ID.
@@ -2240,7 +2240,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>Task of RuleSet</returns>
-        System.Threading.Tasks.Task<RuleSet> GetRulesetAsync (string ruleSetId);
+        System.Threading.Tasks.Task<RuleSet> GetRulesetsRulesetIdAsync (string ruleSetId);
 
         /// <summary>
         /// Get a Rule Set by ID.
@@ -2250,7 +2250,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>Task of ApiResponse (RuleSet)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RuleSet>> GetRulesetAsyncWithHttpInfo (string ruleSetId);
+        System.Threading.Tasks.Task<ApiResponse<RuleSet>> GetRulesetsRulesetIdAsyncWithHttpInfo (string ruleSetId);
         
         /// <summary>
         /// Update a RuleSet.
@@ -2261,7 +2261,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <param name="body">RuleSet</param>
         /// <returns>RuleSet</returns>
-        RuleSet PutRuleset (string ruleSetId, RuleSet body = null);
+        RuleSet PutRulesetsRulesetId (string ruleSetId, RuleSet body = null);
   
         /// <summary>
         /// Update a RuleSet.
@@ -2272,7 +2272,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <param name="body">RuleSet</param>
         /// <returns>ApiResponse of RuleSet</returns>
-        ApiResponse<RuleSet> PutRulesetWithHttpInfo (string ruleSetId, RuleSet body = null);
+        ApiResponse<RuleSet> PutRulesetsRulesetIdWithHttpInfo (string ruleSetId, RuleSet body = null);
 
         /// <summary>
         /// Update a RuleSet.
@@ -2283,7 +2283,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <param name="body">RuleSet</param>
         /// <returns>Task of RuleSet</returns>
-        System.Threading.Tasks.Task<RuleSet> PutRulesetAsync (string ruleSetId, RuleSet body = null);
+        System.Threading.Tasks.Task<RuleSet> PutRulesetsRulesetIdAsync (string ruleSetId, RuleSet body = null);
 
         /// <summary>
         /// Update a RuleSet.
@@ -2294,7 +2294,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <param name="body">RuleSet</param>
         /// <returns>Task of ApiResponse (RuleSet)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RuleSet>> PutRulesetAsyncWithHttpInfo (string ruleSetId, RuleSet body = null);
+        System.Threading.Tasks.Task<ApiResponse<RuleSet>> PutRulesetsRulesetIdAsyncWithHttpInfo (string ruleSetId, RuleSet body = null);
         
         /// <summary>
         /// Delete a Rule set.
@@ -2304,7 +2304,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>string</returns>
-        string DeleteRuleset (string ruleSetId);
+        string DeleteRulesetsRulesetId (string ruleSetId);
   
         /// <summary>
         /// Delete a Rule set.
@@ -2314,7 +2314,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteRulesetWithHttpInfo (string ruleSetId);
+        ApiResponse<string> DeleteRulesetsRulesetIdWithHttpInfo (string ruleSetId);
 
         /// <summary>
         /// Delete a Rule set.
@@ -2324,7 +2324,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteRulesetAsync (string ruleSetId);
+        System.Threading.Tasks.Task<string> DeleteRulesetsRulesetIdAsync (string ruleSetId);
 
         /// <summary>
         /// Delete a Rule set.
@@ -2334,7 +2334,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteRulesetAsyncWithHttpInfo (string ruleSetId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteRulesetsRulesetIdAsyncWithHttpInfo (string ruleSetId);
         
         /// <summary>
         /// Query for a list of dialer campaign schedules.
@@ -2380,7 +2380,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>CampaignSchedule</returns>
-        CampaignSchedule GetSchedulesCampaign (string campaignId);
+        CampaignSchedule GetSchedulesCampaignsCampaignId (string campaignId);
   
         /// <summary>
         /// Get a dialer campaign schedule.
@@ -2390,7 +2390,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of CampaignSchedule</returns>
-        ApiResponse<CampaignSchedule> GetSchedulesCampaignWithHttpInfo (string campaignId);
+        ApiResponse<CampaignSchedule> GetSchedulesCampaignsCampaignIdWithHttpInfo (string campaignId);
 
         /// <summary>
         /// Get a dialer campaign schedule.
@@ -2400,7 +2400,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of CampaignSchedule</returns>
-        System.Threading.Tasks.Task<CampaignSchedule> GetSchedulesCampaignAsync (string campaignId);
+        System.Threading.Tasks.Task<CampaignSchedule> GetSchedulesCampaignsCampaignIdAsync (string campaignId);
 
         /// <summary>
         /// Get a dialer campaign schedule.
@@ -2410,7 +2410,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (CampaignSchedule)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CampaignSchedule>> GetSchedulesCampaignAsyncWithHttpInfo (string campaignId);
+        System.Threading.Tasks.Task<ApiResponse<CampaignSchedule>> GetSchedulesCampaignsCampaignIdAsyncWithHttpInfo (string campaignId);
         
         /// <summary>
         /// Update a new campaign schedule.
@@ -2421,7 +2421,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">CampaignSchedule</param>
         /// <returns>CampaignSchedule</returns>
-        CampaignSchedule PutSchedulesCampaign (string campaignId, CampaignSchedule body = null);
+        CampaignSchedule PutSchedulesCampaignsCampaignId (string campaignId, CampaignSchedule body = null);
   
         /// <summary>
         /// Update a new campaign schedule.
@@ -2432,7 +2432,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">CampaignSchedule</param>
         /// <returns>ApiResponse of CampaignSchedule</returns>
-        ApiResponse<CampaignSchedule> PutSchedulesCampaignWithHttpInfo (string campaignId, CampaignSchedule body = null);
+        ApiResponse<CampaignSchedule> PutSchedulesCampaignsCampaignIdWithHttpInfo (string campaignId, CampaignSchedule body = null);
 
         /// <summary>
         /// Update a new campaign schedule.
@@ -2443,7 +2443,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">CampaignSchedule</param>
         /// <returns>Task of CampaignSchedule</returns>
-        System.Threading.Tasks.Task<CampaignSchedule> PutSchedulesCampaignAsync (string campaignId, CampaignSchedule body = null);
+        System.Threading.Tasks.Task<CampaignSchedule> PutSchedulesCampaignsCampaignIdAsync (string campaignId, CampaignSchedule body = null);
 
         /// <summary>
         /// Update a new campaign schedule.
@@ -2454,7 +2454,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">CampaignSchedule</param>
         /// <returns>Task of ApiResponse (CampaignSchedule)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CampaignSchedule>> PutSchedulesCampaignAsyncWithHttpInfo (string campaignId, CampaignSchedule body = null);
+        System.Threading.Tasks.Task<ApiResponse<CampaignSchedule>> PutSchedulesCampaignsCampaignIdAsyncWithHttpInfo (string campaignId, CampaignSchedule body = null);
         
         /// <summary>
         /// Delete a dialer campaign schedule.
@@ -2464,7 +2464,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>string</returns>
-        string DeleteSchedulesCampaign (string campaignId);
+        string DeleteSchedulesCampaignsCampaignId (string campaignId);
   
         /// <summary>
         /// Delete a dialer campaign schedule.
@@ -2474,7 +2474,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteSchedulesCampaignWithHttpInfo (string campaignId);
+        ApiResponse<string> DeleteSchedulesCampaignsCampaignIdWithHttpInfo (string campaignId);
 
         /// <summary>
         /// Delete a dialer campaign schedule.
@@ -2484,7 +2484,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteSchedulesCampaignAsync (string campaignId);
+        System.Threading.Tasks.Task<string> DeleteSchedulesCampaignsCampaignIdAsync (string campaignId);
 
         /// <summary>
         /// Delete a dialer campaign schedule.
@@ -2494,7 +2494,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteSchedulesCampaignAsyncWithHttpInfo (string campaignId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteSchedulesCampaignsCampaignIdAsyncWithHttpInfo (string campaignId);
         
         /// <summary>
         /// Query for a list of dialer sequence schedules.
@@ -2540,7 +2540,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>SequenceSchedule</returns>
-        SequenceSchedule GetSchedulesSequence (string sequenceId);
+        SequenceSchedule GetSchedulesSequencesSequenceId (string sequenceId);
   
         /// <summary>
         /// Get a dialer sequence schedule.
@@ -2550,7 +2550,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>ApiResponse of SequenceSchedule</returns>
-        ApiResponse<SequenceSchedule> GetSchedulesSequenceWithHttpInfo (string sequenceId);
+        ApiResponse<SequenceSchedule> GetSchedulesSequencesSequenceIdWithHttpInfo (string sequenceId);
 
         /// <summary>
         /// Get a dialer sequence schedule.
@@ -2560,7 +2560,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>Task of SequenceSchedule</returns>
-        System.Threading.Tasks.Task<SequenceSchedule> GetSchedulesSequenceAsync (string sequenceId);
+        System.Threading.Tasks.Task<SequenceSchedule> GetSchedulesSequencesSequenceIdAsync (string sequenceId);
 
         /// <summary>
         /// Get a dialer sequence schedule.
@@ -2570,7 +2570,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>Task of ApiResponse (SequenceSchedule)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SequenceSchedule>> GetSchedulesSequenceAsyncWithHttpInfo (string sequenceId);
+        System.Threading.Tasks.Task<ApiResponse<SequenceSchedule>> GetSchedulesSequencesSequenceIdAsyncWithHttpInfo (string sequenceId);
         
         /// <summary>
         /// Update a new sequence schedule.
@@ -2581,7 +2581,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sequenceId">Sequence ID</param>
         /// <param name="body">SequenceSchedule</param>
         /// <returns>SequenceSchedule</returns>
-        SequenceSchedule PutSchedulesSequence (string sequenceId, SequenceSchedule body = null);
+        SequenceSchedule PutSchedulesSequencesSequenceId (string sequenceId, SequenceSchedule body = null);
   
         /// <summary>
         /// Update a new sequence schedule.
@@ -2592,7 +2592,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sequenceId">Sequence ID</param>
         /// <param name="body">SequenceSchedule</param>
         /// <returns>ApiResponse of SequenceSchedule</returns>
-        ApiResponse<SequenceSchedule> PutSchedulesSequenceWithHttpInfo (string sequenceId, SequenceSchedule body = null);
+        ApiResponse<SequenceSchedule> PutSchedulesSequencesSequenceIdWithHttpInfo (string sequenceId, SequenceSchedule body = null);
 
         /// <summary>
         /// Update a new sequence schedule.
@@ -2603,7 +2603,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sequenceId">Sequence ID</param>
         /// <param name="body">SequenceSchedule</param>
         /// <returns>Task of SequenceSchedule</returns>
-        System.Threading.Tasks.Task<SequenceSchedule> PutSchedulesSequenceAsync (string sequenceId, SequenceSchedule body = null);
+        System.Threading.Tasks.Task<SequenceSchedule> PutSchedulesSequencesSequenceIdAsync (string sequenceId, SequenceSchedule body = null);
 
         /// <summary>
         /// Update a new sequence schedule.
@@ -2614,7 +2614,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sequenceId">Sequence ID</param>
         /// <param name="body">SequenceSchedule</param>
         /// <returns>Task of ApiResponse (SequenceSchedule)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SequenceSchedule>> PutSchedulesSequenceAsyncWithHttpInfo (string sequenceId, SequenceSchedule body = null);
+        System.Threading.Tasks.Task<ApiResponse<SequenceSchedule>> PutSchedulesSequencesSequenceIdAsyncWithHttpInfo (string sequenceId, SequenceSchedule body = null);
         
         /// <summary>
         /// Delete a dialer sequence schedule.
@@ -2624,7 +2624,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>string</returns>
-        string DeleteSchedulesSequence (string sequenceId);
+        string DeleteSchedulesSequencesSequenceId (string sequenceId);
   
         /// <summary>
         /// Delete a dialer sequence schedule.
@@ -2634,7 +2634,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteSchedulesSequenceWithHttpInfo (string sequenceId);
+        ApiResponse<string> DeleteSchedulesSequencesSequenceIdWithHttpInfo (string sequenceId);
 
         /// <summary>
         /// Delete a dialer sequence schedule.
@@ -2644,7 +2644,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteSchedulesSequenceAsync (string sequenceId);
+        System.Threading.Tasks.Task<string> DeleteSchedulesSequencesSequenceIdAsync (string sequenceId);
 
         /// <summary>
         /// Delete a dialer sequence schedule.
@@ -2654,7 +2654,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteSchedulesSequenceAsyncWithHttpInfo (string sequenceId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteSchedulesSequencesSequenceIdAsyncWithHttpInfo (string sequenceId);
         
         /// <summary>
         /// Query a list of dialer campaign sequences.
@@ -2764,7 +2764,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>CampaignSequence</returns>
-        CampaignSequence GetSequence (string sequenceId);
+        CampaignSequence GetSequencesSequenceId (string sequenceId);
   
         /// <summary>
         /// Get a dialer campaign sequence.
@@ -2774,7 +2774,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>ApiResponse of CampaignSequence</returns>
-        ApiResponse<CampaignSequence> GetSequenceWithHttpInfo (string sequenceId);
+        ApiResponse<CampaignSequence> GetSequencesSequenceIdWithHttpInfo (string sequenceId);
 
         /// <summary>
         /// Get a dialer campaign sequence.
@@ -2784,7 +2784,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>Task of CampaignSequence</returns>
-        System.Threading.Tasks.Task<CampaignSequence> GetSequenceAsync (string sequenceId);
+        System.Threading.Tasks.Task<CampaignSequence> GetSequencesSequenceIdAsync (string sequenceId);
 
         /// <summary>
         /// Get a dialer campaign sequence.
@@ -2794,7 +2794,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>Task of ApiResponse (CampaignSequence)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> GetSequenceAsyncWithHttpInfo (string sequenceId);
+        System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> GetSequencesSequenceIdAsyncWithHttpInfo (string sequenceId);
         
         /// <summary>
         /// Update a new campaign sequence.
@@ -2805,7 +2805,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <param name="body">Organization</param>
         /// <returns>CampaignSequence</returns>
-        CampaignSequence PutSequence (string sequenceId, CampaignSequence body = null);
+        CampaignSequence PutSequencesSequenceId (string sequenceId, CampaignSequence body = null);
   
         /// <summary>
         /// Update a new campaign sequence.
@@ -2816,7 +2816,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <param name="body">Organization</param>
         /// <returns>ApiResponse of CampaignSequence</returns>
-        ApiResponse<CampaignSequence> PutSequenceWithHttpInfo (string sequenceId, CampaignSequence body = null);
+        ApiResponse<CampaignSequence> PutSequencesSequenceIdWithHttpInfo (string sequenceId, CampaignSequence body = null);
 
         /// <summary>
         /// Update a new campaign sequence.
@@ -2827,7 +2827,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <param name="body">Organization</param>
         /// <returns>Task of CampaignSequence</returns>
-        System.Threading.Tasks.Task<CampaignSequence> PutSequenceAsync (string sequenceId, CampaignSequence body = null);
+        System.Threading.Tasks.Task<CampaignSequence> PutSequencesSequenceIdAsync (string sequenceId, CampaignSequence body = null);
 
         /// <summary>
         /// Update a new campaign sequence.
@@ -2838,7 +2838,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <param name="body">Organization</param>
         /// <returns>Task of ApiResponse (CampaignSequence)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> PutSequenceAsyncWithHttpInfo (string sequenceId, CampaignSequence body = null);
+        System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> PutSequencesSequenceIdAsyncWithHttpInfo (string sequenceId, CampaignSequence body = null);
         
         /// <summary>
         /// Delete a dialer campaign sequence.
@@ -2848,7 +2848,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>string</returns>
-        string DeleteSequence (string sequenceId);
+        string DeleteSequencesSequenceId (string sequenceId);
   
         /// <summary>
         /// Delete a dialer campaign sequence.
@@ -2858,7 +2858,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteSequenceWithHttpInfo (string sequenceId);
+        ApiResponse<string> DeleteSequencesSequenceIdWithHttpInfo (string sequenceId);
 
         /// <summary>
         /// Delete a dialer campaign sequence.
@@ -2868,7 +2868,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteSequenceAsync (string sequenceId);
+        System.Threading.Tasks.Task<string> DeleteSequencesSequenceIdAsync (string sequenceId);
 
         /// <summary>
         /// Delete a dialer campaign sequence.
@@ -2878,7 +2878,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteSequenceAsyncWithHttpInfo (string sequenceId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteSequencesSequenceIdAsyncWithHttpInfo (string sequenceId);
         
         /// <summary>
         /// Get the Dialer wrap up code mapping.
@@ -3597,9 +3597,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="callableTimeSetId">Callable Time Set ID</param> 
         /// <returns>CallableTimeSet</returns>
-        public CallableTimeSet GetCallabletimeset (string callableTimeSetId)
+        public CallableTimeSet GetCallabletimesetsCallabletimesetId (string callableTimeSetId)
         {
-             ApiResponse<CallableTimeSet> response = GetCallabletimesetWithHttpInfo(callableTimeSetId);
+             ApiResponse<CallableTimeSet> response = GetCallabletimesetsCallabletimesetIdWithHttpInfo(callableTimeSetId);
              return response.Data;
         }
 
@@ -3608,12 +3608,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="callableTimeSetId">Callable Time Set ID</param> 
         /// <returns>ApiResponse of CallableTimeSet</returns>
-        public ApiResponse< CallableTimeSet > GetCallabletimesetWithHttpInfo (string callableTimeSetId)
+        public ApiResponse< CallableTimeSet > GetCallabletimesetsCallabletimesetIdWithHttpInfo (string callableTimeSetId)
         {
             
             // verify the required parameter 'callableTimeSetId' is set
             if (callableTimeSetId == null)
-                throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling OutboundApi->GetCallabletimeset");
+                throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling OutboundApi->GetCallabletimesetsCallabletimesetId");
             
     
             var path_ = "/api/v1/outbound/callabletimesets/{callableTimeSetId}";
@@ -3666,9 +3666,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetCallabletimeset: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetCallabletimesetsCallabletimesetId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetCallabletimeset: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetCallabletimesetsCallabletimesetId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<CallableTimeSet>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3681,9 +3681,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>Task of CallableTimeSet</returns>
-        public async System.Threading.Tasks.Task<CallableTimeSet> GetCallabletimesetAsync (string callableTimeSetId)
+        public async System.Threading.Tasks.Task<CallableTimeSet> GetCallabletimesetsCallabletimesetIdAsync (string callableTimeSetId)
         {
-             ApiResponse<CallableTimeSet> response = await GetCallabletimesetAsyncWithHttpInfo(callableTimeSetId);
+             ApiResponse<CallableTimeSet> response = await GetCallabletimesetsCallabletimesetIdAsyncWithHttpInfo(callableTimeSetId);
              return response.Data;
 
         }
@@ -3693,10 +3693,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>Task of ApiResponse (CallableTimeSet)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> GetCallabletimesetAsyncWithHttpInfo (string callableTimeSetId)
+        public async System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> GetCallabletimesetsCallabletimesetIdAsyncWithHttpInfo (string callableTimeSetId)
         {
             // verify the required parameter 'callableTimeSetId' is set
-            if (callableTimeSetId == null) throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling GetCallabletimeset");
+            if (callableTimeSetId == null) throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling GetCallabletimesetsCallabletimesetId");
             
     
             var path_ = "/api/v1/outbound/callabletimesets/{callableTimeSetId}";
@@ -3750,9 +3750,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetCallabletimeset: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetCallabletimesetsCallabletimesetId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetCallabletimeset: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetCallabletimesetsCallabletimesetId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<CallableTimeSet>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3766,9 +3766,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="callableTimeSetId">Callable Time Set ID</param> 
         /// <param name="body">DialerCallableTimeSet</param> 
         /// <returns>CallableTimeSet</returns>
-        public CallableTimeSet PutCallabletimeset (string callableTimeSetId, CallableTimeSet body = null)
+        public CallableTimeSet PutCallabletimesetsCallabletimesetId (string callableTimeSetId, CallableTimeSet body = null)
         {
-             ApiResponse<CallableTimeSet> response = PutCallabletimesetWithHttpInfo(callableTimeSetId, body);
+             ApiResponse<CallableTimeSet> response = PutCallabletimesetsCallabletimesetIdWithHttpInfo(callableTimeSetId, body);
              return response.Data;
         }
 
@@ -3778,12 +3778,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="callableTimeSetId">Callable Time Set ID</param> 
         /// <param name="body">DialerCallableTimeSet</param> 
         /// <returns>ApiResponse of CallableTimeSet</returns>
-        public ApiResponse< CallableTimeSet > PutCallabletimesetWithHttpInfo (string callableTimeSetId, CallableTimeSet body = null)
+        public ApiResponse< CallableTimeSet > PutCallabletimesetsCallabletimesetIdWithHttpInfo (string callableTimeSetId, CallableTimeSet body = null)
         {
             
             // verify the required parameter 'callableTimeSetId' is set
             if (callableTimeSetId == null)
-                throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling OutboundApi->PutCallabletimeset");
+                throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling OutboundApi->PutCallabletimesetsCallabletimesetId");
             
     
             var path_ = "/api/v1/outbound/callabletimesets/{callableTimeSetId}";
@@ -3843,9 +3843,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutCallabletimeset: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutCallabletimesetsCallabletimesetId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutCallabletimeset: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutCallabletimesetsCallabletimesetId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<CallableTimeSet>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3859,9 +3859,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>Task of CallableTimeSet</returns>
-        public async System.Threading.Tasks.Task<CallableTimeSet> PutCallabletimesetAsync (string callableTimeSetId, CallableTimeSet body = null)
+        public async System.Threading.Tasks.Task<CallableTimeSet> PutCallabletimesetsCallabletimesetIdAsync (string callableTimeSetId, CallableTimeSet body = null)
         {
-             ApiResponse<CallableTimeSet> response = await PutCallabletimesetAsyncWithHttpInfo(callableTimeSetId, body);
+             ApiResponse<CallableTimeSet> response = await PutCallabletimesetsCallabletimesetIdAsyncWithHttpInfo(callableTimeSetId, body);
              return response.Data;
 
         }
@@ -3872,10 +3872,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <param name="body">DialerCallableTimeSet</param>
         /// <returns>Task of ApiResponse (CallableTimeSet)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> PutCallabletimesetAsyncWithHttpInfo (string callableTimeSetId, CallableTimeSet body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CallableTimeSet>> PutCallabletimesetsCallabletimesetIdAsyncWithHttpInfo (string callableTimeSetId, CallableTimeSet body = null)
         {
             // verify the required parameter 'callableTimeSetId' is set
-            if (callableTimeSetId == null) throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling PutCallabletimeset");
+            if (callableTimeSetId == null) throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling PutCallabletimesetsCallabletimesetId");
             
     
             var path_ = "/api/v1/outbound/callabletimesets/{callableTimeSetId}";
@@ -3930,9 +3930,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutCallabletimeset: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutCallabletimesetsCallabletimesetId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutCallabletimeset: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutCallabletimesetsCallabletimesetId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<CallableTimeSet>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3945,9 +3945,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="callableTimeSetId">Callable Time Set ID</param> 
         /// <returns>string</returns>
-        public string DeleteCallabletimeset (string callableTimeSetId)
+        public string DeleteCallabletimesetsCallabletimesetId (string callableTimeSetId)
         {
-             ApiResponse<string> response = DeleteCallabletimesetWithHttpInfo(callableTimeSetId);
+             ApiResponse<string> response = DeleteCallabletimesetsCallabletimesetIdWithHttpInfo(callableTimeSetId);
              return response.Data;
         }
 
@@ -3956,12 +3956,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="callableTimeSetId">Callable Time Set ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteCallabletimesetWithHttpInfo (string callableTimeSetId)
+        public ApiResponse< string > DeleteCallabletimesetsCallabletimesetIdWithHttpInfo (string callableTimeSetId)
         {
             
             // verify the required parameter 'callableTimeSetId' is set
             if (callableTimeSetId == null)
-                throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling OutboundApi->DeleteCallabletimeset");
+                throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling OutboundApi->DeleteCallabletimesetsCallabletimesetId");
             
     
             var path_ = "/api/v1/outbound/callabletimesets/{callableTimeSetId}";
@@ -4014,9 +4014,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteCallabletimeset: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteCallabletimesetsCallabletimesetId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteCallabletimeset: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteCallabletimesetsCallabletimesetId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4029,9 +4029,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteCallabletimesetAsync (string callableTimeSetId)
+        public async System.Threading.Tasks.Task<string> DeleteCallabletimesetsCallabletimesetIdAsync (string callableTimeSetId)
         {
-             ApiResponse<string> response = await DeleteCallabletimesetAsyncWithHttpInfo(callableTimeSetId);
+             ApiResponse<string> response = await DeleteCallabletimesetsCallabletimesetIdAsyncWithHttpInfo(callableTimeSetId);
              return response.Data;
 
         }
@@ -4041,10 +4041,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteCallabletimesetAsyncWithHttpInfo (string callableTimeSetId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteCallabletimesetsCallabletimesetIdAsyncWithHttpInfo (string callableTimeSetId)
         {
             // verify the required parameter 'callableTimeSetId' is set
-            if (callableTimeSetId == null) throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling DeleteCallabletimeset");
+            if (callableTimeSetId == null) throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling DeleteCallabletimesetsCallabletimesetId");
             
     
             var path_ = "/api/v1/outbound/callabletimesets/{callableTimeSetId}";
@@ -4098,9 +4098,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteCallabletimeset: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteCallabletimesetsCallabletimesetId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteCallabletimeset: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteCallabletimesetsCallabletimesetId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4473,9 +4473,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param> 
         /// <returns>ResponseSet</returns>
-        public ResponseSet GetCallanalysisresponseset (string callAnalysisSetId)
+        public ResponseSet GetCallanalysisresponsesetsCallanalysissetId (string callAnalysisSetId)
         {
-             ApiResponse<ResponseSet> response = GetCallanalysisresponsesetWithHttpInfo(callAnalysisSetId);
+             ApiResponse<ResponseSet> response = GetCallanalysisresponsesetsCallanalysissetIdWithHttpInfo(callAnalysisSetId);
              return response.Data;
         }
 
@@ -4484,12 +4484,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param> 
         /// <returns>ApiResponse of ResponseSet</returns>
-        public ApiResponse< ResponseSet > GetCallanalysisresponsesetWithHttpInfo (string callAnalysisSetId)
+        public ApiResponse< ResponseSet > GetCallanalysisresponsesetsCallanalysissetIdWithHttpInfo (string callAnalysisSetId)
         {
             
             // verify the required parameter 'callAnalysisSetId' is set
             if (callAnalysisSetId == null)
-                throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling OutboundApi->GetCallanalysisresponseset");
+                throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling OutboundApi->GetCallanalysisresponsesetsCallanalysissetId");
             
     
             var path_ = "/api/v1/outbound/callanalysisresponsesets/{callAnalysisSetId}";
@@ -4542,9 +4542,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetCallanalysisresponseset: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetCallanalysisresponsesetsCallanalysissetId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetCallanalysisresponseset: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetCallanalysisresponsesetsCallanalysissetId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ResponseSet>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4557,9 +4557,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>Task of ResponseSet</returns>
-        public async System.Threading.Tasks.Task<ResponseSet> GetCallanalysisresponsesetAsync (string callAnalysisSetId)
+        public async System.Threading.Tasks.Task<ResponseSet> GetCallanalysisresponsesetsCallanalysissetIdAsync (string callAnalysisSetId)
         {
-             ApiResponse<ResponseSet> response = await GetCallanalysisresponsesetAsyncWithHttpInfo(callAnalysisSetId);
+             ApiResponse<ResponseSet> response = await GetCallanalysisresponsesetsCallanalysissetIdAsyncWithHttpInfo(callAnalysisSetId);
              return response.Data;
 
         }
@@ -4569,10 +4569,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>Task of ApiResponse (ResponseSet)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseSet>> GetCallanalysisresponsesetAsyncWithHttpInfo (string callAnalysisSetId)
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseSet>> GetCallanalysisresponsesetsCallanalysissetIdAsyncWithHttpInfo (string callAnalysisSetId)
         {
             // verify the required parameter 'callAnalysisSetId' is set
-            if (callAnalysisSetId == null) throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling GetCallanalysisresponseset");
+            if (callAnalysisSetId == null) throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling GetCallanalysisresponsesetsCallanalysissetId");
             
     
             var path_ = "/api/v1/outbound/callanalysisresponsesets/{callAnalysisSetId}";
@@ -4626,9 +4626,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetCallanalysisresponseset: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetCallanalysisresponsesetsCallanalysissetId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetCallanalysisresponseset: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetCallanalysisresponsesetsCallanalysissetId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ResponseSet>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4642,9 +4642,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param> 
         /// <param name="body">ResponseSet</param> 
         /// <returns>ResponseSet</returns>
-        public ResponseSet PutCallanalysisresponseset (string callAnalysisSetId, ResponseSet body = null)
+        public ResponseSet PutCallanalysisresponsesetsCallanalysissetId (string callAnalysisSetId, ResponseSet body = null)
         {
-             ApiResponse<ResponseSet> response = PutCallanalysisresponsesetWithHttpInfo(callAnalysisSetId, body);
+             ApiResponse<ResponseSet> response = PutCallanalysisresponsesetsCallanalysissetIdWithHttpInfo(callAnalysisSetId, body);
              return response.Data;
         }
 
@@ -4654,12 +4654,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param> 
         /// <param name="body">ResponseSet</param> 
         /// <returns>ApiResponse of ResponseSet</returns>
-        public ApiResponse< ResponseSet > PutCallanalysisresponsesetWithHttpInfo (string callAnalysisSetId, ResponseSet body = null)
+        public ApiResponse< ResponseSet > PutCallanalysisresponsesetsCallanalysissetIdWithHttpInfo (string callAnalysisSetId, ResponseSet body = null)
         {
             
             // verify the required parameter 'callAnalysisSetId' is set
             if (callAnalysisSetId == null)
-                throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling OutboundApi->PutCallanalysisresponseset");
+                throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling OutboundApi->PutCallanalysisresponsesetsCallanalysissetId");
             
     
             var path_ = "/api/v1/outbound/callanalysisresponsesets/{callAnalysisSetId}";
@@ -4719,9 +4719,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutCallanalysisresponseset: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutCallanalysisresponsesetsCallanalysissetId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutCallanalysisresponseset: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutCallanalysisresponsesetsCallanalysissetId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ResponseSet>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4735,9 +4735,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <param name="body">ResponseSet</param>
         /// <returns>Task of ResponseSet</returns>
-        public async System.Threading.Tasks.Task<ResponseSet> PutCallanalysisresponsesetAsync (string callAnalysisSetId, ResponseSet body = null)
+        public async System.Threading.Tasks.Task<ResponseSet> PutCallanalysisresponsesetsCallanalysissetIdAsync (string callAnalysisSetId, ResponseSet body = null)
         {
-             ApiResponse<ResponseSet> response = await PutCallanalysisresponsesetAsyncWithHttpInfo(callAnalysisSetId, body);
+             ApiResponse<ResponseSet> response = await PutCallanalysisresponsesetsCallanalysissetIdAsyncWithHttpInfo(callAnalysisSetId, body);
              return response.Data;
 
         }
@@ -4748,10 +4748,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <param name="body">ResponseSet</param>
         /// <returns>Task of ApiResponse (ResponseSet)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseSet>> PutCallanalysisresponsesetAsyncWithHttpInfo (string callAnalysisSetId, ResponseSet body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseSet>> PutCallanalysisresponsesetsCallanalysissetIdAsyncWithHttpInfo (string callAnalysisSetId, ResponseSet body = null)
         {
             // verify the required parameter 'callAnalysisSetId' is set
-            if (callAnalysisSetId == null) throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling PutCallanalysisresponseset");
+            if (callAnalysisSetId == null) throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling PutCallanalysisresponsesetsCallanalysissetId");
             
     
             var path_ = "/api/v1/outbound/callanalysisresponsesets/{callAnalysisSetId}";
@@ -4806,9 +4806,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutCallanalysisresponseset: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutCallanalysisresponsesetsCallanalysissetId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutCallanalysisresponseset: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutCallanalysisresponsesetsCallanalysissetId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ResponseSet>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4821,9 +4821,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param> 
         /// <returns>string</returns>
-        public string DeleteCallanalysisresponseset (string callAnalysisSetId)
+        public string DeleteCallanalysisresponsesetsCallanalysissetId (string callAnalysisSetId)
         {
-             ApiResponse<string> response = DeleteCallanalysisresponsesetWithHttpInfo(callAnalysisSetId);
+             ApiResponse<string> response = DeleteCallanalysisresponsesetsCallanalysissetIdWithHttpInfo(callAnalysisSetId);
              return response.Data;
         }
 
@@ -4832,12 +4832,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteCallanalysisresponsesetWithHttpInfo (string callAnalysisSetId)
+        public ApiResponse< string > DeleteCallanalysisresponsesetsCallanalysissetIdWithHttpInfo (string callAnalysisSetId)
         {
             
             // verify the required parameter 'callAnalysisSetId' is set
             if (callAnalysisSetId == null)
-                throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling OutboundApi->DeleteCallanalysisresponseset");
+                throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling OutboundApi->DeleteCallanalysisresponsesetsCallanalysissetId");
             
     
             var path_ = "/api/v1/outbound/callanalysisresponsesets/{callAnalysisSetId}";
@@ -4890,9 +4890,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteCallanalysisresponseset: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteCallanalysisresponsesetsCallanalysissetId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteCallanalysisresponseset: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteCallanalysisresponsesetsCallanalysissetId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4905,9 +4905,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteCallanalysisresponsesetAsync (string callAnalysisSetId)
+        public async System.Threading.Tasks.Task<string> DeleteCallanalysisresponsesetsCallanalysissetIdAsync (string callAnalysisSetId)
         {
-             ApiResponse<string> response = await DeleteCallanalysisresponsesetAsyncWithHttpInfo(callAnalysisSetId);
+             ApiResponse<string> response = await DeleteCallanalysisresponsesetsCallanalysissetIdAsyncWithHttpInfo(callAnalysisSetId);
              return response.Data;
 
         }
@@ -4917,10 +4917,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteCallanalysisresponsesetAsyncWithHttpInfo (string callAnalysisSetId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteCallanalysisresponsesetsCallanalysissetIdAsyncWithHttpInfo (string callAnalysisSetId)
         {
             // verify the required parameter 'callAnalysisSetId' is set
-            if (callAnalysisSetId == null) throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling DeleteCallanalysisresponseset");
+            if (callAnalysisSetId == null) throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling DeleteCallanalysisresponsesetsCallanalysissetId");
             
     
             var path_ = "/api/v1/outbound/callanalysisresponsesets/{callAnalysisSetId}";
@@ -4974,9 +4974,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteCallanalysisresponseset: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteCallanalysisresponsesetsCallanalysissetId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteCallanalysisresponseset: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteCallanalysisresponsesetsCallanalysissetId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5379,9 +5379,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="campaignId">Campaign ID</param> 
         /// <returns>Campaign</returns>
-        public Campaign GetCampaign (string campaignId)
+        public Campaign GetCampaignsCampaignId (string campaignId)
         {
-             ApiResponse<Campaign> response = GetCampaignWithHttpInfo(campaignId);
+             ApiResponse<Campaign> response = GetCampaignsCampaignIdWithHttpInfo(campaignId);
              return response.Data;
         }
 
@@ -5390,12 +5390,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="campaignId">Campaign ID</param> 
         /// <returns>ApiResponse of Campaign</returns>
-        public ApiResponse< Campaign > GetCampaignWithHttpInfo (string campaignId)
+        public ApiResponse< Campaign > GetCampaignsCampaignIdWithHttpInfo (string campaignId)
         {
             
             // verify the required parameter 'campaignId' is set
             if (campaignId == null)
-                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetCampaign");
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetCampaignsCampaignId");
             
     
             var path_ = "/api/v1/outbound/campaigns/{campaignId}";
@@ -5448,9 +5448,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetCampaign: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetCampaignsCampaignId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetCampaign: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetCampaignsCampaignId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Campaign>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5463,9 +5463,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of Campaign</returns>
-        public async System.Threading.Tasks.Task<Campaign> GetCampaignAsync (string campaignId)
+        public async System.Threading.Tasks.Task<Campaign> GetCampaignsCampaignIdAsync (string campaignId)
         {
-             ApiResponse<Campaign> response = await GetCampaignAsyncWithHttpInfo(campaignId);
+             ApiResponse<Campaign> response = await GetCampaignsCampaignIdAsyncWithHttpInfo(campaignId);
              return response.Data;
 
         }
@@ -5475,10 +5475,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (Campaign)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Campaign>> GetCampaignAsyncWithHttpInfo (string campaignId)
+        public async System.Threading.Tasks.Task<ApiResponse<Campaign>> GetCampaignsCampaignIdAsyncWithHttpInfo (string campaignId)
         {
             // verify the required parameter 'campaignId' is set
-            if (campaignId == null) throw new ApiException(400, "Missing required parameter 'campaignId' when calling GetCampaign");
+            if (campaignId == null) throw new ApiException(400, "Missing required parameter 'campaignId' when calling GetCampaignsCampaignId");
             
     
             var path_ = "/api/v1/outbound/campaigns/{campaignId}";
@@ -5532,9 +5532,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetCampaign: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetCampaignsCampaignId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetCampaign: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetCampaignsCampaignId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Campaign>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5548,9 +5548,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="campaignId">Campaign ID</param> 
         /// <param name="body">Campaign</param> 
         /// <returns>Campaign</returns>
-        public Campaign PutCampaign (string campaignId, Campaign body = null)
+        public Campaign PutCampaignsCampaignId (string campaignId, Campaign body = null)
         {
-             ApiResponse<Campaign> response = PutCampaignWithHttpInfo(campaignId, body);
+             ApiResponse<Campaign> response = PutCampaignsCampaignIdWithHttpInfo(campaignId, body);
              return response.Data;
         }
 
@@ -5560,12 +5560,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="campaignId">Campaign ID</param> 
         /// <param name="body">Campaign</param> 
         /// <returns>ApiResponse of Campaign</returns>
-        public ApiResponse< Campaign > PutCampaignWithHttpInfo (string campaignId, Campaign body = null)
+        public ApiResponse< Campaign > PutCampaignsCampaignIdWithHttpInfo (string campaignId, Campaign body = null)
         {
             
             // verify the required parameter 'campaignId' is set
             if (campaignId == null)
-                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PutCampaign");
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PutCampaignsCampaignId");
             
     
             var path_ = "/api/v1/outbound/campaigns/{campaignId}";
@@ -5625,9 +5625,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutCampaign: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutCampaignsCampaignId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutCampaign: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutCampaignsCampaignId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Campaign>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5641,9 +5641,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">Campaign</param>
         /// <returns>Task of Campaign</returns>
-        public async System.Threading.Tasks.Task<Campaign> PutCampaignAsync (string campaignId, Campaign body = null)
+        public async System.Threading.Tasks.Task<Campaign> PutCampaignsCampaignIdAsync (string campaignId, Campaign body = null)
         {
-             ApiResponse<Campaign> response = await PutCampaignAsyncWithHttpInfo(campaignId, body);
+             ApiResponse<Campaign> response = await PutCampaignsCampaignIdAsyncWithHttpInfo(campaignId, body);
              return response.Data;
 
         }
@@ -5654,10 +5654,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">Campaign</param>
         /// <returns>Task of ApiResponse (Campaign)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Campaign>> PutCampaignAsyncWithHttpInfo (string campaignId, Campaign body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Campaign>> PutCampaignsCampaignIdAsyncWithHttpInfo (string campaignId, Campaign body = null)
         {
             // verify the required parameter 'campaignId' is set
-            if (campaignId == null) throw new ApiException(400, "Missing required parameter 'campaignId' when calling PutCampaign");
+            if (campaignId == null) throw new ApiException(400, "Missing required parameter 'campaignId' when calling PutCampaignsCampaignId");
             
     
             var path_ = "/api/v1/outbound/campaigns/{campaignId}";
@@ -5712,9 +5712,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutCampaign: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutCampaignsCampaignId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutCampaign: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutCampaignsCampaignId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Campaign>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5727,9 +5727,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="campaignId">Campaign ID</param> 
         /// <returns>string</returns>
-        public string DeleteCampaign (string campaignId)
+        public string DeleteCampaignsCampaignId (string campaignId)
         {
-             ApiResponse<string> response = DeleteCampaignWithHttpInfo(campaignId);
+             ApiResponse<string> response = DeleteCampaignsCampaignIdWithHttpInfo(campaignId);
              return response.Data;
         }
 
@@ -5738,12 +5738,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="campaignId">Campaign ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteCampaignWithHttpInfo (string campaignId)
+        public ApiResponse< string > DeleteCampaignsCampaignIdWithHttpInfo (string campaignId)
         {
             
             // verify the required parameter 'campaignId' is set
             if (campaignId == null)
-                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->DeleteCampaign");
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->DeleteCampaignsCampaignId");
             
     
             var path_ = "/api/v1/outbound/campaigns/{campaignId}";
@@ -5796,9 +5796,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteCampaign: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteCampaignsCampaignId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteCampaign: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteCampaignsCampaignId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5811,9 +5811,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteCampaignAsync (string campaignId)
+        public async System.Threading.Tasks.Task<string> DeleteCampaignsCampaignIdAsync (string campaignId)
         {
-             ApiResponse<string> response = await DeleteCampaignAsyncWithHttpInfo(campaignId);
+             ApiResponse<string> response = await DeleteCampaignsCampaignIdAsyncWithHttpInfo(campaignId);
              return response.Data;
 
         }
@@ -5823,10 +5823,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteCampaignAsyncWithHttpInfo (string campaignId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteCampaignsCampaignIdAsyncWithHttpInfo (string campaignId)
         {
             // verify the required parameter 'campaignId' is set
-            if (campaignId == null) throw new ApiException(400, "Missing required parameter 'campaignId' when calling DeleteCampaign");
+            if (campaignId == null) throw new ApiException(400, "Missing required parameter 'campaignId' when calling DeleteCampaignsCampaignId");
             
     
             var path_ = "/api/v1/outbound/campaigns/{campaignId}";
@@ -5880,9 +5880,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteCampaign: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteCampaignsCampaignId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteCampaign: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteCampaignsCampaignId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5897,9 +5897,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">Agent&#39;s user ID</param> 
         /// <param name="body">agent</param> 
         /// <returns>string</returns>
-        public string PutCampaignAgent (string campaignId, string userId, Agent body = null)
+        public string PutCampaignsCampaignIdAgentsUserId (string campaignId, string userId, Agent body = null)
         {
-             ApiResponse<string> response = PutCampaignAgentWithHttpInfo(campaignId, userId, body);
+             ApiResponse<string> response = PutCampaignsCampaignIdAgentsUserIdWithHttpInfo(campaignId, userId, body);
              return response.Data;
         }
 
@@ -5910,16 +5910,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">Agent&#39;s user ID</param> 
         /// <param name="body">agent</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > PutCampaignAgentWithHttpInfo (string campaignId, string userId, Agent body = null)
+        public ApiResponse< string > PutCampaignsCampaignIdAgentsUserIdWithHttpInfo (string campaignId, string userId, Agent body = null)
         {
             
             // verify the required parameter 'campaignId' is set
             if (campaignId == null)
-                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PutCampaignAgent");
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PutCampaignsCampaignIdAgentsUserId");
             
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling OutboundApi->PutCampaignAgent");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling OutboundApi->PutCampaignsCampaignIdAgentsUserId");
             
     
             var path_ = "/api/v1/outbound/campaigns/{campaignId}/agents/{userId}";
@@ -5980,9 +5980,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutCampaignAgent: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutCampaignsCampaignIdAgentsUserId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutCampaignAgent: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutCampaignsCampaignIdAgentsUserId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5997,9 +5997,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">Agent&#39;s user ID</param>
         /// <param name="body">agent</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> PutCampaignAgentAsync (string campaignId, string userId, Agent body = null)
+        public async System.Threading.Tasks.Task<string> PutCampaignsCampaignIdAgentsUserIdAsync (string campaignId, string userId, Agent body = null)
         {
-             ApiResponse<string> response = await PutCampaignAgentAsyncWithHttpInfo(campaignId, userId, body);
+             ApiResponse<string> response = await PutCampaignsCampaignIdAgentsUserIdAsyncWithHttpInfo(campaignId, userId, body);
              return response.Data;
 
         }
@@ -6011,12 +6011,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">Agent&#39;s user ID</param>
         /// <param name="body">agent</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> PutCampaignAgentAsyncWithHttpInfo (string campaignId, string userId, Agent body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> PutCampaignsCampaignIdAgentsUserIdAsyncWithHttpInfo (string campaignId, string userId, Agent body = null)
         {
             // verify the required parameter 'campaignId' is set
-            if (campaignId == null) throw new ApiException(400, "Missing required parameter 'campaignId' when calling PutCampaignAgent");
+            if (campaignId == null) throw new ApiException(400, "Missing required parameter 'campaignId' when calling PutCampaignsCampaignIdAgentsUserId");
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling PutCampaignAgent");
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling PutCampaignsCampaignIdAgentsUserId");
             
     
             var path_ = "/api/v1/outbound/campaigns/{campaignId}/agents/{userId}";
@@ -6072,9 +6072,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutCampaignAgent: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutCampaignsCampaignIdAgentsUserId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutCampaignAgent: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutCampaignsCampaignIdAgentsUserId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6088,9 +6088,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="campaignId">Campaign ID</param> 
         /// <param name="body">ContactCallbackRequest</param> 
         /// <returns>ContactCallbackRequest</returns>
-        public ContactCallbackRequest PostCampaignCallbackSchedule (string campaignId, ContactCallbackRequest body = null)
+        public ContactCallbackRequest PostCampaignsCampaignIdCallbackSchedule (string campaignId, ContactCallbackRequest body = null)
         {
-             ApiResponse<ContactCallbackRequest> response = PostCampaignCallbackScheduleWithHttpInfo(campaignId, body);
+             ApiResponse<ContactCallbackRequest> response = PostCampaignsCampaignIdCallbackScheduleWithHttpInfo(campaignId, body);
              return response.Data;
         }
 
@@ -6100,12 +6100,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="campaignId">Campaign ID</param> 
         /// <param name="body">ContactCallbackRequest</param> 
         /// <returns>ApiResponse of ContactCallbackRequest</returns>
-        public ApiResponse< ContactCallbackRequest > PostCampaignCallbackScheduleWithHttpInfo (string campaignId, ContactCallbackRequest body = null)
+        public ApiResponse< ContactCallbackRequest > PostCampaignsCampaignIdCallbackScheduleWithHttpInfo (string campaignId, ContactCallbackRequest body = null)
         {
             
             // verify the required parameter 'campaignId' is set
             if (campaignId == null)
-                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PostCampaignCallbackSchedule");
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PostCampaignsCampaignIdCallbackSchedule");
             
     
             var path_ = "/api/v1/outbound/campaigns/{campaignId}/callback/schedule";
@@ -6165,9 +6165,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostCampaignCallbackSchedule: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostCampaignsCampaignIdCallbackSchedule: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostCampaignCallbackSchedule: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostCampaignsCampaignIdCallbackSchedule: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ContactCallbackRequest>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6181,9 +6181,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">ContactCallbackRequest</param>
         /// <returns>Task of ContactCallbackRequest</returns>
-        public async System.Threading.Tasks.Task<ContactCallbackRequest> PostCampaignCallbackScheduleAsync (string campaignId, ContactCallbackRequest body = null)
+        public async System.Threading.Tasks.Task<ContactCallbackRequest> PostCampaignsCampaignIdCallbackScheduleAsync (string campaignId, ContactCallbackRequest body = null)
         {
-             ApiResponse<ContactCallbackRequest> response = await PostCampaignCallbackScheduleAsyncWithHttpInfo(campaignId, body);
+             ApiResponse<ContactCallbackRequest> response = await PostCampaignsCampaignIdCallbackScheduleAsyncWithHttpInfo(campaignId, body);
              return response.Data;
 
         }
@@ -6194,10 +6194,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">ContactCallbackRequest</param>
         /// <returns>Task of ApiResponse (ContactCallbackRequest)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ContactCallbackRequest>> PostCampaignCallbackScheduleAsyncWithHttpInfo (string campaignId, ContactCallbackRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ContactCallbackRequest>> PostCampaignsCampaignIdCallbackScheduleAsyncWithHttpInfo (string campaignId, ContactCallbackRequest body = null)
         {
             // verify the required parameter 'campaignId' is set
-            if (campaignId == null) throw new ApiException(400, "Missing required parameter 'campaignId' when calling PostCampaignCallbackSchedule");
+            if (campaignId == null) throw new ApiException(400, "Missing required parameter 'campaignId' when calling PostCampaignsCampaignIdCallbackSchedule");
             
     
             var path_ = "/api/v1/outbound/campaigns/{campaignId}/callback/schedule";
@@ -6252,9 +6252,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostCampaignCallbackSchedule: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostCampaignsCampaignIdCallbackSchedule: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostCampaignCallbackSchedule: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostCampaignsCampaignIdCallbackSchedule: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ContactCallbackRequest>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6267,9 +6267,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="campaignId">Campaign ID</param> 
         /// <returns>CampaignDiagnostics</returns>
-        public CampaignDiagnostics GetCampaignDiagnostics (string campaignId)
+        public CampaignDiagnostics GetCampaignsCampaignIdDiagnostics (string campaignId)
         {
-             ApiResponse<CampaignDiagnostics> response = GetCampaignDiagnosticsWithHttpInfo(campaignId);
+             ApiResponse<CampaignDiagnostics> response = GetCampaignsCampaignIdDiagnosticsWithHttpInfo(campaignId);
              return response.Data;
         }
 
@@ -6278,12 +6278,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="campaignId">Campaign ID</param> 
         /// <returns>ApiResponse of CampaignDiagnostics</returns>
-        public ApiResponse< CampaignDiagnostics > GetCampaignDiagnosticsWithHttpInfo (string campaignId)
+        public ApiResponse< CampaignDiagnostics > GetCampaignsCampaignIdDiagnosticsWithHttpInfo (string campaignId)
         {
             
             // verify the required parameter 'campaignId' is set
             if (campaignId == null)
-                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetCampaignDiagnostics");
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetCampaignsCampaignIdDiagnostics");
             
     
             var path_ = "/api/v1/outbound/campaigns/{campaignId}/diagnostics";
@@ -6336,9 +6336,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetCampaignDiagnostics: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetCampaignsCampaignIdDiagnostics: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetCampaignDiagnostics: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetCampaignsCampaignIdDiagnostics: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<CampaignDiagnostics>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6351,9 +6351,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of CampaignDiagnostics</returns>
-        public async System.Threading.Tasks.Task<CampaignDiagnostics> GetCampaignDiagnosticsAsync (string campaignId)
+        public async System.Threading.Tasks.Task<CampaignDiagnostics> GetCampaignsCampaignIdDiagnosticsAsync (string campaignId)
         {
-             ApiResponse<CampaignDiagnostics> response = await GetCampaignDiagnosticsAsyncWithHttpInfo(campaignId);
+             ApiResponse<CampaignDiagnostics> response = await GetCampaignsCampaignIdDiagnosticsAsyncWithHttpInfo(campaignId);
              return response.Data;
 
         }
@@ -6363,10 +6363,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (CampaignDiagnostics)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CampaignDiagnostics>> GetCampaignDiagnosticsAsyncWithHttpInfo (string campaignId)
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignDiagnostics>> GetCampaignsCampaignIdDiagnosticsAsyncWithHttpInfo (string campaignId)
         {
             // verify the required parameter 'campaignId' is set
-            if (campaignId == null) throw new ApiException(400, "Missing required parameter 'campaignId' when calling GetCampaignDiagnostics");
+            if (campaignId == null) throw new ApiException(400, "Missing required parameter 'campaignId' when calling GetCampaignsCampaignIdDiagnostics");
             
     
             var path_ = "/api/v1/outbound/campaigns/{campaignId}/diagnostics";
@@ -6420,9 +6420,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetCampaignDiagnostics: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetCampaignsCampaignIdDiagnostics: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetCampaignDiagnostics: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetCampaignsCampaignIdDiagnostics: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<CampaignDiagnostics>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6435,9 +6435,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="campaignId">Campaign ID</param> 
         /// <returns>CampaignStats</returns>
-        public CampaignStats GetCampaignStats (string campaignId)
+        public CampaignStats GetCampaignsCampaignIdStats (string campaignId)
         {
-             ApiResponse<CampaignStats> response = GetCampaignStatsWithHttpInfo(campaignId);
+             ApiResponse<CampaignStats> response = GetCampaignsCampaignIdStatsWithHttpInfo(campaignId);
              return response.Data;
         }
 
@@ -6446,12 +6446,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="campaignId">Campaign ID</param> 
         /// <returns>ApiResponse of CampaignStats</returns>
-        public ApiResponse< CampaignStats > GetCampaignStatsWithHttpInfo (string campaignId)
+        public ApiResponse< CampaignStats > GetCampaignsCampaignIdStatsWithHttpInfo (string campaignId)
         {
             
             // verify the required parameter 'campaignId' is set
             if (campaignId == null)
-                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetCampaignStats");
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetCampaignsCampaignIdStats");
             
     
             var path_ = "/api/v1/outbound/campaigns/{campaignId}/stats";
@@ -6504,9 +6504,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetCampaignStats: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetCampaignsCampaignIdStats: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetCampaignStats: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetCampaignsCampaignIdStats: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<CampaignStats>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6519,9 +6519,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of CampaignStats</returns>
-        public async System.Threading.Tasks.Task<CampaignStats> GetCampaignStatsAsync (string campaignId)
+        public async System.Threading.Tasks.Task<CampaignStats> GetCampaignsCampaignIdStatsAsync (string campaignId)
         {
-             ApiResponse<CampaignStats> response = await GetCampaignStatsAsyncWithHttpInfo(campaignId);
+             ApiResponse<CampaignStats> response = await GetCampaignsCampaignIdStatsAsyncWithHttpInfo(campaignId);
              return response.Data;
 
         }
@@ -6531,10 +6531,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (CampaignStats)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CampaignStats>> GetCampaignStatsAsyncWithHttpInfo (string campaignId)
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignStats>> GetCampaignsCampaignIdStatsAsyncWithHttpInfo (string campaignId)
         {
             // verify the required parameter 'campaignId' is set
-            if (campaignId == null) throw new ApiException(400, "Missing required parameter 'campaignId' when calling GetCampaignStats");
+            if (campaignId == null) throw new ApiException(400, "Missing required parameter 'campaignId' when calling GetCampaignsCampaignIdStats");
             
     
             var path_ = "/api/v1/outbound/campaigns/{campaignId}/stats";
@@ -6588,9 +6588,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetCampaignStats: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetCampaignsCampaignIdStats: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetCampaignStats: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetCampaignsCampaignIdStats: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<CampaignStats>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7152,9 +7152,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="importStatus">Import status</param> 
         /// <param name="includeSize">Include size</param> 
         /// <returns>ContactList</returns>
-        public ContactList GetContactlist (string contactListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null)
+        public ContactList GetContactlistsContactlistId (string contactListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null)
         {
-             ApiResponse<ContactList> response = GetContactlistWithHttpInfo(contactListId, includeImportStatus, importStatus, includeSize);
+             ApiResponse<ContactList> response = GetContactlistsContactlistIdWithHttpInfo(contactListId, includeImportStatus, importStatus, includeSize);
              return response.Data;
         }
 
@@ -7166,12 +7166,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="importStatus">Import status</param> 
         /// <param name="includeSize">Include size</param> 
         /// <returns>ApiResponse of ContactList</returns>
-        public ApiResponse< ContactList > GetContactlistWithHttpInfo (string contactListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null)
+        public ApiResponse< ContactList > GetContactlistsContactlistIdWithHttpInfo (string contactListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null)
         {
             
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
-                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetContactlist");
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetContactlistsContactlistId");
             
     
             var path_ = "/api/v1/outbound/contactlists/{contactListId}";
@@ -7227,9 +7227,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContactlist: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContactlistsContactlistId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContactlist: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContactlistsContactlistId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ContactList>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7245,9 +7245,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="importStatus">Import status</param>
         /// <param name="includeSize">Include size</param>
         /// <returns>Task of ContactList</returns>
-        public async System.Threading.Tasks.Task<ContactList> GetContactlistAsync (string contactListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null)
+        public async System.Threading.Tasks.Task<ContactList> GetContactlistsContactlistIdAsync (string contactListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null)
         {
-             ApiResponse<ContactList> response = await GetContactlistAsyncWithHttpInfo(contactListId, includeImportStatus, importStatus, includeSize);
+             ApiResponse<ContactList> response = await GetContactlistsContactlistIdAsyncWithHttpInfo(contactListId, includeImportStatus, importStatus, includeSize);
              return response.Data;
 
         }
@@ -7260,10 +7260,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="importStatus">Import status</param>
         /// <param name="includeSize">Include size</param>
         /// <returns>Task of ApiResponse (ContactList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ContactList>> GetContactlistAsyncWithHttpInfo (string contactListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ContactList>> GetContactlistsContactlistIdAsyncWithHttpInfo (string contactListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null)
         {
             // verify the required parameter 'contactListId' is set
-            if (contactListId == null) throw new ApiException(400, "Missing required parameter 'contactListId' when calling GetContactlist");
+            if (contactListId == null) throw new ApiException(400, "Missing required parameter 'contactListId' when calling GetContactlistsContactlistId");
             
     
             var path_ = "/api/v1/outbound/contactlists/{contactListId}";
@@ -7320,9 +7320,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContactlist: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContactlistsContactlistId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContactlist: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContactlistsContactlistId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ContactList>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7336,9 +7336,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">ContactList ID</param> 
         /// <param name="body">ContactList</param> 
         /// <returns>ContactList</returns>
-        public ContactList PutContactlist (string contactListId, ContactList body = null)
+        public ContactList PutContactlistsContactlistId (string contactListId, ContactList body = null)
         {
-             ApiResponse<ContactList> response = PutContactlistWithHttpInfo(contactListId, body);
+             ApiResponse<ContactList> response = PutContactlistsContactlistIdWithHttpInfo(contactListId, body);
              return response.Data;
         }
 
@@ -7348,12 +7348,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">ContactList ID</param> 
         /// <param name="body">ContactList</param> 
         /// <returns>ApiResponse of ContactList</returns>
-        public ApiResponse< ContactList > PutContactlistWithHttpInfo (string contactListId, ContactList body = null)
+        public ApiResponse< ContactList > PutContactlistsContactlistIdWithHttpInfo (string contactListId, ContactList body = null)
         {
             
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
-                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PutContactlist");
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PutContactlistsContactlistId");
             
     
             var path_ = "/api/v1/outbound/contactlists/{contactListId}";
@@ -7413,9 +7413,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutContactlist: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutContactlistsContactlistId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutContactlist: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutContactlistsContactlistId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ContactList>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7429,9 +7429,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="body">ContactList</param>
         /// <returns>Task of ContactList</returns>
-        public async System.Threading.Tasks.Task<ContactList> PutContactlistAsync (string contactListId, ContactList body = null)
+        public async System.Threading.Tasks.Task<ContactList> PutContactlistsContactlistIdAsync (string contactListId, ContactList body = null)
         {
-             ApiResponse<ContactList> response = await PutContactlistAsyncWithHttpInfo(contactListId, body);
+             ApiResponse<ContactList> response = await PutContactlistsContactlistIdAsyncWithHttpInfo(contactListId, body);
              return response.Data;
 
         }
@@ -7442,10 +7442,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="body">ContactList</param>
         /// <returns>Task of ApiResponse (ContactList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ContactList>> PutContactlistAsyncWithHttpInfo (string contactListId, ContactList body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ContactList>> PutContactlistsContactlistIdAsyncWithHttpInfo (string contactListId, ContactList body = null)
         {
             // verify the required parameter 'contactListId' is set
-            if (contactListId == null) throw new ApiException(400, "Missing required parameter 'contactListId' when calling PutContactlist");
+            if (contactListId == null) throw new ApiException(400, "Missing required parameter 'contactListId' when calling PutContactlistsContactlistId");
             
     
             var path_ = "/api/v1/outbound/contactlists/{contactListId}";
@@ -7500,9 +7500,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutContactlist: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutContactlistsContactlistId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutContactlist: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutContactlistsContactlistId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ContactList>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7515,9 +7515,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="contactListId">ContactList ID</param> 
         /// <returns>string</returns>
-        public string DeleteContactlist (string contactListId)
+        public string DeleteContactlistsContactlistId (string contactListId)
         {
-             ApiResponse<string> response = DeleteContactlistWithHttpInfo(contactListId);
+             ApiResponse<string> response = DeleteContactlistsContactlistIdWithHttpInfo(contactListId);
              return response.Data;
         }
 
@@ -7526,12 +7526,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="contactListId">ContactList ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteContactlistWithHttpInfo (string contactListId)
+        public ApiResponse< string > DeleteContactlistsContactlistIdWithHttpInfo (string contactListId)
         {
             
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
-                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->DeleteContactlist");
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->DeleteContactlistsContactlistId");
             
     
             var path_ = "/api/v1/outbound/contactlists/{contactListId}";
@@ -7584,9 +7584,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteContactlist: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteContactlistsContactlistId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteContactlist: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteContactlistsContactlistId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7599,9 +7599,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteContactlistAsync (string contactListId)
+        public async System.Threading.Tasks.Task<string> DeleteContactlistsContactlistIdAsync (string contactListId)
         {
-             ApiResponse<string> response = await DeleteContactlistAsyncWithHttpInfo(contactListId);
+             ApiResponse<string> response = await DeleteContactlistsContactlistIdAsyncWithHttpInfo(contactListId);
              return response.Data;
 
         }
@@ -7611,10 +7611,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteContactlistAsyncWithHttpInfo (string contactListId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteContactlistsContactlistIdAsyncWithHttpInfo (string contactListId)
         {
             // verify the required parameter 'contactListId' is set
-            if (contactListId == null) throw new ApiException(400, "Missing required parameter 'contactListId' when calling DeleteContactlist");
+            if (contactListId == null) throw new ApiException(400, "Missing required parameter 'contactListId' when calling DeleteContactlistsContactlistId");
             
     
             var path_ = "/api/v1/outbound/contactlists/{contactListId}";
@@ -7668,9 +7668,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteContactlist: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteContactlistsContactlistId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteContactlist: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteContactlistsContactlistId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7685,9 +7685,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Contact</param> 
         /// <param name="priority"></param> 
         /// <returns>Contact</returns>
-        public Contact PostContactlistContacts (string contactListId, List<Contact> body = null, bool? priority = null)
+        public Contact PostContactlistsContactlistIdContacts (string contactListId, List<Contact> body = null, bool? priority = null)
         {
-             ApiResponse<Contact> response = PostContactlistContactsWithHttpInfo(contactListId, body, priority);
+             ApiResponse<Contact> response = PostContactlistsContactlistIdContactsWithHttpInfo(contactListId, body, priority);
              return response.Data;
         }
 
@@ -7698,12 +7698,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Contact</param> 
         /// <param name="priority"></param> 
         /// <returns>ApiResponse of Contact</returns>
-        public ApiResponse< Contact > PostContactlistContactsWithHttpInfo (string contactListId, List<Contact> body = null, bool? priority = null)
+        public ApiResponse< Contact > PostContactlistsContactlistIdContactsWithHttpInfo (string contactListId, List<Contact> body = null, bool? priority = null)
         {
             
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
-                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PostContactlistContacts");
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PostContactlistsContactlistIdContacts");
             
     
             var path_ = "/api/v1/outbound/contactlists/{contactListId}/contacts";
@@ -7764,9 +7764,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostContactlistContacts: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostContactlistsContactlistIdContacts: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostContactlistContacts: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostContactlistsContactlistIdContacts: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Contact>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7781,9 +7781,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Contact</param>
         /// <param name="priority"></param>
         /// <returns>Task of Contact</returns>
-        public async System.Threading.Tasks.Task<Contact> PostContactlistContactsAsync (string contactListId, List<Contact> body = null, bool? priority = null)
+        public async System.Threading.Tasks.Task<Contact> PostContactlistsContactlistIdContactsAsync (string contactListId, List<Contact> body = null, bool? priority = null)
         {
-             ApiResponse<Contact> response = await PostContactlistContactsAsyncWithHttpInfo(contactListId, body, priority);
+             ApiResponse<Contact> response = await PostContactlistsContactlistIdContactsAsyncWithHttpInfo(contactListId, body, priority);
              return response.Data;
 
         }
@@ -7795,10 +7795,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Contact</param>
         /// <param name="priority"></param>
         /// <returns>Task of ApiResponse (Contact)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Contact>> PostContactlistContactsAsyncWithHttpInfo (string contactListId, List<Contact> body = null, bool? priority = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Contact>> PostContactlistsContactlistIdContactsAsyncWithHttpInfo (string contactListId, List<Contact> body = null, bool? priority = null)
         {
             // verify the required parameter 'contactListId' is set
-            if (contactListId == null) throw new ApiException(400, "Missing required parameter 'contactListId' when calling PostContactlistContacts");
+            if (contactListId == null) throw new ApiException(400, "Missing required parameter 'contactListId' when calling PostContactlistsContactlistIdContacts");
             
     
             var path_ = "/api/v1/outbound/contactlists/{contactListId}/contacts";
@@ -7854,9 +7854,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostContactlistContacts: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostContactlistsContactlistIdContacts: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostContactlistContacts: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostContactlistsContactlistIdContacts: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Contact>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7870,9 +7870,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param> 
         /// <param name="contactId">Contact ID</param> 
         /// <returns>Contact</returns>
-        public Contact GetContactlistContact (string contactListId, string contactId)
+        public Contact GetContactlistsContactlistIdContactsContactId (string contactListId, string contactId)
         {
-             ApiResponse<Contact> response = GetContactlistContactWithHttpInfo(contactListId, contactId);
+             ApiResponse<Contact> response = GetContactlistsContactlistIdContactsContactIdWithHttpInfo(contactListId, contactId);
              return response.Data;
         }
 
@@ -7882,16 +7882,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param> 
         /// <param name="contactId">Contact ID</param> 
         /// <returns>ApiResponse of Contact</returns>
-        public ApiResponse< Contact > GetContactlistContactWithHttpInfo (string contactListId, string contactId)
+        public ApiResponse< Contact > GetContactlistsContactlistIdContactsContactIdWithHttpInfo (string contactListId, string contactId)
         {
             
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
-                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetContactlistContact");
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetContactlistsContactlistIdContactsContactId");
             
             // verify the required parameter 'contactId' is set
             if (contactId == null)
-                throw new ApiException(400, "Missing required parameter 'contactId' when calling OutboundApi->GetContactlistContact");
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling OutboundApi->GetContactlistsContactlistIdContactsContactId");
             
     
             var path_ = "/api/v1/outbound/contactlists/{contactListId}/contacts/{contactId}";
@@ -7945,9 +7945,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContactlistContact: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContactlistsContactlistIdContactsContactId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContactlistContact: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContactlistsContactlistIdContactsContactId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Contact>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7961,9 +7961,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>Task of Contact</returns>
-        public async System.Threading.Tasks.Task<Contact> GetContactlistContactAsync (string contactListId, string contactId)
+        public async System.Threading.Tasks.Task<Contact> GetContactlistsContactlistIdContactsContactIdAsync (string contactListId, string contactId)
         {
-             ApiResponse<Contact> response = await GetContactlistContactAsyncWithHttpInfo(contactListId, contactId);
+             ApiResponse<Contact> response = await GetContactlistsContactlistIdContactsContactIdAsyncWithHttpInfo(contactListId, contactId);
              return response.Data;
 
         }
@@ -7974,12 +7974,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>Task of ApiResponse (Contact)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Contact>> GetContactlistContactAsyncWithHttpInfo (string contactListId, string contactId)
+        public async System.Threading.Tasks.Task<ApiResponse<Contact>> GetContactlistsContactlistIdContactsContactIdAsyncWithHttpInfo (string contactListId, string contactId)
         {
             // verify the required parameter 'contactListId' is set
-            if (contactListId == null) throw new ApiException(400, "Missing required parameter 'contactListId' when calling GetContactlistContact");
+            if (contactListId == null) throw new ApiException(400, "Missing required parameter 'contactListId' when calling GetContactlistsContactlistIdContactsContactId");
             // verify the required parameter 'contactId' is set
-            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling GetContactlistContact");
+            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling GetContactlistsContactlistIdContactsContactId");
             
     
             var path_ = "/api/v1/outbound/contactlists/{contactListId}/contacts/{contactId}";
@@ -8034,9 +8034,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContactlistContact: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContactlistsContactlistIdContactsContactId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContactlistContact: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContactlistsContactlistIdContactsContactId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Contact>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8051,9 +8051,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">Contact ID</param> 
         /// <param name="body">Contact</param> 
         /// <returns>Contact</returns>
-        public Contact PutContactlistContact (string contactListId, string contactId, Contact body = null)
+        public Contact PutContactlistsContactlistIdContactsContactId (string contactListId, string contactId, Contact body = null)
         {
-             ApiResponse<Contact> response = PutContactlistContactWithHttpInfo(contactListId, contactId, body);
+             ApiResponse<Contact> response = PutContactlistsContactlistIdContactsContactIdWithHttpInfo(contactListId, contactId, body);
              return response.Data;
         }
 
@@ -8064,16 +8064,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">Contact ID</param> 
         /// <param name="body">Contact</param> 
         /// <returns>ApiResponse of Contact</returns>
-        public ApiResponse< Contact > PutContactlistContactWithHttpInfo (string contactListId, string contactId, Contact body = null)
+        public ApiResponse< Contact > PutContactlistsContactlistIdContactsContactIdWithHttpInfo (string contactListId, string contactId, Contact body = null)
         {
             
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
-                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PutContactlistContact");
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PutContactlistsContactlistIdContactsContactId");
             
             // verify the required parameter 'contactId' is set
             if (contactId == null)
-                throw new ApiException(400, "Missing required parameter 'contactId' when calling OutboundApi->PutContactlistContact");
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling OutboundApi->PutContactlistsContactlistIdContactsContactId");
             
     
             var path_ = "/api/v1/outbound/contactlists/{contactListId}/contacts/{contactId}";
@@ -8134,9 +8134,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutContactlistContact: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutContactlistsContactlistIdContactsContactId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutContactlistContact: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutContactlistsContactlistIdContactsContactId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Contact>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8151,9 +8151,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">Contact ID</param>
         /// <param name="body">Contact</param>
         /// <returns>Task of Contact</returns>
-        public async System.Threading.Tasks.Task<Contact> PutContactlistContactAsync (string contactListId, string contactId, Contact body = null)
+        public async System.Threading.Tasks.Task<Contact> PutContactlistsContactlistIdContactsContactIdAsync (string contactListId, string contactId, Contact body = null)
         {
-             ApiResponse<Contact> response = await PutContactlistContactAsyncWithHttpInfo(contactListId, contactId, body);
+             ApiResponse<Contact> response = await PutContactlistsContactlistIdContactsContactIdAsyncWithHttpInfo(contactListId, contactId, body);
              return response.Data;
 
         }
@@ -8165,12 +8165,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">Contact ID</param>
         /// <param name="body">Contact</param>
         /// <returns>Task of ApiResponse (Contact)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Contact>> PutContactlistContactAsyncWithHttpInfo (string contactListId, string contactId, Contact body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Contact>> PutContactlistsContactlistIdContactsContactIdAsyncWithHttpInfo (string contactListId, string contactId, Contact body = null)
         {
             // verify the required parameter 'contactListId' is set
-            if (contactListId == null) throw new ApiException(400, "Missing required parameter 'contactListId' when calling PutContactlistContact");
+            if (contactListId == null) throw new ApiException(400, "Missing required parameter 'contactListId' when calling PutContactlistsContactlistIdContactsContactId");
             // verify the required parameter 'contactId' is set
-            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling PutContactlistContact");
+            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling PutContactlistsContactlistIdContactsContactId");
             
     
             var path_ = "/api/v1/outbound/contactlists/{contactListId}/contacts/{contactId}";
@@ -8226,9 +8226,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutContactlistContact: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutContactlistsContactlistIdContactsContactId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutContactlistContact: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutContactlistsContactlistIdContactsContactId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Contact>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8242,9 +8242,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param> 
         /// <param name="contactId">Contact ID</param> 
         /// <returns>string</returns>
-        public string DeleteContactlistContact (string contactListId, string contactId)
+        public string DeleteContactlistsContactlistIdContactsContactId (string contactListId, string contactId)
         {
-             ApiResponse<string> response = DeleteContactlistContactWithHttpInfo(contactListId, contactId);
+             ApiResponse<string> response = DeleteContactlistsContactlistIdContactsContactIdWithHttpInfo(contactListId, contactId);
              return response.Data;
         }
 
@@ -8254,16 +8254,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param> 
         /// <param name="contactId">Contact ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteContactlistContactWithHttpInfo (string contactListId, string contactId)
+        public ApiResponse< string > DeleteContactlistsContactlistIdContactsContactIdWithHttpInfo (string contactListId, string contactId)
         {
             
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
-                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->DeleteContactlistContact");
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->DeleteContactlistsContactlistIdContactsContactId");
             
             // verify the required parameter 'contactId' is set
             if (contactId == null)
-                throw new ApiException(400, "Missing required parameter 'contactId' when calling OutboundApi->DeleteContactlistContact");
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling OutboundApi->DeleteContactlistsContactlistIdContactsContactId");
             
     
             var path_ = "/api/v1/outbound/contactlists/{contactListId}/contacts/{contactId}";
@@ -8317,9 +8317,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteContactlistContact: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteContactlistsContactlistIdContactsContactId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteContactlistContact: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteContactlistsContactlistIdContactsContactId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8333,9 +8333,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteContactlistContactAsync (string contactListId, string contactId)
+        public async System.Threading.Tasks.Task<string> DeleteContactlistsContactlistIdContactsContactIdAsync (string contactListId, string contactId)
         {
-             ApiResponse<string> response = await DeleteContactlistContactAsyncWithHttpInfo(contactListId, contactId);
+             ApiResponse<string> response = await DeleteContactlistsContactlistIdContactsContactIdAsyncWithHttpInfo(contactListId, contactId);
              return response.Data;
 
         }
@@ -8346,12 +8346,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteContactlistContactAsyncWithHttpInfo (string contactListId, string contactId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteContactlistsContactlistIdContactsContactIdAsyncWithHttpInfo (string contactListId, string contactId)
         {
             // verify the required parameter 'contactListId' is set
-            if (contactListId == null) throw new ApiException(400, "Missing required parameter 'contactListId' when calling DeleteContactlistContact");
+            if (contactListId == null) throw new ApiException(400, "Missing required parameter 'contactListId' when calling DeleteContactlistsContactlistIdContactsContactId");
             // verify the required parameter 'contactId' is set
-            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling DeleteContactlistContact");
+            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling DeleteContactlistsContactlistIdContactsContactId");
             
     
             var path_ = "/api/v1/outbound/contactlists/{contactListId}/contacts/{contactId}";
@@ -8406,9 +8406,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteContactlistContact: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteContactlistsContactlistIdContactsContactId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteContactlistContact: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteContactlistsContactlistIdContactsContactId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8421,9 +8421,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="contactListId">ContactList ID</param> 
         /// <returns>string</returns>
-        public string PostContactlistExport (string contactListId)
+        public string PostContactlistsContactlistIdExport (string contactListId)
         {
-             ApiResponse<string> response = PostContactlistExportWithHttpInfo(contactListId);
+             ApiResponse<string> response = PostContactlistsContactlistIdExportWithHttpInfo(contactListId);
              return response.Data;
         }
 
@@ -8432,12 +8432,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="contactListId">ContactList ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > PostContactlistExportWithHttpInfo (string contactListId)
+        public ApiResponse< string > PostContactlistsContactlistIdExportWithHttpInfo (string contactListId)
         {
             
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
-                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PostContactlistExport");
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PostContactlistsContactlistIdExport");
             
     
             var path_ = "/api/v1/outbound/contactlists/{contactListId}/export";
@@ -8490,9 +8490,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostContactlistExport: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostContactlistsContactlistIdExport: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostContactlistExport: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostContactlistsContactlistIdExport: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8505,9 +8505,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> PostContactlistExportAsync (string contactListId)
+        public async System.Threading.Tasks.Task<string> PostContactlistsContactlistIdExportAsync (string contactListId)
         {
-             ApiResponse<string> response = await PostContactlistExportAsyncWithHttpInfo(contactListId);
+             ApiResponse<string> response = await PostContactlistsContactlistIdExportAsyncWithHttpInfo(contactListId);
              return response.Data;
 
         }
@@ -8517,10 +8517,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> PostContactlistExportAsyncWithHttpInfo (string contactListId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> PostContactlistsContactlistIdExportAsyncWithHttpInfo (string contactListId)
         {
             // verify the required parameter 'contactListId' is set
-            if (contactListId == null) throw new ApiException(400, "Missing required parameter 'contactListId' when calling PostContactlistExport");
+            if (contactListId == null) throw new ApiException(400, "Missing required parameter 'contactListId' when calling PostContactlistsContactlistIdExport");
             
     
             var path_ = "/api/v1/outbound/contactlists/{contactListId}/export";
@@ -8574,9 +8574,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostContactlistExport: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostContactlistsContactlistIdExport: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostContactlistExport: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostContactlistsContactlistIdExport: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8589,9 +8589,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="contactListId">ContactList ID</param> 
         /// <returns>ImportStatus</returns>
-        public ImportStatus GetContactlistImportstatus (string contactListId)
+        public ImportStatus GetContactlistsContactlistIdImportstatus (string contactListId)
         {
-             ApiResponse<ImportStatus> response = GetContactlistImportstatusWithHttpInfo(contactListId);
+             ApiResponse<ImportStatus> response = GetContactlistsContactlistIdImportstatusWithHttpInfo(contactListId);
              return response.Data;
         }
 
@@ -8600,12 +8600,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="contactListId">ContactList ID</param> 
         /// <returns>ApiResponse of ImportStatus</returns>
-        public ApiResponse< ImportStatus > GetContactlistImportstatusWithHttpInfo (string contactListId)
+        public ApiResponse< ImportStatus > GetContactlistsContactlistIdImportstatusWithHttpInfo (string contactListId)
         {
             
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
-                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetContactlistImportstatus");
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetContactlistsContactlistIdImportstatus");
             
     
             var path_ = "/api/v1/outbound/contactlists/{contactListId}/importstatus";
@@ -8658,9 +8658,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContactlistImportstatus: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContactlistsContactlistIdImportstatus: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContactlistImportstatus: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContactlistsContactlistIdImportstatus: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ImportStatus>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8673,9 +8673,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of ImportStatus</returns>
-        public async System.Threading.Tasks.Task<ImportStatus> GetContactlistImportstatusAsync (string contactListId)
+        public async System.Threading.Tasks.Task<ImportStatus> GetContactlistsContactlistIdImportstatusAsync (string contactListId)
         {
-             ApiResponse<ImportStatus> response = await GetContactlistImportstatusAsyncWithHttpInfo(contactListId);
+             ApiResponse<ImportStatus> response = await GetContactlistsContactlistIdImportstatusAsyncWithHttpInfo(contactListId);
              return response.Data;
 
         }
@@ -8685,10 +8685,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of ApiResponse (ImportStatus)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ImportStatus>> GetContactlistImportstatusAsyncWithHttpInfo (string contactListId)
+        public async System.Threading.Tasks.Task<ApiResponse<ImportStatus>> GetContactlistsContactlistIdImportstatusAsyncWithHttpInfo (string contactListId)
         {
             // verify the required parameter 'contactListId' is set
-            if (contactListId == null) throw new ApiException(400, "Missing required parameter 'contactListId' when calling GetContactlistImportstatus");
+            if (contactListId == null) throw new ApiException(400, "Missing required parameter 'contactListId' when calling GetContactlistsContactlistIdImportstatus");
             
     
             var path_ = "/api/v1/outbound/contactlists/{contactListId}/importstatus";
@@ -8742,9 +8742,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContactlistImportstatus: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContactlistsContactlistIdImportstatus: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContactlistImportstatus: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContactlistsContactlistIdImportstatus: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ImportStatus>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8758,9 +8758,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">ContactList ID</param> 
         /// <param name="campaignId">Campaign ID</param> 
         /// <returns>PenetrationRate</returns>
-        public PenetrationRate GetContactlistPenetrationrate (string contactListId, string campaignId)
+        public PenetrationRate GetContactlistsContactlistIdCampaignIdPenetrationrate (string contactListId, string campaignId)
         {
-             ApiResponse<PenetrationRate> response = GetContactlistPenetrationrateWithHttpInfo(contactListId, campaignId);
+             ApiResponse<PenetrationRate> response = GetContactlistsContactlistIdCampaignIdPenetrationrateWithHttpInfo(contactListId, campaignId);
              return response.Data;
         }
 
@@ -8770,16 +8770,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">ContactList ID</param> 
         /// <param name="campaignId">Campaign ID</param> 
         /// <returns>ApiResponse of PenetrationRate</returns>
-        public ApiResponse< PenetrationRate > GetContactlistPenetrationrateWithHttpInfo (string contactListId, string campaignId)
+        public ApiResponse< PenetrationRate > GetContactlistsContactlistIdCampaignIdPenetrationrateWithHttpInfo (string contactListId, string campaignId)
         {
             
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
-                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetContactlistPenetrationrate");
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetContactlistsContactlistIdCampaignIdPenetrationrate");
             
             // verify the required parameter 'campaignId' is set
             if (campaignId == null)
-                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetContactlistPenetrationrate");
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetContactlistsContactlistIdCampaignIdPenetrationrate");
             
     
             var path_ = "/api/v1/outbound/contactlists/{contactListId}/{campaignId}/penetrationrate";
@@ -8833,9 +8833,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContactlistPenetrationrate: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContactlistsContactlistIdCampaignIdPenetrationrate: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContactlistPenetrationrate: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContactlistsContactlistIdCampaignIdPenetrationrate: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<PenetrationRate>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8849,9 +8849,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of PenetrationRate</returns>
-        public async System.Threading.Tasks.Task<PenetrationRate> GetContactlistPenetrationrateAsync (string contactListId, string campaignId)
+        public async System.Threading.Tasks.Task<PenetrationRate> GetContactlistsContactlistIdCampaignIdPenetrationrateAsync (string contactListId, string campaignId)
         {
-             ApiResponse<PenetrationRate> response = await GetContactlistPenetrationrateAsyncWithHttpInfo(contactListId, campaignId);
+             ApiResponse<PenetrationRate> response = await GetContactlistsContactlistIdCampaignIdPenetrationrateAsyncWithHttpInfo(contactListId, campaignId);
              return response.Data;
 
         }
@@ -8862,12 +8862,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactListId">ContactList ID</param>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (PenetrationRate)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PenetrationRate>> GetContactlistPenetrationrateAsyncWithHttpInfo (string contactListId, string campaignId)
+        public async System.Threading.Tasks.Task<ApiResponse<PenetrationRate>> GetContactlistsContactlistIdCampaignIdPenetrationrateAsyncWithHttpInfo (string contactListId, string campaignId)
         {
             // verify the required parameter 'contactListId' is set
-            if (contactListId == null) throw new ApiException(400, "Missing required parameter 'contactListId' when calling GetContactlistPenetrationrate");
+            if (contactListId == null) throw new ApiException(400, "Missing required parameter 'contactListId' when calling GetContactlistsContactlistIdCampaignIdPenetrationrate");
             // verify the required parameter 'campaignId' is set
-            if (campaignId == null) throw new ApiException(400, "Missing required parameter 'campaignId' when calling GetContactlistPenetrationrate");
+            if (campaignId == null) throw new ApiException(400, "Missing required parameter 'campaignId' when calling GetContactlistsContactlistIdCampaignIdPenetrationrate");
             
     
             var path_ = "/api/v1/outbound/contactlists/{contactListId}/{campaignId}/penetrationrate";
@@ -8922,9 +8922,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContactlistPenetrationrate: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContactlistsContactlistIdCampaignIdPenetrationrate: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContactlistPenetrationrate: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContactlistsContactlistIdCampaignIdPenetrationrate: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<PenetrationRate>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8937,9 +8937,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="conversationId">Conversation ID</param> 
         /// <returns></returns>
-        public void PostConversationDnc (string conversationId)
+        public void PostConversationsConversationIdDnc (string conversationId)
         {
-             PostConversationDncWithHttpInfo(conversationId);
+             PostConversationsConversationIdDncWithHttpInfo(conversationId);
         }
 
         /// <summary>
@@ -8947,12 +8947,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="conversationId">Conversation ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostConversationDncWithHttpInfo (string conversationId)
+        public ApiResponse<Object> PostConversationsConversationIdDncWithHttpInfo (string conversationId)
         {
             
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
-                throw new ApiException(400, "Missing required parameter 'conversationId' when calling OutboundApi->PostConversationDnc");
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling OutboundApi->PostConversationsConversationIdDnc");
             
     
             var path_ = "/api/v1/outbound/conversations/{conversationId}/dnc";
@@ -9005,9 +9005,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostConversationDnc: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostConversationsConversationIdDnc: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostConversationDnc: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostConversationsConversationIdDnc: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -9020,9 +9020,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="conversationId">Conversation ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostConversationDncAsync (string conversationId)
+        public async System.Threading.Tasks.Task PostConversationsConversationIdDncAsync (string conversationId)
         {
-             await PostConversationDncAsyncWithHttpInfo(conversationId);
+             await PostConversationsConversationIdDncAsyncWithHttpInfo(conversationId);
 
         }
 
@@ -9031,10 +9031,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="conversationId">Conversation ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationDncAsyncWithHttpInfo (string conversationId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsConversationIdDncAsyncWithHttpInfo (string conversationId)
         {
             // verify the required parameter 'conversationId' is set
-            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling PostConversationDnc");
+            if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling PostConversationsConversationIdDnc");
             
     
             var path_ = "/api/v1/outbound/conversations/{conversationId}/dnc";
@@ -9088,9 +9088,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostConversationDnc: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostConversationsConversationIdDnc: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostConversationDnc: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostConversationsConversationIdDnc: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -9484,9 +9484,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="importStatus">Import status</param> 
         /// <param name="includeSize">Include size</param> 
         /// <returns>DncList</returns>
-        public DncList GetDnclist (string dncListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null)
+        public DncList GetDnclistsDnclistId (string dncListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null)
         {
-             ApiResponse<DncList> response = GetDnclistWithHttpInfo(dncListId, includeImportStatus, importStatus, includeSize);
+             ApiResponse<DncList> response = GetDnclistsDnclistIdWithHttpInfo(dncListId, includeImportStatus, importStatus, includeSize);
              return response.Data;
         }
 
@@ -9498,12 +9498,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="importStatus">Import status</param> 
         /// <param name="includeSize">Include size</param> 
         /// <returns>ApiResponse of DncList</returns>
-        public ApiResponse< DncList > GetDnclistWithHttpInfo (string dncListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null)
+        public ApiResponse< DncList > GetDnclistsDnclistIdWithHttpInfo (string dncListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null)
         {
             
             // verify the required parameter 'dncListId' is set
             if (dncListId == null)
-                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->GetDnclist");
+                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->GetDnclistsDnclistId");
             
     
             var path_ = "/api/v1/outbound/dnclists/{dncListId}";
@@ -9559,9 +9559,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetDnclist: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetDnclistsDnclistId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetDnclist: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetDnclistsDnclistId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DncList>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9577,9 +9577,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="importStatus">Import status</param>
         /// <param name="includeSize">Include size</param>
         /// <returns>Task of DncList</returns>
-        public async System.Threading.Tasks.Task<DncList> GetDnclistAsync (string dncListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null)
+        public async System.Threading.Tasks.Task<DncList> GetDnclistsDnclistIdAsync (string dncListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null)
         {
-             ApiResponse<DncList> response = await GetDnclistAsyncWithHttpInfo(dncListId, includeImportStatus, importStatus, includeSize);
+             ApiResponse<DncList> response = await GetDnclistsDnclistIdAsyncWithHttpInfo(dncListId, includeImportStatus, importStatus, includeSize);
              return response.Data;
 
         }
@@ -9592,10 +9592,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="importStatus">Import status</param>
         /// <param name="includeSize">Include size</param>
         /// <returns>Task of ApiResponse (DncList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DncList>> GetDnclistAsyncWithHttpInfo (string dncListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DncList>> GetDnclistsDnclistIdAsyncWithHttpInfo (string dncListId, bool? includeImportStatus = null, bool? importStatus = null, bool? includeSize = null)
         {
             // verify the required parameter 'dncListId' is set
-            if (dncListId == null) throw new ApiException(400, "Missing required parameter 'dncListId' when calling GetDnclist");
+            if (dncListId == null) throw new ApiException(400, "Missing required parameter 'dncListId' when calling GetDnclistsDnclistId");
             
     
             var path_ = "/api/v1/outbound/dnclists/{dncListId}";
@@ -9652,9 +9652,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetDnclist: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetDnclistsDnclistId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetDnclist: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetDnclistsDnclistId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DncList>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9668,9 +9668,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="dncListId">DncList ID</param> 
         /// <param name="body">DncList</param> 
         /// <returns>DncList</returns>
-        public DncList PutDnclist (string dncListId, DncList body = null)
+        public DncList PutDnclistsDnclistId (string dncListId, DncList body = null)
         {
-             ApiResponse<DncList> response = PutDnclistWithHttpInfo(dncListId, body);
+             ApiResponse<DncList> response = PutDnclistsDnclistIdWithHttpInfo(dncListId, body);
              return response.Data;
         }
 
@@ -9680,12 +9680,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="dncListId">DncList ID</param> 
         /// <param name="body">DncList</param> 
         /// <returns>ApiResponse of DncList</returns>
-        public ApiResponse< DncList > PutDnclistWithHttpInfo (string dncListId, DncList body = null)
+        public ApiResponse< DncList > PutDnclistsDnclistIdWithHttpInfo (string dncListId, DncList body = null)
         {
             
             // verify the required parameter 'dncListId' is set
             if (dncListId == null)
-                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->PutDnclist");
+                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->PutDnclistsDnclistId");
             
     
             var path_ = "/api/v1/outbound/dnclists/{dncListId}";
@@ -9745,9 +9745,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutDnclist: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutDnclistsDnclistId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutDnclist: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutDnclistsDnclistId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DncList>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9761,9 +9761,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DncList</param>
         /// <returns>Task of DncList</returns>
-        public async System.Threading.Tasks.Task<DncList> PutDnclistAsync (string dncListId, DncList body = null)
+        public async System.Threading.Tasks.Task<DncList> PutDnclistsDnclistIdAsync (string dncListId, DncList body = null)
         {
-             ApiResponse<DncList> response = await PutDnclistAsyncWithHttpInfo(dncListId, body);
+             ApiResponse<DncList> response = await PutDnclistsDnclistIdAsyncWithHttpInfo(dncListId, body);
              return response.Data;
 
         }
@@ -9774,10 +9774,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DncList</param>
         /// <returns>Task of ApiResponse (DncList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DncList>> PutDnclistAsyncWithHttpInfo (string dncListId, DncList body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DncList>> PutDnclistsDnclistIdAsyncWithHttpInfo (string dncListId, DncList body = null)
         {
             // verify the required parameter 'dncListId' is set
-            if (dncListId == null) throw new ApiException(400, "Missing required parameter 'dncListId' when calling PutDnclist");
+            if (dncListId == null) throw new ApiException(400, "Missing required parameter 'dncListId' when calling PutDnclistsDnclistId");
             
     
             var path_ = "/api/v1/outbound/dnclists/{dncListId}";
@@ -9832,9 +9832,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutDnclist: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutDnclistsDnclistId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutDnclist: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutDnclistsDnclistId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DncList>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9847,9 +9847,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="dncListId">DncList ID</param> 
         /// <returns>string</returns>
-        public string DeleteDnclist (string dncListId)
+        public string DeleteDnclistsDnclistId (string dncListId)
         {
-             ApiResponse<string> response = DeleteDnclistWithHttpInfo(dncListId);
+             ApiResponse<string> response = DeleteDnclistsDnclistIdWithHttpInfo(dncListId);
              return response.Data;
         }
 
@@ -9858,12 +9858,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="dncListId">DncList ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteDnclistWithHttpInfo (string dncListId)
+        public ApiResponse< string > DeleteDnclistsDnclistIdWithHttpInfo (string dncListId)
         {
             
             // verify the required parameter 'dncListId' is set
             if (dncListId == null)
-                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->DeleteDnclist");
+                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->DeleteDnclistsDnclistId");
             
     
             var path_ = "/api/v1/outbound/dnclists/{dncListId}";
@@ -9916,9 +9916,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteDnclist: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteDnclistsDnclistId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteDnclist: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteDnclistsDnclistId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9931,9 +9931,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteDnclistAsync (string dncListId)
+        public async System.Threading.Tasks.Task<string> DeleteDnclistsDnclistIdAsync (string dncListId)
         {
-             ApiResponse<string> response = await DeleteDnclistAsyncWithHttpInfo(dncListId);
+             ApiResponse<string> response = await DeleteDnclistsDnclistIdAsyncWithHttpInfo(dncListId);
              return response.Data;
 
         }
@@ -9943,10 +9943,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteDnclistAsyncWithHttpInfo (string dncListId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteDnclistsDnclistIdAsyncWithHttpInfo (string dncListId)
         {
             // verify the required parameter 'dncListId' is set
-            if (dncListId == null) throw new ApiException(400, "Missing required parameter 'dncListId' when calling DeleteDnclist");
+            if (dncListId == null) throw new ApiException(400, "Missing required parameter 'dncListId' when calling DeleteDnclistsDnclistId");
             
     
             var path_ = "/api/v1/outbound/dnclists/{dncListId}";
@@ -10000,9 +10000,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteDnclist: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteDnclistsDnclistId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteDnclist: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteDnclistsDnclistId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10015,9 +10015,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="dncListId">DncList ID</param> 
         /// <returns>string</returns>
-        public string PostDnclistExport (string dncListId)
+        public string PostDnclistsDnclistIdExport (string dncListId)
         {
-             ApiResponse<string> response = PostDnclistExportWithHttpInfo(dncListId);
+             ApiResponse<string> response = PostDnclistsDnclistIdExportWithHttpInfo(dncListId);
              return response.Data;
         }
 
@@ -10026,12 +10026,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="dncListId">DncList ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > PostDnclistExportWithHttpInfo (string dncListId)
+        public ApiResponse< string > PostDnclistsDnclistIdExportWithHttpInfo (string dncListId)
         {
             
             // verify the required parameter 'dncListId' is set
             if (dncListId == null)
-                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->PostDnclistExport");
+                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->PostDnclistsDnclistIdExport");
             
     
             var path_ = "/api/v1/outbound/dnclists/{dncListId}/export";
@@ -10084,9 +10084,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostDnclistExport: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostDnclistsDnclistIdExport: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostDnclistExport: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostDnclistsDnclistIdExport: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10099,9 +10099,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> PostDnclistExportAsync (string dncListId)
+        public async System.Threading.Tasks.Task<string> PostDnclistsDnclistIdExportAsync (string dncListId)
         {
-             ApiResponse<string> response = await PostDnclistExportAsyncWithHttpInfo(dncListId);
+             ApiResponse<string> response = await PostDnclistsDnclistIdExportAsyncWithHttpInfo(dncListId);
              return response.Data;
 
         }
@@ -10111,10 +10111,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> PostDnclistExportAsyncWithHttpInfo (string dncListId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> PostDnclistsDnclistIdExportAsyncWithHttpInfo (string dncListId)
         {
             // verify the required parameter 'dncListId' is set
-            if (dncListId == null) throw new ApiException(400, "Missing required parameter 'dncListId' when calling PostDnclistExport");
+            if (dncListId == null) throw new ApiException(400, "Missing required parameter 'dncListId' when calling PostDnclistsDnclistIdExport");
             
     
             var path_ = "/api/v1/outbound/dnclists/{dncListId}/export";
@@ -10168,9 +10168,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostDnclistExport: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostDnclistsDnclistIdExport: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostDnclistExport: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostDnclistsDnclistIdExport: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10183,9 +10183,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="dncListId">DncList ID</param> 
         /// <returns>ImportStatus</returns>
-        public ImportStatus GetDnclistImportstatus (string dncListId)
+        public ImportStatus GetDnclistsDnclistIdImportstatus (string dncListId)
         {
-             ApiResponse<ImportStatus> response = GetDnclistImportstatusWithHttpInfo(dncListId);
+             ApiResponse<ImportStatus> response = GetDnclistsDnclistIdImportstatusWithHttpInfo(dncListId);
              return response.Data;
         }
 
@@ -10194,12 +10194,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="dncListId">DncList ID</param> 
         /// <returns>ApiResponse of ImportStatus</returns>
-        public ApiResponse< ImportStatus > GetDnclistImportstatusWithHttpInfo (string dncListId)
+        public ApiResponse< ImportStatus > GetDnclistsDnclistIdImportstatusWithHttpInfo (string dncListId)
         {
             
             // verify the required parameter 'dncListId' is set
             if (dncListId == null)
-                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->GetDnclistImportstatus");
+                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->GetDnclistsDnclistIdImportstatus");
             
     
             var path_ = "/api/v1/outbound/dnclists/{dncListId}/importstatus";
@@ -10252,9 +10252,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetDnclistImportstatus: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetDnclistsDnclistIdImportstatus: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetDnclistImportstatus: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetDnclistsDnclistIdImportstatus: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ImportStatus>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10267,9 +10267,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of ImportStatus</returns>
-        public async System.Threading.Tasks.Task<ImportStatus> GetDnclistImportstatusAsync (string dncListId)
+        public async System.Threading.Tasks.Task<ImportStatus> GetDnclistsDnclistIdImportstatusAsync (string dncListId)
         {
-             ApiResponse<ImportStatus> response = await GetDnclistImportstatusAsyncWithHttpInfo(dncListId);
+             ApiResponse<ImportStatus> response = await GetDnclistsDnclistIdImportstatusAsyncWithHttpInfo(dncListId);
              return response.Data;
 
         }
@@ -10279,10 +10279,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="dncListId">DncList ID</param>
         /// <returns>Task of ApiResponse (ImportStatus)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ImportStatus>> GetDnclistImportstatusAsyncWithHttpInfo (string dncListId)
+        public async System.Threading.Tasks.Task<ApiResponse<ImportStatus>> GetDnclistsDnclistIdImportstatusAsyncWithHttpInfo (string dncListId)
         {
             // verify the required parameter 'dncListId' is set
-            if (dncListId == null) throw new ApiException(400, "Missing required parameter 'dncListId' when calling GetDnclistImportstatus");
+            if (dncListId == null) throw new ApiException(400, "Missing required parameter 'dncListId' when calling GetDnclistsDnclistIdImportstatus");
             
     
             var path_ = "/api/v1/outbound/dnclists/{dncListId}/importstatus";
@@ -10336,9 +10336,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetDnclistImportstatus: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetDnclistsDnclistIdImportstatus: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetDnclistImportstatus: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetDnclistsDnclistIdImportstatus: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ImportStatus>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10352,9 +10352,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="dncListId">DncList ID</param> 
         /// <param name="body">DNC Phone Numbers</param> 
         /// <returns></returns>
-        public void PostDnclistPhonenumbers (string dncListId, List<string> body = null)
+        public void PostDnclistsDnclistIdPhonenumbers (string dncListId, List<string> body = null)
         {
-             PostDnclistPhonenumbersWithHttpInfo(dncListId, body);
+             PostDnclistsDnclistIdPhonenumbersWithHttpInfo(dncListId, body);
         }
 
         /// <summary>
@@ -10363,12 +10363,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="dncListId">DncList ID</param> 
         /// <param name="body">DNC Phone Numbers</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostDnclistPhonenumbersWithHttpInfo (string dncListId, List<string> body = null)
+        public ApiResponse<Object> PostDnclistsDnclistIdPhonenumbersWithHttpInfo (string dncListId, List<string> body = null)
         {
             
             // verify the required parameter 'dncListId' is set
             if (dncListId == null)
-                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->PostDnclistPhonenumbers");
+                throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->PostDnclistsDnclistIdPhonenumbers");
             
     
             var path_ = "/api/v1/outbound/dnclists/{dncListId}/phonenumbers";
@@ -10428,9 +10428,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostDnclistPhonenumbers: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostDnclistsDnclistIdPhonenumbers: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostDnclistPhonenumbers: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostDnclistsDnclistIdPhonenumbers: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -10444,9 +10444,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Phone Numbers</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostDnclistPhonenumbersAsync (string dncListId, List<string> body = null)
+        public async System.Threading.Tasks.Task PostDnclistsDnclistIdPhonenumbersAsync (string dncListId, List<string> body = null)
         {
-             await PostDnclistPhonenumbersAsyncWithHttpInfo(dncListId, body);
+             await PostDnclistsDnclistIdPhonenumbersAsyncWithHttpInfo(dncListId, body);
 
         }
 
@@ -10456,10 +10456,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="dncListId">DncList ID</param>
         /// <param name="body">DNC Phone Numbers</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostDnclistPhonenumbersAsyncWithHttpInfo (string dncListId, List<string> body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostDnclistsDnclistIdPhonenumbersAsyncWithHttpInfo (string dncListId, List<string> body = null)
         {
             // verify the required parameter 'dncListId' is set
-            if (dncListId == null) throw new ApiException(400, "Missing required parameter 'dncListId' when calling PostDnclistPhonenumbers");
+            if (dncListId == null) throw new ApiException(400, "Missing required parameter 'dncListId' when calling PostDnclistsDnclistIdPhonenumbers");
             
     
             var path_ = "/api/v1/outbound/dnclists/{dncListId}/phonenumbers";
@@ -10514,9 +10514,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostDnclistPhonenumbers: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostDnclistsDnclistIdPhonenumbers: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostDnclistPhonenumbers: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostDnclistsDnclistIdPhonenumbers: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -10685,9 +10685,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="previewId">preview ID</param> 
         /// <returns>Preview</returns>
-        public Preview GetPreview (string previewId)
+        public Preview GetPreviewsPreviewId (string previewId)
         {
-             ApiResponse<Preview> response = GetPreviewWithHttpInfo(previewId);
+             ApiResponse<Preview> response = GetPreviewsPreviewIdWithHttpInfo(previewId);
              return response.Data;
         }
 
@@ -10696,12 +10696,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="previewId">preview ID</param> 
         /// <returns>ApiResponse of Preview</returns>
-        public ApiResponse< Preview > GetPreviewWithHttpInfo (string previewId)
+        public ApiResponse< Preview > GetPreviewsPreviewIdWithHttpInfo (string previewId)
         {
             
             // verify the required parameter 'previewId' is set
             if (previewId == null)
-                throw new ApiException(400, "Missing required parameter 'previewId' when calling OutboundApi->GetPreview");
+                throw new ApiException(400, "Missing required parameter 'previewId' when calling OutboundApi->GetPreviewsPreviewId");
             
     
             var path_ = "/api/v1/outbound/previews/{previewId}";
@@ -10754,9 +10754,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetPreview: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetPreviewsPreviewId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetPreview: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetPreviewsPreviewId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Preview>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10769,9 +10769,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="previewId">preview ID</param>
         /// <returns>Task of Preview</returns>
-        public async System.Threading.Tasks.Task<Preview> GetPreviewAsync (string previewId)
+        public async System.Threading.Tasks.Task<Preview> GetPreviewsPreviewIdAsync (string previewId)
         {
-             ApiResponse<Preview> response = await GetPreviewAsyncWithHttpInfo(previewId);
+             ApiResponse<Preview> response = await GetPreviewsPreviewIdAsyncWithHttpInfo(previewId);
              return response.Data;
 
         }
@@ -10781,10 +10781,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="previewId">preview ID</param>
         /// <returns>Task of ApiResponse (Preview)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Preview>> GetPreviewAsyncWithHttpInfo (string previewId)
+        public async System.Threading.Tasks.Task<ApiResponse<Preview>> GetPreviewsPreviewIdAsyncWithHttpInfo (string previewId)
         {
             // verify the required parameter 'previewId' is set
-            if (previewId == null) throw new ApiException(400, "Missing required parameter 'previewId' when calling GetPreview");
+            if (previewId == null) throw new ApiException(400, "Missing required parameter 'previewId' when calling GetPreviewsPreviewId");
             
     
             var path_ = "/api/v1/outbound/previews/{previewId}";
@@ -10838,9 +10838,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetPreview: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetPreviewsPreviewId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetPreview: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetPreviewsPreviewId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Preview>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10854,9 +10854,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="previewId">preview ID</param> 
         /// <param name="body"></param> 
         /// <returns>string</returns>
-        public string PostPreviewDispositioncall (string previewId, DialerDispositionCallCommand body = null)
+        public string PostPreviewsPreviewIdDispositioncall (string previewId, DialerDispositionCallCommand body = null)
         {
-             ApiResponse<string> response = PostPreviewDispositioncallWithHttpInfo(previewId, body);
+             ApiResponse<string> response = PostPreviewsPreviewIdDispositioncallWithHttpInfo(previewId, body);
              return response.Data;
         }
 
@@ -10866,12 +10866,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="previewId">preview ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > PostPreviewDispositioncallWithHttpInfo (string previewId, DialerDispositionCallCommand body = null)
+        public ApiResponse< string > PostPreviewsPreviewIdDispositioncallWithHttpInfo (string previewId, DialerDispositionCallCommand body = null)
         {
             
             // verify the required parameter 'previewId' is set
             if (previewId == null)
-                throw new ApiException(400, "Missing required parameter 'previewId' when calling OutboundApi->PostPreviewDispositioncall");
+                throw new ApiException(400, "Missing required parameter 'previewId' when calling OutboundApi->PostPreviewsPreviewIdDispositioncall");
             
     
             var path_ = "/api/v1/outbound/previews/{previewId}/dispositioncall";
@@ -10931,9 +10931,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostPreviewDispositioncall: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostPreviewsPreviewIdDispositioncall: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostPreviewDispositioncall: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostPreviewsPreviewIdDispositioncall: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10947,9 +10947,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="previewId">preview ID</param>
         /// <param name="body"></param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> PostPreviewDispositioncallAsync (string previewId, DialerDispositionCallCommand body = null)
+        public async System.Threading.Tasks.Task<string> PostPreviewsPreviewIdDispositioncallAsync (string previewId, DialerDispositionCallCommand body = null)
         {
-             ApiResponse<string> response = await PostPreviewDispositioncallAsyncWithHttpInfo(previewId, body);
+             ApiResponse<string> response = await PostPreviewsPreviewIdDispositioncallAsyncWithHttpInfo(previewId, body);
              return response.Data;
 
         }
@@ -10960,10 +10960,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="previewId">preview ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> PostPreviewDispositioncallAsyncWithHttpInfo (string previewId, DialerDispositionCallCommand body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> PostPreviewsPreviewIdDispositioncallAsyncWithHttpInfo (string previewId, DialerDispositionCallCommand body = null)
         {
             // verify the required parameter 'previewId' is set
-            if (previewId == null) throw new ApiException(400, "Missing required parameter 'previewId' when calling PostPreviewDispositioncall");
+            if (previewId == null) throw new ApiException(400, "Missing required parameter 'previewId' when calling PostPreviewsPreviewIdDispositioncall");
             
     
             var path_ = "/api/v1/outbound/previews/{previewId}/dispositioncall";
@@ -11018,9 +11018,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostPreviewDispositioncall: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostPreviewsPreviewIdDispositioncall: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostPreviewDispositioncall: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostPreviewsPreviewIdDispositioncall: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -11034,9 +11034,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="previewId">preview ID</param> 
         /// <param name="body"></param> 
         /// <returns>DialerCall</returns>
-        public DialerCall PostPreviewPlacecall (string previewId, DialerPlaceCallCommand body = null)
+        public DialerCall PostPreviewsPreviewIdPlacecall (string previewId, DialerPlaceCallCommand body = null)
         {
-             ApiResponse<DialerCall> response = PostPreviewPlacecallWithHttpInfo(previewId, body);
+             ApiResponse<DialerCall> response = PostPreviewsPreviewIdPlacecallWithHttpInfo(previewId, body);
              return response.Data;
         }
 
@@ -11046,12 +11046,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="previewId">preview ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of DialerCall</returns>
-        public ApiResponse< DialerCall > PostPreviewPlacecallWithHttpInfo (string previewId, DialerPlaceCallCommand body = null)
+        public ApiResponse< DialerCall > PostPreviewsPreviewIdPlacecallWithHttpInfo (string previewId, DialerPlaceCallCommand body = null)
         {
             
             // verify the required parameter 'previewId' is set
             if (previewId == null)
-                throw new ApiException(400, "Missing required parameter 'previewId' when calling OutboundApi->PostPreviewPlacecall");
+                throw new ApiException(400, "Missing required parameter 'previewId' when calling OutboundApi->PostPreviewsPreviewIdPlacecall");
             
     
             var path_ = "/api/v1/outbound/previews/{previewId}/placecall";
@@ -11111,9 +11111,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostPreviewPlacecall: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostPreviewsPreviewIdPlacecall: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostPreviewPlacecall: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostPreviewsPreviewIdPlacecall: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DialerCall>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -11127,9 +11127,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="previewId">preview ID</param>
         /// <param name="body"></param>
         /// <returns>Task of DialerCall</returns>
-        public async System.Threading.Tasks.Task<DialerCall> PostPreviewPlacecallAsync (string previewId, DialerPlaceCallCommand body = null)
+        public async System.Threading.Tasks.Task<DialerCall> PostPreviewsPreviewIdPlacecallAsync (string previewId, DialerPlaceCallCommand body = null)
         {
-             ApiResponse<DialerCall> response = await PostPreviewPlacecallAsyncWithHttpInfo(previewId, body);
+             ApiResponse<DialerCall> response = await PostPreviewsPreviewIdPlacecallAsyncWithHttpInfo(previewId, body);
              return response.Data;
 
         }
@@ -11140,10 +11140,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="previewId">preview ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DialerCall)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DialerCall>> PostPreviewPlacecallAsyncWithHttpInfo (string previewId, DialerPlaceCallCommand body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DialerCall>> PostPreviewsPreviewIdPlacecallAsyncWithHttpInfo (string previewId, DialerPlaceCallCommand body = null)
         {
             // verify the required parameter 'previewId' is set
-            if (previewId == null) throw new ApiException(400, "Missing required parameter 'previewId' when calling PostPreviewPlacecall");
+            if (previewId == null) throw new ApiException(400, "Missing required parameter 'previewId' when calling PostPreviewsPreviewIdPlacecall");
             
     
             var path_ = "/api/v1/outbound/previews/{previewId}/placecall";
@@ -11198,9 +11198,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostPreviewPlacecall: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostPreviewsPreviewIdPlacecall: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostPreviewPlacecall: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostPreviewsPreviewIdPlacecall: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DialerCall>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -11573,9 +11573,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="ruleSetId">Rule Set ID</param> 
         /// <returns>RuleSet</returns>
-        public RuleSet GetRuleset (string ruleSetId)
+        public RuleSet GetRulesetsRulesetId (string ruleSetId)
         {
-             ApiResponse<RuleSet> response = GetRulesetWithHttpInfo(ruleSetId);
+             ApiResponse<RuleSet> response = GetRulesetsRulesetIdWithHttpInfo(ruleSetId);
              return response.Data;
         }
 
@@ -11584,12 +11584,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="ruleSetId">Rule Set ID</param> 
         /// <returns>ApiResponse of RuleSet</returns>
-        public ApiResponse< RuleSet > GetRulesetWithHttpInfo (string ruleSetId)
+        public ApiResponse< RuleSet > GetRulesetsRulesetIdWithHttpInfo (string ruleSetId)
         {
             
             // verify the required parameter 'ruleSetId' is set
             if (ruleSetId == null)
-                throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling OutboundApi->GetRuleset");
+                throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling OutboundApi->GetRulesetsRulesetId");
             
     
             var path_ = "/api/v1/outbound/rulesets/{ruleSetId}";
@@ -11642,9 +11642,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetRuleset: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetRulesetsRulesetId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetRuleset: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetRulesetsRulesetId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<RuleSet>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -11657,9 +11657,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>Task of RuleSet</returns>
-        public async System.Threading.Tasks.Task<RuleSet> GetRulesetAsync (string ruleSetId)
+        public async System.Threading.Tasks.Task<RuleSet> GetRulesetsRulesetIdAsync (string ruleSetId)
         {
-             ApiResponse<RuleSet> response = await GetRulesetAsyncWithHttpInfo(ruleSetId);
+             ApiResponse<RuleSet> response = await GetRulesetsRulesetIdAsyncWithHttpInfo(ruleSetId);
              return response.Data;
 
         }
@@ -11669,10 +11669,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>Task of ApiResponse (RuleSet)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RuleSet>> GetRulesetAsyncWithHttpInfo (string ruleSetId)
+        public async System.Threading.Tasks.Task<ApiResponse<RuleSet>> GetRulesetsRulesetIdAsyncWithHttpInfo (string ruleSetId)
         {
             // verify the required parameter 'ruleSetId' is set
-            if (ruleSetId == null) throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling GetRuleset");
+            if (ruleSetId == null) throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling GetRulesetsRulesetId");
             
     
             var path_ = "/api/v1/outbound/rulesets/{ruleSetId}";
@@ -11726,9 +11726,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetRuleset: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetRulesetsRulesetId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetRuleset: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetRulesetsRulesetId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<RuleSet>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -11742,9 +11742,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ruleSetId">Rule Set ID</param> 
         /// <param name="body">RuleSet</param> 
         /// <returns>RuleSet</returns>
-        public RuleSet PutRuleset (string ruleSetId, RuleSet body = null)
+        public RuleSet PutRulesetsRulesetId (string ruleSetId, RuleSet body = null)
         {
-             ApiResponse<RuleSet> response = PutRulesetWithHttpInfo(ruleSetId, body);
+             ApiResponse<RuleSet> response = PutRulesetsRulesetIdWithHttpInfo(ruleSetId, body);
              return response.Data;
         }
 
@@ -11754,12 +11754,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ruleSetId">Rule Set ID</param> 
         /// <param name="body">RuleSet</param> 
         /// <returns>ApiResponse of RuleSet</returns>
-        public ApiResponse< RuleSet > PutRulesetWithHttpInfo (string ruleSetId, RuleSet body = null)
+        public ApiResponse< RuleSet > PutRulesetsRulesetIdWithHttpInfo (string ruleSetId, RuleSet body = null)
         {
             
             // verify the required parameter 'ruleSetId' is set
             if (ruleSetId == null)
-                throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling OutboundApi->PutRuleset");
+                throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling OutboundApi->PutRulesetsRulesetId");
             
     
             var path_ = "/api/v1/outbound/rulesets/{ruleSetId}";
@@ -11819,9 +11819,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutRuleset: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutRulesetsRulesetId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutRuleset: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutRulesetsRulesetId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<RuleSet>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -11835,9 +11835,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <param name="body">RuleSet</param>
         /// <returns>Task of RuleSet</returns>
-        public async System.Threading.Tasks.Task<RuleSet> PutRulesetAsync (string ruleSetId, RuleSet body = null)
+        public async System.Threading.Tasks.Task<RuleSet> PutRulesetsRulesetIdAsync (string ruleSetId, RuleSet body = null)
         {
-             ApiResponse<RuleSet> response = await PutRulesetAsyncWithHttpInfo(ruleSetId, body);
+             ApiResponse<RuleSet> response = await PutRulesetsRulesetIdAsyncWithHttpInfo(ruleSetId, body);
              return response.Data;
 
         }
@@ -11848,10 +11848,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <param name="body">RuleSet</param>
         /// <returns>Task of ApiResponse (RuleSet)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RuleSet>> PutRulesetAsyncWithHttpInfo (string ruleSetId, RuleSet body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RuleSet>> PutRulesetsRulesetIdAsyncWithHttpInfo (string ruleSetId, RuleSet body = null)
         {
             // verify the required parameter 'ruleSetId' is set
-            if (ruleSetId == null) throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling PutRuleset");
+            if (ruleSetId == null) throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling PutRulesetsRulesetId");
             
     
             var path_ = "/api/v1/outbound/rulesets/{ruleSetId}";
@@ -11906,9 +11906,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutRuleset: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutRulesetsRulesetId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutRuleset: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutRulesetsRulesetId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<RuleSet>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -11921,9 +11921,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="ruleSetId">Rule Set ID</param> 
         /// <returns>string</returns>
-        public string DeleteRuleset (string ruleSetId)
+        public string DeleteRulesetsRulesetId (string ruleSetId)
         {
-             ApiResponse<string> response = DeleteRulesetWithHttpInfo(ruleSetId);
+             ApiResponse<string> response = DeleteRulesetsRulesetIdWithHttpInfo(ruleSetId);
              return response.Data;
         }
 
@@ -11932,12 +11932,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="ruleSetId">Rule Set ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteRulesetWithHttpInfo (string ruleSetId)
+        public ApiResponse< string > DeleteRulesetsRulesetIdWithHttpInfo (string ruleSetId)
         {
             
             // verify the required parameter 'ruleSetId' is set
             if (ruleSetId == null)
-                throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling OutboundApi->DeleteRuleset");
+                throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling OutboundApi->DeleteRulesetsRulesetId");
             
     
             var path_ = "/api/v1/outbound/rulesets/{ruleSetId}";
@@ -11990,9 +11990,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteRuleset: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteRulesetsRulesetId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteRuleset: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteRulesetsRulesetId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -12005,9 +12005,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteRulesetAsync (string ruleSetId)
+        public async System.Threading.Tasks.Task<string> DeleteRulesetsRulesetIdAsync (string ruleSetId)
         {
-             ApiResponse<string> response = await DeleteRulesetAsyncWithHttpInfo(ruleSetId);
+             ApiResponse<string> response = await DeleteRulesetsRulesetIdAsyncWithHttpInfo(ruleSetId);
              return response.Data;
 
         }
@@ -12017,10 +12017,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="ruleSetId">Rule Set ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteRulesetAsyncWithHttpInfo (string ruleSetId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteRulesetsRulesetIdAsyncWithHttpInfo (string ruleSetId)
         {
             // verify the required parameter 'ruleSetId' is set
-            if (ruleSetId == null) throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling DeleteRuleset");
+            if (ruleSetId == null) throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling DeleteRulesetsRulesetId");
             
     
             var path_ = "/api/v1/outbound/rulesets/{ruleSetId}";
@@ -12074,9 +12074,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteRuleset: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteRulesetsRulesetId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteRuleset: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteRulesetsRulesetId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -12245,9 +12245,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="campaignId">Campaign ID</param> 
         /// <returns>CampaignSchedule</returns>
-        public CampaignSchedule GetSchedulesCampaign (string campaignId)
+        public CampaignSchedule GetSchedulesCampaignsCampaignId (string campaignId)
         {
-             ApiResponse<CampaignSchedule> response = GetSchedulesCampaignWithHttpInfo(campaignId);
+             ApiResponse<CampaignSchedule> response = GetSchedulesCampaignsCampaignIdWithHttpInfo(campaignId);
              return response.Data;
         }
 
@@ -12256,12 +12256,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="campaignId">Campaign ID</param> 
         /// <returns>ApiResponse of CampaignSchedule</returns>
-        public ApiResponse< CampaignSchedule > GetSchedulesCampaignWithHttpInfo (string campaignId)
+        public ApiResponse< CampaignSchedule > GetSchedulesCampaignsCampaignIdWithHttpInfo (string campaignId)
         {
             
             // verify the required parameter 'campaignId' is set
             if (campaignId == null)
-                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetSchedulesCampaign");
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetSchedulesCampaignsCampaignId");
             
     
             var path_ = "/api/v1/outbound/schedules/campaigns/{campaignId}";
@@ -12314,9 +12314,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSchedulesCampaign: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSchedulesCampaignsCampaignId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSchedulesCampaign: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSchedulesCampaignsCampaignId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<CampaignSchedule>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -12329,9 +12329,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of CampaignSchedule</returns>
-        public async System.Threading.Tasks.Task<CampaignSchedule> GetSchedulesCampaignAsync (string campaignId)
+        public async System.Threading.Tasks.Task<CampaignSchedule> GetSchedulesCampaignsCampaignIdAsync (string campaignId)
         {
-             ApiResponse<CampaignSchedule> response = await GetSchedulesCampaignAsyncWithHttpInfo(campaignId);
+             ApiResponse<CampaignSchedule> response = await GetSchedulesCampaignsCampaignIdAsyncWithHttpInfo(campaignId);
              return response.Data;
 
         }
@@ -12341,10 +12341,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (CampaignSchedule)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CampaignSchedule>> GetSchedulesCampaignAsyncWithHttpInfo (string campaignId)
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignSchedule>> GetSchedulesCampaignsCampaignIdAsyncWithHttpInfo (string campaignId)
         {
             // verify the required parameter 'campaignId' is set
-            if (campaignId == null) throw new ApiException(400, "Missing required parameter 'campaignId' when calling GetSchedulesCampaign");
+            if (campaignId == null) throw new ApiException(400, "Missing required parameter 'campaignId' when calling GetSchedulesCampaignsCampaignId");
             
     
             var path_ = "/api/v1/outbound/schedules/campaigns/{campaignId}";
@@ -12398,9 +12398,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSchedulesCampaign: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSchedulesCampaignsCampaignId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSchedulesCampaign: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSchedulesCampaignsCampaignId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<CampaignSchedule>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -12414,9 +12414,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="campaignId">Campaign ID</param> 
         /// <param name="body">CampaignSchedule</param> 
         /// <returns>CampaignSchedule</returns>
-        public CampaignSchedule PutSchedulesCampaign (string campaignId, CampaignSchedule body = null)
+        public CampaignSchedule PutSchedulesCampaignsCampaignId (string campaignId, CampaignSchedule body = null)
         {
-             ApiResponse<CampaignSchedule> response = PutSchedulesCampaignWithHttpInfo(campaignId, body);
+             ApiResponse<CampaignSchedule> response = PutSchedulesCampaignsCampaignIdWithHttpInfo(campaignId, body);
              return response.Data;
         }
 
@@ -12426,12 +12426,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="campaignId">Campaign ID</param> 
         /// <param name="body">CampaignSchedule</param> 
         /// <returns>ApiResponse of CampaignSchedule</returns>
-        public ApiResponse< CampaignSchedule > PutSchedulesCampaignWithHttpInfo (string campaignId, CampaignSchedule body = null)
+        public ApiResponse< CampaignSchedule > PutSchedulesCampaignsCampaignIdWithHttpInfo (string campaignId, CampaignSchedule body = null)
         {
             
             // verify the required parameter 'campaignId' is set
             if (campaignId == null)
-                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PutSchedulesCampaign");
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PutSchedulesCampaignsCampaignId");
             
     
             var path_ = "/api/v1/outbound/schedules/campaigns/{campaignId}";
@@ -12491,9 +12491,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutSchedulesCampaign: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutSchedulesCampaignsCampaignId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutSchedulesCampaign: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutSchedulesCampaignsCampaignId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<CampaignSchedule>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -12507,9 +12507,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">CampaignSchedule</param>
         /// <returns>Task of CampaignSchedule</returns>
-        public async System.Threading.Tasks.Task<CampaignSchedule> PutSchedulesCampaignAsync (string campaignId, CampaignSchedule body = null)
+        public async System.Threading.Tasks.Task<CampaignSchedule> PutSchedulesCampaignsCampaignIdAsync (string campaignId, CampaignSchedule body = null)
         {
-             ApiResponse<CampaignSchedule> response = await PutSchedulesCampaignAsyncWithHttpInfo(campaignId, body);
+             ApiResponse<CampaignSchedule> response = await PutSchedulesCampaignsCampaignIdAsyncWithHttpInfo(campaignId, body);
              return response.Data;
 
         }
@@ -12520,10 +12520,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <param name="body">CampaignSchedule</param>
         /// <returns>Task of ApiResponse (CampaignSchedule)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CampaignSchedule>> PutSchedulesCampaignAsyncWithHttpInfo (string campaignId, CampaignSchedule body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignSchedule>> PutSchedulesCampaignsCampaignIdAsyncWithHttpInfo (string campaignId, CampaignSchedule body = null)
         {
             // verify the required parameter 'campaignId' is set
-            if (campaignId == null) throw new ApiException(400, "Missing required parameter 'campaignId' when calling PutSchedulesCampaign");
+            if (campaignId == null) throw new ApiException(400, "Missing required parameter 'campaignId' when calling PutSchedulesCampaignsCampaignId");
             
     
             var path_ = "/api/v1/outbound/schedules/campaigns/{campaignId}";
@@ -12578,9 +12578,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutSchedulesCampaign: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutSchedulesCampaignsCampaignId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutSchedulesCampaign: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutSchedulesCampaignsCampaignId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<CampaignSchedule>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -12593,9 +12593,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="campaignId">Campaign ID</param> 
         /// <returns>string</returns>
-        public string DeleteSchedulesCampaign (string campaignId)
+        public string DeleteSchedulesCampaignsCampaignId (string campaignId)
         {
-             ApiResponse<string> response = DeleteSchedulesCampaignWithHttpInfo(campaignId);
+             ApiResponse<string> response = DeleteSchedulesCampaignsCampaignIdWithHttpInfo(campaignId);
              return response.Data;
         }
 
@@ -12604,12 +12604,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="campaignId">Campaign ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteSchedulesCampaignWithHttpInfo (string campaignId)
+        public ApiResponse< string > DeleteSchedulesCampaignsCampaignIdWithHttpInfo (string campaignId)
         {
             
             // verify the required parameter 'campaignId' is set
             if (campaignId == null)
-                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->DeleteSchedulesCampaign");
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->DeleteSchedulesCampaignsCampaignId");
             
     
             var path_ = "/api/v1/outbound/schedules/campaigns/{campaignId}";
@@ -12662,9 +12662,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteSchedulesCampaign: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteSchedulesCampaignsCampaignId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteSchedulesCampaign: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteSchedulesCampaignsCampaignId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -12677,9 +12677,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteSchedulesCampaignAsync (string campaignId)
+        public async System.Threading.Tasks.Task<string> DeleteSchedulesCampaignsCampaignIdAsync (string campaignId)
         {
-             ApiResponse<string> response = await DeleteSchedulesCampaignAsyncWithHttpInfo(campaignId);
+             ApiResponse<string> response = await DeleteSchedulesCampaignsCampaignIdAsyncWithHttpInfo(campaignId);
              return response.Data;
 
         }
@@ -12689,10 +12689,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteSchedulesCampaignAsyncWithHttpInfo (string campaignId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteSchedulesCampaignsCampaignIdAsyncWithHttpInfo (string campaignId)
         {
             // verify the required parameter 'campaignId' is set
-            if (campaignId == null) throw new ApiException(400, "Missing required parameter 'campaignId' when calling DeleteSchedulesCampaign");
+            if (campaignId == null) throw new ApiException(400, "Missing required parameter 'campaignId' when calling DeleteSchedulesCampaignsCampaignId");
             
     
             var path_ = "/api/v1/outbound/schedules/campaigns/{campaignId}";
@@ -12746,9 +12746,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteSchedulesCampaign: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteSchedulesCampaignsCampaignId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteSchedulesCampaign: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteSchedulesCampaignsCampaignId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -12917,9 +12917,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="sequenceId">Sequence ID</param> 
         /// <returns>SequenceSchedule</returns>
-        public SequenceSchedule GetSchedulesSequence (string sequenceId)
+        public SequenceSchedule GetSchedulesSequencesSequenceId (string sequenceId)
         {
-             ApiResponse<SequenceSchedule> response = GetSchedulesSequenceWithHttpInfo(sequenceId);
+             ApiResponse<SequenceSchedule> response = GetSchedulesSequencesSequenceIdWithHttpInfo(sequenceId);
              return response.Data;
         }
 
@@ -12928,12 +12928,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="sequenceId">Sequence ID</param> 
         /// <returns>ApiResponse of SequenceSchedule</returns>
-        public ApiResponse< SequenceSchedule > GetSchedulesSequenceWithHttpInfo (string sequenceId)
+        public ApiResponse< SequenceSchedule > GetSchedulesSequencesSequenceIdWithHttpInfo (string sequenceId)
         {
             
             // verify the required parameter 'sequenceId' is set
             if (sequenceId == null)
-                throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->GetSchedulesSequence");
+                throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->GetSchedulesSequencesSequenceId");
             
     
             var path_ = "/api/v1/outbound/schedules/sequences/{sequenceId}";
@@ -12986,9 +12986,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSchedulesSequence: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSchedulesSequencesSequenceId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSchedulesSequence: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSchedulesSequencesSequenceId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<SequenceSchedule>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -13001,9 +13001,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>Task of SequenceSchedule</returns>
-        public async System.Threading.Tasks.Task<SequenceSchedule> GetSchedulesSequenceAsync (string sequenceId)
+        public async System.Threading.Tasks.Task<SequenceSchedule> GetSchedulesSequencesSequenceIdAsync (string sequenceId)
         {
-             ApiResponse<SequenceSchedule> response = await GetSchedulesSequenceAsyncWithHttpInfo(sequenceId);
+             ApiResponse<SequenceSchedule> response = await GetSchedulesSequencesSequenceIdAsyncWithHttpInfo(sequenceId);
              return response.Data;
 
         }
@@ -13013,10 +13013,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>Task of ApiResponse (SequenceSchedule)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SequenceSchedule>> GetSchedulesSequenceAsyncWithHttpInfo (string sequenceId)
+        public async System.Threading.Tasks.Task<ApiResponse<SequenceSchedule>> GetSchedulesSequencesSequenceIdAsyncWithHttpInfo (string sequenceId)
         {
             // verify the required parameter 'sequenceId' is set
-            if (sequenceId == null) throw new ApiException(400, "Missing required parameter 'sequenceId' when calling GetSchedulesSequence");
+            if (sequenceId == null) throw new ApiException(400, "Missing required parameter 'sequenceId' when calling GetSchedulesSequencesSequenceId");
             
     
             var path_ = "/api/v1/outbound/schedules/sequences/{sequenceId}";
@@ -13070,9 +13070,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSchedulesSequence: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSchedulesSequencesSequenceId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSchedulesSequence: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSchedulesSequencesSequenceId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<SequenceSchedule>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -13086,9 +13086,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sequenceId">Sequence ID</param> 
         /// <param name="body">SequenceSchedule</param> 
         /// <returns>SequenceSchedule</returns>
-        public SequenceSchedule PutSchedulesSequence (string sequenceId, SequenceSchedule body = null)
+        public SequenceSchedule PutSchedulesSequencesSequenceId (string sequenceId, SequenceSchedule body = null)
         {
-             ApiResponse<SequenceSchedule> response = PutSchedulesSequenceWithHttpInfo(sequenceId, body);
+             ApiResponse<SequenceSchedule> response = PutSchedulesSequencesSequenceIdWithHttpInfo(sequenceId, body);
              return response.Data;
         }
 
@@ -13098,12 +13098,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sequenceId">Sequence ID</param> 
         /// <param name="body">SequenceSchedule</param> 
         /// <returns>ApiResponse of SequenceSchedule</returns>
-        public ApiResponse< SequenceSchedule > PutSchedulesSequenceWithHttpInfo (string sequenceId, SequenceSchedule body = null)
+        public ApiResponse< SequenceSchedule > PutSchedulesSequencesSequenceIdWithHttpInfo (string sequenceId, SequenceSchedule body = null)
         {
             
             // verify the required parameter 'sequenceId' is set
             if (sequenceId == null)
-                throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->PutSchedulesSequence");
+                throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->PutSchedulesSequencesSequenceId");
             
     
             var path_ = "/api/v1/outbound/schedules/sequences/{sequenceId}";
@@ -13163,9 +13163,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutSchedulesSequence: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutSchedulesSequencesSequenceId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutSchedulesSequence: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutSchedulesSequencesSequenceId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<SequenceSchedule>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -13179,9 +13179,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sequenceId">Sequence ID</param>
         /// <param name="body">SequenceSchedule</param>
         /// <returns>Task of SequenceSchedule</returns>
-        public async System.Threading.Tasks.Task<SequenceSchedule> PutSchedulesSequenceAsync (string sequenceId, SequenceSchedule body = null)
+        public async System.Threading.Tasks.Task<SequenceSchedule> PutSchedulesSequencesSequenceIdAsync (string sequenceId, SequenceSchedule body = null)
         {
-             ApiResponse<SequenceSchedule> response = await PutSchedulesSequenceAsyncWithHttpInfo(sequenceId, body);
+             ApiResponse<SequenceSchedule> response = await PutSchedulesSequencesSequenceIdAsyncWithHttpInfo(sequenceId, body);
              return response.Data;
 
         }
@@ -13192,10 +13192,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sequenceId">Sequence ID</param>
         /// <param name="body">SequenceSchedule</param>
         /// <returns>Task of ApiResponse (SequenceSchedule)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SequenceSchedule>> PutSchedulesSequenceAsyncWithHttpInfo (string sequenceId, SequenceSchedule body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SequenceSchedule>> PutSchedulesSequencesSequenceIdAsyncWithHttpInfo (string sequenceId, SequenceSchedule body = null)
         {
             // verify the required parameter 'sequenceId' is set
-            if (sequenceId == null) throw new ApiException(400, "Missing required parameter 'sequenceId' when calling PutSchedulesSequence");
+            if (sequenceId == null) throw new ApiException(400, "Missing required parameter 'sequenceId' when calling PutSchedulesSequencesSequenceId");
             
     
             var path_ = "/api/v1/outbound/schedules/sequences/{sequenceId}";
@@ -13250,9 +13250,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutSchedulesSequence: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutSchedulesSequencesSequenceId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutSchedulesSequence: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutSchedulesSequencesSequenceId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<SequenceSchedule>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -13265,9 +13265,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="sequenceId">Sequence ID</param> 
         /// <returns>string</returns>
-        public string DeleteSchedulesSequence (string sequenceId)
+        public string DeleteSchedulesSequencesSequenceId (string sequenceId)
         {
-             ApiResponse<string> response = DeleteSchedulesSequenceWithHttpInfo(sequenceId);
+             ApiResponse<string> response = DeleteSchedulesSequencesSequenceIdWithHttpInfo(sequenceId);
              return response.Data;
         }
 
@@ -13276,12 +13276,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="sequenceId">Sequence ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteSchedulesSequenceWithHttpInfo (string sequenceId)
+        public ApiResponse< string > DeleteSchedulesSequencesSequenceIdWithHttpInfo (string sequenceId)
         {
             
             // verify the required parameter 'sequenceId' is set
             if (sequenceId == null)
-                throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->DeleteSchedulesSequence");
+                throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->DeleteSchedulesSequencesSequenceId");
             
     
             var path_ = "/api/v1/outbound/schedules/sequences/{sequenceId}";
@@ -13334,9 +13334,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteSchedulesSequence: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteSchedulesSequencesSequenceId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteSchedulesSequence: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteSchedulesSequencesSequenceId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -13349,9 +13349,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteSchedulesSequenceAsync (string sequenceId)
+        public async System.Threading.Tasks.Task<string> DeleteSchedulesSequencesSequenceIdAsync (string sequenceId)
         {
-             ApiResponse<string> response = await DeleteSchedulesSequenceAsyncWithHttpInfo(sequenceId);
+             ApiResponse<string> response = await DeleteSchedulesSequencesSequenceIdAsyncWithHttpInfo(sequenceId);
              return response.Data;
 
         }
@@ -13361,10 +13361,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="sequenceId">Sequence ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteSchedulesSequenceAsyncWithHttpInfo (string sequenceId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteSchedulesSequencesSequenceIdAsyncWithHttpInfo (string sequenceId)
         {
             // verify the required parameter 'sequenceId' is set
-            if (sequenceId == null) throw new ApiException(400, "Missing required parameter 'sequenceId' when calling DeleteSchedulesSequence");
+            if (sequenceId == null) throw new ApiException(400, "Missing required parameter 'sequenceId' when calling DeleteSchedulesSequencesSequenceId");
             
     
             var path_ = "/api/v1/outbound/schedules/sequences/{sequenceId}";
@@ -13418,9 +13418,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteSchedulesSequence: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteSchedulesSequencesSequenceId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteSchedulesSequence: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteSchedulesSequencesSequenceId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -13793,9 +13793,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="sequenceId">Campaign Sequence ID</param> 
         /// <returns>CampaignSequence</returns>
-        public CampaignSequence GetSequence (string sequenceId)
+        public CampaignSequence GetSequencesSequenceId (string sequenceId)
         {
-             ApiResponse<CampaignSequence> response = GetSequenceWithHttpInfo(sequenceId);
+             ApiResponse<CampaignSequence> response = GetSequencesSequenceIdWithHttpInfo(sequenceId);
              return response.Data;
         }
 
@@ -13804,12 +13804,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="sequenceId">Campaign Sequence ID</param> 
         /// <returns>ApiResponse of CampaignSequence</returns>
-        public ApiResponse< CampaignSequence > GetSequenceWithHttpInfo (string sequenceId)
+        public ApiResponse< CampaignSequence > GetSequencesSequenceIdWithHttpInfo (string sequenceId)
         {
             
             // verify the required parameter 'sequenceId' is set
             if (sequenceId == null)
-                throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->GetSequence");
+                throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->GetSequencesSequenceId");
             
     
             var path_ = "/api/v1/outbound/sequences/{sequenceId}";
@@ -13862,9 +13862,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSequence: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSequencesSequenceId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSequence: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSequencesSequenceId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<CampaignSequence>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -13877,9 +13877,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>Task of CampaignSequence</returns>
-        public async System.Threading.Tasks.Task<CampaignSequence> GetSequenceAsync (string sequenceId)
+        public async System.Threading.Tasks.Task<CampaignSequence> GetSequencesSequenceIdAsync (string sequenceId)
         {
-             ApiResponse<CampaignSequence> response = await GetSequenceAsyncWithHttpInfo(sequenceId);
+             ApiResponse<CampaignSequence> response = await GetSequencesSequenceIdAsyncWithHttpInfo(sequenceId);
              return response.Data;
 
         }
@@ -13889,10 +13889,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>Task of ApiResponse (CampaignSequence)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> GetSequenceAsyncWithHttpInfo (string sequenceId)
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> GetSequencesSequenceIdAsyncWithHttpInfo (string sequenceId)
         {
             // verify the required parameter 'sequenceId' is set
-            if (sequenceId == null) throw new ApiException(400, "Missing required parameter 'sequenceId' when calling GetSequence");
+            if (sequenceId == null) throw new ApiException(400, "Missing required parameter 'sequenceId' when calling GetSequencesSequenceId");
             
     
             var path_ = "/api/v1/outbound/sequences/{sequenceId}";
@@ -13946,9 +13946,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSequence: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSequencesSequenceId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSequence: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSequencesSequenceId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<CampaignSequence>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -13962,9 +13962,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sequenceId">Campaign Sequence ID</param> 
         /// <param name="body">Organization</param> 
         /// <returns>CampaignSequence</returns>
-        public CampaignSequence PutSequence (string sequenceId, CampaignSequence body = null)
+        public CampaignSequence PutSequencesSequenceId (string sequenceId, CampaignSequence body = null)
         {
-             ApiResponse<CampaignSequence> response = PutSequenceWithHttpInfo(sequenceId, body);
+             ApiResponse<CampaignSequence> response = PutSequencesSequenceIdWithHttpInfo(sequenceId, body);
              return response.Data;
         }
 
@@ -13974,12 +13974,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sequenceId">Campaign Sequence ID</param> 
         /// <param name="body">Organization</param> 
         /// <returns>ApiResponse of CampaignSequence</returns>
-        public ApiResponse< CampaignSequence > PutSequenceWithHttpInfo (string sequenceId, CampaignSequence body = null)
+        public ApiResponse< CampaignSequence > PutSequencesSequenceIdWithHttpInfo (string sequenceId, CampaignSequence body = null)
         {
             
             // verify the required parameter 'sequenceId' is set
             if (sequenceId == null)
-                throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->PutSequence");
+                throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->PutSequencesSequenceId");
             
     
             var path_ = "/api/v1/outbound/sequences/{sequenceId}";
@@ -14039,9 +14039,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutSequence: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutSequencesSequenceId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutSequence: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutSequencesSequenceId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<CampaignSequence>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -14055,9 +14055,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <param name="body">Organization</param>
         /// <returns>Task of CampaignSequence</returns>
-        public async System.Threading.Tasks.Task<CampaignSequence> PutSequenceAsync (string sequenceId, CampaignSequence body = null)
+        public async System.Threading.Tasks.Task<CampaignSequence> PutSequencesSequenceIdAsync (string sequenceId, CampaignSequence body = null)
         {
-             ApiResponse<CampaignSequence> response = await PutSequenceAsyncWithHttpInfo(sequenceId, body);
+             ApiResponse<CampaignSequence> response = await PutSequencesSequenceIdAsyncWithHttpInfo(sequenceId, body);
              return response.Data;
 
         }
@@ -14068,10 +14068,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <param name="body">Organization</param>
         /// <returns>Task of ApiResponse (CampaignSequence)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> PutSequenceAsyncWithHttpInfo (string sequenceId, CampaignSequence body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignSequence>> PutSequencesSequenceIdAsyncWithHttpInfo (string sequenceId, CampaignSequence body = null)
         {
             // verify the required parameter 'sequenceId' is set
-            if (sequenceId == null) throw new ApiException(400, "Missing required parameter 'sequenceId' when calling PutSequence");
+            if (sequenceId == null) throw new ApiException(400, "Missing required parameter 'sequenceId' when calling PutSequencesSequenceId");
             
     
             var path_ = "/api/v1/outbound/sequences/{sequenceId}";
@@ -14126,9 +14126,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutSequence: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutSequencesSequenceId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutSequence: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutSequencesSequenceId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<CampaignSequence>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -14141,9 +14141,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="sequenceId">Campaign Sequence ID</param> 
         /// <returns>string</returns>
-        public string DeleteSequence (string sequenceId)
+        public string DeleteSequencesSequenceId (string sequenceId)
         {
-             ApiResponse<string> response = DeleteSequenceWithHttpInfo(sequenceId);
+             ApiResponse<string> response = DeleteSequencesSequenceIdWithHttpInfo(sequenceId);
              return response.Data;
         }
 
@@ -14152,12 +14152,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="sequenceId">Campaign Sequence ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteSequenceWithHttpInfo (string sequenceId)
+        public ApiResponse< string > DeleteSequencesSequenceIdWithHttpInfo (string sequenceId)
         {
             
             // verify the required parameter 'sequenceId' is set
             if (sequenceId == null)
-                throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->DeleteSequence");
+                throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->DeleteSequencesSequenceId");
             
     
             var path_ = "/api/v1/outbound/sequences/{sequenceId}";
@@ -14210,9 +14210,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteSequence: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteSequencesSequenceId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteSequence: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteSequencesSequenceId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -14225,9 +14225,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteSequenceAsync (string sequenceId)
+        public async System.Threading.Tasks.Task<string> DeleteSequencesSequenceIdAsync (string sequenceId)
         {
-             ApiResponse<string> response = await DeleteSequenceAsyncWithHttpInfo(sequenceId);
+             ApiResponse<string> response = await DeleteSequencesSequenceIdAsyncWithHttpInfo(sequenceId);
              return response.Data;
 
         }
@@ -14237,10 +14237,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="sequenceId">Campaign Sequence ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteSequenceAsyncWithHttpInfo (string sequenceId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteSequencesSequenceIdAsyncWithHttpInfo (string sequenceId)
         {
             // verify the required parameter 'sequenceId' is set
-            if (sequenceId == null) throw new ApiException(400, "Missing required parameter 'sequenceId' when calling DeleteSequence");
+            if (sequenceId == null) throw new ApiException(400, "Missing required parameter 'sequenceId' when calling DeleteSequencesSequenceId");
             
     
             var path_ = "/api/v1/outbound/sequences/{sequenceId}";
@@ -14294,9 +14294,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteSequence: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteSequencesSequenceId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteSequence: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteSequencesSequenceId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

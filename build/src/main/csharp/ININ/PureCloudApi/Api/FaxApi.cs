@@ -68,7 +68,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="documentId">Document ID</param>
         /// <returns>FaxDocument</returns>
-        FaxDocument GetDocument (string documentId);
+        FaxDocument GetDocumentsDocumentId (string documentId);
   
         /// <summary>
         /// Get a document.
@@ -78,7 +78,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="documentId">Document ID</param>
         /// <returns>ApiResponse of FaxDocument</returns>
-        ApiResponse<FaxDocument> GetDocumentWithHttpInfo (string documentId);
+        ApiResponse<FaxDocument> GetDocumentsDocumentIdWithHttpInfo (string documentId);
 
         /// <summary>
         /// Get a document.
@@ -88,7 +88,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of FaxDocument</returns>
-        System.Threading.Tasks.Task<FaxDocument> GetDocumentAsync (string documentId);
+        System.Threading.Tasks.Task<FaxDocument> GetDocumentsDocumentIdAsync (string documentId);
 
         /// <summary>
         /// Get a document.
@@ -98,7 +98,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of ApiResponse (FaxDocument)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FaxDocument>> GetDocumentAsyncWithHttpInfo (string documentId);
+        System.Threading.Tasks.Task<ApiResponse<FaxDocument>> GetDocumentsDocumentIdAsyncWithHttpInfo (string documentId);
         
         /// <summary>
         /// Update a fax document.
@@ -109,7 +109,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="body">Document</param>
         /// <returns>FaxDocument</returns>
-        FaxDocument PutDocument (string documentId, FaxDocument body = null);
+        FaxDocument PutDocumentsDocumentId (string documentId, FaxDocument body = null);
   
         /// <summary>
         /// Update a fax document.
@@ -120,7 +120,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="body">Document</param>
         /// <returns>ApiResponse of FaxDocument</returns>
-        ApiResponse<FaxDocument> PutDocumentWithHttpInfo (string documentId, FaxDocument body = null);
+        ApiResponse<FaxDocument> PutDocumentsDocumentIdWithHttpInfo (string documentId, FaxDocument body = null);
 
         /// <summary>
         /// Update a fax document.
@@ -131,7 +131,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="body">Document</param>
         /// <returns>Task of FaxDocument</returns>
-        System.Threading.Tasks.Task<FaxDocument> PutDocumentAsync (string documentId, FaxDocument body = null);
+        System.Threading.Tasks.Task<FaxDocument> PutDocumentsDocumentIdAsync (string documentId, FaxDocument body = null);
 
         /// <summary>
         /// Update a fax document.
@@ -142,7 +142,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="body">Document</param>
         /// <returns>Task of ApiResponse (FaxDocument)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FaxDocument>> PutDocumentAsyncWithHttpInfo (string documentId, FaxDocument body = null);
+        System.Threading.Tasks.Task<ApiResponse<FaxDocument>> PutDocumentsDocumentIdAsyncWithHttpInfo (string documentId, FaxDocument body = null);
         
         /// <summary>
         /// Delete a fax document.
@@ -152,7 +152,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="documentId">Document ID</param>
         /// <returns></returns>
-        void DeleteDocument (string documentId);
+        void DeleteDocumentsDocumentId (string documentId);
   
         /// <summary>
         /// Delete a fax document.
@@ -162,7 +162,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="documentId">Document ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteDocumentWithHttpInfo (string documentId);
+        ApiResponse<Object> DeleteDocumentsDocumentIdWithHttpInfo (string documentId);
 
         /// <summary>
         /// Delete a fax document.
@@ -172,7 +172,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteDocumentAsync (string documentId);
+        System.Threading.Tasks.Task DeleteDocumentsDocumentIdAsync (string documentId);
 
         /// <summary>
         /// Delete a fax document.
@@ -182,7 +182,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteDocumentAsyncWithHttpInfo (string documentId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteDocumentsDocumentIdAsyncWithHttpInfo (string documentId);
         
         /// <summary>
         /// Download a fax document.
@@ -192,7 +192,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="documentId">Document ID</param>
         /// <returns>DownloadResponse</returns>
-        DownloadResponse GetDocumentContent (string documentId);
+        DownloadResponse GetDocumentsDocumentIdContent (string documentId);
   
         /// <summary>
         /// Download a fax document.
@@ -202,7 +202,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="documentId">Document ID</param>
         /// <returns>ApiResponse of DownloadResponse</returns>
-        ApiResponse<DownloadResponse> GetDocumentContentWithHttpInfo (string documentId);
+        ApiResponse<DownloadResponse> GetDocumentsDocumentIdContentWithHttpInfo (string documentId);
 
         /// <summary>
         /// Download a fax document.
@@ -212,7 +212,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of DownloadResponse</returns>
-        System.Threading.Tasks.Task<DownloadResponse> GetDocumentContentAsync (string documentId);
+        System.Threading.Tasks.Task<DownloadResponse> GetDocumentsDocumentIdContentAsync (string documentId);
 
         /// <summary>
         /// Download a fax document.
@@ -222,7 +222,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of ApiResponse (DownloadResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetDocumentContentAsyncWithHttpInfo (string documentId);
+        System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetDocumentsDocumentIdContentAsyncWithHttpInfo (string documentId);
         
         /// <summary>
         /// Get fax summary
@@ -511,9 +511,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="documentId">Document ID</param> 
         /// <returns>FaxDocument</returns>
-        public FaxDocument GetDocument (string documentId)
+        public FaxDocument GetDocumentsDocumentId (string documentId)
         {
-             ApiResponse<FaxDocument> response = GetDocumentWithHttpInfo(documentId);
+             ApiResponse<FaxDocument> response = GetDocumentsDocumentIdWithHttpInfo(documentId);
              return response.Data;
         }
 
@@ -522,12 +522,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="documentId">Document ID</param> 
         /// <returns>ApiResponse of FaxDocument</returns>
-        public ApiResponse< FaxDocument > GetDocumentWithHttpInfo (string documentId)
+        public ApiResponse< FaxDocument > GetDocumentsDocumentIdWithHttpInfo (string documentId)
         {
             
             // verify the required parameter 'documentId' is set
             if (documentId == null)
-                throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxApi->GetDocument");
+                throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxApi->GetDocumentsDocumentId");
             
     
             var path_ = "/api/v1/fax/documents/{documentId}";
@@ -580,9 +580,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetDocument: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetDocumentsDocumentId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetDocument: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetDocumentsDocumentId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<FaxDocument>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -595,9 +595,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of FaxDocument</returns>
-        public async System.Threading.Tasks.Task<FaxDocument> GetDocumentAsync (string documentId)
+        public async System.Threading.Tasks.Task<FaxDocument> GetDocumentsDocumentIdAsync (string documentId)
         {
-             ApiResponse<FaxDocument> response = await GetDocumentAsyncWithHttpInfo(documentId);
+             ApiResponse<FaxDocument> response = await GetDocumentsDocumentIdAsyncWithHttpInfo(documentId);
              return response.Data;
 
         }
@@ -607,10 +607,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of ApiResponse (FaxDocument)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FaxDocument>> GetDocumentAsyncWithHttpInfo (string documentId)
+        public async System.Threading.Tasks.Task<ApiResponse<FaxDocument>> GetDocumentsDocumentIdAsyncWithHttpInfo (string documentId)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetDocument");
+            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetDocumentsDocumentId");
             
     
             var path_ = "/api/v1/fax/documents/{documentId}";
@@ -664,9 +664,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetDocument: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetDocumentsDocumentId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetDocument: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetDocumentsDocumentId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<FaxDocument>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -680,9 +680,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param> 
         /// <param name="body">Document</param> 
         /// <returns>FaxDocument</returns>
-        public FaxDocument PutDocument (string documentId, FaxDocument body = null)
+        public FaxDocument PutDocumentsDocumentId (string documentId, FaxDocument body = null)
         {
-             ApiResponse<FaxDocument> response = PutDocumentWithHttpInfo(documentId, body);
+             ApiResponse<FaxDocument> response = PutDocumentsDocumentIdWithHttpInfo(documentId, body);
              return response.Data;
         }
 
@@ -692,12 +692,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param> 
         /// <param name="body">Document</param> 
         /// <returns>ApiResponse of FaxDocument</returns>
-        public ApiResponse< FaxDocument > PutDocumentWithHttpInfo (string documentId, FaxDocument body = null)
+        public ApiResponse< FaxDocument > PutDocumentsDocumentIdWithHttpInfo (string documentId, FaxDocument body = null)
         {
             
             // verify the required parameter 'documentId' is set
             if (documentId == null)
-                throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxApi->PutDocument");
+                throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxApi->PutDocumentsDocumentId");
             
     
             var path_ = "/api/v1/fax/documents/{documentId}";
@@ -757,9 +757,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutDocument: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutDocumentsDocumentId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutDocument: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutDocumentsDocumentId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<FaxDocument>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -773,9 +773,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="body">Document</param>
         /// <returns>Task of FaxDocument</returns>
-        public async System.Threading.Tasks.Task<FaxDocument> PutDocumentAsync (string documentId, FaxDocument body = null)
+        public async System.Threading.Tasks.Task<FaxDocument> PutDocumentsDocumentIdAsync (string documentId, FaxDocument body = null)
         {
-             ApiResponse<FaxDocument> response = await PutDocumentAsyncWithHttpInfo(documentId, body);
+             ApiResponse<FaxDocument> response = await PutDocumentsDocumentIdAsyncWithHttpInfo(documentId, body);
              return response.Data;
 
         }
@@ -786,10 +786,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="body">Document</param>
         /// <returns>Task of ApiResponse (FaxDocument)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FaxDocument>> PutDocumentAsyncWithHttpInfo (string documentId, FaxDocument body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<FaxDocument>> PutDocumentsDocumentIdAsyncWithHttpInfo (string documentId, FaxDocument body = null)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling PutDocument");
+            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling PutDocumentsDocumentId");
             
     
             var path_ = "/api/v1/fax/documents/{documentId}";
@@ -844,9 +844,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutDocument: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutDocumentsDocumentId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutDocument: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutDocumentsDocumentId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<FaxDocument>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -859,9 +859,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="documentId">Document ID</param> 
         /// <returns></returns>
-        public void DeleteDocument (string documentId)
+        public void DeleteDocumentsDocumentId (string documentId)
         {
-             DeleteDocumentWithHttpInfo(documentId);
+             DeleteDocumentsDocumentIdWithHttpInfo(documentId);
         }
 
         /// <summary>
@@ -869,12 +869,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="documentId">Document ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteDocumentWithHttpInfo (string documentId)
+        public ApiResponse<Object> DeleteDocumentsDocumentIdWithHttpInfo (string documentId)
         {
             
             // verify the required parameter 'documentId' is set
             if (documentId == null)
-                throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxApi->DeleteDocument");
+                throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxApi->DeleteDocumentsDocumentId");
             
     
             var path_ = "/api/v1/fax/documents/{documentId}";
@@ -927,9 +927,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteDocument: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteDocumentsDocumentId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteDocument: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteDocumentsDocumentId: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -942,9 +942,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteDocumentAsync (string documentId)
+        public async System.Threading.Tasks.Task DeleteDocumentsDocumentIdAsync (string documentId)
         {
-             await DeleteDocumentAsyncWithHttpInfo(documentId);
+             await DeleteDocumentsDocumentIdAsyncWithHttpInfo(documentId);
 
         }
 
@@ -953,10 +953,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteDocumentAsyncWithHttpInfo (string documentId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteDocumentsDocumentIdAsyncWithHttpInfo (string documentId)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling DeleteDocument");
+            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling DeleteDocumentsDocumentId");
             
     
             var path_ = "/api/v1/fax/documents/{documentId}";
@@ -1010,9 +1010,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteDocument: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteDocumentsDocumentId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteDocument: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteDocumentsDocumentId: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -1025,9 +1025,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="documentId">Document ID</param> 
         /// <returns>DownloadResponse</returns>
-        public DownloadResponse GetDocumentContent (string documentId)
+        public DownloadResponse GetDocumentsDocumentIdContent (string documentId)
         {
-             ApiResponse<DownloadResponse> response = GetDocumentContentWithHttpInfo(documentId);
+             ApiResponse<DownloadResponse> response = GetDocumentsDocumentIdContentWithHttpInfo(documentId);
              return response.Data;
         }
 
@@ -1036,12 +1036,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="documentId">Document ID</param> 
         /// <returns>ApiResponse of DownloadResponse</returns>
-        public ApiResponse< DownloadResponse > GetDocumentContentWithHttpInfo (string documentId)
+        public ApiResponse< DownloadResponse > GetDocumentsDocumentIdContentWithHttpInfo (string documentId)
         {
             
             // verify the required parameter 'documentId' is set
             if (documentId == null)
-                throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxApi->GetDocumentContent");
+                throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxApi->GetDocumentsDocumentIdContent");
             
     
             var path_ = "/api/v1/fax/documents/{documentId}/content";
@@ -1094,9 +1094,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetDocumentContent: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetDocumentsDocumentIdContent: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetDocumentContent: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetDocumentsDocumentIdContent: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DownloadResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1109,9 +1109,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of DownloadResponse</returns>
-        public async System.Threading.Tasks.Task<DownloadResponse> GetDocumentContentAsync (string documentId)
+        public async System.Threading.Tasks.Task<DownloadResponse> GetDocumentsDocumentIdContentAsync (string documentId)
         {
-             ApiResponse<DownloadResponse> response = await GetDocumentContentAsyncWithHttpInfo(documentId);
+             ApiResponse<DownloadResponse> response = await GetDocumentsDocumentIdContentAsyncWithHttpInfo(documentId);
              return response.Data;
 
         }
@@ -1121,10 +1121,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="documentId">Document ID</param>
         /// <returns>Task of ApiResponse (DownloadResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetDocumentContentAsyncWithHttpInfo (string documentId)
+        public async System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetDocumentsDocumentIdContentAsyncWithHttpInfo (string documentId)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetDocumentContent");
+            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetDocumentsDocumentIdContent");
             
     
             var path_ = "/api/v1/fax/documents/{documentId}/content";
@@ -1178,9 +1178,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetDocumentContent: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetDocumentsDocumentIdContent: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetDocumentContent: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetDocumentsDocumentIdContent: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DownloadResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>ParsedCertificate</returns>
-        ParsedCertificate PostCertificateDetails (Certificate body = null);
+        ParsedCertificate PostDetails (Certificate body = null);
   
         /// <summary>
         /// Returns the information about an X509 PEM encoded certificate or certificate chain.
@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>ApiResponse of ParsedCertificate</returns>
-        ApiResponse<ParsedCertificate> PostCertificateDetailsWithHttpInfo (Certificate body = null);
+        ApiResponse<ParsedCertificate> PostDetailsWithHttpInfo (Certificate body = null);
 
         /// <summary>
         /// Returns the information about an X509 PEM encoded certificate or certificate chain.
@@ -44,7 +44,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of ParsedCertificate</returns>
-        System.Threading.Tasks.Task<ParsedCertificate> PostCertificateDetailsAsync (Certificate body = null);
+        System.Threading.Tasks.Task<ParsedCertificate> PostDetailsAsync (Certificate body = null);
 
         /// <summary>
         /// Returns the information about an X509 PEM encoded certificate or certificate chain.
@@ -54,7 +54,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (ParsedCertificate)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ParsedCertificate>> PostCertificateDetailsAsyncWithHttpInfo (Certificate body = null);
+        System.Threading.Tasks.Task<ApiResponse<ParsedCertificate>> PostDetailsAsyncWithHttpInfo (Certificate body = null);
         
         /// <summary>
         /// Validates a street address
@@ -64,7 +64,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>ValidateAddressResponse</returns>
-        ValidateAddressResponse PostConfigurationAddressvalidation (ValidateAddressRequest body = null);
+        ValidateAddressResponse PostAddressvalidation (ValidateAddressRequest body = null);
   
         /// <summary>
         /// Validates a street address
@@ -74,7 +74,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>ApiResponse of ValidateAddressResponse</returns>
-        ApiResponse<ValidateAddressResponse> PostConfigurationAddressvalidationWithHttpInfo (ValidateAddressRequest body = null);
+        ApiResponse<ValidateAddressResponse> PostAddressvalidationWithHttpInfo (ValidateAddressRequest body = null);
 
         /// <summary>
         /// Validates a street address
@@ -84,7 +84,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of ValidateAddressResponse</returns>
-        System.Threading.Tasks.Task<ValidateAddressResponse> PostConfigurationAddressvalidationAsync (ValidateAddressRequest body = null);
+        System.Threading.Tasks.Task<ValidateAddressResponse> PostAddressvalidationAsync (ValidateAddressRequest body = null);
 
         /// <summary>
         /// Validates a street address
@@ -94,7 +94,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (ValidateAddressResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ValidateAddressResponse>> PostConfigurationAddressvalidationAsyncWithHttpInfo (ValidateAddressRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<ValidateAddressResponse>> PostAddressvalidationAsyncWithHttpInfo (ValidateAddressRequest body = null);
         
         /// <summary>
         /// Get the current system date/time
@@ -103,7 +103,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ServerDate</returns>
-        ServerDate GetDate ();
+        ServerDate Get ();
   
         /// <summary>
         /// Get the current system date/time
@@ -112,7 +112,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of ServerDate</returns>
-        ApiResponse<ServerDate> GetDateWithHttpInfo ();
+        ApiResponse<ServerDate> GetWithHttpInfo ();
 
         /// <summary>
         /// Get the current system date/time
@@ -121,7 +121,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ServerDate</returns>
-        System.Threading.Tasks.Task<ServerDate> GetDateAsync ();
+        System.Threading.Tasks.Task<ServerDate> GetAsync ();
 
         /// <summary>
         /// Get the current system date/time
@@ -130,7 +130,43 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse (ServerDate)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ServerDate>> GetDateAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<ServerDate>> GetAsyncWithHttpInfo ();
+        
+        /// <summary>
+        /// Get health.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <returns>HealthCheckInfo</returns>
+        HealthCheckInfo GetCheck ();
+  
+        /// <summary>
+        /// Get health.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <returns>ApiResponse of HealthCheckInfo</returns>
+        ApiResponse<HealthCheckInfo> GetCheckWithHttpInfo ();
+
+        /// <summary>
+        /// Get health.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <returns>Task of HealthCheckInfo</returns>
+        System.Threading.Tasks.Task<HealthCheckInfo> GetCheckAsync ();
+
+        /// <summary>
+        /// Get health.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <returns>Task of ApiResponse (HealthCheckInfo)</returns>
+        System.Threading.Tasks.Task<ApiResponse<HealthCheckInfo>> GetCheckAsyncWithHttpInfo ();
         
         /// <summary>
         /// Get time zones list
@@ -141,7 +177,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>TimeZoneEntityListing</returns>
-        TimeZoneEntityListing GetTimezones (int? pageSize = null, int? pageNumber = null);
+        TimeZoneEntityListing Get_0 (int? pageSize = null, int? pageNumber = null);
   
         /// <summary>
         /// Get time zones list
@@ -152,7 +188,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>ApiResponse of TimeZoneEntityListing</returns>
-        ApiResponse<TimeZoneEntityListing> GetTimezonesWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        ApiResponse<TimeZoneEntityListing> Get_0WithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get time zones list
@@ -163,7 +199,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of TimeZoneEntityListing</returns>
-        System.Threading.Tasks.Task<TimeZoneEntityListing> GetTimezonesAsync (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<TimeZoneEntityListing> Get_0Async (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get time zones list
@@ -174,7 +210,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (TimeZoneEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TimeZoneEntityListing>> GetTimezonesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<TimeZoneEntityListing>> Get_0AsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
         
     }
   
@@ -259,9 +295,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>ParsedCertificate</returns>
-        public ParsedCertificate PostCertificateDetails (Certificate body = null)
+        public ParsedCertificate PostDetails (Certificate body = null)
         {
-             ApiResponse<ParsedCertificate> response = PostCertificateDetailsWithHttpInfo(body);
+             ApiResponse<ParsedCertificate> response = PostDetailsWithHttpInfo(body);
              return response.Data;
         }
 
@@ -270,7 +306,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>ApiResponse of ParsedCertificate</returns>
-        public ApiResponse< ParsedCertificate > PostCertificateDetailsWithHttpInfo (Certificate body = null)
+        public ApiResponse< ParsedCertificate > PostDetailsWithHttpInfo (Certificate body = null)
         {
             
     
@@ -330,9 +366,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostCertificateDetails: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostDetails: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostCertificateDetails: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostDetails: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ParsedCertificate>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -345,9 +381,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of ParsedCertificate</returns>
-        public async System.Threading.Tasks.Task<ParsedCertificate> PostCertificateDetailsAsync (Certificate body = null)
+        public async System.Threading.Tasks.Task<ParsedCertificate> PostDetailsAsync (Certificate body = null)
         {
-             ApiResponse<ParsedCertificate> response = await PostCertificateDetailsAsyncWithHttpInfo(body);
+             ApiResponse<ParsedCertificate> response = await PostDetailsAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -357,7 +393,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (ParsedCertificate)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ParsedCertificate>> PostCertificateDetailsAsyncWithHttpInfo (Certificate body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ParsedCertificate>> PostDetailsAsyncWithHttpInfo (Certificate body = null)
         {
             
     
@@ -412,9 +448,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostCertificateDetails: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostDetails: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostCertificateDetails: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostDetails: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ParsedCertificate>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -427,9 +463,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>ValidateAddressResponse</returns>
-        public ValidateAddressResponse PostConfigurationAddressvalidation (ValidateAddressRequest body = null)
+        public ValidateAddressResponse PostAddressvalidation (ValidateAddressRequest body = null)
         {
-             ApiResponse<ValidateAddressResponse> response = PostConfigurationAddressvalidationWithHttpInfo(body);
+             ApiResponse<ValidateAddressResponse> response = PostAddressvalidationWithHttpInfo(body);
              return response.Data;
         }
 
@@ -438,7 +474,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>ApiResponse of ValidateAddressResponse</returns>
-        public ApiResponse< ValidateAddressResponse > PostConfigurationAddressvalidationWithHttpInfo (ValidateAddressRequest body = null)
+        public ApiResponse< ValidateAddressResponse > PostAddressvalidationWithHttpInfo (ValidateAddressRequest body = null)
         {
             
     
@@ -498,9 +534,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostConfigurationAddressvalidation: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostAddressvalidation: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostConfigurationAddressvalidation: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostAddressvalidation: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ValidateAddressResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -513,9 +549,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of ValidateAddressResponse</returns>
-        public async System.Threading.Tasks.Task<ValidateAddressResponse> PostConfigurationAddressvalidationAsync (ValidateAddressRequest body = null)
+        public async System.Threading.Tasks.Task<ValidateAddressResponse> PostAddressvalidationAsync (ValidateAddressRequest body = null)
         {
-             ApiResponse<ValidateAddressResponse> response = await PostConfigurationAddressvalidationAsyncWithHttpInfo(body);
+             ApiResponse<ValidateAddressResponse> response = await PostAddressvalidationAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -525,7 +561,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (ValidateAddressResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ValidateAddressResponse>> PostConfigurationAddressvalidationAsyncWithHttpInfo (ValidateAddressRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ValidateAddressResponse>> PostAddressvalidationAsyncWithHttpInfo (ValidateAddressRequest body = null)
         {
             
     
@@ -580,9 +616,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostConfigurationAddressvalidation: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostAddressvalidation: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostConfigurationAddressvalidation: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostAddressvalidation: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ValidateAddressResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -594,9 +630,9 @@ namespace ININ.PureCloudApi.Api
         /// Get the current system date/time 
         /// </summary>
         /// <returns>ServerDate</returns>
-        public ServerDate GetDate ()
+        public ServerDate Get ()
         {
-             ApiResponse<ServerDate> response = GetDateWithHttpInfo();
+             ApiResponse<ServerDate> response = GetWithHttpInfo();
              return response.Data;
         }
 
@@ -604,7 +640,7 @@ namespace ININ.PureCloudApi.Api
         /// Get the current system date/time 
         /// </summary>
         /// <returns>ApiResponse of ServerDate</returns>
-        public ApiResponse< ServerDate > GetDateWithHttpInfo ()
+        public ApiResponse< ServerDate > GetWithHttpInfo ()
         {
             
     
@@ -657,9 +693,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetDate: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetDate: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ServerDate>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -671,9 +707,9 @@ namespace ININ.PureCloudApi.Api
         /// Get the current system date/time 
         /// </summary>
         /// <returns>Task of ServerDate</returns>
-        public async System.Threading.Tasks.Task<ServerDate> GetDateAsync ()
+        public async System.Threading.Tasks.Task<ServerDate> GetAsync ()
         {
-             ApiResponse<ServerDate> response = await GetDateAsyncWithHttpInfo();
+             ApiResponse<ServerDate> response = await GetAsyncWithHttpInfo();
              return response.Data;
 
         }
@@ -682,7 +718,7 @@ namespace ININ.PureCloudApi.Api
         /// Get the current system date/time 
         /// </summary>
         /// <returns>Task of ApiResponse (ServerDate)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ServerDate>> GetDateAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<ServerDate>> GetAsyncWithHttpInfo ()
         {
             
     
@@ -736,13 +772,169 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetDate: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetDate: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ServerDate>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ServerDate) Configuration.ApiClient.Deserialize(response, typeof(ServerDate)));
+            
+        }
+        
+        /// <summary>
+        /// Get health. 
+        /// </summary>
+        /// <returns>HealthCheckInfo</returns>
+        public HealthCheckInfo GetCheck ()
+        {
+             ApiResponse<HealthCheckInfo> response = GetCheckWithHttpInfo();
+             return response.Data;
+        }
+
+        /// <summary>
+        /// Get health. 
+        /// </summary>
+        /// <returns>ApiResponse of HealthCheckInfo</returns>
+        public ApiResponse< HealthCheckInfo > GetCheckWithHttpInfo ()
+        {
+            
+    
+            var path_ = "/api/v1/health/check";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+    
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling GetCheck: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling GetCheck: " + response.ErrorMessage, response.ErrorMessage);
+    
+            return new ApiResponse<HealthCheckInfo>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HealthCheckInfo) Configuration.ApiClient.Deserialize(response, typeof(HealthCheckInfo)));
+            
+        }
+    
+        /// <summary>
+        /// Get health. 
+        /// </summary>
+        /// <returns>Task of HealthCheckInfo</returns>
+        public async System.Threading.Tasks.Task<HealthCheckInfo> GetCheckAsync ()
+        {
+             ApiResponse<HealthCheckInfo> response = await GetCheckAsyncWithHttpInfo();
+             return response.Data;
+
+        }
+
+        /// <summary>
+        /// Get health. 
+        /// </summary>
+        /// <returns>Task of ApiResponse (HealthCheckInfo)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<HealthCheckInfo>> GetCheckAsyncWithHttpInfo ()
+        {
+            
+    
+            var path_ = "/api/v1/health/check";
+    
+            var pathParams = new Dictionary<String, String>();
+            var queryParams = new Dictionary<String, String>();
+            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var formParams = new Dictionary<String, String>();
+            var fileParams = new Dictionary<String, FileParameter>();
+            Object postBody = null;
+
+            // to determine the Content-Type header
+            String[] httpContentTypes = new String[] {
+                "application/json"
+            };
+            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+
+            // to determine the Accept header
+            String[] httpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
+            if (httpHeaderAccept != null)
+                headerParams.Add("Accept", httpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            pathParams.Add("format", "json");
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
+                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
+                pathParams, httpContentType);
+
+            int statusCode = (int) response.StatusCode;
+ 
+            if (statusCode >= 400)
+                throw new ApiException (statusCode, "Error calling GetCheck: " + response.Content, response.Content);
+            else if (statusCode == 0)
+                throw new ApiException (statusCode, "Error calling GetCheck: " + response.ErrorMessage, response.ErrorMessage);
+
+            return new ApiResponse<HealthCheckInfo>(statusCode,
+                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HealthCheckInfo) Configuration.ApiClient.Deserialize(response, typeof(HealthCheckInfo)));
             
         }
         
@@ -752,9 +944,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>TimeZoneEntityListing</returns>
-        public TimeZoneEntityListing GetTimezones (int? pageSize = null, int? pageNumber = null)
+        public TimeZoneEntityListing Get_0 (int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<TimeZoneEntityListing> response = GetTimezonesWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<TimeZoneEntityListing> response = Get_0WithHttpInfo(pageSize, pageNumber);
              return response.Data;
         }
 
@@ -764,7 +956,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>ApiResponse of TimeZoneEntityListing</returns>
-        public ApiResponse< TimeZoneEntityListing > GetTimezonesWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< TimeZoneEntityListing > Get_0WithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -819,9 +1011,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTimezones: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get_0: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTimezones: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get_0: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<TimeZoneEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -835,9 +1027,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of TimeZoneEntityListing</returns>
-        public async System.Threading.Tasks.Task<TimeZoneEntityListing> GetTimezonesAsync (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<TimeZoneEntityListing> Get_0Async (int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<TimeZoneEntityListing> response = await GetTimezonesAsyncWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<TimeZoneEntityListing> response = await Get_0AsyncWithHttpInfo(pageSize, pageNumber);
              return response.Data;
 
         }
@@ -848,7 +1040,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (TimeZoneEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TimeZoneEntityListing>> GetTimezonesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TimeZoneEntityListing>> Get_0AsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -904,9 +1096,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetTimezones: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get_0: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetTimezones: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get_0: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<TimeZoneEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

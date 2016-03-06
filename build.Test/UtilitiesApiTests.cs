@@ -47,54 +47,66 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test PostCertificateDetails
+        /// Test PostDetails
         /// </summary>
         [Test]
-        public void PostCertificateDetailsTest()
+        public void PostDetailsTest()
         {
-            // TODO: add unit test for the method 'PostCertificateDetails'
+            // TODO: add unit test for the method 'PostDetails'
             Certificate body = null; // TODO: replace null with proper value
             
-            var response = instance.PostCertificateDetails(body);
+            var response = instance.PostDetails(body);
             Assert.IsInstanceOf<ParsedCertificate> (response, "response is ParsedCertificate"); 
         }
         
         /// <summary>
-        /// Test PostConfigurationAddressvalidation
+        /// Test PostAddressvalidation
         /// </summary>
         [Test]
-        public void PostConfigurationAddressvalidationTest()
+        public void PostAddressvalidationTest()
         {
-            // TODO: add unit test for the method 'PostConfigurationAddressvalidation'
+            // TODO: add unit test for the method 'PostAddressvalidation'
             ValidateAddressRequest body = null; // TODO: replace null with proper value
             
-            var response = instance.PostConfigurationAddressvalidation(body);
+            var response = instance.PostAddressvalidation(body);
             Assert.IsInstanceOf<ValidateAddressResponse> (response, "response is ValidateAddressResponse"); 
         }
         
         /// <summary>
-        /// Test GetDate
+        /// Test Get
         /// </summary>
         [Test]
-        public void GetDateTest()
+        public void GetTest()
         {
-            // TODO: add unit test for the method 'GetDate'
+            // TODO: add unit test for the method 'Get'
             
-            var response = instance.GetDate();
+            var response = instance.Get();
             Assert.IsInstanceOf<ServerDate> (response, "response is ServerDate"); 
         }
         
         /// <summary>
-        /// Test GetTimezones
+        /// Test GetCheck
         /// </summary>
         [Test]
-        public void GetTimezonesTest()
+        public void GetCheckTest()
         {
-            // TODO: add unit test for the method 'GetTimezones'
+            // TODO: add unit test for the method 'GetCheck'
+            
+            var response = instance.GetCheck();
+            Assert.IsInstanceOf<HealthCheckInfo> (response, "response is HealthCheckInfo"); 
+        }
+        
+        /// <summary>
+        /// Test Get_0
+        /// </summary>
+        [Test]
+        public void Get_0Test()
+        {
+            // TODO: add unit test for the method 'Get_0'
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             
-            var response = instance.GetTimezones(pageSize, pageNumber);
+            var response = instance.Get_0(pageSize, pageNumber);
             Assert.IsInstanceOf<TimeZoneEntityListing> (response, "response is TimeZoneEntityListing"); 
         }
         

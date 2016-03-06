@@ -26,7 +26,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">conversation</param>
         /// <returns>UserRecordingEntityListing</returns>
-        UserRecordingEntityListing GetUserrecordings (int? pageSize = null, int? pageNumber = null, string expand = null);
+        UserRecordingEntityListing Get (int? pageSize = null, int? pageNumber = null, string expand = null);
   
         /// <summary>
         /// Get a list of user recordings.
@@ -38,7 +38,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">conversation</param>
         /// <returns>ApiResponse of UserRecordingEntityListing</returns>
-        ApiResponse<UserRecordingEntityListing> GetUserrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null);
+        ApiResponse<UserRecordingEntityListing> GetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null);
 
         /// <summary>
         /// Get a list of user recordings.
@@ -50,7 +50,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">conversation</param>
         /// <returns>Task of UserRecordingEntityListing</returns>
-        System.Threading.Tasks.Task<UserRecordingEntityListing> GetUserrecordingsAsync (int? pageSize = null, int? pageNumber = null, string expand = null);
+        System.Threading.Tasks.Task<UserRecordingEntityListing> GetAsync (int? pageSize = null, int? pageNumber = null, string expand = null);
 
         /// <summary>
         /// Get a list of user recordings.
@@ -62,7 +62,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">conversation</param>
         /// <returns>Task of ApiResponse (UserRecordingEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserRecordingEntityListing>> GetUserrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<UserRecordingEntityListing>> GetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null);
         
         /// <summary>
         /// Get user recording summary
@@ -71,7 +71,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>FaxSummary</returns>
-        FaxSummary GetUserrecordingsSummary ();
+        FaxSummary GetSummary ();
   
         /// <summary>
         /// Get user recording summary
@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of FaxSummary</returns>
-        ApiResponse<FaxSummary> GetUserrecordingsSummaryWithHttpInfo ();
+        ApiResponse<FaxSummary> GetSummaryWithHttpInfo ();
 
         /// <summary>
         /// Get user recording summary
@@ -89,7 +89,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of FaxSummary</returns>
-        System.Threading.Tasks.Task<FaxSummary> GetUserrecordingsSummaryAsync ();
+        System.Threading.Tasks.Task<FaxSummary> GetSummaryAsync ();
 
         /// <summary>
         /// Get user recording summary
@@ -98,7 +98,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse (FaxSummary)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FaxSummary>> GetUserrecordingsSummaryAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<FaxSummary>> GetSummaryAsyncWithHttpInfo ();
         
         /// <summary>
         /// Get a user recording.
@@ -109,7 +109,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="expand">conversation</param>
         /// <returns>UserRecording</returns>
-        UserRecording GetUserrecording (string recordingId, string expand = null);
+        UserRecording GetRecordingId (string recordingId, string expand = null);
   
         /// <summary>
         /// Get a user recording.
@@ -120,7 +120,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="expand">conversation</param>
         /// <returns>ApiResponse of UserRecording</returns>
-        ApiResponse<UserRecording> GetUserrecordingWithHttpInfo (string recordingId, string expand = null);
+        ApiResponse<UserRecording> GetRecordingIdWithHttpInfo (string recordingId, string expand = null);
 
         /// <summary>
         /// Get a user recording.
@@ -131,7 +131,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="expand">conversation</param>
         /// <returns>Task of UserRecording</returns>
-        System.Threading.Tasks.Task<UserRecording> GetUserrecordingAsync (string recordingId, string expand = null);
+        System.Threading.Tasks.Task<UserRecording> GetRecordingIdAsync (string recordingId, string expand = null);
 
         /// <summary>
         /// Get a user recording.
@@ -142,7 +142,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="expand">conversation</param>
         /// <returns>Task of ApiResponse (UserRecording)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserRecording>> GetUserrecordingAsyncWithHttpInfo (string recordingId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<UserRecording>> GetRecordingIdAsyncWithHttpInfo (string recordingId, string expand = null);
         
         /// <summary>
         /// Update a user recording.
@@ -154,7 +154,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">UserRecording</param>
         /// <param name="expand">conversation</param>
         /// <returns>UserRecording</returns>
-        UserRecording PutUserrecording (string recordingId, UserRecording body = null, string expand = null);
+        UserRecording PutRecordingId (string recordingId, UserRecording body = null, string expand = null);
   
         /// <summary>
         /// Update a user recording.
@@ -166,7 +166,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">UserRecording</param>
         /// <param name="expand">conversation</param>
         /// <returns>ApiResponse of UserRecording</returns>
-        ApiResponse<UserRecording> PutUserrecordingWithHttpInfo (string recordingId, UserRecording body = null, string expand = null);
+        ApiResponse<UserRecording> PutRecordingIdWithHttpInfo (string recordingId, UserRecording body = null, string expand = null);
 
         /// <summary>
         /// Update a user recording.
@@ -178,7 +178,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">UserRecording</param>
         /// <param name="expand">conversation</param>
         /// <returns>Task of UserRecording</returns>
-        System.Threading.Tasks.Task<UserRecording> PutUserrecordingAsync (string recordingId, UserRecording body = null, string expand = null);
+        System.Threading.Tasks.Task<UserRecording> PutRecordingIdAsync (string recordingId, UserRecording body = null, string expand = null);
 
         /// <summary>
         /// Update a user recording.
@@ -190,7 +190,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">UserRecording</param>
         /// <param name="expand">conversation</param>
         /// <returns>Task of ApiResponse (UserRecording)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserRecording>> PutUserrecordingAsyncWithHttpInfo (string recordingId, UserRecording body = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<UserRecording>> PutRecordingIdAsyncWithHttpInfo (string recordingId, UserRecording body = null, string expand = null);
         
         /// <summary>
         /// Delete a user recording.
@@ -200,7 +200,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="recordingId">User Recording ID</param>
         /// <returns></returns>
-        void DeleteUserrecording (string recordingId);
+        void DeleteRecordingId (string recordingId);
   
         /// <summary>
         /// Delete a user recording.
@@ -210,7 +210,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="recordingId">User Recording ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteUserrecordingWithHttpInfo (string recordingId);
+        ApiResponse<Object> DeleteRecordingIdWithHttpInfo (string recordingId);
 
         /// <summary>
         /// Delete a user recording.
@@ -220,7 +220,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="recordingId">User Recording ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteUserrecordingAsync (string recordingId);
+        System.Threading.Tasks.Task DeleteRecordingIdAsync (string recordingId);
 
         /// <summary>
         /// Delete a user recording.
@@ -230,7 +230,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="recordingId">User Recording ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserrecordingAsyncWithHttpInfo (string recordingId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRecordingIdAsyncWithHttpInfo (string recordingId);
         
         /// <summary>
         /// Download a user recording.
@@ -241,7 +241,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <returns>DownloadResponse</returns>
-        DownloadResponse GetUserrecordingMedia (string recordingId, string formatId = null);
+        DownloadResponse GetRecordingIdMedia (string recordingId, string formatId = null);
   
         /// <summary>
         /// Download a user recording.
@@ -252,7 +252,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <returns>ApiResponse of DownloadResponse</returns>
-        ApiResponse<DownloadResponse> GetUserrecordingMediaWithHttpInfo (string recordingId, string formatId = null);
+        ApiResponse<DownloadResponse> GetRecordingIdMediaWithHttpInfo (string recordingId, string formatId = null);
 
         /// <summary>
         /// Download a user recording.
@@ -263,7 +263,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <returns>Task of DownloadResponse</returns>
-        System.Threading.Tasks.Task<DownloadResponse> GetUserrecordingMediaAsync (string recordingId, string formatId = null);
+        System.Threading.Tasks.Task<DownloadResponse> GetRecordingIdMediaAsync (string recordingId, string formatId = null);
 
         /// <summary>
         /// Download a user recording.
@@ -274,7 +274,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <returns>Task of ApiResponse (DownloadResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetUserrecordingMediaAsyncWithHttpInfo (string recordingId, string formatId = null);
+        System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetRecordingIdMediaAsyncWithHttpInfo (string recordingId, string formatId = null);
         
     }
   
@@ -361,9 +361,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="expand">conversation</param> 
         /// <returns>UserRecordingEntityListing</returns>
-        public UserRecordingEntityListing GetUserrecordings (int? pageSize = null, int? pageNumber = null, string expand = null)
+        public UserRecordingEntityListing Get (int? pageSize = null, int? pageNumber = null, string expand = null)
         {
-             ApiResponse<UserRecordingEntityListing> response = GetUserrecordingsWithHttpInfo(pageSize, pageNumber, expand);
+             ApiResponse<UserRecordingEntityListing> response = GetWithHttpInfo(pageSize, pageNumber, expand);
              return response.Data;
         }
 
@@ -374,7 +374,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="expand">conversation</param> 
         /// <returns>ApiResponse of UserRecordingEntityListing</returns>
-        public ApiResponse< UserRecordingEntityListing > GetUserrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null)
+        public ApiResponse< UserRecordingEntityListing > GetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null)
         {
             
     
@@ -430,9 +430,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetUserrecordings: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetUserrecordings: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<UserRecordingEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -447,9 +447,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">conversation</param>
         /// <returns>Task of UserRecordingEntityListing</returns>
-        public async System.Threading.Tasks.Task<UserRecordingEntityListing> GetUserrecordingsAsync (int? pageSize = null, int? pageNumber = null, string expand = null)
+        public async System.Threading.Tasks.Task<UserRecordingEntityListing> GetAsync (int? pageSize = null, int? pageNumber = null, string expand = null)
         {
-             ApiResponse<UserRecordingEntityListing> response = await GetUserrecordingsAsyncWithHttpInfo(pageSize, pageNumber, expand);
+             ApiResponse<UserRecordingEntityListing> response = await GetAsyncWithHttpInfo(pageSize, pageNumber, expand);
              return response.Data;
 
         }
@@ -461,7 +461,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">conversation</param>
         /// <returns>Task of ApiResponse (UserRecordingEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserRecordingEntityListing>> GetUserrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserRecordingEntityListing>> GetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null)
         {
             
     
@@ -518,9 +518,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetUserrecordings: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetUserrecordings: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<UserRecordingEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -532,9 +532,9 @@ namespace ININ.PureCloudApi.Api
         /// Get user recording summary 
         /// </summary>
         /// <returns>FaxSummary</returns>
-        public FaxSummary GetUserrecordingsSummary ()
+        public FaxSummary GetSummary ()
         {
-             ApiResponse<FaxSummary> response = GetUserrecordingsSummaryWithHttpInfo();
+             ApiResponse<FaxSummary> response = GetSummaryWithHttpInfo();
              return response.Data;
         }
 
@@ -542,7 +542,7 @@ namespace ININ.PureCloudApi.Api
         /// Get user recording summary 
         /// </summary>
         /// <returns>ApiResponse of FaxSummary</returns>
-        public ApiResponse< FaxSummary > GetUserrecordingsSummaryWithHttpInfo ()
+        public ApiResponse< FaxSummary > GetSummaryWithHttpInfo ()
         {
             
     
@@ -595,9 +595,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetUserrecordingsSummary: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSummary: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetUserrecordingsSummary: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSummary: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<FaxSummary>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -609,9 +609,9 @@ namespace ININ.PureCloudApi.Api
         /// Get user recording summary 
         /// </summary>
         /// <returns>Task of FaxSummary</returns>
-        public async System.Threading.Tasks.Task<FaxSummary> GetUserrecordingsSummaryAsync ()
+        public async System.Threading.Tasks.Task<FaxSummary> GetSummaryAsync ()
         {
-             ApiResponse<FaxSummary> response = await GetUserrecordingsSummaryAsyncWithHttpInfo();
+             ApiResponse<FaxSummary> response = await GetSummaryAsyncWithHttpInfo();
              return response.Data;
 
         }
@@ -620,7 +620,7 @@ namespace ININ.PureCloudApi.Api
         /// Get user recording summary 
         /// </summary>
         /// <returns>Task of ApiResponse (FaxSummary)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FaxSummary>> GetUserrecordingsSummaryAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<FaxSummary>> GetSummaryAsyncWithHttpInfo ()
         {
             
     
@@ -674,9 +674,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetUserrecordingsSummary: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSummary: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetUserrecordingsSummary: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSummary: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<FaxSummary>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -690,9 +690,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">User Recording ID</param> 
         /// <param name="expand">conversation</param> 
         /// <returns>UserRecording</returns>
-        public UserRecording GetUserrecording (string recordingId, string expand = null)
+        public UserRecording GetRecordingId (string recordingId, string expand = null)
         {
-             ApiResponse<UserRecording> response = GetUserrecordingWithHttpInfo(recordingId, expand);
+             ApiResponse<UserRecording> response = GetRecordingIdWithHttpInfo(recordingId, expand);
              return response.Data;
         }
 
@@ -702,12 +702,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">User Recording ID</param> 
         /// <param name="expand">conversation</param> 
         /// <returns>ApiResponse of UserRecording</returns>
-        public ApiResponse< UserRecording > GetUserrecordingWithHttpInfo (string recordingId, string expand = null)
+        public ApiResponse< UserRecording > GetRecordingIdWithHttpInfo (string recordingId, string expand = null)
         {
             
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
-                throw new ApiException(400, "Missing required parameter 'recordingId' when calling UserRecordingsApi->GetUserrecording");
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling UserRecordingsApi->GetRecordingId");
             
     
             var path_ = "/api/v1/userrecordings/{recordingId}";
@@ -761,9 +761,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetUserrecording: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetRecordingId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetUserrecording: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetRecordingId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<UserRecording>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -777,9 +777,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="expand">conversation</param>
         /// <returns>Task of UserRecording</returns>
-        public async System.Threading.Tasks.Task<UserRecording> GetUserrecordingAsync (string recordingId, string expand = null)
+        public async System.Threading.Tasks.Task<UserRecording> GetRecordingIdAsync (string recordingId, string expand = null)
         {
-             ApiResponse<UserRecording> response = await GetUserrecordingAsyncWithHttpInfo(recordingId, expand);
+             ApiResponse<UserRecording> response = await GetRecordingIdAsyncWithHttpInfo(recordingId, expand);
              return response.Data;
 
         }
@@ -790,10 +790,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="expand">conversation</param>
         /// <returns>Task of ApiResponse (UserRecording)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserRecording>> GetUserrecordingAsyncWithHttpInfo (string recordingId, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserRecording>> GetRecordingIdAsyncWithHttpInfo (string recordingId, string expand = null)
         {
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling GetUserrecording");
+            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling GetRecordingId");
             
     
             var path_ = "/api/v1/userrecordings/{recordingId}";
@@ -848,9 +848,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetUserrecording: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetRecordingId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetUserrecording: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetRecordingId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<UserRecording>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -865,9 +865,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">UserRecording</param> 
         /// <param name="expand">conversation</param> 
         /// <returns>UserRecording</returns>
-        public UserRecording PutUserrecording (string recordingId, UserRecording body = null, string expand = null)
+        public UserRecording PutRecordingId (string recordingId, UserRecording body = null, string expand = null)
         {
-             ApiResponse<UserRecording> response = PutUserrecordingWithHttpInfo(recordingId, body, expand);
+             ApiResponse<UserRecording> response = PutRecordingIdWithHttpInfo(recordingId, body, expand);
              return response.Data;
         }
 
@@ -878,12 +878,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">UserRecording</param> 
         /// <param name="expand">conversation</param> 
         /// <returns>ApiResponse of UserRecording</returns>
-        public ApiResponse< UserRecording > PutUserrecordingWithHttpInfo (string recordingId, UserRecording body = null, string expand = null)
+        public ApiResponse< UserRecording > PutRecordingIdWithHttpInfo (string recordingId, UserRecording body = null, string expand = null)
         {
             
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
-                throw new ApiException(400, "Missing required parameter 'recordingId' when calling UserRecordingsApi->PutUserrecording");
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling UserRecordingsApi->PutRecordingId");
             
     
             var path_ = "/api/v1/userrecordings/{recordingId}";
@@ -944,9 +944,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutUserrecording: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutRecordingId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutUserrecording: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutRecordingId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<UserRecording>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -961,9 +961,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">UserRecording</param>
         /// <param name="expand">conversation</param>
         /// <returns>Task of UserRecording</returns>
-        public async System.Threading.Tasks.Task<UserRecording> PutUserrecordingAsync (string recordingId, UserRecording body = null, string expand = null)
+        public async System.Threading.Tasks.Task<UserRecording> PutRecordingIdAsync (string recordingId, UserRecording body = null, string expand = null)
         {
-             ApiResponse<UserRecording> response = await PutUserrecordingAsyncWithHttpInfo(recordingId, body, expand);
+             ApiResponse<UserRecording> response = await PutRecordingIdAsyncWithHttpInfo(recordingId, body, expand);
              return response.Data;
 
         }
@@ -975,10 +975,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">UserRecording</param>
         /// <param name="expand">conversation</param>
         /// <returns>Task of ApiResponse (UserRecording)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserRecording>> PutUserrecordingAsyncWithHttpInfo (string recordingId, UserRecording body = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserRecording>> PutRecordingIdAsyncWithHttpInfo (string recordingId, UserRecording body = null, string expand = null)
         {
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling PutUserrecording");
+            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling PutRecordingId");
             
     
             var path_ = "/api/v1/userrecordings/{recordingId}";
@@ -1034,9 +1034,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutUserrecording: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutRecordingId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutUserrecording: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutRecordingId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<UserRecording>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1049,9 +1049,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="recordingId">User Recording ID</param> 
         /// <returns></returns>
-        public void DeleteUserrecording (string recordingId)
+        public void DeleteRecordingId (string recordingId)
         {
-             DeleteUserrecordingWithHttpInfo(recordingId);
+             DeleteRecordingIdWithHttpInfo(recordingId);
         }
 
         /// <summary>
@@ -1059,12 +1059,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="recordingId">User Recording ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteUserrecordingWithHttpInfo (string recordingId)
+        public ApiResponse<Object> DeleteRecordingIdWithHttpInfo (string recordingId)
         {
             
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
-                throw new ApiException(400, "Missing required parameter 'recordingId' when calling UserRecordingsApi->DeleteUserrecording");
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling UserRecordingsApi->DeleteRecordingId");
             
     
             var path_ = "/api/v1/userrecordings/{recordingId}";
@@ -1117,9 +1117,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteUserrecording: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteRecordingId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteUserrecording: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteRecordingId: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -1132,9 +1132,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="recordingId">User Recording ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteUserrecordingAsync (string recordingId)
+        public async System.Threading.Tasks.Task DeleteRecordingIdAsync (string recordingId)
         {
-             await DeleteUserrecordingAsyncWithHttpInfo(recordingId);
+             await DeleteRecordingIdAsyncWithHttpInfo(recordingId);
 
         }
 
@@ -1143,10 +1143,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="recordingId">User Recording ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserrecordingAsyncWithHttpInfo (string recordingId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRecordingIdAsyncWithHttpInfo (string recordingId)
         {
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling DeleteUserrecording");
+            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling DeleteRecordingId");
             
     
             var path_ = "/api/v1/userrecordings/{recordingId}";
@@ -1200,9 +1200,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteUserrecording: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteRecordingId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteUserrecording: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteRecordingId: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -1216,9 +1216,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">User Recording ID</param> 
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param> 
         /// <returns>DownloadResponse</returns>
-        public DownloadResponse GetUserrecordingMedia (string recordingId, string formatId = null)
+        public DownloadResponse GetRecordingIdMedia (string recordingId, string formatId = null)
         {
-             ApiResponse<DownloadResponse> response = GetUserrecordingMediaWithHttpInfo(recordingId, formatId);
+             ApiResponse<DownloadResponse> response = GetRecordingIdMediaWithHttpInfo(recordingId, formatId);
              return response.Data;
         }
 
@@ -1228,12 +1228,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">User Recording ID</param> 
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param> 
         /// <returns>ApiResponse of DownloadResponse</returns>
-        public ApiResponse< DownloadResponse > GetUserrecordingMediaWithHttpInfo (string recordingId, string formatId = null)
+        public ApiResponse< DownloadResponse > GetRecordingIdMediaWithHttpInfo (string recordingId, string formatId = null)
         {
             
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
-                throw new ApiException(400, "Missing required parameter 'recordingId' when calling UserRecordingsApi->GetUserrecordingMedia");
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling UserRecordingsApi->GetRecordingIdMedia");
             
     
             var path_ = "/api/v1/userrecordings/{recordingId}/media";
@@ -1287,9 +1287,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetUserrecordingMedia: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetRecordingIdMedia: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetUserrecordingMedia: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetRecordingIdMedia: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DownloadResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1303,9 +1303,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <returns>Task of DownloadResponse</returns>
-        public async System.Threading.Tasks.Task<DownloadResponse> GetUserrecordingMediaAsync (string recordingId, string formatId = null)
+        public async System.Threading.Tasks.Task<DownloadResponse> GetRecordingIdMediaAsync (string recordingId, string formatId = null)
         {
-             ApiResponse<DownloadResponse> response = await GetUserrecordingMediaAsyncWithHttpInfo(recordingId, formatId);
+             ApiResponse<DownloadResponse> response = await GetRecordingIdMediaAsyncWithHttpInfo(recordingId, formatId);
              return response.Data;
 
         }
@@ -1316,10 +1316,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="recordingId">User Recording ID</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <returns>Task of ApiResponse (DownloadResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetUserrecordingMediaAsyncWithHttpInfo (string recordingId, string formatId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DownloadResponse>> GetRecordingIdMediaAsyncWithHttpInfo (string recordingId, string formatId = null)
         {
             // verify the required parameter 'recordingId' is set
-            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling GetUserrecordingMedia");
+            if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling GetRecordingIdMedia");
             
     
             var path_ = "/api/v1/userrecordings/{recordingId}/media";
@@ -1374,9 +1374,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetUserrecordingMedia: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetRecordingIdMedia: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetUserrecordingMedia: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetRecordingIdMedia: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DownloadResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

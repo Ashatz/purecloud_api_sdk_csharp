@@ -196,7 +196,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="ivrId">IVR id</param>
         /// <returns>IVR</returns>
-        IVR GetIvr (string ivrId);
+        IVR GetIvrsIvrId (string ivrId);
   
         /// <summary>
         /// Get an IVR config.
@@ -206,7 +206,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="ivrId">IVR id</param>
         /// <returns>ApiResponse of IVR</returns>
-        ApiResponse<IVR> GetIvrWithHttpInfo (string ivrId);
+        ApiResponse<IVR> GetIvrsIvrIdWithHttpInfo (string ivrId);
 
         /// <summary>
         /// Get an IVR config.
@@ -216,7 +216,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="ivrId">IVR id</param>
         /// <returns>Task of IVR</returns>
-        System.Threading.Tasks.Task<IVR> GetIvrAsync (string ivrId);
+        System.Threading.Tasks.Task<IVR> GetIvrsIvrIdAsync (string ivrId);
 
         /// <summary>
         /// Get an IVR config.
@@ -226,7 +226,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="ivrId">IVR id</param>
         /// <returns>Task of ApiResponse (IVR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<IVR>> GetIvrAsyncWithHttpInfo (string ivrId);
+        System.Threading.Tasks.Task<ApiResponse<IVR>> GetIvrsIvrIdAsyncWithHttpInfo (string ivrId);
         
         /// <summary>
         /// Update an IVR Config.
@@ -237,7 +237,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ivrId">IVR id</param>
         /// <param name="body"></param>
         /// <returns>IVR</returns>
-        IVR PutIvr (string ivrId, IVR body = null);
+        IVR PutIvrsIvrId (string ivrId, IVR body = null);
   
         /// <summary>
         /// Update an IVR Config.
@@ -248,7 +248,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ivrId">IVR id</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of IVR</returns>
-        ApiResponse<IVR> PutIvrWithHttpInfo (string ivrId, IVR body = null);
+        ApiResponse<IVR> PutIvrsIvrIdWithHttpInfo (string ivrId, IVR body = null);
 
         /// <summary>
         /// Update an IVR Config.
@@ -259,7 +259,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ivrId">IVR id</param>
         /// <param name="body"></param>
         /// <returns>Task of IVR</returns>
-        System.Threading.Tasks.Task<IVR> PutIvrAsync (string ivrId, IVR body = null);
+        System.Threading.Tasks.Task<IVR> PutIvrsIvrIdAsync (string ivrId, IVR body = null);
 
         /// <summary>
         /// Update an IVR Config.
@@ -270,7 +270,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ivrId">IVR id</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (IVR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<IVR>> PutIvrAsyncWithHttpInfo (string ivrId, IVR body = null);
+        System.Threading.Tasks.Task<ApiResponse<IVR>> PutIvrsIvrIdAsyncWithHttpInfo (string ivrId, IVR body = null);
         
         /// <summary>
         /// Delete an IVR Config.
@@ -280,7 +280,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="ivrId">IVR id</param>
         /// <returns>string</returns>
-        string DeleteIvr (string ivrId);
+        string DeleteIvrsIvrId (string ivrId);
   
         /// <summary>
         /// Delete an IVR Config.
@@ -290,7 +290,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="ivrId">IVR id</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteIvrWithHttpInfo (string ivrId);
+        ApiResponse<string> DeleteIvrsIvrIdWithHttpInfo (string ivrId);
 
         /// <summary>
         /// Delete an IVR Config.
@@ -300,7 +300,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="ivrId">IVR id</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteIvrAsync (string ivrId);
+        System.Threading.Tasks.Task<string> DeleteIvrsIvrIdAsync (string ivrId);
 
         /// <summary>
         /// Delete an IVR Config.
@@ -310,7 +310,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="ivrId">IVR id</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteIvrAsyncWithHttpInfo (string ivrId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteIvrsIvrIdAsyncWithHttpInfo (string ivrId);
         
         /// <summary>
         /// Get a pageable list of user prompts
@@ -460,7 +460,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="promptId">Prompt ID</param>
         /// <returns>Prompt</returns>
-        Prompt GetPrompt (string promptId);
+        Prompt GetPromptsPromptId (string promptId);
   
         /// <summary>
         /// Get specified user prompt
@@ -470,7 +470,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="promptId">Prompt ID</param>
         /// <returns>ApiResponse of Prompt</returns>
-        ApiResponse<Prompt> GetPromptWithHttpInfo (string promptId);
+        ApiResponse<Prompt> GetPromptsPromptIdWithHttpInfo (string promptId);
 
         /// <summary>
         /// Get specified user prompt
@@ -480,7 +480,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="promptId">Prompt ID</param>
         /// <returns>Task of Prompt</returns>
-        System.Threading.Tasks.Task<Prompt> GetPromptAsync (string promptId);
+        System.Threading.Tasks.Task<Prompt> GetPromptsPromptIdAsync (string promptId);
 
         /// <summary>
         /// Get specified user prompt
@@ -490,7 +490,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="promptId">Prompt ID</param>
         /// <returns>Task of ApiResponse (Prompt)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Prompt>> GetPromptAsyncWithHttpInfo (string promptId);
+        System.Threading.Tasks.Task<ApiResponse<Prompt>> GetPromptsPromptIdAsyncWithHttpInfo (string promptId);
         
         /// <summary>
         /// Update specified user prompt
@@ -501,7 +501,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>Prompt</returns>
-        Prompt PutPrompt (string promptId, Prompt body = null);
+        Prompt PutPromptsPromptId (string promptId, Prompt body = null);
   
         /// <summary>
         /// Update specified user prompt
@@ -512,7 +512,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Prompt</returns>
-        ApiResponse<Prompt> PutPromptWithHttpInfo (string promptId, Prompt body = null);
+        ApiResponse<Prompt> PutPromptsPromptIdWithHttpInfo (string promptId, Prompt body = null);
 
         /// <summary>
         /// Update specified user prompt
@@ -523,7 +523,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>Task of Prompt</returns>
-        System.Threading.Tasks.Task<Prompt> PutPromptAsync (string promptId, Prompt body = null);
+        System.Threading.Tasks.Task<Prompt> PutPromptsPromptIdAsync (string promptId, Prompt body = null);
 
         /// <summary>
         /// Update specified user prompt
@@ -534,7 +534,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Prompt)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Prompt>> PutPromptAsyncWithHttpInfo (string promptId, Prompt body = null);
+        System.Threading.Tasks.Task<ApiResponse<Prompt>> PutPromptsPromptIdAsyncWithHttpInfo (string promptId, Prompt body = null);
         
         /// <summary>
         /// Delete specified user prompt
@@ -544,7 +544,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="promptId">Prompt ID</param>
         /// <returns></returns>
-        void DeletePrompt (string promptId);
+        void DeletePromptsPromptId (string promptId);
   
         /// <summary>
         /// Delete specified user prompt
@@ -554,7 +554,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="promptId">Prompt ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeletePromptWithHttpInfo (string promptId);
+        ApiResponse<Object> DeletePromptsPromptIdWithHttpInfo (string promptId);
 
         /// <summary>
         /// Delete specified user prompt
@@ -564,7 +564,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="promptId">Prompt ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeletePromptAsync (string promptId);
+        System.Threading.Tasks.Task DeletePromptsPromptIdAsync (string promptId);
 
         /// <summary>
         /// Delete specified user prompt
@@ -574,7 +574,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="promptId">Prompt ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeletePromptAsyncWithHttpInfo (string promptId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeletePromptsPromptIdAsyncWithHttpInfo (string promptId);
         
         /// <summary>
         /// Get a pageable list of user prompt resources
@@ -586,7 +586,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="pageSize">Page size</param>
         /// <returns>PromptAssetEntityListing</returns>
-        PromptAssetEntityListing GetPromptResources (string promptId, int? pageNumber = null, int? pageSize = null);
+        PromptAssetEntityListing GetPromptsPromptIdResources (string promptId, int? pageNumber = null, int? pageSize = null);
   
         /// <summary>
         /// Get a pageable list of user prompt resources
@@ -598,7 +598,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="pageSize">Page size</param>
         /// <returns>ApiResponse of PromptAssetEntityListing</returns>
-        ApiResponse<PromptAssetEntityListing> GetPromptResourcesWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null);
+        ApiResponse<PromptAssetEntityListing> GetPromptsPromptIdResourcesWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
         /// Get a pageable list of user prompt resources
@@ -610,7 +610,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="pageSize">Page size</param>
         /// <returns>Task of PromptAssetEntityListing</returns>
-        System.Threading.Tasks.Task<PromptAssetEntityListing> GetPromptResourcesAsync (string promptId, int? pageNumber = null, int? pageSize = null);
+        System.Threading.Tasks.Task<PromptAssetEntityListing> GetPromptsPromptIdResourcesAsync (string promptId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
         /// Get a pageable list of user prompt resources
@@ -622,7 +622,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="pageSize">Page size</param>
         /// <returns>Task of ApiResponse (PromptAssetEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PromptAssetEntityListing>> GetPromptResourcesAsyncWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<PromptAssetEntityListing>> GetPromptsPromptIdResourcesAsyncWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null);
         
         /// <summary>
         /// Create a new user prompt resource.
@@ -633,7 +633,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>PromptAsset</returns>
-        PromptAsset PostPromptResources (string promptId, PromptAsset body = null);
+        PromptAsset PostPromptsPromptIdResources (string promptId, PromptAsset body = null);
   
         /// <summary>
         /// Create a new user prompt resource.
@@ -644,7 +644,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of PromptAsset</returns>
-        ApiResponse<PromptAsset> PostPromptResourcesWithHttpInfo (string promptId, PromptAsset body = null);
+        ApiResponse<PromptAsset> PostPromptsPromptIdResourcesWithHttpInfo (string promptId, PromptAsset body = null);
 
         /// <summary>
         /// Create a new user prompt resource.
@@ -655,7 +655,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>Task of PromptAsset</returns>
-        System.Threading.Tasks.Task<PromptAsset> PostPromptResourcesAsync (string promptId, PromptAsset body = null);
+        System.Threading.Tasks.Task<PromptAsset> PostPromptsPromptIdResourcesAsync (string promptId, PromptAsset body = null);
 
         /// <summary>
         /// Create a new user prompt resource.
@@ -666,7 +666,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (PromptAsset)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PromptAsset>> PostPromptResourcesAsyncWithHttpInfo (string promptId, PromptAsset body = null);
+        System.Threading.Tasks.Task<ApiResponse<PromptAsset>> PostPromptsPromptIdResourcesAsyncWithHttpInfo (string promptId, PromptAsset body = null);
         
         /// <summary>
         /// Get specified user prompt resource
@@ -677,7 +677,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="language">Language</param>
         /// <returns>PromptAsset</returns>
-        PromptAsset GetPromptResources_0 (string promptId, string language);
+        PromptAsset GetPromptsPromptIdResourcesLanguage (string promptId, string language);
   
         /// <summary>
         /// Get specified user prompt resource
@@ -688,7 +688,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="language">Language</param>
         /// <returns>ApiResponse of PromptAsset</returns>
-        ApiResponse<PromptAsset> GetPromptResources_0WithHttpInfo (string promptId, string language);
+        ApiResponse<PromptAsset> GetPromptsPromptIdResourcesLanguageWithHttpInfo (string promptId, string language);
 
         /// <summary>
         /// Get specified user prompt resource
@@ -699,7 +699,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="language">Language</param>
         /// <returns>Task of PromptAsset</returns>
-        System.Threading.Tasks.Task<PromptAsset> GetPromptResources_0Async (string promptId, string language);
+        System.Threading.Tasks.Task<PromptAsset> GetPromptsPromptIdResourcesLanguageAsync (string promptId, string language);
 
         /// <summary>
         /// Get specified user prompt resource
@@ -710,7 +710,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="language">Language</param>
         /// <returns>Task of ApiResponse (PromptAsset)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PromptAsset>> GetPromptResources_0AsyncWithHttpInfo (string promptId, string language);
+        System.Threading.Tasks.Task<ApiResponse<PromptAsset>> GetPromptsPromptIdResourcesLanguageAsyncWithHttpInfo (string promptId, string language);
         
         /// <summary>
         /// Update specified user prompt resource
@@ -722,7 +722,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="language">Language</param>
         /// <param name="body"></param>
         /// <returns>PromptAsset</returns>
-        PromptAsset PutPromptResources (string promptId, string language, PromptAsset body = null);
+        PromptAsset PutPromptsPromptIdResourcesLanguage (string promptId, string language, PromptAsset body = null);
   
         /// <summary>
         /// Update specified user prompt resource
@@ -734,7 +734,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="language">Language</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of PromptAsset</returns>
-        ApiResponse<PromptAsset> PutPromptResourcesWithHttpInfo (string promptId, string language, PromptAsset body = null);
+        ApiResponse<PromptAsset> PutPromptsPromptIdResourcesLanguageWithHttpInfo (string promptId, string language, PromptAsset body = null);
 
         /// <summary>
         /// Update specified user prompt resource
@@ -746,7 +746,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="language">Language</param>
         /// <param name="body"></param>
         /// <returns>Task of PromptAsset</returns>
-        System.Threading.Tasks.Task<PromptAsset> PutPromptResourcesAsync (string promptId, string language, PromptAsset body = null);
+        System.Threading.Tasks.Task<PromptAsset> PutPromptsPromptIdResourcesLanguageAsync (string promptId, string language, PromptAsset body = null);
 
         /// <summary>
         /// Update specified user prompt resource
@@ -758,7 +758,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="language">Language</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (PromptAsset)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PromptAsset>> PutPromptResourcesAsyncWithHttpInfo (string promptId, string language, PromptAsset body = null);
+        System.Threading.Tasks.Task<ApiResponse<PromptAsset>> PutPromptsPromptIdResourcesLanguageAsyncWithHttpInfo (string promptId, string language, PromptAsset body = null);
         
         /// <summary>
         /// Delete specified user prompt resource
@@ -769,7 +769,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="language">Language</param>
         /// <returns></returns>
-        void DeletePromptResources (string promptId, string language);
+        void DeletePromptsPromptIdResourcesLanguage (string promptId, string language);
   
         /// <summary>
         /// Delete specified user prompt resource
@@ -780,7 +780,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="language">Language</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeletePromptResourcesWithHttpInfo (string promptId, string language);
+        ApiResponse<Object> DeletePromptsPromptIdResourcesLanguageWithHttpInfo (string promptId, string language);
 
         /// <summary>
         /// Delete specified user prompt resource
@@ -791,7 +791,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="language">Language</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeletePromptResourcesAsync (string promptId, string language);
+        System.Threading.Tasks.Task DeletePromptsPromptIdResourcesLanguageAsync (string promptId, string language);
 
         /// <summary>
         /// Delete specified user prompt resource
@@ -802,7 +802,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="language">Language</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeletePromptResourcesAsyncWithHttpInfo (string promptId, string language);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeletePromptsPromptIdResourcesLanguageAsyncWithHttpInfo (string promptId, string language);
         
         /// <summary>
         /// Get a list of schedule groups.
@@ -904,7 +904,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>ScheduleGroup</returns>
-        ScheduleGroup GetSchedulegroup (string scheduleGroupId);
+        ScheduleGroup GetSchedulegroupsSchedulegroupId (string scheduleGroupId);
   
         /// <summary>
         /// Gets a schedule group by ID
@@ -914,7 +914,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>ApiResponse of ScheduleGroup</returns>
-        ApiResponse<ScheduleGroup> GetSchedulegroupWithHttpInfo (string scheduleGroupId);
+        ApiResponse<ScheduleGroup> GetSchedulegroupsSchedulegroupIdWithHttpInfo (string scheduleGroupId);
 
         /// <summary>
         /// Gets a schedule group by ID
@@ -924,7 +924,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>Task of ScheduleGroup</returns>
-        System.Threading.Tasks.Task<ScheduleGroup> GetSchedulegroupAsync (string scheduleGroupId);
+        System.Threading.Tasks.Task<ScheduleGroup> GetSchedulegroupsSchedulegroupIdAsync (string scheduleGroupId);
 
         /// <summary>
         /// Gets a schedule group by ID
@@ -934,7 +934,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>Task of ApiResponse (ScheduleGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScheduleGroup>> GetSchedulegroupAsyncWithHttpInfo (string scheduleGroupId);
+        System.Threading.Tasks.Task<ApiResponse<ScheduleGroup>> GetSchedulegroupsSchedulegroupIdAsyncWithHttpInfo (string scheduleGroupId);
         
         /// <summary>
         /// Updates a schedule group by ID
@@ -945,7 +945,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <param name="body"></param>
         /// <returns>ScheduleGroup</returns>
-        ScheduleGroup PutSchedulegroup (string scheduleGroupId, ScheduleGroup body = null);
+        ScheduleGroup PutSchedulegroupsSchedulegroupId (string scheduleGroupId, ScheduleGroup body = null);
   
         /// <summary>
         /// Updates a schedule group by ID
@@ -956,7 +956,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of ScheduleGroup</returns>
-        ApiResponse<ScheduleGroup> PutSchedulegroupWithHttpInfo (string scheduleGroupId, ScheduleGroup body = null);
+        ApiResponse<ScheduleGroup> PutSchedulegroupsSchedulegroupIdWithHttpInfo (string scheduleGroupId, ScheduleGroup body = null);
 
         /// <summary>
         /// Updates a schedule group by ID
@@ -967,7 +967,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ScheduleGroup</returns>
-        System.Threading.Tasks.Task<ScheduleGroup> PutSchedulegroupAsync (string scheduleGroupId, ScheduleGroup body = null);
+        System.Threading.Tasks.Task<ScheduleGroup> PutSchedulegroupsSchedulegroupIdAsync (string scheduleGroupId, ScheduleGroup body = null);
 
         /// <summary>
         /// Updates a schedule group by ID
@@ -978,7 +978,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (ScheduleGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScheduleGroup>> PutSchedulegroupAsyncWithHttpInfo (string scheduleGroupId, ScheduleGroup body = null);
+        System.Threading.Tasks.Task<ApiResponse<ScheduleGroup>> PutSchedulegroupsSchedulegroupIdAsyncWithHttpInfo (string scheduleGroupId, ScheduleGroup body = null);
         
         /// <summary>
         /// Deletes a schedule group by ID
@@ -988,7 +988,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>string</returns>
-        string DeleteSchedulegroup (string scheduleGroupId);
+        string DeleteSchedulegroupsSchedulegroupId (string scheduleGroupId);
   
         /// <summary>
         /// Deletes a schedule group by ID
@@ -998,7 +998,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteSchedulegroupWithHttpInfo (string scheduleGroupId);
+        ApiResponse<string> DeleteSchedulegroupsSchedulegroupIdWithHttpInfo (string scheduleGroupId);
 
         /// <summary>
         /// Deletes a schedule group by ID
@@ -1008,7 +1008,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteSchedulegroupAsync (string scheduleGroupId);
+        System.Threading.Tasks.Task<string> DeleteSchedulegroupsSchedulegroupIdAsync (string scheduleGroupId);
 
         /// <summary>
         /// Deletes a schedule group by ID
@@ -1018,7 +1018,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteSchedulegroupAsyncWithHttpInfo (string scheduleGroupId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteSchedulegroupsSchedulegroupIdAsyncWithHttpInfo (string scheduleGroupId);
         
         /// <summary>
         /// Get a list of schedules.
@@ -1120,7 +1120,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Schedule</returns>
-        Schedule GetSchedule (string scheduleId);
+        Schedule GetSchedulesScheduleId (string scheduleId);
   
         /// <summary>
         /// Get a schedule by ID
@@ -1130,7 +1130,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>ApiResponse of Schedule</returns>
-        ApiResponse<Schedule> GetScheduleWithHttpInfo (string scheduleId);
+        ApiResponse<Schedule> GetSchedulesScheduleIdWithHttpInfo (string scheduleId);
 
         /// <summary>
         /// Get a schedule by ID
@@ -1140,7 +1140,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of Schedule</returns>
-        System.Threading.Tasks.Task<Schedule> GetScheduleAsync (string scheduleId);
+        System.Threading.Tasks.Task<Schedule> GetSchedulesScheduleIdAsync (string scheduleId);
 
         /// <summary>
         /// Get a schedule by ID
@@ -1150,7 +1150,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ApiResponse (Schedule)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Schedule>> GetScheduleAsyncWithHttpInfo (string scheduleId);
+        System.Threading.Tasks.Task<ApiResponse<Schedule>> GetSchedulesScheduleIdAsyncWithHttpInfo (string scheduleId);
         
         /// <summary>
         /// Update schedule by ID
@@ -1161,7 +1161,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body"></param>
         /// <returns>Schedule</returns>
-        Schedule PutSchedule (string scheduleId, Schedule body = null);
+        Schedule PutSchedulesScheduleId (string scheduleId, Schedule body = null);
   
         /// <summary>
         /// Update schedule by ID
@@ -1172,7 +1172,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Schedule</returns>
-        ApiResponse<Schedule> PutScheduleWithHttpInfo (string scheduleId, Schedule body = null);
+        ApiResponse<Schedule> PutSchedulesScheduleIdWithHttpInfo (string scheduleId, Schedule body = null);
 
         /// <summary>
         /// Update schedule by ID
@@ -1183,7 +1183,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body"></param>
         /// <returns>Task of Schedule</returns>
-        System.Threading.Tasks.Task<Schedule> PutScheduleAsync (string scheduleId, Schedule body = null);
+        System.Threading.Tasks.Task<Schedule> PutSchedulesScheduleIdAsync (string scheduleId, Schedule body = null);
 
         /// <summary>
         /// Update schedule by ID
@@ -1194,7 +1194,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Schedule)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Schedule>> PutScheduleAsyncWithHttpInfo (string scheduleId, Schedule body = null);
+        System.Threading.Tasks.Task<ApiResponse<Schedule>> PutSchedulesScheduleIdAsyncWithHttpInfo (string scheduleId, Schedule body = null);
         
         /// <summary>
         /// Delete a schedule by id
@@ -1204,7 +1204,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>string</returns>
-        string DeleteSchedule (string scheduleId);
+        string DeleteSchedulesScheduleId (string scheduleId);
   
         /// <summary>
         /// Delete a schedule by id
@@ -1214,7 +1214,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteScheduleWithHttpInfo (string scheduleId);
+        ApiResponse<string> DeleteSchedulesScheduleIdWithHttpInfo (string scheduleId);
 
         /// <summary>
         /// Delete a schedule by id
@@ -1224,7 +1224,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteScheduleAsync (string scheduleId);
+        System.Threading.Tasks.Task<string> DeleteSchedulesScheduleIdAsync (string scheduleId);
 
         /// <summary>
         /// Delete a schedule by id
@@ -1234,7 +1234,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteScheduleAsyncWithHttpInfo (string scheduleId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteSchedulesScheduleIdAsyncWithHttpInfo (string scheduleId);
         
         /// <summary>
         /// Get System Prompts.
@@ -1308,7 +1308,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="promptId"></param>
         /// <returns>SystemPrompt</returns>
-        SystemPrompt GetSystemprompt (string promptId);
+        SystemPrompt GetSystempromptsPromptId (string promptId);
   
         /// <summary>
         /// Get IVR system prompt.
@@ -1318,7 +1318,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="promptId"></param>
         /// <returns>ApiResponse of SystemPrompt</returns>
-        ApiResponse<SystemPrompt> GetSystempromptWithHttpInfo (string promptId);
+        ApiResponse<SystemPrompt> GetSystempromptsPromptIdWithHttpInfo (string promptId);
 
         /// <summary>
         /// Get IVR system prompt.
@@ -1328,7 +1328,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="promptId"></param>
         /// <returns>Task of SystemPrompt</returns>
-        System.Threading.Tasks.Task<SystemPrompt> GetSystempromptAsync (string promptId);
+        System.Threading.Tasks.Task<SystemPrompt> GetSystempromptsPromptIdAsync (string promptId);
 
         /// <summary>
         /// Get IVR system prompt.
@@ -1338,7 +1338,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="promptId"></param>
         /// <returns>Task of ApiResponse (SystemPrompt)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SystemPrompt>> GetSystempromptAsyncWithHttpInfo (string promptId);
+        System.Threading.Tasks.Task<ApiResponse<SystemPrompt>> GetSystempromptsPromptIdAsyncWithHttpInfo (string promptId);
         
         /// <summary>
         /// Get IVR System Prompt resources.
@@ -1352,7 +1352,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>SystemPromptAssetEntityListing</returns>
-        SystemPromptAssetEntityListing GetSystempromptResources (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        SystemPromptAssetEntityListing GetSystempromptsPromptIdResources (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
   
         /// <summary>
         /// Get IVR System Prompt resources.
@@ -1366,7 +1366,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>ApiResponse of SystemPromptAssetEntityListing</returns>
-        ApiResponse<SystemPromptAssetEntityListing> GetSystempromptResourcesWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        ApiResponse<SystemPromptAssetEntityListing> GetSystempromptsPromptIdResourcesWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get IVR System Prompt resources.
@@ -1380,7 +1380,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of SystemPromptAssetEntityListing</returns>
-        System.Threading.Tasks.Task<SystemPromptAssetEntityListing> GetSystempromptResourcesAsync (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<SystemPromptAssetEntityListing> GetSystempromptsPromptIdResourcesAsync (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get IVR System Prompt resources.
@@ -1394,7 +1394,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ApiResponse (SystemPromptAssetEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SystemPromptAssetEntityListing>> GetSystempromptResourcesAsyncWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<SystemPromptAssetEntityListing>> GetSystempromptsPromptIdResourcesAsyncWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
         
         /// <summary>
         /// Create system prompt resource override.
@@ -1405,7 +1405,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>SystemPromptAsset</returns>
-        SystemPromptAsset PostSystempromptResources (string promptId, SystemPromptAsset body = null);
+        SystemPromptAsset PostSystempromptsPromptIdResources (string promptId, SystemPromptAsset body = null);
   
         /// <summary>
         /// Create system prompt resource override.
@@ -1416,7 +1416,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of SystemPromptAsset</returns>
-        ApiResponse<SystemPromptAsset> PostSystempromptResourcesWithHttpInfo (string promptId, SystemPromptAsset body = null);
+        ApiResponse<SystemPromptAsset> PostSystempromptsPromptIdResourcesWithHttpInfo (string promptId, SystemPromptAsset body = null);
 
         /// <summary>
         /// Create system prompt resource override.
@@ -1427,7 +1427,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>Task of SystemPromptAsset</returns>
-        System.Threading.Tasks.Task<SystemPromptAsset> PostSystempromptResourcesAsync (string promptId, SystemPromptAsset body = null);
+        System.Threading.Tasks.Task<SystemPromptAsset> PostSystempromptsPromptIdResourcesAsync (string promptId, SystemPromptAsset body = null);
 
         /// <summary>
         /// Create system prompt resource override.
@@ -1438,7 +1438,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (SystemPromptAsset)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> PostSystempromptResourcesAsyncWithHttpInfo (string promptId, SystemPromptAsset body = null);
+        System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> PostSystempromptsPromptIdResourcesAsyncWithHttpInfo (string promptId, SystemPromptAsset body = null);
         
         /// <summary>
         /// Get a system prompt resource.
@@ -1449,7 +1449,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="language">Language</param>
         /// <returns>SystemPromptAsset</returns>
-        SystemPromptAsset GetSystempromptResources_0 (string promptId, string language);
+        SystemPromptAsset GetSystempromptsPromptIdResourcesLanguage (string promptId, string language);
   
         /// <summary>
         /// Get a system prompt resource.
@@ -1460,7 +1460,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="language">Language</param>
         /// <returns>ApiResponse of SystemPromptAsset</returns>
-        ApiResponse<SystemPromptAsset> GetSystempromptResources_0WithHttpInfo (string promptId, string language);
+        ApiResponse<SystemPromptAsset> GetSystempromptsPromptIdResourcesLanguageWithHttpInfo (string promptId, string language);
 
         /// <summary>
         /// Get a system prompt resource.
@@ -1471,7 +1471,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="language">Language</param>
         /// <returns>Task of SystemPromptAsset</returns>
-        System.Threading.Tasks.Task<SystemPromptAsset> GetSystempromptResources_0Async (string promptId, string language);
+        System.Threading.Tasks.Task<SystemPromptAsset> GetSystempromptsPromptIdResourcesLanguageAsync (string promptId, string language);
 
         /// <summary>
         /// Get a system prompt resource.
@@ -1482,7 +1482,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="language">Language</param>
         /// <returns>Task of ApiResponse (SystemPromptAsset)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> GetSystempromptResources_0AsyncWithHttpInfo (string promptId, string language);
+        System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> GetSystempromptsPromptIdResourcesLanguageAsyncWithHttpInfo (string promptId, string language);
         
         /// <summary>
         /// Delete a system prompt resource override.
@@ -1493,7 +1493,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="language">Language</param>
         /// <returns>string</returns>
-        string DeleteSystempromptResources (string promptId, string language);
+        string DeleteSystempromptsPromptIdResourcesLanguage (string promptId, string language);
   
         /// <summary>
         /// Delete a system prompt resource override.
@@ -1504,7 +1504,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="language">Language</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteSystempromptResourcesWithHttpInfo (string promptId, string language);
+        ApiResponse<string> DeleteSystempromptsPromptIdResourcesLanguageWithHttpInfo (string promptId, string language);
 
         /// <summary>
         /// Delete a system prompt resource override.
@@ -1515,7 +1515,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="language">Language</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteSystempromptResourcesAsync (string promptId, string language);
+        System.Threading.Tasks.Task<string> DeleteSystempromptsPromptIdResourcesLanguageAsync (string promptId, string language);
 
         /// <summary>
         /// Delete a system prompt resource override.
@@ -1526,7 +1526,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="language">Language</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteSystempromptResourcesAsyncWithHttpInfo (string promptId, string language);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteSystempromptsPromptIdResourcesLanguageAsyncWithHttpInfo (string promptId, string language);
         
         /// <summary>
         /// Get a pageable list of flows, filtered by query parameters
@@ -1548,7 +1548,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="lockedBy">Locked by</param>
         /// <param name="deleted">Include deleted</param>
         /// <returns>FlowEntityListing</returns>
-        FlowEntityListing GetFlows (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null);
+        FlowEntityListing Get (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null);
   
         /// <summary>
         /// Get a pageable list of flows, filtered by query parameters
@@ -1570,7 +1570,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="lockedBy">Locked by</param>
         /// <param name="deleted">Include deleted</param>
         /// <returns>ApiResponse of FlowEntityListing</returns>
-        ApiResponse<FlowEntityListing> GetFlowsWithHttpInfo (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null);
+        ApiResponse<FlowEntityListing> GetWithHttpInfo (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null);
 
         /// <summary>
         /// Get a pageable list of flows, filtered by query parameters
@@ -1592,7 +1592,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="lockedBy">Locked by</param>
         /// <param name="deleted">Include deleted</param>
         /// <returns>Task of FlowEntityListing</returns>
-        System.Threading.Tasks.Task<FlowEntityListing> GetFlowsAsync (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null);
+        System.Threading.Tasks.Task<FlowEntityListing> GetAsync (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null);
 
         /// <summary>
         /// Get a pageable list of flows, filtered by query parameters
@@ -1614,7 +1614,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="lockedBy">Locked by</param>
         /// <param name="deleted">Include deleted</param>
         /// <returns>Task of ApiResponse (FlowEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FlowEntityListing>> GetFlowsAsyncWithHttpInfo (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null);
+        System.Threading.Tasks.Task<ApiResponse<FlowEntityListing>> GetAsyncWithHttpInfo (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null);
         
         /// <summary>
         /// Create flow
@@ -1624,7 +1624,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Flow</returns>
-        Flow PostFlows (Flow body = null);
+        Flow Post (Flow body = null);
   
         /// <summary>
         /// Create flow
@@ -1634,7 +1634,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Flow</returns>
-        ApiResponse<Flow> PostFlowsWithHttpInfo (Flow body = null);
+        ApiResponse<Flow> PostWithHttpInfo (Flow body = null);
 
         /// <summary>
         /// Create flow
@@ -1644,7 +1644,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of Flow</returns>
-        System.Threading.Tasks.Task<Flow> PostFlowsAsync (Flow body = null);
+        System.Threading.Tasks.Task<Flow> PostAsync (Flow body = null);
 
         /// <summary>
         /// Create flow
@@ -1654,7 +1654,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Flow)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsAsyncWithHttpInfo (Flow body = null);
+        System.Threading.Tasks.Task<ApiResponse<Flow>> PostAsyncWithHttpInfo (Flow body = null);
         
         /// <summary>
         /// Batch-delete a list of flows
@@ -1665,7 +1665,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">List of Flow IDs</param>
         /// <param name="ignoreDependencies">Ignore Dependencies</param>
         /// <returns></returns>
-        void DeleteFlows (List<string> id, bool? ignoreDependencies = null);
+        void Delete (List<string> id, bool? ignoreDependencies = null);
   
         /// <summary>
         /// Batch-delete a list of flows
@@ -1676,7 +1676,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">List of Flow IDs</param>
         /// <param name="ignoreDependencies">Ignore Dependencies</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteFlowsWithHttpInfo (List<string> id, bool? ignoreDependencies = null);
+        ApiResponse<Object> DeleteWithHttpInfo (List<string> id, bool? ignoreDependencies = null);
 
         /// <summary>
         /// Batch-delete a list of flows
@@ -1687,7 +1687,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">List of Flow IDs</param>
         /// <param name="ignoreDependencies">Ignore Dependencies</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteFlowsAsync (List<string> id, bool? ignoreDependencies = null);
+        System.Threading.Tasks.Task DeleteAsync (List<string> id, bool? ignoreDependencies = null);
 
         /// <summary>
         /// Batch-delete a list of flows
@@ -1698,7 +1698,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">List of Flow IDs</param>
         /// <param name="ignoreDependencies">Ignore Dependencies</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowsAsyncWithHttpInfo (List<string> id, bool? ignoreDependencies = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAsyncWithHttpInfo (List<string> id, bool? ignoreDependencies = null);
         
         /// <summary>
         /// Check-in flow
@@ -1708,7 +1708,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="flow">Flow</param>
         /// <returns>Flow</returns>
-        Flow PostFlowsActionsCheckin (string flow = null);
+        Flow PostActionsCheckin (string flow = null);
   
         /// <summary>
         /// Check-in flow
@@ -1718,7 +1718,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="flow">Flow</param>
         /// <returns>ApiResponse of Flow</returns>
-        ApiResponse<Flow> PostFlowsActionsCheckinWithHttpInfo (string flow = null);
+        ApiResponse<Flow> PostActionsCheckinWithHttpInfo (string flow = null);
 
         /// <summary>
         /// Check-in flow
@@ -1728,7 +1728,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="flow">Flow</param>
         /// <returns>Task of Flow</returns>
-        System.Threading.Tasks.Task<Flow> PostFlowsActionsCheckinAsync (string flow = null);
+        System.Threading.Tasks.Task<Flow> PostActionsCheckinAsync (string flow = null);
 
         /// <summary>
         /// Check-in flow
@@ -1738,7 +1738,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="flow">Flow</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsCheckinAsyncWithHttpInfo (string flow = null);
+        System.Threading.Tasks.Task<ApiResponse<Flow>> PostActionsCheckinAsyncWithHttpInfo (string flow = null);
         
         /// <summary>
         /// Check-out flow
@@ -1748,7 +1748,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="flow">Flow</param>
         /// <returns>Flow</returns>
-        Flow PostFlowsActionsCheckout (string flow = null);
+        Flow PostActionsCheckout (string flow = null);
   
         /// <summary>
         /// Check-out flow
@@ -1758,7 +1758,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="flow">Flow</param>
         /// <returns>ApiResponse of Flow</returns>
-        ApiResponse<Flow> PostFlowsActionsCheckoutWithHttpInfo (string flow = null);
+        ApiResponse<Flow> PostActionsCheckoutWithHttpInfo (string flow = null);
 
         /// <summary>
         /// Check-out flow
@@ -1768,7 +1768,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="flow">Flow</param>
         /// <returns>Task of Flow</returns>
-        System.Threading.Tasks.Task<Flow> PostFlowsActionsCheckoutAsync (string flow = null);
+        System.Threading.Tasks.Task<Flow> PostActionsCheckoutAsync (string flow = null);
 
         /// <summary>
         /// Check-out flow
@@ -1778,7 +1778,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="flow">Flow</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsCheckoutAsyncWithHttpInfo (string flow = null);
+        System.Threading.Tasks.Task<ApiResponse<Flow>> PostActionsCheckoutAsyncWithHttpInfo (string flow = null);
         
         /// <summary>
         /// Deactivate flow
@@ -1788,7 +1788,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="flow">Flow</param>
         /// <returns>Flow</returns>
-        Flow PostFlowsActionsDeactivate (string flow = null);
+        Flow PostActionsDeactivate (string flow = null);
   
         /// <summary>
         /// Deactivate flow
@@ -1798,7 +1798,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="flow">Flow</param>
         /// <returns>ApiResponse of Flow</returns>
-        ApiResponse<Flow> PostFlowsActionsDeactivateWithHttpInfo (string flow = null);
+        ApiResponse<Flow> PostActionsDeactivateWithHttpInfo (string flow = null);
 
         /// <summary>
         /// Deactivate flow
@@ -1808,7 +1808,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="flow">Flow</param>
         /// <returns>Task of Flow</returns>
-        System.Threading.Tasks.Task<Flow> PostFlowsActionsDeactivateAsync (string flow = null);
+        System.Threading.Tasks.Task<Flow> PostActionsDeactivateAsync (string flow = null);
 
         /// <summary>
         /// Deactivate flow
@@ -1818,7 +1818,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="flow">Flow</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsDeactivateAsyncWithHttpInfo (string flow = null);
+        System.Threading.Tasks.Task<ApiResponse<Flow>> PostActionsDeactivateAsyncWithHttpInfo (string flow = null);
         
         /// <summary>
         /// Debug flow
@@ -1829,7 +1829,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="version"></param>
         /// <param name="flow">Flow</param>
         /// <returns></returns>
-        void PostFlowsActionsDebug (string version, string flow = null);
+        void PostActionsDebug (string version, string flow = null);
   
         /// <summary>
         /// Debug flow
@@ -1840,7 +1840,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="version"></param>
         /// <param name="flow">Flow</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostFlowsActionsDebugWithHttpInfo (string version, string flow = null);
+        ApiResponse<Object> PostActionsDebugWithHttpInfo (string version, string flow = null);
 
         /// <summary>
         /// Debug flow
@@ -1851,7 +1851,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="version"></param>
         /// <param name="flow">Flow</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostFlowsActionsDebugAsync (string version, string flow = null);
+        System.Threading.Tasks.Task PostActionsDebugAsync (string version, string flow = null);
 
         /// <summary>
         /// Debug flow
@@ -1862,7 +1862,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="version"></param>
         /// <param name="flow">Flow</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostFlowsActionsDebugAsyncWithHttpInfo (string version, string flow = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostActionsDebugAsyncWithHttpInfo (string version, string flow = null);
         
         /// <summary>
         /// Revert flow
@@ -1872,7 +1872,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="flow">Flow</param>
         /// <returns>Flow</returns>
-        Flow PostFlowsActionsRevert (string flow = null);
+        Flow PostActionsRevert (string flow = null);
   
         /// <summary>
         /// Revert flow
@@ -1882,7 +1882,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="flow">Flow</param>
         /// <returns>ApiResponse of Flow</returns>
-        ApiResponse<Flow> PostFlowsActionsRevertWithHttpInfo (string flow = null);
+        ApiResponse<Flow> PostActionsRevertWithHttpInfo (string flow = null);
 
         /// <summary>
         /// Revert flow
@@ -1892,7 +1892,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="flow">Flow</param>
         /// <returns>Task of Flow</returns>
-        System.Threading.Tasks.Task<Flow> PostFlowsActionsRevertAsync (string flow = null);
+        System.Threading.Tasks.Task<Flow> PostActionsRevertAsync (string flow = null);
 
         /// <summary>
         /// Revert flow
@@ -1902,7 +1902,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="flow">Flow</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsRevertAsyncWithHttpInfo (string flow = null);
+        System.Threading.Tasks.Task<ApiResponse<Flow>> PostActionsRevertAsyncWithHttpInfo (string flow = null);
         
         /// <summary>
         /// Get flow.
@@ -1913,7 +1913,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>Flow</returns>
-        Flow GetFlow (string flowId, string deleted = null);
+        Flow GetFlowId (string flowId, string deleted = null);
   
         /// <summary>
         /// Get flow.
@@ -1924,7 +1924,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>ApiResponse of Flow</returns>
-        ApiResponse<Flow> GetFlowWithHttpInfo (string flowId, string deleted = null);
+        ApiResponse<Flow> GetFlowIdWithHttpInfo (string flowId, string deleted = null);
 
         /// <summary>
         /// Get flow.
@@ -1935,7 +1935,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>Task of Flow</returns>
-        System.Threading.Tasks.Task<Flow> GetFlowAsync (string flowId, string deleted = null);
+        System.Threading.Tasks.Task<Flow> GetFlowIdAsync (string flowId, string deleted = null);
 
         /// <summary>
         /// Get flow.
@@ -1946,7 +1946,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Flow>> GetFlowAsyncWithHttpInfo (string flowId, string deleted = null);
+        System.Threading.Tasks.Task<ApiResponse<Flow>> GetFlowIdAsyncWithHttpInfo (string flowId, string deleted = null);
         
         /// <summary>
         /// Update flow.
@@ -1957,7 +1957,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="body"></param>
         /// <returns>Flow</returns>
-        Flow PutFlow (string flowId, Flow body = null);
+        Flow PutFlowId (string flowId, Flow body = null);
   
         /// <summary>
         /// Update flow.
@@ -1968,7 +1968,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Flow</returns>
-        ApiResponse<Flow> PutFlowWithHttpInfo (string flowId, Flow body = null);
+        ApiResponse<Flow> PutFlowIdWithHttpInfo (string flowId, Flow body = null);
 
         /// <summary>
         /// Update flow.
@@ -1979,7 +1979,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="body"></param>
         /// <returns>Task of Flow</returns>
-        System.Threading.Tasks.Task<Flow> PutFlowAsync (string flowId, Flow body = null);
+        System.Threading.Tasks.Task<Flow> PutFlowIdAsync (string flowId, Flow body = null);
 
         /// <summary>
         /// Update flow.
@@ -1990,7 +1990,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Flow)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Flow>> PutFlowAsyncWithHttpInfo (string flowId, Flow body = null);
+        System.Threading.Tasks.Task<ApiResponse<Flow>> PutFlowIdAsyncWithHttpInfo (string flowId, Flow body = null);
         
         /// <summary>
         /// Delete flow.
@@ -2000,7 +2000,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="flowId">Flow ID</param>
         /// <returns></returns>
-        void DeleteFlow (string flowId);
+        void DeleteFlowId (string flowId);
   
         /// <summary>
         /// Delete flow.
@@ -2010,7 +2010,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="flowId">Flow ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteFlowWithHttpInfo (string flowId);
+        ApiResponse<Object> DeleteFlowIdWithHttpInfo (string flowId);
 
         /// <summary>
         /// Delete flow.
@@ -2020,7 +2020,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="flowId">Flow ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteFlowAsync (string flowId);
+        System.Threading.Tasks.Task DeleteFlowIdAsync (string flowId);
 
         /// <summary>
         /// Delete flow.
@@ -2030,7 +2030,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="flowId">Flow ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowAsyncWithHttpInfo (string flowId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowIdAsyncWithHttpInfo (string flowId);
         
         /// <summary>
         /// Get the latest configuration for flow.
@@ -2041,7 +2041,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>InlineResponse200</returns>
-        InlineResponse200 GetFlowLatestconfiguration (string flowId, string deleted = null);
+        InlineResponse200 GetFlowIdLatestconfiguration (string flowId, string deleted = null);
   
         /// <summary>
         /// Get the latest configuration for flow.
@@ -2052,7 +2052,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>ApiResponse of InlineResponse200</returns>
-        ApiResponse<InlineResponse200> GetFlowLatestconfigurationWithHttpInfo (string flowId, string deleted = null);
+        ApiResponse<InlineResponse200> GetFlowIdLatestconfigurationWithHttpInfo (string flowId, string deleted = null);
 
         /// <summary>
         /// Get the latest configuration for flow.
@@ -2063,7 +2063,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>Task of InlineResponse200</returns>
-        System.Threading.Tasks.Task<InlineResponse200> GetFlowLatestconfigurationAsync (string flowId, string deleted = null);
+        System.Threading.Tasks.Task<InlineResponse200> GetFlowIdLatestconfigurationAsync (string flowId, string deleted = null);
 
         /// <summary>
         /// Get the latest configuration for flow.
@@ -2074,7 +2074,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> GetFlowLatestconfigurationAsyncWithHttpInfo (string flowId, string deleted = null);
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> GetFlowIdLatestconfigurationAsyncWithHttpInfo (string flowId, string deleted = null);
         
         /// <summary>
         /// Get generation result.
@@ -2085,7 +2085,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="id">Publish Result ID</param>
         /// <returns>PublishedResult</returns>
-        PublishedResult GetFlowPublishedresults (string flowId, string id);
+        PublishedResult GetFlowIdPublishedresultsId (string flowId, string id);
   
         /// <summary>
         /// Get generation result.
@@ -2096,7 +2096,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="id">Publish Result ID</param>
         /// <returns>ApiResponse of PublishedResult</returns>
-        ApiResponse<PublishedResult> GetFlowPublishedresultsWithHttpInfo (string flowId, string id);
+        ApiResponse<PublishedResult> GetFlowIdPublishedresultsIdWithHttpInfo (string flowId, string id);
 
         /// <summary>
         /// Get generation result.
@@ -2107,7 +2107,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="id">Publish Result ID</param>
         /// <returns>Task of PublishedResult</returns>
-        System.Threading.Tasks.Task<PublishedResult> GetFlowPublishedresultsAsync (string flowId, string id);
+        System.Threading.Tasks.Task<PublishedResult> GetFlowIdPublishedresultsIdAsync (string flowId, string id);
 
         /// <summary>
         /// Get generation result.
@@ -2118,7 +2118,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="id">Publish Result ID</param>
         /// <returns>Task of ApiResponse (PublishedResult)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PublishedResult>> GetFlowPublishedresultsAsyncWithHttpInfo (string flowId, string id);
+        System.Threading.Tasks.Task<ApiResponse<PublishedResult>> GetFlowIdPublishedresultsIdAsyncWithHttpInfo (string flowId, string id);
         
         /// <summary>
         /// Get flow version list
@@ -2131,7 +2131,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>FlowVersionEntityListing</returns>
-        FlowVersionEntityListing GetFlowVersions (string flowId, int? pageNumber = null, int? pageSize = null, string deleted = null);
+        FlowVersionEntityListing GetFlowIdVersions (string flowId, int? pageNumber = null, int? pageSize = null, string deleted = null);
   
         /// <summary>
         /// Get flow version list
@@ -2144,7 +2144,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>ApiResponse of FlowVersionEntityListing</returns>
-        ApiResponse<FlowVersionEntityListing> GetFlowVersionsWithHttpInfo (string flowId, int? pageNumber = null, int? pageSize = null, string deleted = null);
+        ApiResponse<FlowVersionEntityListing> GetFlowIdVersionsWithHttpInfo (string flowId, int? pageNumber = null, int? pageSize = null, string deleted = null);
 
         /// <summary>
         /// Get flow version list
@@ -2157,7 +2157,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>Task of FlowVersionEntityListing</returns>
-        System.Threading.Tasks.Task<FlowVersionEntityListing> GetFlowVersionsAsync (string flowId, int? pageNumber = null, int? pageSize = null, string deleted = null);
+        System.Threading.Tasks.Task<FlowVersionEntityListing> GetFlowIdVersionsAsync (string flowId, int? pageNumber = null, int? pageSize = null, string deleted = null);
 
         /// <summary>
         /// Get flow version list
@@ -2170,7 +2170,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>Task of ApiResponse (FlowVersionEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FlowVersionEntityListing>> GetFlowVersionsAsyncWithHttpInfo (string flowId, int? pageNumber = null, int? pageSize = null, string deleted = null);
+        System.Threading.Tasks.Task<ApiResponse<FlowVersionEntityListing>> GetFlowIdVersionsAsyncWithHttpInfo (string flowId, int? pageNumber = null, int? pageSize = null, string deleted = null);
         
         /// <summary>
         /// Create flow version
@@ -2181,7 +2181,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="body"></param>
         /// <returns>FlowVersion</returns>
-        FlowVersion PostFlowVersions (string flowId, Body2 body = null);
+        FlowVersion PostFlowIdVersions (string flowId, Body2 body = null);
   
         /// <summary>
         /// Create flow version
@@ -2192,7 +2192,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of FlowVersion</returns>
-        ApiResponse<FlowVersion> PostFlowVersionsWithHttpInfo (string flowId, Body2 body = null);
+        ApiResponse<FlowVersion> PostFlowIdVersionsWithHttpInfo (string flowId, Body2 body = null);
 
         /// <summary>
         /// Create flow version
@@ -2203,7 +2203,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="body"></param>
         /// <returns>Task of FlowVersion</returns>
-        System.Threading.Tasks.Task<FlowVersion> PostFlowVersionsAsync (string flowId, Body2 body = null);
+        System.Threading.Tasks.Task<FlowVersion> PostFlowIdVersionsAsync (string flowId, Body2 body = null);
 
         /// <summary>
         /// Create flow version
@@ -2214,7 +2214,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (FlowVersion)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FlowVersion>> PostFlowVersionsAsyncWithHttpInfo (string flowId, Body2 body = null);
+        System.Threading.Tasks.Task<ApiResponse<FlowVersion>> PostFlowIdVersionsAsyncWithHttpInfo (string flowId, Body2 body = null);
         
         /// <summary>
         /// Get flow version
@@ -2226,7 +2226,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="versionId">Version ID</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>FlowVersion</returns>
-        FlowVersion GetFlowVersion (string flowId, string versionId, string deleted = null);
+        FlowVersion GetFlowIdVersionsVersionId (string flowId, string versionId, string deleted = null);
   
         /// <summary>
         /// Get flow version
@@ -2238,7 +2238,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="versionId">Version ID</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>ApiResponse of FlowVersion</returns>
-        ApiResponse<FlowVersion> GetFlowVersionWithHttpInfo (string flowId, string versionId, string deleted = null);
+        ApiResponse<FlowVersion> GetFlowIdVersionsVersionIdWithHttpInfo (string flowId, string versionId, string deleted = null);
 
         /// <summary>
         /// Get flow version
@@ -2250,7 +2250,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="versionId">Version ID</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>Task of FlowVersion</returns>
-        System.Threading.Tasks.Task<FlowVersion> GetFlowVersionAsync (string flowId, string versionId, string deleted = null);
+        System.Threading.Tasks.Task<FlowVersion> GetFlowIdVersionsVersionIdAsync (string flowId, string versionId, string deleted = null);
 
         /// <summary>
         /// Get flow version
@@ -2262,7 +2262,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="versionId">Version ID</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>Task of ApiResponse (FlowVersion)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FlowVersion>> GetFlowVersionAsyncWithHttpInfo (string flowId, string versionId, string deleted = null);
+        System.Threading.Tasks.Task<ApiResponse<FlowVersion>> GetFlowIdVersionsVersionIdAsyncWithHttpInfo (string flowId, string versionId, string deleted = null);
         
         /// <summary>
         /// Create flow version configuration
@@ -2274,7 +2274,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="versionId">Version ID</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>InlineResponse200</returns>
-        InlineResponse200 GetFlowVersionConfiguration (string flowId, string versionId, string deleted = null);
+        InlineResponse200 GetFlowIdVersionsVersionIdConfiguration (string flowId, string versionId, string deleted = null);
   
         /// <summary>
         /// Create flow version configuration
@@ -2286,7 +2286,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="versionId">Version ID</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>ApiResponse of InlineResponse200</returns>
-        ApiResponse<InlineResponse200> GetFlowVersionConfigurationWithHttpInfo (string flowId, string versionId, string deleted = null);
+        ApiResponse<InlineResponse200> GetFlowIdVersionsVersionIdConfigurationWithHttpInfo (string flowId, string versionId, string deleted = null);
 
         /// <summary>
         /// Create flow version configuration
@@ -2298,7 +2298,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="versionId">Version ID</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>Task of InlineResponse200</returns>
-        System.Threading.Tasks.Task<InlineResponse200> GetFlowVersionConfigurationAsync (string flowId, string versionId, string deleted = null);
+        System.Threading.Tasks.Task<InlineResponse200> GetFlowIdVersionsVersionIdConfigurationAsync (string flowId, string versionId, string deleted = null);
 
         /// <summary>
         /// Create flow version configuration
@@ -2310,7 +2310,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="versionId">Version ID</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> GetFlowVersionConfigurationAsyncWithHttpInfo (string flowId, string versionId, string deleted = null);
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> GetFlowIdVersionsVersionIdConfigurationAsyncWithHttpInfo (string flowId, string versionId, string deleted = null);
         
     }
   
@@ -3079,9 +3079,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="ivrId">IVR id</param> 
         /// <returns>IVR</returns>
-        public IVR GetIvr (string ivrId)
+        public IVR GetIvrsIvrId (string ivrId)
         {
-             ApiResponse<IVR> response = GetIvrWithHttpInfo(ivrId);
+             ApiResponse<IVR> response = GetIvrsIvrIdWithHttpInfo(ivrId);
              return response.Data;
         }
 
@@ -3090,12 +3090,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="ivrId">IVR id</param> 
         /// <returns>ApiResponse of IVR</returns>
-        public ApiResponse< IVR > GetIvrWithHttpInfo (string ivrId)
+        public ApiResponse< IVR > GetIvrsIvrIdWithHttpInfo (string ivrId)
         {
             
             // verify the required parameter 'ivrId' is set
             if (ivrId == null)
-                throw new ApiException(400, "Missing required parameter 'ivrId' when calling ArchitectApi->GetIvr");
+                throw new ApiException(400, "Missing required parameter 'ivrId' when calling ArchitectApi->GetIvrsIvrId");
             
     
             var path_ = "/api/v1/architect/ivrs/{ivrId}";
@@ -3148,9 +3148,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetIvr: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetIvrsIvrId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetIvr: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetIvrsIvrId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<IVR>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3163,9 +3163,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="ivrId">IVR id</param>
         /// <returns>Task of IVR</returns>
-        public async System.Threading.Tasks.Task<IVR> GetIvrAsync (string ivrId)
+        public async System.Threading.Tasks.Task<IVR> GetIvrsIvrIdAsync (string ivrId)
         {
-             ApiResponse<IVR> response = await GetIvrAsyncWithHttpInfo(ivrId);
+             ApiResponse<IVR> response = await GetIvrsIvrIdAsyncWithHttpInfo(ivrId);
              return response.Data;
 
         }
@@ -3175,10 +3175,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="ivrId">IVR id</param>
         /// <returns>Task of ApiResponse (IVR)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<IVR>> GetIvrAsyncWithHttpInfo (string ivrId)
+        public async System.Threading.Tasks.Task<ApiResponse<IVR>> GetIvrsIvrIdAsyncWithHttpInfo (string ivrId)
         {
             // verify the required parameter 'ivrId' is set
-            if (ivrId == null) throw new ApiException(400, "Missing required parameter 'ivrId' when calling GetIvr");
+            if (ivrId == null) throw new ApiException(400, "Missing required parameter 'ivrId' when calling GetIvrsIvrId");
             
     
             var path_ = "/api/v1/architect/ivrs/{ivrId}";
@@ -3232,9 +3232,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetIvr: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetIvrsIvrId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetIvr: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetIvrsIvrId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<IVR>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3248,9 +3248,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ivrId">IVR id</param> 
         /// <param name="body"></param> 
         /// <returns>IVR</returns>
-        public IVR PutIvr (string ivrId, IVR body = null)
+        public IVR PutIvrsIvrId (string ivrId, IVR body = null)
         {
-             ApiResponse<IVR> response = PutIvrWithHttpInfo(ivrId, body);
+             ApiResponse<IVR> response = PutIvrsIvrIdWithHttpInfo(ivrId, body);
              return response.Data;
         }
 
@@ -3260,12 +3260,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ivrId">IVR id</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of IVR</returns>
-        public ApiResponse< IVR > PutIvrWithHttpInfo (string ivrId, IVR body = null)
+        public ApiResponse< IVR > PutIvrsIvrIdWithHttpInfo (string ivrId, IVR body = null)
         {
             
             // verify the required parameter 'ivrId' is set
             if (ivrId == null)
-                throw new ApiException(400, "Missing required parameter 'ivrId' when calling ArchitectApi->PutIvr");
+                throw new ApiException(400, "Missing required parameter 'ivrId' when calling ArchitectApi->PutIvrsIvrId");
             
     
             var path_ = "/api/v1/architect/ivrs/{ivrId}";
@@ -3325,9 +3325,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutIvr: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutIvrsIvrId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutIvr: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutIvrsIvrId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<IVR>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3341,9 +3341,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ivrId">IVR id</param>
         /// <param name="body"></param>
         /// <returns>Task of IVR</returns>
-        public async System.Threading.Tasks.Task<IVR> PutIvrAsync (string ivrId, IVR body = null)
+        public async System.Threading.Tasks.Task<IVR> PutIvrsIvrIdAsync (string ivrId, IVR body = null)
         {
-             ApiResponse<IVR> response = await PutIvrAsyncWithHttpInfo(ivrId, body);
+             ApiResponse<IVR> response = await PutIvrsIvrIdAsyncWithHttpInfo(ivrId, body);
              return response.Data;
 
         }
@@ -3354,10 +3354,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ivrId">IVR id</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (IVR)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<IVR>> PutIvrAsyncWithHttpInfo (string ivrId, IVR body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<IVR>> PutIvrsIvrIdAsyncWithHttpInfo (string ivrId, IVR body = null)
         {
             // verify the required parameter 'ivrId' is set
-            if (ivrId == null) throw new ApiException(400, "Missing required parameter 'ivrId' when calling PutIvr");
+            if (ivrId == null) throw new ApiException(400, "Missing required parameter 'ivrId' when calling PutIvrsIvrId");
             
     
             var path_ = "/api/v1/architect/ivrs/{ivrId}";
@@ -3412,9 +3412,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutIvr: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutIvrsIvrId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutIvr: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutIvrsIvrId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<IVR>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3427,9 +3427,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="ivrId">IVR id</param> 
         /// <returns>string</returns>
-        public string DeleteIvr (string ivrId)
+        public string DeleteIvrsIvrId (string ivrId)
         {
-             ApiResponse<string> response = DeleteIvrWithHttpInfo(ivrId);
+             ApiResponse<string> response = DeleteIvrsIvrIdWithHttpInfo(ivrId);
              return response.Data;
         }
 
@@ -3438,12 +3438,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="ivrId">IVR id</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteIvrWithHttpInfo (string ivrId)
+        public ApiResponse< string > DeleteIvrsIvrIdWithHttpInfo (string ivrId)
         {
             
             // verify the required parameter 'ivrId' is set
             if (ivrId == null)
-                throw new ApiException(400, "Missing required parameter 'ivrId' when calling ArchitectApi->DeleteIvr");
+                throw new ApiException(400, "Missing required parameter 'ivrId' when calling ArchitectApi->DeleteIvrsIvrId");
             
     
             var path_ = "/api/v1/architect/ivrs/{ivrId}";
@@ -3496,9 +3496,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteIvr: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteIvrsIvrId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteIvr: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteIvrsIvrId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3511,9 +3511,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="ivrId">IVR id</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteIvrAsync (string ivrId)
+        public async System.Threading.Tasks.Task<string> DeleteIvrsIvrIdAsync (string ivrId)
         {
-             ApiResponse<string> response = await DeleteIvrAsyncWithHttpInfo(ivrId);
+             ApiResponse<string> response = await DeleteIvrsIvrIdAsyncWithHttpInfo(ivrId);
              return response.Data;
 
         }
@@ -3523,10 +3523,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="ivrId">IVR id</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteIvrAsyncWithHttpInfo (string ivrId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteIvrsIvrIdAsyncWithHttpInfo (string ivrId)
         {
             // verify the required parameter 'ivrId' is set
-            if (ivrId == null) throw new ApiException(400, "Missing required parameter 'ivrId' when calling DeleteIvr");
+            if (ivrId == null) throw new ApiException(400, "Missing required parameter 'ivrId' when calling DeleteIvrsIvrId");
             
     
             var path_ = "/api/v1/architect/ivrs/{ivrId}";
@@ -3580,9 +3580,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteIvr: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteIvrsIvrId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteIvr: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteIvrsIvrId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4121,9 +4121,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="promptId">Prompt ID</param> 
         /// <returns>Prompt</returns>
-        public Prompt GetPrompt (string promptId)
+        public Prompt GetPromptsPromptId (string promptId)
         {
-             ApiResponse<Prompt> response = GetPromptWithHttpInfo(promptId);
+             ApiResponse<Prompt> response = GetPromptsPromptIdWithHttpInfo(promptId);
              return response.Data;
         }
 
@@ -4132,12 +4132,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="promptId">Prompt ID</param> 
         /// <returns>ApiResponse of Prompt</returns>
-        public ApiResponse< Prompt > GetPromptWithHttpInfo (string promptId)
+        public ApiResponse< Prompt > GetPromptsPromptIdWithHttpInfo (string promptId)
         {
             
             // verify the required parameter 'promptId' is set
             if (promptId == null)
-                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetPrompt");
+                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetPromptsPromptId");
             
     
             var path_ = "/api/v1/architect/prompts/{promptId}";
@@ -4190,9 +4190,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetPrompt: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetPromptsPromptId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetPrompt: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetPromptsPromptId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Prompt>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4205,9 +4205,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="promptId">Prompt ID</param>
         /// <returns>Task of Prompt</returns>
-        public async System.Threading.Tasks.Task<Prompt> GetPromptAsync (string promptId)
+        public async System.Threading.Tasks.Task<Prompt> GetPromptsPromptIdAsync (string promptId)
         {
-             ApiResponse<Prompt> response = await GetPromptAsyncWithHttpInfo(promptId);
+             ApiResponse<Prompt> response = await GetPromptsPromptIdAsyncWithHttpInfo(promptId);
              return response.Data;
 
         }
@@ -4217,10 +4217,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="promptId">Prompt ID</param>
         /// <returns>Task of ApiResponse (Prompt)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Prompt>> GetPromptAsyncWithHttpInfo (string promptId)
+        public async System.Threading.Tasks.Task<ApiResponse<Prompt>> GetPromptsPromptIdAsyncWithHttpInfo (string promptId)
         {
             // verify the required parameter 'promptId' is set
-            if (promptId == null) throw new ApiException(400, "Missing required parameter 'promptId' when calling GetPrompt");
+            if (promptId == null) throw new ApiException(400, "Missing required parameter 'promptId' when calling GetPromptsPromptId");
             
     
             var path_ = "/api/v1/architect/prompts/{promptId}";
@@ -4274,9 +4274,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetPrompt: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetPromptsPromptId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetPrompt: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetPromptsPromptId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Prompt>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4290,9 +4290,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param> 
         /// <param name="body"></param> 
         /// <returns>Prompt</returns>
-        public Prompt PutPrompt (string promptId, Prompt body = null)
+        public Prompt PutPromptsPromptId (string promptId, Prompt body = null)
         {
-             ApiResponse<Prompt> response = PutPromptWithHttpInfo(promptId, body);
+             ApiResponse<Prompt> response = PutPromptsPromptIdWithHttpInfo(promptId, body);
              return response.Data;
         }
 
@@ -4302,12 +4302,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of Prompt</returns>
-        public ApiResponse< Prompt > PutPromptWithHttpInfo (string promptId, Prompt body = null)
+        public ApiResponse< Prompt > PutPromptsPromptIdWithHttpInfo (string promptId, Prompt body = null)
         {
             
             // verify the required parameter 'promptId' is set
             if (promptId == null)
-                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PutPrompt");
+                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PutPromptsPromptId");
             
     
             var path_ = "/api/v1/architect/prompts/{promptId}";
@@ -4367,9 +4367,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutPrompt: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutPromptsPromptId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutPrompt: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutPromptsPromptId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Prompt>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4383,9 +4383,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>Task of Prompt</returns>
-        public async System.Threading.Tasks.Task<Prompt> PutPromptAsync (string promptId, Prompt body = null)
+        public async System.Threading.Tasks.Task<Prompt> PutPromptsPromptIdAsync (string promptId, Prompt body = null)
         {
-             ApiResponse<Prompt> response = await PutPromptAsyncWithHttpInfo(promptId, body);
+             ApiResponse<Prompt> response = await PutPromptsPromptIdAsyncWithHttpInfo(promptId, body);
              return response.Data;
 
         }
@@ -4396,10 +4396,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Prompt)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Prompt>> PutPromptAsyncWithHttpInfo (string promptId, Prompt body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Prompt>> PutPromptsPromptIdAsyncWithHttpInfo (string promptId, Prompt body = null)
         {
             // verify the required parameter 'promptId' is set
-            if (promptId == null) throw new ApiException(400, "Missing required parameter 'promptId' when calling PutPrompt");
+            if (promptId == null) throw new ApiException(400, "Missing required parameter 'promptId' when calling PutPromptsPromptId");
             
     
             var path_ = "/api/v1/architect/prompts/{promptId}";
@@ -4454,9 +4454,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutPrompt: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutPromptsPromptId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutPrompt: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutPromptsPromptId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Prompt>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4469,9 +4469,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="promptId">Prompt ID</param> 
         /// <returns></returns>
-        public void DeletePrompt (string promptId)
+        public void DeletePromptsPromptId (string promptId)
         {
-             DeletePromptWithHttpInfo(promptId);
+             DeletePromptsPromptIdWithHttpInfo(promptId);
         }
 
         /// <summary>
@@ -4479,12 +4479,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="promptId">Prompt ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeletePromptWithHttpInfo (string promptId)
+        public ApiResponse<Object> DeletePromptsPromptIdWithHttpInfo (string promptId)
         {
             
             // verify the required parameter 'promptId' is set
             if (promptId == null)
-                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->DeletePrompt");
+                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->DeletePromptsPromptId");
             
     
             var path_ = "/api/v1/architect/prompts/{promptId}";
@@ -4537,9 +4537,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeletePrompt: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeletePromptsPromptId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeletePrompt: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeletePromptsPromptId: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -4552,9 +4552,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="promptId">Prompt ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeletePromptAsync (string promptId)
+        public async System.Threading.Tasks.Task DeletePromptsPromptIdAsync (string promptId)
         {
-             await DeletePromptAsyncWithHttpInfo(promptId);
+             await DeletePromptsPromptIdAsyncWithHttpInfo(promptId);
 
         }
 
@@ -4563,10 +4563,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="promptId">Prompt ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeletePromptAsyncWithHttpInfo (string promptId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeletePromptsPromptIdAsyncWithHttpInfo (string promptId)
         {
             // verify the required parameter 'promptId' is set
-            if (promptId == null) throw new ApiException(400, "Missing required parameter 'promptId' when calling DeletePrompt");
+            if (promptId == null) throw new ApiException(400, "Missing required parameter 'promptId' when calling DeletePromptsPromptId");
             
     
             var path_ = "/api/v1/architect/prompts/{promptId}";
@@ -4620,9 +4620,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeletePrompt: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeletePromptsPromptId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeletePrompt: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeletePromptsPromptId: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -4637,9 +4637,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="pageSize">Page size</param> 
         /// <returns>PromptAssetEntityListing</returns>
-        public PromptAssetEntityListing GetPromptResources (string promptId, int? pageNumber = null, int? pageSize = null)
+        public PromptAssetEntityListing GetPromptsPromptIdResources (string promptId, int? pageNumber = null, int? pageSize = null)
         {
-             ApiResponse<PromptAssetEntityListing> response = GetPromptResourcesWithHttpInfo(promptId, pageNumber, pageSize);
+             ApiResponse<PromptAssetEntityListing> response = GetPromptsPromptIdResourcesWithHttpInfo(promptId, pageNumber, pageSize);
              return response.Data;
         }
 
@@ -4650,12 +4650,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="pageSize">Page size</param> 
         /// <returns>ApiResponse of PromptAssetEntityListing</returns>
-        public ApiResponse< PromptAssetEntityListing > GetPromptResourcesWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null)
+        public ApiResponse< PromptAssetEntityListing > GetPromptsPromptIdResourcesWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null)
         {
             
             // verify the required parameter 'promptId' is set
             if (promptId == null)
-                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetPromptResources");
+                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetPromptsPromptIdResources");
             
     
             var path_ = "/api/v1/architect/prompts/{promptId}/resources";
@@ -4710,9 +4710,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetPromptResources: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetPromptsPromptIdResources: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetPromptResources: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetPromptsPromptIdResources: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<PromptAssetEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4727,9 +4727,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="pageSize">Page size</param>
         /// <returns>Task of PromptAssetEntityListing</returns>
-        public async System.Threading.Tasks.Task<PromptAssetEntityListing> GetPromptResourcesAsync (string promptId, int? pageNumber = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<PromptAssetEntityListing> GetPromptsPromptIdResourcesAsync (string promptId, int? pageNumber = null, int? pageSize = null)
         {
-             ApiResponse<PromptAssetEntityListing> response = await GetPromptResourcesAsyncWithHttpInfo(promptId, pageNumber, pageSize);
+             ApiResponse<PromptAssetEntityListing> response = await GetPromptsPromptIdResourcesAsyncWithHttpInfo(promptId, pageNumber, pageSize);
              return response.Data;
 
         }
@@ -4741,10 +4741,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="pageSize">Page size</param>
         /// <returns>Task of ApiResponse (PromptAssetEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PromptAssetEntityListing>> GetPromptResourcesAsyncWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PromptAssetEntityListing>> GetPromptsPromptIdResourcesAsyncWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null)
         {
             // verify the required parameter 'promptId' is set
-            if (promptId == null) throw new ApiException(400, "Missing required parameter 'promptId' when calling GetPromptResources");
+            if (promptId == null) throw new ApiException(400, "Missing required parameter 'promptId' when calling GetPromptsPromptIdResources");
             
     
             var path_ = "/api/v1/architect/prompts/{promptId}/resources";
@@ -4800,9 +4800,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetPromptResources: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetPromptsPromptIdResources: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetPromptResources: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetPromptsPromptIdResources: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<PromptAssetEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4816,9 +4816,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param> 
         /// <param name="body"></param> 
         /// <returns>PromptAsset</returns>
-        public PromptAsset PostPromptResources (string promptId, PromptAsset body = null)
+        public PromptAsset PostPromptsPromptIdResources (string promptId, PromptAsset body = null)
         {
-             ApiResponse<PromptAsset> response = PostPromptResourcesWithHttpInfo(promptId, body);
+             ApiResponse<PromptAsset> response = PostPromptsPromptIdResourcesWithHttpInfo(promptId, body);
              return response.Data;
         }
 
@@ -4828,12 +4828,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of PromptAsset</returns>
-        public ApiResponse< PromptAsset > PostPromptResourcesWithHttpInfo (string promptId, PromptAsset body = null)
+        public ApiResponse< PromptAsset > PostPromptsPromptIdResourcesWithHttpInfo (string promptId, PromptAsset body = null)
         {
             
             // verify the required parameter 'promptId' is set
             if (promptId == null)
-                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PostPromptResources");
+                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PostPromptsPromptIdResources");
             
     
             var path_ = "/api/v1/architect/prompts/{promptId}/resources";
@@ -4893,9 +4893,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostPromptResources: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostPromptsPromptIdResources: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostPromptResources: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostPromptsPromptIdResources: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<PromptAsset>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4909,9 +4909,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>Task of PromptAsset</returns>
-        public async System.Threading.Tasks.Task<PromptAsset> PostPromptResourcesAsync (string promptId, PromptAsset body = null)
+        public async System.Threading.Tasks.Task<PromptAsset> PostPromptsPromptIdResourcesAsync (string promptId, PromptAsset body = null)
         {
-             ApiResponse<PromptAsset> response = await PostPromptResourcesAsyncWithHttpInfo(promptId, body);
+             ApiResponse<PromptAsset> response = await PostPromptsPromptIdResourcesAsyncWithHttpInfo(promptId, body);
              return response.Data;
 
         }
@@ -4922,10 +4922,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (PromptAsset)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PromptAsset>> PostPromptResourcesAsyncWithHttpInfo (string promptId, PromptAsset body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PromptAsset>> PostPromptsPromptIdResourcesAsyncWithHttpInfo (string promptId, PromptAsset body = null)
         {
             // verify the required parameter 'promptId' is set
-            if (promptId == null) throw new ApiException(400, "Missing required parameter 'promptId' when calling PostPromptResources");
+            if (promptId == null) throw new ApiException(400, "Missing required parameter 'promptId' when calling PostPromptsPromptIdResources");
             
     
             var path_ = "/api/v1/architect/prompts/{promptId}/resources";
@@ -4980,9 +4980,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostPromptResources: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostPromptsPromptIdResources: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostPromptResources: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostPromptsPromptIdResources: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<PromptAsset>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4996,9 +4996,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param> 
         /// <param name="language">Language</param> 
         /// <returns>PromptAsset</returns>
-        public PromptAsset GetPromptResources_0 (string promptId, string language)
+        public PromptAsset GetPromptsPromptIdResourcesLanguage (string promptId, string language)
         {
-             ApiResponse<PromptAsset> response = GetPromptResources_0WithHttpInfo(promptId, language);
+             ApiResponse<PromptAsset> response = GetPromptsPromptIdResourcesLanguageWithHttpInfo(promptId, language);
              return response.Data;
         }
 
@@ -5008,16 +5008,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param> 
         /// <param name="language">Language</param> 
         /// <returns>ApiResponse of PromptAsset</returns>
-        public ApiResponse< PromptAsset > GetPromptResources_0WithHttpInfo (string promptId, string language)
+        public ApiResponse< PromptAsset > GetPromptsPromptIdResourcesLanguageWithHttpInfo (string promptId, string language)
         {
             
             // verify the required parameter 'promptId' is set
             if (promptId == null)
-                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetPromptResources_0");
+                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetPromptsPromptIdResourcesLanguage");
             
             // verify the required parameter 'language' is set
             if (language == null)
-                throw new ApiException(400, "Missing required parameter 'language' when calling ArchitectApi->GetPromptResources_0");
+                throw new ApiException(400, "Missing required parameter 'language' when calling ArchitectApi->GetPromptsPromptIdResourcesLanguage");
             
     
             var path_ = "/api/v1/architect/prompts/{promptId}/resources/{language}";
@@ -5071,9 +5071,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetPromptResources_0: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetPromptsPromptIdResourcesLanguage: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetPromptResources_0: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetPromptsPromptIdResourcesLanguage: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<PromptAsset>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5087,9 +5087,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="language">Language</param>
         /// <returns>Task of PromptAsset</returns>
-        public async System.Threading.Tasks.Task<PromptAsset> GetPromptResources_0Async (string promptId, string language)
+        public async System.Threading.Tasks.Task<PromptAsset> GetPromptsPromptIdResourcesLanguageAsync (string promptId, string language)
         {
-             ApiResponse<PromptAsset> response = await GetPromptResources_0AsyncWithHttpInfo(promptId, language);
+             ApiResponse<PromptAsset> response = await GetPromptsPromptIdResourcesLanguageAsyncWithHttpInfo(promptId, language);
              return response.Data;
 
         }
@@ -5100,12 +5100,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="language">Language</param>
         /// <returns>Task of ApiResponse (PromptAsset)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PromptAsset>> GetPromptResources_0AsyncWithHttpInfo (string promptId, string language)
+        public async System.Threading.Tasks.Task<ApiResponse<PromptAsset>> GetPromptsPromptIdResourcesLanguageAsyncWithHttpInfo (string promptId, string language)
         {
             // verify the required parameter 'promptId' is set
-            if (promptId == null) throw new ApiException(400, "Missing required parameter 'promptId' when calling GetPromptResources_0");
+            if (promptId == null) throw new ApiException(400, "Missing required parameter 'promptId' when calling GetPromptsPromptIdResourcesLanguage");
             // verify the required parameter 'language' is set
-            if (language == null) throw new ApiException(400, "Missing required parameter 'language' when calling GetPromptResources_0");
+            if (language == null) throw new ApiException(400, "Missing required parameter 'language' when calling GetPromptsPromptIdResourcesLanguage");
             
     
             var path_ = "/api/v1/architect/prompts/{promptId}/resources/{language}";
@@ -5160,9 +5160,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetPromptResources_0: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetPromptsPromptIdResourcesLanguage: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetPromptResources_0: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetPromptsPromptIdResourcesLanguage: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<PromptAsset>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5177,9 +5177,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="language">Language</param> 
         /// <param name="body"></param> 
         /// <returns>PromptAsset</returns>
-        public PromptAsset PutPromptResources (string promptId, string language, PromptAsset body = null)
+        public PromptAsset PutPromptsPromptIdResourcesLanguage (string promptId, string language, PromptAsset body = null)
         {
-             ApiResponse<PromptAsset> response = PutPromptResourcesWithHttpInfo(promptId, language, body);
+             ApiResponse<PromptAsset> response = PutPromptsPromptIdResourcesLanguageWithHttpInfo(promptId, language, body);
              return response.Data;
         }
 
@@ -5190,16 +5190,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="language">Language</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of PromptAsset</returns>
-        public ApiResponse< PromptAsset > PutPromptResourcesWithHttpInfo (string promptId, string language, PromptAsset body = null)
+        public ApiResponse< PromptAsset > PutPromptsPromptIdResourcesLanguageWithHttpInfo (string promptId, string language, PromptAsset body = null)
         {
             
             // verify the required parameter 'promptId' is set
             if (promptId == null)
-                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PutPromptResources");
+                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PutPromptsPromptIdResourcesLanguage");
             
             // verify the required parameter 'language' is set
             if (language == null)
-                throw new ApiException(400, "Missing required parameter 'language' when calling ArchitectApi->PutPromptResources");
+                throw new ApiException(400, "Missing required parameter 'language' when calling ArchitectApi->PutPromptsPromptIdResourcesLanguage");
             
     
             var path_ = "/api/v1/architect/prompts/{promptId}/resources/{language}";
@@ -5260,9 +5260,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutPromptResources: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutPromptsPromptIdResourcesLanguage: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutPromptResources: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutPromptsPromptIdResourcesLanguage: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<PromptAsset>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5277,9 +5277,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="language">Language</param>
         /// <param name="body"></param>
         /// <returns>Task of PromptAsset</returns>
-        public async System.Threading.Tasks.Task<PromptAsset> PutPromptResourcesAsync (string promptId, string language, PromptAsset body = null)
+        public async System.Threading.Tasks.Task<PromptAsset> PutPromptsPromptIdResourcesLanguageAsync (string promptId, string language, PromptAsset body = null)
         {
-             ApiResponse<PromptAsset> response = await PutPromptResourcesAsyncWithHttpInfo(promptId, language, body);
+             ApiResponse<PromptAsset> response = await PutPromptsPromptIdResourcesLanguageAsyncWithHttpInfo(promptId, language, body);
              return response.Data;
 
         }
@@ -5291,12 +5291,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="language">Language</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (PromptAsset)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PromptAsset>> PutPromptResourcesAsyncWithHttpInfo (string promptId, string language, PromptAsset body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PromptAsset>> PutPromptsPromptIdResourcesLanguageAsyncWithHttpInfo (string promptId, string language, PromptAsset body = null)
         {
             // verify the required parameter 'promptId' is set
-            if (promptId == null) throw new ApiException(400, "Missing required parameter 'promptId' when calling PutPromptResources");
+            if (promptId == null) throw new ApiException(400, "Missing required parameter 'promptId' when calling PutPromptsPromptIdResourcesLanguage");
             // verify the required parameter 'language' is set
-            if (language == null) throw new ApiException(400, "Missing required parameter 'language' when calling PutPromptResources");
+            if (language == null) throw new ApiException(400, "Missing required parameter 'language' when calling PutPromptsPromptIdResourcesLanguage");
             
     
             var path_ = "/api/v1/architect/prompts/{promptId}/resources/{language}";
@@ -5352,9 +5352,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutPromptResources: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutPromptsPromptIdResourcesLanguage: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutPromptResources: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutPromptsPromptIdResourcesLanguage: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<PromptAsset>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5368,9 +5368,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param> 
         /// <param name="language">Language</param> 
         /// <returns></returns>
-        public void DeletePromptResources (string promptId, string language)
+        public void DeletePromptsPromptIdResourcesLanguage (string promptId, string language)
         {
-             DeletePromptResourcesWithHttpInfo(promptId, language);
+             DeletePromptsPromptIdResourcesLanguageWithHttpInfo(promptId, language);
         }
 
         /// <summary>
@@ -5379,16 +5379,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param> 
         /// <param name="language">Language</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeletePromptResourcesWithHttpInfo (string promptId, string language)
+        public ApiResponse<Object> DeletePromptsPromptIdResourcesLanguageWithHttpInfo (string promptId, string language)
         {
             
             // verify the required parameter 'promptId' is set
             if (promptId == null)
-                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->DeletePromptResources");
+                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->DeletePromptsPromptIdResourcesLanguage");
             
             // verify the required parameter 'language' is set
             if (language == null)
-                throw new ApiException(400, "Missing required parameter 'language' when calling ArchitectApi->DeletePromptResources");
+                throw new ApiException(400, "Missing required parameter 'language' when calling ArchitectApi->DeletePromptsPromptIdResourcesLanguage");
             
     
             var path_ = "/api/v1/architect/prompts/{promptId}/resources/{language}";
@@ -5442,9 +5442,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeletePromptResources: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeletePromptsPromptIdResourcesLanguage: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeletePromptResources: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeletePromptsPromptIdResourcesLanguage: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -5458,9 +5458,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="language">Language</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeletePromptResourcesAsync (string promptId, string language)
+        public async System.Threading.Tasks.Task DeletePromptsPromptIdResourcesLanguageAsync (string promptId, string language)
         {
-             await DeletePromptResourcesAsyncWithHttpInfo(promptId, language);
+             await DeletePromptsPromptIdResourcesLanguageAsyncWithHttpInfo(promptId, language);
 
         }
 
@@ -5470,12 +5470,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="language">Language</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeletePromptResourcesAsyncWithHttpInfo (string promptId, string language)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeletePromptsPromptIdResourcesLanguageAsyncWithHttpInfo (string promptId, string language)
         {
             // verify the required parameter 'promptId' is set
-            if (promptId == null) throw new ApiException(400, "Missing required parameter 'promptId' when calling DeletePromptResources");
+            if (promptId == null) throw new ApiException(400, "Missing required parameter 'promptId' when calling DeletePromptsPromptIdResourcesLanguage");
             // verify the required parameter 'language' is set
-            if (language == null) throw new ApiException(400, "Missing required parameter 'language' when calling DeletePromptResources");
+            if (language == null) throw new ApiException(400, "Missing required parameter 'language' when calling DeletePromptsPromptIdResourcesLanguage");
             
     
             var path_ = "/api/v1/architect/prompts/{promptId}/resources/{language}";
@@ -5530,9 +5530,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeletePromptResources: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeletePromptsPromptIdResourcesLanguage: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeletePromptResources: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeletePromptsPromptIdResourcesLanguage: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -5893,9 +5893,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleGroupId">Schedule group ID</param> 
         /// <returns>ScheduleGroup</returns>
-        public ScheduleGroup GetSchedulegroup (string scheduleGroupId)
+        public ScheduleGroup GetSchedulegroupsSchedulegroupId (string scheduleGroupId)
         {
-             ApiResponse<ScheduleGroup> response = GetSchedulegroupWithHttpInfo(scheduleGroupId);
+             ApiResponse<ScheduleGroup> response = GetSchedulegroupsSchedulegroupIdWithHttpInfo(scheduleGroupId);
              return response.Data;
         }
 
@@ -5904,12 +5904,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleGroupId">Schedule group ID</param> 
         /// <returns>ApiResponse of ScheduleGroup</returns>
-        public ApiResponse< ScheduleGroup > GetSchedulegroupWithHttpInfo (string scheduleGroupId)
+        public ApiResponse< ScheduleGroup > GetSchedulegroupsSchedulegroupIdWithHttpInfo (string scheduleGroupId)
         {
             
             // verify the required parameter 'scheduleGroupId' is set
             if (scheduleGroupId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleGroupId' when calling ArchitectApi->GetSchedulegroup");
+                throw new ApiException(400, "Missing required parameter 'scheduleGroupId' when calling ArchitectApi->GetSchedulegroupsSchedulegroupId");
             
     
             var path_ = "/api/v1/architect/schedulegroups/{scheduleGroupId}";
@@ -5962,9 +5962,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSchedulegroup: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSchedulegroupsSchedulegroupId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSchedulegroup: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSchedulegroupsSchedulegroupId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ScheduleGroup>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5977,9 +5977,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>Task of ScheduleGroup</returns>
-        public async System.Threading.Tasks.Task<ScheduleGroup> GetSchedulegroupAsync (string scheduleGroupId)
+        public async System.Threading.Tasks.Task<ScheduleGroup> GetSchedulegroupsSchedulegroupIdAsync (string scheduleGroupId)
         {
-             ApiResponse<ScheduleGroup> response = await GetSchedulegroupAsyncWithHttpInfo(scheduleGroupId);
+             ApiResponse<ScheduleGroup> response = await GetSchedulegroupsSchedulegroupIdAsyncWithHttpInfo(scheduleGroupId);
              return response.Data;
 
         }
@@ -5989,10 +5989,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>Task of ApiResponse (ScheduleGroup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ScheduleGroup>> GetSchedulegroupAsyncWithHttpInfo (string scheduleGroupId)
+        public async System.Threading.Tasks.Task<ApiResponse<ScheduleGroup>> GetSchedulegroupsSchedulegroupIdAsyncWithHttpInfo (string scheduleGroupId)
         {
             // verify the required parameter 'scheduleGroupId' is set
-            if (scheduleGroupId == null) throw new ApiException(400, "Missing required parameter 'scheduleGroupId' when calling GetSchedulegroup");
+            if (scheduleGroupId == null) throw new ApiException(400, "Missing required parameter 'scheduleGroupId' when calling GetSchedulegroupsSchedulegroupId");
             
     
             var path_ = "/api/v1/architect/schedulegroups/{scheduleGroupId}";
@@ -6046,9 +6046,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSchedulegroup: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSchedulegroupsSchedulegroupId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSchedulegroup: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSchedulegroupsSchedulegroupId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ScheduleGroup>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6062,9 +6062,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleGroupId">Schedule group ID</param> 
         /// <param name="body"></param> 
         /// <returns>ScheduleGroup</returns>
-        public ScheduleGroup PutSchedulegroup (string scheduleGroupId, ScheduleGroup body = null)
+        public ScheduleGroup PutSchedulegroupsSchedulegroupId (string scheduleGroupId, ScheduleGroup body = null)
         {
-             ApiResponse<ScheduleGroup> response = PutSchedulegroupWithHttpInfo(scheduleGroupId, body);
+             ApiResponse<ScheduleGroup> response = PutSchedulegroupsSchedulegroupIdWithHttpInfo(scheduleGroupId, body);
              return response.Data;
         }
 
@@ -6074,12 +6074,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleGroupId">Schedule group ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of ScheduleGroup</returns>
-        public ApiResponse< ScheduleGroup > PutSchedulegroupWithHttpInfo (string scheduleGroupId, ScheduleGroup body = null)
+        public ApiResponse< ScheduleGroup > PutSchedulegroupsSchedulegroupIdWithHttpInfo (string scheduleGroupId, ScheduleGroup body = null)
         {
             
             // verify the required parameter 'scheduleGroupId' is set
             if (scheduleGroupId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleGroupId' when calling ArchitectApi->PutSchedulegroup");
+                throw new ApiException(400, "Missing required parameter 'scheduleGroupId' when calling ArchitectApi->PutSchedulegroupsSchedulegroupId");
             
     
             var path_ = "/api/v1/architect/schedulegroups/{scheduleGroupId}";
@@ -6139,9 +6139,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutSchedulegroup: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutSchedulegroupsSchedulegroupId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutSchedulegroup: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutSchedulegroupsSchedulegroupId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ScheduleGroup>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6155,9 +6155,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ScheduleGroup</returns>
-        public async System.Threading.Tasks.Task<ScheduleGroup> PutSchedulegroupAsync (string scheduleGroupId, ScheduleGroup body = null)
+        public async System.Threading.Tasks.Task<ScheduleGroup> PutSchedulegroupsSchedulegroupIdAsync (string scheduleGroupId, ScheduleGroup body = null)
         {
-             ApiResponse<ScheduleGroup> response = await PutSchedulegroupAsyncWithHttpInfo(scheduleGroupId, body);
+             ApiResponse<ScheduleGroup> response = await PutSchedulegroupsSchedulegroupIdAsyncWithHttpInfo(scheduleGroupId, body);
              return response.Data;
 
         }
@@ -6168,10 +6168,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (ScheduleGroup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ScheduleGroup>> PutSchedulegroupAsyncWithHttpInfo (string scheduleGroupId, ScheduleGroup body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ScheduleGroup>> PutSchedulegroupsSchedulegroupIdAsyncWithHttpInfo (string scheduleGroupId, ScheduleGroup body = null)
         {
             // verify the required parameter 'scheduleGroupId' is set
-            if (scheduleGroupId == null) throw new ApiException(400, "Missing required parameter 'scheduleGroupId' when calling PutSchedulegroup");
+            if (scheduleGroupId == null) throw new ApiException(400, "Missing required parameter 'scheduleGroupId' when calling PutSchedulegroupsSchedulegroupId");
             
     
             var path_ = "/api/v1/architect/schedulegroups/{scheduleGroupId}";
@@ -6226,9 +6226,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutSchedulegroup: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutSchedulegroupsSchedulegroupId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutSchedulegroup: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutSchedulegroupsSchedulegroupId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ScheduleGroup>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6241,9 +6241,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleGroupId">Schedule group ID</param> 
         /// <returns>string</returns>
-        public string DeleteSchedulegroup (string scheduleGroupId)
+        public string DeleteSchedulegroupsSchedulegroupId (string scheduleGroupId)
         {
-             ApiResponse<string> response = DeleteSchedulegroupWithHttpInfo(scheduleGroupId);
+             ApiResponse<string> response = DeleteSchedulegroupsSchedulegroupIdWithHttpInfo(scheduleGroupId);
              return response.Data;
         }
 
@@ -6252,12 +6252,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleGroupId">Schedule group ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteSchedulegroupWithHttpInfo (string scheduleGroupId)
+        public ApiResponse< string > DeleteSchedulegroupsSchedulegroupIdWithHttpInfo (string scheduleGroupId)
         {
             
             // verify the required parameter 'scheduleGroupId' is set
             if (scheduleGroupId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleGroupId' when calling ArchitectApi->DeleteSchedulegroup");
+                throw new ApiException(400, "Missing required parameter 'scheduleGroupId' when calling ArchitectApi->DeleteSchedulegroupsSchedulegroupId");
             
     
             var path_ = "/api/v1/architect/schedulegroups/{scheduleGroupId}";
@@ -6310,9 +6310,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteSchedulegroup: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteSchedulegroupsSchedulegroupId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteSchedulegroup: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteSchedulegroupsSchedulegroupId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6325,9 +6325,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteSchedulegroupAsync (string scheduleGroupId)
+        public async System.Threading.Tasks.Task<string> DeleteSchedulegroupsSchedulegroupIdAsync (string scheduleGroupId)
         {
-             ApiResponse<string> response = await DeleteSchedulegroupAsyncWithHttpInfo(scheduleGroupId);
+             ApiResponse<string> response = await DeleteSchedulegroupsSchedulegroupIdAsyncWithHttpInfo(scheduleGroupId);
              return response.Data;
 
         }
@@ -6337,10 +6337,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleGroupId">Schedule group ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteSchedulegroupAsyncWithHttpInfo (string scheduleGroupId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteSchedulegroupsSchedulegroupIdAsyncWithHttpInfo (string scheduleGroupId)
         {
             // verify the required parameter 'scheduleGroupId' is set
-            if (scheduleGroupId == null) throw new ApiException(400, "Missing required parameter 'scheduleGroupId' when calling DeleteSchedulegroup");
+            if (scheduleGroupId == null) throw new ApiException(400, "Missing required parameter 'scheduleGroupId' when calling DeleteSchedulegroupsSchedulegroupId");
             
     
             var path_ = "/api/v1/architect/schedulegroups/{scheduleGroupId}";
@@ -6394,9 +6394,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteSchedulegroup: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteSchedulegroupsSchedulegroupId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteSchedulegroup: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteSchedulegroupsSchedulegroupId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6757,9 +6757,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleId">Schedule ID</param> 
         /// <returns>Schedule</returns>
-        public Schedule GetSchedule (string scheduleId)
+        public Schedule GetSchedulesScheduleId (string scheduleId)
         {
-             ApiResponse<Schedule> response = GetScheduleWithHttpInfo(scheduleId);
+             ApiResponse<Schedule> response = GetSchedulesScheduleIdWithHttpInfo(scheduleId);
              return response.Data;
         }
 
@@ -6768,12 +6768,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleId">Schedule ID</param> 
         /// <returns>ApiResponse of Schedule</returns>
-        public ApiResponse< Schedule > GetScheduleWithHttpInfo (string scheduleId)
+        public ApiResponse< Schedule > GetSchedulesScheduleIdWithHttpInfo (string scheduleId)
         {
             
             // verify the required parameter 'scheduleId' is set
             if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling ArchitectApi->GetSchedule");
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling ArchitectApi->GetSchedulesScheduleId");
             
     
             var path_ = "/api/v1/architect/schedules/{scheduleId}";
@@ -6826,9 +6826,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSchedule: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSchedulesScheduleId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSchedule: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSchedulesScheduleId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Schedule>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6841,9 +6841,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of Schedule</returns>
-        public async System.Threading.Tasks.Task<Schedule> GetScheduleAsync (string scheduleId)
+        public async System.Threading.Tasks.Task<Schedule> GetSchedulesScheduleIdAsync (string scheduleId)
         {
-             ApiResponse<Schedule> response = await GetScheduleAsyncWithHttpInfo(scheduleId);
+             ApiResponse<Schedule> response = await GetSchedulesScheduleIdAsyncWithHttpInfo(scheduleId);
              return response.Data;
 
         }
@@ -6853,10 +6853,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ApiResponse (Schedule)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Schedule>> GetScheduleAsyncWithHttpInfo (string scheduleId)
+        public async System.Threading.Tasks.Task<ApiResponse<Schedule>> GetSchedulesScheduleIdAsyncWithHttpInfo (string scheduleId)
         {
             // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null) throw new ApiException(400, "Missing required parameter 'scheduleId' when calling GetSchedule");
+            if (scheduleId == null) throw new ApiException(400, "Missing required parameter 'scheduleId' when calling GetSchedulesScheduleId");
             
     
             var path_ = "/api/v1/architect/schedules/{scheduleId}";
@@ -6910,9 +6910,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSchedule: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSchedulesScheduleId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSchedule: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSchedulesScheduleId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Schedule>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6926,9 +6926,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleId">Schedule ID</param> 
         /// <param name="body"></param> 
         /// <returns>Schedule</returns>
-        public Schedule PutSchedule (string scheduleId, Schedule body = null)
+        public Schedule PutSchedulesScheduleId (string scheduleId, Schedule body = null)
         {
-             ApiResponse<Schedule> response = PutScheduleWithHttpInfo(scheduleId, body);
+             ApiResponse<Schedule> response = PutSchedulesScheduleIdWithHttpInfo(scheduleId, body);
              return response.Data;
         }
 
@@ -6938,12 +6938,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleId">Schedule ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of Schedule</returns>
-        public ApiResponse< Schedule > PutScheduleWithHttpInfo (string scheduleId, Schedule body = null)
+        public ApiResponse< Schedule > PutSchedulesScheduleIdWithHttpInfo (string scheduleId, Schedule body = null)
         {
             
             // verify the required parameter 'scheduleId' is set
             if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling ArchitectApi->PutSchedule");
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling ArchitectApi->PutSchedulesScheduleId");
             
     
             var path_ = "/api/v1/architect/schedules/{scheduleId}";
@@ -7003,9 +7003,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutSchedule: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutSchedulesScheduleId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutSchedule: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutSchedulesScheduleId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Schedule>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7019,9 +7019,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body"></param>
         /// <returns>Task of Schedule</returns>
-        public async System.Threading.Tasks.Task<Schedule> PutScheduleAsync (string scheduleId, Schedule body = null)
+        public async System.Threading.Tasks.Task<Schedule> PutSchedulesScheduleIdAsync (string scheduleId, Schedule body = null)
         {
-             ApiResponse<Schedule> response = await PutScheduleAsyncWithHttpInfo(scheduleId, body);
+             ApiResponse<Schedule> response = await PutSchedulesScheduleIdAsyncWithHttpInfo(scheduleId, body);
              return response.Data;
 
         }
@@ -7032,10 +7032,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Schedule)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Schedule>> PutScheduleAsyncWithHttpInfo (string scheduleId, Schedule body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Schedule>> PutSchedulesScheduleIdAsyncWithHttpInfo (string scheduleId, Schedule body = null)
         {
             // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null) throw new ApiException(400, "Missing required parameter 'scheduleId' when calling PutSchedule");
+            if (scheduleId == null) throw new ApiException(400, "Missing required parameter 'scheduleId' when calling PutSchedulesScheduleId");
             
     
             var path_ = "/api/v1/architect/schedules/{scheduleId}";
@@ -7090,9 +7090,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutSchedule: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutSchedulesScheduleId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutSchedule: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutSchedulesScheduleId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Schedule>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7105,9 +7105,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleId">Schedule ID</param> 
         /// <returns>string</returns>
-        public string DeleteSchedule (string scheduleId)
+        public string DeleteSchedulesScheduleId (string scheduleId)
         {
-             ApiResponse<string> response = DeleteScheduleWithHttpInfo(scheduleId);
+             ApiResponse<string> response = DeleteSchedulesScheduleIdWithHttpInfo(scheduleId);
              return response.Data;
         }
 
@@ -7116,12 +7116,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleId">Schedule ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteScheduleWithHttpInfo (string scheduleId)
+        public ApiResponse< string > DeleteSchedulesScheduleIdWithHttpInfo (string scheduleId)
         {
             
             // verify the required parameter 'scheduleId' is set
             if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling ArchitectApi->DeleteSchedule");
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling ArchitectApi->DeleteSchedulesScheduleId");
             
     
             var path_ = "/api/v1/architect/schedules/{scheduleId}";
@@ -7174,9 +7174,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteSchedule: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteSchedulesScheduleId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteSchedule: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteSchedulesScheduleId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7189,9 +7189,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteScheduleAsync (string scheduleId)
+        public async System.Threading.Tasks.Task<string> DeleteSchedulesScheduleIdAsync (string scheduleId)
         {
-             ApiResponse<string> response = await DeleteScheduleAsyncWithHttpInfo(scheduleId);
+             ApiResponse<string> response = await DeleteSchedulesScheduleIdAsyncWithHttpInfo(scheduleId);
              return response.Data;
 
         }
@@ -7201,10 +7201,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteScheduleAsyncWithHttpInfo (string scheduleId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteSchedulesScheduleIdAsyncWithHttpInfo (string scheduleId)
         {
             // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null) throw new ApiException(400, "Missing required parameter 'scheduleId' when calling DeleteSchedule");
+            if (scheduleId == null) throw new ApiException(400, "Missing required parameter 'scheduleId' when calling DeleteSchedulesScheduleId");
             
     
             var path_ = "/api/v1/architect/schedules/{scheduleId}";
@@ -7258,9 +7258,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteSchedule: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteSchedulesScheduleId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteSchedule: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteSchedulesScheduleId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7471,9 +7471,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="promptId"></param> 
         /// <returns>SystemPrompt</returns>
-        public SystemPrompt GetSystemprompt (string promptId)
+        public SystemPrompt GetSystempromptsPromptId (string promptId)
         {
-             ApiResponse<SystemPrompt> response = GetSystempromptWithHttpInfo(promptId);
+             ApiResponse<SystemPrompt> response = GetSystempromptsPromptIdWithHttpInfo(promptId);
              return response.Data;
         }
 
@@ -7482,12 +7482,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="promptId"></param> 
         /// <returns>ApiResponse of SystemPrompt</returns>
-        public ApiResponse< SystemPrompt > GetSystempromptWithHttpInfo (string promptId)
+        public ApiResponse< SystemPrompt > GetSystempromptsPromptIdWithHttpInfo (string promptId)
         {
             
             // verify the required parameter 'promptId' is set
             if (promptId == null)
-                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetSystemprompt");
+                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetSystempromptsPromptId");
             
     
             var path_ = "/api/v1/architect/systemprompts/{promptId}";
@@ -7540,9 +7540,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSystemprompt: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSystempromptsPromptId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSystemprompt: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSystempromptsPromptId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<SystemPrompt>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7555,9 +7555,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="promptId"></param>
         /// <returns>Task of SystemPrompt</returns>
-        public async System.Threading.Tasks.Task<SystemPrompt> GetSystempromptAsync (string promptId)
+        public async System.Threading.Tasks.Task<SystemPrompt> GetSystempromptsPromptIdAsync (string promptId)
         {
-             ApiResponse<SystemPrompt> response = await GetSystempromptAsyncWithHttpInfo(promptId);
+             ApiResponse<SystemPrompt> response = await GetSystempromptsPromptIdAsyncWithHttpInfo(promptId);
              return response.Data;
 
         }
@@ -7567,10 +7567,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="promptId"></param>
         /// <returns>Task of ApiResponse (SystemPrompt)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SystemPrompt>> GetSystempromptAsyncWithHttpInfo (string promptId)
+        public async System.Threading.Tasks.Task<ApiResponse<SystemPrompt>> GetSystempromptsPromptIdAsyncWithHttpInfo (string promptId)
         {
             // verify the required parameter 'promptId' is set
-            if (promptId == null) throw new ApiException(400, "Missing required parameter 'promptId' when calling GetSystemprompt");
+            if (promptId == null) throw new ApiException(400, "Missing required parameter 'promptId' when calling GetSystempromptsPromptId");
             
     
             var path_ = "/api/v1/architect/systemprompts/{promptId}";
@@ -7624,9 +7624,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSystemprompt: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSystempromptsPromptId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSystemprompt: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSystempromptsPromptId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<SystemPrompt>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7643,9 +7643,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param> 
         /// <param name="sortOrder">Sort order</param> 
         /// <returns>SystemPromptAssetEntityListing</returns>
-        public SystemPromptAssetEntityListing GetSystempromptResources (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public SystemPromptAssetEntityListing GetSystempromptsPromptIdResources (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<SystemPromptAssetEntityListing> response = GetSystempromptResourcesWithHttpInfo(promptId, pageNumber, pageSize, sortBy, sortOrder);
+             ApiResponse<SystemPromptAssetEntityListing> response = GetSystempromptsPromptIdResourcesWithHttpInfo(promptId, pageNumber, pageSize, sortBy, sortOrder);
              return response.Data;
         }
 
@@ -7658,12 +7658,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param> 
         /// <param name="sortOrder">Sort order</param> 
         /// <returns>ApiResponse of SystemPromptAssetEntityListing</returns>
-        public ApiResponse< SystemPromptAssetEntityListing > GetSystempromptResourcesWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public ApiResponse< SystemPromptAssetEntityListing > GetSystempromptsPromptIdResourcesWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
         {
             
             // verify the required parameter 'promptId' is set
             if (promptId == null)
-                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetSystempromptResources");
+                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetSystempromptsPromptIdResources");
             
     
             var path_ = "/api/v1/architect/systemprompts/{promptId}/resources";
@@ -7720,9 +7720,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSystempromptResources: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSystempromptsPromptIdResources: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSystempromptResources: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSystempromptsPromptIdResources: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<SystemPromptAssetEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7739,9 +7739,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of SystemPromptAssetEntityListing</returns>
-        public async System.Threading.Tasks.Task<SystemPromptAssetEntityListing> GetSystempromptResourcesAsync (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<SystemPromptAssetEntityListing> GetSystempromptsPromptIdResourcesAsync (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<SystemPromptAssetEntityListing> response = await GetSystempromptResourcesAsyncWithHttpInfo(promptId, pageNumber, pageSize, sortBy, sortOrder);
+             ApiResponse<SystemPromptAssetEntityListing> response = await GetSystempromptsPromptIdResourcesAsyncWithHttpInfo(promptId, pageNumber, pageSize, sortBy, sortOrder);
              return response.Data;
 
         }
@@ -7755,10 +7755,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ApiResponse (SystemPromptAssetEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SystemPromptAssetEntityListing>> GetSystempromptResourcesAsyncWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SystemPromptAssetEntityListing>> GetSystempromptsPromptIdResourcesAsyncWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
         {
             // verify the required parameter 'promptId' is set
-            if (promptId == null) throw new ApiException(400, "Missing required parameter 'promptId' when calling GetSystempromptResources");
+            if (promptId == null) throw new ApiException(400, "Missing required parameter 'promptId' when calling GetSystempromptsPromptIdResources");
             
     
             var path_ = "/api/v1/architect/systemprompts/{promptId}/resources";
@@ -7816,9 +7816,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSystempromptResources: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSystempromptsPromptIdResources: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSystempromptResources: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSystempromptsPromptIdResources: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<SystemPromptAssetEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7832,9 +7832,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param> 
         /// <param name="body"></param> 
         /// <returns>SystemPromptAsset</returns>
-        public SystemPromptAsset PostSystempromptResources (string promptId, SystemPromptAsset body = null)
+        public SystemPromptAsset PostSystempromptsPromptIdResources (string promptId, SystemPromptAsset body = null)
         {
-             ApiResponse<SystemPromptAsset> response = PostSystempromptResourcesWithHttpInfo(promptId, body);
+             ApiResponse<SystemPromptAsset> response = PostSystempromptsPromptIdResourcesWithHttpInfo(promptId, body);
              return response.Data;
         }
 
@@ -7844,12 +7844,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of SystemPromptAsset</returns>
-        public ApiResponse< SystemPromptAsset > PostSystempromptResourcesWithHttpInfo (string promptId, SystemPromptAsset body = null)
+        public ApiResponse< SystemPromptAsset > PostSystempromptsPromptIdResourcesWithHttpInfo (string promptId, SystemPromptAsset body = null)
         {
             
             // verify the required parameter 'promptId' is set
             if (promptId == null)
-                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PostSystempromptResources");
+                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PostSystempromptsPromptIdResources");
             
     
             var path_ = "/api/v1/architect/systemprompts/{promptId}/resources";
@@ -7909,9 +7909,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostSystempromptResources: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostSystempromptsPromptIdResources: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostSystempromptResources: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostSystempromptsPromptIdResources: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<SystemPromptAsset>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7925,9 +7925,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>Task of SystemPromptAsset</returns>
-        public async System.Threading.Tasks.Task<SystemPromptAsset> PostSystempromptResourcesAsync (string promptId, SystemPromptAsset body = null)
+        public async System.Threading.Tasks.Task<SystemPromptAsset> PostSystempromptsPromptIdResourcesAsync (string promptId, SystemPromptAsset body = null)
         {
-             ApiResponse<SystemPromptAsset> response = await PostSystempromptResourcesAsyncWithHttpInfo(promptId, body);
+             ApiResponse<SystemPromptAsset> response = await PostSystempromptsPromptIdResourcesAsyncWithHttpInfo(promptId, body);
              return response.Data;
 
         }
@@ -7938,10 +7938,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (SystemPromptAsset)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> PostSystempromptResourcesAsyncWithHttpInfo (string promptId, SystemPromptAsset body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> PostSystempromptsPromptIdResourcesAsyncWithHttpInfo (string promptId, SystemPromptAsset body = null)
         {
             // verify the required parameter 'promptId' is set
-            if (promptId == null) throw new ApiException(400, "Missing required parameter 'promptId' when calling PostSystempromptResources");
+            if (promptId == null) throw new ApiException(400, "Missing required parameter 'promptId' when calling PostSystempromptsPromptIdResources");
             
     
             var path_ = "/api/v1/architect/systemprompts/{promptId}/resources";
@@ -7996,9 +7996,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostSystempromptResources: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostSystempromptsPromptIdResources: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostSystempromptResources: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostSystempromptsPromptIdResources: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<SystemPromptAsset>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8012,9 +8012,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param> 
         /// <param name="language">Language</param> 
         /// <returns>SystemPromptAsset</returns>
-        public SystemPromptAsset GetSystempromptResources_0 (string promptId, string language)
+        public SystemPromptAsset GetSystempromptsPromptIdResourcesLanguage (string promptId, string language)
         {
-             ApiResponse<SystemPromptAsset> response = GetSystempromptResources_0WithHttpInfo(promptId, language);
+             ApiResponse<SystemPromptAsset> response = GetSystempromptsPromptIdResourcesLanguageWithHttpInfo(promptId, language);
              return response.Data;
         }
 
@@ -8024,16 +8024,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param> 
         /// <param name="language">Language</param> 
         /// <returns>ApiResponse of SystemPromptAsset</returns>
-        public ApiResponse< SystemPromptAsset > GetSystempromptResources_0WithHttpInfo (string promptId, string language)
+        public ApiResponse< SystemPromptAsset > GetSystempromptsPromptIdResourcesLanguageWithHttpInfo (string promptId, string language)
         {
             
             // verify the required parameter 'promptId' is set
             if (promptId == null)
-                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetSystempromptResources_0");
+                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetSystempromptsPromptIdResourcesLanguage");
             
             // verify the required parameter 'language' is set
             if (language == null)
-                throw new ApiException(400, "Missing required parameter 'language' when calling ArchitectApi->GetSystempromptResources_0");
+                throw new ApiException(400, "Missing required parameter 'language' when calling ArchitectApi->GetSystempromptsPromptIdResourcesLanguage");
             
     
             var path_ = "/api/v1/architect/systemprompts/{promptId}/resources/{language}";
@@ -8087,9 +8087,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSystempromptResources_0: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSystempromptsPromptIdResourcesLanguage: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSystempromptResources_0: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSystempromptsPromptIdResourcesLanguage: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<SystemPromptAsset>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8103,9 +8103,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="language">Language</param>
         /// <returns>Task of SystemPromptAsset</returns>
-        public async System.Threading.Tasks.Task<SystemPromptAsset> GetSystempromptResources_0Async (string promptId, string language)
+        public async System.Threading.Tasks.Task<SystemPromptAsset> GetSystempromptsPromptIdResourcesLanguageAsync (string promptId, string language)
         {
-             ApiResponse<SystemPromptAsset> response = await GetSystempromptResources_0AsyncWithHttpInfo(promptId, language);
+             ApiResponse<SystemPromptAsset> response = await GetSystempromptsPromptIdResourcesLanguageAsyncWithHttpInfo(promptId, language);
              return response.Data;
 
         }
@@ -8116,12 +8116,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="language">Language</param>
         /// <returns>Task of ApiResponse (SystemPromptAsset)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> GetSystempromptResources_0AsyncWithHttpInfo (string promptId, string language)
+        public async System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> GetSystempromptsPromptIdResourcesLanguageAsyncWithHttpInfo (string promptId, string language)
         {
             // verify the required parameter 'promptId' is set
-            if (promptId == null) throw new ApiException(400, "Missing required parameter 'promptId' when calling GetSystempromptResources_0");
+            if (promptId == null) throw new ApiException(400, "Missing required parameter 'promptId' when calling GetSystempromptsPromptIdResourcesLanguage");
             // verify the required parameter 'language' is set
-            if (language == null) throw new ApiException(400, "Missing required parameter 'language' when calling GetSystempromptResources_0");
+            if (language == null) throw new ApiException(400, "Missing required parameter 'language' when calling GetSystempromptsPromptIdResourcesLanguage");
             
     
             var path_ = "/api/v1/architect/systemprompts/{promptId}/resources/{language}";
@@ -8176,9 +8176,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSystempromptResources_0: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSystempromptsPromptIdResourcesLanguage: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSystempromptResources_0: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSystempromptsPromptIdResourcesLanguage: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<SystemPromptAsset>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8192,9 +8192,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param> 
         /// <param name="language">Language</param> 
         /// <returns>string</returns>
-        public string DeleteSystempromptResources (string promptId, string language)
+        public string DeleteSystempromptsPromptIdResourcesLanguage (string promptId, string language)
         {
-             ApiResponse<string> response = DeleteSystempromptResourcesWithHttpInfo(promptId, language);
+             ApiResponse<string> response = DeleteSystempromptsPromptIdResourcesLanguageWithHttpInfo(promptId, language);
              return response.Data;
         }
 
@@ -8204,16 +8204,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param> 
         /// <param name="language">Language</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteSystempromptResourcesWithHttpInfo (string promptId, string language)
+        public ApiResponse< string > DeleteSystempromptsPromptIdResourcesLanguageWithHttpInfo (string promptId, string language)
         {
             
             // verify the required parameter 'promptId' is set
             if (promptId == null)
-                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->DeleteSystempromptResources");
+                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->DeleteSystempromptsPromptIdResourcesLanguage");
             
             // verify the required parameter 'language' is set
             if (language == null)
-                throw new ApiException(400, "Missing required parameter 'language' when calling ArchitectApi->DeleteSystempromptResources");
+                throw new ApiException(400, "Missing required parameter 'language' when calling ArchitectApi->DeleteSystempromptsPromptIdResourcesLanguage");
             
     
             var path_ = "/api/v1/architect/systemprompts/{promptId}/resources/{language}";
@@ -8267,9 +8267,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteSystempromptResources: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteSystempromptsPromptIdResourcesLanguage: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteSystempromptResources: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteSystempromptsPromptIdResourcesLanguage: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8283,9 +8283,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="language">Language</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteSystempromptResourcesAsync (string promptId, string language)
+        public async System.Threading.Tasks.Task<string> DeleteSystempromptsPromptIdResourcesLanguageAsync (string promptId, string language)
         {
-             ApiResponse<string> response = await DeleteSystempromptResourcesAsyncWithHttpInfo(promptId, language);
+             ApiResponse<string> response = await DeleteSystempromptsPromptIdResourcesLanguageAsyncWithHttpInfo(promptId, language);
              return response.Data;
 
         }
@@ -8296,12 +8296,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="promptId">Prompt ID</param>
         /// <param name="language">Language</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteSystempromptResourcesAsyncWithHttpInfo (string promptId, string language)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteSystempromptsPromptIdResourcesLanguageAsyncWithHttpInfo (string promptId, string language)
         {
             // verify the required parameter 'promptId' is set
-            if (promptId == null) throw new ApiException(400, "Missing required parameter 'promptId' when calling DeleteSystempromptResources");
+            if (promptId == null) throw new ApiException(400, "Missing required parameter 'promptId' when calling DeleteSystempromptsPromptIdResourcesLanguage");
             // verify the required parameter 'language' is set
-            if (language == null) throw new ApiException(400, "Missing required parameter 'language' when calling DeleteSystempromptResources");
+            if (language == null) throw new ApiException(400, "Missing required parameter 'language' when calling DeleteSystempromptsPromptIdResourcesLanguage");
             
     
             var path_ = "/api/v1/architect/systemprompts/{promptId}/resources/{language}";
@@ -8356,9 +8356,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteSystempromptResources: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteSystempromptsPromptIdResourcesLanguage: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteSystempromptResources: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteSystempromptsPromptIdResourcesLanguage: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8383,9 +8383,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="lockedBy">Locked by</param> 
         /// <param name="deleted">Include deleted</param> 
         /// <returns>FlowEntityListing</returns>
-        public FlowEntityListing GetFlows (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null)
+        public FlowEntityListing Get (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null)
         {
-             ApiResponse<FlowEntityListing> response = GetFlowsWithHttpInfo(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, editableBy, lockedBy, deleted);
+             ApiResponse<FlowEntityListing> response = GetWithHttpInfo(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, editableBy, lockedBy, deleted);
              return response.Data;
         }
 
@@ -8406,7 +8406,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="lockedBy">Locked by</param> 
         /// <param name="deleted">Include deleted</param> 
         /// <returns>ApiResponse of FlowEntityListing</returns>
-        public ApiResponse< FlowEntityListing > GetFlowsWithHttpInfo (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null)
+        public ApiResponse< FlowEntityListing > GetWithHttpInfo (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null)
         {
             
     
@@ -8472,9 +8472,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetFlows: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetFlows: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<FlowEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8499,9 +8499,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="lockedBy">Locked by</param>
         /// <param name="deleted">Include deleted</param>
         /// <returns>Task of FlowEntityListing</returns>
-        public async System.Threading.Tasks.Task<FlowEntityListing> GetFlowsAsync (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null)
+        public async System.Threading.Tasks.Task<FlowEntityListing> GetAsync (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null)
         {
-             ApiResponse<FlowEntityListing> response = await GetFlowsAsyncWithHttpInfo(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, editableBy, lockedBy, deleted);
+             ApiResponse<FlowEntityListing> response = await GetAsyncWithHttpInfo(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, editableBy, lockedBy, deleted);
              return response.Data;
 
         }
@@ -8523,7 +8523,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="lockedBy">Locked by</param>
         /// <param name="deleted">Include deleted</param>
         /// <returns>Task of ApiResponse (FlowEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FlowEntityListing>> GetFlowsAsyncWithHttpInfo (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null)
+        public async System.Threading.Tasks.Task<ApiResponse<FlowEntityListing>> GetAsyncWithHttpInfo (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null)
         {
             
     
@@ -8590,9 +8590,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetFlows: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetFlows: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<FlowEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8605,9 +8605,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>Flow</returns>
-        public Flow PostFlows (Flow body = null)
+        public Flow Post (Flow body = null)
         {
-             ApiResponse<Flow> response = PostFlowsWithHttpInfo(body);
+             ApiResponse<Flow> response = PostWithHttpInfo(body);
              return response.Data;
         }
 
@@ -8616,7 +8616,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>ApiResponse of Flow</returns>
-        public ApiResponse< Flow > PostFlowsWithHttpInfo (Flow body = null)
+        public ApiResponse< Flow > PostWithHttpInfo (Flow body = null)
         {
             
     
@@ -8676,9 +8676,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostFlows: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Post: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostFlows: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Post: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Flow>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8691,9 +8691,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of Flow</returns>
-        public async System.Threading.Tasks.Task<Flow> PostFlowsAsync (Flow body = null)
+        public async System.Threading.Tasks.Task<Flow> PostAsync (Flow body = null)
         {
-             ApiResponse<Flow> response = await PostFlowsAsyncWithHttpInfo(body);
+             ApiResponse<Flow> response = await PostAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -8703,7 +8703,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Flow)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsAsyncWithHttpInfo (Flow body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Flow>> PostAsyncWithHttpInfo (Flow body = null)
         {
             
     
@@ -8758,9 +8758,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostFlows: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Post: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostFlows: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Post: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Flow>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8774,9 +8774,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">List of Flow IDs</param> 
         /// <param name="ignoreDependencies">Ignore Dependencies</param> 
         /// <returns></returns>
-        public void DeleteFlows (List<string> id, bool? ignoreDependencies = null)
+        public void Delete (List<string> id, bool? ignoreDependencies = null)
         {
-             DeleteFlowsWithHttpInfo(id, ignoreDependencies);
+             DeleteWithHttpInfo(id, ignoreDependencies);
         }
 
         /// <summary>
@@ -8785,12 +8785,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">List of Flow IDs</param> 
         /// <param name="ignoreDependencies">Ignore Dependencies</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteFlowsWithHttpInfo (List<string> id, bool? ignoreDependencies = null)
+        public ApiResponse<Object> DeleteWithHttpInfo (List<string> id, bool? ignoreDependencies = null)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ArchitectApi->DeleteFlows");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ArchitectApi->Delete");
             
     
             var path_ = "/api/v1/flows";
@@ -8844,9 +8844,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteFlows: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Delete: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteFlows: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Delete: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -8860,9 +8860,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">List of Flow IDs</param>
         /// <param name="ignoreDependencies">Ignore Dependencies</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteFlowsAsync (List<string> id, bool? ignoreDependencies = null)
+        public async System.Threading.Tasks.Task DeleteAsync (List<string> id, bool? ignoreDependencies = null)
         {
-             await DeleteFlowsAsyncWithHttpInfo(id, ignoreDependencies);
+             await DeleteAsyncWithHttpInfo(id, ignoreDependencies);
 
         }
 
@@ -8872,10 +8872,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">List of Flow IDs</param>
         /// <param name="ignoreDependencies">Ignore Dependencies</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowsAsyncWithHttpInfo (List<string> id, bool? ignoreDependencies = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAsyncWithHttpInfo (List<string> id, bool? ignoreDependencies = null)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteFlows");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Delete");
             
     
             var path_ = "/api/v1/flows";
@@ -8930,9 +8930,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteFlows: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Delete: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteFlows: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Delete: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -8945,9 +8945,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="flow">Flow</param> 
         /// <returns>Flow</returns>
-        public Flow PostFlowsActionsCheckin (string flow = null)
+        public Flow PostActionsCheckin (string flow = null)
         {
-             ApiResponse<Flow> response = PostFlowsActionsCheckinWithHttpInfo(flow);
+             ApiResponse<Flow> response = PostActionsCheckinWithHttpInfo(flow);
              return response.Data;
         }
 
@@ -8956,7 +8956,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="flow">Flow</param> 
         /// <returns>ApiResponse of Flow</returns>
-        public ApiResponse< Flow > PostFlowsActionsCheckinWithHttpInfo (string flow = null)
+        public ApiResponse< Flow > PostActionsCheckinWithHttpInfo (string flow = null)
         {
             
     
@@ -9010,9 +9010,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostFlowsActionsCheckin: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostActionsCheckin: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostFlowsActionsCheckin: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostActionsCheckin: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Flow>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9025,9 +9025,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="flow">Flow</param>
         /// <returns>Task of Flow</returns>
-        public async System.Threading.Tasks.Task<Flow> PostFlowsActionsCheckinAsync (string flow = null)
+        public async System.Threading.Tasks.Task<Flow> PostActionsCheckinAsync (string flow = null)
         {
-             ApiResponse<Flow> response = await PostFlowsActionsCheckinAsyncWithHttpInfo(flow);
+             ApiResponse<Flow> response = await PostActionsCheckinAsyncWithHttpInfo(flow);
              return response.Data;
 
         }
@@ -9037,7 +9037,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="flow">Flow</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsCheckinAsyncWithHttpInfo (string flow = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Flow>> PostActionsCheckinAsyncWithHttpInfo (string flow = null)
         {
             
     
@@ -9092,9 +9092,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostFlowsActionsCheckin: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostActionsCheckin: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostFlowsActionsCheckin: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostActionsCheckin: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Flow>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9107,9 +9107,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="flow">Flow</param> 
         /// <returns>Flow</returns>
-        public Flow PostFlowsActionsCheckout (string flow = null)
+        public Flow PostActionsCheckout (string flow = null)
         {
-             ApiResponse<Flow> response = PostFlowsActionsCheckoutWithHttpInfo(flow);
+             ApiResponse<Flow> response = PostActionsCheckoutWithHttpInfo(flow);
              return response.Data;
         }
 
@@ -9118,7 +9118,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="flow">Flow</param> 
         /// <returns>ApiResponse of Flow</returns>
-        public ApiResponse< Flow > PostFlowsActionsCheckoutWithHttpInfo (string flow = null)
+        public ApiResponse< Flow > PostActionsCheckoutWithHttpInfo (string flow = null)
         {
             
     
@@ -9172,9 +9172,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostFlowsActionsCheckout: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostActionsCheckout: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostFlowsActionsCheckout: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostActionsCheckout: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Flow>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9187,9 +9187,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="flow">Flow</param>
         /// <returns>Task of Flow</returns>
-        public async System.Threading.Tasks.Task<Flow> PostFlowsActionsCheckoutAsync (string flow = null)
+        public async System.Threading.Tasks.Task<Flow> PostActionsCheckoutAsync (string flow = null)
         {
-             ApiResponse<Flow> response = await PostFlowsActionsCheckoutAsyncWithHttpInfo(flow);
+             ApiResponse<Flow> response = await PostActionsCheckoutAsyncWithHttpInfo(flow);
              return response.Data;
 
         }
@@ -9199,7 +9199,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="flow">Flow</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsCheckoutAsyncWithHttpInfo (string flow = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Flow>> PostActionsCheckoutAsyncWithHttpInfo (string flow = null)
         {
             
     
@@ -9254,9 +9254,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostFlowsActionsCheckout: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostActionsCheckout: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostFlowsActionsCheckout: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostActionsCheckout: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Flow>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9269,9 +9269,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="flow">Flow</param> 
         /// <returns>Flow</returns>
-        public Flow PostFlowsActionsDeactivate (string flow = null)
+        public Flow PostActionsDeactivate (string flow = null)
         {
-             ApiResponse<Flow> response = PostFlowsActionsDeactivateWithHttpInfo(flow);
+             ApiResponse<Flow> response = PostActionsDeactivateWithHttpInfo(flow);
              return response.Data;
         }
 
@@ -9280,7 +9280,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="flow">Flow</param> 
         /// <returns>ApiResponse of Flow</returns>
-        public ApiResponse< Flow > PostFlowsActionsDeactivateWithHttpInfo (string flow = null)
+        public ApiResponse< Flow > PostActionsDeactivateWithHttpInfo (string flow = null)
         {
             
     
@@ -9334,9 +9334,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostFlowsActionsDeactivate: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostActionsDeactivate: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostFlowsActionsDeactivate: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostActionsDeactivate: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Flow>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9349,9 +9349,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="flow">Flow</param>
         /// <returns>Task of Flow</returns>
-        public async System.Threading.Tasks.Task<Flow> PostFlowsActionsDeactivateAsync (string flow = null)
+        public async System.Threading.Tasks.Task<Flow> PostActionsDeactivateAsync (string flow = null)
         {
-             ApiResponse<Flow> response = await PostFlowsActionsDeactivateAsyncWithHttpInfo(flow);
+             ApiResponse<Flow> response = await PostActionsDeactivateAsyncWithHttpInfo(flow);
              return response.Data;
 
         }
@@ -9361,7 +9361,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="flow">Flow</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsDeactivateAsyncWithHttpInfo (string flow = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Flow>> PostActionsDeactivateAsyncWithHttpInfo (string flow = null)
         {
             
     
@@ -9416,9 +9416,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostFlowsActionsDeactivate: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostActionsDeactivate: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostFlowsActionsDeactivate: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostActionsDeactivate: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Flow>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9432,9 +9432,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="version"></param> 
         /// <param name="flow">Flow</param> 
         /// <returns></returns>
-        public void PostFlowsActionsDebug (string version, string flow = null)
+        public void PostActionsDebug (string version, string flow = null)
         {
-             PostFlowsActionsDebugWithHttpInfo(version, flow);
+             PostActionsDebugWithHttpInfo(version, flow);
         }
 
         /// <summary>
@@ -9443,12 +9443,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="version"></param> 
         /// <param name="flow">Flow</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostFlowsActionsDebugWithHttpInfo (string version, string flow = null)
+        public ApiResponse<Object> PostActionsDebugWithHttpInfo (string version, string flow = null)
         {
             
             // verify the required parameter 'version' is set
             if (version == null)
-                throw new ApiException(400, "Missing required parameter 'version' when calling ArchitectApi->PostFlowsActionsDebug");
+                throw new ApiException(400, "Missing required parameter 'version' when calling ArchitectApi->PostActionsDebug");
             
     
             var path_ = "/api/v1/flows/actions/debug";
@@ -9502,9 +9502,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostFlowsActionsDebug: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostActionsDebug: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostFlowsActionsDebug: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostActionsDebug: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -9518,9 +9518,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="version"></param>
         /// <param name="flow">Flow</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostFlowsActionsDebugAsync (string version, string flow = null)
+        public async System.Threading.Tasks.Task PostActionsDebugAsync (string version, string flow = null)
         {
-             await PostFlowsActionsDebugAsyncWithHttpInfo(version, flow);
+             await PostActionsDebugAsyncWithHttpInfo(version, flow);
 
         }
 
@@ -9530,10 +9530,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="version"></param>
         /// <param name="flow">Flow</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostFlowsActionsDebugAsyncWithHttpInfo (string version, string flow = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostActionsDebugAsyncWithHttpInfo (string version, string flow = null)
         {
             // verify the required parameter 'version' is set
-            if (version == null) throw new ApiException(400, "Missing required parameter 'version' when calling PostFlowsActionsDebug");
+            if (version == null) throw new ApiException(400, "Missing required parameter 'version' when calling PostActionsDebug");
             
     
             var path_ = "/api/v1/flows/actions/debug";
@@ -9588,9 +9588,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostFlowsActionsDebug: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostActionsDebug: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostFlowsActionsDebug: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostActionsDebug: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -9603,9 +9603,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="flow">Flow</param> 
         /// <returns>Flow</returns>
-        public Flow PostFlowsActionsRevert (string flow = null)
+        public Flow PostActionsRevert (string flow = null)
         {
-             ApiResponse<Flow> response = PostFlowsActionsRevertWithHttpInfo(flow);
+             ApiResponse<Flow> response = PostActionsRevertWithHttpInfo(flow);
              return response.Data;
         }
 
@@ -9614,7 +9614,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="flow">Flow</param> 
         /// <returns>ApiResponse of Flow</returns>
-        public ApiResponse< Flow > PostFlowsActionsRevertWithHttpInfo (string flow = null)
+        public ApiResponse< Flow > PostActionsRevertWithHttpInfo (string flow = null)
         {
             
     
@@ -9668,9 +9668,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostFlowsActionsRevert: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostActionsRevert: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostFlowsActionsRevert: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostActionsRevert: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Flow>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9683,9 +9683,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="flow">Flow</param>
         /// <returns>Task of Flow</returns>
-        public async System.Threading.Tasks.Task<Flow> PostFlowsActionsRevertAsync (string flow = null)
+        public async System.Threading.Tasks.Task<Flow> PostActionsRevertAsync (string flow = null)
         {
-             ApiResponse<Flow> response = await PostFlowsActionsRevertAsyncWithHttpInfo(flow);
+             ApiResponse<Flow> response = await PostActionsRevertAsyncWithHttpInfo(flow);
              return response.Data;
 
         }
@@ -9695,7 +9695,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="flow">Flow</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsRevertAsyncWithHttpInfo (string flow = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Flow>> PostActionsRevertAsyncWithHttpInfo (string flow = null)
         {
             
     
@@ -9750,9 +9750,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostFlowsActionsRevert: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostActionsRevert: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostFlowsActionsRevert: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostActionsRevert: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Flow>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9766,9 +9766,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param> 
         /// <param name="deleted">Deleted</param> 
         /// <returns>Flow</returns>
-        public Flow GetFlow (string flowId, string deleted = null)
+        public Flow GetFlowId (string flowId, string deleted = null)
         {
-             ApiResponse<Flow> response = GetFlowWithHttpInfo(flowId, deleted);
+             ApiResponse<Flow> response = GetFlowIdWithHttpInfo(flowId, deleted);
              return response.Data;
         }
 
@@ -9778,12 +9778,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param> 
         /// <param name="deleted">Deleted</param> 
         /// <returns>ApiResponse of Flow</returns>
-        public ApiResponse< Flow > GetFlowWithHttpInfo (string flowId, string deleted = null)
+        public ApiResponse< Flow > GetFlowIdWithHttpInfo (string flowId, string deleted = null)
         {
             
             // verify the required parameter 'flowId' is set
             if (flowId == null)
-                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlow");
+                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowId");
             
     
             var path_ = "/api/v1/flows/{flowId}";
@@ -9837,9 +9837,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetFlow: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetFlowId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetFlow: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetFlowId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Flow>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9853,9 +9853,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>Task of Flow</returns>
-        public async System.Threading.Tasks.Task<Flow> GetFlowAsync (string flowId, string deleted = null)
+        public async System.Threading.Tasks.Task<Flow> GetFlowIdAsync (string flowId, string deleted = null)
         {
-             ApiResponse<Flow> response = await GetFlowAsyncWithHttpInfo(flowId, deleted);
+             ApiResponse<Flow> response = await GetFlowIdAsyncWithHttpInfo(flowId, deleted);
              return response.Data;
 
         }
@@ -9866,10 +9866,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Flow>> GetFlowAsyncWithHttpInfo (string flowId, string deleted = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Flow>> GetFlowIdAsyncWithHttpInfo (string flowId, string deleted = null)
         {
             // verify the required parameter 'flowId' is set
-            if (flowId == null) throw new ApiException(400, "Missing required parameter 'flowId' when calling GetFlow");
+            if (flowId == null) throw new ApiException(400, "Missing required parameter 'flowId' when calling GetFlowId");
             
     
             var path_ = "/api/v1/flows/{flowId}";
@@ -9924,9 +9924,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetFlow: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetFlowId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetFlow: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetFlowId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Flow>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9940,9 +9940,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param> 
         /// <param name="body"></param> 
         /// <returns>Flow</returns>
-        public Flow PutFlow (string flowId, Flow body = null)
+        public Flow PutFlowId (string flowId, Flow body = null)
         {
-             ApiResponse<Flow> response = PutFlowWithHttpInfo(flowId, body);
+             ApiResponse<Flow> response = PutFlowIdWithHttpInfo(flowId, body);
              return response.Data;
         }
 
@@ -9952,12 +9952,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of Flow</returns>
-        public ApiResponse< Flow > PutFlowWithHttpInfo (string flowId, Flow body = null)
+        public ApiResponse< Flow > PutFlowIdWithHttpInfo (string flowId, Flow body = null)
         {
             
             // verify the required parameter 'flowId' is set
             if (flowId == null)
-                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->PutFlow");
+                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->PutFlowId");
             
     
             var path_ = "/api/v1/flows/{flowId}";
@@ -10017,9 +10017,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutFlow: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutFlowId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutFlow: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutFlowId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Flow>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10033,9 +10033,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="body"></param>
         /// <returns>Task of Flow</returns>
-        public async System.Threading.Tasks.Task<Flow> PutFlowAsync (string flowId, Flow body = null)
+        public async System.Threading.Tasks.Task<Flow> PutFlowIdAsync (string flowId, Flow body = null)
         {
-             ApiResponse<Flow> response = await PutFlowAsyncWithHttpInfo(flowId, body);
+             ApiResponse<Flow> response = await PutFlowIdAsyncWithHttpInfo(flowId, body);
              return response.Data;
 
         }
@@ -10046,10 +10046,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Flow)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Flow>> PutFlowAsyncWithHttpInfo (string flowId, Flow body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Flow>> PutFlowIdAsyncWithHttpInfo (string flowId, Flow body = null)
         {
             // verify the required parameter 'flowId' is set
-            if (flowId == null) throw new ApiException(400, "Missing required parameter 'flowId' when calling PutFlow");
+            if (flowId == null) throw new ApiException(400, "Missing required parameter 'flowId' when calling PutFlowId");
             
     
             var path_ = "/api/v1/flows/{flowId}";
@@ -10104,9 +10104,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutFlow: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutFlowId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutFlow: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutFlowId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Flow>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10119,9 +10119,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="flowId">Flow ID</param> 
         /// <returns></returns>
-        public void DeleteFlow (string flowId)
+        public void DeleteFlowId (string flowId)
         {
-             DeleteFlowWithHttpInfo(flowId);
+             DeleteFlowIdWithHttpInfo(flowId);
         }
 
         /// <summary>
@@ -10129,12 +10129,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="flowId">Flow ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteFlowWithHttpInfo (string flowId)
+        public ApiResponse<Object> DeleteFlowIdWithHttpInfo (string flowId)
         {
             
             // verify the required parameter 'flowId' is set
             if (flowId == null)
-                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->DeleteFlow");
+                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->DeleteFlowId");
             
     
             var path_ = "/api/v1/flows/{flowId}";
@@ -10187,9 +10187,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteFlow: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteFlowId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteFlow: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteFlowId: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -10202,9 +10202,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="flowId">Flow ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteFlowAsync (string flowId)
+        public async System.Threading.Tasks.Task DeleteFlowIdAsync (string flowId)
         {
-             await DeleteFlowAsyncWithHttpInfo(flowId);
+             await DeleteFlowIdAsyncWithHttpInfo(flowId);
 
         }
 
@@ -10213,10 +10213,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="flowId">Flow ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowAsyncWithHttpInfo (string flowId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowIdAsyncWithHttpInfo (string flowId)
         {
             // verify the required parameter 'flowId' is set
-            if (flowId == null) throw new ApiException(400, "Missing required parameter 'flowId' when calling DeleteFlow");
+            if (flowId == null) throw new ApiException(400, "Missing required parameter 'flowId' when calling DeleteFlowId");
             
     
             var path_ = "/api/v1/flows/{flowId}";
@@ -10270,9 +10270,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteFlow: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteFlowId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteFlow: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteFlowId: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -10286,9 +10286,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param> 
         /// <param name="deleted">Deleted</param> 
         /// <returns>InlineResponse200</returns>
-        public InlineResponse200 GetFlowLatestconfiguration (string flowId, string deleted = null)
+        public InlineResponse200 GetFlowIdLatestconfiguration (string flowId, string deleted = null)
         {
-             ApiResponse<InlineResponse200> response = GetFlowLatestconfigurationWithHttpInfo(flowId, deleted);
+             ApiResponse<InlineResponse200> response = GetFlowIdLatestconfigurationWithHttpInfo(flowId, deleted);
              return response.Data;
         }
 
@@ -10298,12 +10298,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param> 
         /// <param name="deleted">Deleted</param> 
         /// <returns>ApiResponse of InlineResponse200</returns>
-        public ApiResponse< InlineResponse200 > GetFlowLatestconfigurationWithHttpInfo (string flowId, string deleted = null)
+        public ApiResponse< InlineResponse200 > GetFlowIdLatestconfigurationWithHttpInfo (string flowId, string deleted = null)
         {
             
             // verify the required parameter 'flowId' is set
             if (flowId == null)
-                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowLatestconfiguration");
+                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowIdLatestconfiguration");
             
     
             var path_ = "/api/v1/flows/{flowId}/latestconfiguration";
@@ -10357,9 +10357,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetFlowLatestconfiguration: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetFlowIdLatestconfiguration: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetFlowLatestconfiguration: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetFlowIdLatestconfiguration: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<InlineResponse200>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10373,9 +10373,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>Task of InlineResponse200</returns>
-        public async System.Threading.Tasks.Task<InlineResponse200> GetFlowLatestconfigurationAsync (string flowId, string deleted = null)
+        public async System.Threading.Tasks.Task<InlineResponse200> GetFlowIdLatestconfigurationAsync (string flowId, string deleted = null)
         {
-             ApiResponse<InlineResponse200> response = await GetFlowLatestconfigurationAsyncWithHttpInfo(flowId, deleted);
+             ApiResponse<InlineResponse200> response = await GetFlowIdLatestconfigurationAsyncWithHttpInfo(flowId, deleted);
              return response.Data;
 
         }
@@ -10386,10 +10386,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> GetFlowLatestconfigurationAsyncWithHttpInfo (string flowId, string deleted = null)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> GetFlowIdLatestconfigurationAsyncWithHttpInfo (string flowId, string deleted = null)
         {
             // verify the required parameter 'flowId' is set
-            if (flowId == null) throw new ApiException(400, "Missing required parameter 'flowId' when calling GetFlowLatestconfiguration");
+            if (flowId == null) throw new ApiException(400, "Missing required parameter 'flowId' when calling GetFlowIdLatestconfiguration");
             
     
             var path_ = "/api/v1/flows/{flowId}/latestconfiguration";
@@ -10444,9 +10444,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetFlowLatestconfiguration: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetFlowIdLatestconfiguration: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetFlowLatestconfiguration: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetFlowIdLatestconfiguration: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<InlineResponse200>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10460,9 +10460,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param> 
         /// <param name="id">Publish Result ID</param> 
         /// <returns>PublishedResult</returns>
-        public PublishedResult GetFlowPublishedresults (string flowId, string id)
+        public PublishedResult GetFlowIdPublishedresultsId (string flowId, string id)
         {
-             ApiResponse<PublishedResult> response = GetFlowPublishedresultsWithHttpInfo(flowId, id);
+             ApiResponse<PublishedResult> response = GetFlowIdPublishedresultsIdWithHttpInfo(flowId, id);
              return response.Data;
         }
 
@@ -10472,16 +10472,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param> 
         /// <param name="id">Publish Result ID</param> 
         /// <returns>ApiResponse of PublishedResult</returns>
-        public ApiResponse< PublishedResult > GetFlowPublishedresultsWithHttpInfo (string flowId, string id)
+        public ApiResponse< PublishedResult > GetFlowIdPublishedresultsIdWithHttpInfo (string flowId, string id)
         {
             
             // verify the required parameter 'flowId' is set
             if (flowId == null)
-                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowPublishedresults");
+                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowIdPublishedresultsId");
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ArchitectApi->GetFlowPublishedresults");
+                throw new ApiException(400, "Missing required parameter 'id' when calling ArchitectApi->GetFlowIdPublishedresultsId");
             
     
             var path_ = "/api/v1/flows/{flowId}/publishedresults/{id}";
@@ -10535,9 +10535,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetFlowPublishedresults: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetFlowIdPublishedresultsId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetFlowPublishedresults: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetFlowIdPublishedresultsId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<PublishedResult>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10551,9 +10551,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="id">Publish Result ID</param>
         /// <returns>Task of PublishedResult</returns>
-        public async System.Threading.Tasks.Task<PublishedResult> GetFlowPublishedresultsAsync (string flowId, string id)
+        public async System.Threading.Tasks.Task<PublishedResult> GetFlowIdPublishedresultsIdAsync (string flowId, string id)
         {
-             ApiResponse<PublishedResult> response = await GetFlowPublishedresultsAsyncWithHttpInfo(flowId, id);
+             ApiResponse<PublishedResult> response = await GetFlowIdPublishedresultsIdAsyncWithHttpInfo(flowId, id);
              return response.Data;
 
         }
@@ -10564,12 +10564,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="id">Publish Result ID</param>
         /// <returns>Task of ApiResponse (PublishedResult)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PublishedResult>> GetFlowPublishedresultsAsyncWithHttpInfo (string flowId, string id)
+        public async System.Threading.Tasks.Task<ApiResponse<PublishedResult>> GetFlowIdPublishedresultsIdAsyncWithHttpInfo (string flowId, string id)
         {
             // verify the required parameter 'flowId' is set
-            if (flowId == null) throw new ApiException(400, "Missing required parameter 'flowId' when calling GetFlowPublishedresults");
+            if (flowId == null) throw new ApiException(400, "Missing required parameter 'flowId' when calling GetFlowIdPublishedresultsId");
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetFlowPublishedresults");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetFlowIdPublishedresultsId");
             
     
             var path_ = "/api/v1/flows/{flowId}/publishedresults/{id}";
@@ -10624,9 +10624,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetFlowPublishedresults: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetFlowIdPublishedresultsId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetFlowPublishedresults: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetFlowIdPublishedresultsId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<PublishedResult>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10642,9 +10642,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="deleted">Deleted</param> 
         /// <returns>FlowVersionEntityListing</returns>
-        public FlowVersionEntityListing GetFlowVersions (string flowId, int? pageNumber = null, int? pageSize = null, string deleted = null)
+        public FlowVersionEntityListing GetFlowIdVersions (string flowId, int? pageNumber = null, int? pageSize = null, string deleted = null)
         {
-             ApiResponse<FlowVersionEntityListing> response = GetFlowVersionsWithHttpInfo(flowId, pageNumber, pageSize, deleted);
+             ApiResponse<FlowVersionEntityListing> response = GetFlowIdVersionsWithHttpInfo(flowId, pageNumber, pageSize, deleted);
              return response.Data;
         }
 
@@ -10656,12 +10656,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="deleted">Deleted</param> 
         /// <returns>ApiResponse of FlowVersionEntityListing</returns>
-        public ApiResponse< FlowVersionEntityListing > GetFlowVersionsWithHttpInfo (string flowId, int? pageNumber = null, int? pageSize = null, string deleted = null)
+        public ApiResponse< FlowVersionEntityListing > GetFlowIdVersionsWithHttpInfo (string flowId, int? pageNumber = null, int? pageSize = null, string deleted = null)
         {
             
             // verify the required parameter 'flowId' is set
             if (flowId == null)
-                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowVersions");
+                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowIdVersions");
             
     
             var path_ = "/api/v1/flows/{flowId}/versions";
@@ -10717,9 +10717,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetFlowVersions: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetFlowIdVersions: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetFlowVersions: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetFlowIdVersions: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<FlowVersionEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10735,9 +10735,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>Task of FlowVersionEntityListing</returns>
-        public async System.Threading.Tasks.Task<FlowVersionEntityListing> GetFlowVersionsAsync (string flowId, int? pageNumber = null, int? pageSize = null, string deleted = null)
+        public async System.Threading.Tasks.Task<FlowVersionEntityListing> GetFlowIdVersionsAsync (string flowId, int? pageNumber = null, int? pageSize = null, string deleted = null)
         {
-             ApiResponse<FlowVersionEntityListing> response = await GetFlowVersionsAsyncWithHttpInfo(flowId, pageNumber, pageSize, deleted);
+             ApiResponse<FlowVersionEntityListing> response = await GetFlowIdVersionsAsyncWithHttpInfo(flowId, pageNumber, pageSize, deleted);
              return response.Data;
 
         }
@@ -10750,10 +10750,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>Task of ApiResponse (FlowVersionEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FlowVersionEntityListing>> GetFlowVersionsAsyncWithHttpInfo (string flowId, int? pageNumber = null, int? pageSize = null, string deleted = null)
+        public async System.Threading.Tasks.Task<ApiResponse<FlowVersionEntityListing>> GetFlowIdVersionsAsyncWithHttpInfo (string flowId, int? pageNumber = null, int? pageSize = null, string deleted = null)
         {
             // verify the required parameter 'flowId' is set
-            if (flowId == null) throw new ApiException(400, "Missing required parameter 'flowId' when calling GetFlowVersions");
+            if (flowId == null) throw new ApiException(400, "Missing required parameter 'flowId' when calling GetFlowIdVersions");
             
     
             var path_ = "/api/v1/flows/{flowId}/versions";
@@ -10810,9 +10810,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetFlowVersions: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetFlowIdVersions: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetFlowVersions: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetFlowIdVersions: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<FlowVersionEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10826,9 +10826,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param> 
         /// <param name="body"></param> 
         /// <returns>FlowVersion</returns>
-        public FlowVersion PostFlowVersions (string flowId, Body2 body = null)
+        public FlowVersion PostFlowIdVersions (string flowId, Body2 body = null)
         {
-             ApiResponse<FlowVersion> response = PostFlowVersionsWithHttpInfo(flowId, body);
+             ApiResponse<FlowVersion> response = PostFlowIdVersionsWithHttpInfo(flowId, body);
              return response.Data;
         }
 
@@ -10838,12 +10838,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of FlowVersion</returns>
-        public ApiResponse< FlowVersion > PostFlowVersionsWithHttpInfo (string flowId, Body2 body = null)
+        public ApiResponse< FlowVersion > PostFlowIdVersionsWithHttpInfo (string flowId, Body2 body = null)
         {
             
             // verify the required parameter 'flowId' is set
             if (flowId == null)
-                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->PostFlowVersions");
+                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->PostFlowIdVersions");
             
     
             var path_ = "/api/v1/flows/{flowId}/versions";
@@ -10903,9 +10903,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostFlowVersions: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostFlowIdVersions: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostFlowVersions: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostFlowIdVersions: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<FlowVersion>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10919,9 +10919,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="body"></param>
         /// <returns>Task of FlowVersion</returns>
-        public async System.Threading.Tasks.Task<FlowVersion> PostFlowVersionsAsync (string flowId, Body2 body = null)
+        public async System.Threading.Tasks.Task<FlowVersion> PostFlowIdVersionsAsync (string flowId, Body2 body = null)
         {
-             ApiResponse<FlowVersion> response = await PostFlowVersionsAsyncWithHttpInfo(flowId, body);
+             ApiResponse<FlowVersion> response = await PostFlowIdVersionsAsyncWithHttpInfo(flowId, body);
              return response.Data;
 
         }
@@ -10932,10 +10932,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (FlowVersion)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FlowVersion>> PostFlowVersionsAsyncWithHttpInfo (string flowId, Body2 body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<FlowVersion>> PostFlowIdVersionsAsyncWithHttpInfo (string flowId, Body2 body = null)
         {
             // verify the required parameter 'flowId' is set
-            if (flowId == null) throw new ApiException(400, "Missing required parameter 'flowId' when calling PostFlowVersions");
+            if (flowId == null) throw new ApiException(400, "Missing required parameter 'flowId' when calling PostFlowIdVersions");
             
     
             var path_ = "/api/v1/flows/{flowId}/versions";
@@ -10990,9 +10990,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostFlowVersions: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostFlowIdVersions: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostFlowVersions: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostFlowIdVersions: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<FlowVersion>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -11007,9 +11007,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="versionId">Version ID</param> 
         /// <param name="deleted">Deleted</param> 
         /// <returns>FlowVersion</returns>
-        public FlowVersion GetFlowVersion (string flowId, string versionId, string deleted = null)
+        public FlowVersion GetFlowIdVersionsVersionId (string flowId, string versionId, string deleted = null)
         {
-             ApiResponse<FlowVersion> response = GetFlowVersionWithHttpInfo(flowId, versionId, deleted);
+             ApiResponse<FlowVersion> response = GetFlowIdVersionsVersionIdWithHttpInfo(flowId, versionId, deleted);
              return response.Data;
         }
 
@@ -11020,16 +11020,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="versionId">Version ID</param> 
         /// <param name="deleted">Deleted</param> 
         /// <returns>ApiResponse of FlowVersion</returns>
-        public ApiResponse< FlowVersion > GetFlowVersionWithHttpInfo (string flowId, string versionId, string deleted = null)
+        public ApiResponse< FlowVersion > GetFlowIdVersionsVersionIdWithHttpInfo (string flowId, string versionId, string deleted = null)
         {
             
             // verify the required parameter 'flowId' is set
             if (flowId == null)
-                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowVersion");
+                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowIdVersionsVersionId");
             
             // verify the required parameter 'versionId' is set
             if (versionId == null)
-                throw new ApiException(400, "Missing required parameter 'versionId' when calling ArchitectApi->GetFlowVersion");
+                throw new ApiException(400, "Missing required parameter 'versionId' when calling ArchitectApi->GetFlowIdVersionsVersionId");
             
     
             var path_ = "/api/v1/flows/{flowId}/versions/{versionId}";
@@ -11084,9 +11084,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetFlowVersion: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetFlowIdVersionsVersionId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetFlowVersion: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetFlowIdVersionsVersionId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<FlowVersion>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -11101,9 +11101,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="versionId">Version ID</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>Task of FlowVersion</returns>
-        public async System.Threading.Tasks.Task<FlowVersion> GetFlowVersionAsync (string flowId, string versionId, string deleted = null)
+        public async System.Threading.Tasks.Task<FlowVersion> GetFlowIdVersionsVersionIdAsync (string flowId, string versionId, string deleted = null)
         {
-             ApiResponse<FlowVersion> response = await GetFlowVersionAsyncWithHttpInfo(flowId, versionId, deleted);
+             ApiResponse<FlowVersion> response = await GetFlowIdVersionsVersionIdAsyncWithHttpInfo(flowId, versionId, deleted);
              return response.Data;
 
         }
@@ -11115,12 +11115,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="versionId">Version ID</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>Task of ApiResponse (FlowVersion)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FlowVersion>> GetFlowVersionAsyncWithHttpInfo (string flowId, string versionId, string deleted = null)
+        public async System.Threading.Tasks.Task<ApiResponse<FlowVersion>> GetFlowIdVersionsVersionIdAsyncWithHttpInfo (string flowId, string versionId, string deleted = null)
         {
             // verify the required parameter 'flowId' is set
-            if (flowId == null) throw new ApiException(400, "Missing required parameter 'flowId' when calling GetFlowVersion");
+            if (flowId == null) throw new ApiException(400, "Missing required parameter 'flowId' when calling GetFlowIdVersionsVersionId");
             // verify the required parameter 'versionId' is set
-            if (versionId == null) throw new ApiException(400, "Missing required parameter 'versionId' when calling GetFlowVersion");
+            if (versionId == null) throw new ApiException(400, "Missing required parameter 'versionId' when calling GetFlowIdVersionsVersionId");
             
     
             var path_ = "/api/v1/flows/{flowId}/versions/{versionId}";
@@ -11176,9 +11176,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetFlowVersion: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetFlowIdVersionsVersionId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetFlowVersion: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetFlowIdVersionsVersionId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<FlowVersion>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -11193,9 +11193,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="versionId">Version ID</param> 
         /// <param name="deleted">Deleted</param> 
         /// <returns>InlineResponse200</returns>
-        public InlineResponse200 GetFlowVersionConfiguration (string flowId, string versionId, string deleted = null)
+        public InlineResponse200 GetFlowIdVersionsVersionIdConfiguration (string flowId, string versionId, string deleted = null)
         {
-             ApiResponse<InlineResponse200> response = GetFlowVersionConfigurationWithHttpInfo(flowId, versionId, deleted);
+             ApiResponse<InlineResponse200> response = GetFlowIdVersionsVersionIdConfigurationWithHttpInfo(flowId, versionId, deleted);
              return response.Data;
         }
 
@@ -11206,16 +11206,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="versionId">Version ID</param> 
         /// <param name="deleted">Deleted</param> 
         /// <returns>ApiResponse of InlineResponse200</returns>
-        public ApiResponse< InlineResponse200 > GetFlowVersionConfigurationWithHttpInfo (string flowId, string versionId, string deleted = null)
+        public ApiResponse< InlineResponse200 > GetFlowIdVersionsVersionIdConfigurationWithHttpInfo (string flowId, string versionId, string deleted = null)
         {
             
             // verify the required parameter 'flowId' is set
             if (flowId == null)
-                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowVersionConfiguration");
+                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowIdVersionsVersionIdConfiguration");
             
             // verify the required parameter 'versionId' is set
             if (versionId == null)
-                throw new ApiException(400, "Missing required parameter 'versionId' when calling ArchitectApi->GetFlowVersionConfiguration");
+                throw new ApiException(400, "Missing required parameter 'versionId' when calling ArchitectApi->GetFlowIdVersionsVersionIdConfiguration");
             
     
             var path_ = "/api/v1/flows/{flowId}/versions/{versionId}/configuration";
@@ -11270,9 +11270,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetFlowVersionConfiguration: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetFlowIdVersionsVersionIdConfiguration: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetFlowVersionConfiguration: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetFlowIdVersionsVersionIdConfiguration: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<InlineResponse200>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -11287,9 +11287,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="versionId">Version ID</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>Task of InlineResponse200</returns>
-        public async System.Threading.Tasks.Task<InlineResponse200> GetFlowVersionConfigurationAsync (string flowId, string versionId, string deleted = null)
+        public async System.Threading.Tasks.Task<InlineResponse200> GetFlowIdVersionsVersionIdConfigurationAsync (string flowId, string versionId, string deleted = null)
         {
-             ApiResponse<InlineResponse200> response = await GetFlowVersionConfigurationAsyncWithHttpInfo(flowId, versionId, deleted);
+             ApiResponse<InlineResponse200> response = await GetFlowIdVersionsVersionIdConfigurationAsyncWithHttpInfo(flowId, versionId, deleted);
              return response.Data;
 
         }
@@ -11301,12 +11301,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="versionId">Version ID</param>
         /// <param name="deleted">Deleted</param>
         /// <returns>Task of ApiResponse (InlineResponse200)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> GetFlowVersionConfigurationAsyncWithHttpInfo (string flowId, string versionId, string deleted = null)
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse200>> GetFlowIdVersionsVersionIdConfigurationAsyncWithHttpInfo (string flowId, string versionId, string deleted = null)
         {
             // verify the required parameter 'flowId' is set
-            if (flowId == null) throw new ApiException(400, "Missing required parameter 'flowId' when calling GetFlowVersionConfiguration");
+            if (flowId == null) throw new ApiException(400, "Missing required parameter 'flowId' when calling GetFlowIdVersionsVersionIdConfiguration");
             // verify the required parameter 'versionId' is set
-            if (versionId == null) throw new ApiException(400, "Missing required parameter 'versionId' when calling GetFlowVersionConfiguration");
+            if (versionId == null) throw new ApiException(400, "Missing required parameter 'versionId' when calling GetFlowIdVersionsVersionIdConfiguration");
             
     
             var path_ = "/api/v1/flows/{flowId}/versions/{versionId}/configuration";
@@ -11362,9 +11362,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetFlowVersionConfiguration: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetFlowIdVersionsVersionIdConfiguration: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetFlowVersionConfiguration: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetFlowIdVersionsVersionIdConfiguration: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<InlineResponse200>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>GeolocationSettings</returns>
-        GeolocationSettings GetGeolocationsSettings ();
+        GeolocationSettings GetSettings ();
   
         /// <summary>
         /// Get a organization&#39;s GeolocationSettings
@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of GeolocationSettings</returns>
-        ApiResponse<GeolocationSettings> GetGeolocationsSettingsWithHttpInfo ();
+        ApiResponse<GeolocationSettings> GetSettingsWithHttpInfo ();
 
         /// <summary>
         /// Get a organization&#39;s GeolocationSettings
@@ -41,7 +41,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of GeolocationSettings</returns>
-        System.Threading.Tasks.Task<GeolocationSettings> GetGeolocationsSettingsAsync ();
+        System.Threading.Tasks.Task<GeolocationSettings> GetSettingsAsync ();
 
         /// <summary>
         /// Get a organization&#39;s GeolocationSettings
@@ -50,7 +50,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse (GeolocationSettings)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> GetGeolocationsSettingsAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> GetSettingsAsyncWithHttpInfo ();
         
         /// <summary>
         /// Patch a organization&#39;s GeolocationSettings
@@ -60,7 +60,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>GeolocationSettings</returns>
-        GeolocationSettings PatchGeolocationsSettings (GeolocationSettings body = null);
+        GeolocationSettings PatchSettings (GeolocationSettings body = null);
   
         /// <summary>
         /// Patch a organization&#39;s GeolocationSettings
@@ -70,7 +70,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>ApiResponse of GeolocationSettings</returns>
-        ApiResponse<GeolocationSettings> PatchGeolocationsSettingsWithHttpInfo (GeolocationSettings body = null);
+        ApiResponse<GeolocationSettings> PatchSettingsWithHttpInfo (GeolocationSettings body = null);
 
         /// <summary>
         /// Patch a organization&#39;s GeolocationSettings
@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of GeolocationSettings</returns>
-        System.Threading.Tasks.Task<GeolocationSettings> PatchGeolocationsSettingsAsync (GeolocationSettings body = null);
+        System.Threading.Tasks.Task<GeolocationSettings> PatchSettingsAsync (GeolocationSettings body = null);
 
         /// <summary>
         /// Patch a organization&#39;s GeolocationSettings
@@ -90,7 +90,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (GeolocationSettings)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> PatchGeolocationsSettingsAsyncWithHttpInfo (GeolocationSettings body = null);
+        System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> PatchSettingsAsyncWithHttpInfo (GeolocationSettings body = null);
         
         /// <summary>
         /// Get a user&#39;s Geolocation
@@ -101,7 +101,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
         /// <returns>Geolocation</returns>
-        Geolocation GetGeolocation (string userId, string clientId);
+        Geolocation GetUserIdGeolocationsClientId (string userId, string clientId);
   
         /// <summary>
         /// Get a user&#39;s Geolocation
@@ -112,7 +112,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
         /// <returns>ApiResponse of Geolocation</returns>
-        ApiResponse<Geolocation> GetGeolocationWithHttpInfo (string userId, string clientId);
+        ApiResponse<Geolocation> GetUserIdGeolocationsClientIdWithHttpInfo (string userId, string clientId);
 
         /// <summary>
         /// Get a user&#39;s Geolocation
@@ -123,7 +123,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
         /// <returns>Task of Geolocation</returns>
-        System.Threading.Tasks.Task<Geolocation> GetGeolocationAsync (string userId, string clientId);
+        System.Threading.Tasks.Task<Geolocation> GetUserIdGeolocationsClientIdAsync (string userId, string clientId);
 
         /// <summary>
         /// Get a user&#39;s Geolocation
@@ -134,7 +134,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
         /// <returns>Task of ApiResponse (Geolocation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Geolocation>> GetGeolocationAsyncWithHttpInfo (string userId, string clientId);
+        System.Threading.Tasks.Task<ApiResponse<Geolocation>> GetUserIdGeolocationsClientIdAsyncWithHttpInfo (string userId, string clientId);
         
         /// <summary>
         /// Patch a user&#39;s Geolocation
@@ -146,7 +146,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">client Id</param>
         /// <param name="body"></param>
         /// <returns>Geolocation</returns>
-        Geolocation PatchGeolocation (string userId, string clientId, Geolocation body = null);
+        Geolocation PatchUserIdGeolocationsClientId (string userId, string clientId, Geolocation body = null);
   
         /// <summary>
         /// Patch a user&#39;s Geolocation
@@ -158,7 +158,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">client Id</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Geolocation</returns>
-        ApiResponse<Geolocation> PatchGeolocationWithHttpInfo (string userId, string clientId, Geolocation body = null);
+        ApiResponse<Geolocation> PatchUserIdGeolocationsClientIdWithHttpInfo (string userId, string clientId, Geolocation body = null);
 
         /// <summary>
         /// Patch a user&#39;s Geolocation
@@ -170,7 +170,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">client Id</param>
         /// <param name="body"></param>
         /// <returns>Task of Geolocation</returns>
-        System.Threading.Tasks.Task<Geolocation> PatchGeolocationAsync (string userId, string clientId, Geolocation body = null);
+        System.Threading.Tasks.Task<Geolocation> PatchUserIdGeolocationsClientIdAsync (string userId, string clientId, Geolocation body = null);
 
         /// <summary>
         /// Patch a user&#39;s Geolocation
@@ -182,7 +182,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">client Id</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Geolocation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Geolocation>> PatchGeolocationAsyncWithHttpInfo (string userId, string clientId, Geolocation body = null);
+        System.Threading.Tasks.Task<ApiResponse<Geolocation>> PatchUserIdGeolocationsClientIdAsyncWithHttpInfo (string userId, string clientId, Geolocation body = null);
         
     }
   
@@ -266,9 +266,9 @@ namespace ININ.PureCloudApi.Api
         /// Get a organization&#39;s GeolocationSettings 
         /// </summary>
         /// <returns>GeolocationSettings</returns>
-        public GeolocationSettings GetGeolocationsSettings ()
+        public GeolocationSettings GetSettings ()
         {
-             ApiResponse<GeolocationSettings> response = GetGeolocationsSettingsWithHttpInfo();
+             ApiResponse<GeolocationSettings> response = GetSettingsWithHttpInfo();
              return response.Data;
         }
 
@@ -276,7 +276,7 @@ namespace ININ.PureCloudApi.Api
         /// Get a organization&#39;s GeolocationSettings 
         /// </summary>
         /// <returns>ApiResponse of GeolocationSettings</returns>
-        public ApiResponse< GeolocationSettings > GetGeolocationsSettingsWithHttpInfo ()
+        public ApiResponse< GeolocationSettings > GetSettingsWithHttpInfo ()
         {
             
     
@@ -329,9 +329,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetGeolocationsSettings: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSettings: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetGeolocationsSettings: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSettings: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<GeolocationSettings>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -343,9 +343,9 @@ namespace ININ.PureCloudApi.Api
         /// Get a organization&#39;s GeolocationSettings 
         /// </summary>
         /// <returns>Task of GeolocationSettings</returns>
-        public async System.Threading.Tasks.Task<GeolocationSettings> GetGeolocationsSettingsAsync ()
+        public async System.Threading.Tasks.Task<GeolocationSettings> GetSettingsAsync ()
         {
-             ApiResponse<GeolocationSettings> response = await GetGeolocationsSettingsAsyncWithHttpInfo();
+             ApiResponse<GeolocationSettings> response = await GetSettingsAsyncWithHttpInfo();
              return response.Data;
 
         }
@@ -354,7 +354,7 @@ namespace ININ.PureCloudApi.Api
         /// Get a organization&#39;s GeolocationSettings 
         /// </summary>
         /// <returns>Task of ApiResponse (GeolocationSettings)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> GetGeolocationsSettingsAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> GetSettingsAsyncWithHttpInfo ()
         {
             
     
@@ -408,9 +408,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetGeolocationsSettings: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSettings: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetGeolocationsSettings: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSettings: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<GeolocationSettings>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -423,9 +423,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>GeolocationSettings</returns>
-        public GeolocationSettings PatchGeolocationsSettings (GeolocationSettings body = null)
+        public GeolocationSettings PatchSettings (GeolocationSettings body = null)
         {
-             ApiResponse<GeolocationSettings> response = PatchGeolocationsSettingsWithHttpInfo(body);
+             ApiResponse<GeolocationSettings> response = PatchSettingsWithHttpInfo(body);
              return response.Data;
         }
 
@@ -434,7 +434,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param> 
         /// <returns>ApiResponse of GeolocationSettings</returns>
-        public ApiResponse< GeolocationSettings > PatchGeolocationsSettingsWithHttpInfo (GeolocationSettings body = null)
+        public ApiResponse< GeolocationSettings > PatchSettingsWithHttpInfo (GeolocationSettings body = null)
         {
             
     
@@ -494,9 +494,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PatchGeolocationsSettings: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PatchSettings: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PatchGeolocationsSettings: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PatchSettings: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<GeolocationSettings>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -509,9 +509,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of GeolocationSettings</returns>
-        public async System.Threading.Tasks.Task<GeolocationSettings> PatchGeolocationsSettingsAsync (GeolocationSettings body = null)
+        public async System.Threading.Tasks.Task<GeolocationSettings> PatchSettingsAsync (GeolocationSettings body = null)
         {
-             ApiResponse<GeolocationSettings> response = await PatchGeolocationsSettingsAsyncWithHttpInfo(body);
+             ApiResponse<GeolocationSettings> response = await PatchSettingsAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -521,7 +521,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (GeolocationSettings)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> PatchGeolocationsSettingsAsyncWithHttpInfo (GeolocationSettings body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> PatchSettingsAsyncWithHttpInfo (GeolocationSettings body = null)
         {
             
     
@@ -576,9 +576,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PatchGeolocationsSettings: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PatchSettings: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PatchGeolocationsSettings: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PatchSettings: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<GeolocationSettings>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -592,9 +592,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">user Id</param> 
         /// <param name="clientId">client Id</param> 
         /// <returns>Geolocation</returns>
-        public Geolocation GetGeolocation (string userId, string clientId)
+        public Geolocation GetUserIdGeolocationsClientId (string userId, string clientId)
         {
-             ApiResponse<Geolocation> response = GetGeolocationWithHttpInfo(userId, clientId);
+             ApiResponse<Geolocation> response = GetUserIdGeolocationsClientIdWithHttpInfo(userId, clientId);
              return response.Data;
         }
 
@@ -604,16 +604,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">user Id</param> 
         /// <param name="clientId">client Id</param> 
         /// <returns>ApiResponse of Geolocation</returns>
-        public ApiResponse< Geolocation > GetGeolocationWithHttpInfo (string userId, string clientId)
+        public ApiResponse< Geolocation > GetUserIdGeolocationsClientIdWithHttpInfo (string userId, string clientId)
         {
             
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling GeolocationApi->GetGeolocation");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling GeolocationApi->GetUserIdGeolocationsClientId");
             
             // verify the required parameter 'clientId' is set
             if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling GeolocationApi->GetGeolocation");
+                throw new ApiException(400, "Missing required parameter 'clientId' when calling GeolocationApi->GetUserIdGeolocationsClientId");
             
     
             var path_ = "/api/v1/users/{userId}/geolocations/{clientId}";
@@ -667,9 +667,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetGeolocation: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetUserIdGeolocationsClientId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetGeolocation: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetUserIdGeolocationsClientId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Geolocation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -683,9 +683,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
         /// <returns>Task of Geolocation</returns>
-        public async System.Threading.Tasks.Task<Geolocation> GetGeolocationAsync (string userId, string clientId)
+        public async System.Threading.Tasks.Task<Geolocation> GetUserIdGeolocationsClientIdAsync (string userId, string clientId)
         {
-             ApiResponse<Geolocation> response = await GetGeolocationAsyncWithHttpInfo(userId, clientId);
+             ApiResponse<Geolocation> response = await GetUserIdGeolocationsClientIdAsyncWithHttpInfo(userId, clientId);
              return response.Data;
 
         }
@@ -696,12 +696,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">user Id</param>
         /// <param name="clientId">client Id</param>
         /// <returns>Task of ApiResponse (Geolocation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Geolocation>> GetGeolocationAsyncWithHttpInfo (string userId, string clientId)
+        public async System.Threading.Tasks.Task<ApiResponse<Geolocation>> GetUserIdGeolocationsClientIdAsyncWithHttpInfo (string userId, string clientId)
         {
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling GetGeolocation");
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling GetUserIdGeolocationsClientId");
             // verify the required parameter 'clientId' is set
-            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling GetGeolocation");
+            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling GetUserIdGeolocationsClientId");
             
     
             var path_ = "/api/v1/users/{userId}/geolocations/{clientId}";
@@ -756,9 +756,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetGeolocation: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetUserIdGeolocationsClientId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetGeolocation: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetUserIdGeolocationsClientId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Geolocation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -773,9 +773,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">client Id</param> 
         /// <param name="body"></param> 
         /// <returns>Geolocation</returns>
-        public Geolocation PatchGeolocation (string userId, string clientId, Geolocation body = null)
+        public Geolocation PatchUserIdGeolocationsClientId (string userId, string clientId, Geolocation body = null)
         {
-             ApiResponse<Geolocation> response = PatchGeolocationWithHttpInfo(userId, clientId, body);
+             ApiResponse<Geolocation> response = PatchUserIdGeolocationsClientIdWithHttpInfo(userId, clientId, body);
              return response.Data;
         }
 
@@ -786,16 +786,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">client Id</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of Geolocation</returns>
-        public ApiResponse< Geolocation > PatchGeolocationWithHttpInfo (string userId, string clientId, Geolocation body = null)
+        public ApiResponse< Geolocation > PatchUserIdGeolocationsClientIdWithHttpInfo (string userId, string clientId, Geolocation body = null)
         {
             
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling GeolocationApi->PatchGeolocation");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling GeolocationApi->PatchUserIdGeolocationsClientId");
             
             // verify the required parameter 'clientId' is set
             if (clientId == null)
-                throw new ApiException(400, "Missing required parameter 'clientId' when calling GeolocationApi->PatchGeolocation");
+                throw new ApiException(400, "Missing required parameter 'clientId' when calling GeolocationApi->PatchUserIdGeolocationsClientId");
             
     
             var path_ = "/api/v1/users/{userId}/geolocations/{clientId}";
@@ -856,9 +856,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PatchGeolocation: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PatchUserIdGeolocationsClientId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PatchGeolocation: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PatchUserIdGeolocationsClientId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Geolocation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -873,9 +873,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">client Id</param>
         /// <param name="body"></param>
         /// <returns>Task of Geolocation</returns>
-        public async System.Threading.Tasks.Task<Geolocation> PatchGeolocationAsync (string userId, string clientId, Geolocation body = null)
+        public async System.Threading.Tasks.Task<Geolocation> PatchUserIdGeolocationsClientIdAsync (string userId, string clientId, Geolocation body = null)
         {
-             ApiResponse<Geolocation> response = await PatchGeolocationAsyncWithHttpInfo(userId, clientId, body);
+             ApiResponse<Geolocation> response = await PatchUserIdGeolocationsClientIdAsyncWithHttpInfo(userId, clientId, body);
              return response.Data;
 
         }
@@ -887,12 +887,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="clientId">client Id</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Geolocation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Geolocation>> PatchGeolocationAsyncWithHttpInfo (string userId, string clientId, Geolocation body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Geolocation>> PatchUserIdGeolocationsClientIdAsyncWithHttpInfo (string userId, string clientId, Geolocation body = null)
         {
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling PatchGeolocation");
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling PatchUserIdGeolocationsClientId");
             // verify the required parameter 'clientId' is set
-            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling PatchGeolocation");
+            if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling PatchUserIdGeolocationsClientId");
             
     
             var path_ = "/api/v1/users/{userId}/geolocations/{clientId}";
@@ -948,9 +948,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PatchGeolocation: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PatchUserIdGeolocationsClientId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PatchGeolocation: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PatchUserIdGeolocationsClientId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Geolocation>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

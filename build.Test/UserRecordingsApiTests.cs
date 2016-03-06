@@ -47,85 +47,85 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test GetUserrecordings
+        /// Test Get
         /// </summary>
         [Test]
-        public void GetUserrecordingsTest()
+        public void GetTest()
         {
-            // TODO: add unit test for the method 'GetUserrecordings'
+            // TODO: add unit test for the method 'Get'
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
             
-            var response = instance.GetUserrecordings(pageSize, pageNumber, expand);
+            var response = instance.Get(pageSize, pageNumber, expand);
             Assert.IsInstanceOf<UserRecordingEntityListing> (response, "response is UserRecordingEntityListing"); 
         }
         
         /// <summary>
-        /// Test GetUserrecordingsSummary
+        /// Test GetSummary
         /// </summary>
         [Test]
-        public void GetUserrecordingsSummaryTest()
+        public void GetSummaryTest()
         {
-            // TODO: add unit test for the method 'GetUserrecordingsSummary'
+            // TODO: add unit test for the method 'GetSummary'
             
-            var response = instance.GetUserrecordingsSummary();
+            var response = instance.GetSummary();
             Assert.IsInstanceOf<FaxSummary> (response, "response is FaxSummary"); 
         }
         
         /// <summary>
-        /// Test GetUserrecording
+        /// Test GetRecordingId
         /// </summary>
         [Test]
-        public void GetUserrecordingTest()
+        public void GetRecordingIdTest()
         {
-            // TODO: add unit test for the method 'GetUserrecording'
+            // TODO: add unit test for the method 'GetRecordingId'
             string recordingId = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
             
-            var response = instance.GetUserrecording(recordingId, expand);
+            var response = instance.GetRecordingId(recordingId, expand);
             Assert.IsInstanceOf<UserRecording> (response, "response is UserRecording"); 
         }
         
         /// <summary>
-        /// Test PutUserrecording
+        /// Test PutRecordingId
         /// </summary>
         [Test]
-        public void PutUserrecordingTest()
+        public void PutRecordingIdTest()
         {
-            // TODO: add unit test for the method 'PutUserrecording'
+            // TODO: add unit test for the method 'PutRecordingId'
             string recordingId = null; // TODO: replace null with proper value
             UserRecording body = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
             
-            var response = instance.PutUserrecording(recordingId, body, expand);
+            var response = instance.PutRecordingId(recordingId, body, expand);
             Assert.IsInstanceOf<UserRecording> (response, "response is UserRecording"); 
         }
         
         /// <summary>
-        /// Test DeleteUserrecording
+        /// Test DeleteRecordingId
         /// </summary>
         [Test]
-        public void DeleteUserrecordingTest()
+        public void DeleteRecordingIdTest()
         {
-            // TODO: add unit test for the method 'DeleteUserrecording'
+            // TODO: add unit test for the method 'DeleteRecordingId'
             string recordingId = null; // TODO: replace null with proper value
             
-            instance.DeleteUserrecording(recordingId);
+            instance.DeleteRecordingId(recordingId);
              
         }
         
         /// <summary>
-        /// Test GetUserrecordingMedia
+        /// Test GetRecordingIdMedia
         /// </summary>
         [Test]
-        public void GetUserrecordingMediaTest()
+        public void GetRecordingIdMediaTest()
         {
-            // TODO: add unit test for the method 'GetUserrecordingMedia'
+            // TODO: add unit test for the method 'GetRecordingIdMedia'
             string recordingId = null; // TODO: replace null with proper value
             string formatId = null; // TODO: replace null with proper value
             
-            var response = instance.GetUserrecordingMedia(recordingId, formatId);
+            var response = instance.GetRecordingIdMedia(recordingId, formatId);
             Assert.IsInstanceOf<DownloadResponse> (response, "response is DownloadResponse"); 
         }
         

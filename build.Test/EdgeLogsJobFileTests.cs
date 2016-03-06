@@ -54,6 +54,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test the property 'Name' 
+        /// </summary>
+        [Test]
+        public void NameTest()
+        {
+            // TODO: unit test for the property 'Name' 
+        }
+        
+        /// <summary>
         /// Test the property 'TimeCreated' 
         /// </summary>
         [Test]
@@ -81,15 +90,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'DownloadUrl' 
-        /// </summary>
-        [Test]
-        public void DownloadUrlTest()
-        {
-            // TODO: unit test for the property 'DownloadUrl' 
-        }
-        
-        /// <summary>
         /// Test the property 'UploadStatus' 
         /// </summary>
         [Test]
@@ -105,6 +105,24 @@ namespace ININ.PureCloudApi.Test
         public void EdgePathTest()
         {
             // TODO: unit test for the property 'EdgePath' 
+        }
+        
+        /// <summary>
+        /// Test the property 'DownloadId' 
+        /// </summary>
+        [Test]
+        public void DownloadIdTest()
+        {
+            // TODO: unit test for the property 'DownloadId' 
+        }
+        
+        /// <summary>
+        /// Test the property 'SelfUri' 
+        /// </summary>
+        [Test]
+        public void SelfUriTest()
+        {
+            // TODO: unit test for the property 'SelfUri' 
         }
         
 

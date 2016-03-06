@@ -25,7 +25,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>LanguageEntityListing</returns>
-        LanguageEntityListing GetLanguages (int? pageSize = null, int? pageNumber = null);
+        LanguageEntityListing Get (int? pageSize = null, int? pageNumber = null);
   
         /// <summary>
         /// Get the list of supported languages.
@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>ApiResponse of LanguageEntityListing</returns>
-        ApiResponse<LanguageEntityListing> GetLanguagesWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        ApiResponse<LanguageEntityListing> GetWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get the list of supported languages.
@@ -47,7 +47,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of LanguageEntityListing</returns>
-        System.Threading.Tasks.Task<LanguageEntityListing> GetLanguagesAsync (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<LanguageEntityListing> GetAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get the list of supported languages.
@@ -58,7 +58,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (LanguageEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LanguageEntityListing>> GetLanguagesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<LanguageEntityListing>> GetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
         /// Get language
@@ -68,7 +68,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="languageId">Language ID</param>
         /// <returns>Language</returns>
-        Language Get (string languageId);
+        Language GetLanguageId (string languageId);
   
         /// <summary>
         /// Get language
@@ -78,7 +78,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="languageId">Language ID</param>
         /// <returns>ApiResponse of Language</returns>
-        ApiResponse<Language> GetWithHttpInfo (string languageId);
+        ApiResponse<Language> GetLanguageIdWithHttpInfo (string languageId);
 
         /// <summary>
         /// Get language
@@ -88,7 +88,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of Language</returns>
-        System.Threading.Tasks.Task<Language> GetAsync (string languageId);
+        System.Threading.Tasks.Task<Language> GetLanguageIdAsync (string languageId);
 
         /// <summary>
         /// Get language
@@ -98,7 +98,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of ApiResponse (Language)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Language>> GetAsyncWithHttpInfo (string languageId);
+        System.Threading.Tasks.Task<ApiResponse<Language>> GetLanguageIdAsyncWithHttpInfo (string languageId);
         
     }
   
@@ -184,9 +184,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>LanguageEntityListing</returns>
-        public LanguageEntityListing GetLanguages (int? pageSize = null, int? pageNumber = null)
+        public LanguageEntityListing Get (int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<LanguageEntityListing> response = GetLanguagesWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<LanguageEntityListing> response = GetWithHttpInfo(pageSize, pageNumber);
              return response.Data;
         }
 
@@ -196,7 +196,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>ApiResponse of LanguageEntityListing</returns>
-        public ApiResponse< LanguageEntityListing > GetLanguagesWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< LanguageEntityListing > GetWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -251,9 +251,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetLanguages: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetLanguages: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<LanguageEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -267,9 +267,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of LanguageEntityListing</returns>
-        public async System.Threading.Tasks.Task<LanguageEntityListing> GetLanguagesAsync (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<LanguageEntityListing> GetAsync (int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<LanguageEntityListing> response = await GetLanguagesAsyncWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<LanguageEntityListing> response = await GetAsyncWithHttpInfo(pageSize, pageNumber);
              return response.Data;
 
         }
@@ -280,7 +280,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (LanguageEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LanguageEntityListing>> GetLanguagesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<LanguageEntityListing>> GetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -336,9 +336,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetLanguages: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetLanguages: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<LanguageEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -351,9 +351,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="languageId">Language ID</param> 
         /// <returns>Language</returns>
-        public Language Get (string languageId)
+        public Language GetLanguageId (string languageId)
         {
-             ApiResponse<Language> response = GetWithHttpInfo(languageId);
+             ApiResponse<Language> response = GetLanguageIdWithHttpInfo(languageId);
              return response.Data;
         }
 
@@ -362,12 +362,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="languageId">Language ID</param> 
         /// <returns>ApiResponse of Language</returns>
-        public ApiResponse< Language > GetWithHttpInfo (string languageId)
+        public ApiResponse< Language > GetLanguageIdWithHttpInfo (string languageId)
         {
             
             // verify the required parameter 'languageId' is set
             if (languageId == null)
-                throw new ApiException(400, "Missing required parameter 'languageId' when calling LanguagesApi->Get");
+                throw new ApiException(400, "Missing required parameter 'languageId' when calling LanguagesApi->GetLanguageId");
             
     
             var path_ = "/api/v1/languages/{languageId}";
@@ -420,9 +420,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetLanguageId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetLanguageId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Language>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -435,9 +435,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of Language</returns>
-        public async System.Threading.Tasks.Task<Language> GetAsync (string languageId)
+        public async System.Threading.Tasks.Task<Language> GetLanguageIdAsync (string languageId)
         {
-             ApiResponse<Language> response = await GetAsyncWithHttpInfo(languageId);
+             ApiResponse<Language> response = await GetLanguageIdAsyncWithHttpInfo(languageId);
              return response.Data;
 
         }
@@ -447,10 +447,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="languageId">Language ID</param>
         /// <returns>Task of ApiResponse (Language)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Language>> GetAsyncWithHttpInfo (string languageId)
+        public async System.Threading.Tasks.Task<ApiResponse<Language>> GetLanguageIdAsyncWithHttpInfo (string languageId)
         {
             // verify the required parameter 'languageId' is set
-            if (languageId == null) throw new ApiException(400, "Missing required parameter 'languageId' when calling Get");
+            if (languageId == null) throw new ApiException(400, "Missing required parameter 'languageId' when calling GetLanguageId");
             
     
             var path_ = "/api/v1/languages/{languageId}";
@@ -504,9 +504,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetLanguageId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetLanguageId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Language>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <returns>QueryResults</returns>
-        QueryResults PostContentmanagementAuditquery (ContentQueryRequest body);
+        QueryResults PostAuditquery (ContentQueryRequest body);
   
         /// <summary>
         /// Query audits
@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <returns>ApiResponse of QueryResults</returns>
-        ApiResponse<QueryResults> PostContentmanagementAuditqueryWithHttpInfo (ContentQueryRequest body);
+        ApiResponse<QueryResults> PostAuditqueryWithHttpInfo (ContentQueryRequest body);
 
         /// <summary>
         /// Query audits
@@ -44,7 +44,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <returns>Task of QueryResults</returns>
-        System.Threading.Tasks.Task<QueryResults> PostContentmanagementAuditqueryAsync (ContentQueryRequest body);
+        System.Threading.Tasks.Task<QueryResults> PostAuditqueryAsync (ContentQueryRequest body);
 
         /// <summary>
         /// Query audits
@@ -54,7 +54,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <returns>Task of ApiResponse (QueryResults)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueryResults>> PostContentmanagementAuditqueryAsyncWithHttpInfo (ContentQueryRequest body);
+        System.Threading.Tasks.Task<ApiResponse<QueryResults>> PostAuditqueryAsyncWithHttpInfo (ContentQueryRequest body);
         
         /// <summary>
         /// Get a list of documents.
@@ -70,7 +70,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">name or dateCreated</param>
         /// <param name="sortOrder">ascending or descending</param>
         /// <returns>DocumentEntityListing</returns>
-        DocumentEntityListing GetContentmanagementDocuments (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+        DocumentEntityListing GetDocuments (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
   
         /// <summary>
         /// Get a list of documents.
@@ -86,7 +86,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">name or dateCreated</param>
         /// <param name="sortOrder">ascending or descending</param>
         /// <returns>ApiResponse of DocumentEntityListing</returns>
-        ApiResponse<DocumentEntityListing> GetContentmanagementDocumentsWithHttpInfo (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+        ApiResponse<DocumentEntityListing> GetDocumentsWithHttpInfo (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get a list of documents.
@@ -102,7 +102,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">name or dateCreated</param>
         /// <param name="sortOrder">ascending or descending</param>
         /// <returns>Task of DocumentEntityListing</returns>
-        System.Threading.Tasks.Task<DocumentEntityListing> GetContentmanagementDocumentsAsync (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<DocumentEntityListing> GetDocumentsAsync (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get a list of documents.
@@ -118,7 +118,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">name or dateCreated</param>
         /// <param name="sortOrder">ascending or descending</param>
         /// <returns>Task of ApiResponse (DocumentEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentEntityListing>> GetContentmanagementDocumentsAsyncWithHttpInfo (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<DocumentEntityListing>> GetDocumentsAsyncWithHttpInfo (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
         
         /// <summary>
         /// Add a document.
@@ -131,7 +131,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source.</param>
         /// <param name="_override">Override any lock on the source document</param>
         /// <returns>Document</returns>
-        Document PostContentmanagementDocuments (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null);
+        Document PostDocuments (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null);
   
         /// <summary>
         /// Add a document.
@@ -144,7 +144,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source.</param>
         /// <param name="_override">Override any lock on the source document</param>
         /// <returns>ApiResponse of Document</returns>
-        ApiResponse<Document> PostContentmanagementDocumentsWithHttpInfo (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null);
+        ApiResponse<Document> PostDocumentsWithHttpInfo (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null);
 
         /// <summary>
         /// Add a document.
@@ -157,7 +157,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source.</param>
         /// <param name="_override">Override any lock on the source document</param>
         /// <returns>Task of Document</returns>
-        System.Threading.Tasks.Task<Document> PostContentmanagementDocumentsAsync (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null);
+        System.Threading.Tasks.Task<Document> PostDocumentsAsync (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null);
 
         /// <summary>
         /// Add a document.
@@ -170,7 +170,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source.</param>
         /// <param name="_override">Override any lock on the source document</param>
         /// <returns>Task of ApiResponse (Document)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Document>> PostContentmanagementDocumentsAsyncWithHttpInfo (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null);
+        System.Threading.Tasks.Task<ApiResponse<Document>> PostDocumentsAsyncWithHttpInfo (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null);
         
         /// <summary>
         /// Get a document.
@@ -181,7 +181,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Document</returns>
-        Document GetContentmanagementDocument (string documentId, string expand = null);
+        Document GetDocumentsDocumentId (string documentId, string expand = null);
   
         /// <summary>
         /// Get a document.
@@ -192,7 +192,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>ApiResponse of Document</returns>
-        ApiResponse<Document> GetContentmanagementDocumentWithHttpInfo (string documentId, string expand = null);
+        ApiResponse<Document> GetDocumentsDocumentIdWithHttpInfo (string documentId, string expand = null);
 
         /// <summary>
         /// Get a document.
@@ -203,7 +203,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of Document</returns>
-        System.Threading.Tasks.Task<Document> GetContentmanagementDocumentAsync (string documentId, string expand = null);
+        System.Threading.Tasks.Task<Document> GetDocumentsDocumentIdAsync (string documentId, string expand = null);
 
         /// <summary>
         /// Get a document.
@@ -214,7 +214,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of ApiResponse (Document)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Document>> GetContentmanagementDocumentAsyncWithHttpInfo (string documentId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Document>> GetDocumentsDocumentIdAsyncWithHttpInfo (string documentId, string expand = null);
         
         /// <summary>
         /// Update a document.
@@ -227,7 +227,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Expand some document fields</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>Document</returns>
-        Document PostContentmanagementDocument (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null);
+        Document PostDocumentsDocumentId (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null);
   
         /// <summary>
         /// Update a document.
@@ -240,7 +240,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Expand some document fields</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>ApiResponse of Document</returns>
-        ApiResponse<Document> PostContentmanagementDocumentWithHttpInfo (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null);
+        ApiResponse<Document> PostDocumentsDocumentIdWithHttpInfo (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null);
 
         /// <summary>
         /// Update a document.
@@ -253,7 +253,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Expand some document fields</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>Task of Document</returns>
-        System.Threading.Tasks.Task<Document> PostContentmanagementDocumentAsync (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null);
+        System.Threading.Tasks.Task<Document> PostDocumentsDocumentIdAsync (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null);
 
         /// <summary>
         /// Update a document.
@@ -266,7 +266,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Expand some document fields</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>Task of ApiResponse (Document)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Document>> PostContentmanagementDocumentAsyncWithHttpInfo (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null);
+        System.Threading.Tasks.Task<ApiResponse<Document>> PostDocumentsDocumentIdAsyncWithHttpInfo (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null);
         
         /// <summary>
         /// Delete a document.
@@ -277,7 +277,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns></returns>
-        void DeleteContentmanagementDocument (string documentId, bool? _override = null);
+        void DeleteDocumentsDocumentId (string documentId, bool? _override = null);
   
         /// <summary>
         /// Delete a document.
@@ -288,7 +288,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteContentmanagementDocumentWithHttpInfo (string documentId, bool? _override = null);
+        ApiResponse<Object> DeleteDocumentsDocumentIdWithHttpInfo (string documentId, bool? _override = null);
 
         /// <summary>
         /// Delete a document.
@@ -299,7 +299,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteContentmanagementDocumentAsync (string documentId, bool? _override = null);
+        System.Threading.Tasks.Task DeleteDocumentsDocumentIdAsync (string documentId, bool? _override = null);
 
         /// <summary>
         /// Delete a document.
@@ -310,7 +310,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementDocumentAsyncWithHttpInfo (string documentId, bool? _override = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteDocumentsDocumentIdAsyncWithHttpInfo (string documentId, bool? _override = null);
         
         /// <summary>
         /// Get a list of audits for a document.
@@ -326,7 +326,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>DocumentAuditEntityListing</returns>
-        DocumentAuditEntityListing GetContentmanagementDocumentAudits (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null);
+        DocumentAuditEntityListing GetDocumentsDocumentIdAudits (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null);
   
         /// <summary>
         /// Get a list of audits for a document.
@@ -342,7 +342,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>ApiResponse of DocumentAuditEntityListing</returns>
-        ApiResponse<DocumentAuditEntityListing> GetContentmanagementDocumentAuditsWithHttpInfo (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null);
+        ApiResponse<DocumentAuditEntityListing> GetDocumentsDocumentIdAuditsWithHttpInfo (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get a list of audits for a document.
@@ -358,7 +358,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of DocumentAuditEntityListing</returns>
-        System.Threading.Tasks.Task<DocumentAuditEntityListing> GetContentmanagementDocumentAuditsAsync (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<DocumentAuditEntityListing> GetDocumentsDocumentIdAuditsAsync (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get a list of audits for a document.
@@ -374,7 +374,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ApiResponse (DocumentAuditEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentAuditEntityListing>> GetContentmanagementDocumentAuditsAsyncWithHttpInfo (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<DocumentAuditEntityListing>> GetDocumentsDocumentIdAuditsAsyncWithHttpInfo (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null);
         
         /// <summary>
         /// Download a document.
@@ -386,7 +386,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment.</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
         /// <returns></returns>
-        void GetContentmanagementDocumentContent (string documentId, string disposition = null, string contentType = null);
+        void GetDocumentsDocumentIdContent (string documentId, string disposition = null, string contentType = null);
   
         /// <summary>
         /// Download a document.
@@ -398,7 +398,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment.</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetContentmanagementDocumentContentWithHttpInfo (string documentId, string disposition = null, string contentType = null);
+        ApiResponse<Object> GetDocumentsDocumentIdContentWithHttpInfo (string documentId, string disposition = null, string contentType = null);
 
         /// <summary>
         /// Download a document.
@@ -410,7 +410,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment.</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetContentmanagementDocumentContentAsync (string documentId, string disposition = null, string contentType = null);
+        System.Threading.Tasks.Task GetDocumentsDocumentIdContentAsync (string documentId, string disposition = null, string contentType = null);
 
         /// <summary>
         /// Download a document.
@@ -422,7 +422,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment.</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetContentmanagementDocumentContentAsyncWithHttpInfo (string documentId, string disposition = null, string contentType = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetDocumentsDocumentIdContentAsyncWithHttpInfo (string documentId, string disposition = null, string contentType = null);
         
         /// <summary>
         /// Replace the contents of a document.
@@ -434,7 +434,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Replace Request</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>ReplaceResponse</returns>
-        ReplaceResponse PostContentmanagementDocumentContent (string documentId, ReplaceRequest body = null, bool? _override = null);
+        ReplaceResponse PostDocumentsDocumentIdContent (string documentId, ReplaceRequest body = null, bool? _override = null);
   
         /// <summary>
         /// Replace the contents of a document.
@@ -446,7 +446,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Replace Request</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>ApiResponse of ReplaceResponse</returns>
-        ApiResponse<ReplaceResponse> PostContentmanagementDocumentContentWithHttpInfo (string documentId, ReplaceRequest body = null, bool? _override = null);
+        ApiResponse<ReplaceResponse> PostDocumentsDocumentIdContentWithHttpInfo (string documentId, ReplaceRequest body = null, bool? _override = null);
 
         /// <summary>
         /// Replace the contents of a document.
@@ -458,7 +458,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Replace Request</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>Task of ReplaceResponse</returns>
-        System.Threading.Tasks.Task<ReplaceResponse> PostContentmanagementDocumentContentAsync (string documentId, ReplaceRequest body = null, bool? _override = null);
+        System.Threading.Tasks.Task<ReplaceResponse> PostDocumentsDocumentIdContentAsync (string documentId, ReplaceRequest body = null, bool? _override = null);
 
         /// <summary>
         /// Replace the contents of a document.
@@ -470,7 +470,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Replace Request</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>Task of ApiResponse (ReplaceResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReplaceResponse>> PostContentmanagementDocumentContentAsyncWithHttpInfo (string documentId, ReplaceRequest body = null, bool? _override = null);
+        System.Threading.Tasks.Task<ApiResponse<ReplaceResponse>> PostDocumentsDocumentIdContentAsyncWithHttpInfo (string documentId, ReplaceRequest body = null, bool? _override = null);
         
         /// <summary>
         /// Query content
@@ -485,7 +485,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">ascending or descending</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>QueryResults</returns>
-        QueryResults GetContentmanagementQuery (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null);
+        QueryResults GetQuery (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null);
   
         /// <summary>
         /// Query content
@@ -500,7 +500,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">ascending or descending</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>ApiResponse of QueryResults</returns>
-        ApiResponse<QueryResults> GetContentmanagementQueryWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null);
+        ApiResponse<QueryResults> GetQueryWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null);
 
         /// <summary>
         /// Query content
@@ -515,7 +515,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">ascending or descending</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of QueryResults</returns>
-        System.Threading.Tasks.Task<QueryResults> GetContentmanagementQueryAsync (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null);
+        System.Threading.Tasks.Task<QueryResults> GetQueryAsync (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null);
 
         /// <summary>
         /// Query content
@@ -530,7 +530,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">ascending or descending</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of ApiResponse (QueryResults)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueryResults>> GetContentmanagementQueryAsyncWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<QueryResults>> GetQueryAsyncWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null);
         
         /// <summary>
         /// Query content
@@ -541,7 +541,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>QueryResults</returns>
-        QueryResults PostContentmanagementQuery (QueryRequest body, string expand = null);
+        QueryResults PostQuery (QueryRequest body, string expand = null);
   
         /// <summary>
         /// Query content
@@ -552,7 +552,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>ApiResponse of QueryResults</returns>
-        ApiResponse<QueryResults> PostContentmanagementQueryWithHttpInfo (QueryRequest body, string expand = null);
+        ApiResponse<QueryResults> PostQueryWithHttpInfo (QueryRequest body, string expand = null);
 
         /// <summary>
         /// Query content
@@ -563,7 +563,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of QueryResults</returns>
-        System.Threading.Tasks.Task<QueryResults> PostContentmanagementQueryAsync (QueryRequest body, string expand = null);
+        System.Threading.Tasks.Task<QueryResults> PostQueryAsync (QueryRequest body, string expand = null);
 
         /// <summary>
         /// Query content
@@ -574,7 +574,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of ApiResponse (QueryResults)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueryResults>> PostContentmanagementQueryAsyncWithHttpInfo (QueryRequest body, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<QueryResults>> PostQueryAsyncWithHttpInfo (QueryRequest body, string expand = null);
         
         /// <summary>
         /// Get a List of Security Profiles
@@ -583,7 +583,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>SecurityProfileEntityListing</returns>
-        SecurityProfileEntityListing GetContentmanagementSecurityprofiles ();
+        SecurityProfileEntityListing GetSecurityprofiles ();
   
         /// <summary>
         /// Get a List of Security Profiles
@@ -592,7 +592,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>ApiResponse of SecurityProfileEntityListing</returns>
-        ApiResponse<SecurityProfileEntityListing> GetContentmanagementSecurityprofilesWithHttpInfo ();
+        ApiResponse<SecurityProfileEntityListing> GetSecurityprofilesWithHttpInfo ();
 
         /// <summary>
         /// Get a List of Security Profiles
@@ -601,7 +601,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of SecurityProfileEntityListing</returns>
-        System.Threading.Tasks.Task<SecurityProfileEntityListing> GetContentmanagementSecurityprofilesAsync ();
+        System.Threading.Tasks.Task<SecurityProfileEntityListing> GetSecurityprofilesAsync ();
 
         /// <summary>
         /// Get a List of Security Profiles
@@ -610,7 +610,7 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <returns>Task of ApiResponse (SecurityProfileEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SecurityProfileEntityListing>> GetContentmanagementSecurityprofilesAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<SecurityProfileEntityListing>> GetSecurityprofilesAsyncWithHttpInfo ();
         
         /// <summary>
         /// Get a Security Profile
@@ -620,7 +620,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="securityProfileId">Security Profile Id</param>
         /// <returns>SecurityProfile</returns>
-        SecurityProfile GetContentmanagementSecurityprofile (string securityProfileId);
+        SecurityProfile GetSecurityprofilesSecurityprofileId (string securityProfileId);
   
         /// <summary>
         /// Get a Security Profile
@@ -630,7 +630,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="securityProfileId">Security Profile Id</param>
         /// <returns>ApiResponse of SecurityProfile</returns>
-        ApiResponse<SecurityProfile> GetContentmanagementSecurityprofileWithHttpInfo (string securityProfileId);
+        ApiResponse<SecurityProfile> GetSecurityprofilesSecurityprofileIdWithHttpInfo (string securityProfileId);
 
         /// <summary>
         /// Get a Security Profile
@@ -640,7 +640,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="securityProfileId">Security Profile Id</param>
         /// <returns>Task of SecurityProfile</returns>
-        System.Threading.Tasks.Task<SecurityProfile> GetContentmanagementSecurityprofileAsync (string securityProfileId);
+        System.Threading.Tasks.Task<SecurityProfile> GetSecurityprofilesSecurityprofileIdAsync (string securityProfileId);
 
         /// <summary>
         /// Get a Security Profile
@@ -650,7 +650,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="securityProfileId">Security Profile Id</param>
         /// <returns>Task of ApiResponse (SecurityProfile)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SecurityProfile>> GetContentmanagementSecurityprofileAsyncWithHttpInfo (string securityProfileId);
+        System.Threading.Tasks.Task<ApiResponse<SecurityProfile>> GetSecurityprofilesSecurityprofileIdAsyncWithHttpInfo (string securityProfileId);
         
         /// <summary>
         /// Get shared documents. Securely download a shared document.
@@ -664,7 +664,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns></returns>
-        void GetContentmanagementShared (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
+        void GetSharedSharedId (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
   
         /// <summary>
         /// Get shared documents. Securely download a shared document.
@@ -678,7 +678,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetContentmanagementSharedWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
+        ApiResponse<Object> GetSharedSharedIdWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
 
         /// <summary>
         /// Get shared documents. Securely download a shared document.
@@ -692,7 +692,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetContentmanagementSharedAsync (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
+        System.Threading.Tasks.Task GetSharedSharedIdAsync (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
 
         /// <summary>
         /// Get shared documents. Securely download a shared document.
@@ -706,7 +706,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetContentmanagementSharedAsyncWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetSharedSharedIdAsyncWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null);
         
         /// <summary>
         /// Gets a list of shares.  You must specify at least one filter (e.g. entityId).
@@ -719,7 +719,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>ShareEntityListing</returns>
-        ShareEntityListing GetContentmanagementShares (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null);
+        ShareEntityListing GetShares (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null);
   
         /// <summary>
         /// Gets a list of shares.  You must specify at least one filter (e.g. entityId).
@@ -732,7 +732,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>ApiResponse of ShareEntityListing</returns>
-        ApiResponse<ShareEntityListing> GetContentmanagementSharesWithHttpInfo (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null);
+        ApiResponse<ShareEntityListing> GetSharesWithHttpInfo (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Gets a list of shares.  You must specify at least one filter (e.g. entityId).
@@ -745,7 +745,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ShareEntityListing</returns>
-        System.Threading.Tasks.Task<ShareEntityListing> GetContentmanagementSharesAsync (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ShareEntityListing> GetSharesAsync (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Gets a list of shares.  You must specify at least one filter (e.g. entityId).
@@ -758,7 +758,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (ShareEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ShareEntityListing>> GetContentmanagementSharesAsyncWithHttpInfo (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<ShareEntityListing>> GetSharesAsyncWithHttpInfo (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
         /// Creates a new share or updates an existing share if the entity has already been shared
@@ -768,7 +768,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
         /// <returns>CreateShareResponse</returns>
-        CreateShareResponse PostContentmanagementShares (CreateShareRequest body = null);
+        CreateShareResponse PostShares (CreateShareRequest body = null);
   
         /// <summary>
         /// Creates a new share or updates an existing share if the entity has already been shared
@@ -778,7 +778,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
         /// <returns>ApiResponse of CreateShareResponse</returns>
-        ApiResponse<CreateShareResponse> PostContentmanagementSharesWithHttpInfo (CreateShareRequest body = null);
+        ApiResponse<CreateShareResponse> PostSharesWithHttpInfo (CreateShareRequest body = null);
 
         /// <summary>
         /// Creates a new share or updates an existing share if the entity has already been shared
@@ -788,7 +788,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
         /// <returns>Task of CreateShareResponse</returns>
-        System.Threading.Tasks.Task<CreateShareResponse> PostContentmanagementSharesAsync (CreateShareRequest body = null);
+        System.Threading.Tasks.Task<CreateShareResponse> PostSharesAsync (CreateShareRequest body = null);
 
         /// <summary>
         /// Creates a new share or updates an existing share if the entity has already been shared
@@ -798,7 +798,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
         /// <returns>Task of ApiResponse (CreateShareResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CreateShareResponse>> PostContentmanagementSharesAsyncWithHttpInfo (CreateShareRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<CreateShareResponse>> PostSharesAsyncWithHttpInfo (CreateShareRequest body = null);
         
         /// <summary>
         /// Retrieve details about an existing share.
@@ -809,7 +809,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="shareId">Share ID</param>
         /// <param name="expand">Expand share fields</param>
         /// <returns>Share</returns>
-        Share GetContentmanagementShare (string shareId, string expand = null);
+        Share GetSharesShareId (string shareId, string expand = null);
   
         /// <summary>
         /// Retrieve details about an existing share.
@@ -820,7 +820,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="shareId">Share ID</param>
         /// <param name="expand">Expand share fields</param>
         /// <returns>ApiResponse of Share</returns>
-        ApiResponse<Share> GetContentmanagementShareWithHttpInfo (string shareId, string expand = null);
+        ApiResponse<Share> GetSharesShareIdWithHttpInfo (string shareId, string expand = null);
 
         /// <summary>
         /// Retrieve details about an existing share.
@@ -831,7 +831,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="shareId">Share ID</param>
         /// <param name="expand">Expand share fields</param>
         /// <returns>Task of Share</returns>
-        System.Threading.Tasks.Task<Share> GetContentmanagementShareAsync (string shareId, string expand = null);
+        System.Threading.Tasks.Task<Share> GetSharesShareIdAsync (string shareId, string expand = null);
 
         /// <summary>
         /// Retrieve details about an existing share.
@@ -842,7 +842,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="shareId">Share ID</param>
         /// <param name="expand">Expand share fields</param>
         /// <returns>Task of ApiResponse (Share)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Share>> GetContentmanagementShareAsyncWithHttpInfo (string shareId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Share>> GetSharesShareIdAsyncWithHttpInfo (string shareId, string expand = null);
         
         /// <summary>
         /// Deletes an existing share.
@@ -852,7 +852,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="shareId">Share ID</param>
         /// <returns></returns>
-        void DeleteContentmanagementShare (string shareId);
+        void DeleteSharesShareId (string shareId);
   
         /// <summary>
         /// Deletes an existing share.
@@ -862,7 +862,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="shareId">Share ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteContentmanagementShareWithHttpInfo (string shareId);
+        ApiResponse<Object> DeleteSharesShareIdWithHttpInfo (string shareId);
 
         /// <summary>
         /// Deletes an existing share.
@@ -872,7 +872,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="shareId">Share ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteContentmanagementShareAsync (string shareId);
+        System.Threading.Tasks.Task DeleteSharesShareIdAsync (string shareId);
 
         /// <summary>
         /// Deletes an existing share.
@@ -882,7 +882,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="shareId">Share ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementShareAsyncWithHttpInfo (string shareId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSharesShareIdAsyncWithHttpInfo (string shareId);
         
         /// <summary>
         /// Get a list of statuses for pending operations
@@ -893,7 +893,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>CommandStatusEntityListing</returns>
-        CommandStatusEntityListing GetContentmanagementStatus (int? pageSize = null, int? pageNumber = null);
+        CommandStatusEntityListing GetStatus (int? pageSize = null, int? pageNumber = null);
   
         /// <summary>
         /// Get a list of statuses for pending operations
@@ -904,7 +904,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>ApiResponse of CommandStatusEntityListing</returns>
-        ApiResponse<CommandStatusEntityListing> GetContentmanagementStatusWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        ApiResponse<CommandStatusEntityListing> GetStatusWithHttpInfo (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get a list of statuses for pending operations
@@ -915,7 +915,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of CommandStatusEntityListing</returns>
-        System.Threading.Tasks.Task<CommandStatusEntityListing> GetContentmanagementStatusAsync (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<CommandStatusEntityListing> GetStatusAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get a list of statuses for pending operations
@@ -926,7 +926,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (CommandStatusEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommandStatusEntityListing>> GetContentmanagementStatusAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<CommandStatusEntityListing>> GetStatusAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
         /// Get a status.
@@ -936,7 +936,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="statusId">Status ID</param>
         /// <returns>CommandStatus</returns>
-        CommandStatus GetContentmanagementStatu (string statusId);
+        CommandStatus GetStatusStatusId (string statusId);
   
         /// <summary>
         /// Get a status.
@@ -946,7 +946,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="statusId">Status ID</param>
         /// <returns>ApiResponse of CommandStatus</returns>
-        ApiResponse<CommandStatus> GetContentmanagementStatuWithHttpInfo (string statusId);
+        ApiResponse<CommandStatus> GetStatusStatusIdWithHttpInfo (string statusId);
 
         /// <summary>
         /// Get a status.
@@ -956,7 +956,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="statusId">Status ID</param>
         /// <returns>Task of CommandStatus</returns>
-        System.Threading.Tasks.Task<CommandStatus> GetContentmanagementStatuAsync (string statusId);
+        System.Threading.Tasks.Task<CommandStatus> GetStatusStatusIdAsync (string statusId);
 
         /// <summary>
         /// Get a status.
@@ -966,7 +966,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="statusId">Status ID</param>
         /// <returns>Task of ApiResponse (CommandStatus)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CommandStatus>> GetContentmanagementStatuAsyncWithHttpInfo (string statusId);
+        System.Threading.Tasks.Task<ApiResponse<CommandStatus>> GetStatusStatusIdAsyncWithHttpInfo (string statusId);
         
         /// <summary>
         /// Cancel the command for this status
@@ -976,7 +976,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="statusId">Status ID</param>
         /// <returns></returns>
-        void DeleteContentmanagementStatu (string statusId);
+        void DeleteStatusStatusId (string statusId);
   
         /// <summary>
         /// Cancel the command for this status
@@ -986,7 +986,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="statusId">Status ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteContentmanagementStatuWithHttpInfo (string statusId);
+        ApiResponse<Object> DeleteStatusStatusIdWithHttpInfo (string statusId);
 
         /// <summary>
         /// Cancel the command for this status
@@ -996,7 +996,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="statusId">Status ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteContentmanagementStatuAsync (string statusId);
+        System.Threading.Tasks.Task DeleteStatusStatusIdAsync (string statusId);
 
         /// <summary>
         /// Cancel the command for this status
@@ -1006,7 +1006,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="statusId">Status ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementStatuAsyncWithHttpInfo (string statusId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteStatusStatusIdAsyncWithHttpInfo (string statusId);
         
         /// <summary>
         /// Get a list of workspaces.
@@ -1019,7 +1019,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="access">Requested access level</param>
         /// <param name="expand">Expand some workspace fields</param>
         /// <returns>WorkspaceEntityListing</returns>
-        WorkspaceEntityListing GetContentmanagementWorkspaces (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null);
+        WorkspaceEntityListing GetWorkspaces (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null);
   
         /// <summary>
         /// Get a list of workspaces.
@@ -1032,7 +1032,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="access">Requested access level</param>
         /// <param name="expand">Expand some workspace fields</param>
         /// <returns>ApiResponse of WorkspaceEntityListing</returns>
-        ApiResponse<WorkspaceEntityListing> GetContentmanagementWorkspacesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null);
+        ApiResponse<WorkspaceEntityListing> GetWorkspacesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null);
 
         /// <summary>
         /// Get a list of workspaces.
@@ -1045,7 +1045,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="access">Requested access level</param>
         /// <param name="expand">Expand some workspace fields</param>
         /// <returns>Task of WorkspaceEntityListing</returns>
-        System.Threading.Tasks.Task<WorkspaceEntityListing> GetContentmanagementWorkspacesAsync (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null);
+        System.Threading.Tasks.Task<WorkspaceEntityListing> GetWorkspacesAsync (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null);
 
         /// <summary>
         /// Get a list of workspaces.
@@ -1058,7 +1058,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="access">Requested access level</param>
         /// <param name="expand">Expand some workspace fields</param>
         /// <returns>Task of ApiResponse (WorkspaceEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WorkspaceEntityListing>> GetContentmanagementWorkspacesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<WorkspaceEntityListing>> GetWorkspacesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null);
         
         /// <summary>
         /// Create a group workspace
@@ -1068,7 +1068,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Workspace</param>
         /// <returns>Workspace</returns>
-        Workspace PostContentmanagementWorkspaces (WorkspaceCreate body = null);
+        Workspace PostWorkspaces (WorkspaceCreate body = null);
   
         /// <summary>
         /// Create a group workspace
@@ -1078,7 +1078,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Workspace</param>
         /// <returns>ApiResponse of Workspace</returns>
-        ApiResponse<Workspace> PostContentmanagementWorkspacesWithHttpInfo (WorkspaceCreate body = null);
+        ApiResponse<Workspace> PostWorkspacesWithHttpInfo (WorkspaceCreate body = null);
 
         /// <summary>
         /// Create a group workspace
@@ -1088,7 +1088,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Workspace</param>
         /// <returns>Task of Workspace</returns>
-        System.Threading.Tasks.Task<Workspace> PostContentmanagementWorkspacesAsync (WorkspaceCreate body = null);
+        System.Threading.Tasks.Task<Workspace> PostWorkspacesAsync (WorkspaceCreate body = null);
 
         /// <summary>
         /// Create a group workspace
@@ -1098,7 +1098,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Workspace>> PostContentmanagementWorkspacesAsyncWithHttpInfo (WorkspaceCreate body = null);
+        System.Threading.Tasks.Task<ApiResponse<Workspace>> PostWorkspacesAsyncWithHttpInfo (WorkspaceCreate body = null);
         
         /// <summary>
         /// Get a workspace.
@@ -1109,7 +1109,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="expand">Expand some workspace fields</param>
         /// <returns>Workspace</returns>
-        Workspace GetContentmanagementWorkspace (string workspaceId, string expand = null);
+        Workspace GetWorkspacesWorkspaceId (string workspaceId, string expand = null);
   
         /// <summary>
         /// Get a workspace.
@@ -1120,7 +1120,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="expand">Expand some workspace fields</param>
         /// <returns>ApiResponse of Workspace</returns>
-        ApiResponse<Workspace> GetContentmanagementWorkspaceWithHttpInfo (string workspaceId, string expand = null);
+        ApiResponse<Workspace> GetWorkspacesWorkspaceIdWithHttpInfo (string workspaceId, string expand = null);
 
         /// <summary>
         /// Get a workspace.
@@ -1131,7 +1131,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="expand">Expand some workspace fields</param>
         /// <returns>Task of Workspace</returns>
-        System.Threading.Tasks.Task<Workspace> GetContentmanagementWorkspaceAsync (string workspaceId, string expand = null);
+        System.Threading.Tasks.Task<Workspace> GetWorkspacesWorkspaceIdAsync (string workspaceId, string expand = null);
 
         /// <summary>
         /// Get a workspace.
@@ -1142,7 +1142,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="expand">Expand some workspace fields</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Workspace>> GetContentmanagementWorkspaceAsyncWithHttpInfo (string workspaceId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Workspace>> GetWorkspacesWorkspaceIdAsyncWithHttpInfo (string workspaceId, string expand = null);
         
         /// <summary>
         /// Update a workspace
@@ -1153,7 +1153,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Workspace</returns>
-        Workspace PutContentmanagementWorkspace (string workspaceId, Workspace body = null);
+        Workspace PutWorkspacesWorkspaceId (string workspaceId, Workspace body = null);
   
         /// <summary>
         /// Update a workspace
@@ -1164,7 +1164,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>ApiResponse of Workspace</returns>
-        ApiResponse<Workspace> PutContentmanagementWorkspaceWithHttpInfo (string workspaceId, Workspace body = null);
+        ApiResponse<Workspace> PutWorkspacesWorkspaceIdWithHttpInfo (string workspaceId, Workspace body = null);
 
         /// <summary>
         /// Update a workspace
@@ -1175,7 +1175,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Task of Workspace</returns>
-        System.Threading.Tasks.Task<Workspace> PutContentmanagementWorkspaceAsync (string workspaceId, Workspace body = null);
+        System.Threading.Tasks.Task<Workspace> PutWorkspacesWorkspaceIdAsync (string workspaceId, Workspace body = null);
 
         /// <summary>
         /// Update a workspace
@@ -1186,7 +1186,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Workspace>> PutContentmanagementWorkspaceAsyncWithHttpInfo (string workspaceId, Workspace body = null);
+        System.Threading.Tasks.Task<ApiResponse<Workspace>> PutWorkspacesWorkspaceIdAsyncWithHttpInfo (string workspaceId, Workspace body = null);
         
         /// <summary>
         /// Delete a workspace
@@ -1197,7 +1197,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace.</param>
         /// <returns></returns>
-        void DeleteContentmanagementWorkspace (string workspaceId, string moveChildrenToWorkspaceId = null);
+        void DeleteWorkspacesWorkspaceId (string workspaceId, string moveChildrenToWorkspaceId = null);
   
         /// <summary>
         /// Delete a workspace
@@ -1208,7 +1208,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteContentmanagementWorkspaceWithHttpInfo (string workspaceId, string moveChildrenToWorkspaceId = null);
+        ApiResponse<Object> DeleteWorkspacesWorkspaceIdWithHttpInfo (string workspaceId, string moveChildrenToWorkspaceId = null);
 
         /// <summary>
         /// Delete a workspace
@@ -1219,7 +1219,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteContentmanagementWorkspaceAsync (string workspaceId, string moveChildrenToWorkspaceId = null);
+        System.Threading.Tasks.Task DeleteWorkspacesWorkspaceIdAsync (string workspaceId, string moveChildrenToWorkspaceId = null);
 
         /// <summary>
         /// Delete a workspace
@@ -1230,7 +1230,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementWorkspaceAsyncWithHttpInfo (string workspaceId, string moveChildrenToWorkspaceId = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkspacesWorkspaceIdAsyncWithHttpInfo (string workspaceId, string moveChildrenToWorkspaceId = null);
         
         /// <summary>
         /// Get a list workspace members
@@ -1243,7 +1243,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">Expand workspace member fields</param>
         /// <returns>WorkspaceMemberEntityListing</returns>
-        WorkspaceMemberEntityListing GetContentmanagementWorkspaceMembers (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null);
+        WorkspaceMemberEntityListing GetWorkspacesWorkspaceIdMembers (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null);
   
         /// <summary>
         /// Get a list workspace members
@@ -1256,7 +1256,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">Expand workspace member fields</param>
         /// <returns>ApiResponse of WorkspaceMemberEntityListing</returns>
-        ApiResponse<WorkspaceMemberEntityListing> GetContentmanagementWorkspaceMembersWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null);
+        ApiResponse<WorkspaceMemberEntityListing> GetWorkspacesWorkspaceIdMembersWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null);
 
         /// <summary>
         /// Get a list workspace members
@@ -1269,7 +1269,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">Expand workspace member fields</param>
         /// <returns>Task of WorkspaceMemberEntityListing</returns>
-        System.Threading.Tasks.Task<WorkspaceMemberEntityListing> GetContentmanagementWorkspaceMembersAsync (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null);
+        System.Threading.Tasks.Task<WorkspaceMemberEntityListing> GetWorkspacesWorkspaceIdMembersAsync (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null);
 
         /// <summary>
         /// Get a list workspace members
@@ -1282,7 +1282,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">Expand workspace member fields</param>
         /// <returns>Task of ApiResponse (WorkspaceMemberEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WorkspaceMemberEntityListing>> GetContentmanagementWorkspaceMembersAsyncWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<WorkspaceMemberEntityListing>> GetWorkspacesWorkspaceIdMembersAsyncWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null);
         
         /// <summary>
         /// Get a workspace member
@@ -1294,7 +1294,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="expand">Expand workspace member fields</param>
         /// <returns>WorkspaceMember</returns>
-        WorkspaceMember GetContentmanagementWorkspaceMember (string workspaceId, string memberId, string expand = null);
+        WorkspaceMember GetWorkspacesWorkspaceIdMembersMemberId (string workspaceId, string memberId, string expand = null);
   
         /// <summary>
         /// Get a workspace member
@@ -1306,7 +1306,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="expand">Expand workspace member fields</param>
         /// <returns>ApiResponse of WorkspaceMember</returns>
-        ApiResponse<WorkspaceMember> GetContentmanagementWorkspaceMemberWithHttpInfo (string workspaceId, string memberId, string expand = null);
+        ApiResponse<WorkspaceMember> GetWorkspacesWorkspaceIdMembersMemberIdWithHttpInfo (string workspaceId, string memberId, string expand = null);
 
         /// <summary>
         /// Get a workspace member
@@ -1318,7 +1318,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="expand">Expand workspace member fields</param>
         /// <returns>Task of WorkspaceMember</returns>
-        System.Threading.Tasks.Task<WorkspaceMember> GetContentmanagementWorkspaceMemberAsync (string workspaceId, string memberId, string expand = null);
+        System.Threading.Tasks.Task<WorkspaceMember> GetWorkspacesWorkspaceIdMembersMemberIdAsync (string workspaceId, string memberId, string expand = null);
 
         /// <summary>
         /// Get a workspace member
@@ -1330,7 +1330,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="expand">Expand workspace member fields</param>
         /// <returns>Task of ApiResponse (WorkspaceMember)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> GetContentmanagementWorkspaceMemberAsyncWithHttpInfo (string workspaceId, string memberId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> GetWorkspacesWorkspaceIdMembersMemberIdAsyncWithHttpInfo (string workspaceId, string memberId, string expand = null);
         
         /// <summary>
         /// Add a member to a workspace
@@ -1342,7 +1342,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>WorkspaceMember</returns>
-        WorkspaceMember PutContentmanagementWorkspaceMember (string workspaceId, string memberId, WorkspaceMember body = null);
+        WorkspaceMember PutWorkspacesWorkspaceIdMembersMemberId (string workspaceId, string memberId, WorkspaceMember body = null);
   
         /// <summary>
         /// Add a member to a workspace
@@ -1354,7 +1354,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>ApiResponse of WorkspaceMember</returns>
-        ApiResponse<WorkspaceMember> PutContentmanagementWorkspaceMemberWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body = null);
+        ApiResponse<WorkspaceMember> PutWorkspacesWorkspaceIdMembersMemberIdWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body = null);
 
         /// <summary>
         /// Add a member to a workspace
@@ -1366,7 +1366,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Task of WorkspaceMember</returns>
-        System.Threading.Tasks.Task<WorkspaceMember> PutContentmanagementWorkspaceMemberAsync (string workspaceId, string memberId, WorkspaceMember body = null);
+        System.Threading.Tasks.Task<WorkspaceMember> PutWorkspacesWorkspaceIdMembersMemberIdAsync (string workspaceId, string memberId, WorkspaceMember body = null);
 
         /// <summary>
         /// Add a member to a workspace
@@ -1378,7 +1378,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (WorkspaceMember)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> PutContentmanagementWorkspaceMemberAsyncWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body = null);
+        System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> PutWorkspacesWorkspaceIdMembersMemberIdAsyncWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body = null);
         
         /// <summary>
         /// Delete a member from a workspace
@@ -1389,7 +1389,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns></returns>
-        void DeleteContentmanagementWorkspaceMember (string workspaceId, string memberId);
+        void DeleteWorkspacesWorkspaceIdMembersMemberId (string workspaceId, string memberId);
   
         /// <summary>
         /// Delete a member from a workspace
@@ -1400,7 +1400,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteContentmanagementWorkspaceMemberWithHttpInfo (string workspaceId, string memberId);
+        ApiResponse<Object> DeleteWorkspacesWorkspaceIdMembersMemberIdWithHttpInfo (string workspaceId, string memberId);
 
         /// <summary>
         /// Delete a member from a workspace
@@ -1411,7 +1411,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteContentmanagementWorkspaceMemberAsync (string workspaceId, string memberId);
+        System.Threading.Tasks.Task DeleteWorkspacesWorkspaceIdMembersMemberIdAsync (string workspaceId, string memberId);
 
         /// <summary>
         /// Delete a member from a workspace
@@ -1422,7 +1422,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementWorkspaceMemberAsyncWithHttpInfo (string workspaceId, string memberId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkspacesWorkspaceIdMembersMemberIdAsyncWithHttpInfo (string workspaceId, string memberId);
         
         /// <summary>
         /// Get a list of workspace tags
@@ -1436,7 +1436,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>TagValueEntityListing</returns>
-        TagValueEntityListing GetContentmanagementWorkspaceTagvalues (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null);
+        TagValueEntityListing GetWorkspacesWorkspaceIdTagvalues (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null);
   
         /// <summary>
         /// Get a list of workspace tags
@@ -1450,7 +1450,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>ApiResponse of TagValueEntityListing</returns>
-        ApiResponse<TagValueEntityListing> GetContentmanagementWorkspaceTagvaluesWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null);
+        ApiResponse<TagValueEntityListing> GetWorkspacesWorkspaceIdTagvaluesWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null);
 
         /// <summary>
         /// Get a list of workspace tags
@@ -1464,7 +1464,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of TagValueEntityListing</returns>
-        System.Threading.Tasks.Task<TagValueEntityListing> GetContentmanagementWorkspaceTagvaluesAsync (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null);
+        System.Threading.Tasks.Task<TagValueEntityListing> GetWorkspacesWorkspaceIdTagvaluesAsync (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null);
 
         /// <summary>
         /// Get a list of workspace tags
@@ -1478,7 +1478,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of ApiResponse (TagValueEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> GetContentmanagementWorkspaceTagvaluesAsyncWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> GetWorkspacesWorkspaceIdTagvaluesAsyncWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null);
         
         /// <summary>
         /// Create a workspace tag
@@ -1489,7 +1489,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">tag</param>
         /// <returns>TagValue</returns>
-        TagValue PostContentmanagementWorkspaceTagvalues (string workspaceId, TagValue body = null);
+        TagValue PostWorkspacesWorkspaceIdTagvalues (string workspaceId, TagValue body = null);
   
         /// <summary>
         /// Create a workspace tag
@@ -1500,7 +1500,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">tag</param>
         /// <returns>ApiResponse of TagValue</returns>
-        ApiResponse<TagValue> PostContentmanagementWorkspaceTagvaluesWithHttpInfo (string workspaceId, TagValue body = null);
+        ApiResponse<TagValue> PostWorkspacesWorkspaceIdTagvaluesWithHttpInfo (string workspaceId, TagValue body = null);
 
         /// <summary>
         /// Create a workspace tag
@@ -1511,7 +1511,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">tag</param>
         /// <returns>Task of TagValue</returns>
-        System.Threading.Tasks.Task<TagValue> PostContentmanagementWorkspaceTagvaluesAsync (string workspaceId, TagValue body = null);
+        System.Threading.Tasks.Task<TagValue> PostWorkspacesWorkspaceIdTagvaluesAsync (string workspaceId, TagValue body = null);
 
         /// <summary>
         /// Create a workspace tag
@@ -1522,7 +1522,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">tag</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TagValue>> PostContentmanagementWorkspaceTagvaluesAsyncWithHttpInfo (string workspaceId, TagValue body = null);
+        System.Threading.Tasks.Task<ApiResponse<TagValue>> PostWorkspacesWorkspaceIdTagvaluesAsyncWithHttpInfo (string workspaceId, TagValue body = null);
         
         /// <summary>
         /// Perform a prefix query on tags in the workspace
@@ -1534,7 +1534,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>TagValueEntityListing</returns>
-        TagValueEntityListing PostContentmanagementWorkspaceTagvaluesQuery (string workspaceId, TagQueryRequest body = null, string expand = null);
+        TagValueEntityListing PostWorkspacesWorkspaceIdTagvaluesQuery (string workspaceId, TagQueryRequest body = null, string expand = null);
   
         /// <summary>
         /// Perform a prefix query on tags in the workspace
@@ -1546,7 +1546,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>ApiResponse of TagValueEntityListing</returns>
-        ApiResponse<TagValueEntityListing> PostContentmanagementWorkspaceTagvaluesQueryWithHttpInfo (string workspaceId, TagQueryRequest body = null, string expand = null);
+        ApiResponse<TagValueEntityListing> PostWorkspacesWorkspaceIdTagvaluesQueryWithHttpInfo (string workspaceId, TagQueryRequest body = null, string expand = null);
 
         /// <summary>
         /// Perform a prefix query on tags in the workspace
@@ -1558,7 +1558,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of TagValueEntityListing</returns>
-        System.Threading.Tasks.Task<TagValueEntityListing> PostContentmanagementWorkspaceTagvaluesQueryAsync (string workspaceId, TagQueryRequest body = null, string expand = null);
+        System.Threading.Tasks.Task<TagValueEntityListing> PostWorkspacesWorkspaceIdTagvaluesQueryAsync (string workspaceId, TagQueryRequest body = null, string expand = null);
 
         /// <summary>
         /// Perform a prefix query on tags in the workspace
@@ -1570,7 +1570,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of ApiResponse (TagValueEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> PostContentmanagementWorkspaceTagvaluesQueryAsyncWithHttpInfo (string workspaceId, TagQueryRequest body = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> PostWorkspacesWorkspaceIdTagvaluesQueryAsyncWithHttpInfo (string workspaceId, TagQueryRequest body = null, string expand = null);
         
         /// <summary>
         /// Get a workspace tag
@@ -1582,7 +1582,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>TagValue</returns>
-        TagValue GetContentmanagementWorkspaceTagvalue (string workspaceId, string tagId, string expand = null);
+        TagValue GetWorkspacesWorkspaceIdTagvaluesTagId (string workspaceId, string tagId, string expand = null);
   
         /// <summary>
         /// Get a workspace tag
@@ -1594,7 +1594,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>ApiResponse of TagValue</returns>
-        ApiResponse<TagValue> GetContentmanagementWorkspaceTagvalueWithHttpInfo (string workspaceId, string tagId, string expand = null);
+        ApiResponse<TagValue> GetWorkspacesWorkspaceIdTagvaluesTagIdWithHttpInfo (string workspaceId, string tagId, string expand = null);
 
         /// <summary>
         /// Get a workspace tag
@@ -1606,7 +1606,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of TagValue</returns>
-        System.Threading.Tasks.Task<TagValue> GetContentmanagementWorkspaceTagvalueAsync (string workspaceId, string tagId, string expand = null);
+        System.Threading.Tasks.Task<TagValue> GetWorkspacesWorkspaceIdTagvaluesTagIdAsync (string workspaceId, string tagId, string expand = null);
 
         /// <summary>
         /// Get a workspace tag
@@ -1618,7 +1618,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TagValue>> GetContentmanagementWorkspaceTagvalueAsyncWithHttpInfo (string workspaceId, string tagId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<TagValue>> GetWorkspacesWorkspaceIdTagvaluesTagIdAsyncWithHttpInfo (string workspaceId, string tagId, string expand = null);
         
         /// <summary>
         /// Update a workspace tag. Will update all documents with the new tag value.
@@ -1630,7 +1630,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>TagValue</returns>
-        TagValue PutContentmanagementWorkspaceTagvalue (string workspaceId, string tagId, TagValue body = null);
+        TagValue PutWorkspacesWorkspaceIdTagvaluesTagId (string workspaceId, string tagId, TagValue body = null);
   
         /// <summary>
         /// Update a workspace tag. Will update all documents with the new tag value.
@@ -1642,7 +1642,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>ApiResponse of TagValue</returns>
-        ApiResponse<TagValue> PutContentmanagementWorkspaceTagvalueWithHttpInfo (string workspaceId, string tagId, TagValue body = null);
+        ApiResponse<TagValue> PutWorkspacesWorkspaceIdTagvaluesTagIdWithHttpInfo (string workspaceId, string tagId, TagValue body = null);
 
         /// <summary>
         /// Update a workspace tag. Will update all documents with the new tag value.
@@ -1654,7 +1654,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Task of TagValue</returns>
-        System.Threading.Tasks.Task<TagValue> PutContentmanagementWorkspaceTagvalueAsync (string workspaceId, string tagId, TagValue body = null);
+        System.Threading.Tasks.Task<TagValue> PutWorkspacesWorkspaceIdTagvaluesTagIdAsync (string workspaceId, string tagId, TagValue body = null);
 
         /// <summary>
         /// Update a workspace tag. Will update all documents with the new tag value.
@@ -1666,7 +1666,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TagValue>> PutContentmanagementWorkspaceTagvalueAsyncWithHttpInfo (string workspaceId, string tagId, TagValue body = null);
+        System.Threading.Tasks.Task<ApiResponse<TagValue>> PutWorkspacesWorkspaceIdTagvaluesTagIdAsyncWithHttpInfo (string workspaceId, string tagId, TagValue body = null);
         
         /// <summary>
         /// Delete workspace tag
@@ -1677,7 +1677,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
         /// <returns></returns>
-        void DeleteContentmanagementWorkspaceTagvalue (string workspaceId, string tagId);
+        void DeleteWorkspacesWorkspaceIdTagvaluesTagId (string workspaceId, string tagId);
   
         /// <summary>
         /// Delete workspace tag
@@ -1688,7 +1688,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteContentmanagementWorkspaceTagvalueWithHttpInfo (string workspaceId, string tagId);
+        ApiResponse<Object> DeleteWorkspacesWorkspaceIdTagvaluesTagIdWithHttpInfo (string workspaceId, string tagId);
 
         /// <summary>
         /// Delete workspace tag
@@ -1699,7 +1699,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteContentmanagementWorkspaceTagvalueAsync (string workspaceId, string tagId);
+        System.Threading.Tasks.Task DeleteWorkspacesWorkspaceIdTagvaluesTagIdAsync (string workspaceId, string tagId);
 
         /// <summary>
         /// Delete workspace tag
@@ -1710,7 +1710,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementWorkspaceTagvalueAsyncWithHttpInfo (string workspaceId, string tagId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkspacesWorkspaceIdTagvaluesTagIdAsyncWithHttpInfo (string workspaceId, string tagId);
         
     }
   
@@ -1795,9 +1795,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Allows for a filtered query returning facet information</param> 
         /// <returns>QueryResults</returns>
-        public QueryResults PostContentmanagementAuditquery (ContentQueryRequest body)
+        public QueryResults PostAuditquery (ContentQueryRequest body)
         {
-             ApiResponse<QueryResults> response = PostContentmanagementAuditqueryWithHttpInfo(body);
+             ApiResponse<QueryResults> response = PostAuditqueryWithHttpInfo(body);
              return response.Data;
         }
 
@@ -1806,12 +1806,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Allows for a filtered query returning facet information</param> 
         /// <returns>ApiResponse of QueryResults</returns>
-        public ApiResponse< QueryResults > PostContentmanagementAuditqueryWithHttpInfo (ContentQueryRequest body)
+        public ApiResponse< QueryResults > PostAuditqueryWithHttpInfo (ContentQueryRequest body)
         {
             
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostContentmanagementAuditquery");
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostAuditquery");
             
     
             var path_ = "/api/v1/contentmanagement/auditquery";
@@ -1870,9 +1870,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementAuditquery: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostAuditquery: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementAuditquery: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostAuditquery: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<QueryResults>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1885,9 +1885,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <returns>Task of QueryResults</returns>
-        public async System.Threading.Tasks.Task<QueryResults> PostContentmanagementAuditqueryAsync (ContentQueryRequest body)
+        public async System.Threading.Tasks.Task<QueryResults> PostAuditqueryAsync (ContentQueryRequest body)
         {
-             ApiResponse<QueryResults> response = await PostContentmanagementAuditqueryAsyncWithHttpInfo(body);
+             ApiResponse<QueryResults> response = await PostAuditqueryAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -1897,10 +1897,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <returns>Task of ApiResponse (QueryResults)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueryResults>> PostContentmanagementAuditqueryAsyncWithHttpInfo (ContentQueryRequest body)
+        public async System.Threading.Tasks.Task<ApiResponse<QueryResults>> PostAuditqueryAsyncWithHttpInfo (ContentQueryRequest body)
         {
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PostContentmanagementAuditquery");
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PostAuditquery");
             
     
             var path_ = "/api/v1/contentmanagement/auditquery";
@@ -1954,9 +1954,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementAuditquery: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostAuditquery: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementAuditquery: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostAuditquery: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<QueryResults>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1975,9 +1975,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">name or dateCreated</param> 
         /// <param name="sortOrder">ascending or descending</param> 
         /// <returns>DocumentEntityListing</returns>
-        public DocumentEntityListing GetContentmanagementDocuments (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        public DocumentEntityListing GetDocuments (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<DocumentEntityListing> response = GetContentmanagementDocumentsWithHttpInfo(workspaceId, name, expand, pageSize, pageNumber, sortBy, sortOrder);
+             ApiResponse<DocumentEntityListing> response = GetDocumentsWithHttpInfo(workspaceId, name, expand, pageSize, pageNumber, sortBy, sortOrder);
              return response.Data;
         }
 
@@ -1992,12 +1992,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">name or dateCreated</param> 
         /// <param name="sortOrder">ascending or descending</param> 
         /// <returns>ApiResponse of DocumentEntityListing</returns>
-        public ApiResponse< DocumentEntityListing > GetContentmanagementDocumentsWithHttpInfo (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        public ApiResponse< DocumentEntityListing > GetDocumentsWithHttpInfo (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
             
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
-                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetContentmanagementDocuments");
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetDocuments");
             
     
             var path_ = "/api/v1/contentmanagement/documents";
@@ -2056,9 +2056,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementDocuments: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetDocuments: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementDocuments: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetDocuments: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DocumentEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2077,9 +2077,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">name or dateCreated</param>
         /// <param name="sortOrder">ascending or descending</param>
         /// <returns>Task of DocumentEntityListing</returns>
-        public async System.Threading.Tasks.Task<DocumentEntityListing> GetContentmanagementDocumentsAsync (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<DocumentEntityListing> GetDocumentsAsync (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<DocumentEntityListing> response = await GetContentmanagementDocumentsAsyncWithHttpInfo(workspaceId, name, expand, pageSize, pageNumber, sortBy, sortOrder);
+             ApiResponse<DocumentEntityListing> response = await GetDocumentsAsyncWithHttpInfo(workspaceId, name, expand, pageSize, pageNumber, sortBy, sortOrder);
              return response.Data;
 
         }
@@ -2095,10 +2095,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">name or dateCreated</param>
         /// <param name="sortOrder">ascending or descending</param>
         /// <returns>Task of ApiResponse (DocumentEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DocumentEntityListing>> GetContentmanagementDocumentsAsyncWithHttpInfo (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentEntityListing>> GetDocumentsAsyncWithHttpInfo (string workspaceId, string name = null, string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetContentmanagementDocuments");
+            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetDocuments");
             
     
             var path_ = "/api/v1/contentmanagement/documents";
@@ -2158,9 +2158,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementDocuments: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetDocuments: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementDocuments: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetDocuments: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DocumentEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2176,9 +2176,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source.</param> 
         /// <param name="_override">Override any lock on the source document</param> 
         /// <returns>Document</returns>
-        public Document PostContentmanagementDocuments (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null)
+        public Document PostDocuments (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null)
         {
-             ApiResponse<Document> response = PostContentmanagementDocumentsWithHttpInfo(body, copySource, moveSource, _override);
+             ApiResponse<Document> response = PostDocumentsWithHttpInfo(body, copySource, moveSource, _override);
              return response.Data;
         }
 
@@ -2190,7 +2190,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source.</param> 
         /// <param name="_override">Override any lock on the source document</param> 
         /// <returns>ApiResponse of Document</returns>
-        public ApiResponse< Document > PostContentmanagementDocumentsWithHttpInfo (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null)
+        public ApiResponse< Document > PostDocumentsWithHttpInfo (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null)
         {
             
     
@@ -2253,9 +2253,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementDocuments: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostDocuments: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementDocuments: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostDocuments: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Document>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2271,9 +2271,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source.</param>
         /// <param name="_override">Override any lock on the source document</param>
         /// <returns>Task of Document</returns>
-        public async System.Threading.Tasks.Task<Document> PostContentmanagementDocumentsAsync (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null)
+        public async System.Threading.Tasks.Task<Document> PostDocumentsAsync (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null)
         {
-             ApiResponse<Document> response = await PostContentmanagementDocumentsAsyncWithHttpInfo(body, copySource, moveSource, _override);
+             ApiResponse<Document> response = await PostDocumentsAsyncWithHttpInfo(body, copySource, moveSource, _override);
              return response.Data;
 
         }
@@ -2286,7 +2286,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="moveSource">Move a document to a new workspace. Provide a document ID as the move source.</param>
         /// <param name="_override">Override any lock on the source document</param>
         /// <returns>Task of ApiResponse (Document)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Document>> PostContentmanagementDocumentsAsyncWithHttpInfo (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Document>> PostDocumentsAsyncWithHttpInfo (DocumentUpload body = null, string copySource = null, string moveSource = null, bool? _override = null)
         {
             
     
@@ -2344,9 +2344,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementDocuments: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostDocuments: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementDocuments: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostDocuments: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Document>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2360,9 +2360,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param> 
         /// <param name="expand">Expand some document fields</param> 
         /// <returns>Document</returns>
-        public Document GetContentmanagementDocument (string documentId, string expand = null)
+        public Document GetDocumentsDocumentId (string documentId, string expand = null)
         {
-             ApiResponse<Document> response = GetContentmanagementDocumentWithHttpInfo(documentId, expand);
+             ApiResponse<Document> response = GetDocumentsDocumentIdWithHttpInfo(documentId, expand);
              return response.Data;
         }
 
@@ -2372,12 +2372,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param> 
         /// <param name="expand">Expand some document fields</param> 
         /// <returns>ApiResponse of Document</returns>
-        public ApiResponse< Document > GetContentmanagementDocumentWithHttpInfo (string documentId, string expand = null)
+        public ApiResponse< Document > GetDocumentsDocumentIdWithHttpInfo (string documentId, string expand = null)
         {
             
             // verify the required parameter 'documentId' is set
             if (documentId == null)
-                throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->GetContentmanagementDocument");
+                throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->GetDocumentsDocumentId");
             
     
             var path_ = "/api/v1/contentmanagement/documents/{documentId}";
@@ -2431,9 +2431,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementDocument: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetDocumentsDocumentId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementDocument: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetDocumentsDocumentId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Document>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2447,9 +2447,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of Document</returns>
-        public async System.Threading.Tasks.Task<Document> GetContentmanagementDocumentAsync (string documentId, string expand = null)
+        public async System.Threading.Tasks.Task<Document> GetDocumentsDocumentIdAsync (string documentId, string expand = null)
         {
-             ApiResponse<Document> response = await GetContentmanagementDocumentAsyncWithHttpInfo(documentId, expand);
+             ApiResponse<Document> response = await GetDocumentsDocumentIdAsyncWithHttpInfo(documentId, expand);
              return response.Data;
 
         }
@@ -2460,10 +2460,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of ApiResponse (Document)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Document>> GetContentmanagementDocumentAsyncWithHttpInfo (string documentId, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Document>> GetDocumentsDocumentIdAsyncWithHttpInfo (string documentId, string expand = null)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetContentmanagementDocument");
+            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetDocumentsDocumentId");
             
     
             var path_ = "/api/v1/contentmanagement/documents/{documentId}";
@@ -2518,9 +2518,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementDocument: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetDocumentsDocumentId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementDocument: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetDocumentsDocumentId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Document>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2536,9 +2536,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Expand some document fields</param> 
         /// <param name="_override">Override any lock on the document</param> 
         /// <returns>Document</returns>
-        public Document PostContentmanagementDocument (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null)
+        public Document PostDocumentsDocumentId (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null)
         {
-             ApiResponse<Document> response = PostContentmanagementDocumentWithHttpInfo(documentId, body, expand, _override);
+             ApiResponse<Document> response = PostDocumentsDocumentIdWithHttpInfo(documentId, body, expand, _override);
              return response.Data;
         }
 
@@ -2550,12 +2550,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Expand some document fields</param> 
         /// <param name="_override">Override any lock on the document</param> 
         /// <returns>ApiResponse of Document</returns>
-        public ApiResponse< Document > PostContentmanagementDocumentWithHttpInfo (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null)
+        public ApiResponse< Document > PostDocumentsDocumentIdWithHttpInfo (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null)
         {
             
             // verify the required parameter 'documentId' is set
             if (documentId == null)
-                throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->PostContentmanagementDocument");
+                throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->PostDocumentsDocumentId");
             
     
             var path_ = "/api/v1/contentmanagement/documents/{documentId}";
@@ -2617,9 +2617,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementDocument: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostDocumentsDocumentId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementDocument: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostDocumentsDocumentId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Document>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2635,9 +2635,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Expand some document fields</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>Task of Document</returns>
-        public async System.Threading.Tasks.Task<Document> PostContentmanagementDocumentAsync (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null)
+        public async System.Threading.Tasks.Task<Document> PostDocumentsDocumentIdAsync (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null)
         {
-             ApiResponse<Document> response = await PostContentmanagementDocumentAsyncWithHttpInfo(documentId, body, expand, _override);
+             ApiResponse<Document> response = await PostDocumentsDocumentIdAsyncWithHttpInfo(documentId, body, expand, _override);
              return response.Data;
 
         }
@@ -2650,10 +2650,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="expand">Expand some document fields</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>Task of ApiResponse (Document)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Document>> PostContentmanagementDocumentAsyncWithHttpInfo (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Document>> PostDocumentsDocumentIdAsyncWithHttpInfo (string documentId, DocumentUpdate body = null, string expand = null, bool? _override = null)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling PostContentmanagementDocument");
+            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling PostDocumentsDocumentId");
             
     
             var path_ = "/api/v1/contentmanagement/documents/{documentId}";
@@ -2710,9 +2710,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementDocument: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostDocumentsDocumentId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementDocument: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostDocumentsDocumentId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Document>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2726,9 +2726,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param> 
         /// <param name="_override">Override any lock on the document</param> 
         /// <returns></returns>
-        public void DeleteContentmanagementDocument (string documentId, bool? _override = null)
+        public void DeleteDocumentsDocumentId (string documentId, bool? _override = null)
         {
-             DeleteContentmanagementDocumentWithHttpInfo(documentId, _override);
+             DeleteDocumentsDocumentIdWithHttpInfo(documentId, _override);
         }
 
         /// <summary>
@@ -2737,12 +2737,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param> 
         /// <param name="_override">Override any lock on the document</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteContentmanagementDocumentWithHttpInfo (string documentId, bool? _override = null)
+        public ApiResponse<Object> DeleteDocumentsDocumentIdWithHttpInfo (string documentId, bool? _override = null)
         {
             
             // verify the required parameter 'documentId' is set
             if (documentId == null)
-                throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->DeleteContentmanagementDocument");
+                throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->DeleteDocumentsDocumentId");
             
     
             var path_ = "/api/v1/contentmanagement/documents/{documentId}";
@@ -2796,9 +2796,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteContentmanagementDocument: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteDocumentsDocumentId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteContentmanagementDocument: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteDocumentsDocumentId: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -2812,9 +2812,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteContentmanagementDocumentAsync (string documentId, bool? _override = null)
+        public async System.Threading.Tasks.Task DeleteDocumentsDocumentIdAsync (string documentId, bool? _override = null)
         {
-             await DeleteContentmanagementDocumentAsyncWithHttpInfo(documentId, _override);
+             await DeleteDocumentsDocumentIdAsyncWithHttpInfo(documentId, _override);
 
         }
 
@@ -2824,10 +2824,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="documentId">Document ID</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementDocumentAsyncWithHttpInfo (string documentId, bool? _override = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteDocumentsDocumentIdAsyncWithHttpInfo (string documentId, bool? _override = null)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling DeleteContentmanagementDocument");
+            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling DeleteDocumentsDocumentId");
             
     
             var path_ = "/api/v1/contentmanagement/documents/{documentId}";
@@ -2882,9 +2882,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteContentmanagementDocument: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteDocumentsDocumentId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteContentmanagementDocument: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteDocumentsDocumentId: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -2903,9 +2903,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param> 
         /// <param name="sortOrder">Sort order</param> 
         /// <returns>DocumentAuditEntityListing</returns>
-        public DocumentAuditEntityListing GetContentmanagementDocumentAudits (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null)
+        public DocumentAuditEntityListing GetDocumentsDocumentIdAudits (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<DocumentAuditEntityListing> response = GetContentmanagementDocumentAuditsWithHttpInfo(documentId, pageSize, pageNumber, transactionFilter, level, sortBy, sortOrder);
+             ApiResponse<DocumentAuditEntityListing> response = GetDocumentsDocumentIdAuditsWithHttpInfo(documentId, pageSize, pageNumber, transactionFilter, level, sortBy, sortOrder);
              return response.Data;
         }
 
@@ -2920,12 +2920,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param> 
         /// <param name="sortOrder">Sort order</param> 
         /// <returns>ApiResponse of DocumentAuditEntityListing</returns>
-        public ApiResponse< DocumentAuditEntityListing > GetContentmanagementDocumentAuditsWithHttpInfo (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null)
+        public ApiResponse< DocumentAuditEntityListing > GetDocumentsDocumentIdAuditsWithHttpInfo (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null)
         {
             
             // verify the required parameter 'documentId' is set
             if (documentId == null)
-                throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->GetContentmanagementDocumentAudits");
+                throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->GetDocumentsDocumentIdAudits");
             
     
             var path_ = "/api/v1/contentmanagement/documents/{documentId}/audits";
@@ -2984,9 +2984,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementDocumentAudits: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetDocumentsDocumentIdAudits: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementDocumentAudits: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetDocumentsDocumentIdAudits: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DocumentAuditEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3005,9 +3005,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of DocumentAuditEntityListing</returns>
-        public async System.Threading.Tasks.Task<DocumentAuditEntityListing> GetContentmanagementDocumentAuditsAsync (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<DocumentAuditEntityListing> GetDocumentsDocumentIdAuditsAsync (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<DocumentAuditEntityListing> response = await GetContentmanagementDocumentAuditsAsyncWithHttpInfo(documentId, pageSize, pageNumber, transactionFilter, level, sortBy, sortOrder);
+             ApiResponse<DocumentAuditEntityListing> response = await GetDocumentsDocumentIdAuditsAsyncWithHttpInfo(documentId, pageSize, pageNumber, transactionFilter, level, sortBy, sortOrder);
              return response.Data;
 
         }
@@ -3023,10 +3023,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortBy">Sort by</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ApiResponse (DocumentAuditEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DocumentAuditEntityListing>> GetContentmanagementDocumentAuditsAsyncWithHttpInfo (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentAuditEntityListing>> GetDocumentsDocumentIdAuditsAsyncWithHttpInfo (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetContentmanagementDocumentAudits");
+            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetDocumentsDocumentIdAudits");
             
     
             var path_ = "/api/v1/contentmanagement/documents/{documentId}/audits";
@@ -3086,9 +3086,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementDocumentAudits: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetDocumentsDocumentIdAudits: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementDocumentAudits: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetDocumentsDocumentIdAudits: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DocumentAuditEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3103,9 +3103,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment.</param> 
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param> 
         /// <returns></returns>
-        public void GetContentmanagementDocumentContent (string documentId, string disposition = null, string contentType = null)
+        public void GetDocumentsDocumentIdContent (string documentId, string disposition = null, string contentType = null)
         {
-             GetContentmanagementDocumentContentWithHttpInfo(documentId, disposition, contentType);
+             GetDocumentsDocumentIdContentWithHttpInfo(documentId, disposition, contentType);
         }
 
         /// <summary>
@@ -3115,12 +3115,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment.</param> 
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetContentmanagementDocumentContentWithHttpInfo (string documentId, string disposition = null, string contentType = null)
+        public ApiResponse<Object> GetDocumentsDocumentIdContentWithHttpInfo (string documentId, string disposition = null, string contentType = null)
         {
             
             // verify the required parameter 'documentId' is set
             if (documentId == null)
-                throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->GetContentmanagementDocumentContent");
+                throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->GetDocumentsDocumentIdContent");
             
     
             var path_ = "/api/v1/contentmanagement/documents/{documentId}/content";
@@ -3175,9 +3175,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementDocumentContent: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetDocumentsDocumentIdContent: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementDocumentContent: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetDocumentsDocumentIdContent: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -3192,9 +3192,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment.</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetContentmanagementDocumentContentAsync (string documentId, string disposition = null, string contentType = null)
+        public async System.Threading.Tasks.Task GetDocumentsDocumentIdContentAsync (string documentId, string disposition = null, string contentType = null)
         {
-             await GetContentmanagementDocumentContentAsyncWithHttpInfo(documentId, disposition, contentType);
+             await GetDocumentsDocumentIdContentAsyncWithHttpInfo(documentId, disposition, contentType);
 
         }
 
@@ -3205,10 +3205,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="disposition">Request how the content will be downloaded: attached as a file or inline. Default is attachment.</param>
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetContentmanagementDocumentContentAsyncWithHttpInfo (string documentId, string disposition = null, string contentType = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetDocumentsDocumentIdContentAsyncWithHttpInfo (string documentId, string disposition = null, string contentType = null)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetContentmanagementDocumentContent");
+            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetDocumentsDocumentIdContent");
             
     
             var path_ = "/api/v1/contentmanagement/documents/{documentId}/content";
@@ -3264,9 +3264,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementDocumentContent: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetDocumentsDocumentIdContent: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementDocumentContent: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetDocumentsDocumentIdContent: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -3281,9 +3281,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Replace Request</param> 
         /// <param name="_override">Override any lock on the document</param> 
         /// <returns>ReplaceResponse</returns>
-        public ReplaceResponse PostContentmanagementDocumentContent (string documentId, ReplaceRequest body = null, bool? _override = null)
+        public ReplaceResponse PostDocumentsDocumentIdContent (string documentId, ReplaceRequest body = null, bool? _override = null)
         {
-             ApiResponse<ReplaceResponse> response = PostContentmanagementDocumentContentWithHttpInfo(documentId, body, _override);
+             ApiResponse<ReplaceResponse> response = PostDocumentsDocumentIdContentWithHttpInfo(documentId, body, _override);
              return response.Data;
         }
 
@@ -3294,12 +3294,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Replace Request</param> 
         /// <param name="_override">Override any lock on the document</param> 
         /// <returns>ApiResponse of ReplaceResponse</returns>
-        public ApiResponse< ReplaceResponse > PostContentmanagementDocumentContentWithHttpInfo (string documentId, ReplaceRequest body = null, bool? _override = null)
+        public ApiResponse< ReplaceResponse > PostDocumentsDocumentIdContentWithHttpInfo (string documentId, ReplaceRequest body = null, bool? _override = null)
         {
             
             // verify the required parameter 'documentId' is set
             if (documentId == null)
-                throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->PostContentmanagementDocumentContent");
+                throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->PostDocumentsDocumentIdContent");
             
     
             var path_ = "/api/v1/contentmanagement/documents/{documentId}/content";
@@ -3360,9 +3360,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementDocumentContent: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostDocumentsDocumentIdContent: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementDocumentContent: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostDocumentsDocumentIdContent: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ReplaceResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3377,9 +3377,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Replace Request</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>Task of ReplaceResponse</returns>
-        public async System.Threading.Tasks.Task<ReplaceResponse> PostContentmanagementDocumentContentAsync (string documentId, ReplaceRequest body = null, bool? _override = null)
+        public async System.Threading.Tasks.Task<ReplaceResponse> PostDocumentsDocumentIdContentAsync (string documentId, ReplaceRequest body = null, bool? _override = null)
         {
-             ApiResponse<ReplaceResponse> response = await PostContentmanagementDocumentContentAsyncWithHttpInfo(documentId, body, _override);
+             ApiResponse<ReplaceResponse> response = await PostDocumentsDocumentIdContentAsyncWithHttpInfo(documentId, body, _override);
              return response.Data;
 
         }
@@ -3391,10 +3391,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Replace Request</param>
         /// <param name="_override">Override any lock on the document</param>
         /// <returns>Task of ApiResponse (ReplaceResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ReplaceResponse>> PostContentmanagementDocumentContentAsyncWithHttpInfo (string documentId, ReplaceRequest body = null, bool? _override = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ReplaceResponse>> PostDocumentsDocumentIdContentAsyncWithHttpInfo (string documentId, ReplaceRequest body = null, bool? _override = null)
         {
             // verify the required parameter 'documentId' is set
-            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling PostContentmanagementDocumentContent");
+            if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling PostDocumentsDocumentIdContent");
             
     
             var path_ = "/api/v1/contentmanagement/documents/{documentId}/content";
@@ -3450,9 +3450,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementDocumentContent: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostDocumentsDocumentIdContent: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementDocumentContent: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostDocumentsDocumentIdContent: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ReplaceResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3470,9 +3470,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">ascending or descending</param> 
         /// <param name="expand">Expand some document fields</param> 
         /// <returns>QueryResults</returns>
-        public QueryResults GetContentmanagementQuery (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null)
+        public QueryResults GetQuery (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null)
         {
-             ApiResponse<QueryResults> response = GetContentmanagementQueryWithHttpInfo(queryPhrase, pageSize, pageNumber, sortBy, sortOrder, expand);
+             ApiResponse<QueryResults> response = GetQueryWithHttpInfo(queryPhrase, pageSize, pageNumber, sortBy, sortOrder, expand);
              return response.Data;
         }
 
@@ -3486,12 +3486,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">ascending or descending</param> 
         /// <param name="expand">Expand some document fields</param> 
         /// <returns>ApiResponse of QueryResults</returns>
-        public ApiResponse< QueryResults > GetContentmanagementQueryWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null)
+        public ApiResponse< QueryResults > GetQueryWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null)
         {
             
             // verify the required parameter 'queryPhrase' is set
             if (queryPhrase == null)
-                throw new ApiException(400, "Missing required parameter 'queryPhrase' when calling ContentManagementApi->GetContentmanagementQuery");
+                throw new ApiException(400, "Missing required parameter 'queryPhrase' when calling ContentManagementApi->GetQuery");
             
     
             var path_ = "/api/v1/contentmanagement/query";
@@ -3549,9 +3549,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementQuery: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetQuery: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementQuery: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetQuery: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<QueryResults>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3569,9 +3569,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">ascending or descending</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of QueryResults</returns>
-        public async System.Threading.Tasks.Task<QueryResults> GetContentmanagementQueryAsync (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null)
+        public async System.Threading.Tasks.Task<QueryResults> GetQueryAsync (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null)
         {
-             ApiResponse<QueryResults> response = await GetContentmanagementQueryAsyncWithHttpInfo(queryPhrase, pageSize, pageNumber, sortBy, sortOrder, expand);
+             ApiResponse<QueryResults> response = await GetQueryAsyncWithHttpInfo(queryPhrase, pageSize, pageNumber, sortBy, sortOrder, expand);
              return response.Data;
 
         }
@@ -3586,10 +3586,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="sortOrder">ascending or descending</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of ApiResponse (QueryResults)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueryResults>> GetContentmanagementQueryAsyncWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<QueryResults>> GetQueryAsyncWithHttpInfo (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string expand = null)
         {
             // verify the required parameter 'queryPhrase' is set
-            if (queryPhrase == null) throw new ApiException(400, "Missing required parameter 'queryPhrase' when calling GetContentmanagementQuery");
+            if (queryPhrase == null) throw new ApiException(400, "Missing required parameter 'queryPhrase' when calling GetQuery");
             
     
             var path_ = "/api/v1/contentmanagement/query";
@@ -3648,9 +3648,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementQuery: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetQuery: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementQuery: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetQuery: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<QueryResults>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3664,9 +3664,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Allows for a filtered query returning facet information</param> 
         /// <param name="expand">Expand some document fields</param> 
         /// <returns>QueryResults</returns>
-        public QueryResults PostContentmanagementQuery (QueryRequest body, string expand = null)
+        public QueryResults PostQuery (QueryRequest body, string expand = null)
         {
-             ApiResponse<QueryResults> response = PostContentmanagementQueryWithHttpInfo(body, expand);
+             ApiResponse<QueryResults> response = PostQueryWithHttpInfo(body, expand);
              return response.Data;
         }
 
@@ -3676,12 +3676,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Allows for a filtered query returning facet information</param> 
         /// <param name="expand">Expand some document fields</param> 
         /// <returns>ApiResponse of QueryResults</returns>
-        public ApiResponse< QueryResults > PostContentmanagementQueryWithHttpInfo (QueryRequest body, string expand = null)
+        public ApiResponse< QueryResults > PostQueryWithHttpInfo (QueryRequest body, string expand = null)
         {
             
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostContentmanagementQuery");
+                throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostQuery");
             
     
             var path_ = "/api/v1/contentmanagement/query";
@@ -3741,9 +3741,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementQuery: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostQuery: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementQuery: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostQuery: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<QueryResults>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3757,9 +3757,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of QueryResults</returns>
-        public async System.Threading.Tasks.Task<QueryResults> PostContentmanagementQueryAsync (QueryRequest body, string expand = null)
+        public async System.Threading.Tasks.Task<QueryResults> PostQueryAsync (QueryRequest body, string expand = null)
         {
-             ApiResponse<QueryResults> response = await PostContentmanagementQueryAsyncWithHttpInfo(body, expand);
+             ApiResponse<QueryResults> response = await PostQueryAsyncWithHttpInfo(body, expand);
              return response.Data;
 
         }
@@ -3770,10 +3770,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">Allows for a filtered query returning facet information</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of ApiResponse (QueryResults)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueryResults>> PostContentmanagementQueryAsyncWithHttpInfo (QueryRequest body, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<QueryResults>> PostQueryAsyncWithHttpInfo (QueryRequest body, string expand = null)
         {
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PostContentmanagementQuery");
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PostQuery");
             
     
             var path_ = "/api/v1/contentmanagement/query";
@@ -3828,9 +3828,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementQuery: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostQuery: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementQuery: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostQuery: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<QueryResults>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3842,9 +3842,9 @@ namespace ININ.PureCloudApi.Api
         /// Get a List of Security Profiles 
         /// </summary>
         /// <returns>SecurityProfileEntityListing</returns>
-        public SecurityProfileEntityListing GetContentmanagementSecurityprofiles ()
+        public SecurityProfileEntityListing GetSecurityprofiles ()
         {
-             ApiResponse<SecurityProfileEntityListing> response = GetContentmanagementSecurityprofilesWithHttpInfo();
+             ApiResponse<SecurityProfileEntityListing> response = GetSecurityprofilesWithHttpInfo();
              return response.Data;
         }
 
@@ -3852,7 +3852,7 @@ namespace ININ.PureCloudApi.Api
         /// Get a List of Security Profiles 
         /// </summary>
         /// <returns>ApiResponse of SecurityProfileEntityListing</returns>
-        public ApiResponse< SecurityProfileEntityListing > GetContentmanagementSecurityprofilesWithHttpInfo ()
+        public ApiResponse< SecurityProfileEntityListing > GetSecurityprofilesWithHttpInfo ()
         {
             
     
@@ -3905,9 +3905,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementSecurityprofiles: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSecurityprofiles: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementSecurityprofiles: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSecurityprofiles: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<SecurityProfileEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3919,9 +3919,9 @@ namespace ININ.PureCloudApi.Api
         /// Get a List of Security Profiles 
         /// </summary>
         /// <returns>Task of SecurityProfileEntityListing</returns>
-        public async System.Threading.Tasks.Task<SecurityProfileEntityListing> GetContentmanagementSecurityprofilesAsync ()
+        public async System.Threading.Tasks.Task<SecurityProfileEntityListing> GetSecurityprofilesAsync ()
         {
-             ApiResponse<SecurityProfileEntityListing> response = await GetContentmanagementSecurityprofilesAsyncWithHttpInfo();
+             ApiResponse<SecurityProfileEntityListing> response = await GetSecurityprofilesAsyncWithHttpInfo();
              return response.Data;
 
         }
@@ -3930,7 +3930,7 @@ namespace ININ.PureCloudApi.Api
         /// Get a List of Security Profiles 
         /// </summary>
         /// <returns>Task of ApiResponse (SecurityProfileEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SecurityProfileEntityListing>> GetContentmanagementSecurityprofilesAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityProfileEntityListing>> GetSecurityprofilesAsyncWithHttpInfo ()
         {
             
     
@@ -3984,9 +3984,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementSecurityprofiles: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSecurityprofiles: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementSecurityprofiles: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSecurityprofiles: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<SecurityProfileEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3999,9 +3999,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="securityProfileId">Security Profile Id</param> 
         /// <returns>SecurityProfile</returns>
-        public SecurityProfile GetContentmanagementSecurityprofile (string securityProfileId)
+        public SecurityProfile GetSecurityprofilesSecurityprofileId (string securityProfileId)
         {
-             ApiResponse<SecurityProfile> response = GetContentmanagementSecurityprofileWithHttpInfo(securityProfileId);
+             ApiResponse<SecurityProfile> response = GetSecurityprofilesSecurityprofileIdWithHttpInfo(securityProfileId);
              return response.Data;
         }
 
@@ -4010,12 +4010,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="securityProfileId">Security Profile Id</param> 
         /// <returns>ApiResponse of SecurityProfile</returns>
-        public ApiResponse< SecurityProfile > GetContentmanagementSecurityprofileWithHttpInfo (string securityProfileId)
+        public ApiResponse< SecurityProfile > GetSecurityprofilesSecurityprofileIdWithHttpInfo (string securityProfileId)
         {
             
             // verify the required parameter 'securityProfileId' is set
             if (securityProfileId == null)
-                throw new ApiException(400, "Missing required parameter 'securityProfileId' when calling ContentManagementApi->GetContentmanagementSecurityprofile");
+                throw new ApiException(400, "Missing required parameter 'securityProfileId' when calling ContentManagementApi->GetSecurityprofilesSecurityprofileId");
             
     
             var path_ = "/api/v1/contentmanagement/securityprofiles/{securityProfileId}";
@@ -4068,9 +4068,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementSecurityprofile: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSecurityprofilesSecurityprofileId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementSecurityprofile: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSecurityprofilesSecurityprofileId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<SecurityProfile>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4083,9 +4083,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="securityProfileId">Security Profile Id</param>
         /// <returns>Task of SecurityProfile</returns>
-        public async System.Threading.Tasks.Task<SecurityProfile> GetContentmanagementSecurityprofileAsync (string securityProfileId)
+        public async System.Threading.Tasks.Task<SecurityProfile> GetSecurityprofilesSecurityprofileIdAsync (string securityProfileId)
         {
-             ApiResponse<SecurityProfile> response = await GetContentmanagementSecurityprofileAsyncWithHttpInfo(securityProfileId);
+             ApiResponse<SecurityProfile> response = await GetSecurityprofilesSecurityprofileIdAsyncWithHttpInfo(securityProfileId);
              return response.Data;
 
         }
@@ -4095,10 +4095,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="securityProfileId">Security Profile Id</param>
         /// <returns>Task of ApiResponse (SecurityProfile)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SecurityProfile>> GetContentmanagementSecurityprofileAsyncWithHttpInfo (string securityProfileId)
+        public async System.Threading.Tasks.Task<ApiResponse<SecurityProfile>> GetSecurityprofilesSecurityprofileIdAsyncWithHttpInfo (string securityProfileId)
         {
             // verify the required parameter 'securityProfileId' is set
-            if (securityProfileId == null) throw new ApiException(400, "Missing required parameter 'securityProfileId' when calling GetContentmanagementSecurityprofile");
+            if (securityProfileId == null) throw new ApiException(400, "Missing required parameter 'securityProfileId' when calling GetSecurityprofilesSecurityprofileId");
             
     
             var path_ = "/api/v1/contentmanagement/securityprofiles/{securityProfileId}";
@@ -4152,9 +4152,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementSecurityprofile: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSecurityprofilesSecurityprofileId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementSecurityprofile: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSecurityprofilesSecurityprofileId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<SecurityProfile>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4171,9 +4171,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param> 
         /// <param name="expand">Expand some document fields</param> 
         /// <returns></returns>
-        public void GetContentmanagementShared (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
+        public void GetSharedSharedId (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
         {
-             GetContentmanagementSharedWithHttpInfo(sharedId, redirect, disposition, contentType, expand);
+             GetSharedSharedIdWithHttpInfo(sharedId, redirect, disposition, contentType, expand);
         }
 
         /// <summary>
@@ -4185,12 +4185,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param> 
         /// <param name="expand">Expand some document fields</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetContentmanagementSharedWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
+        public ApiResponse<Object> GetSharedSharedIdWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
         {
             
             // verify the required parameter 'sharedId' is set
             if (sharedId == null)
-                throw new ApiException(400, "Missing required parameter 'sharedId' when calling ContentManagementApi->GetContentmanagementShared");
+                throw new ApiException(400, "Missing required parameter 'sharedId' when calling ContentManagementApi->GetSharedSharedId");
             
     
             var path_ = "/api/v1/contentmanagement/shared/{sharedId}";
@@ -4247,9 +4247,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementShared: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSharedSharedId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementShared: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSharedSharedId: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -4266,9 +4266,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetContentmanagementSharedAsync (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
+        public async System.Threading.Tasks.Task GetSharedSharedIdAsync (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
         {
-             await GetContentmanagementSharedAsyncWithHttpInfo(sharedId, redirect, disposition, contentType, expand);
+             await GetSharedSharedIdAsyncWithHttpInfo(sharedId, redirect, disposition, contentType, expand);
 
         }
 
@@ -4281,10 +4281,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contentType">The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetContentmanagementSharedAsyncWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetSharedSharedIdAsyncWithHttpInfo (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
         {
             // verify the required parameter 'sharedId' is set
-            if (sharedId == null) throw new ApiException(400, "Missing required parameter 'sharedId' when calling GetContentmanagementShared");
+            if (sharedId == null) throw new ApiException(400, "Missing required parameter 'sharedId' when calling GetSharedSharedId");
             
     
             var path_ = "/api/v1/contentmanagement/shared/{sharedId}";
@@ -4342,9 +4342,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementShared: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSharedSharedId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementShared: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSharedSharedId: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -4360,9 +4360,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>ShareEntityListing</returns>
-        public ShareEntityListing GetContentmanagementShares (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null)
+        public ShareEntityListing GetShares (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<ShareEntityListing> response = GetContentmanagementSharesWithHttpInfo(entityId, expand, pageSize, pageNumber);
+             ApiResponse<ShareEntityListing> response = GetSharesWithHttpInfo(entityId, expand, pageSize, pageNumber);
              return response.Data;
         }
 
@@ -4374,7 +4374,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>ApiResponse of ShareEntityListing</returns>
-        public ApiResponse< ShareEntityListing > GetContentmanagementSharesWithHttpInfo (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< ShareEntityListing > GetSharesWithHttpInfo (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -4431,9 +4431,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementShares: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetShares: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementShares: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetShares: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ShareEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4449,9 +4449,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ShareEntityListing</returns>
-        public async System.Threading.Tasks.Task<ShareEntityListing> GetContentmanagementSharesAsync (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ShareEntityListing> GetSharesAsync (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<ShareEntityListing> response = await GetContentmanagementSharesAsyncWithHttpInfo(entityId, expand, pageSize, pageNumber);
+             ApiResponse<ShareEntityListing> response = await GetSharesAsyncWithHttpInfo(entityId, expand, pageSize, pageNumber);
              return response.Data;
 
         }
@@ -4464,7 +4464,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (ShareEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ShareEntityListing>> GetContentmanagementSharesAsyncWithHttpInfo (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ShareEntityListing>> GetSharesAsyncWithHttpInfo (string entityId = null, string expand = null, int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -4522,9 +4522,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementShares: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetShares: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementShares: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetShares: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ShareEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4537,9 +4537,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param> 
         /// <returns>CreateShareResponse</returns>
-        public CreateShareResponse PostContentmanagementShares (CreateShareRequest body = null)
+        public CreateShareResponse PostShares (CreateShareRequest body = null)
         {
-             ApiResponse<CreateShareResponse> response = PostContentmanagementSharesWithHttpInfo(body);
+             ApiResponse<CreateShareResponse> response = PostSharesWithHttpInfo(body);
              return response.Data;
         }
 
@@ -4548,7 +4548,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param> 
         /// <returns>ApiResponse of CreateShareResponse</returns>
-        public ApiResponse< CreateShareResponse > PostContentmanagementSharesWithHttpInfo (CreateShareRequest body = null)
+        public ApiResponse< CreateShareResponse > PostSharesWithHttpInfo (CreateShareRequest body = null)
         {
             
     
@@ -4608,9 +4608,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementShares: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostShares: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementShares: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostShares: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<CreateShareResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4623,9 +4623,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
         /// <returns>Task of CreateShareResponse</returns>
-        public async System.Threading.Tasks.Task<CreateShareResponse> PostContentmanagementSharesAsync (CreateShareRequest body = null)
+        public async System.Threading.Tasks.Task<CreateShareResponse> PostSharesAsync (CreateShareRequest body = null)
         {
-             ApiResponse<CreateShareResponse> response = await PostContentmanagementSharesAsyncWithHttpInfo(body);
+             ApiResponse<CreateShareResponse> response = await PostSharesAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -4635,7 +4635,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">CreateShareRequest - entity id and type and a single member or list of members are required</param>
         /// <returns>Task of ApiResponse (CreateShareResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CreateShareResponse>> PostContentmanagementSharesAsyncWithHttpInfo (CreateShareRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CreateShareResponse>> PostSharesAsyncWithHttpInfo (CreateShareRequest body = null)
         {
             
     
@@ -4690,9 +4690,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementShares: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostShares: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementShares: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostShares: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<CreateShareResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4706,9 +4706,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="shareId">Share ID</param> 
         /// <param name="expand">Expand share fields</param> 
         /// <returns>Share</returns>
-        public Share GetContentmanagementShare (string shareId, string expand = null)
+        public Share GetSharesShareId (string shareId, string expand = null)
         {
-             ApiResponse<Share> response = GetContentmanagementShareWithHttpInfo(shareId, expand);
+             ApiResponse<Share> response = GetSharesShareIdWithHttpInfo(shareId, expand);
              return response.Data;
         }
 
@@ -4718,12 +4718,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="shareId">Share ID</param> 
         /// <param name="expand">Expand share fields</param> 
         /// <returns>ApiResponse of Share</returns>
-        public ApiResponse< Share > GetContentmanagementShareWithHttpInfo (string shareId, string expand = null)
+        public ApiResponse< Share > GetSharesShareIdWithHttpInfo (string shareId, string expand = null)
         {
             
             // verify the required parameter 'shareId' is set
             if (shareId == null)
-                throw new ApiException(400, "Missing required parameter 'shareId' when calling ContentManagementApi->GetContentmanagementShare");
+                throw new ApiException(400, "Missing required parameter 'shareId' when calling ContentManagementApi->GetSharesShareId");
             
     
             var path_ = "/api/v1/contentmanagement/shares/{shareId}";
@@ -4777,9 +4777,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementShare: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSharesShareId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementShare: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSharesShareId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Share>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4793,9 +4793,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="shareId">Share ID</param>
         /// <param name="expand">Expand share fields</param>
         /// <returns>Task of Share</returns>
-        public async System.Threading.Tasks.Task<Share> GetContentmanagementShareAsync (string shareId, string expand = null)
+        public async System.Threading.Tasks.Task<Share> GetSharesShareIdAsync (string shareId, string expand = null)
         {
-             ApiResponse<Share> response = await GetContentmanagementShareAsyncWithHttpInfo(shareId, expand);
+             ApiResponse<Share> response = await GetSharesShareIdAsyncWithHttpInfo(shareId, expand);
              return response.Data;
 
         }
@@ -4806,10 +4806,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="shareId">Share ID</param>
         /// <param name="expand">Expand share fields</param>
         /// <returns>Task of ApiResponse (Share)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Share>> GetContentmanagementShareAsyncWithHttpInfo (string shareId, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Share>> GetSharesShareIdAsyncWithHttpInfo (string shareId, string expand = null)
         {
             // verify the required parameter 'shareId' is set
-            if (shareId == null) throw new ApiException(400, "Missing required parameter 'shareId' when calling GetContentmanagementShare");
+            if (shareId == null) throw new ApiException(400, "Missing required parameter 'shareId' when calling GetSharesShareId");
             
     
             var path_ = "/api/v1/contentmanagement/shares/{shareId}";
@@ -4864,9 +4864,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementShare: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSharesShareId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementShare: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSharesShareId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Share>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4879,9 +4879,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="shareId">Share ID</param> 
         /// <returns></returns>
-        public void DeleteContentmanagementShare (string shareId)
+        public void DeleteSharesShareId (string shareId)
         {
-             DeleteContentmanagementShareWithHttpInfo(shareId);
+             DeleteSharesShareIdWithHttpInfo(shareId);
         }
 
         /// <summary>
@@ -4889,12 +4889,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="shareId">Share ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteContentmanagementShareWithHttpInfo (string shareId)
+        public ApiResponse<Object> DeleteSharesShareIdWithHttpInfo (string shareId)
         {
             
             // verify the required parameter 'shareId' is set
             if (shareId == null)
-                throw new ApiException(400, "Missing required parameter 'shareId' when calling ContentManagementApi->DeleteContentmanagementShare");
+                throw new ApiException(400, "Missing required parameter 'shareId' when calling ContentManagementApi->DeleteSharesShareId");
             
     
             var path_ = "/api/v1/contentmanagement/shares/{shareId}";
@@ -4947,9 +4947,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteContentmanagementShare: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteSharesShareId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteContentmanagementShare: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteSharesShareId: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -4962,9 +4962,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="shareId">Share ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteContentmanagementShareAsync (string shareId)
+        public async System.Threading.Tasks.Task DeleteSharesShareIdAsync (string shareId)
         {
-             await DeleteContentmanagementShareAsyncWithHttpInfo(shareId);
+             await DeleteSharesShareIdAsyncWithHttpInfo(shareId);
 
         }
 
@@ -4973,10 +4973,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="shareId">Share ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementShareAsyncWithHttpInfo (string shareId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSharesShareIdAsyncWithHttpInfo (string shareId)
         {
             // verify the required parameter 'shareId' is set
-            if (shareId == null) throw new ApiException(400, "Missing required parameter 'shareId' when calling DeleteContentmanagementShare");
+            if (shareId == null) throw new ApiException(400, "Missing required parameter 'shareId' when calling DeleteSharesShareId");
             
     
             var path_ = "/api/v1/contentmanagement/shares/{shareId}";
@@ -5030,9 +5030,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteContentmanagementShare: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteSharesShareId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteContentmanagementShare: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteSharesShareId: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -5046,9 +5046,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>CommandStatusEntityListing</returns>
-        public CommandStatusEntityListing GetContentmanagementStatus (int? pageSize = null, int? pageNumber = null)
+        public CommandStatusEntityListing GetStatus (int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<CommandStatusEntityListing> response = GetContentmanagementStatusWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<CommandStatusEntityListing> response = GetStatusWithHttpInfo(pageSize, pageNumber);
              return response.Data;
         }
 
@@ -5058,7 +5058,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>ApiResponse of CommandStatusEntityListing</returns>
-        public ApiResponse< CommandStatusEntityListing > GetContentmanagementStatusWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< CommandStatusEntityListing > GetStatusWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -5113,9 +5113,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementStatus: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetStatus: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementStatus: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetStatus: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<CommandStatusEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5129,9 +5129,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of CommandStatusEntityListing</returns>
-        public async System.Threading.Tasks.Task<CommandStatusEntityListing> GetContentmanagementStatusAsync (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<CommandStatusEntityListing> GetStatusAsync (int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<CommandStatusEntityListing> response = await GetContentmanagementStatusAsyncWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<CommandStatusEntityListing> response = await GetStatusAsyncWithHttpInfo(pageSize, pageNumber);
              return response.Data;
 
         }
@@ -5142,7 +5142,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (CommandStatusEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CommandStatusEntityListing>> GetContentmanagementStatusAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CommandStatusEntityListing>> GetStatusAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -5198,9 +5198,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementStatus: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetStatus: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementStatus: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetStatus: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<CommandStatusEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5213,9 +5213,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="statusId">Status ID</param> 
         /// <returns>CommandStatus</returns>
-        public CommandStatus GetContentmanagementStatu (string statusId)
+        public CommandStatus GetStatusStatusId (string statusId)
         {
-             ApiResponse<CommandStatus> response = GetContentmanagementStatuWithHttpInfo(statusId);
+             ApiResponse<CommandStatus> response = GetStatusStatusIdWithHttpInfo(statusId);
              return response.Data;
         }
 
@@ -5224,12 +5224,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="statusId">Status ID</param> 
         /// <returns>ApiResponse of CommandStatus</returns>
-        public ApiResponse< CommandStatus > GetContentmanagementStatuWithHttpInfo (string statusId)
+        public ApiResponse< CommandStatus > GetStatusStatusIdWithHttpInfo (string statusId)
         {
             
             // verify the required parameter 'statusId' is set
             if (statusId == null)
-                throw new ApiException(400, "Missing required parameter 'statusId' when calling ContentManagementApi->GetContentmanagementStatu");
+                throw new ApiException(400, "Missing required parameter 'statusId' when calling ContentManagementApi->GetStatusStatusId");
             
     
             var path_ = "/api/v1/contentmanagement/status/{statusId}";
@@ -5282,9 +5282,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementStatu: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetStatusStatusId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementStatu: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetStatusStatusId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<CommandStatus>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5297,9 +5297,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="statusId">Status ID</param>
         /// <returns>Task of CommandStatus</returns>
-        public async System.Threading.Tasks.Task<CommandStatus> GetContentmanagementStatuAsync (string statusId)
+        public async System.Threading.Tasks.Task<CommandStatus> GetStatusStatusIdAsync (string statusId)
         {
-             ApiResponse<CommandStatus> response = await GetContentmanagementStatuAsyncWithHttpInfo(statusId);
+             ApiResponse<CommandStatus> response = await GetStatusStatusIdAsyncWithHttpInfo(statusId);
              return response.Data;
 
         }
@@ -5309,10 +5309,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="statusId">Status ID</param>
         /// <returns>Task of ApiResponse (CommandStatus)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CommandStatus>> GetContentmanagementStatuAsyncWithHttpInfo (string statusId)
+        public async System.Threading.Tasks.Task<ApiResponse<CommandStatus>> GetStatusStatusIdAsyncWithHttpInfo (string statusId)
         {
             // verify the required parameter 'statusId' is set
-            if (statusId == null) throw new ApiException(400, "Missing required parameter 'statusId' when calling GetContentmanagementStatu");
+            if (statusId == null) throw new ApiException(400, "Missing required parameter 'statusId' when calling GetStatusStatusId");
             
     
             var path_ = "/api/v1/contentmanagement/status/{statusId}";
@@ -5366,9 +5366,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementStatu: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetStatusStatusId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementStatu: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetStatusStatusId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<CommandStatus>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5381,9 +5381,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="statusId">Status ID</param> 
         /// <returns></returns>
-        public void DeleteContentmanagementStatu (string statusId)
+        public void DeleteStatusStatusId (string statusId)
         {
-             DeleteContentmanagementStatuWithHttpInfo(statusId);
+             DeleteStatusStatusIdWithHttpInfo(statusId);
         }
 
         /// <summary>
@@ -5391,12 +5391,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="statusId">Status ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteContentmanagementStatuWithHttpInfo (string statusId)
+        public ApiResponse<Object> DeleteStatusStatusIdWithHttpInfo (string statusId)
         {
             
             // verify the required parameter 'statusId' is set
             if (statusId == null)
-                throw new ApiException(400, "Missing required parameter 'statusId' when calling ContentManagementApi->DeleteContentmanagementStatu");
+                throw new ApiException(400, "Missing required parameter 'statusId' when calling ContentManagementApi->DeleteStatusStatusId");
             
     
             var path_ = "/api/v1/contentmanagement/status/{statusId}";
@@ -5449,9 +5449,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteContentmanagementStatu: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteStatusStatusId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteContentmanagementStatu: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteStatusStatusId: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -5464,9 +5464,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="statusId">Status ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteContentmanagementStatuAsync (string statusId)
+        public async System.Threading.Tasks.Task DeleteStatusStatusIdAsync (string statusId)
         {
-             await DeleteContentmanagementStatuAsyncWithHttpInfo(statusId);
+             await DeleteStatusStatusIdAsyncWithHttpInfo(statusId);
 
         }
 
@@ -5475,10 +5475,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="statusId">Status ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementStatuAsyncWithHttpInfo (string statusId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteStatusStatusIdAsyncWithHttpInfo (string statusId)
         {
             // verify the required parameter 'statusId' is set
-            if (statusId == null) throw new ApiException(400, "Missing required parameter 'statusId' when calling DeleteContentmanagementStatu");
+            if (statusId == null) throw new ApiException(400, "Missing required parameter 'statusId' when calling DeleteStatusStatusId");
             
     
             var path_ = "/api/v1/contentmanagement/status/{statusId}";
@@ -5532,9 +5532,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteContentmanagementStatu: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteStatusStatusId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteContentmanagementStatu: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteStatusStatusId: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -5550,9 +5550,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="access">Requested access level</param> 
         /// <param name="expand">Expand some workspace fields</param> 
         /// <returns>WorkspaceEntityListing</returns>
-        public WorkspaceEntityListing GetContentmanagementWorkspaces (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null)
+        public WorkspaceEntityListing GetWorkspaces (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null)
         {
-             ApiResponse<WorkspaceEntityListing> response = GetContentmanagementWorkspacesWithHttpInfo(pageSize, pageNumber, access, expand);
+             ApiResponse<WorkspaceEntityListing> response = GetWorkspacesWithHttpInfo(pageSize, pageNumber, access, expand);
              return response.Data;
         }
 
@@ -5564,7 +5564,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="access">Requested access level</param> 
         /// <param name="expand">Expand some workspace fields</param> 
         /// <returns>ApiResponse of WorkspaceEntityListing</returns>
-        public ApiResponse< WorkspaceEntityListing > GetContentmanagementWorkspacesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null)
+        public ApiResponse< WorkspaceEntityListing > GetWorkspacesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null)
         {
             
     
@@ -5621,9 +5621,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaces: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetWorkspaces: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaces: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetWorkspaces: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<WorkspaceEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5639,9 +5639,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="access">Requested access level</param>
         /// <param name="expand">Expand some workspace fields</param>
         /// <returns>Task of WorkspaceEntityListing</returns>
-        public async System.Threading.Tasks.Task<WorkspaceEntityListing> GetContentmanagementWorkspacesAsync (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null)
+        public async System.Threading.Tasks.Task<WorkspaceEntityListing> GetWorkspacesAsync (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null)
         {
-             ApiResponse<WorkspaceEntityListing> response = await GetContentmanagementWorkspacesAsyncWithHttpInfo(pageSize, pageNumber, access, expand);
+             ApiResponse<WorkspaceEntityListing> response = await GetWorkspacesAsyncWithHttpInfo(pageSize, pageNumber, access, expand);
              return response.Data;
 
         }
@@ -5654,7 +5654,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="access">Requested access level</param>
         /// <param name="expand">Expand some workspace fields</param>
         /// <returns>Task of ApiResponse (WorkspaceEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WorkspaceEntityListing>> GetContentmanagementWorkspacesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WorkspaceEntityListing>> GetWorkspacesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string access = null, string expand = null)
         {
             
     
@@ -5712,9 +5712,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaces: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetWorkspaces: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaces: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetWorkspaces: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<WorkspaceEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5727,9 +5727,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Workspace</param> 
         /// <returns>Workspace</returns>
-        public Workspace PostContentmanagementWorkspaces (WorkspaceCreate body = null)
+        public Workspace PostWorkspaces (WorkspaceCreate body = null)
         {
-             ApiResponse<Workspace> response = PostContentmanagementWorkspacesWithHttpInfo(body);
+             ApiResponse<Workspace> response = PostWorkspacesWithHttpInfo(body);
              return response.Data;
         }
 
@@ -5738,7 +5738,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Workspace</param> 
         /// <returns>ApiResponse of Workspace</returns>
-        public ApiResponse< Workspace > PostContentmanagementWorkspacesWithHttpInfo (WorkspaceCreate body = null)
+        public ApiResponse< Workspace > PostWorkspacesWithHttpInfo (WorkspaceCreate body = null)
         {
             
     
@@ -5798,9 +5798,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementWorkspaces: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostWorkspaces: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementWorkspaces: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostWorkspaces: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Workspace>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5813,9 +5813,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Workspace</param>
         /// <returns>Task of Workspace</returns>
-        public async System.Threading.Tasks.Task<Workspace> PostContentmanagementWorkspacesAsync (WorkspaceCreate body = null)
+        public async System.Threading.Tasks.Task<Workspace> PostWorkspacesAsync (WorkspaceCreate body = null)
         {
-             ApiResponse<Workspace> response = await PostContentmanagementWorkspacesAsyncWithHttpInfo(body);
+             ApiResponse<Workspace> response = await PostWorkspacesAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -5825,7 +5825,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Workspace>> PostContentmanagementWorkspacesAsyncWithHttpInfo (WorkspaceCreate body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Workspace>> PostWorkspacesAsyncWithHttpInfo (WorkspaceCreate body = null)
         {
             
     
@@ -5880,9 +5880,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementWorkspaces: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostWorkspaces: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementWorkspaces: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostWorkspaces: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Workspace>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5896,9 +5896,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param> 
         /// <param name="expand">Expand some workspace fields</param> 
         /// <returns>Workspace</returns>
-        public Workspace GetContentmanagementWorkspace (string workspaceId, string expand = null)
+        public Workspace GetWorkspacesWorkspaceId (string workspaceId, string expand = null)
         {
-             ApiResponse<Workspace> response = GetContentmanagementWorkspaceWithHttpInfo(workspaceId, expand);
+             ApiResponse<Workspace> response = GetWorkspacesWorkspaceIdWithHttpInfo(workspaceId, expand);
              return response.Data;
         }
 
@@ -5908,12 +5908,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param> 
         /// <param name="expand">Expand some workspace fields</param> 
         /// <returns>ApiResponse of Workspace</returns>
-        public ApiResponse< Workspace > GetContentmanagementWorkspaceWithHttpInfo (string workspaceId, string expand = null)
+        public ApiResponse< Workspace > GetWorkspacesWorkspaceIdWithHttpInfo (string workspaceId, string expand = null)
         {
             
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
-                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetContentmanagementWorkspace");
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetWorkspacesWorkspaceId");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}";
@@ -5967,9 +5967,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspace: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetWorkspacesWorkspaceId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspace: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetWorkspacesWorkspaceId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Workspace>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5983,9 +5983,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="expand">Expand some workspace fields</param>
         /// <returns>Task of Workspace</returns>
-        public async System.Threading.Tasks.Task<Workspace> GetContentmanagementWorkspaceAsync (string workspaceId, string expand = null)
+        public async System.Threading.Tasks.Task<Workspace> GetWorkspacesWorkspaceIdAsync (string workspaceId, string expand = null)
         {
-             ApiResponse<Workspace> response = await GetContentmanagementWorkspaceAsyncWithHttpInfo(workspaceId, expand);
+             ApiResponse<Workspace> response = await GetWorkspacesWorkspaceIdAsyncWithHttpInfo(workspaceId, expand);
              return response.Data;
 
         }
@@ -5996,10 +5996,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="expand">Expand some workspace fields</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Workspace>> GetContentmanagementWorkspaceAsyncWithHttpInfo (string workspaceId, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Workspace>> GetWorkspacesWorkspaceIdAsyncWithHttpInfo (string workspaceId, string expand = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetContentmanagementWorkspace");
+            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetWorkspacesWorkspaceId");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}";
@@ -6054,9 +6054,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspace: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetWorkspacesWorkspaceId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspace: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetWorkspacesWorkspaceId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Workspace>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6070,9 +6070,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param> 
         /// <param name="body">Workspace</param> 
         /// <returns>Workspace</returns>
-        public Workspace PutContentmanagementWorkspace (string workspaceId, Workspace body = null)
+        public Workspace PutWorkspacesWorkspaceId (string workspaceId, Workspace body = null)
         {
-             ApiResponse<Workspace> response = PutContentmanagementWorkspaceWithHttpInfo(workspaceId, body);
+             ApiResponse<Workspace> response = PutWorkspacesWorkspaceIdWithHttpInfo(workspaceId, body);
              return response.Data;
         }
 
@@ -6082,12 +6082,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param> 
         /// <param name="body">Workspace</param> 
         /// <returns>ApiResponse of Workspace</returns>
-        public ApiResponse< Workspace > PutContentmanagementWorkspaceWithHttpInfo (string workspaceId, Workspace body = null)
+        public ApiResponse< Workspace > PutWorkspacesWorkspaceIdWithHttpInfo (string workspaceId, Workspace body = null)
         {
             
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
-                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PutContentmanagementWorkspace");
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PutWorkspacesWorkspaceId");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}";
@@ -6147,9 +6147,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutContentmanagementWorkspace: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutWorkspacesWorkspaceId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutContentmanagementWorkspace: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutWorkspacesWorkspaceId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Workspace>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6163,9 +6163,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Task of Workspace</returns>
-        public async System.Threading.Tasks.Task<Workspace> PutContentmanagementWorkspaceAsync (string workspaceId, Workspace body = null)
+        public async System.Threading.Tasks.Task<Workspace> PutWorkspacesWorkspaceIdAsync (string workspaceId, Workspace body = null)
         {
-             ApiResponse<Workspace> response = await PutContentmanagementWorkspaceAsyncWithHttpInfo(workspaceId, body);
+             ApiResponse<Workspace> response = await PutWorkspacesWorkspaceIdAsyncWithHttpInfo(workspaceId, body);
              return response.Data;
 
         }
@@ -6176,10 +6176,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (Workspace)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Workspace>> PutContentmanagementWorkspaceAsyncWithHttpInfo (string workspaceId, Workspace body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Workspace>> PutWorkspacesWorkspaceIdAsyncWithHttpInfo (string workspaceId, Workspace body = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling PutContentmanagementWorkspace");
+            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling PutWorkspacesWorkspaceId");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}";
@@ -6234,9 +6234,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutContentmanagementWorkspace: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutWorkspacesWorkspaceId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutContentmanagementWorkspace: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutWorkspacesWorkspaceId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Workspace>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6250,9 +6250,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param> 
         /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace.</param> 
         /// <returns></returns>
-        public void DeleteContentmanagementWorkspace (string workspaceId, string moveChildrenToWorkspaceId = null)
+        public void DeleteWorkspacesWorkspaceId (string workspaceId, string moveChildrenToWorkspaceId = null)
         {
-             DeleteContentmanagementWorkspaceWithHttpInfo(workspaceId, moveChildrenToWorkspaceId);
+             DeleteWorkspacesWorkspaceIdWithHttpInfo(workspaceId, moveChildrenToWorkspaceId);
         }
 
         /// <summary>
@@ -6261,12 +6261,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param> 
         /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace.</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteContentmanagementWorkspaceWithHttpInfo (string workspaceId, string moveChildrenToWorkspaceId = null)
+        public ApiResponse<Object> DeleteWorkspacesWorkspaceIdWithHttpInfo (string workspaceId, string moveChildrenToWorkspaceId = null)
         {
             
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
-                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->DeleteContentmanagementWorkspace");
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->DeleteWorkspacesWorkspaceId");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}";
@@ -6320,9 +6320,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteContentmanagementWorkspace: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteWorkspacesWorkspaceId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteContentmanagementWorkspace: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteWorkspacesWorkspaceId: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -6336,9 +6336,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteContentmanagementWorkspaceAsync (string workspaceId, string moveChildrenToWorkspaceId = null)
+        public async System.Threading.Tasks.Task DeleteWorkspacesWorkspaceIdAsync (string workspaceId, string moveChildrenToWorkspaceId = null)
         {
-             await DeleteContentmanagementWorkspaceAsyncWithHttpInfo(workspaceId, moveChildrenToWorkspaceId);
+             await DeleteWorkspacesWorkspaceIdAsyncWithHttpInfo(workspaceId, moveChildrenToWorkspaceId);
 
         }
 
@@ -6348,10 +6348,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="moveChildrenToWorkspaceId">New location for objects in deleted workspace.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementWorkspaceAsyncWithHttpInfo (string workspaceId, string moveChildrenToWorkspaceId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkspacesWorkspaceIdAsyncWithHttpInfo (string workspaceId, string moveChildrenToWorkspaceId = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling DeleteContentmanagementWorkspace");
+            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling DeleteWorkspacesWorkspaceId");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}";
@@ -6406,9 +6406,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteContentmanagementWorkspace: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteWorkspacesWorkspaceId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteContentmanagementWorkspace: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteWorkspacesWorkspaceId: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -6424,9 +6424,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="expand">Expand workspace member fields</param> 
         /// <returns>WorkspaceMemberEntityListing</returns>
-        public WorkspaceMemberEntityListing GetContentmanagementWorkspaceMembers (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null)
+        public WorkspaceMemberEntityListing GetWorkspacesWorkspaceIdMembers (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null)
         {
-             ApiResponse<WorkspaceMemberEntityListing> response = GetContentmanagementWorkspaceMembersWithHttpInfo(workspaceId, pageSize, pageNumber, expand);
+             ApiResponse<WorkspaceMemberEntityListing> response = GetWorkspacesWorkspaceIdMembersWithHttpInfo(workspaceId, pageSize, pageNumber, expand);
              return response.Data;
         }
 
@@ -6438,12 +6438,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="expand">Expand workspace member fields</param> 
         /// <returns>ApiResponse of WorkspaceMemberEntityListing</returns>
-        public ApiResponse< WorkspaceMemberEntityListing > GetContentmanagementWorkspaceMembersWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null)
+        public ApiResponse< WorkspaceMemberEntityListing > GetWorkspacesWorkspaceIdMembersWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null)
         {
             
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
-                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetContentmanagementWorkspaceMembers");
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetWorkspacesWorkspaceIdMembers");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/members";
@@ -6499,9 +6499,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceMembers: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetWorkspacesWorkspaceIdMembers: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceMembers: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetWorkspacesWorkspaceIdMembers: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<WorkspaceMemberEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6517,9 +6517,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">Expand workspace member fields</param>
         /// <returns>Task of WorkspaceMemberEntityListing</returns>
-        public async System.Threading.Tasks.Task<WorkspaceMemberEntityListing> GetContentmanagementWorkspaceMembersAsync (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null)
+        public async System.Threading.Tasks.Task<WorkspaceMemberEntityListing> GetWorkspacesWorkspaceIdMembersAsync (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null)
         {
-             ApiResponse<WorkspaceMemberEntityListing> response = await GetContentmanagementWorkspaceMembersAsyncWithHttpInfo(workspaceId, pageSize, pageNumber, expand);
+             ApiResponse<WorkspaceMemberEntityListing> response = await GetWorkspacesWorkspaceIdMembersAsyncWithHttpInfo(workspaceId, pageSize, pageNumber, expand);
              return response.Data;
 
         }
@@ -6532,10 +6532,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">Expand workspace member fields</param>
         /// <returns>Task of ApiResponse (WorkspaceMemberEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WorkspaceMemberEntityListing>> GetContentmanagementWorkspaceMembersAsyncWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WorkspaceMemberEntityListing>> GetWorkspacesWorkspaceIdMembersAsyncWithHttpInfo (string workspaceId, int? pageSize = null, int? pageNumber = null, string expand = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetContentmanagementWorkspaceMembers");
+            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetWorkspacesWorkspaceIdMembers");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/members";
@@ -6592,9 +6592,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceMembers: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetWorkspacesWorkspaceIdMembers: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceMembers: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetWorkspacesWorkspaceIdMembers: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<WorkspaceMemberEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6609,9 +6609,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param> 
         /// <param name="expand">Expand workspace member fields</param> 
         /// <returns>WorkspaceMember</returns>
-        public WorkspaceMember GetContentmanagementWorkspaceMember (string workspaceId, string memberId, string expand = null)
+        public WorkspaceMember GetWorkspacesWorkspaceIdMembersMemberId (string workspaceId, string memberId, string expand = null)
         {
-             ApiResponse<WorkspaceMember> response = GetContentmanagementWorkspaceMemberWithHttpInfo(workspaceId, memberId, expand);
+             ApiResponse<WorkspaceMember> response = GetWorkspacesWorkspaceIdMembersMemberIdWithHttpInfo(workspaceId, memberId, expand);
              return response.Data;
         }
 
@@ -6622,16 +6622,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param> 
         /// <param name="expand">Expand workspace member fields</param> 
         /// <returns>ApiResponse of WorkspaceMember</returns>
-        public ApiResponse< WorkspaceMember > GetContentmanagementWorkspaceMemberWithHttpInfo (string workspaceId, string memberId, string expand = null)
+        public ApiResponse< WorkspaceMember > GetWorkspacesWorkspaceIdMembersMemberIdWithHttpInfo (string workspaceId, string memberId, string expand = null)
         {
             
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
-                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetContentmanagementWorkspaceMember");
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetWorkspacesWorkspaceIdMembersMemberId");
             
             // verify the required parameter 'memberId' is set
             if (memberId == null)
-                throw new ApiException(400, "Missing required parameter 'memberId' when calling ContentManagementApi->GetContentmanagementWorkspaceMember");
+                throw new ApiException(400, "Missing required parameter 'memberId' when calling ContentManagementApi->GetWorkspacesWorkspaceIdMembersMemberId");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
@@ -6686,9 +6686,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceMember: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetWorkspacesWorkspaceIdMembersMemberId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceMember: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetWorkspacesWorkspaceIdMembersMemberId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<WorkspaceMember>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6703,9 +6703,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="expand">Expand workspace member fields</param>
         /// <returns>Task of WorkspaceMember</returns>
-        public async System.Threading.Tasks.Task<WorkspaceMember> GetContentmanagementWorkspaceMemberAsync (string workspaceId, string memberId, string expand = null)
+        public async System.Threading.Tasks.Task<WorkspaceMember> GetWorkspacesWorkspaceIdMembersMemberIdAsync (string workspaceId, string memberId, string expand = null)
         {
-             ApiResponse<WorkspaceMember> response = await GetContentmanagementWorkspaceMemberAsyncWithHttpInfo(workspaceId, memberId, expand);
+             ApiResponse<WorkspaceMember> response = await GetWorkspacesWorkspaceIdMembersMemberIdAsyncWithHttpInfo(workspaceId, memberId, expand);
              return response.Data;
 
         }
@@ -6717,12 +6717,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="expand">Expand workspace member fields</param>
         /// <returns>Task of ApiResponse (WorkspaceMember)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> GetContentmanagementWorkspaceMemberAsyncWithHttpInfo (string workspaceId, string memberId, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> GetWorkspacesWorkspaceIdMembersMemberIdAsyncWithHttpInfo (string workspaceId, string memberId, string expand = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetContentmanagementWorkspaceMember");
+            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetWorkspacesWorkspaceIdMembersMemberId");
             // verify the required parameter 'memberId' is set
-            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling GetContentmanagementWorkspaceMember");
+            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling GetWorkspacesWorkspaceIdMembersMemberId");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
@@ -6778,9 +6778,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceMember: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetWorkspacesWorkspaceIdMembersMemberId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceMember: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetWorkspacesWorkspaceIdMembersMemberId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<WorkspaceMember>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6795,9 +6795,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param> 
         /// <param name="body">Workspace</param> 
         /// <returns>WorkspaceMember</returns>
-        public WorkspaceMember PutContentmanagementWorkspaceMember (string workspaceId, string memberId, WorkspaceMember body = null)
+        public WorkspaceMember PutWorkspacesWorkspaceIdMembersMemberId (string workspaceId, string memberId, WorkspaceMember body = null)
         {
-             ApiResponse<WorkspaceMember> response = PutContentmanagementWorkspaceMemberWithHttpInfo(workspaceId, memberId, body);
+             ApiResponse<WorkspaceMember> response = PutWorkspacesWorkspaceIdMembersMemberIdWithHttpInfo(workspaceId, memberId, body);
              return response.Data;
         }
 
@@ -6808,16 +6808,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param> 
         /// <param name="body">Workspace</param> 
         /// <returns>ApiResponse of WorkspaceMember</returns>
-        public ApiResponse< WorkspaceMember > PutContentmanagementWorkspaceMemberWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body = null)
+        public ApiResponse< WorkspaceMember > PutWorkspacesWorkspaceIdMembersMemberIdWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body = null)
         {
             
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
-                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PutContentmanagementWorkspaceMember");
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PutWorkspacesWorkspaceIdMembersMemberId");
             
             // verify the required parameter 'memberId' is set
             if (memberId == null)
-                throw new ApiException(400, "Missing required parameter 'memberId' when calling ContentManagementApi->PutContentmanagementWorkspaceMember");
+                throw new ApiException(400, "Missing required parameter 'memberId' when calling ContentManagementApi->PutWorkspacesWorkspaceIdMembersMemberId");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
@@ -6878,9 +6878,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutContentmanagementWorkspaceMember: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutWorkspacesWorkspaceIdMembersMemberId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutContentmanagementWorkspaceMember: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutWorkspacesWorkspaceIdMembersMemberId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<WorkspaceMember>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6895,9 +6895,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Task of WorkspaceMember</returns>
-        public async System.Threading.Tasks.Task<WorkspaceMember> PutContentmanagementWorkspaceMemberAsync (string workspaceId, string memberId, WorkspaceMember body = null)
+        public async System.Threading.Tasks.Task<WorkspaceMember> PutWorkspacesWorkspaceIdMembersMemberIdAsync (string workspaceId, string memberId, WorkspaceMember body = null)
         {
-             ApiResponse<WorkspaceMember> response = await PutContentmanagementWorkspaceMemberAsyncWithHttpInfo(workspaceId, memberId, body);
+             ApiResponse<WorkspaceMember> response = await PutWorkspacesWorkspaceIdMembersMemberIdAsyncWithHttpInfo(workspaceId, memberId, body);
              return response.Data;
 
         }
@@ -6909,12 +6909,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="memberId">Member ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (WorkspaceMember)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> PutContentmanagementWorkspaceMemberAsyncWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WorkspaceMember>> PutWorkspacesWorkspaceIdMembersMemberIdAsyncWithHttpInfo (string workspaceId, string memberId, WorkspaceMember body = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling PutContentmanagementWorkspaceMember");
+            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling PutWorkspacesWorkspaceIdMembersMemberId");
             // verify the required parameter 'memberId' is set
-            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling PutContentmanagementWorkspaceMember");
+            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling PutWorkspacesWorkspaceIdMembersMemberId");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
@@ -6970,9 +6970,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutContentmanagementWorkspaceMember: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutWorkspacesWorkspaceIdMembersMemberId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutContentmanagementWorkspaceMember: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutWorkspacesWorkspaceIdMembersMemberId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<WorkspaceMember>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6986,9 +6986,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param> 
         /// <param name="memberId">Member ID</param> 
         /// <returns></returns>
-        public void DeleteContentmanagementWorkspaceMember (string workspaceId, string memberId)
+        public void DeleteWorkspacesWorkspaceIdMembersMemberId (string workspaceId, string memberId)
         {
-             DeleteContentmanagementWorkspaceMemberWithHttpInfo(workspaceId, memberId);
+             DeleteWorkspacesWorkspaceIdMembersMemberIdWithHttpInfo(workspaceId, memberId);
         }
 
         /// <summary>
@@ -6997,16 +6997,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param> 
         /// <param name="memberId">Member ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteContentmanagementWorkspaceMemberWithHttpInfo (string workspaceId, string memberId)
+        public ApiResponse<Object> DeleteWorkspacesWorkspaceIdMembersMemberIdWithHttpInfo (string workspaceId, string memberId)
         {
             
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
-                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->DeleteContentmanagementWorkspaceMember");
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->DeleteWorkspacesWorkspaceIdMembersMemberId");
             
             // verify the required parameter 'memberId' is set
             if (memberId == null)
-                throw new ApiException(400, "Missing required parameter 'memberId' when calling ContentManagementApi->DeleteContentmanagementWorkspaceMember");
+                throw new ApiException(400, "Missing required parameter 'memberId' when calling ContentManagementApi->DeleteWorkspacesWorkspaceIdMembersMemberId");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
@@ -7060,9 +7060,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteContentmanagementWorkspaceMember: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteWorkspacesWorkspaceIdMembersMemberId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteContentmanagementWorkspaceMember: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteWorkspacesWorkspaceIdMembersMemberId: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -7076,9 +7076,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteContentmanagementWorkspaceMemberAsync (string workspaceId, string memberId)
+        public async System.Threading.Tasks.Task DeleteWorkspacesWorkspaceIdMembersMemberIdAsync (string workspaceId, string memberId)
         {
-             await DeleteContentmanagementWorkspaceMemberAsyncWithHttpInfo(workspaceId, memberId);
+             await DeleteWorkspacesWorkspaceIdMembersMemberIdAsyncWithHttpInfo(workspaceId, memberId);
 
         }
 
@@ -7088,12 +7088,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="memberId">Member ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementWorkspaceMemberAsyncWithHttpInfo (string workspaceId, string memberId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkspacesWorkspaceIdMembersMemberIdAsyncWithHttpInfo (string workspaceId, string memberId)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling DeleteContentmanagementWorkspaceMember");
+            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling DeleteWorkspacesWorkspaceIdMembersMemberId");
             // verify the required parameter 'memberId' is set
-            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling DeleteContentmanagementWorkspaceMember");
+            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling DeleteWorkspacesWorkspaceIdMembersMemberId");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
@@ -7148,9 +7148,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteContentmanagementWorkspaceMember: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteWorkspacesWorkspaceIdMembersMemberId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteContentmanagementWorkspaceMember: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteWorkspacesWorkspaceIdMembersMemberId: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -7167,9 +7167,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="expand">Expand some document fields</param> 
         /// <returns>TagValueEntityListing</returns>
-        public TagValueEntityListing GetContentmanagementWorkspaceTagvalues (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null)
+        public TagValueEntityListing GetWorkspacesWorkspaceIdTagvalues (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null)
         {
-             ApiResponse<TagValueEntityListing> response = GetContentmanagementWorkspaceTagvaluesWithHttpInfo(workspaceId, value, pageSize, pageNumber, expand);
+             ApiResponse<TagValueEntityListing> response = GetWorkspacesWorkspaceIdTagvaluesWithHttpInfo(workspaceId, value, pageSize, pageNumber, expand);
              return response.Data;
         }
 
@@ -7182,12 +7182,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="expand">Expand some document fields</param> 
         /// <returns>ApiResponse of TagValueEntityListing</returns>
-        public ApiResponse< TagValueEntityListing > GetContentmanagementWorkspaceTagvaluesWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null)
+        public ApiResponse< TagValueEntityListing > GetWorkspacesWorkspaceIdTagvaluesWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null)
         {
             
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
-                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetContentmanagementWorkspaceTagvalues");
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetWorkspacesWorkspaceIdTagvalues");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues";
@@ -7244,9 +7244,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceTagvalues: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetWorkspacesWorkspaceIdTagvalues: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceTagvalues: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetWorkspacesWorkspaceIdTagvalues: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<TagValueEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7263,9 +7263,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of TagValueEntityListing</returns>
-        public async System.Threading.Tasks.Task<TagValueEntityListing> GetContentmanagementWorkspaceTagvaluesAsync (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null)
+        public async System.Threading.Tasks.Task<TagValueEntityListing> GetWorkspacesWorkspaceIdTagvaluesAsync (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null)
         {
-             ApiResponse<TagValueEntityListing> response = await GetContentmanagementWorkspaceTagvaluesAsyncWithHttpInfo(workspaceId, value, pageSize, pageNumber, expand);
+             ApiResponse<TagValueEntityListing> response = await GetWorkspacesWorkspaceIdTagvaluesAsyncWithHttpInfo(workspaceId, value, pageSize, pageNumber, expand);
              return response.Data;
 
         }
@@ -7279,10 +7279,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of ApiResponse (TagValueEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> GetContentmanagementWorkspaceTagvaluesAsyncWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> GetWorkspacesWorkspaceIdTagvaluesAsyncWithHttpInfo (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, string expand = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetContentmanagementWorkspaceTagvalues");
+            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetWorkspacesWorkspaceIdTagvalues");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues";
@@ -7340,9 +7340,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceTagvalues: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetWorkspacesWorkspaceIdTagvalues: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceTagvalues: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetWorkspacesWorkspaceIdTagvalues: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<TagValueEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7356,9 +7356,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param> 
         /// <param name="body">tag</param> 
         /// <returns>TagValue</returns>
-        public TagValue PostContentmanagementWorkspaceTagvalues (string workspaceId, TagValue body = null)
+        public TagValue PostWorkspacesWorkspaceIdTagvalues (string workspaceId, TagValue body = null)
         {
-             ApiResponse<TagValue> response = PostContentmanagementWorkspaceTagvaluesWithHttpInfo(workspaceId, body);
+             ApiResponse<TagValue> response = PostWorkspacesWorkspaceIdTagvaluesWithHttpInfo(workspaceId, body);
              return response.Data;
         }
 
@@ -7368,12 +7368,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param> 
         /// <param name="body">tag</param> 
         /// <returns>ApiResponse of TagValue</returns>
-        public ApiResponse< TagValue > PostContentmanagementWorkspaceTagvaluesWithHttpInfo (string workspaceId, TagValue body = null)
+        public ApiResponse< TagValue > PostWorkspacesWorkspaceIdTagvaluesWithHttpInfo (string workspaceId, TagValue body = null)
         {
             
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
-                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PostContentmanagementWorkspaceTagvalues");
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PostWorkspacesWorkspaceIdTagvalues");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues";
@@ -7433,9 +7433,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementWorkspaceTagvalues: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostWorkspacesWorkspaceIdTagvalues: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementWorkspaceTagvalues: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostWorkspacesWorkspaceIdTagvalues: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<TagValue>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7449,9 +7449,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">tag</param>
         /// <returns>Task of TagValue</returns>
-        public async System.Threading.Tasks.Task<TagValue> PostContentmanagementWorkspaceTagvaluesAsync (string workspaceId, TagValue body = null)
+        public async System.Threading.Tasks.Task<TagValue> PostWorkspacesWorkspaceIdTagvaluesAsync (string workspaceId, TagValue body = null)
         {
-             ApiResponse<TagValue> response = await PostContentmanagementWorkspaceTagvaluesAsyncWithHttpInfo(workspaceId, body);
+             ApiResponse<TagValue> response = await PostWorkspacesWorkspaceIdTagvaluesAsyncWithHttpInfo(workspaceId, body);
              return response.Data;
 
         }
@@ -7462,10 +7462,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="body">tag</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TagValue>> PostContentmanagementWorkspaceTagvaluesAsyncWithHttpInfo (string workspaceId, TagValue body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TagValue>> PostWorkspacesWorkspaceIdTagvaluesAsyncWithHttpInfo (string workspaceId, TagValue body = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling PostContentmanagementWorkspaceTagvalues");
+            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling PostWorkspacesWorkspaceIdTagvalues");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues";
@@ -7520,9 +7520,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementWorkspaceTagvalues: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostWorkspacesWorkspaceIdTagvalues: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementWorkspaceTagvalues: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostWorkspacesWorkspaceIdTagvalues: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<TagValue>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7537,9 +7537,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param> 
         /// <param name="expand">Expand some document fields</param> 
         /// <returns>TagValueEntityListing</returns>
-        public TagValueEntityListing PostContentmanagementWorkspaceTagvaluesQuery (string workspaceId, TagQueryRequest body = null, string expand = null)
+        public TagValueEntityListing PostWorkspacesWorkspaceIdTagvaluesQuery (string workspaceId, TagQueryRequest body = null, string expand = null)
         {
-             ApiResponse<TagValueEntityListing> response = PostContentmanagementWorkspaceTagvaluesQueryWithHttpInfo(workspaceId, body, expand);
+             ApiResponse<TagValueEntityListing> response = PostWorkspacesWorkspaceIdTagvaluesQueryWithHttpInfo(workspaceId, body, expand);
              return response.Data;
         }
 
@@ -7550,12 +7550,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param> 
         /// <param name="expand">Expand some document fields</param> 
         /// <returns>ApiResponse of TagValueEntityListing</returns>
-        public ApiResponse< TagValueEntityListing > PostContentmanagementWorkspaceTagvaluesQueryWithHttpInfo (string workspaceId, TagQueryRequest body = null, string expand = null)
+        public ApiResponse< TagValueEntityListing > PostWorkspacesWorkspaceIdTagvaluesQueryWithHttpInfo (string workspaceId, TagQueryRequest body = null, string expand = null)
         {
             
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
-                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PostContentmanagementWorkspaceTagvaluesQuery");
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PostWorkspacesWorkspaceIdTagvaluesQuery");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues/query";
@@ -7616,9 +7616,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementWorkspaceTagvaluesQuery: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostWorkspacesWorkspaceIdTagvaluesQuery: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementWorkspaceTagvaluesQuery: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostWorkspacesWorkspaceIdTagvaluesQuery: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<TagValueEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7633,9 +7633,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of TagValueEntityListing</returns>
-        public async System.Threading.Tasks.Task<TagValueEntityListing> PostContentmanagementWorkspaceTagvaluesQueryAsync (string workspaceId, TagQueryRequest body = null, string expand = null)
+        public async System.Threading.Tasks.Task<TagValueEntityListing> PostWorkspacesWorkspaceIdTagvaluesQueryAsync (string workspaceId, TagQueryRequest body = null, string expand = null)
         {
-             ApiResponse<TagValueEntityListing> response = await PostContentmanagementWorkspaceTagvaluesQueryAsyncWithHttpInfo(workspaceId, body, expand);
+             ApiResponse<TagValueEntityListing> response = await PostWorkspacesWorkspaceIdTagvaluesQueryAsyncWithHttpInfo(workspaceId, body, expand);
              return response.Data;
 
         }
@@ -7647,10 +7647,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">query</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of ApiResponse (TagValueEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> PostContentmanagementWorkspaceTagvaluesQueryAsyncWithHttpInfo (string workspaceId, TagQueryRequest body = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TagValueEntityListing>> PostWorkspacesWorkspaceIdTagvaluesQueryAsyncWithHttpInfo (string workspaceId, TagQueryRequest body = null, string expand = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling PostContentmanagementWorkspaceTagvaluesQuery");
+            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling PostWorkspacesWorkspaceIdTagvaluesQuery");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues/query";
@@ -7706,9 +7706,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementWorkspaceTagvaluesQuery: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostWorkspacesWorkspaceIdTagvaluesQuery: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostContentmanagementWorkspaceTagvaluesQuery: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostWorkspacesWorkspaceIdTagvaluesQuery: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<TagValueEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7723,9 +7723,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param> 
         /// <param name="expand">Expand some document fields</param> 
         /// <returns>TagValue</returns>
-        public TagValue GetContentmanagementWorkspaceTagvalue (string workspaceId, string tagId, string expand = null)
+        public TagValue GetWorkspacesWorkspaceIdTagvaluesTagId (string workspaceId, string tagId, string expand = null)
         {
-             ApiResponse<TagValue> response = GetContentmanagementWorkspaceTagvalueWithHttpInfo(workspaceId, tagId, expand);
+             ApiResponse<TagValue> response = GetWorkspacesWorkspaceIdTagvaluesTagIdWithHttpInfo(workspaceId, tagId, expand);
              return response.Data;
         }
 
@@ -7736,16 +7736,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param> 
         /// <param name="expand">Expand some document fields</param> 
         /// <returns>ApiResponse of TagValue</returns>
-        public ApiResponse< TagValue > GetContentmanagementWorkspaceTagvalueWithHttpInfo (string workspaceId, string tagId, string expand = null)
+        public ApiResponse< TagValue > GetWorkspacesWorkspaceIdTagvaluesTagIdWithHttpInfo (string workspaceId, string tagId, string expand = null)
         {
             
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
-                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetContentmanagementWorkspaceTagvalue");
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetWorkspacesWorkspaceIdTagvaluesTagId");
             
             // verify the required parameter 'tagId' is set
             if (tagId == null)
-                throw new ApiException(400, "Missing required parameter 'tagId' when calling ContentManagementApi->GetContentmanagementWorkspaceTagvalue");
+                throw new ApiException(400, "Missing required parameter 'tagId' when calling ContentManagementApi->GetWorkspacesWorkspaceIdTagvaluesTagId");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
@@ -7800,9 +7800,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceTagvalue: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetWorkspacesWorkspaceIdTagvaluesTagId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceTagvalue: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetWorkspacesWorkspaceIdTagvaluesTagId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<TagValue>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7817,9 +7817,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of TagValue</returns>
-        public async System.Threading.Tasks.Task<TagValue> GetContentmanagementWorkspaceTagvalueAsync (string workspaceId, string tagId, string expand = null)
+        public async System.Threading.Tasks.Task<TagValue> GetWorkspacesWorkspaceIdTagvaluesTagIdAsync (string workspaceId, string tagId, string expand = null)
         {
-             ApiResponse<TagValue> response = await GetContentmanagementWorkspaceTagvalueAsyncWithHttpInfo(workspaceId, tagId, expand);
+             ApiResponse<TagValue> response = await GetWorkspacesWorkspaceIdTagvaluesTagIdAsyncWithHttpInfo(workspaceId, tagId, expand);
              return response.Data;
 
         }
@@ -7831,12 +7831,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="expand">Expand some document fields</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TagValue>> GetContentmanagementWorkspaceTagvalueAsyncWithHttpInfo (string workspaceId, string tagId, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TagValue>> GetWorkspacesWorkspaceIdTagvaluesTagIdAsyncWithHttpInfo (string workspaceId, string tagId, string expand = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetContentmanagementWorkspaceTagvalue");
+            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetWorkspacesWorkspaceIdTagvaluesTagId");
             // verify the required parameter 'tagId' is set
-            if (tagId == null) throw new ApiException(400, "Missing required parameter 'tagId' when calling GetContentmanagementWorkspaceTagvalue");
+            if (tagId == null) throw new ApiException(400, "Missing required parameter 'tagId' when calling GetWorkspacesWorkspaceIdTagvaluesTagId");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
@@ -7892,9 +7892,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceTagvalue: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetWorkspacesWorkspaceIdTagvaluesTagId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetContentmanagementWorkspaceTagvalue: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetWorkspacesWorkspaceIdTagvaluesTagId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<TagValue>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7909,9 +7909,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param> 
         /// <param name="body">Workspace</param> 
         /// <returns>TagValue</returns>
-        public TagValue PutContentmanagementWorkspaceTagvalue (string workspaceId, string tagId, TagValue body = null)
+        public TagValue PutWorkspacesWorkspaceIdTagvaluesTagId (string workspaceId, string tagId, TagValue body = null)
         {
-             ApiResponse<TagValue> response = PutContentmanagementWorkspaceTagvalueWithHttpInfo(workspaceId, tagId, body);
+             ApiResponse<TagValue> response = PutWorkspacesWorkspaceIdTagvaluesTagIdWithHttpInfo(workspaceId, tagId, body);
              return response.Data;
         }
 
@@ -7922,16 +7922,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param> 
         /// <param name="body">Workspace</param> 
         /// <returns>ApiResponse of TagValue</returns>
-        public ApiResponse< TagValue > PutContentmanagementWorkspaceTagvalueWithHttpInfo (string workspaceId, string tagId, TagValue body = null)
+        public ApiResponse< TagValue > PutWorkspacesWorkspaceIdTagvaluesTagIdWithHttpInfo (string workspaceId, string tagId, TagValue body = null)
         {
             
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
-                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PutContentmanagementWorkspaceTagvalue");
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PutWorkspacesWorkspaceIdTagvaluesTagId");
             
             // verify the required parameter 'tagId' is set
             if (tagId == null)
-                throw new ApiException(400, "Missing required parameter 'tagId' when calling ContentManagementApi->PutContentmanagementWorkspaceTagvalue");
+                throw new ApiException(400, "Missing required parameter 'tagId' when calling ContentManagementApi->PutWorkspacesWorkspaceIdTagvaluesTagId");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
@@ -7992,9 +7992,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutContentmanagementWorkspaceTagvalue: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutWorkspacesWorkspaceIdTagvaluesTagId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutContentmanagementWorkspaceTagvalue: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutWorkspacesWorkspaceIdTagvaluesTagId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<TagValue>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8009,9 +8009,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Task of TagValue</returns>
-        public async System.Threading.Tasks.Task<TagValue> PutContentmanagementWorkspaceTagvalueAsync (string workspaceId, string tagId, TagValue body = null)
+        public async System.Threading.Tasks.Task<TagValue> PutWorkspacesWorkspaceIdTagvaluesTagIdAsync (string workspaceId, string tagId, TagValue body = null)
         {
-             ApiResponse<TagValue> response = await PutContentmanagementWorkspaceTagvalueAsyncWithHttpInfo(workspaceId, tagId, body);
+             ApiResponse<TagValue> response = await PutWorkspacesWorkspaceIdTagvaluesTagIdAsyncWithHttpInfo(workspaceId, tagId, body);
              return response.Data;
 
         }
@@ -8023,12 +8023,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="tagId">Tag ID</param>
         /// <param name="body">Workspace</param>
         /// <returns>Task of ApiResponse (TagValue)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TagValue>> PutContentmanagementWorkspaceTagvalueAsyncWithHttpInfo (string workspaceId, string tagId, TagValue body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TagValue>> PutWorkspacesWorkspaceIdTagvaluesTagIdAsyncWithHttpInfo (string workspaceId, string tagId, TagValue body = null)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling PutContentmanagementWorkspaceTagvalue");
+            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling PutWorkspacesWorkspaceIdTagvaluesTagId");
             // verify the required parameter 'tagId' is set
-            if (tagId == null) throw new ApiException(400, "Missing required parameter 'tagId' when calling PutContentmanagementWorkspaceTagvalue");
+            if (tagId == null) throw new ApiException(400, "Missing required parameter 'tagId' when calling PutWorkspacesWorkspaceIdTagvaluesTagId");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
@@ -8084,9 +8084,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutContentmanagementWorkspaceTagvalue: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutWorkspacesWorkspaceIdTagvaluesTagId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutContentmanagementWorkspaceTagvalue: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutWorkspacesWorkspaceIdTagvaluesTagId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<TagValue>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8100,9 +8100,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param> 
         /// <param name="tagId">Tag ID</param> 
         /// <returns></returns>
-        public void DeleteContentmanagementWorkspaceTagvalue (string workspaceId, string tagId)
+        public void DeleteWorkspacesWorkspaceIdTagvaluesTagId (string workspaceId, string tagId)
         {
-             DeleteContentmanagementWorkspaceTagvalueWithHttpInfo(workspaceId, tagId);
+             DeleteWorkspacesWorkspaceIdTagvaluesTagIdWithHttpInfo(workspaceId, tagId);
         }
 
         /// <summary>
@@ -8111,16 +8111,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param> 
         /// <param name="tagId">Tag ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteContentmanagementWorkspaceTagvalueWithHttpInfo (string workspaceId, string tagId)
+        public ApiResponse<Object> DeleteWorkspacesWorkspaceIdTagvaluesTagIdWithHttpInfo (string workspaceId, string tagId)
         {
             
             // verify the required parameter 'workspaceId' is set
             if (workspaceId == null)
-                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->DeleteContentmanagementWorkspaceTagvalue");
+                throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->DeleteWorkspacesWorkspaceIdTagvaluesTagId");
             
             // verify the required parameter 'tagId' is set
             if (tagId == null)
-                throw new ApiException(400, "Missing required parameter 'tagId' when calling ContentManagementApi->DeleteContentmanagementWorkspaceTagvalue");
+                throw new ApiException(400, "Missing required parameter 'tagId' when calling ContentManagementApi->DeleteWorkspacesWorkspaceIdTagvaluesTagId");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
@@ -8174,9 +8174,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteContentmanagementWorkspaceTagvalue: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteWorkspacesWorkspaceIdTagvaluesTagId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteContentmanagementWorkspaceTagvalue: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteWorkspacesWorkspaceIdTagvaluesTagId: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -8190,9 +8190,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteContentmanagementWorkspaceTagvalueAsync (string workspaceId, string tagId)
+        public async System.Threading.Tasks.Task DeleteWorkspacesWorkspaceIdTagvaluesTagIdAsync (string workspaceId, string tagId)
         {
-             await DeleteContentmanagementWorkspaceTagvalueAsyncWithHttpInfo(workspaceId, tagId);
+             await DeleteWorkspacesWorkspaceIdTagvaluesTagIdAsyncWithHttpInfo(workspaceId, tagId);
 
         }
 
@@ -8202,12 +8202,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="workspaceId">Workspace ID</param>
         /// <param name="tagId">Tag ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContentmanagementWorkspaceTagvalueAsyncWithHttpInfo (string workspaceId, string tagId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkspacesWorkspaceIdTagvaluesTagIdAsyncWithHttpInfo (string workspaceId, string tagId)
         {
             // verify the required parameter 'workspaceId' is set
-            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling DeleteContentmanagementWorkspaceTagvalue");
+            if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling DeleteWorkspacesWorkspaceIdTagvaluesTagId");
             // verify the required parameter 'tagId' is set
-            if (tagId == null) throw new ApiException(400, "Missing required parameter 'tagId' when calling DeleteContentmanagementWorkspaceTagvalue");
+            if (tagId == null) throw new ApiException(400, "Missing required parameter 'tagId' when calling DeleteWorkspacesWorkspaceIdTagvaluesTagId");
             
     
             var path_ = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
@@ -8262,9 +8262,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteContentmanagementWorkspaceTagvalue: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteWorkspacesWorkspaceIdTagvaluesTagId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteContentmanagementWorkspaceTagvalue: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteWorkspacesWorkspaceIdTagvaluesTagId: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,

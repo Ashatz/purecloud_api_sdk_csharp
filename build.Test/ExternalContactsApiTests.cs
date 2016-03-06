@@ -47,372 +47,372 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test GetExternalcontactsContacts
+        /// Test GetContacts
         /// </summary>
         [Test]
-        public void GetExternalcontactsContactsTest()
+        public void GetContactsTest()
         {
-            // TODO: add unit test for the method 'GetExternalcontactsContacts'
+            // TODO: add unit test for the method 'GetContacts'
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string q = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
             
-            var response = instance.GetExternalcontactsContacts(pageSize, pageNumber, q, sortOrder);
+            var response = instance.GetContacts(pageSize, pageNumber, q, sortOrder);
             Assert.IsInstanceOf<ContactListing> (response, "response is ContactListing"); 
         }
         
         /// <summary>
-        /// Test PostExternalcontactsContacts
+        /// Test PostContacts
         /// </summary>
         [Test]
-        public void PostExternalcontactsContactsTest()
+        public void PostContactsTest()
         {
-            // TODO: add unit test for the method 'PostExternalcontactsContacts'
+            // TODO: add unit test for the method 'PostContacts'
             ExternalContact body = null; // TODO: replace null with proper value
             
-            var response = instance.PostExternalcontactsContacts(body);
+            var response = instance.PostContacts(body);
             Assert.IsInstanceOf<ExternalContact> (response, "response is ExternalContact"); 
         }
         
         /// <summary>
-        /// Test GetExternalcontactsContact
+        /// Test GetContactsContactId
         /// </summary>
         [Test]
-        public void GetExternalcontactsContactTest()
+        public void GetContactsContactIdTest()
         {
-            // TODO: add unit test for the method 'GetExternalcontactsContact'
+            // TODO: add unit test for the method 'GetContactsContactId'
             string contactId = null; // TODO: replace null with proper value
             
-            var response = instance.GetExternalcontactsContact(contactId);
+            var response = instance.GetContactsContactId(contactId);
             Assert.IsInstanceOf<ExternalContact> (response, "response is ExternalContact"); 
         }
         
         /// <summary>
-        /// Test PutExternalcontactsContact
+        /// Test PutContactsContactId
         /// </summary>
         [Test]
-        public void PutExternalcontactsContactTest()
+        public void PutContactsContactIdTest()
         {
-            // TODO: add unit test for the method 'PutExternalcontactsContact'
+            // TODO: add unit test for the method 'PutContactsContactId'
             string contactId = null; // TODO: replace null with proper value
             ExternalContact body = null; // TODO: replace null with proper value
             
-            var response = instance.PutExternalcontactsContact(contactId, body);
+            var response = instance.PutContactsContactId(contactId, body);
             Assert.IsInstanceOf<ExternalContact> (response, "response is ExternalContact"); 
         }
         
         /// <summary>
-        /// Test DeleteExternalcontactsContact
+        /// Test DeleteContactsContactId
         /// </summary>
         [Test]
-        public void DeleteExternalcontactsContactTest()
+        public void DeleteContactsContactIdTest()
         {
-            // TODO: add unit test for the method 'DeleteExternalcontactsContact'
+            // TODO: add unit test for the method 'DeleteContactsContactId'
             string contactId = null; // TODO: replace null with proper value
             
-            instance.DeleteExternalcontactsContact(contactId);
+            instance.DeleteContactsContactId(contactId);
              
         }
         
         /// <summary>
-        /// Test GetExternalcontactsContactNotes
+        /// Test GetContactsContactIdNotes
         /// </summary>
         [Test]
-        public void GetExternalcontactsContactNotesTest()
+        public void GetContactsContactIdNotesTest()
         {
-            // TODO: add unit test for the method 'GetExternalcontactsContactNotes'
+            // TODO: add unit test for the method 'GetContactsContactIdNotes'
             string contactId = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
             
-            var response = instance.GetExternalcontactsContactNotes(contactId, pageSize, pageNumber, sortOrder);
+            var response = instance.GetContactsContactIdNotes(contactId, pageSize, pageNumber, sortOrder);
             Assert.IsInstanceOf<NoteListing> (response, "response is NoteListing"); 
         }
         
         /// <summary>
-        /// Test PostExternalcontactsContactNotes
+        /// Test PostContactsContactIdNotes
         /// </summary>
         [Test]
-        public void PostExternalcontactsContactNotesTest()
+        public void PostContactsContactIdNotesTest()
         {
-            // TODO: add unit test for the method 'PostExternalcontactsContactNotes'
+            // TODO: add unit test for the method 'PostContactsContactIdNotes'
             string contactId = null; // TODO: replace null with proper value
             Note body = null; // TODO: replace null with proper value
             
-            var response = instance.PostExternalcontactsContactNotes(contactId, body);
+            var response = instance.PostContactsContactIdNotes(contactId, body);
             Assert.IsInstanceOf<Note> (response, "response is Note"); 
         }
         
         /// <summary>
-        /// Test GetExternalcontactsContactNote
+        /// Test GetContactsContactIdNotesNoteId
         /// </summary>
         [Test]
-        public void GetExternalcontactsContactNoteTest()
+        public void GetContactsContactIdNotesNoteIdTest()
         {
-            // TODO: add unit test for the method 'GetExternalcontactsContactNote'
+            // TODO: add unit test for the method 'GetContactsContactIdNotesNoteId'
             string contactId = null; // TODO: replace null with proper value
             string noteId = null; // TODO: replace null with proper value
             
-            var response = instance.GetExternalcontactsContactNote(contactId, noteId);
+            var response = instance.GetContactsContactIdNotesNoteId(contactId, noteId);
             Assert.IsInstanceOf<Note> (response, "response is Note"); 
         }
         
         /// <summary>
-        /// Test PutExternalcontactsContactNote
+        /// Test PutContactsContactIdNotesNoteId
         /// </summary>
         [Test]
-        public void PutExternalcontactsContactNoteTest()
+        public void PutContactsContactIdNotesNoteIdTest()
         {
-            // TODO: add unit test for the method 'PutExternalcontactsContactNote'
+            // TODO: add unit test for the method 'PutContactsContactIdNotesNoteId'
             string contactId = null; // TODO: replace null with proper value
             string noteId = null; // TODO: replace null with proper value
             Note body = null; // TODO: replace null with proper value
             
-            var response = instance.PutExternalcontactsContactNote(contactId, noteId, body);
+            var response = instance.PutContactsContactIdNotesNoteId(contactId, noteId, body);
             Assert.IsInstanceOf<Note> (response, "response is Note"); 
         }
         
         /// <summary>
-        /// Test DeleteExternalcontactsContactNote
+        /// Test DeleteContactsContactIdNotesNoteId
         /// </summary>
         [Test]
-        public void DeleteExternalcontactsContactNoteTest()
+        public void DeleteContactsContactIdNotesNoteIdTest()
         {
-            // TODO: add unit test for the method 'DeleteExternalcontactsContactNote'
+            // TODO: add unit test for the method 'DeleteContactsContactIdNotesNoteId'
             string contactId = null; // TODO: replace null with proper value
             string noteId = null; // TODO: replace null with proper value
             
-            instance.DeleteExternalcontactsContactNote(contactId, noteId);
+            instance.DeleteContactsContactIdNotesNoteId(contactId, noteId);
              
         }
         
         /// <summary>
-        /// Test GetExternalcontactsOrganizations
+        /// Test GetOrganizations
         /// </summary>
         [Test]
-        public void GetExternalcontactsOrganizationsTest()
+        public void GetOrganizationsTest()
         {
-            // TODO: add unit test for the method 'GetExternalcontactsOrganizations'
+            // TODO: add unit test for the method 'GetOrganizations'
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string q = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
             
-            var response = instance.GetExternalcontactsOrganizations(pageSize, pageNumber, q, sortOrder);
+            var response = instance.GetOrganizations(pageSize, pageNumber, q, sortOrder);
             Assert.IsInstanceOf<ExternalOrganizationListing> (response, "response is ExternalOrganizationListing"); 
         }
         
         /// <summary>
-        /// Test PostExternalcontactsOrganizations
+        /// Test PostOrganizations
         /// </summary>
         [Test]
-        public void PostExternalcontactsOrganizationsTest()
+        public void PostOrganizationsTest()
         {
-            // TODO: add unit test for the method 'PostExternalcontactsOrganizations'
+            // TODO: add unit test for the method 'PostOrganizations'
             ExternalOrganization body = null; // TODO: replace null with proper value
             
-            var response = instance.PostExternalcontactsOrganizations(body);
+            var response = instance.PostOrganizations(body);
             Assert.IsInstanceOf<ExternalOrganization> (response, "response is ExternalOrganization"); 
         }
         
         /// <summary>
-        /// Test GetExternalcontactsOrganization
+        /// Test GetOrganizationsExternalorganizationId
         /// </summary>
         [Test]
-        public void GetExternalcontactsOrganizationTest()
+        public void GetOrganizationsExternalorganizationIdTest()
         {
-            // TODO: add unit test for the method 'GetExternalcontactsOrganization'
+            // TODO: add unit test for the method 'GetOrganizationsExternalorganizationId'
             string externalOrganizationId = null; // TODO: replace null with proper value
             
-            var response = instance.GetExternalcontactsOrganization(externalOrganizationId);
+            var response = instance.GetOrganizationsExternalorganizationId(externalOrganizationId);
             Assert.IsInstanceOf<ExternalOrganization> (response, "response is ExternalOrganization"); 
         }
         
         /// <summary>
-        /// Test PutExternalcontactsOrganization
+        /// Test PutOrganizationsExternalorganizationId
         /// </summary>
         [Test]
-        public void PutExternalcontactsOrganizationTest()
+        public void PutOrganizationsExternalorganizationIdTest()
         {
-            // TODO: add unit test for the method 'PutExternalcontactsOrganization'
+            // TODO: add unit test for the method 'PutOrganizationsExternalorganizationId'
             string externalOrganizationId = null; // TODO: replace null with proper value
             ExternalOrganization body = null; // TODO: replace null with proper value
             
-            var response = instance.PutExternalcontactsOrganization(externalOrganizationId, body);
+            var response = instance.PutOrganizationsExternalorganizationId(externalOrganizationId, body);
             Assert.IsInstanceOf<ExternalOrganization> (response, "response is ExternalOrganization"); 
         }
         
         /// <summary>
-        /// Test DeleteExternalcontactsOrganization
+        /// Test DeleteOrganizationsExternalorganizationId
         /// </summary>
         [Test]
-        public void DeleteExternalcontactsOrganizationTest()
+        public void DeleteOrganizationsExternalorganizationIdTest()
         {
-            // TODO: add unit test for the method 'DeleteExternalcontactsOrganization'
+            // TODO: add unit test for the method 'DeleteOrganizationsExternalorganizationId'
             string externalOrganizationId = null; // TODO: replace null with proper value
             
-            instance.DeleteExternalcontactsOrganization(externalOrganizationId);
+            instance.DeleteOrganizationsExternalorganizationId(externalOrganizationId);
              
         }
         
         /// <summary>
-        /// Test GetExternalcontactsOrganizationContacts
+        /// Test GetOrganizationsExternalorganizationIdContacts
         /// </summary>
         [Test]
-        public void GetExternalcontactsOrganizationContactsTest()
+        public void GetOrganizationsExternalorganizationIdContactsTest()
         {
-            // TODO: add unit test for the method 'GetExternalcontactsOrganizationContacts'
+            // TODO: add unit test for the method 'GetOrganizationsExternalorganizationIdContacts'
             string externalOrganizationId = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string q = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
             
-            var response = instance.GetExternalcontactsOrganizationContacts(externalOrganizationId, pageSize, pageNumber, q, sortOrder);
+            var response = instance.GetOrganizationsExternalorganizationIdContacts(externalOrganizationId, pageSize, pageNumber, q, sortOrder);
             Assert.IsInstanceOf<ContactListing> (response, "response is ContactListing"); 
         }
         
         /// <summary>
-        /// Test GetExternalcontactsOrganizationNotes
+        /// Test GetOrganizationsExternalorganizationIdNotes
         /// </summary>
         [Test]
-        public void GetExternalcontactsOrganizationNotesTest()
+        public void GetOrganizationsExternalorganizationIdNotesTest()
         {
-            // TODO: add unit test for the method 'GetExternalcontactsOrganizationNotes'
+            // TODO: add unit test for the method 'GetOrganizationsExternalorganizationIdNotes'
             string externalOrganizationId = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
             
-            var response = instance.GetExternalcontactsOrganizationNotes(externalOrganizationId, pageSize, pageNumber, sortOrder);
+            var response = instance.GetOrganizationsExternalorganizationIdNotes(externalOrganizationId, pageSize, pageNumber, sortOrder);
             Assert.IsInstanceOf<NoteListing> (response, "response is NoteListing"); 
         }
         
         /// <summary>
-        /// Test PostExternalcontactsOrganizationNotes
+        /// Test PostOrganizationsExternalorganizationIdNotes
         /// </summary>
         [Test]
-        public void PostExternalcontactsOrganizationNotesTest()
+        public void PostOrganizationsExternalorganizationIdNotesTest()
         {
-            // TODO: add unit test for the method 'PostExternalcontactsOrganizationNotes'
+            // TODO: add unit test for the method 'PostOrganizationsExternalorganizationIdNotes'
             string externalOrganizationId = null; // TODO: replace null with proper value
             Note body = null; // TODO: replace null with proper value
             
-            var response = instance.PostExternalcontactsOrganizationNotes(externalOrganizationId, body);
+            var response = instance.PostOrganizationsExternalorganizationIdNotes(externalOrganizationId, body);
             Assert.IsInstanceOf<Note> (response, "response is Note"); 
         }
         
         /// <summary>
-        /// Test GetExternalcontactsOrganizationNote
+        /// Test GetOrganizationsExternalorganizationIdNotesNoteId
         /// </summary>
         [Test]
-        public void GetExternalcontactsOrganizationNoteTest()
+        public void GetOrganizationsExternalorganizationIdNotesNoteIdTest()
         {
-            // TODO: add unit test for the method 'GetExternalcontactsOrganizationNote'
+            // TODO: add unit test for the method 'GetOrganizationsExternalorganizationIdNotesNoteId'
             string externalOrganizationId = null; // TODO: replace null with proper value
             string noteId = null; // TODO: replace null with proper value
             
-            var response = instance.GetExternalcontactsOrganizationNote(externalOrganizationId, noteId);
+            var response = instance.GetOrganizationsExternalorganizationIdNotesNoteId(externalOrganizationId, noteId);
             Assert.IsInstanceOf<Note> (response, "response is Note"); 
         }
         
         /// <summary>
-        /// Test PutExternalcontactsOrganizationNote
+        /// Test PutOrganizationsExternalorganizationIdNotesNoteId
         /// </summary>
         [Test]
-        public void PutExternalcontactsOrganizationNoteTest()
+        public void PutOrganizationsExternalorganizationIdNotesNoteIdTest()
         {
-            // TODO: add unit test for the method 'PutExternalcontactsOrganizationNote'
+            // TODO: add unit test for the method 'PutOrganizationsExternalorganizationIdNotesNoteId'
             string externalOrganizationId = null; // TODO: replace null with proper value
             string noteId = null; // TODO: replace null with proper value
             Note body = null; // TODO: replace null with proper value
             
-            var response = instance.PutExternalcontactsOrganizationNote(externalOrganizationId, noteId, body);
+            var response = instance.PutOrganizationsExternalorganizationIdNotesNoteId(externalOrganizationId, noteId, body);
             Assert.IsInstanceOf<Note> (response, "response is Note"); 
         }
         
         /// <summary>
-        /// Test DeleteExternalcontactsOrganizationNote
+        /// Test DeleteOrganizationsExternalorganizationIdNotesNoteId
         /// </summary>
         [Test]
-        public void DeleteExternalcontactsOrganizationNoteTest()
+        public void DeleteOrganizationsExternalorganizationIdNotesNoteIdTest()
         {
-            // TODO: add unit test for the method 'DeleteExternalcontactsOrganizationNote'
+            // TODO: add unit test for the method 'DeleteOrganizationsExternalorganizationIdNotesNoteId'
             string externalOrganizationId = null; // TODO: replace null with proper value
             string noteId = null; // TODO: replace null with proper value
             
-            instance.DeleteExternalcontactsOrganizationNote(externalOrganizationId, noteId);
+            instance.DeleteOrganizationsExternalorganizationIdNotesNoteId(externalOrganizationId, noteId);
              
         }
         
         /// <summary>
-        /// Test GetExternalcontactsOrganizationRelationships
+        /// Test GetOrganizationsExternalorganizationIdRelationships
         /// </summary>
         [Test]
-        public void GetExternalcontactsOrganizationRelationshipsTest()
+        public void GetOrganizationsExternalorganizationIdRelationshipsTest()
         {
-            // TODO: add unit test for the method 'GetExternalcontactsOrganizationRelationships'
+            // TODO: add unit test for the method 'GetOrganizationsExternalorganizationIdRelationships'
             string externalOrganizationId = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
             
-            var response = instance.GetExternalcontactsOrganizationRelationships(externalOrganizationId, pageSize, pageNumber, sortOrder);
+            var response = instance.GetOrganizationsExternalorganizationIdRelationships(externalOrganizationId, pageSize, pageNumber, sortOrder);
             Assert.IsInstanceOf<RelationshipListing> (response, "response is RelationshipListing"); 
         }
         
         /// <summary>
-        /// Test PostExternalcontactsRelationships
+        /// Test PostRelationships
         /// </summary>
         [Test]
-        public void PostExternalcontactsRelationshipsTest()
+        public void PostRelationshipsTest()
         {
-            // TODO: add unit test for the method 'PostExternalcontactsRelationships'
+            // TODO: add unit test for the method 'PostRelationships'
             Relationship body = null; // TODO: replace null with proper value
             
-            var response = instance.PostExternalcontactsRelationships(body);
+            var response = instance.PostRelationships(body);
             Assert.IsInstanceOf<Relationship> (response, "response is Relationship"); 
         }
         
         /// <summary>
-        /// Test GetExternalcontactsRelationship
+        /// Test GetRelationshipsRelationshipId
         /// </summary>
         [Test]
-        public void GetExternalcontactsRelationshipTest()
+        public void GetRelationshipsRelationshipIdTest()
         {
-            // TODO: add unit test for the method 'GetExternalcontactsRelationship'
+            // TODO: add unit test for the method 'GetRelationshipsRelationshipId'
             string relationshipId = null; // TODO: replace null with proper value
             
-            var response = instance.GetExternalcontactsRelationship(relationshipId);
+            var response = instance.GetRelationshipsRelationshipId(relationshipId);
             Assert.IsInstanceOf<Relationship> (response, "response is Relationship"); 
         }
         
         /// <summary>
-        /// Test PutExternalcontactsRelationship
+        /// Test PutRelationshipsRelationshipId
         /// </summary>
         [Test]
-        public void PutExternalcontactsRelationshipTest()
+        public void PutRelationshipsRelationshipIdTest()
         {
-            // TODO: add unit test for the method 'PutExternalcontactsRelationship'
+            // TODO: add unit test for the method 'PutRelationshipsRelationshipId'
             string relationshipId = null; // TODO: replace null with proper value
             Relationship body = null; // TODO: replace null with proper value
             
-            var response = instance.PutExternalcontactsRelationship(relationshipId, body);
+            var response = instance.PutRelationshipsRelationshipId(relationshipId, body);
             Assert.IsInstanceOf<Relationship> (response, "response is Relationship"); 
         }
         
         /// <summary>
-        /// Test DeleteExternalcontactsRelationship
+        /// Test DeleteRelationshipsRelationshipId
         /// </summary>
         [Test]
-        public void DeleteExternalcontactsRelationshipTest()
+        public void DeleteRelationshipsRelationshipIdTest()
         {
-            // TODO: add unit test for the method 'DeleteExternalcontactsRelationship'
+            // TODO: add unit test for the method 'DeleteRelationshipsRelationshipId'
             string relationshipId = null; // TODO: replace null with proper value
             
-            instance.DeleteExternalcontactsRelationship(relationshipId);
+            instance.DeleteRelationshipsRelationshipId(relationshipId);
              
         }
         

@@ -47,45 +47,45 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test GetGroups
-        /// </summary>
-        [Test]
-        public void GetGroupsTest()
-        {
-            // TODO: add unit test for the method 'GetGroups'
-            int? pageSize = null; // TODO: replace null with proper value
-            int? pageNumber = null; // TODO: replace null with proper value
-            string name = null; // TODO: replace null with proper value
-            
-            var response = instance.GetGroups(pageSize, pageNumber, name);
-            Assert.IsInstanceOf<GroupEntityListing> (response, "response is GroupEntityListing"); 
-        }
-        
-        /// <summary>
         /// Test Get
         /// </summary>
         [Test]
         public void GetTest()
         {
             // TODO: add unit test for the method 'Get'
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            string name = null; // TODO: replace null with proper value
+            
+            var response = instance.Get(pageSize, pageNumber, name);
+            Assert.IsInstanceOf<GroupEntityListing> (response, "response is GroupEntityListing"); 
+        }
+        
+        /// <summary>
+        /// Test GetGroupId
+        /// </summary>
+        [Test]
+        public void GetGroupIdTest()
+        {
+            // TODO: add unit test for the method 'GetGroupId'
             string groupId = null; // TODO: replace null with proper value
             
-            var response = instance.Get(groupId);
+            var response = instance.GetGroupId(groupId);
             Assert.IsInstanceOf<Group> (response, "response is Group"); 
         }
         
         /// <summary>
-        /// Test GetMembers
+        /// Test GetGroupIdMembers
         /// </summary>
         [Test]
-        public void GetMembersTest()
+        public void GetGroupIdMembersTest()
         {
-            // TODO: add unit test for the method 'GetMembers'
+            // TODO: add unit test for the method 'GetGroupIdMembers'
             string groupId = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             
-            var response = instance.GetMembers(groupId, pageSize, pageNumber);
+            var response = instance.GetGroupIdMembers(groupId, pageSize, pageNumber);
             Assert.IsInstanceOf<UserEntityListing> (response, "response is UserEntityListing"); 
         }
         

@@ -51,9 +51,9 @@ namespace ININ.PureCloudApi.Model
   
         
         /// <summary>
-        /// One or more OAuth Grant/Client types supported by this client.
+        /// The OAuth Grant/Client type supported by this client.
         /// </summary>
-        /// <value>One or more OAuth Grant/Client types supported by this client.</value>
+        /// <value>The OAuth Grant/Client type supported by this client.</value>
         [DataMember(Name="authorizedGrantTypes", EmitDefaultValue=false)]
         public List<string> AuthorizedGrantTypes { get; set; }
   

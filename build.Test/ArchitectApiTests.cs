@@ -102,42 +102,42 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetIvr
+        /// Test GetIvrsIvrId
         /// </summary>
         [Test]
-        public void GetIvrTest()
+        public void GetIvrsIvrIdTest()
         {
-            // TODO: add unit test for the method 'GetIvr'
+            // TODO: add unit test for the method 'GetIvrsIvrId'
             string ivrId = null; // TODO: replace null with proper value
             
-            var response = instance.GetIvr(ivrId);
+            var response = instance.GetIvrsIvrId(ivrId);
             Assert.IsInstanceOf<IVR> (response, "response is IVR"); 
         }
         
         /// <summary>
-        /// Test PutIvr
+        /// Test PutIvrsIvrId
         /// </summary>
         [Test]
-        public void PutIvrTest()
+        public void PutIvrsIvrIdTest()
         {
-            // TODO: add unit test for the method 'PutIvr'
+            // TODO: add unit test for the method 'PutIvrsIvrId'
             string ivrId = null; // TODO: replace null with proper value
             IVR body = null; // TODO: replace null with proper value
             
-            var response = instance.PutIvr(ivrId, body);
+            var response = instance.PutIvrsIvrId(ivrId, body);
             Assert.IsInstanceOf<IVR> (response, "response is IVR"); 
         }
         
         /// <summary>
-        /// Test DeleteIvr
+        /// Test DeleteIvrsIvrId
         /// </summary>
         [Test]
-        public void DeleteIvrTest()
+        public void DeleteIvrsIvrIdTest()
         {
-            // TODO: add unit test for the method 'DeleteIvr'
+            // TODO: add unit test for the method 'DeleteIvrsIvrId'
             string ivrId = null; // TODO: replace null with proper value
             
-            var response = instance.DeleteIvr(ivrId);
+            var response = instance.DeleteIvrsIvrId(ivrId);
             Assert.IsInstanceOf<string> (response, "response is string"); 
         }
         
@@ -186,114 +186,114 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetPrompt
+        /// Test GetPromptsPromptId
         /// </summary>
         [Test]
-        public void GetPromptTest()
+        public void GetPromptsPromptIdTest()
         {
-            // TODO: add unit test for the method 'GetPrompt'
+            // TODO: add unit test for the method 'GetPromptsPromptId'
             string promptId = null; // TODO: replace null with proper value
             
-            var response = instance.GetPrompt(promptId);
+            var response = instance.GetPromptsPromptId(promptId);
             Assert.IsInstanceOf<Prompt> (response, "response is Prompt"); 
         }
         
         /// <summary>
-        /// Test PutPrompt
+        /// Test PutPromptsPromptId
         /// </summary>
         [Test]
-        public void PutPromptTest()
+        public void PutPromptsPromptIdTest()
         {
-            // TODO: add unit test for the method 'PutPrompt'
+            // TODO: add unit test for the method 'PutPromptsPromptId'
             string promptId = null; // TODO: replace null with proper value
             Prompt body = null; // TODO: replace null with proper value
             
-            var response = instance.PutPrompt(promptId, body);
+            var response = instance.PutPromptsPromptId(promptId, body);
             Assert.IsInstanceOf<Prompt> (response, "response is Prompt"); 
         }
         
         /// <summary>
-        /// Test DeletePrompt
+        /// Test DeletePromptsPromptId
         /// </summary>
         [Test]
-        public void DeletePromptTest()
+        public void DeletePromptsPromptIdTest()
         {
-            // TODO: add unit test for the method 'DeletePrompt'
+            // TODO: add unit test for the method 'DeletePromptsPromptId'
             string promptId = null; // TODO: replace null with proper value
             
-            instance.DeletePrompt(promptId);
+            instance.DeletePromptsPromptId(promptId);
              
         }
         
         /// <summary>
-        /// Test GetPromptResources
+        /// Test GetPromptsPromptIdResources
         /// </summary>
         [Test]
-        public void GetPromptResourcesTest()
+        public void GetPromptsPromptIdResourcesTest()
         {
-            // TODO: add unit test for the method 'GetPromptResources'
+            // TODO: add unit test for the method 'GetPromptsPromptIdResources'
             string promptId = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             
-            var response = instance.GetPromptResources(promptId, pageNumber, pageSize);
+            var response = instance.GetPromptsPromptIdResources(promptId, pageNumber, pageSize);
             Assert.IsInstanceOf<PromptAssetEntityListing> (response, "response is PromptAssetEntityListing"); 
         }
         
         /// <summary>
-        /// Test PostPromptResources
+        /// Test PostPromptsPromptIdResources
         /// </summary>
         [Test]
-        public void PostPromptResourcesTest()
+        public void PostPromptsPromptIdResourcesTest()
         {
-            // TODO: add unit test for the method 'PostPromptResources'
+            // TODO: add unit test for the method 'PostPromptsPromptIdResources'
             string promptId = null; // TODO: replace null with proper value
             PromptAsset body = null; // TODO: replace null with proper value
             
-            var response = instance.PostPromptResources(promptId, body);
+            var response = instance.PostPromptsPromptIdResources(promptId, body);
             Assert.IsInstanceOf<PromptAsset> (response, "response is PromptAsset"); 
         }
         
         /// <summary>
-        /// Test GetPromptResources_0
+        /// Test GetPromptsPromptIdResourcesLanguage
         /// </summary>
         [Test]
-        public void GetPromptResources_0Test()
+        public void GetPromptsPromptIdResourcesLanguageTest()
         {
-            // TODO: add unit test for the method 'GetPromptResources_0'
+            // TODO: add unit test for the method 'GetPromptsPromptIdResourcesLanguage'
             string promptId = null; // TODO: replace null with proper value
             string language = null; // TODO: replace null with proper value
             
-            var response = instance.GetPromptResources_0(promptId, language);
+            var response = instance.GetPromptsPromptIdResourcesLanguage(promptId, language);
             Assert.IsInstanceOf<PromptAsset> (response, "response is PromptAsset"); 
         }
         
         /// <summary>
-        /// Test PutPromptResources
+        /// Test PutPromptsPromptIdResourcesLanguage
         /// </summary>
         [Test]
-        public void PutPromptResourcesTest()
+        public void PutPromptsPromptIdResourcesLanguageTest()
         {
-            // TODO: add unit test for the method 'PutPromptResources'
+            // TODO: add unit test for the method 'PutPromptsPromptIdResourcesLanguage'
             string promptId = null; // TODO: replace null with proper value
             string language = null; // TODO: replace null with proper value
             PromptAsset body = null; // TODO: replace null with proper value
             
-            var response = instance.PutPromptResources(promptId, language, body);
+            var response = instance.PutPromptsPromptIdResourcesLanguage(promptId, language, body);
             Assert.IsInstanceOf<PromptAsset> (response, "response is PromptAsset"); 
         }
         
         /// <summary>
-        /// Test DeletePromptResources
+        /// Test DeletePromptsPromptIdResourcesLanguage
         /// </summary>
         [Test]
-        public void DeletePromptResourcesTest()
+        public void DeletePromptsPromptIdResourcesLanguageTest()
         {
-            // TODO: add unit test for the method 'DeletePromptResources'
+            // TODO: add unit test for the method 'DeletePromptsPromptIdResourcesLanguage'
             string promptId = null; // TODO: replace null with proper value
             string language = null; // TODO: replace null with proper value
             
-            instance.DeletePromptResources(promptId, language);
+            instance.DeletePromptsPromptIdResourcesLanguage(promptId, language);
              
         }
         
@@ -327,42 +327,42 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetSchedulegroup
+        /// Test GetSchedulegroupsSchedulegroupId
         /// </summary>
         [Test]
-        public void GetSchedulegroupTest()
+        public void GetSchedulegroupsSchedulegroupIdTest()
         {
-            // TODO: add unit test for the method 'GetSchedulegroup'
+            // TODO: add unit test for the method 'GetSchedulegroupsSchedulegroupId'
             string scheduleGroupId = null; // TODO: replace null with proper value
             
-            var response = instance.GetSchedulegroup(scheduleGroupId);
+            var response = instance.GetSchedulegroupsSchedulegroupId(scheduleGroupId);
             Assert.IsInstanceOf<ScheduleGroup> (response, "response is ScheduleGroup"); 
         }
         
         /// <summary>
-        /// Test PutSchedulegroup
+        /// Test PutSchedulegroupsSchedulegroupId
         /// </summary>
         [Test]
-        public void PutSchedulegroupTest()
+        public void PutSchedulegroupsSchedulegroupIdTest()
         {
-            // TODO: add unit test for the method 'PutSchedulegroup'
+            // TODO: add unit test for the method 'PutSchedulegroupsSchedulegroupId'
             string scheduleGroupId = null; // TODO: replace null with proper value
             ScheduleGroup body = null; // TODO: replace null with proper value
             
-            var response = instance.PutSchedulegroup(scheduleGroupId, body);
+            var response = instance.PutSchedulegroupsSchedulegroupId(scheduleGroupId, body);
             Assert.IsInstanceOf<ScheduleGroup> (response, "response is ScheduleGroup"); 
         }
         
         /// <summary>
-        /// Test DeleteSchedulegroup
+        /// Test DeleteSchedulegroupsSchedulegroupId
         /// </summary>
         [Test]
-        public void DeleteSchedulegroupTest()
+        public void DeleteSchedulegroupsSchedulegroupIdTest()
         {
-            // TODO: add unit test for the method 'DeleteSchedulegroup'
+            // TODO: add unit test for the method 'DeleteSchedulegroupsSchedulegroupId'
             string scheduleGroupId = null; // TODO: replace null with proper value
             
-            var response = instance.DeleteSchedulegroup(scheduleGroupId);
+            var response = instance.DeleteSchedulegroupsSchedulegroupId(scheduleGroupId);
             Assert.IsInstanceOf<string> (response, "response is string"); 
         }
         
@@ -396,42 +396,42 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetSchedule
+        /// Test GetSchedulesScheduleId
         /// </summary>
         [Test]
-        public void GetScheduleTest()
+        public void GetSchedulesScheduleIdTest()
         {
-            // TODO: add unit test for the method 'GetSchedule'
+            // TODO: add unit test for the method 'GetSchedulesScheduleId'
             string scheduleId = null; // TODO: replace null with proper value
             
-            var response = instance.GetSchedule(scheduleId);
+            var response = instance.GetSchedulesScheduleId(scheduleId);
             Assert.IsInstanceOf<Schedule> (response, "response is Schedule"); 
         }
         
         /// <summary>
-        /// Test PutSchedule
+        /// Test PutSchedulesScheduleId
         /// </summary>
         [Test]
-        public void PutScheduleTest()
+        public void PutSchedulesScheduleIdTest()
         {
-            // TODO: add unit test for the method 'PutSchedule'
+            // TODO: add unit test for the method 'PutSchedulesScheduleId'
             string scheduleId = null; // TODO: replace null with proper value
             Schedule body = null; // TODO: replace null with proper value
             
-            var response = instance.PutSchedule(scheduleId, body);
+            var response = instance.PutSchedulesScheduleId(scheduleId, body);
             Assert.IsInstanceOf<Schedule> (response, "response is Schedule"); 
         }
         
         /// <summary>
-        /// Test DeleteSchedule
+        /// Test DeleteSchedulesScheduleId
         /// </summary>
         [Test]
-        public void DeleteScheduleTest()
+        public void DeleteSchedulesScheduleIdTest()
         {
-            // TODO: add unit test for the method 'DeleteSchedule'
+            // TODO: add unit test for the method 'DeleteSchedulesScheduleId'
             string scheduleId = null; // TODO: replace null with proper value
             
-            var response = instance.DeleteSchedule(scheduleId);
+            var response = instance.DeleteSchedulesScheduleId(scheduleId);
             Assert.IsInstanceOf<string> (response, "response is string"); 
         }
         
@@ -455,84 +455,84 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetSystemprompt
+        /// Test GetSystempromptsPromptId
         /// </summary>
         [Test]
-        public void GetSystempromptTest()
+        public void GetSystempromptsPromptIdTest()
         {
-            // TODO: add unit test for the method 'GetSystemprompt'
+            // TODO: add unit test for the method 'GetSystempromptsPromptId'
             string promptId = null; // TODO: replace null with proper value
             
-            var response = instance.GetSystemprompt(promptId);
+            var response = instance.GetSystempromptsPromptId(promptId);
             Assert.IsInstanceOf<SystemPrompt> (response, "response is SystemPrompt"); 
         }
         
         /// <summary>
-        /// Test GetSystempromptResources
+        /// Test GetSystempromptsPromptIdResources
         /// </summary>
         [Test]
-        public void GetSystempromptResourcesTest()
+        public void GetSystempromptsPromptIdResourcesTest()
         {
-            // TODO: add unit test for the method 'GetSystempromptResources'
+            // TODO: add unit test for the method 'GetSystempromptsPromptIdResources'
             string promptId = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
             
-            var response = instance.GetSystempromptResources(promptId, pageNumber, pageSize, sortBy, sortOrder);
+            var response = instance.GetSystempromptsPromptIdResources(promptId, pageNumber, pageSize, sortBy, sortOrder);
             Assert.IsInstanceOf<SystemPromptAssetEntityListing> (response, "response is SystemPromptAssetEntityListing"); 
         }
         
         /// <summary>
-        /// Test PostSystempromptResources
+        /// Test PostSystempromptsPromptIdResources
         /// </summary>
         [Test]
-        public void PostSystempromptResourcesTest()
+        public void PostSystempromptsPromptIdResourcesTest()
         {
-            // TODO: add unit test for the method 'PostSystempromptResources'
+            // TODO: add unit test for the method 'PostSystempromptsPromptIdResources'
             string promptId = null; // TODO: replace null with proper value
             SystemPromptAsset body = null; // TODO: replace null with proper value
             
-            var response = instance.PostSystempromptResources(promptId, body);
+            var response = instance.PostSystempromptsPromptIdResources(promptId, body);
             Assert.IsInstanceOf<SystemPromptAsset> (response, "response is SystemPromptAsset"); 
         }
         
         /// <summary>
-        /// Test GetSystempromptResources_0
+        /// Test GetSystempromptsPromptIdResourcesLanguage
         /// </summary>
         [Test]
-        public void GetSystempromptResources_0Test()
+        public void GetSystempromptsPromptIdResourcesLanguageTest()
         {
-            // TODO: add unit test for the method 'GetSystempromptResources_0'
+            // TODO: add unit test for the method 'GetSystempromptsPromptIdResourcesLanguage'
             string promptId = null; // TODO: replace null with proper value
             string language = null; // TODO: replace null with proper value
             
-            var response = instance.GetSystempromptResources_0(promptId, language);
+            var response = instance.GetSystempromptsPromptIdResourcesLanguage(promptId, language);
             Assert.IsInstanceOf<SystemPromptAsset> (response, "response is SystemPromptAsset"); 
         }
         
         /// <summary>
-        /// Test DeleteSystempromptResources
+        /// Test DeleteSystempromptsPromptIdResourcesLanguage
         /// </summary>
         [Test]
-        public void DeleteSystempromptResourcesTest()
+        public void DeleteSystempromptsPromptIdResourcesLanguageTest()
         {
-            // TODO: add unit test for the method 'DeleteSystempromptResources'
+            // TODO: add unit test for the method 'DeleteSystempromptsPromptIdResourcesLanguage'
             string promptId = null; // TODO: replace null with proper value
             string language = null; // TODO: replace null with proper value
             
-            var response = instance.DeleteSystempromptResources(promptId, language);
+            var response = instance.DeleteSystempromptsPromptIdResourcesLanguage(promptId, language);
             Assert.IsInstanceOf<string> (response, "response is string"); 
         }
         
         /// <summary>
-        /// Test GetFlows
+        /// Test Get
         /// </summary>
         [Test]
-        public void GetFlowsTest()
+        public void GetTest()
         {
-            // TODO: add unit test for the method 'GetFlows'
+            // TODO: add unit test for the method 'Get'
             string type = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
@@ -547,229 +547,229 @@ namespace ININ.PureCloudApi.Test
             string lockedBy = null; // TODO: replace null with proper value
             bool? deleted = null; // TODO: replace null with proper value
             
-            var response = instance.GetFlows(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, editableBy, lockedBy, deleted);
+            var response = instance.Get(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, editableBy, lockedBy, deleted);
             Assert.IsInstanceOf<FlowEntityListing> (response, "response is FlowEntityListing"); 
         }
         
         /// <summary>
-        /// Test PostFlows
+        /// Test Post
         /// </summary>
         [Test]
-        public void PostFlowsTest()
+        public void PostTest()
         {
-            // TODO: add unit test for the method 'PostFlows'
+            // TODO: add unit test for the method 'Post'
             Flow body = null; // TODO: replace null with proper value
             
-            var response = instance.PostFlows(body);
+            var response = instance.Post(body);
             Assert.IsInstanceOf<Flow> (response, "response is Flow"); 
         }
         
         /// <summary>
-        /// Test DeleteFlows
+        /// Test Delete
         /// </summary>
         [Test]
-        public void DeleteFlowsTest()
+        public void DeleteTest()
         {
-            // TODO: add unit test for the method 'DeleteFlows'
+            // TODO: add unit test for the method 'Delete'
             List<string> id = null; // TODO: replace null with proper value
             bool? ignoreDependencies = null; // TODO: replace null with proper value
             
-            instance.DeleteFlows(id, ignoreDependencies);
+            instance.Delete(id, ignoreDependencies);
              
         }
         
         /// <summary>
-        /// Test PostFlowsActionsCheckin
+        /// Test PostActionsCheckin
         /// </summary>
         [Test]
-        public void PostFlowsActionsCheckinTest()
+        public void PostActionsCheckinTest()
         {
-            // TODO: add unit test for the method 'PostFlowsActionsCheckin'
+            // TODO: add unit test for the method 'PostActionsCheckin'
             string flow = null; // TODO: replace null with proper value
             
-            var response = instance.PostFlowsActionsCheckin(flow);
+            var response = instance.PostActionsCheckin(flow);
             Assert.IsInstanceOf<Flow> (response, "response is Flow"); 
         }
         
         /// <summary>
-        /// Test PostFlowsActionsCheckout
+        /// Test PostActionsCheckout
         /// </summary>
         [Test]
-        public void PostFlowsActionsCheckoutTest()
+        public void PostActionsCheckoutTest()
         {
-            // TODO: add unit test for the method 'PostFlowsActionsCheckout'
+            // TODO: add unit test for the method 'PostActionsCheckout'
             string flow = null; // TODO: replace null with proper value
             
-            var response = instance.PostFlowsActionsCheckout(flow);
+            var response = instance.PostActionsCheckout(flow);
             Assert.IsInstanceOf<Flow> (response, "response is Flow"); 
         }
         
         /// <summary>
-        /// Test PostFlowsActionsDeactivate
+        /// Test PostActionsDeactivate
         /// </summary>
         [Test]
-        public void PostFlowsActionsDeactivateTest()
+        public void PostActionsDeactivateTest()
         {
-            // TODO: add unit test for the method 'PostFlowsActionsDeactivate'
+            // TODO: add unit test for the method 'PostActionsDeactivate'
             string flow = null; // TODO: replace null with proper value
             
-            var response = instance.PostFlowsActionsDeactivate(flow);
+            var response = instance.PostActionsDeactivate(flow);
             Assert.IsInstanceOf<Flow> (response, "response is Flow"); 
         }
         
         /// <summary>
-        /// Test PostFlowsActionsDebug
+        /// Test PostActionsDebug
         /// </summary>
         [Test]
-        public void PostFlowsActionsDebugTest()
+        public void PostActionsDebugTest()
         {
-            // TODO: add unit test for the method 'PostFlowsActionsDebug'
+            // TODO: add unit test for the method 'PostActionsDebug'
             string version = null; // TODO: replace null with proper value
             string flow = null; // TODO: replace null with proper value
             
-            instance.PostFlowsActionsDebug(version, flow);
+            instance.PostActionsDebug(version, flow);
              
         }
         
         /// <summary>
-        /// Test PostFlowsActionsRevert
+        /// Test PostActionsRevert
         /// </summary>
         [Test]
-        public void PostFlowsActionsRevertTest()
+        public void PostActionsRevertTest()
         {
-            // TODO: add unit test for the method 'PostFlowsActionsRevert'
+            // TODO: add unit test for the method 'PostActionsRevert'
             string flow = null; // TODO: replace null with proper value
             
-            var response = instance.PostFlowsActionsRevert(flow);
+            var response = instance.PostActionsRevert(flow);
             Assert.IsInstanceOf<Flow> (response, "response is Flow"); 
         }
         
         /// <summary>
-        /// Test GetFlow
+        /// Test GetFlowId
         /// </summary>
         [Test]
-        public void GetFlowTest()
+        public void GetFlowIdTest()
         {
-            // TODO: add unit test for the method 'GetFlow'
+            // TODO: add unit test for the method 'GetFlowId'
             string flowId = null; // TODO: replace null with proper value
             string deleted = null; // TODO: replace null with proper value
             
-            var response = instance.GetFlow(flowId, deleted);
+            var response = instance.GetFlowId(flowId, deleted);
             Assert.IsInstanceOf<Flow> (response, "response is Flow"); 
         }
         
         /// <summary>
-        /// Test PutFlow
+        /// Test PutFlowId
         /// </summary>
         [Test]
-        public void PutFlowTest()
+        public void PutFlowIdTest()
         {
-            // TODO: add unit test for the method 'PutFlow'
+            // TODO: add unit test for the method 'PutFlowId'
             string flowId = null; // TODO: replace null with proper value
             Flow body = null; // TODO: replace null with proper value
             
-            var response = instance.PutFlow(flowId, body);
+            var response = instance.PutFlowId(flowId, body);
             Assert.IsInstanceOf<Flow> (response, "response is Flow"); 
         }
         
         /// <summary>
-        /// Test DeleteFlow
+        /// Test DeleteFlowId
         /// </summary>
         [Test]
-        public void DeleteFlowTest()
+        public void DeleteFlowIdTest()
         {
-            // TODO: add unit test for the method 'DeleteFlow'
+            // TODO: add unit test for the method 'DeleteFlowId'
             string flowId = null; // TODO: replace null with proper value
             
-            instance.DeleteFlow(flowId);
+            instance.DeleteFlowId(flowId);
              
         }
         
         /// <summary>
-        /// Test GetFlowLatestconfiguration
+        /// Test GetFlowIdLatestconfiguration
         /// </summary>
         [Test]
-        public void GetFlowLatestconfigurationTest()
+        public void GetFlowIdLatestconfigurationTest()
         {
-            // TODO: add unit test for the method 'GetFlowLatestconfiguration'
+            // TODO: add unit test for the method 'GetFlowIdLatestconfiguration'
             string flowId = null; // TODO: replace null with proper value
             string deleted = null; // TODO: replace null with proper value
             
-            var response = instance.GetFlowLatestconfiguration(flowId, deleted);
+            var response = instance.GetFlowIdLatestconfiguration(flowId, deleted);
             Assert.IsInstanceOf<InlineResponse200> (response, "response is InlineResponse200"); 
         }
         
         /// <summary>
-        /// Test GetFlowPublishedresults
+        /// Test GetFlowIdPublishedresultsId
         /// </summary>
         [Test]
-        public void GetFlowPublishedresultsTest()
+        public void GetFlowIdPublishedresultsIdTest()
         {
-            // TODO: add unit test for the method 'GetFlowPublishedresults'
+            // TODO: add unit test for the method 'GetFlowIdPublishedresultsId'
             string flowId = null; // TODO: replace null with proper value
             string id = null; // TODO: replace null with proper value
             
-            var response = instance.GetFlowPublishedresults(flowId, id);
+            var response = instance.GetFlowIdPublishedresultsId(flowId, id);
             Assert.IsInstanceOf<PublishedResult> (response, "response is PublishedResult"); 
         }
         
         /// <summary>
-        /// Test GetFlowVersions
+        /// Test GetFlowIdVersions
         /// </summary>
         [Test]
-        public void GetFlowVersionsTest()
+        public void GetFlowIdVersionsTest()
         {
-            // TODO: add unit test for the method 'GetFlowVersions'
+            // TODO: add unit test for the method 'GetFlowIdVersions'
             string flowId = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             string deleted = null; // TODO: replace null with proper value
             
-            var response = instance.GetFlowVersions(flowId, pageNumber, pageSize, deleted);
+            var response = instance.GetFlowIdVersions(flowId, pageNumber, pageSize, deleted);
             Assert.IsInstanceOf<FlowVersionEntityListing> (response, "response is FlowVersionEntityListing"); 
         }
         
         /// <summary>
-        /// Test PostFlowVersions
+        /// Test PostFlowIdVersions
         /// </summary>
         [Test]
-        public void PostFlowVersionsTest()
+        public void PostFlowIdVersionsTest()
         {
-            // TODO: add unit test for the method 'PostFlowVersions'
+            // TODO: add unit test for the method 'PostFlowIdVersions'
             string flowId = null; // TODO: replace null with proper value
             Body2 body = null; // TODO: replace null with proper value
             
-            var response = instance.PostFlowVersions(flowId, body);
+            var response = instance.PostFlowIdVersions(flowId, body);
             Assert.IsInstanceOf<FlowVersion> (response, "response is FlowVersion"); 
         }
         
         /// <summary>
-        /// Test GetFlowVersion
+        /// Test GetFlowIdVersionsVersionId
         /// </summary>
         [Test]
-        public void GetFlowVersionTest()
+        public void GetFlowIdVersionsVersionIdTest()
         {
-            // TODO: add unit test for the method 'GetFlowVersion'
+            // TODO: add unit test for the method 'GetFlowIdVersionsVersionId'
             string flowId = null; // TODO: replace null with proper value
             string versionId = null; // TODO: replace null with proper value
             string deleted = null; // TODO: replace null with proper value
             
-            var response = instance.GetFlowVersion(flowId, versionId, deleted);
+            var response = instance.GetFlowIdVersionsVersionId(flowId, versionId, deleted);
             Assert.IsInstanceOf<FlowVersion> (response, "response is FlowVersion"); 
         }
         
         /// <summary>
-        /// Test GetFlowVersionConfiguration
+        /// Test GetFlowIdVersionsVersionIdConfiguration
         /// </summary>
         [Test]
-        public void GetFlowVersionConfigurationTest()
+        public void GetFlowIdVersionsVersionIdConfigurationTest()
         {
-            // TODO: add unit test for the method 'GetFlowVersionConfiguration'
+            // TODO: add unit test for the method 'GetFlowIdVersionsVersionIdConfiguration'
             string flowId = null; // TODO: replace null with proper value
             string versionId = null; // TODO: replace null with proper value
             string deleted = null; // TODO: replace null with proper value
             
-            var response = instance.GetFlowVersionConfiguration(flowId, versionId, deleted);
+            var response = instance.GetFlowIdVersionsVersionIdConfiguration(flowId, versionId, deleted);
             Assert.IsInstanceOf<InlineResponse200> (response, "response is InlineResponse200"); 
         }
         

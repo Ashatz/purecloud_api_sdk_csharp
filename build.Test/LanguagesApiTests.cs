@@ -47,29 +47,29 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test GetLanguages
-        /// </summary>
-        [Test]
-        public void GetLanguagesTest()
-        {
-            // TODO: add unit test for the method 'GetLanguages'
-            int? pageSize = null; // TODO: replace null with proper value
-            int? pageNumber = null; // TODO: replace null with proper value
-            
-            var response = instance.GetLanguages(pageSize, pageNumber);
-            Assert.IsInstanceOf<LanguageEntityListing> (response, "response is LanguageEntityListing"); 
-        }
-        
-        /// <summary>
         /// Test Get
         /// </summary>
         [Test]
         public void GetTest()
         {
             // TODO: add unit test for the method 'Get'
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            
+            var response = instance.Get(pageSize, pageNumber);
+            Assert.IsInstanceOf<LanguageEntityListing> (response, "response is LanguageEntityListing"); 
+        }
+        
+        /// <summary>
+        /// Test GetLanguageId
+        /// </summary>
+        [Test]
+        public void GetLanguageIdTest()
+        {
+            // TODO: add unit test for the method 'GetLanguageId'
             string languageId = null; // TODO: replace null with proper value
             
-            var response = instance.Get(languageId);
+            var response = instance.GetLanguageId(languageId);
             Assert.IsInstanceOf<Language> (response, "response is Language"); 
         }
         

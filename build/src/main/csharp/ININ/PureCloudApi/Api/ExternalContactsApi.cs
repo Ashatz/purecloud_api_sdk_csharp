@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>ContactListing</returns>
-        ContactListing GetExternalcontactsContacts (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
+        ContactListing GetContacts (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
   
         /// <summary>
         /// Search for External Contacts
@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>ApiResponse of ContactListing</returns>
-        ApiResponse<ContactListing> GetExternalcontactsContactsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
+        ApiResponse<ContactListing> GetContactsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
 
         /// <summary>
         /// Search for External Contacts
@@ -53,7 +53,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ContactListing</returns>
-        System.Threading.Tasks.Task<ContactListing> GetExternalcontactsContactsAsync (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ContactListing> GetContactsAsync (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
 
         /// <summary>
         /// Search for External Contacts
@@ -66,7 +66,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ApiResponse (ContactListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetExternalcontactsContactsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetContactsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
         
         /// <summary>
         /// Create an ExternalContact
@@ -76,7 +76,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">ExternalContact</param>
         /// <returns>ExternalContact</returns>
-        ExternalContact PostExternalcontactsContacts (ExternalContact body = null);
+        ExternalContact PostContacts (ExternalContact body = null);
   
         /// <summary>
         /// Create an ExternalContact
@@ -86,7 +86,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">ExternalContact</param>
         /// <returns>ApiResponse of ExternalContact</returns>
-        ApiResponse<ExternalContact> PostExternalcontactsContactsWithHttpInfo (ExternalContact body = null);
+        ApiResponse<ExternalContact> PostContactsWithHttpInfo (ExternalContact body = null);
 
         /// <summary>
         /// Create an ExternalContact
@@ -96,7 +96,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of ExternalContact</returns>
-        System.Threading.Tasks.Task<ExternalContact> PostExternalcontactsContactsAsync (ExternalContact body = null);
+        System.Threading.Tasks.Task<ExternalContact> PostContactsAsync (ExternalContact body = null);
 
         /// <summary>
         /// Create an ExternalContact
@@ -106,7 +106,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PostExternalcontactsContactsAsyncWithHttpInfo (ExternalContact body = null);
+        System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PostContactsAsyncWithHttpInfo (ExternalContact body = null);
         
         /// <summary>
         /// Fetch a ExternalContact
@@ -116,7 +116,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>ExternalContact</returns>
-        ExternalContact GetExternalcontactsContact (string contactId);
+        ExternalContact GetContactsContactId (string contactId);
   
         /// <summary>
         /// Fetch a ExternalContact
@@ -126,7 +126,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>ApiResponse of ExternalContact</returns>
-        ApiResponse<ExternalContact> GetExternalcontactsContactWithHttpInfo (string contactId);
+        ApiResponse<ExternalContact> GetContactsContactIdWithHttpInfo (string contactId);
 
         /// <summary>
         /// Fetch a ExternalContact
@@ -136,7 +136,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>Task of ExternalContact</returns>
-        System.Threading.Tasks.Task<ExternalContact> GetExternalcontactsContactAsync (string contactId);
+        System.Threading.Tasks.Task<ExternalContact> GetContactsContactIdAsync (string contactId);
 
         /// <summary>
         /// Fetch a ExternalContact
@@ -146,7 +146,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExternalContact>> GetExternalcontactsContactAsyncWithHttpInfo (string contactId);
+        System.Threading.Tasks.Task<ApiResponse<ExternalContact>> GetContactsContactIdAsyncWithHttpInfo (string contactId);
         
         /// <summary>
         /// Update a externalContact
@@ -157,7 +157,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>ExternalContact</returns>
-        ExternalContact PutExternalcontactsContact (string contactId, ExternalContact body = null);
+        ExternalContact PutContactsContactId (string contactId, ExternalContact body = null);
   
         /// <summary>
         /// Update a externalContact
@@ -168,7 +168,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>ApiResponse of ExternalContact</returns>
-        ApiResponse<ExternalContact> PutExternalcontactsContactWithHttpInfo (string contactId, ExternalContact body = null);
+        ApiResponse<ExternalContact> PutContactsContactIdWithHttpInfo (string contactId, ExternalContact body = null);
 
         /// <summary>
         /// Update a externalContact
@@ -179,7 +179,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of ExternalContact</returns>
-        System.Threading.Tasks.Task<ExternalContact> PutExternalcontactsContactAsync (string contactId, ExternalContact body = null);
+        System.Threading.Tasks.Task<ExternalContact> PutContactsContactIdAsync (string contactId, ExternalContact body = null);
 
         /// <summary>
         /// Update a externalContact
@@ -190,7 +190,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PutExternalcontactsContactAsyncWithHttpInfo (string contactId, ExternalContact body = null);
+        System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PutContactsContactIdAsyncWithHttpInfo (string contactId, ExternalContact body = null);
         
         /// <summary>
         /// Delete a contact
@@ -200,7 +200,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns></returns>
-        void DeleteExternalcontactsContact (string contactId);
+        void DeleteContactsContactId (string contactId);
   
         /// <summary>
         /// Delete a contact
@@ -210,7 +210,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteExternalcontactsContactWithHttpInfo (string contactId);
+        ApiResponse<Object> DeleteContactsContactIdWithHttpInfo (string contactId);
 
         /// <summary>
         /// Delete a contact
@@ -220,7 +220,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteExternalcontactsContactAsync (string contactId);
+        System.Threading.Tasks.Task DeleteContactsContactIdAsync (string contactId);
 
         /// <summary>
         /// Delete a contact
@@ -230,7 +230,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsContactAsyncWithHttpInfo (string contactId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContactsContactIdAsyncWithHttpInfo (string contactId);
         
         /// <summary>
         /// List Notes for an ExternalContact
@@ -243,7 +243,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>NoteListing</returns>
-        NoteListing GetExternalcontactsContactNotes (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        NoteListing GetContactsContactIdNotes (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
   
         /// <summary>
         /// List Notes for an ExternalContact
@@ -256,7 +256,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>ApiResponse of NoteListing</returns>
-        ApiResponse<NoteListing> GetExternalcontactsContactNotesWithHttpInfo (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        ApiResponse<NoteListing> GetContactsContactIdNotesWithHttpInfo (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
         /// List Notes for an ExternalContact
@@ -269,7 +269,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of NoteListing</returns>
-        System.Threading.Tasks.Task<NoteListing> GetExternalcontactsContactNotesAsync (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        System.Threading.Tasks.Task<NoteListing> GetContactsContactIdNotesAsync (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
         /// List Notes for an ExternalContact
@@ -282,7 +282,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ApiResponse (NoteListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NoteListing>> GetExternalcontactsContactNotesAsyncWithHttpInfo (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<NoteListing>> GetContactsContactIdNotesAsyncWithHttpInfo (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
         
         /// <summary>
         /// Create a Note for an ExternalContact
@@ -293,7 +293,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Note</returns>
-        Note PostExternalcontactsContactNotes (string contactId, Note body = null);
+        Note PostContactsContactIdNotes (string contactId, Note body = null);
   
         /// <summary>
         /// Create a Note for an ExternalContact
@@ -304,7 +304,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>ApiResponse of Note</returns>
-        ApiResponse<Note> PostExternalcontactsContactNotesWithHttpInfo (string contactId, Note body = null);
+        ApiResponse<Note> PostContactsContactIdNotesWithHttpInfo (string contactId, Note body = null);
 
         /// <summary>
         /// Create a Note for an ExternalContact
@@ -315,7 +315,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of Note</returns>
-        System.Threading.Tasks.Task<Note> PostExternalcontactsContactNotesAsync (string contactId, Note body = null);
+        System.Threading.Tasks.Task<Note> PostContactsContactIdNotesAsync (string contactId, Note body = null);
 
         /// <summary>
         /// Create a Note for an ExternalContact
@@ -326,7 +326,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of ApiResponse (Note)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Note>> PostExternalcontactsContactNotesAsyncWithHttpInfo (string contactId, Note body = null);
+        System.Threading.Tasks.Task<ApiResponse<Note>> PostContactsContactIdNotesAsyncWithHttpInfo (string contactId, Note body = null);
         
         /// <summary>
         /// Fetch a note for a contact
@@ -337,7 +337,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Note</returns>
-        Note GetExternalcontactsContactNote (string contactId, string noteId);
+        Note GetContactsContactIdNotesNoteId (string contactId, string noteId);
   
         /// <summary>
         /// Fetch a note for a contact
@@ -348,7 +348,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>ApiResponse of Note</returns>
-        ApiResponse<Note> GetExternalcontactsContactNoteWithHttpInfo (string contactId, string noteId);
+        ApiResponse<Note> GetContactsContactIdNotesNoteIdWithHttpInfo (string contactId, string noteId);
 
         /// <summary>
         /// Fetch a note for a contact
@@ -359,7 +359,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of Note</returns>
-        System.Threading.Tasks.Task<Note> GetExternalcontactsContactNoteAsync (string contactId, string noteId);
+        System.Threading.Tasks.Task<Note> GetContactsContactIdNotesNoteIdAsync (string contactId, string noteId);
 
         /// <summary>
         /// Fetch a note for a contact
@@ -370,7 +370,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of ApiResponse (Note)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Note>> GetExternalcontactsContactNoteAsyncWithHttpInfo (string contactId, string noteId);
+        System.Threading.Tasks.Task<ApiResponse<Note>> GetContactsContactIdNotesNoteIdAsyncWithHttpInfo (string contactId, string noteId);
         
         /// <summary>
         /// Update a note for a contact
@@ -382,7 +382,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="body">Note</param>
         /// <returns>Note</returns>
-        Note PutExternalcontactsContactNote (string contactId, string noteId, Note body = null);
+        Note PutContactsContactIdNotesNoteId (string contactId, string noteId, Note body = null);
   
         /// <summary>
         /// Update a note for a contact
@@ -394,7 +394,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="body">Note</param>
         /// <returns>ApiResponse of Note</returns>
-        ApiResponse<Note> PutExternalcontactsContactNoteWithHttpInfo (string contactId, string noteId, Note body = null);
+        ApiResponse<Note> PutContactsContactIdNotesNoteIdWithHttpInfo (string contactId, string noteId, Note body = null);
 
         /// <summary>
         /// Update a note for a contact
@@ -406,7 +406,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="body">Note</param>
         /// <returns>Task of Note</returns>
-        System.Threading.Tasks.Task<Note> PutExternalcontactsContactNoteAsync (string contactId, string noteId, Note body = null);
+        System.Threading.Tasks.Task<Note> PutContactsContactIdNotesNoteIdAsync (string contactId, string noteId, Note body = null);
 
         /// <summary>
         /// Update a note for a contact
@@ -418,7 +418,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="body">Note</param>
         /// <returns>Task of ApiResponse (Note)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Note>> PutExternalcontactsContactNoteAsyncWithHttpInfo (string contactId, string noteId, Note body = null);
+        System.Threading.Tasks.Task<ApiResponse<Note>> PutContactsContactIdNotesNoteIdAsyncWithHttpInfo (string contactId, string noteId, Note body = null);
         
         /// <summary>
         /// Delete a note for a contact
@@ -429,7 +429,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns></returns>
-        void DeleteExternalcontactsContactNote (string contactId, string noteId);
+        void DeleteContactsContactIdNotesNoteId (string contactId, string noteId);
   
         /// <summary>
         /// Delete a note for a contact
@@ -440,7 +440,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteExternalcontactsContactNoteWithHttpInfo (string contactId, string noteId);
+        ApiResponse<Object> DeleteContactsContactIdNotesNoteIdWithHttpInfo (string contactId, string noteId);
 
         /// <summary>
         /// Delete a note for a contact
@@ -451,7 +451,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteExternalcontactsContactNoteAsync (string contactId, string noteId);
+        System.Threading.Tasks.Task DeleteContactsContactIdNotesNoteIdAsync (string contactId, string noteId);
 
         /// <summary>
         /// Delete a note for a contact
@@ -462,7 +462,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsContactNoteAsyncWithHttpInfo (string contactId, string noteId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContactsContactIdNotesNoteIdAsyncWithHttpInfo (string contactId, string noteId);
         
         /// <summary>
         /// Search for External Organizations
@@ -475,7 +475,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="q">Search query</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>ExternalOrganizationListing</returns>
-        ExternalOrganizationListing GetExternalcontactsOrganizations (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
+        ExternalOrganizationListing GetOrganizations (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
   
         /// <summary>
         /// Search for External Organizations
@@ -488,7 +488,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="q">Search query</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>ApiResponse of ExternalOrganizationListing</returns>
-        ApiResponse<ExternalOrganizationListing> GetExternalcontactsOrganizationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
+        ApiResponse<ExternalOrganizationListing> GetOrganizationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
 
         /// <summary>
         /// Search for External Organizations
@@ -501,7 +501,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="q">Search query</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ExternalOrganizationListing</returns>
-        System.Threading.Tasks.Task<ExternalOrganizationListing> GetExternalcontactsOrganizationsAsync (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ExternalOrganizationListing> GetOrganizationsAsync (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
 
         /// <summary>
         /// Search for External Organizations
@@ -514,7 +514,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="q">Search query</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ApiResponse (ExternalOrganizationListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExternalOrganizationListing>> GetExternalcontactsOrganizationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<ExternalOrganizationListing>> GetOrganizationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
         
         /// <summary>
         /// Create an External Organization
@@ -524,7 +524,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">ExternalOrganization</param>
         /// <returns>ExternalOrganization</returns>
-        ExternalOrganization PostExternalcontactsOrganizations (ExternalOrganization body = null);
+        ExternalOrganization PostOrganizations (ExternalOrganization body = null);
   
         /// <summary>
         /// Create an External Organization
@@ -534,7 +534,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">ExternalOrganization</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
-        ApiResponse<ExternalOrganization> PostExternalcontactsOrganizationsWithHttpInfo (ExternalOrganization body = null);
+        ApiResponse<ExternalOrganization> PostOrganizationsWithHttpInfo (ExternalOrganization body = null);
 
         /// <summary>
         /// Create an External Organization
@@ -544,7 +544,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">ExternalOrganization</param>
         /// <returns>Task of ExternalOrganization</returns>
-        System.Threading.Tasks.Task<ExternalOrganization> PostExternalcontactsOrganizationsAsync (ExternalOrganization body = null);
+        System.Threading.Tasks.Task<ExternalOrganization> PostOrganizationsAsync (ExternalOrganization body = null);
 
         /// <summary>
         /// Create an External Organization
@@ -554,7 +554,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">ExternalOrganization</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PostExternalcontactsOrganizationsAsyncWithHttpInfo (ExternalOrganization body = null);
+        System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PostOrganizationsAsyncWithHttpInfo (ExternalOrganization body = null);
         
         /// <summary>
         /// Fetch an External Organization
@@ -564,7 +564,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>ExternalOrganization</returns>
-        ExternalOrganization GetExternalcontactsOrganization (string externalOrganizationId);
+        ExternalOrganization GetOrganizationsExternalorganizationId (string externalOrganizationId);
   
         /// <summary>
         /// Fetch an External Organization
@@ -574,7 +574,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
-        ApiResponse<ExternalOrganization> GetExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId);
+        ApiResponse<ExternalOrganization> GetOrganizationsExternalorganizationIdWithHttpInfo (string externalOrganizationId);
 
         /// <summary>
         /// Fetch an External Organization
@@ -584,7 +584,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>Task of ExternalOrganization</returns>
-        System.Threading.Tasks.Task<ExternalOrganization> GetExternalcontactsOrganizationAsync (string externalOrganizationId);
+        System.Threading.Tasks.Task<ExternalOrganization> GetOrganizationsExternalorganizationIdAsync (string externalOrganizationId);
 
         /// <summary>
         /// Fetch an External Organization
@@ -594,7 +594,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> GetExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId);
+        System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> GetOrganizationsExternalorganizationIdAsyncWithHttpInfo (string externalOrganizationId);
         
         /// <summary>
         /// Update an External Organization
@@ -605,7 +605,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="body">ExternalOrganization</param>
         /// <returns>ExternalOrganization</returns>
-        ExternalOrganization PutExternalcontactsOrganization (string externalOrganizationId, ExternalOrganization body = null);
+        ExternalOrganization PutOrganizationsExternalorganizationId (string externalOrganizationId, ExternalOrganization body = null);
   
         /// <summary>
         /// Update an External Organization
@@ -616,7 +616,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="body">ExternalOrganization</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
-        ApiResponse<ExternalOrganization> PutExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId, ExternalOrganization body = null);
+        ApiResponse<ExternalOrganization> PutOrganizationsExternalorganizationIdWithHttpInfo (string externalOrganizationId, ExternalOrganization body = null);
 
         /// <summary>
         /// Update an External Organization
@@ -627,7 +627,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="body">ExternalOrganization</param>
         /// <returns>Task of ExternalOrganization</returns>
-        System.Threading.Tasks.Task<ExternalOrganization> PutExternalcontactsOrganizationAsync (string externalOrganizationId, ExternalOrganization body = null);
+        System.Threading.Tasks.Task<ExternalOrganization> PutOrganizationsExternalorganizationIdAsync (string externalOrganizationId, ExternalOrganization body = null);
 
         /// <summary>
         /// Update an External Organization
@@ -638,7 +638,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="body">ExternalOrganization</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PutExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId, ExternalOrganization body = null);
+        System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PutOrganizationsExternalorganizationIdAsyncWithHttpInfo (string externalOrganizationId, ExternalOrganization body = null);
         
         /// <summary>
         /// Delete an External Organization
@@ -648,7 +648,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns></returns>
-        void DeleteExternalcontactsOrganization (string externalOrganizationId);
+        void DeleteOrganizationsExternalorganizationId (string externalOrganizationId);
   
         /// <summary>
         /// Delete an External Organization
@@ -658,7 +658,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId);
+        ApiResponse<Object> DeleteOrganizationsExternalorganizationIdWithHttpInfo (string externalOrganizationId);
 
         /// <summary>
         /// Delete an External Organization
@@ -668,7 +668,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteExternalcontactsOrganizationAsync (string externalOrganizationId);
+        System.Threading.Tasks.Task DeleteOrganizationsExternalorganizationIdAsync (string externalOrganizationId);
 
         /// <summary>
         /// Delete an External Organization
@@ -678,7 +678,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrganizationsExternalorganizationIdAsyncWithHttpInfo (string externalOrganizationId);
         
         /// <summary>
         /// Search for External Contacts
@@ -692,7 +692,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>ContactListing</returns>
-        ContactListing GetExternalcontactsOrganizationContacts (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
+        ContactListing GetOrganizationsExternalorganizationIdContacts (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
   
         /// <summary>
         /// Search for External Contacts
@@ -706,7 +706,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>ApiResponse of ContactListing</returns>
-        ApiResponse<ContactListing> GetExternalcontactsOrganizationContactsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
+        ApiResponse<ContactListing> GetOrganizationsExternalorganizationIdContactsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
 
         /// <summary>
         /// Search for External Contacts
@@ -720,7 +720,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ContactListing</returns>
-        System.Threading.Tasks.Task<ContactListing> GetExternalcontactsOrganizationContactsAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ContactListing> GetOrganizationsExternalorganizationIdContactsAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
 
         /// <summary>
         /// Search for External Contacts
@@ -734,7 +734,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ApiResponse (ContactListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetExternalcontactsOrganizationContactsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetOrganizationsExternalorganizationIdContactsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
         
         /// <summary>
         /// List Notes for an External Organization
@@ -747,7 +747,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>NoteListing</returns>
-        NoteListing GetExternalcontactsOrganizationNotes (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        NoteListing GetOrganizationsExternalorganizationIdNotes (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
   
         /// <summary>
         /// List Notes for an External Organization
@@ -760,7 +760,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>ApiResponse of NoteListing</returns>
-        ApiResponse<NoteListing> GetExternalcontactsOrganizationNotesWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        ApiResponse<NoteListing> GetOrganizationsExternalorganizationIdNotesWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
         /// List Notes for an External Organization
@@ -773,7 +773,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of NoteListing</returns>
-        System.Threading.Tasks.Task<NoteListing> GetExternalcontactsOrganizationNotesAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        System.Threading.Tasks.Task<NoteListing> GetOrganizationsExternalorganizationIdNotesAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
         /// List Notes for an External Organization
@@ -786,7 +786,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ApiResponse (NoteListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NoteListing>> GetExternalcontactsOrganizationNotesAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<NoteListing>> GetOrganizationsExternalorganizationIdNotesAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
         
         /// <summary>
         /// Create a Note for an External Organization
@@ -797,7 +797,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Note</returns>
-        Note PostExternalcontactsOrganizationNotes (string externalOrganizationId, Note body = null);
+        Note PostOrganizationsExternalorganizationIdNotes (string externalOrganizationId, Note body = null);
   
         /// <summary>
         /// Create a Note for an External Organization
@@ -808,7 +808,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>ApiResponse of Note</returns>
-        ApiResponse<Note> PostExternalcontactsOrganizationNotesWithHttpInfo (string externalOrganizationId, Note body = null);
+        ApiResponse<Note> PostOrganizationsExternalorganizationIdNotesWithHttpInfo (string externalOrganizationId, Note body = null);
 
         /// <summary>
         /// Create a Note for an External Organization
@@ -819,7 +819,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of Note</returns>
-        System.Threading.Tasks.Task<Note> PostExternalcontactsOrganizationNotesAsync (string externalOrganizationId, Note body = null);
+        System.Threading.Tasks.Task<Note> PostOrganizationsExternalorganizationIdNotesAsync (string externalOrganizationId, Note body = null);
 
         /// <summary>
         /// Create a Note for an External Organization
@@ -830,7 +830,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of ApiResponse (Note)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Note>> PostExternalcontactsOrganizationNotesAsyncWithHttpInfo (string externalOrganizationId, Note body = null);
+        System.Threading.Tasks.Task<ApiResponse<Note>> PostOrganizationsExternalorganizationIdNotesAsyncWithHttpInfo (string externalOrganizationId, Note body = null);
         
         /// <summary>
         /// Fetch a note
@@ -841,7 +841,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Note</returns>
-        Note GetExternalcontactsOrganizationNote (string externalOrganizationId, string noteId);
+        Note GetOrganizationsExternalorganizationIdNotesNoteId (string externalOrganizationId, string noteId);
   
         /// <summary>
         /// Fetch a note
@@ -852,7 +852,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>ApiResponse of Note</returns>
-        ApiResponse<Note> GetExternalcontactsOrganizationNoteWithHttpInfo (string externalOrganizationId, string noteId);
+        ApiResponse<Note> GetOrganizationsExternalorganizationIdNotesNoteIdWithHttpInfo (string externalOrganizationId, string noteId);
 
         /// <summary>
         /// Fetch a note
@@ -863,7 +863,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of Note</returns>
-        System.Threading.Tasks.Task<Note> GetExternalcontactsOrganizationNoteAsync (string externalOrganizationId, string noteId);
+        System.Threading.Tasks.Task<Note> GetOrganizationsExternalorganizationIdNotesNoteIdAsync (string externalOrganizationId, string noteId);
 
         /// <summary>
         /// Fetch a note
@@ -874,7 +874,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of ApiResponse (Note)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Note>> GetExternalcontactsOrganizationNoteAsyncWithHttpInfo (string externalOrganizationId, string noteId);
+        System.Threading.Tasks.Task<ApiResponse<Note>> GetOrganizationsExternalorganizationIdNotesNoteIdAsyncWithHttpInfo (string externalOrganizationId, string noteId);
         
         /// <summary>
         /// Update a note
@@ -886,7 +886,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="body">Note</param>
         /// <returns>Note</returns>
-        Note PutExternalcontactsOrganizationNote (string externalOrganizationId, string noteId, Note body = null);
+        Note PutOrganizationsExternalorganizationIdNotesNoteId (string externalOrganizationId, string noteId, Note body = null);
   
         /// <summary>
         /// Update a note
@@ -898,7 +898,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="body">Note</param>
         /// <returns>ApiResponse of Note</returns>
-        ApiResponse<Note> PutExternalcontactsOrganizationNoteWithHttpInfo (string externalOrganizationId, string noteId, Note body = null);
+        ApiResponse<Note> PutOrganizationsExternalorganizationIdNotesNoteIdWithHttpInfo (string externalOrganizationId, string noteId, Note body = null);
 
         /// <summary>
         /// Update a note
@@ -910,7 +910,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="body">Note</param>
         /// <returns>Task of Note</returns>
-        System.Threading.Tasks.Task<Note> PutExternalcontactsOrganizationNoteAsync (string externalOrganizationId, string noteId, Note body = null);
+        System.Threading.Tasks.Task<Note> PutOrganizationsExternalorganizationIdNotesNoteIdAsync (string externalOrganizationId, string noteId, Note body = null);
 
         /// <summary>
         /// Update a note
@@ -922,7 +922,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="body">Note</param>
         /// <returns>Task of ApiResponse (Note)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Note>> PutExternalcontactsOrganizationNoteAsyncWithHttpInfo (string externalOrganizationId, string noteId, Note body = null);
+        System.Threading.Tasks.Task<ApiResponse<Note>> PutOrganizationsExternalorganizationIdNotesNoteIdAsyncWithHttpInfo (string externalOrganizationId, string noteId, Note body = null);
         
         /// <summary>
         /// Delete a note
@@ -933,7 +933,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns></returns>
-        void DeleteExternalcontactsOrganizationNote (string externalOrganizationId, string noteId);
+        void DeleteOrganizationsExternalorganizationIdNotesNoteId (string externalOrganizationId, string noteId);
   
         /// <summary>
         /// Delete a note
@@ -944,7 +944,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteExternalcontactsOrganizationNoteWithHttpInfo (string externalOrganizationId, string noteId);
+        ApiResponse<Object> DeleteOrganizationsExternalorganizationIdNotesNoteIdWithHttpInfo (string externalOrganizationId, string noteId);
 
         /// <summary>
         /// Delete a note
@@ -955,7 +955,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteExternalcontactsOrganizationNoteAsync (string externalOrganizationId, string noteId);
+        System.Threading.Tasks.Task DeleteOrganizationsExternalorganizationIdNotesNoteIdAsync (string externalOrganizationId, string noteId);
 
         /// <summary>
         /// Delete a note
@@ -966,7 +966,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsOrganizationNoteAsyncWithHttpInfo (string externalOrganizationId, string noteId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrganizationsExternalorganizationIdNotesNoteIdAsyncWithHttpInfo (string externalOrganizationId, string noteId);
         
         /// <summary>
         /// Fetch an External Organization
@@ -979,7 +979,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>RelationshipListing</returns>
-        RelationshipListing GetExternalcontactsOrganizationRelationships (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        RelationshipListing GetOrganizationsExternalorganizationIdRelationships (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
   
         /// <summary>
         /// Fetch an External Organization
@@ -992,7 +992,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>ApiResponse of RelationshipListing</returns>
-        ApiResponse<RelationshipListing> GetExternalcontactsOrganizationRelationshipsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        ApiResponse<RelationshipListing> GetOrganizationsExternalorganizationIdRelationshipsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
         /// Fetch an External Organization
@@ -1005,7 +1005,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of RelationshipListing</returns>
-        System.Threading.Tasks.Task<RelationshipListing> GetExternalcontactsOrganizationRelationshipsAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        System.Threading.Tasks.Task<RelationshipListing> GetOrganizationsExternalorganizationIdRelationshipsAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
         /// Fetch an External Organization
@@ -1018,7 +1018,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ApiResponse (RelationshipListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RelationshipListing>> GetExternalcontactsOrganizationRelationshipsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<RelationshipListing>> GetOrganizationsExternalorganizationIdRelationshipsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
         
         /// <summary>
         /// Create a relationship
@@ -1028,7 +1028,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Relationship</param>
         /// <returns>Relationship</returns>
-        Relationship PostExternalcontactsRelationships (Relationship body = null);
+        Relationship PostRelationships (Relationship body = null);
   
         /// <summary>
         /// Create a relationship
@@ -1038,7 +1038,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Relationship</param>
         /// <returns>ApiResponse of Relationship</returns>
-        ApiResponse<Relationship> PostExternalcontactsRelationshipsWithHttpInfo (Relationship body = null);
+        ApiResponse<Relationship> PostRelationshipsWithHttpInfo (Relationship body = null);
 
         /// <summary>
         /// Create a relationship
@@ -1048,7 +1048,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Relationship</param>
         /// <returns>Task of Relationship</returns>
-        System.Threading.Tasks.Task<Relationship> PostExternalcontactsRelationshipsAsync (Relationship body = null);
+        System.Threading.Tasks.Task<Relationship> PostRelationshipsAsync (Relationship body = null);
 
         /// <summary>
         /// Create a relationship
@@ -1058,7 +1058,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="body">Relationship</param>
         /// <returns>Task of ApiResponse (Relationship)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Relationship>> PostExternalcontactsRelationshipsAsyncWithHttpInfo (Relationship body = null);
+        System.Threading.Tasks.Task<ApiResponse<Relationship>> PostRelationshipsAsyncWithHttpInfo (Relationship body = null);
         
         /// <summary>
         /// Fetch a relationship
@@ -1068,7 +1068,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="relationshipId">Relationship Id</param>
         /// <returns>Relationship</returns>
-        Relationship GetExternalcontactsRelationship (string relationshipId);
+        Relationship GetRelationshipsRelationshipId (string relationshipId);
   
         /// <summary>
         /// Fetch a relationship
@@ -1078,7 +1078,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="relationshipId">Relationship Id</param>
         /// <returns>ApiResponse of Relationship</returns>
-        ApiResponse<Relationship> GetExternalcontactsRelationshipWithHttpInfo (string relationshipId);
+        ApiResponse<Relationship> GetRelationshipsRelationshipIdWithHttpInfo (string relationshipId);
 
         /// <summary>
         /// Fetch a relationship
@@ -1088,7 +1088,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="relationshipId">Relationship Id</param>
         /// <returns>Task of Relationship</returns>
-        System.Threading.Tasks.Task<Relationship> GetExternalcontactsRelationshipAsync (string relationshipId);
+        System.Threading.Tasks.Task<Relationship> GetRelationshipsRelationshipIdAsync (string relationshipId);
 
         /// <summary>
         /// Fetch a relationship
@@ -1098,7 +1098,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="relationshipId">Relationship Id</param>
         /// <returns>Task of ApiResponse (Relationship)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Relationship>> GetExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId);
+        System.Threading.Tasks.Task<ApiResponse<Relationship>> GetRelationshipsRelationshipIdAsyncWithHttpInfo (string relationshipId);
         
         /// <summary>
         /// Fetch a relationship
@@ -1109,7 +1109,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="relationshipId">Relationship Id</param>
         /// <param name="body">Relationship</param>
         /// <returns>Relationship</returns>
-        Relationship PutExternalcontactsRelationship (string relationshipId, Relationship body = null);
+        Relationship PutRelationshipsRelationshipId (string relationshipId, Relationship body = null);
   
         /// <summary>
         /// Fetch a relationship
@@ -1120,7 +1120,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="relationshipId">Relationship Id</param>
         /// <param name="body">Relationship</param>
         /// <returns>ApiResponse of Relationship</returns>
-        ApiResponse<Relationship> PutExternalcontactsRelationshipWithHttpInfo (string relationshipId, Relationship body = null);
+        ApiResponse<Relationship> PutRelationshipsRelationshipIdWithHttpInfo (string relationshipId, Relationship body = null);
 
         /// <summary>
         /// Fetch a relationship
@@ -1131,7 +1131,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="relationshipId">Relationship Id</param>
         /// <param name="body">Relationship</param>
         /// <returns>Task of Relationship</returns>
-        System.Threading.Tasks.Task<Relationship> PutExternalcontactsRelationshipAsync (string relationshipId, Relationship body = null);
+        System.Threading.Tasks.Task<Relationship> PutRelationshipsRelationshipIdAsync (string relationshipId, Relationship body = null);
 
         /// <summary>
         /// Fetch a relationship
@@ -1142,7 +1142,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="relationshipId">Relationship Id</param>
         /// <param name="body">Relationship</param>
         /// <returns>Task of ApiResponse (Relationship)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Relationship>> PutExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId, Relationship body = null);
+        System.Threading.Tasks.Task<ApiResponse<Relationship>> PutRelationshipsRelationshipIdAsyncWithHttpInfo (string relationshipId, Relationship body = null);
         
         /// <summary>
         /// Delete a relationship
@@ -1152,7 +1152,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="relationshipId">Relationship Id</param>
         /// <returns></returns>
-        void DeleteExternalcontactsRelationship (string relationshipId);
+        void DeleteRelationshipsRelationshipId (string relationshipId);
   
         /// <summary>
         /// Delete a relationship
@@ -1162,7 +1162,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="relationshipId">Relationship Id</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteExternalcontactsRelationshipWithHttpInfo (string relationshipId);
+        ApiResponse<Object> DeleteRelationshipsRelationshipIdWithHttpInfo (string relationshipId);
 
         /// <summary>
         /// Delete a relationship
@@ -1172,7 +1172,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="relationshipId">Relationship Id</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteExternalcontactsRelationshipAsync (string relationshipId);
+        System.Threading.Tasks.Task DeleteRelationshipsRelationshipIdAsync (string relationshipId);
 
         /// <summary>
         /// Delete a relationship
@@ -1182,7 +1182,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="relationshipId">Relationship Id</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRelationshipsRelationshipIdAsyncWithHttpInfo (string relationshipId);
         
     }
   
@@ -1270,9 +1270,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param> 
         /// <param name="sortOrder">Sort order</param> 
         /// <returns>ContactListing</returns>
-        public ContactListing GetExternalcontactsContacts (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
+        public ContactListing GetContacts (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
         {
-             ApiResponse<ContactListing> response = GetExternalcontactsContactsWithHttpInfo(pageSize, pageNumber, q, sortOrder);
+             ApiResponse<ContactListing> response = GetContactsWithHttpInfo(pageSize, pageNumber, q, sortOrder);
              return response.Data;
         }
 
@@ -1284,7 +1284,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param> 
         /// <param name="sortOrder">Sort order</param> 
         /// <returns>ApiResponse of ContactListing</returns>
-        public ApiResponse< ContactListing > GetExternalcontactsContactsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
+        public ApiResponse< ContactListing > GetContactsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
         {
             
     
@@ -1341,9 +1341,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsContacts: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContacts: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsContacts: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContacts: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ContactListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1359,9 +1359,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ContactListing</returns>
-        public async System.Threading.Tasks.Task<ContactListing> GetExternalcontactsContactsAsync (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ContactListing> GetContactsAsync (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
         {
-             ApiResponse<ContactListing> response = await GetExternalcontactsContactsAsyncWithHttpInfo(pageSize, pageNumber, q, sortOrder);
+             ApiResponse<ContactListing> response = await GetContactsAsyncWithHttpInfo(pageSize, pageNumber, q, sortOrder);
              return response.Data;
 
         }
@@ -1374,7 +1374,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ApiResponse (ContactListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetExternalcontactsContactsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetContactsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
         {
             
     
@@ -1432,9 +1432,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsContacts: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContacts: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsContacts: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContacts: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ContactListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1447,9 +1447,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">ExternalContact</param> 
         /// <returns>ExternalContact</returns>
-        public ExternalContact PostExternalcontactsContacts (ExternalContact body = null)
+        public ExternalContact PostContacts (ExternalContact body = null)
         {
-             ApiResponse<ExternalContact> response = PostExternalcontactsContactsWithHttpInfo(body);
+             ApiResponse<ExternalContact> response = PostContactsWithHttpInfo(body);
              return response.Data;
         }
 
@@ -1458,7 +1458,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">ExternalContact</param> 
         /// <returns>ApiResponse of ExternalContact</returns>
-        public ApiResponse< ExternalContact > PostExternalcontactsContactsWithHttpInfo (ExternalContact body = null)
+        public ApiResponse< ExternalContact > PostContactsWithHttpInfo (ExternalContact body = null)
         {
             
     
@@ -1518,9 +1518,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostExternalcontactsContacts: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostContacts: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostExternalcontactsContacts: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostContacts: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ExternalContact>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1533,9 +1533,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of ExternalContact</returns>
-        public async System.Threading.Tasks.Task<ExternalContact> PostExternalcontactsContactsAsync (ExternalContact body = null)
+        public async System.Threading.Tasks.Task<ExternalContact> PostContactsAsync (ExternalContact body = null)
         {
-             ApiResponse<ExternalContact> response = await PostExternalcontactsContactsAsyncWithHttpInfo(body);
+             ApiResponse<ExternalContact> response = await PostContactsAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -1545,7 +1545,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PostExternalcontactsContactsAsyncWithHttpInfo (ExternalContact body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PostContactsAsyncWithHttpInfo (ExternalContact body = null)
         {
             
     
@@ -1600,9 +1600,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostExternalcontactsContacts: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostContacts: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostExternalcontactsContacts: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostContacts: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ExternalContact>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1615,9 +1615,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="contactId">ExternalContact ID</param> 
         /// <returns>ExternalContact</returns>
-        public ExternalContact GetExternalcontactsContact (string contactId)
+        public ExternalContact GetContactsContactId (string contactId)
         {
-             ApiResponse<ExternalContact> response = GetExternalcontactsContactWithHttpInfo(contactId);
+             ApiResponse<ExternalContact> response = GetContactsContactIdWithHttpInfo(contactId);
              return response.Data;
         }
 
@@ -1626,12 +1626,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="contactId">ExternalContact ID</param> 
         /// <returns>ApiResponse of ExternalContact</returns>
-        public ApiResponse< ExternalContact > GetExternalcontactsContactWithHttpInfo (string contactId)
+        public ApiResponse< ExternalContact > GetContactsContactIdWithHttpInfo (string contactId)
         {
             
             // verify the required parameter 'contactId' is set
             if (contactId == null)
-                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->GetExternalcontactsContact");
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->GetContactsContactId");
             
     
             var path_ = "/api/v1/externalcontacts/contacts/{contactId}";
@@ -1684,9 +1684,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsContact: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContactsContactId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsContact: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContactsContactId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ExternalContact>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1699,9 +1699,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>Task of ExternalContact</returns>
-        public async System.Threading.Tasks.Task<ExternalContact> GetExternalcontactsContactAsync (string contactId)
+        public async System.Threading.Tasks.Task<ExternalContact> GetContactsContactIdAsync (string contactId)
         {
-             ApiResponse<ExternalContact> response = await GetExternalcontactsContactAsyncWithHttpInfo(contactId);
+             ApiResponse<ExternalContact> response = await GetContactsContactIdAsyncWithHttpInfo(contactId);
              return response.Data;
 
         }
@@ -1711,10 +1711,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ExternalContact>> GetExternalcontactsContactAsyncWithHttpInfo (string contactId)
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalContact>> GetContactsContactIdAsyncWithHttpInfo (string contactId)
         {
             // verify the required parameter 'contactId' is set
-            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling GetExternalcontactsContact");
+            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling GetContactsContactId");
             
     
             var path_ = "/api/v1/externalcontacts/contacts/{contactId}";
@@ -1768,9 +1768,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsContact: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContactsContactId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsContact: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContactsContactId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ExternalContact>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1784,9 +1784,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact ID</param> 
         /// <param name="body">ExternalContact</param> 
         /// <returns>ExternalContact</returns>
-        public ExternalContact PutExternalcontactsContact (string contactId, ExternalContact body = null)
+        public ExternalContact PutContactsContactId (string contactId, ExternalContact body = null)
         {
-             ApiResponse<ExternalContact> response = PutExternalcontactsContactWithHttpInfo(contactId, body);
+             ApiResponse<ExternalContact> response = PutContactsContactIdWithHttpInfo(contactId, body);
              return response.Data;
         }
 
@@ -1796,12 +1796,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact ID</param> 
         /// <param name="body">ExternalContact</param> 
         /// <returns>ApiResponse of ExternalContact</returns>
-        public ApiResponse< ExternalContact > PutExternalcontactsContactWithHttpInfo (string contactId, ExternalContact body = null)
+        public ApiResponse< ExternalContact > PutContactsContactIdWithHttpInfo (string contactId, ExternalContact body = null)
         {
             
             // verify the required parameter 'contactId' is set
             if (contactId == null)
-                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->PutExternalcontactsContact");
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->PutContactsContactId");
             
     
             var path_ = "/api/v1/externalcontacts/contacts/{contactId}";
@@ -1861,9 +1861,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutExternalcontactsContact: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutContactsContactId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutExternalcontactsContact: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutContactsContactId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ExternalContact>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1877,9 +1877,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of ExternalContact</returns>
-        public async System.Threading.Tasks.Task<ExternalContact> PutExternalcontactsContactAsync (string contactId, ExternalContact body = null)
+        public async System.Threading.Tasks.Task<ExternalContact> PutContactsContactIdAsync (string contactId, ExternalContact body = null)
         {
-             ApiResponse<ExternalContact> response = await PutExternalcontactsContactAsyncWithHttpInfo(contactId, body);
+             ApiResponse<ExternalContact> response = await PutContactsContactIdAsyncWithHttpInfo(contactId, body);
              return response.Data;
 
         }
@@ -1890,10 +1890,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact ID</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PutExternalcontactsContactAsyncWithHttpInfo (string contactId, ExternalContact body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PutContactsContactIdAsyncWithHttpInfo (string contactId, ExternalContact body = null)
         {
             // verify the required parameter 'contactId' is set
-            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling PutExternalcontactsContact");
+            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling PutContactsContactId");
             
     
             var path_ = "/api/v1/externalcontacts/contacts/{contactId}";
@@ -1948,9 +1948,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutExternalcontactsContact: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutContactsContactId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutExternalcontactsContact: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutContactsContactId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ExternalContact>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1963,9 +1963,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="contactId">ExternalContact ID</param> 
         /// <returns></returns>
-        public void DeleteExternalcontactsContact (string contactId)
+        public void DeleteContactsContactId (string contactId)
         {
-             DeleteExternalcontactsContactWithHttpInfo(contactId);
+             DeleteContactsContactIdWithHttpInfo(contactId);
         }
 
         /// <summary>
@@ -1973,12 +1973,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="contactId">ExternalContact ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteExternalcontactsContactWithHttpInfo (string contactId)
+        public ApiResponse<Object> DeleteContactsContactIdWithHttpInfo (string contactId)
         {
             
             // verify the required parameter 'contactId' is set
             if (contactId == null)
-                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->DeleteExternalcontactsContact");
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->DeleteContactsContactId");
             
     
             var path_ = "/api/v1/externalcontacts/contacts/{contactId}";
@@ -2031,9 +2031,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteExternalcontactsContact: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteContactsContactId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteExternalcontactsContact: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteContactsContactId: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -2046,9 +2046,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteExternalcontactsContactAsync (string contactId)
+        public async System.Threading.Tasks.Task DeleteContactsContactIdAsync (string contactId)
         {
-             await DeleteExternalcontactsContactAsyncWithHttpInfo(contactId);
+             await DeleteContactsContactIdAsyncWithHttpInfo(contactId);
 
         }
 
@@ -2057,10 +2057,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="contactId">ExternalContact ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsContactAsyncWithHttpInfo (string contactId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContactsContactIdAsyncWithHttpInfo (string contactId)
         {
             // verify the required parameter 'contactId' is set
-            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling DeleteExternalcontactsContact");
+            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling DeleteContactsContactId");
             
     
             var path_ = "/api/v1/externalcontacts/contacts/{contactId}";
@@ -2114,9 +2114,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteExternalcontactsContact: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteContactsContactId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteExternalcontactsContact: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteContactsContactId: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -2132,9 +2132,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="sortOrder">Sort order</param> 
         /// <returns>NoteListing</returns>
-        public NoteListing GetExternalcontactsContactNotes (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public NoteListing GetContactsContactIdNotes (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
-             ApiResponse<NoteListing> response = GetExternalcontactsContactNotesWithHttpInfo(contactId, pageSize, pageNumber, sortOrder);
+             ApiResponse<NoteListing> response = GetContactsContactIdNotesWithHttpInfo(contactId, pageSize, pageNumber, sortOrder);
              return response.Data;
         }
 
@@ -2146,12 +2146,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="sortOrder">Sort order</param> 
         /// <returns>ApiResponse of NoteListing</returns>
-        public ApiResponse< NoteListing > GetExternalcontactsContactNotesWithHttpInfo (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public ApiResponse< NoteListing > GetContactsContactIdNotesWithHttpInfo (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
             
             // verify the required parameter 'contactId' is set
             if (contactId == null)
-                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->GetExternalcontactsContactNotes");
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->GetContactsContactIdNotes");
             
     
             var path_ = "/api/v1/externalcontacts/contacts/{contactId}/notes";
@@ -2207,9 +2207,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsContactNotes: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContactsContactIdNotes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsContactNotes: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContactsContactIdNotes: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<NoteListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2225,9 +2225,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of NoteListing</returns>
-        public async System.Threading.Tasks.Task<NoteListing> GetExternalcontactsContactNotesAsync (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<NoteListing> GetContactsContactIdNotesAsync (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
-             ApiResponse<NoteListing> response = await GetExternalcontactsContactNotesAsyncWithHttpInfo(contactId, pageSize, pageNumber, sortOrder);
+             ApiResponse<NoteListing> response = await GetContactsContactIdNotesAsyncWithHttpInfo(contactId, pageSize, pageNumber, sortOrder);
              return response.Data;
 
         }
@@ -2240,10 +2240,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ApiResponse (NoteListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<NoteListing>> GetExternalcontactsContactNotesAsyncWithHttpInfo (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<NoteListing>> GetContactsContactIdNotesAsyncWithHttpInfo (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
             // verify the required parameter 'contactId' is set
-            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling GetExternalcontactsContactNotes");
+            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling GetContactsContactIdNotes");
             
     
             var path_ = "/api/v1/externalcontacts/contacts/{contactId}/notes";
@@ -2300,9 +2300,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsContactNotes: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContactsContactIdNotes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsContactNotes: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContactsContactIdNotes: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<NoteListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2316,9 +2316,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact Id</param> 
         /// <param name="body">ExternalContact</param> 
         /// <returns>Note</returns>
-        public Note PostExternalcontactsContactNotes (string contactId, Note body = null)
+        public Note PostContactsContactIdNotes (string contactId, Note body = null)
         {
-             ApiResponse<Note> response = PostExternalcontactsContactNotesWithHttpInfo(contactId, body);
+             ApiResponse<Note> response = PostContactsContactIdNotesWithHttpInfo(contactId, body);
              return response.Data;
         }
 
@@ -2328,12 +2328,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact Id</param> 
         /// <param name="body">ExternalContact</param> 
         /// <returns>ApiResponse of Note</returns>
-        public ApiResponse< Note > PostExternalcontactsContactNotesWithHttpInfo (string contactId, Note body = null)
+        public ApiResponse< Note > PostContactsContactIdNotesWithHttpInfo (string contactId, Note body = null)
         {
             
             // verify the required parameter 'contactId' is set
             if (contactId == null)
-                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->PostExternalcontactsContactNotes");
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->PostContactsContactIdNotes");
             
     
             var path_ = "/api/v1/externalcontacts/contacts/{contactId}/notes";
@@ -2393,9 +2393,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostExternalcontactsContactNotes: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostContactsContactIdNotes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostExternalcontactsContactNotes: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostContactsContactIdNotes: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Note>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2409,9 +2409,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of Note</returns>
-        public async System.Threading.Tasks.Task<Note> PostExternalcontactsContactNotesAsync (string contactId, Note body = null)
+        public async System.Threading.Tasks.Task<Note> PostContactsContactIdNotesAsync (string contactId, Note body = null)
         {
-             ApiResponse<Note> response = await PostExternalcontactsContactNotesAsyncWithHttpInfo(contactId, body);
+             ApiResponse<Note> response = await PostContactsContactIdNotesAsyncWithHttpInfo(contactId, body);
              return response.Data;
 
         }
@@ -2422,10 +2422,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of ApiResponse (Note)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Note>> PostExternalcontactsContactNotesAsyncWithHttpInfo (string contactId, Note body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Note>> PostContactsContactIdNotesAsyncWithHttpInfo (string contactId, Note body = null)
         {
             // verify the required parameter 'contactId' is set
-            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling PostExternalcontactsContactNotes");
+            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling PostContactsContactIdNotes");
             
     
             var path_ = "/api/v1/externalcontacts/contacts/{contactId}/notes";
@@ -2480,9 +2480,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostExternalcontactsContactNotes: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostContactsContactIdNotes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostExternalcontactsContactNotes: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostContactsContactIdNotes: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Note>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2496,9 +2496,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact Id</param> 
         /// <param name="noteId">Note Id</param> 
         /// <returns>Note</returns>
-        public Note GetExternalcontactsContactNote (string contactId, string noteId)
+        public Note GetContactsContactIdNotesNoteId (string contactId, string noteId)
         {
-             ApiResponse<Note> response = GetExternalcontactsContactNoteWithHttpInfo(contactId, noteId);
+             ApiResponse<Note> response = GetContactsContactIdNotesNoteIdWithHttpInfo(contactId, noteId);
              return response.Data;
         }
 
@@ -2508,16 +2508,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact Id</param> 
         /// <param name="noteId">Note Id</param> 
         /// <returns>ApiResponse of Note</returns>
-        public ApiResponse< Note > GetExternalcontactsContactNoteWithHttpInfo (string contactId, string noteId)
+        public ApiResponse< Note > GetContactsContactIdNotesNoteIdWithHttpInfo (string contactId, string noteId)
         {
             
             // verify the required parameter 'contactId' is set
             if (contactId == null)
-                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->GetExternalcontactsContactNote");
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->GetContactsContactIdNotesNoteId");
             
             // verify the required parameter 'noteId' is set
             if (noteId == null)
-                throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->GetExternalcontactsContactNote");
+                throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->GetContactsContactIdNotesNoteId");
             
     
             var path_ = "/api/v1/externalcontacts/contacts/{contactId}/notes/{noteId}";
@@ -2571,9 +2571,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsContactNote: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContactsContactIdNotesNoteId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsContactNote: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContactsContactIdNotesNoteId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Note>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2587,9 +2587,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of Note</returns>
-        public async System.Threading.Tasks.Task<Note> GetExternalcontactsContactNoteAsync (string contactId, string noteId)
+        public async System.Threading.Tasks.Task<Note> GetContactsContactIdNotesNoteIdAsync (string contactId, string noteId)
         {
-             ApiResponse<Note> response = await GetExternalcontactsContactNoteAsyncWithHttpInfo(contactId, noteId);
+             ApiResponse<Note> response = await GetContactsContactIdNotesNoteIdAsyncWithHttpInfo(contactId, noteId);
              return response.Data;
 
         }
@@ -2600,12 +2600,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of ApiResponse (Note)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Note>> GetExternalcontactsContactNoteAsyncWithHttpInfo (string contactId, string noteId)
+        public async System.Threading.Tasks.Task<ApiResponse<Note>> GetContactsContactIdNotesNoteIdAsyncWithHttpInfo (string contactId, string noteId)
         {
             // verify the required parameter 'contactId' is set
-            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling GetExternalcontactsContactNote");
+            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling GetContactsContactIdNotesNoteId");
             // verify the required parameter 'noteId' is set
-            if (noteId == null) throw new ApiException(400, "Missing required parameter 'noteId' when calling GetExternalcontactsContactNote");
+            if (noteId == null) throw new ApiException(400, "Missing required parameter 'noteId' when calling GetContactsContactIdNotesNoteId");
             
     
             var path_ = "/api/v1/externalcontacts/contacts/{contactId}/notes/{noteId}";
@@ -2660,9 +2660,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsContactNote: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetContactsContactIdNotesNoteId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsContactNote: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetContactsContactIdNotesNoteId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Note>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2677,9 +2677,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="noteId">Note Id</param> 
         /// <param name="body">Note</param> 
         /// <returns>Note</returns>
-        public Note PutExternalcontactsContactNote (string contactId, string noteId, Note body = null)
+        public Note PutContactsContactIdNotesNoteId (string contactId, string noteId, Note body = null)
         {
-             ApiResponse<Note> response = PutExternalcontactsContactNoteWithHttpInfo(contactId, noteId, body);
+             ApiResponse<Note> response = PutContactsContactIdNotesNoteIdWithHttpInfo(contactId, noteId, body);
              return response.Data;
         }
 
@@ -2690,16 +2690,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="noteId">Note Id</param> 
         /// <param name="body">Note</param> 
         /// <returns>ApiResponse of Note</returns>
-        public ApiResponse< Note > PutExternalcontactsContactNoteWithHttpInfo (string contactId, string noteId, Note body = null)
+        public ApiResponse< Note > PutContactsContactIdNotesNoteIdWithHttpInfo (string contactId, string noteId, Note body = null)
         {
             
             // verify the required parameter 'contactId' is set
             if (contactId == null)
-                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->PutExternalcontactsContactNote");
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->PutContactsContactIdNotesNoteId");
             
             // verify the required parameter 'noteId' is set
             if (noteId == null)
-                throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->PutExternalcontactsContactNote");
+                throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->PutContactsContactIdNotesNoteId");
             
     
             var path_ = "/api/v1/externalcontacts/contacts/{contactId}/notes/{noteId}";
@@ -2760,9 +2760,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutExternalcontactsContactNote: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutContactsContactIdNotesNoteId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutExternalcontactsContactNote: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutContactsContactIdNotesNoteId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Note>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2777,9 +2777,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="body">Note</param>
         /// <returns>Task of Note</returns>
-        public async System.Threading.Tasks.Task<Note> PutExternalcontactsContactNoteAsync (string contactId, string noteId, Note body = null)
+        public async System.Threading.Tasks.Task<Note> PutContactsContactIdNotesNoteIdAsync (string contactId, string noteId, Note body = null)
         {
-             ApiResponse<Note> response = await PutExternalcontactsContactNoteAsyncWithHttpInfo(contactId, noteId, body);
+             ApiResponse<Note> response = await PutContactsContactIdNotesNoteIdAsyncWithHttpInfo(contactId, noteId, body);
              return response.Data;
 
         }
@@ -2791,12 +2791,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="body">Note</param>
         /// <returns>Task of ApiResponse (Note)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Note>> PutExternalcontactsContactNoteAsyncWithHttpInfo (string contactId, string noteId, Note body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Note>> PutContactsContactIdNotesNoteIdAsyncWithHttpInfo (string contactId, string noteId, Note body = null)
         {
             // verify the required parameter 'contactId' is set
-            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling PutExternalcontactsContactNote");
+            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling PutContactsContactIdNotesNoteId");
             // verify the required parameter 'noteId' is set
-            if (noteId == null) throw new ApiException(400, "Missing required parameter 'noteId' when calling PutExternalcontactsContactNote");
+            if (noteId == null) throw new ApiException(400, "Missing required parameter 'noteId' when calling PutContactsContactIdNotesNoteId");
             
     
             var path_ = "/api/v1/externalcontacts/contacts/{contactId}/notes/{noteId}";
@@ -2852,9 +2852,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutExternalcontactsContactNote: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutContactsContactIdNotesNoteId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutExternalcontactsContactNote: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutContactsContactIdNotesNoteId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Note>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2868,9 +2868,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact Id</param> 
         /// <param name="noteId">Note Id</param> 
         /// <returns></returns>
-        public void DeleteExternalcontactsContactNote (string contactId, string noteId)
+        public void DeleteContactsContactIdNotesNoteId (string contactId, string noteId)
         {
-             DeleteExternalcontactsContactNoteWithHttpInfo(contactId, noteId);
+             DeleteContactsContactIdNotesNoteIdWithHttpInfo(contactId, noteId);
         }
 
         /// <summary>
@@ -2879,16 +2879,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact Id</param> 
         /// <param name="noteId">Note Id</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteExternalcontactsContactNoteWithHttpInfo (string contactId, string noteId)
+        public ApiResponse<Object> DeleteContactsContactIdNotesNoteIdWithHttpInfo (string contactId, string noteId)
         {
             
             // verify the required parameter 'contactId' is set
             if (contactId == null)
-                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->DeleteExternalcontactsContactNote");
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->DeleteContactsContactIdNotesNoteId");
             
             // verify the required parameter 'noteId' is set
             if (noteId == null)
-                throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->DeleteExternalcontactsContactNote");
+                throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->DeleteContactsContactIdNotesNoteId");
             
     
             var path_ = "/api/v1/externalcontacts/contacts/{contactId}/notes/{noteId}";
@@ -2942,9 +2942,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteExternalcontactsContactNote: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteContactsContactIdNotesNoteId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteExternalcontactsContactNote: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteContactsContactIdNotesNoteId: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -2958,9 +2958,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteExternalcontactsContactNoteAsync (string contactId, string noteId)
+        public async System.Threading.Tasks.Task DeleteContactsContactIdNotesNoteIdAsync (string contactId, string noteId)
         {
-             await DeleteExternalcontactsContactNoteAsyncWithHttpInfo(contactId, noteId);
+             await DeleteContactsContactIdNotesNoteIdAsyncWithHttpInfo(contactId, noteId);
 
         }
 
@@ -2970,12 +2970,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsContactNoteAsyncWithHttpInfo (string contactId, string noteId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteContactsContactIdNotesNoteIdAsyncWithHttpInfo (string contactId, string noteId)
         {
             // verify the required parameter 'contactId' is set
-            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling DeleteExternalcontactsContactNote");
+            if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling DeleteContactsContactIdNotesNoteId");
             // verify the required parameter 'noteId' is set
-            if (noteId == null) throw new ApiException(400, "Missing required parameter 'noteId' when calling DeleteExternalcontactsContactNote");
+            if (noteId == null) throw new ApiException(400, "Missing required parameter 'noteId' when calling DeleteContactsContactIdNotesNoteId");
             
     
             var path_ = "/api/v1/externalcontacts/contacts/{contactId}/notes/{noteId}";
@@ -3030,9 +3030,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteExternalcontactsContactNote: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteContactsContactIdNotesNoteId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteExternalcontactsContactNote: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteContactsContactIdNotesNoteId: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -3048,9 +3048,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="q">Search query</param> 
         /// <param name="sortOrder">Sort order</param> 
         /// <returns>ExternalOrganizationListing</returns>
-        public ExternalOrganizationListing GetExternalcontactsOrganizations (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
+        public ExternalOrganizationListing GetOrganizations (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
         {
-             ApiResponse<ExternalOrganizationListing> response = GetExternalcontactsOrganizationsWithHttpInfo(pageSize, pageNumber, q, sortOrder);
+             ApiResponse<ExternalOrganizationListing> response = GetOrganizationsWithHttpInfo(pageSize, pageNumber, q, sortOrder);
              return response.Data;
         }
 
@@ -3062,7 +3062,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="q">Search query</param> 
         /// <param name="sortOrder">Sort order</param> 
         /// <returns>ApiResponse of ExternalOrganizationListing</returns>
-        public ApiResponse< ExternalOrganizationListing > GetExternalcontactsOrganizationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
+        public ApiResponse< ExternalOrganizationListing > GetOrganizationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
         {
             
     
@@ -3119,9 +3119,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsOrganizations: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetOrganizations: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsOrganizations: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetOrganizations: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ExternalOrganizationListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3137,9 +3137,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="q">Search query</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ExternalOrganizationListing</returns>
-        public async System.Threading.Tasks.Task<ExternalOrganizationListing> GetExternalcontactsOrganizationsAsync (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ExternalOrganizationListing> GetOrganizationsAsync (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
         {
-             ApiResponse<ExternalOrganizationListing> response = await GetExternalcontactsOrganizationsAsyncWithHttpInfo(pageSize, pageNumber, q, sortOrder);
+             ApiResponse<ExternalOrganizationListing> response = await GetOrganizationsAsyncWithHttpInfo(pageSize, pageNumber, q, sortOrder);
              return response.Data;
 
         }
@@ -3152,7 +3152,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="q">Search query</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ApiResponse (ExternalOrganizationListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganizationListing>> GetExternalcontactsOrganizationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganizationListing>> GetOrganizationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
         {
             
     
@@ -3210,9 +3210,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsOrganizations: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetOrganizations: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsOrganizations: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetOrganizations: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ExternalOrganizationListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3225,9 +3225,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">ExternalOrganization</param> 
         /// <returns>ExternalOrganization</returns>
-        public ExternalOrganization PostExternalcontactsOrganizations (ExternalOrganization body = null)
+        public ExternalOrganization PostOrganizations (ExternalOrganization body = null)
         {
-             ApiResponse<ExternalOrganization> response = PostExternalcontactsOrganizationsWithHttpInfo(body);
+             ApiResponse<ExternalOrganization> response = PostOrganizationsWithHttpInfo(body);
              return response.Data;
         }
 
@@ -3236,7 +3236,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">ExternalOrganization</param> 
         /// <returns>ApiResponse of ExternalOrganization</returns>
-        public ApiResponse< ExternalOrganization > PostExternalcontactsOrganizationsWithHttpInfo (ExternalOrganization body = null)
+        public ApiResponse< ExternalOrganization > PostOrganizationsWithHttpInfo (ExternalOrganization body = null)
         {
             
     
@@ -3296,9 +3296,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostExternalcontactsOrganizations: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostOrganizations: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostExternalcontactsOrganizations: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostOrganizations: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ExternalOrganization>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3311,9 +3311,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">ExternalOrganization</param>
         /// <returns>Task of ExternalOrganization</returns>
-        public async System.Threading.Tasks.Task<ExternalOrganization> PostExternalcontactsOrganizationsAsync (ExternalOrganization body = null)
+        public async System.Threading.Tasks.Task<ExternalOrganization> PostOrganizationsAsync (ExternalOrganization body = null)
         {
-             ApiResponse<ExternalOrganization> response = await PostExternalcontactsOrganizationsAsyncWithHttpInfo(body);
+             ApiResponse<ExternalOrganization> response = await PostOrganizationsAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -3323,7 +3323,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">ExternalOrganization</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PostExternalcontactsOrganizationsAsyncWithHttpInfo (ExternalOrganization body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PostOrganizationsAsyncWithHttpInfo (ExternalOrganization body = null)
         {
             
     
@@ -3378,9 +3378,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostExternalcontactsOrganizations: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostOrganizations: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostExternalcontactsOrganizations: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostOrganizations: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ExternalOrganization>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3393,9 +3393,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="externalOrganizationId">External Organization ID</param> 
         /// <returns>ExternalOrganization</returns>
-        public ExternalOrganization GetExternalcontactsOrganization (string externalOrganizationId)
+        public ExternalOrganization GetOrganizationsExternalorganizationId (string externalOrganizationId)
         {
-             ApiResponse<ExternalOrganization> response = GetExternalcontactsOrganizationWithHttpInfo(externalOrganizationId);
+             ApiResponse<ExternalOrganization> response = GetOrganizationsExternalorganizationIdWithHttpInfo(externalOrganizationId);
              return response.Data;
         }
 
@@ -3404,12 +3404,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="externalOrganizationId">External Organization ID</param> 
         /// <returns>ApiResponse of ExternalOrganization</returns>
-        public ApiResponse< ExternalOrganization > GetExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId)
+        public ApiResponse< ExternalOrganization > GetOrganizationsExternalorganizationIdWithHttpInfo (string externalOrganizationId)
         {
             
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
-                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetExternalcontactsOrganization");
+                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetOrganizationsExternalorganizationId");
             
     
             var path_ = "/api/v1/externalcontacts/organizations/{externalOrganizationId}";
@@ -3462,9 +3462,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsOrganization: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetOrganizationsExternalorganizationId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsOrganization: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetOrganizationsExternalorganizationId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ExternalOrganization>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3477,9 +3477,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>Task of ExternalOrganization</returns>
-        public async System.Threading.Tasks.Task<ExternalOrganization> GetExternalcontactsOrganizationAsync (string externalOrganizationId)
+        public async System.Threading.Tasks.Task<ExternalOrganization> GetOrganizationsExternalorganizationIdAsync (string externalOrganizationId)
         {
-             ApiResponse<ExternalOrganization> response = await GetExternalcontactsOrganizationAsyncWithHttpInfo(externalOrganizationId);
+             ApiResponse<ExternalOrganization> response = await GetOrganizationsExternalorganizationIdAsyncWithHttpInfo(externalOrganizationId);
              return response.Data;
 
         }
@@ -3489,10 +3489,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> GetExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId)
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> GetOrganizationsExternalorganizationIdAsyncWithHttpInfo (string externalOrganizationId)
         {
             // verify the required parameter 'externalOrganizationId' is set
-            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling GetExternalcontactsOrganization");
+            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling GetOrganizationsExternalorganizationId");
             
     
             var path_ = "/api/v1/externalcontacts/organizations/{externalOrganizationId}";
@@ -3546,9 +3546,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsOrganization: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetOrganizationsExternalorganizationId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsOrganization: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetOrganizationsExternalorganizationId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ExternalOrganization>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3562,9 +3562,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization ID</param> 
         /// <param name="body">ExternalOrganization</param> 
         /// <returns>ExternalOrganization</returns>
-        public ExternalOrganization PutExternalcontactsOrganization (string externalOrganizationId, ExternalOrganization body = null)
+        public ExternalOrganization PutOrganizationsExternalorganizationId (string externalOrganizationId, ExternalOrganization body = null)
         {
-             ApiResponse<ExternalOrganization> response = PutExternalcontactsOrganizationWithHttpInfo(externalOrganizationId, body);
+             ApiResponse<ExternalOrganization> response = PutOrganizationsExternalorganizationIdWithHttpInfo(externalOrganizationId, body);
              return response.Data;
         }
 
@@ -3574,12 +3574,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization ID</param> 
         /// <param name="body">ExternalOrganization</param> 
         /// <returns>ApiResponse of ExternalOrganization</returns>
-        public ApiResponse< ExternalOrganization > PutExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId, ExternalOrganization body = null)
+        public ApiResponse< ExternalOrganization > PutOrganizationsExternalorganizationIdWithHttpInfo (string externalOrganizationId, ExternalOrganization body = null)
         {
             
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
-                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->PutExternalcontactsOrganization");
+                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->PutOrganizationsExternalorganizationId");
             
     
             var path_ = "/api/v1/externalcontacts/organizations/{externalOrganizationId}";
@@ -3639,9 +3639,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutExternalcontactsOrganization: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutOrganizationsExternalorganizationId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutExternalcontactsOrganization: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutOrganizationsExternalorganizationId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ExternalOrganization>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3655,9 +3655,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="body">ExternalOrganization</param>
         /// <returns>Task of ExternalOrganization</returns>
-        public async System.Threading.Tasks.Task<ExternalOrganization> PutExternalcontactsOrganizationAsync (string externalOrganizationId, ExternalOrganization body = null)
+        public async System.Threading.Tasks.Task<ExternalOrganization> PutOrganizationsExternalorganizationIdAsync (string externalOrganizationId, ExternalOrganization body = null)
         {
-             ApiResponse<ExternalOrganization> response = await PutExternalcontactsOrganizationAsyncWithHttpInfo(externalOrganizationId, body);
+             ApiResponse<ExternalOrganization> response = await PutOrganizationsExternalorganizationIdAsyncWithHttpInfo(externalOrganizationId, body);
              return response.Data;
 
         }
@@ -3668,10 +3668,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="body">ExternalOrganization</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PutExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId, ExternalOrganization body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PutOrganizationsExternalorganizationIdAsyncWithHttpInfo (string externalOrganizationId, ExternalOrganization body = null)
         {
             // verify the required parameter 'externalOrganizationId' is set
-            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling PutExternalcontactsOrganization");
+            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling PutOrganizationsExternalorganizationId");
             
     
             var path_ = "/api/v1/externalcontacts/organizations/{externalOrganizationId}";
@@ -3726,9 +3726,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutExternalcontactsOrganization: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutOrganizationsExternalorganizationId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutExternalcontactsOrganization: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutOrganizationsExternalorganizationId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ExternalOrganization>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3741,9 +3741,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="externalOrganizationId">External Organization ID</param> 
         /// <returns></returns>
-        public void DeleteExternalcontactsOrganization (string externalOrganizationId)
+        public void DeleteOrganizationsExternalorganizationId (string externalOrganizationId)
         {
-             DeleteExternalcontactsOrganizationWithHttpInfo(externalOrganizationId);
+             DeleteOrganizationsExternalorganizationIdWithHttpInfo(externalOrganizationId);
         }
 
         /// <summary>
@@ -3751,12 +3751,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="externalOrganizationId">External Organization ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId)
+        public ApiResponse<Object> DeleteOrganizationsExternalorganizationIdWithHttpInfo (string externalOrganizationId)
         {
             
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
-                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->DeleteExternalcontactsOrganization");
+                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->DeleteOrganizationsExternalorganizationId");
             
     
             var path_ = "/api/v1/externalcontacts/organizations/{externalOrganizationId}";
@@ -3809,9 +3809,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteExternalcontactsOrganization: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteOrganizationsExternalorganizationId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteExternalcontactsOrganization: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteOrganizationsExternalorganizationId: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -3824,9 +3824,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteExternalcontactsOrganizationAsync (string externalOrganizationId)
+        public async System.Threading.Tasks.Task DeleteOrganizationsExternalorganizationIdAsync (string externalOrganizationId)
         {
-             await DeleteExternalcontactsOrganizationAsyncWithHttpInfo(externalOrganizationId);
+             await DeleteOrganizationsExternalorganizationIdAsyncWithHttpInfo(externalOrganizationId);
 
         }
 
@@ -3835,10 +3835,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrganizationsExternalorganizationIdAsyncWithHttpInfo (string externalOrganizationId)
         {
             // verify the required parameter 'externalOrganizationId' is set
-            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling DeleteExternalcontactsOrganization");
+            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling DeleteOrganizationsExternalorganizationId");
             
     
             var path_ = "/api/v1/externalcontacts/organizations/{externalOrganizationId}";
@@ -3892,9 +3892,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteExternalcontactsOrganization: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteOrganizationsExternalorganizationId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteExternalcontactsOrganization: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteOrganizationsExternalorganizationId: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -3911,9 +3911,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param> 
         /// <param name="sortOrder">Sort order</param> 
         /// <returns>ContactListing</returns>
-        public ContactListing GetExternalcontactsOrganizationContacts (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
+        public ContactListing GetOrganizationsExternalorganizationIdContacts (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
         {
-             ApiResponse<ContactListing> response = GetExternalcontactsOrganizationContactsWithHttpInfo(externalOrganizationId, pageSize, pageNumber, q, sortOrder);
+             ApiResponse<ContactListing> response = GetOrganizationsExternalorganizationIdContactsWithHttpInfo(externalOrganizationId, pageSize, pageNumber, q, sortOrder);
              return response.Data;
         }
 
@@ -3926,12 +3926,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param> 
         /// <param name="sortOrder">Sort order</param> 
         /// <returns>ApiResponse of ContactListing</returns>
-        public ApiResponse< ContactListing > GetExternalcontactsOrganizationContactsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
+        public ApiResponse< ContactListing > GetOrganizationsExternalorganizationIdContactsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
         {
             
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
-                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetExternalcontactsOrganizationContacts");
+                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetOrganizationsExternalorganizationIdContacts");
             
     
             var path_ = "/api/v1/externalcontacts/organizations/{externalOrganizationId}/contacts";
@@ -3988,9 +3988,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsOrganizationContacts: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetOrganizationsExternalorganizationIdContacts: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsOrganizationContacts: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetOrganizationsExternalorganizationIdContacts: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ContactListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4007,9 +4007,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ContactListing</returns>
-        public async System.Threading.Tasks.Task<ContactListing> GetExternalcontactsOrganizationContactsAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ContactListing> GetOrganizationsExternalorganizationIdContactsAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
         {
-             ApiResponse<ContactListing> response = await GetExternalcontactsOrganizationContactsAsyncWithHttpInfo(externalOrganizationId, pageSize, pageNumber, q, sortOrder);
+             ApiResponse<ContactListing> response = await GetOrganizationsExternalorganizationIdContactsAsyncWithHttpInfo(externalOrganizationId, pageSize, pageNumber, q, sortOrder);
              return response.Data;
 
         }
@@ -4023,10 +4023,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ApiResponse (ContactListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetExternalcontactsOrganizationContactsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetOrganizationsExternalorganizationIdContactsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
         {
             // verify the required parameter 'externalOrganizationId' is set
-            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling GetExternalcontactsOrganizationContacts");
+            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling GetOrganizationsExternalorganizationIdContacts");
             
     
             var path_ = "/api/v1/externalcontacts/organizations/{externalOrganizationId}/contacts";
@@ -4084,9 +4084,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsOrganizationContacts: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetOrganizationsExternalorganizationIdContacts: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsOrganizationContacts: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetOrganizationsExternalorganizationIdContacts: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ContactListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4102,9 +4102,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="sortOrder">Sort order</param> 
         /// <returns>NoteListing</returns>
-        public NoteListing GetExternalcontactsOrganizationNotes (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public NoteListing GetOrganizationsExternalorganizationIdNotes (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
-             ApiResponse<NoteListing> response = GetExternalcontactsOrganizationNotesWithHttpInfo(externalOrganizationId, pageSize, pageNumber, sortOrder);
+             ApiResponse<NoteListing> response = GetOrganizationsExternalorganizationIdNotesWithHttpInfo(externalOrganizationId, pageSize, pageNumber, sortOrder);
              return response.Data;
         }
 
@@ -4116,12 +4116,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="sortOrder">Sort order</param> 
         /// <returns>ApiResponse of NoteListing</returns>
-        public ApiResponse< NoteListing > GetExternalcontactsOrganizationNotesWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public ApiResponse< NoteListing > GetOrganizationsExternalorganizationIdNotesWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
             
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
-                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetExternalcontactsOrganizationNotes");
+                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetOrganizationsExternalorganizationIdNotes");
             
     
             var path_ = "/api/v1/externalcontacts/organizations/{externalOrganizationId}/notes";
@@ -4177,9 +4177,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsOrganizationNotes: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetOrganizationsExternalorganizationIdNotes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsOrganizationNotes: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetOrganizationsExternalorganizationIdNotes: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<NoteListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4195,9 +4195,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of NoteListing</returns>
-        public async System.Threading.Tasks.Task<NoteListing> GetExternalcontactsOrganizationNotesAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<NoteListing> GetOrganizationsExternalorganizationIdNotesAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
-             ApiResponse<NoteListing> response = await GetExternalcontactsOrganizationNotesAsyncWithHttpInfo(externalOrganizationId, pageSize, pageNumber, sortOrder);
+             ApiResponse<NoteListing> response = await GetOrganizationsExternalorganizationIdNotesAsyncWithHttpInfo(externalOrganizationId, pageSize, pageNumber, sortOrder);
              return response.Data;
 
         }
@@ -4210,10 +4210,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ApiResponse (NoteListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<NoteListing>> GetExternalcontactsOrganizationNotesAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<NoteListing>> GetOrganizationsExternalorganizationIdNotesAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
             // verify the required parameter 'externalOrganizationId' is set
-            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling GetExternalcontactsOrganizationNotes");
+            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling GetOrganizationsExternalorganizationIdNotes");
             
     
             var path_ = "/api/v1/externalcontacts/organizations/{externalOrganizationId}/notes";
@@ -4270,9 +4270,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsOrganizationNotes: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetOrganizationsExternalorganizationIdNotes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsOrganizationNotes: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetOrganizationsExternalorganizationIdNotes: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<NoteListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4286,9 +4286,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization Id</param> 
         /// <param name="body">ExternalContact</param> 
         /// <returns>Note</returns>
-        public Note PostExternalcontactsOrganizationNotes (string externalOrganizationId, Note body = null)
+        public Note PostOrganizationsExternalorganizationIdNotes (string externalOrganizationId, Note body = null)
         {
-             ApiResponse<Note> response = PostExternalcontactsOrganizationNotesWithHttpInfo(externalOrganizationId, body);
+             ApiResponse<Note> response = PostOrganizationsExternalorganizationIdNotesWithHttpInfo(externalOrganizationId, body);
              return response.Data;
         }
 
@@ -4298,12 +4298,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization Id</param> 
         /// <param name="body">ExternalContact</param> 
         /// <returns>ApiResponse of Note</returns>
-        public ApiResponse< Note > PostExternalcontactsOrganizationNotesWithHttpInfo (string externalOrganizationId, Note body = null)
+        public ApiResponse< Note > PostOrganizationsExternalorganizationIdNotesWithHttpInfo (string externalOrganizationId, Note body = null)
         {
             
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
-                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->PostExternalcontactsOrganizationNotes");
+                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->PostOrganizationsExternalorganizationIdNotes");
             
     
             var path_ = "/api/v1/externalcontacts/organizations/{externalOrganizationId}/notes";
@@ -4363,9 +4363,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostExternalcontactsOrganizationNotes: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostOrganizationsExternalorganizationIdNotes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostExternalcontactsOrganizationNotes: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostOrganizationsExternalorganizationIdNotes: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Note>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4379,9 +4379,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of Note</returns>
-        public async System.Threading.Tasks.Task<Note> PostExternalcontactsOrganizationNotesAsync (string externalOrganizationId, Note body = null)
+        public async System.Threading.Tasks.Task<Note> PostOrganizationsExternalorganizationIdNotesAsync (string externalOrganizationId, Note body = null)
         {
-             ApiResponse<Note> response = await PostExternalcontactsOrganizationNotesAsyncWithHttpInfo(externalOrganizationId, body);
+             ApiResponse<Note> response = await PostOrganizationsExternalorganizationIdNotesAsyncWithHttpInfo(externalOrganizationId, body);
              return response.Data;
 
         }
@@ -4392,10 +4392,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="body">ExternalContact</param>
         /// <returns>Task of ApiResponse (Note)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Note>> PostExternalcontactsOrganizationNotesAsyncWithHttpInfo (string externalOrganizationId, Note body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Note>> PostOrganizationsExternalorganizationIdNotesAsyncWithHttpInfo (string externalOrganizationId, Note body = null)
         {
             // verify the required parameter 'externalOrganizationId' is set
-            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling PostExternalcontactsOrganizationNotes");
+            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling PostOrganizationsExternalorganizationIdNotes");
             
     
             var path_ = "/api/v1/externalcontacts/organizations/{externalOrganizationId}/notes";
@@ -4450,9 +4450,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostExternalcontactsOrganizationNotes: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostOrganizationsExternalorganizationIdNotes: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostExternalcontactsOrganizationNotes: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostOrganizationsExternalorganizationIdNotes: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Note>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4466,9 +4466,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization Id</param> 
         /// <param name="noteId">Note Id</param> 
         /// <returns>Note</returns>
-        public Note GetExternalcontactsOrganizationNote (string externalOrganizationId, string noteId)
+        public Note GetOrganizationsExternalorganizationIdNotesNoteId (string externalOrganizationId, string noteId)
         {
-             ApiResponse<Note> response = GetExternalcontactsOrganizationNoteWithHttpInfo(externalOrganizationId, noteId);
+             ApiResponse<Note> response = GetOrganizationsExternalorganizationIdNotesNoteIdWithHttpInfo(externalOrganizationId, noteId);
              return response.Data;
         }
 
@@ -4478,16 +4478,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization Id</param> 
         /// <param name="noteId">Note Id</param> 
         /// <returns>ApiResponse of Note</returns>
-        public ApiResponse< Note > GetExternalcontactsOrganizationNoteWithHttpInfo (string externalOrganizationId, string noteId)
+        public ApiResponse< Note > GetOrganizationsExternalorganizationIdNotesNoteIdWithHttpInfo (string externalOrganizationId, string noteId)
         {
             
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
-                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetExternalcontactsOrganizationNote");
+                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetOrganizationsExternalorganizationIdNotesNoteId");
             
             // verify the required parameter 'noteId' is set
             if (noteId == null)
-                throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->GetExternalcontactsOrganizationNote");
+                throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->GetOrganizationsExternalorganizationIdNotesNoteId");
             
     
             var path_ = "/api/v1/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
@@ -4541,9 +4541,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsOrganizationNote: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetOrganizationsExternalorganizationIdNotesNoteId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsOrganizationNote: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetOrganizationsExternalorganizationIdNotesNoteId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Note>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4557,9 +4557,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of Note</returns>
-        public async System.Threading.Tasks.Task<Note> GetExternalcontactsOrganizationNoteAsync (string externalOrganizationId, string noteId)
+        public async System.Threading.Tasks.Task<Note> GetOrganizationsExternalorganizationIdNotesNoteIdAsync (string externalOrganizationId, string noteId)
         {
-             ApiResponse<Note> response = await GetExternalcontactsOrganizationNoteAsyncWithHttpInfo(externalOrganizationId, noteId);
+             ApiResponse<Note> response = await GetOrganizationsExternalorganizationIdNotesNoteIdAsyncWithHttpInfo(externalOrganizationId, noteId);
              return response.Data;
 
         }
@@ -4570,12 +4570,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of ApiResponse (Note)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Note>> GetExternalcontactsOrganizationNoteAsyncWithHttpInfo (string externalOrganizationId, string noteId)
+        public async System.Threading.Tasks.Task<ApiResponse<Note>> GetOrganizationsExternalorganizationIdNotesNoteIdAsyncWithHttpInfo (string externalOrganizationId, string noteId)
         {
             // verify the required parameter 'externalOrganizationId' is set
-            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling GetExternalcontactsOrganizationNote");
+            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling GetOrganizationsExternalorganizationIdNotesNoteId");
             // verify the required parameter 'noteId' is set
-            if (noteId == null) throw new ApiException(400, "Missing required parameter 'noteId' when calling GetExternalcontactsOrganizationNote");
+            if (noteId == null) throw new ApiException(400, "Missing required parameter 'noteId' when calling GetOrganizationsExternalorganizationIdNotesNoteId");
             
     
             var path_ = "/api/v1/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
@@ -4630,9 +4630,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsOrganizationNote: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetOrganizationsExternalorganizationIdNotesNoteId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsOrganizationNote: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetOrganizationsExternalorganizationIdNotesNoteId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Note>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4647,9 +4647,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="noteId">Note Id</param> 
         /// <param name="body">Note</param> 
         /// <returns>Note</returns>
-        public Note PutExternalcontactsOrganizationNote (string externalOrganizationId, string noteId, Note body = null)
+        public Note PutOrganizationsExternalorganizationIdNotesNoteId (string externalOrganizationId, string noteId, Note body = null)
         {
-             ApiResponse<Note> response = PutExternalcontactsOrganizationNoteWithHttpInfo(externalOrganizationId, noteId, body);
+             ApiResponse<Note> response = PutOrganizationsExternalorganizationIdNotesNoteIdWithHttpInfo(externalOrganizationId, noteId, body);
              return response.Data;
         }
 
@@ -4660,16 +4660,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="noteId">Note Id</param> 
         /// <param name="body">Note</param> 
         /// <returns>ApiResponse of Note</returns>
-        public ApiResponse< Note > PutExternalcontactsOrganizationNoteWithHttpInfo (string externalOrganizationId, string noteId, Note body = null)
+        public ApiResponse< Note > PutOrganizationsExternalorganizationIdNotesNoteIdWithHttpInfo (string externalOrganizationId, string noteId, Note body = null)
         {
             
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
-                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->PutExternalcontactsOrganizationNote");
+                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->PutOrganizationsExternalorganizationIdNotesNoteId");
             
             // verify the required parameter 'noteId' is set
             if (noteId == null)
-                throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->PutExternalcontactsOrganizationNote");
+                throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->PutOrganizationsExternalorganizationIdNotesNoteId");
             
     
             var path_ = "/api/v1/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
@@ -4730,9 +4730,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutExternalcontactsOrganizationNote: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutOrganizationsExternalorganizationIdNotesNoteId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutExternalcontactsOrganizationNote: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutOrganizationsExternalorganizationIdNotesNoteId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Note>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4747,9 +4747,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="body">Note</param>
         /// <returns>Task of Note</returns>
-        public async System.Threading.Tasks.Task<Note> PutExternalcontactsOrganizationNoteAsync (string externalOrganizationId, string noteId, Note body = null)
+        public async System.Threading.Tasks.Task<Note> PutOrganizationsExternalorganizationIdNotesNoteIdAsync (string externalOrganizationId, string noteId, Note body = null)
         {
-             ApiResponse<Note> response = await PutExternalcontactsOrganizationNoteAsyncWithHttpInfo(externalOrganizationId, noteId, body);
+             ApiResponse<Note> response = await PutOrganizationsExternalorganizationIdNotesNoteIdAsyncWithHttpInfo(externalOrganizationId, noteId, body);
              return response.Data;
 
         }
@@ -4761,12 +4761,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="noteId">Note Id</param>
         /// <param name="body">Note</param>
         /// <returns>Task of ApiResponse (Note)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Note>> PutExternalcontactsOrganizationNoteAsyncWithHttpInfo (string externalOrganizationId, string noteId, Note body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Note>> PutOrganizationsExternalorganizationIdNotesNoteIdAsyncWithHttpInfo (string externalOrganizationId, string noteId, Note body = null)
         {
             // verify the required parameter 'externalOrganizationId' is set
-            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling PutExternalcontactsOrganizationNote");
+            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling PutOrganizationsExternalorganizationIdNotesNoteId");
             // verify the required parameter 'noteId' is set
-            if (noteId == null) throw new ApiException(400, "Missing required parameter 'noteId' when calling PutExternalcontactsOrganizationNote");
+            if (noteId == null) throw new ApiException(400, "Missing required parameter 'noteId' when calling PutOrganizationsExternalorganizationIdNotesNoteId");
             
     
             var path_ = "/api/v1/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
@@ -4822,9 +4822,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutExternalcontactsOrganizationNote: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutOrganizationsExternalorganizationIdNotesNoteId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutExternalcontactsOrganizationNote: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutOrganizationsExternalorganizationIdNotesNoteId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Note>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4838,9 +4838,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization Id</param> 
         /// <param name="noteId">Note Id</param> 
         /// <returns></returns>
-        public void DeleteExternalcontactsOrganizationNote (string externalOrganizationId, string noteId)
+        public void DeleteOrganizationsExternalorganizationIdNotesNoteId (string externalOrganizationId, string noteId)
         {
-             DeleteExternalcontactsOrganizationNoteWithHttpInfo(externalOrganizationId, noteId);
+             DeleteOrganizationsExternalorganizationIdNotesNoteIdWithHttpInfo(externalOrganizationId, noteId);
         }
 
         /// <summary>
@@ -4849,16 +4849,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization Id</param> 
         /// <param name="noteId">Note Id</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteExternalcontactsOrganizationNoteWithHttpInfo (string externalOrganizationId, string noteId)
+        public ApiResponse<Object> DeleteOrganizationsExternalorganizationIdNotesNoteIdWithHttpInfo (string externalOrganizationId, string noteId)
         {
             
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
-                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->DeleteExternalcontactsOrganizationNote");
+                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->DeleteOrganizationsExternalorganizationIdNotesNoteId");
             
             // verify the required parameter 'noteId' is set
             if (noteId == null)
-                throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->DeleteExternalcontactsOrganizationNote");
+                throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->DeleteOrganizationsExternalorganizationIdNotesNoteId");
             
     
             var path_ = "/api/v1/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
@@ -4912,9 +4912,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteExternalcontactsOrganizationNote: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteOrganizationsExternalorganizationIdNotesNoteId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteExternalcontactsOrganizationNote: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteOrganizationsExternalorganizationIdNotesNoteId: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -4928,9 +4928,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteExternalcontactsOrganizationNoteAsync (string externalOrganizationId, string noteId)
+        public async System.Threading.Tasks.Task DeleteOrganizationsExternalorganizationIdNotesNoteIdAsync (string externalOrganizationId, string noteId)
         {
-             await DeleteExternalcontactsOrganizationNoteAsyncWithHttpInfo(externalOrganizationId, noteId);
+             await DeleteOrganizationsExternalorganizationIdNotesNoteIdAsyncWithHttpInfo(externalOrganizationId, noteId);
 
         }
 
@@ -4940,12 +4940,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsOrganizationNoteAsyncWithHttpInfo (string externalOrganizationId, string noteId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOrganizationsExternalorganizationIdNotesNoteIdAsyncWithHttpInfo (string externalOrganizationId, string noteId)
         {
             // verify the required parameter 'externalOrganizationId' is set
-            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling DeleteExternalcontactsOrganizationNote");
+            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling DeleteOrganizationsExternalorganizationIdNotesNoteId");
             // verify the required parameter 'noteId' is set
-            if (noteId == null) throw new ApiException(400, "Missing required parameter 'noteId' when calling DeleteExternalcontactsOrganizationNote");
+            if (noteId == null) throw new ApiException(400, "Missing required parameter 'noteId' when calling DeleteOrganizationsExternalorganizationIdNotesNoteId");
             
     
             var path_ = "/api/v1/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
@@ -5000,9 +5000,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteExternalcontactsOrganizationNote: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteOrganizationsExternalorganizationIdNotesNoteId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteExternalcontactsOrganizationNote: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteOrganizationsExternalorganizationIdNotesNoteId: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -5018,9 +5018,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="sortOrder">Sort order</param> 
         /// <returns>RelationshipListing</returns>
-        public RelationshipListing GetExternalcontactsOrganizationRelationships (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public RelationshipListing GetOrganizationsExternalorganizationIdRelationships (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
-             ApiResponse<RelationshipListing> response = GetExternalcontactsOrganizationRelationshipsWithHttpInfo(externalOrganizationId, pageSize, pageNumber, sortOrder);
+             ApiResponse<RelationshipListing> response = GetOrganizationsExternalorganizationIdRelationshipsWithHttpInfo(externalOrganizationId, pageSize, pageNumber, sortOrder);
              return response.Data;
         }
 
@@ -5032,12 +5032,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="sortOrder">Sort order</param> 
         /// <returns>ApiResponse of RelationshipListing</returns>
-        public ApiResponse< RelationshipListing > GetExternalcontactsOrganizationRelationshipsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public ApiResponse< RelationshipListing > GetOrganizationsExternalorganizationIdRelationshipsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
             
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
-                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetExternalcontactsOrganizationRelationships");
+                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetOrganizationsExternalorganizationIdRelationships");
             
     
             var path_ = "/api/v1/externalcontacts/organizations/{externalOrganizationId}/relationships";
@@ -5093,9 +5093,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsOrganizationRelationships: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetOrganizationsExternalorganizationIdRelationships: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsOrganizationRelationships: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetOrganizationsExternalorganizationIdRelationships: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<RelationshipListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5111,9 +5111,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of RelationshipListing</returns>
-        public async System.Threading.Tasks.Task<RelationshipListing> GetExternalcontactsOrganizationRelationshipsAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<RelationshipListing> GetOrganizationsExternalorganizationIdRelationshipsAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
-             ApiResponse<RelationshipListing> response = await GetExternalcontactsOrganizationRelationshipsAsyncWithHttpInfo(externalOrganizationId, pageSize, pageNumber, sortOrder);
+             ApiResponse<RelationshipListing> response = await GetOrganizationsExternalorganizationIdRelationshipsAsyncWithHttpInfo(externalOrganizationId, pageSize, pageNumber, sortOrder);
              return response.Data;
 
         }
@@ -5126,10 +5126,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="sortOrder">Sort order</param>
         /// <returns>Task of ApiResponse (RelationshipListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RelationshipListing>> GetExternalcontactsOrganizationRelationshipsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<RelationshipListing>> GetOrganizationsExternalorganizationIdRelationshipsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
             // verify the required parameter 'externalOrganizationId' is set
-            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling GetExternalcontactsOrganizationRelationships");
+            if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling GetOrganizationsExternalorganizationIdRelationships");
             
     
             var path_ = "/api/v1/externalcontacts/organizations/{externalOrganizationId}/relationships";
@@ -5186,9 +5186,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsOrganizationRelationships: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetOrganizationsExternalorganizationIdRelationships: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsOrganizationRelationships: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetOrganizationsExternalorganizationIdRelationships: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<RelationshipListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5201,9 +5201,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Relationship</param> 
         /// <returns>Relationship</returns>
-        public Relationship PostExternalcontactsRelationships (Relationship body = null)
+        public Relationship PostRelationships (Relationship body = null)
         {
-             ApiResponse<Relationship> response = PostExternalcontactsRelationshipsWithHttpInfo(body);
+             ApiResponse<Relationship> response = PostRelationshipsWithHttpInfo(body);
              return response.Data;
         }
 
@@ -5212,7 +5212,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Relationship</param> 
         /// <returns>ApiResponse of Relationship</returns>
-        public ApiResponse< Relationship > PostExternalcontactsRelationshipsWithHttpInfo (Relationship body = null)
+        public ApiResponse< Relationship > PostRelationshipsWithHttpInfo (Relationship body = null)
         {
             
     
@@ -5272,9 +5272,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostExternalcontactsRelationships: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostRelationships: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostExternalcontactsRelationships: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostRelationships: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Relationship>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5287,9 +5287,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Relationship</param>
         /// <returns>Task of Relationship</returns>
-        public async System.Threading.Tasks.Task<Relationship> PostExternalcontactsRelationshipsAsync (Relationship body = null)
+        public async System.Threading.Tasks.Task<Relationship> PostRelationshipsAsync (Relationship body = null)
         {
-             ApiResponse<Relationship> response = await PostExternalcontactsRelationshipsAsyncWithHttpInfo(body);
+             ApiResponse<Relationship> response = await PostRelationshipsAsyncWithHttpInfo(body);
              return response.Data;
 
         }
@@ -5299,7 +5299,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="body">Relationship</param>
         /// <returns>Task of ApiResponse (Relationship)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Relationship>> PostExternalcontactsRelationshipsAsyncWithHttpInfo (Relationship body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Relationship>> PostRelationshipsAsyncWithHttpInfo (Relationship body = null)
         {
             
     
@@ -5354,9 +5354,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostExternalcontactsRelationships: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostRelationships: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostExternalcontactsRelationships: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostRelationships: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Relationship>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5369,9 +5369,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="relationshipId">Relationship Id</param> 
         /// <returns>Relationship</returns>
-        public Relationship GetExternalcontactsRelationship (string relationshipId)
+        public Relationship GetRelationshipsRelationshipId (string relationshipId)
         {
-             ApiResponse<Relationship> response = GetExternalcontactsRelationshipWithHttpInfo(relationshipId);
+             ApiResponse<Relationship> response = GetRelationshipsRelationshipIdWithHttpInfo(relationshipId);
              return response.Data;
         }
 
@@ -5380,12 +5380,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="relationshipId">Relationship Id</param> 
         /// <returns>ApiResponse of Relationship</returns>
-        public ApiResponse< Relationship > GetExternalcontactsRelationshipWithHttpInfo (string relationshipId)
+        public ApiResponse< Relationship > GetRelationshipsRelationshipIdWithHttpInfo (string relationshipId)
         {
             
             // verify the required parameter 'relationshipId' is set
             if (relationshipId == null)
-                throw new ApiException(400, "Missing required parameter 'relationshipId' when calling ExternalContactsApi->GetExternalcontactsRelationship");
+                throw new ApiException(400, "Missing required parameter 'relationshipId' when calling ExternalContactsApi->GetRelationshipsRelationshipId");
             
     
             var path_ = "/api/v1/externalcontacts/relationships/{relationshipId}";
@@ -5438,9 +5438,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsRelationship: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetRelationshipsRelationshipId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsRelationship: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetRelationshipsRelationshipId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Relationship>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5453,9 +5453,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="relationshipId">Relationship Id</param>
         /// <returns>Task of Relationship</returns>
-        public async System.Threading.Tasks.Task<Relationship> GetExternalcontactsRelationshipAsync (string relationshipId)
+        public async System.Threading.Tasks.Task<Relationship> GetRelationshipsRelationshipIdAsync (string relationshipId)
         {
-             ApiResponse<Relationship> response = await GetExternalcontactsRelationshipAsyncWithHttpInfo(relationshipId);
+             ApiResponse<Relationship> response = await GetRelationshipsRelationshipIdAsyncWithHttpInfo(relationshipId);
              return response.Data;
 
         }
@@ -5465,10 +5465,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="relationshipId">Relationship Id</param>
         /// <returns>Task of ApiResponse (Relationship)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Relationship>> GetExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId)
+        public async System.Threading.Tasks.Task<ApiResponse<Relationship>> GetRelationshipsRelationshipIdAsyncWithHttpInfo (string relationshipId)
         {
             // verify the required parameter 'relationshipId' is set
-            if (relationshipId == null) throw new ApiException(400, "Missing required parameter 'relationshipId' when calling GetExternalcontactsRelationship");
+            if (relationshipId == null) throw new ApiException(400, "Missing required parameter 'relationshipId' when calling GetRelationshipsRelationshipId");
             
     
             var path_ = "/api/v1/externalcontacts/relationships/{relationshipId}";
@@ -5522,9 +5522,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsRelationship: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetRelationshipsRelationshipId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetExternalcontactsRelationship: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetRelationshipsRelationshipId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Relationship>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5538,9 +5538,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="relationshipId">Relationship Id</param> 
         /// <param name="body">Relationship</param> 
         /// <returns>Relationship</returns>
-        public Relationship PutExternalcontactsRelationship (string relationshipId, Relationship body = null)
+        public Relationship PutRelationshipsRelationshipId (string relationshipId, Relationship body = null)
         {
-             ApiResponse<Relationship> response = PutExternalcontactsRelationshipWithHttpInfo(relationshipId, body);
+             ApiResponse<Relationship> response = PutRelationshipsRelationshipIdWithHttpInfo(relationshipId, body);
              return response.Data;
         }
 
@@ -5550,12 +5550,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="relationshipId">Relationship Id</param> 
         /// <param name="body">Relationship</param> 
         /// <returns>ApiResponse of Relationship</returns>
-        public ApiResponse< Relationship > PutExternalcontactsRelationshipWithHttpInfo (string relationshipId, Relationship body = null)
+        public ApiResponse< Relationship > PutRelationshipsRelationshipIdWithHttpInfo (string relationshipId, Relationship body = null)
         {
             
             // verify the required parameter 'relationshipId' is set
             if (relationshipId == null)
-                throw new ApiException(400, "Missing required parameter 'relationshipId' when calling ExternalContactsApi->PutExternalcontactsRelationship");
+                throw new ApiException(400, "Missing required parameter 'relationshipId' when calling ExternalContactsApi->PutRelationshipsRelationshipId");
             
     
             var path_ = "/api/v1/externalcontacts/relationships/{relationshipId}";
@@ -5615,9 +5615,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutExternalcontactsRelationship: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutRelationshipsRelationshipId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutExternalcontactsRelationship: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutRelationshipsRelationshipId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Relationship>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5631,9 +5631,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="relationshipId">Relationship Id</param>
         /// <param name="body">Relationship</param>
         /// <returns>Task of Relationship</returns>
-        public async System.Threading.Tasks.Task<Relationship> PutExternalcontactsRelationshipAsync (string relationshipId, Relationship body = null)
+        public async System.Threading.Tasks.Task<Relationship> PutRelationshipsRelationshipIdAsync (string relationshipId, Relationship body = null)
         {
-             ApiResponse<Relationship> response = await PutExternalcontactsRelationshipAsyncWithHttpInfo(relationshipId, body);
+             ApiResponse<Relationship> response = await PutRelationshipsRelationshipIdAsyncWithHttpInfo(relationshipId, body);
              return response.Data;
 
         }
@@ -5644,10 +5644,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="relationshipId">Relationship Id</param>
         /// <param name="body">Relationship</param>
         /// <returns>Task of ApiResponse (Relationship)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Relationship>> PutExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId, Relationship body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Relationship>> PutRelationshipsRelationshipIdAsyncWithHttpInfo (string relationshipId, Relationship body = null)
         {
             // verify the required parameter 'relationshipId' is set
-            if (relationshipId == null) throw new ApiException(400, "Missing required parameter 'relationshipId' when calling PutExternalcontactsRelationship");
+            if (relationshipId == null) throw new ApiException(400, "Missing required parameter 'relationshipId' when calling PutRelationshipsRelationshipId");
             
     
             var path_ = "/api/v1/externalcontacts/relationships/{relationshipId}";
@@ -5702,9 +5702,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutExternalcontactsRelationship: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutRelationshipsRelationshipId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutExternalcontactsRelationship: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutRelationshipsRelationshipId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Relationship>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5717,9 +5717,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="relationshipId">Relationship Id</param> 
         /// <returns></returns>
-        public void DeleteExternalcontactsRelationship (string relationshipId)
+        public void DeleteRelationshipsRelationshipId (string relationshipId)
         {
-             DeleteExternalcontactsRelationshipWithHttpInfo(relationshipId);
+             DeleteRelationshipsRelationshipIdWithHttpInfo(relationshipId);
         }
 
         /// <summary>
@@ -5727,12 +5727,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="relationshipId">Relationship Id</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteExternalcontactsRelationshipWithHttpInfo (string relationshipId)
+        public ApiResponse<Object> DeleteRelationshipsRelationshipIdWithHttpInfo (string relationshipId)
         {
             
             // verify the required parameter 'relationshipId' is set
             if (relationshipId == null)
-                throw new ApiException(400, "Missing required parameter 'relationshipId' when calling ExternalContactsApi->DeleteExternalcontactsRelationship");
+                throw new ApiException(400, "Missing required parameter 'relationshipId' when calling ExternalContactsApi->DeleteRelationshipsRelationshipId");
             
     
             var path_ = "/api/v1/externalcontacts/relationships/{relationshipId}";
@@ -5785,9 +5785,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteExternalcontactsRelationship: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteRelationshipsRelationshipId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteExternalcontactsRelationship: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteRelationshipsRelationshipId: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -5800,9 +5800,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="relationshipId">Relationship Id</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteExternalcontactsRelationshipAsync (string relationshipId)
+        public async System.Threading.Tasks.Task DeleteRelationshipsRelationshipIdAsync (string relationshipId)
         {
-             await DeleteExternalcontactsRelationshipAsyncWithHttpInfo(relationshipId);
+             await DeleteRelationshipsRelationshipIdAsyncWithHttpInfo(relationshipId);
 
         }
 
@@ -5811,10 +5811,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="relationshipId">Relationship Id</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRelationshipsRelationshipIdAsyncWithHttpInfo (string relationshipId)
         {
             // verify the required parameter 'relationshipId' is set
-            if (relationshipId == null) throw new ApiException(400, "Missing required parameter 'relationshipId' when calling DeleteExternalcontactsRelationship");
+            if (relationshipId == null) throw new ApiException(400, "Missing required parameter 'relationshipId' when calling DeleteRelationshipsRelationshipId");
             
     
             var path_ = "/api/v1/externalcontacts/relationships/{relationshipId}";
@@ -5868,9 +5868,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteExternalcontactsRelationship: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteRelationshipsRelationshipId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteExternalcontactsRelationship: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteRelationshipsRelationshipId: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,

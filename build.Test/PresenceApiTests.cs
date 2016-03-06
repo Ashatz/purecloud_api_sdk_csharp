@@ -47,141 +47,141 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test GetPresencedefinitions
+        /// Test Get
         /// </summary>
         [Test]
-        public void GetPresencedefinitionsTest()
+        public void GetTest()
         {
-            // TODO: add unit test for the method 'GetPresencedefinitions'
+            // TODO: add unit test for the method 'Get'
             int? pageNumber = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             
-            var response = instance.GetPresencedefinitions(pageNumber, pageSize);
+            var response = instance.Get(pageNumber, pageSize);
             Assert.IsInstanceOf<OrganizationPresenceEntityListing> (response, "response is OrganizationPresenceEntityListing"); 
         }
         
         /// <summary>
-        /// Test PostPresencedefinitions
+        /// Test Post
         /// </summary>
         [Test]
-        public void PostPresencedefinitionsTest()
+        public void PostTest()
         {
-            // TODO: add unit test for the method 'PostPresencedefinitions'
+            // TODO: add unit test for the method 'Post'
             OrganizationPresence body = null; // TODO: replace null with proper value
             
-            var response = instance.PostPresencedefinitions(body);
+            var response = instance.Post(body);
             Assert.IsInstanceOf<OrganizationPresence> (response, "response is OrganizationPresence"); 
         }
         
         /// <summary>
-        /// Test GetPresencedefinition
+        /// Test GetPresenceId
         /// </summary>
         [Test]
-        public void GetPresencedefinitionTest()
+        public void GetPresenceIdTest()
         {
-            // TODO: add unit test for the method 'GetPresencedefinition'
+            // TODO: add unit test for the method 'GetPresenceId'
             string presenceId = null; // TODO: replace null with proper value
             
-            var response = instance.GetPresencedefinition(presenceId);
+            var response = instance.GetPresenceId(presenceId);
             Assert.IsInstanceOf<OrganizationPresence> (response, "response is OrganizationPresence"); 
         }
         
         /// <summary>
-        /// Test PutPresencedefinition
+        /// Test PutPresenceId
         /// </summary>
         [Test]
-        public void PutPresencedefinitionTest()
+        public void PutPresenceIdTest()
         {
-            // TODO: add unit test for the method 'PutPresencedefinition'
+            // TODO: add unit test for the method 'PutPresenceId'
             string presenceId = null; // TODO: replace null with proper value
             OrganizationPresence body = null; // TODO: replace null with proper value
             
-            var response = instance.PutPresencedefinition(presenceId, body);
+            var response = instance.PutPresenceId(presenceId, body);
             Assert.IsInstanceOf<OrganizationPresence> (response, "response is OrganizationPresence"); 
         }
         
         /// <summary>
-        /// Test DeletePresencedefinition
+        /// Test DeletePresenceId
         /// </summary>
         [Test]
-        public void DeletePresencedefinitionTest()
+        public void DeletePresenceIdTest()
         {
-            // TODO: add unit test for the method 'DeletePresencedefinition'
+            // TODO: add unit test for the method 'DeletePresenceId'
             string presenceId = null; // TODO: replace null with proper value
             
-            var response = instance.DeletePresencedefinition(presenceId);
+            var response = instance.DeletePresenceId(presenceId);
             Assert.IsInstanceOf<OrganizationPresence> (response, "response is OrganizationPresence"); 
         }
         
         /// <summary>
-        /// Test GetUserPresences
+        /// Test GetUserIdPresences
         /// </summary>
         [Test]
-        public void GetUserPresencesTest()
+        public void GetUserIdPresencesTest()
         {
-            // TODO: add unit test for the method 'GetUserPresences'
+            // TODO: add unit test for the method 'GetUserIdPresences'
             string userId = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             
-            var response = instance.GetUserPresences(userId, pageNumber, pageSize);
+            var response = instance.GetUserIdPresences(userId, pageNumber, pageSize);
             Assert.IsInstanceOf<UserPresenceEntityListing> (response, "response is UserPresenceEntityListing"); 
         }
         
         /// <summary>
-        /// Test GetUserPresences_0
+        /// Test GetUserIdPresencesSource
         /// </summary>
         [Test]
-        public void GetUserPresences_0Test()
+        public void GetUserIdPresencesSourceTest()
         {
-            // TODO: add unit test for the method 'GetUserPresences_0'
+            // TODO: add unit test for the method 'GetUserIdPresencesSource'
             string userId = null; // TODO: replace null with proper value
             string source = null; // TODO: replace null with proper value
             
-            var response = instance.GetUserPresences_0(userId, source);
+            var response = instance.GetUserIdPresencesSource(userId, source);
             Assert.IsInstanceOf<UserPresence> (response, "response is UserPresence"); 
         }
         
         /// <summary>
-        /// Test PutUserPresences
+        /// Test PutUserIdPresencesSource
         /// </summary>
         [Test]
-        public void PutUserPresencesTest()
+        public void PutUserIdPresencesSourceTest()
         {
-            // TODO: add unit test for the method 'PutUserPresences'
-            string userId = null; // TODO: replace null with proper value
-            string source = null; // TODO: replace null with proper value
-            UserPresence body = null; // TODO: replace null with proper value
-            
-            var response = instance.PutUserPresences(userId, source, body);
-            Assert.IsInstanceOf<UserPresence> (response, "response is UserPresence"); 
-        }
-        
-        /// <summary>
-        /// Test PatchUserPresences
-        /// </summary>
-        [Test]
-        public void PatchUserPresencesTest()
-        {
-            // TODO: add unit test for the method 'PatchUserPresences'
+            // TODO: add unit test for the method 'PutUserIdPresencesSource'
             string userId = null; // TODO: replace null with proper value
             string source = null; // TODO: replace null with proper value
             UserPresence body = null; // TODO: replace null with proper value
             
-            var response = instance.PatchUserPresences(userId, source, body);
+            var response = instance.PutUserIdPresencesSource(userId, source, body);
             Assert.IsInstanceOf<UserPresence> (response, "response is UserPresence"); 
         }
         
         /// <summary>
-        /// Test GetUserPrimarypresence
+        /// Test PatchUserIdPresencesSource
         /// </summary>
         [Test]
-        public void GetUserPrimarypresenceTest()
+        public void PatchUserIdPresencesSourceTest()
         {
-            // TODO: add unit test for the method 'GetUserPrimarypresence'
+            // TODO: add unit test for the method 'PatchUserIdPresencesSource'
+            string userId = null; // TODO: replace null with proper value
+            string source = null; // TODO: replace null with proper value
+            UserPresence body = null; // TODO: replace null with proper value
+            
+            var response = instance.PatchUserIdPresencesSource(userId, source, body);
+            Assert.IsInstanceOf<UserPresence> (response, "response is UserPresence"); 
+        }
+        
+        /// <summary>
+        /// Test GetUserIdPrimarypresence
+        /// </summary>
+        [Test]
+        public void GetUserIdPrimarypresenceTest()
+        {
+            // TODO: add unit test for the method 'GetUserIdPrimarypresence'
             string userId = null; // TODO: replace null with proper value
             
-            var response = instance.GetUserPrimarypresence(userId);
+            var response = instance.GetUserIdPrimarypresence(userId);
             Assert.IsInstanceOf<UserPresence> (response, "response is UserPresence"); 
         }
         

@@ -72,15 +72,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetOrgassignments_0
+        /// Test GetOrgassignmentsId
         /// </summary>
         [Test]
-        public void GetOrgassignments_0Test()
+        public void GetOrgassignmentsIdTest()
         {
-            // TODO: add unit test for the method 'GetOrgassignments_0'
+            // TODO: add unit test for the method 'GetOrgassignmentsId'
             string id = null; // TODO: replace null with proper value
             
-            var response = instance.GetOrgassignments_0(id);
+            var response = instance.GetOrgassignmentsId(id);
             Assert.IsInstanceOf<OrgLicenseAssignment> (response, "response is OrgLicenseAssignment"); 
         }
         
@@ -124,15 +124,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetUserassignments_0
+        /// Test GetUserassignmentsId
         /// </summary>
         [Test]
-        public void GetUserassignments_0Test()
+        public void GetUserassignmentsIdTest()
         {
-            // TODO: add unit test for the method 'GetUserassignments_0'
+            // TODO: add unit test for the method 'GetUserassignmentsId'
             string id = null; // TODO: replace null with proper value
             
-            var response = instance.GetUserassignments_0(id);
+            var response = instance.GetUserassignmentsId(id);
             Assert.IsInstanceOf<UserLicenseAssignment> (response, "response is UserLicenseAssignment"); 
         }
         

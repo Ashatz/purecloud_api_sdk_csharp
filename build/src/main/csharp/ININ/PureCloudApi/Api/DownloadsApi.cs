@@ -69,7 +69,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="downloadId">Download ID</param>
         /// <param name="contentDisposition"></param>
         /// <returns>UrlResponse</returns>
-        UrlResponse Get (string downloadId, string contentDisposition = null);
+        UrlResponse GetDownloadId (string downloadId, string contentDisposition = null);
   
         /// <summary>
         /// Issues a redirect to a signed secure download URL for specified download
@@ -80,7 +80,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="downloadId">Download ID</param>
         /// <param name="contentDisposition"></param>
         /// <returns>ApiResponse of UrlResponse</returns>
-        ApiResponse<UrlResponse> GetWithHttpInfo (string downloadId, string contentDisposition = null);
+        ApiResponse<UrlResponse> GetDownloadIdWithHttpInfo (string downloadId, string contentDisposition = null);
 
         /// <summary>
         /// Issues a redirect to a signed secure download URL for specified download
@@ -91,7 +91,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="downloadId">Download ID</param>
         /// <param name="contentDisposition"></param>
         /// <returns>Task of UrlResponse</returns>
-        System.Threading.Tasks.Task<UrlResponse> GetAsync (string downloadId, string contentDisposition = null);
+        System.Threading.Tasks.Task<UrlResponse> GetDownloadIdAsync (string downloadId, string contentDisposition = null);
 
         /// <summary>
         /// Issues a redirect to a signed secure download URL for specified download
@@ -102,7 +102,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="downloadId">Download ID</param>
         /// <param name="contentDisposition"></param>
         /// <returns>Task of ApiResponse (UrlResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UrlResponse>> GetAsyncWithHttpInfo (string downloadId, string contentDisposition = null);
+        System.Threading.Tasks.Task<ApiResponse<UrlResponse>> GetDownloadIdAsyncWithHttpInfo (string downloadId, string contentDisposition = null);
         
     }
   
@@ -354,9 +354,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="downloadId">Download ID</param> 
         /// <param name="contentDisposition"></param> 
         /// <returns>UrlResponse</returns>
-        public UrlResponse Get (string downloadId, string contentDisposition = null)
+        public UrlResponse GetDownloadId (string downloadId, string contentDisposition = null)
         {
-             ApiResponse<UrlResponse> response = GetWithHttpInfo(downloadId, contentDisposition);
+             ApiResponse<UrlResponse> response = GetDownloadIdWithHttpInfo(downloadId, contentDisposition);
              return response.Data;
         }
 
@@ -366,12 +366,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="downloadId">Download ID</param> 
         /// <param name="contentDisposition"></param> 
         /// <returns>ApiResponse of UrlResponse</returns>
-        public ApiResponse< UrlResponse > GetWithHttpInfo (string downloadId, string contentDisposition = null)
+        public ApiResponse< UrlResponse > GetDownloadIdWithHttpInfo (string downloadId, string contentDisposition = null)
         {
             
             // verify the required parameter 'downloadId' is set
             if (downloadId == null)
-                throw new ApiException(400, "Missing required parameter 'downloadId' when calling DownloadsApi->Get");
+                throw new ApiException(400, "Missing required parameter 'downloadId' when calling DownloadsApi->GetDownloadId");
             
     
             var path_ = "/api/v1/downloads/{downloadId}";
@@ -425,9 +425,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetDownloadId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetDownloadId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<UrlResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -441,9 +441,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="downloadId">Download ID</param>
         /// <param name="contentDisposition"></param>
         /// <returns>Task of UrlResponse</returns>
-        public async System.Threading.Tasks.Task<UrlResponse> GetAsync (string downloadId, string contentDisposition = null)
+        public async System.Threading.Tasks.Task<UrlResponse> GetDownloadIdAsync (string downloadId, string contentDisposition = null)
         {
-             ApiResponse<UrlResponse> response = await GetAsyncWithHttpInfo(downloadId, contentDisposition);
+             ApiResponse<UrlResponse> response = await GetDownloadIdAsyncWithHttpInfo(downloadId, contentDisposition);
              return response.Data;
 
         }
@@ -454,10 +454,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="downloadId">Download ID</param>
         /// <param name="contentDisposition"></param>
         /// <returns>Task of ApiResponse (UrlResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UrlResponse>> GetAsyncWithHttpInfo (string downloadId, string contentDisposition = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UrlResponse>> GetDownloadIdAsyncWithHttpInfo (string downloadId, string contentDisposition = null)
         {
             // verify the required parameter 'downloadId' is set
-            if (downloadId == null) throw new ApiException(400, "Missing required parameter 'downloadId' when calling Get");
+            if (downloadId == null) throw new ApiException(400, "Missing required parameter 'downloadId' when calling GetDownloadId");
             
     
             var path_ = "/api/v1/downloads/{downloadId}";
@@ -512,9 +512,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling Get: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetDownloadId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling Get: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetDownloadId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<UrlResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

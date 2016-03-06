@@ -47,12 +47,12 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test GetQualityForms
+        /// Test GetForms
         /// </summary>
         [Test]
-        public void GetQualityFormsTest()
+        public void GetFormsTest()
         {
-            // TODO: add unit test for the method 'GetQualityForms'
+            // TODO: add unit test for the method 'GetForms'
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
@@ -60,146 +60,146 @@ namespace ININ.PureCloudApi.Test
             string expand2 = null; // TODO: replace null with proper value
             string name = null; // TODO: replace null with proper value
             
-            var response = instance.GetQualityForms(pageSize, pageNumber, sortBy, expand, expand2, name);
+            var response = instance.GetForms(pageSize, pageNumber, sortBy, expand, expand2, name);
             Assert.IsInstanceOf<EvaluationFormEntityListing> (response, "response is EvaluationFormEntityListing"); 
         }
         
         /// <summary>
-        /// Test PostQualityForms
+        /// Test PostForms
         /// </summary>
         [Test]
-        public void PostQualityFormsTest()
+        public void PostFormsTest()
         {
-            // TODO: add unit test for the method 'PostQualityForms'
+            // TODO: add unit test for the method 'PostForms'
             EvaluationForm body = null; // TODO: replace null with proper value
             
-            var response = instance.PostQualityForms(body);
+            var response = instance.PostForms(body);
             Assert.IsInstanceOf<EvaluationForm> (response, "response is EvaluationForm"); 
         }
         
         /// <summary>
-        /// Test GetQualityForm
+        /// Test GetFormsFormId
         /// </summary>
         [Test]
-        public void GetQualityFormTest()
+        public void GetFormsFormIdTest()
         {
-            // TODO: add unit test for the method 'GetQualityForm'
+            // TODO: add unit test for the method 'GetFormsFormId'
             string formId = null; // TODO: replace null with proper value
             
-            var response = instance.GetQualityForm(formId);
+            var response = instance.GetFormsFormId(formId);
             Assert.IsInstanceOf<EvaluationForm> (response, "response is EvaluationForm"); 
         }
         
         /// <summary>
-        /// Test PutQualityForm
+        /// Test PutFormsFormId
         /// </summary>
         [Test]
-        public void PutQualityFormTest()
+        public void PutFormsFormIdTest()
         {
-            // TODO: add unit test for the method 'PutQualityForm'
+            // TODO: add unit test for the method 'PutFormsFormId'
             string formId = null; // TODO: replace null with proper value
             EvaluationForm body = null; // TODO: replace null with proper value
             
-            var response = instance.PutQualityForm(formId, body);
+            var response = instance.PutFormsFormId(formId, body);
             Assert.IsInstanceOf<EvaluationForm> (response, "response is EvaluationForm"); 
         }
         
         /// <summary>
-        /// Test DeleteQualityForm
+        /// Test DeleteFormsFormId
         /// </summary>
         [Test]
-        public void DeleteQualityFormTest()
+        public void DeleteFormsFormIdTest()
         {
-            // TODO: add unit test for the method 'DeleteQualityForm'
+            // TODO: add unit test for the method 'DeleteFormsFormId'
             string formId = null; // TODO: replace null with proper value
             
-            var response = instance.DeleteQualityForm(formId);
+            var response = instance.DeleteFormsFormId(formId);
             Assert.IsInstanceOf<string> (response, "response is string"); 
         }
         
         /// <summary>
-        /// Test GetQualityFormVersions
+        /// Test GetFormsFormIdVersions
         /// </summary>
         [Test]
-        public void GetQualityFormVersionsTest()
+        public void GetFormsFormIdVersionsTest()
         {
-            // TODO: add unit test for the method 'GetQualityFormVersions'
+            // TODO: add unit test for the method 'GetFormsFormIdVersions'
             string formId = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             
-            var response = instance.GetQualityFormVersions(formId, pageSize, pageNumber);
+            var response = instance.GetFormsFormIdVersions(formId, pageSize, pageNumber);
             Assert.IsInstanceOf<EvaluationFormEntityListing> (response, "response is EvaluationFormEntityListing"); 
         }
         
         /// <summary>
-        /// Test GetQualityPublishedforms
+        /// Test GetPublishedforms
         /// </summary>
         [Test]
-        public void GetQualityPublishedformsTest()
+        public void GetPublishedformsTest()
         {
-            // TODO: add unit test for the method 'GetQualityPublishedforms'
+            // TODO: add unit test for the method 'GetPublishedforms'
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string name = null; // TODO: replace null with proper value
             
-            var response = instance.GetQualityPublishedforms(pageSize, pageNumber, name);
+            var response = instance.GetPublishedforms(pageSize, pageNumber, name);
             Assert.IsInstanceOf<EvaluationFormEntityListing> (response, "response is EvaluationFormEntityListing"); 
         }
         
         /// <summary>
-        /// Test PostQualityPublishedforms
+        /// Test PostPublishedforms
         /// </summary>
         [Test]
-        public void PostQualityPublishedformsTest()
+        public void PostPublishedformsTest()
         {
-            // TODO: add unit test for the method 'PostQualityPublishedforms'
+            // TODO: add unit test for the method 'PostPublishedforms'
             EvaluationForm body = null; // TODO: replace null with proper value
             
-            var response = instance.PostQualityPublishedforms(body);
+            var response = instance.PostPublishedforms(body);
             Assert.IsInstanceOf<EvaluationForm> (response, "response is EvaluationForm"); 
         }
         
         /// <summary>
-        /// Test GetQualityPublishedform
+        /// Test GetPublishedformsFormId
         /// </summary>
         [Test]
-        public void GetQualityPublishedformTest()
+        public void GetPublishedformsFormIdTest()
         {
-            // TODO: add unit test for the method 'GetQualityPublishedform'
+            // TODO: add unit test for the method 'GetPublishedformsFormId'
             string formId = null; // TODO: replace null with proper value
             
-            var response = instance.GetQualityPublishedform(formId);
+            var response = instance.GetPublishedformsFormId(formId);
             Assert.IsInstanceOf<EvaluationForm> (response, "response is EvaluationForm"); 
         }
         
         /// <summary>
-        /// Test GetScripts
+        /// Test Get
         /// </summary>
         [Test]
-        public void GetScriptsTest()
+        public void GetTest()
         {
-            // TODO: add unit test for the method 'GetScripts'
+            // TODO: add unit test for the method 'Get'
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string expand = null; // TODO: replace null with proper value
             string name = null; // TODO: replace null with proper value
             string feature = null; // TODO: replace null with proper value
             
-            var response = instance.GetScripts(pageSize, pageNumber, expand, name, feature);
+            var response = instance.Get(pageSize, pageNumber, expand, name, feature);
             Assert.IsInstanceOf<ScriptEntityListing> (response, "response is ScriptEntityListing"); 
         }
         
         /// <summary>
-        /// Test PostScripts
+        /// Test Post
         /// </summary>
         [Test]
-        public void PostScriptsTest()
+        public void PostTest()
         {
-            // TODO: add unit test for the method 'PostScripts'
+            // TODO: add unit test for the method 'Post'
             Body3 body = null; // TODO: replace null with proper value
             
-            var response = instance.PostScripts(body);
+            var response = instance.Post(body);
             Assert.IsInstanceOf<Script> (response, "response is Script"); 
         }
         

@@ -100,7 +100,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">ID</param>
         /// <returns>OrgLicenseAssignment</returns>
-        OrgLicenseAssignment GetOrgassignments_0 (string id);
+        OrgLicenseAssignment GetOrgassignmentsId (string id);
   
         /// <summary>
         /// Get org license assignment.
@@ -110,7 +110,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">ID</param>
         /// <returns>ApiResponse of OrgLicenseAssignment</returns>
-        ApiResponse<OrgLicenseAssignment> GetOrgassignments_0WithHttpInfo (string id);
+        ApiResponse<OrgLicenseAssignment> GetOrgassignmentsIdWithHttpInfo (string id);
 
         /// <summary>
         /// Get org license assignment.
@@ -120,7 +120,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">ID</param>
         /// <returns>Task of OrgLicenseAssignment</returns>
-        System.Threading.Tasks.Task<OrgLicenseAssignment> GetOrgassignments_0Async (string id);
+        System.Threading.Tasks.Task<OrgLicenseAssignment> GetOrgassignmentsIdAsync (string id);
 
         /// <summary>
         /// Get org license assignment.
@@ -130,7 +130,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">ID</param>
         /// <returns>Task of ApiResponse (OrgLicenseAssignment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrgLicenseAssignment>> GetOrgassignments_0AsyncWithHttpInfo (string id);
+        System.Threading.Tasks.Task<ApiResponse<OrgLicenseAssignment>> GetOrgassignmentsIdAsyncWithHttpInfo (string id);
         
         /// <summary>
         /// Get Licenses required per permission.
@@ -260,7 +260,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">ID</param>
         /// <returns>UserLicenseAssignment</returns>
-        UserLicenseAssignment GetUserassignments_0 (string id);
+        UserLicenseAssignment GetUserassignmentsId (string id);
   
         /// <summary>
         /// Get user license assignment.
@@ -270,7 +270,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">ID</param>
         /// <returns>ApiResponse of UserLicenseAssignment</returns>
-        ApiResponse<UserLicenseAssignment> GetUserassignments_0WithHttpInfo (string id);
+        ApiResponse<UserLicenseAssignment> GetUserassignmentsIdWithHttpInfo (string id);
 
         /// <summary>
         /// Get user license assignment.
@@ -280,7 +280,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">ID</param>
         /// <returns>Task of UserLicenseAssignment</returns>
-        System.Threading.Tasks.Task<UserLicenseAssignment> GetUserassignments_0Async (string id);
+        System.Threading.Tasks.Task<UserLicenseAssignment> GetUserassignmentsIdAsync (string id);
 
         /// <summary>
         /// Get user license assignment.
@@ -290,7 +290,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="id">ID</param>
         /// <returns>Task of ApiResponse (UserLicenseAssignment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserLicenseAssignment>> GetUserassignments_0AsyncWithHttpInfo (string id);
+        System.Threading.Tasks.Task<ApiResponse<UserLicenseAssignment>> GetUserassignmentsIdAsyncWithHttpInfo (string id);
         
     }
   
@@ -693,9 +693,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">ID</param> 
         /// <returns>OrgLicenseAssignment</returns>
-        public OrgLicenseAssignment GetOrgassignments_0 (string id)
+        public OrgLicenseAssignment GetOrgassignmentsId (string id)
         {
-             ApiResponse<OrgLicenseAssignment> response = GetOrgassignments_0WithHttpInfo(id);
+             ApiResponse<OrgLicenseAssignment> response = GetOrgassignmentsIdWithHttpInfo(id);
              return response.Data;
         }
 
@@ -704,12 +704,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">ID</param> 
         /// <returns>ApiResponse of OrgLicenseAssignment</returns>
-        public ApiResponse< OrgLicenseAssignment > GetOrgassignments_0WithHttpInfo (string id)
+        public ApiResponse< OrgLicenseAssignment > GetOrgassignmentsIdWithHttpInfo (string id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling LicensingApi->GetOrgassignments_0");
+                throw new ApiException(400, "Missing required parameter 'id' when calling LicensingApi->GetOrgassignmentsId");
             
     
             var path_ = "/api/v1/licensing/orgassignments/{id}";
@@ -762,9 +762,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetOrgassignments_0: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetOrgassignmentsId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetOrgassignments_0: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetOrgassignmentsId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<OrgLicenseAssignment>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -777,9 +777,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">ID</param>
         /// <returns>Task of OrgLicenseAssignment</returns>
-        public async System.Threading.Tasks.Task<OrgLicenseAssignment> GetOrgassignments_0Async (string id)
+        public async System.Threading.Tasks.Task<OrgLicenseAssignment> GetOrgassignmentsIdAsync (string id)
         {
-             ApiResponse<OrgLicenseAssignment> response = await GetOrgassignments_0AsyncWithHttpInfo(id);
+             ApiResponse<OrgLicenseAssignment> response = await GetOrgassignmentsIdAsyncWithHttpInfo(id);
              return response.Data;
 
         }
@@ -789,10 +789,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">ID</param>
         /// <returns>Task of ApiResponse (OrgLicenseAssignment)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrgLicenseAssignment>> GetOrgassignments_0AsyncWithHttpInfo (string id)
+        public async System.Threading.Tasks.Task<ApiResponse<OrgLicenseAssignment>> GetOrgassignmentsIdAsyncWithHttpInfo (string id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetOrgassignments_0");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetOrgassignmentsId");
             
     
             var path_ = "/api/v1/licensing/orgassignments/{id}";
@@ -846,9 +846,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetOrgassignments_0: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetOrgassignmentsId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetOrgassignments_0: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetOrgassignmentsId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<OrgLicenseAssignment>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1353,9 +1353,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">ID</param> 
         /// <returns>UserLicenseAssignment</returns>
-        public UserLicenseAssignment GetUserassignments_0 (string id)
+        public UserLicenseAssignment GetUserassignmentsId (string id)
         {
-             ApiResponse<UserLicenseAssignment> response = GetUserassignments_0WithHttpInfo(id);
+             ApiResponse<UserLicenseAssignment> response = GetUserassignmentsIdWithHttpInfo(id);
              return response.Data;
         }
 
@@ -1364,12 +1364,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">ID</param> 
         /// <returns>ApiResponse of UserLicenseAssignment</returns>
-        public ApiResponse< UserLicenseAssignment > GetUserassignments_0WithHttpInfo (string id)
+        public ApiResponse< UserLicenseAssignment > GetUserassignmentsIdWithHttpInfo (string id)
         {
             
             // verify the required parameter 'id' is set
             if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling LicensingApi->GetUserassignments_0");
+                throw new ApiException(400, "Missing required parameter 'id' when calling LicensingApi->GetUserassignmentsId");
             
     
             var path_ = "/api/v1/licensing/userassignments/{id}";
@@ -1422,9 +1422,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetUserassignments_0: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetUserassignmentsId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetUserassignments_0: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetUserassignmentsId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<UserLicenseAssignment>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1437,9 +1437,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">ID</param>
         /// <returns>Task of UserLicenseAssignment</returns>
-        public async System.Threading.Tasks.Task<UserLicenseAssignment> GetUserassignments_0Async (string id)
+        public async System.Threading.Tasks.Task<UserLicenseAssignment> GetUserassignmentsIdAsync (string id)
         {
-             ApiResponse<UserLicenseAssignment> response = await GetUserassignments_0AsyncWithHttpInfo(id);
+             ApiResponse<UserLicenseAssignment> response = await GetUserassignmentsIdAsyncWithHttpInfo(id);
              return response.Data;
 
         }
@@ -1449,10 +1449,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="id">ID</param>
         /// <returns>Task of ApiResponse (UserLicenseAssignment)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserLicenseAssignment>> GetUserassignments_0AsyncWithHttpInfo (string id)
+        public async System.Threading.Tasks.Task<ApiResponse<UserLicenseAssignment>> GetUserassignmentsIdAsyncWithHttpInfo (string id)
         {
             // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetUserassignments_0");
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetUserassignmentsId");
             
     
             var path_ = "/api/v1/licensing/userassignments/{id}";
@@ -1506,9 +1506,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetUserassignments_0: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetUserassignmentsId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetUserassignments_0: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetUserassignmentsId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<UserLicenseAssignment>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

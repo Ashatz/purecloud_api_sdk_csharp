@@ -112,7 +112,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="alertId">Alert ID</param>
         /// <returns>Alert</returns>
-        Alert GetAlertingAlert (string alertId);
+        Alert GetAlertingAlertsAlertId (string alertId);
   
         /// <summary>
         /// Get an alert.
@@ -122,7 +122,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="alertId">Alert ID</param>
         /// <returns>ApiResponse of Alert</returns>
-        ApiResponse<Alert> GetAlertingAlertWithHttpInfo (string alertId);
+        ApiResponse<Alert> GetAlertingAlertsAlertIdWithHttpInfo (string alertId);
 
         /// <summary>
         /// Get an alert.
@@ -132,7 +132,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="alertId">Alert ID</param>
         /// <returns>Task of Alert</returns>
-        System.Threading.Tasks.Task<Alert> GetAlertingAlertAsync (string alertId);
+        System.Threading.Tasks.Task<Alert> GetAlertingAlertsAlertIdAsync (string alertId);
 
         /// <summary>
         /// Get an alert.
@@ -142,7 +142,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="alertId">Alert ID</param>
         /// <returns>Task of ApiResponse (Alert)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Alert>> GetAlertingAlertAsyncWithHttpInfo (string alertId);
+        System.Threading.Tasks.Task<ApiResponse<Alert>> GetAlertingAlertsAlertIdAsyncWithHttpInfo (string alertId);
         
         /// <summary>
         /// Update an alerts unread status.
@@ -153,7 +153,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="alertId">Alert ID</param>
         /// <param name="body">Alert</param>
         /// <returns>Alert</returns>
-        Alert PutAlertingAlert (string alertId, Alert body = null);
+        Alert PutAlertingAlertsAlertId (string alertId, Alert body = null);
   
         /// <summary>
         /// Update an alerts unread status.
@@ -164,7 +164,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="alertId">Alert ID</param>
         /// <param name="body">Alert</param>
         /// <returns>ApiResponse of Alert</returns>
-        ApiResponse<Alert> PutAlertingAlertWithHttpInfo (string alertId, Alert body = null);
+        ApiResponse<Alert> PutAlertingAlertsAlertIdWithHttpInfo (string alertId, Alert body = null);
 
         /// <summary>
         /// Update an alerts unread status.
@@ -175,7 +175,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="alertId">Alert ID</param>
         /// <param name="body">Alert</param>
         /// <returns>Task of Alert</returns>
-        System.Threading.Tasks.Task<Alert> PutAlertingAlertAsync (string alertId, Alert body = null);
+        System.Threading.Tasks.Task<Alert> PutAlertingAlertsAlertIdAsync (string alertId, Alert body = null);
 
         /// <summary>
         /// Update an alerts unread status.
@@ -186,7 +186,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="alertId">Alert ID</param>
         /// <param name="body">Alert</param>
         /// <returns>Task of ApiResponse (Alert)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Alert>> PutAlertingAlertAsyncWithHttpInfo (string alertId, Alert body = null);
+        System.Threading.Tasks.Task<ApiResponse<Alert>> PutAlertingAlertsAlertIdAsyncWithHttpInfo (string alertId, Alert body = null);
         
         /// <summary>
         /// Delete an alert.
@@ -196,7 +196,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="alertId">Alert ID</param>
         /// <returns></returns>
-        void DeleteAlertingAlert (string alertId);
+        void DeleteAlertingAlertsAlertId (string alertId);
   
         /// <summary>
         /// Delete an alert.
@@ -206,7 +206,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="alertId">Alert ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteAlertingAlertWithHttpInfo (string alertId);
+        ApiResponse<Object> DeleteAlertingAlertsAlertIdWithHttpInfo (string alertId);
 
         /// <summary>
         /// Delete an alert.
@@ -216,7 +216,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="alertId">Alert ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteAlertingAlertAsync (string alertId);
+        System.Threading.Tasks.Task DeleteAlertingAlertsAlertIdAsync (string alertId);
 
         /// <summary>
         /// Delete an alert.
@@ -226,7 +226,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="alertId">Alert ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAlertingAlertAsyncWithHttpInfo (string alertId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAlertingAlertsAlertIdAsyncWithHttpInfo (string alertId);
         
         /// <summary>
         /// Get a list of rules.
@@ -328,7 +328,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="ruleId">Rule ID</param>
         /// <returns>Rule</returns>
-        Rule GetAlertingRule (string ruleId);
+        Rule GetAlertingRulesRuleId (string ruleId);
   
         /// <summary>
         /// Get an alerting rule.
@@ -338,7 +338,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="ruleId">Rule ID</param>
         /// <returns>ApiResponse of Rule</returns>
-        ApiResponse<Rule> GetAlertingRuleWithHttpInfo (string ruleId);
+        ApiResponse<Rule> GetAlertingRulesRuleIdWithHttpInfo (string ruleId);
 
         /// <summary>
         /// Get an alerting rule.
@@ -348,7 +348,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="ruleId">Rule ID</param>
         /// <returns>Task of Rule</returns>
-        System.Threading.Tasks.Task<Rule> GetAlertingRuleAsync (string ruleId);
+        System.Threading.Tasks.Task<Rule> GetAlertingRulesRuleIdAsync (string ruleId);
 
         /// <summary>
         /// Get an alerting rule.
@@ -358,7 +358,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="ruleId">Rule ID</param>
         /// <returns>Task of ApiResponse (Rule)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Rule>> GetAlertingRuleAsyncWithHttpInfo (string ruleId);
+        System.Threading.Tasks.Task<ApiResponse<Rule>> GetAlertingRulesRuleIdAsyncWithHttpInfo (string ruleId);
         
         /// <summary>
         /// Update an alerting rule.
@@ -369,7 +369,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ruleId">Rule ID</param>
         /// <param name="body">Rule</param>
         /// <returns>Rule</returns>
-        Rule PutAlertingRule (string ruleId, Rule body = null);
+        Rule PutAlertingRulesRuleId (string ruleId, Rule body = null);
   
         /// <summary>
         /// Update an alerting rule.
@@ -380,7 +380,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ruleId">Rule ID</param>
         /// <param name="body">Rule</param>
         /// <returns>ApiResponse of Rule</returns>
-        ApiResponse<Rule> PutAlertingRuleWithHttpInfo (string ruleId, Rule body = null);
+        ApiResponse<Rule> PutAlertingRulesRuleIdWithHttpInfo (string ruleId, Rule body = null);
 
         /// <summary>
         /// Update an alerting rule.
@@ -391,7 +391,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ruleId">Rule ID</param>
         /// <param name="body">Rule</param>
         /// <returns>Task of Rule</returns>
-        System.Threading.Tasks.Task<Rule> PutAlertingRuleAsync (string ruleId, Rule body = null);
+        System.Threading.Tasks.Task<Rule> PutAlertingRulesRuleIdAsync (string ruleId, Rule body = null);
 
         /// <summary>
         /// Update an alerting rule.
@@ -402,7 +402,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ruleId">Rule ID</param>
         /// <param name="body">Rule</param>
         /// <returns>Task of ApiResponse (Rule)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Rule>> PutAlertingRuleAsyncWithHttpInfo (string ruleId, Rule body = null);
+        System.Threading.Tasks.Task<ApiResponse<Rule>> PutAlertingRulesRuleIdAsyncWithHttpInfo (string ruleId, Rule body = null);
         
         /// <summary>
         /// Delete an alerting rule.
@@ -412,7 +412,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="ruleId">Rule ID</param>
         /// <returns></returns>
-        void DeleteAlertingRule (string ruleId);
+        void DeleteAlertingRulesRuleId (string ruleId);
   
         /// <summary>
         /// Delete an alerting rule.
@@ -422,7 +422,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="ruleId">Rule ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteAlertingRuleWithHttpInfo (string ruleId);
+        ApiResponse<Object> DeleteAlertingRulesRuleIdWithHttpInfo (string ruleId);
 
         /// <summary>
         /// Delete an alerting rule.
@@ -432,7 +432,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="ruleId">Rule ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteAlertingRuleAsync (string ruleId);
+        System.Threading.Tasks.Task DeleteAlertingRulesRuleIdAsync (string ruleId);
 
         /// <summary>
         /// Delete an alerting rule.
@@ -442,7 +442,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="ruleId">Rule ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAlertingRuleAsyncWithHttpInfo (string ruleId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAlertingRulesRuleIdAsyncWithHttpInfo (string ruleId);
         
         /// <summary>
         /// Executes a metrics query against the analytics service
@@ -664,7 +664,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>ReportSchedule</returns>
-        ReportSchedule GetReportingSchedule (string scheduleId);
+        ReportSchedule GetReportingSchedulesScheduleId (string scheduleId);
   
         /// <summary>
         /// Get a scheduled report job.
@@ -674,7 +674,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>ApiResponse of ReportSchedule</returns>
-        ApiResponse<ReportSchedule> GetReportingScheduleWithHttpInfo (string scheduleId);
+        ApiResponse<ReportSchedule> GetReportingSchedulesScheduleIdWithHttpInfo (string scheduleId);
 
         /// <summary>
         /// Get a scheduled report job.
@@ -684,7 +684,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ReportSchedule</returns>
-        System.Threading.Tasks.Task<ReportSchedule> GetReportingScheduleAsync (string scheduleId);
+        System.Threading.Tasks.Task<ReportSchedule> GetReportingSchedulesScheduleIdAsync (string scheduleId);
 
         /// <summary>
         /// Get a scheduled report job.
@@ -694,7 +694,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ApiResponse (ReportSchedule)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> GetReportingScheduleAsyncWithHttpInfo (string scheduleId);
+        System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> GetReportingSchedulesScheduleIdAsyncWithHttpInfo (string scheduleId);
         
         /// <summary>
         /// Update a scheduled report job.
@@ -705,7 +705,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body">ReportSchedule</param>
         /// <returns>ReportSchedule</returns>
-        ReportSchedule PutReportingSchedule (string scheduleId, ReportSchedule body = null);
+        ReportSchedule PutReportingSchedulesScheduleId (string scheduleId, ReportSchedule body = null);
   
         /// <summary>
         /// Update a scheduled report job.
@@ -716,7 +716,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body">ReportSchedule</param>
         /// <returns>ApiResponse of ReportSchedule</returns>
-        ApiResponse<ReportSchedule> PutReportingScheduleWithHttpInfo (string scheduleId, ReportSchedule body = null);
+        ApiResponse<ReportSchedule> PutReportingSchedulesScheduleIdWithHttpInfo (string scheduleId, ReportSchedule body = null);
 
         /// <summary>
         /// Update a scheduled report job.
@@ -727,7 +727,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body">ReportSchedule</param>
         /// <returns>Task of ReportSchedule</returns>
-        System.Threading.Tasks.Task<ReportSchedule> PutReportingScheduleAsync (string scheduleId, ReportSchedule body = null);
+        System.Threading.Tasks.Task<ReportSchedule> PutReportingSchedulesScheduleIdAsync (string scheduleId, ReportSchedule body = null);
 
         /// <summary>
         /// Update a scheduled report job.
@@ -738,7 +738,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body">ReportSchedule</param>
         /// <returns>Task of ApiResponse (ReportSchedule)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> PutReportingScheduleAsyncWithHttpInfo (string scheduleId, ReportSchedule body = null);
+        System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> PutReportingSchedulesScheduleIdAsyncWithHttpInfo (string scheduleId, ReportSchedule body = null);
         
         /// <summary>
         /// Delete a scheduled report job.
@@ -748,7 +748,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>string</returns>
-        string DeleteReportingSchedule (string scheduleId);
+        string DeleteReportingSchedulesScheduleId (string scheduleId);
   
         /// <summary>
         /// Delete a scheduled report job.
@@ -758,7 +758,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteReportingScheduleWithHttpInfo (string scheduleId);
+        ApiResponse<string> DeleteReportingSchedulesScheduleIdWithHttpInfo (string scheduleId);
 
         /// <summary>
         /// Delete a scheduled report job.
@@ -768,7 +768,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteReportingScheduleAsync (string scheduleId);
+        System.Threading.Tasks.Task<string> DeleteReportingSchedulesScheduleIdAsync (string scheduleId);
 
         /// <summary>
         /// Delete a scheduled report job.
@@ -778,7 +778,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteReportingScheduleAsyncWithHttpInfo (string scheduleId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteReportingSchedulesScheduleIdAsyncWithHttpInfo (string scheduleId);
         
         /// <summary>
         /// Get list of completed scheduled report jobs.
@@ -790,7 +790,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber"></param>
         /// <param name="pageSize"></param>
         /// <returns>ReportRunEntryEntityDomainListing</returns>
-        ReportRunEntryEntityDomainListing GetReportingScheduleHistory (string scheduleId, int? pageNumber = null, int? pageSize = null);
+        ReportRunEntryEntityDomainListing GetReportingSchedulesScheduleIdHistory (string scheduleId, int? pageNumber = null, int? pageSize = null);
   
         /// <summary>
         /// Get list of completed scheduled report jobs.
@@ -802,7 +802,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber"></param>
         /// <param name="pageSize"></param>
         /// <returns>ApiResponse of ReportRunEntryEntityDomainListing</returns>
-        ApiResponse<ReportRunEntryEntityDomainListing> GetReportingScheduleHistoryWithHttpInfo (string scheduleId, int? pageNumber = null, int? pageSize = null);
+        ApiResponse<ReportRunEntryEntityDomainListing> GetReportingSchedulesScheduleIdHistoryWithHttpInfo (string scheduleId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
         /// Get list of completed scheduled report jobs.
@@ -814,7 +814,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber"></param>
         /// <param name="pageSize"></param>
         /// <returns>Task of ReportRunEntryEntityDomainListing</returns>
-        System.Threading.Tasks.Task<ReportRunEntryEntityDomainListing> GetReportingScheduleHistoryAsync (string scheduleId, int? pageNumber = null, int? pageSize = null);
+        System.Threading.Tasks.Task<ReportRunEntryEntityDomainListing> GetReportingSchedulesScheduleIdHistoryAsync (string scheduleId, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
         /// Get list of completed scheduled report jobs.
@@ -826,7 +826,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber"></param>
         /// <param name="pageSize"></param>
         /// <returns>Task of ApiResponse (ReportRunEntryEntityDomainListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReportRunEntryEntityDomainListing>> GetReportingScheduleHistoryAsyncWithHttpInfo (string scheduleId, int? pageNumber = null, int? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<ReportRunEntryEntityDomainListing>> GetReportingSchedulesScheduleIdHistoryAsyncWithHttpInfo (string scheduleId, int? pageNumber = null, int? pageSize = null);
         
         /// <summary>
         /// Get most recently completed scheduled report job.
@@ -836,7 +836,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>ReportRunEntry</returns>
-        ReportRunEntry GetReportingScheduleHistoryLatest (string scheduleId);
+        ReportRunEntry GetReportingSchedulesScheduleIdHistoryLatest (string scheduleId);
   
         /// <summary>
         /// Get most recently completed scheduled report job.
@@ -846,7 +846,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>ApiResponse of ReportRunEntry</returns>
-        ApiResponse<ReportRunEntry> GetReportingScheduleHistoryLatestWithHttpInfo (string scheduleId);
+        ApiResponse<ReportRunEntry> GetReportingSchedulesScheduleIdHistoryLatestWithHttpInfo (string scheduleId);
 
         /// <summary>
         /// Get most recently completed scheduled report job.
@@ -856,7 +856,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ReportRunEntry</returns>
-        System.Threading.Tasks.Task<ReportRunEntry> GetReportingScheduleHistoryLatestAsync (string scheduleId);
+        System.Threading.Tasks.Task<ReportRunEntry> GetReportingSchedulesScheduleIdHistoryLatestAsync (string scheduleId);
 
         /// <summary>
         /// Get most recently completed scheduled report job.
@@ -866,7 +866,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ApiResponse (ReportRunEntry)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReportRunEntry>> GetReportingScheduleHistoryLatestAsyncWithHttpInfo (string scheduleId);
+        System.Threading.Tasks.Task<ApiResponse<ReportRunEntry>> GetReportingSchedulesScheduleIdHistoryLatestAsyncWithHttpInfo (string scheduleId);
         
         /// <summary>
         /// A completed scheduled report job
@@ -877,7 +877,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="runId">Run ID</param>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>ReportRunEntry</returns>
-        ReportRunEntry GetReportingScheduleHistory_0 (string runId, string scheduleId);
+        ReportRunEntry GetReportingSchedulesScheduleIdHistoryRunId (string runId, string scheduleId);
   
         /// <summary>
         /// A completed scheduled report job
@@ -888,7 +888,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="runId">Run ID</param>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>ApiResponse of ReportRunEntry</returns>
-        ApiResponse<ReportRunEntry> GetReportingScheduleHistory_0WithHttpInfo (string runId, string scheduleId);
+        ApiResponse<ReportRunEntry> GetReportingSchedulesScheduleIdHistoryRunIdWithHttpInfo (string runId, string scheduleId);
 
         /// <summary>
         /// A completed scheduled report job
@@ -899,7 +899,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="runId">Run ID</param>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ReportRunEntry</returns>
-        System.Threading.Tasks.Task<ReportRunEntry> GetReportingScheduleHistory_0Async (string runId, string scheduleId);
+        System.Threading.Tasks.Task<ReportRunEntry> GetReportingSchedulesScheduleIdHistoryRunIdAsync (string runId, string scheduleId);
 
         /// <summary>
         /// A completed scheduled report job
@@ -910,7 +910,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="runId">Run ID</param>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ApiResponse (ReportRunEntry)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReportRunEntry>> GetReportingScheduleHistory_0AsyncWithHttpInfo (string runId, string scheduleId);
+        System.Threading.Tasks.Task<ApiResponse<ReportRunEntry>> GetReportingSchedulesScheduleIdHistoryRunIdAsyncWithHttpInfo (string runId, string scheduleId);
         
         /// <summary>
         /// Place a scheduled report immediately into the reporting queue
@@ -920,7 +920,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>RunNowResponse</returns>
-        RunNowResponse PostReportingScheduleRunreport (string scheduleId);
+        RunNowResponse PostReportingSchedulesScheduleIdRunreport (string scheduleId);
   
         /// <summary>
         /// Place a scheduled report immediately into the reporting queue
@@ -930,7 +930,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>ApiResponse of RunNowResponse</returns>
-        ApiResponse<RunNowResponse> PostReportingScheduleRunreportWithHttpInfo (string scheduleId);
+        ApiResponse<RunNowResponse> PostReportingSchedulesScheduleIdRunreportWithHttpInfo (string scheduleId);
 
         /// <summary>
         /// Place a scheduled report immediately into the reporting queue
@@ -940,7 +940,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of RunNowResponse</returns>
-        System.Threading.Tasks.Task<RunNowResponse> PostReportingScheduleRunreportAsync (string scheduleId);
+        System.Threading.Tasks.Task<RunNowResponse> PostReportingSchedulesScheduleIdRunreportAsync (string scheduleId);
 
         /// <summary>
         /// Place a scheduled report immediately into the reporting queue
@@ -950,7 +950,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ApiResponse (RunNowResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RunNowResponse>> PostReportingScheduleRunreportAsyncWithHttpInfo (string scheduleId);
+        System.Threading.Tasks.Task<ApiResponse<RunNowResponse>> PostReportingSchedulesScheduleIdRunreportAsyncWithHttpInfo (string scheduleId);
         
         /// <summary>
         /// Get a list of report time periods.
@@ -998,7 +998,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="acceptLanguage">Accepted language</param>
         /// <param name="locale">Locale</param>
         /// <returns>ReportMetaData</returns>
-        ReportMetaData GetReportingMetadata_0 (string reportId, string acceptLanguage = null, string locale = null);
+        ReportMetaData GetReportingReportIdMetadata (string reportId, string acceptLanguage = null, string locale = null);
   
         /// <summary>
         /// Get a reporting metadata.
@@ -1010,7 +1010,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="acceptLanguage">Accepted language</param>
         /// <param name="locale">Locale</param>
         /// <returns>ApiResponse of ReportMetaData</returns>
-        ApiResponse<ReportMetaData> GetReportingMetadata_0WithHttpInfo (string reportId, string acceptLanguage = null, string locale = null);
+        ApiResponse<ReportMetaData> GetReportingReportIdMetadataWithHttpInfo (string reportId, string acceptLanguage = null, string locale = null);
 
         /// <summary>
         /// Get a reporting metadata.
@@ -1022,7 +1022,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="acceptLanguage">Accepted language</param>
         /// <param name="locale">Locale</param>
         /// <returns>Task of ReportMetaData</returns>
-        System.Threading.Tasks.Task<ReportMetaData> GetReportingMetadata_0Async (string reportId, string acceptLanguage = null, string locale = null);
+        System.Threading.Tasks.Task<ReportMetaData> GetReportingReportIdMetadataAsync (string reportId, string acceptLanguage = null, string locale = null);
 
         /// <summary>
         /// Get a reporting metadata.
@@ -1034,7 +1034,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="acceptLanguage">Accepted language</param>
         /// <param name="locale">Locale</param>
         /// <returns>Task of ApiResponse (ReportMetaData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReportMetaData>> GetReportingMetadata_0AsyncWithHttpInfo (string reportId, string acceptLanguage = null, string locale = null);
+        System.Threading.Tasks.Task<ApiResponse<ReportMetaData>> GetReportingReportIdMetadataAsyncWithHttpInfo (string reportId, string acceptLanguage = null, string locale = null);
         
         /// <summary>
         /// Executes a segments query against the analytics service
@@ -1495,9 +1495,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="alertId">Alert ID</param> 
         /// <returns>Alert</returns>
-        public Alert GetAlertingAlert (string alertId)
+        public Alert GetAlertingAlertsAlertId (string alertId)
         {
-             ApiResponse<Alert> response = GetAlertingAlertWithHttpInfo(alertId);
+             ApiResponse<Alert> response = GetAlertingAlertsAlertIdWithHttpInfo(alertId);
              return response.Data;
         }
 
@@ -1506,12 +1506,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="alertId">Alert ID</param> 
         /// <returns>ApiResponse of Alert</returns>
-        public ApiResponse< Alert > GetAlertingAlertWithHttpInfo (string alertId)
+        public ApiResponse< Alert > GetAlertingAlertsAlertIdWithHttpInfo (string alertId)
         {
             
             // verify the required parameter 'alertId' is set
             if (alertId == null)
-                throw new ApiException(400, "Missing required parameter 'alertId' when calling AnalyticsApi->GetAlertingAlert");
+                throw new ApiException(400, "Missing required parameter 'alertId' when calling AnalyticsApi->GetAlertingAlertsAlertId");
             
     
             var path_ = "/api/v1/analytics/alerting/alerts/{alertId}";
@@ -1564,9 +1564,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetAlertingAlert: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetAlertingAlertsAlertId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetAlertingAlert: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetAlertingAlertsAlertId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Alert>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1579,9 +1579,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="alertId">Alert ID</param>
         /// <returns>Task of Alert</returns>
-        public async System.Threading.Tasks.Task<Alert> GetAlertingAlertAsync (string alertId)
+        public async System.Threading.Tasks.Task<Alert> GetAlertingAlertsAlertIdAsync (string alertId)
         {
-             ApiResponse<Alert> response = await GetAlertingAlertAsyncWithHttpInfo(alertId);
+             ApiResponse<Alert> response = await GetAlertingAlertsAlertIdAsyncWithHttpInfo(alertId);
              return response.Data;
 
         }
@@ -1591,10 +1591,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="alertId">Alert ID</param>
         /// <returns>Task of ApiResponse (Alert)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Alert>> GetAlertingAlertAsyncWithHttpInfo (string alertId)
+        public async System.Threading.Tasks.Task<ApiResponse<Alert>> GetAlertingAlertsAlertIdAsyncWithHttpInfo (string alertId)
         {
             // verify the required parameter 'alertId' is set
-            if (alertId == null) throw new ApiException(400, "Missing required parameter 'alertId' when calling GetAlertingAlert");
+            if (alertId == null) throw new ApiException(400, "Missing required parameter 'alertId' when calling GetAlertingAlertsAlertId");
             
     
             var path_ = "/api/v1/analytics/alerting/alerts/{alertId}";
@@ -1648,9 +1648,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetAlertingAlert: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetAlertingAlertsAlertId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetAlertingAlert: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetAlertingAlertsAlertId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Alert>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1664,9 +1664,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="alertId">Alert ID</param> 
         /// <param name="body">Alert</param> 
         /// <returns>Alert</returns>
-        public Alert PutAlertingAlert (string alertId, Alert body = null)
+        public Alert PutAlertingAlertsAlertId (string alertId, Alert body = null)
         {
-             ApiResponse<Alert> response = PutAlertingAlertWithHttpInfo(alertId, body);
+             ApiResponse<Alert> response = PutAlertingAlertsAlertIdWithHttpInfo(alertId, body);
              return response.Data;
         }
 
@@ -1676,12 +1676,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="alertId">Alert ID</param> 
         /// <param name="body">Alert</param> 
         /// <returns>ApiResponse of Alert</returns>
-        public ApiResponse< Alert > PutAlertingAlertWithHttpInfo (string alertId, Alert body = null)
+        public ApiResponse< Alert > PutAlertingAlertsAlertIdWithHttpInfo (string alertId, Alert body = null)
         {
             
             // verify the required parameter 'alertId' is set
             if (alertId == null)
-                throw new ApiException(400, "Missing required parameter 'alertId' when calling AnalyticsApi->PutAlertingAlert");
+                throw new ApiException(400, "Missing required parameter 'alertId' when calling AnalyticsApi->PutAlertingAlertsAlertId");
             
     
             var path_ = "/api/v1/analytics/alerting/alerts/{alertId}";
@@ -1741,9 +1741,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutAlertingAlert: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutAlertingAlertsAlertId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutAlertingAlert: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutAlertingAlertsAlertId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Alert>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1757,9 +1757,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="alertId">Alert ID</param>
         /// <param name="body">Alert</param>
         /// <returns>Task of Alert</returns>
-        public async System.Threading.Tasks.Task<Alert> PutAlertingAlertAsync (string alertId, Alert body = null)
+        public async System.Threading.Tasks.Task<Alert> PutAlertingAlertsAlertIdAsync (string alertId, Alert body = null)
         {
-             ApiResponse<Alert> response = await PutAlertingAlertAsyncWithHttpInfo(alertId, body);
+             ApiResponse<Alert> response = await PutAlertingAlertsAlertIdAsyncWithHttpInfo(alertId, body);
              return response.Data;
 
         }
@@ -1770,10 +1770,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="alertId">Alert ID</param>
         /// <param name="body">Alert</param>
         /// <returns>Task of ApiResponse (Alert)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Alert>> PutAlertingAlertAsyncWithHttpInfo (string alertId, Alert body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Alert>> PutAlertingAlertsAlertIdAsyncWithHttpInfo (string alertId, Alert body = null)
         {
             // verify the required parameter 'alertId' is set
-            if (alertId == null) throw new ApiException(400, "Missing required parameter 'alertId' when calling PutAlertingAlert");
+            if (alertId == null) throw new ApiException(400, "Missing required parameter 'alertId' when calling PutAlertingAlertsAlertId");
             
     
             var path_ = "/api/v1/analytics/alerting/alerts/{alertId}";
@@ -1828,9 +1828,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutAlertingAlert: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutAlertingAlertsAlertId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutAlertingAlert: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutAlertingAlertsAlertId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Alert>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1843,9 +1843,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="alertId">Alert ID</param> 
         /// <returns></returns>
-        public void DeleteAlertingAlert (string alertId)
+        public void DeleteAlertingAlertsAlertId (string alertId)
         {
-             DeleteAlertingAlertWithHttpInfo(alertId);
+             DeleteAlertingAlertsAlertIdWithHttpInfo(alertId);
         }
 
         /// <summary>
@@ -1853,12 +1853,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="alertId">Alert ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteAlertingAlertWithHttpInfo (string alertId)
+        public ApiResponse<Object> DeleteAlertingAlertsAlertIdWithHttpInfo (string alertId)
         {
             
             // verify the required parameter 'alertId' is set
             if (alertId == null)
-                throw new ApiException(400, "Missing required parameter 'alertId' when calling AnalyticsApi->DeleteAlertingAlert");
+                throw new ApiException(400, "Missing required parameter 'alertId' when calling AnalyticsApi->DeleteAlertingAlertsAlertId");
             
     
             var path_ = "/api/v1/analytics/alerting/alerts/{alertId}";
@@ -1911,9 +1911,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteAlertingAlert: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteAlertingAlertsAlertId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteAlertingAlert: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteAlertingAlertsAlertId: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -1926,9 +1926,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="alertId">Alert ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteAlertingAlertAsync (string alertId)
+        public async System.Threading.Tasks.Task DeleteAlertingAlertsAlertIdAsync (string alertId)
         {
-             await DeleteAlertingAlertAsyncWithHttpInfo(alertId);
+             await DeleteAlertingAlertsAlertIdAsyncWithHttpInfo(alertId);
 
         }
 
@@ -1937,10 +1937,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="alertId">Alert ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAlertingAlertAsyncWithHttpInfo (string alertId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAlertingAlertsAlertIdAsyncWithHttpInfo (string alertId)
         {
             // verify the required parameter 'alertId' is set
-            if (alertId == null) throw new ApiException(400, "Missing required parameter 'alertId' when calling DeleteAlertingAlert");
+            if (alertId == null) throw new ApiException(400, "Missing required parameter 'alertId' when calling DeleteAlertingAlertsAlertId");
             
     
             var path_ = "/api/v1/analytics/alerting/alerts/{alertId}";
@@ -1994,9 +1994,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteAlertingAlert: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteAlertingAlertsAlertId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteAlertingAlert: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteAlertingAlertsAlertId: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -2357,9 +2357,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="ruleId">Rule ID</param> 
         /// <returns>Rule</returns>
-        public Rule GetAlertingRule (string ruleId)
+        public Rule GetAlertingRulesRuleId (string ruleId)
         {
-             ApiResponse<Rule> response = GetAlertingRuleWithHttpInfo(ruleId);
+             ApiResponse<Rule> response = GetAlertingRulesRuleIdWithHttpInfo(ruleId);
              return response.Data;
         }
 
@@ -2368,12 +2368,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="ruleId">Rule ID</param> 
         /// <returns>ApiResponse of Rule</returns>
-        public ApiResponse< Rule > GetAlertingRuleWithHttpInfo (string ruleId)
+        public ApiResponse< Rule > GetAlertingRulesRuleIdWithHttpInfo (string ruleId)
         {
             
             // verify the required parameter 'ruleId' is set
             if (ruleId == null)
-                throw new ApiException(400, "Missing required parameter 'ruleId' when calling AnalyticsApi->GetAlertingRule");
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling AnalyticsApi->GetAlertingRulesRuleId");
             
     
             var path_ = "/api/v1/analytics/alerting/rules/{ruleId}";
@@ -2426,9 +2426,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetAlertingRule: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetAlertingRulesRuleId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetAlertingRule: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetAlertingRulesRuleId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Rule>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2441,9 +2441,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="ruleId">Rule ID</param>
         /// <returns>Task of Rule</returns>
-        public async System.Threading.Tasks.Task<Rule> GetAlertingRuleAsync (string ruleId)
+        public async System.Threading.Tasks.Task<Rule> GetAlertingRulesRuleIdAsync (string ruleId)
         {
-             ApiResponse<Rule> response = await GetAlertingRuleAsyncWithHttpInfo(ruleId);
+             ApiResponse<Rule> response = await GetAlertingRulesRuleIdAsyncWithHttpInfo(ruleId);
              return response.Data;
 
         }
@@ -2453,10 +2453,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="ruleId">Rule ID</param>
         /// <returns>Task of ApiResponse (Rule)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Rule>> GetAlertingRuleAsyncWithHttpInfo (string ruleId)
+        public async System.Threading.Tasks.Task<ApiResponse<Rule>> GetAlertingRulesRuleIdAsyncWithHttpInfo (string ruleId)
         {
             // verify the required parameter 'ruleId' is set
-            if (ruleId == null) throw new ApiException(400, "Missing required parameter 'ruleId' when calling GetAlertingRule");
+            if (ruleId == null) throw new ApiException(400, "Missing required parameter 'ruleId' when calling GetAlertingRulesRuleId");
             
     
             var path_ = "/api/v1/analytics/alerting/rules/{ruleId}";
@@ -2510,9 +2510,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetAlertingRule: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetAlertingRulesRuleId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetAlertingRule: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetAlertingRulesRuleId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Rule>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2526,9 +2526,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ruleId">Rule ID</param> 
         /// <param name="body">Rule</param> 
         /// <returns>Rule</returns>
-        public Rule PutAlertingRule (string ruleId, Rule body = null)
+        public Rule PutAlertingRulesRuleId (string ruleId, Rule body = null)
         {
-             ApiResponse<Rule> response = PutAlertingRuleWithHttpInfo(ruleId, body);
+             ApiResponse<Rule> response = PutAlertingRulesRuleIdWithHttpInfo(ruleId, body);
              return response.Data;
         }
 
@@ -2538,12 +2538,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ruleId">Rule ID</param> 
         /// <param name="body">Rule</param> 
         /// <returns>ApiResponse of Rule</returns>
-        public ApiResponse< Rule > PutAlertingRuleWithHttpInfo (string ruleId, Rule body = null)
+        public ApiResponse< Rule > PutAlertingRulesRuleIdWithHttpInfo (string ruleId, Rule body = null)
         {
             
             // verify the required parameter 'ruleId' is set
             if (ruleId == null)
-                throw new ApiException(400, "Missing required parameter 'ruleId' when calling AnalyticsApi->PutAlertingRule");
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling AnalyticsApi->PutAlertingRulesRuleId");
             
     
             var path_ = "/api/v1/analytics/alerting/rules/{ruleId}";
@@ -2603,9 +2603,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutAlertingRule: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutAlertingRulesRuleId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutAlertingRule: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutAlertingRulesRuleId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Rule>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2619,9 +2619,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ruleId">Rule ID</param>
         /// <param name="body">Rule</param>
         /// <returns>Task of Rule</returns>
-        public async System.Threading.Tasks.Task<Rule> PutAlertingRuleAsync (string ruleId, Rule body = null)
+        public async System.Threading.Tasks.Task<Rule> PutAlertingRulesRuleIdAsync (string ruleId, Rule body = null)
         {
-             ApiResponse<Rule> response = await PutAlertingRuleAsyncWithHttpInfo(ruleId, body);
+             ApiResponse<Rule> response = await PutAlertingRulesRuleIdAsyncWithHttpInfo(ruleId, body);
              return response.Data;
 
         }
@@ -2632,10 +2632,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="ruleId">Rule ID</param>
         /// <param name="body">Rule</param>
         /// <returns>Task of ApiResponse (Rule)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Rule>> PutAlertingRuleAsyncWithHttpInfo (string ruleId, Rule body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Rule>> PutAlertingRulesRuleIdAsyncWithHttpInfo (string ruleId, Rule body = null)
         {
             // verify the required parameter 'ruleId' is set
-            if (ruleId == null) throw new ApiException(400, "Missing required parameter 'ruleId' when calling PutAlertingRule");
+            if (ruleId == null) throw new ApiException(400, "Missing required parameter 'ruleId' when calling PutAlertingRulesRuleId");
             
     
             var path_ = "/api/v1/analytics/alerting/rules/{ruleId}";
@@ -2690,9 +2690,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutAlertingRule: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutAlertingRulesRuleId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutAlertingRule: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutAlertingRulesRuleId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Rule>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2705,9 +2705,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="ruleId">Rule ID</param> 
         /// <returns></returns>
-        public void DeleteAlertingRule (string ruleId)
+        public void DeleteAlertingRulesRuleId (string ruleId)
         {
-             DeleteAlertingRuleWithHttpInfo(ruleId);
+             DeleteAlertingRulesRuleIdWithHttpInfo(ruleId);
         }
 
         /// <summary>
@@ -2715,12 +2715,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="ruleId">Rule ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteAlertingRuleWithHttpInfo (string ruleId)
+        public ApiResponse<Object> DeleteAlertingRulesRuleIdWithHttpInfo (string ruleId)
         {
             
             // verify the required parameter 'ruleId' is set
             if (ruleId == null)
-                throw new ApiException(400, "Missing required parameter 'ruleId' when calling AnalyticsApi->DeleteAlertingRule");
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling AnalyticsApi->DeleteAlertingRulesRuleId");
             
     
             var path_ = "/api/v1/analytics/alerting/rules/{ruleId}";
@@ -2773,9 +2773,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteAlertingRule: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteAlertingRulesRuleId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteAlertingRule: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteAlertingRulesRuleId: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -2788,9 +2788,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="ruleId">Rule ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteAlertingRuleAsync (string ruleId)
+        public async System.Threading.Tasks.Task DeleteAlertingRulesRuleIdAsync (string ruleId)
         {
-             await DeleteAlertingRuleAsyncWithHttpInfo(ruleId);
+             await DeleteAlertingRulesRuleIdAsyncWithHttpInfo(ruleId);
 
         }
 
@@ -2799,10 +2799,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="ruleId">Rule ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAlertingRuleAsyncWithHttpInfo (string ruleId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAlertingRulesRuleIdAsyncWithHttpInfo (string ruleId)
         {
             // verify the required parameter 'ruleId' is set
-            if (ruleId == null) throw new ApiException(400, "Missing required parameter 'ruleId' when calling DeleteAlertingRule");
+            if (ruleId == null) throw new ApiException(400, "Missing required parameter 'ruleId' when calling DeleteAlertingRulesRuleId");
             
     
             var path_ = "/api/v1/analytics/alerting/rules/{ruleId}";
@@ -2856,9 +2856,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteAlertingRule: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteAlertingRulesRuleId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteAlertingRule: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteAlertingRulesRuleId: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -3709,9 +3709,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleId">Schedule ID</param> 
         /// <returns>ReportSchedule</returns>
-        public ReportSchedule GetReportingSchedule (string scheduleId)
+        public ReportSchedule GetReportingSchedulesScheduleId (string scheduleId)
         {
-             ApiResponse<ReportSchedule> response = GetReportingScheduleWithHttpInfo(scheduleId);
+             ApiResponse<ReportSchedule> response = GetReportingSchedulesScheduleIdWithHttpInfo(scheduleId);
              return response.Data;
         }
 
@@ -3720,12 +3720,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleId">Schedule ID</param> 
         /// <returns>ApiResponse of ReportSchedule</returns>
-        public ApiResponse< ReportSchedule > GetReportingScheduleWithHttpInfo (string scheduleId)
+        public ApiResponse< ReportSchedule > GetReportingSchedulesScheduleIdWithHttpInfo (string scheduleId)
         {
             
             // verify the required parameter 'scheduleId' is set
             if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetReportingSchedule");
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetReportingSchedulesScheduleId");
             
     
             var path_ = "/api/v1/analytics/reporting/schedules/{scheduleId}";
@@ -3778,9 +3778,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetReportingSchedule: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetReportingSchedulesScheduleId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetReportingSchedule: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetReportingSchedulesScheduleId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ReportSchedule>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3793,9 +3793,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ReportSchedule</returns>
-        public async System.Threading.Tasks.Task<ReportSchedule> GetReportingScheduleAsync (string scheduleId)
+        public async System.Threading.Tasks.Task<ReportSchedule> GetReportingSchedulesScheduleIdAsync (string scheduleId)
         {
-             ApiResponse<ReportSchedule> response = await GetReportingScheduleAsyncWithHttpInfo(scheduleId);
+             ApiResponse<ReportSchedule> response = await GetReportingSchedulesScheduleIdAsyncWithHttpInfo(scheduleId);
              return response.Data;
 
         }
@@ -3805,10 +3805,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ApiResponse (ReportSchedule)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> GetReportingScheduleAsyncWithHttpInfo (string scheduleId)
+        public async System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> GetReportingSchedulesScheduleIdAsyncWithHttpInfo (string scheduleId)
         {
             // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null) throw new ApiException(400, "Missing required parameter 'scheduleId' when calling GetReportingSchedule");
+            if (scheduleId == null) throw new ApiException(400, "Missing required parameter 'scheduleId' when calling GetReportingSchedulesScheduleId");
             
     
             var path_ = "/api/v1/analytics/reporting/schedules/{scheduleId}";
@@ -3862,9 +3862,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetReportingSchedule: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetReportingSchedulesScheduleId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetReportingSchedule: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetReportingSchedulesScheduleId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ReportSchedule>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3878,9 +3878,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleId">Schedule ID</param> 
         /// <param name="body">ReportSchedule</param> 
         /// <returns>ReportSchedule</returns>
-        public ReportSchedule PutReportingSchedule (string scheduleId, ReportSchedule body = null)
+        public ReportSchedule PutReportingSchedulesScheduleId (string scheduleId, ReportSchedule body = null)
         {
-             ApiResponse<ReportSchedule> response = PutReportingScheduleWithHttpInfo(scheduleId, body);
+             ApiResponse<ReportSchedule> response = PutReportingSchedulesScheduleIdWithHttpInfo(scheduleId, body);
              return response.Data;
         }
 
@@ -3890,12 +3890,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleId">Schedule ID</param> 
         /// <param name="body">ReportSchedule</param> 
         /// <returns>ApiResponse of ReportSchedule</returns>
-        public ApiResponse< ReportSchedule > PutReportingScheduleWithHttpInfo (string scheduleId, ReportSchedule body = null)
+        public ApiResponse< ReportSchedule > PutReportingSchedulesScheduleIdWithHttpInfo (string scheduleId, ReportSchedule body = null)
         {
             
             // verify the required parameter 'scheduleId' is set
             if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->PutReportingSchedule");
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->PutReportingSchedulesScheduleId");
             
     
             var path_ = "/api/v1/analytics/reporting/schedules/{scheduleId}";
@@ -3955,9 +3955,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutReportingSchedule: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutReportingSchedulesScheduleId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutReportingSchedule: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutReportingSchedulesScheduleId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ReportSchedule>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3971,9 +3971,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body">ReportSchedule</param>
         /// <returns>Task of ReportSchedule</returns>
-        public async System.Threading.Tasks.Task<ReportSchedule> PutReportingScheduleAsync (string scheduleId, ReportSchedule body = null)
+        public async System.Threading.Tasks.Task<ReportSchedule> PutReportingSchedulesScheduleIdAsync (string scheduleId, ReportSchedule body = null)
         {
-             ApiResponse<ReportSchedule> response = await PutReportingScheduleAsyncWithHttpInfo(scheduleId, body);
+             ApiResponse<ReportSchedule> response = await PutReportingSchedulesScheduleIdAsyncWithHttpInfo(scheduleId, body);
              return response.Data;
 
         }
@@ -3984,10 +3984,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="scheduleId">Schedule ID</param>
         /// <param name="body">ReportSchedule</param>
         /// <returns>Task of ApiResponse (ReportSchedule)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> PutReportingScheduleAsyncWithHttpInfo (string scheduleId, ReportSchedule body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ReportSchedule>> PutReportingSchedulesScheduleIdAsyncWithHttpInfo (string scheduleId, ReportSchedule body = null)
         {
             // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null) throw new ApiException(400, "Missing required parameter 'scheduleId' when calling PutReportingSchedule");
+            if (scheduleId == null) throw new ApiException(400, "Missing required parameter 'scheduleId' when calling PutReportingSchedulesScheduleId");
             
     
             var path_ = "/api/v1/analytics/reporting/schedules/{scheduleId}";
@@ -4042,9 +4042,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutReportingSchedule: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutReportingSchedulesScheduleId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutReportingSchedule: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutReportingSchedulesScheduleId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ReportSchedule>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4057,9 +4057,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleId">Schedule ID</param> 
         /// <returns>string</returns>
-        public string DeleteReportingSchedule (string scheduleId)
+        public string DeleteReportingSchedulesScheduleId (string scheduleId)
         {
-             ApiResponse<string> response = DeleteReportingScheduleWithHttpInfo(scheduleId);
+             ApiResponse<string> response = DeleteReportingSchedulesScheduleIdWithHttpInfo(scheduleId);
              return response.Data;
         }
 
@@ -4068,12 +4068,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleId">Schedule ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteReportingScheduleWithHttpInfo (string scheduleId)
+        public ApiResponse< string > DeleteReportingSchedulesScheduleIdWithHttpInfo (string scheduleId)
         {
             
             // verify the required parameter 'scheduleId' is set
             if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->DeleteReportingSchedule");
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->DeleteReportingSchedulesScheduleId");
             
     
             var path_ = "/api/v1/analytics/reporting/schedules/{scheduleId}";
@@ -4126,9 +4126,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteReportingSchedule: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteReportingSchedulesScheduleId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteReportingSchedule: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteReportingSchedulesScheduleId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4141,9 +4141,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteReportingScheduleAsync (string scheduleId)
+        public async System.Threading.Tasks.Task<string> DeleteReportingSchedulesScheduleIdAsync (string scheduleId)
         {
-             ApiResponse<string> response = await DeleteReportingScheduleAsyncWithHttpInfo(scheduleId);
+             ApiResponse<string> response = await DeleteReportingSchedulesScheduleIdAsyncWithHttpInfo(scheduleId);
              return response.Data;
 
         }
@@ -4153,10 +4153,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteReportingScheduleAsyncWithHttpInfo (string scheduleId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteReportingSchedulesScheduleIdAsyncWithHttpInfo (string scheduleId)
         {
             // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null) throw new ApiException(400, "Missing required parameter 'scheduleId' when calling DeleteReportingSchedule");
+            if (scheduleId == null) throw new ApiException(400, "Missing required parameter 'scheduleId' when calling DeleteReportingSchedulesScheduleId");
             
     
             var path_ = "/api/v1/analytics/reporting/schedules/{scheduleId}";
@@ -4210,9 +4210,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteReportingSchedule: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteReportingSchedulesScheduleId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteReportingSchedule: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteReportingSchedulesScheduleId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4227,9 +4227,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber"></param> 
         /// <param name="pageSize"></param> 
         /// <returns>ReportRunEntryEntityDomainListing</returns>
-        public ReportRunEntryEntityDomainListing GetReportingScheduleHistory (string scheduleId, int? pageNumber = null, int? pageSize = null)
+        public ReportRunEntryEntityDomainListing GetReportingSchedulesScheduleIdHistory (string scheduleId, int? pageNumber = null, int? pageSize = null)
         {
-             ApiResponse<ReportRunEntryEntityDomainListing> response = GetReportingScheduleHistoryWithHttpInfo(scheduleId, pageNumber, pageSize);
+             ApiResponse<ReportRunEntryEntityDomainListing> response = GetReportingSchedulesScheduleIdHistoryWithHttpInfo(scheduleId, pageNumber, pageSize);
              return response.Data;
         }
 
@@ -4240,12 +4240,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber"></param> 
         /// <param name="pageSize"></param> 
         /// <returns>ApiResponse of ReportRunEntryEntityDomainListing</returns>
-        public ApiResponse< ReportRunEntryEntityDomainListing > GetReportingScheduleHistoryWithHttpInfo (string scheduleId, int? pageNumber = null, int? pageSize = null)
+        public ApiResponse< ReportRunEntryEntityDomainListing > GetReportingSchedulesScheduleIdHistoryWithHttpInfo (string scheduleId, int? pageNumber = null, int? pageSize = null)
         {
             
             // verify the required parameter 'scheduleId' is set
             if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetReportingScheduleHistory");
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetReportingSchedulesScheduleIdHistory");
             
     
             var path_ = "/api/v1/analytics/reporting/schedules/{scheduleId}/history";
@@ -4300,9 +4300,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetReportingScheduleHistory: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetReportingSchedulesScheduleIdHistory: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetReportingScheduleHistory: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetReportingSchedulesScheduleIdHistory: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ReportRunEntryEntityDomainListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4317,9 +4317,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber"></param>
         /// <param name="pageSize"></param>
         /// <returns>Task of ReportRunEntryEntityDomainListing</returns>
-        public async System.Threading.Tasks.Task<ReportRunEntryEntityDomainListing> GetReportingScheduleHistoryAsync (string scheduleId, int? pageNumber = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<ReportRunEntryEntityDomainListing> GetReportingSchedulesScheduleIdHistoryAsync (string scheduleId, int? pageNumber = null, int? pageSize = null)
         {
-             ApiResponse<ReportRunEntryEntityDomainListing> response = await GetReportingScheduleHistoryAsyncWithHttpInfo(scheduleId, pageNumber, pageSize);
+             ApiResponse<ReportRunEntryEntityDomainListing> response = await GetReportingSchedulesScheduleIdHistoryAsyncWithHttpInfo(scheduleId, pageNumber, pageSize);
              return response.Data;
 
         }
@@ -4331,10 +4331,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber"></param>
         /// <param name="pageSize"></param>
         /// <returns>Task of ApiResponse (ReportRunEntryEntityDomainListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ReportRunEntryEntityDomainListing>> GetReportingScheduleHistoryAsyncWithHttpInfo (string scheduleId, int? pageNumber = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ReportRunEntryEntityDomainListing>> GetReportingSchedulesScheduleIdHistoryAsyncWithHttpInfo (string scheduleId, int? pageNumber = null, int? pageSize = null)
         {
             // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null) throw new ApiException(400, "Missing required parameter 'scheduleId' when calling GetReportingScheduleHistory");
+            if (scheduleId == null) throw new ApiException(400, "Missing required parameter 'scheduleId' when calling GetReportingSchedulesScheduleIdHistory");
             
     
             var path_ = "/api/v1/analytics/reporting/schedules/{scheduleId}/history";
@@ -4390,9 +4390,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetReportingScheduleHistory: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetReportingSchedulesScheduleIdHistory: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetReportingScheduleHistory: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetReportingSchedulesScheduleIdHistory: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ReportRunEntryEntityDomainListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4405,9 +4405,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleId">Schedule ID</param> 
         /// <returns>ReportRunEntry</returns>
-        public ReportRunEntry GetReportingScheduleHistoryLatest (string scheduleId)
+        public ReportRunEntry GetReportingSchedulesScheduleIdHistoryLatest (string scheduleId)
         {
-             ApiResponse<ReportRunEntry> response = GetReportingScheduleHistoryLatestWithHttpInfo(scheduleId);
+             ApiResponse<ReportRunEntry> response = GetReportingSchedulesScheduleIdHistoryLatestWithHttpInfo(scheduleId);
              return response.Data;
         }
 
@@ -4416,12 +4416,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleId">Schedule ID</param> 
         /// <returns>ApiResponse of ReportRunEntry</returns>
-        public ApiResponse< ReportRunEntry > GetReportingScheduleHistoryLatestWithHttpInfo (string scheduleId)
+        public ApiResponse< ReportRunEntry > GetReportingSchedulesScheduleIdHistoryLatestWithHttpInfo (string scheduleId)
         {
             
             // verify the required parameter 'scheduleId' is set
             if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetReportingScheduleHistoryLatest");
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetReportingSchedulesScheduleIdHistoryLatest");
             
     
             var path_ = "/api/v1/analytics/reporting/schedules/{scheduleId}/history/latest";
@@ -4474,9 +4474,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetReportingScheduleHistoryLatest: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetReportingSchedulesScheduleIdHistoryLatest: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetReportingScheduleHistoryLatest: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetReportingSchedulesScheduleIdHistoryLatest: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ReportRunEntry>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4489,9 +4489,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ReportRunEntry</returns>
-        public async System.Threading.Tasks.Task<ReportRunEntry> GetReportingScheduleHistoryLatestAsync (string scheduleId)
+        public async System.Threading.Tasks.Task<ReportRunEntry> GetReportingSchedulesScheduleIdHistoryLatestAsync (string scheduleId)
         {
-             ApiResponse<ReportRunEntry> response = await GetReportingScheduleHistoryLatestAsyncWithHttpInfo(scheduleId);
+             ApiResponse<ReportRunEntry> response = await GetReportingSchedulesScheduleIdHistoryLatestAsyncWithHttpInfo(scheduleId);
              return response.Data;
 
         }
@@ -4501,10 +4501,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ApiResponse (ReportRunEntry)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ReportRunEntry>> GetReportingScheduleHistoryLatestAsyncWithHttpInfo (string scheduleId)
+        public async System.Threading.Tasks.Task<ApiResponse<ReportRunEntry>> GetReportingSchedulesScheduleIdHistoryLatestAsyncWithHttpInfo (string scheduleId)
         {
             // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null) throw new ApiException(400, "Missing required parameter 'scheduleId' when calling GetReportingScheduleHistoryLatest");
+            if (scheduleId == null) throw new ApiException(400, "Missing required parameter 'scheduleId' when calling GetReportingSchedulesScheduleIdHistoryLatest");
             
     
             var path_ = "/api/v1/analytics/reporting/schedules/{scheduleId}/history/latest";
@@ -4558,9 +4558,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetReportingScheduleHistoryLatest: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetReportingSchedulesScheduleIdHistoryLatest: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetReportingScheduleHistoryLatest: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetReportingSchedulesScheduleIdHistoryLatest: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ReportRunEntry>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4574,9 +4574,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="runId">Run ID</param> 
         /// <param name="scheduleId">Schedule ID</param> 
         /// <returns>ReportRunEntry</returns>
-        public ReportRunEntry GetReportingScheduleHistory_0 (string runId, string scheduleId)
+        public ReportRunEntry GetReportingSchedulesScheduleIdHistoryRunId (string runId, string scheduleId)
         {
-             ApiResponse<ReportRunEntry> response = GetReportingScheduleHistory_0WithHttpInfo(runId, scheduleId);
+             ApiResponse<ReportRunEntry> response = GetReportingSchedulesScheduleIdHistoryRunIdWithHttpInfo(runId, scheduleId);
              return response.Data;
         }
 
@@ -4586,16 +4586,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="runId">Run ID</param> 
         /// <param name="scheduleId">Schedule ID</param> 
         /// <returns>ApiResponse of ReportRunEntry</returns>
-        public ApiResponse< ReportRunEntry > GetReportingScheduleHistory_0WithHttpInfo (string runId, string scheduleId)
+        public ApiResponse< ReportRunEntry > GetReportingSchedulesScheduleIdHistoryRunIdWithHttpInfo (string runId, string scheduleId)
         {
             
             // verify the required parameter 'runId' is set
             if (runId == null)
-                throw new ApiException(400, "Missing required parameter 'runId' when calling AnalyticsApi->GetReportingScheduleHistory_0");
+                throw new ApiException(400, "Missing required parameter 'runId' when calling AnalyticsApi->GetReportingSchedulesScheduleIdHistoryRunId");
             
             // verify the required parameter 'scheduleId' is set
             if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetReportingScheduleHistory_0");
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->GetReportingSchedulesScheduleIdHistoryRunId");
             
     
             var path_ = "/api/v1/analytics/reporting/schedules/{scheduleId}/history/{runId}";
@@ -4649,9 +4649,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetReportingScheduleHistory_0: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetReportingSchedulesScheduleIdHistoryRunId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetReportingScheduleHistory_0: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetReportingSchedulesScheduleIdHistoryRunId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ReportRunEntry>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4665,9 +4665,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="runId">Run ID</param>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ReportRunEntry</returns>
-        public async System.Threading.Tasks.Task<ReportRunEntry> GetReportingScheduleHistory_0Async (string runId, string scheduleId)
+        public async System.Threading.Tasks.Task<ReportRunEntry> GetReportingSchedulesScheduleIdHistoryRunIdAsync (string runId, string scheduleId)
         {
-             ApiResponse<ReportRunEntry> response = await GetReportingScheduleHistory_0AsyncWithHttpInfo(runId, scheduleId);
+             ApiResponse<ReportRunEntry> response = await GetReportingSchedulesScheduleIdHistoryRunIdAsyncWithHttpInfo(runId, scheduleId);
              return response.Data;
 
         }
@@ -4678,12 +4678,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="runId">Run ID</param>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ApiResponse (ReportRunEntry)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ReportRunEntry>> GetReportingScheduleHistory_0AsyncWithHttpInfo (string runId, string scheduleId)
+        public async System.Threading.Tasks.Task<ApiResponse<ReportRunEntry>> GetReportingSchedulesScheduleIdHistoryRunIdAsyncWithHttpInfo (string runId, string scheduleId)
         {
             // verify the required parameter 'runId' is set
-            if (runId == null) throw new ApiException(400, "Missing required parameter 'runId' when calling GetReportingScheduleHistory_0");
+            if (runId == null) throw new ApiException(400, "Missing required parameter 'runId' when calling GetReportingSchedulesScheduleIdHistoryRunId");
             // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null) throw new ApiException(400, "Missing required parameter 'scheduleId' when calling GetReportingScheduleHistory_0");
+            if (scheduleId == null) throw new ApiException(400, "Missing required parameter 'scheduleId' when calling GetReportingSchedulesScheduleIdHistoryRunId");
             
     
             var path_ = "/api/v1/analytics/reporting/schedules/{scheduleId}/history/{runId}";
@@ -4738,9 +4738,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetReportingScheduleHistory_0: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetReportingSchedulesScheduleIdHistoryRunId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetReportingScheduleHistory_0: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetReportingSchedulesScheduleIdHistoryRunId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ReportRunEntry>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4753,9 +4753,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleId">Schedule ID</param> 
         /// <returns>RunNowResponse</returns>
-        public RunNowResponse PostReportingScheduleRunreport (string scheduleId)
+        public RunNowResponse PostReportingSchedulesScheduleIdRunreport (string scheduleId)
         {
-             ApiResponse<RunNowResponse> response = PostReportingScheduleRunreportWithHttpInfo(scheduleId);
+             ApiResponse<RunNowResponse> response = PostReportingSchedulesScheduleIdRunreportWithHttpInfo(scheduleId);
              return response.Data;
         }
 
@@ -4764,12 +4764,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleId">Schedule ID</param> 
         /// <returns>ApiResponse of RunNowResponse</returns>
-        public ApiResponse< RunNowResponse > PostReportingScheduleRunreportWithHttpInfo (string scheduleId)
+        public ApiResponse< RunNowResponse > PostReportingSchedulesScheduleIdRunreportWithHttpInfo (string scheduleId)
         {
             
             // verify the required parameter 'scheduleId' is set
             if (scheduleId == null)
-                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->PostReportingScheduleRunreport");
+                throw new ApiException(400, "Missing required parameter 'scheduleId' when calling AnalyticsApi->PostReportingSchedulesScheduleIdRunreport");
             
     
             var path_ = "/api/v1/analytics/reporting/schedules/{scheduleId}/runreport";
@@ -4822,9 +4822,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostReportingScheduleRunreport: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostReportingSchedulesScheduleIdRunreport: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostReportingScheduleRunreport: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostReportingSchedulesScheduleIdRunreport: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<RunNowResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4837,9 +4837,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of RunNowResponse</returns>
-        public async System.Threading.Tasks.Task<RunNowResponse> PostReportingScheduleRunreportAsync (string scheduleId)
+        public async System.Threading.Tasks.Task<RunNowResponse> PostReportingSchedulesScheduleIdRunreportAsync (string scheduleId)
         {
-             ApiResponse<RunNowResponse> response = await PostReportingScheduleRunreportAsyncWithHttpInfo(scheduleId);
+             ApiResponse<RunNowResponse> response = await PostReportingSchedulesScheduleIdRunreportAsyncWithHttpInfo(scheduleId);
              return response.Data;
 
         }
@@ -4849,10 +4849,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="scheduleId">Schedule ID</param>
         /// <returns>Task of ApiResponse (RunNowResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RunNowResponse>> PostReportingScheduleRunreportAsyncWithHttpInfo (string scheduleId)
+        public async System.Threading.Tasks.Task<ApiResponse<RunNowResponse>> PostReportingSchedulesScheduleIdRunreportAsyncWithHttpInfo (string scheduleId)
         {
             // verify the required parameter 'scheduleId' is set
-            if (scheduleId == null) throw new ApiException(400, "Missing required parameter 'scheduleId' when calling PostReportingScheduleRunreport");
+            if (scheduleId == null) throw new ApiException(400, "Missing required parameter 'scheduleId' when calling PostReportingSchedulesScheduleIdRunreport");
             
     
             var path_ = "/api/v1/analytics/reporting/schedules/{scheduleId}/runreport";
@@ -4906,9 +4906,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostReportingScheduleRunreport: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostReportingSchedulesScheduleIdRunreport: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostReportingScheduleRunreport: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostReportingSchedulesScheduleIdRunreport: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<RunNowResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5079,9 +5079,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="acceptLanguage">Accepted language</param> 
         /// <param name="locale">Locale</param> 
         /// <returns>ReportMetaData</returns>
-        public ReportMetaData GetReportingMetadata_0 (string reportId, string acceptLanguage = null, string locale = null)
+        public ReportMetaData GetReportingReportIdMetadata (string reportId, string acceptLanguage = null, string locale = null)
         {
-             ApiResponse<ReportMetaData> response = GetReportingMetadata_0WithHttpInfo(reportId, acceptLanguage, locale);
+             ApiResponse<ReportMetaData> response = GetReportingReportIdMetadataWithHttpInfo(reportId, acceptLanguage, locale);
              return response.Data;
         }
 
@@ -5092,12 +5092,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="acceptLanguage">Accepted language</param> 
         /// <param name="locale">Locale</param> 
         /// <returns>ApiResponse of ReportMetaData</returns>
-        public ApiResponse< ReportMetaData > GetReportingMetadata_0WithHttpInfo (string reportId, string acceptLanguage = null, string locale = null)
+        public ApiResponse< ReportMetaData > GetReportingReportIdMetadataWithHttpInfo (string reportId, string acceptLanguage = null, string locale = null)
         {
             
             // verify the required parameter 'reportId' is set
             if (reportId == null)
-                throw new ApiException(400, "Missing required parameter 'reportId' when calling AnalyticsApi->GetReportingMetadata_0");
+                throw new ApiException(400, "Missing required parameter 'reportId' when calling AnalyticsApi->GetReportingReportIdMetadata");
             
     
             var path_ = "/api/v1/analytics/reporting/{reportId}/metadata";
@@ -5152,9 +5152,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetReportingMetadata_0: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetReportingReportIdMetadata: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetReportingMetadata_0: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetReportingReportIdMetadata: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ReportMetaData>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5169,9 +5169,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="acceptLanguage">Accepted language</param>
         /// <param name="locale">Locale</param>
         /// <returns>Task of ReportMetaData</returns>
-        public async System.Threading.Tasks.Task<ReportMetaData> GetReportingMetadata_0Async (string reportId, string acceptLanguage = null, string locale = null)
+        public async System.Threading.Tasks.Task<ReportMetaData> GetReportingReportIdMetadataAsync (string reportId, string acceptLanguage = null, string locale = null)
         {
-             ApiResponse<ReportMetaData> response = await GetReportingMetadata_0AsyncWithHttpInfo(reportId, acceptLanguage, locale);
+             ApiResponse<ReportMetaData> response = await GetReportingReportIdMetadataAsyncWithHttpInfo(reportId, acceptLanguage, locale);
              return response.Data;
 
         }
@@ -5183,10 +5183,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="acceptLanguage">Accepted language</param>
         /// <param name="locale">Locale</param>
         /// <returns>Task of ApiResponse (ReportMetaData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ReportMetaData>> GetReportingMetadata_0AsyncWithHttpInfo (string reportId, string acceptLanguage = null, string locale = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ReportMetaData>> GetReportingReportIdMetadataAsyncWithHttpInfo (string reportId, string acceptLanguage = null, string locale = null)
         {
             // verify the required parameter 'reportId' is set
-            if (reportId == null) throw new ApiException(400, "Missing required parameter 'reportId' when calling GetReportingMetadata_0");
+            if (reportId == null) throw new ApiException(400, "Missing required parameter 'reportId' when calling GetReportingReportIdMetadata");
             
     
             var path_ = "/api/v1/analytics/reporting/{reportId}/metadata";
@@ -5242,9 +5242,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetReportingMetadata_0: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetReportingReportIdMetadata: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetReportingMetadata_0: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetReportingReportIdMetadata: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ReportMetaData>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

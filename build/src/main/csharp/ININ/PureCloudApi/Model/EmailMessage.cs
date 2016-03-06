@@ -27,74 +27,98 @@ namespace ININ.PureCloudApi.Model
 
         
         /// <summary>
-        /// Gets or Sets HtmlBody
+        /// The globally unique identifier for the object.
         /// </summary>
-        [DataMember(Name="htmlBody", EmitDefaultValue=false)]
-        public string HtmlBody { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets TextBody
-        /// </summary>
-        [DataMember(Name="textBody", EmitDefaultValue=false)]
-        public string TextBody { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Id
-        /// </summary>
+        /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets To
+        /// Gets or Sets Name
         /// </summary>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+  
+        
+        /// <summary>
+        /// The recipients of the email message.
+        /// </summary>
+        /// <value>The recipients of the email message.</value>
         [DataMember(Name="to", EmitDefaultValue=false)]
         public List<EmailAddress> To { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets Cc
+        /// The recipients that were copied on the email message.
         /// </summary>
+        /// <value>The recipients that were copied on the email message.</value>
         [DataMember(Name="cc", EmitDefaultValue=false)]
         public List<EmailAddress> Cc { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets Bcc
+        /// The recipients that were blind copied on the email message.
         /// </summary>
+        /// <value>The recipients that were blind copied on the email message.</value>
         [DataMember(Name="bcc", EmitDefaultValue=false)]
         public List<EmailAddress> Bcc { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets From
+        /// The sender of the email message.
         /// </summary>
+        /// <value>The sender of the email message.</value>
         [DataMember(Name="from", EmitDefaultValue=false)]
         public EmailAddress From { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets Subject
+        /// The subject of the email message.
         /// </summary>
+        /// <value>The subject of the email message.</value>
         [DataMember(Name="subject", EmitDefaultValue=false)]
         public string Subject { get; set; }
   
         
         /// <summary>
-        /// Gets or Sets Attachments
+        /// The attachments of the email message.
         /// </summary>
+        /// <value>The attachments of the email message.</value>
         [DataMember(Name="attachments", EmitDefaultValue=false)]
-        public List<EmailAttachment> Attachments { get; set; }
+        public List<Attachment> Attachments { get; set; }
   
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The text body of the email message.
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The text body of the email message.</value>
+        [DataMember(Name="textBody", EmitDefaultValue=false)]
+        public string TextBody { get; set; }
+  
+        
+        /// <summary>
+        /// The html body of the email message.
+        /// </summary>
+        /// <value>The html body of the email message.</value>
+        [DataMember(Name="htmlBody", EmitDefaultValue=false)]
+        public string HtmlBody { get; set; }
+  
+        
+        /// <summary>
+        /// The time when the message was received or sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>The time when the message was received or sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="time", EmitDefaultValue=false)]
         public DateTime? Time { get; set; }
+  
+        
+        /// <summary>
+        /// The URI for this object
+        /// </summary>
+        /// <value>The URI for this object</value>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; set; }
   
         
   
@@ -106,16 +130,18 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EmailMessage {\n");
-            sb.Append("  HtmlBody: ").Append(HtmlBody).Append("\n");
-            sb.Append("  TextBody: ").Append(TextBody).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  To: ").Append(To).Append("\n");
             sb.Append("  Cc: ").Append(Cc).Append("\n");
             sb.Append("  Bcc: ").Append(Bcc).Append("\n");
             sb.Append("  From: ").Append(From).Append("\n");
             sb.Append("  Subject: ").Append(Subject).Append("\n");
             sb.Append("  Attachments: ").Append(Attachments).Append("\n");
+            sb.Append("  TextBody: ").Append(TextBody).Append("\n");
+            sb.Append("  HtmlBody: ").Append(HtmlBody).Append("\n");
             sb.Append("  Time: ").Append(Time).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -154,19 +180,14 @@ namespace ININ.PureCloudApi.Model
 
             return 
                 (
-                    this.HtmlBody == other.HtmlBody ||
-                    this.HtmlBody != null &&
-                    this.HtmlBody.Equals(other.HtmlBody)
-                ) && 
-                (
-                    this.TextBody == other.TextBody ||
-                    this.TextBody != null &&
-                    this.TextBody.Equals(other.TextBody)
-                ) && 
-                (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) && 
+                (
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
                 ) && 
                 (
                     this.To == other.To ||
@@ -199,9 +220,24 @@ namespace ININ.PureCloudApi.Model
                     this.Attachments.SequenceEqual(other.Attachments)
                 ) && 
                 (
+                    this.TextBody == other.TextBody ||
+                    this.TextBody != null &&
+                    this.TextBody.Equals(other.TextBody)
+                ) && 
+                (
+                    this.HtmlBody == other.HtmlBody ||
+                    this.HtmlBody != null &&
+                    this.HtmlBody.Equals(other.HtmlBody)
+                ) && 
+                (
                     this.Time == other.Time ||
                     this.Time != null &&
                     this.Time.Equals(other.Time)
+                ) && 
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -217,14 +253,11 @@ namespace ININ.PureCloudApi.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.HtmlBody != null)
-                    hash = hash * 59 + this.HtmlBody.GetHashCode();
-                
-                if (this.TextBody != null)
-                    hash = hash * 59 + this.TextBody.GetHashCode();
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.To != null)
                     hash = hash * 59 + this.To.GetHashCode();
@@ -244,8 +277,17 @@ namespace ININ.PureCloudApi.Model
                 if (this.Attachments != null)
                     hash = hash * 59 + this.Attachments.GetHashCode();
                 
+                if (this.TextBody != null)
+                    hash = hash * 59 + this.TextBody.GetHashCode();
+                
+                if (this.HtmlBody != null)
+                    hash = hash * 59 + this.HtmlBody.GetHashCode();
+                
                 if (this.Time != null)
                     hash = hash * 59 + this.Time.GetHashCode();
+                
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }

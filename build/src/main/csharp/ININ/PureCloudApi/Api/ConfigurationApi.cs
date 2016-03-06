@@ -112,7 +112,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="didPoolId">DID pool ID</param>
         /// <returns>DIDPool</returns>
-        DIDPool GetDidpool (string didPoolId);
+        DIDPool GetDidpoolsDidpoolId (string didPoolId);
   
         /// <summary>
         /// Get a DID Pool by ID.
@@ -122,7 +122,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="didPoolId">DID pool ID</param>
         /// <returns>ApiResponse of DIDPool</returns>
-        ApiResponse<DIDPool> GetDidpoolWithHttpInfo (string didPoolId);
+        ApiResponse<DIDPool> GetDidpoolsDidpoolIdWithHttpInfo (string didPoolId);
 
         /// <summary>
         /// Get a DID Pool by ID.
@@ -132,7 +132,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="didPoolId">DID pool ID</param>
         /// <returns>Task of DIDPool</returns>
-        System.Threading.Tasks.Task<DIDPool> GetDidpoolAsync (string didPoolId);
+        System.Threading.Tasks.Task<DIDPool> GetDidpoolsDidpoolIdAsync (string didPoolId);
 
         /// <summary>
         /// Get a DID Pool by ID.
@@ -142,7 +142,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="didPoolId">DID pool ID</param>
         /// <returns>Task of ApiResponse (DIDPool)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DIDPool>> GetDidpoolAsyncWithHttpInfo (string didPoolId);
+        System.Threading.Tasks.Task<ApiResponse<DIDPool>> GetDidpoolsDidpoolIdAsyncWithHttpInfo (string didPoolId);
         
         /// <summary>
         /// Update a DID Pool by ID.
@@ -153,7 +153,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="didPoolId">DID pool ID</param>
         /// <param name="body"></param>
         /// <returns>DIDPool</returns>
-        DIDPool PutDidpool (string didPoolId, DIDPool body = null);
+        DIDPool PutDidpoolsDidpoolId (string didPoolId, DIDPool body = null);
   
         /// <summary>
         /// Update a DID Pool by ID.
@@ -164,7 +164,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="didPoolId">DID pool ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of DIDPool</returns>
-        ApiResponse<DIDPool> PutDidpoolWithHttpInfo (string didPoolId, DIDPool body = null);
+        ApiResponse<DIDPool> PutDidpoolsDidpoolIdWithHttpInfo (string didPoolId, DIDPool body = null);
 
         /// <summary>
         /// Update a DID Pool by ID.
@@ -175,7 +175,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="didPoolId">DID pool ID</param>
         /// <param name="body"></param>
         /// <returns>Task of DIDPool</returns>
-        System.Threading.Tasks.Task<DIDPool> PutDidpoolAsync (string didPoolId, DIDPool body = null);
+        System.Threading.Tasks.Task<DIDPool> PutDidpoolsDidpoolIdAsync (string didPoolId, DIDPool body = null);
 
         /// <summary>
         /// Update a DID Pool by ID.
@@ -186,7 +186,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="didPoolId">DID pool ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DIDPool)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DIDPool>> PutDidpoolAsyncWithHttpInfo (string didPoolId, DIDPool body = null);
+        System.Threading.Tasks.Task<ApiResponse<DIDPool>> PutDidpoolsDidpoolIdAsyncWithHttpInfo (string didPoolId, DIDPool body = null);
         
         /// <summary>
         /// Delete a DID Pool by ID.
@@ -196,7 +196,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="didPoolId">DID pool ID</param>
         /// <returns>string</returns>
-        string DeleteDidpool (string didPoolId);
+        string DeleteDidpoolsDidpoolId (string didPoolId);
   
         /// <summary>
         /// Delete a DID Pool by ID.
@@ -206,7 +206,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="didPoolId">DID pool ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteDidpoolWithHttpInfo (string didPoolId);
+        ApiResponse<string> DeleteDidpoolsDidpoolIdWithHttpInfo (string didPoolId);
 
         /// <summary>
         /// Delete a DID Pool by ID.
@@ -216,7 +216,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="didPoolId">DID pool ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteDidpoolAsync (string didPoolId);
+        System.Threading.Tasks.Task<string> DeleteDidpoolsDidpoolIdAsync (string didPoolId);
 
         /// <summary>
         /// Delete a DID Pool by ID.
@@ -226,7 +226,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="didPoolId">DID pool ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteDidpoolAsyncWithHttpInfo (string didPoolId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteDidpoolsDidpoolIdAsyncWithHttpInfo (string didPoolId);
         
         /// <summary>
         /// Get a listing of DIDs
@@ -292,7 +292,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="didId">DID ID</param>
         /// <returns>DID</returns>
-        DID GetDid (string didId);
+        DID GetDidsDidId (string didId);
   
         /// <summary>
         /// Get a DID by ID.
@@ -302,7 +302,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="didId">DID ID</param>
         /// <returns>ApiResponse of DID</returns>
-        ApiResponse<DID> GetDidWithHttpInfo (string didId);
+        ApiResponse<DID> GetDidsDidIdWithHttpInfo (string didId);
 
         /// <summary>
         /// Get a DID by ID.
@@ -312,7 +312,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="didId">DID ID</param>
         /// <returns>Task of DID</returns>
-        System.Threading.Tasks.Task<DID> GetDidAsync (string didId);
+        System.Threading.Tasks.Task<DID> GetDidsDidIdAsync (string didId);
 
         /// <summary>
         /// Get a DID by ID.
@@ -322,7 +322,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="didId">DID ID</param>
         /// <returns>Task of ApiResponse (DID)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DID>> GetDidAsyncWithHttpInfo (string didId);
+        System.Threading.Tasks.Task<ApiResponse<DID>> GetDidsDidIdAsyncWithHttpInfo (string didId);
         
         /// <summary>
         /// Update a DID by ID.
@@ -333,7 +333,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="didId">DID ID</param>
         /// <param name="body"></param>
         /// <returns>DID</returns>
-        DID PutDid (string didId, DID body = null);
+        DID PutDidsDidId (string didId, DID body = null);
   
         /// <summary>
         /// Update a DID by ID.
@@ -344,7 +344,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="didId">DID ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of DID</returns>
-        ApiResponse<DID> PutDidWithHttpInfo (string didId, DID body = null);
+        ApiResponse<DID> PutDidsDidIdWithHttpInfo (string didId, DID body = null);
 
         /// <summary>
         /// Update a DID by ID.
@@ -355,7 +355,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="didId">DID ID</param>
         /// <param name="body"></param>
         /// <returns>Task of DID</returns>
-        System.Threading.Tasks.Task<DID> PutDidAsync (string didId, DID body = null);
+        System.Threading.Tasks.Task<DID> PutDidsDidIdAsync (string didId, DID body = null);
 
         /// <summary>
         /// Update a DID by ID.
@@ -366,7 +366,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="didId">DID ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DID)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DID>> PutDidAsyncWithHttpInfo (string didId, DID body = null);
+        System.Threading.Tasks.Task<ApiResponse<DID>> PutDidsDidIdAsyncWithHttpInfo (string didId, DID body = null);
         
         /// <summary>
         /// Get the list of edges.
@@ -552,7 +552,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="certificateId">Certificate ID</param>
         /// <returns>DomainCertificateAuthority</returns>
-        DomainCertificateAuthority GetEdgesCertificateauthoritie (string certificateId);
+        DomainCertificateAuthority GetEdgesCertificateauthoritiesCertificateId (string certificateId);
   
         /// <summary>
         /// Get a certificate authority.
@@ -562,7 +562,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="certificateId">Certificate ID</param>
         /// <returns>ApiResponse of DomainCertificateAuthority</returns>
-        ApiResponse<DomainCertificateAuthority> GetEdgesCertificateauthoritieWithHttpInfo (string certificateId);
+        ApiResponse<DomainCertificateAuthority> GetEdgesCertificateauthoritiesCertificateIdWithHttpInfo (string certificateId);
 
         /// <summary>
         /// Get a certificate authority.
@@ -572,7 +572,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="certificateId">Certificate ID</param>
         /// <returns>Task of DomainCertificateAuthority</returns>
-        System.Threading.Tasks.Task<DomainCertificateAuthority> GetEdgesCertificateauthoritieAsync (string certificateId);
+        System.Threading.Tasks.Task<DomainCertificateAuthority> GetEdgesCertificateauthoritiesCertificateIdAsync (string certificateId);
 
         /// <summary>
         /// Get a certificate authority.
@@ -582,7 +582,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="certificateId">Certificate ID</param>
         /// <returns>Task of ApiResponse (DomainCertificateAuthority)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainCertificateAuthority>> GetEdgesCertificateauthoritieAsyncWithHttpInfo (string certificateId);
+        System.Threading.Tasks.Task<ApiResponse<DomainCertificateAuthority>> GetEdgesCertificateauthoritiesCertificateIdAsyncWithHttpInfo (string certificateId);
         
         /// <summary>
         /// Update a certificate authority.
@@ -593,7 +593,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="certificateId">Certificate ID</param>
         /// <param name="body"></param>
         /// <returns>DomainCertificateAuthority</returns>
-        DomainCertificateAuthority PutEdgesCertificateauthoritie (string certificateId, DomainCertificateAuthority body = null);
+        DomainCertificateAuthority PutEdgesCertificateauthoritiesCertificateId (string certificateId, DomainCertificateAuthority body = null);
   
         /// <summary>
         /// Update a certificate authority.
@@ -604,7 +604,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="certificateId">Certificate ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of DomainCertificateAuthority</returns>
-        ApiResponse<DomainCertificateAuthority> PutEdgesCertificateauthoritieWithHttpInfo (string certificateId, DomainCertificateAuthority body = null);
+        ApiResponse<DomainCertificateAuthority> PutEdgesCertificateauthoritiesCertificateIdWithHttpInfo (string certificateId, DomainCertificateAuthority body = null);
 
         /// <summary>
         /// Update a certificate authority.
@@ -615,7 +615,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="certificateId">Certificate ID</param>
         /// <param name="body"></param>
         /// <returns>Task of DomainCertificateAuthority</returns>
-        System.Threading.Tasks.Task<DomainCertificateAuthority> PutEdgesCertificateauthoritieAsync (string certificateId, DomainCertificateAuthority body = null);
+        System.Threading.Tasks.Task<DomainCertificateAuthority> PutEdgesCertificateauthoritiesCertificateIdAsync (string certificateId, DomainCertificateAuthority body = null);
 
         /// <summary>
         /// Update a certificate authority.
@@ -626,7 +626,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="certificateId">Certificate ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DomainCertificateAuthority)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainCertificateAuthority>> PutEdgesCertificateauthoritieAsyncWithHttpInfo (string certificateId, DomainCertificateAuthority body = null);
+        System.Threading.Tasks.Task<ApiResponse<DomainCertificateAuthority>> PutEdgesCertificateauthoritiesCertificateIdAsyncWithHttpInfo (string certificateId, DomainCertificateAuthority body = null);
         
         /// <summary>
         /// Delete a certificate authority.
@@ -636,7 +636,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="certificateId">Certificate ID</param>
         /// <returns>string</returns>
-        string DeleteEdgesCertificateauthoritie (string certificateId);
+        string DeleteEdgesCertificateauthoritiesCertificateId (string certificateId);
   
         /// <summary>
         /// Delete a certificate authority.
@@ -646,7 +646,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="certificateId">Certificate ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteEdgesCertificateauthoritieWithHttpInfo (string certificateId);
+        ApiResponse<string> DeleteEdgesCertificateauthoritiesCertificateIdWithHttpInfo (string certificateId);
 
         /// <summary>
         /// Delete a certificate authority.
@@ -656,7 +656,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="certificateId">Certificate ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteEdgesCertificateauthoritieAsync (string certificateId);
+        System.Threading.Tasks.Task<string> DeleteEdgesCertificateauthoritiesCertificateIdAsync (string certificateId);
 
         /// <summary>
         /// Delete a certificate authority.
@@ -666,7 +666,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="certificateId">Certificate ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteEdgesCertificateauthoritieAsyncWithHttpInfo (string certificateId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteEdgesCertificateauthoritiesCertificateIdAsyncWithHttpInfo (string certificateId);
         
         /// <summary>
         /// Get edge.
@@ -676,7 +676,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Edge</returns>
-        Edge GetEdge (string edgeId);
+        Edge GetEdgesEdgeId (string edgeId);
   
         /// <summary>
         /// Get edge.
@@ -686,7 +686,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>ApiResponse of Edge</returns>
-        ApiResponse<Edge> GetEdgeWithHttpInfo (string edgeId);
+        ApiResponse<Edge> GetEdgesEdgeIdWithHttpInfo (string edgeId);
 
         /// <summary>
         /// Get edge.
@@ -696,7 +696,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of Edge</returns>
-        System.Threading.Tasks.Task<Edge> GetEdgeAsync (string edgeId);
+        System.Threading.Tasks.Task<Edge> GetEdgesEdgeIdAsync (string edgeId);
 
         /// <summary>
         /// Get edge.
@@ -706,7 +706,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse (Edge)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Edge>> GetEdgeAsyncWithHttpInfo (string edgeId);
+        System.Threading.Tasks.Task<ApiResponse<Edge>> GetEdgesEdgeIdAsyncWithHttpInfo (string edgeId);
         
         /// <summary>
         /// Update a edge.
@@ -717,7 +717,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">Edge</param>
         /// <returns>Edge</returns>
-        Edge PutEdge (string edgeId, Edge body = null);
+        Edge PutEdgesEdgeId (string edgeId, Edge body = null);
   
         /// <summary>
         /// Update a edge.
@@ -728,7 +728,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">Edge</param>
         /// <returns>ApiResponse of Edge</returns>
-        ApiResponse<Edge> PutEdgeWithHttpInfo (string edgeId, Edge body = null);
+        ApiResponse<Edge> PutEdgesEdgeIdWithHttpInfo (string edgeId, Edge body = null);
 
         /// <summary>
         /// Update a edge.
@@ -739,7 +739,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">Edge</param>
         /// <returns>Task of Edge</returns>
-        System.Threading.Tasks.Task<Edge> PutEdgeAsync (string edgeId, Edge body = null);
+        System.Threading.Tasks.Task<Edge> PutEdgesEdgeIdAsync (string edgeId, Edge body = null);
 
         /// <summary>
         /// Update a edge.
@@ -750,7 +750,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">Edge</param>
         /// <returns>Task of ApiResponse (Edge)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Edge>> PutEdgeAsyncWithHttpInfo (string edgeId, Edge body = null);
+        System.Threading.Tasks.Task<ApiResponse<Edge>> PutEdgesEdgeIdAsyncWithHttpInfo (string edgeId, Edge body = null);
         
         /// <summary>
         /// Delete a edge.
@@ -760,7 +760,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>string</returns>
-        string DeleteEdge (string edgeId);
+        string DeleteEdgesEdgeId (string edgeId);
   
         /// <summary>
         /// Delete a edge.
@@ -770,7 +770,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteEdgeWithHttpInfo (string edgeId);
+        ApiResponse<string> DeleteEdgesEdgeIdWithHttpInfo (string edgeId);
 
         /// <summary>
         /// Delete a edge.
@@ -780,7 +780,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteEdgeAsync (string edgeId);
+        System.Threading.Tasks.Task<string> DeleteEdgesEdgeIdAsync (string edgeId);
 
         /// <summary>
         /// Delete a edge.
@@ -790,7 +790,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteEdgeAsyncWithHttpInfo (string edgeId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteEdgesEdgeIdAsyncWithHttpInfo (string edgeId);
         
         /// <summary>
         /// Get the list of lines.
@@ -802,7 +802,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>EdgeLineEntityListing</returns>
-        EdgeLineEntityListing GetEdgeLines (string edgeId, int? pageSize = null, int? pageNumber = null);
+        EdgeLineEntityListing GetEdgesEdgeIdLines (string edgeId, int? pageSize = null, int? pageNumber = null);
   
         /// <summary>
         /// Get the list of lines.
@@ -814,7 +814,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>ApiResponse of EdgeLineEntityListing</returns>
-        ApiResponse<EdgeLineEntityListing> GetEdgeLinesWithHttpInfo (string edgeId, int? pageSize = null, int? pageNumber = null);
+        ApiResponse<EdgeLineEntityListing> GetEdgesEdgeIdLinesWithHttpInfo (string edgeId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get the list of lines.
@@ -826,7 +826,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of EdgeLineEntityListing</returns>
-        System.Threading.Tasks.Task<EdgeLineEntityListing> GetEdgeLinesAsync (string edgeId, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<EdgeLineEntityListing> GetEdgesEdgeIdLinesAsync (string edgeId, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get the list of lines.
@@ -838,7 +838,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (EdgeLineEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EdgeLineEntityListing>> GetEdgeLinesAsyncWithHttpInfo (string edgeId, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<EdgeLineEntityListing>> GetEdgesEdgeIdLinesAsyncWithHttpInfo (string edgeId, int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
         /// Get line
@@ -849,7 +849,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="lineId">Line ID</param>
         /// <returns>EdgeLine</returns>
-        EdgeLine GetEdgeLine (string edgeId, string lineId);
+        EdgeLine GetEdgesEdgeIdLinesLineId (string edgeId, string lineId);
   
         /// <summary>
         /// Get line
@@ -860,7 +860,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="lineId">Line ID</param>
         /// <returns>ApiResponse of EdgeLine</returns>
-        ApiResponse<EdgeLine> GetEdgeLineWithHttpInfo (string edgeId, string lineId);
+        ApiResponse<EdgeLine> GetEdgesEdgeIdLinesLineIdWithHttpInfo (string edgeId, string lineId);
 
         /// <summary>
         /// Get line
@@ -871,7 +871,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="lineId">Line ID</param>
         /// <returns>Task of EdgeLine</returns>
-        System.Threading.Tasks.Task<EdgeLine> GetEdgeLineAsync (string edgeId, string lineId);
+        System.Threading.Tasks.Task<EdgeLine> GetEdgesEdgeIdLinesLineIdAsync (string edgeId, string lineId);
 
         /// <summary>
         /// Get line
@@ -882,7 +882,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="lineId">Line ID</param>
         /// <returns>Task of ApiResponse (EdgeLine)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EdgeLine>> GetEdgeLineAsyncWithHttpInfo (string edgeId, string lineId);
+        System.Threading.Tasks.Task<ApiResponse<EdgeLine>> GetEdgesEdgeIdLinesLineIdAsyncWithHttpInfo (string edgeId, string lineId);
         
         /// <summary>
         /// Update a line.
@@ -894,7 +894,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="lineId">Line ID</param>
         /// <param name="body">Line</param>
         /// <returns>EdgeLine</returns>
-        EdgeLine PutEdgeLine (string edgeId, string lineId, EdgeLine body = null);
+        EdgeLine PutEdgesEdgeIdLinesLineId (string edgeId, string lineId, EdgeLine body = null);
   
         /// <summary>
         /// Update a line.
@@ -906,7 +906,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="lineId">Line ID</param>
         /// <param name="body">Line</param>
         /// <returns>ApiResponse of EdgeLine</returns>
-        ApiResponse<EdgeLine> PutEdgeLineWithHttpInfo (string edgeId, string lineId, EdgeLine body = null);
+        ApiResponse<EdgeLine> PutEdgesEdgeIdLinesLineIdWithHttpInfo (string edgeId, string lineId, EdgeLine body = null);
 
         /// <summary>
         /// Update a line.
@@ -918,7 +918,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="lineId">Line ID</param>
         /// <param name="body">Line</param>
         /// <returns>Task of EdgeLine</returns>
-        System.Threading.Tasks.Task<EdgeLine> PutEdgeLineAsync (string edgeId, string lineId, EdgeLine body = null);
+        System.Threading.Tasks.Task<EdgeLine> PutEdgesEdgeIdLinesLineIdAsync (string edgeId, string lineId, EdgeLine body = null);
 
         /// <summary>
         /// Update a line.
@@ -930,7 +930,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="lineId">Line ID</param>
         /// <param name="body">Line</param>
         /// <returns>Task of ApiResponse (EdgeLine)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EdgeLine>> PutEdgeLineAsyncWithHttpInfo (string edgeId, string lineId, EdgeLine body = null);
+        System.Threading.Tasks.Task<ApiResponse<EdgeLine>> PutEdgesEdgeIdLinesLineIdAsyncWithHttpInfo (string edgeId, string lineId, EdgeLine body = null);
         
         /// <summary>
         /// Get edge logical interfaces.
@@ -940,7 +940,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>LogicalInterfaceEntityListing</returns>
-        LogicalInterfaceEntityListing GetEdgeLogicalinterfaces (string edgeId);
+        LogicalInterfaceEntityListing GetEdgesEdgeIdLogicalinterfaces (string edgeId);
   
         /// <summary>
         /// Get edge logical interfaces.
@@ -950,7 +950,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>ApiResponse of LogicalInterfaceEntityListing</returns>
-        ApiResponse<LogicalInterfaceEntityListing> GetEdgeLogicalinterfacesWithHttpInfo (string edgeId);
+        ApiResponse<LogicalInterfaceEntityListing> GetEdgesEdgeIdLogicalinterfacesWithHttpInfo (string edgeId);
 
         /// <summary>
         /// Get edge logical interfaces.
@@ -960,7 +960,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of LogicalInterfaceEntityListing</returns>
-        System.Threading.Tasks.Task<LogicalInterfaceEntityListing> GetEdgeLogicalinterfacesAsync (string edgeId);
+        System.Threading.Tasks.Task<LogicalInterfaceEntityListing> GetEdgesEdgeIdLogicalinterfacesAsync (string edgeId);
 
         /// <summary>
         /// Get edge logical interfaces.
@@ -970,7 +970,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse (LogicalInterfaceEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LogicalInterfaceEntityListing>> GetEdgeLogicalinterfacesAsyncWithHttpInfo (string edgeId);
+        System.Threading.Tasks.Task<ApiResponse<LogicalInterfaceEntityListing>> GetEdgesEdgeIdLogicalinterfacesAsyncWithHttpInfo (string edgeId);
         
         /// <summary>
         /// Create an edge logical interface.
@@ -981,7 +981,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body"></param>
         /// <returns>DomainLogicalInterface</returns>
-        DomainLogicalInterface PostEdgeLogicalinterfaces (string edgeId, DomainLogicalInterface body = null);
+        DomainLogicalInterface PostEdgesEdgeIdLogicalinterfaces (string edgeId, DomainLogicalInterface body = null);
   
         /// <summary>
         /// Create an edge logical interface.
@@ -992,7 +992,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of DomainLogicalInterface</returns>
-        ApiResponse<DomainLogicalInterface> PostEdgeLogicalinterfacesWithHttpInfo (string edgeId, DomainLogicalInterface body = null);
+        ApiResponse<DomainLogicalInterface> PostEdgesEdgeIdLogicalinterfacesWithHttpInfo (string edgeId, DomainLogicalInterface body = null);
 
         /// <summary>
         /// Create an edge logical interface.
@@ -1003,7 +1003,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body"></param>
         /// <returns>Task of DomainLogicalInterface</returns>
-        System.Threading.Tasks.Task<DomainLogicalInterface> PostEdgeLogicalinterfacesAsync (string edgeId, DomainLogicalInterface body = null);
+        System.Threading.Tasks.Task<DomainLogicalInterface> PostEdgesEdgeIdLogicalinterfacesAsync (string edgeId, DomainLogicalInterface body = null);
 
         /// <summary>
         /// Create an edge logical interface.
@@ -1014,7 +1014,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DomainLogicalInterface)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> PostEdgeLogicalinterfacesAsyncWithHttpInfo (string edgeId, DomainLogicalInterface body = null);
+        System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> PostEdgesEdgeIdLogicalinterfacesAsyncWithHttpInfo (string edgeId, DomainLogicalInterface body = null);
         
         /// <summary>
         /// Get an edge logical interface
@@ -1025,7 +1025,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>DomainLogicalInterface</returns>
-        DomainLogicalInterface GetEdgeLogicalinterface (string edgeId, string interfaceId);
+        DomainLogicalInterface GetEdgesEdgeIdLogicalinterfacesInterfaceId (string edgeId, string interfaceId);
   
         /// <summary>
         /// Get an edge logical interface
@@ -1036,7 +1036,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>ApiResponse of DomainLogicalInterface</returns>
-        ApiResponse<DomainLogicalInterface> GetEdgeLogicalinterfaceWithHttpInfo (string edgeId, string interfaceId);
+        ApiResponse<DomainLogicalInterface> GetEdgesEdgeIdLogicalinterfacesInterfaceIdWithHttpInfo (string edgeId, string interfaceId);
 
         /// <summary>
         /// Get an edge logical interface
@@ -1047,7 +1047,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>Task of DomainLogicalInterface</returns>
-        System.Threading.Tasks.Task<DomainLogicalInterface> GetEdgeLogicalinterfaceAsync (string edgeId, string interfaceId);
+        System.Threading.Tasks.Task<DomainLogicalInterface> GetEdgesEdgeIdLogicalinterfacesInterfaceIdAsync (string edgeId, string interfaceId);
 
         /// <summary>
         /// Get an edge logical interface
@@ -1058,7 +1058,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>Task of ApiResponse (DomainLogicalInterface)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> GetEdgeLogicalinterfaceAsyncWithHttpInfo (string edgeId, string interfaceId);
+        System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> GetEdgesEdgeIdLogicalinterfacesInterfaceIdAsyncWithHttpInfo (string edgeId, string interfaceId);
         
         /// <summary>
         /// Update an edge logical interface.
@@ -1070,7 +1070,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="interfaceId">Interface ID</param>
         /// <param name="body"></param>
         /// <returns>DomainLogicalInterface</returns>
-        DomainLogicalInterface PutEdgeLogicalinterface (string edgeId, string interfaceId, DomainLogicalInterface body = null);
+        DomainLogicalInterface PutEdgesEdgeIdLogicalinterfacesInterfaceId (string edgeId, string interfaceId, DomainLogicalInterface body = null);
   
         /// <summary>
         /// Update an edge logical interface.
@@ -1082,7 +1082,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="interfaceId">Interface ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of DomainLogicalInterface</returns>
-        ApiResponse<DomainLogicalInterface> PutEdgeLogicalinterfaceWithHttpInfo (string edgeId, string interfaceId, DomainLogicalInterface body = null);
+        ApiResponse<DomainLogicalInterface> PutEdgesEdgeIdLogicalinterfacesInterfaceIdWithHttpInfo (string edgeId, string interfaceId, DomainLogicalInterface body = null);
 
         /// <summary>
         /// Update an edge logical interface.
@@ -1094,7 +1094,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="interfaceId">Interface ID</param>
         /// <param name="body"></param>
         /// <returns>Task of DomainLogicalInterface</returns>
-        System.Threading.Tasks.Task<DomainLogicalInterface> PutEdgeLogicalinterfaceAsync (string edgeId, string interfaceId, DomainLogicalInterface body = null);
+        System.Threading.Tasks.Task<DomainLogicalInterface> PutEdgesEdgeIdLogicalinterfacesInterfaceIdAsync (string edgeId, string interfaceId, DomainLogicalInterface body = null);
 
         /// <summary>
         /// Update an edge logical interface.
@@ -1106,7 +1106,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="interfaceId">Interface ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DomainLogicalInterface)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> PutEdgeLogicalinterfaceAsyncWithHttpInfo (string edgeId, string interfaceId, DomainLogicalInterface body = null);
+        System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> PutEdgesEdgeIdLogicalinterfacesInterfaceIdAsyncWithHttpInfo (string edgeId, string interfaceId, DomainLogicalInterface body = null);
         
         /// <summary>
         /// Delete an edge logical interface
@@ -1117,7 +1117,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
         /// <returns></returns>
-        void DeleteEdgeLogicalinterface (string edgeId, string interfaceId);
+        void DeleteEdgesEdgeIdLogicalinterfacesInterfaceId (string edgeId, string interfaceId);
   
         /// <summary>
         /// Delete an edge logical interface
@@ -1128,7 +1128,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteEdgeLogicalinterfaceWithHttpInfo (string edgeId, string interfaceId);
+        ApiResponse<Object> DeleteEdgesEdgeIdLogicalinterfacesInterfaceIdWithHttpInfo (string edgeId, string interfaceId);
 
         /// <summary>
         /// Delete an edge logical interface
@@ -1139,7 +1139,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteEdgeLogicalinterfaceAsync (string edgeId, string interfaceId);
+        System.Threading.Tasks.Task DeleteEdgesEdgeIdLogicalinterfacesInterfaceIdAsync (string edgeId, string interfaceId);
 
         /// <summary>
         /// Delete an edge logical interface
@@ -1150,7 +1150,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteEdgeLogicalinterfaceAsyncWithHttpInfo (string edgeId, string interfaceId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteEdgesEdgeIdLogicalinterfacesInterfaceIdAsyncWithHttpInfo (string edgeId, string interfaceId);
         
         /// <summary>
         /// Create a job to upload a list of Edge logs.
@@ -1161,7 +1161,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">EdgeLogsJobRequest</param>
         /// <returns>EdgeLogsJobResponse</returns>
-        EdgeLogsJobResponse PostEdgeLogsJobs (string edgeId, EdgeLogsJobRequest body = null);
+        EdgeLogsJobResponse PostEdgesEdgeIdLogsJobs (string edgeId, EdgeLogsJobRequest body = null);
   
         /// <summary>
         /// Create a job to upload a list of Edge logs.
@@ -1172,7 +1172,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">EdgeLogsJobRequest</param>
         /// <returns>ApiResponse of EdgeLogsJobResponse</returns>
-        ApiResponse<EdgeLogsJobResponse> PostEdgeLogsJobsWithHttpInfo (string edgeId, EdgeLogsJobRequest body = null);
+        ApiResponse<EdgeLogsJobResponse> PostEdgesEdgeIdLogsJobsWithHttpInfo (string edgeId, EdgeLogsJobRequest body = null);
 
         /// <summary>
         /// Create a job to upload a list of Edge logs.
@@ -1183,7 +1183,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">EdgeLogsJobRequest</param>
         /// <returns>Task of EdgeLogsJobResponse</returns>
-        System.Threading.Tasks.Task<EdgeLogsJobResponse> PostEdgeLogsJobsAsync (string edgeId, EdgeLogsJobRequest body = null);
+        System.Threading.Tasks.Task<EdgeLogsJobResponse> PostEdgesEdgeIdLogsJobsAsync (string edgeId, EdgeLogsJobRequest body = null);
 
         /// <summary>
         /// Create a job to upload a list of Edge logs.
@@ -1194,7 +1194,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">EdgeLogsJobRequest</param>
         /// <returns>Task of ApiResponse (EdgeLogsJobResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EdgeLogsJobResponse>> PostEdgeLogsJobsAsyncWithHttpInfo (string edgeId, EdgeLogsJobRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<EdgeLogsJobResponse>> PostEdgesEdgeIdLogsJobsAsyncWithHttpInfo (string edgeId, EdgeLogsJobRequest body = null);
         
         /// <summary>
         /// Get an Edge logs job.
@@ -1203,9 +1203,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="jobId"></param>
-        /// <returns></returns>
-        void GetEdgeLogsJob (string edgeId, string jobId);
+        /// <param name="jobId">Job ID</param>
+        /// <returns>EdgeLogsJob</returns>
+        EdgeLogsJob GetEdgesEdgeIdLogsJobsJobId (string edgeId, string jobId);
   
         /// <summary>
         /// Get an Edge logs job.
@@ -1214,9 +1214,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="jobId"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetEdgeLogsJobWithHttpInfo (string edgeId, string jobId);
+        /// <param name="jobId">Job ID</param>
+        /// <returns>ApiResponse of EdgeLogsJob</returns>
+        ApiResponse<EdgeLogsJob> GetEdgesEdgeIdLogsJobsJobIdWithHttpInfo (string edgeId, string jobId);
 
         /// <summary>
         /// Get an Edge logs job.
@@ -1225,9 +1225,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="jobId"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetEdgeLogsJobAsync (string edgeId, string jobId);
+        /// <param name="jobId">Job ID</param>
+        /// <returns>Task of EdgeLogsJob</returns>
+        System.Threading.Tasks.Task<EdgeLogsJob> GetEdgesEdgeIdLogsJobsJobIdAsync (string edgeId, string jobId);
 
         /// <summary>
         /// Get an Edge logs job.
@@ -1236,9 +1236,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="jobId"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetEdgeLogsJobAsyncWithHttpInfo (string edgeId, string jobId);
+        /// <param name="jobId">Job ID</param>
+        /// <returns>Task of ApiResponse (EdgeLogsJob)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EdgeLogsJob>> GetEdgesEdgeIdLogsJobsJobIdAsyncWithHttpInfo (string edgeId, string jobId);
         
         /// <summary>
         /// Request that the specified fileIds be uploaded from the Edge.
@@ -1247,10 +1247,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="jobId"></param>
+        /// <param name="jobId">Job ID</param>
         /// <param name="body"></param>
         /// <returns></returns>
-        void PostEdgeLogsJobUpload (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null);
+        void PostEdgesEdgeIdLogsJobsJobIdUpload (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null);
   
         /// <summary>
         /// Request that the specified fileIds be uploaded from the Edge.
@@ -1259,10 +1259,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="jobId"></param>
+        /// <param name="jobId">Job ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostEdgeLogsJobUploadWithHttpInfo (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null);
+        ApiResponse<Object> PostEdgesEdgeIdLogsJobsJobIdUploadWithHttpInfo (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null);
 
         /// <summary>
         /// Request that the specified fileIds be uploaded from the Edge.
@@ -1271,10 +1271,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="jobId"></param>
+        /// <param name="jobId">Job ID</param>
         /// <param name="body"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostEdgeLogsJobUploadAsync (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null);
+        System.Threading.Tasks.Task PostEdgesEdgeIdLogsJobsJobIdUploadAsync (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null);
 
         /// <summary>
         /// Request that the specified fileIds be uploaded from the Edge.
@@ -1283,10 +1283,10 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="jobId"></param>
+        /// <param name="jobId">Job ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostEdgeLogsJobUploadAsyncWithHttpInfo (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostEdgesEdgeIdLogsJobsJobIdUploadAsyncWithHttpInfo (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null);
         
         /// <summary>
         /// Retrieve a list of all configured physical interfaces from a specific edge.
@@ -1296,7 +1296,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>PhysicalInterfaceEntityListing</returns>
-        PhysicalInterfaceEntityListing GetEdgePhysicalinterfaces (string edgeId);
+        PhysicalInterfaceEntityListing GetEdgesEdgeIdPhysicalinterfaces (string edgeId);
   
         /// <summary>
         /// Retrieve a list of all configured physical interfaces from a specific edge.
@@ -1306,7 +1306,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>ApiResponse of PhysicalInterfaceEntityListing</returns>
-        ApiResponse<PhysicalInterfaceEntityListing> GetEdgePhysicalinterfacesWithHttpInfo (string edgeId);
+        ApiResponse<PhysicalInterfaceEntityListing> GetEdgesEdgeIdPhysicalinterfacesWithHttpInfo (string edgeId);
 
         /// <summary>
         /// Retrieve a list of all configured physical interfaces from a specific edge.
@@ -1316,7 +1316,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of PhysicalInterfaceEntityListing</returns>
-        System.Threading.Tasks.Task<PhysicalInterfaceEntityListing> GetEdgePhysicalinterfacesAsync (string edgeId);
+        System.Threading.Tasks.Task<PhysicalInterfaceEntityListing> GetEdgesEdgeIdPhysicalinterfacesAsync (string edgeId);
 
         /// <summary>
         /// Retrieve a list of all configured physical interfaces from a specific edge.
@@ -1326,7 +1326,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse (PhysicalInterfaceEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PhysicalInterfaceEntityListing>> GetEdgePhysicalinterfacesAsyncWithHttpInfo (string edgeId);
+        System.Threading.Tasks.Task<ApiResponse<PhysicalInterfaceEntityListing>> GetEdgesEdgeIdPhysicalinterfacesAsyncWithHttpInfo (string edgeId);
         
         /// <summary>
         /// Get edge physical interface.
@@ -1337,7 +1337,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>DomainPhysicalInterface</returns>
-        DomainPhysicalInterface GetEdgePhysicalinterface (string edgeId, string interfaceId);
+        DomainPhysicalInterface GetEdgesEdgeIdPhysicalinterfacesInterfaceId (string edgeId, string interfaceId);
   
         /// <summary>
         /// Get edge physical interface.
@@ -1348,7 +1348,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>ApiResponse of DomainPhysicalInterface</returns>
-        ApiResponse<DomainPhysicalInterface> GetEdgePhysicalinterfaceWithHttpInfo (string edgeId, string interfaceId);
+        ApiResponse<DomainPhysicalInterface> GetEdgesEdgeIdPhysicalinterfacesInterfaceIdWithHttpInfo (string edgeId, string interfaceId);
 
         /// <summary>
         /// Get edge physical interface.
@@ -1359,7 +1359,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>Task of DomainPhysicalInterface</returns>
-        System.Threading.Tasks.Task<DomainPhysicalInterface> GetEdgePhysicalinterfaceAsync (string edgeId, string interfaceId);
+        System.Threading.Tasks.Task<DomainPhysicalInterface> GetEdgesEdgeIdPhysicalinterfacesInterfaceIdAsync (string edgeId, string interfaceId);
 
         /// <summary>
         /// Get edge physical interface.
@@ -1370,7 +1370,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>Task of ApiResponse (DomainPhysicalInterface)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainPhysicalInterface>> GetEdgePhysicalinterfaceAsyncWithHttpInfo (string edgeId, string interfaceId);
+        System.Threading.Tasks.Task<ApiResponse<DomainPhysicalInterface>> GetEdgesEdgeIdPhysicalinterfacesInterfaceIdAsyncWithHttpInfo (string edgeId, string interfaceId);
         
         /// <summary>
         /// Reboot an Edge
@@ -1380,7 +1380,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>string</returns>
-        string PostEdgeReboot (string edgeId);
+        string PostEdgesEdgeIdReboot (string edgeId);
   
         /// <summary>
         /// Reboot an Edge
@@ -1390,7 +1390,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> PostEdgeRebootWithHttpInfo (string edgeId);
+        ApiResponse<string> PostEdgesEdgeIdRebootWithHttpInfo (string edgeId);
 
         /// <summary>
         /// Reboot an Edge
@@ -1400,7 +1400,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> PostEdgeRebootAsync (string edgeId);
+        System.Threading.Tasks.Task<string> PostEdgesEdgeIdRebootAsync (string edgeId);
 
         /// <summary>
         /// Reboot an Edge
@@ -1410,7 +1410,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> PostEdgeRebootAsyncWithHttpInfo (string edgeId);
+        System.Threading.Tasks.Task<ApiResponse<string>> PostEdgesEdgeIdRebootAsyncWithHttpInfo (string edgeId);
         
         /// <summary>
         /// Gets software update status information about any edge.
@@ -1420,7 +1420,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>DomainEdgeSoftwareUpdateDto</returns>
-        DomainEdgeSoftwareUpdateDto GetEdgeSoftwareupdate (string edgeId);
+        DomainEdgeSoftwareUpdateDto GetEdgesEdgeIdSoftwareupdate (string edgeId);
   
         /// <summary>
         /// Gets software update status information about any edge.
@@ -1430,7 +1430,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>ApiResponse of DomainEdgeSoftwareUpdateDto</returns>
-        ApiResponse<DomainEdgeSoftwareUpdateDto> GetEdgeSoftwareupdateWithHttpInfo (string edgeId);
+        ApiResponse<DomainEdgeSoftwareUpdateDto> GetEdgesEdgeIdSoftwareupdateWithHttpInfo (string edgeId);
 
         /// <summary>
         /// Gets software update status information about any edge.
@@ -1440,7 +1440,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of DomainEdgeSoftwareUpdateDto</returns>
-        System.Threading.Tasks.Task<DomainEdgeSoftwareUpdateDto> GetEdgeSoftwareupdateAsync (string edgeId);
+        System.Threading.Tasks.Task<DomainEdgeSoftwareUpdateDto> GetEdgesEdgeIdSoftwareupdateAsync (string edgeId);
 
         /// <summary>
         /// Gets software update status information about any edge.
@@ -1450,7 +1450,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse (DomainEdgeSoftwareUpdateDto)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareUpdateDto>> GetEdgeSoftwareupdateAsyncWithHttpInfo (string edgeId);
+        System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareUpdateDto>> GetEdgesEdgeIdSoftwareupdateAsyncWithHttpInfo (string edgeId);
         
         /// <summary>
         /// Starts a software update for this edge.
@@ -1461,7 +1461,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body"></param>
         /// <returns>DomainEdgeSoftwareUpdateDto</returns>
-        DomainEdgeSoftwareUpdateDto PostEdgeSoftwareupdate (string edgeId, DomainEdgeSoftwareUpdateDto body = null);
+        DomainEdgeSoftwareUpdateDto PostEdgesEdgeIdSoftwareupdate (string edgeId, DomainEdgeSoftwareUpdateDto body = null);
   
         /// <summary>
         /// Starts a software update for this edge.
@@ -1472,7 +1472,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of DomainEdgeSoftwareUpdateDto</returns>
-        ApiResponse<DomainEdgeSoftwareUpdateDto> PostEdgeSoftwareupdateWithHttpInfo (string edgeId, DomainEdgeSoftwareUpdateDto body = null);
+        ApiResponse<DomainEdgeSoftwareUpdateDto> PostEdgesEdgeIdSoftwareupdateWithHttpInfo (string edgeId, DomainEdgeSoftwareUpdateDto body = null);
 
         /// <summary>
         /// Starts a software update for this edge.
@@ -1483,7 +1483,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body"></param>
         /// <returns>Task of DomainEdgeSoftwareUpdateDto</returns>
-        System.Threading.Tasks.Task<DomainEdgeSoftwareUpdateDto> PostEdgeSoftwareupdateAsync (string edgeId, DomainEdgeSoftwareUpdateDto body = null);
+        System.Threading.Tasks.Task<DomainEdgeSoftwareUpdateDto> PostEdgesEdgeIdSoftwareupdateAsync (string edgeId, DomainEdgeSoftwareUpdateDto body = null);
 
         /// <summary>
         /// Starts a software update for this edge.
@@ -1494,7 +1494,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DomainEdgeSoftwareUpdateDto)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareUpdateDto>> PostEdgeSoftwareupdateAsyncWithHttpInfo (string edgeId, DomainEdgeSoftwareUpdateDto body = null);
+        System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareUpdateDto>> PostEdgesEdgeIdSoftwareupdateAsyncWithHttpInfo (string edgeId, DomainEdgeSoftwareUpdateDto body = null);
         
         /// <summary>
         /// Cancels any in-progress update for this edge.
@@ -1504,7 +1504,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>string</returns>
-        string DeleteEdgeSoftwareupdate (string edgeId);
+        string DeleteEdgesEdgeIdSoftwareupdate (string edgeId);
   
         /// <summary>
         /// Cancels any in-progress update for this edge.
@@ -1514,7 +1514,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteEdgeSoftwareupdateWithHttpInfo (string edgeId);
+        ApiResponse<string> DeleteEdgesEdgeIdSoftwareupdateWithHttpInfo (string edgeId);
 
         /// <summary>
         /// Cancels any in-progress update for this edge.
@@ -1524,7 +1524,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteEdgeSoftwareupdateAsync (string edgeId);
+        System.Threading.Tasks.Task<string> DeleteEdgesEdgeIdSoftwareupdateAsync (string edgeId);
 
         /// <summary>
         /// Cancels any in-progress update for this edge.
@@ -1534,7 +1534,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteEdgeSoftwareupdateAsyncWithHttpInfo (string edgeId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteEdgesEdgeIdSoftwareupdateAsyncWithHttpInfo (string edgeId);
         
         /// <summary>
         /// Gets all the available software versions for this edge.
@@ -1544,7 +1544,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>DomainEdgeSoftwareVersionDto</returns>
-        DomainEdgeSoftwareVersionDto GetEdgeSoftwareversions (string edgeId);
+        DomainEdgeSoftwareVersionDto GetEdgesEdgeIdSoftwareversions (string edgeId);
   
         /// <summary>
         /// Gets all the available software versions for this edge.
@@ -1554,7 +1554,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>ApiResponse of DomainEdgeSoftwareVersionDto</returns>
-        ApiResponse<DomainEdgeSoftwareVersionDto> GetEdgeSoftwareversionsWithHttpInfo (string edgeId);
+        ApiResponse<DomainEdgeSoftwareVersionDto> GetEdgesEdgeIdSoftwareversionsWithHttpInfo (string edgeId);
 
         /// <summary>
         /// Gets all the available software versions for this edge.
@@ -1564,7 +1564,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of DomainEdgeSoftwareVersionDto</returns>
-        System.Threading.Tasks.Task<DomainEdgeSoftwareVersionDto> GetEdgeSoftwareversionsAsync (string edgeId);
+        System.Threading.Tasks.Task<DomainEdgeSoftwareVersionDto> GetEdgesEdgeIdSoftwareversionsAsync (string edgeId);
 
         /// <summary>
         /// Gets all the available software versions for this edge.
@@ -1574,7 +1574,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse (DomainEdgeSoftwareVersionDto)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareVersionDto>> GetEdgeSoftwareversionsAsyncWithHttpInfo (string edgeId);
+        System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareVersionDto>> GetEdgesEdgeIdSoftwareversionsAsyncWithHttpInfo (string edgeId);
         
         /// <summary>
         /// Unpair an Edge
@@ -1584,7 +1584,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>string</returns>
-        string PostEdgeUnpair (string edgeId);
+        string PostEdgesEdgeIdUnpair (string edgeId);
   
         /// <summary>
         /// Unpair an Edge
@@ -1594,7 +1594,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> PostEdgeUnpairWithHttpInfo (string edgeId);
+        ApiResponse<string> PostEdgesEdgeIdUnpairWithHttpInfo (string edgeId);
 
         /// <summary>
         /// Unpair an Edge
@@ -1604,7 +1604,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> PostEdgeUnpairAsync (string edgeId);
+        System.Threading.Tasks.Task<string> PostEdgesEdgeIdUnpairAsync (string edgeId);
 
         /// <summary>
         /// Unpair an Edge
@@ -1614,7 +1614,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> PostEdgeUnpairAsyncWithHttpInfo (string edgeId);
+        System.Threading.Tasks.Task<ApiResponse<string>> PostEdgesEdgeIdUnpairAsyncWithHttpInfo (string edgeId);
         
         /// <summary>
         /// Get the edge version report.
@@ -1752,7 +1752,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="endpointId">Endpoint ID</param>
         /// <returns>Endpoint</returns>
-        Endpoint GetEndpoint (string endpointId);
+        Endpoint GetEndpointsEndpointId (string endpointId);
   
         /// <summary>
         /// Get endpoint
@@ -1762,7 +1762,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="endpointId">Endpoint ID</param>
         /// <returns>ApiResponse of Endpoint</returns>
-        ApiResponse<Endpoint> GetEndpointWithHttpInfo (string endpointId);
+        ApiResponse<Endpoint> GetEndpointsEndpointIdWithHttpInfo (string endpointId);
 
         /// <summary>
         /// Get endpoint
@@ -1772,7 +1772,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="endpointId">Endpoint ID</param>
         /// <returns>Task of Endpoint</returns>
-        System.Threading.Tasks.Task<Endpoint> GetEndpointAsync (string endpointId);
+        System.Threading.Tasks.Task<Endpoint> GetEndpointsEndpointIdAsync (string endpointId);
 
         /// <summary>
         /// Get endpoint
@@ -1782,7 +1782,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="endpointId">Endpoint ID</param>
         /// <returns>Task of ApiResponse (Endpoint)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Endpoint>> GetEndpointAsyncWithHttpInfo (string endpointId);
+        System.Threading.Tasks.Task<ApiResponse<Endpoint>> GetEndpointsEndpointIdAsyncWithHttpInfo (string endpointId);
         
         /// <summary>
         /// Update endpoint
@@ -1793,7 +1793,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endpointId">Endpoint ID</param>
         /// <param name="body">EndpointTemplate</param>
         /// <returns>Endpoint</returns>
-        Endpoint PutEndpoint (string endpointId, Endpoint body = null);
+        Endpoint PutEndpointsEndpointId (string endpointId, Endpoint body = null);
   
         /// <summary>
         /// Update endpoint
@@ -1804,7 +1804,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endpointId">Endpoint ID</param>
         /// <param name="body">EndpointTemplate</param>
         /// <returns>ApiResponse of Endpoint</returns>
-        ApiResponse<Endpoint> PutEndpointWithHttpInfo (string endpointId, Endpoint body = null);
+        ApiResponse<Endpoint> PutEndpointsEndpointIdWithHttpInfo (string endpointId, Endpoint body = null);
 
         /// <summary>
         /// Update endpoint
@@ -1815,7 +1815,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endpointId">Endpoint ID</param>
         /// <param name="body">EndpointTemplate</param>
         /// <returns>Task of Endpoint</returns>
-        System.Threading.Tasks.Task<Endpoint> PutEndpointAsync (string endpointId, Endpoint body = null);
+        System.Threading.Tasks.Task<Endpoint> PutEndpointsEndpointIdAsync (string endpointId, Endpoint body = null);
 
         /// <summary>
         /// Update endpoint
@@ -1826,7 +1826,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endpointId">Endpoint ID</param>
         /// <param name="body">EndpointTemplate</param>
         /// <returns>Task of ApiResponse (Endpoint)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Endpoint>> PutEndpointAsyncWithHttpInfo (string endpointId, Endpoint body = null);
+        System.Threading.Tasks.Task<ApiResponse<Endpoint>> PutEndpointsEndpointIdAsyncWithHttpInfo (string endpointId, Endpoint body = null);
         
         /// <summary>
         /// Delete endpoint
@@ -1836,7 +1836,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="endpointId">Endpoint ID</param>
         /// <returns>string</returns>
-        string DeleteEndpoint (string endpointId);
+        string DeleteEndpointsEndpointId (string endpointId);
   
         /// <summary>
         /// Delete endpoint
@@ -1846,7 +1846,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="endpointId">Endpoint ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteEndpointWithHttpInfo (string endpointId);
+        ApiResponse<string> DeleteEndpointsEndpointIdWithHttpInfo (string endpointId);
 
         /// <summary>
         /// Delete endpoint
@@ -1856,7 +1856,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="endpointId">Endpoint ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteEndpointAsync (string endpointId);
+        System.Threading.Tasks.Task<string> DeleteEndpointsEndpointIdAsync (string endpointId);
 
         /// <summary>
         /// Delete endpoint
@@ -1866,7 +1866,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="endpointId">Endpoint ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteEndpointAsyncWithHttpInfo (string endpointId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteEndpointsEndpointIdAsyncWithHttpInfo (string endpointId);
         
         /// <summary>
         /// Get a listing of extension pools
@@ -1968,7 +1968,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <returns>ExtensionPool</returns>
-        ExtensionPool GetExtensionpool (string extensionPoolId);
+        ExtensionPool GetExtensionpoolsExtensionpoolId (string extensionPoolId);
   
         /// <summary>
         /// Get an extension pool by ID
@@ -1978,7 +1978,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <returns>ApiResponse of ExtensionPool</returns>
-        ApiResponse<ExtensionPool> GetExtensionpoolWithHttpInfo (string extensionPoolId);
+        ApiResponse<ExtensionPool> GetExtensionpoolsExtensionpoolIdWithHttpInfo (string extensionPoolId);
 
         /// <summary>
         /// Get an extension pool by ID
@@ -1988,7 +1988,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <returns>Task of ExtensionPool</returns>
-        System.Threading.Tasks.Task<ExtensionPool> GetExtensionpoolAsync (string extensionPoolId);
+        System.Threading.Tasks.Task<ExtensionPool> GetExtensionpoolsExtensionpoolIdAsync (string extensionPoolId);
 
         /// <summary>
         /// Get an extension pool by ID
@@ -1998,7 +1998,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <returns>Task of ApiResponse (ExtensionPool)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExtensionPool>> GetExtensionpoolAsyncWithHttpInfo (string extensionPoolId);
+        System.Threading.Tasks.Task<ApiResponse<ExtensionPool>> GetExtensionpoolsExtensionpoolIdAsyncWithHttpInfo (string extensionPoolId);
         
         /// <summary>
         /// Update an extension pool by ID
@@ -2009,7 +2009,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <param name="body">ExtensionPool</param>
         /// <returns>ExtensionPool</returns>
-        ExtensionPool PutExtensionpool (string extensionPoolId, ExtensionPool body = null);
+        ExtensionPool PutExtensionpoolsExtensionpoolId (string extensionPoolId, ExtensionPool body = null);
   
         /// <summary>
         /// Update an extension pool by ID
@@ -2020,7 +2020,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <param name="body">ExtensionPool</param>
         /// <returns>ApiResponse of ExtensionPool</returns>
-        ApiResponse<ExtensionPool> PutExtensionpoolWithHttpInfo (string extensionPoolId, ExtensionPool body = null);
+        ApiResponse<ExtensionPool> PutExtensionpoolsExtensionpoolIdWithHttpInfo (string extensionPoolId, ExtensionPool body = null);
 
         /// <summary>
         /// Update an extension pool by ID
@@ -2031,7 +2031,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <param name="body">ExtensionPool</param>
         /// <returns>Task of ExtensionPool</returns>
-        System.Threading.Tasks.Task<ExtensionPool> PutExtensionpoolAsync (string extensionPoolId, ExtensionPool body = null);
+        System.Threading.Tasks.Task<ExtensionPool> PutExtensionpoolsExtensionpoolIdAsync (string extensionPoolId, ExtensionPool body = null);
 
         /// <summary>
         /// Update an extension pool by ID
@@ -2042,7 +2042,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <param name="body">ExtensionPool</param>
         /// <returns>Task of ApiResponse (ExtensionPool)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExtensionPool>> PutExtensionpoolAsyncWithHttpInfo (string extensionPoolId, ExtensionPool body = null);
+        System.Threading.Tasks.Task<ApiResponse<ExtensionPool>> PutExtensionpoolsExtensionpoolIdAsyncWithHttpInfo (string extensionPoolId, ExtensionPool body = null);
         
         /// <summary>
         /// Delete an extension pool by ID
@@ -2052,7 +2052,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <returns>string</returns>
-        string DeleteExtensionpool (string extensionPoolId);
+        string DeleteExtensionpoolsExtensionpoolId (string extensionPoolId);
   
         /// <summary>
         /// Delete an extension pool by ID
@@ -2062,7 +2062,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteExtensionpoolWithHttpInfo (string extensionPoolId);
+        ApiResponse<string> DeleteExtensionpoolsExtensionpoolIdWithHttpInfo (string extensionPoolId);
 
         /// <summary>
         /// Delete an extension pool by ID
@@ -2072,7 +2072,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteExtensionpoolAsync (string extensionPoolId);
+        System.Threading.Tasks.Task<string> DeleteExtensionpoolsExtensionpoolIdAsync (string extensionPoolId);
 
         /// <summary>
         /// Delete an extension pool by ID
@@ -2082,7 +2082,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteExtensionpoolAsyncWithHttpInfo (string extensionPoolId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteExtensionpoolsExtensionpoolIdAsyncWithHttpInfo (string extensionPoolId);
         
         /// <summary>
         /// Get a listing of extensions
@@ -2148,7 +2148,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="extensionId">Extension ID</param>
         /// <returns>Extension</returns>
-        Extension GetExtension (string extensionId);
+        Extension GetExtensionsExtensionId (string extensionId);
   
         /// <summary>
         /// Get an extension by ID.
@@ -2158,7 +2158,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="extensionId">Extension ID</param>
         /// <returns>ApiResponse of Extension</returns>
-        ApiResponse<Extension> GetExtensionWithHttpInfo (string extensionId);
+        ApiResponse<Extension> GetExtensionsExtensionIdWithHttpInfo (string extensionId);
 
         /// <summary>
         /// Get an extension by ID.
@@ -2168,7 +2168,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="extensionId">Extension ID</param>
         /// <returns>Task of Extension</returns>
-        System.Threading.Tasks.Task<Extension> GetExtensionAsync (string extensionId);
+        System.Threading.Tasks.Task<Extension> GetExtensionsExtensionIdAsync (string extensionId);
 
         /// <summary>
         /// Get an extension by ID.
@@ -2178,7 +2178,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="extensionId">Extension ID</param>
         /// <returns>Task of ApiResponse (Extension)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Extension>> GetExtensionAsyncWithHttpInfo (string extensionId);
+        System.Threading.Tasks.Task<ApiResponse<Extension>> GetExtensionsExtensionIdAsyncWithHttpInfo (string extensionId);
         
         /// <summary>
         /// Update an extension by ID.
@@ -2189,7 +2189,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="extensionId">Extension ID</param>
         /// <param name="body"></param>
         /// <returns>Extension</returns>
-        Extension PutExtension (string extensionId, Extension body = null);
+        Extension PutExtensionsExtensionId (string extensionId, Extension body = null);
   
         /// <summary>
         /// Update an extension by ID.
@@ -2200,7 +2200,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="extensionId">Extension ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of Extension</returns>
-        ApiResponse<Extension> PutExtensionWithHttpInfo (string extensionId, Extension body = null);
+        ApiResponse<Extension> PutExtensionsExtensionIdWithHttpInfo (string extensionId, Extension body = null);
 
         /// <summary>
         /// Update an extension by ID.
@@ -2211,7 +2211,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="extensionId">Extension ID</param>
         /// <param name="body"></param>
         /// <returns>Task of Extension</returns>
-        System.Threading.Tasks.Task<Extension> PutExtensionAsync (string extensionId, Extension body = null);
+        System.Threading.Tasks.Task<Extension> PutExtensionsExtensionIdAsync (string extensionId, Extension body = null);
 
         /// <summary>
         /// Update an extension by ID.
@@ -2222,7 +2222,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="extensionId">Extension ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Extension)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Extension>> PutExtensionAsyncWithHttpInfo (string extensionId, Extension body = null);
+        System.Threading.Tasks.Task<ApiResponse<Extension>> PutExtensionsExtensionIdAsyncWithHttpInfo (string extensionId, Extension body = null);
         
         /// <summary>
         /// Gets media retention policy list with query options to filter on name and enabled.
@@ -2380,7 +2380,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Policy</returns>
-        Policy GetMediaretentionpolicie (string policyId);
+        Policy GetMediaretentionpoliciesPolicyId (string policyId);
   
         /// <summary>
         /// Get a media retention policy
@@ -2390,7 +2390,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="policyId">Policy ID</param>
         /// <returns>ApiResponse of Policy</returns>
-        ApiResponse<Policy> GetMediaretentionpolicieWithHttpInfo (string policyId);
+        ApiResponse<Policy> GetMediaretentionpoliciesPolicyIdWithHttpInfo (string policyId);
 
         /// <summary>
         /// Get a media retention policy
@@ -2400,7 +2400,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of Policy</returns>
-        System.Threading.Tasks.Task<Policy> GetMediaretentionpolicieAsync (string policyId);
+        System.Threading.Tasks.Task<Policy> GetMediaretentionpoliciesPolicyIdAsync (string policyId);
 
         /// <summary>
         /// Get a media retention policy
@@ -2410,7 +2410,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Policy>> GetMediaretentionpolicieAsyncWithHttpInfo (string policyId);
+        System.Threading.Tasks.Task<ApiResponse<Policy>> GetMediaretentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId);
         
         /// <summary>
         /// Update a media retention policy
@@ -2421,7 +2421,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Policy</returns>
-        Policy PutMediaretentionpolicie (string policyId, Policy body = null);
+        Policy PutMediaretentionpoliciesPolicyId (string policyId, Policy body = null);
   
         /// <summary>
         /// Update a media retention policy
@@ -2432,7 +2432,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
-        ApiResponse<Policy> PutMediaretentionpolicieWithHttpInfo (string policyId, Policy body = null);
+        ApiResponse<Policy> PutMediaretentionpoliciesPolicyIdWithHttpInfo (string policyId, Policy body = null);
 
         /// <summary>
         /// Update a media retention policy
@@ -2443,7 +2443,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
-        System.Threading.Tasks.Task<Policy> PutMediaretentionpolicieAsync (string policyId, Policy body = null);
+        System.Threading.Tasks.Task<Policy> PutMediaretentionpoliciesPolicyIdAsync (string policyId, Policy body = null);
 
         /// <summary>
         /// Update a media retention policy
@@ -2454,7 +2454,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Policy>> PutMediaretentionpolicieAsyncWithHttpInfo (string policyId, Policy body = null);
+        System.Threading.Tasks.Task<ApiResponse<Policy>> PutMediaretentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId, Policy body = null);
         
         /// <summary>
         /// Delete a media retention policy
@@ -2464,7 +2464,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="policyId">Policy ID</param>
         /// <returns>string</returns>
-        string DeleteMediaretentionpolicie (string policyId);
+        string DeleteMediaretentionpoliciesPolicyId (string policyId);
   
         /// <summary>
         /// Delete a media retention policy
@@ -2474,7 +2474,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="policyId">Policy ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteMediaretentionpolicieWithHttpInfo (string policyId);
+        ApiResponse<string> DeleteMediaretentionpoliciesPolicyIdWithHttpInfo (string policyId);
 
         /// <summary>
         /// Delete a media retention policy
@@ -2484,7 +2484,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteMediaretentionpolicieAsync (string policyId);
+        System.Threading.Tasks.Task<string> DeleteMediaretentionpoliciesPolicyIdAsync (string policyId);
 
         /// <summary>
         /// Delete a media retention policy
@@ -2494,7 +2494,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteMediaretentionpolicieAsyncWithHttpInfo (string policyId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteMediaretentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId);
         
         /// <summary>
         /// Patch a media retention policy
@@ -2505,7 +2505,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Policy</returns>
-        Policy PatchMediaretentionpolicie (string policyId, Policy body = null);
+        Policy PatchMediaretentionpoliciesPolicyId (string policyId, Policy body = null);
   
         /// <summary>
         /// Patch a media retention policy
@@ -2516,7 +2516,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
-        ApiResponse<Policy> PatchMediaretentionpolicieWithHttpInfo (string policyId, Policy body = null);
+        ApiResponse<Policy> PatchMediaretentionpoliciesPolicyIdWithHttpInfo (string policyId, Policy body = null);
 
         /// <summary>
         /// Patch a media retention policy
@@ -2527,7 +2527,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
-        System.Threading.Tasks.Task<Policy> PatchMediaretentionpolicieAsync (string policyId, Policy body = null);
+        System.Threading.Tasks.Task<Policy> PatchMediaretentionpoliciesPolicyIdAsync (string policyId, Policy body = null);
 
         /// <summary>
         /// Patch a media retention policy
@@ -2538,7 +2538,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Policy>> PatchMediaretentionpolicieAsyncWithHttpInfo (string policyId, Policy body = null);
+        System.Threading.Tasks.Task<ApiResponse<Policy>> PatchMediaretentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId, Policy body = null);
         
         /// <summary>
         /// Get context organization.
@@ -2664,7 +2664,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="orgId">Organization ID</param>
         /// <returns>Organization</returns>
-        Organization GetOrganization_0 (string orgId);
+        Organization GetOrganizationsOrgId (string orgId);
   
         /// <summary>
         /// Get organization.
@@ -2674,7 +2674,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="orgId">Organization ID</param>
         /// <returns>ApiResponse of Organization</returns>
-        ApiResponse<Organization> GetOrganization_0WithHttpInfo (string orgId);
+        ApiResponse<Organization> GetOrganizationsOrgIdWithHttpInfo (string orgId);
 
         /// <summary>
         /// Get organization.
@@ -2684,7 +2684,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="orgId">Organization ID</param>
         /// <returns>Task of Organization</returns>
-        System.Threading.Tasks.Task<Organization> GetOrganization_0Async (string orgId);
+        System.Threading.Tasks.Task<Organization> GetOrganizationsOrgIdAsync (string orgId);
 
         /// <summary>
         /// Get organization.
@@ -2694,7 +2694,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="orgId">Organization ID</param>
         /// <returns>Task of ApiResponse (Organization)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Organization>> GetOrganization_0AsyncWithHttpInfo (string orgId);
+        System.Threading.Tasks.Task<ApiResponse<Organization>> GetOrganizationsOrgIdAsyncWithHttpInfo (string orgId);
         
         /// <summary>
         /// Update organization.
@@ -2705,7 +2705,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="orgId">Organization ID</param>
         /// <param name="body">Organization</param>
         /// <returns>Organization</returns>
-        Organization PutOrganization_0 (string orgId, Organization body = null);
+        Organization PutOrganizationsOrgId (string orgId, Organization body = null);
   
         /// <summary>
         /// Update organization.
@@ -2716,7 +2716,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="orgId">Organization ID</param>
         /// <param name="body">Organization</param>
         /// <returns>ApiResponse of Organization</returns>
-        ApiResponse<Organization> PutOrganization_0WithHttpInfo (string orgId, Organization body = null);
+        ApiResponse<Organization> PutOrganizationsOrgIdWithHttpInfo (string orgId, Organization body = null);
 
         /// <summary>
         /// Update organization.
@@ -2727,7 +2727,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="orgId">Organization ID</param>
         /// <param name="body">Organization</param>
         /// <returns>Task of Organization</returns>
-        System.Threading.Tasks.Task<Organization> PutOrganization_0Async (string orgId, Organization body = null);
+        System.Threading.Tasks.Task<Organization> PutOrganizationsOrgIdAsync (string orgId, Organization body = null);
 
         /// <summary>
         /// Update organization.
@@ -2738,7 +2738,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="orgId">Organization ID</param>
         /// <param name="body">Organization</param>
         /// <returns>Task of ApiResponse (Organization)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Organization>> PutOrganization_0AsyncWithHttpInfo (string orgId, Organization body = null);
+        System.Threading.Tasks.Task<ApiResponse<Organization>> PutOrganizationsOrgIdAsyncWithHttpInfo (string orgId, Organization body = null);
         
         /// <summary>
         /// Delete an organization.
@@ -2748,7 +2748,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="orgId">Organization ID</param>
         /// <returns>string</returns>
-        string DeleteOrganization (string orgId);
+        string DeleteOrganizationsOrgId (string orgId);
   
         /// <summary>
         /// Delete an organization.
@@ -2758,7 +2758,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="orgId">Organization ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteOrganizationWithHttpInfo (string orgId);
+        ApiResponse<string> DeleteOrganizationsOrgIdWithHttpInfo (string orgId);
 
         /// <summary>
         /// Delete an organization.
@@ -2768,7 +2768,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="orgId">Organization ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteOrganizationAsync (string orgId);
+        System.Threading.Tasks.Task<string> DeleteOrganizationsOrgIdAsync (string orgId);
 
         /// <summary>
         /// Delete an organization.
@@ -2778,7 +2778,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="orgId">Organization ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteOrganizationAsyncWithHttpInfo (string orgId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteOrganizationsOrgIdAsyncWithHttpInfo (string orgId);
         
         /// <summary>
         /// Get encryption key list
@@ -3092,7 +3092,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Policy</returns>
-        Policy GetRetentionpolicie (string policyId);
+        Policy GetRetentionpoliciesPolicyId (string policyId);
   
         /// <summary>
         /// Get policy
@@ -3102,7 +3102,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="policyId">Policy ID</param>
         /// <returns>ApiResponse of Policy</returns>
-        ApiResponse<Policy> GetRetentionpolicieWithHttpInfo (string policyId);
+        ApiResponse<Policy> GetRetentionpoliciesPolicyIdWithHttpInfo (string policyId);
 
         /// <summary>
         /// Get policy
@@ -3112,7 +3112,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of Policy</returns>
-        System.Threading.Tasks.Task<Policy> GetRetentionpolicieAsync (string policyId);
+        System.Threading.Tasks.Task<Policy> GetRetentionpoliciesPolicyIdAsync (string policyId);
 
         /// <summary>
         /// Get policy
@@ -3122,7 +3122,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Policy>> GetRetentionpolicieAsyncWithHttpInfo (string policyId);
+        System.Threading.Tasks.Task<ApiResponse<Policy>> GetRetentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId);
         
         /// <summary>
         /// Update policy
@@ -3133,7 +3133,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Policy</returns>
-        Policy PutRetentionpolicie (string policyId, Policy body = null);
+        Policy PutRetentionpoliciesPolicyId (string policyId, Policy body = null);
   
         /// <summary>
         /// Update policy
@@ -3144,7 +3144,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
-        ApiResponse<Policy> PutRetentionpolicieWithHttpInfo (string policyId, Policy body = null);
+        ApiResponse<Policy> PutRetentionpoliciesPolicyIdWithHttpInfo (string policyId, Policy body = null);
 
         /// <summary>
         /// Update policy
@@ -3155,7 +3155,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
-        System.Threading.Tasks.Task<Policy> PutRetentionpolicieAsync (string policyId, Policy body = null);
+        System.Threading.Tasks.Task<Policy> PutRetentionpoliciesPolicyIdAsync (string policyId, Policy body = null);
 
         /// <summary>
         /// Update policy
@@ -3166,7 +3166,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Policy>> PutRetentionpolicieAsyncWithHttpInfo (string policyId, Policy body = null);
+        System.Threading.Tasks.Task<ApiResponse<Policy>> PutRetentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId, Policy body = null);
         
         /// <summary>
         /// Delete policy
@@ -3176,7 +3176,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="policyId">Policy ID</param>
         /// <returns>string</returns>
-        string DeleteRetentionpolicie (string policyId);
+        string DeleteRetentionpoliciesPolicyId (string policyId);
   
         /// <summary>
         /// Delete policy
@@ -3186,7 +3186,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="policyId">Policy ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteRetentionpolicieWithHttpInfo (string policyId);
+        ApiResponse<string> DeleteRetentionpoliciesPolicyIdWithHttpInfo (string policyId);
 
         /// <summary>
         /// Delete policy
@@ -3196,7 +3196,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteRetentionpolicieAsync (string policyId);
+        System.Threading.Tasks.Task<string> DeleteRetentionpoliciesPolicyIdAsync (string policyId);
 
         /// <summary>
         /// Delete policy
@@ -3206,7 +3206,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteRetentionpolicieAsyncWithHttpInfo (string policyId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteRetentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId);
         
         /// <summary>
         /// Patch a retention policy
@@ -3217,7 +3217,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Policy</returns>
-        Policy PatchRetentionpolicie (string policyId, Policy body = null);
+        Policy PatchRetentionpoliciesPolicyId (string policyId, Policy body = null);
   
         /// <summary>
         /// Patch a retention policy
@@ -3228,7 +3228,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
-        ApiResponse<Policy> PatchRetentionpolicieWithHttpInfo (string policyId, Policy body = null);
+        ApiResponse<Policy> PatchRetentionpoliciesPolicyIdWithHttpInfo (string policyId, Policy body = null);
 
         /// <summary>
         /// Patch a retention policy
@@ -3239,7 +3239,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
-        System.Threading.Tasks.Task<Policy> PatchRetentionpolicieAsync (string policyId, Policy body = null);
+        System.Threading.Tasks.Task<Policy> PatchRetentionpoliciesPolicyIdAsync (string policyId, Policy body = null);
 
         /// <summary>
         /// Patch a retention policy
@@ -3250,7 +3250,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Policy>> PatchRetentionpolicieAsyncWithHttpInfo (string policyId, Policy body = null);
+        System.Threading.Tasks.Task<ApiResponse<Policy>> PatchRetentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId, Policy body = null);
         
         /// <summary>
         /// Lists available schema categories
@@ -3306,7 +3306,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>SchemaReferenceEntityListing</returns>
-        SchemaReferenceEntityListing GetSchemasEdgesVnext_0 (string schemaCategory, int? pageSize = null, int? pageNumber = null);
+        SchemaReferenceEntityListing GetSchemasEdgesVnextSchemacategory (string schemaCategory, int? pageSize = null, int? pageNumber = null);
   
         /// <summary>
         /// List schemas of a specific category
@@ -3318,7 +3318,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>ApiResponse of SchemaReferenceEntityListing</returns>
-        ApiResponse<SchemaReferenceEntityListing> GetSchemasEdgesVnext_0WithHttpInfo (string schemaCategory, int? pageSize = null, int? pageNumber = null);
+        ApiResponse<SchemaReferenceEntityListing> GetSchemasEdgesVnextSchemacategoryWithHttpInfo (string schemaCategory, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// List schemas of a specific category
@@ -3330,7 +3330,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of SchemaReferenceEntityListing</returns>
-        System.Threading.Tasks.Task<SchemaReferenceEntityListing> GetSchemasEdgesVnext_0Async (string schemaCategory, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<SchemaReferenceEntityListing> GetSchemasEdgesVnextSchemacategoryAsync (string schemaCategory, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// List schemas of a specific category
@@ -3342,7 +3342,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (SchemaReferenceEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SchemaReferenceEntityListing>> GetSchemasEdgesVnext_0AsyncWithHttpInfo (string schemaCategory, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<SchemaReferenceEntityListing>> GetSchemasEdgesVnextSchemacategoryAsyncWithHttpInfo (string schemaCategory, int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
         /// List schemas of a specific category
@@ -3355,7 +3355,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>SchemaReferenceEntityListing</returns>
-        SchemaReferenceEntityListing GetSchemasEdgesVnext_1 (string schemaCategory, string schemaType, int? pageSize = null, int? pageNumber = null);
+        SchemaReferenceEntityListing GetSchemasEdgesVnextSchemacategorySchematype (string schemaCategory, string schemaType, int? pageSize = null, int? pageNumber = null);
   
         /// <summary>
         /// List schemas of a specific category
@@ -3368,7 +3368,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>ApiResponse of SchemaReferenceEntityListing</returns>
-        ApiResponse<SchemaReferenceEntityListing> GetSchemasEdgesVnext_1WithHttpInfo (string schemaCategory, string schemaType, int? pageSize = null, int? pageNumber = null);
+        ApiResponse<SchemaReferenceEntityListing> GetSchemasEdgesVnextSchemacategorySchematypeWithHttpInfo (string schemaCategory, string schemaType, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// List schemas of a specific category
@@ -3381,7 +3381,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of SchemaReferenceEntityListing</returns>
-        System.Threading.Tasks.Task<SchemaReferenceEntityListing> GetSchemasEdgesVnext_1Async (string schemaCategory, string schemaType, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<SchemaReferenceEntityListing> GetSchemasEdgesVnextSchemacategorySchematypeAsync (string schemaCategory, string schemaType, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// List schemas of a specific category
@@ -3394,7 +3394,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (SchemaReferenceEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SchemaReferenceEntityListing>> GetSchemasEdgesVnext_1AsyncWithHttpInfo (string schemaCategory, string schemaType, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<SchemaReferenceEntityListing>> GetSchemasEdgesVnextSchemacategorySchematypeAsyncWithHttpInfo (string schemaCategory, string schemaType, int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
         /// Get a json schema
@@ -3406,7 +3406,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="schemaType">Schema type</param>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Organization</returns>
-        Organization GetSchemasEdgesVnext_2 (string schemaCategory, string schemaType, string schemaId);
+        Organization GetSchemasEdgesVnextSchemacategorySchematypeSchemaId (string schemaCategory, string schemaType, string schemaId);
   
         /// <summary>
         /// Get a json schema
@@ -3418,7 +3418,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="schemaType">Schema type</param>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>ApiResponse of Organization</returns>
-        ApiResponse<Organization> GetSchemasEdgesVnext_2WithHttpInfo (string schemaCategory, string schemaType, string schemaId);
+        ApiResponse<Organization> GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdWithHttpInfo (string schemaCategory, string schemaType, string schemaId);
 
         /// <summary>
         /// Get a json schema
@@ -3430,7 +3430,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="schemaType">Schema type</param>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of Organization</returns>
-        System.Threading.Tasks.Task<Organization> GetSchemasEdgesVnext_2Async (string schemaCategory, string schemaType, string schemaId);
+        System.Threading.Tasks.Task<Organization> GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdAsync (string schemaCategory, string schemaType, string schemaId);
 
         /// <summary>
         /// Get a json schema
@@ -3442,7 +3442,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="schemaType">Schema type</param>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of ApiResponse (Organization)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Organization>> GetSchemasEdgesVnext_2AsyncWithHttpInfo (string schemaCategory, string schemaType, string schemaId);
+        System.Threading.Tasks.Task<ApiResponse<Organization>> GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdAsyncWithHttpInfo (string schemaCategory, string schemaType, string schemaId);
         
         /// <summary>
         /// Get metadata for a schema
@@ -3457,7 +3457,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="metadataId">Metadata ID</param>
         /// <param name="type">Type</param>
         /// <returns>Organization</returns>
-        Organization GetSchemasEdgesVnext_3 (string schemaCategory, string schemaType, string schemaId, string extension, string metadataId, string type = null);
+        Organization GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId (string schemaCategory, string schemaType, string schemaId, string extension, string metadataId, string type = null);
   
         /// <summary>
         /// Get metadata for a schema
@@ -3472,7 +3472,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="metadataId">Metadata ID</param>
         /// <param name="type">Type</param>
         /// <returns>ApiResponse of Organization</returns>
-        ApiResponse<Organization> GetSchemasEdgesVnext_3WithHttpInfo (string schemaCategory, string schemaType, string schemaId, string extension, string metadataId, string type = null);
+        ApiResponse<Organization> GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataIdWithHttpInfo (string schemaCategory, string schemaType, string schemaId, string extension, string metadataId, string type = null);
 
         /// <summary>
         /// Get metadata for a schema
@@ -3487,7 +3487,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="metadataId">Metadata ID</param>
         /// <param name="type">Type</param>
         /// <returns>Task of Organization</returns>
-        System.Threading.Tasks.Task<Organization> GetSchemasEdgesVnext_3Async (string schemaCategory, string schemaType, string schemaId, string extension, string metadataId, string type = null);
+        System.Threading.Tasks.Task<Organization> GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataIdAsync (string schemaCategory, string schemaType, string schemaId, string extension, string metadataId, string type = null);
 
         /// <summary>
         /// Get metadata for a schema
@@ -3502,7 +3502,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="metadataId">Metadata ID</param>
         /// <param name="type">Type</param>
         /// <returns>Task of ApiResponse (Organization)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Organization>> GetSchemasEdgesVnext_3AsyncWithHttpInfo (string schemaCategory, string schemaType, string schemaId, string extension, string metadataId, string type = null);
+        System.Threading.Tasks.Task<ApiResponse<Organization>> GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataIdAsyncWithHttpInfo (string schemaCategory, string schemaType, string schemaId, string extension, string metadataId, string type = null);
         
         /// <summary>
         /// Get the list of sites.
@@ -3612,7 +3612,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="siteId">Site ID</param>
         /// <returns>Site</returns>
-        Site GetSite (string siteId);
+        Site GetSitesSiteId (string siteId);
   
         /// <summary>
         /// Get endpoint.
@@ -3622,7 +3622,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="siteId">Site ID</param>
         /// <returns>ApiResponse of Site</returns>
-        ApiResponse<Site> GetSiteWithHttpInfo (string siteId);
+        ApiResponse<Site> GetSitesSiteIdWithHttpInfo (string siteId);
 
         /// <summary>
         /// Get endpoint.
@@ -3632,7 +3632,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of Site</returns>
-        System.Threading.Tasks.Task<Site> GetSiteAsync (string siteId);
+        System.Threading.Tasks.Task<Site> GetSitesSiteIdAsync (string siteId);
 
         /// <summary>
         /// Get endpoint.
@@ -3642,7 +3642,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of ApiResponse (Site)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Site>> GetSiteAsyncWithHttpInfo (string siteId);
+        System.Threading.Tasks.Task<ApiResponse<Site>> GetSitesSiteIdAsyncWithHttpInfo (string siteId);
         
         /// <summary>
         /// Update a endpoint.
@@ -3653,7 +3653,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="body">Site</param>
         /// <returns>Site</returns>
-        Site PutSite (string siteId, Site body = null);
+        Site PutSitesSiteId (string siteId, Site body = null);
   
         /// <summary>
         /// Update a endpoint.
@@ -3664,7 +3664,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="body">Site</param>
         /// <returns>ApiResponse of Site</returns>
-        ApiResponse<Site> PutSiteWithHttpInfo (string siteId, Site body = null);
+        ApiResponse<Site> PutSitesSiteIdWithHttpInfo (string siteId, Site body = null);
 
         /// <summary>
         /// Update a endpoint.
@@ -3675,7 +3675,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="body">Site</param>
         /// <returns>Task of Site</returns>
-        System.Threading.Tasks.Task<Site> PutSiteAsync (string siteId, Site body = null);
+        System.Threading.Tasks.Task<Site> PutSitesSiteIdAsync (string siteId, Site body = null);
 
         /// <summary>
         /// Update a endpoint.
@@ -3686,7 +3686,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="body">Site</param>
         /// <returns>Task of ApiResponse (Site)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Site>> PutSiteAsyncWithHttpInfo (string siteId, Site body = null);
+        System.Threading.Tasks.Task<ApiResponse<Site>> PutSitesSiteIdAsyncWithHttpInfo (string siteId, Site body = null);
         
         /// <summary>
         /// Delete an ednpoint
@@ -3696,7 +3696,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="siteId">Site ID</param>
         /// <returns>string</returns>
-        string DeleteSite (string siteId);
+        string DeleteSitesSiteId (string siteId);
   
         /// <summary>
         /// Delete an ednpoint
@@ -3706,7 +3706,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="siteId">Site ID</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteSiteWithHttpInfo (string siteId);
+        ApiResponse<string> DeleteSitesSiteIdWithHttpInfo (string siteId);
 
         /// <summary>
         /// Delete an ednpoint
@@ -3716,7 +3716,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteSiteAsync (string siteId);
+        System.Threading.Tasks.Task<string> DeleteSitesSiteIdAsync (string siteId);
 
         /// <summary>
         /// Delete an ednpoint
@@ -3726,7 +3726,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteSiteAsyncWithHttpInfo (string siteId);
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteSitesSiteIdAsyncWithHttpInfo (string siteId);
         
         /// <summary>
         /// Get the list of Number Plans for this Site.
@@ -3736,7 +3736,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="siteId">Site ID</param>
         /// <returns>List&lt;NumberPlan&gt;</returns>
-        List<NumberPlan> GetSiteNumberplans (string siteId);
+        List<NumberPlan> GetSitesSiteIdNumberplans (string siteId);
   
         /// <summary>
         /// Get the list of Number Plans for this Site.
@@ -3746,7 +3746,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="siteId">Site ID</param>
         /// <returns>ApiResponse of List&lt;NumberPlan&gt;</returns>
-        ApiResponse<List<NumberPlan>> GetSiteNumberplansWithHttpInfo (string siteId);
+        ApiResponse<List<NumberPlan>> GetSitesSiteIdNumberplansWithHttpInfo (string siteId);
 
         /// <summary>
         /// Get the list of Number Plans for this Site.
@@ -3756,7 +3756,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of List&lt;NumberPlan&gt;</returns>
-        System.Threading.Tasks.Task<List<NumberPlan>> GetSiteNumberplansAsync (string siteId);
+        System.Threading.Tasks.Task<List<NumberPlan>> GetSitesSiteIdNumberplansAsync (string siteId);
 
         /// <summary>
         /// Get the list of Number Plans for this Site.
@@ -3766,7 +3766,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of ApiResponse (List&lt;NumberPlan&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<NumberPlan>>> GetSiteNumberplansAsyncWithHttpInfo (string siteId);
+        System.Threading.Tasks.Task<ApiResponse<List<NumberPlan>>> GetSitesSiteIdNumberplansAsyncWithHttpInfo (string siteId);
         
         /// <summary>
         /// Update the list of Number Plans.
@@ -3777,7 +3777,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="body"></param>
         /// <returns>List&lt;NumberPlan&gt;</returns>
-        List<NumberPlan> PutSiteNumberplans (string siteId, List<NumberPlan> body = null);
+        List<NumberPlan> PutSitesSiteIdNumberplans (string siteId, List<NumberPlan> body = null);
   
         /// <summary>
         /// Update the list of Number Plans.
@@ -3788,7 +3788,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="body"></param>
         /// <returns>ApiResponse of List&lt;NumberPlan&gt;</returns>
-        ApiResponse<List<NumberPlan>> PutSiteNumberplansWithHttpInfo (string siteId, List<NumberPlan> body = null);
+        ApiResponse<List<NumberPlan>> PutSitesSiteIdNumberplansWithHttpInfo (string siteId, List<NumberPlan> body = null);
 
         /// <summary>
         /// Update the list of Number Plans.
@@ -3799,7 +3799,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;NumberPlan&gt;</returns>
-        System.Threading.Tasks.Task<List<NumberPlan>> PutSiteNumberplansAsync (string siteId, List<NumberPlan> body = null);
+        System.Threading.Tasks.Task<List<NumberPlan>> PutSitesSiteIdNumberplansAsync (string siteId, List<NumberPlan> body = null);
 
         /// <summary>
         /// Update the list of Number Plans.
@@ -3810,7 +3810,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;NumberPlan&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<NumberPlan>>> PutSiteNumberplansAsyncWithHttpInfo (string siteId, List<NumberPlan> body = null);
+        System.Threading.Tasks.Task<ApiResponse<List<NumberPlan>>> PutSitesSiteIdNumberplansAsyncWithHttpInfo (string siteId, List<NumberPlan> body = null);
         
         /// <summary>
         /// Get a list of Classifications for this Site
@@ -3821,7 +3821,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="classification">Classification</param>
         /// <returns>List&lt;string&gt;</returns>
-        List<string> GetSiteNumberplansClassifications (string siteId, string classification = null);
+        List<string> GetSitesSiteIdNumberplansClassifications (string siteId, string classification = null);
   
         /// <summary>
         /// Get a list of Classifications for this Site
@@ -3832,7 +3832,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="classification">Classification</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        ApiResponse<List<string>> GetSiteNumberplansClassificationsWithHttpInfo (string siteId, string classification = null);
+        ApiResponse<List<string>> GetSitesSiteIdNumberplansClassificationsWithHttpInfo (string siteId, string classification = null);
 
         /// <summary>
         /// Get a list of Classifications for this Site
@@ -3843,7 +3843,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="classification">Classification</param>
         /// <returns>Task of List&lt;string&gt;</returns>
-        System.Threading.Tasks.Task<List<string>> GetSiteNumberplansClassificationsAsync (string siteId, string classification = null);
+        System.Threading.Tasks.Task<List<string>> GetSitesSiteIdNumberplansClassificationsAsync (string siteId, string classification = null);
 
         /// <summary>
         /// Get a list of Classifications for this Site
@@ -3854,7 +3854,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="classification">Classification</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<string>>> GetSiteNumberplansClassificationsAsyncWithHttpInfo (string siteId, string classification = null);
+        System.Threading.Tasks.Task<ApiResponse<List<string>>> GetSitesSiteIdNumberplansClassificationsAsyncWithHttpInfo (string siteId, string classification = null);
         
         /// <summary>
         /// Get a Number Plan by ID.
@@ -3865,7 +3865,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="numberPlanId">Number Plan ID</param>
         /// <returns>NumberPlan</returns>
-        NumberPlan GetSiteNumberplan (string siteId, string numberPlanId);
+        NumberPlan GetSitesSiteIdNumberplansNumberplanId (string siteId, string numberPlanId);
   
         /// <summary>
         /// Get a Number Plan by ID.
@@ -3876,7 +3876,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="numberPlanId">Number Plan ID</param>
         /// <returns>ApiResponse of NumberPlan</returns>
-        ApiResponse<NumberPlan> GetSiteNumberplanWithHttpInfo (string siteId, string numberPlanId);
+        ApiResponse<NumberPlan> GetSitesSiteIdNumberplansNumberplanIdWithHttpInfo (string siteId, string numberPlanId);
 
         /// <summary>
         /// Get a Number Plan by ID.
@@ -3887,7 +3887,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="numberPlanId">Number Plan ID</param>
         /// <returns>Task of NumberPlan</returns>
-        System.Threading.Tasks.Task<NumberPlan> GetSiteNumberplanAsync (string siteId, string numberPlanId);
+        System.Threading.Tasks.Task<NumberPlan> GetSitesSiteIdNumberplansNumberplanIdAsync (string siteId, string numberPlanId);
 
         /// <summary>
         /// Get a Number Plan by ID.
@@ -3898,7 +3898,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="numberPlanId">Number Plan ID</param>
         /// <returns>Task of ApiResponse (NumberPlan)</returns>
-        System.Threading.Tasks.Task<ApiResponse<NumberPlan>> GetSiteNumberplanAsyncWithHttpInfo (string siteId, string numberPlanId);
+        System.Threading.Tasks.Task<ApiResponse<NumberPlan>> GetSitesSiteIdNumberplansNumberplanIdAsyncWithHttpInfo (string siteId, string numberPlanId);
         
         /// <summary>
         /// Triggers the rebalance operation.
@@ -3908,7 +3908,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="siteId">Site ID</param>
         /// <returns></returns>
-        void PostSiteRebalance (string siteId);
+        void PostSitesSiteIdRebalance (string siteId);
   
         /// <summary>
         /// Triggers the rebalance operation.
@@ -3918,7 +3918,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="siteId">Site ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostSiteRebalanceWithHttpInfo (string siteId);
+        ApiResponse<Object> PostSitesSiteIdRebalanceWithHttpInfo (string siteId);
 
         /// <summary>
         /// Triggers the rebalance operation.
@@ -3928,7 +3928,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostSiteRebalanceAsync (string siteId);
+        System.Threading.Tasks.Task PostSitesSiteIdRebalanceAsync (string siteId);
 
         /// <summary>
         /// Triggers the rebalance operation.
@@ -3938,7 +3938,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostSiteRebalanceAsyncWithHttpInfo (string siteId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostSitesSiteIdRebalanceAsyncWithHttpInfo (string siteId);
         
     }
   
@@ -4365,9 +4365,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="didPoolId">DID pool ID</param> 
         /// <returns>DIDPool</returns>
-        public DIDPool GetDidpool (string didPoolId)
+        public DIDPool GetDidpoolsDidpoolId (string didPoolId)
         {
-             ApiResponse<DIDPool> response = GetDidpoolWithHttpInfo(didPoolId);
+             ApiResponse<DIDPool> response = GetDidpoolsDidpoolIdWithHttpInfo(didPoolId);
              return response.Data;
         }
 
@@ -4376,12 +4376,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="didPoolId">DID pool ID</param> 
         /// <returns>ApiResponse of DIDPool</returns>
-        public ApiResponse< DIDPool > GetDidpoolWithHttpInfo (string didPoolId)
+        public ApiResponse< DIDPool > GetDidpoolsDidpoolIdWithHttpInfo (string didPoolId)
         {
             
             // verify the required parameter 'didPoolId' is set
             if (didPoolId == null)
-                throw new ApiException(400, "Missing required parameter 'didPoolId' when calling ConfigurationApi->GetDidpool");
+                throw new ApiException(400, "Missing required parameter 'didPoolId' when calling ConfigurationApi->GetDidpoolsDidpoolId");
             
     
             var path_ = "/api/v1/configuration/didpools/{didPoolId}";
@@ -4434,9 +4434,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetDidpool: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetDidpoolsDidpoolId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetDidpool: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetDidpoolsDidpoolId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DIDPool>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4449,9 +4449,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="didPoolId">DID pool ID</param>
         /// <returns>Task of DIDPool</returns>
-        public async System.Threading.Tasks.Task<DIDPool> GetDidpoolAsync (string didPoolId)
+        public async System.Threading.Tasks.Task<DIDPool> GetDidpoolsDidpoolIdAsync (string didPoolId)
         {
-             ApiResponse<DIDPool> response = await GetDidpoolAsyncWithHttpInfo(didPoolId);
+             ApiResponse<DIDPool> response = await GetDidpoolsDidpoolIdAsyncWithHttpInfo(didPoolId);
              return response.Data;
 
         }
@@ -4461,10 +4461,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="didPoolId">DID pool ID</param>
         /// <returns>Task of ApiResponse (DIDPool)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DIDPool>> GetDidpoolAsyncWithHttpInfo (string didPoolId)
+        public async System.Threading.Tasks.Task<ApiResponse<DIDPool>> GetDidpoolsDidpoolIdAsyncWithHttpInfo (string didPoolId)
         {
             // verify the required parameter 'didPoolId' is set
-            if (didPoolId == null) throw new ApiException(400, "Missing required parameter 'didPoolId' when calling GetDidpool");
+            if (didPoolId == null) throw new ApiException(400, "Missing required parameter 'didPoolId' when calling GetDidpoolsDidpoolId");
             
     
             var path_ = "/api/v1/configuration/didpools/{didPoolId}";
@@ -4518,9 +4518,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetDidpool: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetDidpoolsDidpoolId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetDidpool: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetDidpoolsDidpoolId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DIDPool>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4534,9 +4534,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="didPoolId">DID pool ID</param> 
         /// <param name="body"></param> 
         /// <returns>DIDPool</returns>
-        public DIDPool PutDidpool (string didPoolId, DIDPool body = null)
+        public DIDPool PutDidpoolsDidpoolId (string didPoolId, DIDPool body = null)
         {
-             ApiResponse<DIDPool> response = PutDidpoolWithHttpInfo(didPoolId, body);
+             ApiResponse<DIDPool> response = PutDidpoolsDidpoolIdWithHttpInfo(didPoolId, body);
              return response.Data;
         }
 
@@ -4546,12 +4546,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="didPoolId">DID pool ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of DIDPool</returns>
-        public ApiResponse< DIDPool > PutDidpoolWithHttpInfo (string didPoolId, DIDPool body = null)
+        public ApiResponse< DIDPool > PutDidpoolsDidpoolIdWithHttpInfo (string didPoolId, DIDPool body = null)
         {
             
             // verify the required parameter 'didPoolId' is set
             if (didPoolId == null)
-                throw new ApiException(400, "Missing required parameter 'didPoolId' when calling ConfigurationApi->PutDidpool");
+                throw new ApiException(400, "Missing required parameter 'didPoolId' when calling ConfigurationApi->PutDidpoolsDidpoolId");
             
     
             var path_ = "/api/v1/configuration/didpools/{didPoolId}";
@@ -4611,9 +4611,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutDidpool: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutDidpoolsDidpoolId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutDidpool: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutDidpoolsDidpoolId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DIDPool>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4627,9 +4627,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="didPoolId">DID pool ID</param>
         /// <param name="body"></param>
         /// <returns>Task of DIDPool</returns>
-        public async System.Threading.Tasks.Task<DIDPool> PutDidpoolAsync (string didPoolId, DIDPool body = null)
+        public async System.Threading.Tasks.Task<DIDPool> PutDidpoolsDidpoolIdAsync (string didPoolId, DIDPool body = null)
         {
-             ApiResponse<DIDPool> response = await PutDidpoolAsyncWithHttpInfo(didPoolId, body);
+             ApiResponse<DIDPool> response = await PutDidpoolsDidpoolIdAsyncWithHttpInfo(didPoolId, body);
              return response.Data;
 
         }
@@ -4640,10 +4640,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="didPoolId">DID pool ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DIDPool)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DIDPool>> PutDidpoolAsyncWithHttpInfo (string didPoolId, DIDPool body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DIDPool>> PutDidpoolsDidpoolIdAsyncWithHttpInfo (string didPoolId, DIDPool body = null)
         {
             // verify the required parameter 'didPoolId' is set
-            if (didPoolId == null) throw new ApiException(400, "Missing required parameter 'didPoolId' when calling PutDidpool");
+            if (didPoolId == null) throw new ApiException(400, "Missing required parameter 'didPoolId' when calling PutDidpoolsDidpoolId");
             
     
             var path_ = "/api/v1/configuration/didpools/{didPoolId}";
@@ -4698,9 +4698,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutDidpool: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutDidpoolsDidpoolId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutDidpool: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutDidpoolsDidpoolId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DIDPool>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4713,9 +4713,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="didPoolId">DID pool ID</param> 
         /// <returns>string</returns>
-        public string DeleteDidpool (string didPoolId)
+        public string DeleteDidpoolsDidpoolId (string didPoolId)
         {
-             ApiResponse<string> response = DeleteDidpoolWithHttpInfo(didPoolId);
+             ApiResponse<string> response = DeleteDidpoolsDidpoolIdWithHttpInfo(didPoolId);
              return response.Data;
         }
 
@@ -4724,12 +4724,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="didPoolId">DID pool ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteDidpoolWithHttpInfo (string didPoolId)
+        public ApiResponse< string > DeleteDidpoolsDidpoolIdWithHttpInfo (string didPoolId)
         {
             
             // verify the required parameter 'didPoolId' is set
             if (didPoolId == null)
-                throw new ApiException(400, "Missing required parameter 'didPoolId' when calling ConfigurationApi->DeleteDidpool");
+                throw new ApiException(400, "Missing required parameter 'didPoolId' when calling ConfigurationApi->DeleteDidpoolsDidpoolId");
             
     
             var path_ = "/api/v1/configuration/didpools/{didPoolId}";
@@ -4782,9 +4782,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteDidpool: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteDidpoolsDidpoolId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteDidpool: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteDidpoolsDidpoolId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -4797,9 +4797,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="didPoolId">DID pool ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteDidpoolAsync (string didPoolId)
+        public async System.Threading.Tasks.Task<string> DeleteDidpoolsDidpoolIdAsync (string didPoolId)
         {
-             ApiResponse<string> response = await DeleteDidpoolAsyncWithHttpInfo(didPoolId);
+             ApiResponse<string> response = await DeleteDidpoolsDidpoolIdAsyncWithHttpInfo(didPoolId);
              return response.Data;
 
         }
@@ -4809,10 +4809,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="didPoolId">DID pool ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteDidpoolAsyncWithHttpInfo (string didPoolId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteDidpoolsDidpoolIdAsyncWithHttpInfo (string didPoolId)
         {
             // verify the required parameter 'didPoolId' is set
-            if (didPoolId == null) throw new ApiException(400, "Missing required parameter 'didPoolId' when calling DeleteDidpool");
+            if (didPoolId == null) throw new ApiException(400, "Missing required parameter 'didPoolId' when calling DeleteDidpoolsDidpoolId");
             
     
             var path_ = "/api/v1/configuration/didpools/{didPoolId}";
@@ -4866,9 +4866,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteDidpool: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteDidpoolsDidpoolId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteDidpool: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteDidpoolsDidpoolId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5067,9 +5067,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="didId">DID ID</param> 
         /// <returns>DID</returns>
-        public DID GetDid (string didId)
+        public DID GetDidsDidId (string didId)
         {
-             ApiResponse<DID> response = GetDidWithHttpInfo(didId);
+             ApiResponse<DID> response = GetDidsDidIdWithHttpInfo(didId);
              return response.Data;
         }
 
@@ -5078,12 +5078,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="didId">DID ID</param> 
         /// <returns>ApiResponse of DID</returns>
-        public ApiResponse< DID > GetDidWithHttpInfo (string didId)
+        public ApiResponse< DID > GetDidsDidIdWithHttpInfo (string didId)
         {
             
             // verify the required parameter 'didId' is set
             if (didId == null)
-                throw new ApiException(400, "Missing required parameter 'didId' when calling ConfigurationApi->GetDid");
+                throw new ApiException(400, "Missing required parameter 'didId' when calling ConfigurationApi->GetDidsDidId");
             
     
             var path_ = "/api/v1/configuration/dids/{didId}";
@@ -5136,9 +5136,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetDid: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetDidsDidId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetDid: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetDidsDidId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DID>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5151,9 +5151,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="didId">DID ID</param>
         /// <returns>Task of DID</returns>
-        public async System.Threading.Tasks.Task<DID> GetDidAsync (string didId)
+        public async System.Threading.Tasks.Task<DID> GetDidsDidIdAsync (string didId)
         {
-             ApiResponse<DID> response = await GetDidAsyncWithHttpInfo(didId);
+             ApiResponse<DID> response = await GetDidsDidIdAsyncWithHttpInfo(didId);
              return response.Data;
 
         }
@@ -5163,10 +5163,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="didId">DID ID</param>
         /// <returns>Task of ApiResponse (DID)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DID>> GetDidAsyncWithHttpInfo (string didId)
+        public async System.Threading.Tasks.Task<ApiResponse<DID>> GetDidsDidIdAsyncWithHttpInfo (string didId)
         {
             // verify the required parameter 'didId' is set
-            if (didId == null) throw new ApiException(400, "Missing required parameter 'didId' when calling GetDid");
+            if (didId == null) throw new ApiException(400, "Missing required parameter 'didId' when calling GetDidsDidId");
             
     
             var path_ = "/api/v1/configuration/dids/{didId}";
@@ -5220,9 +5220,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetDid: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetDidsDidId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetDid: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetDidsDidId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DID>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5236,9 +5236,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="didId">DID ID</param> 
         /// <param name="body"></param> 
         /// <returns>DID</returns>
-        public DID PutDid (string didId, DID body = null)
+        public DID PutDidsDidId (string didId, DID body = null)
         {
-             ApiResponse<DID> response = PutDidWithHttpInfo(didId, body);
+             ApiResponse<DID> response = PutDidsDidIdWithHttpInfo(didId, body);
              return response.Data;
         }
 
@@ -5248,12 +5248,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="didId">DID ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of DID</returns>
-        public ApiResponse< DID > PutDidWithHttpInfo (string didId, DID body = null)
+        public ApiResponse< DID > PutDidsDidIdWithHttpInfo (string didId, DID body = null)
         {
             
             // verify the required parameter 'didId' is set
             if (didId == null)
-                throw new ApiException(400, "Missing required parameter 'didId' when calling ConfigurationApi->PutDid");
+                throw new ApiException(400, "Missing required parameter 'didId' when calling ConfigurationApi->PutDidsDidId");
             
     
             var path_ = "/api/v1/configuration/dids/{didId}";
@@ -5313,9 +5313,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutDid: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutDidsDidId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutDid: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutDidsDidId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DID>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -5329,9 +5329,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="didId">DID ID</param>
         /// <param name="body"></param>
         /// <returns>Task of DID</returns>
-        public async System.Threading.Tasks.Task<DID> PutDidAsync (string didId, DID body = null)
+        public async System.Threading.Tasks.Task<DID> PutDidsDidIdAsync (string didId, DID body = null)
         {
-             ApiResponse<DID> response = await PutDidAsyncWithHttpInfo(didId, body);
+             ApiResponse<DID> response = await PutDidsDidIdAsyncWithHttpInfo(didId, body);
              return response.Data;
 
         }
@@ -5342,10 +5342,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="didId">DID ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DID)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DID>> PutDidAsyncWithHttpInfo (string didId, DID body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DID>> PutDidsDidIdAsyncWithHttpInfo (string didId, DID body = null)
         {
             // verify the required parameter 'didId' is set
-            if (didId == null) throw new ApiException(400, "Missing required parameter 'didId' when calling PutDid");
+            if (didId == null) throw new ApiException(400, "Missing required parameter 'didId' when calling PutDidsDidId");
             
     
             var path_ = "/api/v1/configuration/dids/{didId}";
@@ -5400,9 +5400,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutDid: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutDidsDidId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutDid: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutDidsDidId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DID>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6099,9 +6099,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="certificateId">Certificate ID</param> 
         /// <returns>DomainCertificateAuthority</returns>
-        public DomainCertificateAuthority GetEdgesCertificateauthoritie (string certificateId)
+        public DomainCertificateAuthority GetEdgesCertificateauthoritiesCertificateId (string certificateId)
         {
-             ApiResponse<DomainCertificateAuthority> response = GetEdgesCertificateauthoritieWithHttpInfo(certificateId);
+             ApiResponse<DomainCertificateAuthority> response = GetEdgesCertificateauthoritiesCertificateIdWithHttpInfo(certificateId);
              return response.Data;
         }
 
@@ -6110,12 +6110,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="certificateId">Certificate ID</param> 
         /// <returns>ApiResponse of DomainCertificateAuthority</returns>
-        public ApiResponse< DomainCertificateAuthority > GetEdgesCertificateauthoritieWithHttpInfo (string certificateId)
+        public ApiResponse< DomainCertificateAuthority > GetEdgesCertificateauthoritiesCertificateIdWithHttpInfo (string certificateId)
         {
             
             // verify the required parameter 'certificateId' is set
             if (certificateId == null)
-                throw new ApiException(400, "Missing required parameter 'certificateId' when calling ConfigurationApi->GetEdgesCertificateauthoritie");
+                throw new ApiException(400, "Missing required parameter 'certificateId' when calling ConfigurationApi->GetEdgesCertificateauthoritiesCertificateId");
             
     
             var path_ = "/api/v1/configuration/edges/certificateauthorities/{certificateId}";
@@ -6168,9 +6168,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetEdgesCertificateauthoritie: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEdgesCertificateauthoritiesCertificateId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetEdgesCertificateauthoritie: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEdgesCertificateauthoritiesCertificateId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DomainCertificateAuthority>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6183,9 +6183,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="certificateId">Certificate ID</param>
         /// <returns>Task of DomainCertificateAuthority</returns>
-        public async System.Threading.Tasks.Task<DomainCertificateAuthority> GetEdgesCertificateauthoritieAsync (string certificateId)
+        public async System.Threading.Tasks.Task<DomainCertificateAuthority> GetEdgesCertificateauthoritiesCertificateIdAsync (string certificateId)
         {
-             ApiResponse<DomainCertificateAuthority> response = await GetEdgesCertificateauthoritieAsyncWithHttpInfo(certificateId);
+             ApiResponse<DomainCertificateAuthority> response = await GetEdgesCertificateauthoritiesCertificateIdAsyncWithHttpInfo(certificateId);
              return response.Data;
 
         }
@@ -6195,10 +6195,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="certificateId">Certificate ID</param>
         /// <returns>Task of ApiResponse (DomainCertificateAuthority)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainCertificateAuthority>> GetEdgesCertificateauthoritieAsyncWithHttpInfo (string certificateId)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainCertificateAuthority>> GetEdgesCertificateauthoritiesCertificateIdAsyncWithHttpInfo (string certificateId)
         {
             // verify the required parameter 'certificateId' is set
-            if (certificateId == null) throw new ApiException(400, "Missing required parameter 'certificateId' when calling GetEdgesCertificateauthoritie");
+            if (certificateId == null) throw new ApiException(400, "Missing required parameter 'certificateId' when calling GetEdgesCertificateauthoritiesCertificateId");
             
     
             var path_ = "/api/v1/configuration/edges/certificateauthorities/{certificateId}";
@@ -6252,9 +6252,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetEdgesCertificateauthoritie: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEdgesCertificateauthoritiesCertificateId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetEdgesCertificateauthoritie: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEdgesCertificateauthoritiesCertificateId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DomainCertificateAuthority>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6268,9 +6268,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="certificateId">Certificate ID</param> 
         /// <param name="body"></param> 
         /// <returns>DomainCertificateAuthority</returns>
-        public DomainCertificateAuthority PutEdgesCertificateauthoritie (string certificateId, DomainCertificateAuthority body = null)
+        public DomainCertificateAuthority PutEdgesCertificateauthoritiesCertificateId (string certificateId, DomainCertificateAuthority body = null)
         {
-             ApiResponse<DomainCertificateAuthority> response = PutEdgesCertificateauthoritieWithHttpInfo(certificateId, body);
+             ApiResponse<DomainCertificateAuthority> response = PutEdgesCertificateauthoritiesCertificateIdWithHttpInfo(certificateId, body);
              return response.Data;
         }
 
@@ -6280,12 +6280,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="certificateId">Certificate ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of DomainCertificateAuthority</returns>
-        public ApiResponse< DomainCertificateAuthority > PutEdgesCertificateauthoritieWithHttpInfo (string certificateId, DomainCertificateAuthority body = null)
+        public ApiResponse< DomainCertificateAuthority > PutEdgesCertificateauthoritiesCertificateIdWithHttpInfo (string certificateId, DomainCertificateAuthority body = null)
         {
             
             // verify the required parameter 'certificateId' is set
             if (certificateId == null)
-                throw new ApiException(400, "Missing required parameter 'certificateId' when calling ConfigurationApi->PutEdgesCertificateauthoritie");
+                throw new ApiException(400, "Missing required parameter 'certificateId' when calling ConfigurationApi->PutEdgesCertificateauthoritiesCertificateId");
             
     
             var path_ = "/api/v1/configuration/edges/certificateauthorities/{certificateId}";
@@ -6345,9 +6345,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutEdgesCertificateauthoritie: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutEdgesCertificateauthoritiesCertificateId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutEdgesCertificateauthoritie: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutEdgesCertificateauthoritiesCertificateId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DomainCertificateAuthority>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6361,9 +6361,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="certificateId">Certificate ID</param>
         /// <param name="body"></param>
         /// <returns>Task of DomainCertificateAuthority</returns>
-        public async System.Threading.Tasks.Task<DomainCertificateAuthority> PutEdgesCertificateauthoritieAsync (string certificateId, DomainCertificateAuthority body = null)
+        public async System.Threading.Tasks.Task<DomainCertificateAuthority> PutEdgesCertificateauthoritiesCertificateIdAsync (string certificateId, DomainCertificateAuthority body = null)
         {
-             ApiResponse<DomainCertificateAuthority> response = await PutEdgesCertificateauthoritieAsyncWithHttpInfo(certificateId, body);
+             ApiResponse<DomainCertificateAuthority> response = await PutEdgesCertificateauthoritiesCertificateIdAsyncWithHttpInfo(certificateId, body);
              return response.Data;
 
         }
@@ -6374,10 +6374,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="certificateId">Certificate ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DomainCertificateAuthority)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainCertificateAuthority>> PutEdgesCertificateauthoritieAsyncWithHttpInfo (string certificateId, DomainCertificateAuthority body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainCertificateAuthority>> PutEdgesCertificateauthoritiesCertificateIdAsyncWithHttpInfo (string certificateId, DomainCertificateAuthority body = null)
         {
             // verify the required parameter 'certificateId' is set
-            if (certificateId == null) throw new ApiException(400, "Missing required parameter 'certificateId' when calling PutEdgesCertificateauthoritie");
+            if (certificateId == null) throw new ApiException(400, "Missing required parameter 'certificateId' when calling PutEdgesCertificateauthoritiesCertificateId");
             
     
             var path_ = "/api/v1/configuration/edges/certificateauthorities/{certificateId}";
@@ -6432,9 +6432,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutEdgesCertificateauthoritie: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutEdgesCertificateauthoritiesCertificateId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutEdgesCertificateauthoritie: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutEdgesCertificateauthoritiesCertificateId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DomainCertificateAuthority>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6447,9 +6447,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="certificateId">Certificate ID</param> 
         /// <returns>string</returns>
-        public string DeleteEdgesCertificateauthoritie (string certificateId)
+        public string DeleteEdgesCertificateauthoritiesCertificateId (string certificateId)
         {
-             ApiResponse<string> response = DeleteEdgesCertificateauthoritieWithHttpInfo(certificateId);
+             ApiResponse<string> response = DeleteEdgesCertificateauthoritiesCertificateIdWithHttpInfo(certificateId);
              return response.Data;
         }
 
@@ -6458,12 +6458,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="certificateId">Certificate ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteEdgesCertificateauthoritieWithHttpInfo (string certificateId)
+        public ApiResponse< string > DeleteEdgesCertificateauthoritiesCertificateIdWithHttpInfo (string certificateId)
         {
             
             // verify the required parameter 'certificateId' is set
             if (certificateId == null)
-                throw new ApiException(400, "Missing required parameter 'certificateId' when calling ConfigurationApi->DeleteEdgesCertificateauthoritie");
+                throw new ApiException(400, "Missing required parameter 'certificateId' when calling ConfigurationApi->DeleteEdgesCertificateauthoritiesCertificateId");
             
     
             var path_ = "/api/v1/configuration/edges/certificateauthorities/{certificateId}";
@@ -6516,9 +6516,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteEdgesCertificateauthoritie: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteEdgesCertificateauthoritiesCertificateId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteEdgesCertificateauthoritie: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteEdgesCertificateauthoritiesCertificateId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6531,9 +6531,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="certificateId">Certificate ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteEdgesCertificateauthoritieAsync (string certificateId)
+        public async System.Threading.Tasks.Task<string> DeleteEdgesCertificateauthoritiesCertificateIdAsync (string certificateId)
         {
-             ApiResponse<string> response = await DeleteEdgesCertificateauthoritieAsyncWithHttpInfo(certificateId);
+             ApiResponse<string> response = await DeleteEdgesCertificateauthoritiesCertificateIdAsyncWithHttpInfo(certificateId);
              return response.Data;
 
         }
@@ -6543,10 +6543,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="certificateId">Certificate ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteEdgesCertificateauthoritieAsyncWithHttpInfo (string certificateId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteEdgesCertificateauthoritiesCertificateIdAsyncWithHttpInfo (string certificateId)
         {
             // verify the required parameter 'certificateId' is set
-            if (certificateId == null) throw new ApiException(400, "Missing required parameter 'certificateId' when calling DeleteEdgesCertificateauthoritie");
+            if (certificateId == null) throw new ApiException(400, "Missing required parameter 'certificateId' when calling DeleteEdgesCertificateauthoritiesCertificateId");
             
     
             var path_ = "/api/v1/configuration/edges/certificateauthorities/{certificateId}";
@@ -6600,9 +6600,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteEdgesCertificateauthoritie: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteEdgesCertificateauthoritiesCertificateId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteEdgesCertificateauthoritie: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteEdgesCertificateauthoritiesCertificateId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6615,9 +6615,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param> 
         /// <returns>Edge</returns>
-        public Edge GetEdge (string edgeId)
+        public Edge GetEdgesEdgeId (string edgeId)
         {
-             ApiResponse<Edge> response = GetEdgeWithHttpInfo(edgeId);
+             ApiResponse<Edge> response = GetEdgesEdgeIdWithHttpInfo(edgeId);
              return response.Data;
         }
 
@@ -6626,12 +6626,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param> 
         /// <returns>ApiResponse of Edge</returns>
-        public ApiResponse< Edge > GetEdgeWithHttpInfo (string edgeId)
+        public ApiResponse< Edge > GetEdgesEdgeIdWithHttpInfo (string edgeId)
         {
             
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->GetEdge");
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->GetEdgesEdgeId");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}";
@@ -6684,9 +6684,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetEdge: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetEdge: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Edge>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6699,9 +6699,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of Edge</returns>
-        public async System.Threading.Tasks.Task<Edge> GetEdgeAsync (string edgeId)
+        public async System.Threading.Tasks.Task<Edge> GetEdgesEdgeIdAsync (string edgeId)
         {
-             ApiResponse<Edge> response = await GetEdgeAsyncWithHttpInfo(edgeId);
+             ApiResponse<Edge> response = await GetEdgesEdgeIdAsyncWithHttpInfo(edgeId);
              return response.Data;
 
         }
@@ -6711,10 +6711,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse (Edge)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Edge>> GetEdgeAsyncWithHttpInfo (string edgeId)
+        public async System.Threading.Tasks.Task<ApiResponse<Edge>> GetEdgesEdgeIdAsyncWithHttpInfo (string edgeId)
         {
             // verify the required parameter 'edgeId' is set
-            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling GetEdge");
+            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling GetEdgesEdgeId");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}";
@@ -6768,9 +6768,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetEdge: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetEdge: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Edge>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6784,9 +6784,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param> 
         /// <param name="body">Edge</param> 
         /// <returns>Edge</returns>
-        public Edge PutEdge (string edgeId, Edge body = null)
+        public Edge PutEdgesEdgeId (string edgeId, Edge body = null)
         {
-             ApiResponse<Edge> response = PutEdgeWithHttpInfo(edgeId, body);
+             ApiResponse<Edge> response = PutEdgesEdgeIdWithHttpInfo(edgeId, body);
              return response.Data;
         }
 
@@ -6796,12 +6796,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param> 
         /// <param name="body">Edge</param> 
         /// <returns>ApiResponse of Edge</returns>
-        public ApiResponse< Edge > PutEdgeWithHttpInfo (string edgeId, Edge body = null)
+        public ApiResponse< Edge > PutEdgesEdgeIdWithHttpInfo (string edgeId, Edge body = null)
         {
             
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->PutEdge");
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->PutEdgesEdgeId");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}";
@@ -6861,9 +6861,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutEdge: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutEdgesEdgeId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutEdge: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutEdgesEdgeId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Edge>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6877,9 +6877,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">Edge</param>
         /// <returns>Task of Edge</returns>
-        public async System.Threading.Tasks.Task<Edge> PutEdgeAsync (string edgeId, Edge body = null)
+        public async System.Threading.Tasks.Task<Edge> PutEdgesEdgeIdAsync (string edgeId, Edge body = null)
         {
-             ApiResponse<Edge> response = await PutEdgeAsyncWithHttpInfo(edgeId, body);
+             ApiResponse<Edge> response = await PutEdgesEdgeIdAsyncWithHttpInfo(edgeId, body);
              return response.Data;
 
         }
@@ -6890,10 +6890,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">Edge</param>
         /// <returns>Task of ApiResponse (Edge)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Edge>> PutEdgeAsyncWithHttpInfo (string edgeId, Edge body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Edge>> PutEdgesEdgeIdAsyncWithHttpInfo (string edgeId, Edge body = null)
         {
             // verify the required parameter 'edgeId' is set
-            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling PutEdge");
+            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling PutEdgesEdgeId");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}";
@@ -6948,9 +6948,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutEdge: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutEdgesEdgeId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutEdge: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutEdgesEdgeId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Edge>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6963,9 +6963,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param> 
         /// <returns>string</returns>
-        public string DeleteEdge (string edgeId)
+        public string DeleteEdgesEdgeId (string edgeId)
         {
-             ApiResponse<string> response = DeleteEdgeWithHttpInfo(edgeId);
+             ApiResponse<string> response = DeleteEdgesEdgeIdWithHttpInfo(edgeId);
              return response.Data;
         }
 
@@ -6974,12 +6974,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteEdgeWithHttpInfo (string edgeId)
+        public ApiResponse< string > DeleteEdgesEdgeIdWithHttpInfo (string edgeId)
         {
             
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->DeleteEdge");
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->DeleteEdgesEdgeId");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}";
@@ -7032,9 +7032,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteEdge: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteEdgesEdgeId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteEdge: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteEdgesEdgeId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7047,9 +7047,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteEdgeAsync (string edgeId)
+        public async System.Threading.Tasks.Task<string> DeleteEdgesEdgeIdAsync (string edgeId)
         {
-             ApiResponse<string> response = await DeleteEdgeAsyncWithHttpInfo(edgeId);
+             ApiResponse<string> response = await DeleteEdgesEdgeIdAsyncWithHttpInfo(edgeId);
              return response.Data;
 
         }
@@ -7059,10 +7059,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteEdgeAsyncWithHttpInfo (string edgeId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteEdgesEdgeIdAsyncWithHttpInfo (string edgeId)
         {
             // verify the required parameter 'edgeId' is set
-            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling DeleteEdge");
+            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling DeleteEdgesEdgeId");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}";
@@ -7116,9 +7116,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteEdge: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteEdgesEdgeId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteEdge: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteEdgesEdgeId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7133,9 +7133,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>EdgeLineEntityListing</returns>
-        public EdgeLineEntityListing GetEdgeLines (string edgeId, int? pageSize = null, int? pageNumber = null)
+        public EdgeLineEntityListing GetEdgesEdgeIdLines (string edgeId, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<EdgeLineEntityListing> response = GetEdgeLinesWithHttpInfo(edgeId, pageSize, pageNumber);
+             ApiResponse<EdgeLineEntityListing> response = GetEdgesEdgeIdLinesWithHttpInfo(edgeId, pageSize, pageNumber);
              return response.Data;
         }
 
@@ -7146,12 +7146,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>ApiResponse of EdgeLineEntityListing</returns>
-        public ApiResponse< EdgeLineEntityListing > GetEdgeLinesWithHttpInfo (string edgeId, int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< EdgeLineEntityListing > GetEdgesEdgeIdLinesWithHttpInfo (string edgeId, int? pageSize = null, int? pageNumber = null)
         {
             
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->GetEdgeLines");
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->GetEdgesEdgeIdLines");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/lines";
@@ -7206,9 +7206,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetEdgeLines: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdLines: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetEdgeLines: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdLines: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EdgeLineEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7223,9 +7223,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of EdgeLineEntityListing</returns>
-        public async System.Threading.Tasks.Task<EdgeLineEntityListing> GetEdgeLinesAsync (string edgeId, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<EdgeLineEntityListing> GetEdgesEdgeIdLinesAsync (string edgeId, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<EdgeLineEntityListing> response = await GetEdgeLinesAsyncWithHttpInfo(edgeId, pageSize, pageNumber);
+             ApiResponse<EdgeLineEntityListing> response = await GetEdgesEdgeIdLinesAsyncWithHttpInfo(edgeId, pageSize, pageNumber);
              return response.Data;
 
         }
@@ -7237,10 +7237,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (EdgeLineEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EdgeLineEntityListing>> GetEdgeLinesAsyncWithHttpInfo (string edgeId, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeLineEntityListing>> GetEdgesEdgeIdLinesAsyncWithHttpInfo (string edgeId, int? pageSize = null, int? pageNumber = null)
         {
             // verify the required parameter 'edgeId' is set
-            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling GetEdgeLines");
+            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling GetEdgesEdgeIdLines");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/lines";
@@ -7296,9 +7296,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetEdgeLines: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdLines: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetEdgeLines: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdLines: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EdgeLineEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7312,9 +7312,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param> 
         /// <param name="lineId">Line ID</param> 
         /// <returns>EdgeLine</returns>
-        public EdgeLine GetEdgeLine (string edgeId, string lineId)
+        public EdgeLine GetEdgesEdgeIdLinesLineId (string edgeId, string lineId)
         {
-             ApiResponse<EdgeLine> response = GetEdgeLineWithHttpInfo(edgeId, lineId);
+             ApiResponse<EdgeLine> response = GetEdgesEdgeIdLinesLineIdWithHttpInfo(edgeId, lineId);
              return response.Data;
         }
 
@@ -7324,16 +7324,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param> 
         /// <param name="lineId">Line ID</param> 
         /// <returns>ApiResponse of EdgeLine</returns>
-        public ApiResponse< EdgeLine > GetEdgeLineWithHttpInfo (string edgeId, string lineId)
+        public ApiResponse< EdgeLine > GetEdgesEdgeIdLinesLineIdWithHttpInfo (string edgeId, string lineId)
         {
             
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->GetEdgeLine");
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->GetEdgesEdgeIdLinesLineId");
             
             // verify the required parameter 'lineId' is set
             if (lineId == null)
-                throw new ApiException(400, "Missing required parameter 'lineId' when calling ConfigurationApi->GetEdgeLine");
+                throw new ApiException(400, "Missing required parameter 'lineId' when calling ConfigurationApi->GetEdgesEdgeIdLinesLineId");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/lines/{lineId}";
@@ -7387,9 +7387,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetEdgeLine: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdLinesLineId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetEdgeLine: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdLinesLineId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EdgeLine>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7403,9 +7403,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="lineId">Line ID</param>
         /// <returns>Task of EdgeLine</returns>
-        public async System.Threading.Tasks.Task<EdgeLine> GetEdgeLineAsync (string edgeId, string lineId)
+        public async System.Threading.Tasks.Task<EdgeLine> GetEdgesEdgeIdLinesLineIdAsync (string edgeId, string lineId)
         {
-             ApiResponse<EdgeLine> response = await GetEdgeLineAsyncWithHttpInfo(edgeId, lineId);
+             ApiResponse<EdgeLine> response = await GetEdgesEdgeIdLinesLineIdAsyncWithHttpInfo(edgeId, lineId);
              return response.Data;
 
         }
@@ -7416,12 +7416,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="lineId">Line ID</param>
         /// <returns>Task of ApiResponse (EdgeLine)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EdgeLine>> GetEdgeLineAsyncWithHttpInfo (string edgeId, string lineId)
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeLine>> GetEdgesEdgeIdLinesLineIdAsyncWithHttpInfo (string edgeId, string lineId)
         {
             // verify the required parameter 'edgeId' is set
-            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling GetEdgeLine");
+            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling GetEdgesEdgeIdLinesLineId");
             // verify the required parameter 'lineId' is set
-            if (lineId == null) throw new ApiException(400, "Missing required parameter 'lineId' when calling GetEdgeLine");
+            if (lineId == null) throw new ApiException(400, "Missing required parameter 'lineId' when calling GetEdgesEdgeIdLinesLineId");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/lines/{lineId}";
@@ -7476,9 +7476,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetEdgeLine: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdLinesLineId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetEdgeLine: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdLinesLineId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EdgeLine>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7493,9 +7493,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="lineId">Line ID</param> 
         /// <param name="body">Line</param> 
         /// <returns>EdgeLine</returns>
-        public EdgeLine PutEdgeLine (string edgeId, string lineId, EdgeLine body = null)
+        public EdgeLine PutEdgesEdgeIdLinesLineId (string edgeId, string lineId, EdgeLine body = null)
         {
-             ApiResponse<EdgeLine> response = PutEdgeLineWithHttpInfo(edgeId, lineId, body);
+             ApiResponse<EdgeLine> response = PutEdgesEdgeIdLinesLineIdWithHttpInfo(edgeId, lineId, body);
              return response.Data;
         }
 
@@ -7506,16 +7506,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="lineId">Line ID</param> 
         /// <param name="body">Line</param> 
         /// <returns>ApiResponse of EdgeLine</returns>
-        public ApiResponse< EdgeLine > PutEdgeLineWithHttpInfo (string edgeId, string lineId, EdgeLine body = null)
+        public ApiResponse< EdgeLine > PutEdgesEdgeIdLinesLineIdWithHttpInfo (string edgeId, string lineId, EdgeLine body = null)
         {
             
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->PutEdgeLine");
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->PutEdgesEdgeIdLinesLineId");
             
             // verify the required parameter 'lineId' is set
             if (lineId == null)
-                throw new ApiException(400, "Missing required parameter 'lineId' when calling ConfigurationApi->PutEdgeLine");
+                throw new ApiException(400, "Missing required parameter 'lineId' when calling ConfigurationApi->PutEdgesEdgeIdLinesLineId");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/lines/{lineId}";
@@ -7576,9 +7576,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutEdgeLine: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutEdgesEdgeIdLinesLineId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutEdgeLine: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutEdgesEdgeIdLinesLineId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EdgeLine>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7593,9 +7593,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="lineId">Line ID</param>
         /// <param name="body">Line</param>
         /// <returns>Task of EdgeLine</returns>
-        public async System.Threading.Tasks.Task<EdgeLine> PutEdgeLineAsync (string edgeId, string lineId, EdgeLine body = null)
+        public async System.Threading.Tasks.Task<EdgeLine> PutEdgesEdgeIdLinesLineIdAsync (string edgeId, string lineId, EdgeLine body = null)
         {
-             ApiResponse<EdgeLine> response = await PutEdgeLineAsyncWithHttpInfo(edgeId, lineId, body);
+             ApiResponse<EdgeLine> response = await PutEdgesEdgeIdLinesLineIdAsyncWithHttpInfo(edgeId, lineId, body);
              return response.Data;
 
         }
@@ -7607,12 +7607,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="lineId">Line ID</param>
         /// <param name="body">Line</param>
         /// <returns>Task of ApiResponse (EdgeLine)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EdgeLine>> PutEdgeLineAsyncWithHttpInfo (string edgeId, string lineId, EdgeLine body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeLine>> PutEdgesEdgeIdLinesLineIdAsyncWithHttpInfo (string edgeId, string lineId, EdgeLine body = null)
         {
             // verify the required parameter 'edgeId' is set
-            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling PutEdgeLine");
+            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling PutEdgesEdgeIdLinesLineId");
             // verify the required parameter 'lineId' is set
-            if (lineId == null) throw new ApiException(400, "Missing required parameter 'lineId' when calling PutEdgeLine");
+            if (lineId == null) throw new ApiException(400, "Missing required parameter 'lineId' when calling PutEdgesEdgeIdLinesLineId");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/lines/{lineId}";
@@ -7668,9 +7668,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutEdgeLine: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutEdgesEdgeIdLinesLineId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutEdgeLine: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutEdgesEdgeIdLinesLineId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EdgeLine>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7683,9 +7683,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param> 
         /// <returns>LogicalInterfaceEntityListing</returns>
-        public LogicalInterfaceEntityListing GetEdgeLogicalinterfaces (string edgeId)
+        public LogicalInterfaceEntityListing GetEdgesEdgeIdLogicalinterfaces (string edgeId)
         {
-             ApiResponse<LogicalInterfaceEntityListing> response = GetEdgeLogicalinterfacesWithHttpInfo(edgeId);
+             ApiResponse<LogicalInterfaceEntityListing> response = GetEdgesEdgeIdLogicalinterfacesWithHttpInfo(edgeId);
              return response.Data;
         }
 
@@ -7694,12 +7694,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param> 
         /// <returns>ApiResponse of LogicalInterfaceEntityListing</returns>
-        public ApiResponse< LogicalInterfaceEntityListing > GetEdgeLogicalinterfacesWithHttpInfo (string edgeId)
+        public ApiResponse< LogicalInterfaceEntityListing > GetEdgesEdgeIdLogicalinterfacesWithHttpInfo (string edgeId)
         {
             
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->GetEdgeLogicalinterfaces");
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->GetEdgesEdgeIdLogicalinterfaces");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/logicalinterfaces";
@@ -7752,9 +7752,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetEdgeLogicalinterfaces: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdLogicalinterfaces: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetEdgeLogicalinterfaces: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdLogicalinterfaces: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<LogicalInterfaceEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7767,9 +7767,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of LogicalInterfaceEntityListing</returns>
-        public async System.Threading.Tasks.Task<LogicalInterfaceEntityListing> GetEdgeLogicalinterfacesAsync (string edgeId)
+        public async System.Threading.Tasks.Task<LogicalInterfaceEntityListing> GetEdgesEdgeIdLogicalinterfacesAsync (string edgeId)
         {
-             ApiResponse<LogicalInterfaceEntityListing> response = await GetEdgeLogicalinterfacesAsyncWithHttpInfo(edgeId);
+             ApiResponse<LogicalInterfaceEntityListing> response = await GetEdgesEdgeIdLogicalinterfacesAsyncWithHttpInfo(edgeId);
              return response.Data;
 
         }
@@ -7779,10 +7779,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse (LogicalInterfaceEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LogicalInterfaceEntityListing>> GetEdgeLogicalinterfacesAsyncWithHttpInfo (string edgeId)
+        public async System.Threading.Tasks.Task<ApiResponse<LogicalInterfaceEntityListing>> GetEdgesEdgeIdLogicalinterfacesAsyncWithHttpInfo (string edgeId)
         {
             // verify the required parameter 'edgeId' is set
-            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling GetEdgeLogicalinterfaces");
+            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling GetEdgesEdgeIdLogicalinterfaces");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/logicalinterfaces";
@@ -7836,9 +7836,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetEdgeLogicalinterfaces: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdLogicalinterfaces: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetEdgeLogicalinterfaces: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdLogicalinterfaces: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<LogicalInterfaceEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7852,9 +7852,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param> 
         /// <param name="body"></param> 
         /// <returns>DomainLogicalInterface</returns>
-        public DomainLogicalInterface PostEdgeLogicalinterfaces (string edgeId, DomainLogicalInterface body = null)
+        public DomainLogicalInterface PostEdgesEdgeIdLogicalinterfaces (string edgeId, DomainLogicalInterface body = null)
         {
-             ApiResponse<DomainLogicalInterface> response = PostEdgeLogicalinterfacesWithHttpInfo(edgeId, body);
+             ApiResponse<DomainLogicalInterface> response = PostEdgesEdgeIdLogicalinterfacesWithHttpInfo(edgeId, body);
              return response.Data;
         }
 
@@ -7864,12 +7864,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of DomainLogicalInterface</returns>
-        public ApiResponse< DomainLogicalInterface > PostEdgeLogicalinterfacesWithHttpInfo (string edgeId, DomainLogicalInterface body = null)
+        public ApiResponse< DomainLogicalInterface > PostEdgesEdgeIdLogicalinterfacesWithHttpInfo (string edgeId, DomainLogicalInterface body = null)
         {
             
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->PostEdgeLogicalinterfaces");
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->PostEdgesEdgeIdLogicalinterfaces");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/logicalinterfaces";
@@ -7929,9 +7929,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostEdgeLogicalinterfaces: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostEdgesEdgeIdLogicalinterfaces: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostEdgeLogicalinterfaces: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostEdgesEdgeIdLogicalinterfaces: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DomainLogicalInterface>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -7945,9 +7945,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body"></param>
         /// <returns>Task of DomainLogicalInterface</returns>
-        public async System.Threading.Tasks.Task<DomainLogicalInterface> PostEdgeLogicalinterfacesAsync (string edgeId, DomainLogicalInterface body = null)
+        public async System.Threading.Tasks.Task<DomainLogicalInterface> PostEdgesEdgeIdLogicalinterfacesAsync (string edgeId, DomainLogicalInterface body = null)
         {
-             ApiResponse<DomainLogicalInterface> response = await PostEdgeLogicalinterfacesAsyncWithHttpInfo(edgeId, body);
+             ApiResponse<DomainLogicalInterface> response = await PostEdgesEdgeIdLogicalinterfacesAsyncWithHttpInfo(edgeId, body);
              return response.Data;
 
         }
@@ -7958,10 +7958,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DomainLogicalInterface)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> PostEdgeLogicalinterfacesAsyncWithHttpInfo (string edgeId, DomainLogicalInterface body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> PostEdgesEdgeIdLogicalinterfacesAsyncWithHttpInfo (string edgeId, DomainLogicalInterface body = null)
         {
             // verify the required parameter 'edgeId' is set
-            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling PostEdgeLogicalinterfaces");
+            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling PostEdgesEdgeIdLogicalinterfaces");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/logicalinterfaces";
@@ -8016,9 +8016,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostEdgeLogicalinterfaces: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostEdgesEdgeIdLogicalinterfaces: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostEdgeLogicalinterfaces: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostEdgesEdgeIdLogicalinterfaces: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DomainLogicalInterface>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8032,9 +8032,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param> 
         /// <param name="interfaceId">Interface ID</param> 
         /// <returns>DomainLogicalInterface</returns>
-        public DomainLogicalInterface GetEdgeLogicalinterface (string edgeId, string interfaceId)
+        public DomainLogicalInterface GetEdgesEdgeIdLogicalinterfacesInterfaceId (string edgeId, string interfaceId)
         {
-             ApiResponse<DomainLogicalInterface> response = GetEdgeLogicalinterfaceWithHttpInfo(edgeId, interfaceId);
+             ApiResponse<DomainLogicalInterface> response = GetEdgesEdgeIdLogicalinterfacesInterfaceIdWithHttpInfo(edgeId, interfaceId);
              return response.Data;
         }
 
@@ -8044,16 +8044,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param> 
         /// <param name="interfaceId">Interface ID</param> 
         /// <returns>ApiResponse of DomainLogicalInterface</returns>
-        public ApiResponse< DomainLogicalInterface > GetEdgeLogicalinterfaceWithHttpInfo (string edgeId, string interfaceId)
+        public ApiResponse< DomainLogicalInterface > GetEdgesEdgeIdLogicalinterfacesInterfaceIdWithHttpInfo (string edgeId, string interfaceId)
         {
             
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->GetEdgeLogicalinterface");
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->GetEdgesEdgeIdLogicalinterfacesInterfaceId");
             
             // verify the required parameter 'interfaceId' is set
             if (interfaceId == null)
-                throw new ApiException(400, "Missing required parameter 'interfaceId' when calling ConfigurationApi->GetEdgeLogicalinterface");
+                throw new ApiException(400, "Missing required parameter 'interfaceId' when calling ConfigurationApi->GetEdgesEdgeIdLogicalinterfacesInterfaceId");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/logicalinterfaces/{interfaceId}";
@@ -8107,9 +8107,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetEdgeLogicalinterface: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdLogicalinterfacesInterfaceId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetEdgeLogicalinterface: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdLogicalinterfacesInterfaceId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DomainLogicalInterface>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8123,9 +8123,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>Task of DomainLogicalInterface</returns>
-        public async System.Threading.Tasks.Task<DomainLogicalInterface> GetEdgeLogicalinterfaceAsync (string edgeId, string interfaceId)
+        public async System.Threading.Tasks.Task<DomainLogicalInterface> GetEdgesEdgeIdLogicalinterfacesInterfaceIdAsync (string edgeId, string interfaceId)
         {
-             ApiResponse<DomainLogicalInterface> response = await GetEdgeLogicalinterfaceAsyncWithHttpInfo(edgeId, interfaceId);
+             ApiResponse<DomainLogicalInterface> response = await GetEdgesEdgeIdLogicalinterfacesInterfaceIdAsyncWithHttpInfo(edgeId, interfaceId);
              return response.Data;
 
         }
@@ -8136,12 +8136,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>Task of ApiResponse (DomainLogicalInterface)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> GetEdgeLogicalinterfaceAsyncWithHttpInfo (string edgeId, string interfaceId)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> GetEdgesEdgeIdLogicalinterfacesInterfaceIdAsyncWithHttpInfo (string edgeId, string interfaceId)
         {
             // verify the required parameter 'edgeId' is set
-            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling GetEdgeLogicalinterface");
+            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling GetEdgesEdgeIdLogicalinterfacesInterfaceId");
             // verify the required parameter 'interfaceId' is set
-            if (interfaceId == null) throw new ApiException(400, "Missing required parameter 'interfaceId' when calling GetEdgeLogicalinterface");
+            if (interfaceId == null) throw new ApiException(400, "Missing required parameter 'interfaceId' when calling GetEdgesEdgeIdLogicalinterfacesInterfaceId");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/logicalinterfaces/{interfaceId}";
@@ -8196,9 +8196,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetEdgeLogicalinterface: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdLogicalinterfacesInterfaceId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetEdgeLogicalinterface: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdLogicalinterfacesInterfaceId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DomainLogicalInterface>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8213,9 +8213,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="interfaceId">Interface ID</param> 
         /// <param name="body"></param> 
         /// <returns>DomainLogicalInterface</returns>
-        public DomainLogicalInterface PutEdgeLogicalinterface (string edgeId, string interfaceId, DomainLogicalInterface body = null)
+        public DomainLogicalInterface PutEdgesEdgeIdLogicalinterfacesInterfaceId (string edgeId, string interfaceId, DomainLogicalInterface body = null)
         {
-             ApiResponse<DomainLogicalInterface> response = PutEdgeLogicalinterfaceWithHttpInfo(edgeId, interfaceId, body);
+             ApiResponse<DomainLogicalInterface> response = PutEdgesEdgeIdLogicalinterfacesInterfaceIdWithHttpInfo(edgeId, interfaceId, body);
              return response.Data;
         }
 
@@ -8226,16 +8226,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="interfaceId">Interface ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of DomainLogicalInterface</returns>
-        public ApiResponse< DomainLogicalInterface > PutEdgeLogicalinterfaceWithHttpInfo (string edgeId, string interfaceId, DomainLogicalInterface body = null)
+        public ApiResponse< DomainLogicalInterface > PutEdgesEdgeIdLogicalinterfacesInterfaceIdWithHttpInfo (string edgeId, string interfaceId, DomainLogicalInterface body = null)
         {
             
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->PutEdgeLogicalinterface");
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->PutEdgesEdgeIdLogicalinterfacesInterfaceId");
             
             // verify the required parameter 'interfaceId' is set
             if (interfaceId == null)
-                throw new ApiException(400, "Missing required parameter 'interfaceId' when calling ConfigurationApi->PutEdgeLogicalinterface");
+                throw new ApiException(400, "Missing required parameter 'interfaceId' when calling ConfigurationApi->PutEdgesEdgeIdLogicalinterfacesInterfaceId");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/logicalinterfaces/{interfaceId}";
@@ -8296,9 +8296,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutEdgeLogicalinterface: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutEdgesEdgeIdLogicalinterfacesInterfaceId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutEdgeLogicalinterface: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutEdgesEdgeIdLogicalinterfacesInterfaceId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DomainLogicalInterface>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8313,9 +8313,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="interfaceId">Interface ID</param>
         /// <param name="body"></param>
         /// <returns>Task of DomainLogicalInterface</returns>
-        public async System.Threading.Tasks.Task<DomainLogicalInterface> PutEdgeLogicalinterfaceAsync (string edgeId, string interfaceId, DomainLogicalInterface body = null)
+        public async System.Threading.Tasks.Task<DomainLogicalInterface> PutEdgesEdgeIdLogicalinterfacesInterfaceIdAsync (string edgeId, string interfaceId, DomainLogicalInterface body = null)
         {
-             ApiResponse<DomainLogicalInterface> response = await PutEdgeLogicalinterfaceAsyncWithHttpInfo(edgeId, interfaceId, body);
+             ApiResponse<DomainLogicalInterface> response = await PutEdgesEdgeIdLogicalinterfacesInterfaceIdAsyncWithHttpInfo(edgeId, interfaceId, body);
              return response.Data;
 
         }
@@ -8327,12 +8327,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="interfaceId">Interface ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DomainLogicalInterface)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> PutEdgeLogicalinterfaceAsyncWithHttpInfo (string edgeId, string interfaceId, DomainLogicalInterface body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainLogicalInterface>> PutEdgesEdgeIdLogicalinterfacesInterfaceIdAsyncWithHttpInfo (string edgeId, string interfaceId, DomainLogicalInterface body = null)
         {
             // verify the required parameter 'edgeId' is set
-            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling PutEdgeLogicalinterface");
+            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling PutEdgesEdgeIdLogicalinterfacesInterfaceId");
             // verify the required parameter 'interfaceId' is set
-            if (interfaceId == null) throw new ApiException(400, "Missing required parameter 'interfaceId' when calling PutEdgeLogicalinterface");
+            if (interfaceId == null) throw new ApiException(400, "Missing required parameter 'interfaceId' when calling PutEdgesEdgeIdLogicalinterfacesInterfaceId");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/logicalinterfaces/{interfaceId}";
@@ -8388,9 +8388,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutEdgeLogicalinterface: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutEdgesEdgeIdLogicalinterfacesInterfaceId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutEdgeLogicalinterface: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutEdgesEdgeIdLogicalinterfacesInterfaceId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DomainLogicalInterface>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8404,9 +8404,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param> 
         /// <param name="interfaceId">Interface ID</param> 
         /// <returns></returns>
-        public void DeleteEdgeLogicalinterface (string edgeId, string interfaceId)
+        public void DeleteEdgesEdgeIdLogicalinterfacesInterfaceId (string edgeId, string interfaceId)
         {
-             DeleteEdgeLogicalinterfaceWithHttpInfo(edgeId, interfaceId);
+             DeleteEdgesEdgeIdLogicalinterfacesInterfaceIdWithHttpInfo(edgeId, interfaceId);
         }
 
         /// <summary>
@@ -8415,16 +8415,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param> 
         /// <param name="interfaceId">Interface ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteEdgeLogicalinterfaceWithHttpInfo (string edgeId, string interfaceId)
+        public ApiResponse<Object> DeleteEdgesEdgeIdLogicalinterfacesInterfaceIdWithHttpInfo (string edgeId, string interfaceId)
         {
             
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->DeleteEdgeLogicalinterface");
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->DeleteEdgesEdgeIdLogicalinterfacesInterfaceId");
             
             // verify the required parameter 'interfaceId' is set
             if (interfaceId == null)
-                throw new ApiException(400, "Missing required parameter 'interfaceId' when calling ConfigurationApi->DeleteEdgeLogicalinterface");
+                throw new ApiException(400, "Missing required parameter 'interfaceId' when calling ConfigurationApi->DeleteEdgesEdgeIdLogicalinterfacesInterfaceId");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/logicalinterfaces/{interfaceId}";
@@ -8478,9 +8478,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteEdgeLogicalinterface: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteEdgesEdgeIdLogicalinterfacesInterfaceId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteEdgeLogicalinterface: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteEdgesEdgeIdLogicalinterfacesInterfaceId: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -8494,9 +8494,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteEdgeLogicalinterfaceAsync (string edgeId, string interfaceId)
+        public async System.Threading.Tasks.Task DeleteEdgesEdgeIdLogicalinterfacesInterfaceIdAsync (string edgeId, string interfaceId)
         {
-             await DeleteEdgeLogicalinterfaceAsyncWithHttpInfo(edgeId, interfaceId);
+             await DeleteEdgesEdgeIdLogicalinterfacesInterfaceIdAsyncWithHttpInfo(edgeId, interfaceId);
 
         }
 
@@ -8506,12 +8506,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteEdgeLogicalinterfaceAsyncWithHttpInfo (string edgeId, string interfaceId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteEdgesEdgeIdLogicalinterfacesInterfaceIdAsyncWithHttpInfo (string edgeId, string interfaceId)
         {
             // verify the required parameter 'edgeId' is set
-            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling DeleteEdgeLogicalinterface");
+            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling DeleteEdgesEdgeIdLogicalinterfacesInterfaceId");
             // verify the required parameter 'interfaceId' is set
-            if (interfaceId == null) throw new ApiException(400, "Missing required parameter 'interfaceId' when calling DeleteEdgeLogicalinterface");
+            if (interfaceId == null) throw new ApiException(400, "Missing required parameter 'interfaceId' when calling DeleteEdgesEdgeIdLogicalinterfacesInterfaceId");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/logicalinterfaces/{interfaceId}";
@@ -8566,9 +8566,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteEdgeLogicalinterface: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteEdgesEdgeIdLogicalinterfacesInterfaceId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteEdgeLogicalinterface: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteEdgesEdgeIdLogicalinterfacesInterfaceId: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -8582,9 +8582,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param> 
         /// <param name="body">EdgeLogsJobRequest</param> 
         /// <returns>EdgeLogsJobResponse</returns>
-        public EdgeLogsJobResponse PostEdgeLogsJobs (string edgeId, EdgeLogsJobRequest body = null)
+        public EdgeLogsJobResponse PostEdgesEdgeIdLogsJobs (string edgeId, EdgeLogsJobRequest body = null)
         {
-             ApiResponse<EdgeLogsJobResponse> response = PostEdgeLogsJobsWithHttpInfo(edgeId, body);
+             ApiResponse<EdgeLogsJobResponse> response = PostEdgesEdgeIdLogsJobsWithHttpInfo(edgeId, body);
              return response.Data;
         }
 
@@ -8594,12 +8594,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param> 
         /// <param name="body">EdgeLogsJobRequest</param> 
         /// <returns>ApiResponse of EdgeLogsJobResponse</returns>
-        public ApiResponse< EdgeLogsJobResponse > PostEdgeLogsJobsWithHttpInfo (string edgeId, EdgeLogsJobRequest body = null)
+        public ApiResponse< EdgeLogsJobResponse > PostEdgesEdgeIdLogsJobsWithHttpInfo (string edgeId, EdgeLogsJobRequest body = null)
         {
             
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->PostEdgeLogsJobs");
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->PostEdgesEdgeIdLogsJobs");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/logs/jobs";
@@ -8659,9 +8659,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostEdgeLogsJobs: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostEdgesEdgeIdLogsJobs: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostEdgeLogsJobs: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostEdgesEdgeIdLogsJobs: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<EdgeLogsJobResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8675,9 +8675,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">EdgeLogsJobRequest</param>
         /// <returns>Task of EdgeLogsJobResponse</returns>
-        public async System.Threading.Tasks.Task<EdgeLogsJobResponse> PostEdgeLogsJobsAsync (string edgeId, EdgeLogsJobRequest body = null)
+        public async System.Threading.Tasks.Task<EdgeLogsJobResponse> PostEdgesEdgeIdLogsJobsAsync (string edgeId, EdgeLogsJobRequest body = null)
         {
-             ApiResponse<EdgeLogsJobResponse> response = await PostEdgeLogsJobsAsyncWithHttpInfo(edgeId, body);
+             ApiResponse<EdgeLogsJobResponse> response = await PostEdgesEdgeIdLogsJobsAsyncWithHttpInfo(edgeId, body);
              return response.Data;
 
         }
@@ -8688,10 +8688,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body">EdgeLogsJobRequest</param>
         /// <returns>Task of ApiResponse (EdgeLogsJobResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EdgeLogsJobResponse>> PostEdgeLogsJobsAsyncWithHttpInfo (string edgeId, EdgeLogsJobRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeLogsJobResponse>> PostEdgesEdgeIdLogsJobsAsyncWithHttpInfo (string edgeId, EdgeLogsJobRequest body = null)
         {
             // verify the required parameter 'edgeId' is set
-            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling PostEdgeLogsJobs");
+            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling PostEdgesEdgeIdLogsJobs");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/logs/jobs";
@@ -8746,9 +8746,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostEdgeLogsJobs: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostEdgesEdgeIdLogsJobs: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostEdgeLogsJobs: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostEdgesEdgeIdLogsJobs: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<EdgeLogsJobResponse>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -8760,29 +8760,30 @@ namespace ININ.PureCloudApi.Api
         /// Get an Edge logs job. 
         /// </summary>
         /// <param name="edgeId">Edge ID</param> 
-        /// <param name="jobId"></param> 
-        /// <returns></returns>
-        public void GetEdgeLogsJob (string edgeId, string jobId)
+        /// <param name="jobId">Job ID</param> 
+        /// <returns>EdgeLogsJob</returns>
+        public EdgeLogsJob GetEdgesEdgeIdLogsJobsJobId (string edgeId, string jobId)
         {
-             GetEdgeLogsJobWithHttpInfo(edgeId, jobId);
+             ApiResponse<EdgeLogsJob> response = GetEdgesEdgeIdLogsJobsJobIdWithHttpInfo(edgeId, jobId);
+             return response.Data;
         }
 
         /// <summary>
         /// Get an Edge logs job. 
         /// </summary>
         /// <param name="edgeId">Edge ID</param> 
-        /// <param name="jobId"></param> 
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetEdgeLogsJobWithHttpInfo (string edgeId, string jobId)
+        /// <param name="jobId">Job ID</param> 
+        /// <returns>ApiResponse of EdgeLogsJob</returns>
+        public ApiResponse< EdgeLogsJob > GetEdgesEdgeIdLogsJobsJobIdWithHttpInfo (string edgeId, string jobId)
         {
             
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->GetEdgeLogsJob");
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->GetEdgesEdgeIdLogsJobsJobId");
             
             // verify the required parameter 'jobId' is set
             if (jobId == null)
-                throw new ApiException(400, "Missing required parameter 'jobId' when calling ConfigurationApi->GetEdgeLogsJob");
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling ConfigurationApi->GetEdgesEdgeIdLogsJobsJobId");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/logs/jobs/{jobId}";
@@ -8836,25 +8837,26 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetEdgeLogsJob: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdLogsJobsJobId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetEdgeLogsJob: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdLogsJobsJobId: " + response.ErrorMessage, response.ErrorMessage);
     
-            
-            return new ApiResponse<Object>(statusCode,
+            return new ApiResponse<EdgeLogsJob>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
+                (EdgeLogsJob) Configuration.ApiClient.Deserialize(response, typeof(EdgeLogsJob)));
+            
         }
     
         /// <summary>
         /// Get an Edge logs job. 
         /// </summary>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="jobId"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetEdgeLogsJobAsync (string edgeId, string jobId)
+        /// <param name="jobId">Job ID</param>
+        /// <returns>Task of EdgeLogsJob</returns>
+        public async System.Threading.Tasks.Task<EdgeLogsJob> GetEdgesEdgeIdLogsJobsJobIdAsync (string edgeId, string jobId)
         {
-             await GetEdgeLogsJobAsyncWithHttpInfo(edgeId, jobId);
+             ApiResponse<EdgeLogsJob> response = await GetEdgesEdgeIdLogsJobsJobIdAsyncWithHttpInfo(edgeId, jobId);
+             return response.Data;
 
         }
 
@@ -8862,14 +8864,14 @@ namespace ININ.PureCloudApi.Api
         /// Get an Edge logs job. 
         /// </summary>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="jobId"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetEdgeLogsJobAsyncWithHttpInfo (string edgeId, string jobId)
+        /// <param name="jobId">Job ID</param>
+        /// <returns>Task of ApiResponse (EdgeLogsJob)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeLogsJob>> GetEdgesEdgeIdLogsJobsJobIdAsyncWithHttpInfo (string edgeId, string jobId)
         {
             // verify the required parameter 'edgeId' is set
-            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling GetEdgeLogsJob");
+            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling GetEdgesEdgeIdLogsJobsJobId");
             // verify the required parameter 'jobId' is set
-            if (jobId == null) throw new ApiException(400, "Missing required parameter 'jobId' when calling GetEdgeLogsJob");
+            if (jobId == null) throw new ApiException(400, "Missing required parameter 'jobId' when calling GetEdgesEdgeIdLogsJobsJobId");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/logs/jobs/{jobId}";
@@ -8924,45 +8926,45 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetEdgeLogsJob: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdLogsJobsJobId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetEdgeLogsJob: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdLogsJobsJobId: " + response.ErrorMessage, response.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(statusCode,
+            return new ApiResponse<EdgeLogsJob>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
+                (EdgeLogsJob) Configuration.ApiClient.Deserialize(response, typeof(EdgeLogsJob)));
+            
         }
         
         /// <summary>
         /// Request that the specified fileIds be uploaded from the Edge. 
         /// </summary>
         /// <param name="edgeId">Edge ID</param> 
-        /// <param name="jobId"></param> 
+        /// <param name="jobId">Job ID</param> 
         /// <param name="body"></param> 
         /// <returns></returns>
-        public void PostEdgeLogsJobUpload (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null)
+        public void PostEdgesEdgeIdLogsJobsJobIdUpload (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null)
         {
-             PostEdgeLogsJobUploadWithHttpInfo(edgeId, jobId, body);
+             PostEdgesEdgeIdLogsJobsJobIdUploadWithHttpInfo(edgeId, jobId, body);
         }
 
         /// <summary>
         /// Request that the specified fileIds be uploaded from the Edge. 
         /// </summary>
         /// <param name="edgeId">Edge ID</param> 
-        /// <param name="jobId"></param> 
+        /// <param name="jobId">Job ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostEdgeLogsJobUploadWithHttpInfo (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null)
+        public ApiResponse<Object> PostEdgesEdgeIdLogsJobsJobIdUploadWithHttpInfo (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null)
         {
             
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->PostEdgeLogsJobUpload");
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->PostEdgesEdgeIdLogsJobsJobIdUpload");
             
             // verify the required parameter 'jobId' is set
             if (jobId == null)
-                throw new ApiException(400, "Missing required parameter 'jobId' when calling ConfigurationApi->PostEdgeLogsJobUpload");
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling ConfigurationApi->PostEdgesEdgeIdLogsJobsJobIdUpload");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/logs/jobs/{jobId}/upload";
@@ -9023,9 +9025,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostEdgeLogsJobUpload: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostEdgesEdgeIdLogsJobsJobIdUpload: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostEdgeLogsJobUpload: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostEdgesEdgeIdLogsJobsJobIdUpload: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -9037,12 +9039,12 @@ namespace ININ.PureCloudApi.Api
         /// Request that the specified fileIds be uploaded from the Edge. 
         /// </summary>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="jobId"></param>
+        /// <param name="jobId">Job ID</param>
         /// <param name="body"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostEdgeLogsJobUploadAsync (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null)
+        public async System.Threading.Tasks.Task PostEdgesEdgeIdLogsJobsJobIdUploadAsync (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null)
         {
-             await PostEdgeLogsJobUploadAsyncWithHttpInfo(edgeId, jobId, body);
+             await PostEdgesEdgeIdLogsJobsJobIdUploadAsyncWithHttpInfo(edgeId, jobId, body);
 
         }
 
@@ -9050,15 +9052,15 @@ namespace ININ.PureCloudApi.Api
         /// Request that the specified fileIds be uploaded from the Edge. 
         /// </summary>
         /// <param name="edgeId">Edge ID</param>
-        /// <param name="jobId"></param>
+        /// <param name="jobId">Job ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostEdgeLogsJobUploadAsyncWithHttpInfo (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostEdgesEdgeIdLogsJobsJobIdUploadAsyncWithHttpInfo (string edgeId, string jobId, EdgeLogsJobUploadRequest body = null)
         {
             // verify the required parameter 'edgeId' is set
-            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling PostEdgeLogsJobUpload");
+            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling PostEdgesEdgeIdLogsJobsJobIdUpload");
             // verify the required parameter 'jobId' is set
-            if (jobId == null) throw new ApiException(400, "Missing required parameter 'jobId' when calling PostEdgeLogsJobUpload");
+            if (jobId == null) throw new ApiException(400, "Missing required parameter 'jobId' when calling PostEdgesEdgeIdLogsJobsJobIdUpload");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/logs/jobs/{jobId}/upload";
@@ -9114,9 +9116,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostEdgeLogsJobUpload: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostEdgesEdgeIdLogsJobsJobIdUpload: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostEdgeLogsJobUpload: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostEdgesEdgeIdLogsJobsJobIdUpload: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,
@@ -9129,9 +9131,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param> 
         /// <returns>PhysicalInterfaceEntityListing</returns>
-        public PhysicalInterfaceEntityListing GetEdgePhysicalinterfaces (string edgeId)
+        public PhysicalInterfaceEntityListing GetEdgesEdgeIdPhysicalinterfaces (string edgeId)
         {
-             ApiResponse<PhysicalInterfaceEntityListing> response = GetEdgePhysicalinterfacesWithHttpInfo(edgeId);
+             ApiResponse<PhysicalInterfaceEntityListing> response = GetEdgesEdgeIdPhysicalinterfacesWithHttpInfo(edgeId);
              return response.Data;
         }
 
@@ -9140,12 +9142,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param> 
         /// <returns>ApiResponse of PhysicalInterfaceEntityListing</returns>
-        public ApiResponse< PhysicalInterfaceEntityListing > GetEdgePhysicalinterfacesWithHttpInfo (string edgeId)
+        public ApiResponse< PhysicalInterfaceEntityListing > GetEdgesEdgeIdPhysicalinterfacesWithHttpInfo (string edgeId)
         {
             
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->GetEdgePhysicalinterfaces");
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->GetEdgesEdgeIdPhysicalinterfaces");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/physicalinterfaces";
@@ -9198,9 +9200,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetEdgePhysicalinterfaces: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdPhysicalinterfaces: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetEdgePhysicalinterfaces: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdPhysicalinterfaces: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<PhysicalInterfaceEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9213,9 +9215,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of PhysicalInterfaceEntityListing</returns>
-        public async System.Threading.Tasks.Task<PhysicalInterfaceEntityListing> GetEdgePhysicalinterfacesAsync (string edgeId)
+        public async System.Threading.Tasks.Task<PhysicalInterfaceEntityListing> GetEdgesEdgeIdPhysicalinterfacesAsync (string edgeId)
         {
-             ApiResponse<PhysicalInterfaceEntityListing> response = await GetEdgePhysicalinterfacesAsyncWithHttpInfo(edgeId);
+             ApiResponse<PhysicalInterfaceEntityListing> response = await GetEdgesEdgeIdPhysicalinterfacesAsyncWithHttpInfo(edgeId);
              return response.Data;
 
         }
@@ -9225,10 +9227,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse (PhysicalInterfaceEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PhysicalInterfaceEntityListing>> GetEdgePhysicalinterfacesAsyncWithHttpInfo (string edgeId)
+        public async System.Threading.Tasks.Task<ApiResponse<PhysicalInterfaceEntityListing>> GetEdgesEdgeIdPhysicalinterfacesAsyncWithHttpInfo (string edgeId)
         {
             // verify the required parameter 'edgeId' is set
-            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling GetEdgePhysicalinterfaces");
+            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling GetEdgesEdgeIdPhysicalinterfaces");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/physicalinterfaces";
@@ -9282,9 +9284,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetEdgePhysicalinterfaces: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdPhysicalinterfaces: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetEdgePhysicalinterfaces: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdPhysicalinterfaces: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<PhysicalInterfaceEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9298,9 +9300,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param> 
         /// <param name="interfaceId">Interface ID</param> 
         /// <returns>DomainPhysicalInterface</returns>
-        public DomainPhysicalInterface GetEdgePhysicalinterface (string edgeId, string interfaceId)
+        public DomainPhysicalInterface GetEdgesEdgeIdPhysicalinterfacesInterfaceId (string edgeId, string interfaceId)
         {
-             ApiResponse<DomainPhysicalInterface> response = GetEdgePhysicalinterfaceWithHttpInfo(edgeId, interfaceId);
+             ApiResponse<DomainPhysicalInterface> response = GetEdgesEdgeIdPhysicalinterfacesInterfaceIdWithHttpInfo(edgeId, interfaceId);
              return response.Data;
         }
 
@@ -9310,16 +9312,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param> 
         /// <param name="interfaceId">Interface ID</param> 
         /// <returns>ApiResponse of DomainPhysicalInterface</returns>
-        public ApiResponse< DomainPhysicalInterface > GetEdgePhysicalinterfaceWithHttpInfo (string edgeId, string interfaceId)
+        public ApiResponse< DomainPhysicalInterface > GetEdgesEdgeIdPhysicalinterfacesInterfaceIdWithHttpInfo (string edgeId, string interfaceId)
         {
             
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->GetEdgePhysicalinterface");
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->GetEdgesEdgeIdPhysicalinterfacesInterfaceId");
             
             // verify the required parameter 'interfaceId' is set
             if (interfaceId == null)
-                throw new ApiException(400, "Missing required parameter 'interfaceId' when calling ConfigurationApi->GetEdgePhysicalinterface");
+                throw new ApiException(400, "Missing required parameter 'interfaceId' when calling ConfigurationApi->GetEdgesEdgeIdPhysicalinterfacesInterfaceId");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/physicalinterfaces/{interfaceId}";
@@ -9373,9 +9375,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetEdgePhysicalinterface: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdPhysicalinterfacesInterfaceId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetEdgePhysicalinterface: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdPhysicalinterfacesInterfaceId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DomainPhysicalInterface>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9389,9 +9391,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>Task of DomainPhysicalInterface</returns>
-        public async System.Threading.Tasks.Task<DomainPhysicalInterface> GetEdgePhysicalinterfaceAsync (string edgeId, string interfaceId)
+        public async System.Threading.Tasks.Task<DomainPhysicalInterface> GetEdgesEdgeIdPhysicalinterfacesInterfaceIdAsync (string edgeId, string interfaceId)
         {
-             ApiResponse<DomainPhysicalInterface> response = await GetEdgePhysicalinterfaceAsyncWithHttpInfo(edgeId, interfaceId);
+             ApiResponse<DomainPhysicalInterface> response = await GetEdgesEdgeIdPhysicalinterfacesInterfaceIdAsyncWithHttpInfo(edgeId, interfaceId);
              return response.Data;
 
         }
@@ -9402,12 +9404,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="interfaceId">Interface ID</param>
         /// <returns>Task of ApiResponse (DomainPhysicalInterface)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainPhysicalInterface>> GetEdgePhysicalinterfaceAsyncWithHttpInfo (string edgeId, string interfaceId)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainPhysicalInterface>> GetEdgesEdgeIdPhysicalinterfacesInterfaceIdAsyncWithHttpInfo (string edgeId, string interfaceId)
         {
             // verify the required parameter 'edgeId' is set
-            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling GetEdgePhysicalinterface");
+            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling GetEdgesEdgeIdPhysicalinterfacesInterfaceId");
             // verify the required parameter 'interfaceId' is set
-            if (interfaceId == null) throw new ApiException(400, "Missing required parameter 'interfaceId' when calling GetEdgePhysicalinterface");
+            if (interfaceId == null) throw new ApiException(400, "Missing required parameter 'interfaceId' when calling GetEdgesEdgeIdPhysicalinterfacesInterfaceId");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/physicalinterfaces/{interfaceId}";
@@ -9462,9 +9464,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetEdgePhysicalinterface: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdPhysicalinterfacesInterfaceId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetEdgePhysicalinterface: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdPhysicalinterfacesInterfaceId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DomainPhysicalInterface>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9477,9 +9479,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param> 
         /// <returns>string</returns>
-        public string PostEdgeReboot (string edgeId)
+        public string PostEdgesEdgeIdReboot (string edgeId)
         {
-             ApiResponse<string> response = PostEdgeRebootWithHttpInfo(edgeId);
+             ApiResponse<string> response = PostEdgesEdgeIdRebootWithHttpInfo(edgeId);
              return response.Data;
         }
 
@@ -9488,12 +9490,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > PostEdgeRebootWithHttpInfo (string edgeId)
+        public ApiResponse< string > PostEdgesEdgeIdRebootWithHttpInfo (string edgeId)
         {
             
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->PostEdgeReboot");
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->PostEdgesEdgeIdReboot");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/reboot";
@@ -9546,9 +9548,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostEdgeReboot: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostEdgesEdgeIdReboot: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostEdgeReboot: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostEdgesEdgeIdReboot: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9561,9 +9563,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> PostEdgeRebootAsync (string edgeId)
+        public async System.Threading.Tasks.Task<string> PostEdgesEdgeIdRebootAsync (string edgeId)
         {
-             ApiResponse<string> response = await PostEdgeRebootAsyncWithHttpInfo(edgeId);
+             ApiResponse<string> response = await PostEdgesEdgeIdRebootAsyncWithHttpInfo(edgeId);
              return response.Data;
 
         }
@@ -9573,10 +9575,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> PostEdgeRebootAsyncWithHttpInfo (string edgeId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> PostEdgesEdgeIdRebootAsyncWithHttpInfo (string edgeId)
         {
             // verify the required parameter 'edgeId' is set
-            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling PostEdgeReboot");
+            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling PostEdgesEdgeIdReboot");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/reboot";
@@ -9630,9 +9632,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostEdgeReboot: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostEdgesEdgeIdReboot: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostEdgeReboot: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostEdgesEdgeIdReboot: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9645,9 +9647,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param> 
         /// <returns>DomainEdgeSoftwareUpdateDto</returns>
-        public DomainEdgeSoftwareUpdateDto GetEdgeSoftwareupdate (string edgeId)
+        public DomainEdgeSoftwareUpdateDto GetEdgesEdgeIdSoftwareupdate (string edgeId)
         {
-             ApiResponse<DomainEdgeSoftwareUpdateDto> response = GetEdgeSoftwareupdateWithHttpInfo(edgeId);
+             ApiResponse<DomainEdgeSoftwareUpdateDto> response = GetEdgesEdgeIdSoftwareupdateWithHttpInfo(edgeId);
              return response.Data;
         }
 
@@ -9656,12 +9658,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param> 
         /// <returns>ApiResponse of DomainEdgeSoftwareUpdateDto</returns>
-        public ApiResponse< DomainEdgeSoftwareUpdateDto > GetEdgeSoftwareupdateWithHttpInfo (string edgeId)
+        public ApiResponse< DomainEdgeSoftwareUpdateDto > GetEdgesEdgeIdSoftwareupdateWithHttpInfo (string edgeId)
         {
             
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->GetEdgeSoftwareupdate");
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->GetEdgesEdgeIdSoftwareupdate");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/softwareupdate";
@@ -9714,9 +9716,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetEdgeSoftwareupdate: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdSoftwareupdate: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetEdgeSoftwareupdate: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdSoftwareupdate: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DomainEdgeSoftwareUpdateDto>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9729,9 +9731,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of DomainEdgeSoftwareUpdateDto</returns>
-        public async System.Threading.Tasks.Task<DomainEdgeSoftwareUpdateDto> GetEdgeSoftwareupdateAsync (string edgeId)
+        public async System.Threading.Tasks.Task<DomainEdgeSoftwareUpdateDto> GetEdgesEdgeIdSoftwareupdateAsync (string edgeId)
         {
-             ApiResponse<DomainEdgeSoftwareUpdateDto> response = await GetEdgeSoftwareupdateAsyncWithHttpInfo(edgeId);
+             ApiResponse<DomainEdgeSoftwareUpdateDto> response = await GetEdgesEdgeIdSoftwareupdateAsyncWithHttpInfo(edgeId);
              return response.Data;
 
         }
@@ -9741,10 +9743,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse (DomainEdgeSoftwareUpdateDto)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareUpdateDto>> GetEdgeSoftwareupdateAsyncWithHttpInfo (string edgeId)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareUpdateDto>> GetEdgesEdgeIdSoftwareupdateAsyncWithHttpInfo (string edgeId)
         {
             // verify the required parameter 'edgeId' is set
-            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling GetEdgeSoftwareupdate");
+            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling GetEdgesEdgeIdSoftwareupdate");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/softwareupdate";
@@ -9798,9 +9800,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetEdgeSoftwareupdate: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdSoftwareupdate: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetEdgeSoftwareupdate: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdSoftwareupdate: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DomainEdgeSoftwareUpdateDto>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9814,9 +9816,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param> 
         /// <param name="body"></param> 
         /// <returns>DomainEdgeSoftwareUpdateDto</returns>
-        public DomainEdgeSoftwareUpdateDto PostEdgeSoftwareupdate (string edgeId, DomainEdgeSoftwareUpdateDto body = null)
+        public DomainEdgeSoftwareUpdateDto PostEdgesEdgeIdSoftwareupdate (string edgeId, DomainEdgeSoftwareUpdateDto body = null)
         {
-             ApiResponse<DomainEdgeSoftwareUpdateDto> response = PostEdgeSoftwareupdateWithHttpInfo(edgeId, body);
+             ApiResponse<DomainEdgeSoftwareUpdateDto> response = PostEdgesEdgeIdSoftwareupdateWithHttpInfo(edgeId, body);
              return response.Data;
         }
 
@@ -9826,12 +9828,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of DomainEdgeSoftwareUpdateDto</returns>
-        public ApiResponse< DomainEdgeSoftwareUpdateDto > PostEdgeSoftwareupdateWithHttpInfo (string edgeId, DomainEdgeSoftwareUpdateDto body = null)
+        public ApiResponse< DomainEdgeSoftwareUpdateDto > PostEdgesEdgeIdSoftwareupdateWithHttpInfo (string edgeId, DomainEdgeSoftwareUpdateDto body = null)
         {
             
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->PostEdgeSoftwareupdate");
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->PostEdgesEdgeIdSoftwareupdate");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/softwareupdate";
@@ -9891,9 +9893,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostEdgeSoftwareupdate: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostEdgesEdgeIdSoftwareupdate: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostEdgeSoftwareupdate: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostEdgesEdgeIdSoftwareupdate: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DomainEdgeSoftwareUpdateDto>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9907,9 +9909,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body"></param>
         /// <returns>Task of DomainEdgeSoftwareUpdateDto</returns>
-        public async System.Threading.Tasks.Task<DomainEdgeSoftwareUpdateDto> PostEdgeSoftwareupdateAsync (string edgeId, DomainEdgeSoftwareUpdateDto body = null)
+        public async System.Threading.Tasks.Task<DomainEdgeSoftwareUpdateDto> PostEdgesEdgeIdSoftwareupdateAsync (string edgeId, DomainEdgeSoftwareUpdateDto body = null)
         {
-             ApiResponse<DomainEdgeSoftwareUpdateDto> response = await PostEdgeSoftwareupdateAsyncWithHttpInfo(edgeId, body);
+             ApiResponse<DomainEdgeSoftwareUpdateDto> response = await PostEdgesEdgeIdSoftwareupdateAsyncWithHttpInfo(edgeId, body);
              return response.Data;
 
         }
@@ -9920,10 +9922,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="edgeId">Edge ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (DomainEdgeSoftwareUpdateDto)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareUpdateDto>> PostEdgeSoftwareupdateAsyncWithHttpInfo (string edgeId, DomainEdgeSoftwareUpdateDto body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareUpdateDto>> PostEdgesEdgeIdSoftwareupdateAsyncWithHttpInfo (string edgeId, DomainEdgeSoftwareUpdateDto body = null)
         {
             // verify the required parameter 'edgeId' is set
-            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling PostEdgeSoftwareupdate");
+            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling PostEdgesEdgeIdSoftwareupdate");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/softwareupdate";
@@ -9978,9 +9980,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostEdgeSoftwareupdate: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostEdgesEdgeIdSoftwareupdate: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostEdgeSoftwareupdate: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostEdgesEdgeIdSoftwareupdate: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DomainEdgeSoftwareUpdateDto>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -9993,9 +9995,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param> 
         /// <returns>string</returns>
-        public string DeleteEdgeSoftwareupdate (string edgeId)
+        public string DeleteEdgesEdgeIdSoftwareupdate (string edgeId)
         {
-             ApiResponse<string> response = DeleteEdgeSoftwareupdateWithHttpInfo(edgeId);
+             ApiResponse<string> response = DeleteEdgesEdgeIdSoftwareupdateWithHttpInfo(edgeId);
              return response.Data;
         }
 
@@ -10004,12 +10006,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteEdgeSoftwareupdateWithHttpInfo (string edgeId)
+        public ApiResponse< string > DeleteEdgesEdgeIdSoftwareupdateWithHttpInfo (string edgeId)
         {
             
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->DeleteEdgeSoftwareupdate");
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->DeleteEdgesEdgeIdSoftwareupdate");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/softwareupdate";
@@ -10062,9 +10064,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteEdgeSoftwareupdate: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteEdgesEdgeIdSoftwareupdate: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteEdgeSoftwareupdate: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteEdgesEdgeIdSoftwareupdate: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10077,9 +10079,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteEdgeSoftwareupdateAsync (string edgeId)
+        public async System.Threading.Tasks.Task<string> DeleteEdgesEdgeIdSoftwareupdateAsync (string edgeId)
         {
-             ApiResponse<string> response = await DeleteEdgeSoftwareupdateAsyncWithHttpInfo(edgeId);
+             ApiResponse<string> response = await DeleteEdgesEdgeIdSoftwareupdateAsyncWithHttpInfo(edgeId);
              return response.Data;
 
         }
@@ -10089,10 +10091,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteEdgeSoftwareupdateAsyncWithHttpInfo (string edgeId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteEdgesEdgeIdSoftwareupdateAsyncWithHttpInfo (string edgeId)
         {
             // verify the required parameter 'edgeId' is set
-            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling DeleteEdgeSoftwareupdate");
+            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling DeleteEdgesEdgeIdSoftwareupdate");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/softwareupdate";
@@ -10146,9 +10148,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteEdgeSoftwareupdate: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteEdgesEdgeIdSoftwareupdate: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteEdgeSoftwareupdate: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteEdgesEdgeIdSoftwareupdate: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10161,9 +10163,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param> 
         /// <returns>DomainEdgeSoftwareVersionDto</returns>
-        public DomainEdgeSoftwareVersionDto GetEdgeSoftwareversions (string edgeId)
+        public DomainEdgeSoftwareVersionDto GetEdgesEdgeIdSoftwareversions (string edgeId)
         {
-             ApiResponse<DomainEdgeSoftwareVersionDto> response = GetEdgeSoftwareversionsWithHttpInfo(edgeId);
+             ApiResponse<DomainEdgeSoftwareVersionDto> response = GetEdgesEdgeIdSoftwareversionsWithHttpInfo(edgeId);
              return response.Data;
         }
 
@@ -10172,12 +10174,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param> 
         /// <returns>ApiResponse of DomainEdgeSoftwareVersionDto</returns>
-        public ApiResponse< DomainEdgeSoftwareVersionDto > GetEdgeSoftwareversionsWithHttpInfo (string edgeId)
+        public ApiResponse< DomainEdgeSoftwareVersionDto > GetEdgesEdgeIdSoftwareversionsWithHttpInfo (string edgeId)
         {
             
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->GetEdgeSoftwareversions");
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->GetEdgesEdgeIdSoftwareversions");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/softwareversions";
@@ -10230,9 +10232,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetEdgeSoftwareversions: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdSoftwareversions: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetEdgeSoftwareversions: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdSoftwareversions: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<DomainEdgeSoftwareVersionDto>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10245,9 +10247,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of DomainEdgeSoftwareVersionDto</returns>
-        public async System.Threading.Tasks.Task<DomainEdgeSoftwareVersionDto> GetEdgeSoftwareversionsAsync (string edgeId)
+        public async System.Threading.Tasks.Task<DomainEdgeSoftwareVersionDto> GetEdgesEdgeIdSoftwareversionsAsync (string edgeId)
         {
-             ApiResponse<DomainEdgeSoftwareVersionDto> response = await GetEdgeSoftwareversionsAsyncWithHttpInfo(edgeId);
+             ApiResponse<DomainEdgeSoftwareVersionDto> response = await GetEdgesEdgeIdSoftwareversionsAsyncWithHttpInfo(edgeId);
              return response.Data;
 
         }
@@ -10257,10 +10259,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse (DomainEdgeSoftwareVersionDto)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareVersionDto>> GetEdgeSoftwareversionsAsyncWithHttpInfo (string edgeId)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareVersionDto>> GetEdgesEdgeIdSoftwareversionsAsyncWithHttpInfo (string edgeId)
         {
             // verify the required parameter 'edgeId' is set
-            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling GetEdgeSoftwareversions");
+            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling GetEdgesEdgeIdSoftwareversions");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/softwareversions";
@@ -10314,9 +10316,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetEdgeSoftwareversions: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdSoftwareversions: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetEdgeSoftwareversions: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEdgesEdgeIdSoftwareversions: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<DomainEdgeSoftwareVersionDto>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10329,9 +10331,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge Id</param> 
         /// <returns>string</returns>
-        public string PostEdgeUnpair (string edgeId)
+        public string PostEdgesEdgeIdUnpair (string edgeId)
         {
-             ApiResponse<string> response = PostEdgeUnpairWithHttpInfo(edgeId);
+             ApiResponse<string> response = PostEdgesEdgeIdUnpairWithHttpInfo(edgeId);
              return response.Data;
         }
 
@@ -10340,12 +10342,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge Id</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > PostEdgeUnpairWithHttpInfo (string edgeId)
+        public ApiResponse< string > PostEdgesEdgeIdUnpairWithHttpInfo (string edgeId)
         {
             
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
-                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->PostEdgeUnpair");
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling ConfigurationApi->PostEdgesEdgeIdUnpair");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/unpair";
@@ -10398,9 +10400,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostEdgeUnpair: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostEdgesEdgeIdUnpair: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostEdgeUnpair: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostEdgesEdgeIdUnpair: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -10413,9 +10415,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> PostEdgeUnpairAsync (string edgeId)
+        public async System.Threading.Tasks.Task<string> PostEdgesEdgeIdUnpairAsync (string edgeId)
         {
-             ApiResponse<string> response = await PostEdgeUnpairAsyncWithHttpInfo(edgeId);
+             ApiResponse<string> response = await PostEdgesEdgeIdUnpairAsyncWithHttpInfo(edgeId);
              return response.Data;
 
         }
@@ -10425,10 +10427,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="edgeId">Edge Id</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> PostEdgeUnpairAsyncWithHttpInfo (string edgeId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> PostEdgesEdgeIdUnpairAsyncWithHttpInfo (string edgeId)
         {
             // verify the required parameter 'edgeId' is set
-            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling PostEdgeUnpair");
+            if (edgeId == null) throw new ApiException(400, "Missing required parameter 'edgeId' when calling PostEdgesEdgeIdUnpair");
             
     
             var path_ = "/api/v1/configuration/edges/{edgeId}/unpair";
@@ -10482,9 +10484,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostEdgeUnpair: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostEdgesEdgeIdUnpair: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostEdgeUnpair: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostEdgesEdgeIdUnpair: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -11001,9 +11003,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="endpointId">Endpoint ID</param> 
         /// <returns>Endpoint</returns>
-        public Endpoint GetEndpoint (string endpointId)
+        public Endpoint GetEndpointsEndpointId (string endpointId)
         {
-             ApiResponse<Endpoint> response = GetEndpointWithHttpInfo(endpointId);
+             ApiResponse<Endpoint> response = GetEndpointsEndpointIdWithHttpInfo(endpointId);
              return response.Data;
         }
 
@@ -11012,12 +11014,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="endpointId">Endpoint ID</param> 
         /// <returns>ApiResponse of Endpoint</returns>
-        public ApiResponse< Endpoint > GetEndpointWithHttpInfo (string endpointId)
+        public ApiResponse< Endpoint > GetEndpointsEndpointIdWithHttpInfo (string endpointId)
         {
             
             // verify the required parameter 'endpointId' is set
             if (endpointId == null)
-                throw new ApiException(400, "Missing required parameter 'endpointId' when calling ConfigurationApi->GetEndpoint");
+                throw new ApiException(400, "Missing required parameter 'endpointId' when calling ConfigurationApi->GetEndpointsEndpointId");
             
     
             var path_ = "/api/v1/configuration/endpoints/{endpointId}";
@@ -11070,9 +11072,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetEndpoint: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEndpointsEndpointId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetEndpoint: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEndpointsEndpointId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Endpoint>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -11085,9 +11087,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="endpointId">Endpoint ID</param>
         /// <returns>Task of Endpoint</returns>
-        public async System.Threading.Tasks.Task<Endpoint> GetEndpointAsync (string endpointId)
+        public async System.Threading.Tasks.Task<Endpoint> GetEndpointsEndpointIdAsync (string endpointId)
         {
-             ApiResponse<Endpoint> response = await GetEndpointAsyncWithHttpInfo(endpointId);
+             ApiResponse<Endpoint> response = await GetEndpointsEndpointIdAsyncWithHttpInfo(endpointId);
              return response.Data;
 
         }
@@ -11097,10 +11099,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="endpointId">Endpoint ID</param>
         /// <returns>Task of ApiResponse (Endpoint)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Endpoint>> GetEndpointAsyncWithHttpInfo (string endpointId)
+        public async System.Threading.Tasks.Task<ApiResponse<Endpoint>> GetEndpointsEndpointIdAsyncWithHttpInfo (string endpointId)
         {
             // verify the required parameter 'endpointId' is set
-            if (endpointId == null) throw new ApiException(400, "Missing required parameter 'endpointId' when calling GetEndpoint");
+            if (endpointId == null) throw new ApiException(400, "Missing required parameter 'endpointId' when calling GetEndpointsEndpointId");
             
     
             var path_ = "/api/v1/configuration/endpoints/{endpointId}";
@@ -11154,9 +11156,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetEndpoint: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetEndpointsEndpointId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetEndpoint: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetEndpointsEndpointId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Endpoint>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -11170,9 +11172,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endpointId">Endpoint ID</param> 
         /// <param name="body">EndpointTemplate</param> 
         /// <returns>Endpoint</returns>
-        public Endpoint PutEndpoint (string endpointId, Endpoint body = null)
+        public Endpoint PutEndpointsEndpointId (string endpointId, Endpoint body = null)
         {
-             ApiResponse<Endpoint> response = PutEndpointWithHttpInfo(endpointId, body);
+             ApiResponse<Endpoint> response = PutEndpointsEndpointIdWithHttpInfo(endpointId, body);
              return response.Data;
         }
 
@@ -11182,12 +11184,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endpointId">Endpoint ID</param> 
         /// <param name="body">EndpointTemplate</param> 
         /// <returns>ApiResponse of Endpoint</returns>
-        public ApiResponse< Endpoint > PutEndpointWithHttpInfo (string endpointId, Endpoint body = null)
+        public ApiResponse< Endpoint > PutEndpointsEndpointIdWithHttpInfo (string endpointId, Endpoint body = null)
         {
             
             // verify the required parameter 'endpointId' is set
             if (endpointId == null)
-                throw new ApiException(400, "Missing required parameter 'endpointId' when calling ConfigurationApi->PutEndpoint");
+                throw new ApiException(400, "Missing required parameter 'endpointId' when calling ConfigurationApi->PutEndpointsEndpointId");
             
     
             var path_ = "/api/v1/configuration/endpoints/{endpointId}";
@@ -11247,9 +11249,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutEndpoint: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutEndpointsEndpointId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutEndpoint: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutEndpointsEndpointId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Endpoint>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -11263,9 +11265,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endpointId">Endpoint ID</param>
         /// <param name="body">EndpointTemplate</param>
         /// <returns>Task of Endpoint</returns>
-        public async System.Threading.Tasks.Task<Endpoint> PutEndpointAsync (string endpointId, Endpoint body = null)
+        public async System.Threading.Tasks.Task<Endpoint> PutEndpointsEndpointIdAsync (string endpointId, Endpoint body = null)
         {
-             ApiResponse<Endpoint> response = await PutEndpointAsyncWithHttpInfo(endpointId, body);
+             ApiResponse<Endpoint> response = await PutEndpointsEndpointIdAsyncWithHttpInfo(endpointId, body);
              return response.Data;
 
         }
@@ -11276,10 +11278,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="endpointId">Endpoint ID</param>
         /// <param name="body">EndpointTemplate</param>
         /// <returns>Task of ApiResponse (Endpoint)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Endpoint>> PutEndpointAsyncWithHttpInfo (string endpointId, Endpoint body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Endpoint>> PutEndpointsEndpointIdAsyncWithHttpInfo (string endpointId, Endpoint body = null)
         {
             // verify the required parameter 'endpointId' is set
-            if (endpointId == null) throw new ApiException(400, "Missing required parameter 'endpointId' when calling PutEndpoint");
+            if (endpointId == null) throw new ApiException(400, "Missing required parameter 'endpointId' when calling PutEndpointsEndpointId");
             
     
             var path_ = "/api/v1/configuration/endpoints/{endpointId}";
@@ -11334,9 +11336,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutEndpoint: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutEndpointsEndpointId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutEndpoint: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutEndpointsEndpointId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Endpoint>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -11349,9 +11351,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="endpointId">Endpoint ID</param> 
         /// <returns>string</returns>
-        public string DeleteEndpoint (string endpointId)
+        public string DeleteEndpointsEndpointId (string endpointId)
         {
-             ApiResponse<string> response = DeleteEndpointWithHttpInfo(endpointId);
+             ApiResponse<string> response = DeleteEndpointsEndpointIdWithHttpInfo(endpointId);
              return response.Data;
         }
 
@@ -11360,12 +11362,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="endpointId">Endpoint ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteEndpointWithHttpInfo (string endpointId)
+        public ApiResponse< string > DeleteEndpointsEndpointIdWithHttpInfo (string endpointId)
         {
             
             // verify the required parameter 'endpointId' is set
             if (endpointId == null)
-                throw new ApiException(400, "Missing required parameter 'endpointId' when calling ConfigurationApi->DeleteEndpoint");
+                throw new ApiException(400, "Missing required parameter 'endpointId' when calling ConfigurationApi->DeleteEndpointsEndpointId");
             
     
             var path_ = "/api/v1/configuration/endpoints/{endpointId}";
@@ -11418,9 +11420,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteEndpoint: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteEndpointsEndpointId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteEndpoint: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteEndpointsEndpointId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -11433,9 +11435,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="endpointId">Endpoint ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteEndpointAsync (string endpointId)
+        public async System.Threading.Tasks.Task<string> DeleteEndpointsEndpointIdAsync (string endpointId)
         {
-             ApiResponse<string> response = await DeleteEndpointAsyncWithHttpInfo(endpointId);
+             ApiResponse<string> response = await DeleteEndpointsEndpointIdAsyncWithHttpInfo(endpointId);
              return response.Data;
 
         }
@@ -11445,10 +11447,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="endpointId">Endpoint ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteEndpointAsyncWithHttpInfo (string endpointId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteEndpointsEndpointIdAsyncWithHttpInfo (string endpointId)
         {
             // verify the required parameter 'endpointId' is set
-            if (endpointId == null) throw new ApiException(400, "Missing required parameter 'endpointId' when calling DeleteEndpoint");
+            if (endpointId == null) throw new ApiException(400, "Missing required parameter 'endpointId' when calling DeleteEndpointsEndpointId");
             
     
             var path_ = "/api/v1/configuration/endpoints/{endpointId}";
@@ -11502,9 +11504,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteEndpoint: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteEndpointsEndpointId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteEndpoint: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteEndpointsEndpointId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -11865,9 +11867,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="extensionPoolId">Extension pool ID</param> 
         /// <returns>ExtensionPool</returns>
-        public ExtensionPool GetExtensionpool (string extensionPoolId)
+        public ExtensionPool GetExtensionpoolsExtensionpoolId (string extensionPoolId)
         {
-             ApiResponse<ExtensionPool> response = GetExtensionpoolWithHttpInfo(extensionPoolId);
+             ApiResponse<ExtensionPool> response = GetExtensionpoolsExtensionpoolIdWithHttpInfo(extensionPoolId);
              return response.Data;
         }
 
@@ -11876,12 +11878,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="extensionPoolId">Extension pool ID</param> 
         /// <returns>ApiResponse of ExtensionPool</returns>
-        public ApiResponse< ExtensionPool > GetExtensionpoolWithHttpInfo (string extensionPoolId)
+        public ApiResponse< ExtensionPool > GetExtensionpoolsExtensionpoolIdWithHttpInfo (string extensionPoolId)
         {
             
             // verify the required parameter 'extensionPoolId' is set
             if (extensionPoolId == null)
-                throw new ApiException(400, "Missing required parameter 'extensionPoolId' when calling ConfigurationApi->GetExtensionpool");
+                throw new ApiException(400, "Missing required parameter 'extensionPoolId' when calling ConfigurationApi->GetExtensionpoolsExtensionpoolId");
             
     
             var path_ = "/api/v1/configuration/extensionpools/{extensionPoolId}";
@@ -11934,9 +11936,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetExtensionpool: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetExtensionpoolsExtensionpoolId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetExtensionpool: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetExtensionpoolsExtensionpoolId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ExtensionPool>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -11949,9 +11951,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <returns>Task of ExtensionPool</returns>
-        public async System.Threading.Tasks.Task<ExtensionPool> GetExtensionpoolAsync (string extensionPoolId)
+        public async System.Threading.Tasks.Task<ExtensionPool> GetExtensionpoolsExtensionpoolIdAsync (string extensionPoolId)
         {
-             ApiResponse<ExtensionPool> response = await GetExtensionpoolAsyncWithHttpInfo(extensionPoolId);
+             ApiResponse<ExtensionPool> response = await GetExtensionpoolsExtensionpoolIdAsyncWithHttpInfo(extensionPoolId);
              return response.Data;
 
         }
@@ -11961,10 +11963,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <returns>Task of ApiResponse (ExtensionPool)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ExtensionPool>> GetExtensionpoolAsyncWithHttpInfo (string extensionPoolId)
+        public async System.Threading.Tasks.Task<ApiResponse<ExtensionPool>> GetExtensionpoolsExtensionpoolIdAsyncWithHttpInfo (string extensionPoolId)
         {
             // verify the required parameter 'extensionPoolId' is set
-            if (extensionPoolId == null) throw new ApiException(400, "Missing required parameter 'extensionPoolId' when calling GetExtensionpool");
+            if (extensionPoolId == null) throw new ApiException(400, "Missing required parameter 'extensionPoolId' when calling GetExtensionpoolsExtensionpoolId");
             
     
             var path_ = "/api/v1/configuration/extensionpools/{extensionPoolId}";
@@ -12018,9 +12020,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetExtensionpool: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetExtensionpoolsExtensionpoolId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetExtensionpool: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetExtensionpoolsExtensionpoolId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ExtensionPool>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -12034,9 +12036,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="extensionPoolId">Extension pool ID</param> 
         /// <param name="body">ExtensionPool</param> 
         /// <returns>ExtensionPool</returns>
-        public ExtensionPool PutExtensionpool (string extensionPoolId, ExtensionPool body = null)
+        public ExtensionPool PutExtensionpoolsExtensionpoolId (string extensionPoolId, ExtensionPool body = null)
         {
-             ApiResponse<ExtensionPool> response = PutExtensionpoolWithHttpInfo(extensionPoolId, body);
+             ApiResponse<ExtensionPool> response = PutExtensionpoolsExtensionpoolIdWithHttpInfo(extensionPoolId, body);
              return response.Data;
         }
 
@@ -12046,12 +12048,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="extensionPoolId">Extension pool ID</param> 
         /// <param name="body">ExtensionPool</param> 
         /// <returns>ApiResponse of ExtensionPool</returns>
-        public ApiResponse< ExtensionPool > PutExtensionpoolWithHttpInfo (string extensionPoolId, ExtensionPool body = null)
+        public ApiResponse< ExtensionPool > PutExtensionpoolsExtensionpoolIdWithHttpInfo (string extensionPoolId, ExtensionPool body = null)
         {
             
             // verify the required parameter 'extensionPoolId' is set
             if (extensionPoolId == null)
-                throw new ApiException(400, "Missing required parameter 'extensionPoolId' when calling ConfigurationApi->PutExtensionpool");
+                throw new ApiException(400, "Missing required parameter 'extensionPoolId' when calling ConfigurationApi->PutExtensionpoolsExtensionpoolId");
             
     
             var path_ = "/api/v1/configuration/extensionpools/{extensionPoolId}";
@@ -12111,9 +12113,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutExtensionpool: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutExtensionpoolsExtensionpoolId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutExtensionpool: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutExtensionpoolsExtensionpoolId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<ExtensionPool>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -12127,9 +12129,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <param name="body">ExtensionPool</param>
         /// <returns>Task of ExtensionPool</returns>
-        public async System.Threading.Tasks.Task<ExtensionPool> PutExtensionpoolAsync (string extensionPoolId, ExtensionPool body = null)
+        public async System.Threading.Tasks.Task<ExtensionPool> PutExtensionpoolsExtensionpoolIdAsync (string extensionPoolId, ExtensionPool body = null)
         {
-             ApiResponse<ExtensionPool> response = await PutExtensionpoolAsyncWithHttpInfo(extensionPoolId, body);
+             ApiResponse<ExtensionPool> response = await PutExtensionpoolsExtensionpoolIdAsyncWithHttpInfo(extensionPoolId, body);
              return response.Data;
 
         }
@@ -12140,10 +12142,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <param name="body">ExtensionPool</param>
         /// <returns>Task of ApiResponse (ExtensionPool)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ExtensionPool>> PutExtensionpoolAsyncWithHttpInfo (string extensionPoolId, ExtensionPool body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ExtensionPool>> PutExtensionpoolsExtensionpoolIdAsyncWithHttpInfo (string extensionPoolId, ExtensionPool body = null)
         {
             // verify the required parameter 'extensionPoolId' is set
-            if (extensionPoolId == null) throw new ApiException(400, "Missing required parameter 'extensionPoolId' when calling PutExtensionpool");
+            if (extensionPoolId == null) throw new ApiException(400, "Missing required parameter 'extensionPoolId' when calling PutExtensionpoolsExtensionpoolId");
             
     
             var path_ = "/api/v1/configuration/extensionpools/{extensionPoolId}";
@@ -12198,9 +12200,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutExtensionpool: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutExtensionpoolsExtensionpoolId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutExtensionpool: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutExtensionpoolsExtensionpoolId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<ExtensionPool>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -12213,9 +12215,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="extensionPoolId">Extension pool ID</param> 
         /// <returns>string</returns>
-        public string DeleteExtensionpool (string extensionPoolId)
+        public string DeleteExtensionpoolsExtensionpoolId (string extensionPoolId)
         {
-             ApiResponse<string> response = DeleteExtensionpoolWithHttpInfo(extensionPoolId);
+             ApiResponse<string> response = DeleteExtensionpoolsExtensionpoolIdWithHttpInfo(extensionPoolId);
              return response.Data;
         }
 
@@ -12224,12 +12226,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="extensionPoolId">Extension pool ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteExtensionpoolWithHttpInfo (string extensionPoolId)
+        public ApiResponse< string > DeleteExtensionpoolsExtensionpoolIdWithHttpInfo (string extensionPoolId)
         {
             
             // verify the required parameter 'extensionPoolId' is set
             if (extensionPoolId == null)
-                throw new ApiException(400, "Missing required parameter 'extensionPoolId' when calling ConfigurationApi->DeleteExtensionpool");
+                throw new ApiException(400, "Missing required parameter 'extensionPoolId' when calling ConfigurationApi->DeleteExtensionpoolsExtensionpoolId");
             
     
             var path_ = "/api/v1/configuration/extensionpools/{extensionPoolId}";
@@ -12282,9 +12284,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteExtensionpool: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteExtensionpoolsExtensionpoolId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteExtensionpool: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteExtensionpoolsExtensionpoolId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -12297,9 +12299,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteExtensionpoolAsync (string extensionPoolId)
+        public async System.Threading.Tasks.Task<string> DeleteExtensionpoolsExtensionpoolIdAsync (string extensionPoolId)
         {
-             ApiResponse<string> response = await DeleteExtensionpoolAsyncWithHttpInfo(extensionPoolId);
+             ApiResponse<string> response = await DeleteExtensionpoolsExtensionpoolIdAsyncWithHttpInfo(extensionPoolId);
              return response.Data;
 
         }
@@ -12309,10 +12311,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="extensionPoolId">Extension pool ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteExtensionpoolAsyncWithHttpInfo (string extensionPoolId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteExtensionpoolsExtensionpoolIdAsyncWithHttpInfo (string extensionPoolId)
         {
             // verify the required parameter 'extensionPoolId' is set
-            if (extensionPoolId == null) throw new ApiException(400, "Missing required parameter 'extensionPoolId' when calling DeleteExtensionpool");
+            if (extensionPoolId == null) throw new ApiException(400, "Missing required parameter 'extensionPoolId' when calling DeleteExtensionpoolsExtensionpoolId");
             
     
             var path_ = "/api/v1/configuration/extensionpools/{extensionPoolId}";
@@ -12366,9 +12368,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteExtensionpool: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteExtensionpoolsExtensionpoolId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteExtensionpool: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteExtensionpoolsExtensionpoolId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -12567,9 +12569,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="extensionId">Extension ID</param> 
         /// <returns>Extension</returns>
-        public Extension GetExtension (string extensionId)
+        public Extension GetExtensionsExtensionId (string extensionId)
         {
-             ApiResponse<Extension> response = GetExtensionWithHttpInfo(extensionId);
+             ApiResponse<Extension> response = GetExtensionsExtensionIdWithHttpInfo(extensionId);
              return response.Data;
         }
 
@@ -12578,12 +12580,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="extensionId">Extension ID</param> 
         /// <returns>ApiResponse of Extension</returns>
-        public ApiResponse< Extension > GetExtensionWithHttpInfo (string extensionId)
+        public ApiResponse< Extension > GetExtensionsExtensionIdWithHttpInfo (string extensionId)
         {
             
             // verify the required parameter 'extensionId' is set
             if (extensionId == null)
-                throw new ApiException(400, "Missing required parameter 'extensionId' when calling ConfigurationApi->GetExtension");
+                throw new ApiException(400, "Missing required parameter 'extensionId' when calling ConfigurationApi->GetExtensionsExtensionId");
             
     
             var path_ = "/api/v1/configuration/extensions/{extensionId}";
@@ -12636,9 +12638,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetExtension: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetExtensionsExtensionId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetExtension: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetExtensionsExtensionId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Extension>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -12651,9 +12653,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="extensionId">Extension ID</param>
         /// <returns>Task of Extension</returns>
-        public async System.Threading.Tasks.Task<Extension> GetExtensionAsync (string extensionId)
+        public async System.Threading.Tasks.Task<Extension> GetExtensionsExtensionIdAsync (string extensionId)
         {
-             ApiResponse<Extension> response = await GetExtensionAsyncWithHttpInfo(extensionId);
+             ApiResponse<Extension> response = await GetExtensionsExtensionIdAsyncWithHttpInfo(extensionId);
              return response.Data;
 
         }
@@ -12663,10 +12665,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="extensionId">Extension ID</param>
         /// <returns>Task of ApiResponse (Extension)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Extension>> GetExtensionAsyncWithHttpInfo (string extensionId)
+        public async System.Threading.Tasks.Task<ApiResponse<Extension>> GetExtensionsExtensionIdAsyncWithHttpInfo (string extensionId)
         {
             // verify the required parameter 'extensionId' is set
-            if (extensionId == null) throw new ApiException(400, "Missing required parameter 'extensionId' when calling GetExtension");
+            if (extensionId == null) throw new ApiException(400, "Missing required parameter 'extensionId' when calling GetExtensionsExtensionId");
             
     
             var path_ = "/api/v1/configuration/extensions/{extensionId}";
@@ -12720,9 +12722,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetExtension: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetExtensionsExtensionId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetExtension: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetExtensionsExtensionId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Extension>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -12736,9 +12738,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="extensionId">Extension ID</param> 
         /// <param name="body"></param> 
         /// <returns>Extension</returns>
-        public Extension PutExtension (string extensionId, Extension body = null)
+        public Extension PutExtensionsExtensionId (string extensionId, Extension body = null)
         {
-             ApiResponse<Extension> response = PutExtensionWithHttpInfo(extensionId, body);
+             ApiResponse<Extension> response = PutExtensionsExtensionIdWithHttpInfo(extensionId, body);
              return response.Data;
         }
 
@@ -12748,12 +12750,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="extensionId">Extension ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of Extension</returns>
-        public ApiResponse< Extension > PutExtensionWithHttpInfo (string extensionId, Extension body = null)
+        public ApiResponse< Extension > PutExtensionsExtensionIdWithHttpInfo (string extensionId, Extension body = null)
         {
             
             // verify the required parameter 'extensionId' is set
             if (extensionId == null)
-                throw new ApiException(400, "Missing required parameter 'extensionId' when calling ConfigurationApi->PutExtension");
+                throw new ApiException(400, "Missing required parameter 'extensionId' when calling ConfigurationApi->PutExtensionsExtensionId");
             
     
             var path_ = "/api/v1/configuration/extensions/{extensionId}";
@@ -12813,9 +12815,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutExtension: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutExtensionsExtensionId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutExtension: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutExtensionsExtensionId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Extension>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -12829,9 +12831,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="extensionId">Extension ID</param>
         /// <param name="body"></param>
         /// <returns>Task of Extension</returns>
-        public async System.Threading.Tasks.Task<Extension> PutExtensionAsync (string extensionId, Extension body = null)
+        public async System.Threading.Tasks.Task<Extension> PutExtensionsExtensionIdAsync (string extensionId, Extension body = null)
         {
-             ApiResponse<Extension> response = await PutExtensionAsyncWithHttpInfo(extensionId, body);
+             ApiResponse<Extension> response = await PutExtensionsExtensionIdAsyncWithHttpInfo(extensionId, body);
              return response.Data;
 
         }
@@ -12842,10 +12844,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="extensionId">Extension ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Extension)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Extension>> PutExtensionAsyncWithHttpInfo (string extensionId, Extension body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Extension>> PutExtensionsExtensionIdAsyncWithHttpInfo (string extensionId, Extension body = null)
         {
             // verify the required parameter 'extensionId' is set
-            if (extensionId == null) throw new ApiException(400, "Missing required parameter 'extensionId' when calling PutExtension");
+            if (extensionId == null) throw new ApiException(400, "Missing required parameter 'extensionId' when calling PutExtensionsExtensionId");
             
     
             var path_ = "/api/v1/configuration/extensions/{extensionId}";
@@ -12900,9 +12902,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutExtension: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutExtensionsExtensionId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutExtension: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutExtensionsExtensionId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Extension>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -13455,9 +13457,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="policyId">Policy ID</param> 
         /// <returns>Policy</returns>
-        public Policy GetMediaretentionpolicie (string policyId)
+        public Policy GetMediaretentionpoliciesPolicyId (string policyId)
         {
-             ApiResponse<Policy> response = GetMediaretentionpolicieWithHttpInfo(policyId);
+             ApiResponse<Policy> response = GetMediaretentionpoliciesPolicyIdWithHttpInfo(policyId);
              return response.Data;
         }
 
@@ -13466,12 +13468,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="policyId">Policy ID</param> 
         /// <returns>ApiResponse of Policy</returns>
-        public ApiResponse< Policy > GetMediaretentionpolicieWithHttpInfo (string policyId)
+        public ApiResponse< Policy > GetMediaretentionpoliciesPolicyIdWithHttpInfo (string policyId)
         {
             
             // verify the required parameter 'policyId' is set
             if (policyId == null)
-                throw new ApiException(400, "Missing required parameter 'policyId' when calling ConfigurationApi->GetMediaretentionpolicie");
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling ConfigurationApi->GetMediaretentionpoliciesPolicyId");
             
     
             var path_ = "/api/v1/configuration/mediaretentionpolicies/{policyId}";
@@ -13524,9 +13526,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetMediaretentionpolicie: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetMediaretentionpoliciesPolicyId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetMediaretentionpolicie: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetMediaretentionpoliciesPolicyId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Policy>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -13539,9 +13541,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of Policy</returns>
-        public async System.Threading.Tasks.Task<Policy> GetMediaretentionpolicieAsync (string policyId)
+        public async System.Threading.Tasks.Task<Policy> GetMediaretentionpoliciesPolicyIdAsync (string policyId)
         {
-             ApiResponse<Policy> response = await GetMediaretentionpolicieAsyncWithHttpInfo(policyId);
+             ApiResponse<Policy> response = await GetMediaretentionpoliciesPolicyIdAsyncWithHttpInfo(policyId);
              return response.Data;
 
         }
@@ -13551,10 +13553,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Policy>> GetMediaretentionpolicieAsyncWithHttpInfo (string policyId)
+        public async System.Threading.Tasks.Task<ApiResponse<Policy>> GetMediaretentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId)
         {
             // verify the required parameter 'policyId' is set
-            if (policyId == null) throw new ApiException(400, "Missing required parameter 'policyId' when calling GetMediaretentionpolicie");
+            if (policyId == null) throw new ApiException(400, "Missing required parameter 'policyId' when calling GetMediaretentionpoliciesPolicyId");
             
     
             var path_ = "/api/v1/configuration/mediaretentionpolicies/{policyId}";
@@ -13608,9 +13610,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetMediaretentionpolicie: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetMediaretentionpoliciesPolicyId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetMediaretentionpolicie: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetMediaretentionpoliciesPolicyId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Policy>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -13624,9 +13626,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param> 
         /// <param name="body">Policy</param> 
         /// <returns>Policy</returns>
-        public Policy PutMediaretentionpolicie (string policyId, Policy body = null)
+        public Policy PutMediaretentionpoliciesPolicyId (string policyId, Policy body = null)
         {
-             ApiResponse<Policy> response = PutMediaretentionpolicieWithHttpInfo(policyId, body);
+             ApiResponse<Policy> response = PutMediaretentionpoliciesPolicyIdWithHttpInfo(policyId, body);
              return response.Data;
         }
 
@@ -13636,12 +13638,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param> 
         /// <param name="body">Policy</param> 
         /// <returns>ApiResponse of Policy</returns>
-        public ApiResponse< Policy > PutMediaretentionpolicieWithHttpInfo (string policyId, Policy body = null)
+        public ApiResponse< Policy > PutMediaretentionpoliciesPolicyIdWithHttpInfo (string policyId, Policy body = null)
         {
             
             // verify the required parameter 'policyId' is set
             if (policyId == null)
-                throw new ApiException(400, "Missing required parameter 'policyId' when calling ConfigurationApi->PutMediaretentionpolicie");
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling ConfigurationApi->PutMediaretentionpoliciesPolicyId");
             
     
             var path_ = "/api/v1/configuration/mediaretentionpolicies/{policyId}";
@@ -13701,9 +13703,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutMediaretentionpolicie: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutMediaretentionpoliciesPolicyId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutMediaretentionpolicie: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutMediaretentionpoliciesPolicyId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Policy>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -13717,9 +13719,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
-        public async System.Threading.Tasks.Task<Policy> PutMediaretentionpolicieAsync (string policyId, Policy body = null)
+        public async System.Threading.Tasks.Task<Policy> PutMediaretentionpoliciesPolicyIdAsync (string policyId, Policy body = null)
         {
-             ApiResponse<Policy> response = await PutMediaretentionpolicieAsyncWithHttpInfo(policyId, body);
+             ApiResponse<Policy> response = await PutMediaretentionpoliciesPolicyIdAsyncWithHttpInfo(policyId, body);
              return response.Data;
 
         }
@@ -13730,10 +13732,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Policy>> PutMediaretentionpolicieAsyncWithHttpInfo (string policyId, Policy body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Policy>> PutMediaretentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId, Policy body = null)
         {
             // verify the required parameter 'policyId' is set
-            if (policyId == null) throw new ApiException(400, "Missing required parameter 'policyId' when calling PutMediaretentionpolicie");
+            if (policyId == null) throw new ApiException(400, "Missing required parameter 'policyId' when calling PutMediaretentionpoliciesPolicyId");
             
     
             var path_ = "/api/v1/configuration/mediaretentionpolicies/{policyId}";
@@ -13788,9 +13790,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutMediaretentionpolicie: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutMediaretentionpoliciesPolicyId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutMediaretentionpolicie: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutMediaretentionpoliciesPolicyId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Policy>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -13803,9 +13805,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="policyId">Policy ID</param> 
         /// <returns>string</returns>
-        public string DeleteMediaretentionpolicie (string policyId)
+        public string DeleteMediaretentionpoliciesPolicyId (string policyId)
         {
-             ApiResponse<string> response = DeleteMediaretentionpolicieWithHttpInfo(policyId);
+             ApiResponse<string> response = DeleteMediaretentionpoliciesPolicyIdWithHttpInfo(policyId);
              return response.Data;
         }
 
@@ -13814,12 +13816,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="policyId">Policy ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteMediaretentionpolicieWithHttpInfo (string policyId)
+        public ApiResponse< string > DeleteMediaretentionpoliciesPolicyIdWithHttpInfo (string policyId)
         {
             
             // verify the required parameter 'policyId' is set
             if (policyId == null)
-                throw new ApiException(400, "Missing required parameter 'policyId' when calling ConfigurationApi->DeleteMediaretentionpolicie");
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling ConfigurationApi->DeleteMediaretentionpoliciesPolicyId");
             
     
             var path_ = "/api/v1/configuration/mediaretentionpolicies/{policyId}";
@@ -13872,9 +13874,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteMediaretentionpolicie: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteMediaretentionpoliciesPolicyId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteMediaretentionpolicie: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteMediaretentionpoliciesPolicyId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -13887,9 +13889,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteMediaretentionpolicieAsync (string policyId)
+        public async System.Threading.Tasks.Task<string> DeleteMediaretentionpoliciesPolicyIdAsync (string policyId)
         {
-             ApiResponse<string> response = await DeleteMediaretentionpolicieAsyncWithHttpInfo(policyId);
+             ApiResponse<string> response = await DeleteMediaretentionpoliciesPolicyIdAsyncWithHttpInfo(policyId);
              return response.Data;
 
         }
@@ -13899,10 +13901,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteMediaretentionpolicieAsyncWithHttpInfo (string policyId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteMediaretentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId)
         {
             // verify the required parameter 'policyId' is set
-            if (policyId == null) throw new ApiException(400, "Missing required parameter 'policyId' when calling DeleteMediaretentionpolicie");
+            if (policyId == null) throw new ApiException(400, "Missing required parameter 'policyId' when calling DeleteMediaretentionpoliciesPolicyId");
             
     
             var path_ = "/api/v1/configuration/mediaretentionpolicies/{policyId}";
@@ -13956,9 +13958,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteMediaretentionpolicie: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteMediaretentionpoliciesPolicyId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteMediaretentionpolicie: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteMediaretentionpoliciesPolicyId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -13972,9 +13974,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param> 
         /// <param name="body">Policy</param> 
         /// <returns>Policy</returns>
-        public Policy PatchMediaretentionpolicie (string policyId, Policy body = null)
+        public Policy PatchMediaretentionpoliciesPolicyId (string policyId, Policy body = null)
         {
-             ApiResponse<Policy> response = PatchMediaretentionpolicieWithHttpInfo(policyId, body);
+             ApiResponse<Policy> response = PatchMediaretentionpoliciesPolicyIdWithHttpInfo(policyId, body);
              return response.Data;
         }
 
@@ -13984,12 +13986,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param> 
         /// <param name="body">Policy</param> 
         /// <returns>ApiResponse of Policy</returns>
-        public ApiResponse< Policy > PatchMediaretentionpolicieWithHttpInfo (string policyId, Policy body = null)
+        public ApiResponse< Policy > PatchMediaretentionpoliciesPolicyIdWithHttpInfo (string policyId, Policy body = null)
         {
             
             // verify the required parameter 'policyId' is set
             if (policyId == null)
-                throw new ApiException(400, "Missing required parameter 'policyId' when calling ConfigurationApi->PatchMediaretentionpolicie");
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling ConfigurationApi->PatchMediaretentionpoliciesPolicyId");
             
     
             var path_ = "/api/v1/configuration/mediaretentionpolicies/{policyId}";
@@ -14049,9 +14051,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PatchMediaretentionpolicie: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PatchMediaretentionpoliciesPolicyId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PatchMediaretentionpolicie: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PatchMediaretentionpoliciesPolicyId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Policy>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -14065,9 +14067,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
-        public async System.Threading.Tasks.Task<Policy> PatchMediaretentionpolicieAsync (string policyId, Policy body = null)
+        public async System.Threading.Tasks.Task<Policy> PatchMediaretentionpoliciesPolicyIdAsync (string policyId, Policy body = null)
         {
-             ApiResponse<Policy> response = await PatchMediaretentionpolicieAsyncWithHttpInfo(policyId, body);
+             ApiResponse<Policy> response = await PatchMediaretentionpoliciesPolicyIdAsyncWithHttpInfo(policyId, body);
              return response.Data;
 
         }
@@ -14078,10 +14080,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Policy>> PatchMediaretentionpolicieAsyncWithHttpInfo (string policyId, Policy body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Policy>> PatchMediaretentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId, Policy body = null)
         {
             // verify the required parameter 'policyId' is set
-            if (policyId == null) throw new ApiException(400, "Missing required parameter 'policyId' when calling PatchMediaretentionpolicie");
+            if (policyId == null) throw new ApiException(400, "Missing required parameter 'policyId' when calling PatchMediaretentionpoliciesPolicyId");
             
     
             var path_ = "/api/v1/configuration/mediaretentionpolicies/{policyId}";
@@ -14136,9 +14138,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PatchMediaretentionpolicie: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PatchMediaretentionpoliciesPolicyId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PatchMediaretentionpolicie: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PatchMediaretentionpoliciesPolicyId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Policy>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -14643,9 +14645,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="orgId">Organization ID</param> 
         /// <returns>Organization</returns>
-        public Organization GetOrganization_0 (string orgId)
+        public Organization GetOrganizationsOrgId (string orgId)
         {
-             ApiResponse<Organization> response = GetOrganization_0WithHttpInfo(orgId);
+             ApiResponse<Organization> response = GetOrganizationsOrgIdWithHttpInfo(orgId);
              return response.Data;
         }
 
@@ -14654,12 +14656,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="orgId">Organization ID</param> 
         /// <returns>ApiResponse of Organization</returns>
-        public ApiResponse< Organization > GetOrganization_0WithHttpInfo (string orgId)
+        public ApiResponse< Organization > GetOrganizationsOrgIdWithHttpInfo (string orgId)
         {
             
             // verify the required parameter 'orgId' is set
             if (orgId == null)
-                throw new ApiException(400, "Missing required parameter 'orgId' when calling ConfigurationApi->GetOrganization_0");
+                throw new ApiException(400, "Missing required parameter 'orgId' when calling ConfigurationApi->GetOrganizationsOrgId");
             
     
             var path_ = "/api/v1/configuration/organizations/{orgId}";
@@ -14712,9 +14714,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetOrganization_0: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetOrganizationsOrgId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetOrganization_0: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetOrganizationsOrgId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Organization>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -14727,9 +14729,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="orgId">Organization ID</param>
         /// <returns>Task of Organization</returns>
-        public async System.Threading.Tasks.Task<Organization> GetOrganization_0Async (string orgId)
+        public async System.Threading.Tasks.Task<Organization> GetOrganizationsOrgIdAsync (string orgId)
         {
-             ApiResponse<Organization> response = await GetOrganization_0AsyncWithHttpInfo(orgId);
+             ApiResponse<Organization> response = await GetOrganizationsOrgIdAsyncWithHttpInfo(orgId);
              return response.Data;
 
         }
@@ -14739,10 +14741,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="orgId">Organization ID</param>
         /// <returns>Task of ApiResponse (Organization)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Organization>> GetOrganization_0AsyncWithHttpInfo (string orgId)
+        public async System.Threading.Tasks.Task<ApiResponse<Organization>> GetOrganizationsOrgIdAsyncWithHttpInfo (string orgId)
         {
             // verify the required parameter 'orgId' is set
-            if (orgId == null) throw new ApiException(400, "Missing required parameter 'orgId' when calling GetOrganization_0");
+            if (orgId == null) throw new ApiException(400, "Missing required parameter 'orgId' when calling GetOrganizationsOrgId");
             
     
             var path_ = "/api/v1/configuration/organizations/{orgId}";
@@ -14796,9 +14798,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetOrganization_0: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetOrganizationsOrgId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetOrganization_0: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetOrganizationsOrgId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Organization>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -14812,9 +14814,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="orgId">Organization ID</param> 
         /// <param name="body">Organization</param> 
         /// <returns>Organization</returns>
-        public Organization PutOrganization_0 (string orgId, Organization body = null)
+        public Organization PutOrganizationsOrgId (string orgId, Organization body = null)
         {
-             ApiResponse<Organization> response = PutOrganization_0WithHttpInfo(orgId, body);
+             ApiResponse<Organization> response = PutOrganizationsOrgIdWithHttpInfo(orgId, body);
              return response.Data;
         }
 
@@ -14824,12 +14826,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="orgId">Organization ID</param> 
         /// <param name="body">Organization</param> 
         /// <returns>ApiResponse of Organization</returns>
-        public ApiResponse< Organization > PutOrganization_0WithHttpInfo (string orgId, Organization body = null)
+        public ApiResponse< Organization > PutOrganizationsOrgIdWithHttpInfo (string orgId, Organization body = null)
         {
             
             // verify the required parameter 'orgId' is set
             if (orgId == null)
-                throw new ApiException(400, "Missing required parameter 'orgId' when calling ConfigurationApi->PutOrganization_0");
+                throw new ApiException(400, "Missing required parameter 'orgId' when calling ConfigurationApi->PutOrganizationsOrgId");
             
     
             var path_ = "/api/v1/configuration/organizations/{orgId}";
@@ -14889,9 +14891,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutOrganization_0: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutOrganizationsOrgId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutOrganization_0: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutOrganizationsOrgId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Organization>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -14905,9 +14907,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="orgId">Organization ID</param>
         /// <param name="body">Organization</param>
         /// <returns>Task of Organization</returns>
-        public async System.Threading.Tasks.Task<Organization> PutOrganization_0Async (string orgId, Organization body = null)
+        public async System.Threading.Tasks.Task<Organization> PutOrganizationsOrgIdAsync (string orgId, Organization body = null)
         {
-             ApiResponse<Organization> response = await PutOrganization_0AsyncWithHttpInfo(orgId, body);
+             ApiResponse<Organization> response = await PutOrganizationsOrgIdAsyncWithHttpInfo(orgId, body);
              return response.Data;
 
         }
@@ -14918,10 +14920,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="orgId">Organization ID</param>
         /// <param name="body">Organization</param>
         /// <returns>Task of ApiResponse (Organization)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Organization>> PutOrganization_0AsyncWithHttpInfo (string orgId, Organization body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Organization>> PutOrganizationsOrgIdAsyncWithHttpInfo (string orgId, Organization body = null)
         {
             // verify the required parameter 'orgId' is set
-            if (orgId == null) throw new ApiException(400, "Missing required parameter 'orgId' when calling PutOrganization_0");
+            if (orgId == null) throw new ApiException(400, "Missing required parameter 'orgId' when calling PutOrganizationsOrgId");
             
     
             var path_ = "/api/v1/configuration/organizations/{orgId}";
@@ -14976,9 +14978,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutOrganization_0: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutOrganizationsOrgId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutOrganization_0: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutOrganizationsOrgId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Organization>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -14991,9 +14993,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="orgId">Organization ID</param> 
         /// <returns>string</returns>
-        public string DeleteOrganization (string orgId)
+        public string DeleteOrganizationsOrgId (string orgId)
         {
-             ApiResponse<string> response = DeleteOrganizationWithHttpInfo(orgId);
+             ApiResponse<string> response = DeleteOrganizationsOrgIdWithHttpInfo(orgId);
              return response.Data;
         }
 
@@ -15002,12 +15004,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="orgId">Organization ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteOrganizationWithHttpInfo (string orgId)
+        public ApiResponse< string > DeleteOrganizationsOrgIdWithHttpInfo (string orgId)
         {
             
             // verify the required parameter 'orgId' is set
             if (orgId == null)
-                throw new ApiException(400, "Missing required parameter 'orgId' when calling ConfigurationApi->DeleteOrganization");
+                throw new ApiException(400, "Missing required parameter 'orgId' when calling ConfigurationApi->DeleteOrganizationsOrgId");
             
     
             var path_ = "/api/v1/configuration/organizations/{orgId}";
@@ -15060,9 +15062,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteOrganization: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteOrganizationsOrgId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteOrganization: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteOrganizationsOrgId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -15075,9 +15077,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="orgId">Organization ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteOrganizationAsync (string orgId)
+        public async System.Threading.Tasks.Task<string> DeleteOrganizationsOrgIdAsync (string orgId)
         {
-             ApiResponse<string> response = await DeleteOrganizationAsyncWithHttpInfo(orgId);
+             ApiResponse<string> response = await DeleteOrganizationsOrgIdAsyncWithHttpInfo(orgId);
              return response.Data;
 
         }
@@ -15087,10 +15089,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="orgId">Organization ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteOrganizationAsyncWithHttpInfo (string orgId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteOrganizationsOrgIdAsyncWithHttpInfo (string orgId)
         {
             // verify the required parameter 'orgId' is set
-            if (orgId == null) throw new ApiException(400, "Missing required parameter 'orgId' when calling DeleteOrganization");
+            if (orgId == null) throw new ApiException(400, "Missing required parameter 'orgId' when calling DeleteOrganizationsOrgId");
             
     
             var path_ = "/api/v1/configuration/organizations/{orgId}";
@@ -15144,9 +15146,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteOrganization: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteOrganizationsOrgId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteOrganization: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteOrganizationsOrgId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -16347,9 +16349,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="policyId">Policy ID</param> 
         /// <returns>Policy</returns>
-        public Policy GetRetentionpolicie (string policyId)
+        public Policy GetRetentionpoliciesPolicyId (string policyId)
         {
-             ApiResponse<Policy> response = GetRetentionpolicieWithHttpInfo(policyId);
+             ApiResponse<Policy> response = GetRetentionpoliciesPolicyIdWithHttpInfo(policyId);
              return response.Data;
         }
 
@@ -16358,12 +16360,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="policyId">Policy ID</param> 
         /// <returns>ApiResponse of Policy</returns>
-        public ApiResponse< Policy > GetRetentionpolicieWithHttpInfo (string policyId)
+        public ApiResponse< Policy > GetRetentionpoliciesPolicyIdWithHttpInfo (string policyId)
         {
             
             // verify the required parameter 'policyId' is set
             if (policyId == null)
-                throw new ApiException(400, "Missing required parameter 'policyId' when calling ConfigurationApi->GetRetentionpolicie");
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling ConfigurationApi->GetRetentionpoliciesPolicyId");
             
     
             var path_ = "/api/v1/configuration/retentionpolicies/{policyId}";
@@ -16416,9 +16418,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetRetentionpolicie: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetRetentionpoliciesPolicyId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetRetentionpolicie: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetRetentionpoliciesPolicyId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Policy>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -16431,9 +16433,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of Policy</returns>
-        public async System.Threading.Tasks.Task<Policy> GetRetentionpolicieAsync (string policyId)
+        public async System.Threading.Tasks.Task<Policy> GetRetentionpoliciesPolicyIdAsync (string policyId)
         {
-             ApiResponse<Policy> response = await GetRetentionpolicieAsyncWithHttpInfo(policyId);
+             ApiResponse<Policy> response = await GetRetentionpoliciesPolicyIdAsyncWithHttpInfo(policyId);
              return response.Data;
 
         }
@@ -16443,10 +16445,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Policy>> GetRetentionpolicieAsyncWithHttpInfo (string policyId)
+        public async System.Threading.Tasks.Task<ApiResponse<Policy>> GetRetentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId)
         {
             // verify the required parameter 'policyId' is set
-            if (policyId == null) throw new ApiException(400, "Missing required parameter 'policyId' when calling GetRetentionpolicie");
+            if (policyId == null) throw new ApiException(400, "Missing required parameter 'policyId' when calling GetRetentionpoliciesPolicyId");
             
     
             var path_ = "/api/v1/configuration/retentionpolicies/{policyId}";
@@ -16500,9 +16502,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetRetentionpolicie: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetRetentionpoliciesPolicyId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetRetentionpolicie: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetRetentionpoliciesPolicyId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Policy>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -16516,9 +16518,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param> 
         /// <param name="body">Policy</param> 
         /// <returns>Policy</returns>
-        public Policy PutRetentionpolicie (string policyId, Policy body = null)
+        public Policy PutRetentionpoliciesPolicyId (string policyId, Policy body = null)
         {
-             ApiResponse<Policy> response = PutRetentionpolicieWithHttpInfo(policyId, body);
+             ApiResponse<Policy> response = PutRetentionpoliciesPolicyIdWithHttpInfo(policyId, body);
              return response.Data;
         }
 
@@ -16528,12 +16530,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param> 
         /// <param name="body">Policy</param> 
         /// <returns>ApiResponse of Policy</returns>
-        public ApiResponse< Policy > PutRetentionpolicieWithHttpInfo (string policyId, Policy body = null)
+        public ApiResponse< Policy > PutRetentionpoliciesPolicyIdWithHttpInfo (string policyId, Policy body = null)
         {
             
             // verify the required parameter 'policyId' is set
             if (policyId == null)
-                throw new ApiException(400, "Missing required parameter 'policyId' when calling ConfigurationApi->PutRetentionpolicie");
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling ConfigurationApi->PutRetentionpoliciesPolicyId");
             
     
             var path_ = "/api/v1/configuration/retentionpolicies/{policyId}";
@@ -16593,9 +16595,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutRetentionpolicie: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutRetentionpoliciesPolicyId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutRetentionpolicie: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutRetentionpoliciesPolicyId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Policy>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -16609,9 +16611,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
-        public async System.Threading.Tasks.Task<Policy> PutRetentionpolicieAsync (string policyId, Policy body = null)
+        public async System.Threading.Tasks.Task<Policy> PutRetentionpoliciesPolicyIdAsync (string policyId, Policy body = null)
         {
-             ApiResponse<Policy> response = await PutRetentionpolicieAsyncWithHttpInfo(policyId, body);
+             ApiResponse<Policy> response = await PutRetentionpoliciesPolicyIdAsyncWithHttpInfo(policyId, body);
              return response.Data;
 
         }
@@ -16622,10 +16624,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Policy>> PutRetentionpolicieAsyncWithHttpInfo (string policyId, Policy body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Policy>> PutRetentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId, Policy body = null)
         {
             // verify the required parameter 'policyId' is set
-            if (policyId == null) throw new ApiException(400, "Missing required parameter 'policyId' when calling PutRetentionpolicie");
+            if (policyId == null) throw new ApiException(400, "Missing required parameter 'policyId' when calling PutRetentionpoliciesPolicyId");
             
     
             var path_ = "/api/v1/configuration/retentionpolicies/{policyId}";
@@ -16680,9 +16682,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutRetentionpolicie: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutRetentionpoliciesPolicyId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutRetentionpolicie: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutRetentionpoliciesPolicyId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Policy>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -16695,9 +16697,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="policyId">Policy ID</param> 
         /// <returns>string</returns>
-        public string DeleteRetentionpolicie (string policyId)
+        public string DeleteRetentionpoliciesPolicyId (string policyId)
         {
-             ApiResponse<string> response = DeleteRetentionpolicieWithHttpInfo(policyId);
+             ApiResponse<string> response = DeleteRetentionpoliciesPolicyIdWithHttpInfo(policyId);
              return response.Data;
         }
 
@@ -16706,12 +16708,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="policyId">Policy ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteRetentionpolicieWithHttpInfo (string policyId)
+        public ApiResponse< string > DeleteRetentionpoliciesPolicyIdWithHttpInfo (string policyId)
         {
             
             // verify the required parameter 'policyId' is set
             if (policyId == null)
-                throw new ApiException(400, "Missing required parameter 'policyId' when calling ConfigurationApi->DeleteRetentionpolicie");
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling ConfigurationApi->DeleteRetentionpoliciesPolicyId");
             
     
             var path_ = "/api/v1/configuration/retentionpolicies/{policyId}";
@@ -16764,9 +16766,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteRetentionpolicie: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteRetentionpoliciesPolicyId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteRetentionpolicie: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteRetentionpoliciesPolicyId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -16779,9 +16781,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteRetentionpolicieAsync (string policyId)
+        public async System.Threading.Tasks.Task<string> DeleteRetentionpoliciesPolicyIdAsync (string policyId)
         {
-             ApiResponse<string> response = await DeleteRetentionpolicieAsyncWithHttpInfo(policyId);
+             ApiResponse<string> response = await DeleteRetentionpoliciesPolicyIdAsyncWithHttpInfo(policyId);
              return response.Data;
 
         }
@@ -16791,10 +16793,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteRetentionpolicieAsyncWithHttpInfo (string policyId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteRetentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId)
         {
             // verify the required parameter 'policyId' is set
-            if (policyId == null) throw new ApiException(400, "Missing required parameter 'policyId' when calling DeleteRetentionpolicie");
+            if (policyId == null) throw new ApiException(400, "Missing required parameter 'policyId' when calling DeleteRetentionpoliciesPolicyId");
             
     
             var path_ = "/api/v1/configuration/retentionpolicies/{policyId}";
@@ -16848,9 +16850,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteRetentionpolicie: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteRetentionpoliciesPolicyId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteRetentionpolicie: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteRetentionpoliciesPolicyId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -16864,9 +16866,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param> 
         /// <param name="body">Policy</param> 
         /// <returns>Policy</returns>
-        public Policy PatchRetentionpolicie (string policyId, Policy body = null)
+        public Policy PatchRetentionpoliciesPolicyId (string policyId, Policy body = null)
         {
-             ApiResponse<Policy> response = PatchRetentionpolicieWithHttpInfo(policyId, body);
+             ApiResponse<Policy> response = PatchRetentionpoliciesPolicyIdWithHttpInfo(policyId, body);
              return response.Data;
         }
 
@@ -16876,12 +16878,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param> 
         /// <param name="body">Policy</param> 
         /// <returns>ApiResponse of Policy</returns>
-        public ApiResponse< Policy > PatchRetentionpolicieWithHttpInfo (string policyId, Policy body = null)
+        public ApiResponse< Policy > PatchRetentionpoliciesPolicyIdWithHttpInfo (string policyId, Policy body = null)
         {
             
             // verify the required parameter 'policyId' is set
             if (policyId == null)
-                throw new ApiException(400, "Missing required parameter 'policyId' when calling ConfigurationApi->PatchRetentionpolicie");
+                throw new ApiException(400, "Missing required parameter 'policyId' when calling ConfigurationApi->PatchRetentionpoliciesPolicyId");
             
     
             var path_ = "/api/v1/configuration/retentionpolicies/{policyId}";
@@ -16941,9 +16943,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PatchRetentionpolicie: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PatchRetentionpoliciesPolicyId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PatchRetentionpolicie: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PatchRetentionpoliciesPolicyId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Policy>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -16957,9 +16959,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of Policy</returns>
-        public async System.Threading.Tasks.Task<Policy> PatchRetentionpolicieAsync (string policyId, Policy body = null)
+        public async System.Threading.Tasks.Task<Policy> PatchRetentionpoliciesPolicyIdAsync (string policyId, Policy body = null)
         {
-             ApiResponse<Policy> response = await PatchRetentionpolicieAsyncWithHttpInfo(policyId, body);
+             ApiResponse<Policy> response = await PatchRetentionpoliciesPolicyIdAsyncWithHttpInfo(policyId, body);
              return response.Data;
 
         }
@@ -16970,10 +16972,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="policyId">Policy ID</param>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Policy>> PatchRetentionpolicieAsyncWithHttpInfo (string policyId, Policy body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Policy>> PatchRetentionpoliciesPolicyIdAsyncWithHttpInfo (string policyId, Policy body = null)
         {
             // verify the required parameter 'policyId' is set
-            if (policyId == null) throw new ApiException(400, "Missing required parameter 'policyId' when calling PatchRetentionpolicie");
+            if (policyId == null) throw new ApiException(400, "Missing required parameter 'policyId' when calling PatchRetentionpoliciesPolicyId");
             
     
             var path_ = "/api/v1/configuration/retentionpolicies/{policyId}";
@@ -17028,9 +17030,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PatchRetentionpolicie: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PatchRetentionpoliciesPolicyId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PatchRetentionpolicie: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PatchRetentionpoliciesPolicyId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Policy>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -17213,9 +17215,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>SchemaReferenceEntityListing</returns>
-        public SchemaReferenceEntityListing GetSchemasEdgesVnext_0 (string schemaCategory, int? pageSize = null, int? pageNumber = null)
+        public SchemaReferenceEntityListing GetSchemasEdgesVnextSchemacategory (string schemaCategory, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<SchemaReferenceEntityListing> response = GetSchemasEdgesVnext_0WithHttpInfo(schemaCategory, pageSize, pageNumber);
+             ApiResponse<SchemaReferenceEntityListing> response = GetSchemasEdgesVnextSchemacategoryWithHttpInfo(schemaCategory, pageSize, pageNumber);
              return response.Data;
         }
 
@@ -17226,12 +17228,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>ApiResponse of SchemaReferenceEntityListing</returns>
-        public ApiResponse< SchemaReferenceEntityListing > GetSchemasEdgesVnext_0WithHttpInfo (string schemaCategory, int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< SchemaReferenceEntityListing > GetSchemasEdgesVnextSchemacategoryWithHttpInfo (string schemaCategory, int? pageSize = null, int? pageNumber = null)
         {
             
             // verify the required parameter 'schemaCategory' is set
             if (schemaCategory == null)
-                throw new ApiException(400, "Missing required parameter 'schemaCategory' when calling ConfigurationApi->GetSchemasEdgesVnext_0");
+                throw new ApiException(400, "Missing required parameter 'schemaCategory' when calling ConfigurationApi->GetSchemasEdgesVnextSchemacategory");
             
     
             var path_ = "/api/v1/configuration/schemas/edges/vnext/{schemaCategory}";
@@ -17286,9 +17288,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnext_0: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnextSchemacategory: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnext_0: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnextSchemacategory: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<SchemaReferenceEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -17303,9 +17305,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of SchemaReferenceEntityListing</returns>
-        public async System.Threading.Tasks.Task<SchemaReferenceEntityListing> GetSchemasEdgesVnext_0Async (string schemaCategory, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<SchemaReferenceEntityListing> GetSchemasEdgesVnextSchemacategoryAsync (string schemaCategory, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<SchemaReferenceEntityListing> response = await GetSchemasEdgesVnext_0AsyncWithHttpInfo(schemaCategory, pageSize, pageNumber);
+             ApiResponse<SchemaReferenceEntityListing> response = await GetSchemasEdgesVnextSchemacategoryAsyncWithHttpInfo(schemaCategory, pageSize, pageNumber);
              return response.Data;
 
         }
@@ -17317,10 +17319,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (SchemaReferenceEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SchemaReferenceEntityListing>> GetSchemasEdgesVnext_0AsyncWithHttpInfo (string schemaCategory, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SchemaReferenceEntityListing>> GetSchemasEdgesVnextSchemacategoryAsyncWithHttpInfo (string schemaCategory, int? pageSize = null, int? pageNumber = null)
         {
             // verify the required parameter 'schemaCategory' is set
-            if (schemaCategory == null) throw new ApiException(400, "Missing required parameter 'schemaCategory' when calling GetSchemasEdgesVnext_0");
+            if (schemaCategory == null) throw new ApiException(400, "Missing required parameter 'schemaCategory' when calling GetSchemasEdgesVnextSchemacategory");
             
     
             var path_ = "/api/v1/configuration/schemas/edges/vnext/{schemaCategory}";
@@ -17376,9 +17378,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnext_0: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnextSchemacategory: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnext_0: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnextSchemacategory: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<SchemaReferenceEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -17394,9 +17396,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>SchemaReferenceEntityListing</returns>
-        public SchemaReferenceEntityListing GetSchemasEdgesVnext_1 (string schemaCategory, string schemaType, int? pageSize = null, int? pageNumber = null)
+        public SchemaReferenceEntityListing GetSchemasEdgesVnextSchemacategorySchematype (string schemaCategory, string schemaType, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<SchemaReferenceEntityListing> response = GetSchemasEdgesVnext_1WithHttpInfo(schemaCategory, schemaType, pageSize, pageNumber);
+             ApiResponse<SchemaReferenceEntityListing> response = GetSchemasEdgesVnextSchemacategorySchematypeWithHttpInfo(schemaCategory, schemaType, pageSize, pageNumber);
              return response.Data;
         }
 
@@ -17408,16 +17410,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>ApiResponse of SchemaReferenceEntityListing</returns>
-        public ApiResponse< SchemaReferenceEntityListing > GetSchemasEdgesVnext_1WithHttpInfo (string schemaCategory, string schemaType, int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< SchemaReferenceEntityListing > GetSchemasEdgesVnextSchemacategorySchematypeWithHttpInfo (string schemaCategory, string schemaType, int? pageSize = null, int? pageNumber = null)
         {
             
             // verify the required parameter 'schemaCategory' is set
             if (schemaCategory == null)
-                throw new ApiException(400, "Missing required parameter 'schemaCategory' when calling ConfigurationApi->GetSchemasEdgesVnext_1");
+                throw new ApiException(400, "Missing required parameter 'schemaCategory' when calling ConfigurationApi->GetSchemasEdgesVnextSchemacategorySchematype");
             
             // verify the required parameter 'schemaType' is set
             if (schemaType == null)
-                throw new ApiException(400, "Missing required parameter 'schemaType' when calling ConfigurationApi->GetSchemasEdgesVnext_1");
+                throw new ApiException(400, "Missing required parameter 'schemaType' when calling ConfigurationApi->GetSchemasEdgesVnextSchemacategorySchematype");
             
     
             var path_ = "/api/v1/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}";
@@ -17473,9 +17475,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnext_1: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnextSchemacategorySchematype: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnext_1: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnextSchemacategorySchematype: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<SchemaReferenceEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -17491,9 +17493,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of SchemaReferenceEntityListing</returns>
-        public async System.Threading.Tasks.Task<SchemaReferenceEntityListing> GetSchemasEdgesVnext_1Async (string schemaCategory, string schemaType, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<SchemaReferenceEntityListing> GetSchemasEdgesVnextSchemacategorySchematypeAsync (string schemaCategory, string schemaType, int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<SchemaReferenceEntityListing> response = await GetSchemasEdgesVnext_1AsyncWithHttpInfo(schemaCategory, schemaType, pageSize, pageNumber);
+             ApiResponse<SchemaReferenceEntityListing> response = await GetSchemasEdgesVnextSchemacategorySchematypeAsyncWithHttpInfo(schemaCategory, schemaType, pageSize, pageNumber);
              return response.Data;
 
         }
@@ -17506,12 +17508,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (SchemaReferenceEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SchemaReferenceEntityListing>> GetSchemasEdgesVnext_1AsyncWithHttpInfo (string schemaCategory, string schemaType, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SchemaReferenceEntityListing>> GetSchemasEdgesVnextSchemacategorySchematypeAsyncWithHttpInfo (string schemaCategory, string schemaType, int? pageSize = null, int? pageNumber = null)
         {
             // verify the required parameter 'schemaCategory' is set
-            if (schemaCategory == null) throw new ApiException(400, "Missing required parameter 'schemaCategory' when calling GetSchemasEdgesVnext_1");
+            if (schemaCategory == null) throw new ApiException(400, "Missing required parameter 'schemaCategory' when calling GetSchemasEdgesVnextSchemacategorySchematype");
             // verify the required parameter 'schemaType' is set
-            if (schemaType == null) throw new ApiException(400, "Missing required parameter 'schemaType' when calling GetSchemasEdgesVnext_1");
+            if (schemaType == null) throw new ApiException(400, "Missing required parameter 'schemaType' when calling GetSchemasEdgesVnextSchemacategorySchematype");
             
     
             var path_ = "/api/v1/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}";
@@ -17568,9 +17570,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnext_1: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnextSchemacategorySchematype: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnext_1: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnextSchemacategorySchematype: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<SchemaReferenceEntityListing>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -17585,9 +17587,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="schemaType">Schema type</param> 
         /// <param name="schemaId">Schema ID</param> 
         /// <returns>Organization</returns>
-        public Organization GetSchemasEdgesVnext_2 (string schemaCategory, string schemaType, string schemaId)
+        public Organization GetSchemasEdgesVnextSchemacategorySchematypeSchemaId (string schemaCategory, string schemaType, string schemaId)
         {
-             ApiResponse<Organization> response = GetSchemasEdgesVnext_2WithHttpInfo(schemaCategory, schemaType, schemaId);
+             ApiResponse<Organization> response = GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdWithHttpInfo(schemaCategory, schemaType, schemaId);
              return response.Data;
         }
 
@@ -17598,20 +17600,20 @@ namespace ININ.PureCloudApi.Api
         /// <param name="schemaType">Schema type</param> 
         /// <param name="schemaId">Schema ID</param> 
         /// <returns>ApiResponse of Organization</returns>
-        public ApiResponse< Organization > GetSchemasEdgesVnext_2WithHttpInfo (string schemaCategory, string schemaType, string schemaId)
+        public ApiResponse< Organization > GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdWithHttpInfo (string schemaCategory, string schemaType, string schemaId)
         {
             
             // verify the required parameter 'schemaCategory' is set
             if (schemaCategory == null)
-                throw new ApiException(400, "Missing required parameter 'schemaCategory' when calling ConfigurationApi->GetSchemasEdgesVnext_2");
+                throw new ApiException(400, "Missing required parameter 'schemaCategory' when calling ConfigurationApi->GetSchemasEdgesVnextSchemacategorySchematypeSchemaId");
             
             // verify the required parameter 'schemaType' is set
             if (schemaType == null)
-                throw new ApiException(400, "Missing required parameter 'schemaType' when calling ConfigurationApi->GetSchemasEdgesVnext_2");
+                throw new ApiException(400, "Missing required parameter 'schemaType' when calling ConfigurationApi->GetSchemasEdgesVnextSchemacategorySchematypeSchemaId");
             
             // verify the required parameter 'schemaId' is set
             if (schemaId == null)
-                throw new ApiException(400, "Missing required parameter 'schemaId' when calling ConfigurationApi->GetSchemasEdgesVnext_2");
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling ConfigurationApi->GetSchemasEdgesVnextSchemacategorySchematypeSchemaId");
             
     
             var path_ = "/api/v1/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}/{schemaId}";
@@ -17666,9 +17668,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnext_2: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnextSchemacategorySchematypeSchemaId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnext_2: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnextSchemacategorySchematypeSchemaId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Organization>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -17683,9 +17685,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="schemaType">Schema type</param>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of Organization</returns>
-        public async System.Threading.Tasks.Task<Organization> GetSchemasEdgesVnext_2Async (string schemaCategory, string schemaType, string schemaId)
+        public async System.Threading.Tasks.Task<Organization> GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdAsync (string schemaCategory, string schemaType, string schemaId)
         {
-             ApiResponse<Organization> response = await GetSchemasEdgesVnext_2AsyncWithHttpInfo(schemaCategory, schemaType, schemaId);
+             ApiResponse<Organization> response = await GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdAsyncWithHttpInfo(schemaCategory, schemaType, schemaId);
              return response.Data;
 
         }
@@ -17697,14 +17699,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="schemaType">Schema type</param>
         /// <param name="schemaId">Schema ID</param>
         /// <returns>Task of ApiResponse (Organization)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Organization>> GetSchemasEdgesVnext_2AsyncWithHttpInfo (string schemaCategory, string schemaType, string schemaId)
+        public async System.Threading.Tasks.Task<ApiResponse<Organization>> GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdAsyncWithHttpInfo (string schemaCategory, string schemaType, string schemaId)
         {
             // verify the required parameter 'schemaCategory' is set
-            if (schemaCategory == null) throw new ApiException(400, "Missing required parameter 'schemaCategory' when calling GetSchemasEdgesVnext_2");
+            if (schemaCategory == null) throw new ApiException(400, "Missing required parameter 'schemaCategory' when calling GetSchemasEdgesVnextSchemacategorySchematypeSchemaId");
             // verify the required parameter 'schemaType' is set
-            if (schemaType == null) throw new ApiException(400, "Missing required parameter 'schemaType' when calling GetSchemasEdgesVnext_2");
+            if (schemaType == null) throw new ApiException(400, "Missing required parameter 'schemaType' when calling GetSchemasEdgesVnextSchemacategorySchematypeSchemaId");
             // verify the required parameter 'schemaId' is set
-            if (schemaId == null) throw new ApiException(400, "Missing required parameter 'schemaId' when calling GetSchemasEdgesVnext_2");
+            if (schemaId == null) throw new ApiException(400, "Missing required parameter 'schemaId' when calling GetSchemasEdgesVnextSchemacategorySchematypeSchemaId");
             
     
             var path_ = "/api/v1/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}/{schemaId}";
@@ -17760,9 +17762,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnext_2: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnextSchemacategorySchematypeSchemaId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnext_2: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnextSchemacategorySchematypeSchemaId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Organization>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -17780,9 +17782,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="metadataId">Metadata ID</param> 
         /// <param name="type">Type</param> 
         /// <returns>Organization</returns>
-        public Organization GetSchemasEdgesVnext_3 (string schemaCategory, string schemaType, string schemaId, string extension, string metadataId, string type = null)
+        public Organization GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId (string schemaCategory, string schemaType, string schemaId, string extension, string metadataId, string type = null)
         {
-             ApiResponse<Organization> response = GetSchemasEdgesVnext_3WithHttpInfo(schemaCategory, schemaType, schemaId, extension, metadataId, type);
+             ApiResponse<Organization> response = GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataIdWithHttpInfo(schemaCategory, schemaType, schemaId, extension, metadataId, type);
              return response.Data;
         }
 
@@ -17796,28 +17798,28 @@ namespace ININ.PureCloudApi.Api
         /// <param name="metadataId">Metadata ID</param> 
         /// <param name="type">Type</param> 
         /// <returns>ApiResponse of Organization</returns>
-        public ApiResponse< Organization > GetSchemasEdgesVnext_3WithHttpInfo (string schemaCategory, string schemaType, string schemaId, string extension, string metadataId, string type = null)
+        public ApiResponse< Organization > GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataIdWithHttpInfo (string schemaCategory, string schemaType, string schemaId, string extension, string metadataId, string type = null)
         {
             
             // verify the required parameter 'schemaCategory' is set
             if (schemaCategory == null)
-                throw new ApiException(400, "Missing required parameter 'schemaCategory' when calling ConfigurationApi->GetSchemasEdgesVnext_3");
+                throw new ApiException(400, "Missing required parameter 'schemaCategory' when calling ConfigurationApi->GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId");
             
             // verify the required parameter 'schemaType' is set
             if (schemaType == null)
-                throw new ApiException(400, "Missing required parameter 'schemaType' when calling ConfigurationApi->GetSchemasEdgesVnext_3");
+                throw new ApiException(400, "Missing required parameter 'schemaType' when calling ConfigurationApi->GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId");
             
             // verify the required parameter 'schemaId' is set
             if (schemaId == null)
-                throw new ApiException(400, "Missing required parameter 'schemaId' when calling ConfigurationApi->GetSchemasEdgesVnext_3");
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling ConfigurationApi->GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId");
             
             // verify the required parameter 'extension' is set
             if (extension == null)
-                throw new ApiException(400, "Missing required parameter 'extension' when calling ConfigurationApi->GetSchemasEdgesVnext_3");
+                throw new ApiException(400, "Missing required parameter 'extension' when calling ConfigurationApi->GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId");
             
             // verify the required parameter 'metadataId' is set
             if (metadataId == null)
-                throw new ApiException(400, "Missing required parameter 'metadataId' when calling ConfigurationApi->GetSchemasEdgesVnext_3");
+                throw new ApiException(400, "Missing required parameter 'metadataId' when calling ConfigurationApi->GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId");
             
     
             var path_ = "/api/v1/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}/{schemaId}/{extension}/{metadataId}";
@@ -17875,9 +17877,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnext_3: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnext_3: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Organization>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -17895,9 +17897,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="metadataId">Metadata ID</param>
         /// <param name="type">Type</param>
         /// <returns>Task of Organization</returns>
-        public async System.Threading.Tasks.Task<Organization> GetSchemasEdgesVnext_3Async (string schemaCategory, string schemaType, string schemaId, string extension, string metadataId, string type = null)
+        public async System.Threading.Tasks.Task<Organization> GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataIdAsync (string schemaCategory, string schemaType, string schemaId, string extension, string metadataId, string type = null)
         {
-             ApiResponse<Organization> response = await GetSchemasEdgesVnext_3AsyncWithHttpInfo(schemaCategory, schemaType, schemaId, extension, metadataId, type);
+             ApiResponse<Organization> response = await GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataIdAsyncWithHttpInfo(schemaCategory, schemaType, schemaId, extension, metadataId, type);
              return response.Data;
 
         }
@@ -17912,18 +17914,18 @@ namespace ININ.PureCloudApi.Api
         /// <param name="metadataId">Metadata ID</param>
         /// <param name="type">Type</param>
         /// <returns>Task of ApiResponse (Organization)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Organization>> GetSchemasEdgesVnext_3AsyncWithHttpInfo (string schemaCategory, string schemaType, string schemaId, string extension, string metadataId, string type = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Organization>> GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataIdAsyncWithHttpInfo (string schemaCategory, string schemaType, string schemaId, string extension, string metadataId, string type = null)
         {
             // verify the required parameter 'schemaCategory' is set
-            if (schemaCategory == null) throw new ApiException(400, "Missing required parameter 'schemaCategory' when calling GetSchemasEdgesVnext_3");
+            if (schemaCategory == null) throw new ApiException(400, "Missing required parameter 'schemaCategory' when calling GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId");
             // verify the required parameter 'schemaType' is set
-            if (schemaType == null) throw new ApiException(400, "Missing required parameter 'schemaType' when calling GetSchemasEdgesVnext_3");
+            if (schemaType == null) throw new ApiException(400, "Missing required parameter 'schemaType' when calling GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId");
             // verify the required parameter 'schemaId' is set
-            if (schemaId == null) throw new ApiException(400, "Missing required parameter 'schemaId' when calling GetSchemasEdgesVnext_3");
+            if (schemaId == null) throw new ApiException(400, "Missing required parameter 'schemaId' when calling GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId");
             // verify the required parameter 'extension' is set
-            if (extension == null) throw new ApiException(400, "Missing required parameter 'extension' when calling GetSchemasEdgesVnext_3");
+            if (extension == null) throw new ApiException(400, "Missing required parameter 'extension' when calling GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId");
             // verify the required parameter 'metadataId' is set
-            if (metadataId == null) throw new ApiException(400, "Missing required parameter 'metadataId' when calling GetSchemasEdgesVnext_3");
+            if (metadataId == null) throw new ApiException(400, "Missing required parameter 'metadataId' when calling GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId");
             
     
             var path_ = "/api/v1/configuration/schemas/edges/vnext/{schemaCategory}/{schemaType}/{schemaId}/{extension}/{metadataId}";
@@ -17982,9 +17984,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnext_3: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnext_3: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSchemasEdgesVnextSchemacategorySchematypeSchemaIdExtensionMetadataId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Organization>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -18357,9 +18359,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="siteId">Site ID</param> 
         /// <returns>Site</returns>
-        public Site GetSite (string siteId)
+        public Site GetSitesSiteId (string siteId)
         {
-             ApiResponse<Site> response = GetSiteWithHttpInfo(siteId);
+             ApiResponse<Site> response = GetSitesSiteIdWithHttpInfo(siteId);
              return response.Data;
         }
 
@@ -18368,12 +18370,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="siteId">Site ID</param> 
         /// <returns>ApiResponse of Site</returns>
-        public ApiResponse< Site > GetSiteWithHttpInfo (string siteId)
+        public ApiResponse< Site > GetSitesSiteIdWithHttpInfo (string siteId)
         {
             
             // verify the required parameter 'siteId' is set
             if (siteId == null)
-                throw new ApiException(400, "Missing required parameter 'siteId' when calling ConfigurationApi->GetSite");
+                throw new ApiException(400, "Missing required parameter 'siteId' when calling ConfigurationApi->GetSitesSiteId");
             
     
             var path_ = "/api/v1/configuration/sites/{siteId}";
@@ -18426,9 +18428,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSite: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSitesSiteId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSite: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSitesSiteId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Site>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -18441,9 +18443,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of Site</returns>
-        public async System.Threading.Tasks.Task<Site> GetSiteAsync (string siteId)
+        public async System.Threading.Tasks.Task<Site> GetSitesSiteIdAsync (string siteId)
         {
-             ApiResponse<Site> response = await GetSiteAsyncWithHttpInfo(siteId);
+             ApiResponse<Site> response = await GetSitesSiteIdAsyncWithHttpInfo(siteId);
              return response.Data;
 
         }
@@ -18453,10 +18455,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of ApiResponse (Site)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Site>> GetSiteAsyncWithHttpInfo (string siteId)
+        public async System.Threading.Tasks.Task<ApiResponse<Site>> GetSitesSiteIdAsyncWithHttpInfo (string siteId)
         {
             // verify the required parameter 'siteId' is set
-            if (siteId == null) throw new ApiException(400, "Missing required parameter 'siteId' when calling GetSite");
+            if (siteId == null) throw new ApiException(400, "Missing required parameter 'siteId' when calling GetSitesSiteId");
             
     
             var path_ = "/api/v1/configuration/sites/{siteId}";
@@ -18510,9 +18512,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSite: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSitesSiteId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSite: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSitesSiteId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Site>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -18526,9 +18528,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param> 
         /// <param name="body">Site</param> 
         /// <returns>Site</returns>
-        public Site PutSite (string siteId, Site body = null)
+        public Site PutSitesSiteId (string siteId, Site body = null)
         {
-             ApiResponse<Site> response = PutSiteWithHttpInfo(siteId, body);
+             ApiResponse<Site> response = PutSitesSiteIdWithHttpInfo(siteId, body);
              return response.Data;
         }
 
@@ -18538,12 +18540,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param> 
         /// <param name="body">Site</param> 
         /// <returns>ApiResponse of Site</returns>
-        public ApiResponse< Site > PutSiteWithHttpInfo (string siteId, Site body = null)
+        public ApiResponse< Site > PutSitesSiteIdWithHttpInfo (string siteId, Site body = null)
         {
             
             // verify the required parameter 'siteId' is set
             if (siteId == null)
-                throw new ApiException(400, "Missing required parameter 'siteId' when calling ConfigurationApi->PutSite");
+                throw new ApiException(400, "Missing required parameter 'siteId' when calling ConfigurationApi->PutSitesSiteId");
             
     
             var path_ = "/api/v1/configuration/sites/{siteId}";
@@ -18603,9 +18605,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutSite: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutSitesSiteId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutSite: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutSitesSiteId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<Site>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -18619,9 +18621,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="body">Site</param>
         /// <returns>Task of Site</returns>
-        public async System.Threading.Tasks.Task<Site> PutSiteAsync (string siteId, Site body = null)
+        public async System.Threading.Tasks.Task<Site> PutSitesSiteIdAsync (string siteId, Site body = null)
         {
-             ApiResponse<Site> response = await PutSiteAsyncWithHttpInfo(siteId, body);
+             ApiResponse<Site> response = await PutSitesSiteIdAsyncWithHttpInfo(siteId, body);
              return response.Data;
 
         }
@@ -18632,10 +18634,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="body">Site</param>
         /// <returns>Task of ApiResponse (Site)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Site>> PutSiteAsyncWithHttpInfo (string siteId, Site body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Site>> PutSitesSiteIdAsyncWithHttpInfo (string siteId, Site body = null)
         {
             // verify the required parameter 'siteId' is set
-            if (siteId == null) throw new ApiException(400, "Missing required parameter 'siteId' when calling PutSite");
+            if (siteId == null) throw new ApiException(400, "Missing required parameter 'siteId' when calling PutSitesSiteId");
             
     
             var path_ = "/api/v1/configuration/sites/{siteId}";
@@ -18690,9 +18692,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutSite: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutSitesSiteId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutSite: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutSitesSiteId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<Site>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -18705,9 +18707,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="siteId">Site ID</param> 
         /// <returns>string</returns>
-        public string DeleteSite (string siteId)
+        public string DeleteSitesSiteId (string siteId)
         {
-             ApiResponse<string> response = DeleteSiteWithHttpInfo(siteId);
+             ApiResponse<string> response = DeleteSitesSiteIdWithHttpInfo(siteId);
              return response.Data;
         }
 
@@ -18716,12 +18718,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="siteId">Site ID</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteSiteWithHttpInfo (string siteId)
+        public ApiResponse< string > DeleteSitesSiteIdWithHttpInfo (string siteId)
         {
             
             // verify the required parameter 'siteId' is set
             if (siteId == null)
-                throw new ApiException(400, "Missing required parameter 'siteId' when calling ConfigurationApi->DeleteSite");
+                throw new ApiException(400, "Missing required parameter 'siteId' when calling ConfigurationApi->DeleteSitesSiteId");
             
     
             var path_ = "/api/v1/configuration/sites/{siteId}";
@@ -18774,9 +18776,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteSite: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteSitesSiteId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteSite: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteSitesSiteId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -18789,9 +18791,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteSiteAsync (string siteId)
+        public async System.Threading.Tasks.Task<string> DeleteSitesSiteIdAsync (string siteId)
         {
-             ApiResponse<string> response = await DeleteSiteAsyncWithHttpInfo(siteId);
+             ApiResponse<string> response = await DeleteSitesSiteIdAsyncWithHttpInfo(siteId);
              return response.Data;
 
         }
@@ -18801,10 +18803,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteSiteAsyncWithHttpInfo (string siteId)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteSitesSiteIdAsyncWithHttpInfo (string siteId)
         {
             // verify the required parameter 'siteId' is set
-            if (siteId == null) throw new ApiException(400, "Missing required parameter 'siteId' when calling DeleteSite");
+            if (siteId == null) throw new ApiException(400, "Missing required parameter 'siteId' when calling DeleteSitesSiteId");
             
     
             var path_ = "/api/v1/configuration/sites/{siteId}";
@@ -18858,9 +18860,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling DeleteSite: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling DeleteSitesSiteId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling DeleteSite: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling DeleteSitesSiteId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<string>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -18873,9 +18875,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="siteId">Site ID</param> 
         /// <returns>List&lt;NumberPlan&gt;</returns>
-        public List<NumberPlan> GetSiteNumberplans (string siteId)
+        public List<NumberPlan> GetSitesSiteIdNumberplans (string siteId)
         {
-             ApiResponse<List<NumberPlan>> response = GetSiteNumberplansWithHttpInfo(siteId);
+             ApiResponse<List<NumberPlan>> response = GetSitesSiteIdNumberplansWithHttpInfo(siteId);
              return response.Data;
         }
 
@@ -18884,12 +18886,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="siteId">Site ID</param> 
         /// <returns>ApiResponse of List&lt;NumberPlan&gt;</returns>
-        public ApiResponse< List<NumberPlan> > GetSiteNumberplansWithHttpInfo (string siteId)
+        public ApiResponse< List<NumberPlan> > GetSitesSiteIdNumberplansWithHttpInfo (string siteId)
         {
             
             // verify the required parameter 'siteId' is set
             if (siteId == null)
-                throw new ApiException(400, "Missing required parameter 'siteId' when calling ConfigurationApi->GetSiteNumberplans");
+                throw new ApiException(400, "Missing required parameter 'siteId' when calling ConfigurationApi->GetSitesSiteIdNumberplans");
             
     
             var path_ = "/api/v1/configuration/sites/{siteId}/numberplans";
@@ -18942,9 +18944,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSiteNumberplans: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSitesSiteIdNumberplans: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSiteNumberplans: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSitesSiteIdNumberplans: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<List<NumberPlan>>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -18957,9 +18959,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of List&lt;NumberPlan&gt;</returns>
-        public async System.Threading.Tasks.Task<List<NumberPlan>> GetSiteNumberplansAsync (string siteId)
+        public async System.Threading.Tasks.Task<List<NumberPlan>> GetSitesSiteIdNumberplansAsync (string siteId)
         {
-             ApiResponse<List<NumberPlan>> response = await GetSiteNumberplansAsyncWithHttpInfo(siteId);
+             ApiResponse<List<NumberPlan>> response = await GetSitesSiteIdNumberplansAsyncWithHttpInfo(siteId);
              return response.Data;
 
         }
@@ -18969,10 +18971,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of ApiResponse (List&lt;NumberPlan&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<NumberPlan>>> GetSiteNumberplansAsyncWithHttpInfo (string siteId)
+        public async System.Threading.Tasks.Task<ApiResponse<List<NumberPlan>>> GetSitesSiteIdNumberplansAsyncWithHttpInfo (string siteId)
         {
             // verify the required parameter 'siteId' is set
-            if (siteId == null) throw new ApiException(400, "Missing required parameter 'siteId' when calling GetSiteNumberplans");
+            if (siteId == null) throw new ApiException(400, "Missing required parameter 'siteId' when calling GetSitesSiteIdNumberplans");
             
     
             var path_ = "/api/v1/configuration/sites/{siteId}/numberplans";
@@ -19026,9 +19028,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSiteNumberplans: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSitesSiteIdNumberplans: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSiteNumberplans: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSitesSiteIdNumberplans: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<List<NumberPlan>>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -19042,9 +19044,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param> 
         /// <param name="body"></param> 
         /// <returns>List&lt;NumberPlan&gt;</returns>
-        public List<NumberPlan> PutSiteNumberplans (string siteId, List<NumberPlan> body = null)
+        public List<NumberPlan> PutSitesSiteIdNumberplans (string siteId, List<NumberPlan> body = null)
         {
-             ApiResponse<List<NumberPlan>> response = PutSiteNumberplansWithHttpInfo(siteId, body);
+             ApiResponse<List<NumberPlan>> response = PutSitesSiteIdNumberplansWithHttpInfo(siteId, body);
              return response.Data;
         }
 
@@ -19054,12 +19056,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param> 
         /// <param name="body"></param> 
         /// <returns>ApiResponse of List&lt;NumberPlan&gt;</returns>
-        public ApiResponse< List<NumberPlan> > PutSiteNumberplansWithHttpInfo (string siteId, List<NumberPlan> body = null)
+        public ApiResponse< List<NumberPlan> > PutSitesSiteIdNumberplansWithHttpInfo (string siteId, List<NumberPlan> body = null)
         {
             
             // verify the required parameter 'siteId' is set
             if (siteId == null)
-                throw new ApiException(400, "Missing required parameter 'siteId' when calling ConfigurationApi->PutSiteNumberplans");
+                throw new ApiException(400, "Missing required parameter 'siteId' when calling ConfigurationApi->PutSitesSiteIdNumberplans");
             
     
             var path_ = "/api/v1/configuration/sites/{siteId}/numberplans";
@@ -19119,9 +19121,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutSiteNumberplans: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutSitesSiteIdNumberplans: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutSiteNumberplans: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutSitesSiteIdNumberplans: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<List<NumberPlan>>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -19135,9 +19137,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="body"></param>
         /// <returns>Task of List&lt;NumberPlan&gt;</returns>
-        public async System.Threading.Tasks.Task<List<NumberPlan>> PutSiteNumberplansAsync (string siteId, List<NumberPlan> body = null)
+        public async System.Threading.Tasks.Task<List<NumberPlan>> PutSitesSiteIdNumberplansAsync (string siteId, List<NumberPlan> body = null)
         {
-             ApiResponse<List<NumberPlan>> response = await PutSiteNumberplansAsyncWithHttpInfo(siteId, body);
+             ApiResponse<List<NumberPlan>> response = await PutSitesSiteIdNumberplansAsyncWithHttpInfo(siteId, body);
              return response.Data;
 
         }
@@ -19148,10 +19150,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (List&lt;NumberPlan&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<NumberPlan>>> PutSiteNumberplansAsyncWithHttpInfo (string siteId, List<NumberPlan> body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<NumberPlan>>> PutSitesSiteIdNumberplansAsyncWithHttpInfo (string siteId, List<NumberPlan> body = null)
         {
             // verify the required parameter 'siteId' is set
-            if (siteId == null) throw new ApiException(400, "Missing required parameter 'siteId' when calling PutSiteNumberplans");
+            if (siteId == null) throw new ApiException(400, "Missing required parameter 'siteId' when calling PutSitesSiteIdNumberplans");
             
     
             var path_ = "/api/v1/configuration/sites/{siteId}/numberplans";
@@ -19206,9 +19208,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutSiteNumberplans: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PutSitesSiteIdNumberplans: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutSiteNumberplans: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PutSitesSiteIdNumberplans: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<List<NumberPlan>>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -19222,9 +19224,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param> 
         /// <param name="classification">Classification</param> 
         /// <returns>List&lt;string&gt;</returns>
-        public List<string> GetSiteNumberplansClassifications (string siteId, string classification = null)
+        public List<string> GetSitesSiteIdNumberplansClassifications (string siteId, string classification = null)
         {
-             ApiResponse<List<string>> response = GetSiteNumberplansClassificationsWithHttpInfo(siteId, classification);
+             ApiResponse<List<string>> response = GetSitesSiteIdNumberplansClassificationsWithHttpInfo(siteId, classification);
              return response.Data;
         }
 
@@ -19234,12 +19236,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param> 
         /// <param name="classification">Classification</param> 
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        public ApiResponse< List<string> > GetSiteNumberplansClassificationsWithHttpInfo (string siteId, string classification = null)
+        public ApiResponse< List<string> > GetSitesSiteIdNumberplansClassificationsWithHttpInfo (string siteId, string classification = null)
         {
             
             // verify the required parameter 'siteId' is set
             if (siteId == null)
-                throw new ApiException(400, "Missing required parameter 'siteId' when calling ConfigurationApi->GetSiteNumberplansClassifications");
+                throw new ApiException(400, "Missing required parameter 'siteId' when calling ConfigurationApi->GetSitesSiteIdNumberplansClassifications");
             
     
             var path_ = "/api/v1/configuration/sites/{siteId}/numberplans/classifications";
@@ -19293,9 +19295,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSiteNumberplansClassifications: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSitesSiteIdNumberplansClassifications: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSiteNumberplansClassifications: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSitesSiteIdNumberplansClassifications: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<List<string>>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -19309,9 +19311,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="classification">Classification</param>
         /// <returns>Task of List&lt;string&gt;</returns>
-        public async System.Threading.Tasks.Task<List<string>> GetSiteNumberplansClassificationsAsync (string siteId, string classification = null)
+        public async System.Threading.Tasks.Task<List<string>> GetSitesSiteIdNumberplansClassificationsAsync (string siteId, string classification = null)
         {
-             ApiResponse<List<string>> response = await GetSiteNumberplansClassificationsAsyncWithHttpInfo(siteId, classification);
+             ApiResponse<List<string>> response = await GetSitesSiteIdNumberplansClassificationsAsyncWithHttpInfo(siteId, classification);
              return response.Data;
 
         }
@@ -19322,10 +19324,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="classification">Classification</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<string>>> GetSiteNumberplansClassificationsAsyncWithHttpInfo (string siteId, string classification = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<string>>> GetSitesSiteIdNumberplansClassificationsAsyncWithHttpInfo (string siteId, string classification = null)
         {
             // verify the required parameter 'siteId' is set
-            if (siteId == null) throw new ApiException(400, "Missing required parameter 'siteId' when calling GetSiteNumberplansClassifications");
+            if (siteId == null) throw new ApiException(400, "Missing required parameter 'siteId' when calling GetSitesSiteIdNumberplansClassifications");
             
     
             var path_ = "/api/v1/configuration/sites/{siteId}/numberplans/classifications";
@@ -19380,9 +19382,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSiteNumberplansClassifications: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSitesSiteIdNumberplansClassifications: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSiteNumberplansClassifications: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSitesSiteIdNumberplansClassifications: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<List<string>>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -19396,9 +19398,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param> 
         /// <param name="numberPlanId">Number Plan ID</param> 
         /// <returns>NumberPlan</returns>
-        public NumberPlan GetSiteNumberplan (string siteId, string numberPlanId)
+        public NumberPlan GetSitesSiteIdNumberplansNumberplanId (string siteId, string numberPlanId)
         {
-             ApiResponse<NumberPlan> response = GetSiteNumberplanWithHttpInfo(siteId, numberPlanId);
+             ApiResponse<NumberPlan> response = GetSitesSiteIdNumberplansNumberplanIdWithHttpInfo(siteId, numberPlanId);
              return response.Data;
         }
 
@@ -19408,16 +19410,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param> 
         /// <param name="numberPlanId">Number Plan ID</param> 
         /// <returns>ApiResponse of NumberPlan</returns>
-        public ApiResponse< NumberPlan > GetSiteNumberplanWithHttpInfo (string siteId, string numberPlanId)
+        public ApiResponse< NumberPlan > GetSitesSiteIdNumberplansNumberplanIdWithHttpInfo (string siteId, string numberPlanId)
         {
             
             // verify the required parameter 'siteId' is set
             if (siteId == null)
-                throw new ApiException(400, "Missing required parameter 'siteId' when calling ConfigurationApi->GetSiteNumberplan");
+                throw new ApiException(400, "Missing required parameter 'siteId' when calling ConfigurationApi->GetSitesSiteIdNumberplansNumberplanId");
             
             // verify the required parameter 'numberPlanId' is set
             if (numberPlanId == null)
-                throw new ApiException(400, "Missing required parameter 'numberPlanId' when calling ConfigurationApi->GetSiteNumberplan");
+                throw new ApiException(400, "Missing required parameter 'numberPlanId' when calling ConfigurationApi->GetSitesSiteIdNumberplansNumberplanId");
             
     
             var path_ = "/api/v1/configuration/sites/{siteId}/numberplans/{numberPlanId}";
@@ -19471,9 +19473,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSiteNumberplan: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSitesSiteIdNumberplansNumberplanId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSiteNumberplan: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSitesSiteIdNumberplansNumberplanId: " + response.ErrorMessage, response.ErrorMessage);
     
             return new ApiResponse<NumberPlan>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -19487,9 +19489,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="numberPlanId">Number Plan ID</param>
         /// <returns>Task of NumberPlan</returns>
-        public async System.Threading.Tasks.Task<NumberPlan> GetSiteNumberplanAsync (string siteId, string numberPlanId)
+        public async System.Threading.Tasks.Task<NumberPlan> GetSitesSiteIdNumberplansNumberplanIdAsync (string siteId, string numberPlanId)
         {
-             ApiResponse<NumberPlan> response = await GetSiteNumberplanAsyncWithHttpInfo(siteId, numberPlanId);
+             ApiResponse<NumberPlan> response = await GetSitesSiteIdNumberplansNumberplanIdAsyncWithHttpInfo(siteId, numberPlanId);
              return response.Data;
 
         }
@@ -19500,12 +19502,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="siteId">Site ID</param>
         /// <param name="numberPlanId">Number Plan ID</param>
         /// <returns>Task of ApiResponse (NumberPlan)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<NumberPlan>> GetSiteNumberplanAsyncWithHttpInfo (string siteId, string numberPlanId)
+        public async System.Threading.Tasks.Task<ApiResponse<NumberPlan>> GetSitesSiteIdNumberplansNumberplanIdAsyncWithHttpInfo (string siteId, string numberPlanId)
         {
             // verify the required parameter 'siteId' is set
-            if (siteId == null) throw new ApiException(400, "Missing required parameter 'siteId' when calling GetSiteNumberplan");
+            if (siteId == null) throw new ApiException(400, "Missing required parameter 'siteId' when calling GetSitesSiteIdNumberplansNumberplanId");
             // verify the required parameter 'numberPlanId' is set
-            if (numberPlanId == null) throw new ApiException(400, "Missing required parameter 'numberPlanId' when calling GetSiteNumberplan");
+            if (numberPlanId == null) throw new ApiException(400, "Missing required parameter 'numberPlanId' when calling GetSitesSiteIdNumberplansNumberplanId");
             
     
             var path_ = "/api/v1/configuration/sites/{siteId}/numberplans/{numberPlanId}";
@@ -19560,9 +19562,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSiteNumberplan: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling GetSitesSiteIdNumberplansNumberplanId: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSiteNumberplan: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling GetSitesSiteIdNumberplansNumberplanId: " + response.ErrorMessage, response.ErrorMessage);
 
             return new ApiResponse<NumberPlan>(statusCode,
                 response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -19575,9 +19577,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="siteId">Site ID</param> 
         /// <returns></returns>
-        public void PostSiteRebalance (string siteId)
+        public void PostSitesSiteIdRebalance (string siteId)
         {
-             PostSiteRebalanceWithHttpInfo(siteId);
+             PostSitesSiteIdRebalanceWithHttpInfo(siteId);
         }
 
         /// <summary>
@@ -19585,12 +19587,12 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="siteId">Site ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostSiteRebalanceWithHttpInfo (string siteId)
+        public ApiResponse<Object> PostSitesSiteIdRebalanceWithHttpInfo (string siteId)
         {
             
             // verify the required parameter 'siteId' is set
             if (siteId == null)
-                throw new ApiException(400, "Missing required parameter 'siteId' when calling ConfigurationApi->PostSiteRebalance");
+                throw new ApiException(400, "Missing required parameter 'siteId' when calling ConfigurationApi->PostSitesSiteIdRebalance");
             
     
             var path_ = "/api/v1/configuration/sites/{siteId}/rebalance";
@@ -19643,9 +19645,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
     
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostSiteRebalance: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostSitesSiteIdRebalance: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostSiteRebalance: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostSitesSiteIdRebalance: " + response.ErrorMessage, response.ErrorMessage);
     
             
             return new ApiResponse<Object>(statusCode,
@@ -19658,9 +19660,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostSiteRebalanceAsync (string siteId)
+        public async System.Threading.Tasks.Task PostSitesSiteIdRebalanceAsync (string siteId)
         {
-             await PostSiteRebalanceAsyncWithHttpInfo(siteId);
+             await PostSitesSiteIdRebalanceAsyncWithHttpInfo(siteId);
 
         }
 
@@ -19669,10 +19671,10 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <param name="siteId">Site ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostSiteRebalanceAsyncWithHttpInfo (string siteId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostSitesSiteIdRebalanceAsyncWithHttpInfo (string siteId)
         {
             // verify the required parameter 'siteId' is set
-            if (siteId == null) throw new ApiException(400, "Missing required parameter 'siteId' when calling PostSiteRebalance");
+            if (siteId == null) throw new ApiException(400, "Missing required parameter 'siteId' when calling PostSitesSiteIdRebalance");
             
     
             var path_ = "/api/v1/configuration/sites/{siteId}/rebalance";
@@ -19726,9 +19728,9 @@ namespace ININ.PureCloudApi.Api
             int statusCode = (int) response.StatusCode;
  
             if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PostSiteRebalance: " + response.Content, response.Content);
+                throw new ApiException (statusCode, "Error calling PostSitesSiteIdRebalance: " + response.Content, response.Content);
             else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PostSiteRebalance: " + response.ErrorMessage, response.ErrorMessage);
+                throw new ApiException (statusCode, "Error calling PostSitesSiteIdRebalance: " + response.ErrorMessage, response.ErrorMessage);
 
             
             return new ApiResponse<Object>(statusCode,

@@ -61,16 +61,16 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test Get
+        /// Test GetDownloadId
         /// </summary>
         [Test]
-        public void GetTest()
+        public void GetDownloadIdTest()
         {
-            // TODO: add unit test for the method 'Get'
+            // TODO: add unit test for the method 'GetDownloadId'
             string downloadId = null; // TODO: replace null with proper value
             string contentDisposition = null; // TODO: replace null with proper value
             
-            var response = instance.Get(downloadId, contentDisposition);
+            var response = instance.GetDownloadId(downloadId, contentDisposition);
             Assert.IsInstanceOf<UrlResponse> (response, "response is UrlResponse"); 
         }
         

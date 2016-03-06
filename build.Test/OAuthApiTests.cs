@@ -47,199 +47,199 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test GetIdentityproviders
+        /// Test Get
         /// </summary>
         [Test]
-        public void GetIdentityprovidersTest()
+        public void GetTest()
         {
-            // TODO: add unit test for the method 'GetIdentityproviders'
+            // TODO: add unit test for the method 'Get'
             
-            var response = instance.GetIdentityproviders();
+            var response = instance.Get();
             Assert.IsInstanceOf<OAuthProviderEntityListing> (response, "response is OAuthProviderEntityListing"); 
         }
         
         /// <summary>
-        /// Test GetIdentityprovidersOkta
+        /// Test GetOkta
         /// </summary>
         [Test]
-        public void GetIdentityprovidersOktaTest()
+        public void GetOktaTest()
         {
-            // TODO: add unit test for the method 'GetIdentityprovidersOkta'
+            // TODO: add unit test for the method 'GetOkta'
             
-            var response = instance.GetIdentityprovidersOkta();
+            var response = instance.GetOkta();
             Assert.IsInstanceOf<Okta> (response, "response is Okta"); 
         }
         
         /// <summary>
-        /// Test PutIdentityprovidersOkta
+        /// Test PutOkta
         /// </summary>
         [Test]
-        public void PutIdentityprovidersOktaTest()
+        public void PutOktaTest()
         {
-            // TODO: add unit test for the method 'PutIdentityprovidersOkta'
+            // TODO: add unit test for the method 'PutOkta'
             Okta body = null; // TODO: replace null with proper value
             
-            instance.PutIdentityprovidersOkta(body);
+            instance.PutOkta(body);
              
         }
         
         /// <summary>
-        /// Test DeleteIdentityprovidersOkta
+        /// Test DeleteOkta
         /// </summary>
         [Test]
-        public void DeleteIdentityprovidersOktaTest()
+        public void DeleteOktaTest()
         {
-            // TODO: add unit test for the method 'DeleteIdentityprovidersOkta'
+            // TODO: add unit test for the method 'DeleteOkta'
             
-            instance.DeleteIdentityprovidersOkta();
+            instance.DeleteOkta();
              
         }
         
         /// <summary>
-        /// Test GetIdentityprovidersOnelogin
+        /// Test GetOnelogin
         /// </summary>
         [Test]
-        public void GetIdentityprovidersOneloginTest()
+        public void GetOneloginTest()
         {
-            // TODO: add unit test for the method 'GetIdentityprovidersOnelogin'
+            // TODO: add unit test for the method 'GetOnelogin'
             
-            var response = instance.GetIdentityprovidersOnelogin();
+            var response = instance.GetOnelogin();
             Assert.IsInstanceOf<OneLogin> (response, "response is OneLogin"); 
         }
         
         /// <summary>
-        /// Test PutIdentityprovidersOnelogin
+        /// Test PutOnelogin
         /// </summary>
         [Test]
-        public void PutIdentityprovidersOneloginTest()
+        public void PutOneloginTest()
         {
-            // TODO: add unit test for the method 'PutIdentityprovidersOnelogin'
+            // TODO: add unit test for the method 'PutOnelogin'
             OneLogin body = null; // TODO: replace null with proper value
             
-            instance.PutIdentityprovidersOnelogin(body);
+            instance.PutOnelogin(body);
              
         }
         
         /// <summary>
-        /// Test DeleteIdentityprovidersOnelogin
+        /// Test DeleteOnelogin
         /// </summary>
         [Test]
-        public void DeleteIdentityprovidersOneloginTest()
+        public void DeleteOneloginTest()
         {
-            // TODO: add unit test for the method 'DeleteIdentityprovidersOnelogin'
+            // TODO: add unit test for the method 'DeleteOnelogin'
             
-            instance.DeleteIdentityprovidersOnelogin();
+            instance.DeleteOnelogin();
              
         }
         
         /// <summary>
-        /// Test GetIdentityprovidersPurecloud
+        /// Test GetPurecloud
         /// </summary>
         [Test]
-        public void GetIdentityprovidersPurecloudTest()
+        public void GetPurecloudTest()
         {
-            // TODO: add unit test for the method 'GetIdentityprovidersPurecloud'
+            // TODO: add unit test for the method 'GetPurecloud'
             
-            var response = instance.GetIdentityprovidersPurecloud();
+            var response = instance.GetPurecloud();
             Assert.IsInstanceOf<PureCloud> (response, "response is PureCloud"); 
         }
         
         /// <summary>
-        /// Test PutIdentityprovidersPurecloud
+        /// Test PutPurecloud
         /// </summary>
         [Test]
-        public void PutIdentityprovidersPurecloudTest()
+        public void PutPurecloudTest()
         {
-            // TODO: add unit test for the method 'PutIdentityprovidersPurecloud'
+            // TODO: add unit test for the method 'PutPurecloud'
             PureCloud body = null; // TODO: replace null with proper value
             
-            instance.PutIdentityprovidersPurecloud(body);
+            instance.PutPurecloud(body);
              
         }
         
         /// <summary>
-        /// Test DeleteIdentityprovidersPurecloud
+        /// Test DeletePurecloud
         /// </summary>
         [Test]
-        public void DeleteIdentityprovidersPurecloudTest()
+        public void DeletePurecloudTest()
         {
-            // TODO: add unit test for the method 'DeleteIdentityprovidersPurecloud'
+            // TODO: add unit test for the method 'DeletePurecloud'
             
-            instance.DeleteIdentityprovidersPurecloud();
+            instance.DeletePurecloud();
              
         }
         
         /// <summary>
-        /// Test GetIdentityprovidersSalesforce
+        /// Test GetSalesforce
         /// </summary>
         [Test]
-        public void GetIdentityprovidersSalesforceTest()
+        public void GetSalesforceTest()
         {
-            // TODO: add unit test for the method 'GetIdentityprovidersSalesforce'
+            // TODO: add unit test for the method 'GetSalesforce'
             
-            var response = instance.GetIdentityprovidersSalesforce();
+            var response = instance.GetSalesforce();
             Assert.IsInstanceOf<Salesforce> (response, "response is Salesforce"); 
         }
         
         /// <summary>
-        /// Test PutIdentityprovidersSalesforce
+        /// Test PutSalesforce
         /// </summary>
         [Test]
-        public void PutIdentityprovidersSalesforceTest()
+        public void PutSalesforceTest()
         {
-            // TODO: add unit test for the method 'PutIdentityprovidersSalesforce'
+            // TODO: add unit test for the method 'PutSalesforce'
             Salesforce body = null; // TODO: replace null with proper value
             
-            instance.PutIdentityprovidersSalesforce(body);
+            instance.PutSalesforce(body);
              
         }
         
         /// <summary>
-        /// Test DeleteIdentityprovidersSalesforce
+        /// Test DeleteSalesforce
         /// </summary>
         [Test]
-        public void DeleteIdentityprovidersSalesforceTest()
+        public void DeleteSalesforceTest()
         {
-            // TODO: add unit test for the method 'DeleteIdentityprovidersSalesforce'
+            // TODO: add unit test for the method 'DeleteSalesforce'
             
-            instance.DeleteIdentityprovidersSalesforce();
+            instance.DeleteSalesforce();
              
         }
         
         /// <summary>
-        /// Test GetIdentityprovider
+        /// Test GetProviderId
         /// </summary>
         [Test]
-        public void GetIdentityproviderTest()
+        public void GetProviderIdTest()
         {
-            // TODO: add unit test for the method 'GetIdentityprovider'
+            // TODO: add unit test for the method 'GetProviderId'
             
-            var response = instance.GetIdentityprovider();
+            var response = instance.GetProviderId();
             Assert.IsInstanceOf<OAuthProvider> (response, "response is OAuthProvider"); 
         }
         
         /// <summary>
-        /// Test PutIdentityprovider
+        /// Test PutProviderId
         /// </summary>
         [Test]
-        public void PutIdentityproviderTest()
+        public void PutProviderIdTest()
         {
-            // TODO: add unit test for the method 'PutIdentityprovider'
+            // TODO: add unit test for the method 'PutProviderId'
             OAuthProvider body = null; // TODO: replace null with proper value
             
-            instance.PutIdentityprovider(body);
+            instance.PutProviderId(body);
              
         }
         
         /// <summary>
-        /// Test DeleteIdentityprovider
+        /// Test DeleteProviderId
         /// </summary>
         [Test]
-        public void DeleteIdentityproviderTest()
+        public void DeleteProviderIdTest()
         {
-            // TODO: add unit test for the method 'DeleteIdentityprovider'
+            // TODO: add unit test for the method 'DeleteProviderId'
             
-            instance.DeleteIdentityprovider();
+            instance.DeleteProviderId();
              
         }
         
@@ -269,55 +269,55 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetClient
+        /// Test GetClientsClientId
         /// </summary>
         [Test]
-        public void GetClientTest()
+        public void GetClientsClientIdTest()
         {
-            // TODO: add unit test for the method 'GetClient'
+            // TODO: add unit test for the method 'GetClientsClientId'
             string clientId = null; // TODO: replace null with proper value
             
-            var response = instance.GetClient(clientId);
+            var response = instance.GetClientsClientId(clientId);
             Assert.IsInstanceOf<OAuthClient> (response, "response is OAuthClient"); 
         }
         
         /// <summary>
-        /// Test PutClient
+        /// Test PutClientsClientId
         /// </summary>
         [Test]
-        public void PutClientTest()
+        public void PutClientsClientIdTest()
         {
-            // TODO: add unit test for the method 'PutClient'
+            // TODO: add unit test for the method 'PutClientsClientId'
             string clientId = null; // TODO: replace null with proper value
             OAuthClient body = null; // TODO: replace null with proper value
             
-            var response = instance.PutClient(clientId, body);
+            var response = instance.PutClientsClientId(clientId, body);
             Assert.IsInstanceOf<OAuthClient> (response, "response is OAuthClient"); 
         }
         
         /// <summary>
-        /// Test DeleteClient
+        /// Test DeleteClientsClientId
         /// </summary>
         [Test]
-        public void DeleteClientTest()
+        public void DeleteClientsClientIdTest()
         {
-            // TODO: add unit test for the method 'DeleteClient'
+            // TODO: add unit test for the method 'DeleteClientsClientId'
             string clientId = null; // TODO: replace null with proper value
             
-            instance.DeleteClient(clientId);
+            instance.DeleteClientsClientId(clientId);
              
         }
         
         /// <summary>
-        /// Test PostClientSecret
+        /// Test PostClientsClientIdSecret
         /// </summary>
         [Test]
-        public void PostClientSecretTest()
+        public void PostClientsClientIdSecretTest()
         {
-            // TODO: add unit test for the method 'PostClientSecret'
+            // TODO: add unit test for the method 'PostClientsClientIdSecret'
             string clientId = null; // TODO: replace null with proper value
             
-            instance.PostClientSecret(clientId);
+            instance.PostClientsClientIdSecret(clientId);
              
         }
         
