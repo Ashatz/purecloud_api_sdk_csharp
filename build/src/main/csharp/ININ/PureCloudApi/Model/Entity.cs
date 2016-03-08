@@ -22,26 +22,24 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="Entity" /> class.
         /// Initializes a new instance of the <see cref="Entity" />class.
         /// </summary>
-        /// <param name="Type">Type.</param>
+        /// <param name="Kind">Kind.</param>
         /// <param name="Id">Id.</param>
         /// <param name="Name">Name.</param>
-        /// <param name="SelfUri">SelfUri.</param>
 
-        public Entity(string Type = null, string Id = null, string Name = null, string SelfUri = null)
+        public Entity(string Kind = null, string Id = null, string Name = null)
         {
-            this.Type = Type;
+            this.Kind = Kind;
             this.Id = Id;
             this.Name = Name;
-            this.SelfUri = SelfUri;
             
         }
         
     
         /// <summary>
-        /// Gets or Sets Type
+        /// Gets or Sets Kind
         /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
+        [DataMember(Name="kind", EmitDefaultValue=false)]
+        public string Kind { get; set; }
     
         /// <summary>
         /// Gets or Sets Id
@@ -56,12 +54,6 @@ namespace ININ.PureCloudApi.Model
         public string Name { get; set; }
     
         /// <summary>
-        /// Gets or Sets SelfUri
-        /// </summary>
-        [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-    
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -69,10 +61,9 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Entity {\n");
-            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  Kind: ").Append(Kind).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -111,9 +102,9 @@ namespace ININ.PureCloudApi.Model
 
             return 
                 (
-                    this.Type == other.Type ||
-                    this.Type != null &&
-                    this.Type.Equals(other.Type)
+                    this.Kind == other.Kind ||
+                    this.Kind != null &&
+                    this.Kind.Equals(other.Kind)
                 ) && 
                 (
                     this.Id == other.Id ||
@@ -124,11 +115,6 @@ namespace ININ.PureCloudApi.Model
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
-                (
-                    this.SelfUri == other.SelfUri ||
-                    this.SelfUri != null &&
-                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -144,17 +130,14 @@ namespace ININ.PureCloudApi.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Type != null)
-                    hash = hash * 59 + this.Type.GetHashCode();
+                if (this.Kind != null)
+                    hash = hash * 59 + this.Kind.GetHashCode();
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
-                if (this.SelfUri != null)
-                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }

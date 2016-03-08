@@ -52,21 +52,30 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test the property 'Address1' 
+        /// Test the property 'Id' 
         /// </summary>
         [Test]
-        public void Address1Test()
+        public void IdTest()
         {
-            // TODO: unit test for the property 'Address1' 
+            // TODO: unit test for the property 'Id' 
         }
         
         /// <summary>
-        /// Test the property 'Address2' 
+        /// Test the property 'Name' 
         /// </summary>
         [Test]
-        public void Address2Test()
+        public void NameTest()
         {
-            // TODO: unit test for the property 'Address2' 
+            // TODO: unit test for the property 'Name' 
+        }
+        
+        /// <summary>
+        /// Test the property 'Street' 
+        /// </summary>
+        [Test]
+        public void StreetTest()
+        {
+            // TODO: unit test for the property 'Street' 
         }
         
         /// <summary>
@@ -79,12 +88,21 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'State' 
+        /// Test the property 'CountryName' 
         /// </summary>
         [Test]
-        public void StateTest()
+        public void CountryNameTest()
         {
-            // TODO: unit test for the property 'State' 
+            // TODO: unit test for the property 'CountryName' 
+        }
+        
+        /// <summary>
+        /// Test the property 'StateName' 
+        /// </summary>
+        [Test]
+        public void StateNameTest()
+        {
+            // TODO: unit test for the property 'StateName' 
         }
         
         /// <summary>
@@ -97,12 +115,12 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'CountryCode' 
+        /// Test the property 'SelfUri' 
         /// </summary>
         [Test]
-        public void CountryCodeTest()
+        public void SelfUriTest()
         {
-            // TODO: unit test for the property 'CountryCode' 
+            // TODO: unit test for the property 'SelfUri' 
         }
         
 
