@@ -7,42 +7,67 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ConsultTransfer :  IEquatable<ConsultTransfer>
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ConsultTransfer" /> class.
-        /// </summary>
-        public ConsultTransfer()
-        {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum SpeakToEnum {
             
+            [EnumMember(Value = "DESTINATION")]
+            Destination,
+            
+            [EnumMember(Value = "OBJECT")]
+            Object,
+            
+            [EnumMember(Value = "BOTH")]
+            Both
         }
-
-        
+    
         /// <summary>
         /// Determines to whom the initiating participant is speaking. Defaults to DESTINATION
         /// </summary>
         /// <value>Determines to whom the initiating participant is speaking. Defaults to DESTINATION</value>
         [DataMember(Name="speakTo", EmitDefaultValue=false)]
-        public string SpeakTo { get; set; }
-  
+        public SpeakToEnum? SpeakTo { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ConsultTransfer" /> class.
+        /// Initializes a new instance of the <see cref="ConsultTransfer" />class.
+        /// </summary>
+        /// <param name="SpeakTo">Determines to whom the initiating participant is speaking. Defaults to DESTINATION.</param>
+        /// <param name="Destination">Destination phone number and name. (required).</param>
+
+        public ConsultTransfer(SpeakToEnum? SpeakTo = null, Destination Destination = null)
+        {
+            // to ensure "Destination" is required (not null)
+            if (Destination == null)
+            {
+                throw new InvalidDataException("Destination is a required property for ConsultTransfer and cannot be null");
+            }
+            else
+            {
+                this.Destination = Destination;
+            }
+            this.SpeakTo = SpeakTo;
+            
+        }
         
+    
         /// <summary>
         /// Destination phone number and name.
         /// </summary>
         /// <value>Destination phone number and name.</value>
         [DataMember(Name="destination", EmitDefaultValue=false)]
         public Destination Destination { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

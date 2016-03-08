@@ -7,61 +7,85 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class CreateShareRequest :  IEquatable<CreateShareRequest>
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CreateShareRequest" /> class.
-        /// </summary>
-        public CreateShareRequest()
-        {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum SharedEntityTypeEnum {
             
+            [EnumMember(Value = "DOCUMENT")]
+            Document
         }
-
-        
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum MemberTypeEnum {
+            
+            [EnumMember(Value = "USER")]
+            User,
+            
+            [EnumMember(Value = "PUBLIC")]
+            Public
+        }
+    
         /// <summary>
         /// Gets or Sets SharedEntityType
         /// </summary>
         [DataMember(Name="sharedEntityType", EmitDefaultValue=false)]
-        public string SharedEntityType { get; set; }
-  
+        public SharedEntityTypeEnum? SharedEntityType { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets MemberType
+        /// </summary>
+        [DataMember(Name="memberType", EmitDefaultValue=false)]
+        public MemberTypeEnum? MemberType { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CreateShareRequest" /> class.
+        /// Initializes a new instance of the <see cref="CreateShareRequest" />class.
+        /// </summary>
+        /// <param name="SharedEntityType">SharedEntityType.</param>
+        /// <param name="SharedEntity">SharedEntity.</param>
+        /// <param name="MemberType">MemberType.</param>
+        /// <param name="Member">Member.</param>
+        /// <param name="Members">Members.</param>
+
+        public CreateShareRequest(SharedEntityTypeEnum? SharedEntityType = null, Entity SharedEntity = null, MemberTypeEnum? MemberType = null, Entity Member = null, List<CreateShareRequestMember> Members = null)
+        {
+            this.SharedEntityType = SharedEntityType;
+            this.SharedEntity = SharedEntity;
+            this.MemberType = MemberType;
+            this.Member = Member;
+            this.Members = Members;
+            
+        }
         
+    
         /// <summary>
         /// Gets or Sets SharedEntity
         /// </summary>
         [DataMember(Name="sharedEntity", EmitDefaultValue=false)]
         public Entity SharedEntity { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets MemberType
-        /// </summary>
-        [DataMember(Name="memberType", EmitDefaultValue=false)]
-        public string MemberType { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Member
         /// </summary>
         [DataMember(Name="member", EmitDefaultValue=false)]
         public Entity Member { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Members
         /// </summary>
         [DataMember(Name="members", EmitDefaultValue=false)]
         public List<CreateShareRequestMember> Members { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

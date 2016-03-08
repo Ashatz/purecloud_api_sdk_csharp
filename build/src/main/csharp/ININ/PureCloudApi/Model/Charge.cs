@@ -7,82 +7,92 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Charge :  IEquatable<Charge>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Charge" /> class.
+        /// Initializes a new instance of the <see cref="Charge" />class.
         /// </summary>
-        public Charge()
+        /// <param name="LicenseCount">LicenseCount.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="Price">Price.</param>
+        /// <param name="UnitOfMeasure">UnitOfMeasure.</param>
+        /// <param name="BillingPeriod">BillingPeriod.</param>
+        /// <param name="Quantity">Quantity.</param>
+        /// <param name="IncludedUnits">IncludedUnits.</param>
+
+        public Charge(int? LicenseCount = null, string Name = null, string Description = null, double? Price = null, string UnitOfMeasure = null, string BillingPeriod = null, int? Quantity = null, int? IncludedUnits = null)
         {
+            this.LicenseCount = LicenseCount;
+            this.Name = Name;
+            this.Description = Description;
+            this.Price = Price;
+            this.UnitOfMeasure = UnitOfMeasure;
+            this.BillingPeriod = BillingPeriod;
+            this.Quantity = Quantity;
+            this.IncludedUnits = IncludedUnits;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets LicenseCount
         /// </summary>
         [DataMember(Name="licenseCount", EmitDefaultValue=false)]
         public int? LicenseCount { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Price
         /// </summary>
         [DataMember(Name="price", EmitDefaultValue=false)]
         public double? Price { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UnitOfMeasure
         /// </summary>
         [DataMember(Name="unitOfMeasure", EmitDefaultValue=false)]
         public string UnitOfMeasure { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets BillingPeriod
         /// </summary>
         [DataMember(Name="billingPeriod", EmitDefaultValue=false)]
         public string BillingPeriod { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Quantity
         /// </summary>
         [DataMember(Name="quantity", EmitDefaultValue=false)]
         public int? Quantity { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IncludedUnits
         /// </summary>
         [DataMember(Name="includedUnits", EmitDefaultValue=false)]
         public int? IncludedUnits { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

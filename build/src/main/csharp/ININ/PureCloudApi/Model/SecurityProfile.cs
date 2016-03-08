@@ -7,56 +7,58 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class SecurityProfile :  IEquatable<SecurityProfile>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="SecurityProfile" /> class.
+        /// Initializes a new instance of the <see cref="SecurityProfile" />class.
         /// </summary>
-        public SecurityProfile()
+        /// <param name="Name">Name.</param>
+        /// <param name="Permissions">Permissions.</param>
+
+        public SecurityProfile(string Name = null, List<string> Permissions = null, )
         {
+            this.Name = Name;
+            this.Permissions = Permissions;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Permissions
         /// </summary>
         [DataMember(Name="permissions", EmitDefaultValue=false)]
         public List<string> Permissions { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

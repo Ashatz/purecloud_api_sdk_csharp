@@ -7,33 +7,36 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Form :  IEquatable<Form>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Form" /> class.
+        /// Initializes a new instance of the <see cref="Form" />class.
         /// </summary>
-        public Form()
+        /// <param name="Controls">Controls.</param>
+
+        public Form(List<Control> Controls = null)
         {
+            this.Controls = Controls;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Controls
         /// </summary>
         [DataMember(Name="controls", EmitDefaultValue=false)]
         public List<Control> Controls { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

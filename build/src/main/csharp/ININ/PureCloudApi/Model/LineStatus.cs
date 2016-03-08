@@ -7,67 +7,81 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class LineStatus :  IEquatable<LineStatus>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="LineStatus" /> class.
+        /// Initializes a new instance of the <see cref="LineStatus" />class.
         /// </summary>
-        public LineStatus()
+        /// <param name="Id">The id of this line.</param>
+        /// <param name="Reachable">Indicates whether the edge can reach the line. (default to false).</param>
+        /// <param name="AddressOfRecord">The line&#39;s address of record..</param>
+        /// <param name="ContactAddresses">The addresses used to contact the line..</param>
+        /// <param name="ReachableStateTime">The time the line entered its current reachable state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+
+        public LineStatus(string Id = null, bool? Reachable = null, string AddressOfRecord = null, List<string> ContactAddresses = null, DateTime? ReachableStateTime = null)
         {
-            this.Reachable = false;
+            this.Id = Id;
+            // use default value if no "Reachable" provided
+            if (Reachable == null)
+            {
+                this.Reachable = false;
+            }
+            else
+            {
+                this.Reachable = Reachable;
+            }
+            this.AddressOfRecord = AddressOfRecord;
+            this.ContactAddresses = ContactAddresses;
+            this.ReachableStateTime = ReachableStateTime;
             
         }
-
         
+    
         /// <summary>
         /// The id of this line
         /// </summary>
         /// <value>The id of this line</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Indicates whether the edge can reach the line.
         /// </summary>
         /// <value>Indicates whether the edge can reach the line.</value>
         [DataMember(Name="reachable", EmitDefaultValue=false)]
         public bool? Reachable { get; set; }
-  
-        
+    
         /// <summary>
         /// The line's address of record.
         /// </summary>
         /// <value>The line's address of record.</value>
         [DataMember(Name="addressOfRecord", EmitDefaultValue=false)]
         public string AddressOfRecord { get; set; }
-  
-        
+    
         /// <summary>
         /// The addresses used to contact the line.
         /// </summary>
         /// <value>The addresses used to contact the line.</value>
         [DataMember(Name="contactAddresses", EmitDefaultValue=false)]
         public List<string> ContactAddresses { get; set; }
-  
-        
+    
         /// <summary>
         /// The time the line entered its current reachable state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The time the line entered its current reachable state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="reachableStateTime", EmitDefaultValue=false)]
         public DateTime? ReachableStateTime { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

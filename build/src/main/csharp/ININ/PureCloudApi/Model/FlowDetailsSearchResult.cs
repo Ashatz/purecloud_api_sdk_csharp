@@ -7,42 +7,46 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Contains the found elements of a search along with the facet result.  All facet results are always returned along with the searchResults regardless of page size/number.
     /// </summary>
     [DataContract]
     public partial class FlowDetailsSearchResult :  IEquatable<FlowDetailsSearchResult>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowDetailsSearchResult" /> class.
+        /// Initializes a new instance of the <see cref="FlowDetailsSearchResult" />class.
         /// </summary>
-        public FlowDetailsSearchResult()
+        /// <param name="SearchResults">The actual results from the search.</param>
+        /// <param name="FacetResults">The results from the facet requests for this search - note ALL facets will always be returned regardless of page size/starting pagenumber in the searchRequest.</param>
+
+        public FlowDetailsSearchResult(LinkedEntityListingFlowDetails SearchResults = null, List<FacetResult> FacetResults = null)
         {
+            this.SearchResults = SearchResults;
+            this.FacetResults = FacetResults;
             
         }
-
         
+    
         /// <summary>
         /// The actual results from the search
         /// </summary>
         /// <value>The actual results from the search</value>
         [DataMember(Name="searchResults", EmitDefaultValue=false)]
         public LinkedEntityListingFlowDetails SearchResults { get; set; }
-  
-        
+    
         /// <summary>
         /// The results from the facet requests for this search - note ALL facets will always be returned regardless of page size/starting pagenumber in the searchRequest
         /// </summary>
         /// <value>The results from the facet requests for this search - note ALL facets will always be returned regardless of page size/starting pagenumber in the searchRequest</value>
         [DataMember(Name="facetResults", EmitDefaultValue=false)]
         public List<FacetResult> FacetResults { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,70 +7,74 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Salesforce :  IEquatable<Salesforce>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Salesforce" /> class.
+        /// Initializes a new instance of the <see cref="Salesforce" />class.
         /// </summary>
-        public Salesforce()
+        /// <param name="Name">Name.</param>
+        /// <param name="Certificate">Certificate.</param>
+        /// <param name="IssuerURI">IssuerURI.</param>
+        /// <param name="SsoTargetURI">SsoTargetURI.</param>
+
+        public Salesforce(string Name = null, string Certificate = null, string IssuerURI = null, string SsoTargetURI = null, )
         {
+            this.Name = Name;
+            this.Certificate = Certificate;
+            this.IssuerURI = IssuerURI;
+            this.SsoTargetURI = SsoTargetURI;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Certificate
         /// </summary>
         [DataMember(Name="certificate", EmitDefaultValue=false)]
         public string Certificate { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IssuerURI
         /// </summary>
         [DataMember(Name="issuerURI", EmitDefaultValue=false)]
         public string IssuerURI { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SsoTargetURI
         /// </summary>
         [DataMember(Name="ssoTargetURI", EmitDefaultValue=false)]
         public string SsoTargetURI { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

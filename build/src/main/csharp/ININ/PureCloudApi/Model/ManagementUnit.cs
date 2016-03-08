@@ -7,61 +7,68 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ManagementUnit :  IEquatable<ManagementUnit>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ManagementUnit" /> class.
+        /// Initializes a new instance of the <see cref="ManagementUnit" />class.
         /// </summary>
-        public ManagementUnit()
+        /// <param name="Name">Name.</param>
+        /// <param name="Id">Id.</param>
+        /// <param name="StartDayOfWeek">StartDayOfWeek.</param>
+        /// <param name="Timezone">Timezone.</param>
+        /// <param name="Version">Version.</param>
+
+        public ManagementUnit(string Name = null, string Id = null, string StartDayOfWeek = null, string Timezone = null, int? Version = null)
         {
+            this.Name = Name;
+            this.Id = Id;
+            this.StartDayOfWeek = StartDayOfWeek;
+            this.Timezone = Timezone;
+            this.Version = Version;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets StartDayOfWeek
         /// </summary>
         [DataMember(Name="startDayOfWeek", EmitDefaultValue=false)]
         public string StartDayOfWeek { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Timezone
         /// </summary>
         [DataMember(Name="timezone", EmitDefaultValue=false)]
         public string Timezone { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

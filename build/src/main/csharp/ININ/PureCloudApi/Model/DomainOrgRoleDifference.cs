@@ -7,61 +7,68 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DomainOrgRoleDifference :  IEquatable<DomainOrgRoleDifference>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainOrgRoleDifference" /> class.
+        /// Initializes a new instance of the <see cref="DomainOrgRoleDifference" />class.
         /// </summary>
-        public DomainOrgRoleDifference()
+        /// <param name="RemovedPermissionPolicies">RemovedPermissionPolicies.</param>
+        /// <param name="AddedPermissionPolicies">AddedPermissionPolicies.</param>
+        /// <param name="SamePermissionPolicies">SamePermissionPolicies.</param>
+        /// <param name="UserOrgRole">UserOrgRole.</param>
+        /// <param name="RoleFromDefault">RoleFromDefault.</param>
+
+        public DomainOrgRoleDifference(List<DomainPermissionPolicy> RemovedPermissionPolicies = null, List<DomainPermissionPolicy> AddedPermissionPolicies = null, List<DomainPermissionPolicy> SamePermissionPolicies = null, DomainOrganizationRole UserOrgRole = null, DomainOrganizationRole RoleFromDefault = null)
         {
+            this.RemovedPermissionPolicies = RemovedPermissionPolicies;
+            this.AddedPermissionPolicies = AddedPermissionPolicies;
+            this.SamePermissionPolicies = SamePermissionPolicies;
+            this.UserOrgRole = UserOrgRole;
+            this.RoleFromDefault = RoleFromDefault;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets RemovedPermissionPolicies
         /// </summary>
         [DataMember(Name="removedPermissionPolicies", EmitDefaultValue=false)]
         public List<DomainPermissionPolicy> RemovedPermissionPolicies { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AddedPermissionPolicies
         /// </summary>
         [DataMember(Name="addedPermissionPolicies", EmitDefaultValue=false)]
         public List<DomainPermissionPolicy> AddedPermissionPolicies { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SamePermissionPolicies
         /// </summary>
         [DataMember(Name="samePermissionPolicies", EmitDefaultValue=false)]
         public List<DomainPermissionPolicy> SamePermissionPolicies { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UserOrgRole
         /// </summary>
         [DataMember(Name="userOrgRole", EmitDefaultValue=false)]
         public DomainOrganizationRole UserOrgRole { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets RoleFromDefault
         /// </summary>
         [DataMember(Name="roleFromDefault", EmitDefaultValue=false)]
         public DomainOrganizationRole RoleFromDefault { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

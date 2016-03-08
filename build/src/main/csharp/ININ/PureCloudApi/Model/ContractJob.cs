@@ -7,64 +7,80 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ContractJob :  IEquatable<ContractJob>
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ContractJob" /> class.
-        /// </summary>
-        public ContractJob()
-        {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StatusEnum {
             
+            [EnumMember(Value = "Processing")]
+            Processing,
+            
+            [EnumMember(Value = "Completed")]
+            Completed,
+            
+            [EnumMember(Value = "Failed")]
+            Failed
         }
-
-        
-        /// <summary>
-        /// The globally unique identifier for the object.
-        /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Contract
-        /// </summary>
-        [DataMember(Name="contract", EmitDefaultValue=false)]
-        public Contract Contract { get; set; }
-  
-        
+    
         /// <summary>
         /// The current status of the job.
         /// </summary>
         /// <value>The current status of the job.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
-        public string Status { get; set; }
-  
+        public StatusEnum? Status { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ContractJob" /> class.
+        /// Initializes a new instance of the <see cref="ContractJob" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="Contract">Contract.</param>
+        /// <param name="Status">The current status of the job..</param>
+
+        public ContractJob(string Name = null, Contract Contract = null, StatusEnum? Status = null, )
+        {
+            this.Name = Name;
+            this.Contract = Contract;
+            this.Status = Status;
+            
+        }
         
+    
+        /// <summary>
+        /// The globally unique identifier for the object.
+        /// </summary>
+        /// <value>The globally unique identifier for the object.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; private set; }
+    
+        /// <summary>
+        /// Gets or Sets Name
+        /// </summary>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Contract
+        /// </summary>
+        [DataMember(Name="contract", EmitDefaultValue=false)]
+        public Contract Contract { get; set; }
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

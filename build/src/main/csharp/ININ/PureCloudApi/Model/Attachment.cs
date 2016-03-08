@@ -7,61 +7,68 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Attachment :  IEquatable<Attachment>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Attachment" /> class.
+        /// Initializes a new instance of the <see cref="Attachment" />class.
         /// </summary>
-        public Attachment()
+        /// <param name="AttachmentId">AttachmentId.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="ContentUri">ContentUri.</param>
+        /// <param name="ContentType">ContentType.</param>
+        /// <param name="ContentLength">ContentLength.</param>
+
+        public Attachment(string AttachmentId = null, string Name = null, string ContentUri = null, string ContentType = null, int? ContentLength = null)
         {
+            this.AttachmentId = AttachmentId;
+            this.Name = Name;
+            this.ContentUri = ContentUri;
+            this.ContentType = ContentType;
+            this.ContentLength = ContentLength;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets AttachmentId
         /// </summary>
         [DataMember(Name="attachmentId", EmitDefaultValue=false)]
         public string AttachmentId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ContentUri
         /// </summary>
         [DataMember(Name="contentUri", EmitDefaultValue=false)]
         public string ContentUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ContentType
         /// </summary>
         [DataMember(Name="contentType", EmitDefaultValue=false)]
         public string ContentType { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ContentLength
         /// </summary>
         [DataMember(Name="contentLength", EmitDefaultValue=false)]
         public int? ContentLength { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,63 +7,66 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class TimeZone :  IEquatable<TimeZone>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeZone" /> class.
+        /// Initializes a new instance of the <see cref="TimeZone" />class.
         /// </summary>
-        public TimeZone()
+        /// <param name="Name">Name.</param>
+        /// <param name="StandardOffset">StandardOffset.</param>
+        /// <param name="Offset">Offset.</param>
+
+        public TimeZone(string Name = null, long? StandardOffset = null, long? Offset = null, )
         {
+            this.Name = Name;
+            this.StandardOffset = StandardOffset;
+            this.Offset = Offset;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets StandardOffset
         /// </summary>
         [DataMember(Name="standardOffset", EmitDefaultValue=false)]
         public long? StandardOffset { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Offset
         /// </summary>
         [DataMember(Name="offset", EmitDefaultValue=false)]
         public long? Offset { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

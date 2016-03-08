@@ -7,47 +7,52 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class WorkItemCommandGroup :  IEquatable<WorkItemCommandGroup>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkItemCommandGroup" /> class.
+        /// Initializes a new instance of the <see cref="WorkItemCommandGroup" />class.
         /// </summary>
-        public WorkItemCommandGroup()
+        /// <param name="Category">Category.</param>
+        /// <param name="DefaultCommandId">DefaultCommandId.</param>
+        /// <param name="Commands">Commands.</param>
+
+        public WorkItemCommandGroup(string Category = null, string DefaultCommandId = null, List<WorkItemCommand> Commands = null)
         {
+            this.Category = Category;
+            this.DefaultCommandId = DefaultCommandId;
+            this.Commands = Commands;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Category
         /// </summary>
         [DataMember(Name="category", EmitDefaultValue=false)]
         public string Category { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DefaultCommandId
         /// </summary>
         [DataMember(Name="defaultCommandId", EmitDefaultValue=false)]
         public string DefaultCommandId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Commands
         /// </summary>
         [DataMember(Name="commands", EmitDefaultValue=false)]
         public List<WorkItemCommand> Commands { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

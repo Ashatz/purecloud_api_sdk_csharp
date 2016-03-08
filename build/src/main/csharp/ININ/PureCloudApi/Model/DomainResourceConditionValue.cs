@@ -7,54 +7,76 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DomainResourceConditionValue :  IEquatable<DomainResourceConditionValue>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum {
+            
+            [EnumMember(Value = "SCALAR")]
+            Scalar,
+            
+            [EnumMember(Value = "VARIABLE")]
+            Variable,
+            
+            [EnumMember(Value = "USER")]
+            User,
+            
+            [EnumMember(Value = "QUEUE")]
+            Queue
+        }
+    
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainResourceConditionValue" /> class.
+        /// Initializes a new instance of the <see cref="DomainResourceConditionValue" />class.
         /// </summary>
-        public DomainResourceConditionValue()
+        /// <param name="User">User.</param>
+        /// <param name="Queue">Queue.</param>
+        /// <param name="Value">Value.</param>
+        /// <param name="Type">Type.</param>
+
+        public DomainResourceConditionValue(User User = null, Queue Queue = null, string Value = null, TypeEnum? Type = null)
         {
+            this.User = User;
+            this.Queue = Queue;
+            this.Value = Value;
+            this.Type = Type;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Queue
         /// </summary>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public Queue Queue { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

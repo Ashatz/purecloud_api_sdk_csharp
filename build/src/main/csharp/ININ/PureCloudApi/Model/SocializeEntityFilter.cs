@@ -7,50 +7,101 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class SocializeEntityFilter :  IEquatable<SocializeEntityFilter>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum _OperatorEnum {
+            
+            [EnumMember(Value = "EQ")]
+            Eq,
+            
+            [EnumMember(Value = "NEG_EQ")]
+            NegEq,
+            
+            [EnumMember(Value = "CONTAINS")]
+            Contains,
+            
+            [EnumMember(Value = "NEG_CONTAINS")]
+            NegContains,
+            
+            [EnumMember(Value = "STARTS_WITH")]
+            StartsWith,
+            
+            [EnumMember(Value = "NEG_STARTS_WITH")]
+            NegStartsWith,
+            
+            [EnumMember(Value = "ENDS_WITH")]
+            EndsWith,
+            
+            [EnumMember(Value = "NEG_ENDS_WITH")]
+            NegEndsWith,
+            
+            [EnumMember(Value = "BT")]
+            Bt,
+            
+            [EnumMember(Value = "GT")]
+            Gt,
+            
+            [EnumMember(Value = "LT")]
+            Lt,
+            
+            [EnumMember(Value = "GE")]
+            Ge,
+            
+            [EnumMember(Value = "LE")]
+            Le,
+            
+            [EnumMember(Value = "IN")]
+            In
+        }
+    
+        /// <summary>
+        /// The operator to apply when filtering.
+        /// </summary>
+        /// <value>The operator to apply when filtering.</value>
+        [DataMember(Name="operator", EmitDefaultValue=false)]
+        public _OperatorEnum? _Operator { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="SocializeEntityFilter" /> class.
+        /// Initializes a new instance of the <see cref="SocializeEntityFilter" />class.
         /// </summary>
-        public SocializeEntityFilter()
+        /// <param name="FieldName">The fieldName the filter will be applied to..</param>
+        /// <param name="_Operator">The operator to apply when filtering..</param>
+        /// <param name="FieldValue">The value to filter on..</param>
+
+        public SocializeEntityFilter(string FieldName = null, _OperatorEnum? _Operator = null, string FieldValue = null)
         {
+            this.FieldName = FieldName;
+            this._Operator = _Operator;
+            this.FieldValue = FieldValue;
             
         }
-
         
+    
         /// <summary>
         /// The fieldName the filter will be applied to.
         /// </summary>
         /// <value>The fieldName the filter will be applied to.</value>
         [DataMember(Name="fieldName", EmitDefaultValue=false)]
         public string FieldName { get; set; }
-  
-        
-        /// <summary>
-        /// The operator to apply when filtering.
-        /// </summary>
-        /// <value>The operator to apply when filtering.</value>
-        [DataMember(Name="operator", EmitDefaultValue=false)]
-        public string Operator { get; set; }
-  
-        
+    
         /// <summary>
         /// The value to filter on.
         /// </summary>
         /// <value>The value to filter on.</value>
         [DataMember(Name="fieldValue", EmitDefaultValue=false)]
         public string FieldValue { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,7 +111,7 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class SocializeEntityFilter {\n");
             sb.Append("  FieldName: ").Append(FieldName).Append("\n");
-            sb.Append("  Operator: ").Append(Operator).Append("\n");
+            sb.Append("  _Operator: ").Append(_Operator).Append("\n");
             sb.Append("  FieldValue: ").Append(FieldValue).Append("\n");
             
             sb.Append("}\n");
@@ -105,9 +156,9 @@ namespace ININ.PureCloudApi.Model
                     this.FieldName.Equals(other.FieldName)
                 ) && 
                 (
-                    this.Operator == other.Operator ||
-                    this.Operator != null &&
-                    this.Operator.Equals(other.Operator)
+                    this._Operator == other._Operator ||
+                    this._Operator != null &&
+                    this._Operator.Equals(other._Operator)
                 ) && 
                 (
                     this.FieldValue == other.FieldValue ||
@@ -131,8 +182,8 @@ namespace ININ.PureCloudApi.Model
                 if (this.FieldName != null)
                     hash = hash * 59 + this.FieldName.GetHashCode();
                 
-                if (this.Operator != null)
-                    hash = hash * 59 + this.Operator.GetHashCode();
+                if (this._Operator != null)
+                    hash = hash * 59 + this._Operator.GetHashCode();
                 
                 if (this.FieldValue != null)
                     hash = hash * 59 + this.FieldValue.GetHashCode();

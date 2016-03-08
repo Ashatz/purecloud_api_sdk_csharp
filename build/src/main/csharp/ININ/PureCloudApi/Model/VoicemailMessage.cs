@@ -7,108 +7,124 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class VoicemailMessage :  IEquatable<VoicemailMessage>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailMessage" /> class.
+        /// Initializes a new instance of the <see cref="VoicemailMessage" />class.
         /// </summary>
-        public VoicemailMessage()
+        /// <param name="Conversation">Conversation.</param>
+        /// <param name="Read">Read (default to false).</param>
+        /// <param name="AudioRecordingDurationSeconds">AudioRecordingDurationSeconds.</param>
+        /// <param name="AudioRecordingSizeBytes">AudioRecordingSizeBytes.</param>
+        /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="CallerAddress">CallerAddress.</param>
+        /// <param name="CallerName">CallerName.</param>
+        /// <param name="CallerUser">CallerUser.</param>
+
+        public VoicemailMessage(Conversation Conversation = null, bool? Read = null, int? AudioRecordingDurationSeconds = null, long? AudioRecordingSizeBytes = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, string CallerAddress = null, string CallerName = null, User CallerUser = null, )
         {
-            this.Read = false;
+            this.Conversation = Conversation;
+            // use default value if no "Read" provided
+            if (Read == null)
+            {
+                this.Read = false;
+            }
+            else
+            {
+                this.Read = Read;
+            }
+            this.AudioRecordingDurationSeconds = AudioRecordingDurationSeconds;
+            this.AudioRecordingSizeBytes = AudioRecordingSizeBytes;
+            this.CreatedDate = CreatedDate;
+            this.ModifiedDate = ModifiedDate;
+            this.CallerAddress = CallerAddress;
+            this.CallerName = CallerName;
+            this.CallerUser = CallerUser;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Conversation
         /// </summary>
         [DataMember(Name="conversation", EmitDefaultValue=false)]
         public Conversation Conversation { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Read
         /// </summary>
         [DataMember(Name="read", EmitDefaultValue=false)]
         public bool? Read { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AudioRecordingDurationSeconds
         /// </summary>
         [DataMember(Name="audioRecordingDurationSeconds", EmitDefaultValue=false)]
         public int? AudioRecordingDurationSeconds { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AudioRecordingSizeBytes
         /// </summary>
         [DataMember(Name="audioRecordingSizeBytes", EmitDefaultValue=false)]
         public long? AudioRecordingSizeBytes { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="createdDate", EmitDefaultValue=false)]
         public DateTime? CreatedDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
         public DateTime? ModifiedDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CallerAddress
         /// </summary>
         [DataMember(Name="callerAddress", EmitDefaultValue=false)]
         public string CallerAddress { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CallerName
         /// </summary>
         [DataMember(Name="callerName", EmitDefaultValue=false)]
         public string CallerName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CallerUser
         /// </summary>
         [DataMember(Name="callerUser", EmitDefaultValue=false)]
         public User CallerUser { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

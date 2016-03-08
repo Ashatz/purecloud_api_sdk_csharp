@@ -7,56 +7,87 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class LockInfo :  IEquatable<LockInfo>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ActionEnum {
+            
+            [EnumMember(Value = "UPDATE")]
+            Update,
+            
+            [EnumMember(Value = "DELETE")]
+            Delete,
+            
+            [EnumMember(Value = "COPY")]
+            Copy,
+            
+            [EnumMember(Value = "MOVE")]
+            Move,
+            
+            [EnumMember(Value = "REPLACE")]
+            Replace,
+            
+            [EnumMember(Value = "THUMBNAIL")]
+            Thumbnail,
+            
+            [EnumMember(Value = "TEXT_EXTRACTION")]
+            TextExtraction
+        }
+    
+        /// <summary>
+        /// Gets or Sets Action
+        /// </summary>
+        [DataMember(Name="action", EmitDefaultValue=false)]
+        public ActionEnum? Action { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="LockInfo" /> class.
+        /// Initializes a new instance of the <see cref="LockInfo" />class.
         /// </summary>
-        public LockInfo()
+        /// <param name="LockedBy">LockedBy.</param>
+        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateExpires">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Action">Action.</param>
+
+        public LockInfo(UriReference LockedBy = null, DateTime? DateCreated = null, DateTime? DateExpires = null, ActionEnum? Action = null)
         {
+            this.LockedBy = LockedBy;
+            this.DateCreated = DateCreated;
+            this.DateExpires = DateExpires;
+            this.Action = Action;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets LockedBy
         /// </summary>
         [DataMember(Name="lockedBy", EmitDefaultValue=false)]
         public UriReference LockedBy { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateExpires", EmitDefaultValue=false)]
         public DateTime? DateExpires { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Action
-        /// </summary>
-        [DataMember(Name="action", EmitDefaultValue=false)]
-        public string Action { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

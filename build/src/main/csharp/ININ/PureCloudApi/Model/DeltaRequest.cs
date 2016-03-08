@@ -7,33 +7,36 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DeltaRequest :  IEquatable<DeltaRequest>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DeltaRequest" /> class.
+        /// Initializes a new instance of the <see cref="DeltaRequest" />class.
         /// </summary>
-        public DeltaRequest()
+        /// <param name="ContextToken">ContextToken.</param>
+
+        public DeltaRequest(string ContextToken = null)
         {
+            this.ContextToken = ContextToken;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets ContextToken
         /// </summary>
         [DataMember(Name="contextToken", EmitDefaultValue=false)]
         public string ContextToken { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

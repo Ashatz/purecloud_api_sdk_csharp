@@ -7,85 +7,175 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Video :  IEquatable<Video>
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Video" /> class.
-        /// </summary>
-        public Video()
-        {
-            this.AudioMuted = false;
-            this.VideoMuted = false;
-            this.SharingScreen = false;
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StateEnum {
             
+            [EnumMember(Value = "ALERTING")]
+            Alerting,
+            
+            [EnumMember(Value = "DIALING")]
+            Dialing,
+            
+            [EnumMember(Value = "CONTACTING")]
+            Contacting,
+            
+            [EnumMember(Value = "OFFERING")]
+            Offering,
+            
+            [EnumMember(Value = "CONNECTED")]
+            Connected,
+            
+            [EnumMember(Value = "DISCONNECTED")]
+            Disconnected,
+            
+            [EnumMember(Value = "TERMINATED")]
+            Terminated,
+            
+            [EnumMember(Value = "NONE")]
+            None
         }
-
-        
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum DisconnectTypeEnum {
+            
+            [EnumMember(Value = "ENDPOINT")]
+            Endpoint,
+            
+            [EnumMember(Value = "CLIENT")]
+            Client,
+            
+            [EnumMember(Value = "SYSTEM")]
+            System,
+            
+            [EnumMember(Value = "TRANSFER")]
+            Transfer,
+            
+            [EnumMember(Value = "TRANSFER_CONFERENCE")]
+            TransferConference,
+            
+            [EnumMember(Value = "TRANSFER_CONSULT")]
+            TransferConsult,
+            
+            [EnumMember(Value = "ERROR")]
+            Error,
+            
+            [EnumMember(Value = "PEER")]
+            Peer,
+            
+            [EnumMember(Value = "OTHER")]
+            Other
+        }
+    
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
-        public string State { get; set; }
-  
+        public StateEnum? State { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets DisconnectType
+        /// </summary>
+        [DataMember(Name="disconnectType", EmitDefaultValue=false)]
+        public DisconnectTypeEnum? DisconnectType { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Video" /> class.
+        /// Initializes a new instance of the <see cref="Video" />class.
+        /// </summary>
+        /// <param name="State">State.</param>
+        /// <param name="Id">Id.</param>
+        /// <param name="Context">Context.</param>
+        /// <param name="AudioMuted">AudioMuted (default to false).</param>
+        /// <param name="VideoMuted">VideoMuted (default to false).</param>
+        /// <param name="SharingScreen">SharingScreen (default to false).</param>
+        /// <param name="PeerCount">PeerCount.</param>
+        /// <param name="DisconnectType">DisconnectType.</param>
+
+        public Video(StateEnum? State = null, string Id = null, string Context = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, int? PeerCount = null, DisconnectTypeEnum? DisconnectType = null)
+        {
+            this.State = State;
+            this.Id = Id;
+            this.Context = Context;
+            // use default value if no "AudioMuted" provided
+            if (AudioMuted == null)
+            {
+                this.AudioMuted = false;
+            }
+            else
+            {
+                this.AudioMuted = AudioMuted;
+            }
+            // use default value if no "VideoMuted" provided
+            if (VideoMuted == null)
+            {
+                this.VideoMuted = false;
+            }
+            else
+            {
+                this.VideoMuted = VideoMuted;
+            }
+            // use default value if no "SharingScreen" provided
+            if (SharingScreen == null)
+            {
+                this.SharingScreen = false;
+            }
+            else
+            {
+                this.SharingScreen = SharingScreen;
+            }
+            this.PeerCount = PeerCount;
+            this.DisconnectType = DisconnectType;
+            
+        }
         
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Context
         /// </summary>
         [DataMember(Name="context", EmitDefaultValue=false)]
         public string Context { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AudioMuted
         /// </summary>
         [DataMember(Name="audioMuted", EmitDefaultValue=false)]
         public bool? AudioMuted { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets VideoMuted
         /// </summary>
         [DataMember(Name="videoMuted", EmitDefaultValue=false)]
         public bool? VideoMuted { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SharingScreen
         /// </summary>
         [DataMember(Name="sharingScreen", EmitDefaultValue=false)]
         public bool? SharingScreen { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PeerCount
         /// </summary>
         [DataMember(Name="peerCount", EmitDefaultValue=false)]
         public int? PeerCount { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets DisconnectType
-        /// </summary>
-        [DataMember(Name="disconnectType", EmitDefaultValue=false)]
-        public string DisconnectType { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

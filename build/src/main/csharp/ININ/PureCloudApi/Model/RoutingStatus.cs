@@ -7,48 +7,69 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class RoutingStatus :  IEquatable<RoutingStatus>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StatusEnum {
+            
+            [EnumMember(Value = "OFF_QUEUE")]
+            OffQueue,
+            
+            [EnumMember(Value = "IDLE")]
+            Idle,
+            
+            [EnumMember(Value = "INTERACTING")]
+            Interacting,
+            
+            [EnumMember(Value = "NOT_RESPONDING")]
+            NotResponding
+        }
+    
+        /// <summary>
+        /// Gets or Sets Status
+        /// </summary>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="RoutingStatus" /> class.
+        /// Initializes a new instance of the <see cref="RoutingStatus" />class.
         /// </summary>
-        public RoutingStatus()
+        /// <param name="UserId">UserId.</param>
+        /// <param name="Status">Status.</param>
+        /// <param name="StartTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+
+        public RoutingStatus(string UserId = null, StatusEnum? Status = null, DateTime? StartTime = null)
         {
+            this.UserId = UserId;
+            this.Status = Status;
+            this.StartTime = StartTime;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Status
-        /// </summary>
-        [DataMember(Name="status", EmitDefaultValue=false)]
-        public string Status { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public DateTime? StartTime { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

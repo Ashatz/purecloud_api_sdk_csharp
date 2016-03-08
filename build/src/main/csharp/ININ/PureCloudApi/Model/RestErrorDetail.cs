@@ -7,40 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class RestErrorDetail :  IEquatable<RestErrorDetail>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="RestErrorDetail" /> class.
+        /// Initializes a new instance of the <see cref="RestErrorDetail" />class.
         /// </summary>
-        public RestErrorDetail()
+        /// <param name="Error">Error.</param>
+        /// <param name="Details">Details.</param>
+
+        public RestErrorDetail(string Error = null, string Details = null)
         {
+            this.Error = Error;
+            this.Details = Details;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Error
         /// </summary>
         [DataMember(Name="error", EmitDefaultValue=false)]
         public string Error { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Details
         /// </summary>
         [DataMember(Name="details", EmitDefaultValue=false)]
         public string Details { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

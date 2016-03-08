@@ -7,50 +7,71 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Information about the a State of a flow
     /// </summary>
     [DataContract]
     public partial class FlowState :  IEquatable<FlowState>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowState" /> class.
+        /// Initializes a new instance of the <see cref="FlowState" />class.
         /// </summary>
-        public FlowState()
+        /// <param name="StateExecId">The identifier of the execution instance of this State. (required).</param>
+        /// <param name="StateConfigId">The identifier of the definition of this State. (required).</param>
+        /// <param name="StateName">The displayable name of this State..</param>
+
+        public FlowState(string StateExecId = null, string StateConfigId = null, string StateName = null)
         {
+            // to ensure "StateExecId" is required (not null)
+            if (StateExecId == null)
+            {
+                throw new InvalidDataException("StateExecId is a required property for FlowState and cannot be null");
+            }
+            else
+            {
+                this.StateExecId = StateExecId;
+            }
+            // to ensure "StateConfigId" is required (not null)
+            if (StateConfigId == null)
+            {
+                throw new InvalidDataException("StateConfigId is a required property for FlowState and cannot be null");
+            }
+            else
+            {
+                this.StateConfigId = StateConfigId;
+            }
+            this.StateName = StateName;
             
         }
-
         
+    
         /// <summary>
         /// The identifier of the execution instance of this State.
         /// </summary>
         /// <value>The identifier of the execution instance of this State.</value>
         [DataMember(Name="stateExecId", EmitDefaultValue=false)]
         public string StateExecId { get; set; }
-  
-        
+    
         /// <summary>
         /// The identifier of the definition of this State.
         /// </summary>
         /// <value>The identifier of the definition of this State.</value>
         [DataMember(Name="stateConfigId", EmitDefaultValue=false)]
         public string StateConfigId { get; set; }
-  
-        
+    
         /// <summary>
         /// The displayable name of this State.
         /// </summary>
         /// <value>The displayable name of this State.</value>
         [DataMember(Name="stateName", EmitDefaultValue=false)]
         public string StateName { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

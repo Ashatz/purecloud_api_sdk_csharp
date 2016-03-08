@@ -7,34 +7,45 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ConsultTransferResponse :  IEquatable<ConsultTransferResponse>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConsultTransferResponse" /> class.
+        /// Initializes a new instance of the <see cref="ConsultTransferResponse" />class.
         /// </summary>
-        public ConsultTransferResponse()
+        /// <param name="DestinationParticipantId">Participant ID to whom the call is being transferred. (required).</param>
+
+        public ConsultTransferResponse(string DestinationParticipantId = null)
         {
+            // to ensure "DestinationParticipantId" is required (not null)
+            if (DestinationParticipantId == null)
+            {
+                throw new InvalidDataException("DestinationParticipantId is a required property for ConsultTransferResponse and cannot be null");
+            }
+            else
+            {
+                this.DestinationParticipantId = DestinationParticipantId;
+            }
             
         }
-
         
+    
         /// <summary>
         /// Participant ID to whom the call is being transferred.
         /// </summary>
         /// <value>Participant ID to whom the call is being transferred.</value>
         [DataMember(Name="destinationParticipantId", EmitDefaultValue=false)]
         public string DestinationParticipantId { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

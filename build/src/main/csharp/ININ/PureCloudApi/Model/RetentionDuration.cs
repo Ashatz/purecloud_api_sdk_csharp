@@ -7,40 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class RetentionDuration :  IEquatable<RetentionDuration>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="RetentionDuration" /> class.
+        /// Initializes a new instance of the <see cref="RetentionDuration" />class.
         /// </summary>
-        public RetentionDuration()
+        /// <param name="ArchiveRetention">ArchiveRetention.</param>
+        /// <param name="DeleteRetention">DeleteRetention.</param>
+
+        public RetentionDuration(ArchiveRetention ArchiveRetention = null, DeleteRetention DeleteRetention = null)
         {
+            this.ArchiveRetention = ArchiveRetention;
+            this.DeleteRetention = DeleteRetention;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets ArchiveRetention
         /// </summary>
         [DataMember(Name="archiveRetention", EmitDefaultValue=false)]
         public ArchiveRetention ArchiveRetention { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DeleteRetention
         /// </summary>
         [DataMember(Name="deleteRetention", EmitDefaultValue=false)]
         public DeleteRetention DeleteRetention { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,41 +7,45 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class CallRecord :  IEquatable<CallRecord>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CallRecord" /> class.
+        /// Initializes a new instance of the <see cref="CallRecord" />class.
         /// </summary>
-        public CallRecord()
+        /// <param name="LastAttempt">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="LastResult">LastResult.</param>
+
+        public CallRecord(DateTime? LastAttempt = null, string LastResult = null)
         {
+            this.LastAttempt = LastAttempt;
+            this.LastResult = LastResult;
             
         }
-
         
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="lastAttempt", EmitDefaultValue=false)]
         public DateTime? LastAttempt { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets LastResult
         /// </summary>
         [DataMember(Name="lastResult", EmitDefaultValue=false)]
         public string LastResult { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,40 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class MediaSummary :  IEquatable<MediaSummary>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaSummary" /> class.
+        /// Initializes a new instance of the <see cref="MediaSummary" />class.
         /// </summary>
-        public MediaSummary()
+        /// <param name="ContactCenter">ContactCenter.</param>
+        /// <param name="Enterprise">Enterprise.</param>
+
+        public MediaSummary(int? ContactCenter = null, int? Enterprise = null)
         {
+            this.ContactCenter = ContactCenter;
+            this.Enterprise = Enterprise;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets ContactCenter
         /// </summary>
         [DataMember(Name="contactCenter", EmitDefaultValue=false)]
         public int? ContactCenter { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Enterprise
         /// </summary>
         [DataMember(Name="enterprise", EmitDefaultValue=false)]
         public int? Enterprise { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,40 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class FlowBodyFormat :  IEquatable<FlowBodyFormat>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowBodyFormat" /> class.
+        /// Initializes a new instance of the <see cref="FlowBodyFormat" />class.
         /// </summary>
-        public FlowBodyFormat()
+        /// <param name="SchemaUri">SchemaUri.</param>
+        /// <param name="Description">Description.</param>
+
+        public FlowBodyFormat(string SchemaUri = null, string Description = null)
         {
+            this.SchemaUri = SchemaUri;
+            this.Description = Description;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets SchemaUri
         /// </summary>
         [DataMember(Name="schemaUri", EmitDefaultValue=false)]
         public string SchemaUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

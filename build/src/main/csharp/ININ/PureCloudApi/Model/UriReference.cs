@@ -7,47 +7,52 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class UriReference :  IEquatable<UriReference>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UriReference" /> class.
+        /// Initializes a new instance of the <see cref="UriReference" />class.
         /// </summary>
-        public UriReference()
+        /// <param name="Id">Id.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="SelfUri">SelfUri.</param>
+
+        public UriReference(string Id = null, string Name = null, string SelfUri = null)
         {
+            this.Id = Id;
+            this.Name = Name;
+            this.SelfUri = SelfUri;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SelfUri
         /// </summary>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

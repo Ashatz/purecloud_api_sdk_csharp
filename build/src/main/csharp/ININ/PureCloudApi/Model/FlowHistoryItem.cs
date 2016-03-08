@@ -7,91 +7,167 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Information about one flow history item
     /// </summary>
     [DataContract]
     public partial class FlowHistoryItem :  IEquatable<FlowHistoryItem>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum HistoryEventTypeEnum {
+            
+            [EnumMember(Value = "FLOW_INSTANCE_START")]
+            FlowInstanceStart,
+            
+            [EnumMember(Value = "FLOW_INSTANCE_GOTO")]
+            FlowInstanceGoto,
+            
+            [EnumMember(Value = "FLOW_INSTANCE_TERMINATE")]
+            FlowInstanceTerminate,
+            
+            [EnumMember(Value = "FLOW_INSTANCE_END")]
+            FlowInstanceEnd,
+            
+            [EnumMember(Value = "TASK_INSTANCE_START")]
+            TaskInstanceStart,
+            
+            [EnumMember(Value = "TASK_INSTANCE_END")]
+            TaskInstanceEnd,
+            
+            [EnumMember(Value = "WORK_ITEM_INSTANCE_SAVE")]
+            WorkItemInstanceSave,
+            
+            [EnumMember(Value = "WORK_ITEM_INSTANCE_ACQUIRE")]
+            WorkItemInstanceAcquire,
+            
+            [EnumMember(Value = "WORK_ITEM_INSTANCE_SUBMIT")]
+            WorkItemInstanceSubmit,
+            
+            [EnumMember(Value = "WORK_ITEM_INSTANCE_OFFER")]
+            WorkItemInstanceOffer,
+            
+            [EnumMember(Value = "WORK_ITEM_INSTANCE_REASSIGN")]
+            WorkItemInstanceReassign,
+            
+            [EnumMember(Value = "FLOW_INSTANCE_ERROR")]
+            FlowInstanceError,
+            
+            [EnumMember(Value = "FLOW_INSTANCE_RETRY")]
+            FlowInstanceRetry
+        }
+    
+        /// <summary>
+        /// The type of the history event being reported.
+        /// </summary>
+        /// <value>The type of the history event being reported.</value>
+        [DataMember(Name="historyEventType", EmitDefaultValue=false)]
+        public HistoryEventTypeEnum? HistoryEventType { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowHistoryItem" /> class.
+        /// Initializes a new instance of the <see cref="FlowHistoryItem" />class.
         /// </summary>
-        public FlowHistoryItem()
+        /// <param name="HistoryEventTime">The time when the history item occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
+        /// <param name="State">The State sequence that applies to the history event, if applicable..</param>
+        /// <param name="WorkItem">Information about the work item associated with the history event, if applicable..</param>
+        /// <param name="User">The user associated with this history event, if applicable..</param>
+        /// <param name="Queue">The queue associated with this history event, if applicable..</param>
+        /// <param name="HistoryEventData">Data elements associated with this history event..</param>
+        /// <param name="HistoryEventType">The type of the history event being reported. (required).</param>
+        /// <param name="Success">Whether or not the flow item was successful (if a &#39;notification&#39; event this will default to true) (required) (default to false).</param>
+
+        public FlowHistoryItem(DateTime? HistoryEventTime = null, FlowState State = null, WorkItem WorkItem = null, User User = null, Queue Queue = null, List<DataItem> HistoryEventData = null, HistoryEventTypeEnum? HistoryEventType = null, bool? Success = null)
         {
-            this.Success = false;
+            // to ensure "HistoryEventTime" is required (not null)
+            if (HistoryEventTime == null)
+            {
+                throw new InvalidDataException("HistoryEventTime is a required property for FlowHistoryItem and cannot be null");
+            }
+            else
+            {
+                this.HistoryEventTime = HistoryEventTime;
+            }
+            // to ensure "HistoryEventType" is required (not null)
+            if (HistoryEventType == null)
+            {
+                throw new InvalidDataException("HistoryEventType is a required property for FlowHistoryItem and cannot be null");
+            }
+            else
+            {
+                this.HistoryEventType = HistoryEventType;
+            }
+            // to ensure "Success" is required (not null)
+            if (Success == null)
+            {
+                throw new InvalidDataException("Success is a required property for FlowHistoryItem and cannot be null");
+            }
+            else
+            {
+                this.Success = Success;
+            }
+            this.State = State;
+            this.WorkItem = WorkItem;
+            this.User = User;
+            this.Queue = Queue;
+            this.HistoryEventData = HistoryEventData;
             
         }
-
         
+    
         /// <summary>
         /// The time when the history item occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The time when the history item occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="historyEventTime", EmitDefaultValue=false)]
         public DateTime? HistoryEventTime { get; set; }
-  
-        
+    
         /// <summary>
         /// The State sequence that applies to the history event, if applicable.
         /// </summary>
         /// <value>The State sequence that applies to the history event, if applicable.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public FlowState State { get; set; }
-  
-        
+    
         /// <summary>
         /// Information about the work item associated with the history event, if applicable.
         /// </summary>
         /// <value>Information about the work item associated with the history event, if applicable.</value>
         [DataMember(Name="workItem", EmitDefaultValue=false)]
         public WorkItem WorkItem { get; set; }
-  
-        
+    
         /// <summary>
         /// The user associated with this history event, if applicable.
         /// </summary>
         /// <value>The user associated with this history event, if applicable.</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
-  
-        
+    
         /// <summary>
         /// The queue associated with this history event, if applicable.
         /// </summary>
         /// <value>The queue associated with this history event, if applicable.</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public Queue Queue { get; set; }
-  
-        
+    
         /// <summary>
         /// Data elements associated with this history event.
         /// </summary>
         /// <value>Data elements associated with this history event.</value>
         [DataMember(Name="historyEventData", EmitDefaultValue=false)]
         public List<DataItem> HistoryEventData { get; set; }
-  
-        
-        /// <summary>
-        /// The type of the history event being reported.
-        /// </summary>
-        /// <value>The type of the history event being reported.</value>
-        [DataMember(Name="historyEventType", EmitDefaultValue=false)]
-        public string HistoryEventType { get; set; }
-  
-        
+    
         /// <summary>
         /// Whether or not the flow item was successful (if a 'notification' event this will default to true)
         /// </summary>
         /// <value>Whether or not the flow item was successful (if a 'notification' event this will default to true)</value>
         [DataMember(Name="success", EmitDefaultValue=false)]
         public bool? Success { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

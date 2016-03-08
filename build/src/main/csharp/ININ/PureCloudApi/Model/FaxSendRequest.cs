@@ -7,84 +7,90 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class FaxSendRequest :  IEquatable<FaxSendRequest>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FaxSendRequest" /> class.
+        /// Initializes a new instance of the <see cref="FaxSendRequest" />class.
         /// </summary>
-        public FaxSendRequest()
+        /// <param name="Name">Name.</param>
+        /// <param name="Addresses">Addresses.</param>
+        /// <param name="OriginalFilename">OriginalFilename.</param>
+        /// <param name="ContentType">ContentType.</param>
+        /// <param name="Workspace">Workspace.</param>
+        /// <param name="CoverSheet">CoverSheet.</param>
+
+        public FaxSendRequest(string Name = null, List<string> Addresses = null, string OriginalFilename = null, string ContentType = null, Workspace Workspace = null, CoverSheet CoverSheet = null, )
         {
+            this.Name = Name;
+            this.Addresses = Addresses;
+            this.OriginalFilename = OriginalFilename;
+            this.ContentType = ContentType;
+            this.Workspace = Workspace;
+            this.CoverSheet = CoverSheet;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Addresses
         /// </summary>
         [DataMember(Name="addresses", EmitDefaultValue=false)]
         public List<string> Addresses { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets OriginalFilename
         /// </summary>
         [DataMember(Name="originalFilename", EmitDefaultValue=false)]
         public string OriginalFilename { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ContentType
         /// </summary>
         [DataMember(Name="contentType", EmitDefaultValue=false)]
         public string ContentType { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Workspace
         /// </summary>
         [DataMember(Name="workspace", EmitDefaultValue=false)]
         public Workspace Workspace { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CoverSheet
         /// </summary>
         [DataMember(Name="coverSheet", EmitDefaultValue=false)]
         public CoverSheet CoverSheet { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

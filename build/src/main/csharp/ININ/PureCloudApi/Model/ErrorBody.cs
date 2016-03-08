@@ -7,96 +7,108 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ErrorBody :  IEquatable<ErrorBody>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ErrorBody" /> class.
+        /// Initializes a new instance of the <see cref="ErrorBody" />class.
         /// </summary>
-        public ErrorBody()
+        /// <param name="Status">Status.</param>
+        /// <param name="Code">Code.</param>
+        /// <param name="EntityId">EntityId.</param>
+        /// <param name="EntityName">EntityName.</param>
+        /// <param name="Message">Message.</param>
+        /// <param name="MessageWithParams">MessageWithParams.</param>
+        /// <param name="MessageParams">MessageParams.</param>
+        /// <param name="ContextId">ContextId.</param>
+        /// <param name="Details">Details.</param>
+        /// <param name="Errors">Errors.</param>
+
+        public ErrorBody(int? Status = null, string Code = null, string EntityId = null, string EntityName = null, string Message = null, string MessageWithParams = null, Dictionary<string, string> MessageParams = null, string ContextId = null, List<Detail> Details = null, List<ErrorBody> Errors = null)
         {
+            this.Status = Status;
+            this.Code = Code;
+            this.EntityId = EntityId;
+            this.EntityName = EntityName;
+            this.Message = Message;
+            this.MessageWithParams = MessageWithParams;
+            this.MessageParams = MessageParams;
+            this.ContextId = ContextId;
+            this.Details = Details;
+            this.Errors = Errors;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public int? Status { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public string Code { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EntityId
         /// </summary>
         [DataMember(Name="entityId", EmitDefaultValue=false)]
         public string EntityId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EntityName
         /// </summary>
         [DataMember(Name="entityName", EmitDefaultValue=false)]
         public string EntityName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Message
         /// </summary>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public string Message { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MessageWithParams
         /// </summary>
         [DataMember(Name="messageWithParams", EmitDefaultValue=false)]
         public string MessageWithParams { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MessageParams
         /// </summary>
         [DataMember(Name="messageParams", EmitDefaultValue=false)]
         public Dictionary<string, string> MessageParams { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ContextId
         /// </summary>
         [DataMember(Name="contextId", EmitDefaultValue=false)]
         public string ContextId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Details
         /// </summary>
         [DataMember(Name="details", EmitDefaultValue=false)]
         public List<Detail> Details { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Errors
         /// </summary>
         [DataMember(Name="errors", EmitDefaultValue=false)]
         public List<ErrorBody> Errors { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

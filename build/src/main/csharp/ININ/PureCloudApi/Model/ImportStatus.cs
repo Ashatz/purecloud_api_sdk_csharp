@@ -7,61 +7,78 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ImportStatus :  IEquatable<ImportStatus>
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ImportStatus" /> class.
-        /// </summary>
-        public ImportStatus()
-        {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StateEnum {
             
+            [EnumMember(Value = "IN_PROGRESS")]
+            InProgress,
+            
+            [EnumMember(Value = "FAILED")]
+            Failed
         }
-
-        
+    
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
-        public string State { get; set; }
-  
+        public StateEnum? State { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ImportStatus" /> class.
+        /// Initializes a new instance of the <see cref="ImportStatus" />class.
+        /// </summary>
+        /// <param name="State">State.</param>
+        /// <param name="TotalRecords">TotalRecords.</param>
+        /// <param name="CompletedRecords">CompletedRecords.</param>
+        /// <param name="PercentComplete">PercentComplete.</param>
+        /// <param name="FailureReason">FailureReason.</param>
+
+        public ImportStatus(StateEnum? State = null, long? TotalRecords = null, long? CompletedRecords = null, int? PercentComplete = null, string FailureReason = null)
+        {
+            this.State = State;
+            this.TotalRecords = TotalRecords;
+            this.CompletedRecords = CompletedRecords;
+            this.PercentComplete = PercentComplete;
+            this.FailureReason = FailureReason;
+            
+        }
         
+    
         /// <summary>
         /// Gets or Sets TotalRecords
         /// </summary>
         [DataMember(Name="totalRecords", EmitDefaultValue=false)]
         public long? TotalRecords { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CompletedRecords
         /// </summary>
         [DataMember(Name="completedRecords", EmitDefaultValue=false)]
         public long? CompletedRecords { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PercentComplete
         /// </summary>
         [DataMember(Name="percentComplete", EmitDefaultValue=false)]
         public int? PercentComplete { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FailureReason
         /// </summary>
         [DataMember(Name="failureReason", EmitDefaultValue=false)]
         public string FailureReason { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

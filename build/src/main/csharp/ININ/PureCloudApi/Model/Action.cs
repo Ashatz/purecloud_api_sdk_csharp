@@ -7,54 +7,60 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Action :  IEquatable<Action>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Action" /> class.
+        /// Initializes a new instance of the <see cref="Action" />class.
         /// </summary>
-        public Action()
+        /// <param name="Type">Type.</param>
+        /// <param name="ActionTypeName">ActionTypeName.</param>
+        /// <param name="UpdateOption">UpdateOption.</param>
+        /// <param name="Properties">Properties.</param>
+
+        public Action(string Type = null, string ActionTypeName = null, string UpdateOption = null, Dictionary<string, string> Properties = null)
         {
+            this.Type = Type;
+            this.ActionTypeName = ActionTypeName;
+            this.UpdateOption = UpdateOption;
+            this.Properties = Properties;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ActionTypeName
         /// </summary>
         [DataMember(Name="actionTypeName", EmitDefaultValue=false)]
         public string ActionTypeName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UpdateOption
         /// </summary>
         [DataMember(Name="updateOption", EmitDefaultValue=false)]
         public string UpdateOption { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Properties
         /// </summary>
         [DataMember(Name="properties", EmitDefaultValue=false)]
         public Dictionary<string, string> Properties { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

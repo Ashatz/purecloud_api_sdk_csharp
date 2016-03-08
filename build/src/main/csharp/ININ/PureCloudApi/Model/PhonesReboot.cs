@@ -7,33 +7,36 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class PhonesReboot :  IEquatable<PhonesReboot>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PhonesReboot" /> class.
+        /// Initializes a new instance of the <see cref="PhonesReboot" />class.
         /// </summary>
-        public PhonesReboot()
+        /// <param name="PhoneIds">PhoneIds.</param>
+
+        public PhonesReboot(List<string> PhoneIds = null)
         {
+            this.PhoneIds = PhoneIds;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets PhoneIds
         /// </summary>
         [DataMember(Name="phoneIds", EmitDefaultValue=false)]
         public List<string> PhoneIds { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

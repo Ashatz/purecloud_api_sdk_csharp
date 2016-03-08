@@ -7,107 +7,164 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class OrphanRecording :  IEquatable<OrphanRecording>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ProviderTypeEnum {
+            
+            [EnumMember(Value = "EDGE")]
+            Edge,
+            
+            [EnumMember(Value = "CHAT")]
+            Chat,
+            
+            [EnumMember(Value = "EMAIL")]
+            Email
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum MediaTypeEnum {
+            
+            [EnumMember(Value = "CALL")]
+            Call,
+            
+            [EnumMember(Value = "CHAT")]
+            Chat,
+            
+            [EnumMember(Value = "EMAIL")]
+            Email
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum FileStateEnum {
+            
+            [EnumMember(Value = "ARCHIVED")]
+            Archived,
+            
+            [EnumMember(Value = "AVAILABLE")]
+            Available,
+            
+            [EnumMember(Value = "DELETED")]
+            Deleted,
+            
+            [EnumMember(Value = "RESTORED")]
+            Restored,
+            
+            [EnumMember(Value = "RESTORING")]
+            Restoring,
+            
+            [EnumMember(Value = "UPLOADING")]
+            Uploading
+        }
+    
+        /// <summary>
+        /// Gets or Sets ProviderType
+        /// </summary>
+        [DataMember(Name="providerType", EmitDefaultValue=false)]
+        public ProviderTypeEnum? ProviderType { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets MediaType
+        /// </summary>
+        [DataMember(Name="mediaType", EmitDefaultValue=false)]
+        public MediaTypeEnum? MediaType { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets FileState
+        /// </summary>
+        [DataMember(Name="fileState", EmitDefaultValue=false)]
+        public FileStateEnum? FileState { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="OrphanRecording" /> class.
+        /// Initializes a new instance of the <see cref="OrphanRecording" />class.
         /// </summary>
-        public OrphanRecording()
+        /// <param name="Name">Name.</param>
+        /// <param name="CreatedTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="RecoveredTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ProviderType">ProviderType.</param>
+        /// <param name="MediaSizeBytes">MediaSizeBytes.</param>
+        /// <param name="MediaType">MediaType.</param>
+        /// <param name="FileState">FileState.</param>
+        /// <param name="ProviderEndpoint">ProviderEndpoint.</param>
+        /// <param name="Recording">Recording.</param>
+
+        public OrphanRecording(string Name = null, DateTime? CreatedTime = null, DateTime? RecoveredTime = null, ProviderTypeEnum? ProviderType = null, long? MediaSizeBytes = null, MediaTypeEnum? MediaType = null, FileStateEnum? FileState = null, Endpoint ProviderEndpoint = null, Recording Recording = null, )
         {
+            this.Name = Name;
+            this.CreatedTime = CreatedTime;
+            this.RecoveredTime = RecoveredTime;
+            this.ProviderType = ProviderType;
+            this.MediaSizeBytes = MediaSizeBytes;
+            this.MediaType = MediaType;
+            this.FileState = FileState;
+            this.ProviderEndpoint = ProviderEndpoint;
+            this.Recording = Recording;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="createdTime", EmitDefaultValue=false)]
         public DateTime? CreatedTime { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="recoveredTime", EmitDefaultValue=false)]
         public DateTime? RecoveredTime { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets ProviderType
-        /// </summary>
-        [DataMember(Name="providerType", EmitDefaultValue=false)]
-        public string ProviderType { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MediaSizeBytes
         /// </summary>
         [DataMember(Name="mediaSizeBytes", EmitDefaultValue=false)]
         public long? MediaSizeBytes { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets MediaType
-        /// </summary>
-        [DataMember(Name="mediaType", EmitDefaultValue=false)]
-        public string MediaType { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets FileState
-        /// </summary>
-        [DataMember(Name="fileState", EmitDefaultValue=false)]
-        public string FileState { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ProviderEndpoint
         /// </summary>
         [DataMember(Name="providerEndpoint", EmitDefaultValue=false)]
         public Endpoint ProviderEndpoint { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Recording
         /// </summary>
         [DataMember(Name="recording", EmitDefaultValue=false)]
         public Recording Recording { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

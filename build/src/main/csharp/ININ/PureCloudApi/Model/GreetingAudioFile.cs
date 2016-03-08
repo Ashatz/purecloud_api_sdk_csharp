@@ -7,47 +7,52 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class GreetingAudioFile :  IEquatable<GreetingAudioFile>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="GreetingAudioFile" /> class.
+        /// Initializes a new instance of the <see cref="GreetingAudioFile" />class.
         /// </summary>
-        public GreetingAudioFile()
+        /// <param name="DurationMilliseconds">DurationMilliseconds.</param>
+        /// <param name="SizeBytes">SizeBytes.</param>
+        /// <param name="SelfUri">SelfUri.</param>
+
+        public GreetingAudioFile(long? DurationMilliseconds = null, long? SizeBytes = null, string SelfUri = null)
         {
+            this.DurationMilliseconds = DurationMilliseconds;
+            this.SizeBytes = SizeBytes;
+            this.SelfUri = SelfUri;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets DurationMilliseconds
         /// </summary>
         [DataMember(Name="durationMilliseconds", EmitDefaultValue=false)]
         public long? DurationMilliseconds { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SizeBytes
         /// </summary>
         [DataMember(Name="sizeBytes", EmitDefaultValue=false)]
         public long? SizeBytes { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SelfUri
         /// </summary>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

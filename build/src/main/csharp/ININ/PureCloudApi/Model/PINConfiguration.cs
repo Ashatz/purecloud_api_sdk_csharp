@@ -7,40 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class PINConfiguration :  IEquatable<PINConfiguration>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PINConfiguration" /> class.
+        /// Initializes a new instance of the <see cref="PINConfiguration" />class.
         /// </summary>
-        public PINConfiguration()
+        /// <param name="MinimumLength">MinimumLength.</param>
+        /// <param name="MaximumLength">MaximumLength.</param>
+
+        public PINConfiguration(int? MinimumLength = null, int? MaximumLength = null)
         {
+            this.MinimumLength = MinimumLength;
+            this.MaximumLength = MaximumLength;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets MinimumLength
         /// </summary>
         [DataMember(Name="minimumLength", EmitDefaultValue=false)]
         public int? MinimumLength { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MaximumLength
         /// </summary>
         [DataMember(Name="maximumLength", EmitDefaultValue=false)]
         public int? MaximumLength { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

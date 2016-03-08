@@ -7,112 +7,161 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class VoiceXmlOperation :  IEquatable<VoiceXmlOperation>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum {
+            
+            [EnumMember(Value = "GOTO")]
+            Goto,
+            
+            [EnumMember(Value = "CALL_AND_RETURN")]
+            CallAndReturn
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum MethodEnum {
+            
+            [EnumMember(Value = "GET")]
+            Get,
+            
+            [EnumMember(Value = "PUT")]
+            Put,
+            
+            [EnumMember(Value = "POST")]
+            Post,
+            
+            [EnumMember(Value = "DELETE")]
+            Delete
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum EncodingEnum {
+            
+            [EnumMember(Value = "MULTIPART_FORM_DATA")]
+            MultipartFormData,
+            
+            [EnumMember(Value = "FORM_URL_ENCODED")]
+            FormUrlEncoded,
+            
+            [EnumMember(Value = "JSON")]
+            Json
+        }
+    
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Method
+        /// </summary>
+        [DataMember(Name="method", EmitDefaultValue=false)]
+        public MethodEnum? Method { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Encoding
+        /// </summary>
+        [DataMember(Name="encoding", EmitDefaultValue=false)]
+        public EncodingEnum? Encoding { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="VoiceXmlOperation" /> class.
+        /// Initializes a new instance of the <see cref="VoiceXmlOperation" />class.
         /// </summary>
-        public VoiceXmlOperation()
+        /// <param name="Name">Name.</param>
+        /// <param name="Type">Type.</param>
+        /// <param name="Method">Method.</param>
+        /// <param name="Encoding">Encoding.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="Uri">Uri.</param>
+        /// <param name="Inputs">Inputs.</param>
+        /// <param name="Outputs">Outputs.</param>
+        /// <param name="FetchAudio">FetchAudio.</param>
+        /// <param name="TimeoutMS">TimeoutMS.</param>
+
+        public VoiceXmlOperation(string Name = null, TypeEnum? Type = null, MethodEnum? Method = null, EncodingEnum? Encoding = null, string Description = null, string Uri = null, string Inputs = null, string Outputs = null, string FetchAudio = null, int? TimeoutMS = null, )
         {
+            this.Name = Name;
+            this.Type = Type;
+            this.Method = Method;
+            this.Encoding = Encoding;
+            this.Description = Description;
+            this.Uri = Uri;
+            this.Inputs = Inputs;
+            this.Outputs = Outputs;
+            this.FetchAudio = FetchAudio;
+            this.TimeoutMS = TimeoutMS;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Method
-        /// </summary>
-        [DataMember(Name="method", EmitDefaultValue=false)]
-        public string Method { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Encoding
-        /// </summary>
-        [DataMember(Name="encoding", EmitDefaultValue=false)]
-        public string Encoding { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Uri
         /// </summary>
         [DataMember(Name="uri", EmitDefaultValue=false)]
         public string Uri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Inputs
         /// </summary>
         [DataMember(Name="inputs", EmitDefaultValue=false)]
         public string Inputs { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Outputs
         /// </summary>
         [DataMember(Name="outputs", EmitDefaultValue=false)]
         public string Outputs { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FetchAudio
         /// </summary>
         [DataMember(Name="fetchAudio", EmitDefaultValue=false)]
         public string FetchAudio { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TimeoutMS
         /// </summary>
         [DataMember(Name="timeoutMS", EmitDefaultValue=false)]
         public int? TimeoutMS { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

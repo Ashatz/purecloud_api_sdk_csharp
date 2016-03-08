@@ -7,83 +7,100 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DomainPermissionPolicy :  IEquatable<DomainPermissionPolicy>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainPermissionPolicy" /> class.
+        /// Initializes a new instance of the <see cref="DomainPermissionPolicy" />class.
         /// </summary>
-        public DomainPermissionPolicy()
+        /// <param name="Domain">Domain.</param>
+        /// <param name="EntityName">EntityName.</param>
+        /// <param name="PolicyName">PolicyName.</param>
+        /// <param name="PolicyDescription">PolicyDescription.</param>
+        /// <param name="ActionSet">ActionSet.</param>
+        /// <param name="NamedResources">NamedResources.</param>
+        /// <param name="AllowConditions">AllowConditions (default to false).</param>
+        /// <param name="ResourceConditionNode">ResourceConditionNode.</param>
+
+        public DomainPermissionPolicy(string Domain = null, string EntityName = null, string PolicyName = null, string PolicyDescription = null, List<string> ActionSet = null, List<string> NamedResources = null, bool? AllowConditions = null, DomainResourceConditionNode ResourceConditionNode = null)
         {
-            this.AllowConditions = false;
+            this.Domain = Domain;
+            this.EntityName = EntityName;
+            this.PolicyName = PolicyName;
+            this.PolicyDescription = PolicyDescription;
+            this.ActionSet = ActionSet;
+            this.NamedResources = NamedResources;
+            // use default value if no "AllowConditions" provided
+            if (AllowConditions == null)
+            {
+                this.AllowConditions = false;
+            }
+            else
+            {
+                this.AllowConditions = AllowConditions;
+            }
+            this.ResourceConditionNode = ResourceConditionNode;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Domain
         /// </summary>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public string Domain { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EntityName
         /// </summary>
         [DataMember(Name="entityName", EmitDefaultValue=false)]
         public string EntityName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PolicyName
         /// </summary>
         [DataMember(Name="policyName", EmitDefaultValue=false)]
         public string PolicyName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PolicyDescription
         /// </summary>
         [DataMember(Name="policyDescription", EmitDefaultValue=false)]
         public string PolicyDescription { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ActionSet
         /// </summary>
         [DataMember(Name="actionSet", EmitDefaultValue=false)]
         public List<string> ActionSet { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets NamedResources
         /// </summary>
         [DataMember(Name="namedResources", EmitDefaultValue=false)]
         public List<string> NamedResources { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AllowConditions
         /// </summary>
         [DataMember(Name="allowConditions", EmitDefaultValue=false)]
         public bool? AllowConditions { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ResourceConditionNode
         /// </summary>
         [DataMember(Name="resourceConditionNode", EmitDefaultValue=false)]
         public DomainResourceConditionNode ResourceConditionNode { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

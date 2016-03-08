@@ -7,40 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ColumnCollapse :  IEquatable<ColumnCollapse>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ColumnCollapse" /> class.
+        /// Initializes a new instance of the <see cref="ColumnCollapse" />class.
         /// </summary>
-        public ColumnCollapse()
+        /// <param name="Label">Label.</param>
+        /// <param name="Columns">Columns.</param>
+
+        public ColumnCollapse(string Label = null, List<int?> Columns = null)
         {
+            this.Label = Label;
+            this.Columns = Columns;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Label
         /// </summary>
         [DataMember(Name="label", EmitDefaultValue=false)]
         public string Label { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Columns
         /// </summary>
         [DataMember(Name="columns", EmitDefaultValue=false)]
         public List<int?> Columns { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

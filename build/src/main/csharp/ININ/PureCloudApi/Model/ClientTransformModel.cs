@@ -7,61 +7,68 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ClientTransformModel :  IEquatable<ClientTransformModel>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ClientTransformModel" /> class.
+        /// Initializes a new instance of the <see cref="ClientTransformModel" />class.
         /// </summary>
-        public ClientTransformModel()
+        /// <param name="Id">Id.</param>
+        /// <param name="EndpointId">EndpointId.</param>
+        /// <param name="FilenameReplaces">FilenameReplaces.</param>
+        /// <param name="Tags">Tags.</param>
+        /// <param name="Name">Name.</param>
+
+        public ClientTransformModel(string Id = null, string EndpointId = null, List<BasicTransform> FilenameReplaces = null, List<TagModel> Tags = null, string Name = null)
         {
+            this.Id = Id;
+            this.EndpointId = EndpointId;
+            this.FilenameReplaces = FilenameReplaces;
+            this.Tags = Tags;
+            this.Name = Name;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EndpointId
         /// </summary>
         [DataMember(Name="endpointId", EmitDefaultValue=false)]
         public string EndpointId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FilenameReplaces
         /// </summary>
         [DataMember(Name="filenameReplaces", EmitDefaultValue=false)]
         public List<BasicTransform> FilenameReplaces { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Tags
         /// </summary>
         [DataMember(Name="tags", EmitDefaultValue=false)]
         public List<TagModel> Tags { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,50 +7,63 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class MediaPolicy :  IEquatable<MediaPolicy>
-    {
+    { 
+        public enum  {
+            
+            [EnumMember(Value = "CONVERSATION_COMPLETE")]
+            ConversationComplete,
+            
+            [EnumMember(Value = "PER_CONVERSATION_EVENT")]
+            PerConversationEvent
+        }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaPolicy" /> class.
+        /// Initializes a new instance of the <see cref="MediaPolicy" />class.
         /// </summary>
-        public MediaPolicy()
+        /// <param name="EvaluationCriteria">When conditions are evaluation and actions applied.</param>
+        /// <param name="Conditions">Conditions for when actions should be applied.</param>
+        /// <param name="Actions">Actions applied when specified conditions are met.</param>
+
+        public MediaPolicy(List<EvaluationCriteriaEnum?> EvaluationCriteria = null, PolicyConditions Conditions = null, PolicyActions Actions = null)
         {
+            this.EvaluationCriteria = EvaluationCriteria;
+            this.Conditions = Conditions;
+            this.Actions = Actions;
             
         }
-
         
+    
         /// <summary>
         /// When conditions are evaluation and actions applied
         /// </summary>
         /// <value>When conditions are evaluation and actions applied</value>
         [DataMember(Name="evaluationCriteria", EmitDefaultValue=false)]
         public List<string> EvaluationCriteria { get; set; }
-  
-        
+    
         /// <summary>
         /// Conditions for when actions should be applied
         /// </summary>
         /// <value>Conditions for when actions should be applied</value>
         [DataMember(Name="conditions", EmitDefaultValue=false)]
         public PolicyConditions Conditions { get; set; }
-  
-        
+    
         /// <summary>
         /// Actions applied when specified conditions are met
         /// </summary>
         /// <value>Actions applied when specified conditions are met</value>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public PolicyActions Actions { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

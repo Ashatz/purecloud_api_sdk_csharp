@@ -7,65 +7,76 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Returned upon a successful publish request.
     /// </summary>
     [DataContract]
     public partial class FlowPublish :  IEquatable<FlowPublish>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowPublish" /> class.
+        /// Initializes a new instance of the <see cref="FlowPublish" />class.
         /// </summary>
-        public FlowPublish()
+        /// <param name="Name">Name.</param>
+        /// <param name="FlowConfigVersionSource">Source version that the flow was published from. (required).</param>
+        /// <param name="Version">Version of this flow config..</param>
+
+        public FlowPublish(string Name = null, string FlowConfigVersionSource = null, string Version = null)
         {
+            // to ensure "FlowConfigVersionSource" is required (not null)
+            if (FlowConfigVersionSource == null)
+            {
+                throw new InvalidDataException("FlowConfigVersionSource is a required property for FlowPublish and cannot be null");
+            }
+            else
+            {
+                this.FlowConfigVersionSource = FlowConfigVersionSource;
+            }
+            this.Name = Name;
+            this.Version = Version;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Source version that the flow was published from.
         /// </summary>
         /// <value>Source version that the flow was published from.</value>
         [DataMember(Name="flowConfigVersionSource", EmitDefaultValue=false)]
         public string FlowConfigVersionSource { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Version of this flow config.
         /// </summary>
         /// <value>Version of this flow config.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public string Version { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

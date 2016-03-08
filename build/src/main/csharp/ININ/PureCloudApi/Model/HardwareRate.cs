@@ -7,70 +7,74 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class HardwareRate :  IEquatable<HardwareRate>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="HardwareRate" /> class.
+        /// Initializes a new instance of the <see cref="HardwareRate" />class.
         /// </summary>
-        public HardwareRate()
+        /// <param name="Name">Name.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="PartNumber">PartNumber.</param>
+        /// <param name="Rate">Rate.</param>
+
+        public HardwareRate(string Name = null, string Description = null, string PartNumber = null, Rate Rate = null, )
         {
+            this.Name = Name;
+            this.Description = Description;
+            this.PartNumber = PartNumber;
+            this.Rate = Rate;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PartNumber
         /// </summary>
         [DataMember(Name="partNumber", EmitDefaultValue=false)]
         public string PartNumber { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Rate
         /// </summary>
         [DataMember(Name="rate", EmitDefaultValue=false)]
         public Rate Rate { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

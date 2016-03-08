@@ -7,54 +7,60 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class PenetrationRate :  IEquatable<PenetrationRate>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PenetrationRate" /> class.
+        /// Initializes a new instance of the <see cref="PenetrationRate" />class.
         /// </summary>
-        public PenetrationRate()
+        /// <param name="NumberOfContactsCalled">NumberOfContactsCalled.</param>
+        /// <param name="TotalNumberOfContacts">TotalNumberOfContacts.</param>
+        /// <param name="Percentage">Percentage.</param>
+        /// <param name="PenetrationRateId">PenetrationRateId.</param>
+
+        public PenetrationRate(long? NumberOfContactsCalled = null, long? TotalNumberOfContacts = null, long? Percentage = null, PenetrationRateId PenetrationRateId = null)
         {
+            this.NumberOfContactsCalled = NumberOfContactsCalled;
+            this.TotalNumberOfContacts = TotalNumberOfContacts;
+            this.Percentage = Percentage;
+            this.PenetrationRateId = PenetrationRateId;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets NumberOfContactsCalled
         /// </summary>
         [DataMember(Name="numberOfContactsCalled", EmitDefaultValue=false)]
         public long? NumberOfContactsCalled { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TotalNumberOfContacts
         /// </summary>
         [DataMember(Name="totalNumberOfContacts", EmitDefaultValue=false)]
         public long? TotalNumberOfContacts { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Percentage
         /// </summary>
         [DataMember(Name="percentage", EmitDefaultValue=false)]
         public long? Percentage { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PenetrationRateId
         /// </summary>
         [DataMember(Name="penetrationRateId", EmitDefaultValue=false)]
         public PenetrationRateId PenetrationRateId { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

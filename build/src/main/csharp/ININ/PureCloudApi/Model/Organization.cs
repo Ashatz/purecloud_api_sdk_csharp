@@ -7,120 +7,151 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Organization :  IEquatable<Organization>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StateEnum {
+            
+            [EnumMember(Value = "ACTIVE")]
+            Active,
+            
+            [EnumMember(Value = "DELETED")]
+            Deleted,
+            
+            [EnumMember(Value = "INACTIVE")]
+            Inactive
+        }
+    
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public StateEnum? State { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Organization" /> class.
+        /// Initializes a new instance of the <see cref="Organization" />class.
         /// </summary>
-        public Organization()
+        /// <param name="Name">Name.</param>
+        /// <param name="ThirdPartyOrgId">ThirdPartyOrgId.</param>
+        /// <param name="ThirdPartyOrgName">ThirdPartyOrgName.</param>
+        /// <param name="ThirdPartyURI">ThirdPartyURI.</param>
+        /// <param name="AdminUsername">AdminUsername.</param>
+        /// <param name="AdminPassword">AdminPassword.</param>
+        /// <param name="Domain">Domain.</param>
+        /// <param name="Version">Version.</param>
+        /// <param name="State">State.</param>
+        /// <param name="DefaultSiteId">DefaultSiteId.</param>
+        /// <param name="Deletable">Deletable (default to false).</param>
+
+        public Organization(string Name = null, string ThirdPartyOrgId = null, string ThirdPartyOrgName = null, string ThirdPartyURI = null, string AdminUsername = null, string AdminPassword = null, string Domain = null, int? Version = null, StateEnum? State = null, string DefaultSiteId = null, bool? Deletable = null, )
         {
-            this.Deletable = false;
+            this.Name = Name;
+            this.ThirdPartyOrgId = ThirdPartyOrgId;
+            this.ThirdPartyOrgName = ThirdPartyOrgName;
+            this.ThirdPartyURI = ThirdPartyURI;
+            this.AdminUsername = AdminUsername;
+            this.AdminPassword = AdminPassword;
+            this.Domain = Domain;
+            this.Version = Version;
+            this.State = State;
+            this.DefaultSiteId = DefaultSiteId;
+            // use default value if no "Deletable" provided
+            if (Deletable == null)
+            {
+                this.Deletable = false;
+            }
+            else
+            {
+                this.Deletable = Deletable;
+            }
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ThirdPartyOrgId
         /// </summary>
         [DataMember(Name="thirdPartyOrgId", EmitDefaultValue=false)]
         public string ThirdPartyOrgId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ThirdPartyOrgName
         /// </summary>
         [DataMember(Name="thirdPartyOrgName", EmitDefaultValue=false)]
         public string ThirdPartyOrgName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ThirdPartyURI
         /// </summary>
         [DataMember(Name="thirdPartyURI", EmitDefaultValue=false)]
         public string ThirdPartyURI { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AdminUsername
         /// </summary>
         [DataMember(Name="adminUsername", EmitDefaultValue=false)]
         public string AdminUsername { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AdminPassword
         /// </summary>
         [DataMember(Name="adminPassword", EmitDefaultValue=false)]
         public string AdminPassword { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Domain
         /// </summary>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public string Domain { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets State
-        /// </summary>
-        [DataMember(Name="state", EmitDefaultValue=false)]
-        public string State { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DefaultSiteId
         /// </summary>
         [DataMember(Name="defaultSiteId", EmitDefaultValue=false)]
         public string DefaultSiteId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Deletable
         /// </summary>
         [DataMember(Name="deletable", EmitDefaultValue=false)]
         public bool? Deletable { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

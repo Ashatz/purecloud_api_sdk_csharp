@@ -7,57 +7,66 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class HIPAAConfig :  IEquatable<HIPAAConfig>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="HIPAAConfig" /> class.
+        /// Initializes a new instance of the <see cref="HIPAAConfig" />class.
         /// </summary>
-        public HIPAAConfig()
+        /// <param name="Name">Name.</param>
+        /// <param name="EnableIdleTokenTimeout">EnableIdleTokenTimeout (default to false).</param>
+
+        public HIPAAConfig(string Name = null, bool? EnableIdleTokenTimeout = null, )
         {
-            this.EnableIdleTokenTimeout = false;
+            this.Name = Name;
+            // use default value if no "EnableIdleTokenTimeout" provided
+            if (EnableIdleTokenTimeout == null)
+            {
+                this.EnableIdleTokenTimeout = false;
+            }
+            else
+            {
+                this.EnableIdleTokenTimeout = EnableIdleTokenTimeout;
+            }
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EnableIdleTokenTimeout
         /// </summary>
         [DataMember(Name="enableIdleTokenTimeout", EmitDefaultValue=false)]
         public bool? EnableIdleTokenTimeout { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

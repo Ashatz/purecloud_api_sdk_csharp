@@ -7,57 +7,86 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class KeyRotationSchedule :  IEquatable<KeyRotationSchedule>
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="KeyRotationSchedule" /> class.
-        /// </summary>
-        public KeyRotationSchedule()
-        {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PeriodEnum {
             
+            [EnumMember(Value = "DISABLED")]
+            Disabled,
+            
+            [EnumMember(Value = "DAILY")]
+            Daily,
+            
+            [EnumMember(Value = "WEEKLY")]
+            Weekly,
+            
+            [EnumMember(Value = "MONTHLY")]
+            Monthly,
+            
+            [EnumMember(Value = "YEARLY")]
+            Yearly
         }
-
-        
-        /// <summary>
-        /// The globally unique identifier for the object.
-        /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Value to set schedule to
         /// </summary>
         /// <value>Value to set schedule to</value>
         [DataMember(Name="period", EmitDefaultValue=false)]
-        public string Period { get; set; }
-  
+        public PeriodEnum? Period { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="KeyRotationSchedule" /> class.
+        /// Initializes a new instance of the <see cref="KeyRotationSchedule" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="Period">Value to set schedule to (required).</param>
+
+        public KeyRotationSchedule(string Name = null, PeriodEnum? Period = null, )
+        {
+            // to ensure "Period" is required (not null)
+            if (Period == null)
+            {
+                throw new InvalidDataException("Period is a required property for KeyRotationSchedule and cannot be null");
+            }
+            else
+            {
+                this.Period = Period;
+            }
+            this.Name = Name;
+            
+        }
         
+    
+        /// <summary>
+        /// The globally unique identifier for the object.
+        /// </summary>
+        /// <value>The globally unique identifier for the object.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; private set; }
+    
+        /// <summary>
+        /// Gets or Sets Name
+        /// </summary>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

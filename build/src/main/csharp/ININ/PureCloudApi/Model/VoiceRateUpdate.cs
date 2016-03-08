@@ -7,129 +7,164 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class VoiceRateUpdate :  IEquatable<VoiceRateUpdate>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="VoiceRateUpdate" /> class.
+        /// Initializes a new instance of the <see cref="VoiceRateUpdate" />class.
         /// </summary>
-        public VoiceRateUpdate()
+        /// <param name="Name">Name.</param>
+        /// <param name="Currency">The ISO 4217 currency code of the voice rate. (required).</param>
+        /// <param name="InboundTollFree">The inbound toll free rate..</param>
+        /// <param name="Extended">The domestic extended rates..</param>
+        /// <param name="InboundTolled">The inbound tolled rate..</param>
+        /// <param name="OutboundLocal">The outbound local rate..</param>
+        /// <param name="OutboundIntraState">The outbound intra-state rate..</param>
+        /// <param name="OutboundInterState">The outbound inter-state rate..</param>
+        /// <param name="OutboundInternational">The outbound international rates..</param>
+        /// <param name="AmendmentDate">The date of the rate amendment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
+        /// <param name="EffectiveDate">The effective date of the rate amendment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
+
+        public VoiceRateUpdate(string Name = null, string Currency = null, VoiceRate InboundTollFree = null, List<VoiceRateExtended> Extended = null, VoiceRate InboundTolled = null, VoiceRate OutboundLocal = null, VoiceRate OutboundIntraState = null, VoiceRate OutboundInterState = null, List<VoiceRateInternational> OutboundInternational = null, DateTime? AmendmentDate = null, DateTime? EffectiveDate = null, )
         {
+            // to ensure "Currency" is required (not null)
+            if (Currency == null)
+            {
+                throw new InvalidDataException("Currency is a required property for VoiceRateUpdate and cannot be null");
+            }
+            else
+            {
+                this.Currency = Currency;
+            }
+            // to ensure "AmendmentDate" is required (not null)
+            if (AmendmentDate == null)
+            {
+                throw new InvalidDataException("AmendmentDate is a required property for VoiceRateUpdate and cannot be null");
+            }
+            else
+            {
+                this.AmendmentDate = AmendmentDate;
+            }
+            // to ensure "EffectiveDate" is required (not null)
+            if (EffectiveDate == null)
+            {
+                throw new InvalidDataException("EffectiveDate is a required property for VoiceRateUpdate and cannot be null");
+            }
+            else
+            {
+                this.EffectiveDate = EffectiveDate;
+            }
+            this.Name = Name;
+            this.InboundTollFree = InboundTollFree;
+            this.Extended = Extended;
+            this.InboundTolled = InboundTolled;
+            this.OutboundLocal = OutboundLocal;
+            this.OutboundIntraState = OutboundIntraState;
+            this.OutboundInterState = OutboundInterState;
+            this.OutboundInternational = OutboundInternational;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// The ISO 4217 currency code of the voice rate.
         /// </summary>
         /// <value>The ISO 4217 currency code of the voice rate.</value>
         [DataMember(Name="currency", EmitDefaultValue=false)]
         public string Currency { get; set; }
-  
-        
+    
         /// <summary>
         /// The inbound toll free rate.
         /// </summary>
         /// <value>The inbound toll free rate.</value>
         [DataMember(Name="inboundTollFree", EmitDefaultValue=false)]
         public VoiceRate InboundTollFree { get; set; }
-  
-        
+    
         /// <summary>
         /// The domestic extended rates.
         /// </summary>
         /// <value>The domestic extended rates.</value>
         [DataMember(Name="extended", EmitDefaultValue=false)]
         public List<VoiceRateExtended> Extended { get; set; }
-  
-        
+    
         /// <summary>
         /// The inbound tolled rate.
         /// </summary>
         /// <value>The inbound tolled rate.</value>
         [DataMember(Name="inboundTolled", EmitDefaultValue=false)]
         public VoiceRate InboundTolled { get; set; }
-  
-        
+    
         /// <summary>
         /// The outbound local rate.
         /// </summary>
         /// <value>The outbound local rate.</value>
         [DataMember(Name="outboundLocal", EmitDefaultValue=false)]
         public VoiceRate OutboundLocal { get; set; }
-  
-        
+    
         /// <summary>
         /// The outbound intra-state rate.
         /// </summary>
         /// <value>The outbound intra-state rate.</value>
         [DataMember(Name="outboundIntraState", EmitDefaultValue=false)]
         public VoiceRate OutboundIntraState { get; set; }
-  
-        
+    
         /// <summary>
         /// The outbound inter-state rate.
         /// </summary>
         /// <value>The outbound inter-state rate.</value>
         [DataMember(Name="outboundInterState", EmitDefaultValue=false)]
         public VoiceRate OutboundInterState { get; set; }
-  
-        
+    
         /// <summary>
         /// The outbound international rates.
         /// </summary>
         /// <value>The outbound international rates.</value>
         [DataMember(Name="outboundInternational", EmitDefaultValue=false)]
         public List<VoiceRateInternational> OutboundInternational { get; set; }
-  
-        
+    
         /// <summary>
         /// The date of the rate amendment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The date of the rate amendment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="amendmentDate", EmitDefaultValue=false)]
         public DateTime? AmendmentDate { get; set; }
-  
-        
+    
         /// <summary>
         /// The effective date of the rate amendment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The effective date of the rate amendment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="effectiveDate", EmitDefaultValue=false)]
         public DateTime? EffectiveDate { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

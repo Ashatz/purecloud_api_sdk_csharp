@@ -7,34 +7,45 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Used to return response query results
     /// </summary>
     [DataContract]
     public partial class ResponseQueryResults :  IEquatable<ResponseQueryResults>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseQueryResults" /> class.
+        /// Initializes a new instance of the <see cref="ResponseQueryResults" />class.
         /// </summary>
-        public ResponseQueryResults()
+        /// <param name="Results">Contains the query results (required).</param>
+
+        public ResponseQueryResults(ResponseEntityList Results = null)
         {
+            // to ensure "Results" is required (not null)
+            if (Results == null)
+            {
+                throw new InvalidDataException("Results is a required property for ResponseQueryResults and cannot be null");
+            }
+            else
+            {
+                this.Results = Results;
+            }
             
         }
-
         
+    
         /// <summary>
         /// Contains the query results
         /// </summary>
         /// <value>Contains the query results</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public ResponseEntityList Results { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

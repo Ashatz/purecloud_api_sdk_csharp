@@ -7,41 +7,52 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ValidateAddressResponse :  IEquatable<ValidateAddressResponse>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ValidateAddressResponse" /> class.
+        /// Initializes a new instance of the <see cref="ValidateAddressResponse" />class.
         /// </summary>
-        public ValidateAddressResponse()
+        /// <param name="Valid">Valid (default to false).</param>
+        /// <param name="Response">Response.</param>
+
+        public ValidateAddressResponse(bool? Valid = null, Response Response = null)
         {
-            this.Valid = false;
+            // use default value if no "Valid" provided
+            if (Valid == null)
+            {
+                this.Valid = false;
+            }
+            else
+            {
+                this.Valid = Valid;
+            }
+            this.Response = Response;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Valid
         /// </summary>
         [DataMember(Name="valid", EmitDefaultValue=false)]
         public bool? Valid { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Response
         /// </summary>
         [DataMember(Name="response", EmitDefaultValue=false)]
         public Response Response { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

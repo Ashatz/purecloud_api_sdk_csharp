@@ -7,124 +7,155 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class SocialAccount :  IEquatable<SocialAccount>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="SocialAccount" /> class.
+        /// Initializes a new instance of the <see cref="SocialAccount" />class.
         /// </summary>
-        public SocialAccount()
+        /// <param name="Name">Name.</param>
+        /// <param name="DateCreated">Creation date for the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateModified">Date the entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Enabled">Indicates if this Social Account is available for selection by other entities (default to false).</param>
+        /// <param name="Authorized">True when successfully completing the third-party authorization process (default to false).</param>
+        /// <param name="SocialHub">Which third party Social Media Hub this account will be communicating through.</param>
+        /// <param name="AccessToken">Credential provided through the Social Hub&#39;s authorization process.</param>
+        /// <param name="AccessTokenSecret">Credential provided through the Social Hub&#39;s authorization process.</param>
+        /// <param name="TwitterId">The account ID as provided by Twitter during the authorization process.</param>
+        /// <param name="StreamingEnabled">Indicates if a stream should be opened on behalf of the indicated Social Hub account (default to false).</param>
+
+        public SocialAccount(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, bool? Enabled = null, bool? Authorized = null, string SocialHub = null, string AccessToken = null, string AccessTokenSecret = null, string TwitterId = null, bool? StreamingEnabled = null, )
         {
-            this.Enabled = false;
-            this.Authorized = false;
-            this.StreamingEnabled = false;
+            this.Name = Name;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            // use default value if no "Enabled" provided
+            if (Enabled == null)
+            {
+                this.Enabled = false;
+            }
+            else
+            {
+                this.Enabled = Enabled;
+            }
+            // use default value if no "Authorized" provided
+            if (Authorized == null)
+            {
+                this.Authorized = false;
+            }
+            else
+            {
+                this.Authorized = Authorized;
+            }
+            this.SocialHub = SocialHub;
+            this.AccessToken = AccessToken;
+            this.AccessTokenSecret = AccessTokenSecret;
+            this.TwitterId = TwitterId;
+            // use default value if no "StreamingEnabled" provided
+            if (StreamingEnabled == null)
+            {
+                this.StreamingEnabled = false;
+            }
+            else
+            {
+                this.StreamingEnabled = StreamingEnabled;
+            }
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Creation date for the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Creation date for the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-  
-        
+    
         /// <summary>
         /// Date the entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date the entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-  
-        
+    
         /// <summary>
         /// Indicates if this Social Account is available for selection by other entities
         /// </summary>
         /// <value>Indicates if this Social Account is available for selection by other entities</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
-  
-        
+    
         /// <summary>
         /// True when successfully completing the third-party authorization process
         /// </summary>
         /// <value>True when successfully completing the third-party authorization process</value>
         [DataMember(Name="authorized", EmitDefaultValue=false)]
         public bool? Authorized { get; set; }
-  
-        
+    
         /// <summary>
         /// Which third party Social Media Hub this account will be communicating through
         /// </summary>
         /// <value>Which third party Social Media Hub this account will be communicating through</value>
         [DataMember(Name="socialHub", EmitDefaultValue=false)]
         public string SocialHub { get; set; }
-  
-        
+    
         /// <summary>
         /// Credential provided through the Social Hub's authorization process
         /// </summary>
         /// <value>Credential provided through the Social Hub's authorization process</value>
         [DataMember(Name="access_token", EmitDefaultValue=false)]
         public string AccessToken { get; set; }
-  
-        
+    
         /// <summary>
         /// Credential provided through the Social Hub's authorization process
         /// </summary>
         /// <value>Credential provided through the Social Hub's authorization process</value>
         [DataMember(Name="access_token_secret", EmitDefaultValue=false)]
         public string AccessTokenSecret { get; set; }
-  
-        
+    
         /// <summary>
         /// The account ID as provided by Twitter during the authorization process
         /// </summary>
         /// <value>The account ID as provided by Twitter during the authorization process</value>
         [DataMember(Name="twitterId", EmitDefaultValue=false)]
         public string TwitterId { get; set; }
-  
-        
+    
         /// <summary>
         /// Indicates if a stream should be opened on behalf of the indicated Social Hub account
         /// </summary>
         /// <value>Indicates if a stream should be opened on behalf of the indicated Social Hub account</value>
         [DataMember(Name="streamingEnabled", EmitDefaultValue=false)]
         public bool? StreamingEnabled { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

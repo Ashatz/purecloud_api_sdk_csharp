@@ -7,63 +7,66 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class PrimaryUserPresenceSource :  IEquatable<PrimaryUserPresenceSource>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PrimaryUserPresenceSource" /> class.
+        /// Initializes a new instance of the <see cref="PrimaryUserPresenceSource" />class.
         /// </summary>
-        public PrimaryUserPresenceSource()
+        /// <param name="Name">Name.</param>
+        /// <param name="User">User.</param>
+        /// <param name="PrimarySource">PrimarySource.</param>
+
+        public PrimaryUserPresenceSource(string Name = null, User User = null, string PrimarySource = null, )
         {
+            this.Name = Name;
+            this.User = User;
+            this.PrimarySource = PrimarySource;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PrimarySource
         /// </summary>
         [DataMember(Name="primarySource", EmitDefaultValue=false)]
         public string PrimarySource { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

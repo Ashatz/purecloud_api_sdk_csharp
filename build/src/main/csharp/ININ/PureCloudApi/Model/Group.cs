@@ -7,84 +7,113 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Group :  IEquatable<Group>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum GroupTypeEnum {
+            
+            [EnumMember(Value = "OFFICIAL")]
+            Official,
+            
+            [EnumMember(Value = "DISTRIBUTION_GROUP")]
+            DistributionGroup
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum GroupStateEnum {
+            
+            [EnumMember(Value = "ACTIVE")]
+            Active,
+            
+            [EnumMember(Value = "INACTIVE")]
+            Inactive,
+            
+            [EnumMember(Value = "DELETED")]
+            Deleted
+        }
+    
+        /// <summary>
+        /// Gets or Sets GroupType
+        /// </summary>
+        [DataMember(Name="groupType", EmitDefaultValue=false)]
+        public GroupTypeEnum? GroupType { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets GroupState
+        /// </summary>
+        [DataMember(Name="groupState", EmitDefaultValue=false)]
+        public GroupStateEnum? GroupState { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Group" /> class.
+        /// Initializes a new instance of the <see cref="Group" />class.
         /// </summary>
-        public Group()
+        /// <param name="Name">Name.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="MemberCount">MemberCount.</param>
+        /// <param name="GroupType">GroupType.</param>
+        /// <param name="GroupImages">GroupImages.</param>
+        /// <param name="GroupState">GroupState.</param>
+
+        public Group(string Name = null, string Description = null, long? MemberCount = null, GroupTypeEnum? GroupType = null, GroupImages GroupImages = null, GroupStateEnum? GroupState = null, )
         {
+            this.Name = Name;
+            this.Description = Description;
+            this.MemberCount = MemberCount;
+            this.GroupType = GroupType;
+            this.GroupImages = GroupImages;
+            this.GroupState = GroupState;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MemberCount
         /// </summary>
         [DataMember(Name="memberCount", EmitDefaultValue=false)]
         public long? MemberCount { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets GroupType
-        /// </summary>
-        [DataMember(Name="groupType", EmitDefaultValue=false)]
-        public string GroupType { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets GroupImages
         /// </summary>
         [DataMember(Name="groupImages", EmitDefaultValue=false)]
         public GroupImages GroupImages { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets GroupState
-        /// </summary>
-        [DataMember(Name="groupState", EmitDefaultValue=false)]
-        public string GroupState { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

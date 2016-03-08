@@ -7,86 +7,106 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class AccountOverview :  IEquatable<AccountOverview>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AccountOverview" /> class.
+        /// Initializes a new instance of the <see cref="AccountOverview" />class.
         /// </summary>
-        public AccountOverview()
+        /// <param name="Name">Name.</param>
+        /// <param name="IsSuperUser">IsSuperUser (default to false).</param>
+        /// <param name="HasAccountNumber">HasAccountNumber (default to false).</param>
+        /// <param name="UsageCharges">UsageCharges.</param>
+        /// <param name="DomesticChargesTotal">DomesticChargesTotal.</param>
+        /// <param name="InternationalChargesTotal">InternationalChargesTotal.</param>
+
+        public AccountOverview(string Name = null, bool? IsSuperUser = null, bool? HasAccountNumber = null, List<Charge> UsageCharges = null, int? DomesticChargesTotal = null, int? InternationalChargesTotal = null, )
         {
-            this.IsSuperUser = false;
-            this.HasAccountNumber = false;
+            this.Name = Name;
+            // use default value if no "IsSuperUser" provided
+            if (IsSuperUser == null)
+            {
+                this.IsSuperUser = false;
+            }
+            else
+            {
+                this.IsSuperUser = IsSuperUser;
+            }
+            // use default value if no "HasAccountNumber" provided
+            if (HasAccountNumber == null)
+            {
+                this.HasAccountNumber = false;
+            }
+            else
+            {
+                this.HasAccountNumber = HasAccountNumber;
+            }
+            this.UsageCharges = UsageCharges;
+            this.DomesticChargesTotal = DomesticChargesTotal;
+            this.InternationalChargesTotal = InternationalChargesTotal;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IsSuperUser
         /// </summary>
         [DataMember(Name="isSuperUser", EmitDefaultValue=false)]
         public bool? IsSuperUser { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets HasAccountNumber
         /// </summary>
         [DataMember(Name="hasAccountNumber", EmitDefaultValue=false)]
         public bool? HasAccountNumber { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UsageCharges
         /// </summary>
         [DataMember(Name="usageCharges", EmitDefaultValue=false)]
         public List<Charge> UsageCharges { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DomesticChargesTotal
         /// </summary>
         [DataMember(Name="domesticChargesTotal", EmitDefaultValue=false)]
         public int? DomesticChargesTotal { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets InternationalChargesTotal
         /// </summary>
         [DataMember(Name="internationalChargesTotal", EmitDefaultValue=false)]
         public int? InternationalChargesTotal { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

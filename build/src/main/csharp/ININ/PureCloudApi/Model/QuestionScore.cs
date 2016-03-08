@@ -7,70 +7,92 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class QuestionScore :  IEquatable<QuestionScore>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="QuestionScore" /> class.
+        /// Initializes a new instance of the <see cref="QuestionScore" />class.
         /// </summary>
-        public QuestionScore()
+        /// <param name="QuestionId">QuestionId.</param>
+        /// <param name="AnswerId">AnswerId.</param>
+        /// <param name="Score">Score.</param>
+        /// <param name="MarkedNA">MarkedNA (default to false).</param>
+        /// <param name="FailedKillQuestion">FailedKillQuestion (default to false).</param>
+        /// <param name="Comments">Comments.</param>
+
+        public QuestionScore(string QuestionId = null, string AnswerId = null, int? Score = null, bool? MarkedNA = null, bool? FailedKillQuestion = null, string Comments = null)
         {
-            this.MarkedNA = false;
-            this.FailedKillQuestion = false;
+            this.QuestionId = QuestionId;
+            this.AnswerId = AnswerId;
+            this.Score = Score;
+            // use default value if no "MarkedNA" provided
+            if (MarkedNA == null)
+            {
+                this.MarkedNA = false;
+            }
+            else
+            {
+                this.MarkedNA = MarkedNA;
+            }
+            // use default value if no "FailedKillQuestion" provided
+            if (FailedKillQuestion == null)
+            {
+                this.FailedKillQuestion = false;
+            }
+            else
+            {
+                this.FailedKillQuestion = FailedKillQuestion;
+            }
+            this.Comments = Comments;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets QuestionId
         /// </summary>
         [DataMember(Name="questionId", EmitDefaultValue=false)]
         public string QuestionId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AnswerId
         /// </summary>
         [DataMember(Name="answerId", EmitDefaultValue=false)]
         public string AnswerId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Score
         /// </summary>
         [DataMember(Name="score", EmitDefaultValue=false)]
         public int? Score { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MarkedNA
         /// </summary>
         [DataMember(Name="markedNA", EmitDefaultValue=false)]
         public bool? MarkedNA { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FailedKillQuestion
         /// </summary>
         [DataMember(Name="failedKillQuestion", EmitDefaultValue=false)]
         public bool? FailedKillQuestion { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Comments
         /// </summary>
         [DataMember(Name="comments", EmitDefaultValue=false)]
         public string Comments { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,69 +7,84 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class MeteredEvaluationAssignment :  IEquatable<MeteredEvaluationAssignment>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="MeteredEvaluationAssignment" /> class.
+        /// Initializes a new instance of the <see cref="MeteredEvaluationAssignment" />class.
         /// </summary>
-        public MeteredEvaluationAssignment()
+        /// <param name="EvaluationContextId">EvaluationContextId.</param>
+        /// <param name="Evaluators">Evaluators.</param>
+        /// <param name="MaxNumberEvaluations">MaxNumberEvaluations.</param>
+        /// <param name="EvaluationForm">EvaluationForm.</param>
+        /// <param name="AssignToActiveUser">AssignToActiveUser (default to false).</param>
+        /// <param name="TimeInterval">TimeInterval.</param>
+
+        public MeteredEvaluationAssignment(string EvaluationContextId = null, List<User> Evaluators = null, int? MaxNumberEvaluations = null, EvaluationForm EvaluationForm = null, bool? AssignToActiveUser = null, TimeInterval TimeInterval = null)
         {
-            this.AssignToActiveUser = false;
+            this.EvaluationContextId = EvaluationContextId;
+            this.Evaluators = Evaluators;
+            this.MaxNumberEvaluations = MaxNumberEvaluations;
+            this.EvaluationForm = EvaluationForm;
+            // use default value if no "AssignToActiveUser" provided
+            if (AssignToActiveUser == null)
+            {
+                this.AssignToActiveUser = false;
+            }
+            else
+            {
+                this.AssignToActiveUser = AssignToActiveUser;
+            }
+            this.TimeInterval = TimeInterval;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets EvaluationContextId
         /// </summary>
         [DataMember(Name="evaluationContextId", EmitDefaultValue=false)]
         public string EvaluationContextId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Evaluators
         /// </summary>
         [DataMember(Name="evaluators", EmitDefaultValue=false)]
         public List<User> Evaluators { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MaxNumberEvaluations
         /// </summary>
         [DataMember(Name="maxNumberEvaluations", EmitDefaultValue=false)]
         public int? MaxNumberEvaluations { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EvaluationForm
         /// </summary>
         [DataMember(Name="evaluationForm", EmitDefaultValue=false)]
         public EvaluationForm EvaluationForm { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AssignToActiveUser
         /// </summary>
         [DataMember(Name="assignToActiveUser", EmitDefaultValue=false)]
         public bool? AssignToActiveUser { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TimeInterval
         /// </summary>
         [DataMember(Name="timeInterval", EmitDefaultValue=false)]
         public TimeInterval TimeInterval { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

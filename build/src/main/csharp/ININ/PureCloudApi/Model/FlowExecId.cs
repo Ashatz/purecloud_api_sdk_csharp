@@ -7,49 +7,50 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// ID of a running flow instance.
     /// </summary>
     [DataContract]
     public partial class FlowExecId :  IEquatable<FlowExecId>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowExecId" /> class.
+        /// Initializes a new instance of the <see cref="FlowExecId" />class.
         /// </summary>
-        public FlowExecId()
+        /// <param name="Name">Name.</param>
+
+        public FlowExecId(string Name = null, )
         {
+            this.Name = Name;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,82 +7,77 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class UploadProgress :  IEquatable<UploadProgress>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UploadProgress" /> class.
+        /// Initializes a new instance of the <see cref="UploadProgress" />class.
         /// </summary>
+
         public UploadProgress()
         {
             
         }
-
         
+    
         /// <summary>
         /// Carrier id associated with the ratesheet that was uploaded.
         /// </summary>
         /// <value>Carrier id associated with the ratesheet that was uploaded.</value>
         [DataMember(Name="CarrierId", EmitDefaultValue=false)]
-        public string CarrierId { get; set; }
-  
-        
+        public string CarrierId { get; private set; }
+    
         /// <summary>
         /// Human readable name for the schema that was used to parse the ratesheet.
         /// </summary>
         /// <value>Human readable name for the schema that was used to parse the ratesheet.</value>
         [DataMember(Name="SchemaName", EmitDefaultValue=false)]
-        public string SchemaName { get; set; }
-  
-        
+        public string SchemaName { get; private set; }
+    
         /// <summary>
         /// Human readable status for progress of the ratesheet upload. This may be an error, the number of rates upload, or a completion message.
         /// </summary>
         /// <value>Human readable status for progress of the ratesheet upload. This may be an error, the number of rates upload, or a completion message.</value>
         [DataMember(Name="Status", EmitDefaultValue=false)]
-        public string Status { get; set; }
-  
-        
+        public string Status { get; private set; }
+    
         /// <summary>
         /// Filename of the ratesheet that was uploaded by the user.
         /// </summary>
         /// <value>Filename of the ratesheet that was uploaded by the user.</value>
         [DataMember(Name="Filename", EmitDefaultValue=false)]
-        public string Filename { get; set; }
-  
-        
+        public string Filename { get; private set; }
+    
         /// <summary>
         /// Media type of the file.
         /// </summary>
         /// <value>Media type of the file.</value>
         [DataMember(Name="Filetype", EmitDefaultValue=false)]
-        public string Filetype { get; set; }
-  
-        
+        public string Filetype { get; private set; }
+    
         /// <summary>
         /// Time at which the uploaded ratesheet was started to be parsed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Time at which the uploaded ratesheet was started to be parsed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="Created", EmitDefaultValue=false)]
-        public DateTime? Created { get; set; }
-  
-        
+        public DateTime? Created { get; private set; }
+    
         /// <summary>
         /// Time at which the progress of the upload was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Time at which the progress of the upload was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="Updated", EmitDefaultValue=false)]
-        public DateTime? Updated { get; set; }
-  
-        
-  
+        public DateTime? Updated { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

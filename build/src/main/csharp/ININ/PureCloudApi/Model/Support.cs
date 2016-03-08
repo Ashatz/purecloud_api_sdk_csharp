@@ -7,47 +7,52 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Support :  IEquatable<Support>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Support" /> class.
+        /// Initializes a new instance of the <see cref="Support" />class.
         /// </summary>
-        public Support()
+        /// <param name="Phone">Phone.</param>
+        /// <param name="Email">Email.</param>
+        /// <param name="Website">Website.</param>
+
+        public Support(string Phone = null, string Email = null, string Website = null)
         {
+            this.Phone = Phone;
+            this.Email = Email;
+            this.Website = Website;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Phone
         /// </summary>
         [DataMember(Name="phone", EmitDefaultValue=false)]
         public string Phone { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Email
         /// </summary>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Website
         /// </summary>
         [DataMember(Name="website", EmitDefaultValue=false)]
         public string Website { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

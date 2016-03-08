@@ -7,33 +7,36 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Chat :  IEquatable<Chat>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Chat" /> class.
+        /// Initializes a new instance of the <see cref="Chat" />class.
         /// </summary>
-        public Chat()
+        /// <param name="JabberId">JabberId.</param>
+
+        public Chat(string JabberId = null)
         {
+            this.JabberId = JabberId;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets JabberId
         /// </summary>
         [DataMember(Name="jabberId", EmitDefaultValue=false)]
         public string JabberId { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

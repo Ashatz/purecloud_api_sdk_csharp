@@ -7,33 +7,36 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class EdgeLogsJobUploadRequest :  IEquatable<EdgeLogsJobUploadRequest>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeLogsJobUploadRequest" /> class.
+        /// Initializes a new instance of the <see cref="EdgeLogsJobUploadRequest" />class.
         /// </summary>
-        public EdgeLogsJobUploadRequest()
+        /// <param name="FileIds">FileIds.</param>
+
+        public EdgeLogsJobUploadRequest(List<string> FileIds = null)
         {
+            this.FileIds = FileIds;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets FileIds
         /// </summary>
         [DataMember(Name="fileIds", EmitDefaultValue=false)]
         public List<string> FileIds { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

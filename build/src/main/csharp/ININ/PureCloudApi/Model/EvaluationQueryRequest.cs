@@ -7,106 +7,161 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class EvaluationQueryRequest :  IEquatable<EvaluationQueryRequest>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum UserTypeEnum {
+            
+            [EnumMember(Value = "EVALUATOR")]
+            Evaluator,
+            
+            [EnumMember(Value = "AGENT")]
+            Agent
+        }
+        public enum  {
+            
+            [EnumMember(Value = "PENDING")]
+            Pending,
+            
+            [EnumMember(Value = "INPROGRESS")]
+            Inprogress,
+            
+            [EnumMember(Value = "FINISHED")]
+            Finished
+        }
+    
+        /// <summary>
+        /// Gets or Sets UserType
+        /// </summary>
+        [DataMember(Name="userType", EmitDefaultValue=false)]
+        public UserTypeEnum? UserType { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationQueryRequest" /> class.
+        /// Initializes a new instance of the <see cref="EvaluationQueryRequest" />class.
         /// </summary>
-        public EvaluationQueryRequest()
+        /// <param name="ConversationId">ConversationId.</param>
+        /// <param name="UserType">UserType.</param>
+        /// <param name="CurrentUserId">CurrentUserId.</param>
+        /// <param name="AgentId">AgentId.</param>
+        /// <param name="QueueId">QueueId.</param>
+        /// <param name="Interval">Interval.</param>
+        /// <param name="EvaluationState">EvaluationState.</param>
+        /// <param name="IsReleased">IsReleased (default to false).</param>
+        /// <param name="AgentHasRead">AgentHasRead (default to false).</param>
+        /// <param name="ExpandAnswerTotalScores">ExpandAnswerTotalScores (default to false).</param>
+        /// <param name="Maximum">Maximum.</param>
+
+        public EvaluationQueryRequest(string ConversationId = null, UserTypeEnum? UserType = null, string CurrentUserId = null, string AgentId = null, string QueueId = null, string Interval = null, List<EvaluationStateEnum?> EvaluationState = null, bool? IsReleased = null, bool? AgentHasRead = null, bool? ExpandAnswerTotalScores = null, int? Maximum = null)
         {
-            this.IsReleased = false;
-            this.AgentHasRead = false;
-            this.ExpandAnswerTotalScores = false;
+            this.ConversationId = ConversationId;
+            this.UserType = UserType;
+            this.CurrentUserId = CurrentUserId;
+            this.AgentId = AgentId;
+            this.QueueId = QueueId;
+            this.Interval = Interval;
+            this.EvaluationState = EvaluationState;
+            // use default value if no "IsReleased" provided
+            if (IsReleased == null)
+            {
+                this.IsReleased = false;
+            }
+            else
+            {
+                this.IsReleased = IsReleased;
+            }
+            // use default value if no "AgentHasRead" provided
+            if (AgentHasRead == null)
+            {
+                this.AgentHasRead = false;
+            }
+            else
+            {
+                this.AgentHasRead = AgentHasRead;
+            }
+            // use default value if no "ExpandAnswerTotalScores" provided
+            if (ExpandAnswerTotalScores == null)
+            {
+                this.ExpandAnswerTotalScores = false;
+            }
+            else
+            {
+                this.ExpandAnswerTotalScores = ExpandAnswerTotalScores;
+            }
+            this.Maximum = Maximum;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets ConversationId
         /// </summary>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets UserType
-        /// </summary>
-        [DataMember(Name="userType", EmitDefaultValue=false)]
-        public string UserType { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CurrentUserId
         /// </summary>
         [DataMember(Name="currentUserId", EmitDefaultValue=false)]
         public string CurrentUserId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AgentId
         /// </summary>
         [DataMember(Name="agentId", EmitDefaultValue=false)]
         public string AgentId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets QueueId
         /// </summary>
         [DataMember(Name="queueId", EmitDefaultValue=false)]
         public string QueueId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Interval
         /// </summary>
         [DataMember(Name="interval", EmitDefaultValue=false)]
         public string Interval { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EvaluationState
         /// </summary>
         [DataMember(Name="evaluationState", EmitDefaultValue=false)]
         public List<string> EvaluationState { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IsReleased
         /// </summary>
         [DataMember(Name="isReleased", EmitDefaultValue=false)]
         public bool? IsReleased { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AgentHasRead
         /// </summary>
         [DataMember(Name="agentHasRead", EmitDefaultValue=false)]
         public bool? AgentHasRead { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ExpandAnswerTotalScores
         /// </summary>
         [DataMember(Name="expandAnswerTotalScores", EmitDefaultValue=false)]
         public bool? ExpandAnswerTotalScores { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Maximum
         /// </summary>
         [DataMember(Name="maximum", EmitDefaultValue=false)]
         public int? Maximum { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

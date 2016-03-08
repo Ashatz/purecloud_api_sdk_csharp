@@ -7,75 +7,84 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class CommonAuditRequest :  IEquatable<CommonAuditRequest>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CommonAuditRequest" /> class.
+        /// Initializes a new instance of the <see cref="CommonAuditRequest" />class.
         /// </summary>
-        public CommonAuditRequest()
+        /// <param name="PageNumber">PageNumber.</param>
+        /// <param name="PageSize">PageSize.</param>
+        /// <param name="SortBy">SortBy.</param>
+        /// <param name="QueryPhrase">QueryPhrase.</param>
+        /// <param name="QueryFields">QueryFields.</param>
+        /// <param name="Facets">Facets.</param>
+        /// <param name="Filters">Filters.</param>
+
+        public CommonAuditRequest(int? PageNumber = null, int? PageSize = null, List<SortBy> SortBy = null, string QueryPhrase = null, List<string> QueryFields = null, List<Facet> Facets = null, List<Filter> Filters = null)
         {
+            this.PageNumber = PageNumber;
+            this.PageSize = PageSize;
+            this.SortBy = SortBy;
+            this.QueryPhrase = QueryPhrase;
+            this.QueryFields = QueryFields;
+            this.Facets = Facets;
+            this.Filters = Filters;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets PageNumber
         /// </summary>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PageSize
         /// </summary>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SortBy
         /// </summary>
         [DataMember(Name="sortBy", EmitDefaultValue=false)]
         public List<SortBy> SortBy { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets QueryPhrase
         /// </summary>
         [DataMember(Name="queryPhrase", EmitDefaultValue=false)]
         public string QueryPhrase { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets QueryFields
         /// </summary>
         [DataMember(Name="queryFields", EmitDefaultValue=false)]
         public List<string> QueryFields { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Facets
         /// </summary>
         [DataMember(Name="facets", EmitDefaultValue=false)]
         public List<Facet> Facets { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Filters
         /// </summary>
         [DataMember(Name="filters", EmitDefaultValue=false)]
         public List<Filter> Filters { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

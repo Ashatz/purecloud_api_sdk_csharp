@@ -7,54 +7,89 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class OrganizationAddress :  IEquatable<OrganizationAddress>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum {
+            
+            [EnumMember(Value = "WORK")]
+            Work,
+            
+            [EnumMember(Value = "HOME")]
+            Home,
+            
+            [EnumMember(Value = "MOBILE")]
+            Mobile,
+            
+            [EnumMember(Value = "MAIN")]
+            Main
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum MediaTypeEnum {
+            
+            [EnumMember(Value = "PHONE")]
+            Phone,
+            
+            [EnumMember(Value = "EMAIL")]
+            Email,
+            
+            [EnumMember(Value = "SMS")]
+            Sms
+        }
+    
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets MediaType
+        /// </summary>
+        [DataMember(Name="mediaType", EmitDefaultValue=false)]
+        public MediaTypeEnum? MediaType { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="OrganizationAddress" /> class.
+        /// Initializes a new instance of the <see cref="OrganizationAddress" />class.
         /// </summary>
-        public OrganizationAddress()
+        /// <param name="Display">Display.</param>
+        /// <param name="Address">Address.</param>
+        /// <param name="Type">Type.</param>
+        /// <param name="MediaType">MediaType.</param>
+
+        public OrganizationAddress(string Display = null, string Address = null, TypeEnum? Type = null, MediaTypeEnum? MediaType = null)
         {
+            this.Display = Display;
+            this.Address = Address;
+            this.Type = Type;
+            this.MediaType = MediaType;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Display
         /// </summary>
         [DataMember(Name="display", EmitDefaultValue=false)]
         public string Display { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Address
         /// </summary>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public string Address { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets MediaType
-        /// </summary>
-        [DataMember(Name="mediaType", EmitDefaultValue=false)]
-        public string MediaType { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,48 +7,63 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class LocationEmergencyNumber :  IEquatable<LocationEmergencyNumber>
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="LocationEmergencyNumber" /> class.
-        /// </summary>
-        public LocationEmergencyNumber()
-        {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum {
             
+            [EnumMember(Value = "default")]
+            Default,
+            
+            [EnumMember(Value = "elin")]
+            Elin
         }
-
-        
-        /// <summary>
-        /// Gets or Sets E164
-        /// </summary>
-        [DataMember(Name="e164", EmitDefaultValue=false)]
-        public string E164 { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Number
-        /// </summary>
-        [DataMember(Name="number", EmitDefaultValue=false)]
-        public string Number { get; set; }
-  
-        
+    
         /// <summary>
         /// The type of emergency number.
         /// </summary>
         /// <value>The type of emergency number.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-  
+        public TypeEnum? Type { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LocationEmergencyNumber" /> class.
+        /// Initializes a new instance of the <see cref="LocationEmergencyNumber" />class.
+        /// </summary>
+        /// <param name="E164">E164.</param>
+        /// <param name="Number">Number.</param>
+        /// <param name="Type">The type of emergency number..</param>
+
+        public LocationEmergencyNumber(string E164 = null, string Number = null, TypeEnum? Type = null)
+        {
+            this.E164 = E164;
+            this.Number = Number;
+            this.Type = Type;
+            
+        }
         
-  
+    
+        /// <summary>
+        /// Gets or Sets E164
+        /// </summary>
+        [DataMember(Name="e164", EmitDefaultValue=false)]
+        public string E164 { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Number
+        /// </summary>
+        [DataMember(Name="number", EmitDefaultValue=false)]
+        public string Number { get; set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

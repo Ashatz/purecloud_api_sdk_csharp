@@ -7,48 +7,51 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Permissions :  IEquatable<Permissions>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Permissions" /> class.
+        /// Initializes a new instance of the <see cref="Permissions" />class.
         /// </summary>
-        public Permissions()
+        /// <param name="Name">Name.</param>
+        /// <param name="Ids">Ids.</param>
+
+        public Permissions(string Name = null, List<string> Ids = null)
         {
+            this.Name = Name;
+            this.Ids = Ids;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Ids
         /// </summary>
         [DataMember(Name="ids", EmitDefaultValue=false)]
         public List<string> Ids { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

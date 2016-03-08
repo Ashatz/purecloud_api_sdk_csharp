@@ -7,96 +7,108 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class FlowConfigMetaDataEntityListing :  IEquatable<FlowConfigMetaDataEntityListing>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowConfigMetaDataEntityListing" /> class.
+        /// Initializes a new instance of the <see cref="FlowConfigMetaDataEntityListing" />class.
         /// </summary>
-        public FlowConfigMetaDataEntityListing()
+        /// <param name="PageSize">PageSize.</param>
+        /// <param name="PageNumber">PageNumber.</param>
+        /// <param name="Total">Total.</param>
+        /// <param name="Entities">Entities.</param>
+        /// <param name="SelfUri">SelfUri.</param>
+        /// <param name="FirstUri">FirstUri.</param>
+        /// <param name="PreviousUri">PreviousUri.</param>
+        /// <param name="NextUri">NextUri.</param>
+        /// <param name="LastUri">LastUri.</param>
+        /// <param name="PageCount">PageCount.</param>
+
+        public FlowConfigMetaDataEntityListing(int? PageSize = null, int? PageNumber = null, long? Total = null, List<FlowConfigMetaData> Entities = null, string SelfUri = null, string FirstUri = null, string PreviousUri = null, string NextUri = null, string LastUri = null, int? PageCount = null)
         {
+            this.PageSize = PageSize;
+            this.PageNumber = PageNumber;
+            this.Total = Total;
+            this.Entities = Entities;
+            this.SelfUri = SelfUri;
+            this.FirstUri = FirstUri;
+            this.PreviousUri = PreviousUri;
+            this.NextUri = NextUri;
+            this.LastUri = LastUri;
+            this.PageCount = PageCount;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets PageSize
         /// </summary>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PageNumber
         /// </summary>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Total
         /// </summary>
         [DataMember(Name="total", EmitDefaultValue=false)]
         public long? Total { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
         public List<FlowConfigMetaData> Entities { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SelfUri
         /// </summary>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FirstUri
         /// </summary>
         [DataMember(Name="firstUri", EmitDefaultValue=false)]
         public string FirstUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PreviousUri
         /// </summary>
         [DataMember(Name="previousUri", EmitDefaultValue=false)]
         public string PreviousUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets NextUri
         /// </summary>
         [DataMember(Name="nextUri", EmitDefaultValue=false)]
         public string NextUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets LastUri
         /// </summary>
         [DataMember(Name="lastUri", EmitDefaultValue=false)]
         public string LastUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PageCount
         /// </summary>
         [DataMember(Name="pageCount", EmitDefaultValue=false)]
         public int? PageCount { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

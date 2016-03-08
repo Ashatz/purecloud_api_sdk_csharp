@@ -7,34 +7,37 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class TwitterExpressionBuffer :  IEquatable<TwitterExpressionBuffer>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="TwitterExpressionBuffer" /> class.
+        /// Initializes a new instance of the <see cref="TwitterExpressionBuffer" />class.
         /// </summary>
-        public TwitterExpressionBuffer()
+        /// <param name="BufferContent">The list of TwitterExpressions currently in the buffer..</param>
+
+        public TwitterExpressionBuffer(List<TwitterExpression> BufferContent = null)
         {
+            this.BufferContent = BufferContent;
             
         }
-
         
+    
         /// <summary>
         /// The list of TwitterExpressions currently in the buffer.
         /// </summary>
         /// <value>The list of TwitterExpressions currently in the buffer.</value>
         [DataMember(Name="bufferContent", EmitDefaultValue=false)]
         public List<TwitterExpression> BufferContent { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

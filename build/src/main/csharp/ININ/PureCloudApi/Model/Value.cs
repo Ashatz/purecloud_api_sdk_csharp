@@ -7,75 +7,84 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Value :  IEquatable<Value>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Value" /> class.
+        /// Initializes a new instance of the <see cref="Value" />class.
         /// </summary>
-        public Value()
+        /// <param name="StringItems">StringItems.</param>
+        /// <param name="IntegerItems">IntegerItems.</param>
+        /// <param name="RealItems">RealItems.</param>
+        /// <param name="DateItems">DateItems.</param>
+        /// <param name="UserItems">UserItems.</param>
+        /// <param name="QueueItems">QueueItems.</param>
+        /// <param name="DataItems">DataItems.</param>
+
+        public Value(List<string> StringItems = null, List<string> IntegerItems = null, List<string> RealItems = null, List<DateTime?> DateItems = null, List<User> UserItems = null, List<Queue> QueueItems = null, List<SubDataItem> DataItems = null)
         {
+            this.StringItems = StringItems;
+            this.IntegerItems = IntegerItems;
+            this.RealItems = RealItems;
+            this.DateItems = DateItems;
+            this.UserItems = UserItems;
+            this.QueueItems = QueueItems;
+            this.DataItems = DataItems;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets StringItems
         /// </summary>
         [DataMember(Name="stringItems", EmitDefaultValue=false)]
         public List<string> StringItems { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IntegerItems
         /// </summary>
         [DataMember(Name="integerItems", EmitDefaultValue=false)]
         public List<string> IntegerItems { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets RealItems
         /// </summary>
         [DataMember(Name="realItems", EmitDefaultValue=false)]
         public List<string> RealItems { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DateItems
         /// </summary>
         [DataMember(Name="dateItems", EmitDefaultValue=false)]
         public List<DateTime?> DateItems { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UserItems
         /// </summary>
         [DataMember(Name="userItems", EmitDefaultValue=false)]
         public List<User> UserItems { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets QueueItems
         /// </summary>
         [DataMember(Name="queueItems", EmitDefaultValue=false)]
         public List<Queue> QueueItems { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DataItems
         /// </summary>
         [DataMember(Name="dataItems", EmitDefaultValue=false)]
         public List<SubDataItem> DataItems { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

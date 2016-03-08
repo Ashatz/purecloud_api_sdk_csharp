@@ -7,47 +7,52 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class VendorConnectionRequest :  IEquatable<VendorConnectionRequest>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="VendorConnectionRequest" /> class.
+        /// Initializes a new instance of the <see cref="VendorConnectionRequest" />class.
         /// </summary>
-        public VendorConnectionRequest()
+        /// <param name="Publisher">Publisher.</param>
+        /// <param name="Type">Type.</param>
+        /// <param name="Name">Name.</param>
+
+        public VendorConnectionRequest(string Publisher = null, string Type = null, string Name = null)
         {
+            this.Publisher = Publisher;
+            this.Type = Type;
+            this.Name = Name;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Publisher
         /// </summary>
         [DataMember(Name="publisher", EmitDefaultValue=false)]
         public string Publisher { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

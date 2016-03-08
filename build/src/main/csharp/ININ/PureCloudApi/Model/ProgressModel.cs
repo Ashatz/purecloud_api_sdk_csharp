@@ -7,50 +7,79 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ProgressModel :  IEquatable<ProgressModel>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ProgressModel" /> class.
+        /// Initializes a new instance of the <see cref="ProgressModel" />class.
         /// </summary>
-        public ProgressModel()
+        /// <param name="Phase">Human readable progress (required).</param>
+        /// <param name="IterationsDone">Number of iterations performed (required).</param>
+        /// <param name="IterationsInPhase">Approximate number of iterations to perform in this phase (required).</param>
+
+        public ProgressModel(string Phase = null, int? IterationsDone = null, int? IterationsInPhase = null)
         {
+            // to ensure "Phase" is required (not null)
+            if (Phase == null)
+            {
+                throw new InvalidDataException("Phase is a required property for ProgressModel and cannot be null");
+            }
+            else
+            {
+                this.Phase = Phase;
+            }
+            // to ensure "IterationsDone" is required (not null)
+            if (IterationsDone == null)
+            {
+                throw new InvalidDataException("IterationsDone is a required property for ProgressModel and cannot be null");
+            }
+            else
+            {
+                this.IterationsDone = IterationsDone;
+            }
+            // to ensure "IterationsInPhase" is required (not null)
+            if (IterationsInPhase == null)
+            {
+                throw new InvalidDataException("IterationsInPhase is a required property for ProgressModel and cannot be null");
+            }
+            else
+            {
+                this.IterationsInPhase = IterationsInPhase;
+            }
             
         }
-
         
+    
         /// <summary>
         /// Human readable progress
         /// </summary>
         /// <value>Human readable progress</value>
         [DataMember(Name="phase", EmitDefaultValue=false)]
         public string Phase { get; set; }
-  
-        
+    
         /// <summary>
         /// Number of iterations performed
         /// </summary>
         /// <value>Number of iterations performed</value>
         [DataMember(Name="iterationsDone", EmitDefaultValue=false)]
         public int? IterationsDone { get; set; }
-  
-        
+    
         /// <summary>
         /// Approximate number of iterations to perform in this phase
         /// </summary>
         /// <value>Approximate number of iterations to perform in this phase</value>
         [DataMember(Name="iterationsInPhase", EmitDefaultValue=false)]
         public int? IterationsInPhase { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,47 +7,52 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ReplaceRequest :  IEquatable<ReplaceRequest>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplaceRequest" /> class.
+        /// Initializes a new instance of the <see cref="ReplaceRequest" />class.
         /// </summary>
-        public ReplaceRequest()
+        /// <param name="ChangeNumber">ChangeNumber.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="AuthToken">AuthToken.</param>
+
+        public ReplaceRequest(int? ChangeNumber = null, string Name = null, string AuthToken = null)
         {
+            this.ChangeNumber = ChangeNumber;
+            this.Name = Name;
+            this.AuthToken = AuthToken;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets ChangeNumber
         /// </summary>
         [DataMember(Name="changeNumber", EmitDefaultValue=false)]
         public int? ChangeNumber { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AuthToken
         /// </summary>
         [DataMember(Name="authToken", EmitDefaultValue=false)]
         public string AuthToken { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

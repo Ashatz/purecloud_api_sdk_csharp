@@ -7,33 +7,36 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class UrlResponse :  IEquatable<UrlResponse>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UrlResponse" /> class.
+        /// Initializes a new instance of the <see cref="UrlResponse" />class.
         /// </summary>
-        public UrlResponse()
+        /// <param name="Url">Url.</param>
+
+        public UrlResponse(string Url = null)
         {
+            this.Url = Url;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Url
         /// </summary>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

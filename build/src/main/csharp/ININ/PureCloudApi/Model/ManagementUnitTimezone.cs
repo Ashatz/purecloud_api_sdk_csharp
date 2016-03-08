@@ -7,33 +7,36 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ManagementUnitTimezone :  IEquatable<ManagementUnitTimezone>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ManagementUnitTimezone" /> class.
+        /// Initializes a new instance of the <see cref="ManagementUnitTimezone" />class.
         /// </summary>
-        public ManagementUnitTimezone()
+        /// <param name="Timezone">Timezone.</param>
+
+        public ManagementUnitTimezone(string Timezone = null)
         {
+            this.Timezone = Timezone;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Timezone
         /// </summary>
         [DataMember(Name="timezone", EmitDefaultValue=false)]
         public string Timezone { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

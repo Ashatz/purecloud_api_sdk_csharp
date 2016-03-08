@@ -7,91 +7,98 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ReportMetaData :  IEquatable<ReportMetaData>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportMetaData" /> class.
+        /// Initializes a new instance of the <see cref="ReportMetaData" />class.
         /// </summary>
-        public ReportMetaData()
+        /// <param name="Name">Name.</param>
+        /// <param name="Title">Title.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="Keywords">Keywords.</param>
+        /// <param name="AvailableLocales">AvailableLocales.</param>
+        /// <param name="Parameters">Parameters.</param>
+        /// <param name="ExampleUrl">ExampleUrl.</param>
+
+        public ReportMetaData(string Name = null, string Title = null, string Description = null, List<string> Keywords = null, List<string> AvailableLocales = null, List<Parameter> Parameters = null, string ExampleUrl = null, )
         {
+            this.Name = Name;
+            this.Title = Title;
+            this.Description = Description;
+            this.Keywords = Keywords;
+            this.AvailableLocales = AvailableLocales;
+            this.Parameters = Parameters;
+            this.ExampleUrl = ExampleUrl;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Title
         /// </summary>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Keywords
         /// </summary>
         [DataMember(Name="keywords", EmitDefaultValue=false)]
         public List<string> Keywords { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AvailableLocales
         /// </summary>
         [DataMember(Name="availableLocales", EmitDefaultValue=false)]
         public List<string> AvailableLocales { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Parameters
         /// </summary>
         [DataMember(Name="parameters", EmitDefaultValue=false)]
         public List<Parameter> Parameters { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ExampleUrl
         /// </summary>
         [DataMember(Name="exampleUrl", EmitDefaultValue=false)]
         public string ExampleUrl { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

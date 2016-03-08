@@ -7,54 +7,60 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class IndexedTransform :  IEquatable<IndexedTransform>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="IndexedTransform" /> class.
+        /// Initializes a new instance of the <see cref="IndexedTransform" />class.
         /// </summary>
-        public IndexedTransform()
+        /// <param name="Replaces">Replaces.</param>
+        /// <param name="EntityPath">EntityPath.</param>
+        /// <param name="Index">Index.</param>
+        /// <param name="Name">Name.</param>
+
+        public IndexedTransform(List<TransformLens> Replaces = null, List<string> EntityPath = null, int? Index = null, string Name = null)
         {
+            this.Replaces = Replaces;
+            this.EntityPath = EntityPath;
+            this.Index = Index;
+            this.Name = Name;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Replaces
         /// </summary>
         [DataMember(Name="replaces", EmitDefaultValue=false)]
         public List<TransformLens> Replaces { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EntityPath
         /// </summary>
         [DataMember(Name="entityPath", EmitDefaultValue=false)]
         public List<string> EntityPath { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Index
         /// </summary>
         [DataMember(Name="index", EmitDefaultValue=false)]
         public int? Index { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,34 +7,37 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ServerDate :  IEquatable<ServerDate>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ServerDate" /> class.
+        /// Initializes a new instance of the <see cref="ServerDate" />class.
         /// </summary>
-        public ServerDate()
+        /// <param name="CurrentDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+
+        public ServerDate(DateTime? CurrentDate = null)
         {
+            this.CurrentDate = CurrentDate;
             
         }
-
         
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="currentDate", EmitDefaultValue=false)]
         public DateTime? CurrentDate { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,70 +7,74 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Contract :  IEquatable<Contract>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Contract" /> class.
+        /// Initializes a new instance of the <see cref="Contract" />class.
         /// </summary>
-        public Contract()
+        /// <param name="Name">Name.</param>
+        /// <param name="Quote">Quote.</param>
+        /// <param name="SignerUrl">SignerUrl.</param>
+        /// <param name="Job">Job.</param>
+
+        public Contract(string Name = null, Quote Quote = null, string SignerUrl = null, ContractJob Job = null, )
         {
+            this.Name = Name;
+            this.Quote = Quote;
+            this.SignerUrl = SignerUrl;
+            this.Job = Job;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Quote
         /// </summary>
         [DataMember(Name="quote", EmitDefaultValue=false)]
         public Quote Quote { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SignerUrl
         /// </summary>
         [DataMember(Name="signerUrl", EmitDefaultValue=false)]
         public string SignerUrl { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Job
         /// </summary>
         [DataMember(Name="job", EmitDefaultValue=false)]
         public ContractJob Job { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,47 +7,52 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Vpn :  IEquatable<Vpn>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Vpn" /> class.
+        /// Initializes a new instance of the <see cref="Vpn" />class.
         /// </summary>
-        public Vpn()
+        /// <param name="Type">Type.</param>
+        /// <param name="Ip">Ip.</param>
+        /// <param name="Psk">Psk.</param>
+
+        public Vpn(string Type = null, string Ip = null, string Psk = null)
         {
+            this.Type = Type;
+            this.Ip = Ip;
+            this.Psk = Psk;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Ip
         /// </summary>
         [DataMember(Name="ip", EmitDefaultValue=false)]
         public string Ip { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Psk
         /// </summary>
         [DataMember(Name="psk", EmitDefaultValue=false)]
         public string Psk { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

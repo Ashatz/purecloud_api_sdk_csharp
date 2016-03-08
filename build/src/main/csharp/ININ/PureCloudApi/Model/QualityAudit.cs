@@ -7,105 +7,114 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class QualityAudit :  IEquatable<QualityAudit>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="QualityAudit" /> class.
+        /// Initializes a new instance of the <see cref="QualityAudit" />class.
         /// </summary>
-        public QualityAudit()
+        /// <param name="Name">Name.</param>
+        /// <param name="User">User.</param>
+        /// <param name="Timestamp">Timestamp.</param>
+        /// <param name="Level">Level.</param>
+        /// <param name="Entity">Entity.</param>
+        /// <param name="Action">Action.</param>
+        /// <param name="Status">Status.</param>
+        /// <param name="Changes">Changes.</param>
+        /// <param name="EntityType">EntityType.</param>
+
+        public QualityAudit(string Name = null, User User = null, string Timestamp = null, string Level = null, Entity Entity = null, string Action = null, string Status = null, List<Change> Changes = null, string EntityType = null, )
         {
+            this.Name = Name;
+            this.User = User;
+            this.Timestamp = Timestamp;
+            this.Level = Level;
+            this.Entity = Entity;
+            this.Action = Action;
+            this.Status = Status;
+            this.Changes = Changes;
+            this.EntityType = EntityType;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Timestamp
         /// </summary>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
         public string Timestamp { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Level
         /// </summary>
         [DataMember(Name="level", EmitDefaultValue=false)]
         public string Level { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Entity
         /// </summary>
         [DataMember(Name="entity", EmitDefaultValue=false)]
         public Entity Entity { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Action
         /// </summary>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public string Action { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Changes
         /// </summary>
         [DataMember(Name="changes", EmitDefaultValue=false)]
         public List<Change> Changes { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EntityType
         /// </summary>
         [DataMember(Name="entityType", EmitDefaultValue=false)]
         public string EntityType { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

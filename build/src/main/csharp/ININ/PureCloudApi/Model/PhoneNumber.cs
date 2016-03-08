@@ -7,69 +7,84 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class PhoneNumber :  IEquatable<PhoneNumber>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneNumber" /> class.
+        /// Initializes a new instance of the <see cref="PhoneNumber" />class.
         /// </summary>
-        public PhoneNumber()
+        /// <param name="Display">Display.</param>
+        /// <param name="Extension">Extension.</param>
+        /// <param name="AcceptsSMS">AcceptsSMS (default to false).</param>
+        /// <param name="UserInput">UserInput.</param>
+        /// <param name="E164">E164.</param>
+        /// <param name="CountryCode">CountryCode.</param>
+
+        public PhoneNumber(string Display = null, long? Extension = null, bool? AcceptsSMS = null, string UserInput = null, string E164 = null, string CountryCode = null)
         {
-            this.AcceptsSMS = false;
+            this.Display = Display;
+            this.Extension = Extension;
+            // use default value if no "AcceptsSMS" provided
+            if (AcceptsSMS == null)
+            {
+                this.AcceptsSMS = false;
+            }
+            else
+            {
+                this.AcceptsSMS = AcceptsSMS;
+            }
+            this.UserInput = UserInput;
+            this.E164 = E164;
+            this.CountryCode = CountryCode;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Display
         /// </summary>
         [DataMember(Name="display", EmitDefaultValue=false)]
         public string Display { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Extension
         /// </summary>
         [DataMember(Name="extension", EmitDefaultValue=false)]
         public long? Extension { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AcceptsSMS
         /// </summary>
         [DataMember(Name="acceptsSMS", EmitDefaultValue=false)]
         public bool? AcceptsSMS { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UserInput
         /// </summary>
         [DataMember(Name="userInput", EmitDefaultValue=false)]
         public string UserInput { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets E164
         /// </summary>
         [DataMember(Name="e164", EmitDefaultValue=false)]
         public string E164 { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CountryCode
         /// </summary>
         [DataMember(Name="countryCode", EmitDefaultValue=false)]
         public string CountryCode { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

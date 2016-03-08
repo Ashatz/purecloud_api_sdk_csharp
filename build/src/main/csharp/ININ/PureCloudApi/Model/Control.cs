@@ -7,77 +7,113 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Control :  IEquatable<Control>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum {
+            
+            [EnumMember(Value = "CHECKBOX")]
+            Checkbox,
+            
+            [EnumMember(Value = "RADIO")]
+            Radio,
+            
+            [EnumMember(Value = "SELECT")]
+            Select
+        }
+    
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Control" /> class.
+        /// Initializes a new instance of the <see cref="Control" />class.
         /// </summary>
-        public Control()
+        /// <param name="Id">Id.</param>
+        /// <param name="Label">Label.</param>
+        /// <param name="Options">Options.</param>
+        /// <param name="Required">Required (default to false).</param>
+        /// <param name="_ReadOnly">_ReadOnly (default to false).</param>
+        /// <param name="VariableBindingId">VariableBindingId.</param>
+        /// <param name="Type">Type.</param>
+
+        public Control(string Id = null, string Label = null, List<ControlOptions> Options = null, bool? Required = null, bool? _ReadOnly = null, string VariableBindingId = null, TypeEnum? Type = null)
         {
-            this.Required = false;
-            this.ReadOnly = false;
+            this.Id = Id;
+            this.Label = Label;
+            this.Options = Options;
+            // use default value if no "Required" provided
+            if (Required == null)
+            {
+                this.Required = false;
+            }
+            else
+            {
+                this.Required = Required;
+            }
+            // use default value if no "_ReadOnly" provided
+            if (_ReadOnly == null)
+            {
+                this._ReadOnly = false;
+            }
+            else
+            {
+                this._ReadOnly = _ReadOnly;
+            }
+            this.VariableBindingId = VariableBindingId;
+            this.Type = Type;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Label
         /// </summary>
         [DataMember(Name="label", EmitDefaultValue=false)]
         public string Label { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Options
         /// </summary>
         [DataMember(Name="options", EmitDefaultValue=false)]
         public List<ControlOptions> Options { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Required
         /// </summary>
         [DataMember(Name="required", EmitDefaultValue=false)]
         public bool? Required { get; set; }
-  
-        
+    
         /// <summary>
-        /// Gets or Sets ReadOnly
+        /// Gets or Sets _ReadOnly
         /// </summary>
         [DataMember(Name="readOnly", EmitDefaultValue=false)]
-        public bool? ReadOnly { get; set; }
-  
-        
+        public bool? _ReadOnly { get; set; }
+    
         /// <summary>
         /// Gets or Sets VariableBindingId
         /// </summary>
         [DataMember(Name="variableBindingId", EmitDefaultValue=false)]
         public string VariableBindingId { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -90,7 +126,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Label: ").Append(Label).Append("\n");
             sb.Append("  Options: ").Append(Options).Append("\n");
             sb.Append("  Required: ").Append(Required).Append("\n");
-            sb.Append("  ReadOnly: ").Append(ReadOnly).Append("\n");
+            sb.Append("  _ReadOnly: ").Append(_ReadOnly).Append("\n");
             sb.Append("  VariableBindingId: ").Append(VariableBindingId).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             
@@ -151,9 +187,9 @@ namespace ININ.PureCloudApi.Model
                     this.Required.Equals(other.Required)
                 ) && 
                 (
-                    this.ReadOnly == other.ReadOnly ||
-                    this.ReadOnly != null &&
-                    this.ReadOnly.Equals(other.ReadOnly)
+                    this._ReadOnly == other._ReadOnly ||
+                    this._ReadOnly != null &&
+                    this._ReadOnly.Equals(other._ReadOnly)
                 ) && 
                 (
                     this.VariableBindingId == other.VariableBindingId ||
@@ -191,8 +227,8 @@ namespace ININ.PureCloudApi.Model
                 if (this.Required != null)
                     hash = hash * 59 + this.Required.GetHashCode();
                 
-                if (this.ReadOnly != null)
-                    hash = hash * 59 + this.ReadOnly.GetHashCode();
+                if (this._ReadOnly != null)
+                    hash = hash * 59 + this._ReadOnly.GetHashCode();
                 
                 if (this.VariableBindingId != null)
                     hash = hash * 59 + this.VariableBindingId.GetHashCode();

@@ -7,41 +7,52 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class SortBy :  IEquatable<SortBy>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="SortBy" /> class.
+        /// Initializes a new instance of the <see cref="SortBy" />class.
         /// </summary>
-        public SortBy()
+        /// <param name="Name">Name.</param>
+        /// <param name="Ascending">Ascending (default to false).</param>
+
+        public SortBy(string Name = null, bool? Ascending = null)
         {
-            this.Ascending = false;
+            this.Name = Name;
+            // use default value if no "Ascending" provided
+            if (Ascending == null)
+            {
+                this.Ascending = false;
+            }
+            else
+            {
+                this.Ascending = Ascending;
+            }
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Ascending
         /// </summary>
         [DataMember(Name="ascending", EmitDefaultValue=false)]
         public bool? Ascending { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

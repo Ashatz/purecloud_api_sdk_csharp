@@ -7,40 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ServiceLevel :  IEquatable<ServiceLevel>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ServiceLevel" /> class.
+        /// Initializes a new instance of the <see cref="ServiceLevel" />class.
         /// </summary>
-        public ServiceLevel()
+        /// <param name="Percentage">Percentage.</param>
+        /// <param name="DurationMs">DurationMs.</param>
+
+        public ServiceLevel(double? Percentage = null, long? DurationMs = null)
         {
+            this.Percentage = Percentage;
+            this.DurationMs = DurationMs;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Percentage
         /// </summary>
         [DataMember(Name="percentage", EmitDefaultValue=false)]
         public double? Percentage { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DurationMs
         /// </summary>
         [DataMember(Name="durationMs", EmitDefaultValue=false)]
         public long? DurationMs { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,40 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class BasicTransform :  IEquatable<BasicTransform>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="BasicTransform" /> class.
+        /// Initializes a new instance of the <see cref="BasicTransform" />class.
         /// </summary>
-        public BasicTransform()
+        /// <param name="Replaces">Replaces.</param>
+        /// <param name="EntityPath">EntityPath.</param>
+
+        public BasicTransform(List<TransformLens> Replaces = null, List<string> EntityPath = null)
         {
+            this.Replaces = Replaces;
+            this.EntityPath = EntityPath;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Replaces
         /// </summary>
         [DataMember(Name="replaces", EmitDefaultValue=false)]
         public List<TransformLens> Replaces { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EntityPath
         /// </summary>
         [DataMember(Name="entityPath", EmitDefaultValue=false)]
         public List<string> EntityPath { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

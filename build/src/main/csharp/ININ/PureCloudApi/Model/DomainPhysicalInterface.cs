@@ -7,84 +7,90 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DomainPhysicalInterface :  IEquatable<DomainPhysicalInterface>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainPhysicalInterface" /> class.
+        /// Initializes a new instance of the <see cref="DomainPhysicalInterface" />class.
         /// </summary>
-        public DomainPhysicalInterface()
+        /// <param name="Name">Name.</param>
+        /// <param name="EdgeUri">EdgeUri.</param>
+        /// <param name="FriendlyName">FriendlyName.</param>
+        /// <param name="HardwareAddress">HardwareAddress.</param>
+        /// <param name="PortLabel">PortLabel.</param>
+        /// <param name="PhysicalCapabilities">PhysicalCapabilities.</param>
+
+        public DomainPhysicalInterface(string Name = null, string EdgeUri = null, string FriendlyName = null, string HardwareAddress = null, string PortLabel = null, DomainPhysicalCapabilities PhysicalCapabilities = null, )
         {
+            this.Name = Name;
+            this.EdgeUri = EdgeUri;
+            this.FriendlyName = FriendlyName;
+            this.HardwareAddress = HardwareAddress;
+            this.PortLabel = PortLabel;
+            this.PhysicalCapabilities = PhysicalCapabilities;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EdgeUri
         /// </summary>
         [DataMember(Name="edgeUri", EmitDefaultValue=false)]
         public string EdgeUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FriendlyName
         /// </summary>
         [DataMember(Name="friendlyName", EmitDefaultValue=false)]
         public string FriendlyName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets HardwareAddress
         /// </summary>
         [DataMember(Name="hardwareAddress", EmitDefaultValue=false)]
         public string HardwareAddress { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PortLabel
         /// </summary>
         [DataMember(Name="portLabel", EmitDefaultValue=false)]
         public string PortLabel { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PhysicalCapabilities
         /// </summary>
         [DataMember(Name="physicalCapabilities", EmitDefaultValue=false)]
         public DomainPhysicalCapabilities PhysicalCapabilities { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

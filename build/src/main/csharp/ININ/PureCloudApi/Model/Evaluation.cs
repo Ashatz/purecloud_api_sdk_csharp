@@ -7,170 +7,228 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Evaluation :  IEquatable<Evaluation>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StatusEnum {
+            
+            [EnumMember(Value = "PENDING")]
+            Pending,
+            
+            [EnumMember(Value = "INPROGRESS")]
+            Inprogress,
+            
+            [EnumMember(Value = "FINISHED")]
+            Finished
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ResourceTypeEnum {
+            
+            [EnumMember(Value = "Email")]
+            Email
+        }
+    
+        /// <summary>
+        /// Gets or Sets Status
+        /// </summary>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; set; }
+    
+        /// <summary>
+        /// The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources.
+        /// </summary>
+        /// <value>The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources.</value>
+        [DataMember(Name="resourceType", EmitDefaultValue=false)]
+        public ResourceTypeEnum? ResourceType { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Evaluation" /> class.
+        /// Initializes a new instance of the <see cref="Evaluation" />class.
         /// </summary>
-        public Evaluation()
+        /// <param name="Name">Name.</param>
+        /// <param name="Conversation">Conversation.</param>
+        /// <param name="EvaluationForm">EvaluationForm.</param>
+        /// <param name="Evaluator">Evaluator.</param>
+        /// <param name="Agent">Agent.</param>
+        /// <param name="Calibration">Calibration.</param>
+        /// <param name="Status">Status.</param>
+        /// <param name="Answers">Answers.</param>
+        /// <param name="AgentHasRead">AgentHasRead (default to false).</param>
+        /// <param name="ReleaseDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="AssignedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ChangedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Queue">Queue.</param>
+        /// <param name="ResourceId">Only used for email evaluations. Will be null for all other evaluations..</param>
+        /// <param name="ResourceType">The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources..</param>
+        /// <param name="Redacted">Is only true when the user making the request does not have sufficient permissions to see evaluation (default to false).</param>
+        /// <param name="IsScoringIndex">IsScoringIndex (default to false).</param>
+
+        public Evaluation(string Name = null, Conversation Conversation = null, EvaluationForm EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, Queue Queue = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null, )
         {
-            this.AgentHasRead = false;
-            this.Redacted = false;
-            this.IsScoringIndex = false;
+            this.Name = Name;
+            this.Conversation = Conversation;
+            this.EvaluationForm = EvaluationForm;
+            this.Evaluator = Evaluator;
+            this.Agent = Agent;
+            this.Calibration = Calibration;
+            this.Status = Status;
+            this.Answers = Answers;
+            // use default value if no "AgentHasRead" provided
+            if (AgentHasRead == null)
+            {
+                this.AgentHasRead = false;
+            }
+            else
+            {
+                this.AgentHasRead = AgentHasRead;
+            }
+            this.ReleaseDate = ReleaseDate;
+            this.AssignedDate = AssignedDate;
+            this.ChangedDate = ChangedDate;
+            this.Queue = Queue;
+            this.ResourceId = ResourceId;
+            this.ResourceType = ResourceType;
+            // use default value if no "Redacted" provided
+            if (Redacted == null)
+            {
+                this.Redacted = false;
+            }
+            else
+            {
+                this.Redacted = Redacted;
+            }
+            // use default value if no "IsScoringIndex" provided
+            if (IsScoringIndex == null)
+            {
+                this.IsScoringIndex = false;
+            }
+            else
+            {
+                this.IsScoringIndex = IsScoringIndex;
+            }
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Conversation
         /// </summary>
         [DataMember(Name="conversation", EmitDefaultValue=false)]
         public Conversation Conversation { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EvaluationForm
         /// </summary>
         [DataMember(Name="evaluationForm", EmitDefaultValue=false)]
         public EvaluationForm EvaluationForm { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Evaluator
         /// </summary>
         [DataMember(Name="evaluator", EmitDefaultValue=false)]
         public User Evaluator { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Agent
         /// </summary>
         [DataMember(Name="agent", EmitDefaultValue=false)]
         public User Agent { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Calibration
         /// </summary>
         [DataMember(Name="calibration", EmitDefaultValue=false)]
         public Calibration Calibration { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Status
-        /// </summary>
-        [DataMember(Name="status", EmitDefaultValue=false)]
-        public string Status { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Answers
         /// </summary>
         [DataMember(Name="answers", EmitDefaultValue=false)]
         public EvaluationScoringSet Answers { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AgentHasRead
         /// </summary>
         [DataMember(Name="agentHasRead", EmitDefaultValue=false)]
         public bool? AgentHasRead { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="releaseDate", EmitDefaultValue=false)]
         public DateTime? ReleaseDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="assignedDate", EmitDefaultValue=false)]
         public DateTime? AssignedDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="changedDate", EmitDefaultValue=false)]
         public DateTime? ChangedDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Queue
         /// </summary>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public Queue Queue { get; set; }
-  
-        
+    
         /// <summary>
         /// Only used for email evaluations. Will be null for all other evaluations.
         /// </summary>
         /// <value>Only used for email evaluations. Will be null for all other evaluations.</value>
         [DataMember(Name="resourceId", EmitDefaultValue=false)]
         public string ResourceId { get; set; }
-  
-        
-        /// <summary>
-        /// The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources.
-        /// </summary>
-        /// <value>The type of resource. Only used for email evaluations. Will be null for evaluations on all other resources.</value>
-        [DataMember(Name="resourceType", EmitDefaultValue=false)]
-        public string ResourceType { get; set; }
-  
-        
+    
         /// <summary>
         /// Is only true when the user making the request does not have sufficient permissions to see evaluation
         /// </summary>
         /// <value>Is only true when the user making the request does not have sufficient permissions to see evaluation</value>
         [DataMember(Name="redacted", EmitDefaultValue=false)]
         public bool? Redacted { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IsScoringIndex
         /// </summary>
         [DataMember(Name="isScoringIndex", EmitDefaultValue=false)]
         public bool? IsScoringIndex { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

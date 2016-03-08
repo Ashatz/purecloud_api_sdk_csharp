@@ -7,68 +7,76 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class UserActionMetadataRequest :  IEquatable<UserActionMetadataRequest>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserActionMetadataRequest" /> class.
+        /// Initializes a new instance of the <see cref="UserActionMetadataRequest" />class.
         /// </summary>
-        public UserActionMetadataRequest()
+        /// <param name="Format">Format.</param>
+        /// <param name="Method">Method.</param>
+        /// <param name="InputSchemaUri">InputSchemaUri.</param>
+        /// <param name="SuccessSchemaUri">SuccessSchemaUri.</param>
+        /// <param name="InputSchema">InputSchema.</param>
+        /// <param name="SuccessSchema">SuccessSchema.</param>
+
+        public UserActionMetadataRequest(string Format = null, string Method = null, string InputSchemaUri = null, string SuccessSchemaUri = null, Object InputSchema = null, Object SuccessSchema = null)
         {
+            this.Format = Format;
+            this.Method = Method;
+            this.InputSchemaUri = InputSchemaUri;
+            this.SuccessSchemaUri = SuccessSchemaUri;
+            this.InputSchema = InputSchema;
+            this.SuccessSchema = SuccessSchema;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Format
         /// </summary>
         [DataMember(Name="format", EmitDefaultValue=false)]
         public string Format { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Method
         /// </summary>
         [DataMember(Name="method", EmitDefaultValue=false)]
         public string Method { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets InputSchemaUri
         /// </summary>
         [DataMember(Name="inputSchemaUri", EmitDefaultValue=false)]
         public string InputSchemaUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SuccessSchemaUri
         /// </summary>
         [DataMember(Name="successSchemaUri", EmitDefaultValue=false)]
         public string SuccessSchemaUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets InputSchema
         /// </summary>
         [DataMember(Name="inputSchema", EmitDefaultValue=false)]
         public Object InputSchema { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SuccessSchema
         /// </summary>
         [DataMember(Name="successSchema", EmitDefaultValue=false)]
         public Object SuccessSchema { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

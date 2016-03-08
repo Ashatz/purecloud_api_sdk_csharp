@@ -7,50 +7,55 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Used to query for attributes
     /// </summary>
     [DataContract]
     public partial class AttributeQueryRequest :  IEquatable<AttributeQueryRequest>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AttributeQueryRequest" /> class.
+        /// Initializes a new instance of the <see cref="AttributeQueryRequest" />class.
         /// </summary>
-        public AttributeQueryRequest()
+        /// <param name="Query">Query phrase to search attribute by name. If not set will match all..</param>
+        /// <param name="PageSize">The maximum number of hits to return. Default: 25, Maximum: 500..</param>
+        /// <param name="PageNumber">The page number to start at. The first page is number 1..</param>
+
+        public AttributeQueryRequest(string Query = null, int? PageSize = null, int? PageNumber = null)
         {
+            this.Query = Query;
+            this.PageSize = PageSize;
+            this.PageNumber = PageNumber;
             
         }
-
         
+    
         /// <summary>
         /// Query phrase to search attribute by name. If not set will match all.
         /// </summary>
         /// <value>Query phrase to search attribute by name. If not set will match all.</value>
         [DataMember(Name="query", EmitDefaultValue=false)]
         public string Query { get; set; }
-  
-        
+    
         /// <summary>
         /// The maximum number of hits to return. Default: 25, Maximum: 500.
         /// </summary>
         /// <value>The maximum number of hits to return. Default: 25, Maximum: 500.</value>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
-  
-        
+    
         /// <summary>
         /// The page number to start at. The first page is number 1.
         /// </summary>
         /// <value>The page number to start at. The first page is number 1.</value>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

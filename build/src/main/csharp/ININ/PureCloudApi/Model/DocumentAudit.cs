@@ -7,142 +7,437 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DocumentAudit :  IEquatable<DocumentAudit>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum LevelEnum {
+            
+            [EnumMember(Value = "USER")]
+            User,
+            
+            [EnumMember(Value = "SYSTEM")]
+            System
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StatusEnum {
+            
+            [EnumMember(Value = "SUCCESS")]
+            Success,
+            
+            [EnumMember(Value = "FAILURE")]
+            Failure
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ActionContextEnum {
+            
+            [EnumMember(Value = "CREATE")]
+            Create,
+            
+            [EnumMember(Value = "READ")]
+            Read,
+            
+            [EnumMember(Value = "UPDATE")]
+            Update,
+            
+            [EnumMember(Value = "DELETE")]
+            Delete,
+            
+            [EnumMember(Value = "DOWNLOAD")]
+            Download,
+            
+            [EnumMember(Value = "VIEW")]
+            View,
+            
+            [EnumMember(Value = "UPLOAD")]
+            Upload,
+            
+            [EnumMember(Value = "SAVE")]
+            Save,
+            
+            [EnumMember(Value = "MOVE")]
+            Move,
+            
+            [EnumMember(Value = "COPY")]
+            Copy,
+            
+            [EnumMember(Value = "ADD")]
+            Add,
+            
+            [EnumMember(Value = "REMOVE")]
+            Remove,
+            
+            [EnumMember(Value = "RECEIVE")]
+            Receive,
+            
+            [EnumMember(Value = "CONVERT")]
+            Convert,
+            
+            [EnumMember(Value = "FAX")]
+            Fax,
+            
+            [EnumMember(Value = "CREATE_COVERPAGE")]
+            CreateCoverpage,
+            
+            [EnumMember(Value = "USER_ADD")]
+            UserAdd,
+            
+            [EnumMember(Value = "USER_REMOVE")]
+            UserRemove,
+            
+            [EnumMember(Value = "MEMBER_ADD")]
+            MemberAdd,
+            
+            [EnumMember(Value = "MEMBER_REMOVE")]
+            MemberRemove,
+            
+            [EnumMember(Value = "MEMBER_UPDATE")]
+            MemberUpdate,
+            
+            [EnumMember(Value = "TAG_ADD")]
+            TagAdd,
+            
+            [EnumMember(Value = "TAG_REMOVE")]
+            TagRemove,
+            
+            [EnumMember(Value = "TAG_UPDATE")]
+            TagUpdate,
+            
+            [EnumMember(Value = "ATTRIBUTE_ADD")]
+            AttributeAdd,
+            
+            [EnumMember(Value = "ATTRIBUTE_REMOVE")]
+            AttributeRemove,
+            
+            [EnumMember(Value = "ATTRIBUTE_UPDATE")]
+            AttributeUpdate,
+            
+            [EnumMember(Value = "ATTRIBUTE_GROUP_INSTANCE_ADD")]
+            AttributeGroupInstanceAdd,
+            
+            [EnumMember(Value = "ATTRIBUTE_GROUP_INSTANCE_REMOVE")]
+            AttributeGroupInstanceRemove,
+            
+            [EnumMember(Value = "ATTRIBUTE_GROUP_INSTANCE_UPDATE")]
+            AttributeGroupInstanceUpdate,
+            
+            [EnumMember(Value = "INDEX_SAVE")]
+            IndexSave,
+            
+            [EnumMember(Value = "INDEX_DELETE")]
+            IndexDelete,
+            
+            [EnumMember(Value = "INDEX_CREATE")]
+            IndexCreate,
+            
+            [EnumMember(Value = "FILE_SAVE")]
+            FileSave,
+            
+            [EnumMember(Value = "FILE_DELETE")]
+            FileDelete,
+            
+            [EnumMember(Value = "FILE_READ")]
+            FileRead,
+            
+            [EnumMember(Value = "THUMBNAIL_CREATE")]
+            ThumbnailCreate,
+            
+            [EnumMember(Value = "TEXT_EXTRACT")]
+            TextExtract,
+            
+            [EnumMember(Value = "SHARE_ADD")]
+            ShareAdd,
+            
+            [EnumMember(Value = "SHARE_REMOVE")]
+            ShareRemove,
+            
+            [EnumMember(Value = "VERSION_CREATE")]
+            VersionCreate
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ActionEnum {
+            
+            [EnumMember(Value = "CREATE")]
+            Create,
+            
+            [EnumMember(Value = "READ")]
+            Read,
+            
+            [EnumMember(Value = "UPDATE")]
+            Update,
+            
+            [EnumMember(Value = "DELETE")]
+            Delete,
+            
+            [EnumMember(Value = "DOWNLOAD")]
+            Download,
+            
+            [EnumMember(Value = "VIEW")]
+            View,
+            
+            [EnumMember(Value = "UPLOAD")]
+            Upload,
+            
+            [EnumMember(Value = "SAVE")]
+            Save,
+            
+            [EnumMember(Value = "MOVE")]
+            Move,
+            
+            [EnumMember(Value = "COPY")]
+            Copy,
+            
+            [EnumMember(Value = "ADD")]
+            Add,
+            
+            [EnumMember(Value = "REMOVE")]
+            Remove,
+            
+            [EnumMember(Value = "RECEIVE")]
+            Receive,
+            
+            [EnumMember(Value = "CONVERT")]
+            Convert,
+            
+            [EnumMember(Value = "FAX")]
+            Fax,
+            
+            [EnumMember(Value = "CREATE_COVERPAGE")]
+            CreateCoverpage,
+            
+            [EnumMember(Value = "USER_ADD")]
+            UserAdd,
+            
+            [EnumMember(Value = "USER_REMOVE")]
+            UserRemove,
+            
+            [EnumMember(Value = "MEMBER_ADD")]
+            MemberAdd,
+            
+            [EnumMember(Value = "MEMBER_REMOVE")]
+            MemberRemove,
+            
+            [EnumMember(Value = "MEMBER_UPDATE")]
+            MemberUpdate,
+            
+            [EnumMember(Value = "TAG_ADD")]
+            TagAdd,
+            
+            [EnumMember(Value = "TAG_REMOVE")]
+            TagRemove,
+            
+            [EnumMember(Value = "TAG_UPDATE")]
+            TagUpdate,
+            
+            [EnumMember(Value = "ATTRIBUTE_ADD")]
+            AttributeAdd,
+            
+            [EnumMember(Value = "ATTRIBUTE_REMOVE")]
+            AttributeRemove,
+            
+            [EnumMember(Value = "ATTRIBUTE_UPDATE")]
+            AttributeUpdate,
+            
+            [EnumMember(Value = "ATTRIBUTE_GROUP_INSTANCE_ADD")]
+            AttributeGroupInstanceAdd,
+            
+            [EnumMember(Value = "ATTRIBUTE_GROUP_INSTANCE_REMOVE")]
+            AttributeGroupInstanceRemove,
+            
+            [EnumMember(Value = "ATTRIBUTE_GROUP_INSTANCE_UPDATE")]
+            AttributeGroupInstanceUpdate,
+            
+            [EnumMember(Value = "INDEX_SAVE")]
+            IndexSave,
+            
+            [EnumMember(Value = "INDEX_DELETE")]
+            IndexDelete,
+            
+            [EnumMember(Value = "INDEX_CREATE")]
+            IndexCreate,
+            
+            [EnumMember(Value = "FILE_SAVE")]
+            FileSave,
+            
+            [EnumMember(Value = "FILE_DELETE")]
+            FileDelete,
+            
+            [EnumMember(Value = "FILE_READ")]
+            FileRead,
+            
+            [EnumMember(Value = "THUMBNAIL_CREATE")]
+            ThumbnailCreate,
+            
+            [EnumMember(Value = "TEXT_EXTRACT")]
+            TextExtract,
+            
+            [EnumMember(Value = "SHARE_ADD")]
+            ShareAdd,
+            
+            [EnumMember(Value = "SHARE_REMOVE")]
+            ShareRemove,
+            
+            [EnumMember(Value = "VERSION_CREATE")]
+            VersionCreate
+        }
+    
+        /// <summary>
+        /// Gets or Sets Level
+        /// </summary>
+        [DataMember(Name="level", EmitDefaultValue=false)]
+        public LevelEnum? Level { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Status
+        /// </summary>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets ActionContext
+        /// </summary>
+        [DataMember(Name="actionContext", EmitDefaultValue=false)]
+        public ActionContextEnum? ActionContext { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Action
+        /// </summary>
+        [DataMember(Name="action", EmitDefaultValue=false)]
+        public ActionEnum? Action { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentAudit" /> class.
+        /// Initializes a new instance of the <see cref="DocumentAudit" />class.
         /// </summary>
-        public DocumentAudit()
+        /// <param name="Name">Name.</param>
+        /// <param name="User">User.</param>
+        /// <param name="Workspace">Workspace.</param>
+        /// <param name="TransactionId">TransactionId.</param>
+        /// <param name="TransactionInitiator">TransactionInitiator (default to false).</param>
+        /// <param name="Application">Application.</param>
+        /// <param name="ServiceName">ServiceName.</param>
+        /// <param name="Level">Level.</param>
+        /// <param name="Timestamp">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Status">Status.</param>
+        /// <param name="ActionContext">ActionContext.</param>
+        /// <param name="Action">Action.</param>
+        /// <param name="Entity">Entity.</param>
+        /// <param name="Changes">Changes.</param>
+
+        public DocumentAudit(string Name = null, UriReference User = null, UriReference Workspace = null, string TransactionId = null, bool? TransactionInitiator = null, string Application = null, string ServiceName = null, LevelEnum? Level = null, DateTime? Timestamp = null, StatusEnum? Status = null, ActionContextEnum? ActionContext = null, ActionEnum? Action = null, AuditEntityReference Entity = null, List<AuditChange> Changes = null, )
         {
-            this.TransactionInitiator = false;
+            this.Name = Name;
+            this.User = User;
+            this.Workspace = Workspace;
+            this.TransactionId = TransactionId;
+            // use default value if no "TransactionInitiator" provided
+            if (TransactionInitiator == null)
+            {
+                this.TransactionInitiator = false;
+            }
+            else
+            {
+                this.TransactionInitiator = TransactionInitiator;
+            }
+            this.Application = Application;
+            this.ServiceName = ServiceName;
+            this.Level = Level;
+            this.Timestamp = Timestamp;
+            this.Status = Status;
+            this.ActionContext = ActionContext;
+            this.Action = Action;
+            this.Entity = Entity;
+            this.Changes = Changes;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public UriReference User { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Workspace
         /// </summary>
         [DataMember(Name="workspace", EmitDefaultValue=false)]
         public UriReference Workspace { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TransactionId
         /// </summary>
         [DataMember(Name="transactionId", EmitDefaultValue=false)]
         public string TransactionId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TransactionInitiator
         /// </summary>
         [DataMember(Name="transactionInitiator", EmitDefaultValue=false)]
         public bool? TransactionInitiator { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Application
         /// </summary>
         [DataMember(Name="application", EmitDefaultValue=false)]
         public string Application { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ServiceName
         /// </summary>
         [DataMember(Name="serviceName", EmitDefaultValue=false)]
         public string ServiceName { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Level
-        /// </summary>
-        [DataMember(Name="level", EmitDefaultValue=false)]
-        public string Level { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
         public DateTime? Timestamp { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Status
-        /// </summary>
-        [DataMember(Name="status", EmitDefaultValue=false)]
-        public string Status { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets ActionContext
-        /// </summary>
-        [DataMember(Name="actionContext", EmitDefaultValue=false)]
-        public string ActionContext { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Action
-        /// </summary>
-        [DataMember(Name="action", EmitDefaultValue=false)]
-        public string Action { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Entity
         /// </summary>
         [DataMember(Name="entity", EmitDefaultValue=false)]
         public AuditEntityReference Entity { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Changes
         /// </summary>
         [DataMember(Name="changes", EmitDefaultValue=false)]
         public List<AuditChange> Changes { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

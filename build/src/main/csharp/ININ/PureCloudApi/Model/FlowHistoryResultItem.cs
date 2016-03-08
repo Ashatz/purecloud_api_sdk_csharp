@@ -7,50 +7,63 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Information about one flow history item
     /// </summary>
     [DataContract]
     public partial class FlowHistoryResultItem :  IEquatable<FlowHistoryResultItem>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowHistoryResultItem" /> class.
+        /// Initializes a new instance of the <see cref="FlowHistoryResultItem" />class.
         /// </summary>
-        public FlowHistoryResultItem()
+        /// <param name="FlowInstance">The flow instance information that applies to the history events. (required).</param>
+        /// <param name="AvailableActions">The actions available for operating in the flow, with respect to your authorization identity..</param>
+        /// <param name="HistoryItems">The ordered list of history events for this flow..</param>
+
+        public FlowHistoryResultItem(FlowDetails FlowInstance = null, BackendFlowAvailableActions AvailableActions = null, List<FlowHistoryItem> HistoryItems = null)
         {
+            // to ensure "FlowInstance" is required (not null)
+            if (FlowInstance == null)
+            {
+                throw new InvalidDataException("FlowInstance is a required property for FlowHistoryResultItem and cannot be null");
+            }
+            else
+            {
+                this.FlowInstance = FlowInstance;
+            }
+            this.AvailableActions = AvailableActions;
+            this.HistoryItems = HistoryItems;
             
         }
-
         
+    
         /// <summary>
         /// The flow instance information that applies to the history events.
         /// </summary>
         /// <value>The flow instance information that applies to the history events.</value>
         [DataMember(Name="flowInstance", EmitDefaultValue=false)]
         public FlowDetails FlowInstance { get; set; }
-  
-        
+    
         /// <summary>
         /// The actions available for operating in the flow, with respect to your authorization identity.
         /// </summary>
         /// <value>The actions available for operating in the flow, with respect to your authorization identity.</value>
         [DataMember(Name="availableActions", EmitDefaultValue=false)]
         public BackendFlowAvailableActions AvailableActions { get; set; }
-  
-        
+    
         /// <summary>
         /// The ordered list of history events for this flow.
         /// </summary>
         /// <value>The ordered list of history events for this flow.</value>
         [DataMember(Name="historyItems", EmitDefaultValue=false)]
         public List<FlowHistoryItem> HistoryItems { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

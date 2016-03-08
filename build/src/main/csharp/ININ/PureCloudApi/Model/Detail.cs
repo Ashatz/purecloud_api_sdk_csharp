@@ -7,54 +7,60 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Detail :  IEquatable<Detail>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Detail" /> class.
+        /// Initializes a new instance of the <see cref="Detail" />class.
         /// </summary>
-        public Detail()
+        /// <param name="ErrorCode">ErrorCode.</param>
+        /// <param name="FieldName">FieldName.</param>
+        /// <param name="EntityId">EntityId.</param>
+        /// <param name="EntityName">EntityName.</param>
+
+        public Detail(string ErrorCode = null, string FieldName = null, string EntityId = null, string EntityName = null)
         {
+            this.ErrorCode = ErrorCode;
+            this.FieldName = FieldName;
+            this.EntityId = EntityId;
+            this.EntityName = EntityName;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
         [DataMember(Name="errorCode", EmitDefaultValue=false)]
         public string ErrorCode { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FieldName
         /// </summary>
         [DataMember(Name="fieldName", EmitDefaultValue=false)]
         public string FieldName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EntityId
         /// </summary>
         [DataMember(Name="entityId", EmitDefaultValue=false)]
         public string EntityId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EntityName
         /// </summary>
         [DataMember(Name="entityName", EmitDefaultValue=false)]
         public string EntityName { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

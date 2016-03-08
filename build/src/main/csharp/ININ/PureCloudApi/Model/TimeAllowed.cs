@@ -7,48 +7,60 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class TimeAllowed :  IEquatable<TimeAllowed>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeAllowed" /> class.
+        /// Initializes a new instance of the <see cref="TimeAllowed" />class.
         /// </summary>
-        public TimeAllowed()
+        /// <param name="TimeSlots">TimeSlots.</param>
+        /// <param name="TimeZoneId">TimeZoneId.</param>
+        /// <param name="Empty">Empty (default to false).</param>
+
+        public TimeAllowed(List<TimeSlot> TimeSlots = null, string TimeZoneId = null, bool? Empty = null)
         {
-            this.Empty = false;
+            this.TimeSlots = TimeSlots;
+            this.TimeZoneId = TimeZoneId;
+            // use default value if no "Empty" provided
+            if (Empty == null)
+            {
+                this.Empty = false;
+            }
+            else
+            {
+                this.Empty = Empty;
+            }
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets TimeSlots
         /// </summary>
         [DataMember(Name="timeSlots", EmitDefaultValue=false)]
         public List<TimeSlot> TimeSlots { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TimeZoneId
         /// </summary>
         [DataMember(Name="timeZoneId", EmitDefaultValue=false)]
         public string TimeZoneId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Empty
         /// </summary>
         [DataMember(Name="empty", EmitDefaultValue=false)]
         public bool? Empty { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

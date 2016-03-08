@@ -7,33 +7,36 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class EmbeddedSignatureView :  IEquatable<EmbeddedSignatureView>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="EmbeddedSignatureView" /> class.
+        /// Initializes a new instance of the <see cref="EmbeddedSignatureView" />class.
         /// </summary>
-        public EmbeddedSignatureView()
+        /// <param name="View">View.</param>
+
+        public EmbeddedSignatureView(View View = null)
         {
+            this.View = View;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets View
         /// </summary>
         [DataMember(Name="view", EmitDefaultValue=false)]
         public View View { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

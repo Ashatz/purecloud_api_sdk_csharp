@@ -7,120 +7,218 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Callback :  IEquatable<Callback>
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Callback" /> class.
-        /// </summary>
-        public Callback()
-        {
-            this.Held = false;
-            this.SkipEnabled = false;
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StateEnum {
             
+            [EnumMember(Value = "ALERTING")]
+            Alerting,
+            
+            [EnumMember(Value = "DIALING")]
+            Dialing,
+            
+            [EnumMember(Value = "CONTACTING")]
+            Contacting,
+            
+            [EnumMember(Value = "OFFERING")]
+            Offering,
+            
+            [EnumMember(Value = "CONNECTED")]
+            Connected,
+            
+            [EnumMember(Value = "DISCONNECTED")]
+            Disconnected,
+            
+            [EnumMember(Value = "TERMINATED")]
+            Terminated,
+            
+            [EnumMember(Value = "NONE")]
+            None
         }
-
-        
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum DirectionEnum {
+            
+            [EnumMember(Value = "INBOUND")]
+            Inbound,
+            
+            [EnumMember(Value = "OUTBOUND")]
+            Outbound
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum DisconnectTypeEnum {
+            
+            [EnumMember(Value = "ENDPOINT")]
+            Endpoint,
+            
+            [EnumMember(Value = "CLIENT")]
+            Client,
+            
+            [EnumMember(Value = "SYSTEM")]
+            System,
+            
+            [EnumMember(Value = "TRANSFER")]
+            Transfer,
+            
+            [EnumMember(Value = "TRANSFER_CONFERENCE")]
+            TransferConference,
+            
+            [EnumMember(Value = "TRANSFER_CONSULT")]
+            TransferConsult,
+            
+            [EnumMember(Value = "ERROR")]
+            Error,
+            
+            [EnumMember(Value = "PEER")]
+            Peer,
+            
+            [EnumMember(Value = "OTHER")]
+            Other
+        }
+    
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
-        public string State { get; set; }
-  
+        public StateEnum? State { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Direction
+        /// </summary>
+        [DataMember(Name="direction", EmitDefaultValue=false)]
+        public DirectionEnum? Direction { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets DisconnectType
+        /// </summary>
+        [DataMember(Name="disconnectType", EmitDefaultValue=false)]
+        public DisconnectTypeEnum? DisconnectType { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Callback" /> class.
+        /// Initializes a new instance of the <see cref="Callback" />class.
+        /// </summary>
+        /// <param name="State">State.</param>
+        /// <param name="Id">Id.</param>
+        /// <param name="Segments">Segments.</param>
+        /// <param name="Direction">Direction.</param>
+        /// <param name="Held">Held (default to false).</param>
+        /// <param name="DisconnectType">DisconnectType.</param>
+        /// <param name="StartHoldTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DialerPreview">DialerPreview.</param>
+        /// <param name="CallbackNumbers">CallbackNumbers.</param>
+        /// <param name="CallbackUserName">CallbackUserName.</param>
+        /// <param name="ScriptId">ScriptId.</param>
+        /// <param name="SkipEnabled">SkipEnabled (default to false).</param>
+        /// <param name="TimeoutSeconds">TimeoutSeconds.</param>
+
+        public Callback(StateEnum? State = null, string Id = null, List<Segment> Segments = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DialerPreview DialerPreview = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null)
+        {
+            this.State = State;
+            this.Id = Id;
+            this.Segments = Segments;
+            this.Direction = Direction;
+            // use default value if no "Held" provided
+            if (Held == null)
+            {
+                this.Held = false;
+            }
+            else
+            {
+                this.Held = Held;
+            }
+            this.DisconnectType = DisconnectType;
+            this.StartHoldTime = StartHoldTime;
+            this.DialerPreview = DialerPreview;
+            this.CallbackNumbers = CallbackNumbers;
+            this.CallbackUserName = CallbackUserName;
+            this.ScriptId = ScriptId;
+            // use default value if no "SkipEnabled" provided
+            if (SkipEnabled == null)
+            {
+                this.SkipEnabled = false;
+            }
+            else
+            {
+                this.SkipEnabled = SkipEnabled;
+            }
+            this.TimeoutSeconds = TimeoutSeconds;
+            
+        }
         
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Segments
         /// </summary>
         [DataMember(Name="segments", EmitDefaultValue=false)]
         public List<Segment> Segments { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Direction
-        /// </summary>
-        [DataMember(Name="direction", EmitDefaultValue=false)]
-        public string Direction { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Held
         /// </summary>
         [DataMember(Name="held", EmitDefaultValue=false)]
         public bool? Held { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets DisconnectType
-        /// </summary>
-        [DataMember(Name="disconnectType", EmitDefaultValue=false)]
-        public string DisconnectType { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
         public DateTime? StartHoldTime { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DialerPreview
         /// </summary>
         [DataMember(Name="dialerPreview", EmitDefaultValue=false)]
         public DialerPreview DialerPreview { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CallbackNumbers
         /// </summary>
         [DataMember(Name="callbackNumbers", EmitDefaultValue=false)]
         public List<string> CallbackNumbers { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CallbackUserName
         /// </summary>
         [DataMember(Name="callbackUserName", EmitDefaultValue=false)]
         public string CallbackUserName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ScriptId
         /// </summary>
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SkipEnabled
         /// </summary>
         [DataMember(Name="skipEnabled", EmitDefaultValue=false)]
         public bool? SkipEnabled { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TimeoutSeconds
         /// </summary>
         [DataMember(Name="timeoutSeconds", EmitDefaultValue=false)]
         public int? TimeoutSeconds { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

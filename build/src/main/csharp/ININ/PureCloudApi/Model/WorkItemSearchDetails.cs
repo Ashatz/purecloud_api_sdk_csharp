@@ -7,33 +7,36 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// WorkItem entry found in result to a search.
     /// </summary>
     [DataContract]
     public partial class WorkItemSearchDetails :  IEquatable<WorkItemSearchDetails>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkItemSearchDetails" /> class.
+        /// Initializes a new instance of the <see cref="WorkItemSearchDetails" />class.
         /// </summary>
-        public WorkItemSearchDetails()
+        /// <param name="WorkItem">WorkItem.</param>
+
+        public WorkItemSearchDetails(WorkItemDetails WorkItem = null)
         {
+            this.WorkItem = WorkItem;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets WorkItem
         /// </summary>
         [DataMember(Name="workItem", EmitDefaultValue=false)]
         public WorkItemDetails WorkItem { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

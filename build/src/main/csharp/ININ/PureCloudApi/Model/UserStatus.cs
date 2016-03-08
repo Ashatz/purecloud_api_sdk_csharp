@@ -7,72 +7,93 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class UserStatus :  IEquatable<UserStatus>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum {
+            
+            [EnumMember(Value = "USER")]
+            User,
+            
+            [EnumMember(Value = "SYSTEM")]
+            System
+        }
+    
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserStatus" /> class.
+        /// Initializes a new instance of the <see cref="UserStatus" />class.
         /// </summary>
-        public UserStatus()
+        /// <param name="Name">Name.</param>
+        /// <param name="Alertable">Alertable (default to false).</param>
+        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Type">Type.</param>
+
+        public UserStatus(string Name = null, bool? Alertable = null, DateTime? DateModified = null, TypeEnum? Type = null, )
         {
-            this.Alertable = false;
+            this.Name = Name;
+            // use default value if no "Alertable" provided
+            if (Alertable == null)
+            {
+                this.Alertable = false;
+            }
+            else
+            {
+                this.Alertable = Alertable;
+            }
+            this.DateModified = DateModified;
+            this.Type = Type;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Alertable
         /// </summary>
         [DataMember(Name="alertable", EmitDefaultValue=false)]
         public bool? Alertable { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

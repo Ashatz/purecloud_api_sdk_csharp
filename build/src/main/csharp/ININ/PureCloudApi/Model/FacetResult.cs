@@ -7,65 +7,104 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Used as part of the searchResult to return facet results to the caller
     /// </summary>
     [DataContract]
     public partial class FacetResult :  IEquatable<FacetResult>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum FieldTypeEnum {
+            
+            [EnumMember(Value = "NUMBER")]
+            Number,
+            
+            [EnumMember(Value = "STRING")]
+            String,
+            
+            [EnumMember(Value = "DATE")]
+            Date,
+            
+            [EnumMember(Value = "BOOLEAN")]
+            Boolean,
+            
+            [EnumMember(Value = "LIST")]
+            List,
+            
+            [EnumMember(Value = "GROUP")]
+            Group
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum RequestTypeEnum {
+            
+            [EnumMember(Value = "TERM")]
+            Term,
+            
+            [EnumMember(Value = "RANGE")]
+            Range
+        }
+    
+        /// <summary>
+        /// data type of the field being returned (if this is a mixed field this will be unknown)
+        /// </summary>
+        /// <value>data type of the field being returned (if this is a mixed field this will be unknown)</value>
+        [DataMember(Name="fieldType", EmitDefaultValue=false)]
+        public FieldTypeEnum? FieldType { get; set; }
+    
+        /// <summary>
+        /// the facet request type that was made.
+        /// </summary>
+        /// <value>the facet request type that was made.</value>
+        [DataMember(Name="requestType", EmitDefaultValue=false)]
+        public RequestTypeEnum? RequestType { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FacetResult" /> class.
+        /// Initializes a new instance of the <see cref="FacetResult" />class.
         /// </summary>
-        public FacetResult()
+        /// <param name="RequestName">This was the name passed in as part of the facetRequest.</param>
+        /// <param name="RequestFieldName">The field name that the facet was requested for..</param>
+        /// <param name="FieldType">data type of the field being returned (if this is a mixed field this will be unknown).</param>
+        /// <param name="RequestType">the facet request type that was made..</param>
+        /// <param name="Results">Results.</param>
+
+        public FacetResult(string RequestName = null, string RequestFieldName = null, FieldTypeEnum? FieldType = null, RequestTypeEnum? RequestType = null, List<FacetResultItem> Results = null)
         {
+            this.RequestName = RequestName;
+            this.RequestFieldName = RequestFieldName;
+            this.FieldType = FieldType;
+            this.RequestType = RequestType;
+            this.Results = Results;
             
         }
-
         
+    
         /// <summary>
         /// This was the name passed in as part of the facetRequest
         /// </summary>
         /// <value>This was the name passed in as part of the facetRequest</value>
         [DataMember(Name="requestName", EmitDefaultValue=false)]
         public string RequestName { get; set; }
-  
-        
+    
         /// <summary>
         /// The field name that the facet was requested for.
         /// </summary>
         /// <value>The field name that the facet was requested for.</value>
         [DataMember(Name="requestFieldName", EmitDefaultValue=false)]
         public string RequestFieldName { get; set; }
-  
-        
-        /// <summary>
-        /// data type of the field being returned (if this is a mixed field this will be unknown)
-        /// </summary>
-        /// <value>data type of the field being returned (if this is a mixed field this will be unknown)</value>
-        [DataMember(Name="fieldType", EmitDefaultValue=false)]
-        public string FieldType { get; set; }
-  
-        
-        /// <summary>
-        /// the facet request type that was made.
-        /// </summary>
-        /// <value>the facet request type that was made.</value>
-        [DataMember(Name="requestType", EmitDefaultValue=false)]
-        public string RequestType { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Results
         /// </summary>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public List<FacetResultItem> Results { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

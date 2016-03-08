@@ -7,199 +7,250 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Recording :  IEquatable<Recording>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum FileStateEnum {
+            
+            [EnumMember(Value = "ARCHIVED")]
+            Archived,
+            
+            [EnumMember(Value = "AVAILABLE")]
+            Available,
+            
+            [EnumMember(Value = "DELETED")]
+            Deleted,
+            
+            [EnumMember(Value = "RESTORED")]
+            Restored,
+            
+            [EnumMember(Value = "RESTORING")]
+            Restoring,
+            
+            [EnumMember(Value = "UPLOADING")]
+            Uploading
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ArchiveMediumEnum {
+            
+            [EnumMember(Value = "CLOUDARCHIVE")]
+            Cloudarchive
+        }
+    
+        /// <summary>
+        /// Gets or Sets FileState
+        /// </summary>
+        [DataMember(Name="fileState", EmitDefaultValue=false)]
+        public FileStateEnum? FileState { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets ArchiveMedium
+        /// </summary>
+        [DataMember(Name="archiveMedium", EmitDefaultValue=false)]
+        public ArchiveMediumEnum? ArchiveMedium { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Recording" /> class.
+        /// Initializes a new instance of the <see cref="Recording" />class.
         /// </summary>
-        public Recording()
+        /// <param name="Name">Name.</param>
+        /// <param name="ConversationId">ConversationId.</param>
+        /// <param name="Path">Path.</param>
+        /// <param name="StartTime">StartTime.</param>
+        /// <param name="EndTime">EndTime.</param>
+        /// <param name="Media">Media.</param>
+        /// <param name="MediaUri">MediaUri.</param>
+        /// <param name="WaveUri">WaveUri.</param>
+        /// <param name="Annotations">Annotations.</param>
+        /// <param name="Transcript">Transcript.</param>
+        /// <param name="EmailTranscript">EmailTranscript.</param>
+        /// <param name="FileState">FileState.</param>
+        /// <param name="RestoreExpirationTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="MediaUris">MediaUris.</param>
+        /// <param name="EstimatedTranscodeTimeMs">EstimatedTranscodeTimeMs.</param>
+        /// <param name="ActualTranscodeTimeMs">ActualTranscodeTimeMs.</param>
+        /// <param name="ArchiveDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ArchiveMedium">ArchiveMedium.</param>
+        /// <param name="DeleteDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="MaxAllowedRestorationsForOrg">MaxAllowedRestorationsForOrg.</param>
+        /// <param name="RemainingRestorationsAllowedForOrg">RemainingRestorationsAllowedForOrg.</param>
+        /// <param name="RecordingId">RecordingId.</param>
+
+        public Recording(string Name = null, string ConversationId = null, string Path = null, string StartTime = null, string EndTime = null, string Media = null, string MediaUri = null, string WaveUri = null, List<Annotation> Annotations = null, List<ChatMessage> Transcript = null, List<EmailMessage> EmailTranscript = null, FileStateEnum? FileState = null, DateTime? RestoreExpirationTime = null, Dictionary<string, MediaResult> MediaUris = null, long? EstimatedTranscodeTimeMs = null, long? ActualTranscodeTimeMs = null, DateTime? ArchiveDate = null, ArchiveMediumEnum? ArchiveMedium = null, DateTime? DeleteDate = null, int? MaxAllowedRestorationsForOrg = null, int? RemainingRestorationsAllowedForOrg = null, string RecordingId = null, )
         {
+            this.Name = Name;
+            this.ConversationId = ConversationId;
+            this.Path = Path;
+            this.StartTime = StartTime;
+            this.EndTime = EndTime;
+            this.Media = Media;
+            this.MediaUri = MediaUri;
+            this.WaveUri = WaveUri;
+            this.Annotations = Annotations;
+            this.Transcript = Transcript;
+            this.EmailTranscript = EmailTranscript;
+            this.FileState = FileState;
+            this.RestoreExpirationTime = RestoreExpirationTime;
+            this.MediaUris = MediaUris;
+            this.EstimatedTranscodeTimeMs = EstimatedTranscodeTimeMs;
+            this.ActualTranscodeTimeMs = ActualTranscodeTimeMs;
+            this.ArchiveDate = ArchiveDate;
+            this.ArchiveMedium = ArchiveMedium;
+            this.DeleteDate = DeleteDate;
+            this.MaxAllowedRestorationsForOrg = MaxAllowedRestorationsForOrg;
+            this.RemainingRestorationsAllowedForOrg = RemainingRestorationsAllowedForOrg;
+            this.RecordingId = RecordingId;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ConversationId
         /// </summary>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Path
         /// </summary>
         [DataMember(Name="path", EmitDefaultValue=false)]
         public string Path { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets StartTime
         /// </summary>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public string StartTime { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EndTime
         /// </summary>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public string EndTime { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Media
         /// </summary>
         [DataMember(Name="media", EmitDefaultValue=false)]
         public string Media { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MediaUri
         /// </summary>
         [DataMember(Name="mediaUri", EmitDefaultValue=false)]
         public string MediaUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets WaveUri
         /// </summary>
         [DataMember(Name="waveUri", EmitDefaultValue=false)]
         public string WaveUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Annotations
         /// </summary>
         [DataMember(Name="annotations", EmitDefaultValue=false)]
         public List<Annotation> Annotations { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Transcript
         /// </summary>
         [DataMember(Name="transcript", EmitDefaultValue=false)]
         public List<ChatMessage> Transcript { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EmailTranscript
         /// </summary>
         [DataMember(Name="emailTranscript", EmitDefaultValue=false)]
         public List<EmailMessage> EmailTranscript { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets FileState
-        /// </summary>
-        [DataMember(Name="fileState", EmitDefaultValue=false)]
-        public string FileState { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="restoreExpirationTime", EmitDefaultValue=false)]
         public DateTime? RestoreExpirationTime { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MediaUris
         /// </summary>
         [DataMember(Name="mediaUris", EmitDefaultValue=false)]
         public Dictionary<string, MediaResult> MediaUris { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EstimatedTranscodeTimeMs
         /// </summary>
         [DataMember(Name="estimatedTranscodeTimeMs", EmitDefaultValue=false)]
         public long? EstimatedTranscodeTimeMs { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ActualTranscodeTimeMs
         /// </summary>
         [DataMember(Name="actualTranscodeTimeMs", EmitDefaultValue=false)]
         public long? ActualTranscodeTimeMs { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="archiveDate", EmitDefaultValue=false)]
         public DateTime? ArchiveDate { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets ArchiveMedium
-        /// </summary>
-        [DataMember(Name="archiveMedium", EmitDefaultValue=false)]
-        public string ArchiveMedium { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="deleteDate", EmitDefaultValue=false)]
         public DateTime? DeleteDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MaxAllowedRestorationsForOrg
         /// </summary>
         [DataMember(Name="maxAllowedRestorationsForOrg", EmitDefaultValue=false)]
         public int? MaxAllowedRestorationsForOrg { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets RemainingRestorationsAllowedForOrg
         /// </summary>
         [DataMember(Name="remainingRestorationsAllowedForOrg", EmitDefaultValue=false)]
         public int? RemainingRestorationsAllowedForOrg { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets RecordingId
         /// </summary>
         [DataMember(Name="recordingId", EmitDefaultValue=false)]
         public string RecordingId { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

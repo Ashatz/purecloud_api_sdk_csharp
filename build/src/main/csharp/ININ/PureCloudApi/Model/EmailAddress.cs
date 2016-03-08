@@ -7,40 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class EmailAddress :  IEquatable<EmailAddress>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailAddress" /> class.
+        /// Initializes a new instance of the <see cref="EmailAddress" />class.
         /// </summary>
-        public EmailAddress()
+        /// <param name="Email">Email.</param>
+        /// <param name="Name">Name.</param>
+
+        public EmailAddress(string Email = null, string Name = null)
         {
+            this.Email = Email;
+            this.Name = Name;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Email
         /// </summary>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

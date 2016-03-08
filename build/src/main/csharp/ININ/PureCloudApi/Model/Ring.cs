@@ -7,40 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Ring :  IEquatable<Ring>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Ring" /> class.
+        /// Initializes a new instance of the <see cref="Ring" />class.
         /// </summary>
-        public Ring()
+        /// <param name="ExpansionCriteria">ExpansionCriteria.</param>
+        /// <param name="Actions">Actions.</param>
+
+        public Ring(List<ExpansionCriterium> ExpansionCriteria = null, Actions Actions = null)
         {
+            this.ExpansionCriteria = ExpansionCriteria;
+            this.Actions = Actions;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets ExpansionCriteria
         /// </summary>
         [DataMember(Name="expansionCriteria", EmitDefaultValue=false)]
         public List<ExpansionCriterium> ExpansionCriteria { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Actions
         /// </summary>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public Actions Actions { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

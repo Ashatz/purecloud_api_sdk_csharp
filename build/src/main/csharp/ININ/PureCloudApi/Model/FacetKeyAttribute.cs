@@ -7,47 +7,52 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class FacetKeyAttribute :  IEquatable<FacetKeyAttribute>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FacetKeyAttribute" /> class.
+        /// Initializes a new instance of the <see cref="FacetKeyAttribute" />class.
         /// </summary>
-        public FacetKeyAttribute()
+        /// <param name="Id">Id.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="Count">Count.</param>
+
+        public FacetKeyAttribute(string Id = null, string Name = null, int? Count = null)
         {
+            this.Id = Id;
+            this.Name = Name;
+            this.Count = Count;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Count
         /// </summary>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public int? Count { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

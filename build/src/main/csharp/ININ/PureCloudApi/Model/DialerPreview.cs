@@ -7,61 +7,68 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DialerPreview :  IEquatable<DialerPreview>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerPreview" /> class.
+        /// Initializes a new instance of the <see cref="DialerPreview" />class.
         /// </summary>
-        public DialerPreview()
+        /// <param name="Id">Id.</param>
+        /// <param name="ContactId">ContactId.</param>
+        /// <param name="ContactListId">ContactListId.</param>
+        /// <param name="CampaignId">CampaignId.</param>
+        /// <param name="PhoneNumberColumns">PhoneNumberColumns.</param>
+
+        public DialerPreview(string Id = null, string ContactId = null, string ContactListId = null, string CampaignId = null, List<PhoneNumberColumn> PhoneNumberColumns = null)
         {
+            this.Id = Id;
+            this.ContactId = ContactId;
+            this.ContactListId = ContactListId;
+            this.CampaignId = CampaignId;
+            this.PhoneNumberColumns = PhoneNumberColumns;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ContactId
         /// </summary>
         [DataMember(Name="contactId", EmitDefaultValue=false)]
         public string ContactId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ContactListId
         /// </summary>
         [DataMember(Name="contactListId", EmitDefaultValue=false)]
         public string ContactListId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CampaignId
         /// </summary>
         [DataMember(Name="campaignId", EmitDefaultValue=false)]
         public string CampaignId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PhoneNumberColumns
         /// </summary>
         [DataMember(Name="phoneNumberColumns", EmitDefaultValue=false)]
         public List<PhoneNumberColumn> PhoneNumberColumns { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

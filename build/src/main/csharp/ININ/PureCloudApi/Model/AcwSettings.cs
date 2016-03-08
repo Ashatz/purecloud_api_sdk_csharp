@@ -7,40 +7,60 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class AcwSettings :  IEquatable<AcwSettings>
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AcwSettings" /> class.
-        /// </summary>
-        public AcwSettings()
-        {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum WrapupPromptEnum {
             
+            [EnumMember(Value = "MANDATORY")]
+            Mandatory,
+            
+            [EnumMember(Value = "OPTIONAL")]
+            Optional,
+            
+            [EnumMember(Value = "MANDATORY_TIMEOUT")]
+            MandatoryTimeout,
+            
+            [EnumMember(Value = "MANDATORY_FORCED_TIMEOUT")]
+            MandatoryForcedTimeout
         }
-
-        
+    
         /// <summary>
         /// Gets or Sets WrapupPrompt
         /// </summary>
         [DataMember(Name="wrapupPrompt", EmitDefaultValue=false)]
-        public string WrapupPrompt { get; set; }
-  
+        public WrapupPromptEnum? WrapupPrompt { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AcwSettings" /> class.
+        /// Initializes a new instance of the <see cref="AcwSettings" />class.
+        /// </summary>
+        /// <param name="WrapupPrompt">WrapupPrompt.</param>
+        /// <param name="TimeoutMs">TimeoutMs.</param>
+
+        public AcwSettings(WrapupPromptEnum? WrapupPrompt = null, int? TimeoutMs = null)
+        {
+            this.WrapupPrompt = WrapupPrompt;
+            this.TimeoutMs = TimeoutMs;
+            
+        }
         
+    
         /// <summary>
         /// Gets or Sets TimeoutMs
         /// </summary>
         [DataMember(Name="timeoutMs", EmitDefaultValue=false)]
         public int? TimeoutMs { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

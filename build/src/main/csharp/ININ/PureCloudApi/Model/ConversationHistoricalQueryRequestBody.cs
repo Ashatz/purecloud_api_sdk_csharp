@@ -7,58 +7,64 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Historical conversation request parameters
     /// </summary>
     [DataContract]
     public partial class ConversationHistoricalQueryRequestBody :  IEquatable<ConversationHistoricalQueryRequestBody>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationHistoricalQueryRequestBody" /> class.
+        /// Initializes a new instance of the <see cref="ConversationHistoricalQueryRequestBody" />class.
         /// </summary>
-        public ConversationHistoricalQueryRequestBody()
+        /// <param name="PageSize">Maximum number of conversations returned. Overrides &#39;maximum&#39; if both specified. Default 100.</param>
+        /// <param name="Maximum">Maximum number of conversations returned.</param>
+        /// <param name="Filters">Query filters. Default is all conversations for the previous 7 days.</param>
+        /// <param name="Facets">Facets to return. Currently, only &#39;queue&#39; is supported.</param>
+
+        public ConversationHistoricalQueryRequestBody(int? PageSize = null, int? Maximum = null, List<ConversationHistoricalQueryRequestFilter> Filters = null, List<string> Facets = null)
         {
+            this.PageSize = PageSize;
+            this.Maximum = Maximum;
+            this.Filters = Filters;
+            this.Facets = Facets;
             
         }
-
         
+    
         /// <summary>
         /// Maximum number of conversations returned. Overrides 'maximum' if both specified. Default 100
         /// </summary>
         /// <value>Maximum number of conversations returned. Overrides 'maximum' if both specified. Default 100</value>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
-  
-        
+    
         /// <summary>
         /// Maximum number of conversations returned
         /// </summary>
         /// <value>Maximum number of conversations returned</value>
         [DataMember(Name="maximum", EmitDefaultValue=false)]
         public int? Maximum { get; set; }
-  
-        
+    
         /// <summary>
         /// Query filters. Default is all conversations for the previous 7 days
         /// </summary>
         /// <value>Query filters. Default is all conversations for the previous 7 days</value>
         [DataMember(Name="filters", EmitDefaultValue=false)]
         public List<ConversationHistoricalQueryRequestFilter> Filters { get; set; }
-  
-        
+    
         /// <summary>
         /// Facets to return. Currently, only 'queue' is supported
         /// </summary>
         /// <value>Facets to return. Currently, only 'queue' is supported</value>
         [DataMember(Name="facets", EmitDefaultValue=false)]
         public List<string> Facets { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

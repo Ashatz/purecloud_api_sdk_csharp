@@ -7,133 +7,146 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ContactSales :  IEquatable<ContactSales>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactSales" /> class.
+        /// Initializes a new instance of the <see cref="ContactSales" />class.
         /// </summary>
-        public ContactSales()
+        /// <param name="Name">Name.</param>
+        /// <param name="Email">Email.</param>
+        /// <param name="FirstName">FirstName.</param>
+        /// <param name="LastName">LastName.</param>
+        /// <param name="ContactPhone">ContactPhone.</param>
+        /// <param name="Country">Country.</param>
+        /// <param name="Title">Title.</param>
+        /// <param name="Message">Message.</param>
+        /// <param name="Language">Language.</param>
+        /// <param name="ProductName">ProductName.</param>
+        /// <param name="QuoteId">QuoteId.</param>
+        /// <param name="Industry">Industry.</param>
+        /// <param name="EstimatedUsers">EstimatedUsers.</param>
+
+        public ContactSales(string Name = null, string Email = null, string FirstName = null, string LastName = null, string ContactPhone = null, string Country = null, string Title = null, string Message = null, string Language = null, string ProductName = null, string QuoteId = null, string Industry = null, string EstimatedUsers = null, )
         {
+            this.Name = Name;
+            this.Email = Email;
+            this.FirstName = FirstName;
+            this.LastName = LastName;
+            this.ContactPhone = ContactPhone;
+            this.Country = Country;
+            this.Title = Title;
+            this.Message = Message;
+            this.Language = Language;
+            this.ProductName = ProductName;
+            this.QuoteId = QuoteId;
+            this.Industry = Industry;
+            this.EstimatedUsers = EstimatedUsers;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Email
         /// </summary>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FirstName
         /// </summary>
         [DataMember(Name="firstName", EmitDefaultValue=false)]
         public string FirstName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets LastName
         /// </summary>
         [DataMember(Name="lastName", EmitDefaultValue=false)]
         public string LastName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ContactPhone
         /// </summary>
         [DataMember(Name="contactPhone", EmitDefaultValue=false)]
         public string ContactPhone { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Country
         /// </summary>
         [DataMember(Name="country", EmitDefaultValue=false)]
         public string Country { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Title
         /// </summary>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Message
         /// </summary>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public string Message { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Language
         /// </summary>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public string Language { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ProductName
         /// </summary>
         [DataMember(Name="productName", EmitDefaultValue=false)]
         public string ProductName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets QuoteId
         /// </summary>
         [DataMember(Name="quoteId", EmitDefaultValue=false)]
         public string QuoteId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Industry
         /// </summary>
         [DataMember(Name="industry", EmitDefaultValue=false)]
         public string Industry { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EstimatedUsers
         /// </summary>
         [DataMember(Name="estimatedUsers", EmitDefaultValue=false)]
         public string EstimatedUsers { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

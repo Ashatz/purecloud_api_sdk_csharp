@@ -7,77 +7,82 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class PhoneBase :  IEquatable<PhoneBase>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneBase" /> class.
+        /// Initializes a new instance of the <see cref="PhoneBase" />class.
         /// </summary>
-        public PhoneBase()
+        /// <param name="Name">Name.</param>
+        /// <param name="PhoneMetaBase">PhoneMetaBase.</param>
+        /// <param name="Lines">Lines.</param>
+        /// <param name="Properties">Properties.</param>
+        /// <param name="Capabilities">Capabilities.</param>
+
+        public PhoneBase(string Name = null, UriReference PhoneMetaBase = null, List<LineBase> Lines = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null, )
         {
+            this.Name = Name;
+            this.PhoneMetaBase = PhoneMetaBase;
+            this.Lines = Lines;
+            this.Properties = Properties;
+            this.Capabilities = Capabilities;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PhoneMetaBase
         /// </summary>
         [DataMember(Name="phoneMetaBase", EmitDefaultValue=false)]
         public UriReference PhoneMetaBase { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Lines
         /// </summary>
         [DataMember(Name="lines", EmitDefaultValue=false)]
         public List<LineBase> Lines { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Properties
         /// </summary>
         [DataMember(Name="properties", EmitDefaultValue=false)]
-        public Dictionary<string, InlineResponse200> Properties { get; set; }
-  
-        
+        public Dictionary<string, Object> Properties { get; set; }
+    
         /// <summary>
         /// Gets or Sets Capabilities
         /// </summary>
         [DataMember(Name="capabilities", EmitDefaultValue=false)]
         public PhoneCapabilities Capabilities { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,47 +7,52 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class BatchReplyItem :  IEquatable<BatchReplyItem>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="BatchReplyItem" /> class.
+        /// Initializes a new instance of the <see cref="BatchReplyItem" />class.
         /// </summary>
-        public BatchReplyItem()
+        /// <param name="Code">Code.</param>
+        /// <param name="Error">Error.</param>
+        /// <param name="Body">Body.</param>
+
+        public BatchReplyItem(double? Code = null, string Error = null, BatchItemBody Body = null)
         {
+            this.Code = Code;
+            this.Error = Error;
+            this.Body = Body;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public double? Code { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Error
         /// </summary>
         [DataMember(Name="error", EmitDefaultValue=false)]
         public string Error { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Body
         /// </summary>
         [DataMember(Name="body", EmitDefaultValue=false)]
         public BatchItemBody Body { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

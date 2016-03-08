@@ -7,33 +7,36 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class PolicyErrors :  IEquatable<PolicyErrors>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PolicyErrors" /> class.
+        /// Initializes a new instance of the <see cref="PolicyErrors" />class.
         /// </summary>
-        public PolicyErrors()
+        /// <param name="PolicyErrorMessages">PolicyErrorMessages.</param>
+
+        public PolicyErrors(List<PolicyErrorMessage> PolicyErrorMessages = null)
         {
+            this.PolicyErrorMessages = PolicyErrorMessages;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets PolicyErrorMessages
         /// </summary>
         [DataMember(Name="policyErrorMessages", EmitDefaultValue=false)]
         public List<PolicyErrorMessage> PolicyErrorMessages { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

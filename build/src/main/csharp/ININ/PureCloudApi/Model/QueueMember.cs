@@ -7,85 +7,98 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class QueueMember :  IEquatable<QueueMember>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueMember" /> class.
+        /// Initializes a new instance of the <see cref="QueueMember" />class.
         /// </summary>
-        public QueueMember()
+        /// <param name="Name">Name.</param>
+        /// <param name="User">User.</param>
+        /// <param name="RingNumber">RingNumber.</param>
+        /// <param name="Joined">Joined (default to false).</param>
+        /// <param name="MemberBy">MemberBy.</param>
+        /// <param name="RoutingStatus">RoutingStatus.</param>
+
+        public QueueMember(string Name = null, User User = null, int? RingNumber = null, bool? Joined = null, string MemberBy = null, RoutingStatus RoutingStatus = null, )
         {
-            this.Joined = false;
+            this.Name = Name;
+            this.User = User;
+            this.RingNumber = RingNumber;
+            // use default value if no "Joined" provided
+            if (Joined == null)
+            {
+                this.Joined = false;
+            }
+            else
+            {
+                this.Joined = Joined;
+            }
+            this.MemberBy = MemberBy;
+            this.RoutingStatus = RoutingStatus;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets RingNumber
         /// </summary>
         [DataMember(Name="ringNumber", EmitDefaultValue=false)]
         public int? RingNumber { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Joined
         /// </summary>
         [DataMember(Name="joined", EmitDefaultValue=false)]
         public bool? Joined { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MemberBy
         /// </summary>
         [DataMember(Name="memberBy", EmitDefaultValue=false)]
         public string MemberBy { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets RoutingStatus
         /// </summary>
         [DataMember(Name="routingStatus", EmitDefaultValue=false)]
         public RoutingStatus RoutingStatus { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,47 +7,232 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class User :  IEquatable<User>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="User" /> class.
+        /// Initializes a new instance of the <see cref="User" />class.
         /// </summary>
-        public User()
+        /// <param name="Name">Name.</param>
+        /// <param name="Username">Username.</param>
+        /// <param name="Email">Email.</param>
+        /// <param name="DisplayName">DisplayName.</param>
+        /// <param name="PhoneNumber">PhoneNumber.</param>
+        /// <param name="UserImages">UserImages.</param>
+        /// <param name="Chat">Chat.</param>
+        /// <param name="Roles">Roles.</param>
+        /// <param name="VoicemailEnabled">VoicemailEnabled (default to false).</param>
+        /// <param name="Department">Department.</param>
+        /// <param name="Title">Title.</param>
+        /// <param name="RoutingStatus">RoutingStatus.</param>
+        /// <param name="Password">Password.</param>
+        /// <param name="PrimaryPresence">PrimaryPresence.</param>
+        /// <param name="Conversations">Conversations.</param>
+        /// <param name="ConversationSummary">ConversationSummary.</param>
+        /// <param name="OutOfOffice">OutOfOffice.</param>
+        /// <param name="Geolocation">Geolocation.</param>
+        /// <param name="Permissions">Permissions.</param>
+        /// <param name="RequestedStatus">RequestedStatus.</param>
+        /// <param name="DefaultStationUri">DefaultStationUri.</param>
+        /// <param name="StationUri">StationUri.</param>
+
+        public User(string Name = null, string Username = null, string Email = null, string DisplayName = null, string PhoneNumber = null, List<UserImage> UserImages = null, Chat Chat = null, List<DomainOrganizationRole> Roles = null, bool? VoicemailEnabled = null, string Department = null, string Title = null, RoutingStatus RoutingStatus = null, string Password = null, UserPresence PrimaryPresence = null, UserConversationSummary Conversations = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, List<string> Permissions = null, UserStatus RequestedStatus = null, string DefaultStationUri = null, string StationUri = null, )
         {
+            this.Name = Name;
+            this.Username = Username;
+            this.Email = Email;
+            this.DisplayName = DisplayName;
+            this.PhoneNumber = PhoneNumber;
+            this.UserImages = UserImages;
+            this.Chat = Chat;
+            this.Roles = Roles;
+            // use default value if no "VoicemailEnabled" provided
+            if (VoicemailEnabled == null)
+            {
+                this.VoicemailEnabled = false;
+            }
+            else
+            {
+                this.VoicemailEnabled = VoicemailEnabled;
+            }
+            this.Department = Department;
+            this.Title = Title;
+            this.RoutingStatus = RoutingStatus;
+            this.Password = Password;
+            this.PrimaryPresence = PrimaryPresence;
+            this.Conversations = Conversations;
+            this.ConversationSummary = ConversationSummary;
+            this.OutOfOffice = OutOfOffice;
+            this.Geolocation = Geolocation;
+            this.Permissions = Permissions;
+            this.RequestedStatus = RequestedStatus;
+            this.DefaultStationUri = DefaultStationUri;
+            this.StationUri = StationUri;
             
         }
-
         
+    
         /// <summary>
-        /// Gets or Sets Id
+        /// The globally unique identifier for the object.
         /// </summary>
+        /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
-        /// Gets or Sets Display
+        /// Gets or Sets Username
         /// </summary>
-        [DataMember(Name="display", EmitDefaultValue=false)]
-        public string Display { get; set; }
-  
-        
-  
+        [DataMember(Name="username", EmitDefaultValue=false)]
+        public string Username { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Email
+        /// </summary>
+        [DataMember(Name="email", EmitDefaultValue=false)]
+        public string Email { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets DisplayName
+        /// </summary>
+        [DataMember(Name="displayName", EmitDefaultValue=false)]
+        public string DisplayName { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets PhoneNumber
+        /// </summary>
+        [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
+        public string PhoneNumber { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets UserImages
+        /// </summary>
+        [DataMember(Name="userImages", EmitDefaultValue=false)]
+        public List<UserImage> UserImages { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Chat
+        /// </summary>
+        [DataMember(Name="chat", EmitDefaultValue=false)]
+        public Chat Chat { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Roles
+        /// </summary>
+        [DataMember(Name="roles", EmitDefaultValue=false)]
+        public List<DomainOrganizationRole> Roles { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets VoicemailEnabled
+        /// </summary>
+        [DataMember(Name="voicemailEnabled", EmitDefaultValue=false)]
+        public bool? VoicemailEnabled { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Department
+        /// </summary>
+        [DataMember(Name="department", EmitDefaultValue=false)]
+        public string Department { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Title
+        /// </summary>
+        [DataMember(Name="title", EmitDefaultValue=false)]
+        public string Title { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets RoutingStatus
+        /// </summary>
+        [DataMember(Name="routingStatus", EmitDefaultValue=false)]
+        public RoutingStatus RoutingStatus { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Password
+        /// </summary>
+        [DataMember(Name="password", EmitDefaultValue=false)]
+        public string Password { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets PrimaryPresence
+        /// </summary>
+        [DataMember(Name="primaryPresence", EmitDefaultValue=false)]
+        public UserPresence PrimaryPresence { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Conversations
+        /// </summary>
+        [DataMember(Name="conversations", EmitDefaultValue=false)]
+        public UserConversationSummary Conversations { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets ConversationSummary
+        /// </summary>
+        [DataMember(Name="conversationSummary", EmitDefaultValue=false)]
+        public UserConversationSummary ConversationSummary { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets OutOfOffice
+        /// </summary>
+        [DataMember(Name="outOfOffice", EmitDefaultValue=false)]
+        public OutOfOffice OutOfOffice { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Geolocation
+        /// </summary>
+        [DataMember(Name="geolocation", EmitDefaultValue=false)]
+        public Geolocation Geolocation { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Permissions
+        /// </summary>
+        [DataMember(Name="permissions", EmitDefaultValue=false)]
+        public List<string> Permissions { get; set; }
+    
+        /// <summary>
+        /// The URI for this object
+        /// </summary>
+        /// <value>The URI for this object</value>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; private set; }
+    
+        /// <summary>
+        /// Gets or Sets RequestedStatus
+        /// </summary>
+        [DataMember(Name="requestedStatus", EmitDefaultValue=false)]
+        public UserStatus RequestedStatus { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets DefaultStationUri
+        /// </summary>
+        [DataMember(Name="defaultStationUri", EmitDefaultValue=false)]
+        public string DefaultStationUri { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets StationUri
+        /// </summary>
+        [DataMember(Name="stationUri", EmitDefaultValue=false)]
+        public string StationUri { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets LastStationUri
+        /// </summary>
+        [DataMember(Name="lastStationUri", EmitDefaultValue=false)]
+        public string LastStationUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -58,7 +243,29 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class User {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Display: ").Append(Display).Append("\n");
+            sb.Append("  Username: ").Append(Username).Append("\n");
+            sb.Append("  Email: ").Append(Email).Append("\n");
+            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
+            sb.Append("  UserImages: ").Append(UserImages).Append("\n");
+            sb.Append("  Chat: ").Append(Chat).Append("\n");
+            sb.Append("  Roles: ").Append(Roles).Append("\n");
+            sb.Append("  VoicemailEnabled: ").Append(VoicemailEnabled).Append("\n");
+            sb.Append("  Department: ").Append(Department).Append("\n");
+            sb.Append("  Title: ").Append(Title).Append("\n");
+            sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
+            sb.Append("  Password: ").Append(Password).Append("\n");
+            sb.Append("  PrimaryPresence: ").Append(PrimaryPresence).Append("\n");
+            sb.Append("  Conversations: ").Append(Conversations).Append("\n");
+            sb.Append("  ConversationSummary: ").Append(ConversationSummary).Append("\n");
+            sb.Append("  OutOfOffice: ").Append(OutOfOffice).Append("\n");
+            sb.Append("  Geolocation: ").Append(Geolocation).Append("\n");
+            sb.Append("  Permissions: ").Append(Permissions).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            sb.Append("  RequestedStatus: ").Append(RequestedStatus).Append("\n");
+            sb.Append("  DefaultStationUri: ").Append(DefaultStationUri).Append("\n");
+            sb.Append("  StationUri: ").Append(StationUri).Append("\n");
+            sb.Append("  LastStationUri: ").Append(LastStationUri).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -107,9 +314,119 @@ namespace ININ.PureCloudApi.Model
                     this.Name.Equals(other.Name)
                 ) && 
                 (
-                    this.Display == other.Display ||
-                    this.Display != null &&
-                    this.Display.Equals(other.Display)
+                    this.Username == other.Username ||
+                    this.Username != null &&
+                    this.Username.Equals(other.Username)
+                ) && 
+                (
+                    this.Email == other.Email ||
+                    this.Email != null &&
+                    this.Email.Equals(other.Email)
+                ) && 
+                (
+                    this.DisplayName == other.DisplayName ||
+                    this.DisplayName != null &&
+                    this.DisplayName.Equals(other.DisplayName)
+                ) && 
+                (
+                    this.PhoneNumber == other.PhoneNumber ||
+                    this.PhoneNumber != null &&
+                    this.PhoneNumber.Equals(other.PhoneNumber)
+                ) && 
+                (
+                    this.UserImages == other.UserImages ||
+                    this.UserImages != null &&
+                    this.UserImages.SequenceEqual(other.UserImages)
+                ) && 
+                (
+                    this.Chat == other.Chat ||
+                    this.Chat != null &&
+                    this.Chat.Equals(other.Chat)
+                ) && 
+                (
+                    this.Roles == other.Roles ||
+                    this.Roles != null &&
+                    this.Roles.SequenceEqual(other.Roles)
+                ) && 
+                (
+                    this.VoicemailEnabled == other.VoicemailEnabled ||
+                    this.VoicemailEnabled != null &&
+                    this.VoicemailEnabled.Equals(other.VoicemailEnabled)
+                ) && 
+                (
+                    this.Department == other.Department ||
+                    this.Department != null &&
+                    this.Department.Equals(other.Department)
+                ) && 
+                (
+                    this.Title == other.Title ||
+                    this.Title != null &&
+                    this.Title.Equals(other.Title)
+                ) && 
+                (
+                    this.RoutingStatus == other.RoutingStatus ||
+                    this.RoutingStatus != null &&
+                    this.RoutingStatus.Equals(other.RoutingStatus)
+                ) && 
+                (
+                    this.Password == other.Password ||
+                    this.Password != null &&
+                    this.Password.Equals(other.Password)
+                ) && 
+                (
+                    this.PrimaryPresence == other.PrimaryPresence ||
+                    this.PrimaryPresence != null &&
+                    this.PrimaryPresence.Equals(other.PrimaryPresence)
+                ) && 
+                (
+                    this.Conversations == other.Conversations ||
+                    this.Conversations != null &&
+                    this.Conversations.Equals(other.Conversations)
+                ) && 
+                (
+                    this.ConversationSummary == other.ConversationSummary ||
+                    this.ConversationSummary != null &&
+                    this.ConversationSummary.Equals(other.ConversationSummary)
+                ) && 
+                (
+                    this.OutOfOffice == other.OutOfOffice ||
+                    this.OutOfOffice != null &&
+                    this.OutOfOffice.Equals(other.OutOfOffice)
+                ) && 
+                (
+                    this.Geolocation == other.Geolocation ||
+                    this.Geolocation != null &&
+                    this.Geolocation.Equals(other.Geolocation)
+                ) && 
+                (
+                    this.Permissions == other.Permissions ||
+                    this.Permissions != null &&
+                    this.Permissions.SequenceEqual(other.Permissions)
+                ) && 
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
+                ) && 
+                (
+                    this.RequestedStatus == other.RequestedStatus ||
+                    this.RequestedStatus != null &&
+                    this.RequestedStatus.Equals(other.RequestedStatus)
+                ) && 
+                (
+                    this.DefaultStationUri == other.DefaultStationUri ||
+                    this.DefaultStationUri != null &&
+                    this.DefaultStationUri.Equals(other.DefaultStationUri)
+                ) && 
+                (
+                    this.StationUri == other.StationUri ||
+                    this.StationUri != null &&
+                    this.StationUri.Equals(other.StationUri)
+                ) && 
+                (
+                    this.LastStationUri == other.LastStationUri ||
+                    this.LastStationUri != null &&
+                    this.LastStationUri.Equals(other.LastStationUri)
                 );
         }
 
@@ -131,8 +448,74 @@ namespace ININ.PureCloudApi.Model
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
                 
-                if (this.Display != null)
-                    hash = hash * 59 + this.Display.GetHashCode();
+                if (this.Username != null)
+                    hash = hash * 59 + this.Username.GetHashCode();
+                
+                if (this.Email != null)
+                    hash = hash * 59 + this.Email.GetHashCode();
+                
+                if (this.DisplayName != null)
+                    hash = hash * 59 + this.DisplayName.GetHashCode();
+                
+                if (this.PhoneNumber != null)
+                    hash = hash * 59 + this.PhoneNumber.GetHashCode();
+                
+                if (this.UserImages != null)
+                    hash = hash * 59 + this.UserImages.GetHashCode();
+                
+                if (this.Chat != null)
+                    hash = hash * 59 + this.Chat.GetHashCode();
+                
+                if (this.Roles != null)
+                    hash = hash * 59 + this.Roles.GetHashCode();
+                
+                if (this.VoicemailEnabled != null)
+                    hash = hash * 59 + this.VoicemailEnabled.GetHashCode();
+                
+                if (this.Department != null)
+                    hash = hash * 59 + this.Department.GetHashCode();
+                
+                if (this.Title != null)
+                    hash = hash * 59 + this.Title.GetHashCode();
+                
+                if (this.RoutingStatus != null)
+                    hash = hash * 59 + this.RoutingStatus.GetHashCode();
+                
+                if (this.Password != null)
+                    hash = hash * 59 + this.Password.GetHashCode();
+                
+                if (this.PrimaryPresence != null)
+                    hash = hash * 59 + this.PrimaryPresence.GetHashCode();
+                
+                if (this.Conversations != null)
+                    hash = hash * 59 + this.Conversations.GetHashCode();
+                
+                if (this.ConversationSummary != null)
+                    hash = hash * 59 + this.ConversationSummary.GetHashCode();
+                
+                if (this.OutOfOffice != null)
+                    hash = hash * 59 + this.OutOfOffice.GetHashCode();
+                
+                if (this.Geolocation != null)
+                    hash = hash * 59 + this.Geolocation.GetHashCode();
+                
+                if (this.Permissions != null)
+                    hash = hash * 59 + this.Permissions.GetHashCode();
+                
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
+                
+                if (this.RequestedStatus != null)
+                    hash = hash * 59 + this.RequestedStatus.GetHashCode();
+                
+                if (this.DefaultStationUri != null)
+                    hash = hash * 59 + this.DefaultStationUri.GetHashCode();
+                
+                if (this.StationUri != null)
+                    hash = hash * 59 + this.StationUri.GetHashCode();
+                
+                if (this.LastStationUri != null)
+                    hash = hash * 59 + this.LastStationUri.GetHashCode();
                 
                 return hash;
             }

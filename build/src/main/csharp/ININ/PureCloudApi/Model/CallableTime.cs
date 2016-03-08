@@ -7,40 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class CallableTime :  IEquatable<CallableTime>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CallableTime" /> class.
+        /// Initializes a new instance of the <see cref="CallableTime" />class.
         /// </summary>
-        public CallableTime()
+        /// <param name="TimeSlots">TimeSlots.</param>
+        /// <param name="TimeZoneId">TimeZoneId.</param>
+
+        public CallableTime(List<TimeSlot> TimeSlots = null, string TimeZoneId = null)
         {
+            this.TimeSlots = TimeSlots;
+            this.TimeZoneId = TimeZoneId;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets TimeSlots
         /// </summary>
         [DataMember(Name="timeSlots", EmitDefaultValue=false)]
         public List<TimeSlot> TimeSlots { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TimeZoneId
         /// </summary>
         [DataMember(Name="timeZoneId", EmitDefaultValue=false)]
         public string TimeZoneId { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

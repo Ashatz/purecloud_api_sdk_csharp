@@ -15,6 +15,7 @@ namespace ININ.PureCloudApi.Api
     /// </summary>
     public interface IRecordingApi
     {
+        #region Synchronous Operations
         
         /// <summary>
         /// Get the Recording Configuration for the Organization
@@ -22,6 +23,7 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createDefault">If no configuration is found, a new one is created with default values</param>
         /// <returns>RecordingConfiguration</returns>
         RecordingConfiguration GetSettings (bool? createDefault = null);
@@ -32,29 +34,10 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createDefault">If no configuration is found, a new one is created with default values</param>
         /// <returns>ApiResponse of RecordingConfiguration</returns>
         ApiResponse<RecordingConfiguration> GetSettingsWithHttpInfo (bool? createDefault = null);
-
-        /// <summary>
-        /// Get the Recording Configuration for the Organization
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <param name="createDefault">If no configuration is found, a new one is created with default values</param>
-        /// <returns>Task of RecordingConfiguration</returns>
-        System.Threading.Tasks.Task<RecordingConfiguration> GetSettingsAsync (bool? createDefault = null);
-
-        /// <summary>
-        /// Get the Recording Configuration for the Organization
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <param name="createDefault">If no configuration is found, a new one is created with default values</param>
-        /// <returns>Task of ApiResponse (RecordingConfiguration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RecordingConfiguration>> GetSettingsAsyncWithHttpInfo (bool? createDefault = null);
         
         /// <summary>
         /// Update the Recording Configuration for the Organization
@@ -62,6 +45,7 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>RecordingConfiguration</returns>
         RecordingConfiguration PutSettings (RecordingConfiguration body = null);
@@ -72,16 +56,44 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>ApiResponse of RecordingConfiguration</returns>
         ApiResponse<RecordingConfiguration> PutSettingsWithHttpInfo (RecordingConfiguration body = null);
+        
+        #endregion Synchronous Operations
+        
+        #region Asynchronous Operations
+        
+        /// <summary>
+        /// Get the Recording Configuration for the Organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="createDefault">If no configuration is found, a new one is created with default values</param>
+        /// <returns>Task of RecordingConfiguration</returns>
+        System.Threading.Tasks.Task<RecordingConfiguration> GetSettingsAsync (bool? createDefault = null);
 
+        /// <summary>
+        /// Get the Recording Configuration for the Organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="createDefault">If no configuration is found, a new one is created with default values</param>
+        /// <returns>Task of ApiResponse (RecordingConfiguration)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RecordingConfiguration>> GetSettingsAsyncWithHttpInfo (bool? createDefault = null);
+        
         /// <summary>
         /// Update the Recording Configuration for the Organization
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of RecordingConfiguration</returns>
         System.Threading.Tasks.Task<RecordingConfiguration> PutSettingsAsync (RecordingConfiguration body = null);
@@ -92,9 +104,12 @@ namespace ININ.PureCloudApi.Api
         /// <remarks>
         /// 
         /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (RecordingConfiguration)</returns>
         System.Threading.Tasks.Task<ApiResponse<RecordingConfiguration>> PutSettingsAsyncWithHttpInfo (RecordingConfiguration body = null);
+        
+        #endregion Asynchronous Operations
         
     }
   
@@ -177,51 +192,53 @@ namespace ININ.PureCloudApi.Api
         /// <summary>
         /// Get the Recording Configuration for the Organization 
         /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createDefault">If no configuration is found, a new one is created with default values</param> 
         /// <returns>RecordingConfiguration</returns>
         public RecordingConfiguration GetSettings (bool? createDefault = null)
         {
-             ApiResponse<RecordingConfiguration> response = GetSettingsWithHttpInfo(createDefault);
-             return response.Data;
+             ApiResponse<RecordingConfiguration> localVarResponse = GetSettingsWithHttpInfo(createDefault);
+             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get the Recording Configuration for the Organization 
         /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createDefault">If no configuration is found, a new one is created with default values</param> 
         /// <returns>ApiResponse of RecordingConfiguration</returns>
         public ApiResponse< RecordingConfiguration > GetSettingsWithHttpInfo (bool? createDefault = null)
         {
             
     
-            var path_ = "/api/v1/recording/settings";
+            var localVarPath = "/api/v1/recording/settings";
     
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            Object postBody = null;
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
 
             // to determine the Content-Type header
-            String[] httpContentTypes = new String[] {
+            String[] localVarHttpContentTypes = new String[] {
                 "application/json"
             };
-            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
-            String[] httpHeaderAccepts = new String[] {
+            String[] localVarHttpHeaderAccepts = new String[] {
                 "application/json"
             };
-            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
-            if (httpHeaderAccept != null)
-                headerParams.Add("Accept", httpHeaderAccept);
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
+            localVarPathParams.Add("format", "json");
             
-            if (createDefault != null) queryParams.Add("createDefault", Configuration.ApiClient.ParameterToString(createDefault)); // query parameter
+            if (createDefault != null) localVarQueryParams.Add("createDefault", Configuration.ApiClient.ParameterToString(createDefault)); // query parameter
             
             
             
@@ -232,77 +249,80 @@ namespace ININ.PureCloudApi.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
-                Method.GET, queryParams, postBody, headerParams, formParams, fileParams,
-                pathParams, httpContentType);
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
 
-            int statusCode = (int) response.StatusCode;
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
     
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSettings: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSettings: " + response.ErrorMessage, response.ErrorMessage);
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSettings: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<RecordingConfiguration>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RecordingConfiguration) Configuration.ApiClient.Deserialize(response, typeof(RecordingConfiguration)));
+            return new ApiResponse<RecordingConfiguration>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RecordingConfiguration) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordingConfiguration)));
             
         }
-    
+
+        
         /// <summary>
         /// Get the Recording Configuration for the Organization 
         /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createDefault">If no configuration is found, a new one is created with default values</param>
         /// <returns>Task of RecordingConfiguration</returns>
         public async System.Threading.Tasks.Task<RecordingConfiguration> GetSettingsAsync (bool? createDefault = null)
         {
-             ApiResponse<RecordingConfiguration> response = await GetSettingsAsyncWithHttpInfo(createDefault);
-             return response.Data;
+             ApiResponse<RecordingConfiguration> localVarResponse = await GetSettingsAsyncWithHttpInfo(createDefault);
+             return localVarResponse.Data;
 
         }
 
         /// <summary>
         /// Get the Recording Configuration for the Organization 
         /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="createDefault">If no configuration is found, a new one is created with default values</param>
         /// <returns>Task of ApiResponse (RecordingConfiguration)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RecordingConfiguration>> GetSettingsAsyncWithHttpInfo (bool? createDefault = null)
         {
             
     
-            var path_ = "/api/v1/recording/settings";
+            var localVarPath = "/api/v1/recording/settings";
     
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            Object postBody = null;
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
 
             // to determine the Content-Type header
-            String[] httpContentTypes = new String[] {
+            String[] localVarHttpContentTypes = new String[] {
                 "application/json"
             };
-            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
-            String[] httpHeaderAccepts = new String[] {
+            String[] localVarHttpHeaderAccepts = new String[] {
                 "application/json"
             };
-            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
-            if (httpHeaderAccept != null)
-                headerParams.Add("Accept", httpHeaderAccept);
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
+            localVarPathParams.Add("format", "json");
             
-            if (createDefault != null) queryParams.Add("createDefault", Configuration.ApiClient.ParameterToString(createDefault)); // query parameter
+            if (createDefault != null) localVarQueryParams.Add("createDefault", Configuration.ApiClient.ParameterToString(createDefault)); // query parameter
             
             
             
@@ -314,85 +334,87 @@ namespace ININ.PureCloudApi.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
-                Method.GET, queryParams, postBody, headerParams, formParams, fileParams, 
-                pathParams, httpContentType);
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
 
-            int statusCode = (int) response.StatusCode;
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
  
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling GetSettings: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling GetSettings: " + response.ErrorMessage, response.ErrorMessage);
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSettings: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<RecordingConfiguration>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RecordingConfiguration) Configuration.ApiClient.Deserialize(response, typeof(RecordingConfiguration)));
+            return new ApiResponse<RecordingConfiguration>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RecordingConfiguration) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordingConfiguration)));
             
         }
         
         /// <summary>
         /// Update the Recording Configuration for the Organization 
         /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param> 
         /// <returns>RecordingConfiguration</returns>
         public RecordingConfiguration PutSettings (RecordingConfiguration body = null)
         {
-             ApiResponse<RecordingConfiguration> response = PutSettingsWithHttpInfo(body);
-             return response.Data;
+             ApiResponse<RecordingConfiguration> localVarResponse = PutSettingsWithHttpInfo(body);
+             return localVarResponse.Data;
         }
 
         /// <summary>
         /// Update the Recording Configuration for the Organization 
         /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param> 
         /// <returns>ApiResponse of RecordingConfiguration</returns>
         public ApiResponse< RecordingConfiguration > PutSettingsWithHttpInfo (RecordingConfiguration body = null)
         {
             
     
-            var path_ = "/api/v1/recording/settings";
+            var localVarPath = "/api/v1/recording/settings";
     
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            Object postBody = null;
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
 
             // to determine the Content-Type header
-            String[] httpContentTypes = new String[] {
+            String[] localVarHttpContentTypes = new String[] {
                 "application/json"
             };
-            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
-            String[] httpHeaderAccepts = new String[] {
+            String[] localVarHttpHeaderAccepts = new String[] {
                 "application/json"
             };
-            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
-            if (httpHeaderAccept != null)
-                headerParams.Add("Accept", httpHeaderAccept);
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
+            localVarPathParams.Add("format", "json");
             
             
             
             
             if (body.GetType() != typeof(byte[]))
             {
-                postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
             }
             else
             {
-                postBody = body; // byte array
+                localVarPostBody = body; // byte array
             }
 
             // authentication (PureCloud Auth) required
@@ -400,81 +422,90 @@ namespace ININ.PureCloudApi.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
             
     
             // make the HTTP request
-            IRestResponse response = (IRestResponse) Configuration.ApiClient.CallApi(path_, 
-                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams,
-                pathParams, httpContentType);
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
 
-            int statusCode = (int) response.StatusCode;
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
     
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutSettings: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutSettings: " + response.ErrorMessage, response.ErrorMessage);
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutSettings: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<RecordingConfiguration>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RecordingConfiguration) Configuration.ApiClient.Deserialize(response, typeof(RecordingConfiguration)));
+            return new ApiResponse<RecordingConfiguration>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RecordingConfiguration) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordingConfiguration)));
             
         }
-    
+
+        
         /// <summary>
         /// Update the Recording Configuration for the Organization 
         /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of RecordingConfiguration</returns>
         public async System.Threading.Tasks.Task<RecordingConfiguration> PutSettingsAsync (RecordingConfiguration body = null)
         {
-             ApiResponse<RecordingConfiguration> response = await PutSettingsAsyncWithHttpInfo(body);
-             return response.Data;
+             ApiResponse<RecordingConfiguration> localVarResponse = await PutSettingsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
 
         }
 
         /// <summary>
         /// Update the Recording Configuration for the Organization 
         /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (RecordingConfiguration)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RecordingConfiguration>> PutSettingsAsyncWithHttpInfo (RecordingConfiguration body = null)
         {
             
     
-            var path_ = "/api/v1/recording/settings";
+            var localVarPath = "/api/v1/recording/settings";
     
-            var pathParams = new Dictionary<String, String>();
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            Object postBody = null;
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
 
             // to determine the Content-Type header
-            String[] httpContentTypes = new String[] {
+            String[] localVarHttpContentTypes = new String[] {
                 "application/json"
             };
-            String httpContentType = Configuration.ApiClient.SelectHeaderContentType(httpContentTypes);
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
-            String[] httpHeaderAccepts = new String[] {
+            String[] localVarHttpHeaderAccepts = new String[] {
                 "application/json"
             };
-            String httpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(httpHeaderAccepts);
-            if (httpHeaderAccept != null)
-                headerParams.Add("Accept", httpHeaderAccept);
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            pathParams.Add("format", "json");
+            localVarPathParams.Add("format", "json");
             
             
             
             
-            postBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
 
             
             // authentication (PureCloud Auth) required
@@ -482,25 +513,25 @@ namespace ININ.PureCloudApi.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                headerParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
             
 
             // make the HTTP request
-            IRestResponse response = (IRestResponse) await Configuration.ApiClient.CallApiAsync(path_, 
-                Method.PUT, queryParams, postBody, headerParams, formParams, fileParams, 
-                pathParams, httpContentType);
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
 
-            int statusCode = (int) response.StatusCode;
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
  
-            if (statusCode >= 400)
-                throw new ApiException (statusCode, "Error calling PutSettings: " + response.Content, response.Content);
-            else if (statusCode == 0)
-                throw new ApiException (statusCode, "Error calling PutSettings: " + response.ErrorMessage, response.ErrorMessage);
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutSettings: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<RecordingConfiguration>(statusCode,
-                response.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (RecordingConfiguration) Configuration.ApiClient.Deserialize(response, typeof(RecordingConfiguration)));
+            return new ApiResponse<RecordingConfiguration>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RecordingConfiguration) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RecordingConfiguration)));
             
         }
         

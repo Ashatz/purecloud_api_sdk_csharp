@@ -7,58 +7,96 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Passed into a flow to describe an object to launch and returned from the operation with the Id populated with the flowInstance launched.
     /// </summary>
     [DataContract]
     public partial class FlowLaunchRequest :  IEquatable<FlowLaunchRequest>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum LaunchTypeEnum {
+            
+            [EnumMember(Value = "UNKNOWN")]
+            Unknown,
+            
+            [EnumMember(Value = "NORMAL")]
+            Normal,
+            
+            [EnumMember(Value = "TEST")]
+            Test,
+            
+            [EnumMember(Value = "AUTOMATIC")]
+            Automatic
+        }
+    
+        /// <summary>
+        /// launch type of the flow - NORMAL or TEST
+        /// </summary>
+        /// <value>launch type of the flow - NORMAL or TEST</value>
+        [DataMember(Name="launchType", EmitDefaultValue=false)]
+        public LaunchTypeEnum? LaunchType { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowLaunchRequest" /> class.
+        /// Initializes a new instance of the <see cref="FlowLaunchRequest" />class.
         /// </summary>
-        public FlowLaunchRequest()
+        /// <param name="FlowConfigId">ID of the flow to launch, will launch the most recently published version if a specific version is not specified. (required).</param>
+        /// <param name="FlowInstanceName">The displayable instance name to assign to the new flow instance (or omit to have one automatically generated).</param>
+        /// <param name="InputData">contains launch parameters or initializations for variables in the flow..</param>
+        /// <param name="LaunchType">launch type of the flow - NORMAL or TEST (required).</param>
+
+        public FlowLaunchRequest(FlowConfigId FlowConfigId = null, string FlowInstanceName = null, FlowInputData InputData = null, LaunchTypeEnum? LaunchType = null)
         {
+            // to ensure "FlowConfigId" is required (not null)
+            if (FlowConfigId == null)
+            {
+                throw new InvalidDataException("FlowConfigId is a required property for FlowLaunchRequest and cannot be null");
+            }
+            else
+            {
+                this.FlowConfigId = FlowConfigId;
+            }
+            // to ensure "LaunchType" is required (not null)
+            if (LaunchType == null)
+            {
+                throw new InvalidDataException("LaunchType is a required property for FlowLaunchRequest and cannot be null");
+            }
+            else
+            {
+                this.LaunchType = LaunchType;
+            }
+            this.FlowInstanceName = FlowInstanceName;
+            this.InputData = InputData;
             
         }
-
         
+    
         /// <summary>
         /// ID of the flow to launch, will launch the most recently published version if a specific version is not specified.
         /// </summary>
         /// <value>ID of the flow to launch, will launch the most recently published version if a specific version is not specified.</value>
         [DataMember(Name="flowConfigId", EmitDefaultValue=false)]
         public FlowConfigId FlowConfigId { get; set; }
-  
-        
+    
         /// <summary>
         /// The displayable instance name to assign to the new flow instance (or omit to have one automatically generated)
         /// </summary>
         /// <value>The displayable instance name to assign to the new flow instance (or omit to have one automatically generated)</value>
         [DataMember(Name="flowInstanceName", EmitDefaultValue=false)]
         public string FlowInstanceName { get; set; }
-  
-        
+    
         /// <summary>
         /// contains launch parameters or initializations for variables in the flow.
         /// </summary>
         /// <value>contains launch parameters or initializations for variables in the flow.</value>
         [DataMember(Name="inputData", EmitDefaultValue=false)]
         public FlowInputData InputData { get; set; }
-  
-        
-        /// <summary>
-        /// launch type of the flow - NORMAL or TEST
-        /// </summary>
-        /// <value>launch type of the flow - NORMAL or TEST</value>
-        [DataMember(Name="launchType", EmitDefaultValue=false)]
-        public string LaunchType { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,33 +7,36 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class SessionRequest :  IEquatable<SessionRequest>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="SessionRequest" /> class.
+        /// Initializes a new instance of the <see cref="SessionRequest" />class.
         /// </summary>
-        public SessionRequest()
+        /// <param name="MinutesToLive">MinutesToLive.</param>
+
+        public SessionRequest(long? MinutesToLive = null)
         {
+            this.MinutesToLive = MinutesToLive;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets MinutesToLive
         /// </summary>
         [DataMember(Name="minutesToLive", EmitDefaultValue=false)]
         public long? MinutesToLive { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

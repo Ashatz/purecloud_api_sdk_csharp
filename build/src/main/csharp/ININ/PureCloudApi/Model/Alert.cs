@@ -7,136 +7,182 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Alert :  IEquatable<Alert>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum MediaTypeEnum {
+            
+            [EnumMember(Value = "VOICE")]
+            Voice,
+            
+            [EnumMember(Value = "CHAT")]
+            Chat
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StatisticEnum {
+            
+            [EnumMember(Value = "COUNT")]
+            Count,
+            
+            [EnumMember(Value = "SUM")]
+            Sum,
+            
+            [EnumMember(Value = "AVG")]
+            Avg,
+            
+            [EnumMember(Value = "RATIO")]
+            Ratio
+        }
+    
+        /// <summary>
+        /// Gets or Sets MediaType
+        /// </summary>
+        [DataMember(Name="mediaType", EmitDefaultValue=false)]
+        public MediaTypeEnum? MediaType { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Statistic
+        /// </summary>
+        [DataMember(Name="statistic", EmitDefaultValue=false)]
+        public StatisticEnum? Statistic { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Alert" /> class.
+        /// Initializes a new instance of the <see cref="Alert" />class.
         /// </summary>
-        public Alert()
+        /// <param name="Name">Name.</param>
+        /// <param name="Title">Title.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="Unread">Unread (default to false).</param>
+        /// <param name="Entity">Entity.</param>
+        /// <param name="Metric">Metric.</param>
+        /// <param name="MetricThresholds">MetricThresholds.</param>
+        /// <param name="MetricValue">MetricValue.</param>
+        /// <param name="StartTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="EndTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="MediaType">MediaType.</param>
+        /// <param name="Statistic">Statistic.</param>
+        /// <param name="RuleUri">RuleUri.</param>
+
+        public Alert(string Name = null, string Title = null, string Description = null, bool? Unread = null, Entity Entity = null, string Metric = null, List<MetricThreshold> MetricThresholds = null, double? MetricValue = null, DateTime? StartTime = null, DateTime? EndTime = null, MediaTypeEnum? MediaType = null, StatisticEnum? Statistic = null, string RuleUri = null, )
         {
-            this.Unread = false;
+            this.Name = Name;
+            this.Title = Title;
+            this.Description = Description;
+            // use default value if no "Unread" provided
+            if (Unread == null)
+            {
+                this.Unread = false;
+            }
+            else
+            {
+                this.Unread = Unread;
+            }
+            this.Entity = Entity;
+            this.Metric = Metric;
+            this.MetricThresholds = MetricThresholds;
+            this.MetricValue = MetricValue;
+            this.StartTime = StartTime;
+            this.EndTime = EndTime;
+            this.MediaType = MediaType;
+            this.Statistic = Statistic;
+            this.RuleUri = RuleUri;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Title
         /// </summary>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Unread
         /// </summary>
         [DataMember(Name="unread", EmitDefaultValue=false)]
         public bool? Unread { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Entity
         /// </summary>
         [DataMember(Name="entity", EmitDefaultValue=false)]
         public Entity Entity { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Metric
         /// </summary>
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public string Metric { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MetricThresholds
         /// </summary>
         [DataMember(Name="metricThresholds", EmitDefaultValue=false)]
         public List<MetricThreshold> MetricThresholds { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MetricValue
         /// </summary>
         [DataMember(Name="metricValue", EmitDefaultValue=false)]
         public double? MetricValue { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public DateTime? StartTime { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public DateTime? EndTime { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets MediaType
-        /// </summary>
-        [DataMember(Name="mediaType", EmitDefaultValue=false)]
-        public string MediaType { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Statistic
-        /// </summary>
-        [DataMember(Name="statistic", EmitDefaultValue=false)]
-        public string Statistic { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets RuleUri
         /// </summary>
         [DataMember(Name="ruleUri", EmitDefaultValue=false)]
         public string RuleUri { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

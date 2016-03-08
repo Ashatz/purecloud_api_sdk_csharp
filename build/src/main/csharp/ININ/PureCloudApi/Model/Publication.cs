@@ -7,89 +7,102 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Publication :  IEquatable<Publication>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Publication" /> class.
+        /// Initializes a new instance of the <see cref="Publication" />class.
         /// </summary>
-        public Publication()
+        /// <param name="Name">Name.</param>
+        /// <param name="DateCreated">Creation date for the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateModified">Date the entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="TweetText">The text of the tweet..</param>
+        /// <param name="RawTweetText">The raw text of the tweet.</param>
+        /// <param name="Approved">Approved (default to false).</param>
+
+        public Publication(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string TweetText = null, string RawTweetText = null, bool? Approved = null, )
         {
-            this.Approved = false;
+            this.Name = Name;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.TweetText = TweetText;
+            this.RawTweetText = RawTweetText;
+            // use default value if no "Approved" provided
+            if (Approved == null)
+            {
+                this.Approved = false;
+            }
+            else
+            {
+                this.Approved = Approved;
+            }
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Creation date for the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Creation date for the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-  
-        
+    
         /// <summary>
         /// Date the entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date the entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-  
-        
+    
         /// <summary>
         /// The text of the tweet.
         /// </summary>
         /// <value>The text of the tweet.</value>
         [DataMember(Name="tweetText", EmitDefaultValue=false)]
         public string TweetText { get; set; }
-  
-        
+    
         /// <summary>
         /// The raw text of the tweet
         /// </summary>
         /// <value>The raw text of the tweet</value>
         [DataMember(Name="rawTweetText", EmitDefaultValue=false)]
         public string RawTweetText { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Approved
         /// </summary>
         [DataMember(Name="approved", EmitDefaultValue=false)]
         public bool? Approved { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

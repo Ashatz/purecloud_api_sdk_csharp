@@ -7,40 +7,51 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ExpansionCriterium :  IEquatable<ExpansionCriterium>
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ExpansionCriterium" /> class.
-        /// </summary>
-        public ExpansionCriterium()
-        {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum {
             
+            [EnumMember(Value = "TIMEOUT_SECONDS")]
+            Seconds
         }
-
-        
+    
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-  
+        public TypeEnum? Type { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ExpansionCriterium" /> class.
+        /// Initializes a new instance of the <see cref="ExpansionCriterium" />class.
+        /// </summary>
+        /// <param name="Type">Type.</param>
+        /// <param name="Threshold">Threshold.</param>
+
+        public ExpansionCriterium(TypeEnum? Type = null, double? Threshold = null)
+        {
+            this.Type = Type;
+            this.Threshold = Threshold;
+            
+        }
         
+    
         /// <summary>
         /// Gets or Sets Threshold
         /// </summary>
         [DataMember(Name="threshold", EmitDefaultValue=false)]
         public double? Threshold { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

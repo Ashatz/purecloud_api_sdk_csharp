@@ -7,92 +7,106 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class AccountStatus :  IEquatable<AccountStatus>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AccountStatus" /> class.
+        /// Initializes a new instance of the <see cref="AccountStatus" />class.
         /// </summary>
-        public AccountStatus()
+        /// <param name="Name">Name.</param>
+        /// <param name="OrgName">OrgName.</param>
+        /// <param name="Configured">Configured (default to false).</param>
+        /// <param name="AdminUIURL">AdminUIURL.</param>
+        /// <param name="ThirdPartyAccountId">ThirdPartyAccountId.</param>
+        /// <param name="ThirdPartySubscriptionId">ThirdPartySubscriptionId.</param>
+        /// <param name="ThirdPartySubscriptionNonAcbId">ThirdPartySubscriptionNonAcbId.</param>
+
+        public AccountStatus(string Name = null, string OrgName = null, bool? Configured = null, string AdminUIURL = null, string ThirdPartyAccountId = null, string ThirdPartySubscriptionId = null, string ThirdPartySubscriptionNonAcbId = null, )
         {
-            this.Configured = false;
+            this.Name = Name;
+            this.OrgName = OrgName;
+            // use default value if no "Configured" provided
+            if (Configured == null)
+            {
+                this.Configured = false;
+            }
+            else
+            {
+                this.Configured = Configured;
+            }
+            this.AdminUIURL = AdminUIURL;
+            this.ThirdPartyAccountId = ThirdPartyAccountId;
+            this.ThirdPartySubscriptionId = ThirdPartySubscriptionId;
+            this.ThirdPartySubscriptionNonAcbId = ThirdPartySubscriptionNonAcbId;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets OrgName
         /// </summary>
         [DataMember(Name="orgName", EmitDefaultValue=false)]
         public string OrgName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Configured
         /// </summary>
         [DataMember(Name="configured", EmitDefaultValue=false)]
         public bool? Configured { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AdminUIURL
         /// </summary>
         [DataMember(Name="adminUIURL", EmitDefaultValue=false)]
         public string AdminUIURL { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ThirdPartyAccountId
         /// </summary>
         [DataMember(Name="thirdPartyAccountId", EmitDefaultValue=false)]
         public string ThirdPartyAccountId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ThirdPartySubscriptionId
         /// </summary>
         [DataMember(Name="thirdPartySubscriptionId", EmitDefaultValue=false)]
         public string ThirdPartySubscriptionId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ThirdPartySubscriptionNonAcbId
         /// </summary>
         [DataMember(Name="thirdPartySubscriptionNonAcbId", EmitDefaultValue=false)]
         public string ThirdPartySubscriptionNonAcbId { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

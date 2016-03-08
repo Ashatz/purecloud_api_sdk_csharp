@@ -7,61 +7,68 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class SharedResponse :  IEquatable<SharedResponse>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="SharedResponse" /> class.
+        /// Initializes a new instance of the <see cref="SharedResponse" />class.
         /// </summary>
-        public SharedResponse()
+        /// <param name="Id">Id.</param>
+        /// <param name="DownloadUri">DownloadUri.</param>
+        /// <param name="ViewUri">ViewUri.</param>
+        /// <param name="Document">Document.</param>
+        /// <param name="Share">Share.</param>
+
+        public SharedResponse(string Id = null, string DownloadUri = null, string ViewUri = null, Document Document = null, Share Share = null)
         {
+            this.Id = Id;
+            this.DownloadUri = DownloadUri;
+            this.ViewUri = ViewUri;
+            this.Document = Document;
+            this.Share = Share;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DownloadUri
         /// </summary>
         [DataMember(Name="downloadUri", EmitDefaultValue=false)]
         public string DownloadUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ViewUri
         /// </summary>
         [DataMember(Name="viewUri", EmitDefaultValue=false)]
         public string ViewUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Document
         /// </summary>
         [DataMember(Name="document", EmitDefaultValue=false)]
         public Document Document { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Share
         /// </summary>
         [DataMember(Name="share", EmitDefaultValue=false)]
         public Share Share { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

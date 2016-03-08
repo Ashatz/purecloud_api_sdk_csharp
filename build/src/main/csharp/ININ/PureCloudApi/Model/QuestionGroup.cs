@@ -7,93 +7,132 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class QuestionGroup :  IEquatable<QuestionGroup>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="QuestionGroup" /> class.
+        /// Initializes a new instance of the <see cref="QuestionGroup" />class.
         /// </summary>
-        public QuestionGroup()
+        /// <param name="Id">Id.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="Type">Type.</param>
+        /// <param name="DefaultAnswersToHighest">DefaultAnswersToHighest (default to false).</param>
+        /// <param name="DefaultAnswersToNA">DefaultAnswersToNA (default to false).</param>
+        /// <param name="NaEnabled">NaEnabled (default to false).</param>
+        /// <param name="Weight">Weight.</param>
+        /// <param name="ManualWeight">ManualWeight (default to false).</param>
+        /// <param name="Questions">Questions.</param>
+
+        public QuestionGroup(string Id = null, string Name = null, string Type = null, bool? DefaultAnswersToHighest = null, bool? DefaultAnswersToNA = null, bool? NaEnabled = null, float? Weight = null, bool? ManualWeight = null, List<Dictionary<string, Object>> Questions = null)
         {
-            this.DefaultAnswersToHighest = false;
-            this.DefaultAnswersToNA = false;
-            this.NaEnabled = false;
-            this.ManualWeight = false;
+            this.Id = Id;
+            this.Name = Name;
+            this.Type = Type;
+            // use default value if no "DefaultAnswersToHighest" provided
+            if (DefaultAnswersToHighest == null)
+            {
+                this.DefaultAnswersToHighest = false;
+            }
+            else
+            {
+                this.DefaultAnswersToHighest = DefaultAnswersToHighest;
+            }
+            // use default value if no "DefaultAnswersToNA" provided
+            if (DefaultAnswersToNA == null)
+            {
+                this.DefaultAnswersToNA = false;
+            }
+            else
+            {
+                this.DefaultAnswersToNA = DefaultAnswersToNA;
+            }
+            // use default value if no "NaEnabled" provided
+            if (NaEnabled == null)
+            {
+                this.NaEnabled = false;
+            }
+            else
+            {
+                this.NaEnabled = NaEnabled;
+            }
+            this.Weight = Weight;
+            // use default value if no "ManualWeight" provided
+            if (ManualWeight == null)
+            {
+                this.ManualWeight = false;
+            }
+            else
+            {
+                this.ManualWeight = ManualWeight;
+            }
+            this.Questions = Questions;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DefaultAnswersToHighest
         /// </summary>
         [DataMember(Name="defaultAnswersToHighest", EmitDefaultValue=false)]
         public bool? DefaultAnswersToHighest { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DefaultAnswersToNA
         /// </summary>
         [DataMember(Name="defaultAnswersToNA", EmitDefaultValue=false)]
         public bool? DefaultAnswersToNA { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets NaEnabled
         /// </summary>
         [DataMember(Name="naEnabled", EmitDefaultValue=false)]
         public bool? NaEnabled { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Weight
         /// </summary>
         [DataMember(Name="weight", EmitDefaultValue=false)]
         public float? Weight { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ManualWeight
         /// </summary>
         [DataMember(Name="manualWeight", EmitDefaultValue=false)]
         public bool? ManualWeight { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Questions
         /// </summary>
         [DataMember(Name="questions", EmitDefaultValue=false)]
         public List<Dictionary<string, Object>> Questions { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

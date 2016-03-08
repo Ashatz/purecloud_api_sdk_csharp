@@ -7,75 +7,130 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Creating an Organization
     /// </summary>
     [DataContract]
     public partial class OrganizationCreate :  IEquatable<OrganizationCreate>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="OrganizationCreate" /> class.
+        /// Initializes a new instance of the <see cref="OrganizationCreate" />class.
         /// </summary>
-        public OrganizationCreate()
+        /// <param name="Name">Display Name for Organization (required).</param>
+        /// <param name="AdminUsername">Administrator username for this organization (required).</param>
+        /// <param name="AdminPassword">Administrator password for this organization (required).</param>
+        /// <param name="Domain">Fully qualified domain name for this organization (Ex. example.com). (required).</param>
+        /// <param name="ThirdPartyOrgName">Organization Name which does not contain special characters like spaces. (required).</param>
+        /// <param name="Deletable">Deletable Property for Organization. (default to false).</param>
+
+        public OrganizationCreate(string Name = null, string AdminUsername = null, string AdminPassword = null, string Domain = null, string ThirdPartyOrgName = null, bool? Deletable = null)
         {
-            this.Deletable = false;
+            // to ensure "Name" is required (not null)
+            if (Name == null)
+            {
+                throw new InvalidDataException("Name is a required property for OrganizationCreate and cannot be null");
+            }
+            else
+            {
+                this.Name = Name;
+            }
+            // to ensure "AdminUsername" is required (not null)
+            if (AdminUsername == null)
+            {
+                throw new InvalidDataException("AdminUsername is a required property for OrganizationCreate and cannot be null");
+            }
+            else
+            {
+                this.AdminUsername = AdminUsername;
+            }
+            // to ensure "AdminPassword" is required (not null)
+            if (AdminPassword == null)
+            {
+                throw new InvalidDataException("AdminPassword is a required property for OrganizationCreate and cannot be null");
+            }
+            else
+            {
+                this.AdminPassword = AdminPassword;
+            }
+            // to ensure "Domain" is required (not null)
+            if (Domain == null)
+            {
+                throw new InvalidDataException("Domain is a required property for OrganizationCreate and cannot be null");
+            }
+            else
+            {
+                this.Domain = Domain;
+            }
+            // to ensure "ThirdPartyOrgName" is required (not null)
+            if (ThirdPartyOrgName == null)
+            {
+                throw new InvalidDataException("ThirdPartyOrgName is a required property for OrganizationCreate and cannot be null");
+            }
+            else
+            {
+                this.ThirdPartyOrgName = ThirdPartyOrgName;
+            }
+            // use default value if no "Deletable" provided
+            if (Deletable == null)
+            {
+                this.Deletable = false;
+            }
+            else
+            {
+                this.Deletable = Deletable;
+            }
             
         }
-
         
+    
         /// <summary>
         /// Display Name for Organization
         /// </summary>
         /// <value>Display Name for Organization</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Administrator username for this organization
         /// </summary>
         /// <value>Administrator username for this organization</value>
         [DataMember(Name="adminUsername", EmitDefaultValue=false)]
         public string AdminUsername { get; set; }
-  
-        
+    
         /// <summary>
         /// Administrator password for this organization
         /// </summary>
         /// <value>Administrator password for this organization</value>
         [DataMember(Name="adminPassword", EmitDefaultValue=false)]
         public string AdminPassword { get; set; }
-  
-        
+    
         /// <summary>
         /// Fully qualified domain name for this organization (Ex. example.com).
         /// </summary>
         /// <value>Fully qualified domain name for this organization (Ex. example.com).</value>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public string Domain { get; set; }
-  
-        
+    
         /// <summary>
         /// Organization Name which does not contain special characters like spaces.
         /// </summary>
         /// <value>Organization Name which does not contain special characters like spaces.</value>
         [DataMember(Name="thirdPartyOrgName", EmitDefaultValue=false)]
         public string ThirdPartyOrgName { get; set; }
-  
-        
+    
         /// <summary>
         /// Deletable Property for Organization.
         /// </summary>
         /// <value>Deletable Property for Organization.</value>
         [DataMember(Name="deletable", EmitDefaultValue=false)]
         public bool? Deletable { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

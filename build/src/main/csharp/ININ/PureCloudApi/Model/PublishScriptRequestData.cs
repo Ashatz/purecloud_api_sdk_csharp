@@ -7,40 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class PublishScriptRequestData :  IEquatable<PublishScriptRequestData>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PublishScriptRequestData" /> class.
+        /// Initializes a new instance of the <see cref="PublishScriptRequestData" />class.
         /// </summary>
-        public PublishScriptRequestData()
+        /// <param name="ScriptId">ScriptId.</param>
+        /// <param name="VersionId">VersionId.</param>
+
+        public PublishScriptRequestData(string ScriptId = null, string VersionId = null)
         {
+            this.ScriptId = ScriptId;
+            this.VersionId = VersionId;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets ScriptId
         /// </summary>
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets VersionId
         /// </summary>
         [DataMember(Name="versionId", EmitDefaultValue=false)]
         public string VersionId { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,54 +7,60 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DocumentUpload :  IEquatable<DocumentUpload>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentUpload" /> class.
+        /// Initializes a new instance of the <see cref="DocumentUpload" />class.
         /// </summary>
-        public DocumentUpload()
+        /// <param name="Name">Name.</param>
+        /// <param name="Workspace">Workspace.</param>
+        /// <param name="Tags">Tags.</param>
+        /// <param name="TagIds">TagIds.</param>
+
+        public DocumentUpload(string Name = null, UriReference Workspace = null, List<string> Tags = null, List<string> TagIds = null)
         {
+            this.Name = Name;
+            this.Workspace = Workspace;
+            this.Tags = Tags;
+            this.TagIds = TagIds;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Workspace
         /// </summary>
         [DataMember(Name="workspace", EmitDefaultValue=false)]
         public UriReference Workspace { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Tags
         /// </summary>
         [DataMember(Name="tags", EmitDefaultValue=false)]
         public List<string> Tags { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TagIds
         /// </summary>
         [DataMember(Name="tagIds", EmitDefaultValue=false)]
         public List<string> TagIds { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

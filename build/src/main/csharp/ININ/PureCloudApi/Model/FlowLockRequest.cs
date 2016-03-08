@@ -7,35 +7,45 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Used as the body to the lockFlow request.
     /// </summary>
     [DataContract]
     public partial class FlowLockRequest :  IEquatable<FlowLockRequest>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowLockRequest" /> class.
+        /// Initializes a new instance of the <see cref="FlowLockRequest" />class.
         /// </summary>
-        public FlowLockRequest()
+        /// <param name="Locked">Change the locked state of the flow definition.  True to attempt to lock for modification, false to release the lock. (required) (default to false).</param>
+
+        public FlowLockRequest(bool? Locked = null)
         {
-            this.Locked = false;
+            // to ensure "Locked" is required (not null)
+            if (Locked == null)
+            {
+                throw new InvalidDataException("Locked is a required property for FlowLockRequest and cannot be null");
+            }
+            else
+            {
+                this.Locked = Locked;
+            }
             
         }
-
         
+    
         /// <summary>
         /// Change the locked state of the flow definition.  True to attempt to lock for modification, false to release the lock.
         /// </summary>
         /// <value>Change the locked state of the flow definition.  True to attempt to lock for modification, false to release the lock.</value>
         [DataMember(Name="locked", EmitDefaultValue=false)]
         public bool? Locked { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

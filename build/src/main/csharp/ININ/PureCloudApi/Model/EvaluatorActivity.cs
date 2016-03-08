@@ -7,98 +7,106 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class EvaluatorActivity :  IEquatable<EvaluatorActivity>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluatorActivity" /> class.
+        /// Initializes a new instance of the <see cref="EvaluatorActivity" />class.
         /// </summary>
-        public EvaluatorActivity()
+        /// <param name="Name">Name.</param>
+        /// <param name="Evaluator">Evaluator.</param>
+        /// <param name="NumEvaluationsAssigned">NumEvaluationsAssigned.</param>
+        /// <param name="NumEvaluationsStarted">NumEvaluationsStarted.</param>
+        /// <param name="NumEvaluationsCompleted">NumEvaluationsCompleted.</param>
+        /// <param name="NumCalibrationsAssigned">NumCalibrationsAssigned.</param>
+        /// <param name="NumCalibrationsStarted">NumCalibrationsStarted.</param>
+        /// <param name="NumCalibrationsCompleted">NumCalibrationsCompleted.</param>
+
+        public EvaluatorActivity(string Name = null, User Evaluator = null, int? NumEvaluationsAssigned = null, int? NumEvaluationsStarted = null, int? NumEvaluationsCompleted = null, int? NumCalibrationsAssigned = null, int? NumCalibrationsStarted = null, int? NumCalibrationsCompleted = null, )
         {
+            this.Name = Name;
+            this.Evaluator = Evaluator;
+            this.NumEvaluationsAssigned = NumEvaluationsAssigned;
+            this.NumEvaluationsStarted = NumEvaluationsStarted;
+            this.NumEvaluationsCompleted = NumEvaluationsCompleted;
+            this.NumCalibrationsAssigned = NumCalibrationsAssigned;
+            this.NumCalibrationsStarted = NumCalibrationsStarted;
+            this.NumCalibrationsCompleted = NumCalibrationsCompleted;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Evaluator
         /// </summary>
         [DataMember(Name="evaluator", EmitDefaultValue=false)]
         public User Evaluator { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets NumEvaluationsAssigned
         /// </summary>
         [DataMember(Name="numEvaluationsAssigned", EmitDefaultValue=false)]
         public int? NumEvaluationsAssigned { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets NumEvaluationsStarted
         /// </summary>
         [DataMember(Name="numEvaluationsStarted", EmitDefaultValue=false)]
         public int? NumEvaluationsStarted { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets NumEvaluationsCompleted
         /// </summary>
         [DataMember(Name="numEvaluationsCompleted", EmitDefaultValue=false)]
         public int? NumEvaluationsCompleted { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets NumCalibrationsAssigned
         /// </summary>
         [DataMember(Name="numCalibrationsAssigned", EmitDefaultValue=false)]
         public int? NumCalibrationsAssigned { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets NumCalibrationsStarted
         /// </summary>
         [DataMember(Name="numCalibrationsStarted", EmitDefaultValue=false)]
         public int? NumCalibrationsStarted { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets NumCalibrationsCompleted
         /// </summary>
         [DataMember(Name="numCalibrationsCompleted", EmitDefaultValue=false)]
         public int? NumCalibrationsCompleted { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

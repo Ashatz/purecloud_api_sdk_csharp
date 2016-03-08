@@ -7,40 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class NocSupport :  IEquatable<NocSupport>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="NocSupport" /> class.
+        /// Initializes a new instance of the <see cref="NocSupport" />class.
         /// </summary>
-        public NocSupport()
+        /// <param name="Phone">Phone.</param>
+        /// <param name="Email">Email.</param>
+
+        public NocSupport(string Phone = null, string Email = null)
         {
+            this.Phone = Phone;
+            this.Email = Email;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Phone
         /// </summary>
         [DataMember(Name="phone", EmitDefaultValue=false)]
         public string Phone { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Email
         /// </summary>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

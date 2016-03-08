@@ -7,106 +7,126 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class VoicemailUserPolicy :  IEquatable<VoicemailUserPolicy>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailUserPolicy" /> class.
+        /// Initializes a new instance of the <see cref="VoicemailUserPolicy" />class.
         /// </summary>
-        public VoicemailUserPolicy()
+        /// <param name="Enabled">Enabled (default to false).</param>
+        /// <param name="AlertTimeoutSeconds">AlertTimeoutSeconds.</param>
+        /// <param name="MinimumRecordingTimeSeconds">MinimumRecordingTimeSeconds.</param>
+        /// <param name="MaximumRecordingTimeSeconds">MaximumRecordingTimeSeconds.</param>
+        /// <param name="UnavailableMessageUri">UnavailableMessageUri.</param>
+        /// <param name="NamePromptMessageUri">NamePromptMessageUri.</param>
+        /// <param name="FullMessageUri">FullMessageUri.</param>
+        /// <param name="Pin">Pin.</param>
+        /// <param name="QuotaSizeBytes">QuotaSizeBytes.</param>
+        /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+
+        public VoicemailUserPolicy(bool? Enabled = null, int? AlertTimeoutSeconds = null, int? MinimumRecordingTimeSeconds = null, int? MaximumRecordingTimeSeconds = null, string UnavailableMessageUri = null, string NamePromptMessageUri = null, string FullMessageUri = null, string Pin = null, long? QuotaSizeBytes = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null)
         {
-            this.Enabled = false;
+            // use default value if no "Enabled" provided
+            if (Enabled == null)
+            {
+                this.Enabled = false;
+            }
+            else
+            {
+                this.Enabled = Enabled;
+            }
+            this.AlertTimeoutSeconds = AlertTimeoutSeconds;
+            this.MinimumRecordingTimeSeconds = MinimumRecordingTimeSeconds;
+            this.MaximumRecordingTimeSeconds = MaximumRecordingTimeSeconds;
+            this.UnavailableMessageUri = UnavailableMessageUri;
+            this.NamePromptMessageUri = NamePromptMessageUri;
+            this.FullMessageUri = FullMessageUri;
+            this.Pin = Pin;
+            this.QuotaSizeBytes = QuotaSizeBytes;
+            this.CreatedDate = CreatedDate;
+            this.ModifiedDate = ModifiedDate;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Enabled
         /// </summary>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AlertTimeoutSeconds
         /// </summary>
         [DataMember(Name="alertTimeoutSeconds", EmitDefaultValue=false)]
         public int? AlertTimeoutSeconds { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MinimumRecordingTimeSeconds
         /// </summary>
         [DataMember(Name="minimumRecordingTimeSeconds", EmitDefaultValue=false)]
         public int? MinimumRecordingTimeSeconds { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MaximumRecordingTimeSeconds
         /// </summary>
         [DataMember(Name="maximumRecordingTimeSeconds", EmitDefaultValue=false)]
         public int? MaximumRecordingTimeSeconds { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UnavailableMessageUri
         /// </summary>
         [DataMember(Name="unavailableMessageUri", EmitDefaultValue=false)]
         public string UnavailableMessageUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets NamePromptMessageUri
         /// </summary>
         [DataMember(Name="namePromptMessageUri", EmitDefaultValue=false)]
         public string NamePromptMessageUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FullMessageUri
         /// </summary>
         [DataMember(Name="fullMessageUri", EmitDefaultValue=false)]
         public string FullMessageUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Pin
         /// </summary>
         [DataMember(Name="pin", EmitDefaultValue=false)]
         public string Pin { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets QuotaSizeBytes
         /// </summary>
         [DataMember(Name="quotaSizeBytes", EmitDefaultValue=false)]
         public long? QuotaSizeBytes { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="createdDate", EmitDefaultValue=false)]
         public DateTime? CreatedDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
         public DateTime? ModifiedDate { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

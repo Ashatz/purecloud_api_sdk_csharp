@@ -68,7 +68,7 @@ namespace ININ.PureCloudApi.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "0.25.0.224";
+        public const string Version = "0.26.0.225";
 
         /// <summary>
         /// Gets or sets the default Configuration.
@@ -267,7 +267,7 @@ namespace ININ.PureCloudApi.Client
                      .GetReferencedAssemblies()
                      .Where(x => x.Name == "System.Core").First().Version.ToString()  + "\n";
             report += "    Version of the API: v1\n";
-            report += "    SDK Package Version: 0.25.0.224\n";
+            report += "    SDK Package Version: 0.26.0.225\n";
 
             return report;
         }

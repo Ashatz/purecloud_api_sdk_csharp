@@ -7,40 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DialerCall :  IEquatable<DialerCall>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerCall" /> class.
+        /// Initializes a new instance of the <see cref="DialerCall" />class.
         /// </summary>
-        public DialerCall()
+        /// <param name="CallId">CallId.</param>
+        /// <param name="ConversationId">ConversationId.</param>
+
+        public DialerCall(string CallId = null, string ConversationId = null)
         {
+            this.CallId = CallId;
+            this.ConversationId = ConversationId;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets CallId
         /// </summary>
         [DataMember(Name="callId", EmitDefaultValue=false)]
         public string CallId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ConversationId
         /// </summary>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

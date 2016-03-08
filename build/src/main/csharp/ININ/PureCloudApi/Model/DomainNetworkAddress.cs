@@ -7,55 +7,68 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DomainNetworkAddress :  IEquatable<DomainNetworkAddress>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainNetworkAddress" /> class.
+        /// Initializes a new instance of the <see cref="DomainNetworkAddress" />class.
         /// </summary>
-        public DomainNetworkAddress()
+        /// <param name="Type">Type.</param>
+        /// <param name="Address">Address.</param>
+        /// <param name="Persistent">Persistent (default to false).</param>
+        /// <param name="Family">Family.</param>
+
+        public DomainNetworkAddress(string Type = null, string Address = null, bool? Persistent = null, int? Family = null)
         {
-            this.Persistent = false;
+            this.Type = Type;
+            this.Address = Address;
+            // use default value if no "Persistent" provided
+            if (Persistent == null)
+            {
+                this.Persistent = false;
+            }
+            else
+            {
+                this.Persistent = Persistent;
+            }
+            this.Family = Family;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Address
         /// </summary>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public string Address { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Persistent
         /// </summary>
         [DataMember(Name="persistent", EmitDefaultValue=false)]
         public bool? Persistent { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Family
         /// </summary>
         [DataMember(Name="family", EmitDefaultValue=false)]
         public int? Family { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

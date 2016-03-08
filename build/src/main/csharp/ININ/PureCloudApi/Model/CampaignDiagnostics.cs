@@ -7,47 +7,52 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class CampaignDiagnostics :  IEquatable<CampaignDiagnostics>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignDiagnostics" /> class.
+        /// Initializes a new instance of the <see cref="CampaignDiagnostics" />class.
         /// </summary>
-        public CampaignDiagnostics()
+        /// <param name="CallableContacts">CallableContacts.</param>
+        /// <param name="QueueUtilizationDiagnostic">QueueUtilizationDiagnostic.</param>
+        /// <param name="OutstandingInteractionsCount">OutstandingInteractionsCount.</param>
+
+        public CampaignDiagnostics(CallableContactsDiagnostic CallableContacts = null, QueueUtilizationDiagnostic QueueUtilizationDiagnostic = null, int? OutstandingInteractionsCount = null)
         {
+            this.CallableContacts = CallableContacts;
+            this.QueueUtilizationDiagnostic = QueueUtilizationDiagnostic;
+            this.OutstandingInteractionsCount = OutstandingInteractionsCount;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets CallableContacts
         /// </summary>
         [DataMember(Name="callableContacts", EmitDefaultValue=false)]
         public CallableContactsDiagnostic CallableContacts { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets QueueUtilizationDiagnostic
         /// </summary>
         [DataMember(Name="queueUtilizationDiagnostic", EmitDefaultValue=false)]
         public QueueUtilizationDiagnostic QueueUtilizationDiagnostic { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets OutstandingInteractionsCount
         /// </summary>
         [DataMember(Name="outstandingInteractionsCount", EmitDefaultValue=false)]
         public int? OutstandingInteractionsCount { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

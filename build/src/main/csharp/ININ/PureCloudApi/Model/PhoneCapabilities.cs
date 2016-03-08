@@ -7,73 +7,116 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class PhoneCapabilities :  IEquatable<PhoneCapabilities>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneCapabilities" /> class.
+        /// Initializes a new instance of the <see cref="PhoneCapabilities" />class.
         /// </summary>
-        public PhoneCapabilities()
+        /// <param name="Provisions">Provisions (default to false).</param>
+        /// <param name="Registers">Registers (default to false).</param>
+        /// <param name="DualRegisters">DualRegisters (default to false).</param>
+        /// <param name="HardwareIdType">HardwareIdType.</param>
+        /// <param name="AllowReboot">AllowReboot (default to false).</param>
+        /// <param name="NoRebalance">NoRebalance (default to false).</param>
+
+        public PhoneCapabilities(bool? Provisions = null, bool? Registers = null, bool? DualRegisters = null, string HardwareIdType = null, bool? AllowReboot = null, bool? NoRebalance = null)
         {
-            this.Provisions = false;
-            this.Registers = false;
-            this.DualRegisters = false;
-            this.AllowReboot = false;
-            this.NoRebalance = false;
+            // use default value if no "Provisions" provided
+            if (Provisions == null)
+            {
+                this.Provisions = false;
+            }
+            else
+            {
+                this.Provisions = Provisions;
+            }
+            // use default value if no "Registers" provided
+            if (Registers == null)
+            {
+                this.Registers = false;
+            }
+            else
+            {
+                this.Registers = Registers;
+            }
+            // use default value if no "DualRegisters" provided
+            if (DualRegisters == null)
+            {
+                this.DualRegisters = false;
+            }
+            else
+            {
+                this.DualRegisters = DualRegisters;
+            }
+            this.HardwareIdType = HardwareIdType;
+            // use default value if no "AllowReboot" provided
+            if (AllowReboot == null)
+            {
+                this.AllowReboot = false;
+            }
+            else
+            {
+                this.AllowReboot = AllowReboot;
+            }
+            // use default value if no "NoRebalance" provided
+            if (NoRebalance == null)
+            {
+                this.NoRebalance = false;
+            }
+            else
+            {
+                this.NoRebalance = NoRebalance;
+            }
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Provisions
         /// </summary>
         [DataMember(Name="provisions", EmitDefaultValue=false)]
         public bool? Provisions { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Registers
         /// </summary>
         [DataMember(Name="registers", EmitDefaultValue=false)]
         public bool? Registers { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DualRegisters
         /// </summary>
         [DataMember(Name="dualRegisters", EmitDefaultValue=false)]
         public bool? DualRegisters { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets HardwareIdType
         /// </summary>
         [DataMember(Name="hardwareIdType", EmitDefaultValue=false)]
         public string HardwareIdType { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AllowReboot
         /// </summary>
         [DataMember(Name="allowReboot", EmitDefaultValue=false)]
         public bool? AllowReboot { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets NoRebalance
         /// </summary>
         [DataMember(Name="noRebalance", EmitDefaultValue=false)]
         public bool? NoRebalance { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

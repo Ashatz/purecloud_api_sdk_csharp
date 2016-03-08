@@ -7,33 +7,36 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ServiceContext :  IEquatable<ServiceContext>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ServiceContext" /> class.
+        /// Initializes a new instance of the <see cref="ServiceContext" />class.
         /// </summary>
-        public ServiceContext()
+        /// <param name="Name">Name.</param>
+
+        public ServiceContext(string Name = null)
         {
+            this.Name = Name;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

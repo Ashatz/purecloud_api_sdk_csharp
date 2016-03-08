@@ -7,105 +7,182 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Email :  IEquatable<Email>
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Email" /> class.
-        /// </summary>
-        public Email()
-        {
-            this.Held = false;
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StateEnum {
             
+            [EnumMember(Value = "ALERTING")]
+            Alerting,
+            
+            [EnumMember(Value = "CONNECTED")]
+            Connected,
+            
+            [EnumMember(Value = "DISCONNECTED")]
+            Disconnected,
+            
+            [EnumMember(Value = "NONE")]
+            None
         }
-
-        
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum DirectionEnum {
+            
+            [EnumMember(Value = "INBOUND")]
+            Inbound,
+            
+            [EnumMember(Value = "OUTBOUND")]
+            Outbound
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum DisconnectTypeEnum {
+            
+            [EnumMember(Value = "ENDPOINT")]
+            Endpoint,
+            
+            [EnumMember(Value = "CLIENT")]
+            Client,
+            
+            [EnumMember(Value = "SYSTEM")]
+            System,
+            
+            [EnumMember(Value = "TRANSFER")]
+            Transfer,
+            
+            [EnumMember(Value = "TRANSFER_CONFERENCE")]
+            TransferConference,
+            
+            [EnumMember(Value = "TRANSFER_CONSULT")]
+            TransferConsult,
+            
+            [EnumMember(Value = "ERROR")]
+            Error,
+            
+            [EnumMember(Value = "PEER")]
+            Peer,
+            
+            [EnumMember(Value = "OTHER")]
+            Other
+        }
+    
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
-        public string State { get; set; }
-  
+        public StateEnum? State { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Direction
+        /// </summary>
+        [DataMember(Name="direction", EmitDefaultValue=false)]
+        public DirectionEnum? Direction { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets DisconnectType
+        /// </summary>
+        [DataMember(Name="disconnectType", EmitDefaultValue=false)]
+        public DisconnectTypeEnum? DisconnectType { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Email" /> class.
+        /// Initializes a new instance of the <see cref="Email" />class.
+        /// </summary>
+        /// <param name="State">State.</param>
+        /// <param name="Id">Id.</param>
+        /// <param name="Held">Held (default to false).</param>
+        /// <param name="Subject">Subject.</param>
+        /// <param name="MessagesSent">MessagesSent.</param>
+        /// <param name="Segments">Segments.</param>
+        /// <param name="Direction">Direction.</param>
+        /// <param name="RecordingId">RecordingId.</param>
+        /// <param name="ErrorInfo">ErrorInfo.</param>
+        /// <param name="DisconnectType">DisconnectType.</param>
+        /// <param name="StartHoldTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+
+        public Email(StateEnum? State = null, string Id = null, bool? Held = null, string Subject = null, int? MessagesSent = null, List<Segment> Segments = null, DirectionEnum? Direction = null, string RecordingId = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null)
+        {
+            this.State = State;
+            this.Id = Id;
+            // use default value if no "Held" provided
+            if (Held == null)
+            {
+                this.Held = false;
+            }
+            else
+            {
+                this.Held = Held;
+            }
+            this.Subject = Subject;
+            this.MessagesSent = MessagesSent;
+            this.Segments = Segments;
+            this.Direction = Direction;
+            this.RecordingId = RecordingId;
+            this.ErrorInfo = ErrorInfo;
+            this.DisconnectType = DisconnectType;
+            this.StartHoldTime = StartHoldTime;
+            
+        }
         
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Held
         /// </summary>
         [DataMember(Name="held", EmitDefaultValue=false)]
         public bool? Held { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Subject
         /// </summary>
         [DataMember(Name="subject", EmitDefaultValue=false)]
         public string Subject { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MessagesSent
         /// </summary>
         [DataMember(Name="messagesSent", EmitDefaultValue=false)]
         public int? MessagesSent { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Segments
         /// </summary>
         [DataMember(Name="segments", EmitDefaultValue=false)]
         public List<Segment> Segments { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Direction
-        /// </summary>
-        [DataMember(Name="direction", EmitDefaultValue=false)]
-        public string Direction { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets RecordingId
         /// </summary>
         [DataMember(Name="recordingId", EmitDefaultValue=false)]
         public string RecordingId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ErrorInfo
         /// </summary>
         [DataMember(Name="errorInfo", EmitDefaultValue=false)]
         public ErrorBody ErrorInfo { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets DisconnectType
-        /// </summary>
-        [DataMember(Name="disconnectType", EmitDefaultValue=false)]
-        public string DisconnectType { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
         public DateTime? StartHoldTime { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

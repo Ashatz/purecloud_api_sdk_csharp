@@ -7,82 +7,108 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class PolicyConditions :  IEquatable<PolicyConditions>
-    {
+    { 
+        public enum  {
+            
+            [EnumMember(Value = "INBOUND")]
+            Inbound,
+            
+            [EnumMember(Value = "OUTBOUND")]
+            Outbound
+        }
+        public enum  {
+            
+            [EnumMember(Value = "CALL")]
+            Call,
+            
+            [EnumMember(Value = "CHAT")]
+            Chat
+        }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PolicyConditions" /> class.
+        /// Initializes a new instance of the <see cref="PolicyConditions" />class.
         /// </summary>
-        public PolicyConditions()
+        /// <param name="ForUsers">ForUsers.</param>
+        /// <param name="Directions">Directions.</param>
+        /// <param name="DateRanges">DateRanges.</param>
+        /// <param name="MediaTypes">MediaTypes.</param>
+        /// <param name="ForQueues">ForQueues.</param>
+        /// <param name="Duration">Duration.</param>
+        /// <param name="WrapupCodes">WrapupCodes.</param>
+        /// <param name="TimeAllowed">TimeAllowed.</param>
+
+        public PolicyConditions(List<User> ForUsers = null, List<DirectionsEnum?> Directions = null, List<string> DateRanges = null, List<MediaTypesEnum?> MediaTypes = null, List<Queue> ForQueues = null, DurationCondition Duration = null, List<WrapupCode> WrapupCodes = null, TimeAllowed TimeAllowed = null)
         {
+            this.ForUsers = ForUsers;
+            this.Directions = Directions;
+            this.DateRanges = DateRanges;
+            this.MediaTypes = MediaTypes;
+            this.ForQueues = ForQueues;
+            this.Duration = Duration;
+            this.WrapupCodes = WrapupCodes;
+            this.TimeAllowed = TimeAllowed;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets ForUsers
         /// </summary>
         [DataMember(Name="forUsers", EmitDefaultValue=false)]
         public List<User> ForUsers { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Directions
         /// </summary>
         [DataMember(Name="directions", EmitDefaultValue=false)]
         public List<string> Directions { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DateRanges
         /// </summary>
         [DataMember(Name="dateRanges", EmitDefaultValue=false)]
         public List<string> DateRanges { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MediaTypes
         /// </summary>
         [DataMember(Name="mediaTypes", EmitDefaultValue=false)]
         public List<string> MediaTypes { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ForQueues
         /// </summary>
         [DataMember(Name="forQueues", EmitDefaultValue=false)]
         public List<Queue> ForQueues { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Duration
         /// </summary>
         [DataMember(Name="duration", EmitDefaultValue=false)]
         public DurationCondition Duration { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets WrapupCodes
         /// </summary>
         [DataMember(Name="wrapupCodes", EmitDefaultValue=false)]
         public List<WrapupCode> WrapupCodes { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TimeAllowed
         /// </summary>
         [DataMember(Name="timeAllowed", EmitDefaultValue=false)]
         public TimeAllowed TimeAllowed { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,47 +7,52 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class FaxSummary :  IEquatable<FaxSummary>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FaxSummary" /> class.
+        /// Initializes a new instance of the <see cref="FaxSummary" />class.
         /// </summary>
-        public FaxSummary()
+        /// <param name="ReadCount">ReadCount.</param>
+        /// <param name="UnreadCount">UnreadCount.</param>
+        /// <param name="TotalCount">TotalCount.</param>
+
+        public FaxSummary(int? ReadCount = null, int? UnreadCount = null, int? TotalCount = null)
         {
+            this.ReadCount = ReadCount;
+            this.UnreadCount = UnreadCount;
+            this.TotalCount = TotalCount;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets ReadCount
         /// </summary>
         [DataMember(Name="readCount", EmitDefaultValue=false)]
         public int? ReadCount { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UnreadCount
         /// </summary>
         [DataMember(Name="unreadCount", EmitDefaultValue=false)]
         public int? UnreadCount { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TotalCount
         /// </summary>
         [DataMember(Name="totalCount", EmitDefaultValue=false)]
         public int? TotalCount { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,81 +7,86 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class AutomateQueue :  IEquatable<AutomateQueue>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AutomateQueue" /> class.
+        /// Initializes a new instance of the <see cref="AutomateQueue" />class.
         /// </summary>
-        public AutomateQueue()
+        /// <param name="Name">Name.</param>
+        /// <param name="Description">The description for the queue object..</param>
+        /// <param name="Members">The members for the queue object..</param>
+        /// <param name="LastUpdateTime">The last time that the queue was updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="LastUpdateUser">The user who last performed an update..</param>
+
+        public AutomateQueue(string Name = null, string Description = null, List<User> Members = null, DateTime? LastUpdateTime = null, User LastUpdateUser = null, )
         {
+            this.Name = Name;
+            this.Description = Description;
+            this.Members = Members;
+            this.LastUpdateTime = LastUpdateTime;
+            this.LastUpdateUser = LastUpdateUser;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// The description for the queue object.
         /// </summary>
         /// <value>The description for the queue object.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
+    
         /// <summary>
         /// The members for the queue object.
         /// </summary>
         /// <value>The members for the queue object.</value>
         [DataMember(Name="members", EmitDefaultValue=false)]
         public List<User> Members { get; set; }
-  
-        
+    
         /// <summary>
         /// The last time that the queue was updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The last time that the queue was updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="lastUpdateTime", EmitDefaultValue=false)]
         public DateTime? LastUpdateTime { get; set; }
-  
-        
+    
         /// <summary>
         /// The user who last performed an update.
         /// </summary>
         /// <value>The user who last performed an update.</value>
         [DataMember(Name="lastUpdateUser", EmitDefaultValue=false)]
         public User LastUpdateUser { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

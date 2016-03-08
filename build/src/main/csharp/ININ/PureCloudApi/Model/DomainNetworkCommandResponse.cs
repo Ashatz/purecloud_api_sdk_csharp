@@ -7,55 +7,68 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DomainNetworkCommandResponse :  IEquatable<DomainNetworkCommandResponse>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainNetworkCommandResponse" /> class.
+        /// Initializes a new instance of the <see cref="DomainNetworkCommandResponse" />class.
         /// </summary>
-        public DomainNetworkCommandResponse()
+        /// <param name="CorrelationId">CorrelationId.</param>
+        /// <param name="CommandName">CommandName.</param>
+        /// <param name="Acknowledged">Acknowledged (default to false).</param>
+        /// <param name="ErrorInfo">ErrorInfo.</param>
+
+        public DomainNetworkCommandResponse(string CorrelationId = null, string CommandName = null, bool? Acknowledged = null, ErrorDetails ErrorInfo = null)
         {
-            this.Acknowledged = false;
+            this.CorrelationId = CorrelationId;
+            this.CommandName = CommandName;
+            // use default value if no "Acknowledged" provided
+            if (Acknowledged == null)
+            {
+                this.Acknowledged = false;
+            }
+            else
+            {
+                this.Acknowledged = Acknowledged;
+            }
+            this.ErrorInfo = ErrorInfo;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets CorrelationId
         /// </summary>
         [DataMember(Name="correlationId", EmitDefaultValue=false)]
         public string CorrelationId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CommandName
         /// </summary>
         [DataMember(Name="commandName", EmitDefaultValue=false)]
         public string CommandName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Acknowledged
         /// </summary>
         [DataMember(Name="acknowledged", EmitDefaultValue=false)]
         public bool? Acknowledged { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ErrorInfo
         /// </summary>
         [DataMember(Name="errorInfo", EmitDefaultValue=false)]
         public ErrorDetails ErrorInfo { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

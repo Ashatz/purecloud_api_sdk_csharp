@@ -7,156 +7,172 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ExternalContact :  IEquatable<ExternalContact>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalContact" /> class.
+        /// Initializes a new instance of the <see cref="ExternalContact" />class.
         /// </summary>
-        public ExternalContact()
+        /// <param name="FirstName">FirstName.</param>
+        /// <param name="MiddleName">MiddleName.</param>
+        /// <param name="LastName">LastName.</param>
+        /// <param name="Salutation">Salutation.</param>
+        /// <param name="Title">Title.</param>
+        /// <param name="WorkPhone">WorkPhone.</param>
+        /// <param name="CellPhone">CellPhone.</param>
+        /// <param name="HomePhone">HomePhone.</param>
+        /// <param name="OtherPhone">OtherPhone.</param>
+        /// <param name="WorkEmail">WorkEmail.</param>
+        /// <param name="PersonalEmail">PersonalEmail.</param>
+        /// <param name="OtherEmail">OtherEmail.</param>
+        /// <param name="Address">Address.</param>
+        /// <param name="ModifyDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="CreateDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ExternalOrganization">ExternalOrganization.</param>
+
+        public ExternalContact(string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, PhoneNumber WorkPhone = null, PhoneNumber CellPhone = null, PhoneNumber HomePhone = null, PhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, Address Address = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, ExternalOrganization ExternalOrganization = null, )
         {
+            this.FirstName = FirstName;
+            this.MiddleName = MiddleName;
+            this.LastName = LastName;
+            this.Salutation = Salutation;
+            this.Title = Title;
+            this.WorkPhone = WorkPhone;
+            this.CellPhone = CellPhone;
+            this.HomePhone = HomePhone;
+            this.OtherPhone = OtherPhone;
+            this.WorkEmail = WorkEmail;
+            this.PersonalEmail = PersonalEmail;
+            this.OtherEmail = OtherEmail;
+            this.Address = Address;
+            this.ModifyDate = ModifyDate;
+            this.CreateDate = CreateDate;
+            this.ExternalOrganization = ExternalOrganization;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets FirstName
         /// </summary>
         [DataMember(Name="firstName", EmitDefaultValue=false)]
         public string FirstName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MiddleName
         /// </summary>
         [DataMember(Name="middleName", EmitDefaultValue=false)]
         public string MiddleName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets LastName
         /// </summary>
         [DataMember(Name="lastName", EmitDefaultValue=false)]
         public string LastName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Salutation
         /// </summary>
         [DataMember(Name="salutation", EmitDefaultValue=false)]
         public string Salutation { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Title
         /// </summary>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets WorkPhone
         /// </summary>
         [DataMember(Name="workPhone", EmitDefaultValue=false)]
         public PhoneNumber WorkPhone { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CellPhone
         /// </summary>
         [DataMember(Name="cellPhone", EmitDefaultValue=false)]
         public PhoneNumber CellPhone { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets HomePhone
         /// </summary>
         [DataMember(Name="homePhone", EmitDefaultValue=false)]
         public PhoneNumber HomePhone { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets OtherPhone
         /// </summary>
         [DataMember(Name="otherPhone", EmitDefaultValue=false)]
         public PhoneNumber OtherPhone { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets WorkEmail
         /// </summary>
         [DataMember(Name="workEmail", EmitDefaultValue=false)]
         public string WorkEmail { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PersonalEmail
         /// </summary>
         [DataMember(Name="personalEmail", EmitDefaultValue=false)]
         public string PersonalEmail { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets OtherEmail
         /// </summary>
         [DataMember(Name="otherEmail", EmitDefaultValue=false)]
         public string OtherEmail { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Address
         /// </summary>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public Address Address { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="modifyDate", EmitDefaultValue=false)]
         public DateTime? ModifyDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="createDate", EmitDefaultValue=false)]
         public DateTime? CreateDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ExternalOrganization
         /// </summary>
         [DataMember(Name="externalOrganization", EmitDefaultValue=false)]
         public ExternalOrganization ExternalOrganization { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

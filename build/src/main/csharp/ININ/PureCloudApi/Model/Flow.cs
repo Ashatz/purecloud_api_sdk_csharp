@@ -7,115 +7,162 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Flow :  IEquatable<Flow>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum {
+            
+            [EnumMember(Value = "INBOUNDCALL")]
+            Inboundcall,
+            
+            [EnumMember(Value = "OUTBOUNDCALL")]
+            Outboundcall,
+            
+            [EnumMember(Value = "INQUEUECALL")]
+            Inqueuecall,
+            
+            [EnumMember(Value = "SPEECH")]
+            Speech
+        }
+    
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Flow" /> class.
+        /// Initializes a new instance of the <see cref="Flow" />class.
         /// </summary>
-        public Flow()
+        /// <param name="Name">Name.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="Type">Type.</param>
+        /// <param name="LockedUser">LockedUser.</param>
+        /// <param name="Active">Active (default to false).</param>
+        /// <param name="Deleted">Deleted (default to false).</param>
+        /// <param name="PublishedVersion">PublishedVersion.</param>
+        /// <param name="CheckedInVersion">CheckedInVersion.</param>
+        /// <param name="SavedVersion">SavedVersion.</param>
+        /// <param name="System">System (default to false).</param>
+
+        public Flow(string Name = null, string Description = null, TypeEnum? Type = null, UriReference LockedUser = null, bool? Active = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion CheckedInVersion = null, FlowVersion SavedVersion = null, bool? System = null, )
         {
-            this.Active = false;
-            this.Deleted = false;
-            this.System = false;
+            this.Name = Name;
+            this.Description = Description;
+            this.Type = Type;
+            this.LockedUser = LockedUser;
+            // use default value if no "Active" provided
+            if (Active == null)
+            {
+                this.Active = false;
+            }
+            else
+            {
+                this.Active = Active;
+            }
+            // use default value if no "Deleted" provided
+            if (Deleted == null)
+            {
+                this.Deleted = false;
+            }
+            else
+            {
+                this.Deleted = Deleted;
+            }
+            this.PublishedVersion = PublishedVersion;
+            this.CheckedInVersion = CheckedInVersion;
+            this.SavedVersion = SavedVersion;
+            // use default value if no "System" provided
+            if (System == null)
+            {
+                this.System = false;
+            }
+            else
+            {
+                this.System = System;
+            }
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets LockedUser
         /// </summary>
         [DataMember(Name="lockedUser", EmitDefaultValue=false)]
         public UriReference LockedUser { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Active
         /// </summary>
         [DataMember(Name="active", EmitDefaultValue=false)]
         public bool? Active { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Deleted
         /// </summary>
         [DataMember(Name="deleted", EmitDefaultValue=false)]
         public bool? Deleted { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PublishedVersion
         /// </summary>
         [DataMember(Name="publishedVersion", EmitDefaultValue=false)]
         public FlowVersion PublishedVersion { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CheckedInVersion
         /// </summary>
         [DataMember(Name="checkedInVersion", EmitDefaultValue=false)]
         public FlowVersion CheckedInVersion { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SavedVersion
         /// </summary>
         [DataMember(Name="savedVersion", EmitDefaultValue=false)]
         public FlowVersion SavedVersion { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets System
         /// </summary>
         [DataMember(Name="system", EmitDefaultValue=false)]
         public bool? System { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

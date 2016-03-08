@@ -7,97 +7,143 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class PhoneStatus :  IEquatable<PhoneStatus>
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PhoneStatus" /> class.
-        /// </summary>
-        public PhoneStatus()
-        {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum OperationalStatusEnum {
             
+            [EnumMember(Value = "OPERATIONAL")]
+            Operational,
+            
+            [EnumMember(Value = "DEGRADED")]
+            Degraded,
+            
+            [EnumMember(Value = "OFFLINE")]
+            Offline
         }
-
-        
-        /// <summary>
-        /// The globally unique identifier for the object.
-        /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-  
-        
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum EdgesStatusEnum {
+            
+            [EnumMember(Value = "IN_SERVICE")]
+            InService,
+            
+            [EnumMember(Value = "MIXED_SERVICE")]
+            MixedService,
+            
+            [EnumMember(Value = "OUT_OF_SERVICE")]
+            OutOfService,
+            
+            [EnumMember(Value = "NO_EDGES")]
+            NoEdges
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PhoneAssignmentToEdgeTypeEnum {
+            
+            [EnumMember(Value = "PRIMARY")]
+            Primary,
+            
+            [EnumMember(Value = "SECONDARY")]
+            Secondary
+        }
+    
         /// <summary>
         /// The Operational Status of this phone
         /// </summary>
         /// <value>The Operational Status of this phone</value>
         [DataMember(Name="operationalStatus", EmitDefaultValue=false)]
-        public string OperationalStatus { get; set; }
-  
-        
+        public OperationalStatusEnum? OperationalStatus { get; set; }
+    
         /// <summary>
         /// The status of the primary or secondary Edges assigned to the phone lines.
         /// </summary>
         /// <value>The status of the primary or secondary Edges assigned to the phone lines.</value>
         [DataMember(Name="edgesStatus", EmitDefaultValue=false)]
-        public string EdgesStatus { get; set; }
-  
+        public EdgesStatusEnum? EdgesStatus { get; set; }
+    
+        /// <summary>
+        /// The phone status's edge assignment type.
+        /// </summary>
+        /// <value>The phone status's edge assignment type.</value>
+        [DataMember(Name="phoneAssignmentToEdgeType", EmitDefaultValue=false)]
+        public PhoneAssignmentToEdgeTypeEnum? PhoneAssignmentToEdgeType { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PhoneStatus" /> class.
+        /// Initializes a new instance of the <see cref="PhoneStatus" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="OperationalStatus">The Operational Status of this phone.</param>
+        /// <param name="EdgesStatus">The status of the primary or secondary Edges assigned to the phone lines..</param>
+        /// <param name="Provision">Provision information for this phone.</param>
+        /// <param name="LineStatuses">A list of LineStatus information for each of the lines of this phone.</param>
+        /// <param name="PhoneAssignmentToEdgeType">The phone status&#39;s edge assignment type..</param>
+        /// <param name="Edge">The URI of the edge that provided this status information..</param>
+
+        public PhoneStatus(string Name = null, OperationalStatusEnum? OperationalStatus = null, EdgesStatusEnum? EdgesStatus = null, ProvisionInfo Provision = null, List<LineStatus> LineStatuses = null, PhoneAssignmentToEdgeTypeEnum? PhoneAssignmentToEdgeType = null, UriReference Edge = null, )
+        {
+            this.Name = Name;
+            this.OperationalStatus = OperationalStatus;
+            this.EdgesStatus = EdgesStatus;
+            this.Provision = Provision;
+            this.LineStatuses = LineStatuses;
+            this.PhoneAssignmentToEdgeType = PhoneAssignmentToEdgeType;
+            this.Edge = Edge;
+            
+        }
         
+    
+        /// <summary>
+        /// The globally unique identifier for the object.
+        /// </summary>
+        /// <value>The globally unique identifier for the object.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; private set; }
+    
+        /// <summary>
+        /// Gets or Sets Name
+        /// </summary>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+    
         /// <summary>
         /// Provision information for this phone
         /// </summary>
         /// <value>Provision information for this phone</value>
         [DataMember(Name="provision", EmitDefaultValue=false)]
         public ProvisionInfo Provision { get; set; }
-  
-        
+    
         /// <summary>
         /// A list of LineStatus information for each of the lines of this phone
         /// </summary>
         /// <value>A list of LineStatus information for each of the lines of this phone</value>
         [DataMember(Name="lineStatuses", EmitDefaultValue=false)]
         public List<LineStatus> LineStatuses { get; set; }
-  
-        
-        /// <summary>
-        /// The phone status's edge assignment type.
-        /// </summary>
-        /// <value>The phone status's edge assignment type.</value>
-        [DataMember(Name="phoneAssignmentToEdgeType", EmitDefaultValue=false)]
-        public string PhoneAssignmentToEdgeType { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI of the edge that provided this status information.
         /// </summary>
         /// <value>The URI of the edge that provided this status information.</value>
         [DataMember(Name="edge", EmitDefaultValue=false)]
         public UriReference Edge { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

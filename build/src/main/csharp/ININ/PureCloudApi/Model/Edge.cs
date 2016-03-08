@@ -7,277 +7,384 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Edge :  IEquatable<Edge>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StateEnum {
+            
+            [EnumMember(Value = "ACTIVE")]
+            Active,
+            
+            [EnumMember(Value = "DELETED")]
+            Deleted,
+            
+            [EnumMember(Value = "INACTIVE")]
+            Inactive
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StatusCodeEnum {
+            
+            [EnumMember(Value = "NEW")]
+            New,
+            
+            [EnumMember(Value = "AWAITING_CONNECTION")]
+            AwaitingConnection,
+            
+            [EnumMember(Value = "AWAITING_FINGERPRINT")]
+            AwaitingFingerprint,
+            
+            [EnumMember(Value = "AWAITING_FINGERPRINT_VERIFICATION")]
+            AwaitingFingerprintVerification,
+            
+            [EnumMember(Value = "FINGERPRINT_VERIFIED")]
+            FingerprintVerified,
+            
+            [EnumMember(Value = "AWAITING_BOOTSTRAP")]
+            AwaitingBootstrap,
+            
+            [EnumMember(Value = "ACTIVE")]
+            Active,
+            
+            [EnumMember(Value = "INACTIVE")]
+            Inactive,
+            
+            [EnumMember(Value = "RMA")]
+            Rma,
+            
+            [EnumMember(Value = "UNPAIRING")]
+            Unpairing,
+            
+            [EnumMember(Value = "UNPAIRED")]
+            Unpaired
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum OnlineStatusEnum {
+            
+            [EnumMember(Value = "ONLINE")]
+            Online,
+            
+            [EnumMember(Value = "OFFLINE")]
+            Offline
+        }
+    
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public StateEnum? State { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets StatusCode
+        /// </summary>
+        [DataMember(Name="statusCode", EmitDefaultValue=false)]
+        public StatusCodeEnum? StatusCode { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets OnlineStatus
+        /// </summary>
+        [DataMember(Name="onlineStatus", EmitDefaultValue=false)]
+        public OnlineStatusEnum? OnlineStatus { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Edge" /> class.
+        /// Initializes a new instance of the <see cref="Edge" />class.
         /// </summary>
-        public Edge()
+        /// <param name="Name">Name.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="Version">Version.</param>
+        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ModifiedBy">ModifiedBy.</param>
+        /// <param name="CreatedBy">CreatedBy.</param>
+        /// <param name="State">State.</param>
+        /// <param name="ModifiedByApp">ModifiedByApp.</param>
+        /// <param name="CreatedByApp">CreatedByApp.</param>
+        /// <param name="Interfaces">Interfaces.</param>
+        /// <param name="Make">Make.</param>
+        /// <param name="Model">Model.</param>
+        /// <param name="ApiVersion">ApiVersion.</param>
+        /// <param name="SoftwareVersion">SoftwareVersion.</param>
+        /// <param name="SoftwareVersionTimestamp">SoftwareVersionTimestamp.</param>
+        /// <param name="SoftwareVersionPlatform">SoftwareVersionPlatform.</param>
+        /// <param name="SoftwareVersionConfiguration">SoftwareVersionConfiguration.</param>
+        /// <param name="FullSoftwareVersion">FullSoftwareVersion.</param>
+        /// <param name="PairingId">PairingId.</param>
+        /// <param name="Fingerprint">Fingerprint.</param>
+        /// <param name="FingerprintHint">FingerprintHint.</param>
+        /// <param name="CurrentVersion">CurrentVersion.</param>
+        /// <param name="StagedVersion">StagedVersion.</param>
+        /// <param name="Patch">Patch.</param>
+        /// <param name="StatusCode">StatusCode.</param>
+        /// <param name="EdgeGroup">EdgeGroup.</param>
+        /// <param name="Site">Site.</param>
+        /// <param name="SoftwareStatus">SoftwareStatus.</param>
+        /// <param name="OnlineStatus">OnlineStatus.</param>
+        /// <param name="SerialNumber">SerialNumber.</param>
+        /// <param name="PhysicalEdge">PhysicalEdge (default to false).</param>
+        /// <param name="Managed">Managed (default to false).</param>
+
+        public Edge(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<EdgeInterface> Interfaces = null, string Make = null, string Model = null, string ApiVersion = null, string SoftwareVersion = null, string SoftwareVersionTimestamp = null, string SoftwareVersionPlatform = null, string SoftwareVersionConfiguration = null, string FullSoftwareVersion = null, string PairingId = null, string Fingerprint = null, string FingerprintHint = null, string CurrentVersion = null, string StagedVersion = null, string Patch = null, StatusCodeEnum? StatusCode = null, EdgeGroup EdgeGroup = null, UriReference Site = null, DomainEdgeSoftwareUpdateDto SoftwareStatus = null, OnlineStatusEnum? OnlineStatus = null, string SerialNumber = null, bool? PhysicalEdge = null, bool? Managed = null, )
         {
-            this.PhysicalEdge = false;
-            this.Managed = false;
+            this.Name = Name;
+            this.Description = Description;
+            this.Version = Version;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.ModifiedBy = ModifiedBy;
+            this.CreatedBy = CreatedBy;
+            this.State = State;
+            this.ModifiedByApp = ModifiedByApp;
+            this.CreatedByApp = CreatedByApp;
+            this.Interfaces = Interfaces;
+            this.Make = Make;
+            this.Model = Model;
+            this.ApiVersion = ApiVersion;
+            this.SoftwareVersion = SoftwareVersion;
+            this.SoftwareVersionTimestamp = SoftwareVersionTimestamp;
+            this.SoftwareVersionPlatform = SoftwareVersionPlatform;
+            this.SoftwareVersionConfiguration = SoftwareVersionConfiguration;
+            this.FullSoftwareVersion = FullSoftwareVersion;
+            this.PairingId = PairingId;
+            this.Fingerprint = Fingerprint;
+            this.FingerprintHint = FingerprintHint;
+            this.CurrentVersion = CurrentVersion;
+            this.StagedVersion = StagedVersion;
+            this.Patch = Patch;
+            this.StatusCode = StatusCode;
+            this.EdgeGroup = EdgeGroup;
+            this.Site = Site;
+            this.SoftwareStatus = SoftwareStatus;
+            this.OnlineStatus = OnlineStatus;
+            this.SerialNumber = SerialNumber;
+            // use default value if no "PhysicalEdge" provided
+            if (PhysicalEdge == null)
+            {
+                this.PhysicalEdge = false;
+            }
+            else
+            {
+                this.PhysicalEdge = PhysicalEdge;
+            }
+            // use default value if no "Managed" provided
+            if (Managed == null)
+            {
+                this.Managed = false;
+            }
+            else
+            {
+                this.Managed = Managed;
+            }
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ModifiedBy
         /// </summary>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public string ModifiedBy { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CreatedBy
         /// </summary>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public string CreatedBy { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets State
-        /// </summary>
-        [DataMember(Name="state", EmitDefaultValue=false)]
-        public string State { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ModifiedByApp
         /// </summary>
         [DataMember(Name="modifiedByApp", EmitDefaultValue=false)]
         public string ModifiedByApp { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CreatedByApp
         /// </summary>
         [DataMember(Name="createdByApp", EmitDefaultValue=false)]
         public string CreatedByApp { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Interfaces
         /// </summary>
         [DataMember(Name="interfaces", EmitDefaultValue=false)]
         public List<EdgeInterface> Interfaces { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Make
         /// </summary>
         [DataMember(Name="make", EmitDefaultValue=false)]
         public string Make { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Model
         /// </summary>
         [DataMember(Name="model", EmitDefaultValue=false)]
         public string Model { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ApiVersion
         /// </summary>
         [DataMember(Name="apiVersion", EmitDefaultValue=false)]
         public string ApiVersion { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SoftwareVersion
         /// </summary>
         [DataMember(Name="softwareVersion", EmitDefaultValue=false)]
         public string SoftwareVersion { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SoftwareVersionTimestamp
         /// </summary>
         [DataMember(Name="softwareVersionTimestamp", EmitDefaultValue=false)]
         public string SoftwareVersionTimestamp { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SoftwareVersionPlatform
         /// </summary>
         [DataMember(Name="softwareVersionPlatform", EmitDefaultValue=false)]
         public string SoftwareVersionPlatform { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SoftwareVersionConfiguration
         /// </summary>
         [DataMember(Name="softwareVersionConfiguration", EmitDefaultValue=false)]
         public string SoftwareVersionConfiguration { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FullSoftwareVersion
         /// </summary>
         [DataMember(Name="fullSoftwareVersion", EmitDefaultValue=false)]
         public string FullSoftwareVersion { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PairingId
         /// </summary>
         [DataMember(Name="pairingId", EmitDefaultValue=false)]
         public string PairingId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Fingerprint
         /// </summary>
         [DataMember(Name="fingerprint", EmitDefaultValue=false)]
         public string Fingerprint { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FingerprintHint
         /// </summary>
         [DataMember(Name="fingerprintHint", EmitDefaultValue=false)]
         public string FingerprintHint { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CurrentVersion
         /// </summary>
         [DataMember(Name="currentVersion", EmitDefaultValue=false)]
         public string CurrentVersion { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets StagedVersion
         /// </summary>
         [DataMember(Name="stagedVersion", EmitDefaultValue=false)]
         public string StagedVersion { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Patch
         /// </summary>
         [DataMember(Name="patch", EmitDefaultValue=false)]
         public string Patch { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets StatusCode
-        /// </summary>
-        [DataMember(Name="statusCode", EmitDefaultValue=false)]
-        public string StatusCode { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EdgeGroup
         /// </summary>
         [DataMember(Name="edgeGroup", EmitDefaultValue=false)]
         public EdgeGroup EdgeGroup { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Site
         /// </summary>
         [DataMember(Name="site", EmitDefaultValue=false)]
         public UriReference Site { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SoftwareStatus
         /// </summary>
         [DataMember(Name="softwareStatus", EmitDefaultValue=false)]
         public DomainEdgeSoftwareUpdateDto SoftwareStatus { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets OnlineStatus
-        /// </summary>
-        [DataMember(Name="onlineStatus", EmitDefaultValue=false)]
-        public string OnlineStatus { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SerialNumber
         /// </summary>
         [DataMember(Name="serialNumber", EmitDefaultValue=false)]
         public string SerialNumber { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PhysicalEdge
         /// </summary>
         [DataMember(Name="physicalEdge", EmitDefaultValue=false)]
         public bool? PhysicalEdge { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Managed
         /// </summary>
         [DataMember(Name="managed", EmitDefaultValue=false)]
         public bool? Managed { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

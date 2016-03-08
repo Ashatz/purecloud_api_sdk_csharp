@@ -7,40 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class EvaluationAssignment :  IEquatable<EvaluationAssignment>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationAssignment" /> class.
+        /// Initializes a new instance of the <see cref="EvaluationAssignment" />class.
         /// </summary>
-        public EvaluationAssignment()
+        /// <param name="EvaluationForm">EvaluationForm.</param>
+        /// <param name="User">User.</param>
+
+        public EvaluationAssignment(EvaluationForm EvaluationForm = null, User User = null)
         {
+            this.EvaluationForm = EvaluationForm;
+            this.User = User;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets EvaluationForm
         /// </summary>
         [DataMember(Name="evaluationForm", EmitDefaultValue=false)]
         public EvaluationForm EvaluationForm { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,142 +7,156 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ExternalOrganization :  IEquatable<ExternalOrganization>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalOrganization" /> class.
+        /// Initializes a new instance of the <see cref="ExternalOrganization" />class.
         /// </summary>
-        public ExternalOrganization()
+        /// <param name="Name">Name.</param>
+        /// <param name="CompanyType">CompanyType.</param>
+        /// <param name="Industry">Industry.</param>
+        /// <param name="PrimaryContactId">PrimaryContactId.</param>
+        /// <param name="Address">Address.</param>
+        /// <param name="PhoneNumber">PhoneNumber.</param>
+        /// <param name="FaxNumber">FaxNumber.</param>
+        /// <param name="EmployeeCount">EmployeeCount.</param>
+        /// <param name="Revenue">Revenue.</param>
+        /// <param name="Tags">Tags.</param>
+        /// <param name="Websites">Websites.</param>
+        /// <param name="Tickers">Tickers.</param>
+        /// <param name="ModifyDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="CreateDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+
+        public ExternalOrganization(string Name = null, string CompanyType = null, string Industry = null, string PrimaryContactId = null, Address Address = null, PhoneNumber PhoneNumber = null, PhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<Ticker> Tickers = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, )
         {
+            this.Name = Name;
+            this.CompanyType = CompanyType;
+            this.Industry = Industry;
+            this.PrimaryContactId = PrimaryContactId;
+            this.Address = Address;
+            this.PhoneNumber = PhoneNumber;
+            this.FaxNumber = FaxNumber;
+            this.EmployeeCount = EmployeeCount;
+            this.Revenue = Revenue;
+            this.Tags = Tags;
+            this.Websites = Websites;
+            this.Tickers = Tickers;
+            this.ModifyDate = ModifyDate;
+            this.CreateDate = CreateDate;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CompanyType
         /// </summary>
         [DataMember(Name="companyType", EmitDefaultValue=false)]
         public string CompanyType { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Industry
         /// </summary>
         [DataMember(Name="industry", EmitDefaultValue=false)]
         public string Industry { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PrimaryContactId
         /// </summary>
         [DataMember(Name="primaryContactId", EmitDefaultValue=false)]
         public string PrimaryContactId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Address
         /// </summary>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public Address Address { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PhoneNumber
         /// </summary>
         [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
         public PhoneNumber PhoneNumber { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FaxNumber
         /// </summary>
         [DataMember(Name="faxNumber", EmitDefaultValue=false)]
         public PhoneNumber FaxNumber { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EmployeeCount
         /// </summary>
         [DataMember(Name="employeeCount", EmitDefaultValue=false)]
         public long? EmployeeCount { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Revenue
         /// </summary>
         [DataMember(Name="revenue", EmitDefaultValue=false)]
         public long? Revenue { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Tags
         /// </summary>
         [DataMember(Name="tags", EmitDefaultValue=false)]
         public List<string> Tags { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Websites
         /// </summary>
         [DataMember(Name="websites", EmitDefaultValue=false)]
         public List<string> Websites { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Tickers
         /// </summary>
         [DataMember(Name="tickers", EmitDefaultValue=false)]
         public List<Ticker> Tickers { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="modifyDate", EmitDefaultValue=false)]
         public DateTime? ModifyDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="createDate", EmitDefaultValue=false)]
         public DateTime? CreateDate { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

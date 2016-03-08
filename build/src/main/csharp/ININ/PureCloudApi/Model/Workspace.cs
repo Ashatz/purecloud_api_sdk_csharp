@@ -7,108 +7,134 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Workspace :  IEquatable<Workspace>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum {
+            
+            [EnumMember(Value = "USER")]
+            User,
+            
+            [EnumMember(Value = "GROUP")]
+            Group
+        }
+    
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Workspace" /> class.
+        /// Initializes a new instance of the <see cref="Workspace" />class.
         /// </summary>
-        public Workspace()
+        /// <param name="Name">Name.</param>
+        /// <param name="Type">Type.</param>
+        /// <param name="IsCurrentUserWorkspace">IsCurrentUserWorkspace (default to false).</param>
+        /// <param name="User">User.</param>
+        /// <param name="Bucket">Bucket.</param>
+        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Summary">Summary.</param>
+        /// <param name="Acl">Acl.</param>
+
+        public Workspace(string Name = null, TypeEnum? Type = null, bool? IsCurrentUserWorkspace = null, UriReference User = null, string Bucket = null, DateTime? DateCreated = null, DateTime? DateModified = null, WorkspaceSummary Summary = null, List<string> Acl = null, )
         {
-            this.IsCurrentUserWorkspace = false;
+            this.Name = Name;
+            this.Type = Type;
+            // use default value if no "IsCurrentUserWorkspace" provided
+            if (IsCurrentUserWorkspace == null)
+            {
+                this.IsCurrentUserWorkspace = false;
+            }
+            else
+            {
+                this.IsCurrentUserWorkspace = IsCurrentUserWorkspace;
+            }
+            this.User = User;
+            this.Bucket = Bucket;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.Summary = Summary;
+            this.Acl = Acl;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IsCurrentUserWorkspace
         /// </summary>
         [DataMember(Name="isCurrentUserWorkspace", EmitDefaultValue=false)]
         public bool? IsCurrentUserWorkspace { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public UriReference User { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Bucket
         /// </summary>
         [DataMember(Name="bucket", EmitDefaultValue=false)]
         public string Bucket { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Summary
         /// </summary>
         [DataMember(Name="summary", EmitDefaultValue=false)]
         public WorkspaceSummary Summary { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Acl
         /// </summary>
         [DataMember(Name="acl", EmitDefaultValue=false)]
         public List<string> Acl { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,84 +7,100 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Station :  IEquatable<Station>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StatusEnum {
+            
+            [EnumMember(Value = "AVAILABLE")]
+            Available,
+            
+            [EnumMember(Value = "ASSOCIATED")]
+            Associated
+        }
+    
+        /// <summary>
+        /// Gets or Sets Status
+        /// </summary>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Station" /> class.
+        /// Initializes a new instance of the <see cref="Station" />class.
         /// </summary>
-        public Station()
+        /// <param name="Name">Name.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="Status">Status.</param>
+        /// <param name="UserId">UserId.</param>
+        /// <param name="PrimaryEdge">PrimaryEdge.</param>
+        /// <param name="SecondaryEdge">SecondaryEdge.</param>
+
+        public Station(string Name = null, string Description = null, StatusEnum? Status = null, string UserId = null, UriReference PrimaryEdge = null, UriReference SecondaryEdge = null, )
         {
+            this.Name = Name;
+            this.Description = Description;
+            this.Status = Status;
+            this.UserId = UserId;
+            this.PrimaryEdge = PrimaryEdge;
+            this.SecondaryEdge = SecondaryEdge;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Status
-        /// </summary>
-        [DataMember(Name="status", EmitDefaultValue=false)]
-        public string Status { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PrimaryEdge
         /// </summary>
         [DataMember(Name="primaryEdge", EmitDefaultValue=false)]
         public UriReference PrimaryEdge { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SecondaryEdge
         /// </summary>
         [DataMember(Name="secondaryEdge", EmitDefaultValue=false)]
         public UriReference SecondaryEdge { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

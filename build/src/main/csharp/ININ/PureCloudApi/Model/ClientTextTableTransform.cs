@@ -7,82 +7,92 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ClientTextTableTransform :  IEquatable<ClientTextTableTransform>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ClientTextTableTransform" /> class.
+        /// Initializes a new instance of the <see cref="ClientTextTableTransform" />class.
         /// </summary>
-        public ClientTextTableTransform()
+        /// <param name="Id">Id.</param>
+        /// <param name="EndpointId">EndpointId.</param>
+        /// <param name="FilenameReplaces">FilenameReplaces.</param>
+        /// <param name="Tags">Tags.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="Comments">Comments.</param>
+        /// <param name="Delimiter">Delimiter.</param>
+        /// <param name="Table">Table.</param>
+
+        public ClientTextTableTransform(string Id = null, string EndpointId = null, List<BasicTransform> FilenameReplaces = null, List<TagModel> Tags = null, string Name = null, string Comments = null, string Delimiter = null, TableTransform Table = null)
         {
+            this.Id = Id;
+            this.EndpointId = EndpointId;
+            this.FilenameReplaces = FilenameReplaces;
+            this.Tags = Tags;
+            this.Name = Name;
+            this.Comments = Comments;
+            this.Delimiter = Delimiter;
+            this.Table = Table;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EndpointId
         /// </summary>
         [DataMember(Name="endpointId", EmitDefaultValue=false)]
         public string EndpointId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FilenameReplaces
         /// </summary>
         [DataMember(Name="filenameReplaces", EmitDefaultValue=false)]
         public List<BasicTransform> FilenameReplaces { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Tags
         /// </summary>
         [DataMember(Name="tags", EmitDefaultValue=false)]
         public List<TagModel> Tags { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Comments
         /// </summary>
         [DataMember(Name="comments", EmitDefaultValue=false)]
         public string Comments { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Delimiter
         /// </summary>
         [DataMember(Name="delimiter", EmitDefaultValue=false)]
         public string Delimiter { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Table
         /// </summary>
         [DataMember(Name="table", EmitDefaultValue=false)]
         public TableTransform Table { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

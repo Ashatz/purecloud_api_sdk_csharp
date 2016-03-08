@@ -7,34 +7,58 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ConsultTransferUpdate :  IEquatable<ConsultTransferUpdate>
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ConsultTransferUpdate" /> class.
-        /// </summary>
-        public ConsultTransferUpdate()
-        {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum SpeakToEnum {
             
+            [EnumMember(Value = "DESTINATION")]
+            Destination,
+            
+            [EnumMember(Value = "OBJECT")]
+            Object,
+            
+            [EnumMember(Value = "BOTH")]
+            Both
         }
-
-        
+    
         /// <summary>
         /// Determines to whom the initiating participant is speaking.
         /// </summary>
         /// <value>Determines to whom the initiating participant is speaking.</value>
         [DataMember(Name="speakTo", EmitDefaultValue=false)]
-        public string SpeakTo { get; set; }
-  
+        public SpeakToEnum? SpeakTo { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ConsultTransferUpdate" /> class.
+        /// Initializes a new instance of the <see cref="ConsultTransferUpdate" />class.
+        /// </summary>
+        /// <param name="SpeakTo">Determines to whom the initiating participant is speaking. (required).</param>
+
+        public ConsultTransferUpdate(SpeakToEnum? SpeakTo = null)
+        {
+            // to ensure "SpeakTo" is required (not null)
+            if (SpeakTo == null)
+            {
+                throw new InvalidDataException("SpeakTo is a required property for ConsultTransferUpdate and cannot be null");
+            }
+            else
+            {
+                this.SpeakTo = SpeakTo;
+            }
+            
+        }
         
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

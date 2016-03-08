@@ -7,90 +7,136 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ChatSearchRequest :  IEquatable<ChatSearchRequest>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum OrderEnum {
+            
+            [EnumMember(Value = "SCORE")]
+            Score,
+            
+            [EnumMember(Value = "RECENT")]
+            Recent
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ExpandEnum {
+            
+            [EnumMember(Value = "to")]
+            To,
+            
+            [EnumMember(Value = "from")]
+            From
+        }
+    
+        /// <summary>
+        /// Sort order of results by score or most recent. Default is by score
+        /// </summary>
+        /// <value>Sort order of results by score or most recent. Default is by score</value>
+        [DataMember(Name="order", EmitDefaultValue=false)]
+        public OrderEnum? Order { get; set; }
+    
+        /// <summary>
+        /// Expand the 'to' or 'from' user details.
+        /// </summary>
+        /// <value>Expand the 'to' or 'from' user details.</value>
+        [DataMember(Name="expand", EmitDefaultValue=false)]
+        public ExpandEnum? Expand { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatSearchRequest" /> class.
+        /// Initializes a new instance of the <see cref="ChatSearchRequest" />class.
         /// </summary>
-        public ChatSearchRequest()
+        /// <param name="Query">Search terms can be AND&#39;d together. Example: foo AND bar (required).</param>
+        /// <param name="Order">Sort order of results by score or most recent. Default is by score (required).</param>
+        /// <param name="TargetJids">A list of XMPP JIDs to consider. Default is all permissible JIDs. A permissible JID is defined as any JID of a person with whom you have chatted, or any group in which you are currently a member..</param>
+        /// <param name="PageSize">The maximum number of hits to receive in the response. Default: 10, Maximum: 50].</param>
+        /// <param name="PageNumber">The number of hits to skip before returning results. Default: 0.</param>
+        /// <param name="FromDate">Consider hits after this date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ToDate">Consider hits before this date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Expand">Expand the &#39;to&#39; or &#39;from&#39; user details..</param>
+
+        public ChatSearchRequest(string Query = null, OrderEnum? Order = null, List<string> TargetJids = null, int? PageSize = null, int? PageNumber = null, DateTime? FromDate = null, DateTime? ToDate = null, ExpandEnum? Expand = null)
         {
+            // to ensure "Query" is required (not null)
+            if (Query == null)
+            {
+                throw new InvalidDataException("Query is a required property for ChatSearchRequest and cannot be null");
+            }
+            else
+            {
+                this.Query = Query;
+            }
+            // to ensure "Order" is required (not null)
+            if (Order == null)
+            {
+                throw new InvalidDataException("Order is a required property for ChatSearchRequest and cannot be null");
+            }
+            else
+            {
+                this.Order = Order;
+            }
+            this.TargetJids = TargetJids;
+            this.PageSize = PageSize;
+            this.PageNumber = PageNumber;
+            this.FromDate = FromDate;
+            this.ToDate = ToDate;
+            this.Expand = Expand;
             
         }
-
         
+    
         /// <summary>
         /// Search terms can be AND'd together. Example: foo AND bar
         /// </summary>
         /// <value>Search terms can be AND'd together. Example: foo AND bar</value>
         [DataMember(Name="query", EmitDefaultValue=false)]
         public string Query { get; set; }
-  
-        
-        /// <summary>
-        /// Sort order of results by score or most recent. Default is by score
-        /// </summary>
-        /// <value>Sort order of results by score or most recent. Default is by score</value>
-        [DataMember(Name="order", EmitDefaultValue=false)]
-        public string Order { get; set; }
-  
-        
+    
         /// <summary>
         /// A list of XMPP JIDs to consider. Default is all permissible JIDs. A permissible JID is defined as any JID of a person with whom you have chatted, or any group in which you are currently a member.
         /// </summary>
         /// <value>A list of XMPP JIDs to consider. Default is all permissible JIDs. A permissible JID is defined as any JID of a person with whom you have chatted, or any group in which you are currently a member.</value>
         [DataMember(Name="targetJids", EmitDefaultValue=false)]
         public List<string> TargetJids { get; set; }
-  
-        
+    
         /// <summary>
         /// The maximum number of hits to receive in the response. Default: 10, Maximum: 50]
         /// </summary>
         /// <value>The maximum number of hits to receive in the response. Default: 10, Maximum: 50]</value>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
-  
-        
+    
         /// <summary>
         /// The number of hits to skip before returning results. Default: 0
         /// </summary>
         /// <value>The number of hits to skip before returning results. Default: 0</value>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
-  
-        
+    
         /// <summary>
         /// Consider hits after this date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Consider hits after this date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="fromDate", EmitDefaultValue=false)]
         public DateTime? FromDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Consider hits before this date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Consider hits before this date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="toDate", EmitDefaultValue=false)]
         public DateTime? ToDate { get; set; }
-  
-        
-        /// <summary>
-        /// Expand the 'to' or 'from' user details.
-        /// </summary>
-        /// <value>Expand the 'to' or 'from' user details.</value>
-        [DataMember(Name="expand", EmitDefaultValue=false)]
-        public string Expand { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

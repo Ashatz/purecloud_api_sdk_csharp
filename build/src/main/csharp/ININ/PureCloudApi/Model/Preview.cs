@@ -7,90 +7,108 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Preview :  IEquatable<Preview>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Preview" /> class.
+        /// Initializes a new instance of the <see cref="Preview" />class.
         /// </summary>
-        public Preview()
+        /// <param name="Id">Id.</param>
+        /// <param name="SelfUri">SelfUri.</param>
+        /// <param name="Campaign">Campaign.</param>
+        /// <param name="ContactList">ContactList.</param>
+        /// <param name="Contact">Contact.</param>
+        /// <param name="AvailablePhoneNumbers">AvailablePhoneNumbers.</param>
+        /// <param name="RemainingSeconds">RemainingSeconds.</param>
+        /// <param name="ScriptId">ScriptId.</param>
+        /// <param name="TimedOut">TimedOut (default to false).</param>
+
+        public Preview(string Id = null, string SelfUri = null, Campaign Campaign = null, ContactList ContactList = null, Contact Contact = null, List<string> AvailablePhoneNumbers = null, int? RemainingSeconds = null, string ScriptId = null, bool? TimedOut = null)
         {
-            this.TimedOut = false;
+            this.Id = Id;
+            this.SelfUri = SelfUri;
+            this.Campaign = Campaign;
+            this.ContactList = ContactList;
+            this.Contact = Contact;
+            this.AvailablePhoneNumbers = AvailablePhoneNumbers;
+            this.RemainingSeconds = RemainingSeconds;
+            this.ScriptId = ScriptId;
+            // use default value if no "TimedOut" provided
+            if (TimedOut == null)
+            {
+                this.TimedOut = false;
+            }
+            else
+            {
+                this.TimedOut = TimedOut;
+            }
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SelfUri
         /// </summary>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Campaign
         /// </summary>
         [DataMember(Name="campaign", EmitDefaultValue=false)]
         public Campaign Campaign { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ContactList
         /// </summary>
         [DataMember(Name="contactList", EmitDefaultValue=false)]
         public ContactList ContactList { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Contact
         /// </summary>
         [DataMember(Name="contact", EmitDefaultValue=false)]
         public Contact Contact { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AvailablePhoneNumbers
         /// </summary>
         [DataMember(Name="availablePhoneNumbers", EmitDefaultValue=false)]
         public List<string> AvailablePhoneNumbers { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets RemainingSeconds
         /// </summary>
         [DataMember(Name="remainingSeconds", EmitDefaultValue=false)]
         public int? RemainingSeconds { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ScriptId
         /// </summary>
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TimedOut
         /// </summary>
         [DataMember(Name="timedOut", EmitDefaultValue=false)]
         public bool? TimedOut { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

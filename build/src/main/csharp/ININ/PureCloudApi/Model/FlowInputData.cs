@@ -7,34 +7,37 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// launch parameters or initializations for variables in the flow.
     /// </summary>
     [DataContract]
     public partial class FlowInputData :  IEquatable<FlowInputData>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowInputData" /> class.
+        /// Initializes a new instance of the <see cref="FlowInputData" />class.
         /// </summary>
-        public FlowInputData()
+        /// <param name="LinkedDocumentIds">A list of document IDs to link with the new flow instance..</param>
+
+        public FlowInputData(List<string> LinkedDocumentIds = null)
         {
+            this.LinkedDocumentIds = LinkedDocumentIds;
             
         }
-
         
+    
         /// <summary>
         /// A list of document IDs to link with the new flow instance.
         /// </summary>
         /// <value>A list of document IDs to link with the new flow instance.</value>
         [DataMember(Name="linkedDocumentIds", EmitDefaultValue=false)]
         public List<string> LinkedDocumentIds { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

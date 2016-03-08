@@ -7,113 +7,122 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class TransformProgress :  IEquatable<TransformProgress>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="TransformProgress" /> class.
+        /// Initializes a new instance of the <see cref="TransformProgress" />class.
         /// </summary>
-        public TransformProgress()
+        /// <param name="Name">Name.</param>
+        /// <param name="Service">Name of this service.</param>
+        /// <param name="User">User unique identifier.</param>
+        /// <param name="UploadTime">Time when file was uploaded. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Filename">Name of the file being parsed.</param>
+        /// <param name="Tags">Tag matching for searching transformation schemas in use.</param>
+        /// <param name="Progress">State of parsing progress for this upload transformation.</param>
+        /// <param name="Model">ID of the ratesheet.</param>
+        /// <param name="Errors">Errors encountered during parsing.</param>
+
+        public TransformProgress(string Name = null, string Service = null, User User = null, DateTime? UploadTime = null, string Filename = null, List<TagModel> Tags = null, ProgressModel Progress = null, TransformModel Model = null, List<ErrorBody> Errors = null, )
         {
+            this.Name = Name;
+            this.Service = Service;
+            this.User = User;
+            this.UploadTime = UploadTime;
+            this.Filename = Filename;
+            this.Tags = Tags;
+            this.Progress = Progress;
+            this.Model = Model;
+            this.Errors = Errors;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Name of this service
         /// </summary>
         /// <value>Name of this service</value>
         [DataMember(Name="service", EmitDefaultValue=false)]
         public string Service { get; set; }
-  
-        
+    
         /// <summary>
         /// User unique identifier
         /// </summary>
         /// <value>User unique identifier</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
-  
-        
+    
         /// <summary>
         /// Time when file was uploaded. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Time when file was uploaded. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="uploadTime", EmitDefaultValue=false)]
         public DateTime? UploadTime { get; set; }
-  
-        
+    
         /// <summary>
         /// Name of the file being parsed
         /// </summary>
         /// <value>Name of the file being parsed</value>
         [DataMember(Name="filename", EmitDefaultValue=false)]
         public string Filename { get; set; }
-  
-        
+    
         /// <summary>
         /// Tag matching for searching transformation schemas in use
         /// </summary>
         /// <value>Tag matching for searching transformation schemas in use</value>
         [DataMember(Name="tags", EmitDefaultValue=false)]
         public List<TagModel> Tags { get; set; }
-  
-        
+    
         /// <summary>
         /// State of parsing progress for this upload transformation
         /// </summary>
         /// <value>State of parsing progress for this upload transformation</value>
         [DataMember(Name="progress", EmitDefaultValue=false)]
         public ProgressModel Progress { get; set; }
-  
-        
+    
         /// <summary>
         /// ID of the ratesheet
         /// </summary>
         /// <value>ID of the ratesheet</value>
         [DataMember(Name="model", EmitDefaultValue=false)]
         public TransformModel Model { get; set; }
-  
-        
+    
         /// <summary>
         /// Errors encountered during parsing
         /// </summary>
         /// <value>Errors encountered during parsing</value>
         [DataMember(Name="errors", EmitDefaultValue=false)]
         public List<ErrorBody> Errors { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

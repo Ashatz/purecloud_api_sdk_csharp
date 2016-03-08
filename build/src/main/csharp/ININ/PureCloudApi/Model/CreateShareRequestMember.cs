@@ -7,40 +7,54 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class CreateShareRequestMember :  IEquatable<CreateShareRequestMember>
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CreateShareRequestMember" /> class.
-        /// </summary>
-        public CreateShareRequestMember()
-        {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum MemberTypeEnum {
             
+            [EnumMember(Value = "USER")]
+            User,
+            
+            [EnumMember(Value = "PUBLIC")]
+            Public
         }
-
-        
+    
         /// <summary>
         /// Gets or Sets MemberType
         /// </summary>
         [DataMember(Name="memberType", EmitDefaultValue=false)]
-        public string MemberType { get; set; }
-  
+        public MemberTypeEnum? MemberType { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CreateShareRequestMember" /> class.
+        /// Initializes a new instance of the <see cref="CreateShareRequestMember" />class.
+        /// </summary>
+        /// <param name="MemberType">MemberType.</param>
+        /// <param name="Member">Member.</param>
+
+        public CreateShareRequestMember(MemberTypeEnum? MemberType = null, Entity Member = null)
+        {
+            this.MemberType = MemberType;
+            this.Member = Member;
+            
+        }
         
+    
         /// <summary>
         /// Gets or Sets Member
         /// </summary>
         [DataMember(Name="member", EmitDefaultValue=false)]
         public Entity Member { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

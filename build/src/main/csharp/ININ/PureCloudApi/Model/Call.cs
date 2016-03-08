@@ -7,143 +7,280 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Call :  IEquatable<Call>
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Call" /> class.
-        /// </summary>
-        public Call()
-        {
-            this.Recording = false;
-            this.Muted = false;
-            this.Confined = false;
-            this.Held = false;
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StateEnum {
             
+            [EnumMember(Value = "ALERTING")]
+            Alerting,
+            
+            [EnumMember(Value = "DIALING")]
+            Dialing,
+            
+            [EnumMember(Value = "CONTACTING")]
+            Contacting,
+            
+            [EnumMember(Value = "OFFERING")]
+            Offering,
+            
+            [EnumMember(Value = "CONNECTED")]
+            Connected,
+            
+            [EnumMember(Value = "DISCONNECTED")]
+            Disconnected,
+            
+            [EnumMember(Value = "TERMINATED")]
+            Terminated,
+            
+            [EnumMember(Value = "CONVERTING")]
+            Converting,
+            
+            [EnumMember(Value = "UPLOADING")]
+            Uploading,
+            
+            [EnumMember(Value = "TRANSMITTING")]
+            Transmitting,
+            
+            [EnumMember(Value = "NONE")]
+            None
         }
-
-        
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum DirectionEnum {
+            
+            [EnumMember(Value = "INBOUND")]
+            Inbound,
+            
+            [EnumMember(Value = "OUTBOUND")]
+            Outbound
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum RecordingStateEnum {
+            
+            [EnumMember(Value = "NONE")]
+            None,
+            
+            [EnumMember(Value = "ACTIVE")]
+            Active,
+            
+            [EnumMember(Value = "PAUSED")]
+            Paused
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum DisconnectTypeEnum {
+            
+            [EnumMember(Value = "ENDPOINT")]
+            Endpoint,
+            
+            [EnumMember(Value = "CLIENT")]
+            Client,
+            
+            [EnumMember(Value = "SYSTEM")]
+            System,
+            
+            [EnumMember(Value = "TRANSFER")]
+            Transfer,
+            
+            [EnumMember(Value = "TRANSFER_CONFERENCE")]
+            TransferConference,
+            
+            [EnumMember(Value = "TRANSFER_CONSULT")]
+            TransferConsult,
+            
+            [EnumMember(Value = "ERROR")]
+            Error,
+            
+            [EnumMember(Value = "PEER")]
+            Peer,
+            
+            [EnumMember(Value = "OTHER")]
+            Other
+        }
+    
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
-        public string State { get; set; }
-  
+        public StateEnum? State { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Direction
+        /// </summary>
+        [DataMember(Name="direction", EmitDefaultValue=false)]
+        public DirectionEnum? Direction { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets RecordingState
+        /// </summary>
+        [DataMember(Name="recordingState", EmitDefaultValue=false)]
+        public RecordingStateEnum? RecordingState { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets DisconnectType
+        /// </summary>
+        [DataMember(Name="disconnectType", EmitDefaultValue=false)]
+        public DisconnectTypeEnum? DisconnectType { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Call" /> class.
+        /// Initializes a new instance of the <see cref="Call" />class.
+        /// </summary>
+        /// <param name="State">State.</param>
+        /// <param name="Id">Id.</param>
+        /// <param name="Direction">Direction.</param>
+        /// <param name="Recording">Recording (default to false).</param>
+        /// <param name="RecordingState">RecordingState.</param>
+        /// <param name="Muted">Muted (default to false).</param>
+        /// <param name="Confined">Confined (default to false).</param>
+        /// <param name="Held">Held (default to false).</param>
+        /// <param name="RecordingId">RecordingId.</param>
+        /// <param name="Segments">Segments.</param>
+        /// <param name="ErrorInfo">ErrorInfo.</param>
+        /// <param name="DisconnectType">DisconnectType.</param>
+        /// <param name="StartHoldTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DocumentId">DocumentId.</param>
+        /// <param name="Self">Self.</param>
+        /// <param name="Other">Other.</param>
+
+        public Call(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, Address Self = null, Address Other = null)
+        {
+            this.State = State;
+            this.Id = Id;
+            this.Direction = Direction;
+            // use default value if no "Recording" provided
+            if (Recording == null)
+            {
+                this.Recording = false;
+            }
+            else
+            {
+                this.Recording = Recording;
+            }
+            this.RecordingState = RecordingState;
+            // use default value if no "Muted" provided
+            if (Muted == null)
+            {
+                this.Muted = false;
+            }
+            else
+            {
+                this.Muted = Muted;
+            }
+            // use default value if no "Confined" provided
+            if (Confined == null)
+            {
+                this.Confined = false;
+            }
+            else
+            {
+                this.Confined = Confined;
+            }
+            // use default value if no "Held" provided
+            if (Held == null)
+            {
+                this.Held = false;
+            }
+            else
+            {
+                this.Held = Held;
+            }
+            this.RecordingId = RecordingId;
+            this.Segments = Segments;
+            this.ErrorInfo = ErrorInfo;
+            this.DisconnectType = DisconnectType;
+            this.StartHoldTime = StartHoldTime;
+            this.DocumentId = DocumentId;
+            this.Self = Self;
+            this.Other = Other;
+            
+        }
         
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Direction
-        /// </summary>
-        [DataMember(Name="direction", EmitDefaultValue=false)]
-        public string Direction { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Recording
         /// </summary>
         [DataMember(Name="recording", EmitDefaultValue=false)]
         public bool? Recording { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets RecordingState
-        /// </summary>
-        [DataMember(Name="recordingState", EmitDefaultValue=false)]
-        public string RecordingState { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Muted
         /// </summary>
         [DataMember(Name="muted", EmitDefaultValue=false)]
         public bool? Muted { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Confined
         /// </summary>
         [DataMember(Name="confined", EmitDefaultValue=false)]
         public bool? Confined { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Held
         /// </summary>
         [DataMember(Name="held", EmitDefaultValue=false)]
         public bool? Held { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets RecordingId
         /// </summary>
         [DataMember(Name="recordingId", EmitDefaultValue=false)]
         public string RecordingId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Segments
         /// </summary>
         [DataMember(Name="segments", EmitDefaultValue=false)]
         public List<Segment> Segments { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ErrorInfo
         /// </summary>
         [DataMember(Name="errorInfo", EmitDefaultValue=false)]
         public ErrorBody ErrorInfo { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets DisconnectType
-        /// </summary>
-        [DataMember(Name="disconnectType", EmitDefaultValue=false)]
-        public string DisconnectType { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
         public DateTime? StartHoldTime { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DocumentId
         /// </summary>
         [DataMember(Name="documentId", EmitDefaultValue=false)]
         public string DocumentId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Self
         /// </summary>
         [DataMember(Name="self", EmitDefaultValue=false)]
         public Address Self { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Other
         /// </summary>
         [DataMember(Name="other", EmitDefaultValue=false)]
         public Address Other { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

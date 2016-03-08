@@ -7,82 +7,114 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class FacetEntry :  IEquatable<FacetEntry>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TermTypeEnum {
+            
+            [EnumMember(Value = "TERM")]
+            Term,
+            
+            [EnumMember(Value = "NUMBERRANGE")]
+            Numberrange,
+            
+            [EnumMember(Value = "NUMBERHISTOGRAM")]
+            Numberhistogram,
+            
+            [EnumMember(Value = "DATERANGE")]
+            Daterange,
+            
+            [EnumMember(Value = "DATEHISTOGRAM")]
+            Datehistogram,
+            
+            [EnumMember(Value = "ID")]
+            Id
+        }
+    
+        /// <summary>
+        /// Gets or Sets TermType
+        /// </summary>
+        [DataMember(Name="termType", EmitDefaultValue=false)]
+        public TermTypeEnum? TermType { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FacetEntry" /> class.
+        /// Initializes a new instance of the <see cref="FacetEntry" />class.
         /// </summary>
-        public FacetEntry()
+        /// <param name="Attribute">Attribute.</param>
+        /// <param name="Statistics">Statistics.</param>
+        /// <param name="Other">Other.</param>
+        /// <param name="Total">Total.</param>
+        /// <param name="Missing">Missing.</param>
+        /// <param name="TermCount">TermCount.</param>
+        /// <param name="TermType">TermType.</param>
+        /// <param name="Terms">Terms.</param>
+
+        public FacetEntry(TermAttribute Attribute = null, FacetStatistics Statistics = null, long? Other = null, long? Total = null, long? Missing = null, int? TermCount = null, TermTypeEnum? TermType = null, List<FacetTerm> Terms = null)
         {
+            this.Attribute = Attribute;
+            this.Statistics = Statistics;
+            this.Other = Other;
+            this.Total = Total;
+            this.Missing = Missing;
+            this.TermCount = TermCount;
+            this.TermType = TermType;
+            this.Terms = Terms;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Attribute
         /// </summary>
         [DataMember(Name="attribute", EmitDefaultValue=false)]
         public TermAttribute Attribute { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Statistics
         /// </summary>
         [DataMember(Name="statistics", EmitDefaultValue=false)]
         public FacetStatistics Statistics { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Other
         /// </summary>
         [DataMember(Name="other", EmitDefaultValue=false)]
         public long? Other { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Total
         /// </summary>
         [DataMember(Name="total", EmitDefaultValue=false)]
         public long? Total { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Missing
         /// </summary>
         [DataMember(Name="missing", EmitDefaultValue=false)]
         public long? Missing { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TermCount
         /// </summary>
         [DataMember(Name="termCount", EmitDefaultValue=false)]
         public int? TermCount { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets TermType
-        /// </summary>
-        [DataMember(Name="termType", EmitDefaultValue=false)]
-        public string TermType { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Terms
         /// </summary>
         [DataMember(Name="terms", EmitDefaultValue=false)]
         public List<FacetTerm> Terms { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

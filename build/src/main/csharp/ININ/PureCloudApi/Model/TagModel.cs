@@ -7,40 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class TagModel :  IEquatable<TagModel>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="TagModel" /> class.
+        /// Initializes a new instance of the <see cref="TagModel" />class.
         /// </summary>
-        public TagModel()
+        /// <param name="Key">Key.</param>
+        /// <param name="Value">Value.</param>
+
+        public TagModel(string Key = null, string Value = null)
         {
+            this.Key = Key;
+            this.Value = Value;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Key
         /// </summary>
         [DataMember(Name="key", EmitDefaultValue=false)]
         public string Key { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

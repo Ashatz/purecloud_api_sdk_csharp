@@ -7,99 +7,152 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class CustomerAccount :  IEquatable<CustomerAccount>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomerAccount" /> class.
+        /// Initializes a new instance of the <see cref="CustomerAccount" />class.
         /// </summary>
-        public CustomerAccount()
+        /// <param name="Name">Name.</param>
+        /// <param name="IsFrozen">Indicates whether the account is currently frozen for review. (required) (default to false).</param>
+        /// <param name="OrgLegalName">The organization legal name. (required).</param>
+        /// <param name="OrgPhone">The organization phone number. (required).</param>
+        /// <param name="IsTaxExempt">Indicates whether the account is tax exempt. (required) (default to false).</param>
+        /// <param name="BillingAddress">The account billing address. (required).</param>
+        /// <param name="Currency">The account currency. (required).</param>
+
+        public CustomerAccount(string Name = null, bool? IsFrozen = null, string OrgLegalName = null, string OrgPhone = null, bool? IsTaxExempt = null, Address BillingAddress = null, string Currency = null, )
         {
-            this.IsFrozen = false;
-            this.IsTaxExempt = false;
+            // to ensure "IsFrozen" is required (not null)
+            if (IsFrozen == null)
+            {
+                throw new InvalidDataException("IsFrozen is a required property for CustomerAccount and cannot be null");
+            }
+            else
+            {
+                this.IsFrozen = IsFrozen;
+            }
+            // to ensure "OrgLegalName" is required (not null)
+            if (OrgLegalName == null)
+            {
+                throw new InvalidDataException("OrgLegalName is a required property for CustomerAccount and cannot be null");
+            }
+            else
+            {
+                this.OrgLegalName = OrgLegalName;
+            }
+            // to ensure "OrgPhone" is required (not null)
+            if (OrgPhone == null)
+            {
+                throw new InvalidDataException("OrgPhone is a required property for CustomerAccount and cannot be null");
+            }
+            else
+            {
+                this.OrgPhone = OrgPhone;
+            }
+            // to ensure "IsTaxExempt" is required (not null)
+            if (IsTaxExempt == null)
+            {
+                throw new InvalidDataException("IsTaxExempt is a required property for CustomerAccount and cannot be null");
+            }
+            else
+            {
+                this.IsTaxExempt = IsTaxExempt;
+            }
+            // to ensure "BillingAddress" is required (not null)
+            if (BillingAddress == null)
+            {
+                throw new InvalidDataException("BillingAddress is a required property for CustomerAccount and cannot be null");
+            }
+            else
+            {
+                this.BillingAddress = BillingAddress;
+            }
+            // to ensure "Currency" is required (not null)
+            if (Currency == null)
+            {
+                throw new InvalidDataException("Currency is a required property for CustomerAccount and cannot be null");
+            }
+            else
+            {
+                this.Currency = Currency;
+            }
+            this.Name = Name;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Indicates whether the account is currently frozen for review.
         /// </summary>
         /// <value>Indicates whether the account is currently frozen for review.</value>
         [DataMember(Name="isFrozen", EmitDefaultValue=false)]
         public bool? IsFrozen { get; set; }
-  
-        
+    
         /// <summary>
         /// The organization legal name.
         /// </summary>
         /// <value>The organization legal name.</value>
         [DataMember(Name="orgLegalName", EmitDefaultValue=false)]
         public string OrgLegalName { get; set; }
-  
-        
+    
         /// <summary>
         /// The organization phone number.
         /// </summary>
         /// <value>The organization phone number.</value>
         [DataMember(Name="orgPhone", EmitDefaultValue=false)]
         public string OrgPhone { get; set; }
-  
-        
+    
         /// <summary>
         /// Indicates whether the account is tax exempt.
         /// </summary>
         /// <value>Indicates whether the account is tax exempt.</value>
         [DataMember(Name="isTaxExempt", EmitDefaultValue=false)]
         public bool? IsTaxExempt { get; set; }
-  
-        
+    
         /// <summary>
         /// The account billing address.
         /// </summary>
         /// <value>The account billing address.</value>
         [DataMember(Name="billingAddress", EmitDefaultValue=false)]
         public Address BillingAddress { get; set; }
-  
-        
+    
         /// <summary>
         /// The account currency.
         /// </summary>
         /// <value>The account currency.</value>
         [DataMember(Name="currency", EmitDefaultValue=false)]
         public string Currency { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

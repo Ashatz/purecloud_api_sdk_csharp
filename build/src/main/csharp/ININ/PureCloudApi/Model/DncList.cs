@@ -7,100 +7,108 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DncList :  IEquatable<DncList>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DncList" /> class.
+        /// Initializes a new instance of the <see cref="DncList" />class.
         /// </summary>
-        public DncList()
+        /// <param name="Name">Name.</param>
+        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Version">Version.</param>
+        /// <param name="PhoneNumberColumns">PhoneNumberColumns.</param>
+        /// <param name="ImportStatus">ImportStatus.</param>
+        /// <param name="FileKey">FileKey.</param>
+        /// <param name="Size">Size.</param>
+
+        public DncList(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<string> PhoneNumberColumns = null, ImportStatus ImportStatus = null, string FileKey = null, long? Size = null, )
         {
+            this.Name = Name;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.Version = Version;
+            this.PhoneNumberColumns = PhoneNumberColumns;
+            this.ImportStatus = ImportStatus;
+            this.FileKey = FileKey;
+            this.Size = Size;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PhoneNumberColumns
         /// </summary>
         [DataMember(Name="phoneNumberColumns", EmitDefaultValue=false)]
         public List<string> PhoneNumberColumns { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ImportStatus
         /// </summary>
         [DataMember(Name="importStatus", EmitDefaultValue=false)]
         public ImportStatus ImportStatus { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FileKey
         /// </summary>
         [DataMember(Name="fileKey", EmitDefaultValue=false)]
         public string FileKey { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Size
         /// </summary>
         [DataMember(Name="size", EmitDefaultValue=false)]
         public long? Size { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

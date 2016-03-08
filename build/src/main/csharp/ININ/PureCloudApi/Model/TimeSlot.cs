@@ -7,47 +7,55 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class TimeSlot :  IEquatable<TimeSlot>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeSlot" /> class.
+        /// Initializes a new instance of the <see cref="TimeSlot" />class.
         /// </summary>
-        public TimeSlot()
+        /// <param name="StartTime">start time in xx:xx:xx.xxx format.</param>
+        /// <param name="StopTime">stop time in xx:xx:xx.xxx format.</param>
+        /// <param name="Day">Day for this time slot, Monday = 1 ... Sunday = 7.</param>
+
+        public TimeSlot(string StartTime = null, string StopTime = null, int? Day = null)
         {
+            this.StartTime = StartTime;
+            this.StopTime = StopTime;
+            this.Day = Day;
             
         }
-
         
+    
         /// <summary>
-        /// Gets or Sets StartTime
+        /// start time in xx:xx:xx.xxx format
         /// </summary>
+        /// <value>start time in xx:xx:xx.xxx format</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public string StartTime { get; set; }
-  
-        
+    
         /// <summary>
-        /// Gets or Sets StopTime
+        /// stop time in xx:xx:xx.xxx format
         /// </summary>
+        /// <value>stop time in xx:xx:xx.xxx format</value>
         [DataMember(Name="stopTime", EmitDefaultValue=false)]
         public string StopTime { get; set; }
-  
-        
+    
         /// <summary>
-        /// Gets or Sets Day
+        /// Day for this time slot, Monday = 1 ... Sunday = 7
         /// </summary>
+        /// <value>Day for this time slot, Monday = 1 ... Sunday = 7</value>
         [DataMember(Name="day", EmitDefaultValue=false)]
         public int? Day { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,47 +7,62 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DurationCondition :  IEquatable<DurationCondition>
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DurationCondition" /> class.
-        /// </summary>
-        public DurationCondition()
-        {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum DurationTargetEnum {
             
+            [EnumMember(Value = "DURATION")]
+            Duration,
+            
+            [EnumMember(Value = "DURATION_RANGE")]
+            DurationRange
         }
-
-        
+    
         /// <summary>
         /// Gets or Sets DurationTarget
         /// </summary>
         [DataMember(Name="durationTarget", EmitDefaultValue=false)]
-        public string DurationTarget { get; set; }
-  
+        public DurationTargetEnum? DurationTarget { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DurationCondition" /> class.
+        /// Initializes a new instance of the <see cref="DurationCondition" />class.
+        /// </summary>
+        /// <param name="DurationTarget">DurationTarget.</param>
+        /// <param name="DurationOperator">DurationOperator.</param>
+        /// <param name="DurationRange">DurationRange.</param>
+
+        public DurationCondition(DurationTargetEnum? DurationTarget = null, string DurationOperator = null, string DurationRange = null)
+        {
+            this.DurationTarget = DurationTarget;
+            this.DurationOperator = DurationOperator;
+            this.DurationRange = DurationRange;
+            
+        }
         
+    
         /// <summary>
         /// Gets or Sets DurationOperator
         /// </summary>
         [DataMember(Name="durationOperator", EmitDefaultValue=false)]
         public string DurationOperator { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DurationRange
         /// </summary>
         [DataMember(Name="durationRange", EmitDefaultValue=false)]
         public string DurationRange { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,54 +7,60 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class AuditChange :  IEquatable<AuditChange>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditChange" /> class.
+        /// Initializes a new instance of the <see cref="AuditChange" />class.
         /// </summary>
-        public AuditChange()
+        /// <param name="Property">Property.</param>
+        /// <param name="Entity">Entity.</param>
+        /// <param name="OldValues">OldValues.</param>
+        /// <param name="NewValues">NewValues.</param>
+
+        public AuditChange(string Property = null, AuditEntityReference Entity = null, List<string> OldValues = null, List<string> NewValues = null)
         {
+            this.Property = Property;
+            this.Entity = Entity;
+            this.OldValues = OldValues;
+            this.NewValues = NewValues;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Property
         /// </summary>
         [DataMember(Name="property", EmitDefaultValue=false)]
         public string Property { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Entity
         /// </summary>
         [DataMember(Name="entity", EmitDefaultValue=false)]
         public AuditEntityReference Entity { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets OldValues
         /// </summary>
         [DataMember(Name="oldValues", EmitDefaultValue=false)]
         public List<string> OldValues { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets NewValues
         /// </summary>
         [DataMember(Name="newValues", EmitDefaultValue=false)]
         public List<string> NewValues { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

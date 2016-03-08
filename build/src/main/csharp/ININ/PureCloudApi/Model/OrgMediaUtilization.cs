@@ -7,42 +7,46 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class OrgMediaUtilization :  IEquatable<OrgMediaUtilization>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="OrgMediaUtilization" /> class.
+        /// Initializes a new instance of the <see cref="OrgMediaUtilization" />class.
         /// </summary>
-        public OrgMediaUtilization()
+        /// <param name="MaximumCapacity">Defines the maximum number of conversations of this type that an agent can handle at one time..</param>
+        /// <param name="InterruptableMediaTypes">Defines the list of other media types that can interrupt a conversation of this media type.  Values can be: call, chat, email, or socialExpression.</param>
+
+        public OrgMediaUtilization(int? MaximumCapacity = null, List<string> InterruptableMediaTypes = null)
         {
+            this.MaximumCapacity = MaximumCapacity;
+            this.InterruptableMediaTypes = InterruptableMediaTypes;
             
         }
-
         
+    
         /// <summary>
         /// Defines the maximum number of conversations of this type that an agent can handle at one time.
         /// </summary>
         /// <value>Defines the maximum number of conversations of this type that an agent can handle at one time.</value>
         [DataMember(Name="maximumCapacity", EmitDefaultValue=false)]
         public int? MaximumCapacity { get; set; }
-  
-        
+    
         /// <summary>
         /// Defines the list of other media types that can interrupt a conversation of this media type.  Values can be: call, chat, email, or socialExpression
         /// </summary>
         /// <value>Defines the list of other media types that can interrupt a conversation of this media type.  Values can be: call, chat, email, or socialExpression</value>
         [DataMember(Name="interruptableMediaTypes", EmitDefaultValue=false)]
         public List<string> InterruptableMediaTypes { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

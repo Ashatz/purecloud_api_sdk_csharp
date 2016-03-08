@@ -7,50 +7,71 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Information about the work item associated with a history item.
     /// </summary>
     [DataContract]
     public partial class WorkItem :  IEquatable<WorkItem>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkItem" /> class.
+        /// Initializes a new instance of the <see cref="WorkItem" />class.
         /// </summary>
-        public WorkItem()
+        /// <param name="WorkItemExecId">The work item execution id. (required).</param>
+        /// <param name="WorkItemConfigId">The work item definition id. (required).</param>
+        /// <param name="WorkItemName">The work item displayable name..</param>
+
+        public WorkItem(string WorkItemExecId = null, string WorkItemConfigId = null, string WorkItemName = null)
         {
+            // to ensure "WorkItemExecId" is required (not null)
+            if (WorkItemExecId == null)
+            {
+                throw new InvalidDataException("WorkItemExecId is a required property for WorkItem and cannot be null");
+            }
+            else
+            {
+                this.WorkItemExecId = WorkItemExecId;
+            }
+            // to ensure "WorkItemConfigId" is required (not null)
+            if (WorkItemConfigId == null)
+            {
+                throw new InvalidDataException("WorkItemConfigId is a required property for WorkItem and cannot be null");
+            }
+            else
+            {
+                this.WorkItemConfigId = WorkItemConfigId;
+            }
+            this.WorkItemName = WorkItemName;
             
         }
-
         
+    
         /// <summary>
         /// The work item execution id.
         /// </summary>
         /// <value>The work item execution id.</value>
         [DataMember(Name="workItemExecId", EmitDefaultValue=false)]
         public string WorkItemExecId { get; set; }
-  
-        
+    
         /// <summary>
         /// The work item definition id.
         /// </summary>
         /// <value>The work item definition id.</value>
         [DataMember(Name="workItemConfigId", EmitDefaultValue=false)]
         public string WorkItemConfigId { get; set; }
-  
-        
+    
         /// <summary>
         /// The work item displayable name.
         /// </summary>
         /// <value>The work item displayable name.</value>
         [DataMember(Name="workItemName", EmitDefaultValue=false)]
         public string WorkItemName { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

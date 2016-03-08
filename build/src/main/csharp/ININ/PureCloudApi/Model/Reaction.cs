@@ -7,47 +7,68 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Reaction :  IEquatable<Reaction>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ReactionTypeEnum {
+            
+            [EnumMember(Value = "HANGUP")]
+            Hangup,
+            
+            [EnumMember(Value = "TRANSFER")]
+            Transfer,
+            
+            [EnumMember(Value = "TRANSFER_FLOW")]
+            TransferFlow,
+            
+            [EnumMember(Value = "PLAY_FILE")]
+            PlayFile
+        }
+    
+        /// <summary>
+        /// Gets or Sets ReactionType
+        /// </summary>
+        [DataMember(Name="reactionType", EmitDefaultValue=false)]
+        public ReactionTypeEnum? ReactionType { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Reaction" /> class.
+        /// Initializes a new instance of the <see cref="Reaction" />class.
         /// </summary>
-        public Reaction()
+        /// <param name="Data">Data.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="ReactionType">ReactionType.</param>
+
+        public Reaction(string Data = null, string Name = null, ReactionTypeEnum? ReactionType = null)
         {
+            this.Data = Data;
+            this.Name = Name;
+            this.ReactionType = ReactionType;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Data
         /// </summary>
         [DataMember(Name="data", EmitDefaultValue=false)]
         public string Data { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets ReactionType
-        /// </summary>
-        [DataMember(Name="reactionType", EmitDefaultValue=false)]
-        public string ReactionType { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,75 +7,84 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ContentQueryRequest :  IEquatable<ContentQueryRequest>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentQueryRequest" /> class.
+        /// Initializes a new instance of the <see cref="ContentQueryRequest" />class.
         /// </summary>
-        public ContentQueryRequest()
+        /// <param name="QueryPhrase">QueryPhrase.</param>
+        /// <param name="PageNumber">PageNumber.</param>
+        /// <param name="PageSize">PageSize.</param>
+        /// <param name="FacetNameRequests">FacetNameRequests.</param>
+        /// <param name="Sort">Sort.</param>
+        /// <param name="Filters">Filters.</param>
+        /// <param name="AttributeFilters">AttributeFilters.</param>
+
+        public ContentQueryRequest(string QueryPhrase = null, int? PageNumber = null, int? PageSize = null, List<string> FacetNameRequests = null, List<ContentSortItem> Sort = null, List<ContentFacetFilterItem> Filters = null, List<ContentAttributeFilterItem> AttributeFilters = null)
         {
+            this.QueryPhrase = QueryPhrase;
+            this.PageNumber = PageNumber;
+            this.PageSize = PageSize;
+            this.FacetNameRequests = FacetNameRequests;
+            this.Sort = Sort;
+            this.Filters = Filters;
+            this.AttributeFilters = AttributeFilters;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets QueryPhrase
         /// </summary>
         [DataMember(Name="queryPhrase", EmitDefaultValue=false)]
         public string QueryPhrase { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PageNumber
         /// </summary>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PageSize
         /// </summary>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FacetNameRequests
         /// </summary>
         [DataMember(Name="facetNameRequests", EmitDefaultValue=false)]
         public List<string> FacetNameRequests { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Sort
         /// </summary>
         [DataMember(Name="sort", EmitDefaultValue=false)]
         public List<ContentSortItem> Sort { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Filters
         /// </summary>
         [DataMember(Name="filters", EmitDefaultValue=false)]
         public List<ContentFacetFilterItem> Filters { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AttributeFilters
         /// </summary>
         [DataMember(Name="attributeFilters", EmitDefaultValue=false)]
         public List<ContentAttributeFilterItem> AttributeFilters { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

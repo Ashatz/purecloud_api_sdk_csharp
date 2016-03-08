@@ -7,108 +7,137 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class CampaignSequence :  IEquatable<CampaignSequence>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StatusEnum {
+            
+            [EnumMember(Value = "ON")]
+            On,
+            
+            [EnumMember(Value = "OFF")]
+            Off,
+            
+            [EnumMember(Value = "COMPLETE")]
+            Complete
+        }
+    
+        /// <summary>
+        /// Gets or Sets Status
+        /// </summary>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignSequence" /> class.
+        /// Initializes a new instance of the <see cref="CampaignSequence" />class.
         /// </summary>
-        public CampaignSequence()
+        /// <param name="Name">Name.</param>
+        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Version">Version.</param>
+        /// <param name="Campaigns">Campaigns.</param>
+        /// <param name="CurrentCampaign">CurrentCampaign.</param>
+        /// <param name="Status">Status.</param>
+        /// <param name="StopMessage">StopMessage.</param>
+        /// <param name="Repeat">Repeat (default to false).</param>
+
+        public CampaignSequence(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<UriReference> Campaigns = null, int? CurrentCampaign = null, StatusEnum? Status = null, string StopMessage = null, bool? Repeat = null, )
         {
-            this.Repeat = false;
+            this.Name = Name;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.Version = Version;
+            this.Campaigns = Campaigns;
+            this.CurrentCampaign = CurrentCampaign;
+            this.Status = Status;
+            this.StopMessage = StopMessage;
+            // use default value if no "Repeat" provided
+            if (Repeat == null)
+            {
+                this.Repeat = false;
+            }
+            else
+            {
+                this.Repeat = Repeat;
+            }
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Campaigns
         /// </summary>
         [DataMember(Name="campaigns", EmitDefaultValue=false)]
         public List<UriReference> Campaigns { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CurrentCampaign
         /// </summary>
         [DataMember(Name="currentCampaign", EmitDefaultValue=false)]
         public int? CurrentCampaign { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Status
-        /// </summary>
-        [DataMember(Name="status", EmitDefaultValue=false)]
-        public string Status { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets StopMessage
         /// </summary>
         [DataMember(Name="stopMessage", EmitDefaultValue=false)]
         public string StopMessage { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Repeat
         /// </summary>
         [DataMember(Name="repeat", EmitDefaultValue=false)]
         public bool? Repeat { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,84 +7,90 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Carrier :  IEquatable<Carrier>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Carrier" /> class.
+        /// Initializes a new instance of the <see cref="Carrier" />class.
         /// </summary>
-        public Carrier()
+        /// <param name="Name">Name.</param>
+        /// <param name="AccountManager">AccountManager.</param>
+        /// <param name="Support">Support.</param>
+        /// <param name="NocSupport">NocSupport.</param>
+        /// <param name="Services">Services.</param>
+        /// <param name="Address">Address.</param>
+
+        public Carrier(string Name = null, AccountManager AccountManager = null, Support Support = null, NocSupport NocSupport = null, List<Service> Services = null, CarrierAddress Address = null)
         {
+            this.Name = Name;
+            this.AccountManager = AccountManager;
+            this.Support = Support;
+            this.NocSupport = NocSupport;
+            this.Services = Services;
+            this.Address = Address;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AccountManager
         /// </summary>
         [DataMember(Name="accountManager", EmitDefaultValue=false)]
         public AccountManager AccountManager { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Support
         /// </summary>
         [DataMember(Name="support", EmitDefaultValue=false)]
         public Support Support { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets NocSupport
         /// </summary>
         [DataMember(Name="nocSupport", EmitDefaultValue=false)]
         public NocSupport NocSupport { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Services
         /// </summary>
         [DataMember(Name="services", EmitDefaultValue=false)]
         public List<Service> Services { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Address
         /// </summary>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public CarrierAddress Address { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

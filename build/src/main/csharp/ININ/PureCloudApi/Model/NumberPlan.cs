@@ -7,164 +7,224 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class NumberPlan :  IEquatable<NumberPlan>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StateEnum {
+            
+            [EnumMember(Value = "ACTIVE")]
+            Active,
+            
+            [EnumMember(Value = "DELETED")]
+            Deleted,
+            
+            [EnumMember(Value = "INACTIVE")]
+            Inactive
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum MatchTypeEnum {
+            
+            [EnumMember(Value = "e164NumberList")]
+            E164numberlist,
+            
+            [EnumMember(Value = "numberList")]
+            Numberlist,
+            
+            [EnumMember(Value = "digitLength")]
+            Digitlength,
+            
+            [EnumMember(Value = "regex")]
+            Regex,
+            
+            [EnumMember(Value = "intraCountryCode")]
+            Intracountrycode,
+            
+            [EnumMember(Value = "interCountryCode")]
+            Intercountrycode
+        }
+    
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public StateEnum? State { get; set; }
+    
+        /// <summary>
+        /// The type of matching technique the number plan uses.
+        /// </summary>
+        /// <value>The type of matching technique the number plan uses.</value>
+        [DataMember(Name="matchType", EmitDefaultValue=false)]
+        public MatchTypeEnum? MatchType { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="NumberPlan" /> class.
+        /// Initializes a new instance of the <see cref="NumberPlan" />class.
         /// </summary>
-        public NumberPlan()
+        /// <param name="Name">Name.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="Version">Version.</param>
+        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ModifiedBy">ModifiedBy.</param>
+        /// <param name="CreatedBy">CreatedBy.</param>
+        /// <param name="State">State.</param>
+        /// <param name="ModifiedByApp">ModifiedByApp.</param>
+        /// <param name="CreatedByApp">CreatedByApp.</param>
+        /// <param name="Match">Match.</param>
+        /// <param name="NormalizedFormat">NormalizedFormat.</param>
+        /// <param name="Priority">Priority.</param>
+        /// <param name="Numbers">Numbers.</param>
+        /// <param name="DigitLength">DigitLength.</param>
+        /// <param name="Classification">Classification.</param>
+        /// <param name="MatchType">The type of matching technique the number plan uses. (required).</param>
+
+        public NumberPlan(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string Match = null, string NormalizedFormat = null, int? Priority = null, List<double?> Numbers = null, DigitLength DigitLength = null, string Classification = null, MatchTypeEnum? MatchType = null, )
         {
+            // to ensure "MatchType" is required (not null)
+            if (MatchType == null)
+            {
+                throw new InvalidDataException("MatchType is a required property for NumberPlan and cannot be null");
+            }
+            else
+            {
+                this.MatchType = MatchType;
+            }
+            this.Name = Name;
+            this.Description = Description;
+            this.Version = Version;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.ModifiedBy = ModifiedBy;
+            this.CreatedBy = CreatedBy;
+            this.State = State;
+            this.ModifiedByApp = ModifiedByApp;
+            this.CreatedByApp = CreatedByApp;
+            this.Match = Match;
+            this.NormalizedFormat = NormalizedFormat;
+            this.Priority = Priority;
+            this.Numbers = Numbers;
+            this.DigitLength = DigitLength;
+            this.Classification = Classification;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ModifiedBy
         /// </summary>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public string ModifiedBy { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CreatedBy
         /// </summary>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public string CreatedBy { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets State
-        /// </summary>
-        [DataMember(Name="state", EmitDefaultValue=false)]
-        public string State { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ModifiedByApp
         /// </summary>
         [DataMember(Name="modifiedByApp", EmitDefaultValue=false)]
         public string ModifiedByApp { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CreatedByApp
         /// </summary>
         [DataMember(Name="createdByApp", EmitDefaultValue=false)]
         public string CreatedByApp { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Match
         /// </summary>
         [DataMember(Name="match", EmitDefaultValue=false)]
         public string Match { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets NormalizedFormat
         /// </summary>
         [DataMember(Name="normalizedFormat", EmitDefaultValue=false)]
         public string NormalizedFormat { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Priority
         /// </summary>
         [DataMember(Name="priority", EmitDefaultValue=false)]
         public int? Priority { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Numbers
         /// </summary>
         [DataMember(Name="numbers", EmitDefaultValue=false)]
         public List<double?> Numbers { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DigitLength
         /// </summary>
         [DataMember(Name="digitLength", EmitDefaultValue=false)]
         public DigitLength DigitLength { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Classification
         /// </summary>
         [DataMember(Name="classification", EmitDefaultValue=false)]
         public string Classification { get; set; }
-  
-        
-        /// <summary>
-        /// The type of matching technique the number plan uses.
-        /// </summary>
-        /// <value>The type of matching technique the number plan uses.</value>
-        [DataMember(Name="matchType", EmitDefaultValue=false)]
-        public string MatchType { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

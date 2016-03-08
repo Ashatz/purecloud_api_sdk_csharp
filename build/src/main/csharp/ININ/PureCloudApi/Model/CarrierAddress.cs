@@ -7,61 +7,68 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class CarrierAddress :  IEquatable<CarrierAddress>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CarrierAddress" /> class.
+        /// Initializes a new instance of the <see cref="CarrierAddress" />class.
         /// </summary>
-        public CarrierAddress()
+        /// <param name="StreetAddress1">StreetAddress1.</param>
+        /// <param name="StreetAddress2">StreetAddress2.</param>
+        /// <param name="City">City.</param>
+        /// <param name="State">State.</param>
+        /// <param name="Zipcode">Zipcode.</param>
+
+        public CarrierAddress(string StreetAddress1 = null, string StreetAddress2 = null, string City = null, string State = null, string Zipcode = null)
         {
+            this.StreetAddress1 = StreetAddress1;
+            this.StreetAddress2 = StreetAddress2;
+            this.City = City;
+            this.State = State;
+            this.Zipcode = Zipcode;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets StreetAddress1
         /// </summary>
         [DataMember(Name="streetAddress1", EmitDefaultValue=false)]
         public string StreetAddress1 { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets StreetAddress2
         /// </summary>
         [DataMember(Name="streetAddress2", EmitDefaultValue=false)]
         public string StreetAddress2 { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets City
         /// </summary>
         [DataMember(Name="city", EmitDefaultValue=false)]
         public string City { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public string State { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Zipcode
         /// </summary>
         [DataMember(Name="zipcode", EmitDefaultValue=false)]
         public string Zipcode { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

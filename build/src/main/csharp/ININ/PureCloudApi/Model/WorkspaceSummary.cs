@@ -7,33 +7,36 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class WorkspaceSummary :  IEquatable<WorkspaceSummary>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkspaceSummary" /> class.
+        /// Initializes a new instance of the <see cref="WorkspaceSummary" />class.
         /// </summary>
-        public WorkspaceSummary()
+        /// <param name="TotalDocumentCount">TotalDocumentCount.</param>
+
+        public WorkspaceSummary(long? TotalDocumentCount = null)
         {
+            this.TotalDocumentCount = TotalDocumentCount;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets TotalDocumentCount
         /// </summary>
         [DataMember(Name="totalDocumentCount", EmitDefaultValue=false)]
         public long? TotalDocumentCount { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

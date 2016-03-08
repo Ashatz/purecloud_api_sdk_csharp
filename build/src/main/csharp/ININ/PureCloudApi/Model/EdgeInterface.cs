@@ -7,82 +7,106 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class EdgeInterface :  IEquatable<EdgeInterface>
-    {
+    { 
+        public enum  {
+            
+            [EnumMember(Value = "TIE")]
+            Tie,
+            
+            [EnumMember(Value = "NETWORK")]
+            Network,
+            
+            [EnumMember(Value = "TRUNK")]
+            Trunk,
+            
+            [EnumMember(Value = "STATION")]
+            Station
+        }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeInterface" /> class.
+        /// Initializes a new instance of the <see cref="EdgeInterface" />class.
         /// </summary>
-        public EdgeInterface()
+        /// <param name="Type">Type.</param>
+        /// <param name="IpAddress">IpAddress.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="MacAddress">MacAddress.</param>
+        /// <param name="IfName">IfName.</param>
+        /// <param name="Endpoints">Endpoints.</param>
+        /// <param name="LineTypes">LineTypes.</param>
+        /// <param name="AddressFamilyId">AddressFamilyId.</param>
+
+        public EdgeInterface(string Type = null, string IpAddress = null, string Name = null, string MacAddress = null, string IfName = null, List<UriReference> Endpoints = null, List<LineTypesEnum?> LineTypes = null, string AddressFamilyId = null)
         {
+            this.Type = Type;
+            this.IpAddress = IpAddress;
+            this.Name = Name;
+            this.MacAddress = MacAddress;
+            this.IfName = IfName;
+            this.Endpoints = Endpoints;
+            this.LineTypes = LineTypes;
+            this.AddressFamilyId = AddressFamilyId;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IpAddress
         /// </summary>
         [DataMember(Name="ipAddress", EmitDefaultValue=false)]
         public string IpAddress { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MacAddress
         /// </summary>
         [DataMember(Name="macAddress", EmitDefaultValue=false)]
         public string MacAddress { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IfName
         /// </summary>
         [DataMember(Name="ifName", EmitDefaultValue=false)]
         public string IfName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Endpoints
         /// </summary>
         [DataMember(Name="endpoints", EmitDefaultValue=false)]
         public List<UriReference> Endpoints { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets LineTypes
         /// </summary>
         [DataMember(Name="lineTypes", EmitDefaultValue=false)]
         public List<string> LineTypes { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AddressFamilyId
         /// </summary>
         [DataMember(Name="addressFamilyId", EmitDefaultValue=false)]
         public string AddressFamilyId { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

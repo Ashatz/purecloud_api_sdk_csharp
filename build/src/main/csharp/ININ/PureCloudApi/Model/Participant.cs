@@ -7,256 +7,327 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Participant :  IEquatable<Participant>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum WrapupPromptEnum {
+            
+            [EnumMember(Value = "MANDATORY")]
+            Mandatory,
+            
+            [EnumMember(Value = "OPTIONAL")]
+            Optional,
+            
+            [EnumMember(Value = "TIMEOUT")]
+            Timeout,
+            
+            [EnumMember(Value = "FORCED_TIMEOUT")]
+            ForcedTimeout
+        }
+    
+        /// <summary>
+        /// Gets or Sets WrapupPrompt
+        /// </summary>
+        [DataMember(Name="wrapupPrompt", EmitDefaultValue=false)]
+        public WrapupPromptEnum? WrapupPrompt { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Participant" /> class.
+        /// Initializes a new instance of the <see cref="Participant" />class.
         /// </summary>
-        public Participant()
+        /// <param name="Id">Id.</param>
+        /// <param name="StartTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="EndTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ConnectedTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="UserUri">UserUri.</param>
+        /// <param name="UserId">UserId.</param>
+        /// <param name="QueueId">QueueId.</param>
+        /// <param name="GroupId">GroupId.</param>
+        /// <param name="QueueName">QueueName.</param>
+        /// <param name="Purpose">Purpose.</param>
+        /// <param name="ParticipantType">ParticipantType.</param>
+        /// <param name="ConsultParticipantId">ConsultParticipantId.</param>
+        /// <param name="Address">Address.</param>
+        /// <param name="Ani">Ani.</param>
+        /// <param name="Dnis">Dnis.</param>
+        /// <param name="Locale">Locale.</param>
+        /// <param name="WrapupRequired">WrapupRequired (default to false).</param>
+        /// <param name="WrapupExpected">WrapupExpected (default to false).</param>
+        /// <param name="WrapupPrompt">WrapupPrompt.</param>
+        /// <param name="WrapupTimeoutMs">WrapupTimeoutMs.</param>
+        /// <param name="WrapupSkipped">WrapupSkipped (default to false).</param>
+        /// <param name="Wrapup">Wrapup.</param>
+        /// <param name="MonitoredParticipantId">MonitoredParticipantId.</param>
+        /// <param name="Attributes">Attributes.</param>
+        /// <param name="Calls">Calls.</param>
+        /// <param name="Callbacks">Callbacks.</param>
+        /// <param name="Chats">Chats.</param>
+        /// <param name="Emails">Emails.</param>
+        /// <param name="SocialExpressions">SocialExpressions.</param>
+        /// <param name="Videos">Videos.</param>
+        /// <param name="Evaluations">Evaluations.</param>
+
+        public Participant(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string QueueId = null, string GroupId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, bool? WrapupExpected = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, string MonitoredParticipantId = null, Dictionary<string, string> Attributes = null, List<Call> Calls = null, List<Callback> Callbacks = null, List<Chat> Chats = null, List<Email> Emails = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null)
         {
-            this.WrapupRequired = false;
-            this.WrapupExpected = false;
-            this.WrapupSkipped = false;
+            this.Id = Id;
+            this.StartTime = StartTime;
+            this.EndTime = EndTime;
+            this.ConnectedTime = ConnectedTime;
+            this.Name = Name;
+            this.UserUri = UserUri;
+            this.UserId = UserId;
+            this.QueueId = QueueId;
+            this.GroupId = GroupId;
+            this.QueueName = QueueName;
+            this.Purpose = Purpose;
+            this.ParticipantType = ParticipantType;
+            this.ConsultParticipantId = ConsultParticipantId;
+            this.Address = Address;
+            this.Ani = Ani;
+            this.Dnis = Dnis;
+            this.Locale = Locale;
+            // use default value if no "WrapupRequired" provided
+            if (WrapupRequired == null)
+            {
+                this.WrapupRequired = false;
+            }
+            else
+            {
+                this.WrapupRequired = WrapupRequired;
+            }
+            // use default value if no "WrapupExpected" provided
+            if (WrapupExpected == null)
+            {
+                this.WrapupExpected = false;
+            }
+            else
+            {
+                this.WrapupExpected = WrapupExpected;
+            }
+            this.WrapupPrompt = WrapupPrompt;
+            this.WrapupTimeoutMs = WrapupTimeoutMs;
+            // use default value if no "WrapupSkipped" provided
+            if (WrapupSkipped == null)
+            {
+                this.WrapupSkipped = false;
+            }
+            else
+            {
+                this.WrapupSkipped = WrapupSkipped;
+            }
+            this.Wrapup = Wrapup;
+            this.MonitoredParticipantId = MonitoredParticipantId;
+            this.Attributes = Attributes;
+            this.Calls = Calls;
+            this.Callbacks = Callbacks;
+            this.Chats = Chats;
+            this.Emails = Emails;
+            this.SocialExpressions = SocialExpressions;
+            this.Videos = Videos;
+            this.Evaluations = Evaluations;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public DateTime? StartTime { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public DateTime? EndTime { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
         public DateTime? ConnectedTime { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UserUri
         /// </summary>
         [DataMember(Name="userUri", EmitDefaultValue=false)]
         public string UserUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets QueueId
         /// </summary>
         [DataMember(Name="queueId", EmitDefaultValue=false)]
         public string QueueId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets GroupId
         /// </summary>
         [DataMember(Name="groupId", EmitDefaultValue=false)]
         public string GroupId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets QueueName
         /// </summary>
         [DataMember(Name="queueName", EmitDefaultValue=false)]
         public string QueueName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Purpose
         /// </summary>
         [DataMember(Name="purpose", EmitDefaultValue=false)]
         public string Purpose { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ParticipantType
         /// </summary>
         [DataMember(Name="participantType", EmitDefaultValue=false)]
         public string ParticipantType { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ConsultParticipantId
         /// </summary>
         [DataMember(Name="consultParticipantId", EmitDefaultValue=false)]
         public string ConsultParticipantId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Address
         /// </summary>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public string Address { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Ani
         /// </summary>
         [DataMember(Name="ani", EmitDefaultValue=false)]
         public string Ani { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Dnis
         /// </summary>
         [DataMember(Name="dnis", EmitDefaultValue=false)]
         public string Dnis { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Locale
         /// </summary>
         [DataMember(Name="locale", EmitDefaultValue=false)]
         public string Locale { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets WrapupRequired
         /// </summary>
         [DataMember(Name="wrapupRequired", EmitDefaultValue=false)]
         public bool? WrapupRequired { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets WrapupExpected
         /// </summary>
         [DataMember(Name="wrapupExpected", EmitDefaultValue=false)]
         public bool? WrapupExpected { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets WrapupPrompt
-        /// </summary>
-        [DataMember(Name="wrapupPrompt", EmitDefaultValue=false)]
-        public string WrapupPrompt { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets WrapupTimeoutMs
         /// </summary>
         [DataMember(Name="wrapupTimeoutMs", EmitDefaultValue=false)]
         public int? WrapupTimeoutMs { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets WrapupSkipped
         /// </summary>
         [DataMember(Name="wrapupSkipped", EmitDefaultValue=false)]
         public bool? WrapupSkipped { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Wrapup
         /// </summary>
         [DataMember(Name="wrapup", EmitDefaultValue=false)]
         public Wrapup Wrapup { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MonitoredParticipantId
         /// </summary>
         [DataMember(Name="monitoredParticipantId", EmitDefaultValue=false)]
         public string MonitoredParticipantId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Attributes
         /// </summary>
         [DataMember(Name="attributes", EmitDefaultValue=false)]
         public Dictionary<string, string> Attributes { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Calls
         /// </summary>
         [DataMember(Name="calls", EmitDefaultValue=false)]
         public List<Call> Calls { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Callbacks
         /// </summary>
         [DataMember(Name="callbacks", EmitDefaultValue=false)]
         public List<Callback> Callbacks { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Chats
         /// </summary>
         [DataMember(Name="chats", EmitDefaultValue=false)]
         public List<Chat> Chats { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Emails
         /// </summary>
         [DataMember(Name="emails", EmitDefaultValue=false)]
         public List<Email> Emails { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SocialExpressions
         /// </summary>
         [DataMember(Name="socialExpressions", EmitDefaultValue=false)]
         public List<SocialExpression> SocialExpressions { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Videos
         /// </summary>
         [DataMember(Name="videos", EmitDefaultValue=false)]
         public List<Video> Videos { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Evaluations
         /// </summary>
         [DataMember(Name="evaluations", EmitDefaultValue=false)]
         public List<Evaluation> Evaluations { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

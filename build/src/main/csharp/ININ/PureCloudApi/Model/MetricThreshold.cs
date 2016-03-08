@@ -7,40 +7,66 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class MetricThreshold :  IEquatable<MetricThreshold>
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="MetricThreshold" /> class.
-        /// </summary>
-        public MetricThreshold()
-        {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum OpEnum {
             
+            [EnumMember(Value = "GT")]
+            Gt,
+            
+            [EnumMember(Value = "GE")]
+            Ge,
+            
+            [EnumMember(Value = "LT")]
+            Lt,
+            
+            [EnumMember(Value = "LE")]
+            Le,
+            
+            [EnumMember(Value = "EQ")]
+            Eq,
+            
+            [EnumMember(Value = "NE")]
+            Ne
         }
-
-        
+    
         /// <summary>
         /// Gets or Sets Op
         /// </summary>
         [DataMember(Name="op", EmitDefaultValue=false)]
-        public string Op { get; set; }
-  
+        public OpEnum? Op { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MetricThreshold" /> class.
+        /// Initializes a new instance of the <see cref="MetricThreshold" />class.
+        /// </summary>
+        /// <param name="Op">Op.</param>
+        /// <param name="Value">Value.</param>
+
+        public MetricThreshold(OpEnum? Op = null, double? Value = null)
+        {
+            this.Op = Op;
+            this.Value = Value;
+            
+        }
         
+    
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public double? Value { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

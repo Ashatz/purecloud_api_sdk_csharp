@@ -7,99 +7,107 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Service :  IEquatable<Service>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Service" /> class.
+        /// Initializes a new instance of the <see cref="Service" />class.
         /// </summary>
-        public Service()
+        /// <param name="Name">Name.</param>
+        /// <param name="Status">Status.</param>
+        /// <param name="Domains">An inbound carrier specific domain (i.e. lb.domain.com).</param>
+        /// <param name="ServiceTypes">ServiceTypes.</param>
+        /// <param name="Gateways">Gateways.</param>
+        /// <param name="Dns">Dns.</param>
+        /// <param name="Vpn">Vpn.</param>
+        /// <param name="Carrier">Carrier.</param>
+
+        public Service(string Name = null, string Status = null, List<string> Domains = null, List<ServiceType> ServiceTypes = null, List<Gateway> Gateways = null, Dns Dns = null, Vpn Vpn = null, Carrier Carrier = null, )
         {
+            this.Name = Name;
+            this.Status = Status;
+            this.Domains = Domains;
+            this.ServiceTypes = ServiceTypes;
+            this.Gateways = Gateways;
+            this.Dns = Dns;
+            this.Vpn = Vpn;
+            this.Carrier = Carrier;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
-  
-        
+    
         /// <summary>
         /// An inbound carrier specific domain (i.e. lb.domain.com)
         /// </summary>
         /// <value>An inbound carrier specific domain (i.e. lb.domain.com)</value>
         [DataMember(Name="domains", EmitDefaultValue=false)]
         public List<string> Domains { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ServiceTypes
         /// </summary>
         [DataMember(Name="serviceTypes", EmitDefaultValue=false)]
         public List<ServiceType> ServiceTypes { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Gateways
         /// </summary>
         [DataMember(Name="gateways", EmitDefaultValue=false)]
         public List<Gateway> Gateways { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Dns
         /// </summary>
         [DataMember(Name="dns", EmitDefaultValue=false)]
         public Dns Dns { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Vpn
         /// </summary>
         [DataMember(Name="vpn", EmitDefaultValue=false)]
         public Vpn Vpn { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Carrier
         /// </summary>
         [DataMember(Name="carrier", EmitDefaultValue=false)]
         public Carrier Carrier { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

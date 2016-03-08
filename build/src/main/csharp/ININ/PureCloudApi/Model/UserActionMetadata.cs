@@ -7,100 +7,122 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class UserActionMetadata :  IEquatable<UserActionMetadata>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserActionMetadata" /> class.
+        /// Initializes a new instance of the <see cref="UserActionMetadata" />class.
         /// </summary>
-        public UserActionMetadata()
+        /// <param name="Name">Name.</param>
+        /// <param name="Category">Category.</param>
+        /// <param name="Deprecated">Deprecated (default to false).</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="Published">Published (default to false).</param>
+        /// <param name="Tags">Tags.</param>
+        /// <param name="HelpLink">HelpLink.</param>
+        /// <param name="Requests">Requests.</param>
+
+        public UserActionMetadata(string Name = null, string Category = null, bool? Deprecated = null, string Description = null, bool? Published = null, List<string> Tags = null, string HelpLink = null, List<UserActionMetadataRequest> Requests = null, )
         {
-            this.Deprecated = false;
-            this.Published = false;
+            this.Name = Name;
+            this.Category = Category;
+            // use default value if no "Deprecated" provided
+            if (Deprecated == null)
+            {
+                this.Deprecated = false;
+            }
+            else
+            {
+                this.Deprecated = Deprecated;
+            }
+            this.Description = Description;
+            // use default value if no "Published" provided
+            if (Published == null)
+            {
+                this.Published = false;
+            }
+            else
+            {
+                this.Published = Published;
+            }
+            this.Tags = Tags;
+            this.HelpLink = HelpLink;
+            this.Requests = Requests;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Category
         /// </summary>
         [DataMember(Name="category", EmitDefaultValue=false)]
         public string Category { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Deprecated
         /// </summary>
         [DataMember(Name="deprecated", EmitDefaultValue=false)]
         public bool? Deprecated { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Published
         /// </summary>
         [DataMember(Name="published", EmitDefaultValue=false)]
         public bool? Published { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Tags
         /// </summary>
         [DataMember(Name="tags", EmitDefaultValue=false)]
         public List<string> Tags { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets HelpLink
         /// </summary>
         [DataMember(Name="helpLink", EmitDefaultValue=false)]
         public string HelpLink { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Requests
         /// </summary>
         [DataMember(Name="requests", EmitDefaultValue=false)]
         public List<UserActionMetadataRequest> Requests { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,196 +7,275 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Quote :  IEquatable<Quote>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum {
+            
+            [EnumMember(Value = "NEW_SUBSCRIPTION")]
+            NewSubscription,
+            
+            [EnumMember(Value = "AMENDMENT")]
+            Amendment
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StatusEnum {
+            
+            [EnumMember(Value = "IN_PROGRESS")]
+            InProgress,
+            
+            [EnumMember(Value = "SUBMITTED")]
+            Submitted,
+            
+            [EnumMember(Value = "FROZEN")]
+            Frozen
+        }
+    
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Status
+        /// </summary>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Quote" /> class.
+        /// Initializes a new instance of the <see cref="Quote" />class.
         /// </summary>
-        public Quote()
+        /// <param name="Name">Name.</param>
+        /// <param name="PurchaseOrder">PurchaseOrder.</param>
+        /// <param name="Type">Type.</param>
+        /// <param name="Status">Status.</param>
+        /// <param name="IsSubmitted">IsSubmitted (default to false).</param>
+        /// <param name="IsPending">IsPending (default to false).</param>
+        /// <param name="IsFrozen">IsFrozen (default to false).</param>
+        /// <param name="Currency">Currency.</param>
+        /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="LastUpdatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="BillingContactEmail">BillingContactEmail.</param>
+        /// <param name="BillingContactFirstName">BillingContactFirstName.</param>
+        /// <param name="BillingContactLastName">BillingContactLastName.</param>
+        /// <param name="BillingContactPhone">BillingContactPhone.</param>
+        /// <param name="IncludeVoiceCharges">IncludeVoiceCharges (default to false).</param>
+        /// <param name="Charges">Charges.</param>
+        /// <param name="EdgeControlModel">EdgeControlModel.</param>
+        /// <param name="ReferralCodes">ReferralCodes.</param>
+        /// <param name="DiscountCodes">DiscountCodes.</param>
+        /// <param name="SalesPartnerCode">SalesPartnerCode.</param>
+        /// <param name="IsAnnualPrepay">IsAnnualPrepay (default to false).</param>
+
+        public Quote(string Name = null, string PurchaseOrder = null, TypeEnum? Type = null, StatusEnum? Status = null, bool? IsSubmitted = null, bool? IsPending = null, bool? IsFrozen = null, string Currency = null, DateTime? CreatedDate = null, DateTime? LastUpdatedDate = null, string BillingContactEmail = null, string BillingContactFirstName = null, string BillingContactLastName = null, string BillingContactPhone = null, bool? IncludeVoiceCharges = null, List<QuoteCharge> Charges = null, string EdgeControlModel = null, List<string> ReferralCodes = null, List<string> DiscountCodes = null, string SalesPartnerCode = null, bool? IsAnnualPrepay = null, )
         {
-            this.IsSubmitted = false;
-            this.IsPending = false;
-            this.IsFrozen = false;
-            this.IncludeVoiceCharges = false;
-            this.IsAnnualPrepay = false;
+            this.Name = Name;
+            this.PurchaseOrder = PurchaseOrder;
+            this.Type = Type;
+            this.Status = Status;
+            // use default value if no "IsSubmitted" provided
+            if (IsSubmitted == null)
+            {
+                this.IsSubmitted = false;
+            }
+            else
+            {
+                this.IsSubmitted = IsSubmitted;
+            }
+            // use default value if no "IsPending" provided
+            if (IsPending == null)
+            {
+                this.IsPending = false;
+            }
+            else
+            {
+                this.IsPending = IsPending;
+            }
+            // use default value if no "IsFrozen" provided
+            if (IsFrozen == null)
+            {
+                this.IsFrozen = false;
+            }
+            else
+            {
+                this.IsFrozen = IsFrozen;
+            }
+            this.Currency = Currency;
+            this.CreatedDate = CreatedDate;
+            this.LastUpdatedDate = LastUpdatedDate;
+            this.BillingContactEmail = BillingContactEmail;
+            this.BillingContactFirstName = BillingContactFirstName;
+            this.BillingContactLastName = BillingContactLastName;
+            this.BillingContactPhone = BillingContactPhone;
+            // use default value if no "IncludeVoiceCharges" provided
+            if (IncludeVoiceCharges == null)
+            {
+                this.IncludeVoiceCharges = false;
+            }
+            else
+            {
+                this.IncludeVoiceCharges = IncludeVoiceCharges;
+            }
+            this.Charges = Charges;
+            this.EdgeControlModel = EdgeControlModel;
+            this.ReferralCodes = ReferralCodes;
+            this.DiscountCodes = DiscountCodes;
+            this.SalesPartnerCode = SalesPartnerCode;
+            // use default value if no "IsAnnualPrepay" provided
+            if (IsAnnualPrepay == null)
+            {
+                this.IsAnnualPrepay = false;
+            }
+            else
+            {
+                this.IsAnnualPrepay = IsAnnualPrepay;
+            }
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PurchaseOrder
         /// </summary>
         [DataMember(Name="purchaseOrder", EmitDefaultValue=false)]
         public string PurchaseOrder { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Status
-        /// </summary>
-        [DataMember(Name="status", EmitDefaultValue=false)]
-        public string Status { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IsSubmitted
         /// </summary>
         [DataMember(Name="isSubmitted", EmitDefaultValue=false)]
         public bool? IsSubmitted { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IsPending
         /// </summary>
         [DataMember(Name="isPending", EmitDefaultValue=false)]
         public bool? IsPending { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IsFrozen
         /// </summary>
         [DataMember(Name="isFrozen", EmitDefaultValue=false)]
         public bool? IsFrozen { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Currency
         /// </summary>
         [DataMember(Name="currency", EmitDefaultValue=false)]
         public string Currency { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="createdDate", EmitDefaultValue=false)]
         public DateTime? CreatedDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="lastUpdatedDate", EmitDefaultValue=false)]
         public DateTime? LastUpdatedDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets BillingContactEmail
         /// </summary>
         [DataMember(Name="billingContactEmail", EmitDefaultValue=false)]
         public string BillingContactEmail { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets BillingContactFirstName
         /// </summary>
         [DataMember(Name="billingContactFirstName", EmitDefaultValue=false)]
         public string BillingContactFirstName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets BillingContactLastName
         /// </summary>
         [DataMember(Name="billingContactLastName", EmitDefaultValue=false)]
         public string BillingContactLastName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets BillingContactPhone
         /// </summary>
         [DataMember(Name="billingContactPhone", EmitDefaultValue=false)]
         public string BillingContactPhone { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IncludeVoiceCharges
         /// </summary>
         [DataMember(Name="includeVoiceCharges", EmitDefaultValue=false)]
         public bool? IncludeVoiceCharges { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Charges
         /// </summary>
         [DataMember(Name="charges", EmitDefaultValue=false)]
         public List<QuoteCharge> Charges { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EdgeControlModel
         /// </summary>
         [DataMember(Name="edgeControlModel", EmitDefaultValue=false)]
         public string EdgeControlModel { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ReferralCodes
         /// </summary>
         [DataMember(Name="referralCodes", EmitDefaultValue=false)]
         public List<string> ReferralCodes { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DiscountCodes
         /// </summary>
         [DataMember(Name="discountCodes", EmitDefaultValue=false)]
         public List<string> DiscountCodes { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SalesPartnerCode
         /// </summary>
         [DataMember(Name="salesPartnerCode", EmitDefaultValue=false)]
         public string SalesPartnerCode { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IsAnnualPrepay
         /// </summary>
         [DataMember(Name="isAnnualPrepay", EmitDefaultValue=false)]
         public bool? IsAnnualPrepay { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

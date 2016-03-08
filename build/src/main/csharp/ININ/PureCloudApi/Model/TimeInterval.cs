@@ -7,40 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class TimeInterval :  IEquatable<TimeInterval>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeInterval" /> class.
+        /// Initializes a new instance of the <see cref="TimeInterval" />class.
         /// </summary>
-        public TimeInterval()
+        /// <param name="Days">Days.</param>
+        /// <param name="Hours">Hours.</param>
+
+        public TimeInterval(int? Days = null, int? Hours = null)
         {
+            this.Days = Days;
+            this.Hours = Hours;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Days
         /// </summary>
         [DataMember(Name="days", EmitDefaultValue=false)]
         public int? Days { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Hours
         /// </summary>
         [DataMember(Name="hours", EmitDefaultValue=false)]
         public int? Hours { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

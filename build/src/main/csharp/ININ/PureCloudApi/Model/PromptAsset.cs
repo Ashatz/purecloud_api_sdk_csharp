@@ -7,98 +7,106 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class PromptAsset :  IEquatable<PromptAsset>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PromptAsset" /> class.
+        /// Initializes a new instance of the <see cref="PromptAsset" />class.
         /// </summary>
-        public PromptAsset()
+        /// <param name="Name">Name.</param>
+        /// <param name="PromptId">PromptId.</param>
+        /// <param name="Language">Language.</param>
+        /// <param name="MediaUri">MediaUri.</param>
+        /// <param name="TtsString">TtsString.</param>
+        /// <param name="UploadStatus">UploadStatus.</param>
+        /// <param name="UploadUri">UploadUri.</param>
+        /// <param name="DurationSeconds">DurationSeconds.</param>
+
+        public PromptAsset(string Name = null, string PromptId = null, string Language = null, string MediaUri = null, string TtsString = null, string UploadStatus = null, string UploadUri = null, double? DurationSeconds = null, )
         {
+            this.Name = Name;
+            this.PromptId = PromptId;
+            this.Language = Language;
+            this.MediaUri = MediaUri;
+            this.TtsString = TtsString;
+            this.UploadStatus = UploadStatus;
+            this.UploadUri = UploadUri;
+            this.DurationSeconds = DurationSeconds;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PromptId
         /// </summary>
         [DataMember(Name="promptId", EmitDefaultValue=false)]
         public string PromptId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Language
         /// </summary>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public string Language { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MediaUri
         /// </summary>
         [DataMember(Name="mediaUri", EmitDefaultValue=false)]
         public string MediaUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TtsString
         /// </summary>
         [DataMember(Name="ttsString", EmitDefaultValue=false)]
         public string TtsString { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UploadStatus
         /// </summary>
         [DataMember(Name="uploadStatus", EmitDefaultValue=false)]
         public string UploadStatus { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UploadUri
         /// </summary>
         [DataMember(Name="uploadUri", EmitDefaultValue=false)]
         public string UploadUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DurationSeconds
         /// </summary>
         [DataMember(Name="durationSeconds", EmitDefaultValue=false)]
         public double? DurationSeconds { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

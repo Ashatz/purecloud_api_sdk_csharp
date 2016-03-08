@@ -7,40 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DownloadResponse :  IEquatable<DownloadResponse>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DownloadResponse" /> class.
+        /// Initializes a new instance of the <see cref="DownloadResponse" />class.
         /// </summary>
-        public DownloadResponse()
+        /// <param name="ContentLocationUri">ContentLocationUri.</param>
+        /// <param name="ImageUri">ImageUri.</param>
+
+        public DownloadResponse(string ContentLocationUri = null, string ImageUri = null)
         {
+            this.ContentLocationUri = ContentLocationUri;
+            this.ImageUri = ImageUri;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets ContentLocationUri
         /// </summary>
         [DataMember(Name="contentLocationUri", EmitDefaultValue=false)]
         public string ContentLocationUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ImageUri
         /// </summary>
         [DataMember(Name="imageUri", EmitDefaultValue=false)]
         public string ImageUri { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

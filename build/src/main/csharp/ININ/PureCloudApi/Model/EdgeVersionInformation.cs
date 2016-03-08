@@ -7,33 +7,36 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class EdgeVersionInformation :  IEquatable<EdgeVersionInformation>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeVersionInformation" /> class.
+        /// Initializes a new instance of the <see cref="EdgeVersionInformation" />class.
         /// </summary>
-        public EdgeVersionInformation()
+        /// <param name="SoftwareVersion">SoftwareVersion.</param>
+
+        public EdgeVersionInformation(string SoftwareVersion = null)
         {
+            this.SoftwareVersion = SoftwareVersion;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets SoftwareVersion
         /// </summary>
         [DataMember(Name="softwareVersion", EmitDefaultValue=false)]
         public string SoftwareVersion { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,42 +7,62 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Ticker :  IEquatable<Ticker>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Ticker" /> class.
+        /// Initializes a new instance of the <see cref="Ticker" />class.
         /// </summary>
-        public Ticker()
+        /// <param name="Symbol">The ticker symbol for this organization. Example: ININ, AAPL, MSFT, etc. (required).</param>
+        /// <param name="Exchange">The exchange for this ticker symbol. Examples: NYSE, FTSE, NASDAQ, etc. (required).</param>
+
+        public Ticker(string Symbol = null, string Exchange = null)
         {
+            // to ensure "Symbol" is required (not null)
+            if (Symbol == null)
+            {
+                throw new InvalidDataException("Symbol is a required property for Ticker and cannot be null");
+            }
+            else
+            {
+                this.Symbol = Symbol;
+            }
+            // to ensure "Exchange" is required (not null)
+            if (Exchange == null)
+            {
+                throw new InvalidDataException("Exchange is a required property for Ticker and cannot be null");
+            }
+            else
+            {
+                this.Exchange = Exchange;
+            }
             
         }
-
         
+    
         /// <summary>
         /// The ticker symbol for this organization. Example: ININ, AAPL, MSFT, etc.
         /// </summary>
         /// <value>The ticker symbol for this organization. Example: ININ, AAPL, MSFT, etc.</value>
         [DataMember(Name="symbol", EmitDefaultValue=false)]
         public string Symbol { get; set; }
-  
-        
+    
         /// <summary>
         /// The exchange for this ticker symbol. Examples: NYSE, FTSE, NASDAQ, etc.
         /// </summary>
         /// <value>The exchange for this ticker symbol. Examples: NYSE, FTSE, NASDAQ, etc.</value>
         [DataMember(Name="exchange", EmitDefaultValue=false)]
         public string Exchange { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

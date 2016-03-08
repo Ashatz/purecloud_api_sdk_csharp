@@ -7,48 +7,60 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class EdgeLogsJobRequest :  IEquatable<EdgeLogsJobRequest>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeLogsJobRequest" /> class.
+        /// Initializes a new instance of the <see cref="EdgeLogsJobRequest" />class.
         /// </summary>
-        public EdgeLogsJobRequest()
+        /// <param name="Path">Path.</param>
+        /// <param name="Query">Query.</param>
+        /// <param name="Recurse">Recurse (default to false).</param>
+
+        public EdgeLogsJobRequest(string Path = null, string Query = null, bool? Recurse = null)
         {
-            this.Recurse = false;
+            this.Path = Path;
+            this.Query = Query;
+            // use default value if no "Recurse" provided
+            if (Recurse == null)
+            {
+                this.Recurse = false;
+            }
+            else
+            {
+                this.Recurse = Recurse;
+            }
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Path
         /// </summary>
         [DataMember(Name="path", EmitDefaultValue=false)]
         public string Path { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Query
         /// </summary>
         [DataMember(Name="query", EmitDefaultValue=false)]
         public string Query { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Recurse
         /// </summary>
         [DataMember(Name="recurse", EmitDefaultValue=false)]
         public bool? Recurse { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

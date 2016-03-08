@@ -7,93 +7,100 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Invoice :  IEquatable<Invoice>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Invoice" /> class.
+        /// Initializes a new instance of the <see cref="Invoice" />class.
         /// </summary>
-        public Invoice()
+        /// <param name="Name">Name.</param>
+        /// <param name="InvoiceNumber">InvoiceNumber.</param>
+        /// <param name="InvoiceDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DueDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Amount">Amount.</param>
+        /// <param name="Balance">Balance.</param>
+        /// <param name="Status">Status.</param>
+
+        public Invoice(string Name = null, string InvoiceNumber = null, DateTime? InvoiceDate = null, DateTime? DueDate = null, string Amount = null, string Balance = null, string Status = null, )
         {
+            this.Name = Name;
+            this.InvoiceNumber = InvoiceNumber;
+            this.InvoiceDate = InvoiceDate;
+            this.DueDate = DueDate;
+            this.Amount = Amount;
+            this.Balance = Balance;
+            this.Status = Status;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets InvoiceNumber
         /// </summary>
         [DataMember(Name="invoiceNumber", EmitDefaultValue=false)]
         public string InvoiceNumber { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="invoiceDate", EmitDefaultValue=false)]
         public DateTime? InvoiceDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dueDate", EmitDefaultValue=false)]
         public DateTime? DueDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Amount
         /// </summary>
         [DataMember(Name="amount", EmitDefaultValue=false)]
         public string Amount { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Balance
         /// </summary>
         [DataMember(Name="balance", EmitDefaultValue=false)]
         public string Balance { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

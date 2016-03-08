@@ -7,47 +7,71 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class TermAttribute :  IEquatable<TermAttribute>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum {
+            
+            [EnumMember(Value = "NUMBER")]
+            Number,
+            
+            [EnumMember(Value = "STRING")]
+            String,
+            
+            [EnumMember(Value = "DATE")]
+            Date,
+            
+            [EnumMember(Value = "BOOLEAN")]
+            Boolean,
+            
+            [EnumMember(Value = "LIST")]
+            List
+        }
+    
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="TermAttribute" /> class.
+        /// Initializes a new instance of the <see cref="TermAttribute" />class.
         /// </summary>
-        public TermAttribute()
+        /// <param name="Id">Id.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="Type">Type.</param>
+
+        public TermAttribute(string Id = null, string Name = null, TypeEnum? Type = null)
         {
+            this.Id = Id;
+            this.Name = Name;
+            this.Type = Type;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

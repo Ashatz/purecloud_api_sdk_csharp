@@ -7,76 +7,85 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class PolicyErrorMessage :  IEquatable<PolicyErrorMessage>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PolicyErrorMessage" /> class.
+        /// Initializes a new instance of the <see cref="PolicyErrorMessage" />class.
         /// </summary>
-        public PolicyErrorMessage()
+        /// <param name="StatusCode">StatusCode.</param>
+        /// <param name="UserMessage">UserMessage.</param>
+        /// <param name="UserParamsMessage">UserParamsMessage.</param>
+        /// <param name="ErrorCode">ErrorCode.</param>
+        /// <param name="CorrelationId">CorrelationId.</param>
+        /// <param name="UserParams">UserParams.</param>
+        /// <param name="InsertDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+
+        public PolicyErrorMessage(int? StatusCode = null, Object UserMessage = null, string UserParamsMessage = null, string ErrorCode = null, string CorrelationId = null, List<UserParam> UserParams = null, DateTime? InsertDate = null)
         {
+            this.StatusCode = StatusCode;
+            this.UserMessage = UserMessage;
+            this.UserParamsMessage = UserParamsMessage;
+            this.ErrorCode = ErrorCode;
+            this.CorrelationId = CorrelationId;
+            this.UserParams = UserParams;
+            this.InsertDate = InsertDate;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets StatusCode
         /// </summary>
         [DataMember(Name="statusCode", EmitDefaultValue=false)]
         public int? StatusCode { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UserMessage
         /// </summary>
         [DataMember(Name="userMessage", EmitDefaultValue=false)]
         public Object UserMessage { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UserParamsMessage
         /// </summary>
         [DataMember(Name="userParamsMessage", EmitDefaultValue=false)]
         public string UserParamsMessage { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
         [DataMember(Name="errorCode", EmitDefaultValue=false)]
         public string ErrorCode { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CorrelationId
         /// </summary>
         [DataMember(Name="correlationId", EmitDefaultValue=false)]
         public string CorrelationId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UserParams
         /// </summary>
         [DataMember(Name="userParams", EmitDefaultValue=false)]
         public List<UserParam> UserParams { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="insertDate", EmitDefaultValue=false)]
         public DateTime? InsertDate { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

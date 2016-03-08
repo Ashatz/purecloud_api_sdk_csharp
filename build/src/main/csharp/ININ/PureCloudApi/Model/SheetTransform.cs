@@ -7,47 +7,52 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class SheetTransform :  IEquatable<SheetTransform>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="SheetTransform" /> class.
+        /// Initializes a new instance of the <see cref="SheetTransform" />class.
         /// </summary>
-        public SheetTransform()
+        /// <param name="Sheet">Sheet.</param>
+        /// <param name="SheetName">SheetName.</param>
+        /// <param name="Table">Table.</param>
+
+        public SheetTransform(int? Sheet = null, string SheetName = null, TableTransform Table = null)
         {
+            this.Sheet = Sheet;
+            this.SheetName = SheetName;
+            this.Table = Table;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Sheet
         /// </summary>
         [DataMember(Name="sheet", EmitDefaultValue=false)]
         public int? Sheet { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SheetName
         /// </summary>
         [DataMember(Name="sheetName", EmitDefaultValue=false)]
         public string SheetName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Table
         /// </summary>
         [DataMember(Name="table", EmitDefaultValue=false)]
         public TableTransform Table { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,47 +7,52 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class MediaResult :  IEquatable<MediaResult>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaResult" /> class.
+        /// Initializes a new instance of the <see cref="MediaResult" />class.
         /// </summary>
-        public MediaResult()
+        /// <param name="WaveUri">WaveUri.</param>
+        /// <param name="MediaUri">MediaUri.</param>
+        /// <param name="WaveformData">WaveformData.</param>
+
+        public MediaResult(string WaveUri = null, string MediaUri = null, List<float?> WaveformData = null)
         {
+            this.WaveUri = WaveUri;
+            this.MediaUri = MediaUri;
+            this.WaveformData = WaveformData;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets WaveUri
         /// </summary>
         [DataMember(Name="waveUri", EmitDefaultValue=false)]
         public string WaveUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MediaUri
         /// </summary>
         [DataMember(Name="mediaUri", EmitDefaultValue=false)]
         public string MediaUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets WaveformData
         /// </summary>
         [DataMember(Name="waveformData", EmitDefaultValue=false)]
         public List<float?> WaveformData { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

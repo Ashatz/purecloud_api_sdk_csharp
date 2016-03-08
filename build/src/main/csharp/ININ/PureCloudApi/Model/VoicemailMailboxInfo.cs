@@ -7,70 +7,78 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class VoicemailMailboxInfo :  IEquatable<VoicemailMailboxInfo>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailMailboxInfo" /> class.
+        /// Initializes a new instance of the <see cref="VoicemailMailboxInfo" />class.
         /// </summary>
-        public VoicemailMailboxInfo()
+        /// <param name="UsageSizeBytes">UsageSizeBytes.</param>
+        /// <param name="TotalCount">TotalCount.</param>
+        /// <param name="UnreadCount">UnreadCount.</param>
+        /// <param name="VoicemailPolicy">VoicemailPolicy.</param>
+        /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+
+        public VoicemailMailboxInfo(long? UsageSizeBytes = null, int? TotalCount = null, int? UnreadCount = null, VoicemailUserPolicy VoicemailPolicy = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null)
         {
+            this.UsageSizeBytes = UsageSizeBytes;
+            this.TotalCount = TotalCount;
+            this.UnreadCount = UnreadCount;
+            this.VoicemailPolicy = VoicemailPolicy;
+            this.CreatedDate = CreatedDate;
+            this.ModifiedDate = ModifiedDate;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets UsageSizeBytes
         /// </summary>
         [DataMember(Name="usageSizeBytes", EmitDefaultValue=false)]
         public long? UsageSizeBytes { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TotalCount
         /// </summary>
         [DataMember(Name="totalCount", EmitDefaultValue=false)]
         public int? TotalCount { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UnreadCount
         /// </summary>
         [DataMember(Name="unreadCount", EmitDefaultValue=false)]
         public int? UnreadCount { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets VoicemailPolicy
         /// </summary>
         [DataMember(Name="voicemailPolicy", EmitDefaultValue=false)]
         public VoicemailUserPolicy VoicemailPolicy { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="createdDate", EmitDefaultValue=false)]
         public DateTime? CreatedDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
         public DateTime? ModifiedDate { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,114 +7,141 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Location :  IEquatable<Location>
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Location" /> class.
-        /// </summary>
-        public Location()
-        {
-            this.AddressVerified = false;
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StateEnum {
             
+            [EnumMember(Value = "active")]
+            Active,
+            
+            [EnumMember(Value = "inactive")]
+            Inactive
         }
-
-        
-        /// <summary>
-        /// The globally unique identifier for the object.
-        /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Address
-        /// </summary>
-        [DataMember(Name="address", EmitDefaultValue=false)]
-        public string Address { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets AddressFields
-        /// </summary>
-        [DataMember(Name="addressFields", EmitDefaultValue=false)]
-        public LocationAddressFields AddressFields { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets AddressVerified
-        /// </summary>
-        [DataMember(Name="addressVerified", EmitDefaultValue=false)]
-        public bool? AddressVerified { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets EmergencyNumber
-        /// </summary>
-        [DataMember(Name="emergencyNumber", EmitDefaultValue=false)]
-        public LocationEmergencyNumber EmergencyNumber { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Notes
-        /// </summary>
-        [DataMember(Name="notes", EmitDefaultValue=false)]
-        public string Notes { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Path
-        /// </summary>
-        [DataMember(Name="path", EmitDefaultValue=false)]
-        public List<string> Path { get; set; }
-  
-        
+    
         /// <summary>
         /// Current activity status of the location.
         /// </summary>
         /// <value>Current activity status of the location.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
-        public string State { get; set; }
-  
+        public StateEnum? State { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Location" /> class.
+        /// Initializes a new instance of the <see cref="Location" />class.
+        /// </summary>
+        /// <param name="Name">Name.</param>
+        /// <param name="Address">Address.</param>
+        /// <param name="AddressFields">AddressFields.</param>
+        /// <param name="AddressVerified">AddressVerified (default to false).</param>
+        /// <param name="EmergencyNumber">EmergencyNumber.</param>
+        /// <param name="Notes">Notes.</param>
+        /// <param name="Path">Path.</param>
+        /// <param name="State">Current activity status of the location..</param>
+        /// <param name="SublocationOrder">SublocationOrder.</param>
+        /// <param name="Version">Version.</param>
+
+        public Location(string Name = null, string Address = null, LocationAddressFields AddressFields = null, bool? AddressVerified = null, LocationEmergencyNumber EmergencyNumber = null, string Notes = null, List<string> Path = null, StateEnum? State = null, List<string> SublocationOrder = null, double? Version = null, )
+        {
+            this.Name = Name;
+            this.Address = Address;
+            this.AddressFields = AddressFields;
+            // use default value if no "AddressVerified" provided
+            if (AddressVerified == null)
+            {
+                this.AddressVerified = false;
+            }
+            else
+            {
+                this.AddressVerified = AddressVerified;
+            }
+            this.EmergencyNumber = EmergencyNumber;
+            this.Notes = Notes;
+            this.Path = Path;
+            this.State = State;
+            this.SublocationOrder = SublocationOrder;
+            this.Version = Version;
+            
+        }
         
+    
+        /// <summary>
+        /// The globally unique identifier for the object.
+        /// </summary>
+        /// <value>The globally unique identifier for the object.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; private set; }
+    
+        /// <summary>
+        /// Gets or Sets Name
+        /// </summary>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Address
+        /// </summary>
+        [DataMember(Name="address", EmitDefaultValue=false)]
+        public string Address { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets AddressFields
+        /// </summary>
+        [DataMember(Name="addressFields", EmitDefaultValue=false)]
+        public LocationAddressFields AddressFields { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets AddressVerified
+        /// </summary>
+        [DataMember(Name="addressVerified", EmitDefaultValue=false)]
+        public bool? AddressVerified { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets EmergencyNumber
+        /// </summary>
+        [DataMember(Name="emergencyNumber", EmitDefaultValue=false)]
+        public LocationEmergencyNumber EmergencyNumber { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Notes
+        /// </summary>
+        [DataMember(Name="notes", EmitDefaultValue=false)]
+        public string Notes { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Path
+        /// </summary>
+        [DataMember(Name="path", EmitDefaultValue=false)]
+        public List<string> Path { get; set; }
+    
         /// <summary>
         /// Gets or Sets SublocationOrder
         /// </summary>
         [DataMember(Name="sublocationOrder", EmitDefaultValue=false)]
         public List<string> SublocationOrder { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public double? Version { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

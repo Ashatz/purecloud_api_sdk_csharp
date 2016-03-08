@@ -7,42 +7,46 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class CoverSheet :  IEquatable<CoverSheet>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CoverSheet" /> class.
+        /// Initializes a new instance of the <see cref="CoverSheet" />class.
         /// </summary>
-        public CoverSheet()
+        /// <param name="Notes">Text to be added to the coversheet.</param>
+        /// <param name="Locale">Locale, e.g. = en-US.</param>
+
+        public CoverSheet(string Notes = null, string Locale = null)
         {
+            this.Notes = Notes;
+            this.Locale = Locale;
             
         }
-
         
+    
         /// <summary>
         /// Text to be added to the coversheet
         /// </summary>
         /// <value>Text to be added to the coversheet</value>
         [DataMember(Name="notes", EmitDefaultValue=false)]
         public string Notes { get; set; }
-  
-        
+    
         /// <summary>
         /// Locale, e.g. = en-US
         /// </summary>
         /// <value>Locale, e.g. = en-US</value>
         [DataMember(Name="locale", EmitDefaultValue=false)]
         public string Locale { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

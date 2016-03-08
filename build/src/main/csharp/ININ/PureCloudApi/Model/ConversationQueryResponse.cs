@@ -7,180 +7,227 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ConversationQueryResponse :  IEquatable<ConversationQueryResponse>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum SortEnum {
+            
+            [EnumMember(Value = "ASC")]
+            Asc,
+            
+            [EnumMember(Value = "DESC")]
+            Desc
+        }
+    
+        /// <summary>
+        /// Gets or Sets Sort
+        /// </summary>
+        [DataMember(Name="sort", EmitDefaultValue=false)]
+        public SortEnum? Sort { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationQueryResponse" /> class.
+        /// Initializes a new instance of the <see cref="ConversationQueryResponse" />class.
         /// </summary>
-        public ConversationQueryResponse()
+        /// <param name="PageSize">PageSize.</param>
+        /// <param name="PageNumber">PageNumber.</param>
+        /// <param name="Total">Total.</param>
+        /// <param name="Entities">Entities.</param>
+        /// <param name="HasMorePrev">HasMorePrev (default to false).</param>
+        /// <param name="HasMoreNext">HasMoreNext (default to false).</param>
+        /// <param name="StartQueryTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="EndQueryTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="NewestResultTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="OldestResultTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="TimeMs">TimeMs.</param>
+        /// <param name="Iterations">Iterations.</param>
+        /// <param name="Anchor">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Sort">Sort.</param>
+        /// <param name="Facets">Facets.</param>
+        /// <param name="SelfUri">SelfUri.</param>
+        /// <param name="FirstUri">FirstUri.</param>
+        /// <param name="PreviousUri">PreviousUri.</param>
+        /// <param name="NextUri">NextUri.</param>
+        /// <param name="LastUri">LastUri.</param>
+        /// <param name="PageCount">PageCount.</param>
+
+        public ConversationQueryResponse(int? PageSize = null, int? PageNumber = null, long? Total = null, List<Conversation> Entities = null, bool? HasMorePrev = null, bool? HasMoreNext = null, DateTime? StartQueryTime = null, DateTime? EndQueryTime = null, DateTime? NewestResultTime = null, DateTime? OldestResultTime = null, long? TimeMs = null, int? Iterations = null, DateTime? Anchor = null, SortEnum? Sort = null, Facets Facets = null, string SelfUri = null, string FirstUri = null, string PreviousUri = null, string NextUri = null, string LastUri = null, int? PageCount = null)
         {
-            this.HasMorePrev = false;
-            this.HasMoreNext = false;
+            this.PageSize = PageSize;
+            this.PageNumber = PageNumber;
+            this.Total = Total;
+            this.Entities = Entities;
+            // use default value if no "HasMorePrev" provided
+            if (HasMorePrev == null)
+            {
+                this.HasMorePrev = false;
+            }
+            else
+            {
+                this.HasMorePrev = HasMorePrev;
+            }
+            // use default value if no "HasMoreNext" provided
+            if (HasMoreNext == null)
+            {
+                this.HasMoreNext = false;
+            }
+            else
+            {
+                this.HasMoreNext = HasMoreNext;
+            }
+            this.StartQueryTime = StartQueryTime;
+            this.EndQueryTime = EndQueryTime;
+            this.NewestResultTime = NewestResultTime;
+            this.OldestResultTime = OldestResultTime;
+            this.TimeMs = TimeMs;
+            this.Iterations = Iterations;
+            this.Anchor = Anchor;
+            this.Sort = Sort;
+            this.Facets = Facets;
+            this.SelfUri = SelfUri;
+            this.FirstUri = FirstUri;
+            this.PreviousUri = PreviousUri;
+            this.NextUri = NextUri;
+            this.LastUri = LastUri;
+            this.PageCount = PageCount;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets PageSize
         /// </summary>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PageNumber
         /// </summary>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Total
         /// </summary>
         [DataMember(Name="total", EmitDefaultValue=false)]
         public long? Total { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
         public List<Conversation> Entities { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets HasMorePrev
         /// </summary>
         [DataMember(Name="hasMorePrev", EmitDefaultValue=false)]
         public bool? HasMorePrev { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets HasMoreNext
         /// </summary>
         [DataMember(Name="hasMoreNext", EmitDefaultValue=false)]
         public bool? HasMoreNext { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="startQueryTime", EmitDefaultValue=false)]
         public DateTime? StartQueryTime { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="endQueryTime", EmitDefaultValue=false)]
         public DateTime? EndQueryTime { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="newestResultTime", EmitDefaultValue=false)]
         public DateTime? NewestResultTime { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="oldestResultTime", EmitDefaultValue=false)]
         public DateTime? OldestResultTime { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TimeMs
         /// </summary>
         [DataMember(Name="timeMs", EmitDefaultValue=false)]
         public long? TimeMs { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Iterations
         /// </summary>
         [DataMember(Name="iterations", EmitDefaultValue=false)]
         public int? Iterations { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="anchor", EmitDefaultValue=false)]
         public DateTime? Anchor { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Sort
-        /// </summary>
-        [DataMember(Name="sort", EmitDefaultValue=false)]
-        public string Sort { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Facets
         /// </summary>
         [DataMember(Name="facets", EmitDefaultValue=false)]
         public Facets Facets { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SelfUri
         /// </summary>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FirstUri
         /// </summary>
         [DataMember(Name="firstUri", EmitDefaultValue=false)]
         public string FirstUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PreviousUri
         /// </summary>
         [DataMember(Name="previousUri", EmitDefaultValue=false)]
         public string PreviousUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets NextUri
         /// </summary>
         [DataMember(Name="nextUri", EmitDefaultValue=false)]
         public string NextUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets LastUri
         /// </summary>
         [DataMember(Name="lastUri", EmitDefaultValue=false)]
         public string LastUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PageCount
         /// </summary>
         [DataMember(Name="pageCount", EmitDefaultValue=false)]
         public int? PageCount { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

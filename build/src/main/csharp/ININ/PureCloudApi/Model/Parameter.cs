@@ -7,55 +7,106 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Parameter :  IEquatable<Parameter>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ParameterTypeEnum {
+            
+            [EnumMember(Value = "UUID")]
+            Uuid,
+            
+            [EnumMember(Value = "STRING")]
+            String,
+            
+            [EnumMember(Value = "UUIDLIST")]
+            Uuidlist,
+            
+            [EnumMember(Value = "STRINGLIST")]
+            Stringlist
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum DomainEnum {
+            
+            [EnumMember(Value = "USERID")]
+            Userid,
+            
+            [EnumMember(Value = "QUEUEID")]
+            Queueid,
+            
+            [EnumMember(Value = "MEDIATYPE")]
+            Mediatype,
+            
+            [EnumMember(Value = "DIALERCAMPAIGNID")]
+            Dialercampaignid,
+            
+            [EnumMember(Value = "QMEVALFORMID")]
+            Qmevalformid,
+            
+            [EnumMember(Value = "UNKNOWN")]
+            Unknown
+        }
+    
+        /// <summary>
+        /// Gets or Sets ParameterType
+        /// </summary>
+        [DataMember(Name="parameterType", EmitDefaultValue=false)]
+        public ParameterTypeEnum? ParameterType { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Domain
+        /// </summary>
+        [DataMember(Name="domain", EmitDefaultValue=false)]
+        public DomainEnum? Domain { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Parameter" /> class.
+        /// Initializes a new instance of the <see cref="Parameter" />class.
         /// </summary>
-        public Parameter()
+        /// <param name="Name">Name.</param>
+        /// <param name="ParameterType">ParameterType.</param>
+        /// <param name="Domain">Domain.</param>
+        /// <param name="Required">Required (default to false).</param>
+
+        public Parameter(string Name = null, ParameterTypeEnum? ParameterType = null, DomainEnum? Domain = null, bool? Required = null)
         {
-            this.Required = false;
+            this.Name = Name;
+            this.ParameterType = ParameterType;
+            this.Domain = Domain;
+            // use default value if no "Required" provided
+            if (Required == null)
+            {
+                this.Required = false;
+            }
+            else
+            {
+                this.Required = Required;
+            }
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets ParameterType
-        /// </summary>
-        [DataMember(Name="parameterType", EmitDefaultValue=false)]
-        public string ParameterType { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Domain
-        /// </summary>
-        [DataMember(Name="domain", EmitDefaultValue=false)]
-        public string Domain { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Required
         /// </summary>
         [DataMember(Name="required", EmitDefaultValue=false)]
         public bool? Required { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

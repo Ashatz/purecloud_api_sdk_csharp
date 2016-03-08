@@ -7,77 +7,86 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class FacetStatistics :  IEquatable<FacetStatistics>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FacetStatistics" /> class.
+        /// Initializes a new instance of the <see cref="FacetStatistics" />class.
         /// </summary>
-        public FacetStatistics()
+        /// <param name="Count">Count.</param>
+        /// <param name="Min">Min.</param>
+        /// <param name="Max">Max.</param>
+        /// <param name="Mean">Mean.</param>
+        /// <param name="StdDeviation">StdDeviation.</param>
+        /// <param name="DateMin">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateMax">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+
+        public FacetStatistics(long? Count = null, double? Min = null, double? Max = null, double? Mean = null, double? StdDeviation = null, DateTime? DateMin = null, DateTime? DateMax = null)
         {
+            this.Count = Count;
+            this.Min = Min;
+            this.Max = Max;
+            this.Mean = Mean;
+            this.StdDeviation = StdDeviation;
+            this.DateMin = DateMin;
+            this.DateMax = DateMax;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Count
         /// </summary>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public long? Count { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Min
         /// </summary>
         [DataMember(Name="min", EmitDefaultValue=false)]
         public double? Min { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Max
         /// </summary>
         [DataMember(Name="max", EmitDefaultValue=false)]
         public double? Max { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Mean
         /// </summary>
         [DataMember(Name="mean", EmitDefaultValue=false)]
         public double? Mean { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets StdDeviation
         /// </summary>
         [DataMember(Name="stdDeviation", EmitDefaultValue=false)]
         public double? StdDeviation { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateMin", EmitDefaultValue=false)]
         public DateTime? DateMin { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateMax", EmitDefaultValue=false)]
         public DateTime? DateMax { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

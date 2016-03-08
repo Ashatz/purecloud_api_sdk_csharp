@@ -7,184 +7,234 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Details about a WorkItem
     /// </summary>
     [DataContract]
     public partial class WorkItemDetails :  IEquatable<WorkItemDetails>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkItemDetails" /> class.
+        /// Initializes a new instance of the <see cref="WorkItemDetails" />class.
         /// </summary>
-        public WorkItemDetails()
+        /// <param name="Name">Name.</param>
+        /// <param name="WorkItemDefinition">WorkItemDefinition.</param>
+        /// <param name="FlowExecId">The flow instance ID that created this WorkItem (required).</param>
+        /// <param name="FlowConfigId">The flow config ID that this workitem was created from. (required).</param>
+        /// <param name="FlowCreateTime">The time the flow was started. (that created this workitem). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
+        /// <param name="CreateTime">The time this workitem was started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
+        /// <param name="Owner">The user currently working on/has responsibility for this WorkItem.  May be null if no owner..</param>
+        /// <param name="OfferedToUsers">List of users that this workItem is offered to.  May be null if only offered to queues..</param>
+        /// <param name="OfferedToQueues">List of queues that this workItem is offered to.  May be null if only offered to users..</param>
+        /// <param name="Title">The work item title.</param>
+        /// <param name="Subtitle">The work item&#39;s subtitle - 2nd line/description.</param>
+        /// <param name="AssociatedDocuments">The documents associated with this workitem.</param>
+        /// <param name="AvailableActions">The actions that the user can take on this workitem (submit, transfer, etc)..</param>
+        /// <param name="DataValueInfo">The data items that provide values for any work item form elements, if applicable..</param>
+        /// <param name="WorkItemCache">The data items in the current work item cache, if one exists..</param>
+        /// <param name="LastOfferedTime">The time this work item was last offered to a user or queue. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="LastOwnershipUpdateTime">The most recent time a user assumed ownership of a work item. This may be blank if the work item has no owner. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="CurrentTaskStartTime">This is the time when the current task that started the work item was started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+
+        public WorkItemDetails(string Name = null, WorkItemDefinition WorkItemDefinition = null, FlowExecId FlowExecId = null, FlowConfigId FlowConfigId = null, DateTime? FlowCreateTime = null, DateTime? CreateTime = null, User Owner = null, List<User> OfferedToUsers = null, List<Queue> OfferedToQueues = null, string Title = null, string Subtitle = null, List<AssociatedDocument> AssociatedDocuments = null, WorkItemActions AvailableActions = null, DataValueInfo DataValueInfo = null, WorkItemCache WorkItemCache = null, DateTime? LastOfferedTime = null, DateTime? LastOwnershipUpdateTime = null, DateTime? CurrentTaskStartTime = null, )
         {
+            // to ensure "FlowExecId" is required (not null)
+            if (FlowExecId == null)
+            {
+                throw new InvalidDataException("FlowExecId is a required property for WorkItemDetails and cannot be null");
+            }
+            else
+            {
+                this.FlowExecId = FlowExecId;
+            }
+            // to ensure "FlowConfigId" is required (not null)
+            if (FlowConfigId == null)
+            {
+                throw new InvalidDataException("FlowConfigId is a required property for WorkItemDetails and cannot be null");
+            }
+            else
+            {
+                this.FlowConfigId = FlowConfigId;
+            }
+            // to ensure "FlowCreateTime" is required (not null)
+            if (FlowCreateTime == null)
+            {
+                throw new InvalidDataException("FlowCreateTime is a required property for WorkItemDetails and cannot be null");
+            }
+            else
+            {
+                this.FlowCreateTime = FlowCreateTime;
+            }
+            // to ensure "CreateTime" is required (not null)
+            if (CreateTime == null)
+            {
+                throw new InvalidDataException("CreateTime is a required property for WorkItemDetails and cannot be null");
+            }
+            else
+            {
+                this.CreateTime = CreateTime;
+            }
+            this.Name = Name;
+            this.WorkItemDefinition = WorkItemDefinition;
+            this.Owner = Owner;
+            this.OfferedToUsers = OfferedToUsers;
+            this.OfferedToQueues = OfferedToQueues;
+            this.Title = Title;
+            this.Subtitle = Subtitle;
+            this.AssociatedDocuments = AssociatedDocuments;
+            this.AvailableActions = AvailableActions;
+            this.DataValueInfo = DataValueInfo;
+            this.WorkItemCache = WorkItemCache;
+            this.LastOfferedTime = LastOfferedTime;
+            this.LastOwnershipUpdateTime = LastOwnershipUpdateTime;
+            this.CurrentTaskStartTime = CurrentTaskStartTime;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets WorkItemDefinition
         /// </summary>
         [DataMember(Name="workItemDefinition", EmitDefaultValue=false)]
         public WorkItemDefinition WorkItemDefinition { get; set; }
-  
-        
+    
         /// <summary>
         /// The flow instance ID that created this WorkItem
         /// </summary>
         /// <value>The flow instance ID that created this WorkItem</value>
         [DataMember(Name="flowExecId", EmitDefaultValue=false)]
         public FlowExecId FlowExecId { get; set; }
-  
-        
+    
         /// <summary>
         /// The flow config ID that this workitem was created from.
         /// </summary>
         /// <value>The flow config ID that this workitem was created from.</value>
         [DataMember(Name="flowConfigId", EmitDefaultValue=false)]
         public FlowConfigId FlowConfigId { get; set; }
-  
-        
+    
         /// <summary>
         /// The time the flow was started. (that created this workitem). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The time the flow was started. (that created this workitem). Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="flowCreateTime", EmitDefaultValue=false)]
         public DateTime? FlowCreateTime { get; set; }
-  
-        
+    
         /// <summary>
         /// The time this workitem was started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The time this workitem was started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="createTime", EmitDefaultValue=false)]
         public DateTime? CreateTime { get; set; }
-  
-        
+    
         /// <summary>
         /// The user currently working on/has responsibility for this WorkItem.  May be null if no owner.
         /// </summary>
         /// <value>The user currently working on/has responsibility for this WorkItem.  May be null if no owner.</value>
         [DataMember(Name="owner", EmitDefaultValue=false)]
         public User Owner { get; set; }
-  
-        
+    
         /// <summary>
         /// List of users that this workItem is offered to.  May be null if only offered to queues.
         /// </summary>
         /// <value>List of users that this workItem is offered to.  May be null if only offered to queues.</value>
         [DataMember(Name="offeredToUsers", EmitDefaultValue=false)]
         public List<User> OfferedToUsers { get; set; }
-  
-        
+    
         /// <summary>
         /// List of queues that this workItem is offered to.  May be null if only offered to users.
         /// </summary>
         /// <value>List of queues that this workItem is offered to.  May be null if only offered to users.</value>
         [DataMember(Name="offeredToQueues", EmitDefaultValue=false)]
         public List<Queue> OfferedToQueues { get; set; }
-  
-        
+    
         /// <summary>
         /// The work item title
         /// </summary>
         /// <value>The work item title</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
-  
-        
+    
         /// <summary>
         /// The work item's subtitle - 2nd line/description
         /// </summary>
         /// <value>The work item's subtitle - 2nd line/description</value>
         [DataMember(Name="subtitle", EmitDefaultValue=false)]
         public string Subtitle { get; set; }
-  
-        
+    
         /// <summary>
         /// The documents associated with this workitem
         /// </summary>
         /// <value>The documents associated with this workitem</value>
         [DataMember(Name="associatedDocuments", EmitDefaultValue=false)]
         public List<AssociatedDocument> AssociatedDocuments { get; set; }
-  
-        
+    
         /// <summary>
         /// The actions that the user can take on this workitem (submit, transfer, etc).
         /// </summary>
         /// <value>The actions that the user can take on this workitem (submit, transfer, etc).</value>
         [DataMember(Name="availableActions", EmitDefaultValue=false)]
         public WorkItemActions AvailableActions { get; set; }
-  
-        
+    
         /// <summary>
         /// The data items that provide values for any work item form elements, if applicable.
         /// </summary>
         /// <value>The data items that provide values for any work item form elements, if applicable.</value>
         [DataMember(Name="dataValueInfo", EmitDefaultValue=false)]
         public DataValueInfo DataValueInfo { get; set; }
-  
-        
+    
         /// <summary>
         /// The data items in the current work item cache, if one exists.
         /// </summary>
         /// <value>The data items in the current work item cache, if one exists.</value>
         [DataMember(Name="workItemCache", EmitDefaultValue=false)]
         public WorkItemCache WorkItemCache { get; set; }
-  
-        
+    
         /// <summary>
         /// The time this work item was last offered to a user or queue. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The time this work item was last offered to a user or queue. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="lastOfferedTime", EmitDefaultValue=false)]
         public DateTime? LastOfferedTime { get; set; }
-  
-        
+    
         /// <summary>
         /// The most recent time a user assumed ownership of a work item. This may be blank if the work item has no owner. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The most recent time a user assumed ownership of a work item. This may be blank if the work item has no owner. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="lastOwnershipUpdateTime", EmitDefaultValue=false)]
         public DateTime? LastOwnershipUpdateTime { get; set; }
-  
-        
+    
         /// <summary>
         /// This is the time when the current task that started the work item was started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>This is the time when the current task that started the work item was started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="currentTaskStartTime", EmitDefaultValue=false)]
         public DateTime? CurrentTaskStartTime { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

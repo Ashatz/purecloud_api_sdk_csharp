@@ -7,87 +7,160 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ParticipantRequest :  IEquatable<ParticipantRequest>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StateEnum {
+            
+            [EnumMember(Value = "ALERTING")]
+            Alerting,
+            
+            [EnumMember(Value = "DIALING")]
+            Dialing,
+            
+            [EnumMember(Value = "CONTACTING")]
+            Contacting,
+            
+            [EnumMember(Value = "OFFERING")]
+            Offering,
+            
+            [EnumMember(Value = "CONNECTED")]
+            Connected,
+            
+            [EnumMember(Value = "DISCONNECTED")]
+            Disconnected,
+            
+            [EnumMember(Value = "TERMINATED")]
+            Terminated,
+            
+            [EnumMember(Value = "NONE")]
+            None
+        }
+    
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public StateEnum? State { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ParticipantRequest" /> class.
+        /// Initializes a new instance of the <see cref="ParticipantRequest" />class.
         /// </summary>
-        public ParticipantRequest()
+        /// <param name="Id">Id.</param>
+        /// <param name="Wrapup">Wrapup.</param>
+        /// <param name="State">State.</param>
+        /// <param name="Recording">Recording (default to false).</param>
+        /// <param name="Muted">Muted (default to false).</param>
+        /// <param name="Confined">Confined (default to false).</param>
+        /// <param name="Held">Held (default to false).</param>
+        /// <param name="WrapupSkipped">WrapupSkipped (default to false).</param>
+
+        public ParticipantRequest(string Id = null, Wrapup Wrapup = null, StateEnum? State = null, bool? Recording = null, bool? Muted = null, bool? Confined = null, bool? Held = null, bool? WrapupSkipped = null)
         {
-            this.Recording = false;
-            this.Muted = false;
-            this.Confined = false;
-            this.Held = false;
-            this.WrapupSkipped = false;
+            this.Id = Id;
+            this.Wrapup = Wrapup;
+            this.State = State;
+            // use default value if no "Recording" provided
+            if (Recording == null)
+            {
+                this.Recording = false;
+            }
+            else
+            {
+                this.Recording = Recording;
+            }
+            // use default value if no "Muted" provided
+            if (Muted == null)
+            {
+                this.Muted = false;
+            }
+            else
+            {
+                this.Muted = Muted;
+            }
+            // use default value if no "Confined" provided
+            if (Confined == null)
+            {
+                this.Confined = false;
+            }
+            else
+            {
+                this.Confined = Confined;
+            }
+            // use default value if no "Held" provided
+            if (Held == null)
+            {
+                this.Held = false;
+            }
+            else
+            {
+                this.Held = Held;
+            }
+            // use default value if no "WrapupSkipped" provided
+            if (WrapupSkipped == null)
+            {
+                this.WrapupSkipped = false;
+            }
+            else
+            {
+                this.WrapupSkipped = WrapupSkipped;
+            }
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Wrapup
         /// </summary>
         [DataMember(Name="wrapup", EmitDefaultValue=false)]
         public Wrapup Wrapup { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets State
-        /// </summary>
-        [DataMember(Name="state", EmitDefaultValue=false)]
-        public string State { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Recording
         /// </summary>
         [DataMember(Name="recording", EmitDefaultValue=false)]
         public bool? Recording { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Muted
         /// </summary>
         [DataMember(Name="muted", EmitDefaultValue=false)]
         public bool? Muted { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Confined
         /// </summary>
         [DataMember(Name="confined", EmitDefaultValue=false)]
         public bool? Confined { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Held
         /// </summary>
         [DataMember(Name="held", EmitDefaultValue=false)]
         public bool? Held { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets WrapupSkipped
         /// </summary>
         [DataMember(Name="wrapupSkipped", EmitDefaultValue=false)]
         public bool? WrapupSkipped { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

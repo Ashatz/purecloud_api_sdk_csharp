@@ -7,56 +7,75 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Reservation :  IEquatable<Reservation>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PhoneNumberTypeEnum {
+            
+            [EnumMember(Value = "TOLL_FREE")]
+            TollFree,
+            
+            [EnumMember(Value = "CN_DOMESTIC")]
+            CnDomestic,
+            
+            [EnumMember(Value = "US_DOMESTIC")]
+            UsDomestic
+        }
+    
+        /// <summary>
+        /// The type of phone number (eg us-domestic, toll-free, etc).
+        /// </summary>
+        /// <value>The type of phone number (eg us-domestic, toll-free, etc).</value>
+        [DataMember(Name="phoneNumberType", EmitDefaultValue=false)]
+        public PhoneNumberTypeEnum? PhoneNumberType { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Reservation" /> class.
+        /// Initializes a new instance of the <see cref="Reservation" />class.
         /// </summary>
-        public Reservation()
+        /// <param name="Id">Id.</param>
+        /// <param name="ReservedTn">ReservedTn.</param>
+        /// <param name="ReservationExpires">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="PhoneNumberType">The type of phone number (eg us-domestic, toll-free, etc)..</param>
+
+        public Reservation(string Id = null, string ReservedTn = null, DateTime? ReservationExpires = null, PhoneNumberTypeEnum? PhoneNumberType = null)
         {
+            this.Id = Id;
+            this.ReservedTn = ReservedTn;
+            this.ReservationExpires = ReservationExpires;
+            this.PhoneNumberType = PhoneNumberType;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ReservedTn
         /// </summary>
         [DataMember(Name="reservedTn", EmitDefaultValue=false)]
         public string ReservedTn { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="reservationExpires", EmitDefaultValue=false)]
         public DateTime? ReservationExpires { get; set; }
-  
-        
-        /// <summary>
-        /// The type of phone number (eg us-domestic, toll-free, etc).
-        /// </summary>
-        /// <value>The type of phone number (eg us-domestic, toll-free, etc).</value>
-        [DataMember(Name="phoneNumberType", EmitDefaultValue=false)]
-        public string PhoneNumberType { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

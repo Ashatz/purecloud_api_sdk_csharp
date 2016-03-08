@@ -7,93 +7,107 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class EvaluationForm :  IEquatable<EvaluationForm>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationForm" /> class.
+        /// Initializes a new instance of the <see cref="EvaluationForm" />class.
         /// </summary>
-        public EvaluationForm()
+        /// <param name="Name">Name.</param>
+        /// <param name="Type">Type.</param>
+        /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Published">Published (default to false).</param>
+        /// <param name="ContextId">ContextId.</param>
+        /// <param name="QuestionGroups">QuestionGroups.</param>
+        /// <param name="PublishedVersions">PublishedVersions.</param>
+
+        public EvaluationForm(string Name = null, string Type = null, DateTime? ModifiedDate = null, bool? Published = null, string ContextId = null, List<QuestionGroup> QuestionGroups = null, DomainEntityListingEvaluationForm PublishedVersions = null, )
         {
-            this.Published = false;
+            this.Name = Name;
+            this.Type = Type;
+            this.ModifiedDate = ModifiedDate;
+            // use default value if no "Published" provided
+            if (Published == null)
+            {
+                this.Published = false;
+            }
+            else
+            {
+                this.Published = Published;
+            }
+            this.ContextId = ContextId;
+            this.QuestionGroups = QuestionGroups;
+            this.PublishedVersions = PublishedVersions;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
         public DateTime? ModifiedDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Published
         /// </summary>
         [DataMember(Name="published", EmitDefaultValue=false)]
         public bool? Published { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ContextId
         /// </summary>
         [DataMember(Name="contextId", EmitDefaultValue=false)]
         public string ContextId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets QuestionGroups
         /// </summary>
         [DataMember(Name="questionGroups", EmitDefaultValue=false)]
         public List<QuestionGroup> QuestionGroups { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PublishedVersions
         /// </summary>
         [DataMember(Name="publishedVersions", EmitDefaultValue=false)]
         public DomainEntityListingEvaluationForm PublishedVersions { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

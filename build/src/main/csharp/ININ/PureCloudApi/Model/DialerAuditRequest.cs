@@ -7,54 +7,60 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DialerAuditRequest :  IEquatable<DialerAuditRequest>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerAuditRequest" /> class.
+        /// Initializes a new instance of the <see cref="DialerAuditRequest" />class.
         /// </summary>
-        public DialerAuditRequest()
+        /// <param name="QueryPhrase">QueryPhrase.</param>
+        /// <param name="QueryFields">QueryFields.</param>
+        /// <param name="Facets">Facets.</param>
+        /// <param name="Filters">Filters.</param>
+
+        public DialerAuditRequest(string QueryPhrase = null, List<string> QueryFields = null, List<Facet> Facets = null, List<Filter> Filters = null)
         {
+            this.QueryPhrase = QueryPhrase;
+            this.QueryFields = QueryFields;
+            this.Facets = Facets;
+            this.Filters = Filters;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets QueryPhrase
         /// </summary>
         [DataMember(Name="queryPhrase", EmitDefaultValue=false)]
         public string QueryPhrase { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets QueryFields
         /// </summary>
         [DataMember(Name="queryFields", EmitDefaultValue=false)]
         public List<string> QueryFields { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Facets
         /// </summary>
         [DataMember(Name="facets", EmitDefaultValue=false)]
         public List<Facet> Facets { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Filters
         /// </summary>
         [DataMember(Name="filters", EmitDefaultValue=false)]
         public List<Filter> Filters { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

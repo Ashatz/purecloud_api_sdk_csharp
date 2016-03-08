@@ -7,184 +7,230 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Queue :  IEquatable<Queue>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StateEnum {
+            
+            [EnumMember(Value = "ACTIVE")]
+            Active,
+            
+            [EnumMember(Value = "DELETED")]
+            Deleted,
+            
+            [EnumMember(Value = "INACTIVE")]
+            Inactive
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum SkillEvaluationMethodEnum {
+            
+            [EnumMember(Value = "NONE")]
+            None,
+            
+            [EnumMember(Value = "BEST")]
+            Best,
+            
+            [EnumMember(Value = "ALL")]
+            All
+        }
+    
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public StateEnum? State { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets SkillEvaluationMethod
+        /// </summary>
+        [DataMember(Name="skillEvaluationMethod", EmitDefaultValue=false)]
+        public SkillEvaluationMethodEnum? SkillEvaluationMethod { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Queue" /> class.
+        /// Initializes a new instance of the <see cref="Queue" />class.
         /// </summary>
-        public Queue()
+        /// <param name="Name">Name.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="Version">Version.</param>
+        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ModifiedBy">ModifiedBy.</param>
+        /// <param name="CreatedBy">CreatedBy.</param>
+        /// <param name="State">State.</param>
+        /// <param name="ModifiedByApp">ModifiedByApp.</param>
+        /// <param name="CreatedByApp">CreatedByApp.</param>
+        /// <param name="WrapupCodes">WrapupCodes.</param>
+        /// <param name="MediaSettings">MediaSettings.</param>
+        /// <param name="Bullseye">Bullseye.</param>
+        /// <param name="AcwSettings">AcwSettings.</param>
+        /// <param name="PhoneNumber">PhoneNumber.</param>
+        /// <param name="SkillEvaluationMethod">SkillEvaluationMethod.</param>
+        /// <param name="QueueFlow">QueueFlow.</param>
+        /// <param name="CallingPartyName">CallingPartyName.</param>
+        /// <param name="CallingPartyNumber">CallingPartyNumber.</param>
+        /// <param name="MemberCount">MemberCount.</param>
+
+        public Queue(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<UriReference> WrapupCodes = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, string PhoneNumber = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, string CallingPartyName = null, string CallingPartyNumber = null, int? MemberCount = null, )
         {
+            this.Name = Name;
+            this.Description = Description;
+            this.Version = Version;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.ModifiedBy = ModifiedBy;
+            this.CreatedBy = CreatedBy;
+            this.State = State;
+            this.ModifiedByApp = ModifiedByApp;
+            this.CreatedByApp = CreatedByApp;
+            this.WrapupCodes = WrapupCodes;
+            this.MediaSettings = MediaSettings;
+            this.Bullseye = Bullseye;
+            this.AcwSettings = AcwSettings;
+            this.PhoneNumber = PhoneNumber;
+            this.SkillEvaluationMethod = SkillEvaluationMethod;
+            this.QueueFlow = QueueFlow;
+            this.CallingPartyName = CallingPartyName;
+            this.CallingPartyNumber = CallingPartyNumber;
+            this.MemberCount = MemberCount;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ModifiedBy
         /// </summary>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public string ModifiedBy { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CreatedBy
         /// </summary>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public string CreatedBy { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets State
-        /// </summary>
-        [DataMember(Name="state", EmitDefaultValue=false)]
-        public string State { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ModifiedByApp
         /// </summary>
         [DataMember(Name="modifiedByApp", EmitDefaultValue=false)]
         public string ModifiedByApp { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CreatedByApp
         /// </summary>
         [DataMember(Name="createdByApp", EmitDefaultValue=false)]
         public string CreatedByApp { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets WrapupCodes
         /// </summary>
         [DataMember(Name="wrapupCodes", EmitDefaultValue=false)]
         public List<UriReference> WrapupCodes { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MediaSettings
         /// </summary>
         [DataMember(Name="mediaSettings", EmitDefaultValue=false)]
         public Dictionary<string, MediaSetting> MediaSettings { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Bullseye
         /// </summary>
         [DataMember(Name="bullseye", EmitDefaultValue=false)]
         public Bullseye Bullseye { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AcwSettings
         /// </summary>
         [DataMember(Name="acwSettings", EmitDefaultValue=false)]
         public AcwSettings AcwSettings { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PhoneNumber
         /// </summary>
         [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
         public string PhoneNumber { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets SkillEvaluationMethod
-        /// </summary>
-        [DataMember(Name="skillEvaluationMethod", EmitDefaultValue=false)]
-        public string SkillEvaluationMethod { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets QueueFlow
         /// </summary>
         [DataMember(Name="queueFlow", EmitDefaultValue=false)]
         public UriReference QueueFlow { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CallingPartyName
         /// </summary>
         [DataMember(Name="callingPartyName", EmitDefaultValue=false)]
         public string CallingPartyName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CallingPartyNumber
         /// </summary>
         [DataMember(Name="callingPartyNumber", EmitDefaultValue=false)]
         public string CallingPartyNumber { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MemberCount
         /// </summary>
         [DataMember(Name="memberCount", EmitDefaultValue=false)]
         public int? MemberCount { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

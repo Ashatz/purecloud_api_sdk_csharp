@@ -7,40 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Number :  IEquatable<Number>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Number" /> class.
+        /// Initializes a new instance of the <see cref="Number" />class.
         /// </summary>
-        public Number()
+        /// <param name="Start">Start.</param>
+        /// <param name="End">End.</param>
+
+        public Number(string Start = null, string End = null)
         {
+            this.Start = Start;
+            this.End = End;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Start
         /// </summary>
         [DataMember(Name="start", EmitDefaultValue=false)]
         public string Start { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets End
         /// </summary>
         [DataMember(Name="end", EmitDefaultValue=false)]
         public string End { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

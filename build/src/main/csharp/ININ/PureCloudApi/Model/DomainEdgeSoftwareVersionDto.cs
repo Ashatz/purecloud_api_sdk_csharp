@@ -7,87 +7,107 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DomainEdgeSoftwareVersionDto :  IEquatable<DomainEdgeSoftwareVersionDto>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainEdgeSoftwareVersionDto" /> class.
+        /// Initializes a new instance of the <see cref="DomainEdgeSoftwareVersionDto" />class.
         /// </summary>
-        public DomainEdgeSoftwareVersionDto()
+        /// <param name="Name">Name.</param>
+        /// <param name="EdgeVersion">EdgeVersion.</param>
+        /// <param name="PublishDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="EdgeUri">EdgeUri.</param>
+        /// <param name="Current">Current (default to false).</param>
+        /// <param name="LatestRelease">LatestRelease (default to false).</param>
+
+        public DomainEdgeSoftwareVersionDto(string Name = null, string EdgeVersion = null, DateTime? PublishDate = null, string EdgeUri = null, bool? Current = null, bool? LatestRelease = null, )
         {
-            this.Current = false;
-            this.LatestRelease = false;
+            this.Name = Name;
+            this.EdgeVersion = EdgeVersion;
+            this.PublishDate = PublishDate;
+            this.EdgeUri = EdgeUri;
+            // use default value if no "Current" provided
+            if (Current == null)
+            {
+                this.Current = false;
+            }
+            else
+            {
+                this.Current = Current;
+            }
+            // use default value if no "LatestRelease" provided
+            if (LatestRelease == null)
+            {
+                this.LatestRelease = false;
+            }
+            else
+            {
+                this.LatestRelease = LatestRelease;
+            }
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EdgeVersion
         /// </summary>
         [DataMember(Name="edgeVersion", EmitDefaultValue=false)]
         public string EdgeVersion { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="publishDate", EmitDefaultValue=false)]
         public DateTime? PublishDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EdgeUri
         /// </summary>
         [DataMember(Name="edgeUri", EmitDefaultValue=false)]
         public string EdgeUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Current
         /// </summary>
         [DataMember(Name="current", EmitDefaultValue=false)]
         public bool? Current { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets LatestRelease
         /// </summary>
         [DataMember(Name="latestRelease", EmitDefaultValue=false)]
         public bool? LatestRelease { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

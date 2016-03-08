@@ -7,97 +7,120 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class EdgeLogsJobFile :  IEquatable<EdgeLogsJobFile>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum UploadStatusEnum {
+            
+            [EnumMember(Value = "UPLOADING")]
+            Uploading,
+            
+            [EnumMember(Value = "NOT_UPLOADED")]
+            NotUploaded,
+            
+            [EnumMember(Value = "UPLOADED")]
+            Uploaded,
+            
+            [EnumMember(Value = "ERROR_ON_UPLOAD")]
+            ErrorOnUpload
+        }
+    
+        /// <summary>
+        /// The status of the upload of this file from the Edge to the cloud.  Use /upload to start an upload.
+        /// </summary>
+        /// <value>The status of the upload of this file from the Edge to the cloud.  Use /upload to start an upload.</value>
+        [DataMember(Name="uploadStatus", EmitDefaultValue=false)]
+        public UploadStatusEnum? UploadStatus { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeLogsJobFile" /> class.
+        /// Initializes a new instance of the <see cref="EdgeLogsJobFile" />class.
         /// </summary>
-        public EdgeLogsJobFile()
+        /// <param name="Name">Name.</param>
+        /// <param name="TimeCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="TimeModified">The time this log file was last modified on the Edge. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="SizeBytes">The size of this file in bytes..</param>
+        /// <param name="UploadStatus">The status of the upload of this file from the Edge to the cloud.  Use /upload to start an upload..</param>
+        /// <param name="EdgePath">The path of this file on the Edge..</param>
+        /// <param name="DownloadId">The download ID to use with the downloads API..</param>
+
+        public EdgeLogsJobFile(string Name = null, DateTime? TimeCreated = null, DateTime? TimeModified = null, double? SizeBytes = null, UploadStatusEnum? UploadStatus = null, string EdgePath = null, string DownloadId = null, )
         {
+            this.Name = Name;
+            this.TimeCreated = TimeCreated;
+            this.TimeModified = TimeModified;
+            this.SizeBytes = SizeBytes;
+            this.UploadStatus = UploadStatus;
+            this.EdgePath = EdgePath;
+            this.DownloadId = DownloadId;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="timeCreated", EmitDefaultValue=false)]
         public DateTime? TimeCreated { get; set; }
-  
-        
+    
         /// <summary>
         /// The time this log file was last modified on the Edge. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The time this log file was last modified on the Edge. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="timeModified", EmitDefaultValue=false)]
         public DateTime? TimeModified { get; set; }
-  
-        
+    
         /// <summary>
         /// The size of this file in bytes.
         /// </summary>
         /// <value>The size of this file in bytes.</value>
         [DataMember(Name="sizeBytes", EmitDefaultValue=false)]
         public double? SizeBytes { get; set; }
-  
-        
-        /// <summary>
-        /// The status of the upload of this file from the Edge to the cloud.  Use /upload to start an upload.
-        /// </summary>
-        /// <value>The status of the upload of this file from the Edge to the cloud.  Use /upload to start an upload.</value>
-        [DataMember(Name="uploadStatus", EmitDefaultValue=false)]
-        public string UploadStatus { get; set; }
-  
-        
+    
         /// <summary>
         /// The path of this file on the Edge.
         /// </summary>
         /// <value>The path of this file on the Edge.</value>
         [DataMember(Name="edgePath", EmitDefaultValue=false)]
         public string EdgePath { get; set; }
-  
-        
+    
         /// <summary>
         /// The download ID to use with the downloads API.
         /// </summary>
         /// <value>The download ID to use with the downloads API.</value>
         [DataMember(Name="downloadId", EmitDefaultValue=false)]
         public string DownloadId { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,50 +7,69 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class XlsxSchema :  IEquatable<XlsxSchema>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="XlsxSchema" /> class.
+        /// Initializes a new instance of the <see cref="XlsxSchema" />class.
         /// </summary>
-        public XlsxSchema()
+        /// <param name="SheetSchemas">A list of all the schemas for a XLSX file. Each schema represents a different sheet&#39;s schema. (required).</param>
+        /// <param name="Name">Human readable name for schema. (required).</param>
+
+        public XlsxSchema(List<SheetSchema> SheetSchemas = null, string Name = null, )
         {
+            // to ensure "SheetSchemas" is required (not null)
+            if (SheetSchemas == null)
+            {
+                throw new InvalidDataException("SheetSchemas is a required property for XlsxSchema and cannot be null");
+            }
+            else
+            {
+                this.SheetSchemas = SheetSchemas;
+            }
+            // to ensure "Name" is required (not null)
+            if (Name == null)
+            {
+                throw new InvalidDataException("Name is a required property for XlsxSchema and cannot be null");
+            }
+            else
+            {
+                this.Name = Name;
+            }
             
         }
-
         
+    
         /// <summary>
         /// A list of all the schemas for a XLSX file. Each schema represents a different sheet's schema.
         /// </summary>
         /// <value>A list of all the schemas for a XLSX file. Each schema represents a different sheet's schema.</value>
         [DataMember(Name="SheetSchemas", EmitDefaultValue=false)]
         public List<SheetSchema> SheetSchemas { get; set; }
-  
-        
+    
         /// <summary>
         /// Human readable name for schema.
         /// </summary>
         /// <value>Human readable name for schema.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Carrier ID associated with this CSV schema.
         /// </summary>
         /// <value>Carrier ID associated with this CSV schema.</value>
         [DataMember(Name="CarrierId", EmitDefaultValue=false)]
-        public string CarrierId { get; set; }
-  
-        
-  
+        public string CarrierId { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

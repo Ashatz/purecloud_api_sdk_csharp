@@ -7,75 +7,84 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class LocationAddressFields :  IEquatable<LocationAddressFields>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="LocationAddressFields" /> class.
+        /// Initializes a new instance of the <see cref="LocationAddressFields" />class.
         /// </summary>
-        public LocationAddressFields()
+        /// <param name="City">City.</param>
+        /// <param name="Country">Country.</param>
+        /// <param name="CountryName">CountryName.</param>
+        /// <param name="State">State.</param>
+        /// <param name="Street1">Street1.</param>
+        /// <param name="Street2">Street2.</param>
+        /// <param name="Zipcode">Zipcode.</param>
+
+        public LocationAddressFields(string City = null, string Country = null, string CountryName = null, string State = null, string Street1 = null, string Street2 = null, string Zipcode = null)
         {
+            this.City = City;
+            this.Country = Country;
+            this.CountryName = CountryName;
+            this.State = State;
+            this.Street1 = Street1;
+            this.Street2 = Street2;
+            this.Zipcode = Zipcode;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets City
         /// </summary>
         [DataMember(Name="city", EmitDefaultValue=false)]
         public string City { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Country
         /// </summary>
         [DataMember(Name="country", EmitDefaultValue=false)]
         public string Country { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CountryName
         /// </summary>
         [DataMember(Name="countryName", EmitDefaultValue=false)]
         public string CountryName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public string State { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Street1
         /// </summary>
         [DataMember(Name="street1", EmitDefaultValue=false)]
         public string Street1 { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Street2
         /// </summary>
         [DataMember(Name="street2", EmitDefaultValue=false)]
         public string Street2 { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Zipcode
         /// </summary>
         [DataMember(Name="zipcode", EmitDefaultValue=false)]
         public string Zipcode { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

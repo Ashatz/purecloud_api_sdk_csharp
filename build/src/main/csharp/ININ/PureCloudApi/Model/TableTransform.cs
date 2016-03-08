@@ -7,68 +7,76 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class TableTransform :  IEquatable<TableTransform>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="TableTransform" /> class.
+        /// Initializes a new instance of the <see cref="TableTransform" />class.
         /// </summary>
-        public TableTransform()
+        /// <param name="HeaderRow">HeaderRow.</param>
+        /// <param name="FirstData">FirstData.</param>
+        /// <param name="HeaderReplaces">HeaderReplaces.</param>
+        /// <param name="Columns">Columns.</param>
+        /// <param name="Unpivots">Unpivots.</param>
+        /// <param name="Collapses">Collapses.</param>
+
+        public TableTransform(int? HeaderRow = null, int? FirstData = null, List<IndexedTransform> HeaderReplaces = null, List<IndexedTransform> Columns = null, List<UnpivotColumns> Unpivots = null, List<ColumnCollapse> Collapses = null)
         {
+            this.HeaderRow = HeaderRow;
+            this.FirstData = FirstData;
+            this.HeaderReplaces = HeaderReplaces;
+            this.Columns = Columns;
+            this.Unpivots = Unpivots;
+            this.Collapses = Collapses;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets HeaderRow
         /// </summary>
         [DataMember(Name="headerRow", EmitDefaultValue=false)]
         public int? HeaderRow { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FirstData
         /// </summary>
         [DataMember(Name="firstData", EmitDefaultValue=false)]
         public int? FirstData { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets HeaderReplaces
         /// </summary>
         [DataMember(Name="headerReplaces", EmitDefaultValue=false)]
         public List<IndexedTransform> HeaderReplaces { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Columns
         /// </summary>
         [DataMember(Name="columns", EmitDefaultValue=false)]
         public List<IndexedTransform> Columns { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Unpivots
         /// </summary>
         [DataMember(Name="unpivots", EmitDefaultValue=false)]
         public List<UnpivotColumns> Unpivots { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Collapses
         /// </summary>
         [DataMember(Name="collapses", EmitDefaultValue=false)]
         public List<ColumnCollapse> Collapses { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

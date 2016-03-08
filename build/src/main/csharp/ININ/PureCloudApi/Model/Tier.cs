@@ -7,40 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Tier :  IEquatable<Tier>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Tier" /> class.
+        /// Initializes a new instance of the <see cref="Tier" />class.
         /// </summary>
-        public Tier()
+        /// <param name="Currency">Currency.</param>
+        /// <param name="Price">Price.</param>
+
+        public Tier(string Currency = null, double? Price = null)
         {
+            this.Currency = Currency;
+            this.Price = Price;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Currency
         /// </summary>
         [DataMember(Name="currency", EmitDefaultValue=false)]
         public string Currency { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Price
         /// </summary>
         [DataMember(Name="price", EmitDefaultValue=false)]
         public double? Price { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

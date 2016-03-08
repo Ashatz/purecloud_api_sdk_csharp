@@ -7,42 +7,46 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class FlowBody :  IEquatable<FlowBody>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowBody" /> class.
+        /// Initializes a new instance of the <see cref="FlowBody" />class.
         /// </summary>
-        public FlowBody()
+        /// <param name="Format">The &#39;format&#39; indicates the particular format of the &#39;body&#39; contents.  Reference the Automate documentation for format information..</param>
+        /// <param name="Body">The flow definition body according to the syntax supported by the &#39;format&#39;.  Use the /processautomation/flows/schemas endpoint to get detailed syntax information for each format..</param>
+
+        public FlowBody(string Format = null, Dictionary<string, Object> Body = null)
         {
+            this.Format = Format;
+            this.Body = Body;
             
         }
-
         
+    
         /// <summary>
         /// The 'format' indicates the particular format of the 'body' contents.  Reference the Automate documentation for format information.
         /// </summary>
         /// <value>The 'format' indicates the particular format of the 'body' contents.  Reference the Automate documentation for format information.</value>
         [DataMember(Name="format", EmitDefaultValue=false)]
         public string Format { get; set; }
-  
-        
+    
         /// <summary>
         /// The flow definition body according to the syntax supported by the 'format'.  Use the /processautomation/flows/schemas endpoint to get detailed syntax information for each format.
         /// </summary>
         /// <value>The flow definition body according to the syntax supported by the 'format'.  Use the /processautomation/flows/schemas endpoint to get detailed syntax information for each format.</value>
         [DataMember(Name="body", EmitDefaultValue=false)]
-        public Dictionary<string, InlineResponse200> Body { get; set; }
-  
-        
-  
+        public Dictionary<string, Object> Body { get; set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

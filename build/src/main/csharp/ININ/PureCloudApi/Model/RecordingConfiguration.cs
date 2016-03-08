@@ -7,33 +7,36 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class RecordingConfiguration :  IEquatable<RecordingConfiguration>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingConfiguration" /> class.
+        /// Initializes a new instance of the <see cref="RecordingConfiguration" />class.
         /// </summary>
-        public RecordingConfiguration()
+        /// <param name="MaxSimultaneousStreams">MaxSimultaneousStreams.</param>
+
+        public RecordingConfiguration(int? MaxSimultaneousStreams = null)
         {
+            this.MaxSimultaneousStreams = MaxSimultaneousStreams;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets MaxSimultaneousStreams
         /// </summary>
         [DataMember(Name="maxSimultaneousStreams", EmitDefaultValue=false)]
         public int? MaxSimultaneousStreams { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

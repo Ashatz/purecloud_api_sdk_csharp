@@ -7,47 +7,52 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class CallableContactsDiagnostic :  IEquatable<CallableContactsDiagnostic>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CallableContactsDiagnostic" /> class.
+        /// Initializes a new instance of the <see cref="CallableContactsDiagnostic" />class.
         /// </summary>
-        public CallableContactsDiagnostic()
+        /// <param name="DncLists">DncLists.</param>
+        /// <param name="CallableTimeSet">CallableTimeSet.</param>
+        /// <param name="RuleSets">RuleSets.</param>
+
+        public CallableContactsDiagnostic(List<UriReference> DncLists = null, UriReference CallableTimeSet = null, List<UriReference> RuleSets = null)
         {
+            this.DncLists = DncLists;
+            this.CallableTimeSet = CallableTimeSet;
+            this.RuleSets = RuleSets;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets DncLists
         /// </summary>
         [DataMember(Name="dncLists", EmitDefaultValue=false)]
         public List<UriReference> DncLists { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CallableTimeSet
         /// </summary>
         [DataMember(Name="callableTimeSet", EmitDefaultValue=false)]
         public UriReference CallableTimeSet { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets RuleSets
         /// </summary>
         [DataMember(Name="ruleSets", EmitDefaultValue=false)]
         public List<UriReference> RuleSets { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

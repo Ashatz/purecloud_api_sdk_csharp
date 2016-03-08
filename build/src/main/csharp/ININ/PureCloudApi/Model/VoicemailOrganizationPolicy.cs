@@ -7,138 +7,176 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class VoicemailOrganizationPolicy :  IEquatable<VoicemailOrganizationPolicy>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailOrganizationPolicy" /> class.
+        /// Initializes a new instance of the <see cref="VoicemailOrganizationPolicy" />class.
         /// </summary>
-        public VoicemailOrganizationPolicy()
+        /// <param name="Enabled">Enabled (default to false).</param>
+        /// <param name="RetentionTimeDays">RetentionTimeDays.</param>
+        /// <param name="AlertTimeoutSeconds">AlertTimeoutSeconds.</param>
+        /// <param name="MinimumRecordingTimeSeconds">MinimumRecordingTimeSeconds.</param>
+        /// <param name="MaximumRecordingTimeSeconds">MaximumRecordingTimeSeconds.</param>
+        /// <param name="UnavailableMessageUri">UnavailableMessageUri.</param>
+        /// <param name="NamePromptMessageUri">NamePromptMessageUri.</param>
+        /// <param name="FullMessageUri">FullMessageUri.</param>
+        /// <param name="CompressSilence">CompressSilence (default to false).</param>
+        /// <param name="PinConfiguration">PinConfiguration.</param>
+        /// <param name="QuotaSizeBytes">QuotaSizeBytes.</param>
+        /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="VoicemailExtension">The extension for voicemail retrieval.  The default value is *86..</param>
+        /// <param name="PinRequired">If this is true, a PIN is required when accessing a user&#39;s voicemail from a phone. (default to false).</param>
+
+        public VoicemailOrganizationPolicy(bool? Enabled = null, int? RetentionTimeDays = null, int? AlertTimeoutSeconds = null, int? MinimumRecordingTimeSeconds = null, int? MaximumRecordingTimeSeconds = null, string UnavailableMessageUri = null, string NamePromptMessageUri = null, string FullMessageUri = null, bool? CompressSilence = null, PINConfiguration PinConfiguration = null, long? QuotaSizeBytes = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, string VoicemailExtension = null, bool? PinRequired = null)
         {
-            this.Enabled = false;
-            this.CompressSilence = false;
-            this.PinRequired = false;
+            // use default value if no "Enabled" provided
+            if (Enabled == null)
+            {
+                this.Enabled = false;
+            }
+            else
+            {
+                this.Enabled = Enabled;
+            }
+            this.RetentionTimeDays = RetentionTimeDays;
+            this.AlertTimeoutSeconds = AlertTimeoutSeconds;
+            this.MinimumRecordingTimeSeconds = MinimumRecordingTimeSeconds;
+            this.MaximumRecordingTimeSeconds = MaximumRecordingTimeSeconds;
+            this.UnavailableMessageUri = UnavailableMessageUri;
+            this.NamePromptMessageUri = NamePromptMessageUri;
+            this.FullMessageUri = FullMessageUri;
+            // use default value if no "CompressSilence" provided
+            if (CompressSilence == null)
+            {
+                this.CompressSilence = false;
+            }
+            else
+            {
+                this.CompressSilence = CompressSilence;
+            }
+            this.PinConfiguration = PinConfiguration;
+            this.QuotaSizeBytes = QuotaSizeBytes;
+            this.CreatedDate = CreatedDate;
+            this.ModifiedDate = ModifiedDate;
+            this.VoicemailExtension = VoicemailExtension;
+            // use default value if no "PinRequired" provided
+            if (PinRequired == null)
+            {
+                this.PinRequired = false;
+            }
+            else
+            {
+                this.PinRequired = PinRequired;
+            }
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Enabled
         /// </summary>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets RetentionTimeDays
         /// </summary>
         [DataMember(Name="retentionTimeDays", EmitDefaultValue=false)]
         public int? RetentionTimeDays { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AlertTimeoutSeconds
         /// </summary>
         [DataMember(Name="alertTimeoutSeconds", EmitDefaultValue=false)]
         public int? AlertTimeoutSeconds { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MinimumRecordingTimeSeconds
         /// </summary>
         [DataMember(Name="minimumRecordingTimeSeconds", EmitDefaultValue=false)]
         public int? MinimumRecordingTimeSeconds { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MaximumRecordingTimeSeconds
         /// </summary>
         [DataMember(Name="maximumRecordingTimeSeconds", EmitDefaultValue=false)]
         public int? MaximumRecordingTimeSeconds { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UnavailableMessageUri
         /// </summary>
         [DataMember(Name="unavailableMessageUri", EmitDefaultValue=false)]
         public string UnavailableMessageUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets NamePromptMessageUri
         /// </summary>
         [DataMember(Name="namePromptMessageUri", EmitDefaultValue=false)]
         public string NamePromptMessageUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FullMessageUri
         /// </summary>
         [DataMember(Name="fullMessageUri", EmitDefaultValue=false)]
         public string FullMessageUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CompressSilence
         /// </summary>
         [DataMember(Name="compressSilence", EmitDefaultValue=false)]
         public bool? CompressSilence { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PinConfiguration
         /// </summary>
         [DataMember(Name="pinConfiguration", EmitDefaultValue=false)]
         public PINConfiguration PinConfiguration { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets QuotaSizeBytes
         /// </summary>
         [DataMember(Name="quotaSizeBytes", EmitDefaultValue=false)]
         public long? QuotaSizeBytes { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="createdDate", EmitDefaultValue=false)]
         public DateTime? CreatedDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
         public DateTime? ModifiedDate { get; set; }
-  
-        
+    
         /// <summary>
         /// The extension for voicemail retrieval.  The default value is *86.
         /// </summary>
         /// <value>The extension for voicemail retrieval.  The default value is *86.</value>
         [DataMember(Name="voicemailExtension", EmitDefaultValue=false)]
         public string VoicemailExtension { get; set; }
-  
-        
+    
         /// <summary>
         /// If this is true, a PIN is required when accessing a user's voicemail from a phone.
         /// </summary>
         /// <value>If this is true, a PIN is required when accessing a user's voicemail from a phone.</value>
         [DataMember(Name="pinRequired", EmitDefaultValue=false)]
         public bool? PinRequired { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

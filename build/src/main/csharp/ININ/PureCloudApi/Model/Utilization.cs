@@ -7,57 +7,59 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Utilization :  IEquatable<Utilization>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Utilization" /> class.
+        /// Initializes a new instance of the <see cref="Utilization" />class.
         /// </summary>
-        public Utilization()
+        /// <param name="Name">Name.</param>
+        /// <param name="Utilization">Map of media types to utilization settings.  Map keys can be: call, chat, email, or socialExpression.</param>
+
+        public Utilization(string Name = null, Dictionary<string, OrgMediaUtilization> Utilization = null, )
         {
+            this.Name = Name;
+            this.Utilization = Utilization;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Map of media types to utilization settings.  Map keys can be: call, chat, email, or socialExpression
         /// </summary>
         /// <value>Map of media types to utilization settings.  Map keys can be: call, chat, email, or socialExpression</value>
         [DataMember(Name="utilization", EmitDefaultValue=false)]
-        public Dictionary<string, OrgMediaUtilization> _Utilization { get; set; }
-  
-        
+        public Dictionary<string, OrgMediaUtilization> Utilization { get; set; }
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,7 +70,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class Utilization {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  _Utilization: ").Append(_Utilization).Append("\n");
+            sb.Append("  Utilization: ").Append(Utilization).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
@@ -118,9 +120,9 @@ namespace ININ.PureCloudApi.Model
                     this.Name.Equals(other.Name)
                 ) && 
                 (
-                    this._Utilization == other._Utilization ||
-                    this._Utilization != null &&
-                    this._Utilization.SequenceEqual(other._Utilization)
+                    this.Utilization == other.Utilization ||
+                    this.Utilization != null &&
+                    this.Utilization.SequenceEqual(other.Utilization)
                 ) && 
                 (
                     this.SelfUri == other.SelfUri ||
@@ -147,8 +149,8 @@ namespace ININ.PureCloudApi.Model
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
                 
-                if (this._Utilization != null)
-                    hash = hash * 59 + this._Utilization.GetHashCode();
+                if (this.Utilization != null)
+                    hash = hash * 59 + this.Utilization.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

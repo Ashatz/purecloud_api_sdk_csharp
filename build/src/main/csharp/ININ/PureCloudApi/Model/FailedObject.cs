@@ -7,54 +7,60 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class FailedObject :  IEquatable<FailedObject>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FailedObject" /> class.
+        /// Initializes a new instance of the <see cref="FailedObject" />class.
         /// </summary>
-        public FailedObject()
+        /// <param name="Id">Id.</param>
+        /// <param name="Version">Version.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="ErrorCode">ErrorCode.</param>
+
+        public FailedObject(string Id = null, string Version = null, string Name = null, string ErrorCode = null)
         {
+            this.Id = Id;
+            this.Version = Version;
+            this.Name = Name;
+            this.ErrorCode = ErrorCode;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public string Version { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
         [DataMember(Name="errorCode", EmitDefaultValue=false)]
         public string ErrorCode { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

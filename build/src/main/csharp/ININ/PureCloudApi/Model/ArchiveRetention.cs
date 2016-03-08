@@ -7,40 +7,51 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ArchiveRetention :  IEquatable<ArchiveRetention>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StorageMediumEnum {
+            
+            [EnumMember(Value = "CLOUDARCHIVE")]
+            Cloudarchive
+        }
+    
+        /// <summary>
+        /// Gets or Sets StorageMedium
+        /// </summary>
+        [DataMember(Name="storageMedium", EmitDefaultValue=false)]
+        public StorageMediumEnum? StorageMedium { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ArchiveRetention" /> class.
+        /// Initializes a new instance of the <see cref="ArchiveRetention" />class.
         /// </summary>
-        public ArchiveRetention()
+        /// <param name="Days">Days.</param>
+        /// <param name="StorageMedium">StorageMedium.</param>
+
+        public ArchiveRetention(int? Days = null, StorageMediumEnum? StorageMedium = null)
         {
+            this.Days = Days;
+            this.StorageMedium = StorageMedium;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Days
         /// </summary>
         [DataMember(Name="days", EmitDefaultValue=false)]
         public int? Days { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets StorageMedium
-        /// </summary>
-        [DataMember(Name="storageMedium", EmitDefaultValue=false)]
-        public string StorageMedium { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

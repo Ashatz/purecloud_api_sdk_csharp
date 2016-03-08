@@ -7,40 +7,54 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class SortField :  IEquatable<SortField>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum SortTypeEnum {
+            
+            [EnumMember(Value = "ASCENDING")]
+            Ascending,
+            
+            [EnumMember(Value = "DESCENDING")]
+            Descending
+        }
+    
+        /// <summary>
+        /// Gets or Sets SortType
+        /// </summary>
+        [DataMember(Name="sortType", EmitDefaultValue=false)]
+        public SortTypeEnum? SortType { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="SortField" /> class.
+        /// Initializes a new instance of the <see cref="SortField" />class.
         /// </summary>
-        public SortField()
+        /// <param name="Name">Name.</param>
+        /// <param name="SortType">SortType.</param>
+
+        public SortField(string Name = null, SortTypeEnum? SortType = null)
         {
+            this.Name = Name;
+            this.SortType = SortType;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets SortType
-        /// </summary>
-        [DataMember(Name="sortType", EmitDefaultValue=false)]
-        public string SortType { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

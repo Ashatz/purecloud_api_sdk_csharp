@@ -7,42 +7,46 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Data containing details to upload a flow definition to for post versioned flows.
     /// </summary>
     [DataContract]
     public partial class FlowUploadResponse :  IEquatable<FlowUploadResponse>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowUploadResponse" /> class.
+        /// Initializes a new instance of the <see cref="FlowUploadResponse" />class.
         /// </summary>
-        public FlowUploadResponse()
+        /// <param name="Uri">uri destination to upload file to.</param>
+        /// <param name="UploadToken">token to send along when creating versioned flow so the file can be bound to the metadata.</param>
+
+        public FlowUploadResponse(string Uri = null, string UploadToken = null)
         {
+            this.Uri = Uri;
+            this.UploadToken = UploadToken;
             
         }
-
         
+    
         /// <summary>
         /// uri destination to upload file to
         /// </summary>
         /// <value>uri destination to upload file to</value>
         [DataMember(Name="uri", EmitDefaultValue=false)]
         public string Uri { get; set; }
-  
-        
+    
         /// <summary>
         /// token to send along when creating versioned flow so the file can be bound to the metadata
         /// </summary>
         /// <value>token to send along when creating versioned flow so the file can be bound to the metadata</value>
         [DataMember(Name="uploadToken", EmitDefaultValue=false)]
         public string UploadToken { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

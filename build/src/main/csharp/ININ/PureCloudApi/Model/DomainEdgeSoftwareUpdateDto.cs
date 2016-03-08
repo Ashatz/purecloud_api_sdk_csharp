@@ -7,94 +7,150 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DomainEdgeSoftwareUpdateDto :  IEquatable<DomainEdgeSoftwareUpdateDto>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StatusEnum {
+            
+            [EnumMember(Value = "NONE")]
+            None,
+            
+            [EnumMember(Value = "INIT")]
+            Init,
+            
+            [EnumMember(Value = "IN_PROGRESS")]
+            InProgress,
+            
+            [EnumMember(Value = "EXPIRED")]
+            Expired,
+            
+            [EnumMember(Value = "EXCEPTION")]
+            Exception,
+            
+            [EnumMember(Value = "ABORTED")]
+            Aborted,
+            
+            [EnumMember(Value = "FAILED")]
+            Failed,
+            
+            [EnumMember(Value = "SUCCEEDED")]
+            Succeeded,
+            
+            [EnumMember(Value = "DELETE")]
+            Delete
+        }
+    
+        /// <summary>
+        /// Gets or Sets Status
+        /// </summary>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainEdgeSoftwareUpdateDto" /> class.
+        /// Initializes a new instance of the <see cref="DomainEdgeSoftwareUpdateDto" />class.
         /// </summary>
-        public DomainEdgeSoftwareUpdateDto()
+        /// <param name="Version">Version.</param>
+        /// <param name="MaxDownloadRate">MaxDownloadRate.</param>
+        /// <param name="DownloadStartTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ExecuteStartTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ExecuteStopTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ExecuteOnIdle">ExecuteOnIdle (default to false).</param>
+        /// <param name="Status">Status.</param>
+        /// <param name="EdgeUri">EdgeUri.</param>
+        /// <param name="Current">Current (default to false).</param>
+
+        public DomainEdgeSoftwareUpdateDto(DomainEdgeSoftwareVersionDto Version = null, int? MaxDownloadRate = null, DateTime? DownloadStartTime = null, DateTime? ExecuteStartTime = null, DateTime? ExecuteStopTime = null, bool? ExecuteOnIdle = null, StatusEnum? Status = null, string EdgeUri = null, bool? Current = null)
         {
-            this.ExecuteOnIdle = false;
-            this.Current = false;
+            this.Version = Version;
+            this.MaxDownloadRate = MaxDownloadRate;
+            this.DownloadStartTime = DownloadStartTime;
+            this.ExecuteStartTime = ExecuteStartTime;
+            this.ExecuteStopTime = ExecuteStopTime;
+            // use default value if no "ExecuteOnIdle" provided
+            if (ExecuteOnIdle == null)
+            {
+                this.ExecuteOnIdle = false;
+            }
+            else
+            {
+                this.ExecuteOnIdle = ExecuteOnIdle;
+            }
+            this.Status = Status;
+            this.EdgeUri = EdgeUri;
+            // use default value if no "Current" provided
+            if (Current == null)
+            {
+                this.Current = false;
+            }
+            else
+            {
+                this.Current = Current;
+            }
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public DomainEdgeSoftwareVersionDto Version { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MaxDownloadRate
         /// </summary>
         [DataMember(Name="maxDownloadRate", EmitDefaultValue=false)]
         public int? MaxDownloadRate { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="downloadStartTime", EmitDefaultValue=false)]
         public DateTime? DownloadStartTime { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="executeStartTime", EmitDefaultValue=false)]
         public DateTime? ExecuteStartTime { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="executeStopTime", EmitDefaultValue=false)]
         public DateTime? ExecuteStopTime { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ExecuteOnIdle
         /// </summary>
         [DataMember(Name="executeOnIdle", EmitDefaultValue=false)]
         public bool? ExecuteOnIdle { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Status
-        /// </summary>
-        [DataMember(Name="status", EmitDefaultValue=false)]
-        public string Status { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EdgeUri
         /// </summary>
         [DataMember(Name="edgeUri", EmitDefaultValue=false)]
         public string EdgeUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Current
         /// </summary>
         [DataMember(Name="current", EmitDefaultValue=false)]
         public bool? Current { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

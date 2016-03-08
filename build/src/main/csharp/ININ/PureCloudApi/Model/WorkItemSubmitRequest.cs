@@ -7,42 +7,54 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Used as the body to the submitWorkItem request.
     /// </summary>
     [DataContract]
     public partial class WorkItemSubmitRequest :  IEquatable<WorkItemSubmitRequest>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkItemSubmitRequest" /> class.
+        /// Initializes a new instance of the <see cref="WorkItemSubmitRequest" />class.
         /// </summary>
-        public WorkItemSubmitRequest()
+        /// <param name="CommandId">The command associated with the submit request. Often it is the button pressed on the user interface. (required).</param>
+        /// <param name="DataItems">The data items that should be a part of the submit request..</param>
+
+        public WorkItemSubmitRequest(string CommandId = null, List<DataItem> DataItems = null)
         {
+            // to ensure "CommandId" is required (not null)
+            if (CommandId == null)
+            {
+                throw new InvalidDataException("CommandId is a required property for WorkItemSubmitRequest and cannot be null");
+            }
+            else
+            {
+                this.CommandId = CommandId;
+            }
+            this.DataItems = DataItems;
             
         }
-
         
+    
         /// <summary>
         /// The command associated with the submit request. Often it is the button pressed on the user interface.
         /// </summary>
         /// <value>The command associated with the submit request. Often it is the button pressed on the user interface.</value>
         [DataMember(Name="commandId", EmitDefaultValue=false)]
         public string CommandId { get; set; }
-  
-        
+    
         /// <summary>
         /// The data items that should be a part of the submit request.
         /// </summary>
         /// <value>The data items that should be a part of the submit request.</value>
         [DataMember(Name="dataItems", EmitDefaultValue=false)]
         public List<DataItem> DataItems { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

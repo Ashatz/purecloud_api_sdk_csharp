@@ -7,130 +7,148 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Gistener :  IEquatable<Gistener>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Gistener" /> class.
+        /// Initializes a new instance of the <see cref="Gistener" />class.
         /// </summary>
-        public Gistener()
+        /// <param name="Name">Name.</param>
+        /// <param name="DateCreated">Creation date for the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateModified">Date the entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Enabled">Indicates if this Gistener may be utilized on another entity (default to false).</param>
+        /// <param name="AnyWords">A tweet must contain any one of these words.</param>
+        /// <param name="AllWords">A tweet must contain every one of these words in any order.</param>
+        /// <param name="ExcludeWords">If a tweet contains any one of these words, it is thrown out.</param>
+        /// <param name="ExactPhrase">A tweet must contain this exact quoted phrase.</param>
+        /// <param name="GroupTags">The group tags associated with this Gistener.</param>
+        /// <param name="SocialAccount">The social account associated with this Gistener.</param>
+        /// <param name="Queue">The operator queue the gistener will route to..</param>
+
+        public Gistener(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, bool? Enabled = null, string AnyWords = null, string AllWords = null, string ExcludeWords = null, string ExactPhrase = null, List<GroupTag> GroupTags = null, SocialAccount SocialAccount = null, Queue Queue = null, )
         {
-            this.Enabled = false;
+            this.Name = Name;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            // use default value if no "Enabled" provided
+            if (Enabled == null)
+            {
+                this.Enabled = false;
+            }
+            else
+            {
+                this.Enabled = Enabled;
+            }
+            this.AnyWords = AnyWords;
+            this.AllWords = AllWords;
+            this.ExcludeWords = ExcludeWords;
+            this.ExactPhrase = ExactPhrase;
+            this.GroupTags = GroupTags;
+            this.SocialAccount = SocialAccount;
+            this.Queue = Queue;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Creation date for the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Creation date for the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-  
-        
+    
         /// <summary>
         /// Date the entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date the entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-  
-        
+    
         /// <summary>
         /// Indicates if this Gistener may be utilized on another entity
         /// </summary>
         /// <value>Indicates if this Gistener may be utilized on another entity</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
-  
-        
+    
         /// <summary>
         /// A tweet must contain any one of these words
         /// </summary>
         /// <value>A tweet must contain any one of these words</value>
         [DataMember(Name="anyWords", EmitDefaultValue=false)]
         public string AnyWords { get; set; }
-  
-        
+    
         /// <summary>
         /// A tweet must contain every one of these words in any order
         /// </summary>
         /// <value>A tweet must contain every one of these words in any order</value>
         [DataMember(Name="allWords", EmitDefaultValue=false)]
         public string AllWords { get; set; }
-  
-        
+    
         /// <summary>
         /// If a tweet contains any one of these words, it is thrown out
         /// </summary>
         /// <value>If a tweet contains any one of these words, it is thrown out</value>
         [DataMember(Name="excludeWords", EmitDefaultValue=false)]
         public string ExcludeWords { get; set; }
-  
-        
+    
         /// <summary>
         /// A tweet must contain this exact quoted phrase
         /// </summary>
         /// <value>A tweet must contain this exact quoted phrase</value>
         [DataMember(Name="exactPhrase", EmitDefaultValue=false)]
         public string ExactPhrase { get; set; }
-  
-        
+    
         /// <summary>
         /// The group tags associated with this Gistener
         /// </summary>
         /// <value>The group tags associated with this Gistener</value>
         [DataMember(Name="groupTags", EmitDefaultValue=false)]
         public List<GroupTag> GroupTags { get; set; }
-  
-        
+    
         /// <summary>
         /// The social account associated with this Gistener
         /// </summary>
         /// <value>The social account associated with this Gistener</value>
         [DataMember(Name="socialAccount", EmitDefaultValue=false)]
         public SocialAccount SocialAccount { get; set; }
-  
-        
+    
         /// <summary>
         /// The operator queue the gistener will route to.
         /// </summary>
         /// <value>The operator queue the gistener will route to.</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public Queue Queue { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

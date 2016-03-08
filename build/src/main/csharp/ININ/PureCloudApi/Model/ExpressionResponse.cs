@@ -7,113 +7,122 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ExpressionResponse :  IEquatable<ExpressionResponse>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ExpressionResponse" /> class.
+        /// Initializes a new instance of the <see cref="ExpressionResponse" />class.
         /// </summary>
-        public ExpressionResponse()
+        /// <param name="Name">Name.</param>
+        /// <param name="DateCreated">Creation date for the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateModified">Date the entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="SocialHub">The name of the social hub..</param>
+        /// <param name="Conversation">The conversation that this response is a part of..</param>
+        /// <param name="TwitterExpression">The twitter expression that this is in response to..</param>
+        /// <param name="RawResponseText">The raw text of the response..</param>
+        /// <param name="SocialAccount">The Social Account used to publish this expression.</param>
+        /// <param name="SocialHubResponseId">The id given to this response from the social hub.</param>
+
+        public ExpressionResponse(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string SocialHub = null, Conversation Conversation = null, TwitterExpression TwitterExpression = null, string RawResponseText = null, SocialAccount SocialAccount = null, string SocialHubResponseId = null, )
         {
+            this.Name = Name;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.SocialHub = SocialHub;
+            this.Conversation = Conversation;
+            this.TwitterExpression = TwitterExpression;
+            this.RawResponseText = RawResponseText;
+            this.SocialAccount = SocialAccount;
+            this.SocialHubResponseId = SocialHubResponseId;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Creation date for the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Creation date for the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-  
-        
+    
         /// <summary>
         /// Date the entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date the entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-  
-        
+    
         /// <summary>
         /// The name of the social hub.
         /// </summary>
         /// <value>The name of the social hub.</value>
         [DataMember(Name="socialHub", EmitDefaultValue=false)]
         public string SocialHub { get; set; }
-  
-        
+    
         /// <summary>
         /// The conversation that this response is a part of.
         /// </summary>
         /// <value>The conversation that this response is a part of.</value>
         [DataMember(Name="conversation", EmitDefaultValue=false)]
         public Conversation Conversation { get; set; }
-  
-        
+    
         /// <summary>
         /// The twitter expression that this is in response to.
         /// </summary>
         /// <value>The twitter expression that this is in response to.</value>
         [DataMember(Name="twitterExpression", EmitDefaultValue=false)]
         public TwitterExpression TwitterExpression { get; set; }
-  
-        
+    
         /// <summary>
         /// The raw text of the response.
         /// </summary>
         /// <value>The raw text of the response.</value>
         [DataMember(Name="rawResponseText", EmitDefaultValue=false)]
         public string RawResponseText { get; set; }
-  
-        
+    
         /// <summary>
         /// The Social Account used to publish this expression
         /// </summary>
         /// <value>The Social Account used to publish this expression</value>
         [DataMember(Name="socialAccount", EmitDefaultValue=false)]
         public SocialAccount SocialAccount { get; set; }
-  
-        
+    
         /// <summary>
         /// The id given to this response from the social hub
         /// </summary>
         /// <value>The id given to this response from the social hub</value>
         [DataMember(Name="socialHubResponseId", EmitDefaultValue=false)]
         public string SocialHubResponseId { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

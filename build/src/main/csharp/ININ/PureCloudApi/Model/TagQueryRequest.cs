@@ -7,47 +7,52 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class TagQueryRequest :  IEquatable<TagQueryRequest>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="TagQueryRequest" /> class.
+        /// Initializes a new instance of the <see cref="TagQueryRequest" />class.
         /// </summary>
-        public TagQueryRequest()
+        /// <param name="Query">Query.</param>
+        /// <param name="PageNumber">PageNumber.</param>
+        /// <param name="PageSize">PageSize.</param>
+
+        public TagQueryRequest(string Query = null, int? PageNumber = null, int? PageSize = null)
         {
+            this.Query = Query;
+            this.PageNumber = PageNumber;
+            this.PageSize = PageSize;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Query
         /// </summary>
         [DataMember(Name="query", EmitDefaultValue=false)]
         public string Query { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PageNumber
         /// </summary>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PageSize
         /// </summary>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

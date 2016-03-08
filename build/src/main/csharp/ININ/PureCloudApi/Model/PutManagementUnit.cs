@@ -7,47 +7,77 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class PutManagementUnit :  IEquatable<PutManagementUnit>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StartDayOfWeekEnum {
+            
+            [EnumMember(Value = "MONDAY")]
+            Monday,
+            
+            [EnumMember(Value = "TUESDAY")]
+            Tuesday,
+            
+            [EnumMember(Value = "WEDNESDAY")]
+            Wednesday,
+            
+            [EnumMember(Value = "THURSDAY")]
+            Thursday,
+            
+            [EnumMember(Value = "FRIDAY")]
+            Friday,
+            
+            [EnumMember(Value = "SATURDAY")]
+            Saturday,
+            
+            [EnumMember(Value = "SUNDAY")]
+            Sunday
+        }
+    
+        /// <summary>
+        /// Gets or Sets StartDayOfWeek
+        /// </summary>
+        [DataMember(Name="startDayOfWeek", EmitDefaultValue=false)]
+        public StartDayOfWeekEnum? StartDayOfWeek { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PutManagementUnit" /> class.
+        /// Initializes a new instance of the <see cref="PutManagementUnit" />class.
         /// </summary>
-        public PutManagementUnit()
+        /// <param name="Name">Name.</param>
+        /// <param name="StartDayOfWeek">StartDayOfWeek.</param>
+        /// <param name="Timezone">Timezone.</param>
+
+        public PutManagementUnit(string Name = null, StartDayOfWeekEnum? StartDayOfWeek = null, string Timezone = null)
         {
+            this.Name = Name;
+            this.StartDayOfWeek = StartDayOfWeek;
+            this.Timezone = Timezone;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets StartDayOfWeek
-        /// </summary>
-        [DataMember(Name="startDayOfWeek", EmitDefaultValue=false)]
-        public string StartDayOfWeek { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Timezone
         /// </summary>
         [DataMember(Name="timezone", EmitDefaultValue=false)]
         public string Timezone { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

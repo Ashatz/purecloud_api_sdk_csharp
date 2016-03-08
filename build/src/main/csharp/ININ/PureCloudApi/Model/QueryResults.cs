@@ -7,40 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class QueryResults :  IEquatable<QueryResults>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="QueryResults" /> class.
+        /// Initializes a new instance of the <see cref="QueryResults" />class.
         /// </summary>
-        public QueryResults()
+        /// <param name="Results">Results.</param>
+        /// <param name="FacetInfo">FacetInfo.</param>
+
+        public QueryResults(DomainEntityListingQueryResult Results = null, QueryFacetInfo FacetInfo = null)
         {
+            this.Results = Results;
+            this.FacetInfo = FacetInfo;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Results
         /// </summary>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public DomainEntityListingQueryResult Results { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FacetInfo
         /// </summary>
         [DataMember(Name="facetInfo", EmitDefaultValue=false)]
         public QueryFacetInfo FacetInfo { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,70 +7,92 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class PolicyActions :  IEquatable<PolicyActions>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PolicyActions" /> class.
+        /// Initializes a new instance of the <see cref="PolicyActions" />class.
         /// </summary>
-        public PolicyActions()
+        /// <param name="RetainRecording">RetainRecording (default to false).</param>
+        /// <param name="DeleteRecording">DeleteRecording (default to false).</param>
+        /// <param name="AssignEvaluations">AssignEvaluations.</param>
+        /// <param name="AssignMeteredEvaluations">AssignMeteredEvaluations.</param>
+        /// <param name="AssignCalibrations">AssignCalibrations.</param>
+        /// <param name="RetentionDuration">RetentionDuration.</param>
+
+        public PolicyActions(bool? RetainRecording = null, bool? DeleteRecording = null, List<EvaluationAssignment> AssignEvaluations = null, List<MeteredEvaluationAssignment> AssignMeteredEvaluations = null, List<CalibrationAssignment> AssignCalibrations = null, RetentionDuration RetentionDuration = null)
         {
-            this.RetainRecording = false;
-            this.DeleteRecording = false;
+            // use default value if no "RetainRecording" provided
+            if (RetainRecording == null)
+            {
+                this.RetainRecording = false;
+            }
+            else
+            {
+                this.RetainRecording = RetainRecording;
+            }
+            // use default value if no "DeleteRecording" provided
+            if (DeleteRecording == null)
+            {
+                this.DeleteRecording = false;
+            }
+            else
+            {
+                this.DeleteRecording = DeleteRecording;
+            }
+            this.AssignEvaluations = AssignEvaluations;
+            this.AssignMeteredEvaluations = AssignMeteredEvaluations;
+            this.AssignCalibrations = AssignCalibrations;
+            this.RetentionDuration = RetentionDuration;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets RetainRecording
         /// </summary>
         [DataMember(Name="retainRecording", EmitDefaultValue=false)]
         public bool? RetainRecording { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DeleteRecording
         /// </summary>
         [DataMember(Name="deleteRecording", EmitDefaultValue=false)]
         public bool? DeleteRecording { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AssignEvaluations
         /// </summary>
         [DataMember(Name="assignEvaluations", EmitDefaultValue=false)]
         public List<EvaluationAssignment> AssignEvaluations { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AssignMeteredEvaluations
         /// </summary>
         [DataMember(Name="assignMeteredEvaluations", EmitDefaultValue=false)]
         public List<MeteredEvaluationAssignment> AssignMeteredEvaluations { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AssignCalibrations
         /// </summary>
         [DataMember(Name="assignCalibrations", EmitDefaultValue=false)]
         public List<CalibrationAssignment> AssignCalibrations { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets RetentionDuration
         /// </summary>
         [DataMember(Name="retentionDuration", EmitDefaultValue=false)]
         public RetentionDuration RetentionDuration { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

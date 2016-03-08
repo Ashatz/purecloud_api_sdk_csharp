@@ -7,34 +7,37 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Represents the parsed certificate information.
     /// </summary>
     [DataContract]
     public partial class ParsedCertificate :  IEquatable<ParsedCertificate>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ParsedCertificate" /> class.
+        /// Initializes a new instance of the <see cref="ParsedCertificate" />class.
         /// </summary>
-        public ParsedCertificate()
+        /// <param name="CertificateDetails">The details of the certificates that were parsed correctly..</param>
+
+        public ParsedCertificate(List<CertificateDetails> CertificateDetails = null)
         {
+            this.CertificateDetails = CertificateDetails;
             
         }
-
         
+    
         /// <summary>
         /// The details of the certificates that were parsed correctly.
         /// </summary>
         /// <value>The details of the certificates that were parsed correctly.</value>
         [DataMember(Name="certificateDetails", EmitDefaultValue=false)]
         public List<CertificateDetails> CertificateDetails { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

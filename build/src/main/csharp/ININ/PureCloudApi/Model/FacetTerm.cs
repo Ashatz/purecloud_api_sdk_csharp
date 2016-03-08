@@ -7,69 +7,77 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class FacetTerm :  IEquatable<FacetTerm>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FacetTerm" /> class.
+        /// Initializes a new instance of the <see cref="FacetTerm" />class.
         /// </summary>
-        public FacetTerm()
+        /// <param name="Term">Term.</param>
+        /// <param name="Key">Key.</param>
+        /// <param name="Id">Id.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="Count">Count.</param>
+        /// <param name="Time">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+
+        public FacetTerm(string Term = null, long? Key = null, string Id = null, string Name = null, long? Count = null, DateTime? Time = null)
         {
+            this.Term = Term;
+            this.Key = Key;
+            this.Id = Id;
+            this.Name = Name;
+            this.Count = Count;
+            this.Time = Time;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Term
         /// </summary>
         [DataMember(Name="term", EmitDefaultValue=false)]
         public string Term { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Key
         /// </summary>
         [DataMember(Name="key", EmitDefaultValue=false)]
         public long? Key { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Count
         /// </summary>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public long? Count { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="time", EmitDefaultValue=false)]
         public DateTime? Time { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

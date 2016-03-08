@@ -7,48 +7,60 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DeltaResponse :  IEquatable<DeltaResponse>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DeltaResponse" /> class.
+        /// Initializes a new instance of the <see cref="DeltaResponse" />class.
         /// </summary>
-        public DeltaResponse()
+        /// <param name="ContextToken">ContextToken.</param>
+        /// <param name="Documents">Documents.</param>
+        /// <param name="HasMore">HasMore (default to false).</param>
+
+        public DeltaResponse(string ContextToken = null, List<DeltaDocument> Documents = null, bool? HasMore = null)
         {
-            this.HasMore = false;
+            this.ContextToken = ContextToken;
+            this.Documents = Documents;
+            // use default value if no "HasMore" provided
+            if (HasMore == null)
+            {
+                this.HasMore = false;
+            }
+            else
+            {
+                this.HasMore = HasMore;
+            }
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets ContextToken
         /// </summary>
         [DataMember(Name="contextToken", EmitDefaultValue=false)]
         public string ContextToken { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Documents
         /// </summary>
         [DataMember(Name="documents", EmitDefaultValue=false)]
         public List<DeltaDocument> Documents { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets HasMore
         /// </summary>
         [DataMember(Name="hasMore", EmitDefaultValue=false)]
         public bool? HasMore { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

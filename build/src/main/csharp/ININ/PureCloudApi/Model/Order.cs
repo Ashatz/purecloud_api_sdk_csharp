@@ -7,63 +7,66 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Order :  IEquatable<Order>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Order" /> class.
+        /// Initializes a new instance of the <see cref="Order" />class.
         /// </summary>
-        public Order()
+        /// <param name="Name">Name.</param>
+        /// <param name="Quote">Quote.</param>
+        /// <param name="EnvelopeId">EnvelopeId.</param>
+
+        public Order(string Name = null, Quote Quote = null, string EnvelopeId = null, )
         {
+            this.Name = Name;
+            this.Quote = Quote;
+            this.EnvelopeId = EnvelopeId;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Quote
         /// </summary>
         [DataMember(Name="quote", EmitDefaultValue=false)]
         public Quote Quote { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EnvelopeId
         /// </summary>
         [DataMember(Name="envelopeId", EmitDefaultValue=false)]
         public string EnvelopeId { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

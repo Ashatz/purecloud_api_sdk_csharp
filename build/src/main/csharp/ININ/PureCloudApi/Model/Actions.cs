@@ -7,33 +7,36 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Actions :  IEquatable<Actions>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Actions" /> class.
+        /// Initializes a new instance of the <see cref="Actions" />class.
         /// </summary>
-        public Actions()
+        /// <param name="SkillsToRemove">SkillsToRemove.</param>
+
+        public Actions(List<SkillsToRemove> SkillsToRemove = null)
         {
+            this.SkillsToRemove = SkillsToRemove;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets SkillsToRemove
         /// </summary>
         [DataMember(Name="skillsToRemove", EmitDefaultValue=false)]
         public List<SkillsToRemove> SkillsToRemove { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

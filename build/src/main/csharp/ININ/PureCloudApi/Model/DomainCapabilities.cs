@@ -7,49 +7,68 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DomainCapabilities :  IEquatable<DomainCapabilities>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainCapabilities" /> class.
+        /// Initializes a new instance of the <see cref="DomainCapabilities" />class.
         /// </summary>
-        public DomainCapabilities()
+        /// <param name="Enabled">Enabled (default to false).</param>
+        /// <param name="Dhcp">Dhcp (default to false).</param>
+        /// <param name="Metric">Metric.</param>
+
+        public DomainCapabilities(bool? Enabled = null, bool? Dhcp = null, int? Metric = null)
         {
-            this.Enabled = false;
-            this.Dhcp = false;
+            // use default value if no "Enabled" provided
+            if (Enabled == null)
+            {
+                this.Enabled = false;
+            }
+            else
+            {
+                this.Enabled = Enabled;
+            }
+            // use default value if no "Dhcp" provided
+            if (Dhcp == null)
+            {
+                this.Dhcp = false;
+            }
+            else
+            {
+                this.Dhcp = Dhcp;
+            }
+            this.Metric = Metric;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Enabled
         /// </summary>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Dhcp
         /// </summary>
         [DataMember(Name="dhcp", EmitDefaultValue=false)]
         public bool? Dhcp { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Metric
         /// </summary>
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public int? Metric { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

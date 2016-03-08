@@ -7,105 +7,191 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class VoiceRate :  IEquatable<VoiceRate>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum {
+            
+            [EnumMember(Value = "RATE_TOLL_FREE")]
+            RateTollFree,
+            
+            [EnumMember(Value = "RATE_TOLLED")]
+            RateTolled,
+            
+            [EnumMember(Value = "OUTBOUND_INTERSTATE")]
+            OutboundInterstate,
+            
+            [EnumMember(Value = "OUTBOUND_INTRASTATE")]
+            OutboundIntrastate,
+            
+            [EnumMember(Value = "OUTBOUND_LOCAL")]
+            OutboundLocal,
+            
+            [EnumMember(Value = "EXTENDED")]
+            Extended
+        }
+    
+        /// <summary>
+        /// The voice rate type.
+        /// </summary>
+        /// <value>The voice rate type.</value>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="VoiceRate" /> class.
+        /// Initializes a new instance of the <see cref="VoiceRate" />class.
         /// </summary>
-        public VoiceRate()
+        /// <param name="Name">Name.</param>
+        /// <param name="Currency">The ISO 4217 currency code of the voice rate. (required).</param>
+        /// <param name="AmendmentId">The amendment Id of the voice rate. (required).</param>
+        /// <param name="Type">The voice rate type. (required).</param>
+        /// <param name="EffectiveDate">The effective date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
+        /// <param name="Rate">The rate. (required).</param>
+        /// <param name="DurationMinimumSeconds">The minimum duration charged in seconds. (required).</param>
+        /// <param name="DurationIncrementSeconds">The billing duration increment in seconds. (required).</param>
+
+        public VoiceRate(string Name = null, string Currency = null, string AmendmentId = null, TypeEnum? Type = null, DateTime? EffectiveDate = null, double? Rate = null, int? DurationMinimumSeconds = null, int? DurationIncrementSeconds = null, )
         {
+            // to ensure "Currency" is required (not null)
+            if (Currency == null)
+            {
+                throw new InvalidDataException("Currency is a required property for VoiceRate and cannot be null");
+            }
+            else
+            {
+                this.Currency = Currency;
+            }
+            // to ensure "AmendmentId" is required (not null)
+            if (AmendmentId == null)
+            {
+                throw new InvalidDataException("AmendmentId is a required property for VoiceRate and cannot be null");
+            }
+            else
+            {
+                this.AmendmentId = AmendmentId;
+            }
+            // to ensure "Type" is required (not null)
+            if (Type == null)
+            {
+                throw new InvalidDataException("Type is a required property for VoiceRate and cannot be null");
+            }
+            else
+            {
+                this.Type = Type;
+            }
+            // to ensure "EffectiveDate" is required (not null)
+            if (EffectiveDate == null)
+            {
+                throw new InvalidDataException("EffectiveDate is a required property for VoiceRate and cannot be null");
+            }
+            else
+            {
+                this.EffectiveDate = EffectiveDate;
+            }
+            // to ensure "Rate" is required (not null)
+            if (Rate == null)
+            {
+                throw new InvalidDataException("Rate is a required property for VoiceRate and cannot be null");
+            }
+            else
+            {
+                this.Rate = Rate;
+            }
+            // to ensure "DurationMinimumSeconds" is required (not null)
+            if (DurationMinimumSeconds == null)
+            {
+                throw new InvalidDataException("DurationMinimumSeconds is a required property for VoiceRate and cannot be null");
+            }
+            else
+            {
+                this.DurationMinimumSeconds = DurationMinimumSeconds;
+            }
+            // to ensure "DurationIncrementSeconds" is required (not null)
+            if (DurationIncrementSeconds == null)
+            {
+                throw new InvalidDataException("DurationIncrementSeconds is a required property for VoiceRate and cannot be null");
+            }
+            else
+            {
+                this.DurationIncrementSeconds = DurationIncrementSeconds;
+            }
+            this.Name = Name;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// The ISO 4217 currency code of the voice rate.
         /// </summary>
         /// <value>The ISO 4217 currency code of the voice rate.</value>
         [DataMember(Name="currency", EmitDefaultValue=false)]
         public string Currency { get; set; }
-  
-        
+    
         /// <summary>
         /// The amendment Id of the voice rate.
         /// </summary>
         /// <value>The amendment Id of the voice rate.</value>
         [DataMember(Name="amendmentId", EmitDefaultValue=false)]
         public string AmendmentId { get; set; }
-  
-        
-        /// <summary>
-        /// The voice rate type.
-        /// </summary>
-        /// <value>The voice rate type.</value>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-  
-        
+    
         /// <summary>
         /// The effective date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The effective date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="effectiveDate", EmitDefaultValue=false)]
         public DateTime? EffectiveDate { get; set; }
-  
-        
+    
         /// <summary>
         /// The rate.
         /// </summary>
         /// <value>The rate.</value>
         [DataMember(Name="rate", EmitDefaultValue=false)]
         public double? Rate { get; set; }
-  
-        
+    
         /// <summary>
         /// The minimum duration charged in seconds.
         /// </summary>
         /// <value>The minimum duration charged in seconds.</value>
         [DataMember(Name="durationMinimumSeconds", EmitDefaultValue=false)]
         public int? DurationMinimumSeconds { get; set; }
-  
-        
+    
         /// <summary>
         /// The billing duration increment in seconds.
         /// </summary>
         /// <value>The billing duration increment in seconds.</value>
         [DataMember(Name="durationIncrementSeconds", EmitDefaultValue=false)]
         public int? DurationIncrementSeconds { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

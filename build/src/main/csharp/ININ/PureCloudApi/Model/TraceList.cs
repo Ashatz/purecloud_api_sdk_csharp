@@ -7,40 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class TraceList :  IEquatable<TraceList>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="TraceList" /> class.
+        /// Initializes a new instance of the <see cref="TraceList" />class.
         /// </summary>
-        public TraceList()
+        /// <param name="App">App.</param>
+        /// <param name="Traces">Traces.</param>
+
+        public TraceList(App App = null, List<Trace> Traces = null)
         {
+            this.App = App;
+            this.Traces = Traces;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets App
         /// </summary>
         [DataMember(Name="app", EmitDefaultValue=false)]
         public App App { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Traces
         /// </summary>
         [DataMember(Name="traces", EmitDefaultValue=false)]
         public List<Trace> Traces { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

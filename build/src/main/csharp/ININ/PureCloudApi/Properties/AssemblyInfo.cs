@@ -1,6 +1,5 @@
 using System.Reflection;
 using System.Runtime.InteropServices;
-using System.Windows;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
@@ -29,5 +28,5 @@ using System.Windows;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.25.0.224")]
-[assembly: AssemblyFileVersion("0.25.0.224")]
+[assembly: AssemblyVersion("0.26.0.225")]
+[assembly: AssemblyFileVersion("0.26.0.225")]

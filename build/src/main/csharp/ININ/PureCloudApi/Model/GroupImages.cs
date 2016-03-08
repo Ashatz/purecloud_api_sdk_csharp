@@ -7,33 +7,36 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class GroupImages :  IEquatable<GroupImages>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="GroupImages" /> class.
+        /// Initializes a new instance of the <see cref="GroupImages" />class.
         /// </summary>
-        public GroupImages()
+        /// <param name="ActiveImages">ActiveImages.</param>
+
+        public GroupImages(List<UserImage> ActiveImages = null)
         {
+            this.ActiveImages = ActiveImages;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets ActiveImages
         /// </summary>
         [DataMember(Name="activeImages", EmitDefaultValue=false)]
         public List<UserImage> ActiveImages { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

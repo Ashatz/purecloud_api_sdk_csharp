@@ -7,42 +7,46 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class TrunkBaseAssignment :  IEquatable<TrunkBaseAssignment>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="TrunkBaseAssignment" /> class.
+        /// Initializes a new instance of the <see cref="TrunkBaseAssignment" />class.
         /// </summary>
-        public TrunkBaseAssignment()
+        /// <param name="Family">The address family to use with the trunk base settings. 2=IPv4, 23=IPv6.</param>
+        /// <param name="TrunkBase">A trunk base settings reference..</param>
+
+        public TrunkBaseAssignment(int? Family = null, UriReference TrunkBase = null)
         {
+            this.Family = Family;
+            this.TrunkBase = TrunkBase;
             
         }
-
         
+    
         /// <summary>
         /// The address family to use with the trunk base settings. 2=IPv4, 23=IPv6
         /// </summary>
         /// <value>The address family to use with the trunk base settings. 2=IPv4, 23=IPv6</value>
         [DataMember(Name="family", EmitDefaultValue=false)]
         public int? Family { get; set; }
-  
-        
+    
         /// <summary>
         /// A trunk base settings reference.
         /// </summary>
         /// <value>A trunk base settings reference.</value>
         [DataMember(Name="trunkBase", EmitDefaultValue=false)]
         public UriReference TrunkBase { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

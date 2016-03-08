@@ -7,151 +7,173 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ReportSchedule :  IEquatable<ReportSchedule>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportSchedule" /> class.
+        /// Initializes a new instance of the <see cref="ReportSchedule" />class.
         /// </summary>
-        public ReportSchedule()
+        /// <param name="Name">Name.</param>
+        /// <param name="QuartzCronExpression">QuartzCronExpression.</param>
+        /// <param name="NextFireTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="TimeZone">TimeZone.</param>
+        /// <param name="TimePeriod">TimePeriod.</param>
+        /// <param name="Interval">Interval.</param>
+        /// <param name="ReportFormat">ReportFormat.</param>
+        /// <param name="Locale">Locale.</param>
+        /// <param name="Enabled">Enabled (default to false).</param>
+        /// <param name="ReportId">ReportId.</param>
+        /// <param name="Parameters">Parameters.</param>
+        /// <param name="LastRun">LastRun.</param>
+
+        public ReportSchedule(string Name = null, string QuartzCronExpression = null, DateTime? NextFireTime = null, DateTime? DateCreated = null, DateTime? DateModified = null, string Description = null, string TimeZone = null, string TimePeriod = null, CampaignScheduleIntervals Interval = null, string ReportFormat = null, string Locale = null, bool? Enabled = null, string ReportId = null, Dictionary<string, Object> Parameters = null, ReportRunEntry LastRun = null, )
         {
-            this.Enabled = false;
+            this.Name = Name;
+            this.QuartzCronExpression = QuartzCronExpression;
+            this.NextFireTime = NextFireTime;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.Description = Description;
+            this.TimeZone = TimeZone;
+            this.TimePeriod = TimePeriod;
+            this.Interval = Interval;
+            this.ReportFormat = ReportFormat;
+            this.Locale = Locale;
+            // use default value if no "Enabled" provided
+            if (Enabled == null)
+            {
+                this.Enabled = false;
+            }
+            else
+            {
+                this.Enabled = Enabled;
+            }
+            this.ReportId = ReportId;
+            this.Parameters = Parameters;
+            this.LastRun = LastRun;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets QuartzCronExpression
         /// </summary>
         [DataMember(Name="quartzCronExpression", EmitDefaultValue=false)]
         public string QuartzCronExpression { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="nextFireTime", EmitDefaultValue=false)]
         public DateTime? NextFireTime { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TimeZone
         /// </summary>
         [DataMember(Name="timeZone", EmitDefaultValue=false)]
         public string TimeZone { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TimePeriod
         /// </summary>
         [DataMember(Name="timePeriod", EmitDefaultValue=false)]
         public string TimePeriod { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Interval
         /// </summary>
         [DataMember(Name="interval", EmitDefaultValue=false)]
         public CampaignScheduleIntervals Interval { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ReportFormat
         /// </summary>
         [DataMember(Name="reportFormat", EmitDefaultValue=false)]
         public string ReportFormat { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Locale
         /// </summary>
         [DataMember(Name="locale", EmitDefaultValue=false)]
         public string Locale { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Enabled
         /// </summary>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ReportId
         /// </summary>
         [DataMember(Name="reportId", EmitDefaultValue=false)]
         public string ReportId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Parameters
         /// </summary>
         [DataMember(Name="parameters", EmitDefaultValue=false)]
-        public Dictionary<string, InlineResponse200> Parameters { get; set; }
-  
-        
+        public Dictionary<string, Object> Parameters { get; set; }
+    
         /// <summary>
         /// Gets or Sets LastRun
         /// </summary>
         [DataMember(Name="lastRun", EmitDefaultValue=false)]
         public ReportRunEntry LastRun { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

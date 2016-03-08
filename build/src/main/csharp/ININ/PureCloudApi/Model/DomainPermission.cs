@@ -7,69 +7,84 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DomainPermission :  IEquatable<DomainPermission>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainPermission" /> class.
+        /// Initializes a new instance of the <see cref="DomainPermission" />class.
         /// </summary>
-        public DomainPermission()
+        /// <param name="Domain">Domain.</param>
+        /// <param name="EntityType">EntityType.</param>
+        /// <param name="Action">Action.</param>
+        /// <param name="Label">Label.</param>
+        /// <param name="Licenses">Licenses.</param>
+        /// <param name="AllowsConditions">AllowsConditions (default to false).</param>
+
+        public DomainPermission(string Domain = null, string EntityType = null, string Action = null, string Label = null, List<string> Licenses = null, bool? AllowsConditions = null)
         {
-            this.AllowsConditions = false;
+            this.Domain = Domain;
+            this.EntityType = EntityType;
+            this.Action = Action;
+            this.Label = Label;
+            this.Licenses = Licenses;
+            // use default value if no "AllowsConditions" provided
+            if (AllowsConditions == null)
+            {
+                this.AllowsConditions = false;
+            }
+            else
+            {
+                this.AllowsConditions = AllowsConditions;
+            }
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Domain
         /// </summary>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public string Domain { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EntityType
         /// </summary>
         [DataMember(Name="entityType", EmitDefaultValue=false)]
         public string EntityType { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Action
         /// </summary>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public string Action { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Label
         /// </summary>
         [DataMember(Name="label", EmitDefaultValue=false)]
         public string Label { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Licenses
         /// </summary>
         [DataMember(Name="licenses", EmitDefaultValue=false)]
         public List<string> Licenses { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AllowsConditions
         /// </summary>
         [DataMember(Name="allowsConditions", EmitDefaultValue=false)]
         public bool? AllowsConditions { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,66 +7,73 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class WorkItemCache :  IEquatable<WorkItemCache>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkItemCache" /> class.
+        /// Initializes a new instance of the <see cref="WorkItemCache" />class.
         /// </summary>
-        public WorkItemCache()
+        /// <param name="WorkItemExecId">The workItem instance ID that owns this cache..</param>
+        /// <param name="SaveTime">The time that the workItem cache was last saved. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="SaveUser">The user that last saved the workItem cache..</param>
+        /// <param name="SaveComment">An optional comment made during the last save.</param>
+        /// <param name="DataItems">The data items that are present within the cache..</param>
+
+        public WorkItemCache(string WorkItemExecId = null, DateTime? SaveTime = null, User SaveUser = null, string SaveComment = null, List<DataItem> DataItems = null)
         {
+            this.WorkItemExecId = WorkItemExecId;
+            this.SaveTime = SaveTime;
+            this.SaveUser = SaveUser;
+            this.SaveComment = SaveComment;
+            this.DataItems = DataItems;
             
         }
-
         
+    
         /// <summary>
         /// The workItem instance ID that owns this cache.
         /// </summary>
         /// <value>The workItem instance ID that owns this cache.</value>
         [DataMember(Name="workItemExecId", EmitDefaultValue=false)]
         public string WorkItemExecId { get; set; }
-  
-        
+    
         /// <summary>
         /// The time that the workItem cache was last saved. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The time that the workItem cache was last saved. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="saveTime", EmitDefaultValue=false)]
         public DateTime? SaveTime { get; set; }
-  
-        
+    
         /// <summary>
         /// The user that last saved the workItem cache.
         /// </summary>
         /// <value>The user that last saved the workItem cache.</value>
         [DataMember(Name="saveUser", EmitDefaultValue=false)]
         public User SaveUser { get; set; }
-  
-        
+    
         /// <summary>
         /// An optional comment made during the last save
         /// </summary>
         /// <value>An optional comment made during the last save</value>
         [DataMember(Name="saveComment", EmitDefaultValue=false)]
         public string SaveComment { get; set; }
-  
-        
+    
         /// <summary>
         /// The data items that are present within the cache.
         /// </summary>
         /// <value>The data items that are present within the cache.</value>
         [DataMember(Name="dataItems", EmitDefaultValue=false)]
         public List<DataItem> DataItems { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,33 +7,36 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Agent :  IEquatable<Agent>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Agent" /> class.
+        /// Initializes a new instance of the <see cref="Agent" />class.
         /// </summary>
-        public Agent()
+        /// <param name="Stage">Stage.</param>
+
+        public Agent(string Stage = null)
         {
+            this.Stage = Stage;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Stage
         /// </summary>
         [DataMember(Name="stage", EmitDefaultValue=false)]
         public string Stage { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

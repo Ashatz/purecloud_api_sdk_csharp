@@ -7,56 +7,62 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class EdgeAutoUpdateConfig :  IEquatable<EdgeAutoUpdateConfig>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeAutoUpdateConfig" /> class.
+        /// Initializes a new instance of the <see cref="EdgeAutoUpdateConfig" />class.
         /// </summary>
-        public EdgeAutoUpdateConfig()
+        /// <param name="TimeZone">TimeZone.</param>
+        /// <param name="Rrule">Rrule.</param>
+        /// <param name="Start">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="End">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+
+        public EdgeAutoUpdateConfig(string TimeZone = null, string Rrule = null, DateTime? Start = null, DateTime? End = null)
         {
+            this.TimeZone = TimeZone;
+            this.Rrule = Rrule;
+            this.Start = Start;
+            this.End = End;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets TimeZone
         /// </summary>
         [DataMember(Name="timeZone", EmitDefaultValue=false)]
         public string TimeZone { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Rrule
         /// </summary>
         [DataMember(Name="rrule", EmitDefaultValue=false)]
         public string Rrule { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="start", EmitDefaultValue=false)]
         public DateTime? Start { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="end", EmitDefaultValue=false)]
         public DateTime? End { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,139 +7,164 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class AuditMessage :  IEquatable<AuditMessage>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditMessage" /> class.
+        /// Initializes a new instance of the <see cref="AuditMessage" />class.
         /// </summary>
-        public AuditMessage()
+        /// <param name="Id">Id.</param>
+        /// <param name="User">User.</param>
+        /// <param name="CorrelationId">CorrelationId.</param>
+        /// <param name="TransactionId">TransactionId.</param>
+        /// <param name="TransactionInitiator">TransactionInitiator (default to false).</param>
+        /// <param name="Application">Application.</param>
+        /// <param name="ServiceName">ServiceName.</param>
+        /// <param name="Level">Level.</param>
+        /// <param name="Timestamp">Timestamp.</param>
+        /// <param name="ReceivedTimestamp">ReceivedTimestamp.</param>
+        /// <param name="Status">Status.</param>
+        /// <param name="ActionContext">ActionContext.</param>
+        /// <param name="Action">Action.</param>
+        /// <param name="Changes">Changes.</param>
+        /// <param name="Entity">Entity.</param>
+        /// <param name="ServiceContext">ServiceContext.</param>
+
+        public AuditMessage(string Id = null, User User = null, string CorrelationId = null, string TransactionId = null, bool? TransactionInitiator = null, string Application = null, string ServiceName = null, string Level = null, string Timestamp = null, string ReceivedTimestamp = null, string Status = null, string ActionContext = null, string Action = null, List<Change> Changes = null, Entity Entity = null, ServiceContext ServiceContext = null)
         {
-            this.TransactionInitiator = false;
+            this.Id = Id;
+            this.User = User;
+            this.CorrelationId = CorrelationId;
+            this.TransactionId = TransactionId;
+            // use default value if no "TransactionInitiator" provided
+            if (TransactionInitiator == null)
+            {
+                this.TransactionInitiator = false;
+            }
+            else
+            {
+                this.TransactionInitiator = TransactionInitiator;
+            }
+            this.Application = Application;
+            this.ServiceName = ServiceName;
+            this.Level = Level;
+            this.Timestamp = Timestamp;
+            this.ReceivedTimestamp = ReceivedTimestamp;
+            this.Status = Status;
+            this.ActionContext = ActionContext;
+            this.Action = Action;
+            this.Changes = Changes;
+            this.Entity = Entity;
+            this.ServiceContext = ServiceContext;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CorrelationId
         /// </summary>
         [DataMember(Name="correlationId", EmitDefaultValue=false)]
         public string CorrelationId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TransactionId
         /// </summary>
         [DataMember(Name="transactionId", EmitDefaultValue=false)]
         public string TransactionId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TransactionInitiator
         /// </summary>
         [DataMember(Name="transactionInitiator", EmitDefaultValue=false)]
         public bool? TransactionInitiator { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Application
         /// </summary>
         [DataMember(Name="application", EmitDefaultValue=false)]
         public string Application { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ServiceName
         /// </summary>
         [DataMember(Name="serviceName", EmitDefaultValue=false)]
         public string ServiceName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Level
         /// </summary>
         [DataMember(Name="level", EmitDefaultValue=false)]
         public string Level { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Timestamp
         /// </summary>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
         public string Timestamp { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ReceivedTimestamp
         /// </summary>
         [DataMember(Name="receivedTimestamp", EmitDefaultValue=false)]
         public string ReceivedTimestamp { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ActionContext
         /// </summary>
         [DataMember(Name="actionContext", EmitDefaultValue=false)]
         public string ActionContext { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Action
         /// </summary>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public string Action { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Changes
         /// </summary>
         [DataMember(Name="changes", EmitDefaultValue=false)]
         public List<Change> Changes { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Entity
         /// </summary>
         [DataMember(Name="entity", EmitDefaultValue=false)]
         public Entity Entity { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ServiceContext
         /// </summary>
         [DataMember(Name="serviceContext", EmitDefaultValue=false)]
         public ServiceContext ServiceContext { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

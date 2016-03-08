@@ -7,62 +7,79 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class SocializeFilterRequest :  IEquatable<SocializeFilterRequest>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum SortOrderEnum {
+            
+            [EnumMember(Value = "ascending")]
+            Ascending,
+            
+            [EnumMember(Value = "descending")]
+            Descending
+        }
+    
+        /// <summary>
+        /// Gets or Sets SortOrder
+        /// </summary>
+        [DataMember(Name="sortOrder", EmitDefaultValue=false)]
+        public SortOrderEnum? SortOrder { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="SocializeFilterRequest" /> class.
+        /// Initializes a new instance of the <see cref="SocializeFilterRequest" />class.
         /// </summary>
-        public SocializeFilterRequest()
+        /// <param name="Filters">The list of filters used to narrow the return..</param>
+        /// <param name="PageSize">PageSize.</param>
+        /// <param name="PageNumber">PageNumber.</param>
+        /// <param name="SortBy">SortBy.</param>
+        /// <param name="SortOrder">SortOrder.</param>
+
+        public SocializeFilterRequest(List<SocializeEntityFilter> Filters = null, int? PageSize = null, int? PageNumber = null, string SortBy = null, SortOrderEnum? SortOrder = null)
         {
+            this.Filters = Filters;
+            this.PageSize = PageSize;
+            this.PageNumber = PageNumber;
+            this.SortBy = SortBy;
+            this.SortOrder = SortOrder;
             
         }
-
         
+    
         /// <summary>
         /// The list of filters used to narrow the return.
         /// </summary>
         /// <value>The list of filters used to narrow the return.</value>
         [DataMember(Name="filters", EmitDefaultValue=false)]
         public List<SocializeEntityFilter> Filters { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PageSize
         /// </summary>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PageNumber
         /// </summary>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SortBy
         /// </summary>
         [DataMember(Name="sortBy", EmitDefaultValue=false)]
         public string SortBy { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets SortOrder
-        /// </summary>
-        [DataMember(Name="sortOrder", EmitDefaultValue=false)]
-        public string SortOrder { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,42 +7,54 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Contains information about the text associated with a response.
     /// </summary>
     [DataContract]
     public partial class ResponseText :  IEquatable<ResponseText>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseText" /> class.
+        /// Initializes a new instance of the <see cref="ResponseText" />class.
         /// </summary>
-        public ResponseText()
+        /// <param name="Content">Response text content. (required).</param>
+        /// <param name="ContentType">Response text content type..</param>
+
+        public ResponseText(string Content = null, string ContentType = null)
         {
+            // to ensure "Content" is required (not null)
+            if (Content == null)
+            {
+                throw new InvalidDataException("Content is a required property for ResponseText and cannot be null");
+            }
+            else
+            {
+                this.Content = Content;
+            }
+            this.ContentType = ContentType;
             
         }
-
         
+    
         /// <summary>
         /// Response text content.
         /// </summary>
         /// <value>Response text content.</value>
         [DataMember(Name="content", EmitDefaultValue=false)]
         public string Content { get; set; }
-  
-        
+    
         /// <summary>
         /// Response text content type.
         /// </summary>
         /// <value>Response text content type.</value>
         [DataMember(Name="contentType", EmitDefaultValue=false)]
         public string ContentType { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,250 +7,322 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Document :  IEquatable<Document>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum SystemTypeEnum {
+            
+            [EnumMember(Value = "DOCUMENT")]
+            Document,
+            
+            [EnumMember(Value = "FAX")]
+            Fax,
+            
+            [EnumMember(Value = "RECORDING")]
+            Recording
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum UploadMethodEnum {
+            
+            [EnumMember(Value = "SINGLE_PUT")]
+            SinglePut,
+            
+            [EnumMember(Value = "MULTIPART_POST")]
+            MultipartPost
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum SharingStatusEnum {
+            
+            [EnumMember(Value = "NONE")]
+            None,
+            
+            [EnumMember(Value = "LIMITED")]
+            Limited,
+            
+            [EnumMember(Value = "PUBLIC")]
+            Public
+        }
+    
+        /// <summary>
+        /// Gets or Sets SystemType
+        /// </summary>
+        [DataMember(Name="systemType", EmitDefaultValue=false)]
+        public SystemTypeEnum? SystemType { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets UploadMethod
+        /// </summary>
+        [DataMember(Name="uploadMethod", EmitDefaultValue=false)]
+        public UploadMethodEnum? UploadMethod { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets SharingStatus
+        /// </summary>
+        [DataMember(Name="sharingStatus", EmitDefaultValue=false)]
+        public SharingStatusEnum? SharingStatus { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Document" /> class.
+        /// Initializes a new instance of the <see cref="Document" />class.
         /// </summary>
-        public Document()
+        /// <param name="Name">Name.</param>
+        /// <param name="ChangeNumber">ChangeNumber.</param>
+        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateUploaded">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ContentUri">ContentUri.</param>
+        /// <param name="Workspace">Workspace.</param>
+        /// <param name="CreatedBy">CreatedBy.</param>
+        /// <param name="UploadedBy">UploadedBy.</param>
+        /// <param name="ContentType">ContentType.</param>
+        /// <param name="ContentLength">ContentLength.</param>
+        /// <param name="SystemType">SystemType.</param>
+        /// <param name="Filename">Filename.</param>
+        /// <param name="PageCount">PageCount.</param>
+        /// <param name="Read">Read (default to false).</param>
+        /// <param name="CallerAddress">CallerAddress.</param>
+        /// <param name="ReceiverAddress">ReceiverAddress.</param>
+        /// <param name="Tags">Tags.</param>
+        /// <param name="TagValues">TagValues.</param>
+        /// <param name="Attributes">Attributes.</param>
+        /// <param name="Thumbnails">Thumbnails.</param>
+        /// <param name="UploadStatus">UploadStatus.</param>
+        /// <param name="UploadDestinationUri">UploadDestinationUri.</param>
+        /// <param name="UploadMethod">UploadMethod.</param>
+        /// <param name="LockInfo">LockInfo.</param>
+        /// <param name="Acl">A list of permitted action rights for the user making the request.</param>
+        /// <param name="SharingStatus">SharingStatus.</param>
+        /// <param name="SharingUri">SharingUri.</param>
+        /// <param name="DownloadSharingUri">DownloadSharingUri.</param>
+
+        public Document(string Name = null, int? ChangeNumber = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateUploaded = null, string ContentUri = null, UriReference Workspace = null, UriReference CreatedBy = null, UriReference UploadedBy = null, string ContentType = null, long? ContentLength = null, SystemTypeEnum? SystemType = null, string Filename = null, long? PageCount = null, bool? Read = null, string CallerAddress = null, string ReceiverAddress = null, List<string> Tags = null, List<TagValue> TagValues = null, List<DocumentAttribute> Attributes = null, List<DocumentThumbnail> Thumbnails = null, UriReference UploadStatus = null, string UploadDestinationUri = null, UploadMethodEnum? UploadMethod = null, LockInfo LockInfo = null, List<string> Acl = null, SharingStatusEnum? SharingStatus = null, string SharingUri = null, string DownloadSharingUri = null, )
         {
-            this.Read = false;
+            this.Name = Name;
+            this.ChangeNumber = ChangeNumber;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.DateUploaded = DateUploaded;
+            this.ContentUri = ContentUri;
+            this.Workspace = Workspace;
+            this.CreatedBy = CreatedBy;
+            this.UploadedBy = UploadedBy;
+            this.ContentType = ContentType;
+            this.ContentLength = ContentLength;
+            this.SystemType = SystemType;
+            this.Filename = Filename;
+            this.PageCount = PageCount;
+            // use default value if no "Read" provided
+            if (Read == null)
+            {
+                this.Read = false;
+            }
+            else
+            {
+                this.Read = Read;
+            }
+            this.CallerAddress = CallerAddress;
+            this.ReceiverAddress = ReceiverAddress;
+            this.Tags = Tags;
+            this.TagValues = TagValues;
+            this.Attributes = Attributes;
+            this.Thumbnails = Thumbnails;
+            this.UploadStatus = UploadStatus;
+            this.UploadDestinationUri = UploadDestinationUri;
+            this.UploadMethod = UploadMethod;
+            this.LockInfo = LockInfo;
+            this.Acl = Acl;
+            this.SharingStatus = SharingStatus;
+            this.SharingUri = SharingUri;
+            this.DownloadSharingUri = DownloadSharingUri;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ChangeNumber
         /// </summary>
         [DataMember(Name="changeNumber", EmitDefaultValue=false)]
         public int? ChangeNumber { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateUploaded", EmitDefaultValue=false)]
         public DateTime? DateUploaded { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ContentUri
         /// </summary>
         [DataMember(Name="contentUri", EmitDefaultValue=false)]
         public string ContentUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Workspace
         /// </summary>
         [DataMember(Name="workspace", EmitDefaultValue=false)]
         public UriReference Workspace { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CreatedBy
         /// </summary>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public UriReference CreatedBy { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UploadedBy
         /// </summary>
         [DataMember(Name="uploadedBy", EmitDefaultValue=false)]
         public UriReference UploadedBy { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ContentType
         /// </summary>
         [DataMember(Name="contentType", EmitDefaultValue=false)]
         public string ContentType { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ContentLength
         /// </summary>
         [DataMember(Name="contentLength", EmitDefaultValue=false)]
         public long? ContentLength { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets SystemType
-        /// </summary>
-        [DataMember(Name="systemType", EmitDefaultValue=false)]
-        public string SystemType { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Filename
         /// </summary>
         [DataMember(Name="filename", EmitDefaultValue=false)]
         public string Filename { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PageCount
         /// </summary>
         [DataMember(Name="pageCount", EmitDefaultValue=false)]
         public long? PageCount { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Read
         /// </summary>
         [DataMember(Name="read", EmitDefaultValue=false)]
         public bool? Read { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CallerAddress
         /// </summary>
         [DataMember(Name="callerAddress", EmitDefaultValue=false)]
         public string CallerAddress { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ReceiverAddress
         /// </summary>
         [DataMember(Name="receiverAddress", EmitDefaultValue=false)]
         public string ReceiverAddress { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Tags
         /// </summary>
         [DataMember(Name="tags", EmitDefaultValue=false)]
         public List<string> Tags { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TagValues
         /// </summary>
         [DataMember(Name="tagValues", EmitDefaultValue=false)]
         public List<TagValue> TagValues { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Attributes
         /// </summary>
         [DataMember(Name="attributes", EmitDefaultValue=false)]
         public List<DocumentAttribute> Attributes { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Thumbnails
         /// </summary>
         [DataMember(Name="thumbnails", EmitDefaultValue=false)]
         public List<DocumentThumbnail> Thumbnails { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UploadStatus
         /// </summary>
         [DataMember(Name="uploadStatus", EmitDefaultValue=false)]
         public UriReference UploadStatus { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UploadDestinationUri
         /// </summary>
         [DataMember(Name="uploadDestinationUri", EmitDefaultValue=false)]
         public string UploadDestinationUri { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets UploadMethod
-        /// </summary>
-        [DataMember(Name="uploadMethod", EmitDefaultValue=false)]
-        public string UploadMethod { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets LockInfo
         /// </summary>
         [DataMember(Name="lockInfo", EmitDefaultValue=false)]
         public LockInfo LockInfo { get; set; }
-  
-        
+    
         /// <summary>
         /// A list of permitted action rights for the user making the request
         /// </summary>
         /// <value>A list of permitted action rights for the user making the request</value>
         [DataMember(Name="acl", EmitDefaultValue=false)]
         public List<string> Acl { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets SharingStatus
-        /// </summary>
-        [DataMember(Name="sharingStatus", EmitDefaultValue=false)]
-        public string SharingStatus { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SharingUri
         /// </summary>
         [DataMember(Name="sharingUri", EmitDefaultValue=false)]
         public string SharingUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DownloadSharingUri
         /// </summary>
         [DataMember(Name="downloadSharingUri", EmitDefaultValue=false)]
         public string DownloadSharingUri { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

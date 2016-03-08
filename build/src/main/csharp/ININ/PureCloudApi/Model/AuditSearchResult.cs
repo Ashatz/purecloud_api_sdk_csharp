@@ -7,68 +7,76 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class AuditSearchResult :  IEquatable<AuditSearchResult>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditSearchResult" /> class.
+        /// Initializes a new instance of the <see cref="AuditSearchResult" />class.
         /// </summary>
-        public AuditSearchResult()
+        /// <param name="PageNumber">PageNumber.</param>
+        /// <param name="PageSize">PageSize.</param>
+        /// <param name="Total">Total.</param>
+        /// <param name="PageCount">PageCount.</param>
+        /// <param name="FacetInfo">FacetInfo.</param>
+        /// <param name="AuditMessages">AuditMessages.</param>
+
+        public AuditSearchResult(int? PageNumber = null, int? PageSize = null, int? Total = null, int? PageCount = null, List<FacetInfo> FacetInfo = null, List<AuditMessage> AuditMessages = null)
         {
+            this.PageNumber = PageNumber;
+            this.PageSize = PageSize;
+            this.Total = Total;
+            this.PageCount = PageCount;
+            this.FacetInfo = FacetInfo;
+            this.AuditMessages = AuditMessages;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets PageNumber
         /// </summary>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PageSize
         /// </summary>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Total
         /// </summary>
         [DataMember(Name="total", EmitDefaultValue=false)]
         public int? Total { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PageCount
         /// </summary>
         [DataMember(Name="pageCount", EmitDefaultValue=false)]
         public int? PageCount { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FacetInfo
         /// </summary>
         [DataMember(Name="facetInfo", EmitDefaultValue=false)]
         public List<FacetInfo> FacetInfo { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AuditMessages
         /// </summary>
         [DataMember(Name="auditMessages", EmitDefaultValue=false)]
         public List<AuditMessage> AuditMessages { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

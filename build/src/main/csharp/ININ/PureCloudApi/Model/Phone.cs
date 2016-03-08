@@ -7,186 +7,219 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Phone :  IEquatable<Phone>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StateEnum {
+            
+            [EnumMember(Value = "ACTIVE")]
+            Active,
+            
+            [EnumMember(Value = "DELETED")]
+            Deleted,
+            
+            [EnumMember(Value = "INACTIVE")]
+            Inactive
+        }
+    
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public StateEnum? State { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Phone" /> class.
+        /// Initializes a new instance of the <see cref="Phone" />class.
         /// </summary>
-        public Phone()
+        /// <param name="Name">Name.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="Version">Version.</param>
+        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ModifiedBy">ModifiedBy.</param>
+        /// <param name="CreatedBy">CreatedBy.</param>
+        /// <param name="State">State.</param>
+        /// <param name="ModifiedByApp">ModifiedByApp.</param>
+        /// <param name="CreatedByApp">CreatedByApp.</param>
+        /// <param name="EdgeGroup">EdgeGroup.</param>
+        /// <param name="Site">Site.</param>
+        /// <param name="PhoneBaseSettings">PhoneBaseSettings.</param>
+        /// <param name="LineBaseSettings">LineBaseSettings.</param>
+        /// <param name="PhoneMetaBase">PhoneMetaBase.</param>
+        /// <param name="Lines">Lines.</param>
+        /// <param name="Status">The status of the phone and lines from the primary Edge..</param>
+        /// <param name="SecondaryStatus">The status of the phone and lines from the secondary Edge..</param>
+        /// <param name="Properties">Properties.</param>
+        /// <param name="Capabilities">Capabilities.</param>
+
+        public Phone(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference EdgeGroup = null, UriReference Site = null, UriReference PhoneBaseSettings = null, UriReference LineBaseSettings = null, UriReference PhoneMetaBase = null, List<Line> Lines = null, PhoneStatus Status = null, PhoneStatus SecondaryStatus = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null, )
         {
+            this.Name = Name;
+            this.Description = Description;
+            this.Version = Version;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.ModifiedBy = ModifiedBy;
+            this.CreatedBy = CreatedBy;
+            this.State = State;
+            this.ModifiedByApp = ModifiedByApp;
+            this.CreatedByApp = CreatedByApp;
+            this.EdgeGroup = EdgeGroup;
+            this.Site = Site;
+            this.PhoneBaseSettings = PhoneBaseSettings;
+            this.LineBaseSettings = LineBaseSettings;
+            this.PhoneMetaBase = PhoneMetaBase;
+            this.Lines = Lines;
+            this.Status = Status;
+            this.SecondaryStatus = SecondaryStatus;
+            this.Properties = Properties;
+            this.Capabilities = Capabilities;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ModifiedBy
         /// </summary>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public string ModifiedBy { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CreatedBy
         /// </summary>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public string CreatedBy { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets State
-        /// </summary>
-        [DataMember(Name="state", EmitDefaultValue=false)]
-        public string State { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ModifiedByApp
         /// </summary>
         [DataMember(Name="modifiedByApp", EmitDefaultValue=false)]
         public string ModifiedByApp { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CreatedByApp
         /// </summary>
         [DataMember(Name="createdByApp", EmitDefaultValue=false)]
         public string CreatedByApp { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EdgeGroup
         /// </summary>
         [DataMember(Name="edgeGroup", EmitDefaultValue=false)]
         public UriReference EdgeGroup { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Site
         /// </summary>
         [DataMember(Name="site", EmitDefaultValue=false)]
         public UriReference Site { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PhoneBaseSettings
         /// </summary>
         [DataMember(Name="phoneBaseSettings", EmitDefaultValue=false)]
         public UriReference PhoneBaseSettings { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets LineBaseSettings
         /// </summary>
         [DataMember(Name="lineBaseSettings", EmitDefaultValue=false)]
         public UriReference LineBaseSettings { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PhoneMetaBase
         /// </summary>
         [DataMember(Name="phoneMetaBase", EmitDefaultValue=false)]
         public UriReference PhoneMetaBase { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Lines
         /// </summary>
         [DataMember(Name="lines", EmitDefaultValue=false)]
         public List<Line> Lines { get; set; }
-  
-        
+    
         /// <summary>
         /// The status of the phone and lines from the primary Edge.
         /// </summary>
         /// <value>The status of the phone and lines from the primary Edge.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public PhoneStatus Status { get; set; }
-  
-        
+    
         /// <summary>
         /// The status of the phone and lines from the secondary Edge.
         /// </summary>
         /// <value>The status of the phone and lines from the secondary Edge.</value>
         [DataMember(Name="secondaryStatus", EmitDefaultValue=false)]
         public PhoneStatus SecondaryStatus { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Properties
         /// </summary>
         [DataMember(Name="properties", EmitDefaultValue=false)]
-        public Dictionary<string, InlineResponse200> Properties { get; set; }
-  
-        
+        public Dictionary<string, Object> Properties { get; set; }
+    
         /// <summary>
         /// Gets or Sets Capabilities
         /// </summary>
         [DataMember(Name="capabilities", EmitDefaultValue=false)]
         public PhoneCapabilities Capabilities { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

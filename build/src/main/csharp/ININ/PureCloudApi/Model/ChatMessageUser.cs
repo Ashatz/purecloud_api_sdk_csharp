@@ -7,61 +7,68 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ChatMessageUser :  IEquatable<ChatMessageUser>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatMessageUser" /> class.
+        /// Initializes a new instance of the <see cref="ChatMessageUser" />class.
         /// </summary>
-        public ChatMessageUser()
+        /// <param name="Id">Id.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="DisplayName">DisplayName.</param>
+        /// <param name="Username">Username.</param>
+        /// <param name="Images">Images.</param>
+
+        public ChatMessageUser(string Id = null, string Name = null, string DisplayName = null, string Username = null, List<UserImage> Images = null)
         {
+            this.Id = Id;
+            this.Name = Name;
+            this.DisplayName = DisplayName;
+            this.Username = Username;
+            this.Images = Images;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DisplayName
         /// </summary>
         [DataMember(Name="displayName", EmitDefaultValue=false)]
         public string DisplayName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Username
         /// </summary>
         [DataMember(Name="username", EmitDefaultValue=false)]
         public string Username { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Images
         /// </summary>
         [DataMember(Name="images", EmitDefaultValue=false)]
         public List<UserImage> Images { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

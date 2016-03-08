@@ -7,114 +7,138 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DomainOrganizationRole :  IEquatable<DomainOrganizationRole>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainOrganizationRole" /> class.
+        /// Initializes a new instance of the <see cref="DomainOrganizationRole" />class.
         /// </summary>
-        public DomainOrganizationRole()
+        /// <param name="Name">Name.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="DefaultRoleId">DefaultRoleId.</param>
+        /// <param name="Permissions">Permissions.</param>
+        /// <param name="Licenses">Licenses.</param>
+        /// <param name="PermissionPolicies">PermissionPolicies.</param>
+        /// <param name="Code">Code.</param>
+        /// <param name="UserCount">UserCount.</param>
+        /// <param name="RoleNeedsUpdate">RoleNeedsUpdate (default to false).</param>
+        /// <param name="_Default">_Default (default to false).</param>
+
+        public DomainOrganizationRole(string Name = null, string Description = null, string DefaultRoleId = null, List<string> Permissions = null, List<string> Licenses = null, List<DomainPermissionPolicy> PermissionPolicies = null, string Code = null, int? UserCount = null, bool? RoleNeedsUpdate = null, bool? _Default = null, )
         {
-            this.RoleNeedsUpdate = false;
-            this.Default = false;
+            this.Name = Name;
+            this.Description = Description;
+            this.DefaultRoleId = DefaultRoleId;
+            this.Permissions = Permissions;
+            this.Licenses = Licenses;
+            this.PermissionPolicies = PermissionPolicies;
+            this.Code = Code;
+            this.UserCount = UserCount;
+            // use default value if no "RoleNeedsUpdate" provided
+            if (RoleNeedsUpdate == null)
+            {
+                this.RoleNeedsUpdate = false;
+            }
+            else
+            {
+                this.RoleNeedsUpdate = RoleNeedsUpdate;
+            }
+            // use default value if no "_Default" provided
+            if (_Default == null)
+            {
+                this._Default = false;
+            }
+            else
+            {
+                this._Default = _Default;
+            }
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DefaultRoleId
         /// </summary>
         [DataMember(Name="defaultRoleId", EmitDefaultValue=false)]
         public string DefaultRoleId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Permissions
         /// </summary>
         [DataMember(Name="permissions", EmitDefaultValue=false)]
         public List<string> Permissions { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Licenses
         /// </summary>
         [DataMember(Name="licenses", EmitDefaultValue=false)]
         public List<string> Licenses { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PermissionPolicies
         /// </summary>
         [DataMember(Name="permissionPolicies", EmitDefaultValue=false)]
         public List<DomainPermissionPolicy> PermissionPolicies { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public string Code { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UserCount
         /// </summary>
         [DataMember(Name="userCount", EmitDefaultValue=false)]
         public int? UserCount { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets RoleNeedsUpdate
         /// </summary>
         [DataMember(Name="roleNeedsUpdate", EmitDefaultValue=false)]
         public bool? RoleNeedsUpdate { get; set; }
-  
-        
+    
         /// <summary>
-        /// Gets or Sets Default
+        /// Gets or Sets _Default
         /// </summary>
         [DataMember(Name="default", EmitDefaultValue=false)]
-        public bool? Default { get; set; }
-  
-        
+        public bool? _Default { get; set; }
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -133,7 +157,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  UserCount: ").Append(UserCount).Append("\n");
             sb.Append("  RoleNeedsUpdate: ").Append(RoleNeedsUpdate).Append("\n");
-            sb.Append("  Default: ").Append(Default).Append("\n");
+            sb.Append("  _Default: ").Append(_Default).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
@@ -223,9 +247,9 @@ namespace ININ.PureCloudApi.Model
                     this.RoleNeedsUpdate.Equals(other.RoleNeedsUpdate)
                 ) && 
                 (
-                    this.Default == other.Default ||
-                    this.Default != null &&
-                    this.Default.Equals(other.Default)
+                    this._Default == other._Default ||
+                    this._Default != null &&
+                    this._Default.Equals(other._Default)
                 ) && 
                 (
                     this.SelfUri == other.SelfUri ||
@@ -276,8 +300,8 @@ namespace ININ.PureCloudApi.Model
                 if (this.RoleNeedsUpdate != null)
                     hash = hash * 59 + this.RoleNeedsUpdate.GetHashCode();
                 
-                if (this.Default != null)
-                    hash = hash * 59 + this.Default.GetHashCode();
+                if (this._Default != null)
+                    hash = hash * 59 + this._Default.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

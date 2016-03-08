@@ -7,63 +7,66 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DomainPermissionCollection :  IEquatable<DomainPermissionCollection>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainPermissionCollection" /> class.
+        /// Initializes a new instance of the <see cref="DomainPermissionCollection" />class.
         /// </summary>
-        public DomainPermissionCollection()
+        /// <param name="Name">Name.</param>
+        /// <param name="Domain">Domain.</param>
+        /// <param name="PermissionMap">PermissionMap.</param>
+
+        public DomainPermissionCollection(string Name = null, string Domain = null, Dictionary<string, List<DomainPermission>> PermissionMap = null, )
         {
+            this.Name = Name;
+            this.Domain = Domain;
+            this.PermissionMap = PermissionMap;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Domain
         /// </summary>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public string Domain { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PermissionMap
         /// </summary>
         [DataMember(Name="permissionMap", EmitDefaultValue=false)]
         public Dictionary<string, List<DomainPermission>> PermissionMap { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

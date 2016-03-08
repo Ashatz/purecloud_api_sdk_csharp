@@ -7,34 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class WorkItemActions :  IEquatable<WorkItemActions>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkItemActions" /> class.
+        /// Initializes a new instance of the <see cref="WorkItemActions" />class.
         /// </summary>
-        public WorkItemActions()
+        /// <param name="CanSubmit">CanSubmit (default to false).</param>
+
+        public WorkItemActions(bool? CanSubmit = null)
         {
-            this.CanSubmit = false;
+            // use default value if no "CanSubmit" provided
+            if (CanSubmit == null)
+            {
+                this.CanSubmit = false;
+            }
+            else
+            {
+                this.CanSubmit = CanSubmit;
+            }
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets CanSubmit
         /// </summary>
         [DataMember(Name="canSubmit", EmitDefaultValue=false)]
         public bool? CanSubmit { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

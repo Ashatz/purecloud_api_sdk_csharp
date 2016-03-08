@@ -7,54 +7,60 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class CampaignStats :  IEquatable<CampaignStats>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignStats" /> class.
+        /// Initializes a new instance of the <see cref="CampaignStats" />class.
         /// </summary>
-        public CampaignStats()
+        /// <param name="ContactRate">ContactRate.</param>
+        /// <param name="IdleAgents">IdleAgents.</param>
+        /// <param name="AdjustedCallsPerAgent">AdjustedCallsPerAgent.</param>
+        /// <param name="OutstandingCalls">OutstandingCalls.</param>
+
+        public CampaignStats(ConnectRate ContactRate = null, int? IdleAgents = null, double? AdjustedCallsPerAgent = null, int? OutstandingCalls = null)
         {
+            this.ContactRate = ContactRate;
+            this.IdleAgents = IdleAgents;
+            this.AdjustedCallsPerAgent = AdjustedCallsPerAgent;
+            this.OutstandingCalls = OutstandingCalls;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets ContactRate
         /// </summary>
         [DataMember(Name="contactRate", EmitDefaultValue=false)]
         public ConnectRate ContactRate { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IdleAgents
         /// </summary>
         [DataMember(Name="idleAgents", EmitDefaultValue=false)]
         public int? IdleAgents { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AdjustedCallsPerAgent
         /// </summary>
         [DataMember(Name="adjustedCallsPerAgent", EmitDefaultValue=false)]
         public double? AdjustedCallsPerAgent { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets OutstandingCalls
         /// </summary>
         [DataMember(Name="outstandingCalls", EmitDefaultValue=false)]
         public int? OutstandingCalls { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

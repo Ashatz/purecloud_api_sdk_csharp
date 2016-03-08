@@ -7,54 +7,60 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class AccountManager :  IEquatable<AccountManager>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AccountManager" /> class.
+        /// Initializes a new instance of the <see cref="AccountManager" />class.
         /// </summary>
-        public AccountManager()
+        /// <param name="FirstName">FirstName.</param>
+        /// <param name="LastName">LastName.</param>
+        /// <param name="Phone">Phone.</param>
+        /// <param name="Email">Email.</param>
+
+        public AccountManager(string FirstName = null, string LastName = null, string Phone = null, string Email = null)
         {
+            this.FirstName = FirstName;
+            this.LastName = LastName;
+            this.Phone = Phone;
+            this.Email = Email;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets FirstName
         /// </summary>
         [DataMember(Name="firstName", EmitDefaultValue=false)]
         public string FirstName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets LastName
         /// </summary>
         [DataMember(Name="lastName", EmitDefaultValue=false)]
         public string LastName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Phone
         /// </summary>
         [DataMember(Name="phone", EmitDefaultValue=false)]
         public string Phone { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Email
         /// </summary>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

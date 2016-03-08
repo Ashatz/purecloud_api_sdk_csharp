@@ -7,63 +7,83 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class NumberOrderRequest :  IEquatable<NumberOrderRequest>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PhoneNumberTypeEnum {
+            
+            [EnumMember(Value = "TOLL_FREE")]
+            TollFree,
+            
+            [EnumMember(Value = "CN_DOMESTIC")]
+            CnDomestic,
+            
+            [EnumMember(Value = "US_DOMESTIC")]
+            UsDomestic
+        }
+    
+        /// <summary>
+        /// The type of phone number (eg us-domestic, toll-free, etc), to determine which third-party api(s) to use for the order request.
+        /// </summary>
+        /// <value>The type of phone number (eg us-domestic, toll-free, etc), to determine which third-party api(s) to use for the order request.</value>
+        [DataMember(Name="phoneNumberType", EmitDefaultValue=false)]
+        public PhoneNumberTypeEnum? PhoneNumberType { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="NumberOrderRequest" /> class.
+        /// Initializes a new instance of the <see cref="NumberOrderRequest" />class.
         /// </summary>
-        public NumberOrderRequest()
+        /// <param name="OrderTns">OrderTns.</param>
+        /// <param name="ReservationIds">ReservationIds.</param>
+        /// <param name="OrderId">OrderId.</param>
+        /// <param name="EffectiveDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="PhoneNumberType">The type of phone number (eg us-domestic, toll-free, etc), to determine which third-party api(s) to use for the order request..</param>
+
+        public NumberOrderRequest(List<string> OrderTns = null, List<string> ReservationIds = null, string OrderId = null, DateTime? EffectiveDate = null, PhoneNumberTypeEnum? PhoneNumberType = null)
         {
+            this.OrderTns = OrderTns;
+            this.ReservationIds = ReservationIds;
+            this.OrderId = OrderId;
+            this.EffectiveDate = EffectiveDate;
+            this.PhoneNumberType = PhoneNumberType;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets OrderTns
         /// </summary>
         [DataMember(Name="orderTns", EmitDefaultValue=false)]
         public List<string> OrderTns { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ReservationIds
         /// </summary>
         [DataMember(Name="reservationIds", EmitDefaultValue=false)]
         public List<string> ReservationIds { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets OrderId
         /// </summary>
         [DataMember(Name="orderId", EmitDefaultValue=false)]
         public string OrderId { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="effectiveDate", EmitDefaultValue=false)]
         public DateTime? EffectiveDate { get; set; }
-  
-        
-        /// <summary>
-        /// The type of phone number (eg us-domestic, toll-free, etc), to determine which third-party api(s) to use for the order request.
-        /// </summary>
-        /// <value>The type of phone number (eg us-domestic, toll-free, etc), to determine which third-party api(s) to use for the order request.</value>
-        [DataMember(Name="phoneNumberType", EmitDefaultValue=false)]
-        public string PhoneNumberType { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,98 +7,123 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Share :  IEquatable<Share>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum SharedEntityTypeEnum {
+            
+            [EnumMember(Value = "DOCUMENT")]
+            Document
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum MemberTypeEnum {
+            
+            [EnumMember(Value = "USER")]
+            User,
+            
+            [EnumMember(Value = "PUBLIC")]
+            Public
+        }
+    
+        /// <summary>
+        /// Gets or Sets SharedEntityType
+        /// </summary>
+        [DataMember(Name="sharedEntityType", EmitDefaultValue=false)]
+        public SharedEntityTypeEnum? SharedEntityType { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets MemberType
+        /// </summary>
+        [DataMember(Name="memberType", EmitDefaultValue=false)]
+        public MemberTypeEnum? MemberType { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Share" /> class.
+        /// Initializes a new instance of the <see cref="Share" />class.
         /// </summary>
-        public Share()
+        /// <param name="Name">Name.</param>
+        /// <param name="SharedEntityType">SharedEntityType.</param>
+        /// <param name="SharedEntity">SharedEntity.</param>
+        /// <param name="MemberType">MemberType.</param>
+        /// <param name="Member">Member.</param>
+        /// <param name="SharedBy">SharedBy.</param>
+        /// <param name="Workspace">Workspace.</param>
+        /// <param name="User">User.</param>
+
+        public Share(string Name = null, SharedEntityTypeEnum? SharedEntityType = null, UriReference SharedEntity = null, MemberTypeEnum? MemberType = null, UriReference Member = null, UriReference SharedBy = null, UriReference Workspace = null, User User = null, )
         {
+            this.Name = Name;
+            this.SharedEntityType = SharedEntityType;
+            this.SharedEntity = SharedEntity;
+            this.MemberType = MemberType;
+            this.Member = Member;
+            this.SharedBy = SharedBy;
+            this.Workspace = Workspace;
+            this.User = User;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets SharedEntityType
-        /// </summary>
-        [DataMember(Name="sharedEntityType", EmitDefaultValue=false)]
-        public string SharedEntityType { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SharedEntity
         /// </summary>
         [DataMember(Name="sharedEntity", EmitDefaultValue=false)]
         public UriReference SharedEntity { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets MemberType
-        /// </summary>
-        [DataMember(Name="memberType", EmitDefaultValue=false)]
-        public string MemberType { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Member
         /// </summary>
         [DataMember(Name="member", EmitDefaultValue=false)]
         public UriReference Member { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SharedBy
         /// </summary>
         [DataMember(Name="sharedBy", EmitDefaultValue=false)]
         public UriReference SharedBy { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Workspace
         /// </summary>
         [DataMember(Name="workspace", EmitDefaultValue=false)]
         public UriReference Workspace { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

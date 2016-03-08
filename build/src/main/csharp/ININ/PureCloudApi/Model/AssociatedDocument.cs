@@ -7,42 +7,67 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Contains information about the Document associated with a workItem
     /// </summary>
     [DataContract]
     public partial class AssociatedDocument :  IEquatable<AssociatedDocument>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum DocumentAssociationTypeEnum {
+            
+            [EnumMember(Value = "UNKNOWN")]
+            Unknown,
+            
+            [EnumMember(Value = "MAIN")]
+            Main,
+            
+            [EnumMember(Value = "SECONDARY")]
+            Secondary
+        }
+    
+        /// <summary>
+        /// the document association type
+        /// </summary>
+        /// <value>the document association type</value>
+        [DataMember(Name="documentAssociationType", EmitDefaultValue=false)]
+        public DocumentAssociationTypeEnum? DocumentAssociationType { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AssociatedDocument" /> class.
+        /// Initializes a new instance of the <see cref="AssociatedDocument" />class.
         /// </summary>
-        public AssociatedDocument()
+        /// <param name="Document">the document associated with the workitem (required).</param>
+        /// <param name="DocumentAssociationType">the document association type.</param>
+
+        public AssociatedDocument(Document Document = null, DocumentAssociationTypeEnum? DocumentAssociationType = null)
         {
+            // to ensure "Document" is required (not null)
+            if (Document == null)
+            {
+                throw new InvalidDataException("Document is a required property for AssociatedDocument and cannot be null");
+            }
+            else
+            {
+                this.Document = Document;
+            }
+            this.DocumentAssociationType = DocumentAssociationType;
             
         }
-
         
+    
         /// <summary>
         /// the document associated with the workitem
         /// </summary>
         /// <value>the document associated with the workitem</value>
         [DataMember(Name="document", EmitDefaultValue=false)]
         public Document Document { get; set; }
-  
-        
-        /// <summary>
-        /// the document association type
-        /// </summary>
-        /// <value>the document association type</value>
-        [DataMember(Name="documentAssociationType", EmitDefaultValue=false)]
-        public string DocumentAssociationType { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

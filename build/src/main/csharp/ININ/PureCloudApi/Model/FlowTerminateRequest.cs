@@ -7,34 +7,37 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Passed into a terminate command to customize the termination/cancellation action.
     /// </summary>
     [DataContract]
     public partial class FlowTerminateRequest :  IEquatable<FlowTerminateRequest>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowTerminateRequest" /> class.
+        /// Initializes a new instance of the <see cref="FlowTerminateRequest" />class.
         /// </summary>
-        public FlowTerminateRequest()
+        /// <param name="Reason">Reason for termination..</param>
+
+        public FlowTerminateRequest(string Reason = null)
         {
+            this.Reason = Reason;
             
         }
-
         
+    
         /// <summary>
         /// Reason for termination.
         /// </summary>
         /// <value>Reason for termination.</value>
         [DataMember(Name="reason", EmitDefaultValue=false)]
         public string Reason { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,75 +7,84 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ClientSpreadsheetTransform :  IEquatable<ClientSpreadsheetTransform>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ClientSpreadsheetTransform" /> class.
+        /// Initializes a new instance of the <see cref="ClientSpreadsheetTransform" />class.
         /// </summary>
-        public ClientSpreadsheetTransform()
+        /// <param name="Id">Id.</param>
+        /// <param name="EndpointId">EndpointId.</param>
+        /// <param name="FilenameReplaces">FilenameReplaces.</param>
+        /// <param name="Tags">Tags.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="SheetNameReplaces">SheetNameReplaces.</param>
+        /// <param name="Sheets">Sheets.</param>
+
+        public ClientSpreadsheetTransform(string Id = null, string EndpointId = null, List<BasicTransform> FilenameReplaces = null, List<TagModel> Tags = null, string Name = null, List<IndexedTransform> SheetNameReplaces = null, List<SheetTransform> Sheets = null)
         {
+            this.Id = Id;
+            this.EndpointId = EndpointId;
+            this.FilenameReplaces = FilenameReplaces;
+            this.Tags = Tags;
+            this.Name = Name;
+            this.SheetNameReplaces = SheetNameReplaces;
+            this.Sheets = Sheets;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EndpointId
         /// </summary>
         [DataMember(Name="endpointId", EmitDefaultValue=false)]
         public string EndpointId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FilenameReplaces
         /// </summary>
         [DataMember(Name="filenameReplaces", EmitDefaultValue=false)]
         public List<BasicTransform> FilenameReplaces { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Tags
         /// </summary>
         [DataMember(Name="tags", EmitDefaultValue=false)]
         public List<TagModel> Tags { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SheetNameReplaces
         /// </summary>
         [DataMember(Name="sheetNameReplaces", EmitDefaultValue=false)]
         public List<IndexedTransform> SheetNameReplaces { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Sheets
         /// </summary>
         [DataMember(Name="sheets", EmitDefaultValue=false)]
         public List<SheetTransform> Sheets { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

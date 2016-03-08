@@ -7,35 +7,45 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Used as the body to the activateFlow request.
     /// </summary>
     [DataContract]
     public partial class FlowActivateRequest :  IEquatable<FlowActivateRequest>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowActivateRequest" /> class.
+        /// Initializes a new instance of the <see cref="FlowActivateRequest" />class.
         /// </summary>
-        public FlowActivateRequest()
+        /// <param name="Activated">Change the activated state of the flow definition.  True to activate the flow definition so it can be launched, false to disable the flow. (required) (default to false).</param>
+
+        public FlowActivateRequest(bool? Activated = null)
         {
-            this.Activated = false;
+            // to ensure "Activated" is required (not null)
+            if (Activated == null)
+            {
+                throw new InvalidDataException("Activated is a required property for FlowActivateRequest and cannot be null");
+            }
+            else
+            {
+                this.Activated = Activated;
+            }
             
         }
-
         
+    
         /// <summary>
         /// Change the activated state of the flow definition.  True to activate the flow definition so it can be launched, false to disable the flow.
         /// </summary>
         /// <value>Change the activated state of the flow definition.  True to activate the flow definition so it can be launched, false to disable the flow.</value>
         [DataMember(Name="activated", EmitDefaultValue=false)]
         public bool? Activated { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,101 +7,116 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Geolocation :  IEquatable<Geolocation>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Geolocation" /> class.
+        /// Initializes a new instance of the <see cref="Geolocation" />class.
         /// </summary>
-        public Geolocation()
+        /// <param name="Name">Name.</param>
+        /// <param name="Type">A string used to describe the type of client the geolocation is being updated from e.g. ios, android, web, etc..</param>
+        /// <param name="Primary">A boolean used to tell whether or not to set this geolocation client as the primary on a PATCH (default to false).</param>
+        /// <param name="Latitude">Latitude.</param>
+        /// <param name="Longitude">Longitude.</param>
+        /// <param name="Country">Country.</param>
+        /// <param name="Region">Region.</param>
+        /// <param name="City">City.</param>
+
+        public Geolocation(string Name = null, string Type = null, bool? Primary = null, double? Latitude = null, double? Longitude = null, string Country = null, string Region = null, string City = null, )
         {
-            this.Primary = false;
+            this.Name = Name;
+            this.Type = Type;
+            // use default value if no "Primary" provided
+            if (Primary == null)
+            {
+                this.Primary = false;
+            }
+            else
+            {
+                this.Primary = Primary;
+            }
+            this.Latitude = Latitude;
+            this.Longitude = Longitude;
+            this.Country = Country;
+            this.Region = Region;
+            this.City = City;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// A string used to describe the type of client the geolocation is being updated from e.g. ios, android, web, etc.
         /// </summary>
         /// <value>A string used to describe the type of client the geolocation is being updated from e.g. ios, android, web, etc.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-  
-        
+    
         /// <summary>
         /// A boolean used to tell whether or not to set this geolocation client as the primary on a PATCH
         /// </summary>
         /// <value>A boolean used to tell whether or not to set this geolocation client as the primary on a PATCH</value>
         [DataMember(Name="primary", EmitDefaultValue=false)]
         public bool? Primary { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Latitude
         /// </summary>
         [DataMember(Name="latitude", EmitDefaultValue=false)]
         public double? Latitude { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Longitude
         /// </summary>
         [DataMember(Name="longitude", EmitDefaultValue=false)]
         public double? Longitude { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Country
         /// </summary>
         [DataMember(Name="country", EmitDefaultValue=false)]
         public string Country { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Region
         /// </summary>
         [DataMember(Name="region", EmitDefaultValue=false)]
         public string Region { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets City
         /// </summary>
         [DataMember(Name="city", EmitDefaultValue=false)]
         public string City { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

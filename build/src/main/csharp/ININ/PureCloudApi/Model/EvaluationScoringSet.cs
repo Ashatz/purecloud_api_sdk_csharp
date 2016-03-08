@@ -7,69 +7,84 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class EvaluationScoringSet :  IEquatable<EvaluationScoringSet>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationScoringSet" /> class.
+        /// Initializes a new instance of the <see cref="EvaluationScoringSet" />class.
         /// </summary>
-        public EvaluationScoringSet()
+        /// <param name="TotalScore">TotalScore.</param>
+        /// <param name="TotalCriticalScore">TotalCriticalScore.</param>
+        /// <param name="QuestionGroupScores">QuestionGroupScores.</param>
+        /// <param name="AnyFailedKillQuestions">AnyFailedKillQuestions (default to false).</param>
+        /// <param name="Comments">Comments.</param>
+        /// <param name="AgentComments">AgentComments.</param>
+
+        public EvaluationScoringSet(float? TotalScore = null, float? TotalCriticalScore = null, List<QuestionGroupScore> QuestionGroupScores = null, bool? AnyFailedKillQuestions = null, string Comments = null, string AgentComments = null)
         {
-            this.AnyFailedKillQuestions = false;
+            this.TotalScore = TotalScore;
+            this.TotalCriticalScore = TotalCriticalScore;
+            this.QuestionGroupScores = QuestionGroupScores;
+            // use default value if no "AnyFailedKillQuestions" provided
+            if (AnyFailedKillQuestions == null)
+            {
+                this.AnyFailedKillQuestions = false;
+            }
+            else
+            {
+                this.AnyFailedKillQuestions = AnyFailedKillQuestions;
+            }
+            this.Comments = Comments;
+            this.AgentComments = AgentComments;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets TotalScore
         /// </summary>
         [DataMember(Name="totalScore", EmitDefaultValue=false)]
         public float? TotalScore { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets TotalCriticalScore
         /// </summary>
         [DataMember(Name="totalCriticalScore", EmitDefaultValue=false)]
         public float? TotalCriticalScore { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets QuestionGroupScores
         /// </summary>
         [DataMember(Name="questionGroupScores", EmitDefaultValue=false)]
         public List<QuestionGroupScore> QuestionGroupScores { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AnyFailedKillQuestions
         /// </summary>
         [DataMember(Name="anyFailedKillQuestions", EmitDefaultValue=false)]
         public bool? AnyFailedKillQuestions { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Comments
         /// </summary>
         [DataMember(Name="comments", EmitDefaultValue=false)]
         public string Comments { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AgentComments
         /// </summary>
         [DataMember(Name="agentComments", EmitDefaultValue=false)]
         public string AgentComments { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

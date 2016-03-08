@@ -7,40 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Facets :  IEquatable<Facets>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Facets" /> class.
+        /// Initializes a new instance of the <see cref="Facets" />class.
         /// </summary>
-        public Facets()
+        /// <param name="Count">Count.</param>
+        /// <param name="FacetGroups">FacetGroups.</param>
+
+        public Facets(int? Count = null, List<FacetGroup> FacetGroups = null)
         {
+            this.Count = Count;
+            this.FacetGroups = FacetGroups;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Count
         /// </summary>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public int? Count { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FacetGroups
         /// </summary>
         [DataMember(Name="facetGroups", EmitDefaultValue=false)]
         public List<FacetGroup> FacetGroups { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

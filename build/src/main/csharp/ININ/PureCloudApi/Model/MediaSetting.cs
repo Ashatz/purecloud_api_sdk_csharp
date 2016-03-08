@@ -7,40 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class MediaSetting :  IEquatable<MediaSetting>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaSetting" /> class.
+        /// Initializes a new instance of the <see cref="MediaSetting" />class.
         /// </summary>
-        public MediaSetting()
+        /// <param name="AlertingTimeoutSeconds">AlertingTimeoutSeconds.</param>
+        /// <param name="ServiceLevel">ServiceLevel.</param>
+
+        public MediaSetting(int? AlertingTimeoutSeconds = null, ServiceLevel ServiceLevel = null)
         {
+            this.AlertingTimeoutSeconds = AlertingTimeoutSeconds;
+            this.ServiceLevel = ServiceLevel;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets AlertingTimeoutSeconds
         /// </summary>
         [DataMember(Name="alertingTimeoutSeconds", EmitDefaultValue=false)]
         public int? AlertingTimeoutSeconds { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ServiceLevel
         /// </summary>
         [DataMember(Name="serviceLevel", EmitDefaultValue=false)]
         public ServiceLevel ServiceLevel { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

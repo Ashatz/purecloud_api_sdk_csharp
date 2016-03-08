@@ -7,76 +7,115 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DiagnosticEmail :  IEquatable<DiagnosticEmail>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum PriorityEnum {
+            
+            [EnumMember(Value = "LOW")]
+            Low,
+            
+            [EnumMember(Value = "MEDIUM")]
+            Medium,
+            
+            [EnumMember(Value = "HIGH")]
+            High
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum {
+            
+            [EnumMember(Value = "PROBLEM")]
+            Problem,
+            
+            [EnumMember(Value = "FEATURE_REQUEST")]
+            FeatureRequest,
+            
+            [EnumMember(Value = "QUESTION")]
+            Question,
+            
+            [EnumMember(Value = "TECHNICAL_ISSUE")]
+            TechnicalIssue,
+            
+            [EnumMember(Value = "NON_TECHNICAL_ISSUE")]
+            NonTechnicalIssue
+        }
+    
+        /// <summary>
+        /// Gets or Sets Priority
+        /// </summary>
+        [DataMember(Name="priority", EmitDefaultValue=false)]
+        public PriorityEnum? Priority { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DiagnosticEmail" /> class.
+        /// Initializes a new instance of the <see cref="DiagnosticEmail" />class.
         /// </summary>
-        public DiagnosticEmail()
+        /// <param name="Subject">Subject.</param>
+        /// <param name="Topic">Topic.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="Priority">Priority.</param>
+        /// <param name="Type">Type.</param>
+        /// <param name="Data">Data.</param>
+
+        public DiagnosticEmail(string Subject = null, string Topic = null, string Description = null, PriorityEnum? Priority = null, TypeEnum? Type = null, Object Data = null)
         {
+            this.Subject = Subject;
+            this.Topic = Topic;
+            this.Description = Description;
+            this.Priority = Priority;
+            this.Type = Type;
+            this.Data = Data;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Subject
         /// </summary>
         [DataMember(Name="subject", EmitDefaultValue=false)]
         public string Subject { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Topic
         /// </summary>
         [DataMember(Name="topic", EmitDefaultValue=false)]
         public string Topic { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Priority
-        /// </summary>
-        [DataMember(Name="priority", EmitDefaultValue=false)]
-        public string Priority { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Data
         /// </summary>
         [DataMember(Name="data", EmitDefaultValue=false)]
         public Object Data { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

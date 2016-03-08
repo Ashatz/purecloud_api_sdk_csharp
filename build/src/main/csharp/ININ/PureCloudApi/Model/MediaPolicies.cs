@@ -7,50 +7,55 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class MediaPolicies :  IEquatable<MediaPolicies>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaPolicies" /> class.
+        /// Initializes a new instance of the <see cref="MediaPolicies" />class.
         /// </summary>
-        public MediaPolicies()
+        /// <param name="CallPolicy">Conditions and actions for calls.</param>
+        /// <param name="ChatPolicy">Conditions and actions for chats.</param>
+        /// <param name="EmailPolicy">Conditions and actions for emails.</param>
+
+        public MediaPolicies(MediaPolicy CallPolicy = null, MediaPolicy ChatPolicy = null, MediaPolicy EmailPolicy = null)
         {
+            this.CallPolicy = CallPolicy;
+            this.ChatPolicy = ChatPolicy;
+            this.EmailPolicy = EmailPolicy;
             
         }
-
         
+    
         /// <summary>
         /// Conditions and actions for calls
         /// </summary>
         /// <value>Conditions and actions for calls</value>
         [DataMember(Name="callPolicy", EmitDefaultValue=false)]
         public MediaPolicy CallPolicy { get; set; }
-  
-        
+    
         /// <summary>
         /// Conditions and actions for chats
         /// </summary>
         /// <value>Conditions and actions for chats</value>
         [DataMember(Name="chatPolicy", EmitDefaultValue=false)]
         public MediaPolicy ChatPolicy { get; set; }
-  
-        
+    
         /// <summary>
         /// Conditions and actions for emails
         /// </summary>
         /// <value>Conditions and actions for emails</value>
         [DataMember(Name="emailPolicy", EmitDefaultValue=false)]
         public MediaPolicy EmailPolicy { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

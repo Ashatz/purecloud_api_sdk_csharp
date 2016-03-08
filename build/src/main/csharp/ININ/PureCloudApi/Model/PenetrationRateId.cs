@@ -7,40 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class PenetrationRateId :  IEquatable<PenetrationRateId>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PenetrationRateId" /> class.
+        /// Initializes a new instance of the <see cref="PenetrationRateId" />class.
         /// </summary>
-        public PenetrationRateId()
+        /// <param name="ContactList">ContactList.</param>
+        /// <param name="Qualifier">Qualifier.</param>
+
+        public PenetrationRateId(UriReference ContactList = null, UriReference Qualifier = null)
         {
+            this.ContactList = ContactList;
+            this.Qualifier = Qualifier;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets ContactList
         /// </summary>
         [DataMember(Name="contactList", EmitDefaultValue=false)]
         public UriReference ContactList { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Qualifier
         /// </summary>
         [DataMember(Name="qualifier", EmitDefaultValue=false)]
         public UriReference Qualifier { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

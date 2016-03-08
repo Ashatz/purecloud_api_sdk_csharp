@@ -7,42 +7,60 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DomainPhysicalCapabilities :  IEquatable<DomainPhysicalCapabilities>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainPhysicalCapabilities" /> class.
+        /// Initializes a new instance of the <see cref="DomainPhysicalCapabilities" />class.
         /// </summary>
-        public DomainPhysicalCapabilities()
+        /// <param name="Vlan">Vlan (default to false).</param>
+        /// <param name="Team">Team (default to false).</param>
+
+        public DomainPhysicalCapabilities(bool? Vlan = null, bool? Team = null)
         {
-            this.Vlan = false;
-            this.Team = false;
+            // use default value if no "Vlan" provided
+            if (Vlan == null)
+            {
+                this.Vlan = false;
+            }
+            else
+            {
+                this.Vlan = Vlan;
+            }
+            // use default value if no "Team" provided
+            if (Team == null)
+            {
+                this.Team = false;
+            }
+            else
+            {
+                this.Team = Team;
+            }
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Vlan
         /// </summary>
         [DataMember(Name="vlan", EmitDefaultValue=false)]
         public bool? Vlan { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Team
         /// </summary>
         [DataMember(Name="team", EmitDefaultValue=false)]
         public bool? Team { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

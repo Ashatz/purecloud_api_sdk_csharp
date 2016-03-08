@@ -7,34 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class BackendFlowAvailableActions :  IEquatable<BackendFlowAvailableActions>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="BackendFlowAvailableActions" /> class.
+        /// Initializes a new instance of the <see cref="BackendFlowAvailableActions" />class.
         /// </summary>
-        public BackendFlowAvailableActions()
+        /// <param name="CanTerminate">CanTerminate (default to false).</param>
+
+        public BackendFlowAvailableActions(bool? CanTerminate = null)
         {
-            this.CanTerminate = false;
+            // use default value if no "CanTerminate" provided
+            if (CanTerminate == null)
+            {
+                this.CanTerminate = false;
+            }
+            else
+            {
+                this.CanTerminate = CanTerminate;
+            }
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets CanTerminate
         /// </summary>
         [DataMember(Name="canTerminate", EmitDefaultValue=false)]
         public bool? CanTerminate { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

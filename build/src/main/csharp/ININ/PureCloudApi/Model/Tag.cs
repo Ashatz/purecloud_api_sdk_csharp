@@ -7,41 +7,52 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Tag :  IEquatable<Tag>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Tag" /> class.
+        /// Initializes a new instance of the <see cref="Tag" />class.
         /// </summary>
-        public Tag()
+        /// <param name="Label">Label.</param>
+        /// <param name="InteractionFlag">InteractionFlag (default to false).</param>
+
+        public Tag(string Label = null, bool? InteractionFlag = null)
         {
-            this.InteractionFlag = false;
+            this.Label = Label;
+            // use default value if no "InteractionFlag" provided
+            if (InteractionFlag == null)
+            {
+                this.InteractionFlag = false;
+            }
+            else
+            {
+                this.InteractionFlag = InteractionFlag;
+            }
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Label
         /// </summary>
         [DataMember(Name="label", EmitDefaultValue=false)]
         public string Label { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets InteractionFlag
         /// </summary>
         [DataMember(Name="interactionFlag", EmitDefaultValue=false)]
         public bool? InteractionFlag { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

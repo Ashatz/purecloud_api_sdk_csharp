@@ -7,85 +7,91 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Session :  IEquatable<Session>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Session" /> class.
+        /// Initializes a new instance of the <see cref="Session" />class.
         /// </summary>
-        public Session()
+        /// <param name="Name">Name.</param>
+        /// <param name="MinutesToLive">MinutesToLive.</param>
+        /// <param name="UserAgent">UserAgent.</param>
+        /// <param name="CreatedOn">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="User">User.</param>
+        /// <param name="Language">Language.</param>
+
+        public Session(string Name = null, long? MinutesToLive = null, string UserAgent = null, DateTime? CreatedOn = null, User User = null, string Language = null, )
         {
+            this.Name = Name;
+            this.MinutesToLive = MinutesToLive;
+            this.UserAgent = UserAgent;
+            this.CreatedOn = CreatedOn;
+            this.User = User;
+            this.Language = Language;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets MinutesToLive
         /// </summary>
         [DataMember(Name="minutesToLive", EmitDefaultValue=false)]
         public long? MinutesToLive { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UserAgent
         /// </summary>
         [DataMember(Name="userAgent", EmitDefaultValue=false)]
         public string UserAgent { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="createdOn", EmitDefaultValue=false)]
         public DateTime? CreatedOn { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Language
         /// </summary>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public string Language { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,33 +7,36 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Bullseye :  IEquatable<Bullseye>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Bullseye" /> class.
+        /// Initializes a new instance of the <see cref="Bullseye" />class.
         /// </summary>
-        public Bullseye()
+        /// <param name="Rings">Rings.</param>
+
+        public Bullseye(List<Ring> Rings = null)
         {
+            this.Rings = Rings;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Rings
         /// </summary>
         [DataMember(Name="rings", EmitDefaultValue=false)]
         public List<Ring> Rings { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

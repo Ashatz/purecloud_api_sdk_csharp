@@ -7,47 +7,52 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class SignatureDocumentInfo :  IEquatable<SignatureDocumentInfo>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="SignatureDocumentInfo" /> class.
+        /// Initializes a new instance of the <see cref="SignatureDocumentInfo" />class.
         /// </summary>
-        public SignatureDocumentInfo()
+        /// <param name="Org">Org.</param>
+        /// <param name="User">User.</param>
+        /// <param name="ReturnUrl">ReturnUrl.</param>
+
+        public SignatureDocumentInfo(Organization Org = null, User User = null, string ReturnUrl = null)
         {
+            this.Org = Org;
+            this.User = User;
+            this.ReturnUrl = ReturnUrl;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Org
         /// </summary>
         [DataMember(Name="org", EmitDefaultValue=false)]
         public Organization Org { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ReturnUrl
         /// </summary>
         [DataMember(Name="returnUrl", EmitDefaultValue=false)]
         public string ReturnUrl { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

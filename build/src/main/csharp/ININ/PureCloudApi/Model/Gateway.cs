@@ -7,47 +7,52 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Gateway :  IEquatable<Gateway>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Gateway" /> class.
+        /// Initializes a new instance of the <see cref="Gateway" />class.
         /// </summary>
-        public Gateway()
+        /// <param name="Id">Id.</param>
+        /// <param name="Ip">Ip.</param>
+        /// <param name="Port">Port.</param>
+
+        public Gateway(string Id = null, string Ip = null, int? Port = null)
         {
+            this.Id = Id;
+            this.Ip = Ip;
+            this.Port = Port;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Ip
         /// </summary>
         [DataMember(Name="ip", EmitDefaultValue=false)]
         public string Ip { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Port
         /// </summary>
         [DataMember(Name="port", EmitDefaultValue=false)]
         public int? Port { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

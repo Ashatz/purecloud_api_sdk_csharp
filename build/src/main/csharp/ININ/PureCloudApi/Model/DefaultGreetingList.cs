@@ -7,100 +7,118 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DefaultGreetingList :  IEquatable<DefaultGreetingList>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum OwnerTypeEnum {
+            
+            [EnumMember(Value = "USER")]
+            User,
+            
+            [EnumMember(Value = "ORGANIZATION")]
+            Organization
+        }
+    
+        /// <summary>
+        /// Gets or Sets OwnerType
+        /// </summary>
+        [DataMember(Name="ownerType", EmitDefaultValue=false)]
+        public OwnerTypeEnum? OwnerType { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DefaultGreetingList" /> class.
+        /// Initializes a new instance of the <see cref="DefaultGreetingList" />class.
         /// </summary>
-        public DefaultGreetingList()
+        /// <param name="Name">Name.</param>
+        /// <param name="Owner">Owner.</param>
+        /// <param name="OwnerType">OwnerType.</param>
+        /// <param name="Greetings">Greetings.</param>
+        /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="CreatedBy">CreatedBy.</param>
+        /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ModifiedBy">ModifiedBy.</param>
+
+        public DefaultGreetingList(string Name = null, GreetingOwner Owner = null, OwnerTypeEnum? OwnerType = null, Dictionary<string, Greeting> Greetings = null, DateTime? CreatedDate = null, string CreatedBy = null, DateTime? ModifiedDate = null, string ModifiedBy = null, )
         {
+            this.Name = Name;
+            this.Owner = Owner;
+            this.OwnerType = OwnerType;
+            this.Greetings = Greetings;
+            this.CreatedDate = CreatedDate;
+            this.CreatedBy = CreatedBy;
+            this.ModifiedDate = ModifiedDate;
+            this.ModifiedBy = ModifiedBy;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Owner
         /// </summary>
         [DataMember(Name="owner", EmitDefaultValue=false)]
         public GreetingOwner Owner { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets OwnerType
-        /// </summary>
-        [DataMember(Name="ownerType", EmitDefaultValue=false)]
-        public string OwnerType { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Greetings
         /// </summary>
         [DataMember(Name="greetings", EmitDefaultValue=false)]
         public Dictionary<string, Greeting> Greetings { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="createdDate", EmitDefaultValue=false)]
         public DateTime? CreatedDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CreatedBy
         /// </summary>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public string CreatedBy { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
         public DateTime? ModifiedDate { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ModifiedBy
         /// </summary>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public string ModifiedBy { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,131 +7,241 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class QuoteCharge :  IEquatable<QuoteCharge>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="QuoteCharge" /> class.
+        /// Initializes a new instance of the <see cref="QuoteCharge" />class.
         /// </summary>
-        public QuoteCharge()
+        /// <param name="Id">The quote charge Id. (required).</param>
+        /// <param name="Sku">The quote charge SKU. (required).</param>
+        /// <param name="Name">The quote charge name. (required).</param>
+        /// <param name="ChargeType">The quote charge type. (required).</param>
+        /// <param name="Quantity">The quote charge quantity. (required).</param>
+        /// <param name="ListTotal">The quote charge total price before discounts. (required).</param>
+        /// <param name="Total">The quote charge total price after discounts. (required).</param>
+        /// <param name="ListPriceDisplay">The quote charge list price before discounts. (required).</param>
+        /// <param name="Discount">The quote charge discount percent. (required).</param>
+        /// <param name="EffectivePrice">The quote charge list price after discounts. (required).</param>
+        /// <param name="ProductShippable">Indicates whether the product can be shipped. (required) (default to false).</param>
+        /// <param name="ShippingAddress">The quote shipping address. (required).</param>
+        /// <param name="ForRelatedPart">The part number of a part related to the quote charge..</param>
+
+        public QuoteCharge(string Id = null, string Sku = null, string Name = null, string ChargeType = null, int? Quantity = null, string ListTotal = null, string Total = null, string ListPriceDisplay = null, string Discount = null, string EffectivePrice = null, bool? ProductShippable = null, Address ShippingAddress = null, string ForRelatedPart = null)
         {
-            this.ProductShippable = false;
+            // to ensure "Id" is required (not null)
+            if (Id == null)
+            {
+                throw new InvalidDataException("Id is a required property for QuoteCharge and cannot be null");
+            }
+            else
+            {
+                this.Id = Id;
+            }
+            // to ensure "Sku" is required (not null)
+            if (Sku == null)
+            {
+                throw new InvalidDataException("Sku is a required property for QuoteCharge and cannot be null");
+            }
+            else
+            {
+                this.Sku = Sku;
+            }
+            // to ensure "Name" is required (not null)
+            if (Name == null)
+            {
+                throw new InvalidDataException("Name is a required property for QuoteCharge and cannot be null");
+            }
+            else
+            {
+                this.Name = Name;
+            }
+            // to ensure "ChargeType" is required (not null)
+            if (ChargeType == null)
+            {
+                throw new InvalidDataException("ChargeType is a required property for QuoteCharge and cannot be null");
+            }
+            else
+            {
+                this.ChargeType = ChargeType;
+            }
+            // to ensure "Quantity" is required (not null)
+            if (Quantity == null)
+            {
+                throw new InvalidDataException("Quantity is a required property for QuoteCharge and cannot be null");
+            }
+            else
+            {
+                this.Quantity = Quantity;
+            }
+            // to ensure "ListTotal" is required (not null)
+            if (ListTotal == null)
+            {
+                throw new InvalidDataException("ListTotal is a required property for QuoteCharge and cannot be null");
+            }
+            else
+            {
+                this.ListTotal = ListTotal;
+            }
+            // to ensure "Total" is required (not null)
+            if (Total == null)
+            {
+                throw new InvalidDataException("Total is a required property for QuoteCharge and cannot be null");
+            }
+            else
+            {
+                this.Total = Total;
+            }
+            // to ensure "ListPriceDisplay" is required (not null)
+            if (ListPriceDisplay == null)
+            {
+                throw new InvalidDataException("ListPriceDisplay is a required property for QuoteCharge and cannot be null");
+            }
+            else
+            {
+                this.ListPriceDisplay = ListPriceDisplay;
+            }
+            // to ensure "Discount" is required (not null)
+            if (Discount == null)
+            {
+                throw new InvalidDataException("Discount is a required property for QuoteCharge and cannot be null");
+            }
+            else
+            {
+                this.Discount = Discount;
+            }
+            // to ensure "EffectivePrice" is required (not null)
+            if (EffectivePrice == null)
+            {
+                throw new InvalidDataException("EffectivePrice is a required property for QuoteCharge and cannot be null");
+            }
+            else
+            {
+                this.EffectivePrice = EffectivePrice;
+            }
+            // to ensure "ProductShippable" is required (not null)
+            if (ProductShippable == null)
+            {
+                throw new InvalidDataException("ProductShippable is a required property for QuoteCharge and cannot be null");
+            }
+            else
+            {
+                this.ProductShippable = ProductShippable;
+            }
+            // to ensure "ShippingAddress" is required (not null)
+            if (ShippingAddress == null)
+            {
+                throw new InvalidDataException("ShippingAddress is a required property for QuoteCharge and cannot be null");
+            }
+            else
+            {
+                this.ShippingAddress = ShippingAddress;
+            }
+            this.ForRelatedPart = ForRelatedPart;
             
         }
-
         
+    
         /// <summary>
         /// The quote charge Id.
         /// </summary>
         /// <value>The quote charge Id.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// The quote charge SKU.
         /// </summary>
         /// <value>The quote charge SKU.</value>
         [DataMember(Name="sku", EmitDefaultValue=false)]
         public string Sku { get; set; }
-  
-        
+    
         /// <summary>
         /// The quote charge name.
         /// </summary>
         /// <value>The quote charge name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// The quote charge type.
         /// </summary>
         /// <value>The quote charge type.</value>
         [DataMember(Name="chargeType", EmitDefaultValue=false)]
         public string ChargeType { get; set; }
-  
-        
+    
         /// <summary>
         /// The quote charge quantity.
         /// </summary>
         /// <value>The quote charge quantity.</value>
         [DataMember(Name="quantity", EmitDefaultValue=false)]
         public int? Quantity { get; set; }
-  
-        
+    
         /// <summary>
         /// The quote charge total price before discounts.
         /// </summary>
         /// <value>The quote charge total price before discounts.</value>
         [DataMember(Name="listTotal", EmitDefaultValue=false)]
         public string ListTotal { get; set; }
-  
-        
+    
         /// <summary>
         /// The quote charge total price after discounts.
         /// </summary>
         /// <value>The quote charge total price after discounts.</value>
         [DataMember(Name="total", EmitDefaultValue=false)]
         public string Total { get; set; }
-  
-        
+    
         /// <summary>
         /// The quote charge list price before discounts.
         /// </summary>
         /// <value>The quote charge list price before discounts.</value>
         [DataMember(Name="listPriceDisplay", EmitDefaultValue=false)]
         public string ListPriceDisplay { get; set; }
-  
-        
+    
         /// <summary>
         /// The quote charge discount percent.
         /// </summary>
         /// <value>The quote charge discount percent.</value>
         [DataMember(Name="discount", EmitDefaultValue=false)]
         public string Discount { get; set; }
-  
-        
+    
         /// <summary>
         /// The quote charge list price after discounts.
         /// </summary>
         /// <value>The quote charge list price after discounts.</value>
         [DataMember(Name="effectivePrice", EmitDefaultValue=false)]
         public string EffectivePrice { get; set; }
-  
-        
+    
         /// <summary>
         /// Indicates whether the product can be shipped.
         /// </summary>
         /// <value>Indicates whether the product can be shipped.</value>
         [DataMember(Name="productShippable", EmitDefaultValue=false)]
         public bool? ProductShippable { get; set; }
-  
-        
+    
         /// <summary>
         /// The quote shipping address.
         /// </summary>
         /// <value>The quote shipping address.</value>
         [DataMember(Name="shippingAddress", EmitDefaultValue=false)]
         public Address ShippingAddress { get; set; }
-  
-        
+    
         /// <summary>
         /// The part number of a part related to the quote charge.
         /// </summary>
         /// <value>The part number of a part related to the quote charge.</value>
         [DataMember(Name="forRelatedPart", EmitDefaultValue=false)]
         public string ForRelatedPart { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

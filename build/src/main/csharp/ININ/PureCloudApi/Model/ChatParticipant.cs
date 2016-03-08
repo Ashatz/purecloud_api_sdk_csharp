@@ -7,33 +7,46 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ChatParticipant :  IEquatable<ChatParticipant>
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ChatParticipant" /> class.
-        /// </summary>
-        public ChatParticipant()
-        {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum {
             
+            [EnumMember(Value = "USER")]
+            User,
+            
+            [EnumMember(Value = "ROOM")]
+            Room
         }
-
-        
+    
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-  
+        public TypeEnum? Type { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ChatParticipant" /> class.
+        /// Initializes a new instance of the <see cref="ChatParticipant" />class.
+        /// </summary>
+        /// <param name="Type">Type.</param>
+
+        public ChatParticipant(TypeEnum? Type = null)
+        {
+            this.Type = Type;
+            
+        }
         
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

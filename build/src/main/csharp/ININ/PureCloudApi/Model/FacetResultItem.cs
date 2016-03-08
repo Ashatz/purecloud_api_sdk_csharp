@@ -7,77 +7,86 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class FacetResultItem :  IEquatable<FacetResultItem>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FacetResultItem" /> class.
+        /// Initializes a new instance of the <see cref="FacetResultItem" />class.
         /// </summary>
-        public FacetResultItem()
+        /// <param name="Name">For TERM facets this will contain the value of the term that was found userid, docid, etc..</param>
+        /// <param name="Count">The number of items that matched the facetRequest..</param>
+        /// <param name="Document">Document.</param>
+        /// <param name="User">User.</param>
+        /// <param name="Queue">Queue.</param>
+        /// <param name="FlowConfigId">FlowConfigId.</param>
+        /// <param name="Workspace">Workspace.</param>
+
+        public FacetResultItem(string Name = null, long? Count = null, Document Document = null, User User = null, Queue Queue = null, FlowConfigId FlowConfigId = null, Workspace Workspace = null)
         {
+            this.Name = Name;
+            this.Count = Count;
+            this.Document = Document;
+            this.User = User;
+            this.Queue = Queue;
+            this.FlowConfigId = FlowConfigId;
+            this.Workspace = Workspace;
             
         }
-
         
+    
         /// <summary>
         /// For TERM facets this will contain the value of the term that was found userid, docid, etc.
         /// </summary>
         /// <value>For TERM facets this will contain the value of the term that was found userid, docid, etc.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// The number of items that matched the facetRequest.
         /// </summary>
         /// <value>The number of items that matched the facetRequest.</value>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public long? Count { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Document
         /// </summary>
         [DataMember(Name="document", EmitDefaultValue=false)]
         public Document Document { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Queue
         /// </summary>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public Queue Queue { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FlowConfigId
         /// </summary>
         [DataMember(Name="flowConfigId", EmitDefaultValue=false)]
         public FlowConfigId FlowConfigId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Workspace
         /// </summary>
         [DataMember(Name="workspace", EmitDefaultValue=false)]
         public Workspace Workspace { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,33 +7,36 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DomainOrganizationProduct :  IEquatable<DomainOrganizationProduct>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainOrganizationProduct" /> class.
+        /// Initializes a new instance of the <see cref="DomainOrganizationProduct" />class.
         /// </summary>
-        public DomainOrganizationProduct()
+        /// <param name="Id">Id.</param>
+
+        public DomainOrganizationProduct(string Id = null)
         {
+            this.Id = Id;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

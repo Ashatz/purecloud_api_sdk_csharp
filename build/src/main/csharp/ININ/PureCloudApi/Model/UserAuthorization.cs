@@ -7,77 +7,82 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class UserAuthorization :  IEquatable<UserAuthorization>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserAuthorization" /> class.
+        /// Initializes a new instance of the <see cref="UserAuthorization" />class.
         /// </summary>
-        public UserAuthorization()
+        /// <param name="Name">Name.</param>
+        /// <param name="Licenses">Licenses.</param>
+        /// <param name="Roles">Roles.</param>
+        /// <param name="Permissions">Permissions.</param>
+        /// <param name="PermissionPolicies">PermissionPolicies.</param>
+
+        public UserAuthorization(string Name = null, List<string> Licenses = null, List<string> Roles = null, List<string> Permissions = null, List<ResourcePermissionPolicy> PermissionPolicies = null, )
         {
+            this.Name = Name;
+            this.Licenses = Licenses;
+            this.Roles = Roles;
+            this.Permissions = Permissions;
+            this.PermissionPolicies = PermissionPolicies;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Licenses
         /// </summary>
         [DataMember(Name="licenses", EmitDefaultValue=false)]
         public List<string> Licenses { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Roles
         /// </summary>
         [DataMember(Name="roles", EmitDefaultValue=false)]
         public List<string> Roles { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Permissions
         /// </summary>
         [DataMember(Name="permissions", EmitDefaultValue=false)]
         public List<string> Permissions { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PermissionPolicies
         /// </summary>
         [DataMember(Name="permissionPolicies", EmitDefaultValue=false)]
         public List<ResourcePermissionPolicy> PermissionPolicies { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

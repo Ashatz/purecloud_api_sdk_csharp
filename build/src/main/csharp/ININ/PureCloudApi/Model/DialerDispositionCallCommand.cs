@@ -7,47 +7,52 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DialerDispositionCallCommand :  IEquatable<DialerDispositionCallCommand>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerDispositionCallCommand" /> class.
+        /// Initializes a new instance of the <see cref="DialerDispositionCallCommand" />class.
         /// </summary>
-        public DialerDispositionCallCommand()
+        /// <param name="CallId">CallId.</param>
+        /// <param name="WrapupCodeId">WrapupCodeId.</param>
+        /// <param name="Contact">Contact.</param>
+
+        public DialerDispositionCallCommand(string CallId = null, string WrapupCodeId = null, Contact Contact = null)
         {
+            this.CallId = CallId;
+            this.WrapupCodeId = WrapupCodeId;
+            this.Contact = Contact;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets CallId
         /// </summary>
         [DataMember(Name="callId", EmitDefaultValue=false)]
         public string CallId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets WrapupCodeId
         /// </summary>
         [DataMember(Name="wrapupCodeId", EmitDefaultValue=false)]
         public string WrapupCodeId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Contact
         /// </summary>
         [DataMember(Name="contact", EmitDefaultValue=false)]
         public Contact Contact { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

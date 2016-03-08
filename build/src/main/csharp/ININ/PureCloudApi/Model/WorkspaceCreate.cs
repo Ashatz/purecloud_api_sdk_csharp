@@ -7,40 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class WorkspaceCreate :  IEquatable<WorkspaceCreate>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkspaceCreate" /> class.
+        /// Initializes a new instance of the <see cref="WorkspaceCreate" />class.
         /// </summary>
-        public WorkspaceCreate()
+        /// <param name="Name">Name.</param>
+        /// <param name="Bucket">Bucket.</param>
+
+        public WorkspaceCreate(string Name = null, string Bucket = null)
         {
+            this.Name = Name;
+            this.Bucket = Bucket;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Bucket
         /// </summary>
         [DataMember(Name="bucket", EmitDefaultValue=false)]
         public string Bucket { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

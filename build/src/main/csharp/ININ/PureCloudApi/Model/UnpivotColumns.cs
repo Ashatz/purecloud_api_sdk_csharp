@@ -7,33 +7,36 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class UnpivotColumns :  IEquatable<UnpivotColumns>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UnpivotColumns" /> class.
+        /// Initializes a new instance of the <see cref="UnpivotColumns" />class.
         /// </summary>
-        public UnpivotColumns()
+        /// <param name="Columns">Columns.</param>
+
+        public UnpivotColumns(List<IndexedTransform> Columns = null)
         {
+            this.Columns = Columns;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Columns
         /// </summary>
         [DataMember(Name="columns", EmitDefaultValue=false)]
         public List<IndexedTransform> Columns { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

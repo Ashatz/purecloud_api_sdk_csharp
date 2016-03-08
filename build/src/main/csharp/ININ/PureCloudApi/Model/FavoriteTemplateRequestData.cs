@@ -7,33 +7,36 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class FavoriteTemplateRequestData :  IEquatable<FavoriteTemplateRequestData>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FavoriteTemplateRequestData" /> class.
+        /// Initializes a new instance of the <see cref="FavoriteTemplateRequestData" />class.
         /// </summary>
-        public FavoriteTemplateRequestData()
+        /// <param name="TemplateId">TemplateId.</param>
+
+        public FavoriteTemplateRequestData(string TemplateId = null)
         {
+            this.TemplateId = TemplateId;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets TemplateId
         /// </summary>
         [DataMember(Name="templateId", EmitDefaultValue=false)]
         public string TemplateId { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,122 +7,187 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Report for one active (running) process found in result to a report request.
     /// </summary>
     [DataContract]
     public partial class FlowReportResultItem :  IEquatable<FlowReportResultItem>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum FlowStatusEnum {
+            
+            [EnumMember(Value = "UNKNOWN")]
+            Unknown,
+            
+            [EnumMember(Value = "RUNNING")]
+            Running,
+            
+            [EnumMember(Value = "ERROR")]
+            Error,
+            
+            [EnumMember(Value = "TERMINATED")]
+            Terminated,
+            
+            [EnumMember(Value = "COMPLETED")]
+            Completed
+        }
+    
+        /// <summary>
+        /// The flow's running status, which indicates whether the flow is running normally or in error, etc;
+        /// </summary>
+        /// <value>The flow's running status, which indicates whether the flow is running normally or in error, etc;</value>
+        [DataMember(Name="flowStatus", EmitDefaultValue=false)]
+        public FlowStatusEnum? FlowStatus { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowReportResultItem" /> class.
+        /// Initializes a new instance of the <see cref="FlowReportResultItem" />class.
         /// </summary>
-        public FlowReportResultItem()
+        /// <param name="FlowExecId">The flow instance ID for this process (required).</param>
+        /// <param name="FlowConfigId">The flow config ID that this workitem was created from. (required).</param>
+        /// <param name="FlowInstanceName">The instance name for this flow in relation to its primary document.  If the flow is not a document-centric type, this value will be empty..</param>
+        /// <param name="AssociatedDocument">the document for this flow (if this flow was launched via a document).</param>
+        /// <param name="FlowStatus">The flow&#39;s running status, which indicates whether the flow is running normally or in error, etc;.</param>
+        /// <param name="CurrentState">The current state of the flow (EG what action is being processed) (required).</param>
+        /// <param name="StartDateTime">The time the flow was started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
+        /// <param name="EndDateTime">The time the flow ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="WorkItemUserAssignees">List of users currently assigned to a workItem.</param>
+        /// <param name="CompletedUser">User that completed the flow.</param>
+        /// <param name="CompletionReason">Reason for completion.</param>
+        /// <param name="FlowErrorInfo">Additional information if the flow is in error.</param>
+
+        public FlowReportResultItem(FlowExecId FlowExecId = null, FlowConfigId FlowConfigId = null, string FlowInstanceName = null, AssociatedDocument AssociatedDocument = null, FlowStatusEnum? FlowStatus = null, string CurrentState = null, DateTime? StartDateTime = null, DateTime? EndDateTime = null, List<User> WorkItemUserAssignees = null, User CompletedUser = null, string CompletionReason = null, ErrorBody FlowErrorInfo = null)
         {
+            // to ensure "FlowExecId" is required (not null)
+            if (FlowExecId == null)
+            {
+                throw new InvalidDataException("FlowExecId is a required property for FlowReportResultItem and cannot be null");
+            }
+            else
+            {
+                this.FlowExecId = FlowExecId;
+            }
+            // to ensure "FlowConfigId" is required (not null)
+            if (FlowConfigId == null)
+            {
+                throw new InvalidDataException("FlowConfigId is a required property for FlowReportResultItem and cannot be null");
+            }
+            else
+            {
+                this.FlowConfigId = FlowConfigId;
+            }
+            // to ensure "CurrentState" is required (not null)
+            if (CurrentState == null)
+            {
+                throw new InvalidDataException("CurrentState is a required property for FlowReportResultItem and cannot be null");
+            }
+            else
+            {
+                this.CurrentState = CurrentState;
+            }
+            // to ensure "StartDateTime" is required (not null)
+            if (StartDateTime == null)
+            {
+                throw new InvalidDataException("StartDateTime is a required property for FlowReportResultItem and cannot be null");
+            }
+            else
+            {
+                this.StartDateTime = StartDateTime;
+            }
+            this.FlowInstanceName = FlowInstanceName;
+            this.AssociatedDocument = AssociatedDocument;
+            this.FlowStatus = FlowStatus;
+            this.EndDateTime = EndDateTime;
+            this.WorkItemUserAssignees = WorkItemUserAssignees;
+            this.CompletedUser = CompletedUser;
+            this.CompletionReason = CompletionReason;
+            this.FlowErrorInfo = FlowErrorInfo;
             
         }
-
         
+    
         /// <summary>
         /// The flow instance ID for this process
         /// </summary>
         /// <value>The flow instance ID for this process</value>
         [DataMember(Name="flowExecId", EmitDefaultValue=false)]
         public FlowExecId FlowExecId { get; set; }
-  
-        
+    
         /// <summary>
         /// The flow config ID that this workitem was created from.
         /// </summary>
         /// <value>The flow config ID that this workitem was created from.</value>
         [DataMember(Name="flowConfigId", EmitDefaultValue=false)]
         public FlowConfigId FlowConfigId { get; set; }
-  
-        
+    
         /// <summary>
         /// The instance name for this flow in relation to its primary document.  If the flow is not a document-centric type, this value will be empty.
         /// </summary>
         /// <value>The instance name for this flow in relation to its primary document.  If the flow is not a document-centric type, this value will be empty.</value>
         [DataMember(Name="flowInstanceName", EmitDefaultValue=false)]
         public string FlowInstanceName { get; set; }
-  
-        
+    
         /// <summary>
         /// the document for this flow (if this flow was launched via a document)
         /// </summary>
         /// <value>the document for this flow (if this flow was launched via a document)</value>
         [DataMember(Name="associatedDocument", EmitDefaultValue=false)]
         public AssociatedDocument AssociatedDocument { get; set; }
-  
-        
-        /// <summary>
-        /// The flow's running status, which indicates whether the flow is running normally or in error, etc;
-        /// </summary>
-        /// <value>The flow's running status, which indicates whether the flow is running normally or in error, etc;</value>
-        [DataMember(Name="flowStatus", EmitDefaultValue=false)]
-        public string FlowStatus { get; set; }
-  
-        
+    
         /// <summary>
         /// The current state of the flow (EG what action is being processed)
         /// </summary>
         /// <value>The current state of the flow (EG what action is being processed)</value>
         [DataMember(Name="currentState", EmitDefaultValue=false)]
         public string CurrentState { get; set; }
-  
-        
+    
         /// <summary>
         /// The time the flow was started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The time the flow was started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="startDateTime", EmitDefaultValue=false)]
         public DateTime? StartDateTime { get; set; }
-  
-        
+    
         /// <summary>
         /// The time the flow ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The time the flow ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="endDateTime", EmitDefaultValue=false)]
         public DateTime? EndDateTime { get; set; }
-  
-        
+    
         /// <summary>
         /// List of users currently assigned to a workItem
         /// </summary>
         /// <value>List of users currently assigned to a workItem</value>
         [DataMember(Name="workItemUserAssignees", EmitDefaultValue=false)]
         public List<User> WorkItemUserAssignees { get; set; }
-  
-        
+    
         /// <summary>
         /// User that completed the flow
         /// </summary>
         /// <value>User that completed the flow</value>
         [DataMember(Name="completedUser", EmitDefaultValue=false)]
         public User CompletedUser { get; set; }
-  
-        
+    
         /// <summary>
         /// Reason for completion
         /// </summary>
         /// <value>Reason for completion</value>
         [DataMember(Name="completionReason", EmitDefaultValue=false)]
         public string CompletionReason { get; set; }
-  
-        
+    
         /// <summary>
         /// Additional information if the flow is in error
         /// </summary>
         /// <value>Additional information if the flow is in error</value>
         [DataMember(Name="flowErrorInfo", EmitDefaultValue=false)]
         public ErrorBody FlowErrorInfo { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

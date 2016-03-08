@@ -7,54 +7,60 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class CalibrationAssignment :  IEquatable<CalibrationAssignment>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CalibrationAssignment" /> class.
+        /// Initializes a new instance of the <see cref="CalibrationAssignment" />class.
         /// </summary>
-        public CalibrationAssignment()
+        /// <param name="Calibrator">Calibrator.</param>
+        /// <param name="Evaluators">Evaluators.</param>
+        /// <param name="EvaluationForm">EvaluationForm.</param>
+        /// <param name="ExpertEvaluator">ExpertEvaluator.</param>
+
+        public CalibrationAssignment(User Calibrator = null, List<User> Evaluators = null, EvaluationForm EvaluationForm = null, User ExpertEvaluator = null)
         {
+            this.Calibrator = Calibrator;
+            this.Evaluators = Evaluators;
+            this.EvaluationForm = EvaluationForm;
+            this.ExpertEvaluator = ExpertEvaluator;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Calibrator
         /// </summary>
         [DataMember(Name="calibrator", EmitDefaultValue=false)]
         public User Calibrator { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Evaluators
         /// </summary>
         [DataMember(Name="evaluators", EmitDefaultValue=false)]
         public List<User> Evaluators { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EvaluationForm
         /// </summary>
         [DataMember(Name="evaluationForm", EmitDefaultValue=false)]
         public EvaluationForm EvaluationForm { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ExpertEvaluator
         /// </summary>
         [DataMember(Name="expertEvaluator", EmitDefaultValue=false)]
         public User ExpertEvaluator { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

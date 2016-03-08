@@ -7,33 +7,36 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DeleteRetention :  IEquatable<DeleteRetention>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DeleteRetention" /> class.
+        /// Initializes a new instance of the <see cref="DeleteRetention" />class.
         /// </summary>
-        public DeleteRetention()
+        /// <param name="Days">Days.</param>
+
+        public DeleteRetention(int? Days = null)
         {
+            this.Days = Days;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Days
         /// </summary>
         [DataMember(Name="days", EmitDefaultValue=false)]
         public int? Days { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

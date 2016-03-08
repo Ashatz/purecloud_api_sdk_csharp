@@ -7,47 +7,52 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ConnectRate :  IEquatable<ConnectRate>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConnectRate" /> class.
+        /// Initializes a new instance of the <see cref="ConnectRate" />class.
         /// </summary>
-        public ConnectRate()
+        /// <param name="Attempts">Attempts.</param>
+        /// <param name="Connects">Connects.</param>
+        /// <param name="ConnectRatio">ConnectRatio.</param>
+
+        public ConnectRate(long? Attempts = null, long? Connects = null, double? ConnectRatio = null)
         {
+            this.Attempts = Attempts;
+            this.Connects = Connects;
+            this.ConnectRatio = ConnectRatio;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Attempts
         /// </summary>
         [DataMember(Name="attempts", EmitDefaultValue=false)]
         public long? Attempts { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Connects
         /// </summary>
         [DataMember(Name="connects", EmitDefaultValue=false)]
         public long? Connects { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ConnectRatio
         /// </summary>
         [DataMember(Name="connectRatio", EmitDefaultValue=false)]
         public double? ConnectRatio { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

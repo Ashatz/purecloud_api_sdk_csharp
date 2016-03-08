@@ -7,85 +7,98 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Contact :  IEquatable<Contact>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Contact" /> class.
+        /// Initializes a new instance of the <see cref="Contact" />class.
         /// </summary>
-        public Contact()
+        /// <param name="Name">Name.</param>
+        /// <param name="ContactListId">ContactListId.</param>
+        /// <param name="Data">Data.</param>
+        /// <param name="CallRecords">CallRecords.</param>
+        /// <param name="Callable">Callable (default to false).</param>
+        /// <param name="PhoneNumberStatus">PhoneNumberStatus.</param>
+
+        public Contact(string Name = null, string ContactListId = null, Dictionary<string, Object> Data = null, Dictionary<string, CallRecord> CallRecords = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null, )
         {
-            this.Callable = false;
+            this.Name = Name;
+            this.ContactListId = ContactListId;
+            this.Data = Data;
+            this.CallRecords = CallRecords;
+            // use default value if no "Callable" provided
+            if (Callable == null)
+            {
+                this.Callable = false;
+            }
+            else
+            {
+                this.Callable = Callable;
+            }
+            this.PhoneNumberStatus = PhoneNumberStatus;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ContactListId
         /// </summary>
         [DataMember(Name="contactListId", EmitDefaultValue=false)]
         public string ContactListId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Data
         /// </summary>
         [DataMember(Name="data", EmitDefaultValue=false)]
-        public Dictionary<string, InlineResponse200> Data { get; set; }
-  
-        
+        public Dictionary<string, Object> Data { get; set; }
+    
         /// <summary>
         /// Gets or Sets CallRecords
         /// </summary>
         [DataMember(Name="callRecords", EmitDefaultValue=false)]
         public Dictionary<string, CallRecord> CallRecords { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Callable
         /// </summary>
         [DataMember(Name="callable", EmitDefaultValue=false)]
         public bool? Callable { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PhoneNumberStatus
         /// </summary>
         [DataMember(Name="phoneNumberStatus", EmitDefaultValue=false)]
         public Dictionary<string, PhoneNumberStatus> PhoneNumberStatus { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,90 +7,108 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DocumentUpdate :  IEquatable<DocumentUpdate>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentUpdate" /> class.
+        /// Initializes a new instance of the <see cref="DocumentUpdate" />class.
         /// </summary>
-        public DocumentUpdate()
+        /// <param name="ChangeNumber">ChangeNumber.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="Read">Read (default to false).</param>
+        /// <param name="AddTags">AddTags.</param>
+        /// <param name="RemoveTags">RemoveTags.</param>
+        /// <param name="AddTagIds">AddTagIds.</param>
+        /// <param name="RemoveTagIds">RemoveTagIds.</param>
+        /// <param name="UpdateAttributes">UpdateAttributes.</param>
+        /// <param name="RemoveAttributes">RemoveAttributes.</param>
+
+        public DocumentUpdate(int? ChangeNumber = null, string Name = null, bool? Read = null, List<string> AddTags = null, List<string> RemoveTags = null, List<string> AddTagIds = null, List<string> RemoveTagIds = null, List<DocumentAttribute> UpdateAttributes = null, List<string> RemoveAttributes = null)
         {
-            this.Read = false;
+            this.ChangeNumber = ChangeNumber;
+            this.Name = Name;
+            // use default value if no "Read" provided
+            if (Read == null)
+            {
+                this.Read = false;
+            }
+            else
+            {
+                this.Read = Read;
+            }
+            this.AddTags = AddTags;
+            this.RemoveTags = RemoveTags;
+            this.AddTagIds = AddTagIds;
+            this.RemoveTagIds = RemoveTagIds;
+            this.UpdateAttributes = UpdateAttributes;
+            this.RemoveAttributes = RemoveAttributes;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets ChangeNumber
         /// </summary>
         [DataMember(Name="changeNumber", EmitDefaultValue=false)]
         public int? ChangeNumber { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Read
         /// </summary>
         [DataMember(Name="read", EmitDefaultValue=false)]
         public bool? Read { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AddTags
         /// </summary>
         [DataMember(Name="addTags", EmitDefaultValue=false)]
         public List<string> AddTags { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets RemoveTags
         /// </summary>
         [DataMember(Name="removeTags", EmitDefaultValue=false)]
         public List<string> RemoveTags { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AddTagIds
         /// </summary>
         [DataMember(Name="addTagIds", EmitDefaultValue=false)]
         public List<string> AddTagIds { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets RemoveTagIds
         /// </summary>
         [DataMember(Name="removeTagIds", EmitDefaultValue=false)]
         public List<string> RemoveTagIds { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UpdateAttributes
         /// </summary>
         [DataMember(Name="updateAttributes", EmitDefaultValue=false)]
         public List<DocumentAttribute> UpdateAttributes { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets RemoveAttributes
         /// </summary>
         [DataMember(Name="removeAttributes", EmitDefaultValue=false)]
         public List<string> RemoveAttributes { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

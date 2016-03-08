@@ -7,61 +7,68 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ContactCallbackRequest :  IEquatable<ContactCallbackRequest>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactCallbackRequest" /> class.
+        /// Initializes a new instance of the <see cref="ContactCallbackRequest" />class.
         /// </summary>
-        public ContactCallbackRequest()
+        /// <param name="CampaignId">CampaignId.</param>
+        /// <param name="ContactListId">ContactListId.</param>
+        /// <param name="ContactId">ContactId.</param>
+        /// <param name="PhoneColumn">PhoneColumn.</param>
+        /// <param name="Schedule">Schedule.</param>
+
+        public ContactCallbackRequest(string CampaignId = null, string ContactListId = null, string ContactId = null, string PhoneColumn = null, string Schedule = null)
         {
+            this.CampaignId = CampaignId;
+            this.ContactListId = ContactListId;
+            this.ContactId = ContactId;
+            this.PhoneColumn = PhoneColumn;
+            this.Schedule = Schedule;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets CampaignId
         /// </summary>
         [DataMember(Name="campaignId", EmitDefaultValue=false)]
         public string CampaignId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ContactListId
         /// </summary>
         [DataMember(Name="contactListId", EmitDefaultValue=false)]
         public string ContactListId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ContactId
         /// </summary>
         [DataMember(Name="contactId", EmitDefaultValue=false)]
         public string ContactId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PhoneColumn
         /// </summary>
         [DataMember(Name="phoneColumn", EmitDefaultValue=false)]
         public string PhoneColumn { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Schedule
         /// </summary>
         [DataMember(Name="schedule", EmitDefaultValue=false)]
         public string Schedule { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

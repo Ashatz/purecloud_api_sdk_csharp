@@ -7,281 +7,363 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DomainLogicalInterface :  IEquatable<DomainLogicalInterface>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum StateEnum {
+            
+            [EnumMember(Value = "ACTIVE")]
+            Active,
+            
+            [EnumMember(Value = "DELETED")]
+            Deleted,
+            
+            [EnumMember(Value = "INACTIVE")]
+            Inactive
+        }
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum CurrentStateEnum {
+            
+            [EnumMember(Value = "INIT")]
+            Init,
+            
+            [EnumMember(Value = "CREATING")]
+            Creating,
+            
+            [EnumMember(Value = "UPDATING")]
+            Updating,
+            
+            [EnumMember(Value = "OK")]
+            Ok,
+            
+            [EnumMember(Value = "EXCEPTION")]
+            Exception,
+            
+            [EnumMember(Value = "DELETING")]
+            Deleting
+        }
+    
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public StateEnum? State { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets CurrentState
+        /// </summary>
+        [DataMember(Name="currentState", EmitDefaultValue=false)]
+        public CurrentStateEnum? CurrentState { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainLogicalInterface" /> class.
+        /// Initializes a new instance of the <see cref="DomainLogicalInterface" />class.
         /// </summary>
-        public DomainLogicalInterface()
+        /// <param name="Name">Name.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="Version">Version.</param>
+        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ModifiedBy">ModifiedBy.</param>
+        /// <param name="CreatedBy">CreatedBy.</param>
+        /// <param name="State">State.</param>
+        /// <param name="ModifiedByApp">ModifiedByApp.</param>
+        /// <param name="CreatedByApp">CreatedByApp.</param>
+        /// <param name="EdgeUri">EdgeUri.</param>
+        /// <param name="EdgeAssignedId">EdgeAssignedId.</param>
+        /// <param name="FriendlyName">FriendlyName.</param>
+        /// <param name="VlanTagId">VlanTagId.</param>
+        /// <param name="HardwareAddress">HardwareAddress.</param>
+        /// <param name="PhysicalAdapterId">PhysicalAdapterId.</param>
+        /// <param name="IpAddress">IpAddress.</param>
+        /// <param name="Gateway">Gateway.</param>
+        /// <param name="PrimaryDns">PrimaryDns.</param>
+        /// <param name="SecondaryDns">SecondaryDns.</param>
+        /// <param name="IfStatus">IfStatus.</param>
+        /// <param name="Routes">Routes.</param>
+        /// <param name="Addresses">Addresses.</param>
+        /// <param name="Ipv4Capabilities">Ipv4Capabilities.</param>
+        /// <param name="Ipv6Capabilities">Ipv6Capabilities.</param>
+        /// <param name="CurrentState">CurrentState.</param>
+        /// <param name="LastModifiedUserId">LastModifiedUserId.</param>
+        /// <param name="LastModifiedCorrelationId">LastModifiedCorrelationId.</param>
+        /// <param name="CommandResponses">CommandResponses.</param>
+        /// <param name="InheritPhoneTrunkBases">Phone trunk base assignment will be inherited from the Edge Group. (default to false).</param>
+        /// <param name="UseForInternalEdgeCommunication">This interface will be used for all internal edge-to-edge communication using settings from the edgeTrunkBaseAssignment on the Edge Group. (default to false).</param>
+        /// <param name="ExternalTrunkBaseAssignments">External trunk base settings to use for external communication from this interface..</param>
+        /// <param name="PhoneTrunkBaseAssignments">Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \&quot;inheritPhoneTrunkBases\&quot; is true..</param>
+
+        public DomainLogicalInterface(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string EdgeUri = null, string EdgeAssignedId = null, string FriendlyName = null, int? VlanTagId = null, string HardwareAddress = null, string PhysicalAdapterId = null, string IpAddress = null, string Gateway = null, string PrimaryDns = null, string SecondaryDns = null, string IfStatus = null, List<DomainNetworkRoute> Routes = null, List<DomainNetworkAddress> Addresses = null, DomainCapabilities Ipv4Capabilities = null, DomainCapabilities Ipv6Capabilities = null, CurrentStateEnum? CurrentState = null, string LastModifiedUserId = null, string LastModifiedCorrelationId = null, List<DomainNetworkCommandResponse> CommandResponses = null, bool? InheritPhoneTrunkBases = null, bool? UseForInternalEdgeCommunication = null, List<TrunkBaseAssignment> ExternalTrunkBaseAssignments = null, List<TrunkBaseAssignment> PhoneTrunkBaseAssignments = null, )
         {
-            this.InheritPhoneTrunkBases = false;
-            this.UseForInternalEdgeCommunication = false;
+            this.Name = Name;
+            this.Description = Description;
+            this.Version = Version;
+            this.DateCreated = DateCreated;
+            this.DateModified = DateModified;
+            this.ModifiedBy = ModifiedBy;
+            this.CreatedBy = CreatedBy;
+            this.State = State;
+            this.ModifiedByApp = ModifiedByApp;
+            this.CreatedByApp = CreatedByApp;
+            this.EdgeUri = EdgeUri;
+            this.EdgeAssignedId = EdgeAssignedId;
+            this.FriendlyName = FriendlyName;
+            this.VlanTagId = VlanTagId;
+            this.HardwareAddress = HardwareAddress;
+            this.PhysicalAdapterId = PhysicalAdapterId;
+            this.IpAddress = IpAddress;
+            this.Gateway = Gateway;
+            this.PrimaryDns = PrimaryDns;
+            this.SecondaryDns = SecondaryDns;
+            this.IfStatus = IfStatus;
+            this.Routes = Routes;
+            this.Addresses = Addresses;
+            this.Ipv4Capabilities = Ipv4Capabilities;
+            this.Ipv6Capabilities = Ipv6Capabilities;
+            this.CurrentState = CurrentState;
+            this.LastModifiedUserId = LastModifiedUserId;
+            this.LastModifiedCorrelationId = LastModifiedCorrelationId;
+            this.CommandResponses = CommandResponses;
+            // use default value if no "InheritPhoneTrunkBases" provided
+            if (InheritPhoneTrunkBases == null)
+            {
+                this.InheritPhoneTrunkBases = false;
+            }
+            else
+            {
+                this.InheritPhoneTrunkBases = InheritPhoneTrunkBases;
+            }
+            // use default value if no "UseForInternalEdgeCommunication" provided
+            if (UseForInternalEdgeCommunication == null)
+            {
+                this.UseForInternalEdgeCommunication = false;
+            }
+            else
+            {
+                this.UseForInternalEdgeCommunication = UseForInternalEdgeCommunication;
+            }
+            this.ExternalTrunkBaseAssignments = ExternalTrunkBaseAssignments;
+            this.PhoneTrunkBaseAssignments = PhoneTrunkBaseAssignments;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ModifiedBy
         /// </summary>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public string ModifiedBy { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CreatedBy
         /// </summary>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public string CreatedBy { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets State
-        /// </summary>
-        [DataMember(Name="state", EmitDefaultValue=false)]
-        public string State { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ModifiedByApp
         /// </summary>
         [DataMember(Name="modifiedByApp", EmitDefaultValue=false)]
         public string ModifiedByApp { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CreatedByApp
         /// </summary>
         [DataMember(Name="createdByApp", EmitDefaultValue=false)]
         public string CreatedByApp { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EdgeUri
         /// </summary>
         [DataMember(Name="edgeUri", EmitDefaultValue=false)]
         public string EdgeUri { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets EdgeAssignedId
         /// </summary>
         [DataMember(Name="edgeAssignedId", EmitDefaultValue=false)]
         public string EdgeAssignedId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FriendlyName
         /// </summary>
         [DataMember(Name="friendlyName", EmitDefaultValue=false)]
         public string FriendlyName { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets VlanTagId
         /// </summary>
         [DataMember(Name="vlanTagId", EmitDefaultValue=false)]
         public int? VlanTagId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets HardwareAddress
         /// </summary>
         [DataMember(Name="hardwareAddress", EmitDefaultValue=false)]
         public string HardwareAddress { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PhysicalAdapterId
         /// </summary>
         [DataMember(Name="physicalAdapterId", EmitDefaultValue=false)]
         public string PhysicalAdapterId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IpAddress
         /// </summary>
         [DataMember(Name="ipAddress", EmitDefaultValue=false)]
         public string IpAddress { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Gateway
         /// </summary>
         [DataMember(Name="gateway", EmitDefaultValue=false)]
         public string Gateway { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets PrimaryDns
         /// </summary>
         [DataMember(Name="primaryDns", EmitDefaultValue=false)]
         public string PrimaryDns { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SecondaryDns
         /// </summary>
         [DataMember(Name="secondaryDns", EmitDefaultValue=false)]
         public string SecondaryDns { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets IfStatus
         /// </summary>
         [DataMember(Name="ifStatus", EmitDefaultValue=false)]
         public string IfStatus { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Routes
         /// </summary>
         [DataMember(Name="routes", EmitDefaultValue=false)]
         public List<DomainNetworkRoute> Routes { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Addresses
         /// </summary>
         [DataMember(Name="addresses", EmitDefaultValue=false)]
         public List<DomainNetworkAddress> Addresses { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Ipv4Capabilities
         /// </summary>
         [DataMember(Name="ipv4Capabilities", EmitDefaultValue=false)]
         public DomainCapabilities Ipv4Capabilities { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Ipv6Capabilities
         /// </summary>
         [DataMember(Name="ipv6Capabilities", EmitDefaultValue=false)]
         public DomainCapabilities Ipv6Capabilities { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets CurrentState
-        /// </summary>
-        [DataMember(Name="currentState", EmitDefaultValue=false)]
-        public string CurrentState { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets LastModifiedUserId
         /// </summary>
         [DataMember(Name="lastModifiedUserId", EmitDefaultValue=false)]
         public string LastModifiedUserId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets LastModifiedCorrelationId
         /// </summary>
         [DataMember(Name="lastModifiedCorrelationId", EmitDefaultValue=false)]
         public string LastModifiedCorrelationId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CommandResponses
         /// </summary>
         [DataMember(Name="commandResponses", EmitDefaultValue=false)]
         public List<DomainNetworkCommandResponse> CommandResponses { get; set; }
-  
-        
+    
         /// <summary>
         /// Phone trunk base assignment will be inherited from the Edge Group.
         /// </summary>
         /// <value>Phone trunk base assignment will be inherited from the Edge Group.</value>
         [DataMember(Name="inheritPhoneTrunkBases", EmitDefaultValue=false)]
         public bool? InheritPhoneTrunkBases { get; set; }
-  
-        
+    
         /// <summary>
         /// This interface will be used for all internal edge-to-edge communication using settings from the edgeTrunkBaseAssignment on the Edge Group.
         /// </summary>
         /// <value>This interface will be used for all internal edge-to-edge communication using settings from the edgeTrunkBaseAssignment on the Edge Group.</value>
         [DataMember(Name="useForInternalEdgeCommunication", EmitDefaultValue=false)]
         public bool? UseForInternalEdgeCommunication { get; set; }
-  
-        
+    
         /// <summary>
         /// External trunk base settings to use for external communication from this interface.
         /// </summary>
         /// <value>External trunk base settings to use for external communication from this interface.</value>
         [DataMember(Name="externalTrunkBaseAssignments", EmitDefaultValue=false)]
         public List<TrunkBaseAssignment> ExternalTrunkBaseAssignments { get; set; }
-  
-        
+    
         /// <summary>
         /// Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \"inheritPhoneTrunkBases\" is true.
         /// </summary>
         /// <value>Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \"inheritPhoneTrunkBases\" is true.</value>
         [DataMember(Name="phoneTrunkBaseAssignments", EmitDefaultValue=false)]
         public List<TrunkBaseAssignment> PhoneTrunkBaseAssignments { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

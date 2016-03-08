@@ -7,68 +7,86 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ReplaceResponse :  IEquatable<ReplaceResponse>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum UploadMethodEnum {
+            
+            [EnumMember(Value = "SINGLE_PUT")]
+            SinglePut,
+            
+            [EnumMember(Value = "MULTIPART_POST")]
+            MultipartPost
+        }
+    
+        /// <summary>
+        /// Gets or Sets UploadMethod
+        /// </summary>
+        [DataMember(Name="uploadMethod", EmitDefaultValue=false)]
+        public UploadMethodEnum? UploadMethod { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplaceResponse" /> class.
+        /// Initializes a new instance of the <see cref="ReplaceResponse" />class.
         /// </summary>
-        public ReplaceResponse()
+        /// <param name="Id">Id.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="ChangeNumber">ChangeNumber.</param>
+        /// <param name="UploadStatus">UploadStatus.</param>
+        /// <param name="UploadDestinationUri">UploadDestinationUri.</param>
+        /// <param name="UploadMethod">UploadMethod.</param>
+
+        public ReplaceResponse(string Id = null, string Name = null, int? ChangeNumber = null, UriReference UploadStatus = null, string UploadDestinationUri = null, UploadMethodEnum? UploadMethod = null)
         {
+            this.Id = Id;
+            this.Name = Name;
+            this.ChangeNumber = ChangeNumber;
+            this.UploadStatus = UploadStatus;
+            this.UploadDestinationUri = UploadDestinationUri;
+            this.UploadMethod = UploadMethod;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ChangeNumber
         /// </summary>
         [DataMember(Name="changeNumber", EmitDefaultValue=false)]
         public int? ChangeNumber { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UploadStatus
         /// </summary>
         [DataMember(Name="uploadStatus", EmitDefaultValue=false)]
         public UriReference UploadStatus { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UploadDestinationUri
         /// </summary>
         [DataMember(Name="uploadDestinationUri", EmitDefaultValue=false)]
         public string UploadDestinationUri { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets UploadMethod
-        /// </summary>
-        [DataMember(Name="uploadMethod", EmitDefaultValue=false)]
-        public string UploadMethod { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

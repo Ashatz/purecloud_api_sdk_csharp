@@ -7,40 +7,60 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ResourceConditionValue :  IEquatable<ResourceConditionValue>
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ResourceConditionValue" /> class.
-        /// </summary>
-        public ResourceConditionValue()
-        {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum {
             
+            [EnumMember(Value = "SCALAR")]
+            Scalar,
+            
+            [EnumMember(Value = "VARIABLE")]
+            Variable,
+            
+            [EnumMember(Value = "USER")]
+            User,
+            
+            [EnumMember(Value = "QUEUE")]
+            Queue
         }
-
-        
+    
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-  
+        public TypeEnum? Type { get; set; }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ResourceConditionValue" /> class.
+        /// Initializes a new instance of the <see cref="ResourceConditionValue" />class.
+        /// </summary>
+        /// <param name="Type">Type.</param>
+        /// <param name="Value">Value.</param>
+
+        public ResourceConditionValue(TypeEnum? Type = null, string Value = null)
+        {
+            this.Type = Type;
+            this.Value = Value;
+            
+        }
         
+    
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

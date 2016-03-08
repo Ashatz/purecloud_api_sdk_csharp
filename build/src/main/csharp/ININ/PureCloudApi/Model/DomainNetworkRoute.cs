@@ -7,62 +7,76 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class DomainNetworkRoute :  IEquatable<DomainNetworkRoute>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainNetworkRoute" /> class.
+        /// Initializes a new instance of the <see cref="DomainNetworkRoute" />class.
         /// </summary>
-        public DomainNetworkRoute()
+        /// <param name="Prefix">Prefix.</param>
+        /// <param name="Nexthop">Nexthop.</param>
+        /// <param name="Persistent">Persistent (default to false).</param>
+        /// <param name="Metric">Metric.</param>
+        /// <param name="Family">Family.</param>
+
+        public DomainNetworkRoute(string Prefix = null, string Nexthop = null, bool? Persistent = null, int? Metric = null, int? Family = null)
         {
-            this.Persistent = false;
+            this.Prefix = Prefix;
+            this.Nexthop = Nexthop;
+            // use default value if no "Persistent" provided
+            if (Persistent == null)
+            {
+                this.Persistent = false;
+            }
+            else
+            {
+                this.Persistent = Persistent;
+            }
+            this.Metric = Metric;
+            this.Family = Family;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Prefix
         /// </summary>
         [DataMember(Name="prefix", EmitDefaultValue=false)]
         public string Prefix { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Nexthop
         /// </summary>
         [DataMember(Name="nexthop", EmitDefaultValue=false)]
         public string Nexthop { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Persistent
         /// </summary>
         [DataMember(Name="persistent", EmitDefaultValue=false)]
         public bool? Persistent { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Metric
         /// </summary>
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public int? Metric { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Family
         /// </summary>
         [DataMember(Name="family", EmitDefaultValue=false)]
         public int? Family { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

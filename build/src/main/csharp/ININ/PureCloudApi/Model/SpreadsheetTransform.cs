@@ -7,91 +7,98 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class SpreadsheetTransform :  IEquatable<SpreadsheetTransform>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="SpreadsheetTransform" /> class.
+        /// Initializes a new instance of the <see cref="SpreadsheetTransform" />class.
         /// </summary>
-        public SpreadsheetTransform()
+        /// <param name="Name">Name.</param>
+        /// <param name="RestEndpoint">RestEndpoint.</param>
+        /// <param name="FilenameTransforms">FilenameTransforms.</param>
+        /// <param name="Tags">Tags.</param>
+        /// <param name="SheetNameTransforms">SheetNameTransforms.</param>
+        /// <param name="Sheets">Sheets.</param>
+        /// <param name="ClientTransformModel">ClientTransformModel.</param>
+
+        public SpreadsheetTransform(string Name = null, TransformEndpoint RestEndpoint = null, List<BasicTransform> FilenameTransforms = null, List<TagModel> Tags = null, List<IndexedTransform> SheetNameTransforms = null, List<SheetTransform> Sheets = null, ClientSpreadsheetTransform ClientTransformModel = null, )
         {
+            this.Name = Name;
+            this.RestEndpoint = RestEndpoint;
+            this.FilenameTransforms = FilenameTransforms;
+            this.Tags = Tags;
+            this.SheetNameTransforms = SheetNameTransforms;
+            this.Sheets = Sheets;
+            this.ClientTransformModel = ClientTransformModel;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets RestEndpoint
         /// </summary>
         [DataMember(Name="restEndpoint", EmitDefaultValue=false)]
         public TransformEndpoint RestEndpoint { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets FilenameTransforms
         /// </summary>
         [DataMember(Name="filenameTransforms", EmitDefaultValue=false)]
         public List<BasicTransform> FilenameTransforms { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Tags
         /// </summary>
         [DataMember(Name="tags", EmitDefaultValue=false)]
         public List<TagModel> Tags { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SheetNameTransforms
         /// </summary>
         [DataMember(Name="sheetNameTransforms", EmitDefaultValue=false)]
         public List<IndexedTransform> SheetNameTransforms { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Sheets
         /// </summary>
         [DataMember(Name="sheets", EmitDefaultValue=false)]
         public List<SheetTransform> Sheets { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ClientTransformModel
         /// </summary>
         [DataMember(Name="clientTransformModel", EmitDefaultValue=false)]
         public ClientSpreadsheetTransform ClientTransformModel { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

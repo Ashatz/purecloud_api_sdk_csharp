@@ -7,57 +7,59 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// ID of a Flow Definition with an optional version
     /// </summary>
     [DataContract]
     public partial class FlowConfigId :  IEquatable<FlowConfigId>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowConfigId" /> class.
+        /// Initializes a new instance of the <see cref="FlowConfigId" />class.
         /// </summary>
-        public FlowConfigId()
+        /// <param name="Name">Name.</param>
+        /// <param name="Version">Version of this flow config..</param>
+
+        public FlowConfigId(string Name = null, string Version = null)
         {
+            this.Name = Name;
+            this.Version = Version;
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Version of this flow config.
         /// </summary>
         /// <value>Version of this flow config.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public string Version { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

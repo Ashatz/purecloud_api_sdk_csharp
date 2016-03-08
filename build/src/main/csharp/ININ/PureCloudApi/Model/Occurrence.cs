@@ -7,40 +7,60 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Occurrence :  IEquatable<Occurrence>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TypeEnum {
+            
+            [EnumMember(Value = "EVENT")]
+            Event,
+            
+            [EnumMember(Value = "SECONDS")]
+            Seconds,
+            
+            [EnumMember(Value = "MINUTES")]
+            Minutes,
+            
+            [EnumMember(Value = "INTERVALS")]
+            Intervals
+        }
+    
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Occurrence" /> class.
+        /// Initializes a new instance of the <see cref="Occurrence" />class.
         /// </summary>
-        public Occurrence()
+        /// <param name="Limit">Limit.</param>
+        /// <param name="Type">Type.</param>
+
+        public Occurrence(int? Limit = null, TypeEnum? Type = null)
         {
+            this.Limit = Limit;
+            this.Type = Type;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Limit
         /// </summary>
         [DataMember(Name="limit", EmitDefaultValue=false)]
         public int? Limit { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

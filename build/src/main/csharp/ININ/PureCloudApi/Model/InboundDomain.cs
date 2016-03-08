@@ -7,65 +7,88 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class InboundDomain :  IEquatable<InboundDomain>
-    {
+    { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum MxRecordStatusEnum {
+            
+            [EnumMember(Value = "VALID")]
+            Valid,
+            
+            [EnumMember(Value = "INVALID")]
+            Invalid,
+            
+            [EnumMember(Value = "NOT_AVAILABLE")]
+            NotAvailable
+        }
+    
+        /// <summary>
+        /// Gets or Sets MxRecordStatus
+        /// </summary>
+        [DataMember(Name="mxRecordStatus", EmitDefaultValue=false)]
+        public MxRecordStatusEnum? MxRecordStatus { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="InboundDomain" /> class.
+        /// Initializes a new instance of the <see cref="InboundDomain" />class.
         /// </summary>
-        public InboundDomain()
+        /// <param name="Name">Name.</param>
+        /// <param name="MxRecordStatus">MxRecordStatus.</param>
+        /// <param name="SubDomain">Indicates if this a PureCloud sub-domain.  If true, then the appropriate DNS records are created for sending/receiving email. (default to false).</param>
+
+        public InboundDomain(string Name = null, MxRecordStatusEnum? MxRecordStatus = null, bool? SubDomain = null, )
         {
-            this.SubDomain = false;
+            this.Name = Name;
+            this.MxRecordStatus = MxRecordStatus;
+            // use default value if no "SubDomain" provided
+            if (SubDomain == null)
+            {
+                this.SubDomain = false;
+            }
+            else
+            {
+                this.SubDomain = SubDomain;
+            }
             
         }
-
         
+    
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-  
-        
+        public string Id { get; private set; }
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
-        /// <summary>
-        /// Gets or Sets MxRecordStatus
-        /// </summary>
-        [DataMember(Name="mxRecordStatus", EmitDefaultValue=false)]
-        public string MxRecordStatus { get; set; }
-  
-        
+    
         /// <summary>
         /// Indicates if this a PureCloud sub-domain.  If true, then the appropriate DNS records are created for sending/receiving email.
         /// </summary>
         /// <value>Indicates if this a PureCloud sub-domain.  If true, then the appropriate DNS records are created for sending/receiving email.</value>
         [DataMember(Name="subDomain", EmitDefaultValue=false)]
         public bool? SubDomain { get; set; }
-  
-        
+    
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; set; }
-  
-        
-  
+        public string SelfUri { get; private set; }
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

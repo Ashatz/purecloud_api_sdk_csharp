@@ -7,68 +7,76 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ServiceType :  IEquatable<ServiceType>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ServiceType" /> class.
+        /// Initializes a new instance of the <see cref="ServiceType" />class.
         /// </summary>
-        public ServiceType()
+        /// <param name="Type">Type.</param>
+        /// <param name="Parameters">Parameters.</param>
+        /// <param name="Codecs">Codecs.</param>
+        /// <param name="CallingPartyId">CallingPartyId.</param>
+        /// <param name="CallHistory">CallHistory.</param>
+        /// <param name="Prefix">Prefix.</param>
+
+        public ServiceType(string Type = null, Dictionary<string, string> Parameters = null, List<string> Codecs = null, string CallingPartyId = null, string CallHistory = null, string Prefix = null)
         {
+            this.Type = Type;
+            this.Parameters = Parameters;
+            this.Codecs = Codecs;
+            this.CallingPartyId = CallingPartyId;
+            this.CallHistory = CallHistory;
+            this.Prefix = Prefix;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Parameters
         /// </summary>
         [DataMember(Name="parameters", EmitDefaultValue=false)]
         public Dictionary<string, string> Parameters { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Codecs
         /// </summary>
         [DataMember(Name="codecs", EmitDefaultValue=false)]
         public List<string> Codecs { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CallingPartyId
         /// </summary>
         [DataMember(Name="callingPartyId", EmitDefaultValue=false)]
         public string CallingPartyId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets CallHistory
         /// </summary>
         [DataMember(Name="callHistory", EmitDefaultValue=false)]
         public string CallHistory { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Prefix
         /// </summary>
         [DataMember(Name="prefix", EmitDefaultValue=false)]
         public string Prefix { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

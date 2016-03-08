@@ -7,40 +7,44 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class App :  IEquatable<App>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="App" /> class.
+        /// Initializes a new instance of the <see cref="App" />class.
         /// </summary>
-        public App()
+        /// <param name="AppId">AppId.</param>
+        /// <param name="AppVersion">AppVersion.</param>
+
+        public App(string AppId = null, string AppVersion = null)
         {
+            this.AppId = AppId;
+            this.AppVersion = AppVersion;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets AppId
         /// </summary>
         [DataMember(Name="appId", EmitDefaultValue=false)]
         public string AppId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets AppVersion
         /// </summary>
         [DataMember(Name="appVersion", EmitDefaultValue=false)]
         public string AppVersion { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

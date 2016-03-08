@@ -7,33 +7,36 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class UnreadMetric :  IEquatable<UnreadMetric>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UnreadMetric" /> class.
+        /// Initializes a new instance of the <see cref="UnreadMetric" />class.
         /// </summary>
-        public UnreadMetric()
+        /// <param name="Count">Count.</param>
+
+        public UnreadMetric(int? Count = null)
         {
+            this.Count = Count;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Count
         /// </summary>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public int? Count { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

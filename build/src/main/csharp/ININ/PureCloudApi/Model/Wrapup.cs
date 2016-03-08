@@ -7,77 +7,93 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class Wrapup :  IEquatable<Wrapup>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Wrapup" /> class.
+        /// Initializes a new instance of the <see cref="Wrapup" />class.
         /// </summary>
-        public Wrapup()
+        /// <param name="Code">Code.</param>
+        /// <param name="Name">Name.</param>
+        /// <param name="Notes">Notes.</param>
+        /// <param name="Tags">Tags.</param>
+        /// <param name="DurationSeconds">DurationSeconds.</param>
+        /// <param name="EndTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Provisional">Provisional (default to false).</param>
+
+        public Wrapup(string Code = null, string Name = null, string Notes = null, List<string> Tags = null, int? DurationSeconds = null, DateTime? EndTime = null, bool? Provisional = null)
         {
-            this.Provisional = false;
+            this.Code = Code;
+            this.Name = Name;
+            this.Notes = Notes;
+            this.Tags = Tags;
+            this.DurationSeconds = DurationSeconds;
+            this.EndTime = EndTime;
+            // use default value if no "Provisional" provided
+            if (Provisional == null)
+            {
+                this.Provisional = false;
+            }
+            else
+            {
+                this.Provisional = Provisional;
+            }
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public string Code { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Notes
         /// </summary>
         [DataMember(Name="notes", EmitDefaultValue=false)]
         public string Notes { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Tags
         /// </summary>
         [DataMember(Name="tags", EmitDefaultValue=false)]
         public List<string> Tags { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets DurationSeconds
         /// </summary>
         [DataMember(Name="durationSeconds", EmitDefaultValue=false)]
         public int? DurationSeconds { get; set; }
-  
-        
+    
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public DateTime? EndTime { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Provisional
         /// </summary>
         [DataMember(Name="provisional", EmitDefaultValue=false)]
         public bool? Provisional { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,50 +7,55 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Used to query for responses
     /// </summary>
     [DataContract]
     public partial class ResponseQueryRequest :  IEquatable<ResponseQueryRequest>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseQueryRequest" /> class.
+        /// Initializes a new instance of the <see cref="ResponseQueryRequest" />class.
         /// </summary>
-        public ResponseQueryRequest()
+        /// <param name="QueryPhrase">Query phrase to search response text and name. If not set will match all..</param>
+        /// <param name="PageSize">The maximum number of hits to return. Default: 25, Maximum: 500..</param>
+        /// <param name="Filters">Filter the query results..</param>
+
+        public ResponseQueryRequest(string QueryPhrase = null, int? PageSize = null, List<Filter> Filters = null)
         {
+            this.QueryPhrase = QueryPhrase;
+            this.PageSize = PageSize;
+            this.Filters = Filters;
             
         }
-
         
+    
         /// <summary>
         /// Query phrase to search response text and name. If not set will match all.
         /// </summary>
         /// <value>Query phrase to search response text and name. If not set will match all.</value>
         [DataMember(Name="queryPhrase", EmitDefaultValue=false)]
         public string QueryPhrase { get; set; }
-  
-        
+    
         /// <summary>
         /// The maximum number of hits to return. Default: 25, Maximum: 500.
         /// </summary>
         /// <value>The maximum number of hits to return. Default: 25, Maximum: 500.</value>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
-  
-        
+    
         /// <summary>
         /// Filter the query results.
         /// </summary>
         /// <value>Filter the query results.</value>
         [DataMember(Name="filters", EmitDefaultValue=false)]
         public List<Filter> Filters { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

@@ -7,34 +7,45 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// Used as the body to the associateWithWorkspaces request.
     /// </summary>
     [DataContract]
     public partial class FlowAssociateWorkspacesRequest :  IEquatable<FlowAssociateWorkspacesRequest>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowAssociateWorkspacesRequest" /> class.
+        /// Initializes a new instance of the <see cref="FlowAssociateWorkspacesRequest" />class.
         /// </summary>
-        public FlowAssociateWorkspacesRequest()
+        /// <param name="Workspaces">The list of Workspaces to associate with a flow.  Can be null/empty to remove associations. (required).</param>
+
+        public FlowAssociateWorkspacesRequest(List<string> Workspaces = null)
         {
+            // to ensure "Workspaces" is required (not null)
+            if (Workspaces == null)
+            {
+                throw new InvalidDataException("Workspaces is a required property for FlowAssociateWorkspacesRequest and cannot be null");
+            }
+            else
+            {
+                this.Workspaces = Workspaces;
+            }
             
         }
-
         
+    
         /// <summary>
         /// The list of Workspaces to associate with a flow.  Can be null/empty to remove associations.
         /// </summary>
         /// <value>The list of Workspaces to associate with a flow.  Can be null/empty to remove associations.</value>
         [DataMember(Name="workspaces", EmitDefaultValue=false)]
         public List<string> Workspaces { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

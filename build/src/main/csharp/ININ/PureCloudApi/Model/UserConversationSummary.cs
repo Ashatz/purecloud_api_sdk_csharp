@@ -7,75 +7,84 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class UserConversationSummary :  IEquatable<UserConversationSummary>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserConversationSummary" /> class.
+        /// Initializes a new instance of the <see cref="UserConversationSummary" />class.
         /// </summary>
-        public UserConversationSummary()
+        /// <param name="UserId">UserId.</param>
+        /// <param name="Call">Call.</param>
+        /// <param name="Callback">Callback.</param>
+        /// <param name="Email">Email.</param>
+        /// <param name="Chat">Chat.</param>
+        /// <param name="SocialExpression">SocialExpression.</param>
+        /// <param name="Video">Video.</param>
+
+        public UserConversationSummary(string UserId = null, MediaSummary Call = null, MediaSummary Callback = null, MediaSummary Email = null, MediaSummary Chat = null, MediaSummary SocialExpression = null, MediaSummary Video = null)
         {
+            this.UserId = UserId;
+            this.Call = Call;
+            this.Callback = Callback;
+            this.Email = Email;
+            this.Chat = Chat;
+            this.SocialExpression = SocialExpression;
+            this.Video = Video;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Call
         /// </summary>
         [DataMember(Name="call", EmitDefaultValue=false)]
         public MediaSummary Call { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Callback
         /// </summary>
         [DataMember(Name="callback", EmitDefaultValue=false)]
         public MediaSummary Callback { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Email
         /// </summary>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public MediaSummary Email { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Chat
         /// </summary>
         [DataMember(Name="chat", EmitDefaultValue=false)]
         public MediaSummary Chat { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets SocialExpression
         /// </summary>
         [DataMember(Name="socialExpression", EmitDefaultValue=false)]
         public MediaSummary SocialExpression { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Video
         /// </summary>
         [DataMember(Name="video", EmitDefaultValue=false)]
         public MediaSummary Video { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

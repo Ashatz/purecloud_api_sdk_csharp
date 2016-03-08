@@ -7,50 +7,55 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class ProvisionInfo :  IEquatable<ProvisionInfo>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ProvisionInfo" /> class.
+        /// Initializes a new instance of the <see cref="ProvisionInfo" />class.
         /// </summary>
-        public ProvisionInfo()
+        /// <param name="Time">The time at which this phone was provisioned. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Source">The source of the provisioning.</param>
+        /// <param name="ErrorInfo">The error information from the provision process, if any.</param>
+
+        public ProvisionInfo(DateTime? Time = null, string Source = null, string ErrorInfo = null)
         {
+            this.Time = Time;
+            this.Source = Source;
+            this.ErrorInfo = ErrorInfo;
             
         }
-
         
+    
         /// <summary>
         /// The time at which this phone was provisioned. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The time at which this phone was provisioned. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="time", EmitDefaultValue=false)]
         public DateTime? Time { get; set; }
-  
-        
+    
         /// <summary>
         /// The source of the provisioning
         /// </summary>
         /// <value>The source of the provisioning</value>
         [DataMember(Name="source", EmitDefaultValue=false)]
         public string Source { get; set; }
-  
-        
+    
         /// <summary>
         /// The error information from the provision process, if any
         /// </summary>
         /// <value>The error information from the provision process, if any</value>
         [DataMember(Name="errorInfo", EmitDefaultValue=false)]
         public string ErrorInfo { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

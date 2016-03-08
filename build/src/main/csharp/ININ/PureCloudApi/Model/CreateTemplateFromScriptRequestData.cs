@@ -7,61 +7,68 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace ININ.PureCloudApi.Model
 {
-
     /// <summary>
     /// 
     /// </summary>
     [DataContract]
     public partial class CreateTemplateFromScriptRequestData :  IEquatable<CreateTemplateFromScriptRequestData>
-    {
+    { 
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateTemplateFromScriptRequestData" /> class.
+        /// Initializes a new instance of the <see cref="CreateTemplateFromScriptRequestData" />class.
         /// </summary>
-        public CreateTemplateFromScriptRequestData()
+        /// <param name="Name">Name.</param>
+        /// <param name="Description">Description.</param>
+        /// <param name="Tags">Tags.</param>
+        /// <param name="ScriptId">ScriptId.</param>
+        /// <param name="UserId">UserId.</param>
+
+        public CreateTemplateFromScriptRequestData(string Name = null, string Description = null, List<string> Tags = null, string ScriptId = null, string UserId = null)
         {
+            this.Name = Name;
+            this.Description = Description;
+            this.Tags = Tags;
+            this.ScriptId = ScriptId;
+            this.UserId = UserId;
             
         }
-
         
+    
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets Tags
         /// </summary>
         [DataMember(Name="tags", EmitDefaultValue=false)]
         public List<string> Tags { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets ScriptId
         /// </summary>
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
-  
-        
+    
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
-  
-        
-  
+    
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
