@@ -52,30 +52,21 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test the property 'HtmlBody' 
-        /// </summary>
-        [Test]
-        public void HtmlBodyTest()
-        {
-            // TODO: unit test for the property 'HtmlBody' 
-        }
-        
-        /// <summary>
-        /// Test the property 'TextBody' 
-        /// </summary>
-        [Test]
-        public void TextBodyTest()
-        {
-            // TODO: unit test for the property 'TextBody' 
-        }
-        
-        /// <summary>
         /// Test the property 'Id' 
         /// </summary>
         [Test]
         public void IdTest()
         {
             // TODO: unit test for the property 'Id' 
+        }
+        
+        /// <summary>
+        /// Test the property 'Name' 
+        /// </summary>
+        [Test]
+        public void NameTest()
+        {
+            // TODO: unit test for the property 'Name' 
         }
         
         /// <summary>
@@ -133,12 +124,39 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test the property 'TextBody' 
+        /// </summary>
+        [Test]
+        public void TextBodyTest()
+        {
+            // TODO: unit test for the property 'TextBody' 
+        }
+        
+        /// <summary>
+        /// Test the property 'HtmlBody' 
+        /// </summary>
+        [Test]
+        public void HtmlBodyTest()
+        {
+            // TODO: unit test for the property 'HtmlBody' 
+        }
+        
+        /// <summary>
         /// Test the property 'Time' 
         /// </summary>
         [Test]
         public void TimeTest()
         {
             // TODO: unit test for the property 'Time' 
+        }
+        
+        /// <summary>
+        /// Test the property 'SelfUri' 
+        /// </summary>
+        [Test]
+        public void SelfUriTest()
+        {
+            // TODO: unit test for the property 'SelfUri' 
         }
         
 
