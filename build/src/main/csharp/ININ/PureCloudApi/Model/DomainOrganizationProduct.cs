@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DomainOrganizationProduct :  IEquatable<DomainOrganizationProduct>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DomainOrganizationProduct" /> class.
         /// Initializes a new instance of the <see cref="DomainOrganizationProduct" />class.
         /// </summary>
         /// <param name="Id">Id.</param>
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&

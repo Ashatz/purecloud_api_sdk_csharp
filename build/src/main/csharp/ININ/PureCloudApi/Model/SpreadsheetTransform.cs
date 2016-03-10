@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class SpreadsheetTransform :  IEquatable<SpreadsheetTransform>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="SpreadsheetTransform" /> class.
         /// Initializes a new instance of the <see cref="SpreadsheetTransform" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -30,7 +29,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Sheets">Sheets.</param>
         /// <param name="ClientTransformModel">ClientTransformModel.</param>
 
-        public SpreadsheetTransform(string Name = null, TransformEndpoint RestEndpoint = null, List<BasicTransform> FilenameTransforms = null, List<TagModel> Tags = null, List<IndexedTransform> SheetNameTransforms = null, List<SheetTransform> Sheets = null, ClientSpreadsheetTransform ClientTransformModel = null, )
+        public SpreadsheetTransform(string Name = null, TransformEndpoint RestEndpoint = null, List<BasicTransform> FilenameTransforms = null, List<TagModel> Tags = null, List<IndexedTransform> SheetNameTransforms = null, List<SheetTransform> Sheets = null, ClientSpreadsheetTransform ClientTransformModel = null)
         {
             this.Name = Name;
             this.RestEndpoint = RestEndpoint;
@@ -152,47 +151,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.RestEndpoint == other.RestEndpoint ||
                     this.RestEndpoint != null &&
                     this.RestEndpoint.Equals(other.RestEndpoint)
-                ) && 
+                ) &&
                 (
                     this.FilenameTransforms == other.FilenameTransforms ||
                     this.FilenameTransforms != null &&
                     this.FilenameTransforms.SequenceEqual(other.FilenameTransforms)
-                ) && 
+                ) &&
                 (
                     this.Tags == other.Tags ||
                     this.Tags != null &&
                     this.Tags.SequenceEqual(other.Tags)
-                ) && 
+                ) &&
                 (
                     this.SheetNameTransforms == other.SheetNameTransforms ||
                     this.SheetNameTransforms != null &&
                     this.SheetNameTransforms.SequenceEqual(other.SheetNameTransforms)
-                ) && 
+                ) &&
                 (
                     this.Sheets == other.Sheets ||
                     this.Sheets != null &&
                     this.Sheets.SequenceEqual(other.Sheets)
-                ) && 
+                ) &&
                 (
                     this.ClientTransformModel == other.ClientTransformModel ||
                     this.ClientTransformModel != null &&
                     this.ClientTransformModel.Equals(other.ClientTransformModel)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ParsedCertificate :  IEquatable<ParsedCertificate>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ParsedCertificate" /> class.
         /// Initializes a new instance of the <see cref="ParsedCertificate" />class.
         /// </summary>
         /// <param name="CertificateDetails">The details of the certificates that were parsed correctly..</param>
@@ -83,7 +82,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.CertificateDetails == other.CertificateDetails ||
                     this.CertificateDetails != null &&

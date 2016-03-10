@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class PhoneNumberColumn :  IEquatable<PhoneNumberColumn>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="PhoneNumberColumn" /> class.
         /// Initializes a new instance of the <see cref="PhoneNumberColumn" />class.
         /// </summary>
         /// <param name="ColumnName">ColumnName.</param>
@@ -91,12 +90,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ColumnName == other.ColumnName ||
                     this.ColumnName != null &&
                     this.ColumnName.Equals(other.ColumnName)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&

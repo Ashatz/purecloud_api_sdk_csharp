@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "OPERATIONALNEEDSREBUILD")]
             Operationalneedsrebuild
         }
-    
+        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -44,7 +44,6 @@ namespace ININ.PureCloudApi.Model
         public StatusEnum? Status { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="DependencyStatus" /> class.
         /// Initializes a new instance of the <see cref="DependencyStatus" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -55,7 +54,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Status">Status.</param>
         /// <param name="FailedObjects">FailedObjects.</param>
 
-        public DependencyStatus(string Name = null, User User = null, string BuildId = null, DateTime? DateStarted = null, DateTime? DateCompleted = null, StatusEnum? Status = null, List<FailedObject> FailedObjects = null, )
+        public DependencyStatus(string Name = null, User User = null, string BuildId = null, DateTime? DateStarted = null, DateTime? DateCompleted = null, StatusEnum? Status = null, List<FailedObject> FailedObjects = null)
         {
             this.Name = Name;
             this.User = User;
@@ -173,47 +172,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
-                ) && 
+                ) &&
                 (
                     this.BuildId == other.BuildId ||
                     this.BuildId != null &&
                     this.BuildId.Equals(other.BuildId)
-                ) && 
+                ) &&
                 (
                     this.DateStarted == other.DateStarted ||
                     this.DateStarted != null &&
                     this.DateStarted.Equals(other.DateStarted)
-                ) && 
+                ) &&
                 (
                     this.DateCompleted == other.DateCompleted ||
                     this.DateCompleted != null &&
                     this.DateCompleted.Equals(other.DateCompleted)
-                ) && 
+                ) &&
                 (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-                ) && 
+                ) &&
                 (
                     this.FailedObjects == other.FailedObjects ||
                     this.FailedObjects != null &&
                     this.FailedObjects.SequenceEqual(other.FailedObjects)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

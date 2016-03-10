@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "INACTIVE")]
             Inactive
         }
-    
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -38,7 +38,6 @@ namespace ININ.PureCloudApi.Model
         public StateEnum? State { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Organization" /> class.
         /// Initializes a new instance of the <see cref="Organization" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -53,7 +52,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DefaultSiteId">DefaultSiteId.</param>
         /// <param name="Deletable">Deletable (default to false).</param>
 
-        public Organization(string Name = null, string ThirdPartyOrgId = null, string ThirdPartyOrgName = null, string ThirdPartyURI = null, string AdminUsername = null, string AdminPassword = null, string Domain = null, int? Version = null, StateEnum? State = null, string DefaultSiteId = null, bool? Deletable = null, )
+        public Organization(string Name = null, string ThirdPartyOrgId = null, string ThirdPartyOrgName = null, string ThirdPartyURI = null, string AdminUsername = null, string AdminPassword = null, string Domain = null, int? Version = null, StateEnum? State = null, string DefaultSiteId = null, bool? Deletable = null)
         {
             this.Name = Name;
             this.ThirdPartyOrgId = ThirdPartyOrgId;
@@ -209,67 +208,67 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.ThirdPartyOrgId == other.ThirdPartyOrgId ||
                     this.ThirdPartyOrgId != null &&
                     this.ThirdPartyOrgId.Equals(other.ThirdPartyOrgId)
-                ) && 
+                ) &&
                 (
                     this.ThirdPartyOrgName == other.ThirdPartyOrgName ||
                     this.ThirdPartyOrgName != null &&
                     this.ThirdPartyOrgName.Equals(other.ThirdPartyOrgName)
-                ) && 
+                ) &&
                 (
                     this.ThirdPartyURI == other.ThirdPartyURI ||
                     this.ThirdPartyURI != null &&
                     this.ThirdPartyURI.Equals(other.ThirdPartyURI)
-                ) && 
+                ) &&
                 (
                     this.AdminUsername == other.AdminUsername ||
                     this.AdminUsername != null &&
                     this.AdminUsername.Equals(other.AdminUsername)
-                ) && 
+                ) &&
                 (
                     this.AdminPassword == other.AdminPassword ||
                     this.AdminPassword != null &&
                     this.AdminPassword.Equals(other.AdminPassword)
-                ) && 
+                ) &&
                 (
                     this.Domain == other.Domain ||
                     this.Domain != null &&
                     this.Domain.Equals(other.Domain)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.DefaultSiteId == other.DefaultSiteId ||
                     this.DefaultSiteId != null &&
                     this.DefaultSiteId.Equals(other.DefaultSiteId)
-                ) && 
+                ) &&
                 (
                     this.Deletable == other.Deletable ||
                     this.Deletable != null &&
                     this.Deletable.Equals(other.Deletable)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

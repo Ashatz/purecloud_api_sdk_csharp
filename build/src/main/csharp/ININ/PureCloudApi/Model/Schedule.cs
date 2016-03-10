@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "INACTIVE")]
             Inactive
         }
-    
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -38,7 +38,6 @@ namespace ININ.PureCloudApi.Model
         public StateEnum? State { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Schedule" /> class.
         /// Initializes a new instance of the <see cref="Schedule" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -56,7 +55,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Rrule">An iCal Recurrence Rule (RRULE) string.</param>
         /// <param name="Keywords">Keywords.</param>
 
-        public Schedule(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, DateTime? Start = null, DateTime? End = null, string Rrule = null, List<string> Keywords = null, )
+        public Schedule(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, DateTime? Start = null, DateTime? End = null, string Rrule = null, List<string> Keywords = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -233,82 +232,82 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.ModifiedBy == other.ModifiedBy ||
                     this.ModifiedBy != null &&
                     this.ModifiedBy.Equals(other.ModifiedBy)
-                ) && 
+                ) &&
                 (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
-                ) && 
+                ) &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.ModifiedByApp == other.ModifiedByApp ||
                     this.ModifiedByApp != null &&
                     this.ModifiedByApp.Equals(other.ModifiedByApp)
-                ) && 
+                ) &&
                 (
                     this.CreatedByApp == other.CreatedByApp ||
                     this.CreatedByApp != null &&
                     this.CreatedByApp.Equals(other.CreatedByApp)
-                ) && 
+                ) &&
                 (
                     this.Start == other.Start ||
                     this.Start != null &&
                     this.Start.Equals(other.Start)
-                ) && 
+                ) &&
                 (
                     this.End == other.End ||
                     this.End != null &&
                     this.End.Equals(other.End)
-                ) && 
+                ) &&
                 (
                     this.Rrule == other.Rrule ||
                     this.Rrule != null &&
                     this.Rrule.Equals(other.Rrule)
-                ) && 
+                ) &&
                 (
                     this.Keywords == other.Keywords ||
                     this.Keywords != null &&
                     this.Keywords.SequenceEqual(other.Keywords)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

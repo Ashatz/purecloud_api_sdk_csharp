@@ -17,20 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ReportRequest :  IEquatable<ReportRequest>
     { 
-        public enum  {
-            
-            [EnumMember(Value = "USER")]
-            User,
-            
-            [EnumMember(Value = "FLOW")]
-            Flow,
-            
-            [EnumMember(Value = "QUEUE")]
-            Queue
-        }
-    
+        
+        public static string GroupBy_User = "USER";
+        public static string GroupBy_Flow = "FLOW";
+        public static string GroupBy_Queue = "QUEUE";
+        
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ReportRequest" /> class.
         /// Initializes a new instance of the <see cref="ReportRequest" />class.
         /// </summary>
         /// <param name="PageNumber">The pageNumber to get results from (EG If there are 100 results with a pageSize of 10 and pageNumber is 3 then 10 results will be returned starting with index #31.</param>
@@ -40,7 +33,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Filters">You can also restrict the request to particular field values and ranges.</param>
         /// <param name="GroupBy">GroupBy.</param>
 
-        public ReportRequest(int? PageNumber = null, int? PageSize = null, List<FacetRequest> FacetRequests = null, List<SortField> Sort = null, List<FilterItem> Filters = null, List<GroupByEnum?> GroupBy = null)
+        public ReportRequest(int? PageNumber = null, int? PageSize = null, List<FacetRequest> FacetRequests = null, List<SortField> Sort = null, List<FilterItem> Filters = null, List<string> GroupBy = null)
         {
             this.PageNumber = PageNumber;
             this.PageSize = PageSize;
@@ -143,32 +136,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.PageNumber == other.PageNumber ||
                     this.PageNumber != null &&
                     this.PageNumber.Equals(other.PageNumber)
-                ) && 
+                ) &&
                 (
                     this.PageSize == other.PageSize ||
                     this.PageSize != null &&
                     this.PageSize.Equals(other.PageSize)
-                ) && 
+                ) &&
                 (
                     this.FacetRequests == other.FacetRequests ||
                     this.FacetRequests != null &&
                     this.FacetRequests.SequenceEqual(other.FacetRequests)
-                ) && 
+                ) &&
                 (
                     this.Sort == other.Sort ||
                     this.Sort != null &&
                     this.Sort.SequenceEqual(other.Sort)
-                ) && 
+                ) &&
                 (
                     this.Filters == other.Filters ||
                     this.Filters != null &&
                     this.Filters.SequenceEqual(other.Filters)
-                ) && 
+                ) &&
                 (
                     this.GroupBy == other.GroupBy ||
                     this.GroupBy != null &&

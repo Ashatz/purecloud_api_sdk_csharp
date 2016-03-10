@@ -33,7 +33,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "AUTOMATIC")]
             Automatic
         }
-    
+        
         /// <summary>
         /// launch type of the flow - NORMAL or TEST
         /// </summary>
@@ -42,7 +42,6 @@ namespace ININ.PureCloudApi.Model
         public LaunchTypeEnum? LaunchType { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowLaunchRequest" /> class.
         /// Initializes a new instance of the <see cref="FlowLaunchRequest" />class.
         /// </summary>
         /// <param name="FlowConfigId">ID of the flow to launch, will launch the most recently published version if a specific version is not specified. (required).</param>
@@ -145,22 +144,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.FlowConfigId == other.FlowConfigId ||
                     this.FlowConfigId != null &&
                     this.FlowConfigId.Equals(other.FlowConfigId)
-                ) && 
+                ) &&
                 (
                     this.FlowInstanceName == other.FlowInstanceName ||
                     this.FlowInstanceName != null &&
                     this.FlowInstanceName.Equals(other.FlowInstanceName)
-                ) && 
+                ) &&
                 (
                     this.InputData == other.InputData ||
                     this.InputData != null &&
                     this.InputData.Equals(other.InputData)
-                ) && 
+                ) &&
                 (
                     this.LaunchType == other.LaunchType ||
                     this.LaunchType != null &&

@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class GreetingAudioFile :  IEquatable<GreetingAudioFile>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="GreetingAudioFile" /> class.
         /// Initializes a new instance of the <see cref="GreetingAudioFile" />class.
         /// </summary>
         /// <param name="DurationMilliseconds">DurationMilliseconds.</param>
@@ -100,17 +99,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.DurationMilliseconds == other.DurationMilliseconds ||
                     this.DurationMilliseconds != null &&
                     this.DurationMilliseconds.Equals(other.DurationMilliseconds)
-                ) && 
+                ) &&
                 (
                     this.SizeBytes == other.SizeBytes ||
                     this.SizeBytes != null &&
                     this.SizeBytes.Equals(other.SizeBytes)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

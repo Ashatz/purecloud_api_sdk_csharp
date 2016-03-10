@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class WorkspaceCreate :  IEquatable<WorkspaceCreate>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="WorkspaceCreate" /> class.
         /// Initializes a new instance of the <see cref="WorkspaceCreate" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -91,12 +90,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Bucket == other.Bucket ||
                     this.Bucket != null &&

@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class PINConfiguration :  IEquatable<PINConfiguration>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="PINConfiguration" /> class.
         /// Initializes a new instance of the <see cref="PINConfiguration" />class.
         /// </summary>
         /// <param name="MinimumLength">MinimumLength.</param>
@@ -91,12 +90,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.MinimumLength == other.MinimumLength ||
                     this.MinimumLength != null &&
                     this.MinimumLength.Equals(other.MinimumLength)
-                ) && 
+                ) &&
                 (
                     this.MaximumLength == other.MaximumLength ||
                     this.MaximumLength != null &&

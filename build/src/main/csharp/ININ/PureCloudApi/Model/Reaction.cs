@@ -33,7 +33,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "PLAY_FILE")]
             PlayFile
         }
-    
+        
         /// <summary>
         /// Gets or Sets ReactionType
         /// </summary>
@@ -41,7 +41,6 @@ namespace ININ.PureCloudApi.Model
         public ReactionTypeEnum? ReactionType { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Reaction" /> class.
         /// Initializes a new instance of the <see cref="Reaction" />class.
         /// </summary>
         /// <param name="Data">Data.</param>
@@ -116,17 +115,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Data == other.Data ||
                     this.Data != null &&
                     this.Data.Equals(other.Data)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.ReactionType == other.ReactionType ||
                     this.ReactionType != null &&

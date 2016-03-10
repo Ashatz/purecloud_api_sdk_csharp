@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "US_DOMESTIC")]
             UsDomestic
         }
-    
+        
         /// <summary>
         /// The type of phone number (eg us-domestic, toll-free, etc), to determine which third-party api(s) to use for the order request.
         /// </summary>
@@ -39,7 +39,6 @@ namespace ININ.PureCloudApi.Model
         public PhoneNumberTypeEnum? PhoneNumberType { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="NumberOrderRequest" /> class.
         /// Initializes a new instance of the <see cref="NumberOrderRequest" />class.
         /// </summary>
         /// <param name="OrderTns">OrderTns.</param>
@@ -133,27 +132,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.OrderTns == other.OrderTns ||
                     this.OrderTns != null &&
                     this.OrderTns.SequenceEqual(other.OrderTns)
-                ) && 
+                ) &&
                 (
                     this.ReservationIds == other.ReservationIds ||
                     this.ReservationIds != null &&
                     this.ReservationIds.SequenceEqual(other.ReservationIds)
-                ) && 
+                ) &&
                 (
                     this.OrderId == other.OrderId ||
                     this.OrderId != null &&
                     this.OrderId.Equals(other.OrderId)
-                ) && 
+                ) &&
                 (
                     this.EffectiveDate == other.EffectiveDate ||
                     this.EffectiveDate != null &&
                     this.EffectiveDate.Equals(other.EffectiveDate)
-                ) && 
+                ) &&
                 (
                     this.PhoneNumberType == other.PhoneNumberType ||
                     this.PhoneNumberType != null &&

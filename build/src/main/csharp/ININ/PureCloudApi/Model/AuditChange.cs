@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class AuditChange :  IEquatable<AuditChange>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="AuditChange" /> class.
         /// Initializes a new instance of the <see cref="AuditChange" />class.
         /// </summary>
         /// <param name="Property">Property.</param>
@@ -109,22 +108,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Property == other.Property ||
                     this.Property != null &&
                     this.Property.Equals(other.Property)
-                ) && 
+                ) &&
                 (
                     this.Entity == other.Entity ||
                     this.Entity != null &&
                     this.Entity.Equals(other.Entity)
-                ) && 
+                ) &&
                 (
                     this.OldValues == other.OldValues ||
                     this.OldValues != null &&
                     this.OldValues.SequenceEqual(other.OldValues)
-                ) && 
+                ) &&
                 (
                     this.NewValues == other.NewValues ||
                     this.NewValues != null &&

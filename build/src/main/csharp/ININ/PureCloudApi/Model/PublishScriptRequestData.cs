@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class PublishScriptRequestData :  IEquatable<PublishScriptRequestData>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="PublishScriptRequestData" /> class.
         /// Initializes a new instance of the <see cref="PublishScriptRequestData" />class.
         /// </summary>
         /// <param name="ScriptId">ScriptId.</param>
@@ -91,12 +90,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ScriptId == other.ScriptId ||
                     this.ScriptId != null &&
                     this.ScriptId.Equals(other.ScriptId)
-                ) && 
+                ) &&
                 (
                     this.VersionId == other.VersionId ||
                     this.VersionId != null &&

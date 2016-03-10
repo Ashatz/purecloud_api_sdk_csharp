@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "DELETED")]
             Deleted
         }
-    
+        
         /// <summary>
         /// Gets or Sets GroupType
         /// </summary>
@@ -54,7 +54,6 @@ namespace ININ.PureCloudApi.Model
         public GroupStateEnum? GroupState { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Group" /> class.
         /// Initializes a new instance of the <see cref="Group" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -64,7 +63,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="GroupImages">GroupImages.</param>
         /// <param name="GroupState">GroupState.</param>
 
-        public Group(string Name = null, string Description = null, long? MemberCount = null, GroupTypeEnum? GroupType = null, GroupImages GroupImages = null, GroupStateEnum? GroupState = null, )
+        public Group(string Name = null, string Description = null, long? MemberCount = null, GroupTypeEnum? GroupType = null, GroupImages GroupImages = null, GroupStateEnum? GroupState = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -166,42 +165,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.MemberCount == other.MemberCount ||
                     this.MemberCount != null &&
                     this.MemberCount.Equals(other.MemberCount)
-                ) && 
+                ) &&
                 (
                     this.GroupType == other.GroupType ||
                     this.GroupType != null &&
                     this.GroupType.Equals(other.GroupType)
-                ) && 
+                ) &&
                 (
                     this.GroupImages == other.GroupImages ||
                     this.GroupImages != null &&
                     this.GroupImages.Equals(other.GroupImages)
-                ) && 
+                ) &&
                 (
                     this.GroupState == other.GroupState ||
                     this.GroupState != null &&
                     this.GroupState.Equals(other.GroupState)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

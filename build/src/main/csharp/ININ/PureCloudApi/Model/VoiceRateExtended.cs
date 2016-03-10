@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "EXTENDED")]
             Extended
         }
-    
+        
         /// <summary>
         /// The voice rate type.
         /// </summary>
@@ -48,7 +48,6 @@ namespace ININ.PureCloudApi.Model
         public TypeEnum? Type { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="VoiceRateExtended" /> class.
         /// Initializes a new instance of the <see cref="VoiceRateExtended" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -69,7 +68,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="InboundTollFreeDurationMinimumSeconds">The minimum duration charged in seconds. (required).</param>
         /// <param name="InboundTollFreeDurationIncrementSeconds">The billing duration increment in seconds. (required).</param>
 
-        public VoiceRateExtended(string Name = null, string Currency = null, string AmendmentId = null, TypeEnum? Type = null, DateTime? EffectiveDate = null, string GroupName = null, string AreaCode = null, bool? DeletionMarker = null, double? OutboundRate = null, int? OutboundDurationMinimumSeconds = null, int? OutboundDurationIncrementSeconds = null, double? InboundTolledRate = null, int? InboundTolledDurationMinimumSeconds = null, int? InboundTolledDurationIncrementSeconds = null, double? InboundTollFreeRate = null, int? InboundTollFreeDurationMinimumSeconds = null, int? InboundTollFreeDurationIncrementSeconds = null, )
+        public VoiceRateExtended(string Name = null, string Currency = null, string AmendmentId = null, TypeEnum? Type = null, DateTime? EffectiveDate = null, string GroupName = null, string AreaCode = null, bool? DeletionMarker = null, double? OutboundRate = null, int? OutboundDurationMinimumSeconds = null, int? OutboundDurationIncrementSeconds = null, double? InboundTolledRate = null, int? InboundTolledDurationMinimumSeconds = null, int? InboundTolledDurationIncrementSeconds = null, double? InboundTollFreeRate = null, int? InboundTollFreeDurationMinimumSeconds = null, int? InboundTollFreeDurationIncrementSeconds = null)
         {
             // to ensure "Currency" is required (not null)
             if (Currency == null)
@@ -408,97 +407,97 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Currency == other.Currency ||
                     this.Currency != null &&
                     this.Currency.Equals(other.Currency)
-                ) && 
+                ) &&
                 (
                     this.AmendmentId == other.AmendmentId ||
                     this.AmendmentId != null &&
                     this.AmendmentId.Equals(other.AmendmentId)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.EffectiveDate == other.EffectiveDate ||
                     this.EffectiveDate != null &&
                     this.EffectiveDate.Equals(other.EffectiveDate)
-                ) && 
+                ) &&
                 (
                     this.GroupName == other.GroupName ||
                     this.GroupName != null &&
                     this.GroupName.Equals(other.GroupName)
-                ) && 
+                ) &&
                 (
                     this.AreaCode == other.AreaCode ||
                     this.AreaCode != null &&
                     this.AreaCode.Equals(other.AreaCode)
-                ) && 
+                ) &&
                 (
                     this.DeletionMarker == other.DeletionMarker ||
                     this.DeletionMarker != null &&
                     this.DeletionMarker.Equals(other.DeletionMarker)
-                ) && 
+                ) &&
                 (
                     this.OutboundRate == other.OutboundRate ||
                     this.OutboundRate != null &&
                     this.OutboundRate.Equals(other.OutboundRate)
-                ) && 
+                ) &&
                 (
                     this.OutboundDurationMinimumSeconds == other.OutboundDurationMinimumSeconds ||
                     this.OutboundDurationMinimumSeconds != null &&
                     this.OutboundDurationMinimumSeconds.Equals(other.OutboundDurationMinimumSeconds)
-                ) && 
+                ) &&
                 (
                     this.OutboundDurationIncrementSeconds == other.OutboundDurationIncrementSeconds ||
                     this.OutboundDurationIncrementSeconds != null &&
                     this.OutboundDurationIncrementSeconds.Equals(other.OutboundDurationIncrementSeconds)
-                ) && 
+                ) &&
                 (
                     this.InboundTolledRate == other.InboundTolledRate ||
                     this.InboundTolledRate != null &&
                     this.InboundTolledRate.Equals(other.InboundTolledRate)
-                ) && 
+                ) &&
                 (
                     this.InboundTolledDurationMinimumSeconds == other.InboundTolledDurationMinimumSeconds ||
                     this.InboundTolledDurationMinimumSeconds != null &&
                     this.InboundTolledDurationMinimumSeconds.Equals(other.InboundTolledDurationMinimumSeconds)
-                ) && 
+                ) &&
                 (
                     this.InboundTolledDurationIncrementSeconds == other.InboundTolledDurationIncrementSeconds ||
                     this.InboundTolledDurationIncrementSeconds != null &&
                     this.InboundTolledDurationIncrementSeconds.Equals(other.InboundTolledDurationIncrementSeconds)
-                ) && 
+                ) &&
                 (
                     this.InboundTollFreeRate == other.InboundTollFreeRate ||
                     this.InboundTollFreeRate != null &&
                     this.InboundTollFreeRate.Equals(other.InboundTollFreeRate)
-                ) && 
+                ) &&
                 (
                     this.InboundTollFreeDurationMinimumSeconds == other.InboundTollFreeDurationMinimumSeconds ||
                     this.InboundTollFreeDurationMinimumSeconds != null &&
                     this.InboundTollFreeDurationMinimumSeconds.Equals(other.InboundTollFreeDurationMinimumSeconds)
-                ) && 
+                ) &&
                 (
                     this.InboundTollFreeDurationIncrementSeconds == other.InboundTollFreeDurationIncrementSeconds ||
                     this.InboundTollFreeDurationIncrementSeconds != null &&
                     this.InboundTollFreeDurationIncrementSeconds.Equals(other.InboundTollFreeDurationIncrementSeconds)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

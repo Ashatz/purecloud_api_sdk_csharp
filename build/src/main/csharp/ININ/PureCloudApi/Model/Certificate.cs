@@ -17,23 +17,22 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Certificate :  IEquatable<Certificate>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Certificate" /> class.
         /// Initializes a new instance of the <see cref="Certificate" />class.
         /// </summary>
-        /// <param name="Certificate">The certificate to parse. (required).</param>
+        /// <param name="CertificateProperty">The certificate to parse. (required).</param>
 
-        public Certificate(string Certificate = null)
+        public Certificate(string CertificateProperty = null)
         {
-            // to ensure "Certificate" is required (not null)
-            if (Certificate == null)
+            // to ensure "CertificateProperty" is required (not null)
+            if (CertificateProperty == null)
             {
-                throw new InvalidDataException("Certificate is a required property for Certificate and cannot be null");
+                throw new InvalidDataException("CertificateProperty is a required property for Certificate and cannot be null");
             }
             else
             {
-                this.Certificate = Certificate;
+                this.CertificateProperty = CertificateProperty;
             }
             
         }
@@ -44,7 +43,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>The certificate to parse.</value>
         [DataMember(Name="certificate", EmitDefaultValue=false)]
-        public string Certificate { get; set; }
+        public string CertificateProperty { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -54,7 +53,7 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Certificate {\n");
-            sb.Append("  Certificate: ").Append(Certificate).Append("\n");
+            sb.Append("  CertificateProperty: ").Append(CertificateProperty).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -91,11 +90,11 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
-                    this.Certificate == other.Certificate ||
-                    this.Certificate != null &&
-                    this.Certificate.Equals(other.Certificate)
+                    this.CertificateProperty == other.CertificateProperty ||
+                    this.CertificateProperty != null &&
+                    this.CertificateProperty.Equals(other.CertificateProperty)
                 );
         }
 
@@ -111,8 +110,8 @@ namespace ININ.PureCloudApi.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Certificate != null)
-                    hash = hash * 59 + this.Certificate.GetHashCode();
+                if (this.CertificateProperty != null)
+                    hash = hash * 59 + this.CertificateProperty.GetHashCode();
                 
                 return hash;
             }

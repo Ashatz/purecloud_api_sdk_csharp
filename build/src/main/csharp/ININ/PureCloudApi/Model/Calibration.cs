@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Calibration :  IEquatable<Calibration>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Calibration" /> class.
         /// Initializes a new instance of the <see cref="Calibration" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -37,7 +36,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ScoringIndex">ScoringIndex.</param>
         /// <param name="ExpertEvaluator">ExpertEvaluator.</param>
 
-        public Calibration(string Name = null, User Calibrator = null, User Agent = null, Conversation Conversation = null, EvaluationForm EvaluationForm = null, string ContextId = null, int? AverageScore = null, int? HighScore = null, int? LowScore = null, DateTime? CreatedDate = null, List<Evaluation> Evaluations = null, List<User> Evaluators = null, Evaluation ScoringIndex = null, User ExpertEvaluator = null, )
+        public Calibration(string Name = null, User Calibrator = null, User Agent = null, Conversation Conversation = null, EvaluationForm EvaluationForm = null, string ContextId = null, int? AverageScore = null, int? HighScore = null, int? LowScore = null, DateTime? CreatedDate = null, List<Evaluation> Evaluations = null, List<User> Evaluators = null, Evaluation ScoringIndex = null, User ExpertEvaluator = null)
         {
             this.Name = Name;
             this.Calibrator = Calibrator;
@@ -216,82 +215,82 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Calibrator == other.Calibrator ||
                     this.Calibrator != null &&
                     this.Calibrator.Equals(other.Calibrator)
-                ) && 
+                ) &&
                 (
                     this.Agent == other.Agent ||
                     this.Agent != null &&
                     this.Agent.Equals(other.Agent)
-                ) && 
+                ) &&
                 (
                     this.Conversation == other.Conversation ||
                     this.Conversation != null &&
                     this.Conversation.Equals(other.Conversation)
-                ) && 
+                ) &&
                 (
                     this.EvaluationForm == other.EvaluationForm ||
                     this.EvaluationForm != null &&
                     this.EvaluationForm.Equals(other.EvaluationForm)
-                ) && 
+                ) &&
                 (
                     this.ContextId == other.ContextId ||
                     this.ContextId != null &&
                     this.ContextId.Equals(other.ContextId)
-                ) && 
+                ) &&
                 (
                     this.AverageScore == other.AverageScore ||
                     this.AverageScore != null &&
                     this.AverageScore.Equals(other.AverageScore)
-                ) && 
+                ) &&
                 (
                     this.HighScore == other.HighScore ||
                     this.HighScore != null &&
                     this.HighScore.Equals(other.HighScore)
-                ) && 
+                ) &&
                 (
                     this.LowScore == other.LowScore ||
                     this.LowScore != null &&
                     this.LowScore.Equals(other.LowScore)
-                ) && 
+                ) &&
                 (
                     this.CreatedDate == other.CreatedDate ||
                     this.CreatedDate != null &&
                     this.CreatedDate.Equals(other.CreatedDate)
-                ) && 
+                ) &&
                 (
                     this.Evaluations == other.Evaluations ||
                     this.Evaluations != null &&
                     this.Evaluations.SequenceEqual(other.Evaluations)
-                ) && 
+                ) &&
                 (
                     this.Evaluators == other.Evaluators ||
                     this.Evaluators != null &&
                     this.Evaluators.SequenceEqual(other.Evaluators)
-                ) && 
+                ) &&
                 (
                     this.ScoringIndex == other.ScoringIndex ||
                     this.ScoringIndex != null &&
                     this.ScoringIndex.Equals(other.ScoringIndex)
-                ) && 
+                ) &&
                 (
                     this.ExpertEvaluator == other.ExpertEvaluator ||
                     this.ExpertEvaluator != null &&
                     this.ExpertEvaluator.Equals(other.ExpertEvaluator)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

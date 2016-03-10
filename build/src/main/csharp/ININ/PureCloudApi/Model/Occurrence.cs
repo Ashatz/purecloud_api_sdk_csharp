@@ -33,7 +33,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "INTERVALS")]
             Intervals
         }
-    
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -41,7 +41,6 @@ namespace ININ.PureCloudApi.Model
         public TypeEnum? Type { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Occurrence" /> class.
         /// Initializes a new instance of the <see cref="Occurrence" />class.
         /// </summary>
         /// <param name="Limit">Limit.</param>
@@ -107,12 +106,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Limit == other.Limit ||
                     this.Limit != null &&
                     this.Limit.Equals(other.Limit)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&

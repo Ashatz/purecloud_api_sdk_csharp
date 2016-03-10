@@ -46,7 +46,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "SMS")]
             Sms
         }
-    
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -60,7 +60,6 @@ namespace ININ.PureCloudApi.Model
         public MediaTypeEnum? MediaType { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrganizationAddress" /> class.
         /// Initializes a new instance of the <see cref="OrganizationAddress" />class.
         /// </summary>
         /// <param name="Display">Display.</param>
@@ -138,22 +137,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Display == other.Display ||
                     this.Display != null &&
                     this.Display.Equals(other.Display)
-                ) && 
+                ) &&
                 (
                     this.Address == other.Address ||
                     this.Address != null &&
                     this.Address.Equals(other.Address)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.MediaType == other.MediaType ||
                     this.MediaType != null &&

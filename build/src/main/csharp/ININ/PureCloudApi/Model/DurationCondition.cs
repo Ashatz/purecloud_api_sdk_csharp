@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "DURATION_RANGE")]
             DurationRange
         }
-    
+        
         /// <summary>
         /// Gets or Sets DurationTarget
         /// </summary>
@@ -35,7 +35,6 @@ namespace ININ.PureCloudApi.Model
         public DurationTargetEnum? DurationTarget { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="DurationCondition" /> class.
         /// Initializes a new instance of the <see cref="DurationCondition" />class.
         /// </summary>
         /// <param name="DurationTarget">DurationTarget.</param>
@@ -110,17 +109,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.DurationTarget == other.DurationTarget ||
                     this.DurationTarget != null &&
                     this.DurationTarget.Equals(other.DurationTarget)
-                ) && 
+                ) &&
                 (
                     this.DurationOperator == other.DurationOperator ||
                     this.DurationOperator != null &&
                     this.DurationOperator.Equals(other.DurationOperator)
-                ) && 
+                ) &&
                 (
                     this.DurationRange == other.DurationRange ||
                     this.DurationRange != null &&

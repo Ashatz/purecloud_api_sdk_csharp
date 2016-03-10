@@ -17,19 +17,18 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Discount :  IEquatable<Discount>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Discount" /> class.
         /// Initializes a new instance of the <see cref="Discount" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="AnnualPrePay">AnnualPrePay (default to false).</param>
-        /// <param name="Discount">Discount.</param>
+        /// <param name="DiscountProperty">DiscountProperty.</param>
         /// <param name="Maximum">Maximum.</param>
         /// <param name="Minimum">Minimum.</param>
         /// <param name="ProductCategory">ProductCategory.</param>
 
-        public Discount(string Name = null, bool? AnnualPrePay = null, string Discount = null, string Maximum = null, string Minimum = null, string ProductCategory = null, )
+        public Discount(string Name = null, bool? AnnualPrePay = null, string DiscountProperty = null, string Maximum = null, string Minimum = null, string ProductCategory = null)
         {
             this.Name = Name;
             // use default value if no "AnnualPrePay" provided
@@ -41,7 +40,7 @@ namespace ININ.PureCloudApi.Model
             {
                 this.AnnualPrePay = AnnualPrePay;
             }
-            this.Discount = Discount;
+            this.DiscountProperty = DiscountProperty;
             this.Maximum = Maximum;
             this.Minimum = Minimum;
             this.ProductCategory = ProductCategory;
@@ -69,10 +68,10 @@ namespace ININ.PureCloudApi.Model
         public bool? AnnualPrePay { get; set; }
     
         /// <summary>
-        /// Gets or Sets Discount
+        /// Gets or Sets DiscountProperty
         /// </summary>
         [DataMember(Name="discount", EmitDefaultValue=false)]
-        public string Discount { get; set; }
+        public string DiscountProperty { get; set; }
     
         /// <summary>
         /// Gets or Sets Maximum
@@ -110,7 +109,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  AnnualPrePay: ").Append(AnnualPrePay).Append("\n");
-            sb.Append("  Discount: ").Append(Discount).Append("\n");
+            sb.Append("  DiscountProperty: ").Append(DiscountProperty).Append("\n");
             sb.Append("  Maximum: ").Append(Maximum).Append("\n");
             sb.Append("  Minimum: ").Append(Minimum).Append("\n");
             sb.Append("  ProductCategory: ").Append(ProductCategory).Append("\n");
@@ -151,42 +150,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.AnnualPrePay == other.AnnualPrePay ||
                     this.AnnualPrePay != null &&
                     this.AnnualPrePay.Equals(other.AnnualPrePay)
-                ) && 
+                ) &&
                 (
-                    this.Discount == other.Discount ||
-                    this.Discount != null &&
-                    this.Discount.Equals(other.Discount)
-                ) && 
+                    this.DiscountProperty == other.DiscountProperty ||
+                    this.DiscountProperty != null &&
+                    this.DiscountProperty.Equals(other.DiscountProperty)
+                ) &&
                 (
                     this.Maximum == other.Maximum ||
                     this.Maximum != null &&
                     this.Maximum.Equals(other.Maximum)
-                ) && 
+                ) &&
                 (
                     this.Minimum == other.Minimum ||
                     this.Minimum != null &&
                     this.Minimum.Equals(other.Minimum)
-                ) && 
+                ) &&
                 (
                     this.ProductCategory == other.ProductCategory ||
                     this.ProductCategory != null &&
                     this.ProductCategory.Equals(other.ProductCategory)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -215,8 +214,8 @@ namespace ININ.PureCloudApi.Model
                 if (this.AnnualPrePay != null)
                     hash = hash * 59 + this.AnnualPrePay.GetHashCode();
                 
-                if (this.Discount != null)
-                    hash = hash * 59 + this.Discount.GetHashCode();
+                if (this.DiscountProperty != null)
+                    hash = hash * 59 + this.DiscountProperty.GetHashCode();
                 
                 if (this.Maximum != null)
                     hash = hash * 59 + this.Maximum.GetHashCode();

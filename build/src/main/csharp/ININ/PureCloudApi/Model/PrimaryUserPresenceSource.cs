@@ -17,16 +17,15 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class PrimaryUserPresenceSource :  IEquatable<PrimaryUserPresenceSource>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="PrimaryUserPresenceSource" /> class.
         /// Initializes a new instance of the <see cref="PrimaryUserPresenceSource" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="User">User.</param>
         /// <param name="PrimarySource">PrimarySource.</param>
 
-        public PrimaryUserPresenceSource(string Name = null, User User = null, string PrimarySource = null, )
+        public PrimaryUserPresenceSource(string Name = null, User User = null, string PrimarySource = null)
         {
             this.Name = Name;
             this.User = User;
@@ -116,27 +115,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
-                ) && 
+                ) &&
                 (
                     this.PrimarySource == other.PrimarySource ||
                     this.PrimarySource != null &&
                     this.PrimarySource.Equals(other.PrimarySource)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

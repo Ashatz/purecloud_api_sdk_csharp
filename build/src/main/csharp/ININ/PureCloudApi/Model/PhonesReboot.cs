@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class PhonesReboot :  IEquatable<PhonesReboot>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="PhonesReboot" /> class.
         /// Initializes a new instance of the <see cref="PhonesReboot" />class.
         /// </summary>
         /// <param name="PhoneIds">PhoneIds.</param>
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.PhoneIds == other.PhoneIds ||
                     this.PhoneIds != null &&

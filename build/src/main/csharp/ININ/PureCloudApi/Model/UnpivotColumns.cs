@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class UnpivotColumns :  IEquatable<UnpivotColumns>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="UnpivotColumns" /> class.
         /// Initializes a new instance of the <see cref="UnpivotColumns" />class.
         /// </summary>
         /// <param name="Columns">Columns.</param>
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Columns == other.Columns ||
                     this.Columns != null &&

@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DeleteRetention :  IEquatable<DeleteRetention>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DeleteRetention" /> class.
         /// Initializes a new instance of the <see cref="DeleteRetention" />class.
         /// </summary>
         /// <param name="Days">Days.</param>
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Days == other.Days ||
                     this.Days != null &&

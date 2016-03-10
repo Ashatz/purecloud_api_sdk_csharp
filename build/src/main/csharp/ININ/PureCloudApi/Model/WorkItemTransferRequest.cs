@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "QUEUE")]
             Queue
         }
-    
+        
         /// <summary>
         /// The type of the transferTarget, indicating whether you want to transfer to a User, or a Queue, etc.
         /// </summary>
@@ -36,7 +36,6 @@ namespace ININ.PureCloudApi.Model
         public TransferTargetTypeEnum? TransferTargetType { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="WorkItemTransferRequest" /> class.
         /// Initializes a new instance of the <see cref="WorkItemTransferRequest" />class.
         /// </summary>
         /// <param name="TransferTargetType">The type of the transferTarget, indicating whether you want to transfer to a User, or a Queue, etc. (required).</param>
@@ -119,12 +118,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.TransferTargetType == other.TransferTargetType ||
                     this.TransferTargetType != null &&
                     this.TransferTargetType.Equals(other.TransferTargetType)
-                ) && 
+                ) &&
                 (
                     this.TransferTarget == other.TransferTarget ||
                     this.TransferTarget != null &&

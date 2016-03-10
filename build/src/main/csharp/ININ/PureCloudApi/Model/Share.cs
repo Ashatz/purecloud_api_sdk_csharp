@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "PUBLIC")]
             Public
         }
-    
+        
         /// <summary>
         /// Gets or Sets SharedEntityType
         /// </summary>
@@ -48,7 +48,6 @@ namespace ININ.PureCloudApi.Model
         public MemberTypeEnum? MemberType { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Share" /> class.
         /// Initializes a new instance of the <see cref="Share" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -60,7 +59,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Workspace">Workspace.</param>
         /// <param name="User">User.</param>
 
-        public Share(string Name = null, SharedEntityTypeEnum? SharedEntityType = null, UriReference SharedEntity = null, MemberTypeEnum? MemberType = null, UriReference Member = null, UriReference SharedBy = null, UriReference Workspace = null, User User = null, )
+        public Share(string Name = null, SharedEntityTypeEnum? SharedEntityType = null, UriReference SharedEntity = null, MemberTypeEnum? MemberType = null, UriReference Member = null, UriReference SharedBy = null, UriReference Workspace = null, User User = null)
         {
             this.Name = Name;
             this.SharedEntityType = SharedEntityType;
@@ -178,52 +177,52 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.SharedEntityType == other.SharedEntityType ||
                     this.SharedEntityType != null &&
                     this.SharedEntityType.Equals(other.SharedEntityType)
-                ) && 
+                ) &&
                 (
                     this.SharedEntity == other.SharedEntity ||
                     this.SharedEntity != null &&
                     this.SharedEntity.Equals(other.SharedEntity)
-                ) && 
+                ) &&
                 (
                     this.MemberType == other.MemberType ||
                     this.MemberType != null &&
                     this.MemberType.Equals(other.MemberType)
-                ) && 
+                ) &&
                 (
                     this.Member == other.Member ||
                     this.Member != null &&
                     this.Member.Equals(other.Member)
-                ) && 
+                ) &&
                 (
                     this.SharedBy == other.SharedBy ||
                     this.SharedBy != null &&
                     this.SharedBy.Equals(other.SharedBy)
-                ) && 
+                ) &&
                 (
                     this.Workspace == other.Workspace ||
                     this.Workspace != null &&
                     this.Workspace.Equals(other.Workspace)
-                ) && 
+                ) &&
                 (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

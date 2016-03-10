@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class TimeInterval :  IEquatable<TimeInterval>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="TimeInterval" /> class.
         /// Initializes a new instance of the <see cref="TimeInterval" />class.
         /// </summary>
         /// <param name="Days">Days.</param>
@@ -91,12 +90,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Days == other.Days ||
                     this.Days != null &&
                     this.Days.Equals(other.Days)
-                ) && 
+                ) &&
                 (
                     this.Hours == other.Hours ||
                     this.Hours != null &&

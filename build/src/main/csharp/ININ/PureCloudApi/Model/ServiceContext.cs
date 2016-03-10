@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ServiceContext :  IEquatable<ServiceContext>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ServiceContext" /> class.
         /// Initializes a new instance of the <see cref="ServiceContext" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&

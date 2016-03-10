@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "CLOUDARCHIVE")]
             Cloudarchive
         }
-    
+        
         /// <summary>
         /// Gets or Sets StorageMedium
         /// </summary>
@@ -32,7 +32,6 @@ namespace ININ.PureCloudApi.Model
         public StorageMediumEnum? StorageMedium { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ArchiveRetention" /> class.
         /// Initializes a new instance of the <see cref="ArchiveRetention" />class.
         /// </summary>
         /// <param name="Days">Days.</param>
@@ -98,12 +97,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Days == other.Days ||
                     this.Days != null &&
                     this.Days.Equals(other.Days)
-                ) && 
+                ) &&
                 (
                     this.StorageMedium == other.StorageMedium ||
                     this.StorageMedium != null &&

@@ -48,7 +48,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "DELETE")]
             Delete
         }
-    
+        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -56,7 +56,6 @@ namespace ININ.PureCloudApi.Model
         public StatusEnum? Status { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="DomainEdgeSoftwareUpdateDto" /> class.
         /// Initializes a new instance of the <see cref="DomainEdgeSoftwareUpdateDto" />class.
         /// </summary>
         /// <param name="Version">Version.</param>
@@ -204,47 +203,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.MaxDownloadRate == other.MaxDownloadRate ||
                     this.MaxDownloadRate != null &&
                     this.MaxDownloadRate.Equals(other.MaxDownloadRate)
-                ) && 
+                ) &&
                 (
                     this.DownloadStartTime == other.DownloadStartTime ||
                     this.DownloadStartTime != null &&
                     this.DownloadStartTime.Equals(other.DownloadStartTime)
-                ) && 
+                ) &&
                 (
                     this.ExecuteStartTime == other.ExecuteStartTime ||
                     this.ExecuteStartTime != null &&
                     this.ExecuteStartTime.Equals(other.ExecuteStartTime)
-                ) && 
+                ) &&
                 (
                     this.ExecuteStopTime == other.ExecuteStopTime ||
                     this.ExecuteStopTime != null &&
                     this.ExecuteStopTime.Equals(other.ExecuteStopTime)
-                ) && 
+                ) &&
                 (
                     this.ExecuteOnIdle == other.ExecuteOnIdle ||
                     this.ExecuteOnIdle != null &&
                     this.ExecuteOnIdle.Equals(other.ExecuteOnIdle)
-                ) && 
+                ) &&
                 (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-                ) && 
+                ) &&
                 (
                     this.EdgeUri == other.EdgeUri ||
                     this.EdgeUri != null &&
                     this.EdgeUri.Equals(other.EdgeUri)
-                ) && 
+                ) &&
                 (
                     this.Current == other.Current ||
                     this.Current != null &&

@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ThirdPartyAccount :  IEquatable<ThirdPartyAccount>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ThirdPartyAccount" /> class.
         /// Initializes a new instance of the <see cref="ThirdPartyAccount" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -28,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Invoices">Invoices.</param>
         /// <param name="Subscriptions">Subscriptions.</param>
 
-        public ThirdPartyAccount(string Name = null, string AccountNumber = null, string Currency = null, List<Invoice> Invoices = null, List<ThirdPartySubscription> Subscriptions = null, )
+        public ThirdPartyAccount(string Name = null, string AccountNumber = null, string Currency = null, List<Invoice> Invoices = null, List<ThirdPartySubscription> Subscriptions = null)
         {
             this.Name = Name;
             this.AccountNumber = AccountNumber;
@@ -134,37 +133,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.AccountNumber == other.AccountNumber ||
                     this.AccountNumber != null &&
                     this.AccountNumber.Equals(other.AccountNumber)
-                ) && 
+                ) &&
                 (
                     this.Currency == other.Currency ||
                     this.Currency != null &&
                     this.Currency.Equals(other.Currency)
-                ) && 
+                ) &&
                 (
                     this.Invoices == other.Invoices ||
                     this.Invoices != null &&
                     this.Invoices.SequenceEqual(other.Invoices)
-                ) && 
+                ) &&
                 (
                     this.Subscriptions == other.Subscriptions ||
                     this.Subscriptions != null &&
                     this.Subscriptions.SequenceEqual(other.Subscriptions)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

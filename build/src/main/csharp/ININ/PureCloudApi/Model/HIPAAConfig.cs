@@ -17,15 +17,14 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class HIPAAConfig :  IEquatable<HIPAAConfig>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="HIPAAConfig" /> class.
         /// Initializes a new instance of the <see cref="HIPAAConfig" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="EnableIdleTokenTimeout">EnableIdleTokenTimeout (default to false).</param>
 
-        public HIPAAConfig(string Name = null, bool? EnableIdleTokenTimeout = null, )
+        public HIPAAConfig(string Name = null, bool? EnableIdleTokenTimeout = null)
         {
             this.Name = Name;
             // use default value if no "EnableIdleTokenTimeout" provided
@@ -115,22 +114,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.EnableIdleTokenTimeout == other.EnableIdleTokenTimeout ||
                     this.EnableIdleTokenTimeout != null &&
                     this.EnableIdleTokenTimeout.Equals(other.EnableIdleTokenTimeout)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

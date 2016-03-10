@@ -81,7 +81,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "wrapUpCode")]
             Wrapupcode
         }
-    
+        
         /// <summary>
         /// Filter target
         /// </summary>
@@ -90,7 +90,6 @@ namespace ININ.PureCloudApi.Model
         public TargetEnum? Target { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConversationHistoricalQueryRequestFilter" /> class.
         /// Initializes a new instance of the <see cref="ConversationHistoricalQueryRequestFilter" />class.
         /// </summary>
         /// <param name="Target">Filter target (required).</param>
@@ -191,17 +190,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Target == other.Target ||
                     this.Target != null &&
                     this.Target.Equals(other.Target)
-                ) && 
+                ) &&
                 (
                     this._Operator == other._Operator ||
                     this._Operator != null &&
                     this._Operator.Equals(other._Operator)
-                ) && 
+                ) &&
                 (
                     this.Values == other.Values ||
                     this.Values != null &&

@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Channel :  IEquatable<Channel>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Channel" /> class.
         /// Initializes a new instance of the <see cref="Channel" />class.
         /// </summary>
         /// <param name="ConnectUri">ConnectUri.</param>
@@ -90,12 +89,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.ConnectUri == other.ConnectUri ||
                     this.ConnectUri != null &&

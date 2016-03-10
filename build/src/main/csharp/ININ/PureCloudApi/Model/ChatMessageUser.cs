@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ChatMessageUser :  IEquatable<ChatMessageUser>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ChatMessageUser" /> class.
         /// Initializes a new instance of the <see cref="ChatMessageUser" />class.
         /// </summary>
         /// <param name="Id">Id.</param>
@@ -118,27 +117,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.DisplayName == other.DisplayName ||
                     this.DisplayName != null &&
                     this.DisplayName.Equals(other.DisplayName)
-                ) && 
+                ) &&
                 (
                     this.Username == other.Username ||
                     this.Username != null &&
                     this.Username.Equals(other.Username)
-                ) && 
+                ) &&
                 (
                     this.Images == other.Images ||
                     this.Images != null &&

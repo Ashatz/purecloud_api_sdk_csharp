@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class RestErrorDetail :  IEquatable<RestErrorDetail>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="RestErrorDetail" /> class.
         /// Initializes a new instance of the <see cref="RestErrorDetail" />class.
         /// </summary>
         /// <param name="Error">Error.</param>
@@ -91,12 +90,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Error == other.Error ||
                     this.Error != null &&
                     this.Error.Equals(other.Error)
-                ) && 
+                ) &&
                 (
                     this.Details == other.Details ||
                     this.Details != null &&

@@ -43,7 +43,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ALL")]
             All
         }
-    
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -57,7 +57,6 @@ namespace ININ.PureCloudApi.Model
         public SkillEvaluationMethodEnum? SkillEvaluationMethod { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Queue" /> class.
         /// Initializes a new instance of the <see cref="Queue" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -81,7 +80,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CallingPartyNumber">CallingPartyNumber.</param>
         /// <param name="MemberCount">MemberCount.</param>
 
-        public Queue(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<UriReference> WrapupCodes = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, string PhoneNumber = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, string CallingPartyName = null, string CallingPartyNumber = null, int? MemberCount = null, )
+        public Queue(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<UriReference> WrapupCodes = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, string PhoneNumber = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, string CallingPartyName = null, string CallingPartyNumber = null, int? MemberCount = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -297,112 +296,112 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.ModifiedBy == other.ModifiedBy ||
                     this.ModifiedBy != null &&
                     this.ModifiedBy.Equals(other.ModifiedBy)
-                ) && 
+                ) &&
                 (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
-                ) && 
+                ) &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.ModifiedByApp == other.ModifiedByApp ||
                     this.ModifiedByApp != null &&
                     this.ModifiedByApp.Equals(other.ModifiedByApp)
-                ) && 
+                ) &&
                 (
                     this.CreatedByApp == other.CreatedByApp ||
                     this.CreatedByApp != null &&
                     this.CreatedByApp.Equals(other.CreatedByApp)
-                ) && 
+                ) &&
                 (
                     this.WrapupCodes == other.WrapupCodes ||
                     this.WrapupCodes != null &&
                     this.WrapupCodes.SequenceEqual(other.WrapupCodes)
-                ) && 
+                ) &&
                 (
                     this.MediaSettings == other.MediaSettings ||
                     this.MediaSettings != null &&
                     this.MediaSettings.SequenceEqual(other.MediaSettings)
-                ) && 
+                ) &&
                 (
                     this.Bullseye == other.Bullseye ||
                     this.Bullseye != null &&
                     this.Bullseye.Equals(other.Bullseye)
-                ) && 
+                ) &&
                 (
                     this.AcwSettings == other.AcwSettings ||
                     this.AcwSettings != null &&
                     this.AcwSettings.Equals(other.AcwSettings)
-                ) && 
+                ) &&
                 (
                     this.PhoneNumber == other.PhoneNumber ||
                     this.PhoneNumber != null &&
                     this.PhoneNumber.Equals(other.PhoneNumber)
-                ) && 
+                ) &&
                 (
                     this.SkillEvaluationMethod == other.SkillEvaluationMethod ||
                     this.SkillEvaluationMethod != null &&
                     this.SkillEvaluationMethod.Equals(other.SkillEvaluationMethod)
-                ) && 
+                ) &&
                 (
                     this.QueueFlow == other.QueueFlow ||
                     this.QueueFlow != null &&
                     this.QueueFlow.Equals(other.QueueFlow)
-                ) && 
+                ) &&
                 (
                     this.CallingPartyName == other.CallingPartyName ||
                     this.CallingPartyName != null &&
                     this.CallingPartyName.Equals(other.CallingPartyName)
-                ) && 
+                ) &&
                 (
                     this.CallingPartyNumber == other.CallingPartyNumber ||
                     this.CallingPartyNumber != null &&
                     this.CallingPartyNumber.Equals(other.CallingPartyNumber)
-                ) && 
+                ) &&
                 (
                     this.MemberCount == other.MemberCount ||
                     this.MemberCount != null &&
                     this.MemberCount.Equals(other.MemberCount)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

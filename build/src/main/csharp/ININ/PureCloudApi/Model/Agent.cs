@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Agent :  IEquatable<Agent>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Agent" /> class.
         /// Initializes a new instance of the <see cref="Agent" />class.
         /// </summary>
         /// <param name="Stage">Stage.</param>
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Stage == other.Stage ||
                     this.Stage != null &&

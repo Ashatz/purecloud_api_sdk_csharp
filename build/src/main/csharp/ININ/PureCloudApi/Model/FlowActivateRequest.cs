@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FlowActivateRequest :  IEquatable<FlowActivateRequest>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowActivateRequest" /> class.
         /// Initializes a new instance of the <see cref="FlowActivateRequest" />class.
         /// </summary>
         /// <param name="Activated">Change the activated state of the flow definition.  True to activate the flow definition so it can be launched, false to disable the flow. (required) (default to false).</param>
@@ -91,7 +90,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Activated == other.Activated ||
                     this.Activated != null &&

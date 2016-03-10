@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DomainOrganizationRole :  IEquatable<DomainOrganizationRole>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DomainOrganizationRole" /> class.
         /// Initializes a new instance of the <see cref="DomainOrganizationRole" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -33,7 +32,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="RoleNeedsUpdate">RoleNeedsUpdate (default to false).</param>
         /// <param name="_Default">_Default (default to false).</param>
 
-        public DomainOrganizationRole(string Name = null, string Description = null, string DefaultRoleId = null, List<string> Permissions = null, List<string> Licenses = null, List<DomainPermissionPolicy> PermissionPolicies = null, string Code = null, int? UserCount = null, bool? RoleNeedsUpdate = null, bool? _Default = null, )
+        public DomainOrganizationRole(string Name = null, string Description = null, string DefaultRoleId = null, List<string> Permissions = null, List<string> Licenses = null, List<DomainPermissionPolicy> PermissionPolicies = null, string Code = null, int? UserCount = null, bool? RoleNeedsUpdate = null, bool? _Default = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -195,62 +194,62 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.DefaultRoleId == other.DefaultRoleId ||
                     this.DefaultRoleId != null &&
                     this.DefaultRoleId.Equals(other.DefaultRoleId)
-                ) && 
+                ) &&
                 (
                     this.Permissions == other.Permissions ||
                     this.Permissions != null &&
                     this.Permissions.SequenceEqual(other.Permissions)
-                ) && 
+                ) &&
                 (
                     this.Licenses == other.Licenses ||
                     this.Licenses != null &&
                     this.Licenses.SequenceEqual(other.Licenses)
-                ) && 
+                ) &&
                 (
                     this.PermissionPolicies == other.PermissionPolicies ||
                     this.PermissionPolicies != null &&
                     this.PermissionPolicies.SequenceEqual(other.PermissionPolicies)
-                ) && 
+                ) &&
                 (
                     this.Code == other.Code ||
                     this.Code != null &&
                     this.Code.Equals(other.Code)
-                ) && 
+                ) &&
                 (
                     this.UserCount == other.UserCount ||
                     this.UserCount != null &&
                     this.UserCount.Equals(other.UserCount)
-                ) && 
+                ) &&
                 (
                     this.RoleNeedsUpdate == other.RoleNeedsUpdate ||
                     this.RoleNeedsUpdate != null &&
                     this.RoleNeedsUpdate.Equals(other.RoleNeedsUpdate)
-                ) && 
+                ) &&
                 (
                     this._Default == other._Default ||
                     this._Default != null &&
                     this._Default.Equals(other._Default)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

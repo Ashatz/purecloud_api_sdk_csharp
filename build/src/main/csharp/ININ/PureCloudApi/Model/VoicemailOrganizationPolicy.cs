@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class VoicemailOrganizationPolicy :  IEquatable<VoicemailOrganizationPolicy>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="VoicemailOrganizationPolicy" /> class.
         /// Initializes a new instance of the <see cref="VoicemailOrganizationPolicy" />class.
         /// </summary>
         /// <param name="Enabled">Enabled (default to false).</param>
@@ -236,77 +235,77 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Enabled == other.Enabled ||
                     this.Enabled != null &&
                     this.Enabled.Equals(other.Enabled)
-                ) && 
+                ) &&
                 (
                     this.RetentionTimeDays == other.RetentionTimeDays ||
                     this.RetentionTimeDays != null &&
                     this.RetentionTimeDays.Equals(other.RetentionTimeDays)
-                ) && 
+                ) &&
                 (
                     this.AlertTimeoutSeconds == other.AlertTimeoutSeconds ||
                     this.AlertTimeoutSeconds != null &&
                     this.AlertTimeoutSeconds.Equals(other.AlertTimeoutSeconds)
-                ) && 
+                ) &&
                 (
                     this.MinimumRecordingTimeSeconds == other.MinimumRecordingTimeSeconds ||
                     this.MinimumRecordingTimeSeconds != null &&
                     this.MinimumRecordingTimeSeconds.Equals(other.MinimumRecordingTimeSeconds)
-                ) && 
+                ) &&
                 (
                     this.MaximumRecordingTimeSeconds == other.MaximumRecordingTimeSeconds ||
                     this.MaximumRecordingTimeSeconds != null &&
                     this.MaximumRecordingTimeSeconds.Equals(other.MaximumRecordingTimeSeconds)
-                ) && 
+                ) &&
                 (
                     this.UnavailableMessageUri == other.UnavailableMessageUri ||
                     this.UnavailableMessageUri != null &&
                     this.UnavailableMessageUri.Equals(other.UnavailableMessageUri)
-                ) && 
+                ) &&
                 (
                     this.NamePromptMessageUri == other.NamePromptMessageUri ||
                     this.NamePromptMessageUri != null &&
                     this.NamePromptMessageUri.Equals(other.NamePromptMessageUri)
-                ) && 
+                ) &&
                 (
                     this.FullMessageUri == other.FullMessageUri ||
                     this.FullMessageUri != null &&
                     this.FullMessageUri.Equals(other.FullMessageUri)
-                ) && 
+                ) &&
                 (
                     this.CompressSilence == other.CompressSilence ||
                     this.CompressSilence != null &&
                     this.CompressSilence.Equals(other.CompressSilence)
-                ) && 
+                ) &&
                 (
                     this.PinConfiguration == other.PinConfiguration ||
                     this.PinConfiguration != null &&
                     this.PinConfiguration.Equals(other.PinConfiguration)
-                ) && 
+                ) &&
                 (
                     this.QuotaSizeBytes == other.QuotaSizeBytes ||
                     this.QuotaSizeBytes != null &&
                     this.QuotaSizeBytes.Equals(other.QuotaSizeBytes)
-                ) && 
+                ) &&
                 (
                     this.CreatedDate == other.CreatedDate ||
                     this.CreatedDate != null &&
                     this.CreatedDate.Equals(other.CreatedDate)
-                ) && 
+                ) &&
                 (
                     this.ModifiedDate == other.ModifiedDate ||
                     this.ModifiedDate != null &&
                     this.ModifiedDate.Equals(other.ModifiedDate)
-                ) && 
+                ) &&
                 (
                     this.VoicemailExtension == other.VoicemailExtension ||
                     this.VoicemailExtension != null &&
                     this.VoicemailExtension.Equals(other.VoicemailExtension)
-                ) && 
+                ) &&
                 (
                     this.PinRequired == other.PinRequired ||
                     this.PinRequired != null &&

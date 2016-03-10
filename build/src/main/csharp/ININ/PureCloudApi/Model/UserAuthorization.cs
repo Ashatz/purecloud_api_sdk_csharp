@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class UserAuthorization :  IEquatable<UserAuthorization>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="UserAuthorization" /> class.
         /// Initializes a new instance of the <see cref="UserAuthorization" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -28,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Permissions">Permissions.</param>
         /// <param name="PermissionPolicies">PermissionPolicies.</param>
 
-        public UserAuthorization(string Name = null, List<string> Licenses = null, List<string> Roles = null, List<string> Permissions = null, List<ResourcePermissionPolicy> PermissionPolicies = null, )
+        public UserAuthorization(string Name = null, List<string> Licenses = null, List<string> Roles = null, List<string> Permissions = null, List<ResourcePermissionPolicy> PermissionPolicies = null)
         {
             this.Name = Name;
             this.Licenses = Licenses;
@@ -134,37 +133,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Licenses == other.Licenses ||
                     this.Licenses != null &&
                     this.Licenses.SequenceEqual(other.Licenses)
-                ) && 
+                ) &&
                 (
                     this.Roles == other.Roles ||
                     this.Roles != null &&
                     this.Roles.SequenceEqual(other.Roles)
-                ) && 
+                ) &&
                 (
                     this.Permissions == other.Permissions ||
                     this.Permissions != null &&
                     this.Permissions.SequenceEqual(other.Permissions)
-                ) && 
+                ) &&
                 (
                     this.PermissionPolicies == other.PermissionPolicies ||
                     this.PermissionPolicies != null &&
                     this.PermissionPolicies.SequenceEqual(other.PermissionPolicies)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

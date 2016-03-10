@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class CallCommand :  IEquatable<CallCommand>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="CallCommand" /> class.
         /// Initializes a new instance of the <see cref="CallCommand" />class.
         /// </summary>
         /// <param name="CallNumber">CallNumber.</param>
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.CallNumber == other.CallNumber ||
                     this.CallNumber != null &&

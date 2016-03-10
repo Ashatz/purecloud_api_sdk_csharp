@@ -63,7 +63,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "IN")]
             In
         }
-    
+        
         /// <summary>
         /// The operator to apply when filtering.
         /// </summary>
@@ -72,7 +72,6 @@ namespace ININ.PureCloudApi.Model
         public _OperatorEnum? _Operator { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="SocializeEntityFilter" /> class.
         /// Initializes a new instance of the <see cref="SocializeEntityFilter" />class.
         /// </summary>
         /// <param name="FieldName">The fieldName the filter will be applied to..</param>
@@ -149,17 +148,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.FieldName == other.FieldName ||
                     this.FieldName != null &&
                     this.FieldName.Equals(other.FieldName)
-                ) && 
+                ) &&
                 (
                     this._Operator == other._Operator ||
                     this._Operator != null &&
                     this._Operator.Equals(other._Operator)
-                ) && 
+                ) &&
                 (
                     this.FieldValue == other.FieldValue ||
                     this.FieldValue != null &&

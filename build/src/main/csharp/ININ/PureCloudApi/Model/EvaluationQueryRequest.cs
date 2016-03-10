@@ -27,18 +27,12 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "AGENT")]
             Agent
         }
-        public enum  {
-            
-            [EnumMember(Value = "PENDING")]
-            Pending,
-            
-            [EnumMember(Value = "INPROGRESS")]
-            Inprogress,
-            
-            [EnumMember(Value = "FINISHED")]
-            Finished
-        }
-    
+        
+        public static string EvaluationState_Pending = "PENDING";
+        public static string EvaluationState_Inprogress = "INPROGRESS";
+        public static string EvaluationState_Finished = "FINISHED";
+        
+        
         /// <summary>
         /// Gets or Sets UserType
         /// </summary>
@@ -46,7 +40,6 @@ namespace ININ.PureCloudApi.Model
         public UserTypeEnum? UserType { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="EvaluationQueryRequest" /> class.
         /// Initializes a new instance of the <see cref="EvaluationQueryRequest" />class.
         /// </summary>
         /// <param name="ConversationId">ConversationId.</param>
@@ -61,7 +54,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ExpandAnswerTotalScores">ExpandAnswerTotalScores (default to false).</param>
         /// <param name="Maximum">Maximum.</param>
 
-        public EvaluationQueryRequest(string ConversationId = null, UserTypeEnum? UserType = null, string CurrentUserId = null, string AgentId = null, string QueueId = null, string Interval = null, List<EvaluationStateEnum?> EvaluationState = null, bool? IsReleased = null, bool? AgentHasRead = null, bool? ExpandAnswerTotalScores = null, int? Maximum = null)
+        public EvaluationQueryRequest(string ConversationId = null, UserTypeEnum? UserType = null, string CurrentUserId = null, string AgentId = null, string QueueId = null, string Interval = null, List<string> EvaluationState = null, bool? IsReleased = null, bool? AgentHasRead = null, bool? ExpandAnswerTotalScores = null, int? Maximum = null)
         {
             this.ConversationId = ConversationId;
             this.UserType = UserType;
@@ -217,57 +210,57 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ConversationId == other.ConversationId ||
                     this.ConversationId != null &&
                     this.ConversationId.Equals(other.ConversationId)
-                ) && 
+                ) &&
                 (
                     this.UserType == other.UserType ||
                     this.UserType != null &&
                     this.UserType.Equals(other.UserType)
-                ) && 
+                ) &&
                 (
                     this.CurrentUserId == other.CurrentUserId ||
                     this.CurrentUserId != null &&
                     this.CurrentUserId.Equals(other.CurrentUserId)
-                ) && 
+                ) &&
                 (
                     this.AgentId == other.AgentId ||
                     this.AgentId != null &&
                     this.AgentId.Equals(other.AgentId)
-                ) && 
+                ) &&
                 (
                     this.QueueId == other.QueueId ||
                     this.QueueId != null &&
                     this.QueueId.Equals(other.QueueId)
-                ) && 
+                ) &&
                 (
                     this.Interval == other.Interval ||
                     this.Interval != null &&
                     this.Interval.Equals(other.Interval)
-                ) && 
+                ) &&
                 (
                     this.EvaluationState == other.EvaluationState ||
                     this.EvaluationState != null &&
                     this.EvaluationState.SequenceEqual(other.EvaluationState)
-                ) && 
+                ) &&
                 (
                     this.IsReleased == other.IsReleased ||
                     this.IsReleased != null &&
                     this.IsReleased.Equals(other.IsReleased)
-                ) && 
+                ) &&
                 (
                     this.AgentHasRead == other.AgentHasRead ||
                     this.AgentHasRead != null &&
                     this.AgentHasRead.Equals(other.AgentHasRead)
-                ) && 
+                ) &&
                 (
                     this.ExpandAnswerTotalScores == other.ExpandAnswerTotalScores ||
                     this.ExpandAnswerTotalScores != null &&
                     this.ExpandAnswerTotalScores.Equals(other.ExpandAnswerTotalScores)
-                ) && 
+                ) &&
                 (
                     this.Maximum == other.Maximum ||
                     this.Maximum != null &&

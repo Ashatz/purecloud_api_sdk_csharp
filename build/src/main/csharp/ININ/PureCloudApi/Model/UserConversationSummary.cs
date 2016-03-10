@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class UserConversationSummary :  IEquatable<UserConversationSummary>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="UserConversationSummary" /> class.
         /// Initializes a new instance of the <see cref="UserConversationSummary" />class.
         /// </summary>
         /// <param name="UserId">UserId.</param>
@@ -136,37 +135,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.UserId == other.UserId ||
                     this.UserId != null &&
                     this.UserId.Equals(other.UserId)
-                ) && 
+                ) &&
                 (
                     this.Call == other.Call ||
                     this.Call != null &&
                     this.Call.Equals(other.Call)
-                ) && 
+                ) &&
                 (
                     this.Callback == other.Callback ||
                     this.Callback != null &&
                     this.Callback.Equals(other.Callback)
-                ) && 
+                ) &&
                 (
                     this.Email == other.Email ||
                     this.Email != null &&
                     this.Email.Equals(other.Email)
-                ) && 
+                ) &&
                 (
                     this.Chat == other.Chat ||
                     this.Chat != null &&
                     this.Chat.Equals(other.Chat)
-                ) && 
+                ) &&
                 (
                     this.SocialExpression == other.SocialExpression ||
                     this.SocialExpression != null &&
                     this.SocialExpression.Equals(other.SocialExpression)
-                ) && 
+                ) &&
                 (
                     this.Video == other.Video ||
                     this.Video != null &&

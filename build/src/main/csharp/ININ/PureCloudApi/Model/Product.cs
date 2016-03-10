@@ -33,7 +33,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "PARTIAL")]
             Partial
         }
-    
+        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -41,14 +41,13 @@ namespace ININ.PureCloudApi.Model
         public StatusEnum? Status { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Product" /> class.
         /// Initializes a new instance of the <see cref="Product" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Status">Status.</param>
         /// <param name="Comments">Comments.</param>
 
-        public Product(string Name = null, StatusEnum? Status = null, List<string> Comments = null, )
+        public Product(string Name = null, StatusEnum? Status = null, List<string> Comments = null)
         {
             this.Name = Name;
             this.Status = Status;
@@ -132,27 +131,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-                ) && 
+                ) &&
                 (
                     this.Comments == other.Comments ||
                     this.Comments != null &&
                     this.Comments.SequenceEqual(other.Comments)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

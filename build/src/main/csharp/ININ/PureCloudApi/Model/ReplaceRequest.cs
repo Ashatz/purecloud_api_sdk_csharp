@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ReplaceRequest :  IEquatable<ReplaceRequest>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ReplaceRequest" /> class.
         /// Initializes a new instance of the <see cref="ReplaceRequest" />class.
         /// </summary>
         /// <param name="ChangeNumber">ChangeNumber.</param>
@@ -100,17 +99,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ChangeNumber == other.ChangeNumber ||
                     this.ChangeNumber != null &&
                     this.ChangeNumber.Equals(other.ChangeNumber)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.AuthToken == other.AuthToken ||
                     this.AuthToken != null &&

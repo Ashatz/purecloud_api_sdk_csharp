@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class BatchReply :  IEquatable<BatchReply>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="BatchReply" /> class.
         /// Initializes a new instance of the <see cref="BatchReply" />class.
         /// </summary>
         /// <param name="Items">Items.</param>
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Items == other.Items ||
                     this.Items != null &&

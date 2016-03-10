@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ThirdPartySubscription :  IEquatable<ThirdPartySubscription>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ThirdPartySubscription" /> class.
         /// Initializes a new instance of the <see cref="ThirdPartySubscription" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -27,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ContractEffectiveDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Version">Version.</param>
 
-        public ThirdPartySubscription(string Name = null, string Notes = null, DateTime? ContractEffectiveDate = null, string Version = null, )
+        public ThirdPartySubscription(string Name = null, string Notes = null, DateTime? ContractEffectiveDate = null, string Version = null)
         {
             this.Name = Name;
             this.Notes = Notes;
@@ -126,32 +125,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Notes == other.Notes ||
                     this.Notes != null &&
                     this.Notes.Equals(other.Notes)
-                ) && 
+                ) &&
                 (
                     this.ContractEffectiveDate == other.ContractEffectiveDate ||
                     this.ContractEffectiveDate != null &&
                     this.ContractEffectiveDate.Equals(other.ContractEffectiveDate)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

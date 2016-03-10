@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FlowBodyFormat :  IEquatable<FlowBodyFormat>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowBodyFormat" /> class.
         /// Initializes a new instance of the <see cref="FlowBodyFormat" />class.
         /// </summary>
         /// <param name="SchemaUri">SchemaUri.</param>
@@ -91,12 +90,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.SchemaUri == other.SchemaUri ||
                     this.SchemaUri != null &&
                     this.SchemaUri.Equals(other.SchemaUri)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&

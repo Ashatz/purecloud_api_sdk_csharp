@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class CreateTemplateFromScriptRequestData :  IEquatable<CreateTemplateFromScriptRequestData>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="CreateTemplateFromScriptRequestData" /> class.
         /// Initializes a new instance of the <see cref="CreateTemplateFromScriptRequestData" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -118,27 +117,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Tags == other.Tags ||
                     this.Tags != null &&
                     this.Tags.SequenceEqual(other.Tags)
-                ) && 
+                ) &&
                 (
                     this.ScriptId == other.ScriptId ||
                     this.ScriptId != null &&
                     this.ScriptId.Equals(other.ScriptId)
-                ) && 
+                ) &&
                 (
                     this.UserId == other.UserId ||
                     this.UserId != null &&

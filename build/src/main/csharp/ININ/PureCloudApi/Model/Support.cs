@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Support :  IEquatable<Support>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Support" /> class.
         /// Initializes a new instance of the <see cref="Support" />class.
         /// </summary>
         /// <param name="Phone">Phone.</param>
@@ -100,17 +99,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Phone == other.Phone ||
                     this.Phone != null &&
                     this.Phone.Equals(other.Phone)
-                ) && 
+                ) &&
                 (
                     this.Email == other.Email ||
                     this.Email != null &&
                     this.Email.Equals(other.Email)
-                ) && 
+                ) &&
                 (
                     this.Website == other.Website ||
                     this.Website != null &&

@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class OrgMediaUtilization :  IEquatable<OrgMediaUtilization>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrgMediaUtilization" /> class.
         /// Initializes a new instance of the <see cref="OrgMediaUtilization" />class.
         /// </summary>
         /// <param name="MaximumCapacity">Defines the maximum number of conversations of this type that an agent can handle at one time..</param>
@@ -93,12 +92,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.MaximumCapacity == other.MaximumCapacity ||
                     this.MaximumCapacity != null &&
                     this.MaximumCapacity.Equals(other.MaximumCapacity)
-                ) && 
+                ) &&
                 (
                     this.InterruptableMediaTypes == other.InterruptableMediaTypes ||
                     this.InterruptableMediaTypes != null &&

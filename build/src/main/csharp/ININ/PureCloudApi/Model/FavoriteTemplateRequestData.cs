@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FavoriteTemplateRequestData :  IEquatable<FavoriteTemplateRequestData>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FavoriteTemplateRequestData" /> class.
         /// Initializes a new instance of the <see cref="FavoriteTemplateRequestData" />class.
         /// </summary>
         /// <param name="TemplateId">TemplateId.</param>
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.TemplateId == other.TemplateId ||
                     this.TemplateId != null &&

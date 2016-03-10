@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class WorkspaceSummary :  IEquatable<WorkspaceSummary>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="WorkspaceSummary" /> class.
         /// Initializes a new instance of the <see cref="WorkspaceSummary" />class.
         /// </summary>
         /// <param name="TotalDocumentCount">TotalDocumentCount.</param>
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.TotalDocumentCount == other.TotalDocumentCount ||
                     this.TotalDocumentCount != null &&

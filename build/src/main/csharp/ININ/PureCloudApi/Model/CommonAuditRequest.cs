@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class CommonAuditRequest :  IEquatable<CommonAuditRequest>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="CommonAuditRequest" /> class.
         /// Initializes a new instance of the <see cref="CommonAuditRequest" />class.
         /// </summary>
         /// <param name="PageNumber">PageNumber.</param>
@@ -136,37 +135,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.PageNumber == other.PageNumber ||
                     this.PageNumber != null &&
                     this.PageNumber.Equals(other.PageNumber)
-                ) && 
+                ) &&
                 (
                     this.PageSize == other.PageSize ||
                     this.PageSize != null &&
                     this.PageSize.Equals(other.PageSize)
-                ) && 
+                ) &&
                 (
                     this.SortBy == other.SortBy ||
                     this.SortBy != null &&
                     this.SortBy.SequenceEqual(other.SortBy)
-                ) && 
+                ) &&
                 (
                     this.QueryPhrase == other.QueryPhrase ||
                     this.QueryPhrase != null &&
                     this.QueryPhrase.Equals(other.QueryPhrase)
-                ) && 
+                ) &&
                 (
                     this.QueryFields == other.QueryFields ||
                     this.QueryFields != null &&
                     this.QueryFields.SequenceEqual(other.QueryFields)
-                ) && 
+                ) &&
                 (
                     this.Facets == other.Facets ||
                     this.Facets != null &&
                     this.Facets.SequenceEqual(other.Facets)
-                ) && 
+                ) &&
                 (
                     this.Filters == other.Filters ||
                     this.Filters != null &&

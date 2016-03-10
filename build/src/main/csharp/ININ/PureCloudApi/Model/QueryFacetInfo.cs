@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class QueryFacetInfo :  IEquatable<QueryFacetInfo>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="QueryFacetInfo" /> class.
         /// Initializes a new instance of the <see cref="QueryFacetInfo" />class.
         /// </summary>
         /// <param name="Attributes">Attributes.</param>
@@ -91,12 +90,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Attributes == other.Attributes ||
                     this.Attributes != null &&
                     this.Attributes.SequenceEqual(other.Attributes)
-                ) && 
+                ) &&
                 (
                     this.Facets == other.Facets ||
                     this.Facets != null &&

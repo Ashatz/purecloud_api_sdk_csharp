@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class TrunkBaseAssignment :  IEquatable<TrunkBaseAssignment>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrunkBaseAssignment" /> class.
         /// Initializes a new instance of the <see cref="TrunkBaseAssignment" />class.
         /// </summary>
         /// <param name="Family">The address family to use with the trunk base settings. 2=IPv4, 23=IPv6.</param>
@@ -93,12 +92,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Family == other.Family ||
                     this.Family != null &&
                     this.Family.Equals(other.Family)
-                ) && 
+                ) &&
                 (
                     this.TrunkBase == other.TrunkBase ||
                     this.TrunkBase != null &&

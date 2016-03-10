@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Library :  IEquatable<Library>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Library" /> class.
         /// Initializes a new instance of the <see cref="Library" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -27,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CreatedBy">CreatedBy.</param>
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
 
-        public Library(string Name = null, int? Version = null, User CreatedBy = null, DateTime? DateCreated = null, )
+        public Library(string Name = null, int? Version = null, User CreatedBy = null, DateTime? DateCreated = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -126,32 +125,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

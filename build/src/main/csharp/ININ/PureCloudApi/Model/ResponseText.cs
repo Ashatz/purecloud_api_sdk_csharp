@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ResponseText :  IEquatable<ResponseText>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ResponseText" /> class.
         /// Initializes a new instance of the <see cref="ResponseText" />class.
         /// </summary>
         /// <param name="Content">Response text content. (required).</param>
@@ -101,12 +100,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Content == other.Content ||
                     this.Content != null &&
                     this.Content.Equals(other.Content)
-                ) && 
+                ) &&
                 (
                     this.ContentType == other.ContentType ||
                     this.ContentType != null &&

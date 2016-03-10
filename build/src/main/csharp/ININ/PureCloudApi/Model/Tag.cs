@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Tag :  IEquatable<Tag>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Tag" /> class.
         /// Initializes a new instance of the <see cref="Tag" />class.
         /// </summary>
         /// <param name="Label">Label.</param>
@@ -99,12 +98,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Label == other.Label ||
                     this.Label != null &&
                     this.Label.Equals(other.Label)
-                ) && 
+                ) &&
                 (
                     this.InteractionFlag == other.InteractionFlag ||
                     this.InteractionFlag != null &&

@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FlowPublish :  IEquatable<FlowPublish>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowPublish" /> class.
         /// Initializes a new instance of the <see cref="FlowPublish" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -126,27 +125,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.FlowConfigVersionSource == other.FlowConfigVersionSource ||
                     this.FlowConfigVersionSource != null &&
                     this.FlowConfigVersionSource.Equals(other.FlowConfigVersionSource)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&

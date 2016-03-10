@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Filter :  IEquatable<Filter>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Filter" /> class.
         /// Initializes a new instance of the <see cref="Filter" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -109,22 +108,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this._Operator == other._Operator ||
                     this._Operator != null &&
                     this._Operator.Equals(other._Operator)
-                ) && 
+                ) &&
                 (
                     this.Values == other.Values ||
                     this.Values != null &&

@@ -17,16 +17,15 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class LineBase :  IEquatable<LineBase>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="LineBase" /> class.
         /// Initializes a new instance of the <see cref="LineBase" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="LineMetaBase">LineMetaBase.</param>
         /// <param name="Properties">Properties.</param>
 
-        public LineBase(string Name = null, UriReference LineMetaBase = null, Dictionary<string, Object> Properties = null, )
+        public LineBase(string Name = null, UriReference LineMetaBase = null, Dictionary<string, Object> Properties = null)
         {
             this.Name = Name;
             this.LineMetaBase = LineMetaBase;
@@ -116,27 +115,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.LineMetaBase == other.LineMetaBase ||
                     this.LineMetaBase != null &&
                     this.LineMetaBase.Equals(other.LineMetaBase)
-                ) && 
+                ) &&
                 (
                     this.Properties == other.Properties ||
                     this.Properties != null &&
                     this.Properties.SequenceEqual(other.Properties)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

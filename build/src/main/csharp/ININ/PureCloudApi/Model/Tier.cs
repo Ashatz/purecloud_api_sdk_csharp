@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Tier :  IEquatable<Tier>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Tier" /> class.
         /// Initializes a new instance of the <see cref="Tier" />class.
         /// </summary>
         /// <param name="Currency">Currency.</param>
@@ -91,12 +90,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Currency == other.Currency ||
                     this.Currency != null &&
                     this.Currency.Equals(other.Currency)
-                ) && 
+                ) &&
                 (
                     this.Price == other.Price ||
                     this.Price != null &&

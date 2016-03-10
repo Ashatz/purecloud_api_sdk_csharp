@@ -17,15 +17,14 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class GeolocationSettings :  IEquatable<GeolocationSettings>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="GeolocationSettings" /> class.
         /// Initializes a new instance of the <see cref="GeolocationSettings" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Enabled">Enabled (default to false).</param>
 
-        public GeolocationSettings(string Name = null, bool? Enabled = null, )
+        public GeolocationSettings(string Name = null, bool? Enabled = null)
         {
             this.Name = Name;
             // use default value if no "Enabled" provided
@@ -115,22 +114,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Enabled == other.Enabled ||
                     this.Enabled != null &&
                     this.Enabled.Equals(other.Enabled)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

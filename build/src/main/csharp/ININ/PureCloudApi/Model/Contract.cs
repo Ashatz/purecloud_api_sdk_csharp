@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Contract :  IEquatable<Contract>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Contract" /> class.
         /// Initializes a new instance of the <see cref="Contract" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -27,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SignerUrl">SignerUrl.</param>
         /// <param name="Job">Job.</param>
 
-        public Contract(string Name = null, Quote Quote = null, string SignerUrl = null, ContractJob Job = null, )
+        public Contract(string Name = null, Quote Quote = null, string SignerUrl = null, ContractJob Job = null)
         {
             this.Name = Name;
             this.Quote = Quote;
@@ -125,32 +124,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Quote == other.Quote ||
                     this.Quote != null &&
                     this.Quote.Equals(other.Quote)
-                ) && 
+                ) &&
                 (
                     this.SignerUrl == other.SignerUrl ||
                     this.SignerUrl != null &&
                     this.SignerUrl.Equals(other.SignerUrl)
-                ) && 
+                ) &&
                 (
                     this.Job == other.Job ||
                     this.Job != null &&
                     this.Job.Equals(other.Job)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

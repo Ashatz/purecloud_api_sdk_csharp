@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Destination :  IEquatable<Destination>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Destination" /> class.
         /// Initializes a new instance of the <see cref="Destination" />class.
         /// </summary>
         /// <param name="AccountCodeDigits">AccountCodeDigits.</param>
@@ -136,32 +135,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.AccountCodeDigits == other.AccountCodeDigits ||
                     this.AccountCodeDigits != null &&
                     this.AccountCodeDigits.Equals(other.AccountCodeDigits)
-                ) && 
+                ) &&
                 (
                     this.PostConnectDigits == other.PostConnectDigits ||
                     this.PostConnectDigits != null &&
                     this.PostConnectDigits.Equals(other.PostConnectDigits)
-                ) && 
+                ) &&
                 (
                     this.Address == other.Address ||
                     this.Address != null &&
                     this.Address.Equals(other.Address)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.UserId == other.UserId ||
                     this.UserId != null &&
                     this.UserId.Equals(other.UserId)
-                ) && 
+                ) &&
                 (
                     this.QueueId == other.QueueId ||
                     this.QueueId != null &&

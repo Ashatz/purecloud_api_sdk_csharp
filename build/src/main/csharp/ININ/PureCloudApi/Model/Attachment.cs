@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Attachment :  IEquatable<Attachment>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Attachment" /> class.
         /// Initializes a new instance of the <see cref="Attachment" />class.
         /// </summary>
         /// <param name="AttachmentId">AttachmentId.</param>
@@ -118,27 +117,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.AttachmentId == other.AttachmentId ||
                     this.AttachmentId != null &&
                     this.AttachmentId.Equals(other.AttachmentId)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.ContentUri == other.ContentUri ||
                     this.ContentUri != null &&
                     this.ContentUri.Equals(other.ContentUri)
-                ) && 
+                ) &&
                 (
                     this.ContentType == other.ContentType ||
                     this.ContentType != null &&
                     this.ContentType.Equals(other.ContentType)
-                ) && 
+                ) &&
                 (
                     this.ContentLength == other.ContentLength ||
                     this.ContentLength != null &&

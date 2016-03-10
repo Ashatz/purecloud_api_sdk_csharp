@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class EvaluationForm :  IEquatable<EvaluationForm>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="EvaluationForm" /> class.
         /// Initializes a new instance of the <see cref="EvaluationForm" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -30,7 +29,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="QuestionGroups">QuestionGroups.</param>
         /// <param name="PublishedVersions">PublishedVersions.</param>
 
-        public EvaluationForm(string Name = null, string Type = null, DateTime? ModifiedDate = null, bool? Published = null, string ContextId = null, List<QuestionGroup> QuestionGroups = null, DomainEntityListingEvaluationForm PublishedVersions = null, )
+        public EvaluationForm(string Name = null, string Type = null, DateTime? ModifiedDate = null, bool? Published = null, string ContextId = null, List<QuestionGroup> QuestionGroups = null, DomainEntityListingEvaluationForm PublishedVersions = null)
         {
             this.Name = Name;
             this.Type = Type;
@@ -161,47 +160,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.ModifiedDate == other.ModifiedDate ||
                     this.ModifiedDate != null &&
                     this.ModifiedDate.Equals(other.ModifiedDate)
-                ) && 
+                ) &&
                 (
                     this.Published == other.Published ||
                     this.Published != null &&
                     this.Published.Equals(other.Published)
-                ) && 
+                ) &&
                 (
                     this.ContextId == other.ContextId ||
                     this.ContextId != null &&
                     this.ContextId.Equals(other.ContextId)
-                ) && 
+                ) &&
                 (
                     this.QuestionGroups == other.QuestionGroups ||
                     this.QuestionGroups != null &&
                     this.QuestionGroups.SequenceEqual(other.QuestionGroups)
-                ) && 
+                ) &&
                 (
                     this.PublishedVersions == other.PublishedVersions ||
                     this.PublishedVersions != null &&
                     this.PublishedVersions.Equals(other.PublishedVersions)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

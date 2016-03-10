@@ -40,18 +40,12 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "REMOTE")]
             Remote
         }
-        public enum  {
-            
-            [EnumMember(Value = "SIP")]
-            Sip,
-            
-            [EnumMember(Value = "PROVISION")]
-            Provision,
-            
-            [EnumMember(Value = "PROVISION_PHONE")]
-            ProvisionPhone
-        }
-    
+        
+        public static string Services_Sip = "SIP";
+        public static string Services_Provision = "PROVISION";
+        public static string Services_ProvisionPhone = "PROVISION_PHONE";
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -66,7 +60,6 @@ namespace ININ.PureCloudApi.Model
         public TypeEnum? Type { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="DomainCertificateAuthority" /> class.
         /// Initializes a new instance of the <see cref="DomainCertificateAuthority" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -84,7 +77,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Services">The service(s) that the authority can be used to authenticate. (required).</param>
         /// <param name="CertificateDetails">The details of the parsed certificate(s)..</param>
 
-        public DomainCertificateAuthority(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string Certificate = null, TypeEnum? Type = null, List<ServicesEnum?> Services = null, List<CertificateDetails> CertificateDetails = null, )
+        public DomainCertificateAuthority(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string Certificate = null, TypeEnum? Type = null, List<string> Services = null, List<CertificateDetails> CertificateDetails = null)
         {
             // to ensure "Certificate" is required (not null)
             if (Certificate == null)
@@ -279,82 +272,82 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.ModifiedBy == other.ModifiedBy ||
                     this.ModifiedBy != null &&
                     this.ModifiedBy.Equals(other.ModifiedBy)
-                ) && 
+                ) &&
                 (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
-                ) && 
+                ) &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.ModifiedByApp == other.ModifiedByApp ||
                     this.ModifiedByApp != null &&
                     this.ModifiedByApp.Equals(other.ModifiedByApp)
-                ) && 
+                ) &&
                 (
                     this.CreatedByApp == other.CreatedByApp ||
                     this.CreatedByApp != null &&
                     this.CreatedByApp.Equals(other.CreatedByApp)
-                ) && 
+                ) &&
                 (
                     this.Certificate == other.Certificate ||
                     this.Certificate != null &&
                     this.Certificate.Equals(other.Certificate)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.Services == other.Services ||
                     this.Services != null &&
                     this.Services.SequenceEqual(other.Services)
-                ) && 
+                ) &&
                 (
                     this.CertificateDetails == other.CertificateDetails ||
                     this.CertificateDetails != null &&
                     this.CertificateDetails.SequenceEqual(other.CertificateDetails)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

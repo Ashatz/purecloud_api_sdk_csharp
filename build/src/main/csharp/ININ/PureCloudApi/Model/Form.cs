@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Form :  IEquatable<Form>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Form" /> class.
         /// Initializes a new instance of the <see cref="Form" />class.
         /// </summary>
         /// <param name="Controls">Controls.</param>
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Controls == other.Controls ||
                     this.Controls != null &&

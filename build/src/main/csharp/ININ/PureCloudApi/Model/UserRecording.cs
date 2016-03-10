@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class UserRecording :  IEquatable<UserRecording>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="UserRecording" /> class.
         /// Initializes a new instance of the <see cref="UserRecording" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -34,7 +33,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Thumbnails">Thumbnails.</param>
         /// <param name="Read">Read (default to false).</param>
 
-        public UserRecording(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ContentUri = null, UriReference Workspace = null, UriReference CreatedBy = null, Conversation Conversation = null, long? ContentLength = null, long? DurationMilliseconds = null, List<DocumentThumbnail> Thumbnails = null, bool? Read = null, )
+        public UserRecording(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ContentUri = null, UriReference Workspace = null, UriReference CreatedBy = null, Conversation Conversation = null, long? ContentLength = null, long? DurationMilliseconds = null, List<DocumentThumbnail> Thumbnails = null, bool? Read = null)
         {
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -198,67 +197,67 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.ContentUri == other.ContentUri ||
                     this.ContentUri != null &&
                     this.ContentUri.Equals(other.ContentUri)
-                ) && 
+                ) &&
                 (
                     this.Workspace == other.Workspace ||
                     this.Workspace != null &&
                     this.Workspace.Equals(other.Workspace)
-                ) && 
+                ) &&
                 (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
-                ) && 
+                ) &&
                 (
                     this.Conversation == other.Conversation ||
                     this.Conversation != null &&
                     this.Conversation.Equals(other.Conversation)
-                ) && 
+                ) &&
                 (
                     this.ContentLength == other.ContentLength ||
                     this.ContentLength != null &&
                     this.ContentLength.Equals(other.ContentLength)
-                ) && 
+                ) &&
                 (
                     this.DurationMilliseconds == other.DurationMilliseconds ||
                     this.DurationMilliseconds != null &&
                     this.DurationMilliseconds.Equals(other.DurationMilliseconds)
-                ) && 
+                ) &&
                 (
                     this.Thumbnails == other.Thumbnails ||
                     this.Thumbnails != null &&
                     this.Thumbnails.SequenceEqual(other.Thumbnails)
-                ) && 
+                ) &&
                 (
                     this.Read == other.Read ||
                     this.Read != null &&
                     this.Read.Equals(other.Read)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

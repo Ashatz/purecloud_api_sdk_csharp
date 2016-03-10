@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class BackendFlowAvailableActions :  IEquatable<BackendFlowAvailableActions>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="BackendFlowAvailableActions" /> class.
         /// Initializes a new instance of the <see cref="BackendFlowAvailableActions" />class.
         /// </summary>
         /// <param name="CanTerminate">CanTerminate (default to false).</param>
@@ -90,7 +89,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.CanTerminate == other.CanTerminate ||
                     this.CanTerminate != null &&

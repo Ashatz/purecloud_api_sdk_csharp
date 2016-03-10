@@ -17,16 +17,15 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DomainPermissionCollection :  IEquatable<DomainPermissionCollection>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DomainPermissionCollection" /> class.
         /// Initializes a new instance of the <see cref="DomainPermissionCollection" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Domain">Domain.</param>
         /// <param name="PermissionMap">PermissionMap.</param>
 
-        public DomainPermissionCollection(string Name = null, string Domain = null, Dictionary<string, List<DomainPermission>> PermissionMap = null, )
+        public DomainPermissionCollection(string Name = null, string Domain = null, Dictionary<string, List<DomainPermission>> PermissionMap = null)
         {
             this.Name = Name;
             this.Domain = Domain;
@@ -116,27 +115,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Domain == other.Domain ||
                     this.Domain != null &&
                     this.Domain.Equals(other.Domain)
-                ) && 
+                ) &&
                 (
                     this.PermissionMap == other.PermissionMap ||
                     this.PermissionMap != null &&
                     this.PermissionMap.SequenceEqual(other.PermissionMap)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

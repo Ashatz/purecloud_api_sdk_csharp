@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class CampaignScheduleIntervals :  IEquatable<CampaignScheduleIntervals>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="CampaignScheduleIntervals" /> class.
         /// Initializes a new instance of the <see cref="CampaignScheduleIntervals" />class.
         /// </summary>
         /// <param name="Start">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
@@ -93,12 +92,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Start == other.Start ||
                     this.Start != null &&
                     this.Start.Equals(other.Start)
-                ) && 
+                ) &&
                 (
                     this.End == other.End ||
                     this.End != null &&

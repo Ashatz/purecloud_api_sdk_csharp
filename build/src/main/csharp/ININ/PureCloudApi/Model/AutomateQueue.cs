@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class AutomateQueue :  IEquatable<AutomateQueue>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="AutomateQueue" /> class.
         /// Initializes a new instance of the <see cref="AutomateQueue" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -28,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="LastUpdateTime">The last time that the queue was updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="LastUpdateUser">The user who last performed an update..</param>
 
-        public AutomateQueue(string Name = null, string Description = null, List<User> Members = null, DateTime? LastUpdateTime = null, User LastUpdateUser = null, )
+        public AutomateQueue(string Name = null, string Description = null, List<User> Members = null, DateTime? LastUpdateTime = null, User LastUpdateUser = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -138,37 +137,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Members == other.Members ||
                     this.Members != null &&
                     this.Members.SequenceEqual(other.Members)
-                ) && 
+                ) &&
                 (
                     this.LastUpdateTime == other.LastUpdateTime ||
                     this.LastUpdateTime != null &&
                     this.LastUpdateTime.Equals(other.LastUpdateTime)
-                ) && 
+                ) &&
                 (
                     this.LastUpdateUser == other.LastUpdateUser ||
                     this.LastUpdateUser != null &&
                     this.LastUpdateUser.Equals(other.LastUpdateUser)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

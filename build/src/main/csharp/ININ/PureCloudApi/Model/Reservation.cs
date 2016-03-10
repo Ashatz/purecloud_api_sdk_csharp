@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "US_DOMESTIC")]
             UsDomestic
         }
-    
+        
         /// <summary>
         /// The type of phone number (eg us-domestic, toll-free, etc).
         /// </summary>
@@ -39,7 +39,6 @@ namespace ININ.PureCloudApi.Model
         public PhoneNumberTypeEnum? PhoneNumberType { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Reservation" /> class.
         /// Initializes a new instance of the <see cref="Reservation" />class.
         /// </summary>
         /// <param name="Id">Id.</param>
@@ -124,22 +123,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.ReservedTn == other.ReservedTn ||
                     this.ReservedTn != null &&
                     this.ReservedTn.Equals(other.ReservedTn)
-                ) && 
+                ) &&
                 (
                     this.ReservationExpires == other.ReservationExpires ||
                     this.ReservationExpires != null &&
                     this.ReservationExpires.Equals(other.ReservationExpires)
-                ) && 
+                ) &&
                 (
                     this.PhoneNumberType == other.PhoneNumberType ||
                     this.PhoneNumberType != null &&

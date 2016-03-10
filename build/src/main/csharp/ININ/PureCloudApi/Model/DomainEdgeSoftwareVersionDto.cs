@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DomainEdgeSoftwareVersionDto :  IEquatable<DomainEdgeSoftwareVersionDto>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DomainEdgeSoftwareVersionDto" /> class.
         /// Initializes a new instance of the <see cref="DomainEdgeSoftwareVersionDto" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -29,7 +28,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Current">Current (default to false).</param>
         /// <param name="LatestRelease">LatestRelease (default to false).</param>
 
-        public DomainEdgeSoftwareVersionDto(string Name = null, string EdgeVersion = null, DateTime? PublishDate = null, string EdgeUri = null, bool? Current = null, bool? LatestRelease = null, )
+        public DomainEdgeSoftwareVersionDto(string Name = null, string EdgeVersion = null, DateTime? PublishDate = null, string EdgeUri = null, bool? Current = null, bool? LatestRelease = null)
         {
             this.Name = Name;
             this.EdgeVersion = EdgeVersion;
@@ -160,42 +159,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.EdgeVersion == other.EdgeVersion ||
                     this.EdgeVersion != null &&
                     this.EdgeVersion.Equals(other.EdgeVersion)
-                ) && 
+                ) &&
                 (
                     this.PublishDate == other.PublishDate ||
                     this.PublishDate != null &&
                     this.PublishDate.Equals(other.PublishDate)
-                ) && 
+                ) &&
                 (
                     this.EdgeUri == other.EdgeUri ||
                     this.EdgeUri != null &&
                     this.EdgeUri.Equals(other.EdgeUri)
-                ) && 
+                ) &&
                 (
                     this.Current == other.Current ||
                     this.Current != null &&
                     this.Current.Equals(other.Current)
-                ) && 
+                ) &&
                 (
                     this.LatestRelease == other.LatestRelease ||
                     this.LatestRelease != null &&
                     this.LatestRelease.Equals(other.LatestRelease)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

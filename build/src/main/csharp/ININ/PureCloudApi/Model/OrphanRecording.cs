@@ -65,7 +65,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "UPLOADING")]
             Uploading
         }
-    
+        
         /// <summary>
         /// Gets or Sets ProviderType
         /// </summary>
@@ -85,7 +85,6 @@ namespace ININ.PureCloudApi.Model
         public FileStateEnum? FileState { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrphanRecording" /> class.
         /// Initializes a new instance of the <see cref="OrphanRecording" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -98,7 +97,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ProviderEndpoint">ProviderEndpoint.</param>
         /// <param name="Recording">Recording.</param>
 
-        public OrphanRecording(string Name = null, DateTime? CreatedTime = null, DateTime? RecoveredTime = null, ProviderTypeEnum? ProviderType = null, long? MediaSizeBytes = null, MediaTypeEnum? MediaType = null, FileStateEnum? FileState = null, Endpoint ProviderEndpoint = null, Recording Recording = null, )
+        public OrphanRecording(string Name = null, DateTime? CreatedTime = null, DateTime? RecoveredTime = null, ProviderTypeEnum? ProviderType = null, long? MediaSizeBytes = null, MediaTypeEnum? MediaType = null, FileStateEnum? FileState = null, Endpoint ProviderEndpoint = null, Recording Recording = null)
         {
             this.Name = Name;
             this.CreatedTime = CreatedTime;
@@ -220,57 +219,57 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.CreatedTime == other.CreatedTime ||
                     this.CreatedTime != null &&
                     this.CreatedTime.Equals(other.CreatedTime)
-                ) && 
+                ) &&
                 (
                     this.RecoveredTime == other.RecoveredTime ||
                     this.RecoveredTime != null &&
                     this.RecoveredTime.Equals(other.RecoveredTime)
-                ) && 
+                ) &&
                 (
                     this.ProviderType == other.ProviderType ||
                     this.ProviderType != null &&
                     this.ProviderType.Equals(other.ProviderType)
-                ) && 
+                ) &&
                 (
                     this.MediaSizeBytes == other.MediaSizeBytes ||
                     this.MediaSizeBytes != null &&
                     this.MediaSizeBytes.Equals(other.MediaSizeBytes)
-                ) && 
+                ) &&
                 (
                     this.MediaType == other.MediaType ||
                     this.MediaType != null &&
                     this.MediaType.Equals(other.MediaType)
-                ) && 
+                ) &&
                 (
                     this.FileState == other.FileState ||
                     this.FileState != null &&
                     this.FileState.Equals(other.FileState)
-                ) && 
+                ) &&
                 (
                     this.ProviderEndpoint == other.ProviderEndpoint ||
                     this.ProviderEndpoint != null &&
                     this.ProviderEndpoint.Equals(other.ProviderEndpoint)
-                ) && 
+                ) &&
                 (
                     this.Recording == other.Recording ||
                     this.Recording != null &&
                     this.Recording.Equals(other.Recording)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

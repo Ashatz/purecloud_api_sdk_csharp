@@ -49,7 +49,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "RANGE")]
             Range
         }
-    
+        
         /// <summary>
         /// data type of the field being returned (if this is a mixed field this will be unknown)
         /// </summary>
@@ -65,7 +65,6 @@ namespace ININ.PureCloudApi.Model
         public RequestTypeEnum? RequestType { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="FacetResult" /> class.
         /// Initializes a new instance of the <see cref="FacetResult" />class.
         /// </summary>
         /// <param name="RequestName">This was the name passed in as part of the facetRequest.</param>
@@ -154,27 +153,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.RequestName == other.RequestName ||
                     this.RequestName != null &&
                     this.RequestName.Equals(other.RequestName)
-                ) && 
+                ) &&
                 (
                     this.RequestFieldName == other.RequestFieldName ||
                     this.RequestFieldName != null &&
                     this.RequestFieldName.Equals(other.RequestFieldName)
-                ) && 
+                ) &&
                 (
                     this.FieldType == other.FieldType ||
                     this.FieldType != null &&
                     this.FieldType.Equals(other.FieldType)
-                ) && 
+                ) &&
                 (
                     this.RequestType == other.RequestType ||
                     this.RequestType != null &&
                     this.RequestType.Equals(other.RequestType)
-                ) && 
+                ) &&
                 (
                     this.Results == other.Results ||
                     this.Results != null &&

@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "TRANSCODED")]
             Transcoded
         }
-    
+        
         /// <summary>
         /// Gets or Sets UploadStatus
         /// </summary>
@@ -38,7 +38,6 @@ namespace ININ.PureCloudApi.Model
         public UploadStatusEnum? UploadStatus { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="SystemPromptAsset" /> class.
         /// Initializes a new instance of the <see cref="SystemPromptAsset" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -51,7 +50,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="UploadStatus">UploadStatus.</param>
         /// <param name="HasDefault">HasDefault (default to false).</param>
 
-        public SystemPromptAsset(string Name = null, string PromptId = null, string Language = null, double? DurationSeconds = null, string MediaUri = null, string TtsString = null, string UploadUri = null, UploadStatusEnum? UploadStatus = null, bool? HasDefault = null, )
+        public SystemPromptAsset(string Name = null, string PromptId = null, string Language = null, double? DurationSeconds = null, string MediaUri = null, string TtsString = null, string UploadUri = null, UploadStatusEnum? UploadStatus = null, bool? HasDefault = null)
         {
             this.Name = Name;
             this.PromptId = PromptId;
@@ -191,57 +190,57 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.PromptId == other.PromptId ||
                     this.PromptId != null &&
                     this.PromptId.Equals(other.PromptId)
-                ) && 
+                ) &&
                 (
                     this.Language == other.Language ||
                     this.Language != null &&
                     this.Language.Equals(other.Language)
-                ) && 
+                ) &&
                 (
                     this.DurationSeconds == other.DurationSeconds ||
                     this.DurationSeconds != null &&
                     this.DurationSeconds.Equals(other.DurationSeconds)
-                ) && 
+                ) &&
                 (
                     this.MediaUri == other.MediaUri ||
                     this.MediaUri != null &&
                     this.MediaUri.Equals(other.MediaUri)
-                ) && 
+                ) &&
                 (
                     this.TtsString == other.TtsString ||
                     this.TtsString != null &&
                     this.TtsString.Equals(other.TtsString)
-                ) && 
+                ) &&
                 (
                     this.UploadUri == other.UploadUri ||
                     this.UploadUri != null &&
                     this.UploadUri.Equals(other.UploadUri)
-                ) && 
+                ) &&
                 (
                     this.UploadStatus == other.UploadStatus ||
                     this.UploadStatus != null &&
                     this.UploadStatus.Equals(other.UploadStatus)
-                ) && 
+                ) &&
                 (
                     this.HasDefault == other.HasDefault ||
                     this.HasDefault != null &&
                     this.HasDefault.Equals(other.HasDefault)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

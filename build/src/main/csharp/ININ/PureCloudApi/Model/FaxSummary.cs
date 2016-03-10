@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FaxSummary :  IEquatable<FaxSummary>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FaxSummary" /> class.
         /// Initializes a new instance of the <see cref="FaxSummary" />class.
         /// </summary>
         /// <param name="ReadCount">ReadCount.</param>
@@ -100,17 +99,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ReadCount == other.ReadCount ||
                     this.ReadCount != null &&
                     this.ReadCount.Equals(other.ReadCount)
-                ) && 
+                ) &&
                 (
                     this.UnreadCount == other.UnreadCount ||
                     this.UnreadCount != null &&
                     this.UnreadCount.Equals(other.UnreadCount)
-                ) && 
+                ) &&
                 (
                     this.TotalCount == other.TotalCount ||
                     this.TotalCount != null &&

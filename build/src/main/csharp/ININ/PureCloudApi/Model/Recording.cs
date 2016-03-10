@@ -46,7 +46,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "CLOUDARCHIVE")]
             Cloudarchive
         }
-    
+        
         /// <summary>
         /// Gets or Sets FileState
         /// </summary>
@@ -60,7 +60,6 @@ namespace ININ.PureCloudApi.Model
         public ArchiveMediumEnum? ArchiveMedium { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Recording" /> class.
         /// Initializes a new instance of the <see cref="Recording" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -86,7 +85,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="RemainingRestorationsAllowedForOrg">RemainingRestorationsAllowedForOrg.</param>
         /// <param name="RecordingId">RecordingId.</param>
 
-        public Recording(string Name = null, string ConversationId = null, string Path = null, string StartTime = null, string EndTime = null, string Media = null, string MediaUri = null, string WaveUri = null, List<Annotation> Annotations = null, List<ChatMessage> Transcript = null, List<EmailMessage> EmailTranscript = null, FileStateEnum? FileState = null, DateTime? RestoreExpirationTime = null, Dictionary<string, MediaResult> MediaUris = null, long? EstimatedTranscodeTimeMs = null, long? ActualTranscodeTimeMs = null, DateTime? ArchiveDate = null, ArchiveMediumEnum? ArchiveMedium = null, DateTime? DeleteDate = null, int? MaxAllowedRestorationsForOrg = null, int? RemainingRestorationsAllowedForOrg = null, string RecordingId = null, )
+        public Recording(string Name = null, string ConversationId = null, string Path = null, string StartTime = null, string EndTime = null, string Media = null, string MediaUri = null, string WaveUri = null, List<Annotation> Annotations = null, List<ChatMessage> Transcript = null, List<EmailMessage> EmailTranscript = null, FileStateEnum? FileState = null, DateTime? RestoreExpirationTime = null, Dictionary<string, MediaResult> MediaUris = null, long? EstimatedTranscodeTimeMs = null, long? ActualTranscodeTimeMs = null, DateTime? ArchiveDate = null, ArchiveMediumEnum? ArchiveMedium = null, DateTime? DeleteDate = null, int? MaxAllowedRestorationsForOrg = null, int? RemainingRestorationsAllowedForOrg = null, string RecordingId = null)
         {
             this.Name = Name;
             this.ConversationId = ConversationId;
@@ -319,122 +318,122 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.ConversationId == other.ConversationId ||
                     this.ConversationId != null &&
                     this.ConversationId.Equals(other.ConversationId)
-                ) && 
+                ) &&
                 (
                     this.Path == other.Path ||
                     this.Path != null &&
                     this.Path.Equals(other.Path)
-                ) && 
+                ) &&
                 (
                     this.StartTime == other.StartTime ||
                     this.StartTime != null &&
                     this.StartTime.Equals(other.StartTime)
-                ) && 
+                ) &&
                 (
                     this.EndTime == other.EndTime ||
                     this.EndTime != null &&
                     this.EndTime.Equals(other.EndTime)
-                ) && 
+                ) &&
                 (
                     this.Media == other.Media ||
                     this.Media != null &&
                     this.Media.Equals(other.Media)
-                ) && 
+                ) &&
                 (
                     this.MediaUri == other.MediaUri ||
                     this.MediaUri != null &&
                     this.MediaUri.Equals(other.MediaUri)
-                ) && 
+                ) &&
                 (
                     this.WaveUri == other.WaveUri ||
                     this.WaveUri != null &&
                     this.WaveUri.Equals(other.WaveUri)
-                ) && 
+                ) &&
                 (
                     this.Annotations == other.Annotations ||
                     this.Annotations != null &&
                     this.Annotations.SequenceEqual(other.Annotations)
-                ) && 
+                ) &&
                 (
                     this.Transcript == other.Transcript ||
                     this.Transcript != null &&
                     this.Transcript.SequenceEqual(other.Transcript)
-                ) && 
+                ) &&
                 (
                     this.EmailTranscript == other.EmailTranscript ||
                     this.EmailTranscript != null &&
                     this.EmailTranscript.SequenceEqual(other.EmailTranscript)
-                ) && 
+                ) &&
                 (
                     this.FileState == other.FileState ||
                     this.FileState != null &&
                     this.FileState.Equals(other.FileState)
-                ) && 
+                ) &&
                 (
                     this.RestoreExpirationTime == other.RestoreExpirationTime ||
                     this.RestoreExpirationTime != null &&
                     this.RestoreExpirationTime.Equals(other.RestoreExpirationTime)
-                ) && 
+                ) &&
                 (
                     this.MediaUris == other.MediaUris ||
                     this.MediaUris != null &&
                     this.MediaUris.SequenceEqual(other.MediaUris)
-                ) && 
+                ) &&
                 (
                     this.EstimatedTranscodeTimeMs == other.EstimatedTranscodeTimeMs ||
                     this.EstimatedTranscodeTimeMs != null &&
                     this.EstimatedTranscodeTimeMs.Equals(other.EstimatedTranscodeTimeMs)
-                ) && 
+                ) &&
                 (
                     this.ActualTranscodeTimeMs == other.ActualTranscodeTimeMs ||
                     this.ActualTranscodeTimeMs != null &&
                     this.ActualTranscodeTimeMs.Equals(other.ActualTranscodeTimeMs)
-                ) && 
+                ) &&
                 (
                     this.ArchiveDate == other.ArchiveDate ||
                     this.ArchiveDate != null &&
                     this.ArchiveDate.Equals(other.ArchiveDate)
-                ) && 
+                ) &&
                 (
                     this.ArchiveMedium == other.ArchiveMedium ||
                     this.ArchiveMedium != null &&
                     this.ArchiveMedium.Equals(other.ArchiveMedium)
-                ) && 
+                ) &&
                 (
                     this.DeleteDate == other.DeleteDate ||
                     this.DeleteDate != null &&
                     this.DeleteDate.Equals(other.DeleteDate)
-                ) && 
+                ) &&
                 (
                     this.MaxAllowedRestorationsForOrg == other.MaxAllowedRestorationsForOrg ||
                     this.MaxAllowedRestorationsForOrg != null &&
                     this.MaxAllowedRestorationsForOrg.Equals(other.MaxAllowedRestorationsForOrg)
-                ) && 
+                ) &&
                 (
                     this.RemainingRestorationsAllowedForOrg == other.RemainingRestorationsAllowedForOrg ||
                     this.RemainingRestorationsAllowedForOrg != null &&
                     this.RemainingRestorationsAllowedForOrg.Equals(other.RemainingRestorationsAllowedForOrg)
-                ) && 
+                ) &&
                 (
                     this.RecordingId == other.RecordingId ||
                     this.RecordingId != null &&
                     this.RecordingId.Equals(other.RecordingId)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DialerDispositionCallCommand :  IEquatable<DialerDispositionCallCommand>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DialerDispositionCallCommand" /> class.
         /// Initializes a new instance of the <see cref="DialerDispositionCallCommand" />class.
         /// </summary>
         /// <param name="CallId">CallId.</param>
@@ -100,17 +99,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.CallId == other.CallId ||
                     this.CallId != null &&
                     this.CallId.Equals(other.CallId)
-                ) && 
+                ) &&
                 (
                     this.WrapupCodeId == other.WrapupCodeId ||
                     this.WrapupCodeId != null &&
                     this.WrapupCodeId.Equals(other.WrapupCodeId)
-                ) && 
+                ) &&
                 (
                     this.Contact == other.Contact ||
                     this.Contact != null &&

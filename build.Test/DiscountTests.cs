@@ -79,12 +79,12 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'Discount' 
+        /// Test the property 'DiscountProperty' 
         /// </summary>
         [Test]
-        public void DiscountTest()
+        public void DiscountPropertyTest()
         {
-            // TODO: unit test for the property 'Discount' 
+            // TODO: unit test for the property 'DiscountProperty' 
         }
         
         /// <summary>

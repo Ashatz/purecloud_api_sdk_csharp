@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "SECONDARY")]
             Secondary
         }
-    
+        
         /// <summary>
         /// the document association type
         /// </summary>
@@ -39,7 +39,6 @@ namespace ININ.PureCloudApi.Model
         public DocumentAssociationTypeEnum? DocumentAssociationType { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="AssociatedDocument" /> class.
         /// Initializes a new instance of the <see cref="AssociatedDocument" />class.
         /// </summary>
         /// <param name="Document">the document associated with the workitem (required).</param>
@@ -114,12 +113,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Document == other.Document ||
                     this.Document != null &&
                     this.Document.Equals(other.Document)
-                ) && 
+                ) &&
                 (
                     this.DocumentAssociationType == other.DocumentAssociationType ||
                     this.DocumentAssociationType != null &&

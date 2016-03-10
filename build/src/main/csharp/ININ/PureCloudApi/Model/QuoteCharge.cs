@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class QuoteCharge :  IEquatable<QuoteCharge>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="QuoteCharge" /> class.
         /// Initializes a new instance of the <see cref="QuoteCharge" />class.
         /// </summary>
         /// <param name="Id">The quote charge Id. (required).</param>
@@ -299,67 +298,67 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Sku == other.Sku ||
                     this.Sku != null &&
                     this.Sku.Equals(other.Sku)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.ChargeType == other.ChargeType ||
                     this.ChargeType != null &&
                     this.ChargeType.Equals(other.ChargeType)
-                ) && 
+                ) &&
                 (
                     this.Quantity == other.Quantity ||
                     this.Quantity != null &&
                     this.Quantity.Equals(other.Quantity)
-                ) && 
+                ) &&
                 (
                     this.ListTotal == other.ListTotal ||
                     this.ListTotal != null &&
                     this.ListTotal.Equals(other.ListTotal)
-                ) && 
+                ) &&
                 (
                     this.Total == other.Total ||
                     this.Total != null &&
                     this.Total.Equals(other.Total)
-                ) && 
+                ) &&
                 (
                     this.ListPriceDisplay == other.ListPriceDisplay ||
                     this.ListPriceDisplay != null &&
                     this.ListPriceDisplay.Equals(other.ListPriceDisplay)
-                ) && 
+                ) &&
                 (
                     this.Discount == other.Discount ||
                     this.Discount != null &&
                     this.Discount.Equals(other.Discount)
-                ) && 
+                ) &&
                 (
                     this.EffectivePrice == other.EffectivePrice ||
                     this.EffectivePrice != null &&
                     this.EffectivePrice.Equals(other.EffectivePrice)
-                ) && 
+                ) &&
                 (
                     this.ProductShippable == other.ProductShippable ||
                     this.ProductShippable != null &&
                     this.ProductShippable.Equals(other.ProductShippable)
-                ) && 
+                ) &&
                 (
                     this.ShippingAddress == other.ShippingAddress ||
                     this.ShippingAddress != null &&
                     this.ShippingAddress.Equals(other.ShippingAddress)
-                ) && 
+                ) &&
                 (
                     this.ForRelatedPart == other.ForRelatedPart ||
                     this.ForRelatedPart != null &&

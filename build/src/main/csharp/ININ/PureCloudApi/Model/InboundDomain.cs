@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "NOT_AVAILABLE")]
             NotAvailable
         }
-    
+        
         /// <summary>
         /// Gets or Sets MxRecordStatus
         /// </summary>
@@ -38,14 +38,13 @@ namespace ININ.PureCloudApi.Model
         public MxRecordStatusEnum? MxRecordStatus { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="InboundDomain" /> class.
         /// Initializes a new instance of the <see cref="InboundDomain" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="MxRecordStatus">MxRecordStatus.</param>
         /// <param name="SubDomain">Indicates if this a PureCloud sub-domain.  If true, then the appropriate DNS records are created for sending/receiving email. (default to false).</param>
 
-        public InboundDomain(string Name = null, MxRecordStatusEnum? MxRecordStatus = null, bool? SubDomain = null, )
+        public InboundDomain(string Name = null, MxRecordStatusEnum? MxRecordStatus = null, bool? SubDomain = null)
         {
             this.Name = Name;
             this.MxRecordStatus = MxRecordStatus;
@@ -138,27 +137,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.MxRecordStatus == other.MxRecordStatus ||
                     this.MxRecordStatus != null &&
                     this.MxRecordStatus.Equals(other.MxRecordStatus)
-                ) && 
+                ) &&
                 (
                     this.SubDomain == other.SubDomain ||
                     this.SubDomain != null &&
                     this.SubDomain.Equals(other.SubDomain)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

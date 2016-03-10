@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class TransformProgress :  IEquatable<TransformProgress>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="TransformProgress" /> class.
         /// Initializes a new instance of the <see cref="TransformProgress" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -32,7 +31,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Model">ID of the ratesheet.</param>
         /// <param name="Errors">Errors encountered during parsing.</param>
 
-        public TransformProgress(string Name = null, string Service = null, User User = null, DateTime? UploadTime = null, string Filename = null, List<TagModel> Tags = null, ProgressModel Progress = null, TransformModel Model = null, List<ErrorBody> Errors = null, )
+        public TransformProgress(string Name = null, string Service = null, User User = null, DateTime? UploadTime = null, string Filename = null, List<TagModel> Tags = null, ProgressModel Progress = null, TransformModel Model = null, List<ErrorBody> Errors = null)
         {
             this.Name = Name;
             this.Service = Service;
@@ -178,57 +177,57 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Service == other.Service ||
                     this.Service != null &&
                     this.Service.Equals(other.Service)
-                ) && 
+                ) &&
                 (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
-                ) && 
+                ) &&
                 (
                     this.UploadTime == other.UploadTime ||
                     this.UploadTime != null &&
                     this.UploadTime.Equals(other.UploadTime)
-                ) && 
+                ) &&
                 (
                     this.Filename == other.Filename ||
                     this.Filename != null &&
                     this.Filename.Equals(other.Filename)
-                ) && 
+                ) &&
                 (
                     this.Tags == other.Tags ||
                     this.Tags != null &&
                     this.Tags.SequenceEqual(other.Tags)
-                ) && 
+                ) &&
                 (
                     this.Progress == other.Progress ||
                     this.Progress != null &&
                     this.Progress.Equals(other.Progress)
-                ) && 
+                ) &&
                 (
                     this.Model == other.Model ||
                     this.Model != null &&
                     this.Model.Equals(other.Model)
-                ) && 
+                ) &&
                 (
                     this.Errors == other.Errors ||
                     this.Errors != null &&
                     this.Errors.SequenceEqual(other.Errors)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

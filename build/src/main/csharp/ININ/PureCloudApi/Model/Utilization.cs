@@ -17,18 +17,17 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Utilization :  IEquatable<Utilization>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Utilization" /> class.
         /// Initializes a new instance of the <see cref="Utilization" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Utilization">Map of media types to utilization settings.  Map keys can be: call, chat, email, or socialExpression.</param>
+        /// <param name="UtilizationProperty">Map of media types to utilization settings.  Map keys can be: call, chat, email, or socialExpression.</param>
 
-        public Utilization(string Name = null, Dictionary<string, OrgMediaUtilization> Utilization = null, )
+        public Utilization(string Name = null, Dictionary<string, OrgMediaUtilization> UtilizationProperty = null)
         {
             this.Name = Name;
-            this.Utilization = Utilization;
+            this.UtilizationProperty = UtilizationProperty;
             
         }
         
@@ -51,7 +50,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>Map of media types to utilization settings.  Map keys can be: call, chat, email, or socialExpression</value>
         [DataMember(Name="utilization", EmitDefaultValue=false)]
-        public Dictionary<string, OrgMediaUtilization> Utilization { get; set; }
+        public Dictionary<string, OrgMediaUtilization> UtilizationProperty { get; set; }
     
         /// <summary>
         /// The URI for this object
@@ -70,7 +69,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("class Utilization {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Utilization: ").Append(Utilization).Append("\n");
+            sb.Append("  UtilizationProperty: ").Append(UtilizationProperty).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
@@ -108,22 +107,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
-                    this.Utilization == other.Utilization ||
-                    this.Utilization != null &&
-                    this.Utilization.SequenceEqual(other.Utilization)
-                ) && 
+                    this.UtilizationProperty == other.UtilizationProperty ||
+                    this.UtilizationProperty != null &&
+                    this.UtilizationProperty.SequenceEqual(other.UtilizationProperty)
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
@@ -149,8 +148,8 @@ namespace ININ.PureCloudApi.Model
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
                 
-                if (this.Utilization != null)
-                    hash = hash * 59 + this.Utilization.GetHashCode();
+                if (this.UtilizationProperty != null)
+                    hash = hash * 59 + this.UtilizationProperty.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

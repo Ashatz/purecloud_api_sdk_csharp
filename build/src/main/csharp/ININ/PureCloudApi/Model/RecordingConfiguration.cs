@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class RecordingConfiguration :  IEquatable<RecordingConfiguration>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="RecordingConfiguration" /> class.
         /// Initializes a new instance of the <see cref="RecordingConfiguration" />class.
         /// </summary>
         /// <param name="MaxSimultaneousStreams">MaxSimultaneousStreams.</param>
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.MaxSimultaneousStreams == other.MaxSimultaneousStreams ||
                     this.MaxSimultaneousStreams != null &&

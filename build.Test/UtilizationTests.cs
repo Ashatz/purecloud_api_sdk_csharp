@@ -70,12 +70,12 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'Utilization' 
+        /// Test the property 'UtilizationProperty' 
         /// </summary>
         [Test]
-        public void UtilizationTest()
+        public void UtilizationPropertyTest()
         {
-            // TODO: unit test for the property 'Utilization' 
+            // TODO: unit test for the property 'UtilizationProperty' 
         }
         
         /// <summary>

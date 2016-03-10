@@ -52,12 +52,12 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test the property 'MaxParticipants' 
+        /// Test the property 'MaxParticipantsProperty' 
         /// </summary>
         [Test]
-        public void MaxParticipantsTest()
+        public void MaxParticipantsPropertyTest()
         {
-            // TODO: unit test for the property 'MaxParticipants' 
+            // TODO: unit test for the property 'MaxParticipantsProperty' 
         }
         
 

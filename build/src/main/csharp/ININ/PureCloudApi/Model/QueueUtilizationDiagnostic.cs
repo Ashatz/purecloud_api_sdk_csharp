@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class QueueUtilizationDiagnostic :  IEquatable<QueueUtilizationDiagnostic>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="QueueUtilizationDiagnostic" /> class.
         /// Initializes a new instance of the <see cref="QueueUtilizationDiagnostic" />class.
         /// </summary>
         /// <param name="Queue">Queue.</param>
@@ -145,42 +144,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Queue == other.Queue ||
                     this.Queue != null &&
                     this.Queue.Equals(other.Queue)
-                ) && 
+                ) &&
                 (
                     this.UsersInQueue == other.UsersInQueue ||
                     this.UsersInQueue != null &&
                     this.UsersInQueue.Equals(other.UsersInQueue)
-                ) && 
+                ) &&
                 (
                     this.ActiveUsersInQueue == other.ActiveUsersInQueue ||
                     this.ActiveUsersInQueue != null &&
                     this.ActiveUsersInQueue.Equals(other.ActiveUsersInQueue)
-                ) && 
+                ) &&
                 (
                     this.UsersOnQueue == other.UsersOnQueue ||
                     this.UsersOnQueue != null &&
                     this.UsersOnQueue.Equals(other.UsersOnQueue)
-                ) && 
+                ) &&
                 (
                     this.UsersNotUtilized == other.UsersNotUtilized ||
                     this.UsersNotUtilized != null &&
                     this.UsersNotUtilized.Equals(other.UsersNotUtilized)
-                ) && 
+                ) &&
                 (
                     this.UsersOnQueueWithStation == other.UsersOnQueueWithStation ||
                     this.UsersOnQueueWithStation != null &&
                     this.UsersOnQueueWithStation.Equals(other.UsersOnQueueWithStation)
-                ) && 
+                ) &&
                 (
                     this.UsersOnACampaignCall == other.UsersOnACampaignCall ||
                     this.UsersOnACampaignCall != null &&
                     this.UsersOnACampaignCall.Equals(other.UsersOnACampaignCall)
-                ) && 
+                ) &&
                 (
                     this.UsersOnANonCampaignCall == other.UsersOnANonCampaignCall ||
                     this.UsersOnANonCampaignCall != null &&

@@ -88,12 +88,12 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'Relationship' 
+        /// Test the property 'RelationshipProperty' 
         /// </summary>
         [Test]
-        public void RelationshipTest()
+        public void RelationshipPropertyTest()
         {
-            // TODO: unit test for the property 'Relationship' 
+            // TODO: unit test for the property 'RelationshipProperty' 
         }
         
         /// <summary>

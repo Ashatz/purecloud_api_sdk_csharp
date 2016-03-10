@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "FROZEN")]
             Frozen
         }
-    
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -54,7 +54,6 @@ namespace ININ.PureCloudApi.Model
         public StatusEnum? Status { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Quote" /> class.
         /// Initializes a new instance of the <see cref="Quote" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -79,7 +78,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SalesPartnerCode">SalesPartnerCode.</param>
         /// <param name="IsAnnualPrepay">IsAnnualPrepay (default to false).</param>
 
-        public Quote(string Name = null, string PurchaseOrder = null, TypeEnum? Type = null, StatusEnum? Status = null, bool? IsSubmitted = null, bool? IsPending = null, bool? IsFrozen = null, string Currency = null, DateTime? CreatedDate = null, DateTime? LastUpdatedDate = null, string BillingContactEmail = null, string BillingContactFirstName = null, string BillingContactLastName = null, string BillingContactPhone = null, bool? IncludeVoiceCharges = null, List<QuoteCharge> Charges = null, string EdgeControlModel = null, List<string> ReferralCodes = null, List<string> DiscountCodes = null, string SalesPartnerCode = null, bool? IsAnnualPrepay = null, )
+        public Quote(string Name = null, string PurchaseOrder = null, TypeEnum? Type = null, StatusEnum? Status = null, bool? IsSubmitted = null, bool? IsPending = null, bool? IsFrozen = null, string Currency = null, DateTime? CreatedDate = null, DateTime? LastUpdatedDate = null, string BillingContactEmail = null, string BillingContactFirstName = null, string BillingContactLastName = null, string BillingContactPhone = null, bool? IncludeVoiceCharges = null, List<QuoteCharge> Charges = null, string EdgeControlModel = null, List<string> ReferralCodes = null, List<string> DiscountCodes = null, string SalesPartnerCode = null, bool? IsAnnualPrepay = null)
         {
             this.Name = Name;
             this.PurchaseOrder = PurchaseOrder;
@@ -343,117 +342,117 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.PurchaseOrder == other.PurchaseOrder ||
                     this.PurchaseOrder != null &&
                     this.PurchaseOrder.Equals(other.PurchaseOrder)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-                ) && 
+                ) &&
                 (
                     this.IsSubmitted == other.IsSubmitted ||
                     this.IsSubmitted != null &&
                     this.IsSubmitted.Equals(other.IsSubmitted)
-                ) && 
+                ) &&
                 (
                     this.IsPending == other.IsPending ||
                     this.IsPending != null &&
                     this.IsPending.Equals(other.IsPending)
-                ) && 
+                ) &&
                 (
                     this.IsFrozen == other.IsFrozen ||
                     this.IsFrozen != null &&
                     this.IsFrozen.Equals(other.IsFrozen)
-                ) && 
+                ) &&
                 (
                     this.Currency == other.Currency ||
                     this.Currency != null &&
                     this.Currency.Equals(other.Currency)
-                ) && 
+                ) &&
                 (
                     this.CreatedDate == other.CreatedDate ||
                     this.CreatedDate != null &&
                     this.CreatedDate.Equals(other.CreatedDate)
-                ) && 
+                ) &&
                 (
                     this.LastUpdatedDate == other.LastUpdatedDate ||
                     this.LastUpdatedDate != null &&
                     this.LastUpdatedDate.Equals(other.LastUpdatedDate)
-                ) && 
+                ) &&
                 (
                     this.BillingContactEmail == other.BillingContactEmail ||
                     this.BillingContactEmail != null &&
                     this.BillingContactEmail.Equals(other.BillingContactEmail)
-                ) && 
+                ) &&
                 (
                     this.BillingContactFirstName == other.BillingContactFirstName ||
                     this.BillingContactFirstName != null &&
                     this.BillingContactFirstName.Equals(other.BillingContactFirstName)
-                ) && 
+                ) &&
                 (
                     this.BillingContactLastName == other.BillingContactLastName ||
                     this.BillingContactLastName != null &&
                     this.BillingContactLastName.Equals(other.BillingContactLastName)
-                ) && 
+                ) &&
                 (
                     this.BillingContactPhone == other.BillingContactPhone ||
                     this.BillingContactPhone != null &&
                     this.BillingContactPhone.Equals(other.BillingContactPhone)
-                ) && 
+                ) &&
                 (
                     this.IncludeVoiceCharges == other.IncludeVoiceCharges ||
                     this.IncludeVoiceCharges != null &&
                     this.IncludeVoiceCharges.Equals(other.IncludeVoiceCharges)
-                ) && 
+                ) &&
                 (
                     this.Charges == other.Charges ||
                     this.Charges != null &&
                     this.Charges.SequenceEqual(other.Charges)
-                ) && 
+                ) &&
                 (
                     this.EdgeControlModel == other.EdgeControlModel ||
                     this.EdgeControlModel != null &&
                     this.EdgeControlModel.Equals(other.EdgeControlModel)
-                ) && 
+                ) &&
                 (
                     this.ReferralCodes == other.ReferralCodes ||
                     this.ReferralCodes != null &&
                     this.ReferralCodes.SequenceEqual(other.ReferralCodes)
-                ) && 
+                ) &&
                 (
                     this.DiscountCodes == other.DiscountCodes ||
                     this.DiscountCodes != null &&
                     this.DiscountCodes.SequenceEqual(other.DiscountCodes)
-                ) && 
+                ) &&
                 (
                     this.SalesPartnerCode == other.SalesPartnerCode ||
                     this.SalesPartnerCode != null &&
                     this.SalesPartnerCode.Equals(other.SalesPartnerCode)
-                ) && 
+                ) &&
                 (
                     this.IsAnnualPrepay == other.IsAnnualPrepay ||
                     this.IsAnnualPrepay != null &&
                     this.IsAnnualPrepay.Equals(other.IsAnnualPrepay)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

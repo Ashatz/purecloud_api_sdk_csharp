@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class MediaSetting :  IEquatable<MediaSetting>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="MediaSetting" /> class.
         /// Initializes a new instance of the <see cref="MediaSetting" />class.
         /// </summary>
         /// <param name="AlertingTimeoutSeconds">AlertingTimeoutSeconds.</param>
@@ -91,12 +90,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.AlertingTimeoutSeconds == other.AlertingTimeoutSeconds ||
                     this.AlertingTimeoutSeconds != null &&
                     this.AlertingTimeoutSeconds.Equals(other.AlertingTimeoutSeconds)
-                ) && 
+                ) &&
                 (
                     this.ServiceLevel == other.ServiceLevel ||
                     this.ServiceLevel != null &&

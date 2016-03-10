@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DomainOrgRoleDifference :  IEquatable<DomainOrgRoleDifference>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DomainOrgRoleDifference" /> class.
         /// Initializes a new instance of the <see cref="DomainOrgRoleDifference" />class.
         /// </summary>
         /// <param name="RemovedPermissionPolicies">RemovedPermissionPolicies.</param>
@@ -118,27 +117,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.RemovedPermissionPolicies == other.RemovedPermissionPolicies ||
                     this.RemovedPermissionPolicies != null &&
                     this.RemovedPermissionPolicies.SequenceEqual(other.RemovedPermissionPolicies)
-                ) && 
+                ) &&
                 (
                     this.AddedPermissionPolicies == other.AddedPermissionPolicies ||
                     this.AddedPermissionPolicies != null &&
                     this.AddedPermissionPolicies.SequenceEqual(other.AddedPermissionPolicies)
-                ) && 
+                ) &&
                 (
                     this.SamePermissionPolicies == other.SamePermissionPolicies ||
                     this.SamePermissionPolicies != null &&
                     this.SamePermissionPolicies.SequenceEqual(other.SamePermissionPolicies)
-                ) && 
+                ) &&
                 (
                     this.UserOrgRole == other.UserOrgRole ||
                     this.UserOrgRole != null &&
                     this.UserOrgRole.Equals(other.UserOrgRole)
-                ) && 
+                ) &&
                 (
                     this.RoleFromDefault == other.RoleFromDefault ||
                     this.RoleFromDefault != null &&

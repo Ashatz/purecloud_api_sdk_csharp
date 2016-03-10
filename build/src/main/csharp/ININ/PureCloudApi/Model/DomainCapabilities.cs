@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DomainCapabilities :  IEquatable<DomainCapabilities>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DomainCapabilities" /> class.
         /// Initializes a new instance of the <see cref="DomainCapabilities" />class.
         /// </summary>
         /// <param name="Enabled">Enabled (default to false).</param>
@@ -116,17 +115,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Enabled == other.Enabled ||
                     this.Enabled != null &&
                     this.Enabled.Equals(other.Enabled)
-                ) && 
+                ) &&
                 (
                     this.Dhcp == other.Dhcp ||
                     this.Dhcp != null &&
                     this.Dhcp.Equals(other.Dhcp)
-                ) && 
+                ) &&
                 (
                     this.Metric == other.Metric ||
                     this.Metric != null &&

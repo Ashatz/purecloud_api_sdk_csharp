@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DomainPhysicalInterface :  IEquatable<DomainPhysicalInterface>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DomainPhysicalInterface" /> class.
         /// Initializes a new instance of the <see cref="DomainPhysicalInterface" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -29,7 +28,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PortLabel">PortLabel.</param>
         /// <param name="PhysicalCapabilities">PhysicalCapabilities.</param>
 
-        public DomainPhysicalInterface(string Name = null, string EdgeUri = null, string FriendlyName = null, string HardwareAddress = null, string PortLabel = null, DomainPhysicalCapabilities PhysicalCapabilities = null, )
+        public DomainPhysicalInterface(string Name = null, string EdgeUri = null, string FriendlyName = null, string HardwareAddress = null, string PortLabel = null, DomainPhysicalCapabilities PhysicalCapabilities = null)
         {
             this.Name = Name;
             this.EdgeUri = EdgeUri;
@@ -143,42 +142,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.EdgeUri == other.EdgeUri ||
                     this.EdgeUri != null &&
                     this.EdgeUri.Equals(other.EdgeUri)
-                ) && 
+                ) &&
                 (
                     this.FriendlyName == other.FriendlyName ||
                     this.FriendlyName != null &&
                     this.FriendlyName.Equals(other.FriendlyName)
-                ) && 
+                ) &&
                 (
                     this.HardwareAddress == other.HardwareAddress ||
                     this.HardwareAddress != null &&
                     this.HardwareAddress.Equals(other.HardwareAddress)
-                ) && 
+                ) &&
                 (
                     this.PortLabel == other.PortLabel ||
                     this.PortLabel != null &&
                     this.PortLabel.Equals(other.PortLabel)
-                ) && 
+                ) &&
                 (
                     this.PhysicalCapabilities == other.PhysicalCapabilities ||
                     this.PhysicalCapabilities != null &&
                     this.PhysicalCapabilities.Equals(other.PhysicalCapabilities)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

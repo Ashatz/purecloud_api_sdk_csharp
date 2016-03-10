@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "SAVE")]
             Save
         }
-    
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -38,7 +38,6 @@ namespace ININ.PureCloudApi.Model
         public TypeEnum? Type { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowVersion" /> class.
         /// Initializes a new instance of the <see cref="FlowVersion" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -51,7 +50,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="GenerationId">GenerationId.</param>
         /// <param name="PublishResultUri">PublishResultUri.</param>
 
-        public FlowVersion(string Name = null, string CommitVersion = null, string ConfigurationVersion = null, TypeEnum? Type = null, UriReference CreatedBy = null, string ConfigurationUri = null, long? DateCreated = null, string GenerationId = null, string PublishResultUri = null, )
+        public FlowVersion(string Name = null, string CommitVersion = null, string ConfigurationVersion = null, TypeEnum? Type = null, UriReference CreatedBy = null, string ConfigurationUri = null, long? DateCreated = null, string GenerationId = null, string PublishResultUri = null)
         {
             this.Name = Name;
             this.CommitVersion = CommitVersion;
@@ -183,57 +182,57 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.CommitVersion == other.CommitVersion ||
                     this.CommitVersion != null &&
                     this.CommitVersion.Equals(other.CommitVersion)
-                ) && 
+                ) &&
                 (
                     this.ConfigurationVersion == other.ConfigurationVersion ||
                     this.ConfigurationVersion != null &&
                     this.ConfigurationVersion.Equals(other.ConfigurationVersion)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
-                ) && 
+                ) &&
                 (
                     this.ConfigurationUri == other.ConfigurationUri ||
                     this.ConfigurationUri != null &&
                     this.ConfigurationUri.Equals(other.ConfigurationUri)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.GenerationId == other.GenerationId ||
                     this.GenerationId != null &&
                     this.GenerationId.Equals(other.GenerationId)
-                ) && 
+                ) &&
                 (
                     this.PublishResultUri == other.PublishResultUri ||
                     this.PublishResultUri != null &&
                     this.PublishResultUri.Equals(other.PublishResultUri)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

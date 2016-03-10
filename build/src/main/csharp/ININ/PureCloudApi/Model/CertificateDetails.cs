@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class CertificateDetails :  IEquatable<CertificateDetails>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="CertificateDetails" /> class.
         /// Initializes a new instance of the <see cref="CertificateDetails" />class.
         /// </summary>
         /// <param name="Issuer">Information about the issuer of the certificate.  The value of this property is a comma separated key=value format.  Each key is one of the attribute names supported by X.500..</param>
@@ -165,37 +164,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Issuer == other.Issuer ||
                     this.Issuer != null &&
                     this.Issuer.Equals(other.Issuer)
-                ) && 
+                ) &&
                 (
                     this.Subject == other.Subject ||
                     this.Subject != null &&
                     this.Subject.Equals(other.Subject)
-                ) && 
+                ) &&
                 (
                     this.ExpirationDate == other.ExpirationDate ||
                     this.ExpirationDate != null &&
                     this.ExpirationDate.Equals(other.ExpirationDate)
-                ) && 
+                ) &&
                 (
                     this.IssueDate == other.IssueDate ||
                     this.IssueDate != null &&
                     this.IssueDate.Equals(other.IssueDate)
-                ) && 
+                ) &&
                 (
                     this.Expired == other.Expired ||
                     this.Expired != null &&
                     this.Expired.Equals(other.Expired)
-                ) && 
+                ) &&
                 (
                     this.SignatureValid == other.SignatureValid ||
                     this.SignatureValid != null &&
                     this.SignatureValid.Equals(other.SignatureValid)
-                ) && 
+                ) &&
                 (
                     this.Valid == other.Valid ||
                     this.Valid != null &&

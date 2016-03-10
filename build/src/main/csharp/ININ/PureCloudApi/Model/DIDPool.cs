@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "PURE_CLOUD_VOICE")]
             CloudVoice
         }
-    
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -55,7 +55,6 @@ namespace ININ.PureCloudApi.Model
         public ProviderEnum? Provider { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="DIDPool" /> class.
         /// Initializes a new instance of the <see cref="DIDPool" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -73,7 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Comments">Comments.</param>
         /// <param name="Provider">The provider for this DID pool.</param>
 
-        public DIDPool(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string StartPhoneNumber = null, string EndPhoneNumber = null, string Comments = null, ProviderEnum? Provider = null, )
+        public DIDPool(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string StartPhoneNumber = null, string EndPhoneNumber = null, string Comments = null, ProviderEnum? Provider = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -243,82 +242,82 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.ModifiedBy == other.ModifiedBy ||
                     this.ModifiedBy != null &&
                     this.ModifiedBy.Equals(other.ModifiedBy)
-                ) && 
+                ) &&
                 (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
-                ) && 
+                ) &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.ModifiedByApp == other.ModifiedByApp ||
                     this.ModifiedByApp != null &&
                     this.ModifiedByApp.Equals(other.ModifiedByApp)
-                ) && 
+                ) &&
                 (
                     this.CreatedByApp == other.CreatedByApp ||
                     this.CreatedByApp != null &&
                     this.CreatedByApp.Equals(other.CreatedByApp)
-                ) && 
+                ) &&
                 (
                     this.StartPhoneNumber == other.StartPhoneNumber ||
                     this.StartPhoneNumber != null &&
                     this.StartPhoneNumber.Equals(other.StartPhoneNumber)
-                ) && 
+                ) &&
                 (
                     this.EndPhoneNumber == other.EndPhoneNumber ||
                     this.EndPhoneNumber != null &&
                     this.EndPhoneNumber.Equals(other.EndPhoneNumber)
-                ) && 
+                ) &&
                 (
                     this.Comments == other.Comments ||
                     this.Comments != null &&
                     this.Comments.Equals(other.Comments)
-                ) && 
+                ) &&
                 (
                     this.Provider == other.Provider ||
                     this.Provider != null &&
                     this.Provider.Equals(other.Provider)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

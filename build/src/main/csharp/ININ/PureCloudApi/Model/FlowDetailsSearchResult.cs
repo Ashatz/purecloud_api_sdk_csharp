@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FlowDetailsSearchResult :  IEquatable<FlowDetailsSearchResult>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowDetailsSearchResult" /> class.
         /// Initializes a new instance of the <see cref="FlowDetailsSearchResult" />class.
         /// </summary>
         /// <param name="SearchResults">The actual results from the search.</param>
@@ -93,12 +92,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.SearchResults == other.SearchResults ||
                     this.SearchResults != null &&
                     this.SearchResults.Equals(other.SearchResults)
-                ) && 
+                ) &&
                 (
                     this.FacetResults == other.FacetResults ||
                     this.FacetResults != null &&

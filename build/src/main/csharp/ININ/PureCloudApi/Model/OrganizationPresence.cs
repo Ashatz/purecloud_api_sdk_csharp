@@ -42,7 +42,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "IDLE")]
             Idle
         }
-    
+        
         /// <summary>
         /// Gets or Sets SystemPresence
         /// </summary>
@@ -50,7 +50,6 @@ namespace ININ.PureCloudApi.Model
         public SystemPresenceEnum? SystemPresence { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrganizationPresence" /> class.
         /// Initializes a new instance of the <see cref="OrganizationPresence" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -62,7 +61,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ModifiedBy">ModifiedBy.</param>
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
 
-        public OrganizationPresence(string Name = null, Dictionary<string, string> LanguageLabels = null, SystemPresenceEnum? SystemPresence = null, bool? Deactivated = null, User CreatedBy = null, DateTime? CreatedDate = null, User ModifiedBy = null, DateTime? ModifiedDate = null, )
+        public OrganizationPresence(string Name = null, Dictionary<string, string> LanguageLabels = null, SystemPresenceEnum? SystemPresence = null, bool? Deactivated = null, User CreatedBy = null, DateTime? CreatedDate = null, User ModifiedBy = null, DateTime? ModifiedDate = null)
         {
             this.Name = Name;
             this.LanguageLabels = LanguageLabels;
@@ -196,52 +195,52 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.LanguageLabels == other.LanguageLabels ||
                     this.LanguageLabels != null &&
                     this.LanguageLabels.SequenceEqual(other.LanguageLabels)
-                ) && 
+                ) &&
                 (
                     this.SystemPresence == other.SystemPresence ||
                     this.SystemPresence != null &&
                     this.SystemPresence.Equals(other.SystemPresence)
-                ) && 
+                ) &&
                 (
                     this.Deactivated == other.Deactivated ||
                     this.Deactivated != null &&
                     this.Deactivated.Equals(other.Deactivated)
-                ) && 
+                ) &&
                 (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
-                ) && 
+                ) &&
                 (
                     this.CreatedDate == other.CreatedDate ||
                     this.CreatedDate != null &&
                     this.CreatedDate.Equals(other.CreatedDate)
-                ) && 
+                ) &&
                 (
                     this.ModifiedBy == other.ModifiedBy ||
                     this.ModifiedBy != null &&
                     this.ModifiedBy.Equals(other.ModifiedBy)
-                ) && 
+                ) &&
                 (
                     this.ModifiedDate == other.ModifiedDate ||
                     this.ModifiedDate != null &&
                     this.ModifiedDate.Equals(other.ModifiedDate)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

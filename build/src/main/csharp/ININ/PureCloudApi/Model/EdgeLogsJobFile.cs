@@ -33,7 +33,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ERROR_ON_UPLOAD")]
             ErrorOnUpload
         }
-    
+        
         /// <summary>
         /// The status of the upload of this file from the Edge to the cloud.  Use /upload to start an upload.
         /// </summary>
@@ -42,7 +42,6 @@ namespace ININ.PureCloudApi.Model
         public UploadStatusEnum? UploadStatus { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="EdgeLogsJobFile" /> class.
         /// Initializes a new instance of the <see cref="EdgeLogsJobFile" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -53,7 +52,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="EdgePath">The path of this file on the Edge..</param>
         /// <param name="DownloadId">The download ID to use with the downloads API..</param>
 
-        public EdgeLogsJobFile(string Name = null, DateTime? TimeCreated = null, DateTime? TimeModified = null, double? SizeBytes = null, UploadStatusEnum? UploadStatus = null, string EdgePath = null, string DownloadId = null, )
+        public EdgeLogsJobFile(string Name = null, DateTime? TimeCreated = null, DateTime? TimeModified = null, double? SizeBytes = null, UploadStatusEnum? UploadStatus = null, string EdgePath = null, string DownloadId = null)
         {
             this.Name = Name;
             this.TimeCreated = TimeCreated;
@@ -174,47 +173,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.TimeCreated == other.TimeCreated ||
                     this.TimeCreated != null &&
                     this.TimeCreated.Equals(other.TimeCreated)
-                ) && 
+                ) &&
                 (
                     this.TimeModified == other.TimeModified ||
                     this.TimeModified != null &&
                     this.TimeModified.Equals(other.TimeModified)
-                ) && 
+                ) &&
                 (
                     this.SizeBytes == other.SizeBytes ||
                     this.SizeBytes != null &&
                     this.SizeBytes.Equals(other.SizeBytes)
-                ) && 
+                ) &&
                 (
                     this.UploadStatus == other.UploadStatus ||
                     this.UploadStatus != null &&
                     this.UploadStatus.Equals(other.UploadStatus)
-                ) && 
+                ) &&
                 (
                     this.EdgePath == other.EdgePath ||
                     this.EdgePath != null &&
                     this.EdgePath.Equals(other.EdgePath)
-                ) && 
+                ) &&
                 (
                     this.DownloadId == other.DownloadId ||
                     this.DownloadId != null &&
                     this.DownloadId.Equals(other.DownloadId)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ValidateAddressResponse :  IEquatable<ValidateAddressResponse>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ValidateAddressResponse" /> class.
         /// Initializes a new instance of the <see cref="ValidateAddressResponse" />class.
         /// </summary>
         /// <param name="Valid">Valid (default to false).</param>
@@ -99,12 +98,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Valid == other.Valid ||
                     this.Valid != null &&
                     this.Valid.Equals(other.Valid)
-                ) && 
+                ) &&
                 (
                     this.Response == other.Response ||
                     this.Response != null &&

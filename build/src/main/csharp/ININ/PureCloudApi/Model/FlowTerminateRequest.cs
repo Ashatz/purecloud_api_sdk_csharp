@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FlowTerminateRequest :  IEquatable<FlowTerminateRequest>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowTerminateRequest" /> class.
         /// Initializes a new instance of the <see cref="FlowTerminateRequest" />class.
         /// </summary>
         /// <param name="Reason">Reason for termination..</param>
@@ -83,7 +82,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Reason == other.Reason ||
                     this.Reason != null &&

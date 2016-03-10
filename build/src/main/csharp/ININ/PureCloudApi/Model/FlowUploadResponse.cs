@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FlowUploadResponse :  IEquatable<FlowUploadResponse>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowUploadResponse" /> class.
         /// Initializes a new instance of the <see cref="FlowUploadResponse" />class.
         /// </summary>
         /// <param name="Uri">uri destination to upload file to.</param>
@@ -93,12 +92,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Uri == other.Uri ||
                     this.Uri != null &&
                     this.Uri.Equals(other.Uri)
-                ) && 
+                ) &&
                 (
                     this.UploadToken == other.UploadToken ||
                     this.UploadToken != null &&

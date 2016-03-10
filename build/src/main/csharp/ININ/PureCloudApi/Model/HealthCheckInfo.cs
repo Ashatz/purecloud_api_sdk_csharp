@@ -129,7 +129,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "HTTP_VERSION_NOT_SUPPORTED")]
             HttpVersionNotSupported
         }
-    
+        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -137,7 +137,6 @@ namespace ININ.PureCloudApi.Model
         public StatusEnum? Status { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="HealthCheckInfo" /> class.
         /// Initializes a new instance of the <see cref="HealthCheckInfo" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -292,62 +291,62 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
-                ) && 
+                ) &&
                 (
                     this.BuildTime == other.BuildTime ||
                     this.BuildTime != null &&
                     this.BuildTime.Equals(other.BuildTime)
-                ) && 
+                ) &&
                 (
                     this.BuildVersion == other.BuildVersion ||
                     this.BuildVersion != null &&
                     this.BuildVersion.Equals(other.BuildVersion)
-                ) && 
+                ) &&
                 (
                     this.BuildJdk == other.BuildJdk ||
                     this.BuildJdk != null &&
                     this.BuildJdk.Equals(other.BuildJdk)
-                ) && 
+                ) &&
                 (
                     this.BuiltBy == other.BuiltBy ||
                     this.BuiltBy != null &&
                     this.BuiltBy.Equals(other.BuiltBy)
-                ) && 
+                ) &&
                 (
                     this.ImplementationBuild == other.ImplementationBuild ||
                     this.ImplementationBuild != null &&
                     this.ImplementationBuild.Equals(other.ImplementationBuild)
-                ) && 
+                ) &&
                 (
                     this.ImplementationVersion == other.ImplementationVersion ||
                     this.ImplementationVersion != null &&
                     this.ImplementationVersion.Equals(other.ImplementationVersion)
-                ) && 
+                ) &&
                 (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-                ) && 
+                ) &&
                 (
                     this.PingMs == other.PingMs ||
                     this.PingMs != null &&
                     this.PingMs.Equals(other.PingMs)
-                ) && 
+                ) &&
                 (
                     this.Date == other.Date ||
                     this.Date != null &&

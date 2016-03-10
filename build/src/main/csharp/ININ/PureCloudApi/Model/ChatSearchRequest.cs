@@ -37,7 +37,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "from")]
             From
         }
-    
+        
         /// <summary>
         /// Sort order of results by score or most recent. Default is by score
         /// </summary>
@@ -53,7 +53,6 @@ namespace ININ.PureCloudApi.Model
         public ExpandEnum? Expand { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ChatSearchRequest" /> class.
         /// Initializes a new instance of the <see cref="ChatSearchRequest" />class.
         /// </summary>
         /// <param name="Query">Search terms can be AND&#39;d together. Example: foo AND bar (required).</param>
@@ -189,42 +188,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Query == other.Query ||
                     this.Query != null &&
                     this.Query.Equals(other.Query)
-                ) && 
+                ) &&
                 (
                     this.Order == other.Order ||
                     this.Order != null &&
                     this.Order.Equals(other.Order)
-                ) && 
+                ) &&
                 (
                     this.TargetJids == other.TargetJids ||
                     this.TargetJids != null &&
                     this.TargetJids.SequenceEqual(other.TargetJids)
-                ) && 
+                ) &&
                 (
                     this.PageSize == other.PageSize ||
                     this.PageSize != null &&
                     this.PageSize.Equals(other.PageSize)
-                ) && 
+                ) &&
                 (
                     this.PageNumber == other.PageNumber ||
                     this.PageNumber != null &&
                     this.PageNumber.Equals(other.PageNumber)
-                ) && 
+                ) &&
                 (
                     this.FromDate == other.FromDate ||
                     this.FromDate != null &&
                     this.FromDate.Equals(other.FromDate)
-                ) && 
+                ) &&
                 (
                     this.ToDate == other.ToDate ||
                     this.ToDate != null &&
                     this.ToDate.Equals(other.ToDate)
-                ) && 
+                ) &&
                 (
                     this.Expand == other.Expand ||
                     this.Expand != null &&

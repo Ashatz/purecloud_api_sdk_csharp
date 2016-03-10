@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ProgressModel :  IEquatable<ProgressModel>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ProgressModel" /> class.
         /// Initializes a new instance of the <see cref="ProgressModel" />class.
         /// </summary>
         /// <param name="Phase">Human readable progress (required).</param>
@@ -127,17 +126,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Phase == other.Phase ||
                     this.Phase != null &&
                     this.Phase.Equals(other.Phase)
-                ) && 
+                ) &&
                 (
                     this.IterationsDone == other.IterationsDone ||
                     this.IterationsDone != null &&
                     this.IterationsDone.Equals(other.IterationsDone)
-                ) && 
+                ) &&
                 (
                     this.IterationsInPhase == other.IterationsInPhase ||
                     this.IterationsInPhase != null &&

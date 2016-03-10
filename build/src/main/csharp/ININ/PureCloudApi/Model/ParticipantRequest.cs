@@ -45,7 +45,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "NONE")]
             None
         }
-    
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -53,7 +53,6 @@ namespace ININ.PureCloudApi.Model
         public StateEnum? State { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ParticipantRequest" /> class.
         /// Initializes a new instance of the <see cref="ParticipantRequest" />class.
         /// </summary>
         /// <param name="Id">Id.</param>
@@ -213,42 +212,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Wrapup == other.Wrapup ||
                     this.Wrapup != null &&
                     this.Wrapup.Equals(other.Wrapup)
-                ) && 
+                ) &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.Recording == other.Recording ||
                     this.Recording != null &&
                     this.Recording.Equals(other.Recording)
-                ) && 
+                ) &&
                 (
                     this.Muted == other.Muted ||
                     this.Muted != null &&
                     this.Muted.Equals(other.Muted)
-                ) && 
+                ) &&
                 (
                     this.Confined == other.Confined ||
                     this.Confined != null &&
                     this.Confined.Equals(other.Confined)
-                ) && 
+                ) &&
                 (
                     this.Held == other.Held ||
                     this.Held != null &&
                     this.Held.Equals(other.Held)
-                ) && 
+                ) &&
                 (
                     this.WrapupSkipped == other.WrapupSkipped ||
                     this.WrapupSkipped != null &&

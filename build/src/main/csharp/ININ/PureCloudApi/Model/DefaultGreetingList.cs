@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ORGANIZATION")]
             Organization
         }
-    
+        
         /// <summary>
         /// Gets or Sets OwnerType
         /// </summary>
@@ -35,7 +35,6 @@ namespace ININ.PureCloudApi.Model
         public OwnerTypeEnum? OwnerType { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="DefaultGreetingList" /> class.
         /// Initializes a new instance of the <see cref="DefaultGreetingList" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -47,7 +46,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="ModifiedBy">ModifiedBy.</param>
 
-        public DefaultGreetingList(string Name = null, GreetingOwner Owner = null, OwnerTypeEnum? OwnerType = null, Dictionary<string, Greeting> Greetings = null, DateTime? CreatedDate = null, string CreatedBy = null, DateTime? ModifiedDate = null, string ModifiedBy = null, )
+        public DefaultGreetingList(string Name = null, GreetingOwner Owner = null, OwnerTypeEnum? OwnerType = null, Dictionary<string, Greeting> Greetings = null, DateTime? CreatedDate = null, string CreatedBy = null, DateTime? ModifiedDate = null, string ModifiedBy = null)
         {
             this.Name = Name;
             this.Owner = Owner;
@@ -173,52 +172,52 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Owner == other.Owner ||
                     this.Owner != null &&
                     this.Owner.Equals(other.Owner)
-                ) && 
+                ) &&
                 (
                     this.OwnerType == other.OwnerType ||
                     this.OwnerType != null &&
                     this.OwnerType.Equals(other.OwnerType)
-                ) && 
+                ) &&
                 (
                     this.Greetings == other.Greetings ||
                     this.Greetings != null &&
                     this.Greetings.SequenceEqual(other.Greetings)
-                ) && 
+                ) &&
                 (
                     this.CreatedDate == other.CreatedDate ||
                     this.CreatedDate != null &&
                     this.CreatedDate.Equals(other.CreatedDate)
-                ) && 
+                ) &&
                 (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
-                ) && 
+                ) &&
                 (
                     this.ModifiedDate == other.ModifiedDate ||
                     this.ModifiedDate != null &&
                     this.ModifiedDate.Equals(other.ModifiedDate)
-                ) && 
+                ) &&
                 (
                     this.ModifiedBy == other.ModifiedBy ||
                     this.ModifiedBy != null &&
                     this.ModifiedBy.Equals(other.ModifiedBy)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

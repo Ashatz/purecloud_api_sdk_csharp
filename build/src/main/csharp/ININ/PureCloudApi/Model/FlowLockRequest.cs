@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FlowLockRequest :  IEquatable<FlowLockRequest>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowLockRequest" /> class.
         /// Initializes a new instance of the <see cref="FlowLockRequest" />class.
         /// </summary>
         /// <param name="Locked">Change the locked state of the flow definition.  True to attempt to lock for modification, false to release the lock. (required) (default to false).</param>
@@ -91,7 +90,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Locked == other.Locked ||
                     this.Locked != null &&

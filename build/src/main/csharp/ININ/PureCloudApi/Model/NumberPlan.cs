@@ -52,7 +52,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "interCountryCode")]
             Intercountrycode
         }
-    
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -67,7 +67,6 @@ namespace ININ.PureCloudApi.Model
         public MatchTypeEnum? MatchType { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="NumberPlan" /> class.
         /// Initializes a new instance of the <see cref="NumberPlan" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -88,7 +87,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Classification">Classification.</param>
         /// <param name="MatchType">The type of matching technique the number plan uses. (required).</param>
 
-        public NumberPlan(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string Match = null, string NormalizedFormat = null, int? Priority = null, List<double?> Numbers = null, DigitLength DigitLength = null, string Classification = null, MatchTypeEnum? MatchType = null, )
+        public NumberPlan(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string Match = null, string NormalizedFormat = null, int? Priority = null, List<double?> Numbers = null, DigitLength DigitLength = null, string Classification = null, MatchTypeEnum? MatchType = null)
         {
             // to ensure "MatchType" is required (not null)
             if (MatchType == null)
@@ -288,97 +287,97 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.ModifiedBy == other.ModifiedBy ||
                     this.ModifiedBy != null &&
                     this.ModifiedBy.Equals(other.ModifiedBy)
-                ) && 
+                ) &&
                 (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
-                ) && 
+                ) &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.ModifiedByApp == other.ModifiedByApp ||
                     this.ModifiedByApp != null &&
                     this.ModifiedByApp.Equals(other.ModifiedByApp)
-                ) && 
+                ) &&
                 (
                     this.CreatedByApp == other.CreatedByApp ||
                     this.CreatedByApp != null &&
                     this.CreatedByApp.Equals(other.CreatedByApp)
-                ) && 
+                ) &&
                 (
                     this.Match == other.Match ||
                     this.Match != null &&
                     this.Match.Equals(other.Match)
-                ) && 
+                ) &&
                 (
                     this.NormalizedFormat == other.NormalizedFormat ||
                     this.NormalizedFormat != null &&
                     this.NormalizedFormat.Equals(other.NormalizedFormat)
-                ) && 
+                ) &&
                 (
                     this.Priority == other.Priority ||
                     this.Priority != null &&
                     this.Priority.Equals(other.Priority)
-                ) && 
+                ) &&
                 (
                     this.Numbers == other.Numbers ||
                     this.Numbers != null &&
                     this.Numbers.SequenceEqual(other.Numbers)
-                ) && 
+                ) &&
                 (
                     this.DigitLength == other.DigitLength ||
                     this.DigitLength != null &&
                     this.DigitLength.Equals(other.DigitLength)
-                ) && 
+                ) &&
                 (
                     this.Classification == other.Classification ||
                     this.Classification != null &&
                     this.Classification.Equals(other.Classification)
-                ) && 
+                ) &&
                 (
                     this.MatchType == other.MatchType ||
                     this.MatchType != null &&
                     this.MatchType.Equals(other.MatchType)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

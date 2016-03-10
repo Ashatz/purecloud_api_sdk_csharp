@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class MediaPolicies :  IEquatable<MediaPolicies>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="MediaPolicies" /> class.
         /// Initializes a new instance of the <see cref="MediaPolicies" />class.
         /// </summary>
         /// <param name="CallPolicy">Conditions and actions for calls.</param>
@@ -103,17 +102,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.CallPolicy == other.CallPolicy ||
                     this.CallPolicy != null &&
                     this.CallPolicy.Equals(other.CallPolicy)
-                ) && 
+                ) &&
                 (
                     this.ChatPolicy == other.ChatPolicy ||
                     this.ChatPolicy != null &&
                     this.ChatPolicy.Equals(other.ChatPolicy)
-                ) && 
+                ) &&
                 (
                     this.EmailPolicy == other.EmailPolicy ||
                     this.EmailPolicy != null &&

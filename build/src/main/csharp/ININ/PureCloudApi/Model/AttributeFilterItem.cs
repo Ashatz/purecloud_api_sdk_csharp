@@ -48,7 +48,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "CONTAINS")]
             Contains
         }
-    
+        
         /// <summary>
         /// Gets or Sets _Operator
         /// </summary>
@@ -56,7 +56,6 @@ namespace ININ.PureCloudApi.Model
         public _OperatorEnum? _Operator { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="AttributeFilterItem" /> class.
         /// Initializes a new instance of the <see cref="AttributeFilterItem" />class.
         /// </summary>
         /// <param name="Id">Id.</param>
@@ -131,17 +130,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this._Operator == other._Operator ||
                     this._Operator != null &&
                     this._Operator.Equals(other._Operator)
-                ) && 
+                ) &&
                 (
                     this.Values == other.Values ||
                     this.Values != null &&

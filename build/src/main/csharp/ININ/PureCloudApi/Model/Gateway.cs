@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Gateway :  IEquatable<Gateway>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Gateway" /> class.
         /// Initializes a new instance of the <see cref="Gateway" />class.
         /// </summary>
         /// <param name="Id">Id.</param>
@@ -100,17 +99,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Ip == other.Ip ||
                     this.Ip != null &&
                     this.Ip.Equals(other.Ip)
-                ) && 
+                ) &&
                 (
                     this.Port == other.Port ||
                     this.Port != null &&

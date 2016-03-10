@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Geolocation :  IEquatable<Geolocation>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Geolocation" /> class.
         /// Initializes a new instance of the <see cref="Geolocation" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -31,7 +30,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Region">Region.</param>
         /// <param name="City">City.</param>
 
-        public Geolocation(string Name = null, string Type = null, bool? Primary = null, double? Latitude = null, double? Longitude = null, string Country = null, string Region = null, string City = null, )
+        public Geolocation(string Name = null, string Type = null, bool? Primary = null, double? Latitude = null, double? Longitude = null, string Country = null, string Region = null, string City = null)
         {
             this.Name = Name;
             this.Type = Type;
@@ -171,52 +170,52 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.Primary == other.Primary ||
                     this.Primary != null &&
                     this.Primary.Equals(other.Primary)
-                ) && 
+                ) &&
                 (
                     this.Latitude == other.Latitude ||
                     this.Latitude != null &&
                     this.Latitude.Equals(other.Latitude)
-                ) && 
+                ) &&
                 (
                     this.Longitude == other.Longitude ||
                     this.Longitude != null &&
                     this.Longitude.Equals(other.Longitude)
-                ) && 
+                ) &&
                 (
                     this.Country == other.Country ||
                     this.Country != null &&
                     this.Country.Equals(other.Country)
-                ) && 
+                ) &&
                 (
                     this.Region == other.Region ||
                     this.Region != null &&
                     this.Region.Equals(other.Region)
-                ) && 
+                ) &&
                 (
                     this.City == other.City ||
                     this.City != null &&
                     this.City.Equals(other.City)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

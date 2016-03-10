@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class WorkItemSearchDetails :  IEquatable<WorkItemSearchDetails>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="WorkItemSearchDetails" /> class.
         /// Initializes a new instance of the <see cref="WorkItemSearchDetails" />class.
         /// </summary>
         /// <param name="WorkItem">WorkItem.</param>
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.WorkItem == other.WorkItem ||
                     this.WorkItem != null &&

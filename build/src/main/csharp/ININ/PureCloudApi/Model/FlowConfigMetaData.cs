@@ -43,7 +43,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "WORKFLOW")]
             Workflow
         }
-    
+        
         /// <summary>
         /// Usability of this flow definition. (output only)
         /// </summary>
@@ -59,7 +59,6 @@ namespace ININ.PureCloudApi.Model
         public FlowTypeEnum? FlowType { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowConfigMetaData" /> class.
         /// Initializes a new instance of the <see cref="FlowConfigMetaData" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -72,7 +71,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Description">User notes describing the flow definition..</param>
         /// <param name="HasDraft">Flag if this definition has a draft populated. (default to false).</param>
 
-        public FlowConfigMetaData(string Name = null, ConfigStateEnum? ConfigState = null, FlowTypeEnum? FlowType = null, User LockedByUser = null, string NewestPublishedVersion = null, string NewestVersion = null, List<Workspace> AssociatedWorkspaces = null, string Description = null, bool? HasDraft = null, )
+        public FlowConfigMetaData(string Name = null, ConfigStateEnum? ConfigState = null, FlowTypeEnum? FlowType = null, User LockedByUser = null, string NewestPublishedVersion = null, string NewestVersion = null, List<Workspace> AssociatedWorkspaces = null, string Description = null, bool? HasDraft = null)
         {
             // to ensure "FlowType" is required (not null)
             if (FlowType == null)
@@ -220,57 +219,57 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.ConfigState == other.ConfigState ||
                     this.ConfigState != null &&
                     this.ConfigState.Equals(other.ConfigState)
-                ) && 
+                ) &&
                 (
                     this.FlowType == other.FlowType ||
                     this.FlowType != null &&
                     this.FlowType.Equals(other.FlowType)
-                ) && 
+                ) &&
                 (
                     this.LockedByUser == other.LockedByUser ||
                     this.LockedByUser != null &&
                     this.LockedByUser.Equals(other.LockedByUser)
-                ) && 
+                ) &&
                 (
                     this.NewestPublishedVersion == other.NewestPublishedVersion ||
                     this.NewestPublishedVersion != null &&
                     this.NewestPublishedVersion.Equals(other.NewestPublishedVersion)
-                ) && 
+                ) &&
                 (
                     this.NewestVersion == other.NewestVersion ||
                     this.NewestVersion != null &&
                     this.NewestVersion.Equals(other.NewestVersion)
-                ) && 
+                ) &&
                 (
                     this.AssociatedWorkspaces == other.AssociatedWorkspaces ||
                     this.AssociatedWorkspaces != null &&
                     this.AssociatedWorkspaces.SequenceEqual(other.AssociatedWorkspaces)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.HasDraft == other.HasDraft ||
                     this.HasDraft != null &&
                     this.HasDraft.Equals(other.HasDraft)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

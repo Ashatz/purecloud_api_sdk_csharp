@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ROOM")]
             Room
         }
-    
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -35,7 +35,6 @@ namespace ININ.PureCloudApi.Model
         public TypeEnum? Type { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ChatParticipant" /> class.
         /// Initializes a new instance of the <see cref="ChatParticipant" />class.
         /// </summary>
         /// <param name="Type">Type.</param>
@@ -92,7 +91,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&

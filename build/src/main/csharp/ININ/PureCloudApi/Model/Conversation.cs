@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "NONE")]
             None
         }
-    
+        
         /// <summary>
         /// On update, 'paused' initiates a secure pause, 'active' resumes any paused recordings; otherwise indicates state of conversation recording.
         /// </summary>
@@ -39,7 +39,6 @@ namespace ININ.PureCloudApi.Model
         public RecordingStateEnum? RecordingState { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Conversation" /> class.
         /// Initializes a new instance of the <see cref="Conversation" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -51,7 +50,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="MaxParticipants">If this is a conference conversation, then this field indicates the maximum number of participants allowed to participant in the conference..</param>
         /// <param name="RecordingState">On update, &#39;paused&#39; initiates a secure pause, &#39;active&#39; resumes any paused recordings; otherwise indicates state of conversation recording..</param>
 
-        public Conversation(string Name = null, DateTime? StartTime = null, DateTime? EndTime = null, string Address = null, List<Participant> Participants = null, List<string> ConversationIds = null, int? MaxParticipants = null, RecordingStateEnum? RecordingState = null, )
+        public Conversation(string Name = null, DateTime? StartTime = null, DateTime? EndTime = null, string Address = null, List<Participant> Participants = null, List<string> ConversationIds = null, int? MaxParticipants = null, RecordingStateEnum? RecordingState = null)
         {
             // to ensure "StartTime" is required (not null)
             if (StartTime == null)
@@ -197,52 +196,52 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.StartTime == other.StartTime ||
                     this.StartTime != null &&
                     this.StartTime.Equals(other.StartTime)
-                ) && 
+                ) &&
                 (
                     this.EndTime == other.EndTime ||
                     this.EndTime != null &&
                     this.EndTime.Equals(other.EndTime)
-                ) && 
+                ) &&
                 (
                     this.Address == other.Address ||
                     this.Address != null &&
                     this.Address.Equals(other.Address)
-                ) && 
+                ) &&
                 (
                     this.Participants == other.Participants ||
                     this.Participants != null &&
                     this.Participants.SequenceEqual(other.Participants)
-                ) && 
+                ) &&
                 (
                     this.ConversationIds == other.ConversationIds ||
                     this.ConversationIds != null &&
                     this.ConversationIds.SequenceEqual(other.ConversationIds)
-                ) && 
+                ) &&
                 (
                     this.MaxParticipants == other.MaxParticipants ||
                     this.MaxParticipants != null &&
                     this.MaxParticipants.Equals(other.MaxParticipants)
-                ) && 
+                ) &&
                 (
                     this.RecordingState == other.RecordingState ||
                     this.RecordingState != null &&
                     this.RecordingState.Equals(other.RecordingState)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

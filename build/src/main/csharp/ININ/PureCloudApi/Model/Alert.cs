@@ -43,7 +43,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "RATIO")]
             Ratio
         }
-    
+        
         /// <summary>
         /// Gets or Sets MediaType
         /// </summary>
@@ -57,7 +57,6 @@ namespace ININ.PureCloudApi.Model
         public StatisticEnum? Statistic { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Alert" /> class.
         /// Initializes a new instance of the <see cref="Alert" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -74,7 +73,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Statistic">Statistic.</param>
         /// <param name="RuleUri">RuleUri.</param>
 
-        public Alert(string Name = null, string Title = null, string Description = null, bool? Unread = null, Entity Entity = null, string Metric = null, List<MetricThreshold> MetricThresholds = null, double? MetricValue = null, DateTime? StartTime = null, DateTime? EndTime = null, MediaTypeEnum? MediaType = null, StatisticEnum? Statistic = null, string RuleUri = null, )
+        public Alert(string Name = null, string Title = null, string Description = null, bool? Unread = null, Entity Entity = null, string Metric = null, List<MetricThreshold> MetricThresholds = null, double? MetricValue = null, DateTime? StartTime = null, DateTime? EndTime = null, MediaTypeEnum? MediaType = null, StatisticEnum? Statistic = null, string RuleUri = null)
         {
             this.Name = Name;
             this.Title = Title;
@@ -242,77 +241,77 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Title == other.Title ||
                     this.Title != null &&
                     this.Title.Equals(other.Title)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Unread == other.Unread ||
                     this.Unread != null &&
                     this.Unread.Equals(other.Unread)
-                ) && 
+                ) &&
                 (
                     this.Entity == other.Entity ||
                     this.Entity != null &&
                     this.Entity.Equals(other.Entity)
-                ) && 
+                ) &&
                 (
                     this.Metric == other.Metric ||
                     this.Metric != null &&
                     this.Metric.Equals(other.Metric)
-                ) && 
+                ) &&
                 (
                     this.MetricThresholds == other.MetricThresholds ||
                     this.MetricThresholds != null &&
                     this.MetricThresholds.SequenceEqual(other.MetricThresholds)
-                ) && 
+                ) &&
                 (
                     this.MetricValue == other.MetricValue ||
                     this.MetricValue != null &&
                     this.MetricValue.Equals(other.MetricValue)
-                ) && 
+                ) &&
                 (
                     this.StartTime == other.StartTime ||
                     this.StartTime != null &&
                     this.StartTime.Equals(other.StartTime)
-                ) && 
+                ) &&
                 (
                     this.EndTime == other.EndTime ||
                     this.EndTime != null &&
                     this.EndTime.Equals(other.EndTime)
-                ) && 
+                ) &&
                 (
                     this.MediaType == other.MediaType ||
                     this.MediaType != null &&
                     this.MediaType.Equals(other.MediaType)
-                ) && 
+                ) &&
                 (
                     this.Statistic == other.Statistic ||
                     this.Statistic != null &&
                     this.Statistic.Equals(other.Statistic)
-                ) && 
+                ) &&
                 (
                     this.RuleUri == other.RuleUri ||
                     this.RuleUri != null &&
                     this.RuleUri.Equals(other.RuleUri)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

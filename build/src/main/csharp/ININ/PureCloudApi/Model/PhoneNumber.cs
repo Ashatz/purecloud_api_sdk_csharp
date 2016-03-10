@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class PhoneNumber :  IEquatable<PhoneNumber>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="PhoneNumber" /> class.
         /// Initializes a new instance of the <see cref="PhoneNumber" />class.
         /// </summary>
         /// <param name="Display">Display.</param>
@@ -135,32 +134,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Display == other.Display ||
                     this.Display != null &&
                     this.Display.Equals(other.Display)
-                ) && 
+                ) &&
                 (
                     this.Extension == other.Extension ||
                     this.Extension != null &&
                     this.Extension.Equals(other.Extension)
-                ) && 
+                ) &&
                 (
                     this.AcceptsSMS == other.AcceptsSMS ||
                     this.AcceptsSMS != null &&
                     this.AcceptsSMS.Equals(other.AcceptsSMS)
-                ) && 
+                ) &&
                 (
                     this.UserInput == other.UserInput ||
                     this.UserInput != null &&
                     this.UserInput.Equals(other.UserInput)
-                ) && 
+                ) &&
                 (
                     this.E164 == other.E164 ||
                     this.E164 != null &&
                     this.E164.Equals(other.E164)
-                ) && 
+                ) &&
                 (
                     this.CountryCode == other.CountryCode ||
                     this.CountryCode != null &&

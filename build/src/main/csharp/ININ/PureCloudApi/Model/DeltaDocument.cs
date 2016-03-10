@@ -33,7 +33,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "DELETED")]
             Deleted
         }
-    
+        
         /// <summary>
         /// Gets or Sets Operation
         /// </summary>
@@ -41,7 +41,6 @@ namespace ININ.PureCloudApi.Model
         public OperationEnum? Operation { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="DeltaDocument" /> class.
         /// Initializes a new instance of the <see cref="DeltaDocument" />class.
         /// </summary>
         /// <param name="Id">Id.</param>
@@ -153,37 +152,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Filename == other.Filename ||
                     this.Filename != null &&
                     this.Filename.Equals(other.Filename)
-                ) && 
+                ) &&
                 (
                     this.ContentType == other.ContentType ||
                     this.ContentType != null &&
                     this.ContentType.Equals(other.ContentType)
-                ) && 
+                ) &&
                 (
                     this.ContentLengthBytes == other.ContentLengthBytes ||
                     this.ContentLengthBytes != null &&
                     this.ContentLengthBytes.Equals(other.ContentLengthBytes)
-                ) && 
+                ) &&
                 (
                     this.Operation == other.Operation ||
                     this.Operation != null &&
                     this.Operation.Equals(other.Operation)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&

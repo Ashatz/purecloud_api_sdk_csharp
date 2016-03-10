@@ -49,7 +49,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "NON_TECHNICAL_ISSUE")]
             NonTechnicalIssue
         }
-    
+        
         /// <summary>
         /// Gets or Sets Priority
         /// </summary>
@@ -63,7 +63,6 @@ namespace ININ.PureCloudApi.Model
         public TypeEnum? Type { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="DiagnosticEmail" /> class.
         /// Initializes a new instance of the <see cref="DiagnosticEmail" />class.
         /// </summary>
         /// <param name="Subject">Subject.</param>
@@ -167,37 +166,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Subject == other.Subject ||
                     this.Subject != null &&
                     this.Subject.Equals(other.Subject)
-                ) && 
+                ) &&
                 (
                     this.Topic == other.Topic ||
                     this.Topic != null &&
                     this.Topic.Equals(other.Topic)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Priority == other.Priority ||
                     this.Priority != null &&
                     this.Priority.Equals(other.Priority)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.Data == other.Data ||
                     this.Data != null &&

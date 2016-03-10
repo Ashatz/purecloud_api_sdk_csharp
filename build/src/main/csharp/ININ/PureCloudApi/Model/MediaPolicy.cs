@@ -17,24 +17,19 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class MediaPolicy :  IEquatable<MediaPolicy>
     { 
-        public enum  {
-            
-            [EnumMember(Value = "CONVERSATION_COMPLETE")]
-            ConversationComplete,
-            
-            [EnumMember(Value = "PER_CONVERSATION_EVENT")]
-            PerConversationEvent
-        }
-    
+        
+        public static string EvaluationCriteria_ConversationComplete = "CONVERSATION_COMPLETE";
+        public static string EvaluationCriteria_PerConversationEvent = "PER_CONVERSATION_EVENT";
+        
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="MediaPolicy" /> class.
         /// Initializes a new instance of the <see cref="MediaPolicy" />class.
         /// </summary>
         /// <param name="EvaluationCriteria">When conditions are evaluation and actions applied.</param>
         /// <param name="Conditions">Conditions for when actions should be applied.</param>
         /// <param name="Actions">Actions applied when specified conditions are met.</param>
 
-        public MediaPolicy(List<EvaluationCriteriaEnum?> EvaluationCriteria = null, PolicyConditions Conditions = null, PolicyActions Actions = null)
+        public MediaPolicy(List<string> EvaluationCriteria = null, PolicyConditions Conditions = null, PolicyActions Actions = null)
         {
             this.EvaluationCriteria = EvaluationCriteria;
             this.Conditions = Conditions;
@@ -111,17 +106,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.EvaluationCriteria == other.EvaluationCriteria ||
                     this.EvaluationCriteria != null &&
                     this.EvaluationCriteria.SequenceEqual(other.EvaluationCriteria)
-                ) && 
+                ) &&
                 (
                     this.Conditions == other.Conditions ||
                     this.Conditions != null &&
                     this.Conditions.Equals(other.Conditions)
-                ) && 
+                ) &&
                 (
                     this.Actions == other.Actions ||
                     this.Actions != null &&

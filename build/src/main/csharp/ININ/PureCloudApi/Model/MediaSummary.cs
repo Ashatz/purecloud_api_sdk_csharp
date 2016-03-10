@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class MediaSummary :  IEquatable<MediaSummary>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="MediaSummary" /> class.
         /// Initializes a new instance of the <see cref="MediaSummary" />class.
         /// </summary>
         /// <param name="ContactCenter">ContactCenter.</param>
@@ -91,12 +90,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ContactCenter == other.ContactCenter ||
                     this.ContactCenter != null &&
                     this.ContactCenter.Equals(other.ContactCenter)
-                ) && 
+                ) &&
                 (
                     this.Enterprise == other.Enterprise ||
                     this.Enterprise != null &&

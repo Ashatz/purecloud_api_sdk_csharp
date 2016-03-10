@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "BOTH")]
             Both
         }
-    
+        
         /// <summary>
         /// Determines to whom the initiating participant is speaking.
         /// </summary>
@@ -39,7 +39,6 @@ namespace ININ.PureCloudApi.Model
         public SpeakToEnum? SpeakTo { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConsultTransferUpdate" /> class.
         /// Initializes a new instance of the <see cref="ConsultTransferUpdate" />class.
         /// </summary>
         /// <param name="SpeakTo">Determines to whom the initiating participant is speaking. (required).</param>
@@ -104,7 +103,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.SpeakTo == other.SpeakTo ||
                     this.SpeakTo != null &&

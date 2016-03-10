@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DataValueInfo :  IEquatable<DataValueInfo>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DataValueInfo" /> class.
         /// Initializes a new instance of the <see cref="DataValueInfo" />class.
         /// </summary>
         /// <param name="DataItems">DataItems.</param>
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.DataItems == other.DataItems ||
                     this.DataItems != null &&

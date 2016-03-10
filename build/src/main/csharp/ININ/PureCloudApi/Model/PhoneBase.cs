@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class PhoneBase :  IEquatable<PhoneBase>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="PhoneBase" /> class.
         /// Initializes a new instance of the <see cref="PhoneBase" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -28,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Properties">Properties.</param>
         /// <param name="Capabilities">Capabilities.</param>
 
-        public PhoneBase(string Name = null, UriReference PhoneMetaBase = null, List<LineBase> Lines = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null, )
+        public PhoneBase(string Name = null, UriReference PhoneMetaBase = null, List<LineBase> Lines = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null)
         {
             this.Name = Name;
             this.PhoneMetaBase = PhoneMetaBase;
@@ -134,37 +133,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.PhoneMetaBase == other.PhoneMetaBase ||
                     this.PhoneMetaBase != null &&
                     this.PhoneMetaBase.Equals(other.PhoneMetaBase)
-                ) && 
+                ) &&
                 (
                     this.Lines == other.Lines ||
                     this.Lines != null &&
                     this.Lines.SequenceEqual(other.Lines)
-                ) && 
+                ) &&
                 (
                     this.Properties == other.Properties ||
                     this.Properties != null &&
                     this.Properties.SequenceEqual(other.Properties)
-                ) && 
+                ) &&
                 (
                     this.Capabilities == other.Capabilities ||
                     this.Capabilities != null &&
                     this.Capabilities.Equals(other.Capabilities)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

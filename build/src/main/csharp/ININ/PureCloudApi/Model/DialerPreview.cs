@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DialerPreview :  IEquatable<DialerPreview>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DialerPreview" /> class.
         /// Initializes a new instance of the <see cref="DialerPreview" />class.
         /// </summary>
         /// <param name="Id">Id.</param>
@@ -118,27 +117,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.ContactId == other.ContactId ||
                     this.ContactId != null &&
                     this.ContactId.Equals(other.ContactId)
-                ) && 
+                ) &&
                 (
                     this.ContactListId == other.ContactListId ||
                     this.ContactListId != null &&
                     this.ContactListId.Equals(other.ContactListId)
-                ) && 
+                ) &&
                 (
                     this.CampaignId == other.CampaignId ||
                     this.CampaignId != null &&
                     this.CampaignId.Equals(other.CampaignId)
-                ) && 
+                ) &&
                 (
                     this.PhoneNumberColumns == other.PhoneNumberColumns ||
                     this.PhoneNumberColumns != null &&

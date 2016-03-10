@@ -55,7 +55,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "UNKNOWN")]
             Unknown
         }
-    
+        
         /// <summary>
         /// Gets or Sets ParameterType
         /// </summary>
@@ -69,7 +69,6 @@ namespace ININ.PureCloudApi.Model
         public DomainEnum? Domain { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Parameter" /> class.
         /// Initializes a new instance of the <see cref="Parameter" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -155,22 +154,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.ParameterType == other.ParameterType ||
                     this.ParameterType != null &&
                     this.ParameterType.Equals(other.ParameterType)
-                ) && 
+                ) &&
                 (
                     this.Domain == other.Domain ||
                     this.Domain != null &&
                     this.Domain.Equals(other.Domain)
-                ) && 
+                ) &&
                 (
                     this.Required == other.Required ||
                     this.Required != null &&

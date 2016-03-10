@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "SYSTEM")]
             System
         }
-    
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -35,7 +35,6 @@ namespace ININ.PureCloudApi.Model
         public TypeEnum? Type { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="UserStatus" /> class.
         /// Initializes a new instance of the <see cref="UserStatus" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -43,7 +42,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Type">Type.</param>
 
-        public UserStatus(string Name = null, bool? Alertable = null, DateTime? DateModified = null, TypeEnum? Type = null, )
+        public UserStatus(string Name = null, bool? Alertable = null, DateTime? DateModified = null, TypeEnum? Type = null)
         {
             this.Name = Name;
             // use default value if no "Alertable" provided
@@ -144,32 +143,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Alertable == other.Alertable ||
                     this.Alertable != null &&
                     this.Alertable.Equals(other.Alertable)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

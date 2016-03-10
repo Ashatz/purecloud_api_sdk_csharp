@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DomainNetworkCommandResponse :  IEquatable<DomainNetworkCommandResponse>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DomainNetworkCommandResponse" /> class.
         /// Initializes a new instance of the <see cref="DomainNetworkCommandResponse" />class.
         /// </summary>
         /// <param name="CorrelationId">CorrelationId.</param>
@@ -117,22 +116,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.CorrelationId == other.CorrelationId ||
                     this.CorrelationId != null &&
                     this.CorrelationId.Equals(other.CorrelationId)
-                ) && 
+                ) &&
                 (
                     this.CommandName == other.CommandName ||
                     this.CommandName != null &&
                     this.CommandName.Equals(other.CommandName)
-                ) && 
+                ) &&
                 (
                     this.Acknowledged == other.Acknowledged ||
                     this.Acknowledged != null &&
                     this.Acknowledged.Equals(other.Acknowledged)
-                ) && 
+                ) &&
                 (
                     this.ErrorInfo == other.ErrorInfo ||
                     this.ErrorInfo != null &&

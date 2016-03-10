@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DomainLicense :  IEquatable<DomainLicense>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DomainLicense" /> class.
         /// Initializes a new instance of the <see cref="DomainLicense" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -27,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Product">Product.</param>
         /// <param name="Permissions">Permissions.</param>
 
-        public DomainLicense(string Name = null, string Description = null, string Product = null, List<string> Permissions = null, )
+        public DomainLicense(string Name = null, string Description = null, string Product = null, List<string> Permissions = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -125,32 +124,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Product == other.Product ||
                     this.Product != null &&
                     this.Product.Equals(other.Product)
-                ) && 
+                ) &&
                 (
                     this.Permissions == other.Permissions ||
                     this.Permissions != null &&
                     this.Permissions.SequenceEqual(other.Permissions)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

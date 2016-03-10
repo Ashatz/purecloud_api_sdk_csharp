@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ProvisionInfo :  IEquatable<ProvisionInfo>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ProvisionInfo" /> class.
         /// Initializes a new instance of the <see cref="ProvisionInfo" />class.
         /// </summary>
         /// <param name="Time">The time at which this phone was provisioned. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
@@ -103,17 +102,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Time == other.Time ||
                     this.Time != null &&
                     this.Time.Equals(other.Time)
-                ) && 
+                ) &&
                 (
                     this.Source == other.Source ||
                     this.Source != null &&
                     this.Source.Equals(other.Source)
-                ) && 
+                ) &&
                 (
                     this.ErrorInfo == other.ErrorInfo ||
                     this.ErrorInfo != null &&

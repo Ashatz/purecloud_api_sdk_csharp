@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class VoicemailMessage :  IEquatable<VoicemailMessage>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="VoicemailMessage" /> class.
         /// Initializes a new instance of the <see cref="VoicemailMessage" />class.
         /// </summary>
         /// <param name="Conversation">Conversation.</param>
@@ -32,7 +31,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CallerName">CallerName.</param>
         /// <param name="CallerUser">CallerUser.</param>
 
-        public VoicemailMessage(Conversation Conversation = null, bool? Read = null, int? AudioRecordingDurationSeconds = null, long? AudioRecordingSizeBytes = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, string CallerAddress = null, string CallerName = null, User CallerUser = null, )
+        public VoicemailMessage(Conversation Conversation = null, bool? Read = null, int? AudioRecordingDurationSeconds = null, long? AudioRecordingSizeBytes = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, string CallerAddress = null, string CallerName = null, User CallerUser = null)
         {
             this.Conversation = Conversation;
             // use default value if no "Read" provided
@@ -180,57 +179,57 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Conversation == other.Conversation ||
                     this.Conversation != null &&
                     this.Conversation.Equals(other.Conversation)
-                ) && 
+                ) &&
                 (
                     this.Read == other.Read ||
                     this.Read != null &&
                     this.Read.Equals(other.Read)
-                ) && 
+                ) &&
                 (
                     this.AudioRecordingDurationSeconds == other.AudioRecordingDurationSeconds ||
                     this.AudioRecordingDurationSeconds != null &&
                     this.AudioRecordingDurationSeconds.Equals(other.AudioRecordingDurationSeconds)
-                ) && 
+                ) &&
                 (
                     this.AudioRecordingSizeBytes == other.AudioRecordingSizeBytes ||
                     this.AudioRecordingSizeBytes != null &&
                     this.AudioRecordingSizeBytes.Equals(other.AudioRecordingSizeBytes)
-                ) && 
+                ) &&
                 (
                     this.CreatedDate == other.CreatedDate ||
                     this.CreatedDate != null &&
                     this.CreatedDate.Equals(other.CreatedDate)
-                ) && 
+                ) &&
                 (
                     this.ModifiedDate == other.ModifiedDate ||
                     this.ModifiedDate != null &&
                     this.ModifiedDate.Equals(other.ModifiedDate)
-                ) && 
+                ) &&
                 (
                     this.CallerAddress == other.CallerAddress ||
                     this.CallerAddress != null &&
                     this.CallerAddress.Equals(other.CallerAddress)
-                ) && 
+                ) &&
                 (
                     this.CallerName == other.CallerName ||
                     this.CallerName != null &&
                     this.CallerName.Equals(other.CallerName)
-                ) && 
+                ) &&
                 (
                     this.CallerUser == other.CallerUser ||
                     this.CallerUser != null &&
                     this.CallerUser.Equals(other.CallerUser)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

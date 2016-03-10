@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Actions :  IEquatable<Actions>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Actions" /> class.
         /// Initializes a new instance of the <see cref="Actions" />class.
         /// </summary>
         /// <param name="SkillsToRemove">SkillsToRemove.</param>
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.SkillsToRemove == other.SkillsToRemove ||
                     this.SkillsToRemove != null &&

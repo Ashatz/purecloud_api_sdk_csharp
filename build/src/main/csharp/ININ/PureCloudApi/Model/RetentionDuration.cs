@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class RetentionDuration :  IEquatable<RetentionDuration>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="RetentionDuration" /> class.
         /// Initializes a new instance of the <see cref="RetentionDuration" />class.
         /// </summary>
         /// <param name="ArchiveRetention">ArchiveRetention.</param>
@@ -91,12 +90,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ArchiveRetention == other.ArchiveRetention ||
                     this.ArchiveRetention != null &&
                     this.ArchiveRetention.Equals(other.ArchiveRetention)
-                ) && 
+                ) &&
                 (
                     this.DeleteRetention == other.DeleteRetention ||
                     this.DeleteRetention != null &&

@@ -76,7 +76,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "OTHER")]
             Other
         }
-    
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -90,7 +90,6 @@ namespace ININ.PureCloudApi.Model
         public DisconnectTypeEnum? DisconnectType { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="SocialExpression" /> class.
         /// Initializes a new instance of the <see cref="SocialExpression" />class.
         /// </summary>
         /// <param name="State">State.</param>
@@ -240,57 +239,57 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.SocialMediaId == other.SocialMediaId ||
                     this.SocialMediaId != null &&
                     this.SocialMediaId.Equals(other.SocialMediaId)
-                ) && 
+                ) &&
                 (
                     this.SocialMediaHub == other.SocialMediaHub ||
                     this.SocialMediaHub != null &&
                     this.SocialMediaHub.Equals(other.SocialMediaHub)
-                ) && 
+                ) &&
                 (
                     this.SocialUserName == other.SocialUserName ||
                     this.SocialUserName != null &&
                     this.SocialUserName.Equals(other.SocialUserName)
-                ) && 
+                ) &&
                 (
                     this.PreviewText == other.PreviewText ||
                     this.PreviewText != null &&
                     this.PreviewText.Equals(other.PreviewText)
-                ) && 
+                ) &&
                 (
                     this.RecordingId == other.RecordingId ||
                     this.RecordingId != null &&
                     this.RecordingId.Equals(other.RecordingId)
-                ) && 
+                ) &&
                 (
                     this.Segments == other.Segments ||
                     this.Segments != null &&
                     this.Segments.SequenceEqual(other.Segments)
-                ) && 
+                ) &&
                 (
                     this.Held == other.Held ||
                     this.Held != null &&
                     this.Held.Equals(other.Held)
-                ) && 
+                ) &&
                 (
                     this.DisconnectType == other.DisconnectType ||
                     this.DisconnectType != null &&
                     this.DisconnectType.Equals(other.DisconnectType)
-                ) && 
+                ) &&
                 (
                     this.StartHoldTime == other.StartHoldTime ||
                     this.StartHoldTime != null &&

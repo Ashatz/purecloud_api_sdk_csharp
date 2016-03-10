@@ -60,7 +60,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "FLOW_INSTANCE_RETRY")]
             FlowInstanceRetry
         }
-    
+        
         /// <summary>
         /// The type of the history event being reported.
         /// </summary>
@@ -69,7 +69,6 @@ namespace ININ.PureCloudApi.Model
         public HistoryEventTypeEnum? HistoryEventType { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowHistoryItem" /> class.
         /// Initializes a new instance of the <see cref="FlowHistoryItem" />class.
         /// </summary>
         /// <param name="HistoryEventTime">The time when the history item occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
@@ -220,42 +219,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.HistoryEventTime == other.HistoryEventTime ||
                     this.HistoryEventTime != null &&
                     this.HistoryEventTime.Equals(other.HistoryEventTime)
-                ) && 
+                ) &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.WorkItem == other.WorkItem ||
                     this.WorkItem != null &&
                     this.WorkItem.Equals(other.WorkItem)
-                ) && 
+                ) &&
                 (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
-                ) && 
+                ) &&
                 (
                     this.Queue == other.Queue ||
                     this.Queue != null &&
                     this.Queue.Equals(other.Queue)
-                ) && 
+                ) &&
                 (
                     this.HistoryEventData == other.HistoryEventData ||
                     this.HistoryEventData != null &&
                     this.HistoryEventData.SequenceEqual(other.HistoryEventData)
-                ) && 
+                ) &&
                 (
                     this.HistoryEventType == other.HistoryEventType ||
                     this.HistoryEventType != null &&
                     this.HistoryEventType.Equals(other.HistoryEventType)
-                ) && 
+                ) &&
                 (
                     this.Success == other.Success ||
                     this.Success != null &&

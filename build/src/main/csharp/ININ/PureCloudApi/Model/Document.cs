@@ -53,7 +53,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "PUBLIC")]
             Public
         }
-    
+        
         /// <summary>
         /// Gets or Sets SystemType
         /// </summary>
@@ -73,7 +73,6 @@ namespace ININ.PureCloudApi.Model
         public SharingStatusEnum? SharingStatus { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Document" /> class.
         /// Initializes a new instance of the <see cref="Document" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -106,7 +105,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SharingUri">SharingUri.</param>
         /// <param name="DownloadSharingUri">DownloadSharingUri.</param>
 
-        public Document(string Name = null, int? ChangeNumber = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateUploaded = null, string ContentUri = null, UriReference Workspace = null, UriReference CreatedBy = null, UriReference UploadedBy = null, string ContentType = null, long? ContentLength = null, SystemTypeEnum? SystemType = null, string Filename = null, long? PageCount = null, bool? Read = null, string CallerAddress = null, string ReceiverAddress = null, List<string> Tags = null, List<TagValue> TagValues = null, List<DocumentAttribute> Attributes = null, List<DocumentThumbnail> Thumbnails = null, UriReference UploadStatus = null, string UploadDestinationUri = null, UploadMethodEnum? UploadMethod = null, LockInfo LockInfo = null, List<string> Acl = null, SharingStatusEnum? SharingStatus = null, string SharingUri = null, string DownloadSharingUri = null, )
+        public Document(string Name = null, int? ChangeNumber = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateUploaded = null, string ContentUri = null, UriReference Workspace = null, UriReference CreatedBy = null, UriReference UploadedBy = null, string ContentType = null, long? ContentLength = null, SystemTypeEnum? SystemType = null, string Filename = null, long? PageCount = null, bool? Read = null, string CallerAddress = null, string ReceiverAddress = null, List<string> Tags = null, List<TagValue> TagValues = null, List<DocumentAttribute> Attributes = null, List<DocumentThumbnail> Thumbnails = null, UriReference UploadStatus = null, string UploadDestinationUri = null, UploadMethodEnum? UploadMethod = null, LockInfo LockInfo = null, List<string> Acl = null, SharingStatusEnum? SharingStatus = null, string SharingUri = null, string DownloadSharingUri = null)
         {
             this.Name = Name;
             this.ChangeNumber = ChangeNumber;
@@ -398,157 +397,157 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.ChangeNumber == other.ChangeNumber ||
                     this.ChangeNumber != null &&
                     this.ChangeNumber.Equals(other.ChangeNumber)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.DateUploaded == other.DateUploaded ||
                     this.DateUploaded != null &&
                     this.DateUploaded.Equals(other.DateUploaded)
-                ) && 
+                ) &&
                 (
                     this.ContentUri == other.ContentUri ||
                     this.ContentUri != null &&
                     this.ContentUri.Equals(other.ContentUri)
-                ) && 
+                ) &&
                 (
                     this.Workspace == other.Workspace ||
                     this.Workspace != null &&
                     this.Workspace.Equals(other.Workspace)
-                ) && 
+                ) &&
                 (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
-                ) && 
+                ) &&
                 (
                     this.UploadedBy == other.UploadedBy ||
                     this.UploadedBy != null &&
                     this.UploadedBy.Equals(other.UploadedBy)
-                ) && 
+                ) &&
                 (
                     this.ContentType == other.ContentType ||
                     this.ContentType != null &&
                     this.ContentType.Equals(other.ContentType)
-                ) && 
+                ) &&
                 (
                     this.ContentLength == other.ContentLength ||
                     this.ContentLength != null &&
                     this.ContentLength.Equals(other.ContentLength)
-                ) && 
+                ) &&
                 (
                     this.SystemType == other.SystemType ||
                     this.SystemType != null &&
                     this.SystemType.Equals(other.SystemType)
-                ) && 
+                ) &&
                 (
                     this.Filename == other.Filename ||
                     this.Filename != null &&
                     this.Filename.Equals(other.Filename)
-                ) && 
+                ) &&
                 (
                     this.PageCount == other.PageCount ||
                     this.PageCount != null &&
                     this.PageCount.Equals(other.PageCount)
-                ) && 
+                ) &&
                 (
                     this.Read == other.Read ||
                     this.Read != null &&
                     this.Read.Equals(other.Read)
-                ) && 
+                ) &&
                 (
                     this.CallerAddress == other.CallerAddress ||
                     this.CallerAddress != null &&
                     this.CallerAddress.Equals(other.CallerAddress)
-                ) && 
+                ) &&
                 (
                     this.ReceiverAddress == other.ReceiverAddress ||
                     this.ReceiverAddress != null &&
                     this.ReceiverAddress.Equals(other.ReceiverAddress)
-                ) && 
+                ) &&
                 (
                     this.Tags == other.Tags ||
                     this.Tags != null &&
                     this.Tags.SequenceEqual(other.Tags)
-                ) && 
+                ) &&
                 (
                     this.TagValues == other.TagValues ||
                     this.TagValues != null &&
                     this.TagValues.SequenceEqual(other.TagValues)
-                ) && 
+                ) &&
                 (
                     this.Attributes == other.Attributes ||
                     this.Attributes != null &&
                     this.Attributes.SequenceEqual(other.Attributes)
-                ) && 
+                ) &&
                 (
                     this.Thumbnails == other.Thumbnails ||
                     this.Thumbnails != null &&
                     this.Thumbnails.SequenceEqual(other.Thumbnails)
-                ) && 
+                ) &&
                 (
                     this.UploadStatus == other.UploadStatus ||
                     this.UploadStatus != null &&
                     this.UploadStatus.Equals(other.UploadStatus)
-                ) && 
+                ) &&
                 (
                     this.UploadDestinationUri == other.UploadDestinationUri ||
                     this.UploadDestinationUri != null &&
                     this.UploadDestinationUri.Equals(other.UploadDestinationUri)
-                ) && 
+                ) &&
                 (
                     this.UploadMethod == other.UploadMethod ||
                     this.UploadMethod != null &&
                     this.UploadMethod.Equals(other.UploadMethod)
-                ) && 
+                ) &&
                 (
                     this.LockInfo == other.LockInfo ||
                     this.LockInfo != null &&
                     this.LockInfo.Equals(other.LockInfo)
-                ) && 
+                ) &&
                 (
                     this.Acl == other.Acl ||
                     this.Acl != null &&
                     this.Acl.SequenceEqual(other.Acl)
-                ) && 
+                ) &&
                 (
                     this.SharingStatus == other.SharingStatus ||
                     this.SharingStatus != null &&
                     this.SharingStatus.Equals(other.SharingStatus)
-                ) && 
+                ) &&
                 (
                     this.SharingUri == other.SharingUri ||
                     this.SharingUri != null &&
                     this.SharingUri.Equals(other.SharingUri)
-                ) && 
+                ) &&
                 (
                     this.DownloadSharingUri == other.DownloadSharingUri ||
                     this.DownloadSharingUri != null &&
                     this.DownloadSharingUri.Equals(other.DownloadSharingUri)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

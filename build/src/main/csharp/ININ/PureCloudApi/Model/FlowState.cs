@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FlowState :  IEquatable<FlowState>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowState" /> class.
         /// Initializes a new instance of the <see cref="FlowState" />class.
         /// </summary>
         /// <param name="StateExecId">The identifier of the execution instance of this State. (required).</param>
@@ -119,17 +118,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.StateExecId == other.StateExecId ||
                     this.StateExecId != null &&
                     this.StateExecId.Equals(other.StateExecId)
-                ) && 
+                ) &&
                 (
                     this.StateConfigId == other.StateConfigId ||
                     this.StateConfigId != null &&
                     this.StateConfigId.Equals(other.StateConfigId)
-                ) && 
+                ) &&
                 (
                     this.StateName == other.StateName ||
                     this.StateName != null &&

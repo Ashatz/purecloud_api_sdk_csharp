@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ConsultTransferResponse :  IEquatable<ConsultTransferResponse>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConsultTransferResponse" /> class.
         /// Initializes a new instance of the <see cref="ConsultTransferResponse" />class.
         /// </summary>
         /// <param name="DestinationParticipantId">Participant ID to whom the call is being transferred. (required).</param>
@@ -91,7 +90,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.DestinationParticipantId == other.DestinationParticipantId ||
                     this.DestinationParticipantId != null &&

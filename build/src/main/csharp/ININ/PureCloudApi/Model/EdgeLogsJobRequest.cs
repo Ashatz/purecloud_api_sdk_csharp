@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class EdgeLogsJobRequest :  IEquatable<EdgeLogsJobRequest>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="EdgeLogsJobRequest" /> class.
         /// Initializes a new instance of the <see cref="EdgeLogsJobRequest" />class.
         /// </summary>
         /// <param name="Path">Path.</param>
@@ -108,17 +107,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Path == other.Path ||
                     this.Path != null &&
                     this.Path.Equals(other.Path)
-                ) && 
+                ) &&
                 (
                     this.Query == other.Query ||
                     this.Query != null &&
                     this.Query.Equals(other.Query)
-                ) && 
+                ) &&
                 (
                     this.Recurse == other.Recurse ||
                     this.Recurse != null &&

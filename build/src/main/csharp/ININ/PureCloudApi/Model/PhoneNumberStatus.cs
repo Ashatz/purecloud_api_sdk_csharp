@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class PhoneNumberStatus :  IEquatable<PhoneNumberStatus>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="PhoneNumberStatus" /> class.
         /// Initializes a new instance of the <see cref="PhoneNumberStatus" />class.
         /// </summary>
         /// <param name="Callable">Callable (default to false).</param>
@@ -90,7 +89,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Callable == other.Callable ||
                     this.Callable != null &&

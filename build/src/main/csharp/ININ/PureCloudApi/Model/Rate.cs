@@ -17,16 +17,15 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Rate :  IEquatable<Rate>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Rate" /> class.
         /// Initializes a new instance of the <see cref="Rate" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="PartNumber">PartNumber.</param>
         /// <param name="Tiers">Tiers.</param>
 
-        public Rate(string Name = null, string PartNumber = null, List<Tier> Tiers = null, )
+        public Rate(string Name = null, string PartNumber = null, List<Tier> Tiers = null)
         {
             this.Name = Name;
             this.PartNumber = PartNumber;
@@ -116,27 +115,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.PartNumber == other.PartNumber ||
                     this.PartNumber != null &&
                     this.PartNumber.Equals(other.PartNumber)
-                ) && 
+                ) &&
                 (
                     this.Tiers == other.Tiers ||
                     this.Tiers != null &&
                     this.Tiers.SequenceEqual(other.Tiers)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

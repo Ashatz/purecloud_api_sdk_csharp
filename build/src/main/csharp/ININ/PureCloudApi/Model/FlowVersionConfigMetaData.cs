@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FlowVersionConfigMetaData :  IEquatable<FlowVersionConfigMetaData>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowVersionConfigMetaData" /> class.
         /// Initializes a new instance of the <see cref="FlowVersionConfigMetaData" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -156,42 +155,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.VersionSpecificComment == other.VersionSpecificComment ||
                     this.VersionSpecificComment != null &&
                     this.VersionSpecificComment.Equals(other.VersionSpecificComment)
-                ) && 
+                ) &&
                 (
                     this.FlowDefinitionUri == other.FlowDefinitionUri ||
                     this.FlowDefinitionUri != null &&
                     this.FlowDefinitionUri.Equals(other.FlowDefinitionUri)
-                ) && 
+                ) &&
                 (
                     this.CreatedByUser == other.CreatedByUser ||
                     this.CreatedByUser != null &&
                     this.CreatedByUser.Equals(other.CreatedByUser)
-                ) && 
+                ) &&
                 (
                     this.CreatedDate == other.CreatedDate ||
                     this.CreatedDate != null &&
                     this.CreatedDate.Equals(other.CreatedDate)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&

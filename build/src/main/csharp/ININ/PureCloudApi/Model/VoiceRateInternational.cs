@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "EXTENDED")]
             Extended
         }
-    
+        
         /// <summary>
         /// The voice rate type.
         /// </summary>
@@ -48,7 +48,6 @@ namespace ININ.PureCloudApi.Model
         public TypeEnum? Type { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="VoiceRateInternational" /> class.
         /// Initializes a new instance of the <see cref="VoiceRateInternational" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -62,7 +61,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Origin">The origin. (required).</param>
         /// <param name="Destination">The destination. (required).</param>
 
-        public VoiceRateInternational(string Name = null, string Currency = null, string AmendmentId = null, TypeEnum? Type = null, DateTime? EffectiveDate = null, double? Rate = null, int? DurationMinimumSeconds = null, int? DurationIncrementSeconds = null, string Origin = null, string Destination = null, )
+        public VoiceRateInternational(string Name = null, string Currency = null, string AmendmentId = null, TypeEnum? Type = null, DateTime? EffectiveDate = null, double? Rate = null, int? DurationMinimumSeconds = null, int? DurationIncrementSeconds = null, string Origin = null, string Destination = null)
         {
             // to ensure "Currency" is required (not null)
             if (Currency == null)
@@ -282,62 +281,62 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Currency == other.Currency ||
                     this.Currency != null &&
                     this.Currency.Equals(other.Currency)
-                ) && 
+                ) &&
                 (
                     this.AmendmentId == other.AmendmentId ||
                     this.AmendmentId != null &&
                     this.AmendmentId.Equals(other.AmendmentId)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.EffectiveDate == other.EffectiveDate ||
                     this.EffectiveDate != null &&
                     this.EffectiveDate.Equals(other.EffectiveDate)
-                ) && 
+                ) &&
                 (
                     this.Rate == other.Rate ||
                     this.Rate != null &&
                     this.Rate.Equals(other.Rate)
-                ) && 
+                ) &&
                 (
                     this.DurationMinimumSeconds == other.DurationMinimumSeconds ||
                     this.DurationMinimumSeconds != null &&
                     this.DurationMinimumSeconds.Equals(other.DurationMinimumSeconds)
-                ) && 
+                ) &&
                 (
                     this.DurationIncrementSeconds == other.DurationIncrementSeconds ||
                     this.DurationIncrementSeconds != null &&
                     this.DurationIncrementSeconds.Equals(other.DurationIncrementSeconds)
-                ) && 
+                ) &&
                 (
                     this.Origin == other.Origin ||
                     this.Origin != null &&
                     this.Origin.Equals(other.Origin)
-                ) && 
+                ) &&
                 (
                     this.Destination == other.Destination ||
                     this.Destination != null &&
                     this.Destination.Equals(other.Destination)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

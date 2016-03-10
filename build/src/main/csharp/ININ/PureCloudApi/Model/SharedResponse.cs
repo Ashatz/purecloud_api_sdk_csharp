@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class SharedResponse :  IEquatable<SharedResponse>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="SharedResponse" /> class.
         /// Initializes a new instance of the <see cref="SharedResponse" />class.
         /// </summary>
         /// <param name="Id">Id.</param>
@@ -118,27 +117,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.DownloadUri == other.DownloadUri ||
                     this.DownloadUri != null &&
                     this.DownloadUri.Equals(other.DownloadUri)
-                ) && 
+                ) &&
                 (
                     this.ViewUri == other.ViewUri ||
                     this.ViewUri != null &&
                     this.ViewUri.Equals(other.ViewUri)
-                ) && 
+                ) &&
                 (
                     this.Document == other.Document ||
                     this.Document != null &&
                     this.Document.Equals(other.Document)
-                ) && 
+                ) &&
                 (
                     this.Share == other.Share ||
                     this.Share != null &&

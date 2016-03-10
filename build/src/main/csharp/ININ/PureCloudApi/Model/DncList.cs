@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DncList :  IEquatable<DncList>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DncList" /> class.
         /// Initializes a new instance of the <see cref="DncList" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -31,7 +30,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="FileKey">FileKey.</param>
         /// <param name="Size">Size.</param>
 
-        public DncList(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<string> PhoneNumberColumns = null, ImportStatus ImportStatus = null, string FileKey = null, long? Size = null, )
+        public DncList(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<string> PhoneNumberColumns = null, ImportStatus ImportStatus = null, string FileKey = null, long? Size = null)
         {
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -163,52 +162,52 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.PhoneNumberColumns == other.PhoneNumberColumns ||
                     this.PhoneNumberColumns != null &&
                     this.PhoneNumberColumns.SequenceEqual(other.PhoneNumberColumns)
-                ) && 
+                ) &&
                 (
                     this.ImportStatus == other.ImportStatus ||
                     this.ImportStatus != null &&
                     this.ImportStatus.Equals(other.ImportStatus)
-                ) && 
+                ) &&
                 (
                     this.FileKey == other.FileKey ||
                     this.FileKey != null &&
                     this.FileKey.Equals(other.FileKey)
-                ) && 
+                ) &&
                 (
                     this.Size == other.Size ||
                     this.Size != null &&
                     this.Size.Equals(other.Size)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

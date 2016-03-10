@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class RuleSet :  IEquatable<RuleSet>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="RuleSet" /> class.
         /// Initializes a new instance of the <see cref="RuleSet" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -30,7 +29,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Queue">Queue.</param>
         /// <param name="Rules">Rules.</param>
 
-        public RuleSet(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, List<Rule> Rules = null, )
+        public RuleSet(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, List<Rule> Rules = null)
         {
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -154,47 +153,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.ContactList == other.ContactList ||
                     this.ContactList != null &&
                     this.ContactList.Equals(other.ContactList)
-                ) && 
+                ) &&
                 (
                     this.Queue == other.Queue ||
                     this.Queue != null &&
                     this.Queue.Equals(other.Queue)
-                ) && 
+                ) &&
                 (
                     this.Rules == other.Rules ||
                     this.Rules != null &&
                     this.Rules.SequenceEqual(other.Rules)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

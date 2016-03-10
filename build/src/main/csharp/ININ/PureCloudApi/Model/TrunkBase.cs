@@ -43,7 +43,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "EDGE")]
             Edge
         }
-    
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -58,7 +58,6 @@ namespace ININ.PureCloudApi.Model
         public TrunkTypeEnum? TrunkType { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrunkBase" /> class.
         /// Initializes a new instance of the <see cref="TrunkBase" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -76,7 +75,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="TrunkType">The type of this trunk base. (required).</param>
         /// <param name="Managed">Is this trunk being managed remotely. (default to false).</param>
 
-        public TrunkBase(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference TrunkMetabase = null, Dictionary<string, Object> Properties = null, TrunkTypeEnum? TrunkType = null, bool? Managed = null, )
+        public TrunkBase(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference TrunkMetabase = null, Dictionary<string, Object> Properties = null, TrunkTypeEnum? TrunkType = null, bool? Managed = null)
         {
             // to ensure "TrunkMetabase" is required (not null)
             if (TrunkMetabase == null)
@@ -270,82 +269,82 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.ModifiedBy == other.ModifiedBy ||
                     this.ModifiedBy != null &&
                     this.ModifiedBy.Equals(other.ModifiedBy)
-                ) && 
+                ) &&
                 (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
-                ) && 
+                ) &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.ModifiedByApp == other.ModifiedByApp ||
                     this.ModifiedByApp != null &&
                     this.ModifiedByApp.Equals(other.ModifiedByApp)
-                ) && 
+                ) &&
                 (
                     this.CreatedByApp == other.CreatedByApp ||
                     this.CreatedByApp != null &&
                     this.CreatedByApp.Equals(other.CreatedByApp)
-                ) && 
+                ) &&
                 (
                     this.TrunkMetabase == other.TrunkMetabase ||
                     this.TrunkMetabase != null &&
                     this.TrunkMetabase.Equals(other.TrunkMetabase)
-                ) && 
+                ) &&
                 (
                     this.Properties == other.Properties ||
                     this.Properties != null &&
                     this.Properties.SequenceEqual(other.Properties)
-                ) && 
+                ) &&
                 (
                     this.TrunkType == other.TrunkType ||
                     this.TrunkType != null &&
                     this.TrunkType.Equals(other.TrunkType)
-                ) && 
+                ) &&
                 (
                     this.Managed == other.Managed ||
                     this.Managed != null &&
                     this.Managed.Equals(other.Managed)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

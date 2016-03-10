@@ -17,15 +17,14 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DependencyType :  IEquatable<DependencyType>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DependencyType" /> class.
         /// Initializes a new instance of the <see cref="DependencyType" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Versioned">Versioned (default to false).</param>
 
-        public DependencyType(string Name = null, bool? Versioned = null, )
+        public DependencyType(string Name = null, bool? Versioned = null)
         {
             this.Name = Name;
             // use default value if no "Versioned" provided
@@ -115,22 +114,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Versioned == other.Versioned ||
                     this.Versioned != null &&
                     this.Versioned.Equals(other.Versioned)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class PolicyErrors :  IEquatable<PolicyErrors>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="PolicyErrors" /> class.
         /// Initializes a new instance of the <see cref="PolicyErrors" />class.
         /// </summary>
         /// <param name="PolicyErrorMessages">PolicyErrorMessages.</param>
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.PolicyErrorMessages == other.PolicyErrorMessages ||
                     this.PolicyErrorMessages != null &&

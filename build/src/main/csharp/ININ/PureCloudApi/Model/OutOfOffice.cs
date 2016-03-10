@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class OutOfOffice :  IEquatable<OutOfOffice>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="OutOfOffice" /> class.
         /// Initializes a new instance of the <see cref="OutOfOffice" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -28,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="EndDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Active">Active (default to false).</param>
 
-        public OutOfOffice(string Name = null, User User = null, DateTime? StartDate = null, DateTime? EndDate = null, bool? Active = null, )
+        public OutOfOffice(string Name = null, User User = null, DateTime? StartDate = null, DateTime? EndDate = null, bool? Active = null)
         {
             this.Name = Name;
             this.User = User;
@@ -144,37 +143,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
-                ) && 
+                ) &&
                 (
                     this.StartDate == other.StartDate ||
                     this.StartDate != null &&
                     this.StartDate.Equals(other.StartDate)
-                ) && 
+                ) &&
                 (
                     this.EndDate == other.EndDate ||
                     this.EndDate != null &&
                     this.EndDate.Equals(other.EndDate)
-                ) && 
+                ) &&
                 (
                     this.Active == other.Active ||
                     this.Active != null &&
                     this.Active.Equals(other.Active)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class SocialAccount :  IEquatable<SocialAccount>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="SocialAccount" /> class.
         /// Initializes a new instance of the <see cref="SocialAccount" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -33,7 +32,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="TwitterId">The account ID as provided by Twitter during the authorization process.</param>
         /// <param name="StreamingEnabled">Indicates if a stream should be opened on behalf of the indicated Social Hub account (default to false).</param>
 
-        public SocialAccount(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, bool? Enabled = null, bool? Authorized = null, string SocialHub = null, string AccessToken = null, string AccessTokenSecret = null, string TwitterId = null, bool? StreamingEnabled = null, )
+        public SocialAccount(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, bool? Enabled = null, bool? Authorized = null, string SocialHub = null, string AccessToken = null, string AccessTokenSecret = null, string TwitterId = null, bool? StreamingEnabled = null)
         {
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -212,62 +211,62 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.Enabled == other.Enabled ||
                     this.Enabled != null &&
                     this.Enabled.Equals(other.Enabled)
-                ) && 
+                ) &&
                 (
                     this.Authorized == other.Authorized ||
                     this.Authorized != null &&
                     this.Authorized.Equals(other.Authorized)
-                ) && 
+                ) &&
                 (
                     this.SocialHub == other.SocialHub ||
                     this.SocialHub != null &&
                     this.SocialHub.Equals(other.SocialHub)
-                ) && 
+                ) &&
                 (
                     this.AccessToken == other.AccessToken ||
                     this.AccessToken != null &&
                     this.AccessToken.Equals(other.AccessToken)
-                ) && 
+                ) &&
                 (
                     this.AccessTokenSecret == other.AccessTokenSecret ||
                     this.AccessTokenSecret != null &&
                     this.AccessTokenSecret.Equals(other.AccessTokenSecret)
-                ) && 
+                ) &&
                 (
                     this.TwitterId == other.TwitterId ||
                     this.TwitterId != null &&
                     this.TwitterId.Equals(other.TwitterId)
-                ) && 
+                ) &&
                 (
                     this.StreamingEnabled == other.StreamingEnabled ||
                     this.StreamingEnabled != null &&
                     this.StreamingEnabled.Equals(other.StreamingEnabled)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

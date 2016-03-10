@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DocumentUpload :  IEquatable<DocumentUpload>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DocumentUpload" /> class.
         /// Initializes a new instance of the <see cref="DocumentUpload" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -109,22 +108,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Workspace == other.Workspace ||
                     this.Workspace != null &&
                     this.Workspace.Equals(other.Workspace)
-                ) && 
+                ) &&
                 (
                     this.Tags == other.Tags ||
                     this.Tags != null &&
                     this.Tags.SequenceEqual(other.Tags)
-                ) && 
+                ) &&
                 (
                     this.TagIds == other.TagIds ||
                     this.TagIds != null &&

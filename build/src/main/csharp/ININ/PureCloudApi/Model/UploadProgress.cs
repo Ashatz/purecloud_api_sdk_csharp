@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class UploadProgress :  IEquatable<UploadProgress>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="UploadProgress" /> class.
         /// Initializes a new instance of the <see cref="UploadProgress" />class.
         /// </summary>
 
@@ -129,37 +128,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.CarrierId == other.CarrierId ||
                     this.CarrierId != null &&
                     this.CarrierId.Equals(other.CarrierId)
-                ) && 
+                ) &&
                 (
                     this.SchemaName == other.SchemaName ||
                     this.SchemaName != null &&
                     this.SchemaName.Equals(other.SchemaName)
-                ) && 
+                ) &&
                 (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-                ) && 
+                ) &&
                 (
                     this.Filename == other.Filename ||
                     this.Filename != null &&
                     this.Filename.Equals(other.Filename)
-                ) && 
+                ) &&
                 (
                     this.Filetype == other.Filetype ||
                     this.Filetype != null &&
                     this.Filetype.Equals(other.Filetype)
-                ) && 
+                ) &&
                 (
                     this.Created == other.Created ||
                     this.Created != null &&
                     this.Created.Equals(other.Created)
-                ) && 
+                ) &&
                 (
                     this.Updated == other.Updated ||
                     this.Updated != null &&

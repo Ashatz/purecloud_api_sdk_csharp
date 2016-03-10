@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class SubDataItem :  IEquatable<SubDataItem>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="SubDataItem" /> class.
         /// Initializes a new instance of the <see cref="SubDataItem" />class.
         /// </summary>
         /// <param name="Id">The id of this element (required).</param>
@@ -163,27 +162,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.Value == other.Value ||
                     this.Value != null &&
                     this.Value.Equals(other.Value)
-                ) && 
+                ) &&
                 (
                     this.Prompt == other.Prompt ||
                     this.Prompt != null &&
                     this.Prompt.Equals(other.Prompt)
-                ) && 
+                ) &&
                 (
                     this.DisplayValue == other.DisplayValue ||
                     this.DisplayValue != null &&

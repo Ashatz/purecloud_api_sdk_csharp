@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class UserActionMetadataRequest :  IEquatable<UserActionMetadataRequest>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="UserActionMetadataRequest" /> class.
         /// Initializes a new instance of the <see cref="UserActionMetadataRequest" />class.
         /// </summary>
         /// <param name="Format">Format.</param>
@@ -127,32 +126,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Format == other.Format ||
                     this.Format != null &&
                     this.Format.Equals(other.Format)
-                ) && 
+                ) &&
                 (
                     this.Method == other.Method ||
                     this.Method != null &&
                     this.Method.Equals(other.Method)
-                ) && 
+                ) &&
                 (
                     this.InputSchemaUri == other.InputSchemaUri ||
                     this.InputSchemaUri != null &&
                     this.InputSchemaUri.Equals(other.InputSchemaUri)
-                ) && 
+                ) &&
                 (
                     this.SuccessSchemaUri == other.SuccessSchemaUri ||
                     this.SuccessSchemaUri != null &&
                     this.SuccessSchemaUri.Equals(other.SuccessSchemaUri)
-                ) && 
+                ) &&
                 (
                     this.InputSchema == other.InputSchema ||
                     this.InputSchema != null &&
                     this.InputSchema.Equals(other.InputSchema)
-                ) && 
+                ) &&
                 (
                     this.SuccessSchema == other.SuccessSchema ||
                     this.SuccessSchema != null &&

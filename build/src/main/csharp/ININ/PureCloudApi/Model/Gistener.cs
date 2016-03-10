@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Gistener :  IEquatable<Gistener>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Gistener" /> class.
         /// Initializes a new instance of the <see cref="Gistener" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -34,7 +33,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SocialAccount">The social account associated with this Gistener.</param>
         /// <param name="Queue">The operator queue the gistener will route to..</param>
 
-        public Gistener(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, bool? Enabled = null, string AnyWords = null, string AllWords = null, string ExcludeWords = null, string ExactPhrase = null, List<GroupTag> GroupTags = null, SocialAccount SocialAccount = null, Queue Queue = null, )
+        public Gistener(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, bool? Enabled = null, string AnyWords = null, string AllWords = null, string ExcludeWords = null, string ExactPhrase = null, List<GroupTag> GroupTags = null, SocialAccount SocialAccount = null, Queue Queue = null)
         {
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -206,67 +205,67 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.Enabled == other.Enabled ||
                     this.Enabled != null &&
                     this.Enabled.Equals(other.Enabled)
-                ) && 
+                ) &&
                 (
                     this.AnyWords == other.AnyWords ||
                     this.AnyWords != null &&
                     this.AnyWords.Equals(other.AnyWords)
-                ) && 
+                ) &&
                 (
                     this.AllWords == other.AllWords ||
                     this.AllWords != null &&
                     this.AllWords.Equals(other.AllWords)
-                ) && 
+                ) &&
                 (
                     this.ExcludeWords == other.ExcludeWords ||
                     this.ExcludeWords != null &&
                     this.ExcludeWords.Equals(other.ExcludeWords)
-                ) && 
+                ) &&
                 (
                     this.ExactPhrase == other.ExactPhrase ||
                     this.ExactPhrase != null &&
                     this.ExactPhrase.Equals(other.ExactPhrase)
-                ) && 
+                ) &&
                 (
                     this.GroupTags == other.GroupTags ||
                     this.GroupTags != null &&
                     this.GroupTags.SequenceEqual(other.GroupTags)
-                ) && 
+                ) &&
                 (
                     this.SocialAccount == other.SocialAccount ||
                     this.SocialAccount != null &&
                     this.SocialAccount.Equals(other.SocialAccount)
-                ) && 
+                ) &&
                 (
                     this.Queue == other.Queue ||
                     this.Queue != null &&
                     this.Queue.Equals(other.Queue)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

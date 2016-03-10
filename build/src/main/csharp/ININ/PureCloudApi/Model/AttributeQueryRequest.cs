@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class AttributeQueryRequest :  IEquatable<AttributeQueryRequest>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="AttributeQueryRequest" /> class.
         /// Initializes a new instance of the <see cref="AttributeQueryRequest" />class.
         /// </summary>
         /// <param name="Query">Query phrase to search attribute by name. If not set will match all..</param>
@@ -103,17 +102,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Query == other.Query ||
                     this.Query != null &&
                     this.Query.Equals(other.Query)
-                ) && 
+                ) &&
                 (
                     this.PageSize == other.PageSize ||
                     this.PageSize != null &&
                     this.PageSize.Equals(other.PageSize)
-                ) && 
+                ) &&
                 (
                     this.PageNumber == other.PageNumber ||
                     this.PageNumber != null &&

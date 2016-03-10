@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Account :  IEquatable<Account>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Account" /> class.
         /// Initializes a new instance of the <see cref="Account" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -51,7 +50,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="EstimatedQuantities">EstimatedQuantities.</param>
         /// <param name="OneTimeCharges">OneTimeCharges.</param>
 
-        public Account(string Name = null, string OrgLegalName = null, string BillingAddressLine1 = null, string BillingAddressLine2 = null, string BillingAddressCity = null, string BillingAddressState = null, string BillingAddressZipCode = null, string BillingAddressCountry = null, string LegalAddressLine1 = null, string LegalAddressLine2 = null, string LegalAddressCity = null, string LegalAddressState = null, string LegalAddressZipCode = null, string LegalAddressCountry = null, string BillingContactFirstName = null, string BillingContactLastName = null, string BillingContactEmail = null, string BillingContactPhone = null, string PurchaseOrderNumber = null, bool? IsTaxExempt = null, string Currency = null, string PaymentTerm = null, int? ContractTerm = null, bool? AutoRenew = null, bool? Enabled = null, Dictionary<string, int?> MinCommitQuantities = null, Dictionary<string, int?> EstimatedQuantities = null, List<string> OneTimeCharges = null, )
+        public Account(string Name = null, string OrgLegalName = null, string BillingAddressLine1 = null, string BillingAddressLine2 = null, string BillingAddressCity = null, string BillingAddressState = null, string BillingAddressZipCode = null, string BillingAddressCountry = null, string LegalAddressLine1 = null, string LegalAddressLine2 = null, string LegalAddressCity = null, string LegalAddressState = null, string LegalAddressZipCode = null, string LegalAddressCountry = null, string BillingContactFirstName = null, string BillingContactLastName = null, string BillingContactEmail = null, string BillingContactPhone = null, string PurchaseOrderNumber = null, bool? IsTaxExempt = null, string Currency = null, string PaymentTerm = null, int? ContractTerm = null, bool? AutoRenew = null, bool? Enabled = null, Dictionary<string, int?> MinCommitQuantities = null, Dictionary<string, int?> EstimatedQuantities = null, List<string> OneTimeCharges = null)
         {
             this.Name = Name;
             this.OrgLegalName = OrgLegalName;
@@ -365,152 +364,152 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.OrgLegalName == other.OrgLegalName ||
                     this.OrgLegalName != null &&
                     this.OrgLegalName.Equals(other.OrgLegalName)
-                ) && 
+                ) &&
                 (
                     this.BillingAddressLine1 == other.BillingAddressLine1 ||
                     this.BillingAddressLine1 != null &&
                     this.BillingAddressLine1.Equals(other.BillingAddressLine1)
-                ) && 
+                ) &&
                 (
                     this.BillingAddressLine2 == other.BillingAddressLine2 ||
                     this.BillingAddressLine2 != null &&
                     this.BillingAddressLine2.Equals(other.BillingAddressLine2)
-                ) && 
+                ) &&
                 (
                     this.BillingAddressCity == other.BillingAddressCity ||
                     this.BillingAddressCity != null &&
                     this.BillingAddressCity.Equals(other.BillingAddressCity)
-                ) && 
+                ) &&
                 (
                     this.BillingAddressState == other.BillingAddressState ||
                     this.BillingAddressState != null &&
                     this.BillingAddressState.Equals(other.BillingAddressState)
-                ) && 
+                ) &&
                 (
                     this.BillingAddressZipCode == other.BillingAddressZipCode ||
                     this.BillingAddressZipCode != null &&
                     this.BillingAddressZipCode.Equals(other.BillingAddressZipCode)
-                ) && 
+                ) &&
                 (
                     this.BillingAddressCountry == other.BillingAddressCountry ||
                     this.BillingAddressCountry != null &&
                     this.BillingAddressCountry.Equals(other.BillingAddressCountry)
-                ) && 
+                ) &&
                 (
                     this.LegalAddressLine1 == other.LegalAddressLine1 ||
                     this.LegalAddressLine1 != null &&
                     this.LegalAddressLine1.Equals(other.LegalAddressLine1)
-                ) && 
+                ) &&
                 (
                     this.LegalAddressLine2 == other.LegalAddressLine2 ||
                     this.LegalAddressLine2 != null &&
                     this.LegalAddressLine2.Equals(other.LegalAddressLine2)
-                ) && 
+                ) &&
                 (
                     this.LegalAddressCity == other.LegalAddressCity ||
                     this.LegalAddressCity != null &&
                     this.LegalAddressCity.Equals(other.LegalAddressCity)
-                ) && 
+                ) &&
                 (
                     this.LegalAddressState == other.LegalAddressState ||
                     this.LegalAddressState != null &&
                     this.LegalAddressState.Equals(other.LegalAddressState)
-                ) && 
+                ) &&
                 (
                     this.LegalAddressZipCode == other.LegalAddressZipCode ||
                     this.LegalAddressZipCode != null &&
                     this.LegalAddressZipCode.Equals(other.LegalAddressZipCode)
-                ) && 
+                ) &&
                 (
                     this.LegalAddressCountry == other.LegalAddressCountry ||
                     this.LegalAddressCountry != null &&
                     this.LegalAddressCountry.Equals(other.LegalAddressCountry)
-                ) && 
+                ) &&
                 (
                     this.BillingContactFirstName == other.BillingContactFirstName ||
                     this.BillingContactFirstName != null &&
                     this.BillingContactFirstName.Equals(other.BillingContactFirstName)
-                ) && 
+                ) &&
                 (
                     this.BillingContactLastName == other.BillingContactLastName ||
                     this.BillingContactLastName != null &&
                     this.BillingContactLastName.Equals(other.BillingContactLastName)
-                ) && 
+                ) &&
                 (
                     this.BillingContactEmail == other.BillingContactEmail ||
                     this.BillingContactEmail != null &&
                     this.BillingContactEmail.Equals(other.BillingContactEmail)
-                ) && 
+                ) &&
                 (
                     this.BillingContactPhone == other.BillingContactPhone ||
                     this.BillingContactPhone != null &&
                     this.BillingContactPhone.Equals(other.BillingContactPhone)
-                ) && 
+                ) &&
                 (
                     this.PurchaseOrderNumber == other.PurchaseOrderNumber ||
                     this.PurchaseOrderNumber != null &&
                     this.PurchaseOrderNumber.Equals(other.PurchaseOrderNumber)
-                ) && 
+                ) &&
                 (
                     this.IsTaxExempt == other.IsTaxExempt ||
                     this.IsTaxExempt != null &&
                     this.IsTaxExempt.Equals(other.IsTaxExempt)
-                ) && 
+                ) &&
                 (
                     this.Currency == other.Currency ||
                     this.Currency != null &&
                     this.Currency.Equals(other.Currency)
-                ) && 
+                ) &&
                 (
                     this.PaymentTerm == other.PaymentTerm ||
                     this.PaymentTerm != null &&
                     this.PaymentTerm.Equals(other.PaymentTerm)
-                ) && 
+                ) &&
                 (
                     this.ContractTerm == other.ContractTerm ||
                     this.ContractTerm != null &&
                     this.ContractTerm.Equals(other.ContractTerm)
-                ) && 
+                ) &&
                 (
                     this.AutoRenew == other.AutoRenew ||
                     this.AutoRenew != null &&
                     this.AutoRenew.Equals(other.AutoRenew)
-                ) && 
+                ) &&
                 (
                     this.Enabled == other.Enabled ||
                     this.Enabled != null &&
                     this.Enabled.Equals(other.Enabled)
-                ) && 
+                ) &&
                 (
                     this.MinCommitQuantities == other.MinCommitQuantities ||
                     this.MinCommitQuantities != null &&
                     this.MinCommitQuantities.SequenceEqual(other.MinCommitQuantities)
-                ) && 
+                ) &&
                 (
                     this.EstimatedQuantities == other.EstimatedQuantities ||
                     this.EstimatedQuantities != null &&
                     this.EstimatedQuantities.SequenceEqual(other.EstimatedQuantities)
-                ) && 
+                ) &&
                 (
                     this.OneTimeCharges == other.OneTimeCharges ||
                     this.OneTimeCharges != null &&
                     this.OneTimeCharges.SequenceEqual(other.OneTimeCharges)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

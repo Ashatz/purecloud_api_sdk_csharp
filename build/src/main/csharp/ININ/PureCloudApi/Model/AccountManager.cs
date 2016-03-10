@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class AccountManager :  IEquatable<AccountManager>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="AccountManager" /> class.
         /// Initializes a new instance of the <see cref="AccountManager" />class.
         /// </summary>
         /// <param name="FirstName">FirstName.</param>
@@ -109,22 +108,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.FirstName == other.FirstName ||
                     this.FirstName != null &&
                     this.FirstName.Equals(other.FirstName)
-                ) && 
+                ) &&
                 (
                     this.LastName == other.LastName ||
                     this.LastName != null &&
                     this.LastName.Equals(other.LastName)
-                ) && 
+                ) &&
                 (
                     this.Phone == other.Phone ||
                     this.Phone != null &&
                     this.Phone.Equals(other.Phone)
-                ) && 
+                ) &&
                 (
                     this.Email == other.Email ||
                     this.Email != null &&

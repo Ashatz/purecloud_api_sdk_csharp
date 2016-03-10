@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ResponseQueryRequest :  IEquatable<ResponseQueryRequest>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ResponseQueryRequest" /> class.
         /// Initializes a new instance of the <see cref="ResponseQueryRequest" />class.
         /// </summary>
         /// <param name="QueryPhrase">Query phrase to search response text and name. If not set will match all..</param>
@@ -103,17 +102,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.QueryPhrase == other.QueryPhrase ||
                     this.QueryPhrase != null &&
                     this.QueryPhrase.Equals(other.QueryPhrase)
-                ) && 
+                ) &&
                 (
                     this.PageSize == other.PageSize ||
                     this.PageSize != null &&
                     this.PageSize.Equals(other.PageSize)
-                ) && 
+                ) &&
                 (
                     this.Filters == other.Filters ||
                     this.Filters != null &&

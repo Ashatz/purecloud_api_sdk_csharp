@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "TIMEOUT_SECONDS")]
             Seconds
         }
-    
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -32,7 +32,6 @@ namespace ININ.PureCloudApi.Model
         public TypeEnum? Type { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ExpansionCriterium" /> class.
         /// Initializes a new instance of the <see cref="ExpansionCriterium" />class.
         /// </summary>
         /// <param name="Type">Type.</param>
@@ -98,12 +97,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.Threshold == other.Threshold ||
                     this.Threshold != null &&

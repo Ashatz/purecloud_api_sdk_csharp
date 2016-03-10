@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class AvailableTopic :  IEquatable<AvailableTopic>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="AvailableTopic" /> class.
         /// Initializes a new instance of the <see cref="AvailableTopic" />class.
         /// </summary>
 
@@ -81,7 +80,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&

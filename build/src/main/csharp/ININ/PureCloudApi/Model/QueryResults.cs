@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class QueryResults :  IEquatable<QueryResults>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="QueryResults" /> class.
         /// Initializes a new instance of the <see cref="QueryResults" />class.
         /// </summary>
         /// <param name="Results">Results.</param>
@@ -91,12 +90,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Results == other.Results ||
                     this.Results != null &&
                     this.Results.Equals(other.Results)
-                ) && 
+                ) &&
                 (
                     this.FacetInfo == other.FacetInfo ||
                     this.FacetInfo != null &&

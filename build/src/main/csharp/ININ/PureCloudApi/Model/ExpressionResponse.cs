@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ExpressionResponse :  IEquatable<ExpressionResponse>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ExpressionResponse" /> class.
         /// Initializes a new instance of the <see cref="ExpressionResponse" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -32,7 +31,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SocialAccount">The Social Account used to publish this expression.</param>
         /// <param name="SocialHubResponseId">The id given to this response from the social hub.</param>
 
-        public ExpressionResponse(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string SocialHub = null, Conversation Conversation = null, TwitterExpression TwitterExpression = null, string RawResponseText = null, SocialAccount SocialAccount = null, string SocialHubResponseId = null, )
+        public ExpressionResponse(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string SocialHub = null, Conversation Conversation = null, TwitterExpression TwitterExpression = null, string RawResponseText = null, SocialAccount SocialAccount = null, string SocialHubResponseId = null)
         {
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -178,57 +177,57 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.SocialHub == other.SocialHub ||
                     this.SocialHub != null &&
                     this.SocialHub.Equals(other.SocialHub)
-                ) && 
+                ) &&
                 (
                     this.Conversation == other.Conversation ||
                     this.Conversation != null &&
                     this.Conversation.Equals(other.Conversation)
-                ) && 
+                ) &&
                 (
                     this.TwitterExpression == other.TwitterExpression ||
                     this.TwitterExpression != null &&
                     this.TwitterExpression.Equals(other.TwitterExpression)
-                ) && 
+                ) &&
                 (
                     this.RawResponseText == other.RawResponseText ||
                     this.RawResponseText != null &&
                     this.RawResponseText.Equals(other.RawResponseText)
-                ) && 
+                ) &&
                 (
                     this.SocialAccount == other.SocialAccount ||
                     this.SocialAccount != null &&
                     this.SocialAccount.Equals(other.SocialAccount)
-                ) && 
+                ) &&
                 (
                     this.SocialHubResponseId == other.SocialHubResponseId ||
                     this.SocialHubResponseId != null &&
                     this.SocialHubResponseId.Equals(other.SocialHubResponseId)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

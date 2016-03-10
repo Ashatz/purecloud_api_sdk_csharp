@@ -49,7 +49,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "LT")]
             Lt
         }
-    
+        
         /// <summary>
         /// Gets or Sets Conjunction
         /// </summary>
@@ -63,7 +63,6 @@ namespace ININ.PureCloudApi.Model
         public _OperatorEnum? _Operator { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ResourceConditionNode" /> class.
         /// Initializes a new instance of the <see cref="ResourceConditionNode" />class.
         /// </summary>
         /// <param name="VariableName">VariableName.</param>
@@ -150,27 +149,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.VariableName == other.VariableName ||
                     this.VariableName != null &&
                     this.VariableName.Equals(other.VariableName)
-                ) && 
+                ) &&
                 (
                     this.Conjunction == other.Conjunction ||
                     this.Conjunction != null &&
                     this.Conjunction.Equals(other.Conjunction)
-                ) && 
+                ) &&
                 (
                     this._Operator == other._Operator ||
                     this._Operator != null &&
                     this._Operator.Equals(other._Operator)
-                ) && 
+                ) &&
                 (
                     this.Operands == other.Operands ||
                     this.Operands != null &&
                     this.Operands.SequenceEqual(other.Operands)
-                ) && 
+                ) &&
                 (
                     this.Terms == other.Terms ||
                     this.Terms != null &&

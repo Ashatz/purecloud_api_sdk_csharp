@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Action :  IEquatable<Action>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Action" /> class.
         /// Initializes a new instance of the <see cref="Action" />class.
         /// </summary>
         /// <param name="Type">Type.</param>
@@ -109,22 +108,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.ActionTypeName == other.ActionTypeName ||
                     this.ActionTypeName != null &&
                     this.ActionTypeName.Equals(other.ActionTypeName)
-                ) && 
+                ) &&
                 (
                     this.UpdateOption == other.UpdateOption ||
                     this.UpdateOption != null &&
                     this.UpdateOption.Equals(other.UpdateOption)
-                ) && 
+                ) &&
                 (
                     this.Properties == other.Properties ||
                     this.Properties != null &&

@@ -17,15 +17,14 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class EdgeLogsJob :  IEquatable<EdgeLogsJob>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="EdgeLogsJob" /> class.
         /// Initializes a new instance of the <see cref="EdgeLogsJob" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Files">The files available to upload from the Edge to the cloud..</param>
 
-        public EdgeLogsJob(string Name = null, List<EdgeLogsJobFile> Files = null, )
+        public EdgeLogsJob(string Name = null, List<EdgeLogsJobFile> Files = null)
         {
             this.Name = Name;
             this.Files = Files;
@@ -108,22 +107,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Files == other.Files ||
                     this.Files != null &&
                     this.Files.SequenceEqual(other.Files)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Entity :  IEquatable<Entity>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Entity" /> class.
         /// Initializes a new instance of the <see cref="Entity" />class.
         /// </summary>
         /// <param name="Kind">Kind.</param>
@@ -100,17 +99,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Kind == other.Kind ||
                     this.Kind != null &&
                     this.Kind.Equals(other.Kind)
-                ) && 
+                ) &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&

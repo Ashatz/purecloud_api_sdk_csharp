@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FacetGroup :  IEquatable<FacetGroup>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FacetGroup" /> class.
         /// Initializes a new instance of the <see cref="FacetGroup" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -100,17 +99,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Count == other.Count ||
                     this.Count != null &&
                     this.Count.Equals(other.Count)
-                ) && 
+                ) &&
                 (
                     this.Items == other.Items ||
                     this.Items != null &&

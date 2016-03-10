@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Session :  IEquatable<Session>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Session" /> class.
         /// Initializes a new instance of the <see cref="Session" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -29,7 +28,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="User">User.</param>
         /// <param name="Language">Language.</param>
 
-        public Session(string Name = null, long? MinutesToLive = null, string UserAgent = null, DateTime? CreatedOn = null, User User = null, string Language = null, )
+        public Session(string Name = null, long? MinutesToLive = null, string UserAgent = null, DateTime? CreatedOn = null, User User = null, string Language = null)
         {
             this.Name = Name;
             this.MinutesToLive = MinutesToLive;
@@ -144,42 +143,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.MinutesToLive == other.MinutesToLive ||
                     this.MinutesToLive != null &&
                     this.MinutesToLive.Equals(other.MinutesToLive)
-                ) && 
+                ) &&
                 (
                     this.UserAgent == other.UserAgent ||
                     this.UserAgent != null &&
                     this.UserAgent.Equals(other.UserAgent)
-                ) && 
+                ) &&
                 (
                     this.CreatedOn == other.CreatedOn ||
                     this.CreatedOn != null &&
                     this.CreatedOn.Equals(other.CreatedOn)
-                ) && 
+                ) &&
                 (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
-                ) && 
+                ) &&
                 (
                     this.Language == other.Language ||
                     this.Language != null &&
                     this.Language.Equals(other.Language)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

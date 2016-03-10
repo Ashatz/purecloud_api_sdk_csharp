@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Invoice :  IEquatable<Invoice>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Invoice" /> class.
         /// Initializes a new instance of the <see cref="Invoice" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -30,7 +29,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Balance">Balance.</param>
         /// <param name="Status">Status.</param>
 
-        public Invoice(string Name = null, string InvoiceNumber = null, DateTime? InvoiceDate = null, DateTime? DueDate = null, string Amount = null, string Balance = null, string Status = null, )
+        public Invoice(string Name = null, string InvoiceNumber = null, DateTime? InvoiceDate = null, DateTime? DueDate = null, string Amount = null, string Balance = null, string Status = null)
         {
             this.Name = Name;
             this.InvoiceNumber = InvoiceNumber;
@@ -154,47 +153,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.InvoiceNumber == other.InvoiceNumber ||
                     this.InvoiceNumber != null &&
                     this.InvoiceNumber.Equals(other.InvoiceNumber)
-                ) && 
+                ) &&
                 (
                     this.InvoiceDate == other.InvoiceDate ||
                     this.InvoiceDate != null &&
                     this.InvoiceDate.Equals(other.InvoiceDate)
-                ) && 
+                ) &&
                 (
                     this.DueDate == other.DueDate ||
                     this.DueDate != null &&
                     this.DueDate.Equals(other.DueDate)
-                ) && 
+                ) &&
                 (
                     this.Amount == other.Amount ||
                     this.Amount != null &&
                     this.Amount.Equals(other.Amount)
-                ) && 
+                ) &&
                 (
                     this.Balance == other.Balance ||
                     this.Balance != null &&
                     this.Balance.Equals(other.Balance)
-                ) && 
+                ) &&
                 (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class WorkItemActions :  IEquatable<WorkItemActions>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="WorkItemActions" /> class.
         /// Initializes a new instance of the <see cref="WorkItemActions" />class.
         /// </summary>
         /// <param name="CanSubmit">CanSubmit (default to false).</param>
@@ -90,7 +89,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.CanSubmit == other.CanSubmit ||
                     this.CanSubmit != null &&

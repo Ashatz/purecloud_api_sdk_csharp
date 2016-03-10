@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "DESCENDING")]
             Descending
         }
-    
+        
         /// <summary>
         /// Gets or Sets SortType
         /// </summary>
@@ -35,7 +35,6 @@ namespace ININ.PureCloudApi.Model
         public SortTypeEnum? SortType { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="SortField" /> class.
         /// Initializes a new instance of the <see cref="SortField" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -101,12 +100,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.SortType == other.SortType ||
                     this.SortType != null &&

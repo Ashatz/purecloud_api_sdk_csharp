@@ -17,15 +17,14 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class OrgLicenseAssignment :  IEquatable<OrgLicenseAssignment>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrgLicenseAssignment" /> class.
         /// Initializes a new instance of the <see cref="OrgLicenseAssignment" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="LicenseId">LicenseId.</param>
 
-        public OrgLicenseAssignment(string Name = null, string LicenseId = null, )
+        public OrgLicenseAssignment(string Name = null, string LicenseId = null)
         {
             this.Name = Name;
             this.LicenseId = LicenseId;
@@ -107,22 +106,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.LicenseId == other.LicenseId ||
                     this.LicenseId != null &&
                     this.LicenseId.Equals(other.LicenseId)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

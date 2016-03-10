@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ConversationHistoricalQueryRequestBody :  IEquatable<ConversationHistoricalQueryRequestBody>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConversationHistoricalQueryRequestBody" /> class.
         /// Initializes a new instance of the <see cref="ConversationHistoricalQueryRequestBody" />class.
         /// </summary>
         /// <param name="PageSize">Maximum number of conversations returned. Overrides &#39;maximum&#39; if both specified. Default 100.</param>
@@ -113,22 +112,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.PageSize == other.PageSize ||
                     this.PageSize != null &&
                     this.PageSize.Equals(other.PageSize)
-                ) && 
+                ) &&
                 (
                     this.Maximum == other.Maximum ||
                     this.Maximum != null &&
                     this.Maximum.Equals(other.Maximum)
-                ) && 
+                ) &&
                 (
                     this.Filters == other.Filters ||
                     this.Filters != null &&
                     this.Filters.SequenceEqual(other.Filters)
-                ) && 
+                ) &&
                 (
                     this.Facets == other.Facets ||
                     this.Facets != null &&

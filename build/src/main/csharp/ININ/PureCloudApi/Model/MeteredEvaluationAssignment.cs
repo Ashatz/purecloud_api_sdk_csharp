@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class MeteredEvaluationAssignment :  IEquatable<MeteredEvaluationAssignment>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="MeteredEvaluationAssignment" /> class.
         /// Initializes a new instance of the <see cref="MeteredEvaluationAssignment" />class.
         /// </summary>
         /// <param name="EvaluationContextId">EvaluationContextId.</param>
@@ -135,32 +134,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.EvaluationContextId == other.EvaluationContextId ||
                     this.EvaluationContextId != null &&
                     this.EvaluationContextId.Equals(other.EvaluationContextId)
-                ) && 
+                ) &&
                 (
                     this.Evaluators == other.Evaluators ||
                     this.Evaluators != null &&
                     this.Evaluators.SequenceEqual(other.Evaluators)
-                ) && 
+                ) &&
                 (
                     this.MaxNumberEvaluations == other.MaxNumberEvaluations ||
                     this.MaxNumberEvaluations != null &&
                     this.MaxNumberEvaluations.Equals(other.MaxNumberEvaluations)
-                ) && 
+                ) &&
                 (
                     this.EvaluationForm == other.EvaluationForm ||
                     this.EvaluationForm != null &&
                     this.EvaluationForm.Equals(other.EvaluationForm)
-                ) && 
+                ) &&
                 (
                     this.AssignToActiveUser == other.AssignToActiveUser ||
                     this.AssignToActiveUser != null &&
                     this.AssignToActiveUser.Equals(other.AssignToActiveUser)
-                ) && 
+                ) &&
                 (
                     this.TimeInterval == other.TimeInterval ||
                     this.TimeInterval != null &&

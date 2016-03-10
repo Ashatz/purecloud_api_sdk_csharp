@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "descending")]
             Descending
         }
-    
+        
         /// <summary>
         /// Gets or Sets SortOrder
         /// </summary>
@@ -35,7 +35,6 @@ namespace ININ.PureCloudApi.Model
         public SortOrderEnum? SortOrder { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="SocializeFilterRequest" /> class.
         /// Initializes a new instance of the <see cref="SocializeFilterRequest" />class.
         /// </summary>
         /// <param name="Filters">The list of filters used to narrow the return..</param>
@@ -129,27 +128,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Filters == other.Filters ||
                     this.Filters != null &&
                     this.Filters.SequenceEqual(other.Filters)
-                ) && 
+                ) &&
                 (
                     this.PageSize == other.PageSize ||
                     this.PageSize != null &&
                     this.PageSize.Equals(other.PageSize)
-                ) && 
+                ) &&
                 (
                     this.PageNumber == other.PageNumber ||
                     this.PageNumber != null &&
                     this.PageNumber.Equals(other.PageNumber)
-                ) && 
+                ) &&
                 (
                     this.SortBy == other.SortBy ||
                     this.SortBy != null &&
                     this.SortBy.Equals(other.SortBy)
-                ) && 
+                ) &&
                 (
                     this.SortOrder == other.SortOrder ||
                     this.SortOrder != null &&

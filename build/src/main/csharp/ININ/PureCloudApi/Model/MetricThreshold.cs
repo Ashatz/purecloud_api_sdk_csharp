@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "NE")]
             Ne
         }
-    
+        
         /// <summary>
         /// Gets or Sets Op
         /// </summary>
@@ -47,7 +47,6 @@ namespace ININ.PureCloudApi.Model
         public OpEnum? Op { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="MetricThreshold" /> class.
         /// Initializes a new instance of the <see cref="MetricThreshold" />class.
         /// </summary>
         /// <param name="Op">Op.</param>
@@ -113,12 +112,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Op == other.Op ||
                     this.Op != null &&
                     this.Op.Equals(other.Op)
-                ) && 
+                ) &&
                 (
                     this.Value == other.Value ||
                     this.Value != null &&

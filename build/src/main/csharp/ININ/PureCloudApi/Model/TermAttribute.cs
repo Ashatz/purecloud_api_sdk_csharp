@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "LIST")]
             List
         }
-    
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -44,7 +44,6 @@ namespace ININ.PureCloudApi.Model
         public TypeEnum? Type { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="TermAttribute" /> class.
         /// Initializes a new instance of the <see cref="TermAttribute" />class.
         /// </summary>
         /// <param name="Id">Id.</param>
@@ -119,17 +118,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&

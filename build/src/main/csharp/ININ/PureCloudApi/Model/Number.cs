@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Number :  IEquatable<Number>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Number" /> class.
         /// Initializes a new instance of the <see cref="Number" />class.
         /// </summary>
         /// <param name="Start">Start.</param>
@@ -91,12 +90,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Start == other.Start ||
                     this.Start != null &&
                     this.Start.Equals(other.Start)
-                ) && 
+                ) &&
                 (
                     this.End == other.End ||
                     this.End != null &&

@@ -42,7 +42,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "SUNDAY")]
             Sunday
         }
-    
+        
         /// <summary>
         /// Gets or Sets StartDayOfWeek
         /// </summary>
@@ -50,7 +50,6 @@ namespace ININ.PureCloudApi.Model
         public StartDayOfWeekEnum? StartDayOfWeek { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="PutManagementUnit" /> class.
         /// Initializes a new instance of the <see cref="PutManagementUnit" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -125,17 +124,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.StartDayOfWeek == other.StartDayOfWeek ||
                     this.StartDayOfWeek != null &&
                     this.StartDayOfWeek.Equals(other.StartDayOfWeek)
-                ) && 
+                ) &&
                 (
                     this.Timezone == other.Timezone ||
                     this.Timezone != null &&

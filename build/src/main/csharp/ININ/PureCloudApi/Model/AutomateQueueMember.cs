@@ -17,15 +17,14 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class AutomateQueueMember :  IEquatable<AutomateQueueMember>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="AutomateQueueMember" /> class.
         /// Initializes a new instance of the <see cref="AutomateQueueMember" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="User">User.</param>
 
-        public AutomateQueueMember(string Name = null, User User = null, )
+        public AutomateQueueMember(string Name = null, User User = null)
         {
             this.Name = Name;
             this.User = User;
@@ -107,22 +106,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

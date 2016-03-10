@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "Failed")]
             Failed
         }
-    
+        
         /// <summary>
         /// The current status of the job.
         /// </summary>
@@ -39,14 +39,13 @@ namespace ININ.PureCloudApi.Model
         public StatusEnum? Status { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ContractJob" /> class.
         /// Initializes a new instance of the <see cref="ContractJob" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Contract">Contract.</param>
         /// <param name="Status">The current status of the job..</param>
 
-        public ContractJob(string Name = null, Contract Contract = null, StatusEnum? Status = null, )
+        public ContractJob(string Name = null, Contract Contract = null, StatusEnum? Status = null)
         {
             this.Name = Name;
             this.Contract = Contract;
@@ -130,27 +129,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Contract == other.Contract ||
                     this.Contract != null &&
                     this.Contract.Equals(other.Contract)
-                ) && 
+                ) &&
                 (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

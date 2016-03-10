@@ -17,23 +17,14 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class EdgeInterface :  IEquatable<EdgeInterface>
     { 
-        public enum  {
-            
-            [EnumMember(Value = "TIE")]
-            Tie,
-            
-            [EnumMember(Value = "NETWORK")]
-            Network,
-            
-            [EnumMember(Value = "TRUNK")]
-            Trunk,
-            
-            [EnumMember(Value = "STATION")]
-            Station
-        }
-    
+        
+        public static string LineTypes_Tie = "TIE";
+        public static string LineTypes_Network = "NETWORK";
+        public static string LineTypes_Trunk = "TRUNK";
+        public static string LineTypes_Station = "STATION";
+        
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="EdgeInterface" /> class.
         /// Initializes a new instance of the <see cref="EdgeInterface" />class.
         /// </summary>
         /// <param name="Type">Type.</param>
@@ -45,7 +36,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="LineTypes">LineTypes.</param>
         /// <param name="AddressFamilyId">AddressFamilyId.</param>
 
-        public EdgeInterface(string Type = null, string IpAddress = null, string Name = null, string MacAddress = null, string IfName = null, List<UriReference> Endpoints = null, List<LineTypesEnum?> LineTypes = null, string AddressFamilyId = null)
+        public EdgeInterface(string Type = null, string IpAddress = null, string Name = null, string MacAddress = null, string IfName = null, List<UriReference> Endpoints = null, List<string> LineTypes = null, string AddressFamilyId = null)
         {
             this.Type = Type;
             this.IpAddress = IpAddress;
@@ -159,42 +150,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.IpAddress == other.IpAddress ||
                     this.IpAddress != null &&
                     this.IpAddress.Equals(other.IpAddress)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.MacAddress == other.MacAddress ||
                     this.MacAddress != null &&
                     this.MacAddress.Equals(other.MacAddress)
-                ) && 
+                ) &&
                 (
                     this.IfName == other.IfName ||
                     this.IfName != null &&
                     this.IfName.Equals(other.IfName)
-                ) && 
+                ) &&
                 (
                     this.Endpoints == other.Endpoints ||
                     this.Endpoints != null &&
                     this.Endpoints.SequenceEqual(other.Endpoints)
-                ) && 
+                ) &&
                 (
                     this.LineTypes == other.LineTypes ||
                     this.LineTypes != null &&
                     this.LineTypes.SequenceEqual(other.LineTypes)
-                ) && 
+                ) &&
                 (
                     this.AddressFamilyId == other.AddressFamilyId ||
                     this.AddressFamilyId != null &&

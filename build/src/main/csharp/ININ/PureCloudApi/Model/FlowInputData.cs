@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FlowInputData :  IEquatable<FlowInputData>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowInputData" /> class.
         /// Initializes a new instance of the <see cref="FlowInputData" />class.
         /// </summary>
         /// <param name="LinkedDocumentIds">A list of document IDs to link with the new flow instance..</param>
@@ -83,7 +82,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.LinkedDocumentIds == other.LinkedDocumentIds ||
                     this.LinkedDocumentIds != null &&

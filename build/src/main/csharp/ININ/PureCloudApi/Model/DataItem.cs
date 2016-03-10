@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DataItem :  IEquatable<DataItem>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DataItem" /> class.
         /// Initializes a new instance of the <see cref="DataItem" />class.
         /// </summary>
         /// <param name="ParameterName">The name of the data element associated with a history event. (required).</param>
@@ -119,17 +118,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ParameterName == other.ParameterName ||
                     this.ParameterName != null &&
                     this.ParameterName.Equals(other.ParameterName)
-                ) && 
+                ) &&
                 (
                     this.ParameterType == other.ParameterType ||
                     this.ParameterType != null &&
                     this.ParameterType.Equals(other.ParameterType)
-                ) && 
+                ) &&
                 (
                     this.ParameterValues == other.ParameterValues ||
                     this.ParameterValues != null &&

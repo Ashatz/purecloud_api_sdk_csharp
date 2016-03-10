@@ -69,7 +69,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "VOICEXML")]
             Voicexml
         }
-    
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -77,7 +77,6 @@ namespace ININ.PureCloudApi.Model
         public TypeEnum? Type { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Dependency" /> class.
         /// Initializes a new instance of the <see cref="Dependency" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -85,7 +84,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Type">Type.</param>
         /// <param name="Deleted">Deleted (default to false).</param>
 
-        public Dependency(string Name = null, string Version = null, TypeEnum? Type = null, bool? Deleted = null, )
+        public Dependency(string Name = null, string Version = null, TypeEnum? Type = null, bool? Deleted = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -185,32 +184,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.Deleted == other.Deleted ||
                     this.Deleted != null &&
                     this.Deleted.Equals(other.Deleted)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

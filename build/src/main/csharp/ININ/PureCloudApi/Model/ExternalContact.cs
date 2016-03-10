@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ExternalContact :  IEquatable<ExternalContact>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ExternalContact" /> class.
         /// Initializes a new instance of the <see cref="ExternalContact" />class.
         /// </summary>
         /// <param name="FirstName">FirstName.</param>
@@ -39,7 +38,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CreateDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="ExternalOrganization">ExternalOrganization.</param>
 
-        public ExternalContact(string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, PhoneNumber WorkPhone = null, PhoneNumber CellPhone = null, PhoneNumber HomePhone = null, PhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, Address Address = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, ExternalOrganization ExternalOrganization = null, )
+        public ExternalContact(string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, PhoneNumber WorkPhone = null, PhoneNumber CellPhone = null, PhoneNumber HomePhone = null, PhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, Address Address = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, ExternalOrganization ExternalOrganization = null)
         {
             this.FirstName = FirstName;
             this.MiddleName = MiddleName;
@@ -235,92 +234,92 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.FirstName == other.FirstName ||
                     this.FirstName != null &&
                     this.FirstName.Equals(other.FirstName)
-                ) && 
+                ) &&
                 (
                     this.MiddleName == other.MiddleName ||
                     this.MiddleName != null &&
                     this.MiddleName.Equals(other.MiddleName)
-                ) && 
+                ) &&
                 (
                     this.LastName == other.LastName ||
                     this.LastName != null &&
                     this.LastName.Equals(other.LastName)
-                ) && 
+                ) &&
                 (
                     this.Salutation == other.Salutation ||
                     this.Salutation != null &&
                     this.Salutation.Equals(other.Salutation)
-                ) && 
+                ) &&
                 (
                     this.Title == other.Title ||
                     this.Title != null &&
                     this.Title.Equals(other.Title)
-                ) && 
+                ) &&
                 (
                     this.WorkPhone == other.WorkPhone ||
                     this.WorkPhone != null &&
                     this.WorkPhone.Equals(other.WorkPhone)
-                ) && 
+                ) &&
                 (
                     this.CellPhone == other.CellPhone ||
                     this.CellPhone != null &&
                     this.CellPhone.Equals(other.CellPhone)
-                ) && 
+                ) &&
                 (
                     this.HomePhone == other.HomePhone ||
                     this.HomePhone != null &&
                     this.HomePhone.Equals(other.HomePhone)
-                ) && 
+                ) &&
                 (
                     this.OtherPhone == other.OtherPhone ||
                     this.OtherPhone != null &&
                     this.OtherPhone.Equals(other.OtherPhone)
-                ) && 
+                ) &&
                 (
                     this.WorkEmail == other.WorkEmail ||
                     this.WorkEmail != null &&
                     this.WorkEmail.Equals(other.WorkEmail)
-                ) && 
+                ) &&
                 (
                     this.PersonalEmail == other.PersonalEmail ||
                     this.PersonalEmail != null &&
                     this.PersonalEmail.Equals(other.PersonalEmail)
-                ) && 
+                ) &&
                 (
                     this.OtherEmail == other.OtherEmail ||
                     this.OtherEmail != null &&
                     this.OtherEmail.Equals(other.OtherEmail)
-                ) && 
+                ) &&
                 (
                     this.Address == other.Address ||
                     this.Address != null &&
                     this.Address.Equals(other.Address)
-                ) && 
+                ) &&
                 (
                     this.ModifyDate == other.ModifyDate ||
                     this.ModifyDate != null &&
                     this.ModifyDate.Equals(other.ModifyDate)
-                ) && 
+                ) &&
                 (
                     this.CreateDate == other.CreateDate ||
                     this.CreateDate != null &&
                     this.CreateDate.Equals(other.CreateDate)
-                ) && 
+                ) &&
                 (
                     this.ExternalOrganization == other.ExternalOrganization ||
                     this.ExternalOrganization != null &&
                     this.ExternalOrganization.Equals(other.ExternalOrganization)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

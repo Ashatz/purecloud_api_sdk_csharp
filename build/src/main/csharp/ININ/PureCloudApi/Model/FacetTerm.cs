@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FacetTerm :  IEquatable<FacetTerm>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FacetTerm" /> class.
         /// Initializes a new instance of the <see cref="FacetTerm" />class.
         /// </summary>
         /// <param name="Term">Term.</param>
@@ -128,32 +127,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Term == other.Term ||
                     this.Term != null &&
                     this.Term.Equals(other.Term)
-                ) && 
+                ) &&
                 (
                     this.Key == other.Key ||
                     this.Key != null &&
                     this.Key.Equals(other.Key)
-                ) && 
+                ) &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Count == other.Count ||
                     this.Count != null &&
                     this.Count.Equals(other.Count)
-                ) && 
+                ) &&
                 (
                     this.Time == other.Time ||
                     this.Time != null &&

@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Ring :  IEquatable<Ring>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Ring" /> class.
         /// Initializes a new instance of the <see cref="Ring" />class.
         /// </summary>
         /// <param name="ExpansionCriteria">ExpansionCriteria.</param>
@@ -91,12 +90,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ExpansionCriteria == other.ExpansionCriteria ||
                     this.ExpansionCriteria != null &&
                     this.ExpansionCriteria.SequenceEqual(other.ExpansionCriteria)
-                ) && 
+                ) &&
                 (
                     this.Actions == other.Actions ||
                     this.Actions != null &&

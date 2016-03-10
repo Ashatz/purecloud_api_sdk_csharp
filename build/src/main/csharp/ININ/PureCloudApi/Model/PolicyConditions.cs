@@ -17,25 +17,16 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class PolicyConditions :  IEquatable<PolicyConditions>
     { 
-        public enum  {
-            
-            [EnumMember(Value = "INBOUND")]
-            Inbound,
-            
-            [EnumMember(Value = "OUTBOUND")]
-            Outbound
-        }
-        public enum  {
-            
-            [EnumMember(Value = "CALL")]
-            Call,
-            
-            [EnumMember(Value = "CHAT")]
-            Chat
-        }
-    
+        
+        public static string Directions_Inbound = "INBOUND";
+        public static string Directions_Outbound = "OUTBOUND";
+        
+        
+        public static string MediaTypes_Call = "CALL";
+        public static string MediaTypes_Chat = "CHAT";
+        
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="PolicyConditions" /> class.
         /// Initializes a new instance of the <see cref="PolicyConditions" />class.
         /// </summary>
         /// <param name="ForUsers">ForUsers.</param>
@@ -47,7 +38,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="WrapupCodes">WrapupCodes.</param>
         /// <param name="TimeAllowed">TimeAllowed.</param>
 
-        public PolicyConditions(List<User> ForUsers = null, List<DirectionsEnum?> Directions = null, List<string> DateRanges = null, List<MediaTypesEnum?> MediaTypes = null, List<Queue> ForQueues = null, DurationCondition Duration = null, List<WrapupCode> WrapupCodes = null, TimeAllowed TimeAllowed = null)
+        public PolicyConditions(List<User> ForUsers = null, List<string> Directions = null, List<string> DateRanges = null, List<string> MediaTypes = null, List<Queue> ForQueues = null, DurationCondition Duration = null, List<WrapupCode> WrapupCodes = null, TimeAllowed TimeAllowed = null)
         {
             this.ForUsers = ForUsers;
             this.Directions = Directions;
@@ -161,42 +152,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ForUsers == other.ForUsers ||
                     this.ForUsers != null &&
                     this.ForUsers.SequenceEqual(other.ForUsers)
-                ) && 
+                ) &&
                 (
                     this.Directions == other.Directions ||
                     this.Directions != null &&
                     this.Directions.SequenceEqual(other.Directions)
-                ) && 
+                ) &&
                 (
                     this.DateRanges == other.DateRanges ||
                     this.DateRanges != null &&
                     this.DateRanges.SequenceEqual(other.DateRanges)
-                ) && 
+                ) &&
                 (
                     this.MediaTypes == other.MediaTypes ||
                     this.MediaTypes != null &&
                     this.MediaTypes.SequenceEqual(other.MediaTypes)
-                ) && 
+                ) &&
                 (
                     this.ForQueues == other.ForQueues ||
                     this.ForQueues != null &&
                     this.ForQueues.SequenceEqual(other.ForQueues)
-                ) && 
+                ) &&
                 (
                     this.Duration == other.Duration ||
                     this.Duration != null &&
                     this.Duration.Equals(other.Duration)
-                ) && 
+                ) &&
                 (
                     this.WrapupCodes == other.WrapupCodes ||
                     this.WrapupCodes != null &&
                     this.WrapupCodes.SequenceEqual(other.WrapupCodes)
-                ) && 
+                ) &&
                 (
                     this.TimeAllowed == other.TimeAllowed ||
                     this.TimeAllowed != null &&

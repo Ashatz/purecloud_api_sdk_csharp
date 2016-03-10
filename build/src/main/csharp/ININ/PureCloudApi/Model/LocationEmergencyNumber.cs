@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "elin")]
             Elin
         }
-    
+        
         /// <summary>
         /// The type of emergency number.
         /// </summary>
@@ -36,7 +36,6 @@ namespace ININ.PureCloudApi.Model
         public TypeEnum? Type { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="LocationEmergencyNumber" /> class.
         /// Initializes a new instance of the <see cref="LocationEmergencyNumber" />class.
         /// </summary>
         /// <param name="E164">E164.</param>
@@ -111,17 +110,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.E164 == other.E164 ||
                     this.E164 != null &&
                     this.E164.Equals(other.E164)
-                ) && 
+                ) &&
                 (
                     this.Number == other.Number ||
                     this.Number != null &&
                     this.Number.Equals(other.Number)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&

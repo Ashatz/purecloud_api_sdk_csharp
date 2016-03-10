@@ -17,15 +17,14 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class VoiceRatesCsv :  IEquatable<VoiceRatesCsv>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="VoiceRatesCsv" /> class.
         /// Initializes a new instance of the <see cref="VoiceRatesCsv" />class.
         /// </summary>
         /// <param name="Name">The name of the rate csv. (required).</param>
         /// <param name="Url">The url of the rate csv. (required).</param>
 
-        public VoiceRatesCsv(string Name = null, string Url = null, )
+        public VoiceRatesCsv(string Name = null, string Url = null)
         {
             // to ensure "Name" is required (not null)
             if (Name == null)
@@ -125,22 +124,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Url == other.Url ||
                     this.Url != null &&
                     this.Url.Equals(other.Url)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

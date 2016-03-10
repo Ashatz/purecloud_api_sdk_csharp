@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ErrorDetails :  IEquatable<ErrorDetails>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ErrorDetails" /> class.
         /// Initializes a new instance of the <see cref="ErrorDetails" />class.
         /// </summary>
         /// <param name="Status">Status.</param>
@@ -145,42 +144,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-                ) && 
+                ) &&
                 (
                     this.Message == other.Message ||
                     this.Message != null &&
                     this.Message.Equals(other.Message)
-                ) && 
+                ) &&
                 (
                     this.MessageWithParams == other.MessageWithParams ||
                     this.MessageWithParams != null &&
                     this.MessageWithParams.Equals(other.MessageWithParams)
-                ) && 
+                ) &&
                 (
                     this.MessageParams == other.MessageParams ||
                     this.MessageParams != null &&
                     this.MessageParams.SequenceEqual(other.MessageParams)
-                ) && 
+                ) &&
                 (
                     this.Code == other.Code ||
                     this.Code != null &&
                     this.Code.Equals(other.Code)
-                ) && 
+                ) &&
                 (
                     this.ContextId == other.ContextId ||
                     this.ContextId != null &&
                     this.ContextId.Equals(other.ContextId)
-                ) && 
+                ) &&
                 (
                     this.Nested == other.Nested ||
                     this.Nested != null &&
                     this.Nested.Equals(other.Nested)
-                ) && 
+                ) &&
                 (
                     this.Details == other.Details ||
                     this.Details != null &&

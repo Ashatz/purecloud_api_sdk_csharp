@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class AgentActivity :  IEquatable<AgentActivity>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="AgentActivity" /> class.
         /// Initializes a new instance of the <see cref="AgentActivity" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -28,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="AverageEvaluationScore">AverageEvaluationScore.</param>
         /// <param name="AgentEvaluatorActivityList">AgentEvaluatorActivityList.</param>
 
-        public AgentActivity(string Name = null, User Agent = null, int? NumEvaluations = null, int? AverageEvaluationScore = null, List<AgentEvaluatorActivity> AgentEvaluatorActivityList = null, )
+        public AgentActivity(string Name = null, User Agent = null, int? NumEvaluations = null, int? AverageEvaluationScore = null, List<AgentEvaluatorActivity> AgentEvaluatorActivityList = null)
         {
             this.Name = Name;
             this.Agent = Agent;
@@ -134,37 +133,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Agent == other.Agent ||
                     this.Agent != null &&
                     this.Agent.Equals(other.Agent)
-                ) && 
+                ) &&
                 (
                     this.NumEvaluations == other.NumEvaluations ||
                     this.NumEvaluations != null &&
                     this.NumEvaluations.Equals(other.NumEvaluations)
-                ) && 
+                ) &&
                 (
                     this.AverageEvaluationScore == other.AverageEvaluationScore ||
                     this.AverageEvaluationScore != null &&
                     this.AverageEvaluationScore.Equals(other.AverageEvaluationScore)
-                ) && 
+                ) &&
                 (
                     this.AgentEvaluatorActivityList == other.AgentEvaluatorActivityList ||
                     this.AgentEvaluatorActivityList != null &&
                     this.AgentEvaluatorActivityList.SequenceEqual(other.AgentEvaluatorActivityList)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

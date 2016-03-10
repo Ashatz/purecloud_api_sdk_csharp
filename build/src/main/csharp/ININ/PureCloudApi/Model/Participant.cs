@@ -33,7 +33,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "FORCED_TIMEOUT")]
             ForcedTimeout
         }
-    
+        
         /// <summary>
         /// Gets or Sets WrapupPrompt
         /// </summary>
@@ -41,7 +41,6 @@ namespace ININ.PureCloudApi.Model
         public WrapupPromptEnum? WrapupPrompt { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Participant" /> class.
         /// Initializes a new instance of the <see cref="Participant" />class.
         /// </summary>
         /// <param name="Id">Id.</param>
@@ -404,162 +403,162 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.StartTime == other.StartTime ||
                     this.StartTime != null &&
                     this.StartTime.Equals(other.StartTime)
-                ) && 
+                ) &&
                 (
                     this.EndTime == other.EndTime ||
                     this.EndTime != null &&
                     this.EndTime.Equals(other.EndTime)
-                ) && 
+                ) &&
                 (
                     this.ConnectedTime == other.ConnectedTime ||
                     this.ConnectedTime != null &&
                     this.ConnectedTime.Equals(other.ConnectedTime)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.UserUri == other.UserUri ||
                     this.UserUri != null &&
                     this.UserUri.Equals(other.UserUri)
-                ) && 
+                ) &&
                 (
                     this.UserId == other.UserId ||
                     this.UserId != null &&
                     this.UserId.Equals(other.UserId)
-                ) && 
+                ) &&
                 (
                     this.QueueId == other.QueueId ||
                     this.QueueId != null &&
                     this.QueueId.Equals(other.QueueId)
-                ) && 
+                ) &&
                 (
                     this.GroupId == other.GroupId ||
                     this.GroupId != null &&
                     this.GroupId.Equals(other.GroupId)
-                ) && 
+                ) &&
                 (
                     this.QueueName == other.QueueName ||
                     this.QueueName != null &&
                     this.QueueName.Equals(other.QueueName)
-                ) && 
+                ) &&
                 (
                     this.Purpose == other.Purpose ||
                     this.Purpose != null &&
                     this.Purpose.Equals(other.Purpose)
-                ) && 
+                ) &&
                 (
                     this.ParticipantType == other.ParticipantType ||
                     this.ParticipantType != null &&
                     this.ParticipantType.Equals(other.ParticipantType)
-                ) && 
+                ) &&
                 (
                     this.ConsultParticipantId == other.ConsultParticipantId ||
                     this.ConsultParticipantId != null &&
                     this.ConsultParticipantId.Equals(other.ConsultParticipantId)
-                ) && 
+                ) &&
                 (
                     this.Address == other.Address ||
                     this.Address != null &&
                     this.Address.Equals(other.Address)
-                ) && 
+                ) &&
                 (
                     this.Ani == other.Ani ||
                     this.Ani != null &&
                     this.Ani.Equals(other.Ani)
-                ) && 
+                ) &&
                 (
                     this.Dnis == other.Dnis ||
                     this.Dnis != null &&
                     this.Dnis.Equals(other.Dnis)
-                ) && 
+                ) &&
                 (
                     this.Locale == other.Locale ||
                     this.Locale != null &&
                     this.Locale.Equals(other.Locale)
-                ) && 
+                ) &&
                 (
                     this.WrapupRequired == other.WrapupRequired ||
                     this.WrapupRequired != null &&
                     this.WrapupRequired.Equals(other.WrapupRequired)
-                ) && 
+                ) &&
                 (
                     this.WrapupExpected == other.WrapupExpected ||
                     this.WrapupExpected != null &&
                     this.WrapupExpected.Equals(other.WrapupExpected)
-                ) && 
+                ) &&
                 (
                     this.WrapupPrompt == other.WrapupPrompt ||
                     this.WrapupPrompt != null &&
                     this.WrapupPrompt.Equals(other.WrapupPrompt)
-                ) && 
+                ) &&
                 (
                     this.WrapupTimeoutMs == other.WrapupTimeoutMs ||
                     this.WrapupTimeoutMs != null &&
                     this.WrapupTimeoutMs.Equals(other.WrapupTimeoutMs)
-                ) && 
+                ) &&
                 (
                     this.WrapupSkipped == other.WrapupSkipped ||
                     this.WrapupSkipped != null &&
                     this.WrapupSkipped.Equals(other.WrapupSkipped)
-                ) && 
+                ) &&
                 (
                     this.Wrapup == other.Wrapup ||
                     this.Wrapup != null &&
                     this.Wrapup.Equals(other.Wrapup)
-                ) && 
+                ) &&
                 (
                     this.MonitoredParticipantId == other.MonitoredParticipantId ||
                     this.MonitoredParticipantId != null &&
                     this.MonitoredParticipantId.Equals(other.MonitoredParticipantId)
-                ) && 
+                ) &&
                 (
                     this.Attributes == other.Attributes ||
                     this.Attributes != null &&
                     this.Attributes.SequenceEqual(other.Attributes)
-                ) && 
+                ) &&
                 (
                     this.Calls == other.Calls ||
                     this.Calls != null &&
                     this.Calls.SequenceEqual(other.Calls)
-                ) && 
+                ) &&
                 (
                     this.Callbacks == other.Callbacks ||
                     this.Callbacks != null &&
                     this.Callbacks.SequenceEqual(other.Callbacks)
-                ) && 
+                ) &&
                 (
                     this.Chats == other.Chats ||
                     this.Chats != null &&
                     this.Chats.SequenceEqual(other.Chats)
-                ) && 
+                ) &&
                 (
                     this.Emails == other.Emails ||
                     this.Emails != null &&
                     this.Emails.SequenceEqual(other.Emails)
-                ) && 
+                ) &&
                 (
                     this.SocialExpressions == other.SocialExpressions ||
                     this.SocialExpressions != null &&
                     this.SocialExpressions.SequenceEqual(other.SocialExpressions)
-                ) && 
+                ) &&
                 (
                     this.Videos == other.Videos ||
                     this.Videos != null &&
                     this.Videos.SequenceEqual(other.Videos)
-                ) && 
+                ) &&
                 (
                     this.Evaluations == other.Evaluations ||
                     this.Evaluations != null &&

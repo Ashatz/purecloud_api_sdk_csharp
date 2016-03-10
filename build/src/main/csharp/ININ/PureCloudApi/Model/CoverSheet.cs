@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class CoverSheet :  IEquatable<CoverSheet>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="CoverSheet" /> class.
         /// Initializes a new instance of the <see cref="CoverSheet" />class.
         /// </summary>
         /// <param name="Notes">Text to be added to the coversheet.</param>
@@ -93,12 +92,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Notes == other.Notes ||
                     this.Notes != null &&
                     this.Notes.Equals(other.Notes)
-                ) && 
+                ) &&
                 (
                     this.Locale == other.Locale ||
                     this.Locale != null &&

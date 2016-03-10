@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class PenetrationRate :  IEquatable<PenetrationRate>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="PenetrationRate" /> class.
         /// Initializes a new instance of the <see cref="PenetrationRate" />class.
         /// </summary>
         /// <param name="NumberOfContactsCalled">NumberOfContactsCalled.</param>
@@ -109,22 +108,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.NumberOfContactsCalled == other.NumberOfContactsCalled ||
                     this.NumberOfContactsCalled != null &&
                     this.NumberOfContactsCalled.Equals(other.NumberOfContactsCalled)
-                ) && 
+                ) &&
                 (
                     this.TotalNumberOfContacts == other.TotalNumberOfContacts ||
                     this.TotalNumberOfContacts != null &&
                     this.TotalNumberOfContacts.Equals(other.TotalNumberOfContacts)
-                ) && 
+                ) &&
                 (
                     this.Percentage == other.Percentage ||
                     this.Percentage != null &&
                     this.Percentage.Equals(other.Percentage)
-                ) && 
+                ) &&
                 (
                     this.PenetrationRateId == other.PenetrationRateId ||
                     this.PenetrationRateId != null &&

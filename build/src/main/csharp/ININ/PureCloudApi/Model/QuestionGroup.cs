@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class QuestionGroup :  IEquatable<QuestionGroup>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="QuestionGroup" /> class.
         /// Initializes a new instance of the <see cref="QuestionGroup" />class.
         /// </summary>
         /// <param name="Id">Id.</param>
@@ -186,47 +185,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.DefaultAnswersToHighest == other.DefaultAnswersToHighest ||
                     this.DefaultAnswersToHighest != null &&
                     this.DefaultAnswersToHighest.Equals(other.DefaultAnswersToHighest)
-                ) && 
+                ) &&
                 (
                     this.DefaultAnswersToNA == other.DefaultAnswersToNA ||
                     this.DefaultAnswersToNA != null &&
                     this.DefaultAnswersToNA.Equals(other.DefaultAnswersToNA)
-                ) && 
+                ) &&
                 (
                     this.NaEnabled == other.NaEnabled ||
                     this.NaEnabled != null &&
                     this.NaEnabled.Equals(other.NaEnabled)
-                ) && 
+                ) &&
                 (
                     this.Weight == other.Weight ||
                     this.Weight != null &&
                     this.Weight.Equals(other.Weight)
-                ) && 
+                ) &&
                 (
                     this.ManualWeight == other.ManualWeight ||
                     this.ManualWeight != null &&
                     this.ManualWeight.Equals(other.ManualWeight)
-                ) && 
+                ) &&
                 (
                     this.Questions == other.Questions ||
                     this.Questions != null &&

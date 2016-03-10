@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class VendorConnectionRequest :  IEquatable<VendorConnectionRequest>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="VendorConnectionRequest" /> class.
         /// Initializes a new instance of the <see cref="VendorConnectionRequest" />class.
         /// </summary>
         /// <param name="Publisher">Publisher.</param>
@@ -100,17 +99,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Publisher == other.Publisher ||
                     this.Publisher != null &&
                     this.Publisher.Equals(other.Publisher)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&

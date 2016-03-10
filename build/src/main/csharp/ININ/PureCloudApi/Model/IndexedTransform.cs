@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class IndexedTransform :  IEquatable<IndexedTransform>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="IndexedTransform" /> class.
         /// Initializes a new instance of the <see cref="IndexedTransform" />class.
         /// </summary>
         /// <param name="Replaces">Replaces.</param>
@@ -109,22 +108,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Replaces == other.Replaces ||
                     this.Replaces != null &&
                     this.Replaces.SequenceEqual(other.Replaces)
-                ) && 
+                ) &&
                 (
                     this.EntityPath == other.EntityPath ||
                     this.EntityPath != null &&
                     this.EntityPath.SequenceEqual(other.EntityPath)
-                ) && 
+                ) &&
                 (
                     this.Index == other.Index ||
                     this.Index != null &&
                     this.Index.Equals(other.Index)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&

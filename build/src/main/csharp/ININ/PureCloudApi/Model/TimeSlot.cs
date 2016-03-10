@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class TimeSlot :  IEquatable<TimeSlot>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="TimeSlot" /> class.
         /// Initializes a new instance of the <see cref="TimeSlot" />class.
         /// </summary>
         /// <param name="StartTime">StartTime.</param>
@@ -100,17 +99,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.StartTime == other.StartTime ||
                     this.StartTime != null &&
                     this.StartTime.Equals(other.StartTime)
-                ) && 
+                ) &&
                 (
                     this.StopTime == other.StopTime ||
                     this.StopTime != null &&
                     this.StopTime.Equals(other.StopTime)
-                ) && 
+                ) &&
                 (
                     this.Day == other.Day ||
                     this.Day != null &&

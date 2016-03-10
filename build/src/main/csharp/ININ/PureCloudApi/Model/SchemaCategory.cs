@@ -17,14 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class SchemaCategory :  IEquatable<SchemaCategory>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="SchemaCategory" /> class.
         /// Initializes a new instance of the <see cref="SchemaCategory" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
 
-        public SchemaCategory(string Name = null, )
+        public SchemaCategory(string Name = null)
         {
             this.Name = Name;
             
@@ -98,17 +97,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class CampaignStats :  IEquatable<CampaignStats>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="CampaignStats" /> class.
         /// Initializes a new instance of the <see cref="CampaignStats" />class.
         /// </summary>
         /// <param name="ContactRate">ContactRate.</param>
@@ -109,22 +108,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ContactRate == other.ContactRate ||
                     this.ContactRate != null &&
                     this.ContactRate.Equals(other.ContactRate)
-                ) && 
+                ) &&
                 (
                     this.IdleAgents == other.IdleAgents ||
                     this.IdleAgents != null &&
                     this.IdleAgents.Equals(other.IdleAgents)
-                ) && 
+                ) &&
                 (
                     this.AdjustedCallsPerAgent == other.AdjustedCallsPerAgent ||
                     this.AdjustedCallsPerAgent != null &&
                     this.AdjustedCallsPerAgent.Equals(other.AdjustedCallsPerAgent)
-                ) && 
+                ) &&
                 (
                     this.OutstandingCalls == other.OutstandingCalls ||
                     this.OutstandingCalls != null &&

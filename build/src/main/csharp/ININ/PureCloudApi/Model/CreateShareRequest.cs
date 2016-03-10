@@ -34,7 +34,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "PUBLIC")]
             Public
         }
-    
+        
         /// <summary>
         /// Gets or Sets SharedEntityType
         /// </summary>
@@ -48,7 +48,6 @@ namespace ININ.PureCloudApi.Model
         public MemberTypeEnum? MemberType { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="CreateShareRequest" /> class.
         /// Initializes a new instance of the <see cref="CreateShareRequest" />class.
         /// </summary>
         /// <param name="SharedEntityType">SharedEntityType.</param>
@@ -135,27 +134,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.SharedEntityType == other.SharedEntityType ||
                     this.SharedEntityType != null &&
                     this.SharedEntityType.Equals(other.SharedEntityType)
-                ) && 
+                ) &&
                 (
                     this.SharedEntity == other.SharedEntity ||
                     this.SharedEntity != null &&
                     this.SharedEntity.Equals(other.SharedEntity)
-                ) && 
+                ) &&
                 (
                     this.MemberType == other.MemberType ||
                     this.MemberType != null &&
                     this.MemberType.Equals(other.MemberType)
-                ) && 
+                ) &&
                 (
                     this.Member == other.Member ||
                     this.Member != null &&
                     this.Member.Equals(other.Member)
-                ) && 
+                ) &&
                 (
                     this.Members == other.Members ||
                     this.Members != null &&

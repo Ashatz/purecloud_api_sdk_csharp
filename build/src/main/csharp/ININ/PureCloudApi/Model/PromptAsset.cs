@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class PromptAsset :  IEquatable<PromptAsset>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="PromptAsset" /> class.
         /// Initializes a new instance of the <see cref="PromptAsset" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -31,7 +30,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="UploadUri">UploadUri.</param>
         /// <param name="DurationSeconds">DurationSeconds.</param>
 
-        public PromptAsset(string Name = null, string PromptId = null, string Language = null, string MediaUri = null, string TtsString = null, string UploadStatus = null, string UploadUri = null, double? DurationSeconds = null, )
+        public PromptAsset(string Name = null, string PromptId = null, string Language = null, string MediaUri = null, string TtsString = null, string UploadStatus = null, string UploadUri = null, double? DurationSeconds = null)
         {
             this.Name = Name;
             this.PromptId = PromptId;
@@ -161,52 +160,52 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.PromptId == other.PromptId ||
                     this.PromptId != null &&
                     this.PromptId.Equals(other.PromptId)
-                ) && 
+                ) &&
                 (
                     this.Language == other.Language ||
                     this.Language != null &&
                     this.Language.Equals(other.Language)
-                ) && 
+                ) &&
                 (
                     this.MediaUri == other.MediaUri ||
                     this.MediaUri != null &&
                     this.MediaUri.Equals(other.MediaUri)
-                ) && 
+                ) &&
                 (
                     this.TtsString == other.TtsString ||
                     this.TtsString != null &&
                     this.TtsString.Equals(other.TtsString)
-                ) && 
+                ) &&
                 (
                     this.UploadStatus == other.UploadStatus ||
                     this.UploadStatus != null &&
                     this.UploadStatus.Equals(other.UploadStatus)
-                ) && 
+                ) &&
                 (
                     this.UploadUri == other.UploadUri ||
                     this.UploadUri != null &&
                     this.UploadUri.Equals(other.UploadUri)
-                ) && 
+                ) &&
                 (
                     this.DurationSeconds == other.DurationSeconds ||
                     this.DurationSeconds != null &&
                     this.DurationSeconds.Equals(other.DurationSeconds)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

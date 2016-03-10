@@ -49,7 +49,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "GROUP")]
             Group
         }
-    
+        
         /// <summary>
         /// Which facet request type
         /// </summary>
@@ -65,7 +65,6 @@ namespace ININ.PureCloudApi.Model
         public TypeEnum? Type { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="FacetRequest" /> class.
         /// Initializes a new instance of the <see cref="FacetRequest" />class.
         /// </summary>
         /// <param name="Name">name of the facet request that will be returned with the result set (required).</param>
@@ -199,37 +198,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.FacetRequestQueryType == other.FacetRequestQueryType ||
                     this.FacetRequestQueryType != null &&
                     this.FacetRequestQueryType.Equals(other.FacetRequestQueryType)
-                ) && 
+                ) &&
                 (
                     this.FieldName == other.FieldName ||
                     this.FieldName != null &&
                     this.FieldName.Equals(other.FieldName)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.RangeFrom == other.RangeFrom ||
                     this.RangeFrom != null &&
                     this.RangeFrom.Equals(other.RangeFrom)
-                ) && 
+                ) &&
                 (
                     this.RangeTo == other.RangeTo ||
                     this.RangeTo != null &&
                     this.RangeTo.Equals(other.RangeTo)
-                ) && 
+                ) &&
                 (
                     this.MaxFacetCount == other.MaxFacetCount ||
                     this.MaxFacetCount != null &&

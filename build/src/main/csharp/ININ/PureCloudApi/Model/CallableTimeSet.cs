@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class CallableTimeSet :  IEquatable<CallableTimeSet>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="CallableTimeSet" /> class.
         /// Initializes a new instance of the <see cref="CallableTimeSet" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -28,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Version">Version.</param>
         /// <param name="CallableTimes">CallableTimes.</param>
 
-        public CallableTimeSet(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<CallableTime> CallableTimes = null, )
+        public CallableTimeSet(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<CallableTime> CallableTimes = null)
         {
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -136,37 +135,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.CallableTimes == other.CallableTimes ||
                     this.CallableTimes != null &&
                     this.CallableTimes.SequenceEqual(other.CallableTimes)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

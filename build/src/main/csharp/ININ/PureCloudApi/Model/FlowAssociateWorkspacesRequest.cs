@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FlowAssociateWorkspacesRequest :  IEquatable<FlowAssociateWorkspacesRequest>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowAssociateWorkspacesRequest" /> class.
         /// Initializes a new instance of the <see cref="FlowAssociateWorkspacesRequest" />class.
         /// </summary>
         /// <param name="Workspaces">The list of Workspaces to associate with a flow.  Can be null/empty to remove associations. (required).</param>
@@ -91,7 +90,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Workspaces == other.Workspaces ||
                     this.Workspaces != null &&

@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DocumentUpdate :  IEquatable<DocumentUpdate>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DocumentUpdate" /> class.
         /// Initializes a new instance of the <see cref="DocumentUpdate" />class.
         /// </summary>
         /// <param name="ChangeNumber">ChangeNumber.</param>
@@ -162,47 +161,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ChangeNumber == other.ChangeNumber ||
                     this.ChangeNumber != null &&
                     this.ChangeNumber.Equals(other.ChangeNumber)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Read == other.Read ||
                     this.Read != null &&
                     this.Read.Equals(other.Read)
-                ) && 
+                ) &&
                 (
                     this.AddTags == other.AddTags ||
                     this.AddTags != null &&
                     this.AddTags.SequenceEqual(other.AddTags)
-                ) && 
+                ) &&
                 (
                     this.RemoveTags == other.RemoveTags ||
                     this.RemoveTags != null &&
                     this.RemoveTags.SequenceEqual(other.RemoveTags)
-                ) && 
+                ) &&
                 (
                     this.AddTagIds == other.AddTagIds ||
                     this.AddTagIds != null &&
                     this.AddTagIds.SequenceEqual(other.AddTagIds)
-                ) && 
+                ) &&
                 (
                     this.RemoveTagIds == other.RemoveTagIds ||
                     this.RemoveTagIds != null &&
                     this.RemoveTagIds.SequenceEqual(other.RemoveTagIds)
-                ) && 
+                ) &&
                 (
                     this.UpdateAttributes == other.UpdateAttributes ||
                     this.UpdateAttributes != null &&
                     this.UpdateAttributes.SequenceEqual(other.UpdateAttributes)
-                ) && 
+                ) &&
                 (
                     this.RemoveAttributes == other.RemoveAttributes ||
                     this.RemoveAttributes != null &&

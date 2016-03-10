@@ -17,15 +17,14 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class XlsxSchema :  IEquatable<XlsxSchema>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="XlsxSchema" /> class.
         /// Initializes a new instance of the <see cref="XlsxSchema" />class.
         /// </summary>
         /// <param name="SheetSchemas">A list of all the schemas for a XLSX file. Each schema represents a different sheet&#39;s schema. (required).</param>
         /// <param name="Name">Human readable name for schema. (required).</param>
 
-        public XlsxSchema(List<SheetSchema> SheetSchemas = null, string Name = null, )
+        public XlsxSchema(List<SheetSchema> SheetSchemas = null, string Name = null)
         {
             // to ensure "SheetSchemas" is required (not null)
             if (SheetSchemas == null)
@@ -117,17 +116,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.SheetSchemas == other.SheetSchemas ||
                     this.SheetSchemas != null &&
                     this.SheetSchemas.SequenceEqual(other.SheetSchemas)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.CarrierId == other.CarrierId ||
                     this.CarrierId != null &&

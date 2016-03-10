@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class EncryptionKey :  IEquatable<EncryptionKey>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="EncryptionKey" /> class.
         /// Initializes a new instance of the <see cref="EncryptionKey" />class.
         /// </summary>
         /// <param name="Id">Id.</param>
@@ -28,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="KeydataSummary">KeydataSummary.</param>
         /// <param name="User">User.</param>
 
-        public EncryptionKey(string Id = null, string Name = null, DateTime? CreateDate = null, string KeydataSummary = null, User User = null, )
+        public EncryptionKey(string Id = null, string Name = null, DateTime? CreateDate = null, string KeydataSummary = null, User User = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -127,32 +126,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.CreateDate == other.CreateDate ||
                     this.CreateDate != null &&
                     this.CreateDate.Equals(other.CreateDate)
-                ) && 
+                ) &&
                 (
                     this.KeydataSummary == other.KeydataSummary ||
                     this.KeydataSummary != null &&
                     this.KeydataSummary.Equals(other.KeydataSummary)
-                ) && 
+                ) &&
                 (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

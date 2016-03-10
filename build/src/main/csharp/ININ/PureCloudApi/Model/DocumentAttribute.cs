@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DocumentAttribute :  IEquatable<DocumentAttribute>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DocumentAttribute" /> class.
         /// Initializes a new instance of the <see cref="DocumentAttribute" />class.
         /// </summary>
         /// <param name="Attribute">Attribute.</param>
@@ -91,12 +90,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Attribute == other.Attribute ||
                     this.Attribute != null &&
                     this.Attribute.Equals(other.Attribute)
-                ) && 
+                ) &&
                 (
                     this.Values == other.Values ||
                     this.Values != null &&

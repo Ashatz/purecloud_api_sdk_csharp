@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class HardwareRate :  IEquatable<HardwareRate>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="HardwareRate" /> class.
         /// Initializes a new instance of the <see cref="HardwareRate" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -27,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PartNumber">PartNumber.</param>
         /// <param name="Rate">Rate.</param>
 
-        public HardwareRate(string Name = null, string Description = null, string PartNumber = null, Rate Rate = null, )
+        public HardwareRate(string Name = null, string Description = null, string PartNumber = null, Rate Rate = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -125,32 +124,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.PartNumber == other.PartNumber ||
                     this.PartNumber != null &&
                     this.PartNumber.Equals(other.PartNumber)
-                ) && 
+                ) &&
                 (
                     this.Rate == other.Rate ||
                     this.Rate != null &&
                     this.Rate.Equals(other.Rate)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

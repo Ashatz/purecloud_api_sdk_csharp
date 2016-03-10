@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class SheetTransform :  IEquatable<SheetTransform>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="SheetTransform" /> class.
         /// Initializes a new instance of the <see cref="SheetTransform" />class.
         /// </summary>
         /// <param name="Sheet">Sheet.</param>
@@ -100,17 +99,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Sheet == other.Sheet ||
                     this.Sheet != null &&
                     this.Sheet.Equals(other.Sheet)
-                ) && 
+                ) &&
                 (
                     this.SheetName == other.SheetName ||
                     this.SheetName != null &&
                     this.SheetName.Equals(other.SheetName)
-                ) && 
+                ) &&
                 (
                     this.Table == other.Table ||
                     this.Table != null &&

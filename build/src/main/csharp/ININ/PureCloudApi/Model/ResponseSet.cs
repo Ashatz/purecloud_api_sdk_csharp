@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ResponseSet :  IEquatable<ResponseSet>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ResponseSet" /> class.
         /// Initializes a new instance of the <see cref="ResponseSet" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -28,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Version">Version.</param>
         /// <param name="Responses">Responses.</param>
 
-        public ResponseSet(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, Dictionary<string, Reaction> Responses = null, )
+        public ResponseSet(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, Dictionary<string, Reaction> Responses = null)
         {
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -136,37 +135,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.Responses == other.Responses ||
                     this.Responses != null &&
                     this.Responses.SequenceEqual(other.Responses)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

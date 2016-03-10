@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "INACTIVE")]
             Inactive
         }
-    
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -38,7 +38,6 @@ namespace ININ.PureCloudApi.Model
         public StateEnum? State { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Site" /> class.
         /// Initializes a new instance of the <see cref="Site" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -61,7 +60,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Location">Location.</param>
         /// <param name="Managed">Managed (default to false).</param>
 
-        public Site(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<UriReference> PrimarySites = null, List<UriReference> SecondarySites = null, List<Edge> PrimaryEdges = null, List<Edge> SecondaryEdges = null, List<OrganizationAddress> Addresses = null, List<Edge> Edges = null, EdgeAutoUpdateConfig EdgeAutoUpdateConfig = null, UriReference Location = null, bool? Managed = null, )
+        public Site(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<UriReference> PrimarySites = null, List<UriReference> SecondarySites = null, List<Edge> PrimaryEdges = null, List<Edge> SecondaryEdges = null, List<OrganizationAddress> Addresses = null, List<Edge> Edges = null, EdgeAutoUpdateConfig EdgeAutoUpdateConfig = null, UriReference Location = null, bool? Managed = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -284,107 +283,107 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.ModifiedBy == other.ModifiedBy ||
                     this.ModifiedBy != null &&
                     this.ModifiedBy.Equals(other.ModifiedBy)
-                ) && 
+                ) &&
                 (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
-                ) && 
+                ) &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.ModifiedByApp == other.ModifiedByApp ||
                     this.ModifiedByApp != null &&
                     this.ModifiedByApp.Equals(other.ModifiedByApp)
-                ) && 
+                ) &&
                 (
                     this.CreatedByApp == other.CreatedByApp ||
                     this.CreatedByApp != null &&
                     this.CreatedByApp.Equals(other.CreatedByApp)
-                ) && 
+                ) &&
                 (
                     this.PrimarySites == other.PrimarySites ||
                     this.PrimarySites != null &&
                     this.PrimarySites.SequenceEqual(other.PrimarySites)
-                ) && 
+                ) &&
                 (
                     this.SecondarySites == other.SecondarySites ||
                     this.SecondarySites != null &&
                     this.SecondarySites.SequenceEqual(other.SecondarySites)
-                ) && 
+                ) &&
                 (
                     this.PrimaryEdges == other.PrimaryEdges ||
                     this.PrimaryEdges != null &&
                     this.PrimaryEdges.SequenceEqual(other.PrimaryEdges)
-                ) && 
+                ) &&
                 (
                     this.SecondaryEdges == other.SecondaryEdges ||
                     this.SecondaryEdges != null &&
                     this.SecondaryEdges.SequenceEqual(other.SecondaryEdges)
-                ) && 
+                ) &&
                 (
                     this.Addresses == other.Addresses ||
                     this.Addresses != null &&
                     this.Addresses.SequenceEqual(other.Addresses)
-                ) && 
+                ) &&
                 (
                     this.Edges == other.Edges ||
                     this.Edges != null &&
                     this.Edges.SequenceEqual(other.Edges)
-                ) && 
+                ) &&
                 (
                     this.EdgeAutoUpdateConfig == other.EdgeAutoUpdateConfig ||
                     this.EdgeAutoUpdateConfig != null &&
                     this.EdgeAutoUpdateConfig.Equals(other.EdgeAutoUpdateConfig)
-                ) && 
+                ) &&
                 (
                     this.Location == other.Location ||
                     this.Location != null &&
                     this.Location.Equals(other.Location)
-                ) && 
+                ) &&
                 (
                     this.Managed == other.Managed ||
                     this.Managed != null &&
                     this.Managed.Equals(other.Managed)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

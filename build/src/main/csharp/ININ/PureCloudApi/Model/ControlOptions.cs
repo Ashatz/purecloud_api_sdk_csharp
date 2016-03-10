@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ControlOptions :  IEquatable<ControlOptions>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ControlOptions" /> class.
         /// Initializes a new instance of the <see cref="ControlOptions" />class.
         /// </summary>
         /// <param name="Value">Value.</param>
@@ -91,12 +90,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Value == other.Value ||
                     this.Value != null &&
                     this.Value.Equals(other.Value)
-                ) && 
+                ) &&
                 (
                     this.Label == other.Label ||
                     this.Label != null &&

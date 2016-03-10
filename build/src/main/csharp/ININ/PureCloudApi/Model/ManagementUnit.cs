@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ManagementUnit :  IEquatable<ManagementUnit>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ManagementUnit" /> class.
         /// Initializes a new instance of the <see cref="ManagementUnit" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -118,27 +117,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.StartDayOfWeek == other.StartDayOfWeek ||
                     this.StartDayOfWeek != null &&
                     this.StartDayOfWeek.Equals(other.StartDayOfWeek)
-                ) && 
+                ) &&
                 (
                     this.Timezone == other.Timezone ||
                     this.Timezone != null &&
                     this.Timezone.Equals(other.Timezone)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&

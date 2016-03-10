@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class AvailableAdditionalService :  IEquatable<AvailableAdditionalService>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="AvailableAdditionalService" /> class.
         /// Initializes a new instance of the <see cref="AvailableAdditionalService" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -28,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="RequiredForProducts">The list of products which require this additional service. (required).</param>
         /// <param name="Rate">The rate of this additional service. (required).</param>
 
-        public AvailableAdditionalService(string Name = null, string Description = null, string PartNumber = null, List<string> RequiredForProducts = null, Rate Rate = null, )
+        public AvailableAdditionalService(string Name = null, string Description = null, string PartNumber = null, List<string> RequiredForProducts = null, Rate Rate = null)
         {
             // to ensure "Description" is required (not null)
             if (Description == null)
@@ -170,37 +169,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.PartNumber == other.PartNumber ||
                     this.PartNumber != null &&
                     this.PartNumber.Equals(other.PartNumber)
-                ) && 
+                ) &&
                 (
                     this.RequiredForProducts == other.RequiredForProducts ||
                     this.RequiredForProducts != null &&
                     this.RequiredForProducts.SequenceEqual(other.RequiredForProducts)
-                ) && 
+                ) &&
                 (
                     this.Rate == other.Rate ||
                     this.Rate != null &&
                     this.Rate.Equals(other.Rate)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

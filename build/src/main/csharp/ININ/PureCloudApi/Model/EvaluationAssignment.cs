@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class EvaluationAssignment :  IEquatable<EvaluationAssignment>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="EvaluationAssignment" /> class.
         /// Initializes a new instance of the <see cref="EvaluationAssignment" />class.
         /// </summary>
         /// <param name="EvaluationForm">EvaluationForm.</param>
@@ -91,12 +90,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.EvaluationForm == other.EvaluationForm ||
                     this.EvaluationForm != null &&
                     this.EvaluationForm.Equals(other.EvaluationForm)
-                ) && 
+                ) &&
                 (
                     this.User == other.User ||
                     this.User != null &&

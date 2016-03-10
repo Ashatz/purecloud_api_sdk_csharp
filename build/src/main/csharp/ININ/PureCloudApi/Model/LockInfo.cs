@@ -42,7 +42,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "TEXT_EXTRACTION")]
             TextExtraction
         }
-    
+        
         /// <summary>
         /// Gets or Sets Action
         /// </summary>
@@ -50,7 +50,6 @@ namespace ININ.PureCloudApi.Model
         public ActionEnum? Action { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="LockInfo" /> class.
         /// Initializes a new instance of the <see cref="LockInfo" />class.
         /// </summary>
         /// <param name="LockedBy">LockedBy.</param>
@@ -136,22 +135,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.LockedBy == other.LockedBy ||
                     this.LockedBy != null &&
                     this.LockedBy.Equals(other.LockedBy)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateExpires == other.DateExpires ||
                     this.DateExpires != null &&
                     this.DateExpires.Equals(other.DateExpires)
-                ) && 
+                ) &&
                 (
                     this.Action == other.Action ||
                     this.Action != null &&

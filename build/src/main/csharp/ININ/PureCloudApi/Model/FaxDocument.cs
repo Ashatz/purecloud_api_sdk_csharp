@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FaxDocument :  IEquatable<FaxDocument>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FaxDocument" /> class.
         /// Initializes a new instance of the <see cref="FaxDocument" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -39,7 +38,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SharingUri">SharingUri.</param>
         /// <param name="DownloadSharingUri">DownloadSharingUri.</param>
 
-        public FaxDocument(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ContentUri = null, UriReference Workspace = null, UriReference CreatedBy = null, string ContentType = null, long? ContentLength = null, string Filename = null, bool? Read = null, long? PageCount = null, string CallerAddress = null, string ReceiverAddress = null, List<DocumentThumbnail> Thumbnails = null, string SharingUri = null, string DownloadSharingUri = null, )
+        public FaxDocument(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ContentUri = null, UriReference Workspace = null, UriReference CreatedBy = null, string ContentType = null, long? ContentLength = null, string Filename = null, bool? Read = null, long? PageCount = null, string CallerAddress = null, string ReceiverAddress = null, List<DocumentThumbnail> Thumbnails = null, string SharingUri = null, string DownloadSharingUri = null)
         {
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -243,92 +242,92 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.ContentUri == other.ContentUri ||
                     this.ContentUri != null &&
                     this.ContentUri.Equals(other.ContentUri)
-                ) && 
+                ) &&
                 (
                     this.Workspace == other.Workspace ||
                     this.Workspace != null &&
                     this.Workspace.Equals(other.Workspace)
-                ) && 
+                ) &&
                 (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
-                ) && 
+                ) &&
                 (
                     this.ContentType == other.ContentType ||
                     this.ContentType != null &&
                     this.ContentType.Equals(other.ContentType)
-                ) && 
+                ) &&
                 (
                     this.ContentLength == other.ContentLength ||
                     this.ContentLength != null &&
                     this.ContentLength.Equals(other.ContentLength)
-                ) && 
+                ) &&
                 (
                     this.Filename == other.Filename ||
                     this.Filename != null &&
                     this.Filename.Equals(other.Filename)
-                ) && 
+                ) &&
                 (
                     this.Read == other.Read ||
                     this.Read != null &&
                     this.Read.Equals(other.Read)
-                ) && 
+                ) &&
                 (
                     this.PageCount == other.PageCount ||
                     this.PageCount != null &&
                     this.PageCount.Equals(other.PageCount)
-                ) && 
+                ) &&
                 (
                     this.CallerAddress == other.CallerAddress ||
                     this.CallerAddress != null &&
                     this.CallerAddress.Equals(other.CallerAddress)
-                ) && 
+                ) &&
                 (
                     this.ReceiverAddress == other.ReceiverAddress ||
                     this.ReceiverAddress != null &&
                     this.ReceiverAddress.Equals(other.ReceiverAddress)
-                ) && 
+                ) &&
                 (
                     this.Thumbnails == other.Thumbnails ||
                     this.Thumbnails != null &&
                     this.Thumbnails.SequenceEqual(other.Thumbnails)
-                ) && 
+                ) &&
                 (
                     this.SharingUri == other.SharingUri ||
                     this.SharingUri != null &&
                     this.SharingUri.Equals(other.SharingUri)
-                ) && 
+                ) &&
                 (
                     this.DownloadSharingUri == other.DownloadSharingUri ||
                     this.DownloadSharingUri != null &&
                     this.DownloadSharingUri.Equals(other.DownloadSharingUri)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

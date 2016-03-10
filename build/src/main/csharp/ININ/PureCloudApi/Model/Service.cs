@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Service :  IEquatable<Service>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Service" /> class.
         /// Initializes a new instance of the <see cref="Service" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -31,7 +30,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Vpn">Vpn.</param>
         /// <param name="Carrier">Carrier.</param>
 
-        public Service(string Name = null, string Status = null, List<string> Domains = null, List<ServiceType> ServiceTypes = null, List<Gateway> Gateways = null, Dns Dns = null, Vpn Vpn = null, Carrier Carrier = null, )
+        public Service(string Name = null, string Status = null, List<string> Domains = null, List<ServiceType> ServiceTypes = null, List<Gateway> Gateways = null, Dns Dns = null, Vpn Vpn = null, Carrier Carrier = null)
         {
             this.Name = Name;
             this.Status = Status;
@@ -162,52 +161,52 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-                ) && 
+                ) &&
                 (
                     this.Domains == other.Domains ||
                     this.Domains != null &&
                     this.Domains.SequenceEqual(other.Domains)
-                ) && 
+                ) &&
                 (
                     this.ServiceTypes == other.ServiceTypes ||
                     this.ServiceTypes != null &&
                     this.ServiceTypes.SequenceEqual(other.ServiceTypes)
-                ) && 
+                ) &&
                 (
                     this.Gateways == other.Gateways ||
                     this.Gateways != null &&
                     this.Gateways.SequenceEqual(other.Gateways)
-                ) && 
+                ) &&
                 (
                     this.Dns == other.Dns ||
                     this.Dns != null &&
                     this.Dns.Equals(other.Dns)
-                ) && 
+                ) &&
                 (
                     this.Vpn == other.Vpn ||
                     this.Vpn != null &&
                     this.Vpn.Equals(other.Vpn)
-                ) && 
+                ) &&
                 (
                     this.Carrier == other.Carrier ||
                     this.Carrier != null &&
                     this.Carrier.Equals(other.Carrier)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

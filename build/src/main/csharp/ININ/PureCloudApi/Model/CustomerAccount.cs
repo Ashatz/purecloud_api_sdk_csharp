@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class CustomerAccount :  IEquatable<CustomerAccount>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="CustomerAccount" /> class.
         /// Initializes a new instance of the <see cref="CustomerAccount" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -30,7 +29,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="BillingAddress">The account billing address. (required).</param>
         /// <param name="Currency">The account currency. (required).</param>
 
-        public CustomerAccount(string Name = null, bool? IsFrozen = null, string OrgLegalName = null, string OrgPhone = null, bool? IsTaxExempt = null, Address BillingAddress = null, string Currency = null, )
+        public CustomerAccount(string Name = null, bool? IsFrozen = null, string OrgLegalName = null, string OrgPhone = null, bool? IsTaxExempt = null, Address BillingAddress = null, string Currency = null)
         {
             // to ensure "IsFrozen" is required (not null)
             if (IsFrozen == null)
@@ -206,47 +205,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.IsFrozen == other.IsFrozen ||
                     this.IsFrozen != null &&
                     this.IsFrozen.Equals(other.IsFrozen)
-                ) && 
+                ) &&
                 (
                     this.OrgLegalName == other.OrgLegalName ||
                     this.OrgLegalName != null &&
                     this.OrgLegalName.Equals(other.OrgLegalName)
-                ) && 
+                ) &&
                 (
                     this.OrgPhone == other.OrgPhone ||
                     this.OrgPhone != null &&
                     this.OrgPhone.Equals(other.OrgPhone)
-                ) && 
+                ) &&
                 (
                     this.IsTaxExempt == other.IsTaxExempt ||
                     this.IsTaxExempt != null &&
                     this.IsTaxExempt.Equals(other.IsTaxExempt)
-                ) && 
+                ) &&
                 (
                     this.BillingAddress == other.BillingAddress ||
                     this.BillingAddress != null &&
                     this.BillingAddress.Equals(other.BillingAddress)
-                ) && 
+                ) &&
                 (
                     this.Currency == other.Currency ||
                     this.Currency != null &&
                     this.Currency.Equals(other.Currency)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

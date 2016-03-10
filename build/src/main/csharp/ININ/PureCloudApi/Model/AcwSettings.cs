@@ -33,7 +33,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "MANDATORY_FORCED_TIMEOUT")]
             MandatoryForcedTimeout
         }
-    
+        
         /// <summary>
         /// Gets or Sets WrapupPrompt
         /// </summary>
@@ -41,7 +41,6 @@ namespace ININ.PureCloudApi.Model
         public WrapupPromptEnum? WrapupPrompt { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="AcwSettings" /> class.
         /// Initializes a new instance of the <see cref="AcwSettings" />class.
         /// </summary>
         /// <param name="WrapupPrompt">WrapupPrompt.</param>
@@ -107,12 +106,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.WrapupPrompt == other.WrapupPrompt ||
                     this.WrapupPrompt != null &&
                     this.WrapupPrompt.Equals(other.WrapupPrompt)
-                ) && 
+                ) &&
                 (
                     this.TimeoutMs == other.TimeoutMs ||
                     this.TimeoutMs != null &&

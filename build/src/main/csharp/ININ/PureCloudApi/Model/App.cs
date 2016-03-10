@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class App :  IEquatable<App>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="App" /> class.
         /// Initializes a new instance of the <see cref="App" />class.
         /// </summary>
         /// <param name="AppId">AppId.</param>
@@ -91,12 +90,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.AppId == other.AppId ||
                     this.AppId != null &&
                     this.AppId.Equals(other.AppId)
-                ) && 
+                ) &&
                 (
                     this.AppVersion == other.AppVersion ||
                     this.AppVersion != null &&

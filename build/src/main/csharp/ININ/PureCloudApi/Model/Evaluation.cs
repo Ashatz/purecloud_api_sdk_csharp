@@ -37,7 +37,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "Email")]
             Email
         }
-    
+        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -52,7 +52,6 @@ namespace ININ.PureCloudApi.Model
         public ResourceTypeEnum? ResourceType { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Evaluation" /> class.
         /// Initializes a new instance of the <see cref="Evaluation" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -73,7 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Redacted">Is only true when the user making the request does not have sufficient permissions to see evaluation (default to false).</param>
         /// <param name="IsScoringIndex">IsScoringIndex (default to false).</param>
 
-        public Evaluation(string Name = null, Conversation Conversation = null, EvaluationForm EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, Queue Queue = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null, )
+        public Evaluation(string Name = null, Conversation Conversation = null, EvaluationForm EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? ChangedDate = null, Queue Queue = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, bool? IsScoringIndex = null)
         {
             this.Name = Name;
             this.Conversation = Conversation;
@@ -292,97 +291,97 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Conversation == other.Conversation ||
                     this.Conversation != null &&
                     this.Conversation.Equals(other.Conversation)
-                ) && 
+                ) &&
                 (
                     this.EvaluationForm == other.EvaluationForm ||
                     this.EvaluationForm != null &&
                     this.EvaluationForm.Equals(other.EvaluationForm)
-                ) && 
+                ) &&
                 (
                     this.Evaluator == other.Evaluator ||
                     this.Evaluator != null &&
                     this.Evaluator.Equals(other.Evaluator)
-                ) && 
+                ) &&
                 (
                     this.Agent == other.Agent ||
                     this.Agent != null &&
                     this.Agent.Equals(other.Agent)
-                ) && 
+                ) &&
                 (
                     this.Calibration == other.Calibration ||
                     this.Calibration != null &&
                     this.Calibration.Equals(other.Calibration)
-                ) && 
+                ) &&
                 (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-                ) && 
+                ) &&
                 (
                     this.Answers == other.Answers ||
                     this.Answers != null &&
                     this.Answers.Equals(other.Answers)
-                ) && 
+                ) &&
                 (
                     this.AgentHasRead == other.AgentHasRead ||
                     this.AgentHasRead != null &&
                     this.AgentHasRead.Equals(other.AgentHasRead)
-                ) && 
+                ) &&
                 (
                     this.ReleaseDate == other.ReleaseDate ||
                     this.ReleaseDate != null &&
                     this.ReleaseDate.Equals(other.ReleaseDate)
-                ) && 
+                ) &&
                 (
                     this.AssignedDate == other.AssignedDate ||
                     this.AssignedDate != null &&
                     this.AssignedDate.Equals(other.AssignedDate)
-                ) && 
+                ) &&
                 (
                     this.ChangedDate == other.ChangedDate ||
                     this.ChangedDate != null &&
                     this.ChangedDate.Equals(other.ChangedDate)
-                ) && 
+                ) &&
                 (
                     this.Queue == other.Queue ||
                     this.Queue != null &&
                     this.Queue.Equals(other.Queue)
-                ) && 
+                ) &&
                 (
                     this.ResourceId == other.ResourceId ||
                     this.ResourceId != null &&
                     this.ResourceId.Equals(other.ResourceId)
-                ) && 
+                ) &&
                 (
                     this.ResourceType == other.ResourceType ||
                     this.ResourceType != null &&
                     this.ResourceType.Equals(other.ResourceType)
-                ) && 
+                ) &&
                 (
                     this.Redacted == other.Redacted ||
                     this.Redacted != null &&
                     this.Redacted.Equals(other.Redacted)
-                ) && 
+                ) &&
                 (
                     this.IsScoringIndex == other.IsScoringIndex ||
                     this.IsScoringIndex != null &&
                     this.IsScoringIndex.Equals(other.IsScoringIndex)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

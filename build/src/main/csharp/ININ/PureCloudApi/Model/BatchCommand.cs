@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class BatchCommand :  IEquatable<BatchCommand>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="BatchCommand" /> class.
         /// Initializes a new instance of the <see cref="BatchCommand" />class.
         /// </summary>
         /// <param name="Items">Items.</param>
@@ -91,12 +90,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Items == other.Items ||
                     this.Items != null &&
                     this.Items.SequenceEqual(other.Items)
-                ) && 
+                ) &&
                 (
                     this.CommandId == other.CommandId ||
                     this.CommandId != null &&

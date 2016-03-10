@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DomainPhysicalCapabilities :  IEquatable<DomainPhysicalCapabilities>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DomainPhysicalCapabilities" /> class.
         /// Initializes a new instance of the <see cref="DomainPhysicalCapabilities" />class.
         /// </summary>
         /// <param name="Vlan">Vlan (default to false).</param>
@@ -107,12 +106,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Vlan == other.Vlan ||
                     this.Vlan != null &&
                     this.Vlan.Equals(other.Vlan)
-                ) && 
+                ) &&
                 (
                     this.Team == other.Team ||
                     this.Team != null &&

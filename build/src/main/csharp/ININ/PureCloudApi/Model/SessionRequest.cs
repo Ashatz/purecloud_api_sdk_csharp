@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class SessionRequest :  IEquatable<SessionRequest>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="SessionRequest" /> class.
         /// Initializes a new instance of the <see cref="SessionRequest" />class.
         /// </summary>
         /// <param name="MinutesToLive">MinutesToLive.</param>
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.MinutesToLive == other.MinutesToLive ||
                     this.MinutesToLive != null &&

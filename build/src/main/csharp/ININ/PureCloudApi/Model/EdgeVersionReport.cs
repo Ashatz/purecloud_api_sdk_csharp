@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class EdgeVersionReport :  IEquatable<EdgeVersionReport>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="EdgeVersionReport" /> class.
         /// Initializes a new instance of the <see cref="EdgeVersionReport" />class.
         /// </summary>
         /// <param name="OldestVersion">OldestVersion.</param>
@@ -91,12 +90,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.OldestVersion == other.OldestVersion ||
                     this.OldestVersion != null &&
                     this.OldestVersion.Equals(other.OldestVersion)
-                ) && 
+                ) &&
                 (
                     this.NewestVersion == other.NewestVersion ||
                     this.NewestVersion != null &&

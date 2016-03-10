@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class TimeAllowed :  IEquatable<TimeAllowed>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="TimeAllowed" /> class.
         /// Initializes a new instance of the <see cref="TimeAllowed" />class.
         /// </summary>
         /// <param name="TimeSlots">TimeSlots.</param>
@@ -108,17 +107,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.TimeSlots == other.TimeSlots ||
                     this.TimeSlots != null &&
                     this.TimeSlots.SequenceEqual(other.TimeSlots)
-                ) && 
+                ) &&
                 (
                     this.TimeZoneId == other.TimeZoneId ||
                     this.TimeZoneId != null &&
                     this.TimeZoneId.Equals(other.TimeZoneId)
-                ) && 
+                ) &&
                 (
                     this.Empty == other.Empty ||
                     this.Empty != null &&

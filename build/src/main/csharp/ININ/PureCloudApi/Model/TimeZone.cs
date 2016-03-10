@@ -17,16 +17,15 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class TimeZone :  IEquatable<TimeZone>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="TimeZone" /> class.
         /// Initializes a new instance of the <see cref="TimeZone" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="StandardOffset">StandardOffset.</param>
         /// <param name="Offset">Offset.</param>
 
-        public TimeZone(string Name = null, long? StandardOffset = null, long? Offset = null, )
+        public TimeZone(string Name = null, long? StandardOffset = null, long? Offset = null)
         {
             this.Name = Name;
             this.StandardOffset = StandardOffset;
@@ -116,27 +115,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.StandardOffset == other.StandardOffset ||
                     this.StandardOffset != null &&
                     this.StandardOffset.Equals(other.StandardOffset)
-                ) && 
+                ) &&
                 (
                     this.Offset == other.Offset ||
                     this.Offset != null &&
                     this.Offset.Equals(other.Offset)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

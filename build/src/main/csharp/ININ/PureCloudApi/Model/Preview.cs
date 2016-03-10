@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Preview :  IEquatable<Preview>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Preview" /> class.
         /// Initializes a new instance of the <see cref="Preview" />class.
         /// </summary>
         /// <param name="Id">Id.</param>
@@ -162,47 +161,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
-                ) && 
+                ) &&
                 (
                     this.Campaign == other.Campaign ||
                     this.Campaign != null &&
                     this.Campaign.Equals(other.Campaign)
-                ) && 
+                ) &&
                 (
                     this.ContactList == other.ContactList ||
                     this.ContactList != null &&
                     this.ContactList.Equals(other.ContactList)
-                ) && 
+                ) &&
                 (
                     this.Contact == other.Contact ||
                     this.Contact != null &&
                     this.Contact.Equals(other.Contact)
-                ) && 
+                ) &&
                 (
                     this.AvailablePhoneNumbers == other.AvailablePhoneNumbers ||
                     this.AvailablePhoneNumbers != null &&
                     this.AvailablePhoneNumbers.SequenceEqual(other.AvailablePhoneNumbers)
-                ) && 
+                ) &&
                 (
                     this.RemainingSeconds == other.RemainingSeconds ||
                     this.RemainingSeconds != null &&
                     this.RemainingSeconds.Equals(other.RemainingSeconds)
-                ) && 
+                ) &&
                 (
                     this.ScriptId == other.ScriptId ||
                     this.ScriptId != null &&
                     this.ScriptId.Equals(other.ScriptId)
-                ) && 
+                ) &&
                 (
                     this.TimedOut == other.TimedOut ||
                     this.TimedOut != null &&

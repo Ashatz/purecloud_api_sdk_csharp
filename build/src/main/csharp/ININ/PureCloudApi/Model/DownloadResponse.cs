@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DownloadResponse :  IEquatable<DownloadResponse>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DownloadResponse" /> class.
         /// Initializes a new instance of the <see cref="DownloadResponse" />class.
         /// </summary>
         /// <param name="ContentLocationUri">ContentLocationUri.</param>
@@ -91,12 +90,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ContentLocationUri == other.ContentLocationUri ||
                     this.ContentLocationUri != null &&
                     this.ContentLocationUri.Equals(other.ContentLocationUri)
-                ) && 
+                ) &&
                 (
                     this.ImageUri == other.ImageUri ||
                     this.ImageUri != null &&

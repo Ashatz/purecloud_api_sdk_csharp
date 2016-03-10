@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class VoicemailMediaInfo :  IEquatable<VoicemailMediaInfo>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="VoicemailMediaInfo" /> class.
         /// Initializes a new instance of the <see cref="VoicemailMediaInfo" />class.
         /// </summary>
         /// <param name="MediaFileUri">MediaFileUri.</param>
@@ -99,17 +98,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.MediaFileUri == other.MediaFileUri ||
                     this.MediaFileUri != null &&
                     this.MediaFileUri.Equals(other.MediaFileUri)
-                ) && 
+                ) &&
                 (
                     this.MediaImageUri == other.MediaImageUri ||
                     this.MediaImageUri != null &&

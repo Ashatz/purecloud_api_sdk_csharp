@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FaxSendRequest :  IEquatable<FaxSendRequest>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FaxSendRequest" /> class.
         /// Initializes a new instance of the <see cref="FaxSendRequest" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -29,7 +28,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Workspace">Workspace.</param>
         /// <param name="CoverSheet">CoverSheet.</param>
 
-        public FaxSendRequest(string Name = null, List<string> Addresses = null, string OriginalFilename = null, string ContentType = null, Workspace Workspace = null, CoverSheet CoverSheet = null, )
+        public FaxSendRequest(string Name = null, List<string> Addresses = null, string OriginalFilename = null, string ContentType = null, Workspace Workspace = null, CoverSheet CoverSheet = null)
         {
             this.Name = Name;
             this.Addresses = Addresses;
@@ -143,42 +142,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Addresses == other.Addresses ||
                     this.Addresses != null &&
                     this.Addresses.SequenceEqual(other.Addresses)
-                ) && 
+                ) &&
                 (
                     this.OriginalFilename == other.OriginalFilename ||
                     this.OriginalFilename != null &&
                     this.OriginalFilename.Equals(other.OriginalFilename)
-                ) && 
+                ) &&
                 (
                     this.ContentType == other.ContentType ||
                     this.ContentType != null &&
                     this.ContentType.Equals(other.ContentType)
-                ) && 
+                ) &&
                 (
                     this.Workspace == other.Workspace ||
                     this.Workspace != null &&
                     this.Workspace.Equals(other.Workspace)
-                ) && 
+                ) &&
                 (
                     this.CoverSheet == other.CoverSheet ||
                     this.CoverSheet != null &&
                     this.CoverSheet.Equals(other.CoverSheet)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

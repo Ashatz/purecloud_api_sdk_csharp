@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class TagQueryRequest :  IEquatable<TagQueryRequest>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="TagQueryRequest" /> class.
         /// Initializes a new instance of the <see cref="TagQueryRequest" />class.
         /// </summary>
         /// <param name="Query">Query.</param>
@@ -100,17 +99,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Query == other.Query ||
                     this.Query != null &&
                     this.Query.Equals(other.Query)
-                ) && 
+                ) &&
                 (
                     this.PageNumber == other.PageNumber ||
                     this.PageNumber != null &&
                     this.PageNumber.Equals(other.PageNumber)
-                ) && 
+                ) &&
                 (
                     this.PageSize == other.PageSize ||
                     this.PageSize != null &&

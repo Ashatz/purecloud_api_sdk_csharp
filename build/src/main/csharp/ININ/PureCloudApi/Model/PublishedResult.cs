@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "STARTED")]
             Started
         }
-    
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -38,7 +38,6 @@ namespace ININ.PureCloudApi.Model
         public TypeEnum? Type { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="PublishedResult" /> class.
         /// Initializes a new instance of the <see cref="PublishedResult" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -46,7 +45,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Message">Message.</param>
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
 
-        public PublishedResult(string Name = null, TypeEnum? Type = null, string Message = null, DateTime? DateCreated = null, )
+        public PublishedResult(string Name = null, TypeEnum? Type = null, string Message = null, DateTime? DateCreated = null)
         {
             this.Name = Name;
             this.Type = Type;
@@ -139,32 +138,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.Message == other.Message ||
                     this.Message != null &&
                     this.Message.Equals(other.Message)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

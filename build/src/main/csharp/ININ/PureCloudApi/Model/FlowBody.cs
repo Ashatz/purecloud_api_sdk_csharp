@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FlowBody :  IEquatable<FlowBody>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowBody" /> class.
         /// Initializes a new instance of the <see cref="FlowBody" />class.
         /// </summary>
         /// <param name="Format">The &#39;format&#39; indicates the particular format of the &#39;body&#39; contents.  Reference the Automate documentation for format information..</param>
@@ -93,12 +92,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Format == other.Format ||
                     this.Format != null &&
                     this.Format.Equals(other.Format)
-                ) && 
+                ) &&
                 (
                     this.Body == other.Body ||
                     this.Body != null &&

@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ChatSearchItem :  IEquatable<ChatSearchItem>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ChatSearchItem" /> class.
         /// Initializes a new instance of the <see cref="ChatSearchItem" />class.
         /// </summary>
         /// <param name="Id">Id.</param>
@@ -29,7 +28,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="To">To.</param>
         /// <param name="Body">Body.</param>
 
-        public ChatSearchItem(string Id = null, string Name = null, DateTime? CreatedDate = null, ChatParticipant From = null, ChatParticipant To = null, string Body = null, )
+        public ChatSearchItem(string Id = null, string Name = null, DateTime? CreatedDate = null, ChatParticipant From = null, ChatParticipant To = null, string Body = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -136,37 +135,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.CreatedDate == other.CreatedDate ||
                     this.CreatedDate != null &&
                     this.CreatedDate.Equals(other.CreatedDate)
-                ) && 
+                ) &&
                 (
                     this.From == other.From ||
                     this.From != null &&
                     this.From.Equals(other.From)
-                ) && 
+                ) &&
                 (
                     this.To == other.To ||
                     this.To != null &&
                     this.To.Equals(other.To)
-                ) && 
+                ) &&
                 (
                     this.Body == other.Body ||
                     this.Body != null &&
                     this.Body.Equals(other.Body)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

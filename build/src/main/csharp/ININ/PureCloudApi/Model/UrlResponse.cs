@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class UrlResponse :  IEquatable<UrlResponse>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="UrlResponse" /> class.
         /// Initializes a new instance of the <see cref="UrlResponse" />class.
         /// </summary>
         /// <param name="Url">Url.</param>
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Url == other.Url ||
                     this.Url != null &&

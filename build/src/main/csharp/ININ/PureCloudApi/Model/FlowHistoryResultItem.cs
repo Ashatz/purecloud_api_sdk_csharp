@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class FlowHistoryResultItem :  IEquatable<FlowHistoryResultItem>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowHistoryResultItem" /> class.
         /// Initializes a new instance of the <see cref="FlowHistoryResultItem" />class.
         /// </summary>
         /// <param name="FlowInstance">The flow instance information that applies to the history events. (required).</param>
@@ -111,17 +110,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.FlowInstance == other.FlowInstance ||
                     this.FlowInstance != null &&
                     this.FlowInstance.Equals(other.FlowInstance)
-                ) && 
+                ) &&
                 (
                     this.AvailableActions == other.AvailableActions ||
                     this.AvailableActions != null &&
                     this.AvailableActions.Equals(other.AvailableActions)
-                ) && 
+                ) &&
                 (
                     this.HistoryItems == other.HistoryItems ||
                     this.HistoryItems != null &&

@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ContactSales :  IEquatable<ContactSales>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ContactSales" /> class.
         /// Initializes a new instance of the <see cref="ContactSales" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -36,7 +35,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Industry">Industry.</param>
         /// <param name="EstimatedUsers">EstimatedUsers.</param>
 
-        public ContactSales(string Name = null, string Email = null, string FirstName = null, string LastName = null, string ContactPhone = null, string Country = null, string Title = null, string Message = null, string Language = null, string ProductName = null, string QuoteId = null, string Industry = null, string EstimatedUsers = null, )
+        public ContactSales(string Name = null, string Email = null, string FirstName = null, string LastName = null, string ContactPhone = null, string Country = null, string Title = null, string Message = null, string Language = null, string ProductName = null, string QuoteId = null, string Industry = null, string EstimatedUsers = null)
         {
             this.Name = Name;
             this.Email = Email;
@@ -206,77 +205,77 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Email == other.Email ||
                     this.Email != null &&
                     this.Email.Equals(other.Email)
-                ) && 
+                ) &&
                 (
                     this.FirstName == other.FirstName ||
                     this.FirstName != null &&
                     this.FirstName.Equals(other.FirstName)
-                ) && 
+                ) &&
                 (
                     this.LastName == other.LastName ||
                     this.LastName != null &&
                     this.LastName.Equals(other.LastName)
-                ) && 
+                ) &&
                 (
                     this.ContactPhone == other.ContactPhone ||
                     this.ContactPhone != null &&
                     this.ContactPhone.Equals(other.ContactPhone)
-                ) && 
+                ) &&
                 (
                     this.Country == other.Country ||
                     this.Country != null &&
                     this.Country.Equals(other.Country)
-                ) && 
+                ) &&
                 (
                     this.Title == other.Title ||
                     this.Title != null &&
                     this.Title.Equals(other.Title)
-                ) && 
+                ) &&
                 (
                     this.Message == other.Message ||
                     this.Message != null &&
                     this.Message.Equals(other.Message)
-                ) && 
+                ) &&
                 (
                     this.Language == other.Language ||
                     this.Language != null &&
                     this.Language.Equals(other.Language)
-                ) && 
+                ) &&
                 (
                     this.ProductName == other.ProductName ||
                     this.ProductName != null &&
                     this.ProductName.Equals(other.ProductName)
-                ) && 
+                ) &&
                 (
                     this.QuoteId == other.QuoteId ||
                     this.QuoteId != null &&
                     this.QuoteId.Equals(other.QuoteId)
-                ) && 
+                ) &&
                 (
                     this.Industry == other.Industry ||
                     this.Industry != null &&
                     this.Industry.Equals(other.Industry)
-                ) && 
+                ) &&
                 (
                     this.EstimatedUsers == other.EstimatedUsers ||
                     this.EstimatedUsers != null &&
                     this.EstimatedUsers.Equals(other.EstimatedUsers)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ParticipantAttributes :  IEquatable<ParticipantAttributes>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ParticipantAttributes" /> class.
         /// Initializes a new instance of the <see cref="ParticipantAttributes" />class.
         /// </summary>
         /// <param name="Attributes">Attributes.</param>
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Attributes == other.Attributes ||
                     this.Attributes != null &&

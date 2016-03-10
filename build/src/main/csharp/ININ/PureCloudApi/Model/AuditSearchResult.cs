@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class AuditSearchResult :  IEquatable<AuditSearchResult>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="AuditSearchResult" /> class.
         /// Initializes a new instance of the <see cref="AuditSearchResult" />class.
         /// </summary>
         /// <param name="PageNumber">PageNumber.</param>
@@ -127,32 +126,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.PageNumber == other.PageNumber ||
                     this.PageNumber != null &&
                     this.PageNumber.Equals(other.PageNumber)
-                ) && 
+                ) &&
                 (
                     this.PageSize == other.PageSize ||
                     this.PageSize != null &&
                     this.PageSize.Equals(other.PageSize)
-                ) && 
+                ) &&
                 (
                     this.Total == other.Total ||
                     this.Total != null &&
                     this.Total.Equals(other.Total)
-                ) && 
+                ) &&
                 (
                     this.PageCount == other.PageCount ||
                     this.PageCount != null &&
                     this.PageCount.Equals(other.PageCount)
-                ) && 
+                ) &&
                 (
                     this.FacetInfo == other.FacetInfo ||
                     this.FacetInfo != null &&
                     this.FacetInfo.SequenceEqual(other.FacetInfo)
-                ) && 
+                ) &&
                 (
                     this.AuditMessages == other.AuditMessages ||
                     this.AuditMessages != null &&

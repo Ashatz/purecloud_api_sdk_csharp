@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "inactive")]
             Inactive
         }
-    
+        
         /// <summary>
         /// Current activity status of the location.
         /// </summary>
@@ -36,7 +36,6 @@ namespace ININ.PureCloudApi.Model
         public StateEnum? State { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Location" /> class.
         /// Initializes a new instance of the <see cref="Location" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -50,7 +49,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SublocationOrder">SublocationOrder.</param>
         /// <param name="Version">Version.</param>
 
-        public Location(string Name = null, string Address = null, LocationAddressFields AddressFields = null, bool? AddressVerified = null, LocationEmergencyNumber EmergencyNumber = null, string Notes = null, List<string> Path = null, StateEnum? State = null, List<string> SublocationOrder = null, double? Version = null, )
+        public Location(string Name = null, string Address = null, LocationAddressFields AddressFields = null, bool? AddressVerified = null, LocationEmergencyNumber EmergencyNumber = null, string Notes = null, List<string> Path = null, StateEnum? State = null, List<string> SublocationOrder = null, double? Version = null)
         {
             this.Name = Name;
             this.Address = Address;
@@ -198,62 +197,62 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Address == other.Address ||
                     this.Address != null &&
                     this.Address.Equals(other.Address)
-                ) && 
+                ) &&
                 (
                     this.AddressFields == other.AddressFields ||
                     this.AddressFields != null &&
                     this.AddressFields.Equals(other.AddressFields)
-                ) && 
+                ) &&
                 (
                     this.AddressVerified == other.AddressVerified ||
                     this.AddressVerified != null &&
                     this.AddressVerified.Equals(other.AddressVerified)
-                ) && 
+                ) &&
                 (
                     this.EmergencyNumber == other.EmergencyNumber ||
                     this.EmergencyNumber != null &&
                     this.EmergencyNumber.Equals(other.EmergencyNumber)
-                ) && 
+                ) &&
                 (
                     this.Notes == other.Notes ||
                     this.Notes != null &&
                     this.Notes.Equals(other.Notes)
-                ) && 
+                ) &&
                 (
                     this.Path == other.Path ||
                     this.Path != null &&
                     this.Path.SequenceEqual(other.Path)
-                ) && 
+                ) &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.SublocationOrder == other.SublocationOrder ||
                     this.SublocationOrder != null &&
                     this.SublocationOrder.SequenceEqual(other.SublocationOrder)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

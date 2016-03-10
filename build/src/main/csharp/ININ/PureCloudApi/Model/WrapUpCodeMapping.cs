@@ -17,20 +17,13 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class WrapUpCodeMapping :  IEquatable<WrapUpCodeMapping>
     { 
-        public enum  {
-            
-            [EnumMember(Value = "CONTACT_UNCALLABLE")]
-            ContactUncallable,
-            
-            [EnumMember(Value = "NUMBER_UNCALLABLE")]
-            NumberUncallable,
-            
-            [EnumMember(Value = "RIGHT_PARTY_CONTACT")]
-            RightPartyContact
-        }
-    
+        
+        public static string DefaultSet_ContactUncallable = "CONTACT_UNCALLABLE";
+        public static string DefaultSet_NumberUncallable = "NUMBER_UNCALLABLE";
+        public static string DefaultSet_RightPartyContact = "RIGHT_PARTY_CONTACT";
+        
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="WrapUpCodeMapping" /> class.
         /// Initializes a new instance of the <see cref="WrapUpCodeMapping" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -40,7 +33,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DefaultSet">DefaultSet.</param>
         /// <param name="Mapping">Mapping.</param>
 
-        public WrapUpCodeMapping(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<DefaultSetEnum?> DefaultSet = null, Dictionary<string, List<string>> Mapping = null, )
+        public WrapUpCodeMapping(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<string> DefaultSet = null, Dictionary<string, List<string>> Mapping = null)
         {
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -156,42 +149,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.DefaultSet == other.DefaultSet ||
                     this.DefaultSet != null &&
                     this.DefaultSet.SequenceEqual(other.DefaultSet)
-                ) && 
+                ) &&
                 (
                     this.Mapping == other.Mapping ||
                     this.Mapping != null &&
                     this.Mapping.SequenceEqual(other.Mapping)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

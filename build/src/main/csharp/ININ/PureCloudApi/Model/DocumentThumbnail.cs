@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DocumentThumbnail :  IEquatable<DocumentThumbnail>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DocumentThumbnail" /> class.
         /// Initializes a new instance of the <see cref="DocumentThumbnail" />class.
         /// </summary>
         /// <param name="Resolution">Resolution.</param>
@@ -91,12 +90,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Resolution == other.Resolution ||
                     this.Resolution != null &&
                     this.Resolution.Equals(other.Resolution)
-                ) && 
+                ) &&
                 (
                     this.ImageUri == other.ImageUri ||
                     this.ImageUri != null &&

@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DomainPermissionPolicy :  IEquatable<DomainPermissionPolicy>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DomainPermissionPolicy" /> class.
         /// Initializes a new instance of the <see cref="DomainPermissionPolicy" />class.
         /// </summary>
         /// <param name="Domain">Domain.</param>
@@ -153,42 +152,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Domain == other.Domain ||
                     this.Domain != null &&
                     this.Domain.Equals(other.Domain)
-                ) && 
+                ) &&
                 (
                     this.EntityName == other.EntityName ||
                     this.EntityName != null &&
                     this.EntityName.Equals(other.EntityName)
-                ) && 
+                ) &&
                 (
                     this.PolicyName == other.PolicyName ||
                     this.PolicyName != null &&
                     this.PolicyName.Equals(other.PolicyName)
-                ) && 
+                ) &&
                 (
                     this.PolicyDescription == other.PolicyDescription ||
                     this.PolicyDescription != null &&
                     this.PolicyDescription.Equals(other.PolicyDescription)
-                ) && 
+                ) &&
                 (
                     this.ActionSet == other.ActionSet ||
                     this.ActionSet != null &&
                     this.ActionSet.SequenceEqual(other.ActionSet)
-                ) && 
+                ) &&
                 (
                     this.NamedResources == other.NamedResources ||
                     this.NamedResources != null &&
                     this.NamedResources.SequenceEqual(other.NamedResources)
-                ) && 
+                ) &&
                 (
                     this.AllowConditions == other.AllowConditions ||
                     this.AllowConditions != null &&
                     this.AllowConditions.Equals(other.AllowConditions)
-                ) && 
+                ) &&
                 (
                     this.ResourceConditionNode == other.ResourceConditionNode ||
                     this.ResourceConditionNode != null &&

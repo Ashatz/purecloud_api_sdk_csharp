@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DomainPermission :  IEquatable<DomainPermission>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DomainPermission" /> class.
         /// Initializes a new instance of the <see cref="DomainPermission" />class.
         /// </summary>
         /// <param name="Domain">Domain.</param>
@@ -135,32 +134,32 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Domain == other.Domain ||
                     this.Domain != null &&
                     this.Domain.Equals(other.Domain)
-                ) && 
+                ) &&
                 (
                     this.EntityType == other.EntityType ||
                     this.EntityType != null &&
                     this.EntityType.Equals(other.EntityType)
-                ) && 
+                ) &&
                 (
                     this.Action == other.Action ||
                     this.Action != null &&
                     this.Action.Equals(other.Action)
-                ) && 
+                ) &&
                 (
                     this.Label == other.Label ||
                     this.Label != null &&
                     this.Label.Equals(other.Label)
-                ) && 
+                ) &&
                 (
                     this.Licenses == other.Licenses ||
                     this.Licenses != null &&
                     this.Licenses.SequenceEqual(other.Licenses)
-                ) && 
+                ) &&
                 (
                     this.AllowsConditions == other.AllowsConditions ||
                     this.AllowsConditions != null &&

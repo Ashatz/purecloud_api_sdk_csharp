@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Bullseye :  IEquatable<Bullseye>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Bullseye" /> class.
         /// Initializes a new instance of the <see cref="Bullseye" />class.
         /// </summary>
         /// <param name="Rings">Rings.</param>
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Rings == other.Rings ||
                     this.Rings != null &&

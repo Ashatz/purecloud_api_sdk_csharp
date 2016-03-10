@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class TransformModel :  IEquatable<TransformModel>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="TransformModel" /> class.
         /// Initializes a new instance of the <see cref="TransformModel" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -28,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Tags">Tags.</param>
         /// <param name="ClientTransformModel">ClientTransformModel.</param>
 
-        public TransformModel(string Name = null, TransformEndpoint RestEndpoint = null, List<BasicTransform> FilenameTransforms = null, List<TagModel> Tags = null, ClientTransformModel ClientTransformModel = null, )
+        public TransformModel(string Name = null, TransformEndpoint RestEndpoint = null, List<BasicTransform> FilenameTransforms = null, List<TagModel> Tags = null, ClientTransformModel ClientTransformModel = null)
         {
             this.Name = Name;
             this.RestEndpoint = RestEndpoint;
@@ -134,37 +133,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.RestEndpoint == other.RestEndpoint ||
                     this.RestEndpoint != null &&
                     this.RestEndpoint.Equals(other.RestEndpoint)
-                ) && 
+                ) &&
                 (
                     this.FilenameTransforms == other.FilenameTransforms ||
                     this.FilenameTransforms != null &&
                     this.FilenameTransforms.SequenceEqual(other.FilenameTransforms)
-                ) && 
+                ) &&
                 (
                     this.Tags == other.Tags ||
                     this.Tags != null &&
                     this.Tags.SequenceEqual(other.Tags)
-                ) && 
+                ) &&
                 (
                     this.ClientTransformModel == other.ClientTransformModel ||
                     this.ClientTransformModel != null &&
                     this.ClientTransformModel.Equals(other.ClientTransformModel)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

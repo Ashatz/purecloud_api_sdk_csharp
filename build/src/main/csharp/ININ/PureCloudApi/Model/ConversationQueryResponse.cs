@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "DESC")]
             Desc
         }
-    
+        
         /// <summary>
         /// Gets or Sets Sort
         /// </summary>
@@ -35,7 +35,6 @@ namespace ININ.PureCloudApi.Model
         public SortEnum? Sort { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConversationQueryResponse" /> class.
         /// Initializes a new instance of the <see cref="ConversationQueryResponse" />class.
         /// </summary>
         /// <param name="PageSize">PageSize.</param>
@@ -293,107 +292,107 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.PageSize == other.PageSize ||
                     this.PageSize != null &&
                     this.PageSize.Equals(other.PageSize)
-                ) && 
+                ) &&
                 (
                     this.PageNumber == other.PageNumber ||
                     this.PageNumber != null &&
                     this.PageNumber.Equals(other.PageNumber)
-                ) && 
+                ) &&
                 (
                     this.Total == other.Total ||
                     this.Total != null &&
                     this.Total.Equals(other.Total)
-                ) && 
+                ) &&
                 (
                     this.Entities == other.Entities ||
                     this.Entities != null &&
                     this.Entities.SequenceEqual(other.Entities)
-                ) && 
+                ) &&
                 (
                     this.HasMorePrev == other.HasMorePrev ||
                     this.HasMorePrev != null &&
                     this.HasMorePrev.Equals(other.HasMorePrev)
-                ) && 
+                ) &&
                 (
                     this.HasMoreNext == other.HasMoreNext ||
                     this.HasMoreNext != null &&
                     this.HasMoreNext.Equals(other.HasMoreNext)
-                ) && 
+                ) &&
                 (
                     this.StartQueryTime == other.StartQueryTime ||
                     this.StartQueryTime != null &&
                     this.StartQueryTime.Equals(other.StartQueryTime)
-                ) && 
+                ) &&
                 (
                     this.EndQueryTime == other.EndQueryTime ||
                     this.EndQueryTime != null &&
                     this.EndQueryTime.Equals(other.EndQueryTime)
-                ) && 
+                ) &&
                 (
                     this.NewestResultTime == other.NewestResultTime ||
                     this.NewestResultTime != null &&
                     this.NewestResultTime.Equals(other.NewestResultTime)
-                ) && 
+                ) &&
                 (
                     this.OldestResultTime == other.OldestResultTime ||
                     this.OldestResultTime != null &&
                     this.OldestResultTime.Equals(other.OldestResultTime)
-                ) && 
+                ) &&
                 (
                     this.TimeMs == other.TimeMs ||
                     this.TimeMs != null &&
                     this.TimeMs.Equals(other.TimeMs)
-                ) && 
+                ) &&
                 (
                     this.Iterations == other.Iterations ||
                     this.Iterations != null &&
                     this.Iterations.Equals(other.Iterations)
-                ) && 
+                ) &&
                 (
                     this.Anchor == other.Anchor ||
                     this.Anchor != null &&
                     this.Anchor.Equals(other.Anchor)
-                ) && 
+                ) &&
                 (
                     this.Sort == other.Sort ||
                     this.Sort != null &&
                     this.Sort.Equals(other.Sort)
-                ) && 
+                ) &&
                 (
                     this.Facets == other.Facets ||
                     this.Facets != null &&
                     this.Facets.Equals(other.Facets)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
-                ) && 
+                ) &&
                 (
                     this.FirstUri == other.FirstUri ||
                     this.FirstUri != null &&
                     this.FirstUri.Equals(other.FirstUri)
-                ) && 
+                ) &&
                 (
                     this.PreviousUri == other.PreviousUri ||
                     this.PreviousUri != null &&
                     this.PreviousUri.Equals(other.PreviousUri)
-                ) && 
+                ) &&
                 (
                     this.NextUri == other.NextUri ||
                     this.NextUri != null &&
                     this.NextUri.Equals(other.NextUri)
-                ) && 
+                ) &&
                 (
                     this.LastUri == other.LastUri ||
                     this.LastUri != null &&
                     this.LastUri.Equals(other.LastUri)
-                ) && 
+                ) &&
                 (
                     this.PageCount == other.PageCount ||
                     this.PageCount != null &&

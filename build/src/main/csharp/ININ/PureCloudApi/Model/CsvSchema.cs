@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "INTERNATIONAL")]
             International
         }
-    
+        
         /// <summary>
         /// Rate type for the sheet.
         /// </summary>
@@ -39,7 +39,6 @@ namespace ININ.PureCloudApi.Model
         public RateTypeEnum? RateType { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="CsvSchema" /> class.
         /// Initializes a new instance of the <see cref="CsvSchema" />class.
         /// </summary>
         /// <param name="HeaderRow">Row number for the CSV&#39;s headers.  This is zero indexed (i.e. 0 is row 1). (required).</param>
@@ -194,37 +193,37 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.CarrierId == other.CarrierId ||
                     this.CarrierId != null &&
                     this.CarrierId.Equals(other.CarrierId)
-                ) && 
+                ) &&
                 (
                     this.HeaderRow == other.HeaderRow ||
                     this.HeaderRow != null &&
                     this.HeaderRow.Equals(other.HeaderRow)
-                ) && 
+                ) &&
                 (
                     this.DataRow == other.DataRow ||
                     this.DataRow != null &&
                     this.DataRow.Equals(other.DataRow)
-                ) && 
+                ) &&
                 (
                     this.HeaderMappings == other.HeaderMappings ||
                     this.HeaderMappings != null &&
                     this.HeaderMappings.SequenceEqual(other.HeaderMappings)
-                ) && 
+                ) &&
                 (
                     this.RateType == other.RateType ||
                     this.RateType != null &&
                     this.RateType.Equals(other.RateType)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.DateFormat == other.DateFormat ||
                     this.DateFormat != null &&

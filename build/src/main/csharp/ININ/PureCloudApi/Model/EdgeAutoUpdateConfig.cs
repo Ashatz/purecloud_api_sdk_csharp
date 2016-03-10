@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class EdgeAutoUpdateConfig :  IEquatable<EdgeAutoUpdateConfig>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="EdgeAutoUpdateConfig" /> class.
         /// Initializes a new instance of the <see cref="EdgeAutoUpdateConfig" />class.
         /// </summary>
         /// <param name="TimeZone">TimeZone.</param>
@@ -111,22 +110,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.TimeZone == other.TimeZone ||
                     this.TimeZone != null &&
                     this.TimeZone.Equals(other.TimeZone)
-                ) && 
+                ) &&
                 (
                     this.Rrule == other.Rrule ||
                     this.Rrule != null &&
                     this.Rrule.Equals(other.Rrule)
-                ) && 
+                ) &&
                 (
                     this.Start == other.Start ||
                     this.Start != null &&
                     this.Start.Equals(other.Start)
-                ) && 
+                ) &&
                 (
                     this.End == other.End ||
                     this.End != null &&

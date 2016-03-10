@@ -77,7 +77,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "OFFLINE")]
             Offline
         }
-    
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -97,7 +97,6 @@ namespace ININ.PureCloudApi.Model
         public OnlineStatusEnum? OnlineStatus { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Edge" /> class.
         /// Initializes a new instance of the <see cref="Edge" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -134,7 +133,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PhysicalEdge">PhysicalEdge (default to false).</param>
         /// <param name="Managed">Managed (default to false).</param>
 
-        public Edge(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<EdgeInterface> Interfaces = null, string Make = null, string Model = null, string ApiVersion = null, string SoftwareVersion = null, string SoftwareVersionTimestamp = null, string SoftwareVersionPlatform = null, string SoftwareVersionConfiguration = null, string FullSoftwareVersion = null, string PairingId = null, string Fingerprint = null, string FingerprintHint = null, string CurrentVersion = null, string StagedVersion = null, string Patch = null, StatusCodeEnum? StatusCode = null, EdgeGroup EdgeGroup = null, UriReference Site = null, DomainEdgeSoftwareUpdateDto SoftwareStatus = null, OnlineStatusEnum? OnlineStatus = null, string SerialNumber = null, bool? PhysicalEdge = null, bool? Managed = null, )
+        public Edge(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<EdgeInterface> Interfaces = null, string Make = null, string Model = null, string ApiVersion = null, string SoftwareVersion = null, string SoftwareVersionTimestamp = null, string SoftwareVersionPlatform = null, string SoftwareVersionConfiguration = null, string FullSoftwareVersion = null, string PairingId = null, string Fingerprint = null, string FingerprintHint = null, string CurrentVersion = null, string StagedVersion = null, string Patch = null, StatusCodeEnum? StatusCode = null, EdgeGroup EdgeGroup = null, UriReference Site = null, DomainEdgeSoftwareUpdateDto SoftwareStatus = null, OnlineStatusEnum? OnlineStatus = null, string SerialNumber = null, bool? PhysicalEdge = null, bool? Managed = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -464,177 +463,177 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.ModifiedBy == other.ModifiedBy ||
                     this.ModifiedBy != null &&
                     this.ModifiedBy.Equals(other.ModifiedBy)
-                ) && 
+                ) &&
                 (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
-                ) && 
+                ) &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.ModifiedByApp == other.ModifiedByApp ||
                     this.ModifiedByApp != null &&
                     this.ModifiedByApp.Equals(other.ModifiedByApp)
-                ) && 
+                ) &&
                 (
                     this.CreatedByApp == other.CreatedByApp ||
                     this.CreatedByApp != null &&
                     this.CreatedByApp.Equals(other.CreatedByApp)
-                ) && 
+                ) &&
                 (
                     this.Interfaces == other.Interfaces ||
                     this.Interfaces != null &&
                     this.Interfaces.SequenceEqual(other.Interfaces)
-                ) && 
+                ) &&
                 (
                     this.Make == other.Make ||
                     this.Make != null &&
                     this.Make.Equals(other.Make)
-                ) && 
+                ) &&
                 (
                     this.Model == other.Model ||
                     this.Model != null &&
                     this.Model.Equals(other.Model)
-                ) && 
+                ) &&
                 (
                     this.ApiVersion == other.ApiVersion ||
                     this.ApiVersion != null &&
                     this.ApiVersion.Equals(other.ApiVersion)
-                ) && 
+                ) &&
                 (
                     this.SoftwareVersion == other.SoftwareVersion ||
                     this.SoftwareVersion != null &&
                     this.SoftwareVersion.Equals(other.SoftwareVersion)
-                ) && 
+                ) &&
                 (
                     this.SoftwareVersionTimestamp == other.SoftwareVersionTimestamp ||
                     this.SoftwareVersionTimestamp != null &&
                     this.SoftwareVersionTimestamp.Equals(other.SoftwareVersionTimestamp)
-                ) && 
+                ) &&
                 (
                     this.SoftwareVersionPlatform == other.SoftwareVersionPlatform ||
                     this.SoftwareVersionPlatform != null &&
                     this.SoftwareVersionPlatform.Equals(other.SoftwareVersionPlatform)
-                ) && 
+                ) &&
                 (
                     this.SoftwareVersionConfiguration == other.SoftwareVersionConfiguration ||
                     this.SoftwareVersionConfiguration != null &&
                     this.SoftwareVersionConfiguration.Equals(other.SoftwareVersionConfiguration)
-                ) && 
+                ) &&
                 (
                     this.FullSoftwareVersion == other.FullSoftwareVersion ||
                     this.FullSoftwareVersion != null &&
                     this.FullSoftwareVersion.Equals(other.FullSoftwareVersion)
-                ) && 
+                ) &&
                 (
                     this.PairingId == other.PairingId ||
                     this.PairingId != null &&
                     this.PairingId.Equals(other.PairingId)
-                ) && 
+                ) &&
                 (
                     this.Fingerprint == other.Fingerprint ||
                     this.Fingerprint != null &&
                     this.Fingerprint.Equals(other.Fingerprint)
-                ) && 
+                ) &&
                 (
                     this.FingerprintHint == other.FingerprintHint ||
                     this.FingerprintHint != null &&
                     this.FingerprintHint.Equals(other.FingerprintHint)
-                ) && 
+                ) &&
                 (
                     this.CurrentVersion == other.CurrentVersion ||
                     this.CurrentVersion != null &&
                     this.CurrentVersion.Equals(other.CurrentVersion)
-                ) && 
+                ) &&
                 (
                     this.StagedVersion == other.StagedVersion ||
                     this.StagedVersion != null &&
                     this.StagedVersion.Equals(other.StagedVersion)
-                ) && 
+                ) &&
                 (
                     this.Patch == other.Patch ||
                     this.Patch != null &&
                     this.Patch.Equals(other.Patch)
-                ) && 
+                ) &&
                 (
                     this.StatusCode == other.StatusCode ||
                     this.StatusCode != null &&
                     this.StatusCode.Equals(other.StatusCode)
-                ) && 
+                ) &&
                 (
                     this.EdgeGroup == other.EdgeGroup ||
                     this.EdgeGroup != null &&
                     this.EdgeGroup.Equals(other.EdgeGroup)
-                ) && 
+                ) &&
                 (
                     this.Site == other.Site ||
                     this.Site != null &&
                     this.Site.Equals(other.Site)
-                ) && 
+                ) &&
                 (
                     this.SoftwareStatus == other.SoftwareStatus ||
                     this.SoftwareStatus != null &&
                     this.SoftwareStatus.Equals(other.SoftwareStatus)
-                ) && 
+                ) &&
                 (
                     this.OnlineStatus == other.OnlineStatus ||
                     this.OnlineStatus != null &&
                     this.OnlineStatus.Equals(other.OnlineStatus)
-                ) && 
+                ) &&
                 (
                     this.SerialNumber == other.SerialNumber ||
                     this.SerialNumber != null &&
                     this.SerialNumber.Equals(other.SerialNumber)
-                ) && 
+                ) &&
                 (
                     this.PhysicalEdge == other.PhysicalEdge ||
                     this.PhysicalEdge != null &&
                     this.PhysicalEdge.Equals(other.PhysicalEdge)
-                ) && 
+                ) &&
                 (
                     this.Managed == other.Managed ||
                     this.Managed != null &&
                     this.Managed.Equals(other.Managed)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class UserPresence :  IEquatable<UserPresence>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="UserPresence" /> class.
         /// Initializes a new instance of the <see cref="UserPresence" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -30,7 +29,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ModifiedBy">ModifiedBy.</param>
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
 
-        public UserPresence(string Name = null, User User = null, string Source = null, OrganizationPresence PresenceDefinition = null, string Message = null, User ModifiedBy = null, DateTime? ModifiedDate = null, )
+        public UserPresence(string Name = null, User User = null, string Source = null, OrganizationPresence PresenceDefinition = null, string Message = null, User ModifiedBy = null, DateTime? ModifiedDate = null)
         {
             this.Name = Name;
             this.User = User;
@@ -154,47 +153,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
-                ) && 
+                ) &&
                 (
                     this.Source == other.Source ||
                     this.Source != null &&
                     this.Source.Equals(other.Source)
-                ) && 
+                ) &&
                 (
                     this.PresenceDefinition == other.PresenceDefinition ||
                     this.PresenceDefinition != null &&
                     this.PresenceDefinition.Equals(other.PresenceDefinition)
-                ) && 
+                ) &&
                 (
                     this.Message == other.Message ||
                     this.Message != null &&
                     this.Message.Equals(other.Message)
-                ) && 
+                ) &&
                 (
                     this.ModifiedBy == other.ModifiedBy ||
                     this.ModifiedBy != null &&
                     this.ModifiedBy.Equals(other.ModifiedBy)
-                ) && 
+                ) &&
                 (
                     this.ModifiedDate == other.ModifiedDate ||
                     this.ModifiedDate != null &&
                     this.ModifiedDate.Equals(other.ModifiedDate)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

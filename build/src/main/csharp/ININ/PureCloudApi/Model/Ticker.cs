@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Ticker :  IEquatable<Ticker>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Ticker" /> class.
         /// Initializes a new instance of the <see cref="Ticker" />class.
         /// </summary>
         /// <param name="Symbol">The ticker symbol for this organization. Example: ININ, AAPL, MSFT, etc. (required).</param>
@@ -109,12 +108,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Symbol == other.Symbol ||
                     this.Symbol != null &&
                     this.Symbol.Equals(other.Symbol)
-                ) && 
+                ) &&
                 (
                     this.Exchange == other.Exchange ||
                     this.Exchange != null &&

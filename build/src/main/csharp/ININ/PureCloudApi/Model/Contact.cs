@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Contact :  IEquatable<Contact>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Contact" /> class.
         /// Initializes a new instance of the <see cref="Contact" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -29,7 +28,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Callable">Callable (default to false).</param>
         /// <param name="PhoneNumberStatus">PhoneNumberStatus.</param>
 
-        public Contact(string Name = null, string ContactListId = null, Dictionary<string, Object> Data = null, Dictionary<string, CallRecord> CallRecords = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null, )
+        public Contact(string Name = null, string ContactListId = null, Dictionary<string, Object> Data = null, Dictionary<string, CallRecord> CallRecords = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null)
         {
             this.Name = Name;
             this.ContactListId = ContactListId;
@@ -151,42 +150,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.ContactListId == other.ContactListId ||
                     this.ContactListId != null &&
                     this.ContactListId.Equals(other.ContactListId)
-                ) && 
+                ) &&
                 (
                     this.Data == other.Data ||
                     this.Data != null &&
                     this.Data.SequenceEqual(other.Data)
-                ) && 
+                ) &&
                 (
                     this.CallRecords == other.CallRecords ||
                     this.CallRecords != null &&
                     this.CallRecords.SequenceEqual(other.CallRecords)
-                ) && 
+                ) &&
                 (
                     this.Callable == other.Callable ||
                     this.Callable != null &&
                     this.Callable.Equals(other.Callable)
-                ) && 
+                ) &&
                 (
                     this.PhoneNumberStatus == other.PhoneNumberStatus ||
                     this.PhoneNumberStatus != null &&
                     this.PhoneNumberStatus.SequenceEqual(other.PhoneNumberStatus)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

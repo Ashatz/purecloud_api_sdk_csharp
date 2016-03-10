@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class WorkItemSubmitRequest :  IEquatable<WorkItemSubmitRequest>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="WorkItemSubmitRequest" /> class.
         /// Initializes a new instance of the <see cref="WorkItemSubmitRequest" />class.
         /// </summary>
         /// <param name="CommandId">The command associated with the submit request. Often it is the button pressed on the user interface. (required).</param>
@@ -101,12 +100,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.CommandId == other.CommandId ||
                     this.CommandId != null &&
                     this.CommandId.Equals(other.CommandId)
-                ) && 
+                ) &&
                 (
                     this.DataItems == other.DataItems ||
                     this.DataItems != null &&

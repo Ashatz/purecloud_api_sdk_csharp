@@ -56,7 +56,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "JSON")]
             Json
         }
-    
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -76,7 +76,6 @@ namespace ININ.PureCloudApi.Model
         public EncodingEnum? Encoding { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="VoiceXmlOperation" /> class.
         /// Initializes a new instance of the <see cref="VoiceXmlOperation" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -90,7 +89,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="FetchAudio">FetchAudio.</param>
         /// <param name="TimeoutMS">TimeoutMS.</param>
 
-        public VoiceXmlOperation(string Name = null, TypeEnum? Type = null, MethodEnum? Method = null, EncodingEnum? Encoding = null, string Description = null, string Uri = null, string Inputs = null, string Outputs = null, string FetchAudio = null, int? TimeoutMS = null, )
+        public VoiceXmlOperation(string Name = null, TypeEnum? Type = null, MethodEnum? Method = null, EncodingEnum? Encoding = null, string Description = null, string Uri = null, string Inputs = null, string Outputs = null, string FetchAudio = null, int? TimeoutMS = null)
         {
             this.Name = Name;
             this.Type = Type;
@@ -218,62 +217,62 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.Method == other.Method ||
                     this.Method != null &&
                     this.Method.Equals(other.Method)
-                ) && 
+                ) &&
                 (
                     this.Encoding == other.Encoding ||
                     this.Encoding != null &&
                     this.Encoding.Equals(other.Encoding)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Uri == other.Uri ||
                     this.Uri != null &&
                     this.Uri.Equals(other.Uri)
-                ) && 
+                ) &&
                 (
                     this.Inputs == other.Inputs ||
                     this.Inputs != null &&
                     this.Inputs.Equals(other.Inputs)
-                ) && 
+                ) &&
                 (
                     this.Outputs == other.Outputs ||
                     this.Outputs != null &&
                     this.Outputs.Equals(other.Outputs)
-                ) && 
+                ) &&
                 (
                     this.FetchAudio == other.FetchAudio ||
                     this.FetchAudio != null &&
                     this.FetchAudio.Equals(other.FetchAudio)
-                ) && 
+                ) &&
                 (
                     this.TimeoutMS == other.TimeoutMS ||
                     this.TimeoutMS != null &&
                     this.TimeoutMS.Equals(other.TimeoutMS)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DomainNetworkAddress :  IEquatable<DomainNetworkAddress>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DomainNetworkAddress" /> class.
         /// Initializes a new instance of the <see cref="DomainNetworkAddress" />class.
         /// </summary>
         /// <param name="Type">Type.</param>
@@ -117,22 +116,22 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.Address == other.Address ||
                     this.Address != null &&
                     this.Address.Equals(other.Address)
-                ) && 
+                ) &&
                 (
                     this.Persistent == other.Persistent ||
                     this.Persistent != null &&
                     this.Persistent.Equals(other.Persistent)
-                ) && 
+                ) &&
                 (
                     this.Family == other.Family ||
                     this.Family != null &&

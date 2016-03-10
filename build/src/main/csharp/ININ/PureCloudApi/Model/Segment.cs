@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Segment :  IEquatable<Segment>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Segment" /> class.
         /// Initializes a new instance of the <see cref="Segment" />class.
         /// </summary>
         /// <param name="StartTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
@@ -120,27 +119,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.StartTime == other.StartTime ||
                     this.StartTime != null &&
                     this.StartTime.Equals(other.StartTime)
-                ) && 
+                ) &&
                 (
                     this.EndTime == other.EndTime ||
                     this.EndTime != null &&
                     this.EndTime.Equals(other.EndTime)
-                ) && 
+                ) &&
                 (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
-                ) && 
+                ) &&
                 (
                     this.HowEnded == other.HowEnded ||
                     this.HowEnded != null &&
                     this.HowEnded.Equals(other.HowEnded)
-                ) && 
+                ) &&
                 (
                     this.DisconnectType == other.DisconnectType ||
                     this.DisconnectType != null &&

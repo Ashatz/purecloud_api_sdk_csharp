@@ -52,12 +52,12 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test the property 'Certificate' 
+        /// Test the property 'CertificateProperty' 
         /// </summary>
         [Test]
-        public void CertificateTest()
+        public void CertificatePropertyTest()
         {
-            // TODO: unit test for the property 'Certificate' 
+            // TODO: unit test for the property 'CertificateProperty' 
         }
         
 

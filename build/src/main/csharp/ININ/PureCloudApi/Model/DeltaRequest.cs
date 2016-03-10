@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class DeltaRequest :  IEquatable<DeltaRequest>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="DeltaRequest" /> class.
         /// Initializes a new instance of the <see cref="DeltaRequest" />class.
         /// </summary>
         /// <param name="ContextToken">ContextToken.</param>
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ContextToken == other.ContextToken ||
                     this.ContextToken != null &&

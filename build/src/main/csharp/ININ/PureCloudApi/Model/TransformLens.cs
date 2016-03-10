@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class TransformLens :  IEquatable<TransformLens>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="TransformLens" /> class.
         /// Initializes a new instance of the <see cref="TransformLens" />class.
         /// </summary>
         /// <param name="Replace">Replace.</param>
@@ -91,12 +90,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Replace == other.Replace ||
                     this.Replace != null &&
                     this.Replace.Equals(other.Replace)
-                ) && 
+                ) &&
                 (
                     this.Value == other.Value ||
                     this.Value != null &&

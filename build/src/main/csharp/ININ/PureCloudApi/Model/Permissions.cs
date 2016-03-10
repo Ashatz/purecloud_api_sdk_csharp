@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class Permissions :  IEquatable<Permissions>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="Permissions" /> class.
         /// Initializes a new instance of the <see cref="Permissions" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -99,17 +98,17 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Ids == other.Ids ||
                     this.Ids != null &&

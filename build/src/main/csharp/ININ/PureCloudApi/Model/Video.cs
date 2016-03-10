@@ -76,7 +76,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "OTHER")]
             Other
         }
-    
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -90,7 +90,6 @@ namespace ININ.PureCloudApi.Model
         public DisconnectTypeEnum? DisconnectType { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Video" /> class.
         /// Initializes a new instance of the <see cref="Video" />class.
         /// </summary>
         /// <param name="State">State.</param>
@@ -228,42 +227,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
-                ) && 
+                ) &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Context == other.Context ||
                     this.Context != null &&
                     this.Context.Equals(other.Context)
-                ) && 
+                ) &&
                 (
                     this.AudioMuted == other.AudioMuted ||
                     this.AudioMuted != null &&
                     this.AudioMuted.Equals(other.AudioMuted)
-                ) && 
+                ) &&
                 (
                     this.VideoMuted == other.VideoMuted ||
                     this.VideoMuted != null &&
                     this.VideoMuted.Equals(other.VideoMuted)
-                ) && 
+                ) &&
                 (
                     this.SharingScreen == other.SharingScreen ||
                     this.SharingScreen != null &&
                     this.SharingScreen.Equals(other.SharingScreen)
-                ) && 
+                ) &&
                 (
                     this.PeerCount == other.PeerCount ||
                     this.PeerCount != null &&
                     this.PeerCount.Equals(other.PeerCount)
-                ) && 
+                ) &&
                 (
                     this.DisconnectType == other.DisconnectType ||
                     this.DisconnectType != null &&

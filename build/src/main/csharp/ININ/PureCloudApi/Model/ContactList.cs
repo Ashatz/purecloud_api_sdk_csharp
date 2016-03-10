@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ContactList :  IEquatable<ContactList>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ContactList" /> class.
         /// Initializes a new instance of the <see cref="ContactList" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -33,7 +32,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PreviewModeAcceptedValues">PreviewModeAcceptedValues.</param>
         /// <param name="Size">Size.</param>
 
-        public ContactList(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<string> ColumnNames = null, List<PhoneNumberColumn> PhoneColumns = null, ImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, long? Size = null, )
+        public ContactList(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<string> ColumnNames = null, List<PhoneNumberColumn> PhoneColumns = null, ImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, long? Size = null)
         {
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -181,62 +180,62 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
-                ) && 
+                ) &&
                 (
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
-                ) && 
+                ) &&
                 (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) && 
+                ) &&
                 (
                     this.ColumnNames == other.ColumnNames ||
                     this.ColumnNames != null &&
                     this.ColumnNames.SequenceEqual(other.ColumnNames)
-                ) && 
+                ) &&
                 (
                     this.PhoneColumns == other.PhoneColumns ||
                     this.PhoneColumns != null &&
                     this.PhoneColumns.SequenceEqual(other.PhoneColumns)
-                ) && 
+                ) &&
                 (
                     this.ImportStatus == other.ImportStatus ||
                     this.ImportStatus != null &&
                     this.ImportStatus.Equals(other.ImportStatus)
-                ) && 
+                ) &&
                 (
                     this.PreviewModeColumnName == other.PreviewModeColumnName ||
                     this.PreviewModeColumnName != null &&
                     this.PreviewModeColumnName.Equals(other.PreviewModeColumnName)
-                ) && 
+                ) &&
                 (
                     this.PreviewModeAcceptedValues == other.PreviewModeAcceptedValues ||
                     this.PreviewModeAcceptedValues != null &&
                     this.PreviewModeAcceptedValues.SequenceEqual(other.PreviewModeAcceptedValues)
-                ) && 
+                ) &&
                 (
                     this.Size == other.Size ||
                     this.Size != null &&
                     this.Size.Equals(other.Size)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

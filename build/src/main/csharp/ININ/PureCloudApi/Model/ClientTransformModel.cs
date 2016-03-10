@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ClientTransformModel :  IEquatable<ClientTransformModel>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ClientTransformModel" /> class.
         /// Initializes a new instance of the <see cref="ClientTransformModel" />class.
         /// </summary>
         /// <param name="Id">Id.</param>
@@ -118,27 +117,27 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.EndpointId == other.EndpointId ||
                     this.EndpointId != null &&
                     this.EndpointId.Equals(other.EndpointId)
-                ) && 
+                ) &&
                 (
                     this.FilenameReplaces == other.FilenameReplaces ||
                     this.FilenameReplaces != null &&
                     this.FilenameReplaces.SequenceEqual(other.FilenameReplaces)
-                ) && 
+                ) &&
                 (
                     this.Tags == other.Tags ||
                     this.Tags != null &&
                     this.Tags.SequenceEqual(other.Tags)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&

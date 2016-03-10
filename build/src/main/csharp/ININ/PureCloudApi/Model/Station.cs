@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ASSOCIATED")]
             Associated
         }
-    
+        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -35,7 +35,6 @@ namespace ININ.PureCloudApi.Model
         public StatusEnum? Status { get; set; }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Station" /> class.
         /// Initializes a new instance of the <see cref="Station" />class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -45,7 +44,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PrimaryEdge">PrimaryEdge.</param>
         /// <param name="SecondaryEdge">SecondaryEdge.</param>
 
-        public Station(string Name = null, string Description = null, StatusEnum? Status = null, string UserId = null, UriReference PrimaryEdge = null, UriReference SecondaryEdge = null, )
+        public Station(string Name = null, string Description = null, StatusEnum? Status = null, string UserId = null, UriReference PrimaryEdge = null, UriReference SecondaryEdge = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -153,42 +152,42 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-                ) && 
+                ) &&
                 (
                     this.UserId == other.UserId ||
                     this.UserId != null &&
                     this.UserId.Equals(other.UserId)
-                ) && 
+                ) &&
                 (
                     this.PrimaryEdge == other.PrimaryEdge ||
                     this.PrimaryEdge != null &&
                     this.PrimaryEdge.Equals(other.PrimaryEdge)
-                ) && 
+                ) &&
                 (
                     this.SecondaryEdge == other.SecondaryEdge ||
                     this.SecondaryEdge != null &&
                     this.SecondaryEdge.Equals(other.SecondaryEdge)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&

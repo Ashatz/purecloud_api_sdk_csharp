@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class EmailSetup :  IEquatable<EmailSetup>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="EmailSetup" /> class.
         /// Initializes a new instance of the <see cref="EmailSetup" />class.
         /// </summary>
         /// <param name="RootDomain">The root PureCloud domain that all sub-domains are created from..</param>
@@ -83,7 +82,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.RootDomain == other.RootDomain ||
                     this.RootDomain != null &&

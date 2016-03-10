@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ValidateAddressRequest :  IEquatable<ValidateAddressRequest>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ValidateAddressRequest" /> class.
         /// Initializes a new instance of the <see cref="ValidateAddressRequest" />class.
         /// </summary>
         /// <param name="Address">Address.</param>
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Address == other.Address ||
                     this.Address != null &&

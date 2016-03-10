@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class TwitterExpressionBuffer :  IEquatable<TwitterExpressionBuffer>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="TwitterExpressionBuffer" /> class.
         /// Initializes a new instance of the <see cref="TwitterExpressionBuffer" />class.
         /// </summary>
         /// <param name="BufferContent">The list of TwitterExpressions currently in the buffer..</param>
@@ -83,7 +82,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.BufferContent == other.BufferContent ||
                     this.BufferContent != null &&

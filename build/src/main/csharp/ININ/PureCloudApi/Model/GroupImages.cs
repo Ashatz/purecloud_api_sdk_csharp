@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class GroupImages :  IEquatable<GroupImages>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="GroupImages" /> class.
         /// Initializes a new instance of the <see cref="GroupImages" />class.
         /// </summary>
         /// <param name="ActiveImages">ActiveImages.</param>
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.ActiveImages == other.ActiveImages ||
                     this.ActiveImages != null &&

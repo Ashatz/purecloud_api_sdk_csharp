@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class ManagementUnitTimezone :  IEquatable<ManagementUnitTimezone>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="ManagementUnitTimezone" /> class.
         /// Initializes a new instance of the <see cref="ManagementUnitTimezone" />class.
         /// </summary>
         /// <param name="Timezone">Timezone.</param>
@@ -82,7 +81,7 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Timezone == other.Timezone ||
                     this.Timezone != null &&

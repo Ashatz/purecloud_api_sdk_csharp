@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class CallRecord :  IEquatable<CallRecord>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="CallRecord" /> class.
         /// Initializes a new instance of the <see cref="CallRecord" />class.
         /// </summary>
         /// <param name="LastAttempt">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
@@ -92,12 +91,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.LastAttempt == other.LastAttempt ||
                     this.LastAttempt != null &&
                     this.LastAttempt.Equals(other.LastAttempt)
-                ) && 
+                ) &&
                 (
                     this.LastResult == other.LastResult ||
                     this.LastResult != null &&

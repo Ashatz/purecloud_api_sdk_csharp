@@ -17,9 +17,8 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class UserParam :  IEquatable<UserParam>
     { 
-    
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="UserParam" /> class.
         /// Initializes a new instance of the <see cref="UserParam" />class.
         /// </summary>
         /// <param name="Key">Key.</param>
@@ -91,12 +90,12 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Key == other.Key ||
                     this.Key != null &&
                     this.Key.Equals(other.Key)
-                ) && 
+                ) &&
                 (
                     this.Value == other.Value ||
                     this.Value != null &&

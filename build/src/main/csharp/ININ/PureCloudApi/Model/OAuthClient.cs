@@ -17,26 +17,15 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class OAuthClient :  IEquatable<OAuthClient>
     { 
-        public enum  {
-            
-            [EnumMember(Value = "CODE")]
-            Code,
-            
-            [EnumMember(Value = "TOKEN")]
-            Token,
-            
-            [EnumMember(Value = "SAML2BEARER")]
-            Saml2bearer,
-            
-            [EnumMember(Value = "PASSWORD")]
-            Password,
-            
-            [EnumMember(Value = "CLIENT_CREDENTIALS")]
-            ClientCredentials
-        }
-    
+        
+        public static string AuthorizedGrantTypes_Code = "CODE";
+        public static string AuthorizedGrantTypes_Token = "TOKEN";
+        public static string AuthorizedGrantTypes_Saml2bearer = "SAML2BEARER";
+        public static string AuthorizedGrantTypes_Password = "PASSWORD";
+        public static string AuthorizedGrantTypes_ClientCredentials = "CLIENT_CREDENTIALS";
+        
+        
         /// <summary>
-        /// Initializes a new instance of the <see cref="OAuthClient" /> class.
         /// Initializes a new instance of the <see cref="OAuthClient" />class.
         /// </summary>
         /// <param name="Name">The name of the OAuth client. (required).</param>
@@ -47,7 +36,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Secret">System created secret assigned to this client. Secrets are required for code authorization grants..</param>
         /// <param name="RoleIds">Roles assigned to this client. Roles only apply to clients using the client_credential grant.</param>
 
-        public OAuthClient(string Name = null, long? AccessTokenValiditySeconds = null, List<AuthorizedGrantTypesEnum?> AuthorizedGrantTypes = null, string Description = null, List<string> RegisteredRedirectUri = null, string Secret = null, List<string> RoleIds = null, )
+        public OAuthClient(string Name = null, long? AccessTokenValiditySeconds = null, List<string> AuthorizedGrantTypes = null, string Description = null, List<string> RegisteredRedirectUri = null, string Secret = null, List<string> RoleIds = null)
         {
             // to ensure "Name" is required (not null)
             if (Name == null)
@@ -199,47 +188,47 @@ namespace ININ.PureCloudApi.Model
             if (other == null)
                 return false;
 
-            return 
+            return true &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
-                ) && 
+                ) &&
                 (
                     this.AccessTokenValiditySeconds == other.AccessTokenValiditySeconds ||
                     this.AccessTokenValiditySeconds != null &&
                     this.AccessTokenValiditySeconds.Equals(other.AccessTokenValiditySeconds)
-                ) && 
+                ) &&
                 (
                     this.AuthorizedGrantTypes == other.AuthorizedGrantTypes ||
                     this.AuthorizedGrantTypes != null &&
                     this.AuthorizedGrantTypes.SequenceEqual(other.AuthorizedGrantTypes)
-                ) && 
+                ) &&
                 (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) && 
+                ) &&
                 (
                     this.RegisteredRedirectUri == other.RegisteredRedirectUri ||
                     this.RegisteredRedirectUri != null &&
                     this.RegisteredRedirectUri.SequenceEqual(other.RegisteredRedirectUri)
-                ) && 
+                ) &&
                 (
                     this.Secret == other.Secret ||
                     this.Secret != null &&
                     this.Secret.Equals(other.Secret)
-                ) && 
+                ) &&
                 (
                     this.RoleIds == other.RoleIds ||
                     this.RoleIds != null &&
                     this.RoleIds.SequenceEqual(other.RoleIds)
-                ) && 
+                ) &&
                 (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
