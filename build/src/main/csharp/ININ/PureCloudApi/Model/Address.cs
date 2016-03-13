@@ -21,52 +21,60 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Address" />class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="NameRaw">NameRaw.</param>
-        /// <param name="AddressNormalized">AddressNormalized.</param>
-        /// <param name="AddressRaw">AddressRaw.</param>
-        /// <param name="AddressDisplayable">AddressDisplayable.</param>
+        /// <param name="Address1">Address1.</param>
+        /// <param name="Address2">Address2.</param>
+        /// <param name="City">City.</param>
+        /// <param name="State">State.</param>
+        /// <param name="PostalCode">PostalCode.</param>
+        /// <param name="CountryCode">CountryCode.</param>
 
-        public Address(string Name = null, string NameRaw = null, string AddressNormalized = null, string AddressRaw = null, string AddressDisplayable = null)
+        public Address(string Address1 = null, string Address2 = null, string City = null, string State = null, string PostalCode = null, string CountryCode = null)
         {
-            this.Name = Name;
-            this.NameRaw = NameRaw;
-            this.AddressNormalized = AddressNormalized;
-            this.AddressRaw = AddressRaw;
-            this.AddressDisplayable = AddressDisplayable;
+            this.Address1 = Address1;
+            this.Address2 = Address2;
+            this.City = City;
+            this.State = State;
+            this.PostalCode = PostalCode;
+            this.CountryCode = CountryCode;
             
         }
         
     
         /// <summary>
-        /// Gets or Sets Name
+        /// Gets or Sets Address1
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
+        [DataMember(Name="address1", EmitDefaultValue=false)]
+        public string Address1 { get; set; }
     
         /// <summary>
-        /// Gets or Sets NameRaw
+        /// Gets or Sets Address2
         /// </summary>
-        [DataMember(Name="nameRaw", EmitDefaultValue=false)]
-        public string NameRaw { get; set; }
+        [DataMember(Name="address2", EmitDefaultValue=false)]
+        public string Address2 { get; set; }
     
         /// <summary>
-        /// Gets or Sets AddressNormalized
+        /// Gets or Sets City
         /// </summary>
-        [DataMember(Name="addressNormalized", EmitDefaultValue=false)]
-        public string AddressNormalized { get; set; }
+        [DataMember(Name="city", EmitDefaultValue=false)]
+        public string City { get; set; }
     
         /// <summary>
-        /// Gets or Sets AddressRaw
+        /// Gets or Sets State
         /// </summary>
-        [DataMember(Name="addressRaw", EmitDefaultValue=false)]
-        public string AddressRaw { get; set; }
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public string State { get; set; }
     
         /// <summary>
-        /// Gets or Sets AddressDisplayable
+        /// Gets or Sets PostalCode
         /// </summary>
-        [DataMember(Name="addressDisplayable", EmitDefaultValue=false)]
-        public string AddressDisplayable { get; set; }
+        [DataMember(Name="postalCode", EmitDefaultValue=false)]
+        public string PostalCode { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets CountryCode
+        /// </summary>
+        [DataMember(Name="countryCode", EmitDefaultValue=false)]
+        public string CountryCode { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -76,11 +84,12 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Address {\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  NameRaw: ").Append(NameRaw).Append("\n");
-            sb.Append("  AddressNormalized: ").Append(AddressNormalized).Append("\n");
-            sb.Append("  AddressRaw: ").Append(AddressRaw).Append("\n");
-            sb.Append("  AddressDisplayable: ").Append(AddressDisplayable).Append("\n");
+            sb.Append("  Address1: ").Append(Address1).Append("\n");
+            sb.Append("  Address2: ").Append(Address2).Append("\n");
+            sb.Append("  City: ").Append(City).Append("\n");
+            sb.Append("  State: ").Append(State).Append("\n");
+            sb.Append("  PostalCode: ").Append(PostalCode).Append("\n");
+            sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -119,29 +128,34 @@ namespace ININ.PureCloudApi.Model
 
             return true &&
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Address1 == other.Address1 ||
+                    this.Address1 != null &&
+                    this.Address1.Equals(other.Address1)
                 ) &&
                 (
-                    this.NameRaw == other.NameRaw ||
-                    this.NameRaw != null &&
-                    this.NameRaw.Equals(other.NameRaw)
+                    this.Address2 == other.Address2 ||
+                    this.Address2 != null &&
+                    this.Address2.Equals(other.Address2)
                 ) &&
                 (
-                    this.AddressNormalized == other.AddressNormalized ||
-                    this.AddressNormalized != null &&
-                    this.AddressNormalized.Equals(other.AddressNormalized)
+                    this.City == other.City ||
+                    this.City != null &&
+                    this.City.Equals(other.City)
                 ) &&
                 (
-                    this.AddressRaw == other.AddressRaw ||
-                    this.AddressRaw != null &&
-                    this.AddressRaw.Equals(other.AddressRaw)
+                    this.State == other.State ||
+                    this.State != null &&
+                    this.State.Equals(other.State)
                 ) &&
                 (
-                    this.AddressDisplayable == other.AddressDisplayable ||
-                    this.AddressDisplayable != null &&
-                    this.AddressDisplayable.Equals(other.AddressDisplayable)
+                    this.PostalCode == other.PostalCode ||
+                    this.PostalCode != null &&
+                    this.PostalCode.Equals(other.PostalCode)
+                ) &&
+                (
+                    this.CountryCode == other.CountryCode ||
+                    this.CountryCode != null &&
+                    this.CountryCode.Equals(other.CountryCode)
                 );
         }
 
@@ -157,20 +171,23 @@ namespace ININ.PureCloudApi.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
+                if (this.Address1 != null)
+                    hash = hash * 59 + this.Address1.GetHashCode();
                 
-                if (this.NameRaw != null)
-                    hash = hash * 59 + this.NameRaw.GetHashCode();
+                if (this.Address2 != null)
+                    hash = hash * 59 + this.Address2.GetHashCode();
                 
-                if (this.AddressNormalized != null)
-                    hash = hash * 59 + this.AddressNormalized.GetHashCode();
+                if (this.City != null)
+                    hash = hash * 59 + this.City.GetHashCode();
                 
-                if (this.AddressRaw != null)
-                    hash = hash * 59 + this.AddressRaw.GetHashCode();
+                if (this.State != null)
+                    hash = hash * 59 + this.State.GetHashCode();
                 
-                if (this.AddressDisplayable != null)
-                    hash = hash * 59 + this.AddressDisplayable.GetHashCode();
+                if (this.PostalCode != null)
+                    hash = hash * 59 + this.PostalCode.GetHashCode();
+                
+                if (this.CountryCode != null)
+                    hash = hash * 59 + this.CountryCode.GetHashCode();
                 
                 return hash;
             }

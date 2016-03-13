@@ -79,6 +79,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test the property 'Strip' 
+        /// </summary>
+        [Test]
+        public void StripTest()
+        {
+            // TODO: unit test for the property 'Strip' 
+        }
+        
+        /// <summary>
         /// Test the property 'CallingPartyId' 
         /// </summary>
         [Test]

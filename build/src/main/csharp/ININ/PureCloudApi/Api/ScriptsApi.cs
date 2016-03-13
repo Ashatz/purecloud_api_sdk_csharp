@@ -40,36 +40,6 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<string> DeleteFormsFormIdWithHttpInfo (string formId);
         
         /// <summary>
-        /// Get the list of scripts
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="expand">Expand</param>
-        /// <param name="name">Name</param>
-        /// <param name="feature">Feature</param>
-        /// <returns>ScriptEntityListing</returns>
-        ScriptEntityListing Get (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null);
-  
-        /// <summary>
-        /// Get the list of scripts
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="expand">Expand</param>
-        /// <param name="name">Name</param>
-        /// <param name="feature">Feature</param>
-        /// <returns>ApiResponse of ScriptEntityListing</returns>
-        ApiResponse<ScriptEntityListing> GetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null);
-        
-        /// <summary>
         /// Get the list of evaluation forms
         /// </summary>
         /// <remarks>
@@ -198,26 +168,34 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<EvaluationForm> GetPublishedformsFormIdWithHttpInfo (string formId);
         
         /// <summary>
-        /// Create a script.
+        /// Get the list of scripts
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <returns>Script</returns>
-        Script Post (Object body = null);
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="expand">Expand</param>
+        /// <param name="name">Name</param>
+        /// <param name="feature">Feature</param>
+        /// <returns>ScriptEntityListing</returns>
+        ScriptEntityListing GetScripts (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null);
   
         /// <summary>
-        /// Create a script.
+        /// Get the list of scripts
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <returns>ApiResponse of Script</returns>
-        ApiResponse<Script> PostWithHttpInfo (Object body = null);
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="expand">Expand</param>
+        /// <param name="name">Name</param>
+        /// <param name="feature">Feature</param>
+        /// <returns>ApiResponse of ScriptEntityListing</returns>
+        ApiResponse<ScriptEntityListing> GetScriptsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null);
         
         /// <summary>
         /// Create an evaluation form.
@@ -262,6 +240,28 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of EvaluationForm</returns>
         ApiResponse<EvaluationForm> PostPublishedformsWithHttpInfo (EvaluationForm body = null);
+        
+        /// <summary>
+        /// Create a script.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Script</returns>
+        Script PostScripts (Object body = null);
+  
+        /// <summary>
+        /// Create a script.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of Script</returns>
+        ApiResponse<Script> PostScriptsWithHttpInfo (Object body = null);
         
         /// <summary>
         /// Update an evaluation form.
@@ -312,36 +312,6 @@ namespace ININ.PureCloudApi.Api
         /// <param name="formId">Form ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> DeleteFormsFormIdAsyncWithHttpInfo (string formId);
-        
-        /// <summary>
-        /// Get the list of scripts
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="expand">Expand</param>
-        /// <param name="name">Name</param>
-        /// <param name="feature">Feature</param>
-        /// <returns>Task of ScriptEntityListing</returns>
-        System.Threading.Tasks.Task<ScriptEntityListing> GetAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null);
-
-        /// <summary>
-        /// Get the list of scripts
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="expand">Expand</param>
-        /// <param name="name">Name</param>
-        /// <param name="feature">Feature</param>
-        /// <returns>Task of ApiResponse (ScriptEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null);
         
         /// <summary>
         /// Get the list of evaluation forms
@@ -472,26 +442,34 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> GetPublishedformsFormIdAsyncWithHttpInfo (string formId);
         
         /// <summary>
-        /// Create a script.
+        /// Get the list of scripts
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <returns>Task of Script</returns>
-        System.Threading.Tasks.Task<Script> PostAsync (Object body = null);
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="expand">Expand</param>
+        /// <param name="name">Name</param>
+        /// <param name="feature">Feature</param>
+        /// <returns>Task of ScriptEntityListing</returns>
+        System.Threading.Tasks.Task<ScriptEntityListing> GetScriptsAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null);
 
         /// <summary>
-        /// Create a script.
+        /// Get the list of scripts
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <returns>Task of ApiResponse (Script)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Script>> PostAsyncWithHttpInfo (Object body = null);
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="expand">Expand</param>
+        /// <param name="name">Name</param>
+        /// <param name="feature">Feature</param>
+        /// <returns>Task of ApiResponse (ScriptEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null);
         
         /// <summary>
         /// Create an evaluation form.
@@ -536,6 +514,28 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
         System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostPublishedformsAsyncWithHttpInfo (EvaluationForm body = null);
+        
+        /// <summary>
+        /// Create a script.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of Script</returns>
+        System.Threading.Tasks.Task<Script> PostScriptsAsync (Object body = null);
+
+        /// <summary>
+        /// Create a script.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (Script)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Script>> PostScriptsAsyncWithHttpInfo (Object body = null);
         
         /// <summary>
         /// Update an evaluation form.
@@ -811,197 +811,6 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
-            
-        }
-        
-        /// <summary>
-        /// Get the list of scripts 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="expand">Expand</param> 
-        /// <param name="name">Name</param> 
-        /// <param name="feature">Feature</param> 
-        /// <returns>ScriptEntityListing</returns>
-        public ScriptEntityListing Get (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null)
-        {
-             ApiResponse<ScriptEntityListing> localVarResponse = GetWithHttpInfo(pageSize, pageNumber, expand, name, feature);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get the list of scripts 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="expand">Expand</param> 
-        /// <param name="name">Name</param> 
-        /// <param name="feature">Feature</param> 
-        /// <returns>ApiResponse of ScriptEntityListing</returns>
-        public ApiResponse< ScriptEntityListing > GetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null)
-        {
-            
-    
-            var localVarPath = "/api/v1/scripts";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
-            if (feature != null) localVarQueryParams.Add("feature", Configuration.ApiClient.ParameterToString(feature)); // query parameter
-            
-            
-            
-            
-
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Get: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Get: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<ScriptEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ScriptEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScriptEntityListing)));
-            
-        }
-
-        
-        /// <summary>
-        /// Get the list of scripts 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="expand">Expand</param>
-        /// <param name="name">Name</param>
-        /// <param name="feature">Feature</param>
-        /// <returns>Task of ScriptEntityListing</returns>
-        public async System.Threading.Tasks.Task<ScriptEntityListing> GetAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null)
-        {
-             ApiResponse<ScriptEntityListing> localVarResponse = await GetAsyncWithHttpInfo(pageSize, pageNumber, expand, name, feature);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get the list of scripts 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="expand">Expand</param>
-        /// <param name="name">Name</param>
-        /// <param name="feature">Feature</param>
-        /// <returns>Task of ApiResponse (ScriptEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null)
-        {
-            
-    
-            var localVarPath = "/api/v1/scripts";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
-            if (feature != null) localVarQueryParams.Add("feature", Configuration.ApiClient.ParameterToString(feature)); // query parameter
-            
-            
-            
-            
-
-            
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Get: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Get: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ScriptEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ScriptEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScriptEntityListing)));
             
         }
         
@@ -1913,24 +1722,32 @@ namespace ININ.PureCloudApi.Api
         }
         
         /// <summary>
-        /// Create a script. 
+        /// Get the list of scripts 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param> 
-        /// <returns>Script</returns>
-        public Script Post (Object body = null)
+        /// <param name="pageSize">Page size</param> 
+        /// <param name="pageNumber">Page number</param> 
+        /// <param name="expand">Expand</param> 
+        /// <param name="name">Name</param> 
+        /// <param name="feature">Feature</param> 
+        /// <returns>ScriptEntityListing</returns>
+        public ScriptEntityListing GetScripts (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null)
         {
-             ApiResponse<Script> localVarResponse = PostWithHttpInfo(body);
+             ApiResponse<ScriptEntityListing> localVarResponse = GetScriptsWithHttpInfo(pageSize, pageNumber, expand, name, feature);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Create a script. 
+        /// Get the list of scripts 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param> 
-        /// <returns>ApiResponse of Script</returns>
-        public ApiResponse< Script > PostWithHttpInfo (Object body = null)
+        /// <param name="pageSize">Page size</param> 
+        /// <param name="pageNumber">Page number</param> 
+        /// <param name="expand">Expand</param> 
+        /// <param name="name">Name</param> 
+        /// <param name="feature">Feature</param> 
+        /// <returns>ApiResponse of ScriptEntityListing</returns>
+        public ApiResponse< ScriptEntityListing > GetScriptsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null)
         {
             
     
@@ -1961,17 +1778,15 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (feature != null) localVarQueryParams.Add("feature", Configuration.ApiClient.ParameterToString(feature)); // query parameter
             
             
             
-            if (body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
+            
 
             // authentication (PureCloud Auth) required
             
@@ -1984,43 +1799,51 @@ namespace ININ.PureCloudApi.Api
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Post: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetScripts: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Post: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetScripts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<Script>(localVarStatusCode,
+            return new ApiResponse<ScriptEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Script) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Script)));
+                (ScriptEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScriptEntityListing)));
             
         }
 
         
         /// <summary>
-        /// Create a script. 
+        /// Get the list of scripts 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <returns>Task of Script</returns>
-        public async System.Threading.Tasks.Task<Script> PostAsync (Object body = null)
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="expand">Expand</param>
+        /// <param name="name">Name</param>
+        /// <param name="feature">Feature</param>
+        /// <returns>Task of ScriptEntityListing</returns>
+        public async System.Threading.Tasks.Task<ScriptEntityListing> GetScriptsAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null)
         {
-             ApiResponse<Script> localVarResponse = await PostAsyncWithHttpInfo(body);
+             ApiResponse<ScriptEntityListing> localVarResponse = await GetScriptsAsyncWithHttpInfo(pageSize, pageNumber, expand, name, feature);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Create a script. 
+        /// Get the list of scripts 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <returns>Task of ApiResponse (Script)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Script>> PostAsyncWithHttpInfo (Object body = null)
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="expand">Expand</param>
+        /// <param name="name">Name</param>
+        /// <param name="feature">Feature</param>
+        /// <returns>Task of ApiResponse (ScriptEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null)
         {
             
     
@@ -2051,17 +1874,15 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (feature != null) localVarQueryParams.Add("feature", Configuration.ApiClient.ParameterToString(feature)); // query parameter
             
             
             
-            if (body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
+            
 
             
             // authentication (PureCloud Auth) required
@@ -2075,19 +1896,19 @@ namespace ININ.PureCloudApi.Api
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Post: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetScripts: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Post: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetScripts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Script>(localVarStatusCode,
+            return new ApiResponse<ScriptEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Script) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Script)));
+                (ScriptEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScriptEntityListing)));
             
         }
         
@@ -2446,6 +2267,185 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<EvaluationForm>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (EvaluationForm) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationForm)));
+            
+        }
+        
+        /// <summary>
+        /// Create a script. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param> 
+        /// <returns>Script</returns>
+        public Script PostScripts (Object body = null)
+        {
+             ApiResponse<Script> localVarResponse = PostScriptsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a script. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param> 
+        /// <returns>ApiResponse of Script</returns>
+        public ApiResponse< Script > PostScriptsWithHttpInfo (Object body = null)
+        {
+            
+    
+            var localVarPath = "/api/v1/scripts";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostScripts: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostScripts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<Script>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Script) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Script)));
+            
+        }
+
+        
+        /// <summary>
+        /// Create a script. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of Script</returns>
+        public async System.Threading.Tasks.Task<Script> PostScriptsAsync (Object body = null)
+        {
+             ApiResponse<Script> localVarResponse = await PostScriptsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a script. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (Script)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Script>> PostScriptsAsyncWithHttpInfo (Object body = null)
+        {
+            
+    
+            var localVarPath = "/api/v1/scripts";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostScripts: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostScripts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Script>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Script) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Script)));
             
         }
         

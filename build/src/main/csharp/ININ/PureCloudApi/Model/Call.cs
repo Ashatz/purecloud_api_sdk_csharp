@@ -90,6 +90,9 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "SYSTEM")]
             System,
             
+            [EnumMember(Value = "TIMEOUT")]
+            Timeout,
+            
             [EnumMember(Value = "TRANSFER")]
             Transfer,
             
@@ -152,8 +155,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DocumentId">DocumentId.</param>
         /// <param name="Self">Self.</param>
         /// <param name="Other">Other.</param>
+        /// <param name="ConnectedTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
 
-        public Call(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, Address Self = null, Address Other = null)
+        public Call(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, Address Self = null, Address Other = null, DateTime? ConnectedTime = null)
         {
             this.State = State;
             this.Id = Id;
@@ -203,6 +207,7 @@ namespace ININ.PureCloudApi.Model
             this.DocumentId = DocumentId;
             this.Self = Self;
             this.Other = Other;
+            this.ConnectedTime = ConnectedTime;
             
         }
         
@@ -281,6 +286,13 @@ namespace ININ.PureCloudApi.Model
         public Address Other { get; set; }
     
         /// <summary>
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="connectedTime", EmitDefaultValue=false)]
+        public DateTime? ConnectedTime { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -304,6 +316,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  DocumentId: ").Append(DocumentId).Append("\n");
             sb.Append("  Self: ").Append(Self).Append("\n");
             sb.Append("  Other: ").Append(Other).Append("\n");
+            sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -420,6 +433,11 @@ namespace ININ.PureCloudApi.Model
                     this.Other == other.Other ||
                     this.Other != null &&
                     this.Other.Equals(other.Other)
+                ) &&
+                (
+                    this.ConnectedTime == other.ConnectedTime ||
+                    this.ConnectedTime != null &&
+                    this.ConnectedTime.Equals(other.ConnectedTime)
                 );
         }
 
@@ -482,6 +500,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.Other != null)
                     hash = hash * 59 + this.Other.GetHashCode();
+                
+                if (this.ConnectedTime != null)
+                    hash = hash * 59 + this.ConnectedTime.GetHashCode();
                 
                 return hash;
             }

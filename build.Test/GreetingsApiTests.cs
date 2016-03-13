@@ -67,20 +67,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test Get
-        /// </summary>
-        [Test]
-        public void GetTest()
-        {
-            // TODO: add unit test for the method 'Get'
-            int? pageSize = null; // TODO: replace null with proper value
-            int? pageNumber = null; // TODO: replace null with proper value
-            
-            var response = instance.Get(pageSize, pageNumber);
-            Assert.IsInstanceOf<DomainEntityListing> (response, "response is DomainEntityListing"); 
-        }
-        
-        /// <summary>
         /// Test GetDefaults
         /// </summary>
         [Test]
@@ -120,6 +106,20 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetGreetings
+        /// </summary>
+        [Test]
+        public void GetGreetingsTest()
+        {
+            // TODO: add unit test for the method 'GetGreetings'
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            
+            var response = instance.GetGreetings(pageSize, pageNumber);
+            Assert.IsInstanceOf<DomainEntityListing> (response, "response is DomainEntityListing"); 
+        }
+        
+        /// <summary>
         /// Test GetUserIdGreetings
         /// </summary>
         [Test]
@@ -148,15 +148,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test Post
+        /// Test PostGreetings
         /// </summary>
         [Test]
-        public void PostTest()
+        public void PostGreetingsTest()
         {
-            // TODO: add unit test for the method 'Post'
+            // TODO: add unit test for the method 'PostGreetings'
             Greeting body = null; // TODO: replace null with proper value
             
-            var response = instance.Post(body);
+            var response = instance.PostGreetings(body);
             Assert.IsInstanceOf<DefaultGreetingList> (response, "response is DefaultGreetingList"); 
         }
         

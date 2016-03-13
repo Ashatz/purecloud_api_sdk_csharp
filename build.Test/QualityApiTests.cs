@@ -68,21 +68,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId
-        /// </summary>
-        [Test]
-        public void DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationIdTest()
-        {
-            // TODO: add unit test for the method 'DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId'
-            string conversationId = null; // TODO: replace null with proper value
-            string recordingId = null; // TODO: replace null with proper value
-            string annotationId = null; // TODO: replace null with proper value
-            
-            instance.DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId(conversationId, recordingId, annotationId);
-             
-        }
-        
-        /// <summary>
         /// Test DeleteConversationsConversationIdEvaluationsEvaluationId
         /// </summary>
         [Test]
@@ -151,68 +136,6 @@ namespace ININ.PureCloudApi.Test
             
             var response = instance.GetCalibrationsCalibrationId(calibrationId, calibratorId);
             Assert.IsInstanceOf<Calibration> (response, "response is Calibration"); 
-        }
-        
-        /// <summary>
-        /// Test GetConversationIdRecordings
-        /// </summary>
-        [Test]
-        public void GetConversationIdRecordingsTest()
-        {
-            // TODO: add unit test for the method 'GetConversationIdRecordings'
-            string conversationId = null; // TODO: replace null with proper value
-            int? maxWaitMs = null; // TODO: replace null with proper value
-            string formatId = null; // TODO: replace null with proper value
-            
-            var response = instance.GetConversationIdRecordings(conversationId, maxWaitMs, formatId);
-            Assert.IsInstanceOf<List<Recording>> (response, "response is List<Recording>"); 
-        }
-        
-        /// <summary>
-        /// Test GetConversationIdRecordingsRecordingId
-        /// </summary>
-        [Test]
-        public void GetConversationIdRecordingsRecordingIdTest()
-        {
-            // TODO: add unit test for the method 'GetConversationIdRecordingsRecordingId'
-            string conversationId = null; // TODO: replace null with proper value
-            string recordingId = null; // TODO: replace null with proper value
-            int? maxWaitMs = null; // TODO: replace null with proper value
-            string formatId = null; // TODO: replace null with proper value
-            bool? download = null; // TODO: replace null with proper value
-            string fileName = null; // TODO: replace null with proper value
-            
-            instance.GetConversationIdRecordingsRecordingId(conversationId, recordingId, maxWaitMs, formatId, download, fileName);
-             
-        }
-        
-        /// <summary>
-        /// Test GetConversationIdRecordingsRecordingIdAnnotations
-        /// </summary>
-        [Test]
-        public void GetConversationIdRecordingsRecordingIdAnnotationsTest()
-        {
-            // TODO: add unit test for the method 'GetConversationIdRecordingsRecordingIdAnnotations'
-            string conversationId = null; // TODO: replace null with proper value
-            string recordingId = null; // TODO: replace null with proper value
-            
-            var response = instance.GetConversationIdRecordingsRecordingIdAnnotations(conversationId, recordingId);
-            Assert.IsInstanceOf<List<Annotation>> (response, "response is List<Annotation>"); 
-        }
-        
-        /// <summary>
-        /// Test GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId
-        /// </summary>
-        [Test]
-        public void GetConversationIdRecordingsRecordingIdAnnotationsAnnotationIdTest()
-        {
-            // TODO: add unit test for the method 'GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId'
-            string conversationId = null; // TODO: replace null with proper value
-            string recordingId = null; // TODO: replace null with proper value
-            string annotationId = null; // TODO: replace null with proper value
-            
-            var response = instance.GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId(conversationId, recordingId, annotationId);
-            Assert.IsInstanceOf<Annotation> (response, "response is Annotation"); 
         }
         
         /// <summary>
@@ -312,21 +235,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PostConversationIdRecordingsRecordingIdAnnotations
-        /// </summary>
-        [Test]
-        public void PostConversationIdRecordingsRecordingIdAnnotationsTest()
-        {
-            // TODO: add unit test for the method 'PostConversationIdRecordingsRecordingIdAnnotations'
-            string conversationId = null; // TODO: replace null with proper value
-            string recordingId = null; // TODO: replace null with proper value
-            Annotation body = null; // TODO: replace null with proper value
-            
-            var response = instance.PostConversationIdRecordingsRecordingIdAnnotations(conversationId, recordingId, body);
-            Assert.IsInstanceOf<Annotation> (response, "response is Annotation"); 
-        }
-        
-        /// <summary>
         /// Test PostConversationsConversationIdEvaluations
         /// </summary>
         [Test]
@@ -380,38 +288,6 @@ namespace ININ.PureCloudApi.Test
             
             var response = instance.PutCalibrationsCalibrationId(calibrationId, body);
             Assert.IsInstanceOf<Calibration> (response, "response is Calibration"); 
-        }
-        
-        /// <summary>
-        /// Test PutConversationIdRecordingsRecordingId
-        /// </summary>
-        [Test]
-        public void PutConversationIdRecordingsRecordingIdTest()
-        {
-            // TODO: add unit test for the method 'PutConversationIdRecordingsRecordingId'
-            string conversationId = null; // TODO: replace null with proper value
-            string recordingId = null; // TODO: replace null with proper value
-            Recording body = null; // TODO: replace null with proper value
-            int? restoreDays = null; // TODO: replace null with proper value
-            
-            instance.PutConversationIdRecordingsRecordingId(conversationId, recordingId, body, restoreDays);
-             
-        }
-        
-        /// <summary>
-        /// Test PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId
-        /// </summary>
-        [Test]
-        public void PutConversationIdRecordingsRecordingIdAnnotationsAnnotationIdTest()
-        {
-            // TODO: add unit test for the method 'PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId'
-            string conversationId = null; // TODO: replace null with proper value
-            string recordingId = null; // TODO: replace null with proper value
-            string annotationId = null; // TODO: replace null with proper value
-            Annotation body = null; // TODO: replace null with proper value
-            
-            var response = instance.PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId(conversationId, recordingId, annotationId, body);
-            Assert.IsInstanceOf<Annotation> (response, "response is Annotation"); 
         }
         
         /// <summary>

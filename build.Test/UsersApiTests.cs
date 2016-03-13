@@ -54,27 +54,6 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test Get
-        /// </summary>
-        [Test]
-        public void GetTest()
-        {
-            // TODO: add unit test for the method 'Get'
-            int? pageSize = null; // TODO: replace null with proper value
-            int? pageNumber = null; // TODO: replace null with proper value
-            List<string> id = null; // TODO: replace null with proper value
-            string sortBy = null; // TODO: replace null with proper value
-            string role = null; // TODO: replace null with proper value
-            string name = null; // TODO: replace null with proper value
-            string username = null; // TODO: replace null with proper value
-            List<string> skill = null; // TODO: replace null with proper value
-            List<string> expand = null; // TODO: replace null with proper value
-            
-            var response = instance.Get(pageSize, pageNumber, id, sortBy, role, name, username, skill, expand);
-            Assert.IsInstanceOf<UsersEntityListing> (response, "response is UsersEntityListing"); 
-        }
-        
-        /// <summary>
         /// Test GetMe
         /// </summary>
         [Test]
@@ -209,6 +188,27 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetUsers
+        /// </summary>
+        [Test]
+        public void GetUsersTest()
+        {
+            // TODO: add unit test for the method 'GetUsers'
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            List<string> id = null; // TODO: replace null with proper value
+            string sortBy = null; // TODO: replace null with proper value
+            string role = null; // TODO: replace null with proper value
+            string name = null; // TODO: replace null with proper value
+            string username = null; // TODO: replace null with proper value
+            List<string> skill = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
+            
+            var response = instance.GetUsers(pageSize, pageNumber, id, sortBy, role, name, username, skill, expand);
+            Assert.IsInstanceOf<UsersEntityListing> (response, "response is UsersEntityListing"); 
+        }
+        
+        /// <summary>
         /// Test PatchUserIdCallforwarding
         /// </summary>
         [Test]
@@ -267,15 +267,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test Post
+        /// Test PostUsers
         /// </summary>
         [Test]
-        public void PostTest()
+        public void PostUsersTest()
         {
-            // TODO: add unit test for the method 'Post'
+            // TODO: add unit test for the method 'PostUsers'
             User body = null; // TODO: replace null with proper value
             
-            var response = instance.Post(body);
+            var response = instance.PostUsers(body);
             Assert.IsInstanceOf<User> (response, "response is User"); 
         }
         

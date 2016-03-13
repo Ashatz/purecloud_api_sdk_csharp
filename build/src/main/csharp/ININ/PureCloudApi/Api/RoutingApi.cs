@@ -316,6 +316,30 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<Queue> GetQueuesQueueIdWithHttpInfo (string queueId);
         
         /// <summary>
+        /// Get Estimated Wait Time
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">queueId</param>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>EstimatedWaitTimePredictions</returns>
+        EstimatedWaitTimePredictions GetQueuesQueueIdEstimatedwaittime (string queueId, string conversationId = null);
+  
+        /// <summary>
+        /// Get Estimated Wait Time
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">queueId</param>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>ApiResponse of EstimatedWaitTimePredictions</returns>
+        ApiResponse<EstimatedWaitTimePredictions> GetQueuesQueueIdEstimatedwaittimeWithHttpInfo (string queueId, string conversationId = null);
+        
+        /// <summary>
         /// Get members in a queue
         /// </summary>
         /// <remarks>
@@ -1116,6 +1140,30 @@ namespace ININ.PureCloudApi.Api
         /// <param name="queueId">Queue ID</param>
         /// <returns>Task of ApiResponse (Queue)</returns>
         System.Threading.Tasks.Task<ApiResponse<Queue>> GetQueuesQueueIdAsyncWithHttpInfo (string queueId);
+        
+        /// <summary>
+        /// Get Estimated Wait Time
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">queueId</param>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>Task of EstimatedWaitTimePredictions</returns>
+        System.Threading.Tasks.Task<EstimatedWaitTimePredictions> GetQueuesQueueIdEstimatedwaittimeAsync (string queueId, string conversationId = null);
+
+        /// <summary>
+        /// Get Estimated Wait Time
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">queueId</param>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>Task of ApiResponse (EstimatedWaitTimePredictions)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EstimatedWaitTimePredictions>> GetQueuesQueueIdEstimatedwaittimeAsyncWithHttpInfo (string queueId, string conversationId = null);
         
         /// <summary>
         /// Get members in a queue
@@ -3979,6 +4027,185 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Queue>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Queue) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Queue)));
+            
+        }
+        
+        /// <summary>
+        /// Get Estimated Wait Time 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">queueId</param> 
+        /// <param name="conversationId">conversationId</param> 
+        /// <returns>EstimatedWaitTimePredictions</returns>
+        public EstimatedWaitTimePredictions GetQueuesQueueIdEstimatedwaittime (string queueId, string conversationId = null)
+        {
+             ApiResponse<EstimatedWaitTimePredictions> localVarResponse = GetQueuesQueueIdEstimatedwaittimeWithHttpInfo(queueId, conversationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Estimated Wait Time 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">queueId</param> 
+        /// <param name="conversationId">conversationId</param> 
+        /// <returns>ApiResponse of EstimatedWaitTimePredictions</returns>
+        public ApiResponse< EstimatedWaitTimePredictions > GetQueuesQueueIdEstimatedwaittimeWithHttpInfo (string queueId, string conversationId = null)
+        {
+            
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueuesQueueIdEstimatedwaittime");
+            
+    
+            var localVarPath = "/api/v1/routing/queues/{queueId}/estimatedwaittime";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
+            
+            if (conversationId != null) localVarQueryParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // query parameter
+            
+            
+            
+            
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdEstimatedwaittime: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdEstimatedwaittime: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<EstimatedWaitTimePredictions>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EstimatedWaitTimePredictions) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EstimatedWaitTimePredictions)));
+            
+        }
+
+        
+        /// <summary>
+        /// Get Estimated Wait Time 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">queueId</param>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>Task of EstimatedWaitTimePredictions</returns>
+        public async System.Threading.Tasks.Task<EstimatedWaitTimePredictions> GetQueuesQueueIdEstimatedwaittimeAsync (string queueId, string conversationId = null)
+        {
+             ApiResponse<EstimatedWaitTimePredictions> localVarResponse = await GetQueuesQueueIdEstimatedwaittimeAsyncWithHttpInfo(queueId, conversationId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Estimated Wait Time 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="queueId">queueId</param>
+        /// <param name="conversationId">conversationId</param>
+        /// <returns>Task of ApiResponse (EstimatedWaitTimePredictions)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EstimatedWaitTimePredictions>> GetQueuesQueueIdEstimatedwaittimeAsyncWithHttpInfo (string queueId, string conversationId = null)
+        {
+            // verify the required parameter 'queueId' is set
+            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling GetQueuesQueueIdEstimatedwaittime");
+            
+    
+            var localVarPath = "/api/v1/routing/queues/{queueId}/estimatedwaittime";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
+            
+            if (conversationId != null) localVarQueryParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // query parameter
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdEstimatedwaittime: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdEstimatedwaittime: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EstimatedWaitTimePredictions>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (EstimatedWaitTimePredictions) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EstimatedWaitTimePredictions)));
             
         }
         

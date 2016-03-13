@@ -29,7 +29,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Description">Description.</param>
         /// <param name="TimeZone">TimeZone.</param>
         /// <param name="TimePeriod">TimePeriod.</param>
-        /// <param name="Interval">Interval.</param>
+        /// <param name="Interval">Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
         /// <param name="ReportFormat">ReportFormat.</param>
         /// <param name="Locale">Locale.</param>
         /// <param name="Enabled">Enabled (default to false).</param>
@@ -37,7 +37,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Parameters">Parameters.</param>
         /// <param name="LastRun">LastRun.</param>
 
-        public ReportSchedule(string Name = null, string QuartzCronExpression = null, DateTime? NextFireTime = null, DateTime? DateCreated = null, DateTime? DateModified = null, string Description = null, string TimeZone = null, string TimePeriod = null, CampaignScheduleIntervals Interval = null, string ReportFormat = null, string Locale = null, bool? Enabled = null, string ReportId = null, Dictionary<string, Object> Parameters = null, ReportRunEntry LastRun = null)
+        public ReportSchedule(string Name = null, string QuartzCronExpression = null, DateTime? NextFireTime = null, DateTime? DateCreated = null, DateTime? DateModified = null, string Description = null, string TimeZone = null, string TimePeriod = null, DateTime? Interval = null, string ReportFormat = null, string Locale = null, bool? Enabled = null, string ReportId = null, Dictionary<string, Object> Parameters = null, ReportRunEntry LastRun = null)
         {
             this.Name = Name;
             this.QuartzCronExpression = QuartzCronExpression;
@@ -125,10 +125,11 @@ namespace ININ.PureCloudApi.Model
         public string TimePeriod { get; set; }
     
         /// <summary>
-        /// Gets or Sets Interval
+        /// Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
         /// </summary>
+        /// <value>Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss</value>
         [DataMember(Name="interval", EmitDefaultValue=false)]
-        public CampaignScheduleIntervals Interval { get; set; }
+        public DateTime? Interval { get; set; }
     
         /// <summary>
         /// Gets or Sets ReportFormat

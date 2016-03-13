@@ -52,48 +52,57 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Address1' 
         /// </summary>
         [Test]
-        public void NameTest()
+        public void Address1Test()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Address1' 
         }
         
         /// <summary>
-        /// Test the property 'NameRaw' 
+        /// Test the property 'Address2' 
         /// </summary>
         [Test]
-        public void NameRawTest()
+        public void Address2Test()
         {
-            // TODO: unit test for the property 'NameRaw' 
+            // TODO: unit test for the property 'Address2' 
         }
         
         /// <summary>
-        /// Test the property 'AddressNormalized' 
+        /// Test the property 'City' 
         /// </summary>
         [Test]
-        public void AddressNormalizedTest()
+        public void CityTest()
         {
-            // TODO: unit test for the property 'AddressNormalized' 
+            // TODO: unit test for the property 'City' 
         }
         
         /// <summary>
-        /// Test the property 'AddressRaw' 
+        /// Test the property 'State' 
         /// </summary>
         [Test]
-        public void AddressRawTest()
+        public void StateTest()
         {
-            // TODO: unit test for the property 'AddressRaw' 
+            // TODO: unit test for the property 'State' 
         }
         
         /// <summary>
-        /// Test the property 'AddressDisplayable' 
+        /// Test the property 'PostalCode' 
         /// </summary>
         [Test]
-        public void AddressDisplayableTest()
+        public void PostalCodeTest()
         {
-            // TODO: unit test for the property 'AddressDisplayable' 
+            // TODO: unit test for the property 'PostalCode' 
+        }
+        
+        /// <summary>
+        /// Test the property 'CountryCode' 
+        /// </summary>
+        [Test]
+        public void CountryCodeTest()
+        {
+            // TODO: unit test for the property 'CountryCode' 
         }
         
 

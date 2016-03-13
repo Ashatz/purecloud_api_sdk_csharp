@@ -40,30 +40,6 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<Greeting> DeleteGreetingIdWithHttpInfo (string greetingId);
         
         /// <summary>
-        /// Gets an Organization&#39;s Greetings
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <returns>DomainEntityListing</returns>
-        DomainEntityListing Get (int? pageSize = null, int? pageNumber = null);
-  
-        /// <summary>
-        /// Gets an Organization&#39;s Greetings
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <returns>ApiResponse of DomainEntityListing</returns>
-        ApiResponse<DomainEntityListing> GetWithHttpInfo (int? pageSize = null, int? pageNumber = null);
-        
-        /// <summary>
         /// Get an Organization&#39;s DefaultGreetingList
         /// </summary>
         /// <remarks>
@@ -130,6 +106,30 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<GreetingMediaInfo> GetGreetingIdMediaWithHttpInfo (string greetingId, string formatId = null);
         
         /// <summary>
+        /// Gets an Organization&#39;s Greetings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <returns>DomainEntityListing</returns>
+        DomainEntityListing GetGreetings (int? pageSize = null, int? pageNumber = null);
+  
+        /// <summary>
+        /// Gets an Organization&#39;s Greetings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <returns>ApiResponse of DomainEntityListing</returns>
+        ApiResponse<DomainEntityListing> GetGreetingsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        
+        /// <summary>
         /// Get a list of the User&#39;s Greetings
         /// </summary>
         /// <remarks>
@@ -186,7 +186,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Greeting to create</param>
         /// <returns>DefaultGreetingList</returns>
-        DefaultGreetingList Post (Greeting body);
+        DefaultGreetingList PostGreetings (Greeting body);
   
         /// <summary>
         /// Create a Greeting for an Organization
@@ -197,7 +197,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Greeting to create</param>
         /// <returns>ApiResponse of DefaultGreetingList</returns>
-        ApiResponse<DefaultGreetingList> PostWithHttpInfo (Greeting body);
+        ApiResponse<DefaultGreetingList> PostGreetingsWithHttpInfo (Greeting body);
         
         /// <summary>
         /// Creates a Greeting for a User
@@ -320,30 +320,6 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<Greeting>> DeleteGreetingIdAsyncWithHttpInfo (string greetingId);
         
         /// <summary>
-        /// Gets an Organization&#39;s Greetings
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <returns>Task of DomainEntityListing</returns>
-        System.Threading.Tasks.Task<DomainEntityListing> GetAsync (int? pageSize = null, int? pageNumber = null);
-
-        /// <summary>
-        /// Gets an Organization&#39;s Greetings
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <returns>Task of ApiResponse (DomainEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainEntityListing>> GetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
-        
-        /// <summary>
         /// Get an Organization&#39;s DefaultGreetingList
         /// </summary>
         /// <remarks>
@@ -410,6 +386,30 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<GreetingMediaInfo>> GetGreetingIdMediaAsyncWithHttpInfo (string greetingId, string formatId = null);
         
         /// <summary>
+        /// Gets an Organization&#39;s Greetings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <returns>Task of DomainEntityListing</returns>
+        System.Threading.Tasks.Task<DomainEntityListing> GetGreetingsAsync (int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Gets an Organization&#39;s Greetings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <returns>Task of ApiResponse (DomainEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DomainEntityListing>> GetGreetingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        
+        /// <summary>
         /// Get a list of the User&#39;s Greetings
         /// </summary>
         /// <remarks>
@@ -466,7 +466,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of DefaultGreetingList</returns>
-        System.Threading.Tasks.Task<DefaultGreetingList> PostAsync (Greeting body);
+        System.Threading.Tasks.Task<DefaultGreetingList> PostGreetingsAsync (Greeting body);
 
         /// <summary>
         /// Create a Greeting for an Organization
@@ -477,7 +477,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PostAsyncWithHttpInfo (Greeting body);
+        System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PostGreetingsAsyncWithHttpInfo (Greeting body);
         
         /// <summary>
         /// Creates a Greeting for a User
@@ -823,179 +823,6 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Greeting>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Greeting) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Greeting)));
-            
-        }
-        
-        /// <summary>
-        /// Gets an Organization&#39;s Greetings 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <returns>DomainEntityListing</returns>
-        public DomainEntityListing Get (int? pageSize = null, int? pageNumber = null)
-        {
-             ApiResponse<DomainEntityListing> localVarResponse = GetWithHttpInfo(pageSize, pageNumber);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Gets an Organization&#39;s Greetings 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <returns>ApiResponse of DomainEntityListing</returns>
-        public ApiResponse< DomainEntityListing > GetWithHttpInfo (int? pageSize = null, int? pageNumber = null)
-        {
-            
-    
-            var localVarPath = "/api/v1/greetings";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            
-            
-            
-
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Get: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Get: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<DomainEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DomainEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainEntityListing)));
-            
-        }
-
-        
-        /// <summary>
-        /// Gets an Organization&#39;s Greetings 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <returns>Task of DomainEntityListing</returns>
-        public async System.Threading.Tasks.Task<DomainEntityListing> GetAsync (int? pageSize = null, int? pageNumber = null)
-        {
-             ApiResponse<DomainEntityListing> localVarResponse = await GetAsyncWithHttpInfo(pageSize, pageNumber);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Gets an Organization&#39;s Greetings 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <returns>Task of ApiResponse (DomainEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainEntityListing>> GetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
-        {
-            
-    
-            var localVarPath = "/api/v1/greetings";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            
-            
-            
-
-            
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Get: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Get: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<DomainEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DomainEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainEntityListing)));
             
         }
         
@@ -1513,6 +1340,179 @@ namespace ININ.PureCloudApi.Api
         }
         
         /// <summary>
+        /// Gets an Organization&#39;s Greetings 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size</param> 
+        /// <param name="pageNumber">Page number</param> 
+        /// <returns>DomainEntityListing</returns>
+        public DomainEntityListing GetGreetings (int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<DomainEntityListing> localVarResponse = GetGreetingsWithHttpInfo(pageSize, pageNumber);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets an Organization&#39;s Greetings 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size</param> 
+        /// <param name="pageNumber">Page number</param> 
+        /// <returns>ApiResponse of DomainEntityListing</returns>
+        public ApiResponse< DomainEntityListing > GetGreetingsWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        {
+            
+    
+            var localVarPath = "/api/v1/greetings";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
+            
+            
+            
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGreetings: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGreetings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<DomainEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DomainEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainEntityListing)));
+            
+        }
+
+        
+        /// <summary>
+        /// Gets an Organization&#39;s Greetings 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <returns>Task of DomainEntityListing</returns>
+        public async System.Threading.Tasks.Task<DomainEntityListing> GetGreetingsAsync (int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<DomainEntityListing> localVarResponse = await GetGreetingsAsyncWithHttpInfo(pageSize, pageNumber);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets an Organization&#39;s Greetings 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <returns>Task of ApiResponse (DomainEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DomainEntityListing>> GetGreetingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        {
+            
+    
+            var localVarPath = "/api/v1/greetings";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGreetings: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGreetings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DomainEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DomainEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainEntityListing)));
+            
+        }
+        
+        /// <summary>
         /// Get a list of the User&#39;s Greetings 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1876,9 +1876,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Greeting to create</param> 
         /// <returns>DefaultGreetingList</returns>
-        public DefaultGreetingList Post (Greeting body)
+        public DefaultGreetingList PostGreetings (Greeting body)
         {
-             ApiResponse<DefaultGreetingList> localVarResponse = PostWithHttpInfo(body);
+             ApiResponse<DefaultGreetingList> localVarResponse = PostGreetingsWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -1888,12 +1888,12 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Greeting to create</param> 
         /// <returns>ApiResponse of DefaultGreetingList</returns>
-        public ApiResponse< DefaultGreetingList > PostWithHttpInfo (Greeting body)
+        public ApiResponse< DefaultGreetingList > PostGreetingsWithHttpInfo (Greeting body)
         {
             
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->Post");
+                throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PostGreetings");
             
     
             var localVarPath = "/api/v1/greetings";
@@ -1952,9 +1952,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Post: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PostGreetings: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Post: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PostGreetings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<DefaultGreetingList>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1969,9 +1969,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of DefaultGreetingList</returns>
-        public async System.Threading.Tasks.Task<DefaultGreetingList> PostAsync (Greeting body)
+        public async System.Threading.Tasks.Task<DefaultGreetingList> PostGreetingsAsync (Greeting body)
         {
-             ApiResponse<DefaultGreetingList> localVarResponse = await PostAsyncWithHttpInfo(body);
+             ApiResponse<DefaultGreetingList> localVarResponse = await PostGreetingsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -1982,10 +1982,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PostAsyncWithHttpInfo (Greeting body)
+        public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PostGreetingsAsyncWithHttpInfo (Greeting body)
         {
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling Post");
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PostGreetings");
             
     
             var localVarPath = "/api/v1/greetings";
@@ -2045,9 +2045,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Post: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PostGreetings: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Post: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PostGreetings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<DefaultGreetingList>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

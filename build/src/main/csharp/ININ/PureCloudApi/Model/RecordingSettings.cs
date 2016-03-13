@@ -12,38 +12,29 @@ using Newtonsoft.Json.Converters;
 namespace ININ.PureCloudApi.Model
 {
     /// <summary>
-    /// Used as the body to the activateFlow request.
+    /// 
     /// </summary>
     [DataContract]
-    public partial class FlowActivateRequest :  IEquatable<FlowActivateRequest>
+    public partial class RecordingSettings :  IEquatable<RecordingSettings>
     { 
         
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowActivateRequest" />class.
+        /// Initializes a new instance of the <see cref="RecordingSettings" />class.
         /// </summary>
-        /// <param name="Activated">Change the activated state of the flow definition.  True to activate the flow definition so it can be launched, false to disable the flow. (required) (default to false).</param>
+        /// <param name="MaxSimultaneousStreams">MaxSimultaneousStreams.</param>
 
-        public FlowActivateRequest(bool? Activated = null)
+        public RecordingSettings(int? MaxSimultaneousStreams = null)
         {
-            // to ensure "Activated" is required (not null)
-            if (Activated == null)
-            {
-                throw new InvalidDataException("Activated is a required property for FlowActivateRequest and cannot be null");
-            }
-            else
-            {
-                this.Activated = Activated;
-            }
+            this.MaxSimultaneousStreams = MaxSimultaneousStreams;
             
         }
         
     
         /// <summary>
-        /// Change the activated state of the flow definition.  True to activate the flow definition so it can be launched, false to disable the flow.
+        /// Gets or Sets MaxSimultaneousStreams
         /// </summary>
-        /// <value>Change the activated state of the flow definition.  True to activate the flow definition so it can be launched, false to disable the flow.</value>
-        [DataMember(Name="activated", EmitDefaultValue=false)]
-        public bool? Activated { get; set; }
+        [DataMember(Name="maxSimultaneousStreams", EmitDefaultValue=false)]
+        public int? MaxSimultaneousStreams { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,8 +43,8 @@ namespace ININ.PureCloudApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class FlowActivateRequest {\n");
-            sb.Append("  Activated: ").Append(Activated).Append("\n");
+            sb.Append("class RecordingSettings {\n");
+            sb.Append("  MaxSimultaneousStreams: ").Append(MaxSimultaneousStreams).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -76,15 +67,15 @@ namespace ININ.PureCloudApi.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as FlowActivateRequest);
+            return this.Equals(obj as RecordingSettings);
         }
 
         /// <summary>
-        /// Returns true if FlowActivateRequest instances are equal
+        /// Returns true if RecordingSettings instances are equal
         /// </summary>
-        /// <param name="other">Instance of FlowActivateRequest to be compared</param>
+        /// <param name="other">Instance of RecordingSettings to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(FlowActivateRequest other)
+        public bool Equals(RecordingSettings other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -92,9 +83,9 @@ namespace ININ.PureCloudApi.Model
 
             return true &&
                 (
-                    this.Activated == other.Activated ||
-                    this.Activated != null &&
-                    this.Activated.Equals(other.Activated)
+                    this.MaxSimultaneousStreams == other.MaxSimultaneousStreams ||
+                    this.MaxSimultaneousStreams != null &&
+                    this.MaxSimultaneousStreams.Equals(other.MaxSimultaneousStreams)
                 );
         }
 
@@ -110,8 +101,8 @@ namespace ININ.PureCloudApi.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Activated != null)
-                    hash = hash * 59 + this.Activated.GetHashCode();
+                if (this.MaxSimultaneousStreams != null)
+                    hash = hash * 59 + this.MaxSimultaneousStreams.GetHashCode();
                 
                 return hash;
             }

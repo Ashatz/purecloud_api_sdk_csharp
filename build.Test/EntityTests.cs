@@ -52,30 +52,12 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test the property 'Kind' 
-        /// </summary>
-        [Test]
-        public void KindTest()
-        {
-            // TODO: unit test for the property 'Kind' 
-        }
-        
-        /// <summary>
         /// Test the property 'Id' 
         /// </summary>
         [Test]
         public void IdTest()
         {
             // TODO: unit test for the property 'Id' 
-        }
-        
-        /// <summary>
-        /// Test the property 'Name' 
-        /// </summary>
-        [Test]
-        public void NameTest()
-        {
-            // TODO: unit test for the property 'Name' 
         }
         
 

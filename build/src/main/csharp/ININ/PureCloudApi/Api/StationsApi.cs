@@ -40,34 +40,6 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<string> DeleteIdAssociateduserWithHttpInfo (string id);
         
         /// <summary>
-        /// Get the list of available stations.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortBy">Sort by</param>
-        /// <param name="name">Name</param>
-        /// <returns>StationEntityListing</returns>
-        StationEntityListing Get (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
-  
-        /// <summary>
-        /// Get the list of available stations.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortBy">Sort by</param>
-        /// <param name="name">Name</param>
-        /// <returns>ApiResponse of StationEntityListing</returns>
-        ApiResponse<StationEntityListing> GetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
-        
-        /// <summary>
         /// Get station.
         /// </summary>
         /// <remarks>
@@ -88,6 +60,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">Station ID</param>
         /// <returns>ApiResponse of Station</returns>
         ApiResponse<Station> GetIdWithHttpInfo (string id);
+        
+        /// <summary>
+        /// Get the list of available stations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="sortBy">Sort by</param>
+        /// <param name="name">Name</param>
+        /// <returns>StationEntityListing</returns>
+        StationEntityListing GetStations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
+  
+        /// <summary>
+        /// Get the list of available stations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="sortBy">Sort by</param>
+        /// <param name="name">Name</param>
+        /// <returns>ApiResponse of StationEntityListing</returns>
+        ApiResponse<StationEntityListing> GetStationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
         
         #endregion Synchronous Operations
         
@@ -116,34 +116,6 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<string>> DeleteIdAssociateduserAsyncWithHttpInfo (string id);
         
         /// <summary>
-        /// Get the list of available stations.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortBy">Sort by</param>
-        /// <param name="name">Name</param>
-        /// <returns>Task of StationEntityListing</returns>
-        System.Threading.Tasks.Task<StationEntityListing> GetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
-
-        /// <summary>
-        /// Get the list of available stations.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortBy">Sort by</param>
-        /// <param name="name">Name</param>
-        /// <returns>Task of ApiResponse (StationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StationEntityListing>> GetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
-        
-        /// <summary>
         /// Get station.
         /// </summary>
         /// <remarks>
@@ -164,6 +136,34 @@ namespace ININ.PureCloudApi.Api
         /// <param name="id">Station ID</param>
         /// <returns>Task of ApiResponse (Station)</returns>
         System.Threading.Tasks.Task<ApiResponse<Station>> GetIdAsyncWithHttpInfo (string id);
+        
+        /// <summary>
+        /// Get the list of available stations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="sortBy">Sort by</param>
+        /// <param name="name">Name</param>
+        /// <returns>Task of StationEntityListing</returns>
+        System.Threading.Tasks.Task<StationEntityListing> GetStationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
+
+        /// <summary>
+        /// Get the list of available stations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="sortBy">Sort by</param>
+        /// <param name="name">Name</param>
+        /// <returns>Task of ApiResponse (StationEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<StationEntityListing>> GetStationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
         
         #endregion Asynchronous Operations
         
@@ -419,191 +419,6 @@ namespace ININ.PureCloudApi.Api
         }
         
         /// <summary>
-        /// Get the list of available stations. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="sortBy">Sort by</param> 
-        /// <param name="name">Name</param> 
-        /// <returns>StationEntityListing</returns>
-        public StationEntityListing Get (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
-        {
-             ApiResponse<StationEntityListing> localVarResponse = GetWithHttpInfo(pageSize, pageNumber, sortBy, name);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get the list of available stations. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="sortBy">Sort by</param> 
-        /// <param name="name">Name</param> 
-        /// <returns>ApiResponse of StationEntityListing</returns>
-        public ApiResponse< StationEntityListing > GetWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
-        {
-            
-    
-            var localVarPath = "/api/v1/stations";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
-            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
-            
-            
-            
-            
-
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Get: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Get: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<StationEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (StationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StationEntityListing)));
-            
-        }
-
-        
-        /// <summary>
-        /// Get the list of available stations. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortBy">Sort by</param>
-        /// <param name="name">Name</param>
-        /// <returns>Task of StationEntityListing</returns>
-        public async System.Threading.Tasks.Task<StationEntityListing> GetAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
-        {
-             ApiResponse<StationEntityListing> localVarResponse = await GetAsyncWithHttpInfo(pageSize, pageNumber, sortBy, name);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get the list of available stations. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="sortBy">Sort by</param>
-        /// <param name="name">Name</param>
-        /// <returns>Task of ApiResponse (StationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StationEntityListing>> GetAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
-        {
-            
-    
-            var localVarPath = "/api/v1/stations";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
-            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
-            
-            
-            
-            
-
-            
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Get: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Get: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<StationEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (StationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StationEntityListing)));
-            
-        }
-        
-        /// <summary>
         /// Get station. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -773,6 +588,191 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Station>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Station) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Station)));
+            
+        }
+        
+        /// <summary>
+        /// Get the list of available stations. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size</param> 
+        /// <param name="pageNumber">Page number</param> 
+        /// <param name="sortBy">Sort by</param> 
+        /// <param name="name">Name</param> 
+        /// <returns>StationEntityListing</returns>
+        public StationEntityListing GetStations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
+        {
+             ApiResponse<StationEntityListing> localVarResponse = GetStationsWithHttpInfo(pageSize, pageNumber, sortBy, name);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the list of available stations. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size</param> 
+        /// <param name="pageNumber">Page number</param> 
+        /// <param name="sortBy">Sort by</param> 
+        /// <param name="name">Name</param> 
+        /// <returns>ApiResponse of StationEntityListing</returns>
+        public ApiResponse< StationEntityListing > GetStationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
+        {
+            
+    
+            var localVarPath = "/api/v1/stations";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            
+            
+            
+            
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetStations: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetStations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<StationEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (StationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StationEntityListing)));
+            
+        }
+
+        
+        /// <summary>
+        /// Get the list of available stations. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="sortBy">Sort by</param>
+        /// <param name="name">Name</param>
+        /// <returns>Task of StationEntityListing</returns>
+        public async System.Threading.Tasks.Task<StationEntityListing> GetStationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
+        {
+             ApiResponse<StationEntityListing> localVarResponse = await GetStationsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, name);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the list of available stations. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="sortBy">Sort by</param>
+        /// <param name="name">Name</param>
+        /// <returns>Task of ApiResponse (StationEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<StationEntityListing>> GetStationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
+        {
+            
+    
+            var localVarPath = "/api/v1/stations";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetStations: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetStations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<StationEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (StationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(StationEntityListing)));
             
         }
         

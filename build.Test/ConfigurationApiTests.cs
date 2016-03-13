@@ -146,32 +146,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test DeleteMediaretentionpolicies
-        /// </summary>
-        [Test]
-        public void DeleteMediaretentionpoliciesTest()
-        {
-            // TODO: add unit test for the method 'DeleteMediaretentionpolicies'
-            string ids = null; // TODO: replace null with proper value
-            
-            var response = instance.DeleteMediaretentionpolicies(ids);
-            Assert.IsInstanceOf<string> (response, "response is string"); 
-        }
-        
-        /// <summary>
-        /// Test DeleteMediaretentionpoliciesPolicyId
-        /// </summary>
-        [Test]
-        public void DeleteMediaretentionpoliciesPolicyIdTest()
-        {
-            // TODO: add unit test for the method 'DeleteMediaretentionpoliciesPolicyId'
-            string policyId = null; // TODO: replace null with proper value
-            
-            var response = instance.DeleteMediaretentionpoliciesPolicyId(policyId);
-            Assert.IsInstanceOf<string> (response, "response is string"); 
-        }
-        
-        /// <summary>
         /// Test DeleteOrganizationsOrgId
         /// </summary>
         [Test]
@@ -561,39 +535,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetMediaretentionpolicies
-        /// </summary>
-        [Test]
-        public void GetMediaretentionpoliciesTest()
-        {
-            // TODO: add unit test for the method 'GetMediaretentionpolicies'
-            int? pageSize = null; // TODO: replace null with proper value
-            int? pageNumber = null; // TODO: replace null with proper value
-            string sortBy = null; // TODO: replace null with proper value
-            List<string> expand = null; // TODO: replace null with proper value
-            string name = null; // TODO: replace null with proper value
-            bool? enabled = null; // TODO: replace null with proper value
-            bool? summary = null; // TODO: replace null with proper value
-            bool? hasErrors = null; // TODO: replace null with proper value
-            
-            var response = instance.GetMediaretentionpolicies(pageSize, pageNumber, sortBy, expand, name, enabled, summary, hasErrors);
-            Assert.IsInstanceOf<PolicyEntityListing> (response, "response is PolicyEntityListing"); 
-        }
-        
-        /// <summary>
-        /// Test GetMediaretentionpoliciesPolicyId
-        /// </summary>
-        [Test]
-        public void GetMediaretentionpoliciesPolicyIdTest()
-        {
-            // TODO: add unit test for the method 'GetMediaretentionpoliciesPolicyId'
-            string policyId = null; // TODO: replace null with proper value
-            
-            var response = instance.GetMediaretentionpoliciesPolicyId(policyId);
-            Assert.IsInstanceOf<Policy> (response, "response is Policy"); 
-        }
-        
-        /// <summary>
         /// Test GetOrganization
         /// </summary>
         [Test]
@@ -828,20 +769,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PatchMediaretentionpoliciesPolicyId
-        /// </summary>
-        [Test]
-        public void PatchMediaretentionpoliciesPolicyIdTest()
-        {
-            // TODO: add unit test for the method 'PatchMediaretentionpoliciesPolicyId'
-            string policyId = null; // TODO: replace null with proper value
-            Policy body = null; // TODO: replace null with proper value
-            
-            var response = instance.PatchMediaretentionpoliciesPolicyId(policyId, body);
-            Assert.IsInstanceOf<Policy> (response, "response is Policy"); 
-        }
-        
-        /// <summary>
         /// Test PatchRetentionpoliciesPolicyId
         /// </summary>
         [Test]
@@ -1001,19 +928,6 @@ namespace ININ.PureCloudApi.Test
             
             var response = instance.PostExtensionpools(body);
             Assert.IsInstanceOf<Extension> (response, "response is Extension"); 
-        }
-        
-        /// <summary>
-        /// Test PostMediaretentionpolicies
-        /// </summary>
-        [Test]
-        public void PostMediaretentionpoliciesTest()
-        {
-            // TODO: add unit test for the method 'PostMediaretentionpolicies'
-            Policy body = null; // TODO: replace null with proper value
-            
-            var response = instance.PostMediaretentionpolicies(body);
-            Assert.IsInstanceOf<Policy> (response, "response is Policy"); 
         }
         
         /// <summary>
@@ -1206,20 +1120,6 @@ namespace ININ.PureCloudApi.Test
             
             var response = instance.PutExtensionsExtensionId(extensionId, body);
             Assert.IsInstanceOf<Extension> (response, "response is Extension"); 
-        }
-        
-        /// <summary>
-        /// Test PutMediaretentionpoliciesPolicyId
-        /// </summary>
-        [Test]
-        public void PutMediaretentionpoliciesPolicyIdTest()
-        {
-            // TODO: add unit test for the method 'PutMediaretentionpoliciesPolicyId'
-            string policyId = null; // TODO: replace null with proper value
-            Policy body = null; // TODO: replace null with proper value
-            
-            var response = instance.PutMediaretentionpoliciesPolicyId(policyId, body);
-            Assert.IsInstanceOf<Policy> (response, "response is Policy"); 
         }
         
         /// <summary>

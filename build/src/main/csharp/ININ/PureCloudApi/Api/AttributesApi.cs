@@ -40,30 +40,6 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<Object> DeleteAttributeIdWithHttpInfo (string attributeId);
         
         /// <summary>
-        /// Gets a list of existing attributes.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="pageSize">Page size</param>
-        /// <returns>AttributeEntityListing</returns>
-        AttributeEntityListing Get (int? pageNumber = null, int? pageSize = null);
-  
-        /// <summary>
-        /// Gets a list of existing attributes.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="pageSize">Page size</param>
-        /// <returns>ApiResponse of AttributeEntityListing</returns>
-        ApiResponse<AttributeEntityListing> GetWithHttpInfo (int? pageNumber = null, int? pageSize = null);
-        
-        /// <summary>
         /// Get details about an existing attribute.
         /// </summary>
         /// <remarks>
@@ -86,6 +62,30 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<ININ.PureCloudApi.Model.Attribute> GetAttributeIdWithHttpInfo (string attributeId);
         
         /// <summary>
+        /// Gets a list of existing attributes.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="pageSize">Page size</param>
+        /// <returns>AttributeEntityListing</returns>
+        AttributeEntityListing GetAttributes (int? pageNumber = null, int? pageSize = null);
+  
+        /// <summary>
+        /// Gets a list of existing attributes.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="pageSize">Page size</param>
+        /// <returns>ApiResponse of AttributeEntityListing</returns>
+        ApiResponse<AttributeEntityListing> GetAttributesWithHttpInfo (int? pageNumber = null, int? pageSize = null);
+        
+        /// <summary>
         /// Create an attribute.
         /// </summary>
         /// <remarks>
@@ -94,7 +94,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Attribute</param>
         /// <returns>ININ.PureCloudApi.Model.Attribute</returns>
-        ININ.PureCloudApi.Model.Attribute Post (ININ.PureCloudApi.Model.Attribute body = null);
+        ININ.PureCloudApi.Model.Attribute PostAttributes (ININ.PureCloudApi.Model.Attribute body = null);
   
         /// <summary>
         /// Create an attribute.
@@ -105,7 +105,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Attribute</param>
         /// <returns>ApiResponse of ININ.PureCloudApi.Model.Attribute</returns>
-        ApiResponse<ININ.PureCloudApi.Model.Attribute> PostWithHttpInfo (ININ.PureCloudApi.Model.Attribute body = null);
+        ApiResponse<ININ.PureCloudApi.Model.Attribute> PostAttributesWithHttpInfo (ININ.PureCloudApi.Model.Attribute body = null);
         
         /// <summary>
         /// Query attributes
@@ -180,30 +180,6 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAttributeIdAsyncWithHttpInfo (string attributeId);
         
         /// <summary>
-        /// Gets a list of existing attributes.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="pageSize">Page size</param>
-        /// <returns>Task of AttributeEntityListing</returns>
-        System.Threading.Tasks.Task<AttributeEntityListing> GetAsync (int? pageNumber = null, int? pageSize = null);
-
-        /// <summary>
-        /// Gets a list of existing attributes.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="pageSize">Page size</param>
-        /// <returns>Task of ApiResponse (AttributeEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AttributeEntityListing>> GetAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null);
-        
-        /// <summary>
         /// Get details about an existing attribute.
         /// </summary>
         /// <remarks>
@@ -226,6 +202,30 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<ININ.PureCloudApi.Model.Attribute>> GetAttributeIdAsyncWithHttpInfo (string attributeId);
         
         /// <summary>
+        /// Gets a list of existing attributes.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="pageSize">Page size</param>
+        /// <returns>Task of AttributeEntityListing</returns>
+        System.Threading.Tasks.Task<AttributeEntityListing> GetAttributesAsync (int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
+        /// Gets a list of existing attributes.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="pageSize">Page size</param>
+        /// <returns>Task of ApiResponse (AttributeEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AttributeEntityListing>> GetAttributesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null);
+        
+        /// <summary>
         /// Create an attribute.
         /// </summary>
         /// <remarks>
@@ -234,7 +234,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Attribute</param>
         /// <returns>Task of ININ.PureCloudApi.Model.Attribute</returns>
-        System.Threading.Tasks.Task<ININ.PureCloudApi.Model.Attribute> PostAsync (ININ.PureCloudApi.Model.Attribute body = null);
+        System.Threading.Tasks.Task<ININ.PureCloudApi.Model.Attribute> PostAttributesAsync (ININ.PureCloudApi.Model.Attribute body = null);
 
         /// <summary>
         /// Create an attribute.
@@ -245,7 +245,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Attribute</param>
         /// <returns>Task of ApiResponse (ININ.PureCloudApi.Model.Attribute)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ININ.PureCloudApi.Model.Attribute>> PostAsyncWithHttpInfo (ININ.PureCloudApi.Model.Attribute body = null);
+        System.Threading.Tasks.Task<ApiResponse<ININ.PureCloudApi.Model.Attribute>> PostAttributesAsyncWithHttpInfo (ININ.PureCloudApi.Model.Attribute body = null);
         
         /// <summary>
         /// Query attributes
@@ -545,179 +545,6 @@ namespace ININ.PureCloudApi.Api
         }
         
         /// <summary>
-        /// Gets a list of existing attributes. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="pageSize">Page size</param> 
-        /// <returns>AttributeEntityListing</returns>
-        public AttributeEntityListing Get (int? pageNumber = null, int? pageSize = null)
-        {
-             ApiResponse<AttributeEntityListing> localVarResponse = GetWithHttpInfo(pageNumber, pageSize);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Gets a list of existing attributes. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="pageSize">Page size</param> 
-        /// <returns>ApiResponse of AttributeEntityListing</returns>
-        public ApiResponse< AttributeEntityListing > GetWithHttpInfo (int? pageNumber = null, int? pageSize = null)
-        {
-            
-    
-            var localVarPath = "/api/v1/attributes";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            
-            
-            
-
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Get: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Get: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<AttributeEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AttributeEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AttributeEntityListing)));
-            
-        }
-
-        
-        /// <summary>
-        /// Gets a list of existing attributes. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="pageSize">Page size</param>
-        /// <returns>Task of AttributeEntityListing</returns>
-        public async System.Threading.Tasks.Task<AttributeEntityListing> GetAsync (int? pageNumber = null, int? pageSize = null)
-        {
-             ApiResponse<AttributeEntityListing> localVarResponse = await GetAsyncWithHttpInfo(pageNumber, pageSize);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Gets a list of existing attributes. 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="pageSize">Page size</param>
-        /// <returns>Task of ApiResponse (AttributeEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AttributeEntityListing>> GetAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null)
-        {
-            
-    
-            var localVarPath = "/api/v1/attributes";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            
-            
-            
-
-            
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Get: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Get: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<AttributeEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AttributeEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AttributeEntityListing)));
-            
-        }
-        
-        /// <summary>
         /// Get details about an existing attribute. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -891,14 +718,187 @@ namespace ININ.PureCloudApi.Api
         }
         
         /// <summary>
+        /// Gets a list of existing attributes. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number</param> 
+        /// <param name="pageSize">Page size</param> 
+        /// <returns>AttributeEntityListing</returns>
+        public AttributeEntityListing GetAttributes (int? pageNumber = null, int? pageSize = null)
+        {
+             ApiResponse<AttributeEntityListing> localVarResponse = GetAttributesWithHttpInfo(pageNumber, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets a list of existing attributes. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number</param> 
+        /// <param name="pageSize">Page size</param> 
+        /// <returns>ApiResponse of AttributeEntityListing</returns>
+        public ApiResponse< AttributeEntityListing > GetAttributesWithHttpInfo (int? pageNumber = null, int? pageSize = null)
+        {
+            
+    
+            var localVarPath = "/api/v1/attributes";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
+            
+            
+            
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAttributes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<AttributeEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AttributeEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AttributeEntityListing)));
+            
+        }
+
+        
+        /// <summary>
+        /// Gets a list of existing attributes. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="pageSize">Page size</param>
+        /// <returns>Task of AttributeEntityListing</returns>
+        public async System.Threading.Tasks.Task<AttributeEntityListing> GetAttributesAsync (int? pageNumber = null, int? pageSize = null)
+        {
+             ApiResponse<AttributeEntityListing> localVarResponse = await GetAttributesAsyncWithHttpInfo(pageNumber, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets a list of existing attributes. 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="pageSize">Page size</param>
+        /// <returns>Task of ApiResponse (AttributeEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AttributeEntityListing>> GetAttributesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null)
+        {
+            
+    
+            var localVarPath = "/api/v1/attributes";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAttributes: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AttributeEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AttributeEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(AttributeEntityListing)));
+            
+        }
+        
+        /// <summary>
         /// Create an attribute. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Attribute</param> 
         /// <returns>ININ.PureCloudApi.Model.Attribute</returns>
-        public ININ.PureCloudApi.Model.Attribute Post (ININ.PureCloudApi.Model.Attribute body = null)
+        public ININ.PureCloudApi.Model.Attribute PostAttributes (ININ.PureCloudApi.Model.Attribute body = null)
         {
-             ApiResponse<ININ.PureCloudApi.Model.Attribute> localVarResponse = PostWithHttpInfo(body);
+             ApiResponse<ININ.PureCloudApi.Model.Attribute> localVarResponse = PostAttributesWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -908,7 +908,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Attribute</param> 
         /// <returns>ApiResponse of ININ.PureCloudApi.Model.Attribute</returns>
-        public ApiResponse< ININ.PureCloudApi.Model.Attribute > PostWithHttpInfo (ININ.PureCloudApi.Model.Attribute body = null)
+        public ApiResponse< ININ.PureCloudApi.Model.Attribute > PostAttributesWithHttpInfo (ININ.PureCloudApi.Model.Attribute body = null)
         {
             
     
@@ -968,9 +968,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Post: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PostAttributes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Post: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PostAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<ININ.PureCloudApi.Model.Attribute>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -985,9 +985,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Attribute</param>
         /// <returns>Task of ININ.PureCloudApi.Model.Attribute</returns>
-        public async System.Threading.Tasks.Task<ININ.PureCloudApi.Model.Attribute> PostAsync (ININ.PureCloudApi.Model.Attribute body = null)
+        public async System.Threading.Tasks.Task<ININ.PureCloudApi.Model.Attribute> PostAttributesAsync (ININ.PureCloudApi.Model.Attribute body = null)
         {
-             ApiResponse<ININ.PureCloudApi.Model.Attribute> localVarResponse = await PostAsyncWithHttpInfo(body);
+             ApiResponse<ININ.PureCloudApi.Model.Attribute> localVarResponse = await PostAttributesAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -998,7 +998,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Attribute</param>
         /// <returns>Task of ApiResponse (ININ.PureCloudApi.Model.Attribute)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ININ.PureCloudApi.Model.Attribute>> PostAsyncWithHttpInfo (ININ.PureCloudApi.Model.Attribute body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ININ.PureCloudApi.Model.Attribute>> PostAttributesAsyncWithHttpInfo (ININ.PureCloudApi.Model.Attribute body = null)
         {
             
     
@@ -1059,9 +1059,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Post: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PostAttributes: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Post: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PostAttributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<ININ.PureCloudApi.Model.Attribute>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

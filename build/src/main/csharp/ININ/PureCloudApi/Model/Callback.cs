@@ -121,8 +121,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ScriptId">ScriptId.</param>
         /// <param name="SkipEnabled">SkipEnabled (default to false).</param>
         /// <param name="TimeoutSeconds">TimeoutSeconds.</param>
+        /// <param name="ConnectedTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
 
-        public Callback(StateEnum? State = null, string Id = null, List<Segment> Segments = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DialerPreview DialerPreview = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null)
+        public Callback(StateEnum? State = null, string Id = null, List<Segment> Segments = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DialerPreview DialerPreview = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null)
         {
             this.State = State;
             this.Id = Id;
@@ -153,6 +154,7 @@ namespace ININ.PureCloudApi.Model
                 this.SkipEnabled = SkipEnabled;
             }
             this.TimeoutSeconds = TimeoutSeconds;
+            this.ConnectedTime = ConnectedTime;
             
         }
         
@@ -219,6 +221,13 @@ namespace ININ.PureCloudApi.Model
         public int? TimeoutSeconds { get; set; }
     
         /// <summary>
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="connectedTime", EmitDefaultValue=false)]
+        public DateTime? ConnectedTime { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -239,6 +248,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
             sb.Append("  SkipEnabled: ").Append(SkipEnabled).Append("\n");
             sb.Append("  TimeoutSeconds: ").Append(TimeoutSeconds).Append("\n");
+            sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -340,6 +350,11 @@ namespace ININ.PureCloudApi.Model
                     this.TimeoutSeconds == other.TimeoutSeconds ||
                     this.TimeoutSeconds != null &&
                     this.TimeoutSeconds.Equals(other.TimeoutSeconds)
+                ) &&
+                (
+                    this.ConnectedTime == other.ConnectedTime ||
+                    this.ConnectedTime != null &&
+                    this.ConnectedTime.Equals(other.ConnectedTime)
                 );
         }
 
@@ -393,6 +408,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.TimeoutSeconds != null)
                     hash = hash * 59 + this.TimeoutSeconds.GetHashCode();
+                
+                if (this.ConnectedTime != null)
+                    hash = hash * 59 + this.ConnectedTime.GetHashCode();
                 
                 return hash;
             }

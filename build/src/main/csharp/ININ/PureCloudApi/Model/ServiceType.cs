@@ -24,15 +24,17 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Type">Type.</param>
         /// <param name="Parameters">Parameters.</param>
         /// <param name="Codecs">Codecs.</param>
+        /// <param name="Strip">Prefix striping is a mechanism to remove digits from the beginning of a phone number before sending a call out to a carrier, such as international exit codes. This must be configurable on a per carrier basis as all carriers act differently..</param>
         /// <param name="CallingPartyId">CallingPartyId.</param>
         /// <param name="CallHistory">CallHistory.</param>
         /// <param name="Prefix">Prefix.</param>
 
-        public ServiceType(string Type = null, Dictionary<string, string> Parameters = null, List<string> Codecs = null, string CallingPartyId = null, string CallHistory = null, string Prefix = null)
+        public ServiceType(string Type = null, Dictionary<string, string> Parameters = null, List<string> Codecs = null, string Strip = null, string CallingPartyId = null, string CallHistory = null, string Prefix = null)
         {
             this.Type = Type;
             this.Parameters = Parameters;
             this.Codecs = Codecs;
+            this.Strip = Strip;
             this.CallingPartyId = CallingPartyId;
             this.CallHistory = CallHistory;
             this.Prefix = Prefix;
@@ -57,6 +59,13 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="codecs", EmitDefaultValue=false)]
         public List<string> Codecs { get; set; }
+    
+        /// <summary>
+        /// Prefix striping is a mechanism to remove digits from the beginning of a phone number before sending a call out to a carrier, such as international exit codes. This must be configurable on a per carrier basis as all carriers act differently.
+        /// </summary>
+        /// <value>Prefix striping is a mechanism to remove digits from the beginning of a phone number before sending a call out to a carrier, such as international exit codes. This must be configurable on a per carrier basis as all carriers act differently.</value>
+        [DataMember(Name="strip", EmitDefaultValue=false)]
+        public string Strip { get; set; }
     
         /// <summary>
         /// Gets or Sets CallingPartyId
@@ -87,6 +96,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Parameters: ").Append(Parameters).Append("\n");
             sb.Append("  Codecs: ").Append(Codecs).Append("\n");
+            sb.Append("  Strip: ").Append(Strip).Append("\n");
             sb.Append("  CallingPartyId: ").Append(CallingPartyId).Append("\n");
             sb.Append("  CallHistory: ").Append(CallHistory).Append("\n");
             sb.Append("  Prefix: ").Append(Prefix).Append("\n");
@@ -143,6 +153,11 @@ namespace ININ.PureCloudApi.Model
                     this.Codecs.SequenceEqual(other.Codecs)
                 ) &&
                 (
+                    this.Strip == other.Strip ||
+                    this.Strip != null &&
+                    this.Strip.Equals(other.Strip)
+                ) &&
+                (
                     this.CallingPartyId == other.CallingPartyId ||
                     this.CallingPartyId != null &&
                     this.CallingPartyId.Equals(other.CallingPartyId)
@@ -179,6 +194,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.Codecs != null)
                     hash = hash * 59 + this.Codecs.GetHashCode();
+                
+                if (this.Strip != null)
+                    hash = hash * 59 + this.Strip.GetHashCode();
                 
                 if (this.CallingPartyId != null)
                     hash = hash * 59 + this.CallingPartyId.GetHashCode();

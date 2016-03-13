@@ -21,36 +21,20 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Entity" />class.
         /// </summary>
-        /// <param name="Kind">Kind.</param>
         /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
 
-        public Entity(string Kind = null, string Id = null, string Name = null)
+        public Entity(string Id = null)
         {
-            this.Kind = Kind;
             this.Id = Id;
-            this.Name = Name;
             
         }
         
-    
-        /// <summary>
-        /// Gets or Sets Kind
-        /// </summary>
-        [DataMember(Name="kind", EmitDefaultValue=false)]
-        public string Kind { get; set; }
     
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -60,9 +44,7 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Entity {\n");
-            sb.Append("  Kind: ").Append(Kind).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -101,19 +83,9 @@ namespace ININ.PureCloudApi.Model
 
             return true &&
                 (
-                    this.Kind == other.Kind ||
-                    this.Kind != null &&
-                    this.Kind.Equals(other.Kind)
-                ) &&
-                (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
                 );
         }
 
@@ -129,14 +101,8 @@ namespace ININ.PureCloudApi.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Kind != null)
-                    hash = hash * 59 + this.Kind.GetHashCode();
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 return hash;
             }

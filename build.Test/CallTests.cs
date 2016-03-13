@@ -195,6 +195,15 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'Other' 
         }
         
+        /// <summary>
+        /// Test the property 'ConnectedTime' 
+        /// </summary>
+        [Test]
+        public void ConnectedTimeTest()
+        {
+            // TODO: unit test for the property 'ConnectedTime' 
+        }
+        
 
     }
 

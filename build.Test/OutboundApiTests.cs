@@ -93,6 +93,19 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test DeleteCampaignsCampaignIdProgress
+        /// </summary>
+        [Test]
+        public void DeleteCampaignsCampaignIdProgressTest()
+        {
+            // TODO: add unit test for the method 'DeleteCampaignsCampaignIdProgress'
+            string campaignId = null; // TODO: replace null with proper value
+            
+            var response = instance.DeleteCampaignsCampaignIdProgress(campaignId);
+            Assert.IsInstanceOf<string> (response, "response is string"); 
+        }
+        
+        /// <summary>
         /// Test DeleteContactlistsContactlistId
         /// </summary>
         [Test]
@@ -293,6 +306,19 @@ namespace ININ.PureCloudApi.Test
             
             var response = instance.GetCampaignsCampaignIdDiagnostics(campaignId);
             Assert.IsInstanceOf<CampaignDiagnostics> (response, "response is CampaignDiagnostics"); 
+        }
+        
+        /// <summary>
+        /// Test GetCampaignsCampaignIdProgress
+        /// </summary>
+        [Test]
+        public void GetCampaignsCampaignIdProgressTest()
+        {
+            // TODO: add unit test for the method 'GetCampaignsCampaignIdProgress'
+            string campaignId = null; // TODO: replace null with proper value
+            
+            var response = instance.GetCampaignsCampaignIdProgress(campaignId);
+            Assert.IsInstanceOf<CampaignProgress> (response, "response is CampaignProgress"); 
         }
         
         /// <summary>
@@ -654,6 +680,19 @@ namespace ININ.PureCloudApi.Test
             
             var response = instance.PostCampaignsCampaignIdCallbackSchedule(campaignId, body);
             Assert.IsInstanceOf<ContactCallbackRequest> (response, "response is ContactCallbackRequest"); 
+        }
+        
+        /// <summary>
+        /// Test PostCampaignsProgress
+        /// </summary>
+        [Test]
+        public void PostCampaignsProgressTest()
+        {
+            // TODO: add unit test for the method 'PostCampaignsProgress'
+            List<string> body = null; // TODO: replace null with proper value
+            
+            var response = instance.PostCampaignsProgress(body);
+            Assert.IsInstanceOf<List<CampaignProgress>> (response, "response is List<CampaignProgress>"); 
         }
         
         /// <summary>

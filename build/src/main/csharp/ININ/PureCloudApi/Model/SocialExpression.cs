@@ -103,8 +103,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Held">Held (default to false).</param>
         /// <param name="DisconnectType">DisconnectType.</param>
         /// <param name="StartHoldTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ConnectedTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
 
-        public SocialExpression(StateEnum? State = null, string Id = null, string SocialMediaId = null, string SocialMediaHub = null, string SocialUserName = null, string PreviewText = null, string RecordingId = null, List<Segment> Segments = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null)
+        public SocialExpression(StateEnum? State = null, string Id = null, string SocialMediaId = null, string SocialMediaHub = null, string SocialUserName = null, string PreviewText = null, string RecordingId = null, List<Segment> Segments = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null)
         {
             this.State = State;
             this.Id = Id;
@@ -125,6 +126,7 @@ namespace ININ.PureCloudApi.Model
             }
             this.DisconnectType = DisconnectType;
             this.StartHoldTime = StartHoldTime;
+            this.ConnectedTime = ConnectedTime;
             
         }
         
@@ -185,6 +187,13 @@ namespace ININ.PureCloudApi.Model
         public DateTime? StartHoldTime { get; set; }
     
         /// <summary>
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="connectedTime", EmitDefaultValue=false)]
+        public DateTime? ConnectedTime { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -203,6 +212,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Held: ").Append(Held).Append("\n");
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
+            sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -294,6 +304,11 @@ namespace ININ.PureCloudApi.Model
                     this.StartHoldTime == other.StartHoldTime ||
                     this.StartHoldTime != null &&
                     this.StartHoldTime.Equals(other.StartHoldTime)
+                ) &&
+                (
+                    this.ConnectedTime == other.ConnectedTime ||
+                    this.ConnectedTime != null &&
+                    this.ConnectedTime.Equals(other.ConnectedTime)
                 );
         }
 
@@ -341,6 +356,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.StartHoldTime != null)
                     hash = hash * 59 + this.StartHoldTime.GetHashCode();
+                
+                if (this.ConnectedTime != null)
+                    hash = hash * 59 + this.ConnectedTime.GetHashCode();
                 
                 return hash;
             }

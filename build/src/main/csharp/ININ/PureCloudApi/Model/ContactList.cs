@@ -21,108 +21,28 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactList" />class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        /// <param name="Version">Version.</param>
-        /// <param name="ColumnNames">ColumnNames.</param>
-        /// <param name="PhoneColumns">PhoneColumns.</param>
-        /// <param name="ImportStatus">ImportStatus.</param>
-        /// <param name="PreviewModeColumnName">PreviewModeColumnName.</param>
-        /// <param name="PreviewModeAcceptedValues">PreviewModeAcceptedValues.</param>
-        /// <param name="Size">Size.</param>
+        /// <param name="Id">Id.</param>
+        /// <param name="SelfUri">SelfUri.</param>
 
-        public ContactList(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<string> ColumnNames = null, List<PhoneNumberColumn> PhoneColumns = null, ImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, long? Size = null)
+        public ContactList(string Id = null, string SelfUri = null)
         {
-            this.Name = Name;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
-            this.Version = Version;
-            this.ColumnNames = ColumnNames;
-            this.PhoneColumns = PhoneColumns;
-            this.ImportStatus = ImportStatus;
-            this.PreviewModeColumnName = PreviewModeColumnName;
-            this.PreviewModeAcceptedValues = PreviewModeAcceptedValues;
-            this.Size = Size;
+            this.Id = Id;
+            this.SelfUri = SelfUri;
             
         }
         
     
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// Gets or Sets Id
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
     
         /// <summary>
-        /// Gets or Sets Name
+        /// Gets or Sets SelfUri
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-    
-        /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-        /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
-        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
-        public DateTime? DateCreated { get; set; }
-    
-        /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-        /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
-        [DataMember(Name="dateModified", EmitDefaultValue=false)]
-        public DateTime? DateModified { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets Version
-        /// </summary>
-        [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets ColumnNames
-        /// </summary>
-        [DataMember(Name="columnNames", EmitDefaultValue=false)]
-        public List<string> ColumnNames { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets PhoneColumns
-        /// </summary>
-        [DataMember(Name="phoneColumns", EmitDefaultValue=false)]
-        public List<PhoneNumberColumn> PhoneColumns { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets ImportStatus
-        /// </summary>
-        [DataMember(Name="importStatus", EmitDefaultValue=false)]
-        public ImportStatus ImportStatus { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets PreviewModeColumnName
-        /// </summary>
-        [DataMember(Name="previewModeColumnName", EmitDefaultValue=false)]
-        public string PreviewModeColumnName { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets PreviewModeAcceptedValues
-        /// </summary>
-        [DataMember(Name="previewModeAcceptedValues", EmitDefaultValue=false)]
-        public List<string> PreviewModeAcceptedValues { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets Size
-        /// </summary>
-        [DataMember(Name="size", EmitDefaultValue=false)]
-        public long? Size { get; set; }
-    
-        /// <summary>
-        /// The URI for this object
-        /// </summary>
-        /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; private set; }
+        public string SelfUri { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -133,16 +53,6 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class ContactList {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            sb.Append("  Version: ").Append(Version).Append("\n");
-            sb.Append("  ColumnNames: ").Append(ColumnNames).Append("\n");
-            sb.Append("  PhoneColumns: ").Append(PhoneColumns).Append("\n");
-            sb.Append("  ImportStatus: ").Append(ImportStatus).Append("\n");
-            sb.Append("  PreviewModeColumnName: ").Append(PreviewModeColumnName).Append("\n");
-            sb.Append("  PreviewModeAcceptedValues: ").Append(PreviewModeAcceptedValues).Append("\n");
-            sb.Append("  Size: ").Append(Size).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
@@ -187,56 +97,6 @@ namespace ININ.PureCloudApi.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
-                ) &&
-                (
-                    this.DateCreated == other.DateCreated ||
-                    this.DateCreated != null &&
-                    this.DateCreated.Equals(other.DateCreated)
-                ) &&
-                (
-                    this.DateModified == other.DateModified ||
-                    this.DateModified != null &&
-                    this.DateModified.Equals(other.DateModified)
-                ) &&
-                (
-                    this.Version == other.Version ||
-                    this.Version != null &&
-                    this.Version.Equals(other.Version)
-                ) &&
-                (
-                    this.ColumnNames == other.ColumnNames ||
-                    this.ColumnNames != null &&
-                    this.ColumnNames.SequenceEqual(other.ColumnNames)
-                ) &&
-                (
-                    this.PhoneColumns == other.PhoneColumns ||
-                    this.PhoneColumns != null &&
-                    this.PhoneColumns.SequenceEqual(other.PhoneColumns)
-                ) &&
-                (
-                    this.ImportStatus == other.ImportStatus ||
-                    this.ImportStatus != null &&
-                    this.ImportStatus.Equals(other.ImportStatus)
-                ) &&
-                (
-                    this.PreviewModeColumnName == other.PreviewModeColumnName ||
-                    this.PreviewModeColumnName != null &&
-                    this.PreviewModeColumnName.Equals(other.PreviewModeColumnName)
-                ) &&
-                (
-                    this.PreviewModeAcceptedValues == other.PreviewModeAcceptedValues ||
-                    this.PreviewModeAcceptedValues != null &&
-                    this.PreviewModeAcceptedValues.SequenceEqual(other.PreviewModeAcceptedValues)
-                ) &&
-                (
-                    this.Size == other.Size ||
-                    this.Size != null &&
-                    this.Size.Equals(other.Size)
-                ) &&
-                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -257,36 +117,6 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
-                
-                if (this.DateCreated != null)
-                    hash = hash * 59 + this.DateCreated.GetHashCode();
-                
-                if (this.DateModified != null)
-                    hash = hash * 59 + this.DateModified.GetHashCode();
-                
-                if (this.Version != null)
-                    hash = hash * 59 + this.Version.GetHashCode();
-                
-                if (this.ColumnNames != null)
-                    hash = hash * 59 + this.ColumnNames.GetHashCode();
-                
-                if (this.PhoneColumns != null)
-                    hash = hash * 59 + this.PhoneColumns.GetHashCode();
-                
-                if (this.ImportStatus != null)
-                    hash = hash * 59 + this.ImportStatus.GetHashCode();
-                
-                if (this.PreviewModeColumnName != null)
-                    hash = hash * 59 + this.PreviewModeColumnName.GetHashCode();
-                
-                if (this.PreviewModeAcceptedValues != null)
-                    hash = hash * 59 + this.PreviewModeAcceptedValues.GetHashCode();
-                
-                if (this.Size != null)
-                    hash = hash * 59 + this.Size.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

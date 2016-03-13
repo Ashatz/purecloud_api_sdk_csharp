@@ -12,51 +12,83 @@ using Newtonsoft.Json.Converters;
 namespace ININ.PureCloudApi.Model
 {
     /// <summary>
-    /// 
+    /// Used to filter response queries
     /// </summary>
     [DataContract]
     public partial class Filter :  IEquatable<Filter>
     { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum _OperatorEnum {
+            
+            [EnumMember(Value = "IN")]
+            In,
+            
+            [EnumMember(Value = "EQUALS")]
+            Equals,
+            
+            [EnumMember(Value = "NOTEQUALS")]
+            Notequals
+        }
         
+        /// <summary>
+        /// Filter operation: IN, EQUALS, NOTEQUALS.
+        /// </summary>
+        /// <value>Filter operation: IN, EQUALS, NOTEQUALS.</value>
+        [DataMember(Name="operator", EmitDefaultValue=false)]
+        public _OperatorEnum? _Operator { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Filter" />class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Type">Type.</param>
-        /// <param name="_Operator">_Operator.</param>
-        /// <param name="Values">Values.</param>
+        /// <param name="Name">Field to filter on. Allowed values are &#39;name&#39; and &#39;libraryId. (required).</param>
+        /// <param name="_Operator">Filter operation: IN, EQUALS, NOTEQUALS. (required).</param>
+        /// <param name="Values">Values to filter on. (required).</param>
 
-        public Filter(string Name = null, string Type = null, string _Operator = null, List<string> Values = null)
+        public Filter(string Name = null, _OperatorEnum? _Operator = null, List<string> Values = null)
         {
-            this.Name = Name;
-            this.Type = Type;
-            this._Operator = _Operator;
-            this.Values = Values;
+            // to ensure "Name" is required (not null)
+            if (Name == null)
+            {
+                throw new InvalidDataException("Name is a required property for Filter and cannot be null");
+            }
+            else
+            {
+                this.Name = Name;
+            }
+            // to ensure "_Operator" is required (not null)
+            if (_Operator == null)
+            {
+                throw new InvalidDataException("_Operator is a required property for Filter and cannot be null");
+            }
+            else
+            {
+                this._Operator = _Operator;
+            }
+            // to ensure "Values" is required (not null)
+            if (Values == null)
+            {
+                throw new InvalidDataException("Values is a required property for Filter and cannot be null");
+            }
+            else
+            {
+                this.Values = Values;
+            }
             
         }
         
     
         /// <summary>
-        /// Gets or Sets Name
+        /// Field to filter on. Allowed values are 'name' and 'libraryId.
         /// </summary>
+        /// <value>Field to filter on. Allowed values are 'name' and 'libraryId.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
     
         /// <summary>
-        /// Gets or Sets Type
+        /// Values to filter on.
         /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets _Operator
-        /// </summary>
-        [DataMember(Name="operator", EmitDefaultValue=false)]
-        public string _Operator { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets Values
-        /// </summary>
+        /// <value>Values to filter on.</value>
         [DataMember(Name="values", EmitDefaultValue=false)]
         public List<string> Values { get; set; }
     
@@ -69,7 +101,6 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class Filter {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
             sb.Append("  Values: ").Append(Values).Append("\n");
             
@@ -115,11 +146,6 @@ namespace ININ.PureCloudApi.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
-                    this.Type == other.Type ||
-                    this.Type != null &&
-                    this.Type.Equals(other.Type)
-                ) &&
-                (
                     this._Operator == other._Operator ||
                     this._Operator != null &&
                     this._Operator.Equals(other._Operator)
@@ -145,9 +171,6 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
-                if (this.Type != null)
-                    hash = hash * 59 + this.Type.GetHashCode();
                 
                 if (this._Operator != null)
                     hash = hash * 59 + this._Operator.GetHashCode();

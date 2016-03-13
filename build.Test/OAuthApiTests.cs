@@ -127,18 +127,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test Get
-        /// </summary>
-        [Test]
-        public void GetTest()
-        {
-            // TODO: add unit test for the method 'Get'
-            
-            var response = instance.Get();
-            Assert.IsInstanceOf<OAuthProviderEntityListing> (response, "response is OAuthProviderEntityListing"); 
-        }
-        
-        /// <summary>
         /// Test GetClients
         /// </summary>
         [Test]
@@ -161,6 +149,18 @@ namespace ININ.PureCloudApi.Test
             
             var response = instance.GetClientsClientId(clientId);
             Assert.IsInstanceOf<OAuthClient> (response, "response is OAuthClient"); 
+        }
+        
+        /// <summary>
+        /// Test GetIdentityproviders
+        /// </summary>
+        [Test]
+        public void GetIdentityprovidersTest()
+        {
+            // TODO: add unit test for the method 'GetIdentityproviders'
+            
+            var response = instance.GetIdentityproviders();
+            Assert.IsInstanceOf<OAuthProviderEntityListing> (response, "response is OAuthProviderEntityListing"); 
         }
         
         /// <summary>

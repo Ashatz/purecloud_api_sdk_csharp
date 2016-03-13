@@ -82,19 +82,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test Get
-        /// </summary>
-        [Test]
-        public void GetTest()
-        {
-            // TODO: add unit test for the method 'Get'
-            string communicationType = null; // TODO: replace null with proper value
-            
-            var response = instance.Get(communicationType);
-            Assert.IsInstanceOf<ConversationEntityListing> (response, "response is ConversationEntityListing"); 
-        }
-        
-        /// <summary>
         /// Test GetConversationId
         /// </summary>
         [Test]
@@ -203,6 +190,19 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetConversations
+        /// </summary>
+        [Test]
+        public void GetConversationsTest()
+        {
+            // TODO: add unit test for the method 'GetConversations'
+            string communicationType = null; // TODO: replace null with proper value
+            
+            var response = instance.GetConversations(communicationType);
+            Assert.IsInstanceOf<ConversationEntityListing> (response, "response is ConversationEntityListing"); 
+        }
+        
+        /// <summary>
         /// Test GetMaximumconferenceparties
         /// </summary>
         [Test]
@@ -212,26 +212,6 @@ namespace ININ.PureCloudApi.Test
             
             var response = instance.GetMaximumconferenceparties();
             Assert.IsInstanceOf<MaxParticipants> (response, "response is MaxParticipants"); 
-        }
-        
-        /// <summary>
-        /// Test Post
-        /// </summary>
-        [Test]
-        public void PostTest()
-        {
-            // TODO: add unit test for the method 'Post'
-            string call = null; // TODO: replace null with proper value
-            string callFrom = null; // TODO: replace null with proper value
-            string callQueueId = null; // TODO: replace null with proper value
-            string callUserId = null; // TODO: replace null with proper value
-            int? priority = null; // TODO: replace null with proper value
-            string languageId = null; // TODO: replace null with proper value
-            List<string> skillIds = null; // TODO: replace null with proper value
-            string body = null; // TODO: replace null with proper value
-            
-            var response = instance.Post(call, callFrom, callQueueId, callUserId, priority, languageId, skillIds, body);
-            Assert.IsInstanceOf<ConversationResponse> (response, "response is ConversationResponse"); 
         }
         
         /// <summary>
@@ -322,6 +302,26 @@ namespace ININ.PureCloudApi.Test
             
             instance.PostConversationIdParticipantsParticipantIdReplace(conversationId, participantId, userId, address, username, queueId, voicemail);
              
+        }
+        
+        /// <summary>
+        /// Test PostConversations
+        /// </summary>
+        [Test]
+        public void PostConversationsTest()
+        {
+            // TODO: add unit test for the method 'PostConversations'
+            string call = null; // TODO: replace null with proper value
+            string callFrom = null; // TODO: replace null with proper value
+            string callQueueId = null; // TODO: replace null with proper value
+            string callUserId = null; // TODO: replace null with proper value
+            int? priority = null; // TODO: replace null with proper value
+            string languageId = null; // TODO: replace null with proper value
+            List<string> skillIds = null; // TODO: replace null with proper value
+            string body = null; // TODO: replace null with proper value
+            
+            var response = instance.PostConversations(call, callFrom, callQueueId, callUserId, priority, languageId, skillIds, body);
+            Assert.IsInstanceOf<ConversationResponse> (response, "response is ConversationResponse"); 
         }
         
         /// <summary>

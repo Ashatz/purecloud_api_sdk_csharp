@@ -18,26 +18,6 @@ namespace ININ.PureCloudApi.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Get the current system date/time
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ServerDate</returns>
-        ServerDate Get ();
-  
-        /// <summary>
-        /// Get the current system date/time
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of ServerDate</returns>
-        ApiResponse<ServerDate> GetWithHttpInfo ();
-        
-        /// <summary>
         /// Get health.
         /// </summary>
         /// <remarks>
@@ -58,6 +38,26 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<HealthCheckInfo> GetCheckWithHttpInfo ();
         
         /// <summary>
+        /// Get the current system date/time
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ServerDate</returns>
+        ServerDate GetDate ();
+  
+        /// <summary>
+        /// Get the current system date/time
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ServerDate</returns>
+        ApiResponse<ServerDate> GetDateWithHttpInfo ();
+        
+        /// <summary>
         /// Get time zones list
         /// </summary>
         /// <remarks>
@@ -67,7 +67,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>TimeZoneEntityListing</returns>
-        TimeZoneEntityListing Get_0 (int? pageSize = null, int? pageNumber = null);
+        TimeZoneEntityListing GetTimezones (int? pageSize = null, int? pageNumber = null);
   
         /// <summary>
         /// Get time zones list
@@ -79,7 +79,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>ApiResponse of TimeZoneEntityListing</returns>
-        ApiResponse<TimeZoneEntityListing> Get_0WithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        ApiResponse<TimeZoneEntityListing> GetTimezonesWithHttpInfo (int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
         /// Validates a street address
@@ -130,26 +130,6 @@ namespace ININ.PureCloudApi.Api
         #region Asynchronous Operations
         
         /// <summary>
-        /// Get the current system date/time
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ServerDate</returns>
-        System.Threading.Tasks.Task<ServerDate> GetAsync ();
-
-        /// <summary>
-        /// Get the current system date/time
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (ServerDate)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ServerDate>> GetAsyncWithHttpInfo ();
-        
-        /// <summary>
         /// Get health.
         /// </summary>
         /// <remarks>
@@ -170,6 +150,26 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<HealthCheckInfo>> GetCheckAsyncWithHttpInfo ();
         
         /// <summary>
+        /// Get the current system date/time
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ServerDate</returns>
+        System.Threading.Tasks.Task<ServerDate> GetDateAsync ();
+
+        /// <summary>
+        /// Get the current system date/time
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ServerDate)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ServerDate>> GetDateAsyncWithHttpInfo ();
+        
+        /// <summary>
         /// Get time zones list
         /// </summary>
         /// <remarks>
@@ -179,7 +179,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of TimeZoneEntityListing</returns>
-        System.Threading.Tasks.Task<TimeZoneEntityListing> Get_0Async (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<TimeZoneEntityListing> GetTimezonesAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Get time zones list
@@ -191,7 +191,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (TimeZoneEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TimeZoneEntityListing>> Get_0AsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<TimeZoneEntityListing>> GetTimezonesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
         
         /// <summary>
         /// Validates a street address
@@ -316,167 +316,6 @@ namespace ININ.PureCloudApi.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
    
-        
-        /// <summary>
-        /// Get the current system date/time 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ServerDate</returns>
-        public ServerDate Get ()
-        {
-             ApiResponse<ServerDate> localVarResponse = GetWithHttpInfo();
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get the current system date/time 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of ServerDate</returns>
-        public ApiResponse< ServerDate > GetWithHttpInfo ()
-        {
-            
-    
-            var localVarPath = "/api/v1/date";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            
-
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Get: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Get: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<ServerDate>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ServerDate) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerDate)));
-            
-        }
-
-        
-        /// <summary>
-        /// Get the current system date/time 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ServerDate</returns>
-        public async System.Threading.Tasks.Task<ServerDate> GetAsync ()
-        {
-             ApiResponse<ServerDate> localVarResponse = await GetAsyncWithHttpInfo();
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get the current system date/time 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (ServerDate)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ServerDate>> GetAsyncWithHttpInfo ()
-        {
-            
-    
-            var localVarPath = "/api/v1/date";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            
-
-            
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Get: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Get: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ServerDate>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ServerDate) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerDate)));
-            
-        }
         
         /// <summary>
         /// Get health. 
@@ -640,15 +479,176 @@ namespace ININ.PureCloudApi.Api
         }
         
         /// <summary>
+        /// Get the current system date/time 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ServerDate</returns>
+        public ServerDate GetDate ()
+        {
+             ApiResponse<ServerDate> localVarResponse = GetDateWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the current system date/time 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ServerDate</returns>
+        public ApiResponse< ServerDate > GetDateWithHttpInfo ()
+        {
+            
+    
+            var localVarPath = "/api/v1/date";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetDate: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetDate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ServerDate>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ServerDate) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerDate)));
+            
+        }
+
+        
+        /// <summary>
+        /// Get the current system date/time 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ServerDate</returns>
+        public async System.Threading.Tasks.Task<ServerDate> GetDateAsync ()
+        {
+             ApiResponse<ServerDate> localVarResponse = await GetDateAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the current system date/time 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ServerDate)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ServerDate>> GetDateAsyncWithHttpInfo ()
+        {
+            
+    
+            var localVarPath = "/api/v1/date";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetDate: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetDate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ServerDate>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ServerDate) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ServerDate)));
+            
+        }
+        
+        /// <summary>
         /// Get time zones list 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>TimeZoneEntityListing</returns>
-        public TimeZoneEntityListing Get_0 (int? pageSize = null, int? pageNumber = null)
+        public TimeZoneEntityListing GetTimezones (int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<TimeZoneEntityListing> localVarResponse = Get_0WithHttpInfo(pageSize, pageNumber);
+             ApiResponse<TimeZoneEntityListing> localVarResponse = GetTimezonesWithHttpInfo(pageSize, pageNumber);
              return localVarResponse.Data;
         }
 
@@ -659,7 +659,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
         /// <returns>ApiResponse of TimeZoneEntityListing</returns>
-        public ApiResponse< TimeZoneEntityListing > Get_0WithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< TimeZoneEntityListing > GetTimezonesWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -714,9 +714,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Get_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetTimezones: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Get_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetTimezones: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<TimeZoneEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -732,9 +732,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of TimeZoneEntityListing</returns>
-        public async System.Threading.Tasks.Task<TimeZoneEntityListing> Get_0Async (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<TimeZoneEntityListing> GetTimezonesAsync (int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<TimeZoneEntityListing> localVarResponse = await Get_0AsyncWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<TimeZoneEntityListing> localVarResponse = await GetTimezonesAsyncWithHttpInfo(pageSize, pageNumber);
              return localVarResponse.Data;
 
         }
@@ -746,7 +746,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
         /// <returns>Task of ApiResponse (TimeZoneEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TimeZoneEntityListing>> Get_0AsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TimeZoneEntityListing>> GetTimezonesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
             
     
@@ -802,9 +802,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Get_0: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetTimezones: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Get_0: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetTimezones: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<TimeZoneEntityListing>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

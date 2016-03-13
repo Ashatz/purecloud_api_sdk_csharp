@@ -18,30 +18,6 @@ namespace ININ.PureCloudApi.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Batch-delete a list of flows
-        /// </summary>
-        /// <remarks>
-        /// Multiple IDs can be specified, in which case all specified flows will be deleted.
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">List of Flow IDs</param>
-        /// <param name="ignoreDependencies">Ignore Dependencies</param>
-        /// <returns></returns>
-        void Delete (List<string> id, bool? ignoreDependencies = null);
-  
-        /// <summary>
-        /// Batch-delete a list of flows
-        /// </summary>
-        /// <remarks>
-        /// Multiple IDs can be specified, in which case all specified flows will be deleted.
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">List of Flow IDs</param>
-        /// <param name="ignoreDependencies">Ignore Dependencies</param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteWithHttpInfo (List<string> id, bool? ignoreDependencies = null);
-        
-        /// <summary>
         /// Delete flow.
         /// </summary>
         /// <remarks>
@@ -62,6 +38,30 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteFlowIdWithHttpInfo (string flowId);
+        
+        /// <summary>
+        /// Batch-delete a list of flows
+        /// </summary>
+        /// <remarks>
+        /// Multiple IDs can be specified, in which case all specified flows will be deleted.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">List of Flow IDs</param>
+        /// <param name="ignoreDependencies">Ignore Dependencies</param>
+        /// <returns></returns>
+        void DeleteFlows (List<string> id, bool? ignoreDependencies = null);
+  
+        /// <summary>
+        /// Batch-delete a list of flows
+        /// </summary>
+        /// <remarks>
+        /// Multiple IDs can be specified, in which case all specified flows will be deleted.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">List of Flow IDs</param>
+        /// <param name="ignoreDependencies">Ignore Dependencies</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteFlowsWithHttpInfo (List<string> id, bool? ignoreDependencies = null);
         
         /// <summary>
         /// Delete an IVR Config.
@@ -224,52 +224,6 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<string> DeleteSystempromptsPromptIdResourcesLanguageWithHttpInfo (string promptId, string language);
         
         /// <summary>
-        /// Get a pageable list of flows, filtered by query parameters
-        /// </summary>
-        /// <remarks>
-        /// Multiple IDs can be specified, in which case all matching flows will be returned, and no other parameters will be evaluated.
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="type">Type</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="sortBy">Sort by</param>
-        /// <param name="sortOrder">Sort order</param>
-        /// <param name="id">ID</param>
-        /// <param name="name">Name</param>
-        /// <param name="description">Description</param>
-        /// <param name="nameOrDescription">Name or description</param>
-        /// <param name="publishVersionId">Publish version ID</param>
-        /// <param name="editableBy">Editable by</param>
-        /// <param name="lockedBy">Locked by</param>
-        /// <param name="deleted">Include deleted</param>
-        /// <returns>FlowEntityListing</returns>
-        FlowEntityListing Get (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null);
-  
-        /// <summary>
-        /// Get a pageable list of flows, filtered by query parameters
-        /// </summary>
-        /// <remarks>
-        /// Multiple IDs can be specified, in which case all matching flows will be returned, and no other parameters will be evaluated.
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="type">Type</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="sortBy">Sort by</param>
-        /// <param name="sortOrder">Sort order</param>
-        /// <param name="id">ID</param>
-        /// <param name="name">Name</param>
-        /// <param name="description">Description</param>
-        /// <param name="nameOrDescription">Name or description</param>
-        /// <param name="publishVersionId">Publish version ID</param>
-        /// <param name="editableBy">Editable by</param>
-        /// <param name="lockedBy">Locked by</param>
-        /// <param name="deleted">Include deleted</param>
-        /// <returns>ApiResponse of FlowEntityListing</returns>
-        ApiResponse<FlowEntityListing> GetWithHttpInfo (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null);
-        
-        /// <summary>
         /// Get flow.
         /// </summary>
         /// <remarks>
@@ -420,6 +374,52 @@ namespace ININ.PureCloudApi.Api
         /// <param name="deleted">Deleted</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> GetFlowIdVersionsVersionIdConfigurationWithHttpInfo (string flowId, string versionId, string deleted = null);
+        
+        /// <summary>
+        /// Get a pageable list of flows, filtered by query parameters
+        /// </summary>
+        /// <remarks>
+        /// Multiple IDs can be specified, in which case all matching flows will be returned, and no other parameters will be evaluated.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Type</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="sortBy">Sort by</param>
+        /// <param name="sortOrder">Sort order</param>
+        /// <param name="id">ID</param>
+        /// <param name="name">Name</param>
+        /// <param name="description">Description</param>
+        /// <param name="nameOrDescription">Name or description</param>
+        /// <param name="publishVersionId">Publish version ID</param>
+        /// <param name="editableBy">Editable by</param>
+        /// <param name="lockedBy">Locked by</param>
+        /// <param name="deleted">Include deleted</param>
+        /// <returns>FlowEntityListing</returns>
+        FlowEntityListing GetFlows (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null);
+  
+        /// <summary>
+        /// Get a pageable list of flows, filtered by query parameters
+        /// </summary>
+        /// <remarks>
+        /// Multiple IDs can be specified, in which case all matching flows will be returned, and no other parameters will be evaluated.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Type</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="sortBy">Sort by</param>
+        /// <param name="sortOrder">Sort order</param>
+        /// <param name="id">ID</param>
+        /// <param name="name">Name</param>
+        /// <param name="description">Description</param>
+        /// <param name="nameOrDescription">Name or description</param>
+        /// <param name="publishVersionId">Publish version ID</param>
+        /// <param name="editableBy">Editable by</param>
+        /// <param name="lockedBy">Locked by</param>
+        /// <param name="deleted">Include deleted</param>
+        /// <returns>ApiResponse of FlowEntityListing</returns>
+        ApiResponse<FlowEntityListing> GetFlowsWithHttpInfo (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null);
         
         /// <summary>
         /// Get IVR configs.
@@ -784,28 +784,6 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<SystemPromptAsset> GetSystempromptsPromptIdResourcesLanguageWithHttpInfo (string promptId, string language);
         
         /// <summary>
-        /// Create flow
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <returns>Flow</returns>
-        Flow Post (Flow body = null);
-  
-        /// <summary>
-        /// Create flow
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <returns>ApiResponse of Flow</returns>
-        ApiResponse<Flow> PostWithHttpInfo (Flow body = null);
-        
-        /// <summary>
         /// Check-in flow
         /// </summary>
         /// <remarks>
@@ -962,6 +940,28 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of FlowVersion</returns>
         ApiResponse<FlowVersion> PostFlowIdVersionsWithHttpInfo (string flowId, Object body = null);
+        
+        /// <summary>
+        /// Create flow
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Flow</returns>
+        Flow PostFlows (Flow body = null);
+  
+        /// <summary>
+        /// Create flow
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of Flow</returns>
+        ApiResponse<Flow> PostFlowsWithHttpInfo (Flow body = null);
         
         /// <summary>
         /// Create IVR config.
@@ -1272,30 +1272,6 @@ namespace ININ.PureCloudApi.Api
         #region Asynchronous Operations
         
         /// <summary>
-        /// Batch-delete a list of flows
-        /// </summary>
-        /// <remarks>
-        /// Multiple IDs can be specified, in which case all specified flows will be deleted.
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">List of Flow IDs</param>
-        /// <param name="ignoreDependencies">Ignore Dependencies</param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteAsync (List<string> id, bool? ignoreDependencies = null);
-
-        /// <summary>
-        /// Batch-delete a list of flows
-        /// </summary>
-        /// <remarks>
-        /// Multiple IDs can be specified, in which case all specified flows will be deleted.
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">List of Flow IDs</param>
-        /// <param name="ignoreDependencies">Ignore Dependencies</param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAsyncWithHttpInfo (List<string> id, bool? ignoreDependencies = null);
-        
-        /// <summary>
         /// Delete flow.
         /// </summary>
         /// <remarks>
@@ -1316,6 +1292,30 @@ namespace ININ.PureCloudApi.Api
         /// <param name="flowId">Flow ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowIdAsyncWithHttpInfo (string flowId);
+        
+        /// <summary>
+        /// Batch-delete a list of flows
+        /// </summary>
+        /// <remarks>
+        /// Multiple IDs can be specified, in which case all specified flows will be deleted.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">List of Flow IDs</param>
+        /// <param name="ignoreDependencies">Ignore Dependencies</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteFlowsAsync (List<string> id, bool? ignoreDependencies = null);
+
+        /// <summary>
+        /// Batch-delete a list of flows
+        /// </summary>
+        /// <remarks>
+        /// Multiple IDs can be specified, in which case all specified flows will be deleted.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">List of Flow IDs</param>
+        /// <param name="ignoreDependencies">Ignore Dependencies</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowsAsyncWithHttpInfo (List<string> id, bool? ignoreDependencies = null);
         
         /// <summary>
         /// Delete an IVR Config.
@@ -1478,52 +1478,6 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<string>> DeleteSystempromptsPromptIdResourcesLanguageAsyncWithHttpInfo (string promptId, string language);
         
         /// <summary>
-        /// Get a pageable list of flows, filtered by query parameters
-        /// </summary>
-        /// <remarks>
-        /// Multiple IDs can be specified, in which case all matching flows will be returned, and no other parameters will be evaluated.
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="type">Type</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="sortBy">Sort by</param>
-        /// <param name="sortOrder">Sort order</param>
-        /// <param name="id">ID</param>
-        /// <param name="name">Name</param>
-        /// <param name="description">Description</param>
-        /// <param name="nameOrDescription">Name or description</param>
-        /// <param name="publishVersionId">Publish version ID</param>
-        /// <param name="editableBy">Editable by</param>
-        /// <param name="lockedBy">Locked by</param>
-        /// <param name="deleted">Include deleted</param>
-        /// <returns>Task of FlowEntityListing</returns>
-        System.Threading.Tasks.Task<FlowEntityListing> GetAsync (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null);
-
-        /// <summary>
-        /// Get a pageable list of flows, filtered by query parameters
-        /// </summary>
-        /// <remarks>
-        /// Multiple IDs can be specified, in which case all matching flows will be returned, and no other parameters will be evaluated.
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="type">Type</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="sortBy">Sort by</param>
-        /// <param name="sortOrder">Sort order</param>
-        /// <param name="id">ID</param>
-        /// <param name="name">Name</param>
-        /// <param name="description">Description</param>
-        /// <param name="nameOrDescription">Name or description</param>
-        /// <param name="publishVersionId">Publish version ID</param>
-        /// <param name="editableBy">Editable by</param>
-        /// <param name="lockedBy">Locked by</param>
-        /// <param name="deleted">Include deleted</param>
-        /// <returns>Task of ApiResponse (FlowEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FlowEntityListing>> GetAsyncWithHttpInfo (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null);
-        
-        /// <summary>
         /// Get flow.
         /// </summary>
         /// <remarks>
@@ -1674,6 +1628,52 @@ namespace ININ.PureCloudApi.Api
         /// <param name="deleted">Deleted</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> GetFlowIdVersionsVersionIdConfigurationAsyncWithHttpInfo (string flowId, string versionId, string deleted = null);
+        
+        /// <summary>
+        /// Get a pageable list of flows, filtered by query parameters
+        /// </summary>
+        /// <remarks>
+        /// Multiple IDs can be specified, in which case all matching flows will be returned, and no other parameters will be evaluated.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Type</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="sortBy">Sort by</param>
+        /// <param name="sortOrder">Sort order</param>
+        /// <param name="id">ID</param>
+        /// <param name="name">Name</param>
+        /// <param name="description">Description</param>
+        /// <param name="nameOrDescription">Name or description</param>
+        /// <param name="publishVersionId">Publish version ID</param>
+        /// <param name="editableBy">Editable by</param>
+        /// <param name="lockedBy">Locked by</param>
+        /// <param name="deleted">Include deleted</param>
+        /// <returns>Task of FlowEntityListing</returns>
+        System.Threading.Tasks.Task<FlowEntityListing> GetFlowsAsync (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null);
+
+        /// <summary>
+        /// Get a pageable list of flows, filtered by query parameters
+        /// </summary>
+        /// <remarks>
+        /// Multiple IDs can be specified, in which case all matching flows will be returned, and no other parameters will be evaluated.
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Type</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="sortBy">Sort by</param>
+        /// <param name="sortOrder">Sort order</param>
+        /// <param name="id">ID</param>
+        /// <param name="name">Name</param>
+        /// <param name="description">Description</param>
+        /// <param name="nameOrDescription">Name or description</param>
+        /// <param name="publishVersionId">Publish version ID</param>
+        /// <param name="editableBy">Editable by</param>
+        /// <param name="lockedBy">Locked by</param>
+        /// <param name="deleted">Include deleted</param>
+        /// <returns>Task of ApiResponse (FlowEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FlowEntityListing>> GetFlowsAsyncWithHttpInfo (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null);
         
         /// <summary>
         /// Get IVR configs.
@@ -2038,28 +2038,6 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> GetSystempromptsPromptIdResourcesLanguageAsyncWithHttpInfo (string promptId, string language);
         
         /// <summary>
-        /// Create flow
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <returns>Task of Flow</returns>
-        System.Threading.Tasks.Task<Flow> PostAsync (Flow body = null);
-
-        /// <summary>
-        /// Create flow
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <returns>Task of ApiResponse (Flow)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Flow>> PostAsyncWithHttpInfo (Flow body = null);
-        
-        /// <summary>
         /// Check-in flow
         /// </summary>
         /// <remarks>
@@ -2216,6 +2194,28 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (FlowVersion)</returns>
         System.Threading.Tasks.Task<ApiResponse<FlowVersion>> PostFlowIdVersionsAsyncWithHttpInfo (string flowId, Object body = null);
+        
+        /// <summary>
+        /// Create flow
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of Flow</returns>
+        System.Threading.Tasks.Task<Flow> PostFlowsAsync (Flow body = null);
+
+        /// <summary>
+        /// Create flow
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (Flow)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsAsyncWithHttpInfo (Flow body = null);
         
         /// <summary>
         /// Create IVR config.
@@ -2602,183 +2602,6 @@ namespace ININ.PureCloudApi.Api
    
         
         /// <summary>
-        /// Batch-delete a list of flows Multiple IDs can be specified, in which case all specified flows will be deleted.
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">List of Flow IDs</param> 
-        /// <param name="ignoreDependencies">Ignore Dependencies</param> 
-        /// <returns></returns>
-        public void Delete (List<string> id, bool? ignoreDependencies = null)
-        {
-             DeleteWithHttpInfo(id, ignoreDependencies);
-        }
-
-        /// <summary>
-        /// Batch-delete a list of flows Multiple IDs can be specified, in which case all specified flows will be deleted.
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">List of Flow IDs</param> 
-        /// <param name="ignoreDependencies">Ignore Dependencies</param> 
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteWithHttpInfo (List<string> id, bool? ignoreDependencies = null)
-        {
-            
-            // verify the required parameter 'id' is set
-            if (id == null)
-                throw new ApiException(400, "Missing required parameter 'id' when calling ArchitectApi->Delete");
-            
-    
-            var localVarPath = "/api/v1/flows";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            if (ignoreDependencies != null) localVarQueryParams.Add("ignoreDependencies", Configuration.ApiClient.ParameterToString(ignoreDependencies)); // query parameter
-            
-            
-            
-            
-
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Delete: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Delete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        
-        /// <summary>
-        /// Batch-delete a list of flows Multiple IDs can be specified, in which case all specified flows will be deleted.
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">List of Flow IDs</param>
-        /// <param name="ignoreDependencies">Ignore Dependencies</param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteAsync (List<string> id, bool? ignoreDependencies = null)
-        {
-             await DeleteAsyncWithHttpInfo(id, ignoreDependencies);
-
-        }
-
-        /// <summary>
-        /// Batch-delete a list of flows Multiple IDs can be specified, in which case all specified flows will be deleted.
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="id">List of Flow IDs</param>
-        /// <param name="ignoreDependencies">Ignore Dependencies</param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAsyncWithHttpInfo (List<string> id, bool? ignoreDependencies = null)
-        {
-            // verify the required parameter 'id' is set
-            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling Delete");
-            
-    
-            var localVarPath = "/api/v1/flows";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            if (ignoreDependencies != null) localVarQueryParams.Add("ignoreDependencies", Configuration.ApiClient.ParameterToString(ignoreDependencies)); // query parameter
-            
-            
-            
-            
-
-            
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Delete: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Delete: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-        
-        /// <summary>
         /// Delete flow. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2942,6 +2765,183 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteFlowId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteFlowId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+        
+        /// <summary>
+        /// Batch-delete a list of flows Multiple IDs can be specified, in which case all specified flows will be deleted.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">List of Flow IDs</param> 
+        /// <param name="ignoreDependencies">Ignore Dependencies</param> 
+        /// <returns></returns>
+        public void DeleteFlows (List<string> id, bool? ignoreDependencies = null)
+        {
+             DeleteFlowsWithHttpInfo(id, ignoreDependencies);
+        }
+
+        /// <summary>
+        /// Batch-delete a list of flows Multiple IDs can be specified, in which case all specified flows will be deleted.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">List of Flow IDs</param> 
+        /// <param name="ignoreDependencies">Ignore Dependencies</param> 
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteFlowsWithHttpInfo (List<string> id, bool? ignoreDependencies = null)
+        {
+            
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling ArchitectApi->DeleteFlows");
+            
+    
+            var localVarPath = "/api/v1/flows";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            if (ignoreDependencies != null) localVarQueryParams.Add("ignoreDependencies", Configuration.ApiClient.ParameterToString(ignoreDependencies)); // query parameter
+            
+            
+            
+            
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteFlows: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteFlows: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        
+        /// <summary>
+        /// Batch-delete a list of flows Multiple IDs can be specified, in which case all specified flows will be deleted.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">List of Flow IDs</param>
+        /// <param name="ignoreDependencies">Ignore Dependencies</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteFlowsAsync (List<string> id, bool? ignoreDependencies = null)
+        {
+             await DeleteFlowsAsyncWithHttpInfo(id, ignoreDependencies);
+
+        }
+
+        /// <summary>
+        /// Batch-delete a list of flows Multiple IDs can be specified, in which case all specified flows will be deleted.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">List of Flow IDs</param>
+        /// <param name="ignoreDependencies">Ignore Dependencies</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowsAsyncWithHttpInfo (List<string> id, bool? ignoreDependencies = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteFlows");
+            
+    
+            var localVarPath = "/api/v1/flows";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            if (ignoreDependencies != null) localVarQueryParams.Add("ignoreDependencies", Configuration.ApiClient.ParameterToString(ignoreDependencies)); // query parameter
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteFlows: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteFlows: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
@@ -4185,245 +4185,6 @@ namespace ININ.PureCloudApi.Api
         }
         
         /// <summary>
-        /// Get a pageable list of flows, filtered by query parameters Multiple IDs can be specified, in which case all matching flows will be returned, and no other parameters will be evaluated.
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="type">Type</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="sortBy">Sort by</param> 
-        /// <param name="sortOrder">Sort order</param> 
-        /// <param name="id">ID</param> 
-        /// <param name="name">Name</param> 
-        /// <param name="description">Description</param> 
-        /// <param name="nameOrDescription">Name or description</param> 
-        /// <param name="publishVersionId">Publish version ID</param> 
-        /// <param name="editableBy">Editable by</param> 
-        /// <param name="lockedBy">Locked by</param> 
-        /// <param name="deleted">Include deleted</param> 
-        /// <returns>FlowEntityListing</returns>
-        public FlowEntityListing Get (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null)
-        {
-             ApiResponse<FlowEntityListing> localVarResponse = GetWithHttpInfo(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, editableBy, lockedBy, deleted);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get a pageable list of flows, filtered by query parameters Multiple IDs can be specified, in which case all matching flows will be returned, and no other parameters will be evaluated.
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="type">Type</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="sortBy">Sort by</param> 
-        /// <param name="sortOrder">Sort order</param> 
-        /// <param name="id">ID</param> 
-        /// <param name="name">Name</param> 
-        /// <param name="description">Description</param> 
-        /// <param name="nameOrDescription">Name or description</param> 
-        /// <param name="publishVersionId">Publish version ID</param> 
-        /// <param name="editableBy">Editable by</param> 
-        /// <param name="lockedBy">Locked by</param> 
-        /// <param name="deleted">Include deleted</param> 
-        /// <returns>ApiResponse of FlowEntityListing</returns>
-        public ApiResponse< FlowEntityListing > GetWithHttpInfo (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null)
-        {
-            
-    
-            var localVarPath = "/api/v1/flows";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (type != null) localVarQueryParams.Add("type", Configuration.ApiClient.ParameterToString(type)); // query parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
-            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
-            if (description != null) localVarQueryParams.Add("description", Configuration.ApiClient.ParameterToString(description)); // query parameter
-            if (nameOrDescription != null) localVarQueryParams.Add("nameOrDescription", Configuration.ApiClient.ParameterToString(nameOrDescription)); // query parameter
-            if (publishVersionId != null) localVarQueryParams.Add("publishVersionId", Configuration.ApiClient.ParameterToString(publishVersionId)); // query parameter
-            if (editableBy != null) localVarQueryParams.Add("editableBy", Configuration.ApiClient.ParameterToString(editableBy)); // query parameter
-            if (lockedBy != null) localVarQueryParams.Add("lockedBy", Configuration.ApiClient.ParameterToString(lockedBy)); // query parameter
-            if (deleted != null) localVarQueryParams.Add("deleted", Configuration.ApiClient.ParameterToString(deleted)); // query parameter
-            
-            
-            
-            
-
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Get: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Get: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<FlowEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlowEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowEntityListing)));
-            
-        }
-
-        
-        /// <summary>
-        /// Get a pageable list of flows, filtered by query parameters Multiple IDs can be specified, in which case all matching flows will be returned, and no other parameters will be evaluated.
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="type">Type</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="sortBy">Sort by</param>
-        /// <param name="sortOrder">Sort order</param>
-        /// <param name="id">ID</param>
-        /// <param name="name">Name</param>
-        /// <param name="description">Description</param>
-        /// <param name="nameOrDescription">Name or description</param>
-        /// <param name="publishVersionId">Publish version ID</param>
-        /// <param name="editableBy">Editable by</param>
-        /// <param name="lockedBy">Locked by</param>
-        /// <param name="deleted">Include deleted</param>
-        /// <returns>Task of FlowEntityListing</returns>
-        public async System.Threading.Tasks.Task<FlowEntityListing> GetAsync (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null)
-        {
-             ApiResponse<FlowEntityListing> localVarResponse = await GetAsyncWithHttpInfo(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, editableBy, lockedBy, deleted);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get a pageable list of flows, filtered by query parameters Multiple IDs can be specified, in which case all matching flows will be returned, and no other parameters will be evaluated.
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="type">Type</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="sortBy">Sort by</param>
-        /// <param name="sortOrder">Sort order</param>
-        /// <param name="id">ID</param>
-        /// <param name="name">Name</param>
-        /// <param name="description">Description</param>
-        /// <param name="nameOrDescription">Name or description</param>
-        /// <param name="publishVersionId">Publish version ID</param>
-        /// <param name="editableBy">Editable by</param>
-        /// <param name="lockedBy">Locked by</param>
-        /// <param name="deleted">Include deleted</param>
-        /// <returns>Task of ApiResponse (FlowEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FlowEntityListing>> GetAsyncWithHttpInfo (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null)
-        {
-            
-    
-            var localVarPath = "/api/v1/flows";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (type != null) localVarQueryParams.Add("type", Configuration.ApiClient.ParameterToString(type)); // query parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
-            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
-            if (description != null) localVarQueryParams.Add("description", Configuration.ApiClient.ParameterToString(description)); // query parameter
-            if (nameOrDescription != null) localVarQueryParams.Add("nameOrDescription", Configuration.ApiClient.ParameterToString(nameOrDescription)); // query parameter
-            if (publishVersionId != null) localVarQueryParams.Add("publishVersionId", Configuration.ApiClient.ParameterToString(publishVersionId)); // query parameter
-            if (editableBy != null) localVarQueryParams.Add("editableBy", Configuration.ApiClient.ParameterToString(editableBy)); // query parameter
-            if (lockedBy != null) localVarQueryParams.Add("lockedBy", Configuration.ApiClient.ParameterToString(lockedBy)); // query parameter
-            if (deleted != null) localVarQueryParams.Add("deleted", Configuration.ApiClient.ParameterToString(deleted)); // query parameter
-            
-            
-            
-            
-
-            
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Get: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Get: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<FlowEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (FlowEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowEntityListing)));
-            
-        }
-        
-        /// <summary>
         /// Get flow. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5536,6 +5297,245 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+        
+        /// <summary>
+        /// Get a pageable list of flows, filtered by query parameters Multiple IDs can be specified, in which case all matching flows will be returned, and no other parameters will be evaluated.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Type</param> 
+        /// <param name="pageNumber">Page number</param> 
+        /// <param name="pageSize">Page size</param> 
+        /// <param name="sortBy">Sort by</param> 
+        /// <param name="sortOrder">Sort order</param> 
+        /// <param name="id">ID</param> 
+        /// <param name="name">Name</param> 
+        /// <param name="description">Description</param> 
+        /// <param name="nameOrDescription">Name or description</param> 
+        /// <param name="publishVersionId">Publish version ID</param> 
+        /// <param name="editableBy">Editable by</param> 
+        /// <param name="lockedBy">Locked by</param> 
+        /// <param name="deleted">Include deleted</param> 
+        /// <returns>FlowEntityListing</returns>
+        public FlowEntityListing GetFlows (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null)
+        {
+             ApiResponse<FlowEntityListing> localVarResponse = GetFlowsWithHttpInfo(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, editableBy, lockedBy, deleted);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a pageable list of flows, filtered by query parameters Multiple IDs can be specified, in which case all matching flows will be returned, and no other parameters will be evaluated.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Type</param> 
+        /// <param name="pageNumber">Page number</param> 
+        /// <param name="pageSize">Page size</param> 
+        /// <param name="sortBy">Sort by</param> 
+        /// <param name="sortOrder">Sort order</param> 
+        /// <param name="id">ID</param> 
+        /// <param name="name">Name</param> 
+        /// <param name="description">Description</param> 
+        /// <param name="nameOrDescription">Name or description</param> 
+        /// <param name="publishVersionId">Publish version ID</param> 
+        /// <param name="editableBy">Editable by</param> 
+        /// <param name="lockedBy">Locked by</param> 
+        /// <param name="deleted">Include deleted</param> 
+        /// <returns>ApiResponse of FlowEntityListing</returns>
+        public ApiResponse< FlowEntityListing > GetFlowsWithHttpInfo (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null)
+        {
+            
+    
+            var localVarPath = "/api/v1/flows";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (type != null) localVarQueryParams.Add("type", Configuration.ApiClient.ParameterToString(type)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (description != null) localVarQueryParams.Add("description", Configuration.ApiClient.ParameterToString(description)); // query parameter
+            if (nameOrDescription != null) localVarQueryParams.Add("nameOrDescription", Configuration.ApiClient.ParameterToString(nameOrDescription)); // query parameter
+            if (publishVersionId != null) localVarQueryParams.Add("publishVersionId", Configuration.ApiClient.ParameterToString(publishVersionId)); // query parameter
+            if (editableBy != null) localVarQueryParams.Add("editableBy", Configuration.ApiClient.ParameterToString(editableBy)); // query parameter
+            if (lockedBy != null) localVarQueryParams.Add("lockedBy", Configuration.ApiClient.ParameterToString(lockedBy)); // query parameter
+            if (deleted != null) localVarQueryParams.Add("deleted", Configuration.ApiClient.ParameterToString(deleted)); // query parameter
+            
+            
+            
+            
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlows: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlows: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<FlowEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FlowEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowEntityListing)));
+            
+        }
+
+        
+        /// <summary>
+        /// Get a pageable list of flows, filtered by query parameters Multiple IDs can be specified, in which case all matching flows will be returned, and no other parameters will be evaluated.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Type</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="sortBy">Sort by</param>
+        /// <param name="sortOrder">Sort order</param>
+        /// <param name="id">ID</param>
+        /// <param name="name">Name</param>
+        /// <param name="description">Description</param>
+        /// <param name="nameOrDescription">Name or description</param>
+        /// <param name="publishVersionId">Publish version ID</param>
+        /// <param name="editableBy">Editable by</param>
+        /// <param name="lockedBy">Locked by</param>
+        /// <param name="deleted">Include deleted</param>
+        /// <returns>Task of FlowEntityListing</returns>
+        public async System.Threading.Tasks.Task<FlowEntityListing> GetFlowsAsync (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null)
+        {
+             ApiResponse<FlowEntityListing> localVarResponse = await GetFlowsAsyncWithHttpInfo(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, editableBy, lockedBy, deleted);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a pageable list of flows, filtered by query parameters Multiple IDs can be specified, in which case all matching flows will be returned, and no other parameters will be evaluated.
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Type</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="sortBy">Sort by</param>
+        /// <param name="sortOrder">Sort order</param>
+        /// <param name="id">ID</param>
+        /// <param name="name">Name</param>
+        /// <param name="description">Description</param>
+        /// <param name="nameOrDescription">Name or description</param>
+        /// <param name="publishVersionId">Publish version ID</param>
+        /// <param name="editableBy">Editable by</param>
+        /// <param name="lockedBy">Locked by</param>
+        /// <param name="deleted">Include deleted</param>
+        /// <returns>Task of ApiResponse (FlowEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FlowEntityListing>> GetFlowsAsyncWithHttpInfo (string type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, bool? deleted = null)
+        {
+            
+    
+            var localVarPath = "/api/v1/flows";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (type != null) localVarQueryParams.Add("type", Configuration.ApiClient.ParameterToString(type)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (description != null) localVarQueryParams.Add("description", Configuration.ApiClient.ParameterToString(description)); // query parameter
+            if (nameOrDescription != null) localVarQueryParams.Add("nameOrDescription", Configuration.ApiClient.ParameterToString(nameOrDescription)); // query parameter
+            if (publishVersionId != null) localVarQueryParams.Add("publishVersionId", Configuration.ApiClient.ParameterToString(publishVersionId)); // query parameter
+            if (editableBy != null) localVarQueryParams.Add("editableBy", Configuration.ApiClient.ParameterToString(editableBy)); // query parameter
+            if (lockedBy != null) localVarQueryParams.Add("lockedBy", Configuration.ApiClient.ParameterToString(lockedBy)); // query parameter
+            if (deleted != null) localVarQueryParams.Add("deleted", Configuration.ApiClient.ParameterToString(deleted)); // query parameter
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlows: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlows: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FlowEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowEntityListing)));
             
         }
         
@@ -8106,185 +8106,6 @@ namespace ININ.PureCloudApi.Api
         }
         
         /// <summary>
-        /// Create flow 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param> 
-        /// <returns>Flow</returns>
-        public Flow Post (Flow body = null)
-        {
-             ApiResponse<Flow> localVarResponse = PostWithHttpInfo(body);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Create flow 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param> 
-        /// <returns>ApiResponse of Flow</returns>
-        public ApiResponse< Flow > PostWithHttpInfo (Flow body = null)
-        {
-            
-    
-            var localVarPath = "/api/v1/flows";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            if (body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Post: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Post: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<Flow>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Flow) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
-            
-        }
-
-        
-        /// <summary>
-        /// Create flow 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <returns>Task of Flow</returns>
-        public async System.Threading.Tasks.Task<Flow> PostAsync (Flow body = null)
-        {
-             ApiResponse<Flow> localVarResponse = await PostAsyncWithHttpInfo(body);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Create flow 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"></param>
-        /// <returns>Task of ApiResponse (Flow)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Flow>> PostAsyncWithHttpInfo (Flow body = null)
-        {
-            
-    
-            var localVarPath = "/api/v1/flows";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            if (body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-
-            
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Post: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Post: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<Flow>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Flow) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
-            
-        }
-        
-        /// <summary>
         /// Check-in flow 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9496,6 +9317,185 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<FlowVersion>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (FlowVersion) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowVersion)));
+            
+        }
+        
+        /// <summary>
+        /// Create flow 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param> 
+        /// <returns>Flow</returns>
+        public Flow PostFlows (Flow body = null)
+        {
+             ApiResponse<Flow> localVarResponse = PostFlowsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create flow 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param> 
+        /// <returns>ApiResponse of Flow</returns>
+        public ApiResponse< Flow > PostFlowsWithHttpInfo (Flow body = null)
+        {
+            
+    
+            var localVarPath = "/api/v1/flows";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlows: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlows: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<Flow>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Flow) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
+            
+        }
+
+        
+        /// <summary>
+        /// Create flow 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of Flow</returns>
+        public async System.Threading.Tasks.Task<Flow> PostFlowsAsync (Flow body = null)
+        {
+             ApiResponse<Flow> localVarResponse = await PostFlowsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create flow 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (Flow)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsAsyncWithHttpInfo (Flow body = null)
+        {
+            
+    
+            var localVarPath = "/api/v1/flows";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlows: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlows: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Flow>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Flow) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
             
         }
         

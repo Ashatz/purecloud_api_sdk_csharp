@@ -66,28 +66,6 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<string> DeleteConversationIdParticipantsParticipantIdConsultWithHttpInfo (string conversationId, string participantId);
         
         /// <summary>
-        /// Get conversations
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="communicationType">Call or Chat communication filtering</param>
-        /// <returns>ConversationEntityListing</returns>
-        ConversationEntityListing Get (string communicationType = null);
-  
-        /// <summary>
-        /// Get conversations
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="communicationType">Call or Chat communication filtering</param>
-        /// <returns>ApiResponse of ConversationEntityListing</returns>
-        ApiResponse<ConversationEntityListing> GetWithHttpInfo (string communicationType = null);
-        
-        /// <summary>
         /// Get conversation
         /// </summary>
         /// <remarks>
@@ -272,6 +250,28 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<WrapupCode> GetConversationIdWrapupcodesWithHttpInfo (string conversationId);
         
         /// <summary>
+        /// Get conversations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="communicationType">Call or Chat communication filtering</param>
+        /// <returns>ConversationEntityListing</returns>
+        ConversationEntityListing GetConversations (string communicationType = null);
+  
+        /// <summary>
+        /// Get conversations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="communicationType">Call or Chat communication filtering</param>
+        /// <returns>ApiResponse of ConversationEntityListing</returns>
+        ApiResponse<ConversationEntityListing> GetConversationsWithHttpInfo (string communicationType = null);
+        
+        /// <summary>
         /// Get the maximum number of participants that this user can have on a conference
         /// </summary>
         /// <remarks>
@@ -290,42 +290,6 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of MaxParticipants</returns>
         ApiResponse<MaxParticipants> GetMaximumconferencepartiesWithHttpInfo ();
-        
-        /// <summary>
-        /// Create conversation
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="call">Phone number to call</param>
-        /// <param name="callFrom">Queue id to place the call from</param>
-        /// <param name="callQueueId">Queue id to call</param>
-        /// <param name="callUserId">User id to call (this will call the default number)</param>
-        /// <param name="priority">Priority level to use for routing when calling a queue</param>
-        /// <param name="languageId">Language id to use for routing when calling a queue</param>
-        /// <param name="skillIds">Skill ids to use for routing when calling a queue</param>
-        /// <param name="body"></param>
-        /// <returns>ConversationResponse</returns>
-        ConversationResponse Post (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null);
-  
-        /// <summary>
-        /// Create conversation
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="call">Phone number to call</param>
-        /// <param name="callFrom">Queue id to place the call from</param>
-        /// <param name="callQueueId">Queue id to call</param>
-        /// <param name="callUserId">User id to call (this will call the default number)</param>
-        /// <param name="priority">Priority level to use for routing when calling a queue</param>
-        /// <param name="languageId">Language id to use for routing when calling a queue</param>
-        /// <param name="skillIds">Skill ids to use for routing when calling a queue</param>
-        /// <param name="body"></param>
-        /// <returns>ApiResponse of ConversationResponse</returns>
-        ApiResponse<ConversationResponse> PostWithHttpInfo (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null);
         
         /// <summary>
         /// Add a new call to a conversation
@@ -482,6 +446,42 @@ namespace ININ.PureCloudApi.Api
         /// <param name="voicemail">Indicates this participant will be replaced by the voicemail inbox of the participant.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostConversationIdParticipantsParticipantIdReplaceWithHttpInfo (string conversationId, string participantId, string userId = null, string address = null, string username = null, string queueId = null, bool? voicemail = null);
+        
+        /// <summary>
+        /// Create conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="call">Phone number to call</param>
+        /// <param name="callFrom">Queue id to place the call from</param>
+        /// <param name="callQueueId">Queue id to call</param>
+        /// <param name="callUserId">User id to call (this will call the default number)</param>
+        /// <param name="priority">Priority level to use for routing when calling a queue</param>
+        /// <param name="languageId">Language id to use for routing when calling a queue</param>
+        /// <param name="skillIds">Skill ids to use for routing when calling a queue</param>
+        /// <param name="body"></param>
+        /// <returns>ConversationResponse</returns>
+        ConversationResponse PostConversations (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null);
+  
+        /// <summary>
+        /// Create conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="call">Phone number to call</param>
+        /// <param name="callFrom">Queue id to place the call from</param>
+        /// <param name="callQueueId">Queue id to call</param>
+        /// <param name="callUserId">User id to call (this will call the default number)</param>
+        /// <param name="priority">Priority level to use for routing when calling a queue</param>
+        /// <param name="languageId">Language id to use for routing when calling a queue</param>
+        /// <param name="skillIds">Skill ids to use for routing when calling a queue</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of ConversationResponse</returns>
+        ApiResponse<ConversationResponse> PostConversationsWithHttpInfo (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null);
         
         /// <summary>
         /// Create Fax Conversation
@@ -730,28 +730,6 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<string>> DeleteConversationIdParticipantsParticipantIdConsultAsyncWithHttpInfo (string conversationId, string participantId);
         
         /// <summary>
-        /// Get conversations
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="communicationType">Call or Chat communication filtering</param>
-        /// <returns>Task of ConversationEntityListing</returns>
-        System.Threading.Tasks.Task<ConversationEntityListing> GetAsync (string communicationType = null);
-
-        /// <summary>
-        /// Get conversations
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="communicationType">Call or Chat communication filtering</param>
-        /// <returns>Task of ApiResponse (ConversationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConversationEntityListing>> GetAsyncWithHttpInfo (string communicationType = null);
-        
-        /// <summary>
         /// Get conversation
         /// </summary>
         /// <remarks>
@@ -936,6 +914,28 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetConversationIdWrapupcodesAsyncWithHttpInfo (string conversationId);
         
         /// <summary>
+        /// Get conversations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="communicationType">Call or Chat communication filtering</param>
+        /// <returns>Task of ConversationEntityListing</returns>
+        System.Threading.Tasks.Task<ConversationEntityListing> GetConversationsAsync (string communicationType = null);
+
+        /// <summary>
+        /// Get conversations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="communicationType">Call or Chat communication filtering</param>
+        /// <returns>Task of ApiResponse (ConversationEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConversationEntityListing>> GetConversationsAsyncWithHttpInfo (string communicationType = null);
+        
+        /// <summary>
         /// Get the maximum number of participants that this user can have on a conference
         /// </summary>
         /// <remarks>
@@ -954,42 +954,6 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (MaxParticipants)</returns>
         System.Threading.Tasks.Task<ApiResponse<MaxParticipants>> GetMaximumconferencepartiesAsyncWithHttpInfo ();
-        
-        /// <summary>
-        /// Create conversation
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="call">Phone number to call</param>
-        /// <param name="callFrom">Queue id to place the call from</param>
-        /// <param name="callQueueId">Queue id to call</param>
-        /// <param name="callUserId">User id to call (this will call the default number)</param>
-        /// <param name="priority">Priority level to use for routing when calling a queue</param>
-        /// <param name="languageId">Language id to use for routing when calling a queue</param>
-        /// <param name="skillIds">Skill ids to use for routing when calling a queue</param>
-        /// <param name="body"></param>
-        /// <returns>Task of ConversationResponse</returns>
-        System.Threading.Tasks.Task<ConversationResponse> PostAsync (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null);
-
-        /// <summary>
-        /// Create conversation
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="call">Phone number to call</param>
-        /// <param name="callFrom">Queue id to place the call from</param>
-        /// <param name="callQueueId">Queue id to call</param>
-        /// <param name="callUserId">User id to call (this will call the default number)</param>
-        /// <param name="priority">Priority level to use for routing when calling a queue</param>
-        /// <param name="languageId">Language id to use for routing when calling a queue</param>
-        /// <param name="skillIds">Skill ids to use for routing when calling a queue</param>
-        /// <param name="body"></param>
-        /// <returns>Task of ApiResponse (ConversationResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConversationResponse>> PostAsyncWithHttpInfo (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null);
         
         /// <summary>
         /// Add a new call to a conversation
@@ -1146,6 +1110,42 @@ namespace ININ.PureCloudApi.Api
         /// <param name="voicemail">Indicates this participant will be replaced by the voicemail inbox of the participant.</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationIdParticipantsParticipantIdReplaceAsyncWithHttpInfo (string conversationId, string participantId, string userId = null, string address = null, string username = null, string queueId = null, bool? voicemail = null);
+        
+        /// <summary>
+        /// Create conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="call">Phone number to call</param>
+        /// <param name="callFrom">Queue id to place the call from</param>
+        /// <param name="callQueueId">Queue id to call</param>
+        /// <param name="callUserId">User id to call (this will call the default number)</param>
+        /// <param name="priority">Priority level to use for routing when calling a queue</param>
+        /// <param name="languageId">Language id to use for routing when calling a queue</param>
+        /// <param name="skillIds">Skill ids to use for routing when calling a queue</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ConversationResponse</returns>
+        System.Threading.Tasks.Task<ConversationResponse> PostConversationsAsync (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null);
+
+        /// <summary>
+        /// Create conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="call">Phone number to call</param>
+        /// <param name="callFrom">Queue id to place the call from</param>
+        /// <param name="callQueueId">Queue id to call</param>
+        /// <param name="callUserId">User id to call (this will call the default number)</param>
+        /// <param name="priority">Priority level to use for routing when calling a queue</param>
+        /// <param name="languageId">Language id to use for routing when calling a queue</param>
+        /// <param name="skillIds">Skill ids to use for routing when calling a queue</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (ConversationResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConversationResponse>> PostConversationsAsyncWithHttpInfo (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null);
         
         /// <summary>
         /// Create Fax Conversation
@@ -1788,173 +1788,6 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
-            
-        }
-        
-        /// <summary>
-        /// Get conversations 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="communicationType">Call or Chat communication filtering</param> 
-        /// <returns>ConversationEntityListing</returns>
-        public ConversationEntityListing Get (string communicationType = null)
-        {
-             ApiResponse<ConversationEntityListing> localVarResponse = GetWithHttpInfo(communicationType);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get conversations 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="communicationType">Call or Chat communication filtering</param> 
-        /// <returns>ApiResponse of ConversationEntityListing</returns>
-        public ApiResponse< ConversationEntityListing > GetWithHttpInfo (string communicationType = null)
-        {
-            
-    
-            var localVarPath = "/api/v1/conversations";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (communicationType != null) localVarQueryParams.Add("communicationType", Configuration.ApiClient.ParameterToString(communicationType)); // query parameter
-            
-            
-            
-            
-
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Get: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Get: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<ConversationEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationEntityListing)));
-            
-        }
-
-        
-        /// <summary>
-        /// Get conversations 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="communicationType">Call or Chat communication filtering</param>
-        /// <returns>Task of ConversationEntityListing</returns>
-        public async System.Threading.Tasks.Task<ConversationEntityListing> GetAsync (string communicationType = null)
-        {
-             ApiResponse<ConversationEntityListing> localVarResponse = await GetAsyncWithHttpInfo(communicationType);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get conversations 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="communicationType">Call or Chat communication filtering</param>
-        /// <returns>Task of ApiResponse (ConversationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ConversationEntityListing>> GetAsyncWithHttpInfo (string communicationType = null)
-        {
-            
-    
-            var localVarPath = "/api/v1/conversations";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (communicationType != null) localVarQueryParams.Add("communicationType", Configuration.ApiClient.ParameterToString(communicationType)); // query parameter
-            
-            
-            
-            
-
-            
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Get: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Get: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ConversationEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationEntityListing)));
             
         }
         
@@ -3385,6 +3218,173 @@ namespace ININ.PureCloudApi.Api
         }
         
         /// <summary>
+        /// Get conversations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="communicationType">Call or Chat communication filtering</param> 
+        /// <returns>ConversationEntityListing</returns>
+        public ConversationEntityListing GetConversations (string communicationType = null)
+        {
+             ApiResponse<ConversationEntityListing> localVarResponse = GetConversationsWithHttpInfo(communicationType);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get conversations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="communicationType">Call or Chat communication filtering</param> 
+        /// <returns>ApiResponse of ConversationEntityListing</returns>
+        public ApiResponse< ConversationEntityListing > GetConversationsWithHttpInfo (string communicationType = null)
+        {
+            
+    
+            var localVarPath = "/api/v1/conversations";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (communicationType != null) localVarQueryParams.Add("communicationType", Configuration.ApiClient.ParameterToString(communicationType)); // query parameter
+            
+            
+            
+            
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversations: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ConversationEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationEntityListing)));
+            
+        }
+
+        
+        /// <summary>
+        /// Get conversations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="communicationType">Call or Chat communication filtering</param>
+        /// <returns>Task of ConversationEntityListing</returns>
+        public async System.Threading.Tasks.Task<ConversationEntityListing> GetConversationsAsync (string communicationType = null)
+        {
+             ApiResponse<ConversationEntityListing> localVarResponse = await GetConversationsAsyncWithHttpInfo(communicationType);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get conversations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="communicationType">Call or Chat communication filtering</param>
+        /// <returns>Task of ApiResponse (ConversationEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConversationEntityListing>> GetConversationsAsyncWithHttpInfo (string communicationType = null)
+        {
+            
+    
+            var localVarPath = "/api/v1/conversations";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (communicationType != null) localVarQueryParams.Add("communicationType", Configuration.ApiClient.ParameterToString(communicationType)); // query parameter
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversations: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConversationEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationEntityListing)));
+            
+        }
+        
+        /// <summary>
         /// Get the maximum number of participants that this user can have on a conference 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3542,227 +3542,6 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<MaxParticipants>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (MaxParticipants) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MaxParticipants)));
-            
-        }
-        
-        /// <summary>
-        /// Create conversation 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="call">Phone number to call</param> 
-        /// <param name="callFrom">Queue id to place the call from</param> 
-        /// <param name="callQueueId">Queue id to call</param> 
-        /// <param name="callUserId">User id to call (this will call the default number)</param> 
-        /// <param name="priority">Priority level to use for routing when calling a queue</param> 
-        /// <param name="languageId">Language id to use for routing when calling a queue</param> 
-        /// <param name="skillIds">Skill ids to use for routing when calling a queue</param> 
-        /// <param name="body"></param> 
-        /// <returns>ConversationResponse</returns>
-        public ConversationResponse Post (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null)
-        {
-             ApiResponse<ConversationResponse> localVarResponse = PostWithHttpInfo(call, callFrom, callQueueId, callUserId, priority, languageId, skillIds, body);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Create conversation 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="call">Phone number to call</param> 
-        /// <param name="callFrom">Queue id to place the call from</param> 
-        /// <param name="callQueueId">Queue id to call</param> 
-        /// <param name="callUserId">User id to call (this will call the default number)</param> 
-        /// <param name="priority">Priority level to use for routing when calling a queue</param> 
-        /// <param name="languageId">Language id to use for routing when calling a queue</param> 
-        /// <param name="skillIds">Skill ids to use for routing when calling a queue</param> 
-        /// <param name="body"></param> 
-        /// <returns>ApiResponse of ConversationResponse</returns>
-        public ApiResponse< ConversationResponse > PostWithHttpInfo (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null)
-        {
-            
-    
-            var localVarPath = "/api/v1/conversations";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (call != null) localVarQueryParams.Add("call", Configuration.ApiClient.ParameterToString(call)); // query parameter
-            if (callFrom != null) localVarQueryParams.Add("callFrom", Configuration.ApiClient.ParameterToString(callFrom)); // query parameter
-            if (callQueueId != null) localVarQueryParams.Add("callQueueId", Configuration.ApiClient.ParameterToString(callQueueId)); // query parameter
-            if (callUserId != null) localVarQueryParams.Add("callUserId", Configuration.ApiClient.ParameterToString(callUserId)); // query parameter
-            if (priority != null) localVarQueryParams.Add("priority", Configuration.ApiClient.ParameterToString(priority)); // query parameter
-            if (languageId != null) localVarQueryParams.Add("languageId", Configuration.ApiClient.ParameterToString(languageId)); // query parameter
-            if (skillIds != null) localVarQueryParams.Add("skillIds", Configuration.ApiClient.ParameterToString(skillIds)); // query parameter
-            
-            
-            
-            if (body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Post: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Post: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<ConversationResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ConversationResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationResponse)));
-            
-        }
-
-        
-        /// <summary>
-        /// Create conversation 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="call">Phone number to call</param>
-        /// <param name="callFrom">Queue id to place the call from</param>
-        /// <param name="callQueueId">Queue id to call</param>
-        /// <param name="callUserId">User id to call (this will call the default number)</param>
-        /// <param name="priority">Priority level to use for routing when calling a queue</param>
-        /// <param name="languageId">Language id to use for routing when calling a queue</param>
-        /// <param name="skillIds">Skill ids to use for routing when calling a queue</param>
-        /// <param name="body"></param>
-        /// <returns>Task of ConversationResponse</returns>
-        public async System.Threading.Tasks.Task<ConversationResponse> PostAsync (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null)
-        {
-             ApiResponse<ConversationResponse> localVarResponse = await PostAsyncWithHttpInfo(call, callFrom, callQueueId, callUserId, priority, languageId, skillIds, body);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Create conversation 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="call">Phone number to call</param>
-        /// <param name="callFrom">Queue id to place the call from</param>
-        /// <param name="callQueueId">Queue id to call</param>
-        /// <param name="callUserId">User id to call (this will call the default number)</param>
-        /// <param name="priority">Priority level to use for routing when calling a queue</param>
-        /// <param name="languageId">Language id to use for routing when calling a queue</param>
-        /// <param name="skillIds">Skill ids to use for routing when calling a queue</param>
-        /// <param name="body"></param>
-        /// <returns>Task of ApiResponse (ConversationResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ConversationResponse>> PostAsyncWithHttpInfo (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null)
-        {
-            
-    
-            var localVarPath = "/api/v1/conversations";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (call != null) localVarQueryParams.Add("call", Configuration.ApiClient.ParameterToString(call)); // query parameter
-            if (callFrom != null) localVarQueryParams.Add("callFrom", Configuration.ApiClient.ParameterToString(callFrom)); // query parameter
-            if (callQueueId != null) localVarQueryParams.Add("callQueueId", Configuration.ApiClient.ParameterToString(callQueueId)); // query parameter
-            if (callUserId != null) localVarQueryParams.Add("callUserId", Configuration.ApiClient.ParameterToString(callUserId)); // query parameter
-            if (priority != null) localVarQueryParams.Add("priority", Configuration.ApiClient.ParameterToString(priority)); // query parameter
-            if (languageId != null) localVarQueryParams.Add("languageId", Configuration.ApiClient.ParameterToString(languageId)); // query parameter
-            if (skillIds != null) localVarQueryParams.Add("skillIds", Configuration.ApiClient.ParameterToString(skillIds)); // query parameter
-            
-            
-            
-            if (body.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = body; // byte array
-            }
-
-            
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Post: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Post: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<ConversationResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ConversationResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationResponse)));
             
         }
         
@@ -4936,6 +4715,227 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
+        }
+        
+        /// <summary>
+        /// Create conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="call">Phone number to call</param> 
+        /// <param name="callFrom">Queue id to place the call from</param> 
+        /// <param name="callQueueId">Queue id to call</param> 
+        /// <param name="callUserId">User id to call (this will call the default number)</param> 
+        /// <param name="priority">Priority level to use for routing when calling a queue</param> 
+        /// <param name="languageId">Language id to use for routing when calling a queue</param> 
+        /// <param name="skillIds">Skill ids to use for routing when calling a queue</param> 
+        /// <param name="body"></param> 
+        /// <returns>ConversationResponse</returns>
+        public ConversationResponse PostConversations (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null)
+        {
+             ApiResponse<ConversationResponse> localVarResponse = PostConversationsWithHttpInfo(call, callFrom, callQueueId, callUserId, priority, languageId, skillIds, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="call">Phone number to call</param> 
+        /// <param name="callFrom">Queue id to place the call from</param> 
+        /// <param name="callQueueId">Queue id to call</param> 
+        /// <param name="callUserId">User id to call (this will call the default number)</param> 
+        /// <param name="priority">Priority level to use for routing when calling a queue</param> 
+        /// <param name="languageId">Language id to use for routing when calling a queue</param> 
+        /// <param name="skillIds">Skill ids to use for routing when calling a queue</param> 
+        /// <param name="body"></param> 
+        /// <returns>ApiResponse of ConversationResponse</returns>
+        public ApiResponse< ConversationResponse > PostConversationsWithHttpInfo (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null)
+        {
+            
+    
+            var localVarPath = "/api/v1/conversations";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (call != null) localVarQueryParams.Add("call", Configuration.ApiClient.ParameterToString(call)); // query parameter
+            if (callFrom != null) localVarQueryParams.Add("callFrom", Configuration.ApiClient.ParameterToString(callFrom)); // query parameter
+            if (callQueueId != null) localVarQueryParams.Add("callQueueId", Configuration.ApiClient.ParameterToString(callQueueId)); // query parameter
+            if (callUserId != null) localVarQueryParams.Add("callUserId", Configuration.ApiClient.ParameterToString(callUserId)); // query parameter
+            if (priority != null) localVarQueryParams.Add("priority", Configuration.ApiClient.ParameterToString(priority)); // query parameter
+            if (languageId != null) localVarQueryParams.Add("languageId", Configuration.ApiClient.ParameterToString(languageId)); // query parameter
+            if (skillIds != null) localVarQueryParams.Add("skillIds", Configuration.ApiClient.ParameterToString(skillIds)); // query parameter
+            
+            
+            
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversations: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ConversationResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ConversationResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Create conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="call">Phone number to call</param>
+        /// <param name="callFrom">Queue id to place the call from</param>
+        /// <param name="callQueueId">Queue id to call</param>
+        /// <param name="callUserId">User id to call (this will call the default number)</param>
+        /// <param name="priority">Priority level to use for routing when calling a queue</param>
+        /// <param name="languageId">Language id to use for routing when calling a queue</param>
+        /// <param name="skillIds">Skill ids to use for routing when calling a queue</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ConversationResponse</returns>
+        public async System.Threading.Tasks.Task<ConversationResponse> PostConversationsAsync (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null)
+        {
+             ApiResponse<ConversationResponse> localVarResponse = await PostConversationsAsyncWithHttpInfo(call, callFrom, callQueueId, callUserId, priority, languageId, skillIds, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create conversation 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="call">Phone number to call</param>
+        /// <param name="callFrom">Queue id to place the call from</param>
+        /// <param name="callQueueId">Queue id to call</param>
+        /// <param name="callUserId">User id to call (this will call the default number)</param>
+        /// <param name="priority">Priority level to use for routing when calling a queue</param>
+        /// <param name="languageId">Language id to use for routing when calling a queue</param>
+        /// <param name="skillIds">Skill ids to use for routing when calling a queue</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (ConversationResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConversationResponse>> PostConversationsAsyncWithHttpInfo (string call = null, string callFrom = null, string callQueueId = null, string callUserId = null, int? priority = null, string languageId = null, List<string> skillIds = null, string body = null)
+        {
+            
+    
+            var localVarPath = "/api/v1/conversations";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (call != null) localVarQueryParams.Add("call", Configuration.ApiClient.ParameterToString(call)); // query parameter
+            if (callFrom != null) localVarQueryParams.Add("callFrom", Configuration.ApiClient.ParameterToString(callFrom)); // query parameter
+            if (callQueueId != null) localVarQueryParams.Add("callQueueId", Configuration.ApiClient.ParameterToString(callQueueId)); // query parameter
+            if (callUserId != null) localVarQueryParams.Add("callUserId", Configuration.ApiClient.ParameterToString(callUserId)); // query parameter
+            if (priority != null) localVarQueryParams.Add("priority", Configuration.ApiClient.ParameterToString(priority)); // query parameter
+            if (languageId != null) localVarQueryParams.Add("languageId", Configuration.ApiClient.ParameterToString(languageId)); // query parameter
+            if (skillIds != null) localVarQueryParams.Add("skillIds", Configuration.ApiClient.ParameterToString(skillIds)); // query parameter
+            
+            
+            
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversations: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ConversationResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ConversationResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConversationResponse)));
+            
         }
         
         /// <summary>

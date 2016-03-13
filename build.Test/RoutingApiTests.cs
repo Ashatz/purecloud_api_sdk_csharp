@@ -229,6 +229,20 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test GetQueuesQueueIdEstimatedwaittime
+        /// </summary>
+        [Test]
+        public void GetQueuesQueueIdEstimatedwaittimeTest()
+        {
+            // TODO: add unit test for the method 'GetQueuesQueueIdEstimatedwaittime'
+            string queueId = null; // TODO: replace null with proper value
+            string conversationId = null; // TODO: replace null with proper value
+            
+            var response = instance.GetQueuesQueueIdEstimatedwaittime(queueId, conversationId);
+            Assert.IsInstanceOf<EstimatedWaitTimePredictions> (response, "response is EstimatedWaitTimePredictions"); 
+        }
+        
+        /// <summary>
         /// Test GetQueuesQueueIdMembers
         /// </summary>
         [Test]

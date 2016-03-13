@@ -12,38 +12,38 @@ using Newtonsoft.Json.Converters;
 namespace ININ.PureCloudApi.Model
 {
     /// <summary>
-    /// Used as the body to the associateWithWorkspaces request.
+    /// 
     /// </summary>
     [DataContract]
-    public partial class FlowAssociateWorkspacesRequest :  IEquatable<FlowAssociateWorkspacesRequest>
+    public partial class EstimatedWaitTimePredictions :  IEquatable<EstimatedWaitTimePredictions>
     { 
         
         /// <summary>
-        /// Initializes a new instance of the <see cref="FlowAssociateWorkspacesRequest" />class.
+        /// Initializes a new instance of the <see cref="EstimatedWaitTimePredictions" />class.
         /// </summary>
-        /// <param name="Workspaces">The list of Workspaces to associate with a flow.  Can be null/empty to remove associations. (required).</param>
+        /// <param name="Results">Returned upon a successful estimated wait time request. (required).</param>
 
-        public FlowAssociateWorkspacesRequest(List<string> Workspaces = null)
+        public EstimatedWaitTimePredictions(List<PredictionResults> Results = null)
         {
-            // to ensure "Workspaces" is required (not null)
-            if (Workspaces == null)
+            // to ensure "Results" is required (not null)
+            if (Results == null)
             {
-                throw new InvalidDataException("Workspaces is a required property for FlowAssociateWorkspacesRequest and cannot be null");
+                throw new InvalidDataException("Results is a required property for EstimatedWaitTimePredictions and cannot be null");
             }
             else
             {
-                this.Workspaces = Workspaces;
+                this.Results = Results;
             }
             
         }
         
     
         /// <summary>
-        /// The list of Workspaces to associate with a flow.  Can be null/empty to remove associations.
+        /// Returned upon a successful estimated wait time request.
         /// </summary>
-        /// <value>The list of Workspaces to associate with a flow.  Can be null/empty to remove associations.</value>
-        [DataMember(Name="workspaces", EmitDefaultValue=false)]
-        public List<string> Workspaces { get; set; }
+        /// <value>Returned upon a successful estimated wait time request.</value>
+        [DataMember(Name="results", EmitDefaultValue=false)]
+        public List<PredictionResults> Results { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,8 +52,8 @@ namespace ININ.PureCloudApi.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class FlowAssociateWorkspacesRequest {\n");
-            sb.Append("  Workspaces: ").Append(Workspaces).Append("\n");
+            sb.Append("class EstimatedWaitTimePredictions {\n");
+            sb.Append("  Results: ").Append(Results).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -76,15 +76,15 @@ namespace ININ.PureCloudApi.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as FlowAssociateWorkspacesRequest);
+            return this.Equals(obj as EstimatedWaitTimePredictions);
         }
 
         /// <summary>
-        /// Returns true if FlowAssociateWorkspacesRequest instances are equal
+        /// Returns true if EstimatedWaitTimePredictions instances are equal
         /// </summary>
-        /// <param name="other">Instance of FlowAssociateWorkspacesRequest to be compared</param>
+        /// <param name="other">Instance of EstimatedWaitTimePredictions to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(FlowAssociateWorkspacesRequest other)
+        public bool Equals(EstimatedWaitTimePredictions other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -92,9 +92,9 @@ namespace ININ.PureCloudApi.Model
 
             return true &&
                 (
-                    this.Workspaces == other.Workspaces ||
-                    this.Workspaces != null &&
-                    this.Workspaces.SequenceEqual(other.Workspaces)
+                    this.Results == other.Results ||
+                    this.Results != null &&
+                    this.Results.SequenceEqual(other.Results)
                 );
         }
 
@@ -110,8 +110,8 @@ namespace ININ.PureCloudApi.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Workspaces != null)
-                    hash = hash * 59 + this.Workspaces.GetHashCode();
+                if (this.Results != null)
+                    hash = hash * 59 + this.Results.GetHashCode();
                 
                 return hash;
             }

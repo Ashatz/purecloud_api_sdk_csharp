@@ -54,20 +54,6 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test Delete
-        /// </summary>
-        [Test]
-        public void DeleteTest()
-        {
-            // TODO: add unit test for the method 'Delete'
-            List<string> id = null; // TODO: replace null with proper value
-            bool? ignoreDependencies = null; // TODO: replace null with proper value
-            
-            instance.Delete(id, ignoreDependencies);
-             
-        }
-        
-        /// <summary>
         /// Test DeleteFlowId
         /// </summary>
         [Test]
@@ -77,6 +63,20 @@ namespace ININ.PureCloudApi.Test
             string flowId = null; // TODO: replace null with proper value
             
             instance.DeleteFlowId(flowId);
+             
+        }
+        
+        /// <summary>
+        /// Test DeleteFlows
+        /// </summary>
+        [Test]
+        public void DeleteFlowsTest()
+        {
+            // TODO: add unit test for the method 'DeleteFlows'
+            List<string> id = null; // TODO: replace null with proper value
+            bool? ignoreDependencies = null; // TODO: replace null with proper value
+            
+            instance.DeleteFlows(id, ignoreDependencies);
              
         }
         
@@ -175,31 +175,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test Get
-        /// </summary>
-        [Test]
-        public void GetTest()
-        {
-            // TODO: add unit test for the method 'Get'
-            string type = null; // TODO: replace null with proper value
-            int? pageNumber = null; // TODO: replace null with proper value
-            int? pageSize = null; // TODO: replace null with proper value
-            string sortBy = null; // TODO: replace null with proper value
-            string sortOrder = null; // TODO: replace null with proper value
-            List<string> id = null; // TODO: replace null with proper value
-            string name = null; // TODO: replace null with proper value
-            string description = null; // TODO: replace null with proper value
-            string nameOrDescription = null; // TODO: replace null with proper value
-            string publishVersionId = null; // TODO: replace null with proper value
-            string editableBy = null; // TODO: replace null with proper value
-            string lockedBy = null; // TODO: replace null with proper value
-            bool? deleted = null; // TODO: replace null with proper value
-            
-            var response = instance.Get(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, editableBy, lockedBy, deleted);
-            Assert.IsInstanceOf<FlowEntityListing> (response, "response is FlowEntityListing"); 
-        }
-        
-        /// <summary>
         /// Test GetFlowId
         /// </summary>
         [Test]
@@ -285,6 +260,31 @@ namespace ININ.PureCloudApi.Test
             
             var response = instance.GetFlowIdVersionsVersionIdConfiguration(flowId, versionId, deleted);
             Assert.IsInstanceOf<Object> (response, "response is Object"); 
+        }
+        
+        /// <summary>
+        /// Test GetFlows
+        /// </summary>
+        [Test]
+        public void GetFlowsTest()
+        {
+            // TODO: add unit test for the method 'GetFlows'
+            string type = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            int? pageSize = null; // TODO: replace null with proper value
+            string sortBy = null; // TODO: replace null with proper value
+            string sortOrder = null; // TODO: replace null with proper value
+            List<string> id = null; // TODO: replace null with proper value
+            string name = null; // TODO: replace null with proper value
+            string description = null; // TODO: replace null with proper value
+            string nameOrDescription = null; // TODO: replace null with proper value
+            string publishVersionId = null; // TODO: replace null with proper value
+            string editableBy = null; // TODO: replace null with proper value
+            string lockedBy = null; // TODO: replace null with proper value
+            bool? deleted = null; // TODO: replace null with proper value
+            
+            var response = instance.GetFlows(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, editableBy, lockedBy, deleted);
+            Assert.IsInstanceOf<FlowEntityListing> (response, "response is FlowEntityListing"); 
         }
         
         /// <summary>
@@ -497,19 +497,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test Post
-        /// </summary>
-        [Test]
-        public void PostTest()
-        {
-            // TODO: add unit test for the method 'Post'
-            Flow body = null; // TODO: replace null with proper value
-            
-            var response = instance.Post(body);
-            Assert.IsInstanceOf<Flow> (response, "response is Flow"); 
-        }
-        
-        /// <summary>
         /// Test PostActionsCheckin
         /// </summary>
         [Test]
@@ -600,6 +587,19 @@ namespace ININ.PureCloudApi.Test
             
             var response = instance.PostFlowIdVersions(flowId, body);
             Assert.IsInstanceOf<FlowVersion> (response, "response is FlowVersion"); 
+        }
+        
+        /// <summary>
+        /// Test PostFlows
+        /// </summary>
+        [Test]
+        public void PostFlowsTest()
+        {
+            // TODO: add unit test for the method 'PostFlows'
+            Flow body = null; // TODO: replace null with proper value
+            
+            var response = instance.PostFlows(body);
+            Assert.IsInstanceOf<Flow> (response, "response is Flow"); 
         }
         
         /// <summary>

@@ -84,6 +84,28 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<string> DeleteCampaignsCampaignIdWithHttpInfo (string campaignId);
         
         /// <summary>
+        /// Reset campaign progress and recycle the campaign
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>string</returns>
+        string DeleteCampaignsCampaignIdProgress (string campaignId);
+  
+        /// <summary>
+        /// Reset campaign progress and recycle the campaign
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> DeleteCampaignsCampaignIdProgressWithHttpInfo (string campaignId);
+        
+        /// <summary>
         /// Delete a contact list.
         /// </summary>
         /// <remarks>
@@ -432,6 +454,28 @@ namespace ININ.PureCloudApi.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>ApiResponse of CampaignDiagnostics</returns>
         ApiResponse<CampaignDiagnostics> GetCampaignsCampaignIdDiagnosticsWithHttpInfo (string campaignId);
+        
+        /// <summary>
+        /// Get campaign progress
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>CampaignProgress</returns>
+        CampaignProgress GetCampaignsCampaignIdProgress (string campaignId);
+  
+        /// <summary>
+        /// Get campaign progress
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>ApiResponse of CampaignProgress</returns>
+        ApiResponse<CampaignProgress> GetCampaignsCampaignIdProgressWithHttpInfo (string campaignId);
         
         /// <summary>
         /// Get statistics about a Dialer Campaign
@@ -1054,6 +1098,28 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">ContactCallbackRequest</param>
         /// <returns>ApiResponse of ContactCallbackRequest</returns>
         ApiResponse<ContactCallbackRequest> PostCampaignsCampaignIdCallbackScheduleWithHttpInfo (string campaignId, ContactCallbackRequest body = null);
+        
+        /// <summary>
+        /// Get progress for a list of campaigns
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Campaign IDs</param>
+        /// <returns>List&lt;CampaignProgress&gt;</returns>
+        List<CampaignProgress> PostCampaignsProgress (List<string> body = null);
+  
+        /// <summary>
+        /// Get progress for a list of campaigns
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Campaign IDs</param>
+        /// <returns>ApiResponse of List&lt;CampaignProgress&gt;</returns>
+        ApiResponse<List<CampaignProgress>> PostCampaignsProgressWithHttpInfo (List<string> body = null);
         
         /// <summary>
         /// Create a contact List.
@@ -1690,6 +1756,28 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<string>> DeleteCampaignsCampaignIdAsyncWithHttpInfo (string campaignId);
         
         /// <summary>
+        /// Reset campaign progress and recycle the campaign
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> DeleteCampaignsCampaignIdProgressAsync (string campaignId);
+
+        /// <summary>
+        /// Reset campaign progress and recycle the campaign
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteCampaignsCampaignIdProgressAsyncWithHttpInfo (string campaignId);
+        
+        /// <summary>
         /// Delete a contact list.
         /// </summary>
         /// <remarks>
@@ -2038,6 +2126,28 @@ namespace ININ.PureCloudApi.Api
         /// <param name="campaignId">Campaign ID</param>
         /// <returns>Task of ApiResponse (CampaignDiagnostics)</returns>
         System.Threading.Tasks.Task<ApiResponse<CampaignDiagnostics>> GetCampaignsCampaignIdDiagnosticsAsyncWithHttpInfo (string campaignId);
+        
+        /// <summary>
+        /// Get campaign progress
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of CampaignProgress</returns>
+        System.Threading.Tasks.Task<CampaignProgress> GetCampaignsCampaignIdProgressAsync (string campaignId);
+
+        /// <summary>
+        /// Get campaign progress
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (CampaignProgress)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CampaignProgress>> GetCampaignsCampaignIdProgressAsyncWithHttpInfo (string campaignId);
         
         /// <summary>
         /// Get statistics about a Dialer Campaign
@@ -2660,6 +2770,28 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body">ContactCallbackRequest</param>
         /// <returns>Task of ApiResponse (ContactCallbackRequest)</returns>
         System.Threading.Tasks.Task<ApiResponse<ContactCallbackRequest>> PostCampaignsCampaignIdCallbackScheduleAsyncWithHttpInfo (string campaignId, ContactCallbackRequest body = null);
+        
+        /// <summary>
+        /// Get progress for a list of campaigns
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Campaign IDs</param>
+        /// <returns>Task of List&lt;CampaignProgress&gt;</returns>
+        System.Threading.Tasks.Task<List<CampaignProgress>> PostCampaignsProgressAsync (List<string> body = null);
+
+        /// <summary>
+        /// Get progress for a list of campaigns
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Campaign IDs</param>
+        /// <returns>Task of ApiResponse (List&lt;CampaignProgress&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<CampaignProgress>>> PostCampaignsProgressAsyncWithHttpInfo (List<string> body = null);
         
         /// <summary>
         /// Create a contact List.
@@ -3817,6 +3949,179 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteCampaignsCampaignId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteCampaignsCampaignId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+        
+        /// <summary>
+        /// Reset campaign progress and recycle the campaign 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param> 
+        /// <returns>string</returns>
+        public string DeleteCampaignsCampaignIdProgress (string campaignId)
+        {
+             ApiResponse<string> localVarResponse = DeleteCampaignsCampaignIdProgressWithHttpInfo(campaignId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Reset campaign progress and recycle the campaign 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param> 
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > DeleteCampaignsCampaignIdProgressWithHttpInfo (string campaignId)
+        {
+            
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->DeleteCampaignsCampaignIdProgress");
+            
+    
+            var localVarPath = "/api/v1/outbound/campaigns/{campaignId}/progress";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+            
+            
+            
+            
+            
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCampaignsCampaignIdProgress: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCampaignsCampaignIdProgress: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+
+        
+        /// <summary>
+        /// Reset campaign progress and recycle the campaign 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> DeleteCampaignsCampaignIdProgressAsync (string campaignId)
+        {
+             ApiResponse<string> localVarResponse = await DeleteCampaignsCampaignIdProgressAsyncWithHttpInfo(campaignId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Reset campaign progress and recycle the campaign 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteCampaignsCampaignIdProgressAsyncWithHttpInfo (string campaignId)
+        {
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null) throw new ApiException(400, "Missing required parameter 'campaignId' when calling DeleteCampaignsCampaignIdProgress");
+            
+    
+            var localVarPath = "/api/v1/outbound/campaigns/{campaignId}/progress";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCampaignsCampaignIdProgress: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteCampaignsCampaignIdProgress: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<string>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -6357,6 +6662,179 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<CampaignDiagnostics>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CampaignDiagnostics) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignDiagnostics)));
+            
+        }
+        
+        /// <summary>
+        /// Get campaign progress 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param> 
+        /// <returns>CampaignProgress</returns>
+        public CampaignProgress GetCampaignsCampaignIdProgress (string campaignId)
+        {
+             ApiResponse<CampaignProgress> localVarResponse = GetCampaignsCampaignIdProgressWithHttpInfo(campaignId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get campaign progress 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param> 
+        /// <returns>ApiResponse of CampaignProgress</returns>
+        public ApiResponse< CampaignProgress > GetCampaignsCampaignIdProgressWithHttpInfo (string campaignId)
+        {
+            
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetCampaignsCampaignIdProgress");
+            
+    
+            var localVarPath = "/api/v1/outbound/campaigns/{campaignId}/progress";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+            
+            
+            
+            
+            
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignsCampaignIdProgress: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignsCampaignIdProgress: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<CampaignProgress>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CampaignProgress) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignProgress)));
+            
+        }
+
+        
+        /// <summary>
+        /// Get campaign progress 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of CampaignProgress</returns>
+        public async System.Threading.Tasks.Task<CampaignProgress> GetCampaignsCampaignIdProgressAsync (string campaignId)
+        {
+             ApiResponse<CampaignProgress> localVarResponse = await GetCampaignsCampaignIdProgressAsyncWithHttpInfo(campaignId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get campaign progress 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <returns>Task of ApiResponse (CampaignProgress)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignProgress>> GetCampaignsCampaignIdProgressAsyncWithHttpInfo (string campaignId)
+        {
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null) throw new ApiException(400, "Missing required parameter 'campaignId' when calling GetCampaignsCampaignIdProgress");
+            
+    
+            var localVarPath = "/api/v1/outbound/campaigns/{campaignId}/progress";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (campaignId != null) localVarPathParams.Add("campaignId", Configuration.ApiClient.ParameterToString(campaignId)); // path parameter
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignsCampaignIdProgress: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetCampaignsCampaignIdProgress: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignProgress>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CampaignProgress) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignProgress)));
             
         }
         
@@ -10898,6 +11376,185 @@ namespace ININ.PureCloudApi.Api
             return new ApiResponse<ContactCallbackRequest>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ContactCallbackRequest) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactCallbackRequest)));
+            
+        }
+        
+        /// <summary>
+        /// Get progress for a list of campaigns 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Campaign IDs</param> 
+        /// <returns>List&lt;CampaignProgress&gt;</returns>
+        public List<CampaignProgress> PostCampaignsProgress (List<string> body = null)
+        {
+             ApiResponse<List<CampaignProgress>> localVarResponse = PostCampaignsProgressWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get progress for a list of campaigns 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Campaign IDs</param> 
+        /// <returns>ApiResponse of List&lt;CampaignProgress&gt;</returns>
+        public ApiResponse< List<CampaignProgress> > PostCampaignsProgressWithHttpInfo (List<string> body = null)
+        {
+            
+    
+            var localVarPath = "/api/v1/outbound/campaigns/progress";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostCampaignsProgress: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCampaignsProgress: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<List<CampaignProgress>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<CampaignProgress>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CampaignProgress>)));
+            
+        }
+
+        
+        /// <summary>
+        /// Get progress for a list of campaigns 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Campaign IDs</param>
+        /// <returns>Task of List&lt;CampaignProgress&gt;</returns>
+        public async System.Threading.Tasks.Task<List<CampaignProgress>> PostCampaignsProgressAsync (List<string> body = null)
+        {
+             ApiResponse<List<CampaignProgress>> localVarResponse = await PostCampaignsProgressAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get progress for a list of campaigns 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Campaign IDs</param>
+        /// <returns>Task of ApiResponse (List&lt;CampaignProgress&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<CampaignProgress>>> PostCampaignsProgressAsyncWithHttpInfo (List<string> body = null)
+        {
+            
+    
+            var localVarPath = "/api/v1/outbound/campaigns/progress";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostCampaignsProgress: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCampaignsProgress: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<CampaignProgress>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<CampaignProgress>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CampaignProgress>)));
             
         }
         

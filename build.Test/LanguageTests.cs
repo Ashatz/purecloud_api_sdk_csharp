@@ -70,6 +70,33 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test the property 'DateModified' 
+        /// </summary>
+        [Test]
+        public void DateModifiedTest()
+        {
+            // TODO: unit test for the property 'DateModified' 
+        }
+        
+        /// <summary>
+        /// Test the property 'State' 
+        /// </summary>
+        [Test]
+        public void StateTest()
+        {
+            // TODO: unit test for the property 'State' 
+        }
+        
+        /// <summary>
+        /// Test the property 'Version' 
+        /// </summary>
+        [Test]
+        public void VersionTest()
+        {
+            // TODO: unit test for the property 'Version' 
+        }
+        
+        /// <summary>
         /// Test the property 'SelfUri' 
         /// </summary>
         [Test]

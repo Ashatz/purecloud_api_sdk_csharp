@@ -54,18 +54,6 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test Get
-        /// </summary>
-        [Test]
-        public void GetTest()
-        {
-            // TODO: add unit test for the method 'Get'
-            
-            var response = instance.Get();
-            Assert.IsInstanceOf<ServerDate> (response, "response is ServerDate"); 
-        }
-        
-        /// <summary>
         /// Test GetCheck
         /// </summary>
         [Test]
@@ -78,16 +66,28 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test Get_0
+        /// Test GetDate
         /// </summary>
         [Test]
-        public void Get_0Test()
+        public void GetDateTest()
         {
-            // TODO: add unit test for the method 'Get_0'
+            // TODO: add unit test for the method 'GetDate'
+            
+            var response = instance.GetDate();
+            Assert.IsInstanceOf<ServerDate> (response, "response is ServerDate"); 
+        }
+        
+        /// <summary>
+        /// Test GetTimezones
+        /// </summary>
+        [Test]
+        public void GetTimezonesTest()
+        {
+            // TODO: add unit test for the method 'GetTimezones'
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             
-            var response = instance.Get_0(pageSize, pageNumber);
+            var response = instance.GetTimezones(pageSize, pageNumber);
             Assert.IsInstanceOf<TimeZoneEntityListing> (response, "response is TimeZoneEntityListing"); 
         }
         

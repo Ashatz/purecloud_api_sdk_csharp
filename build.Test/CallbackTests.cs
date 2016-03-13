@@ -168,6 +168,15 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'TimeoutSeconds' 
         }
         
+        /// <summary>
+        /// Test the property 'ConnectedTime' 
+        /// </summary>
+        [Test]
+        public void ConnectedTimeTest()
+        {
+            // TODO: unit test for the property 'ConnectedTime' 
+        }
+        
 
     }
 

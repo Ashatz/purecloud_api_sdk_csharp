@@ -67,23 +67,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test Get
-        /// </summary>
-        [Test]
-        public void GetTest()
-        {
-            // TODO: add unit test for the method 'Get'
-            int? pageSize = null; // TODO: replace null with proper value
-            int? pageNumber = null; // TODO: replace null with proper value
-            string expand = null; // TODO: replace null with proper value
-            string name = null; // TODO: replace null with proper value
-            string feature = null; // TODO: replace null with proper value
-            
-            var response = instance.Get(pageSize, pageNumber, expand, name, feature);
-            Assert.IsInstanceOf<ScriptEntityListing> (response, "response is ScriptEntityListing"); 
-        }
-        
-        /// <summary>
         /// Test GetForms
         /// </summary>
         [Test]
@@ -158,16 +141,20 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test Post
+        /// Test GetScripts
         /// </summary>
         [Test]
-        public void PostTest()
+        public void GetScriptsTest()
         {
-            // TODO: add unit test for the method 'Post'
-            Object body = null; // TODO: replace null with proper value
+            // TODO: add unit test for the method 'GetScripts'
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            string expand = null; // TODO: replace null with proper value
+            string name = null; // TODO: replace null with proper value
+            string feature = null; // TODO: replace null with proper value
             
-            var response = instance.Post(body);
-            Assert.IsInstanceOf<Script> (response, "response is Script"); 
+            var response = instance.GetScripts(pageSize, pageNumber, expand, name, feature);
+            Assert.IsInstanceOf<ScriptEntityListing> (response, "response is ScriptEntityListing"); 
         }
         
         /// <summary>
@@ -194,6 +181,19 @@ namespace ININ.PureCloudApi.Test
             
             var response = instance.PostPublishedforms(body);
             Assert.IsInstanceOf<EvaluationForm> (response, "response is EvaluationForm"); 
+        }
+        
+        /// <summary>
+        /// Test PostScripts
+        /// </summary>
+        [Test]
+        public void PostScriptsTest()
+        {
+            // TODO: add unit test for the method 'PostScripts'
+            Object body = null; // TODO: replace null with proper value
+            
+            var response = instance.PostScripts(body);
+            Assert.IsInstanceOf<Script> (response, "response is Script"); 
         }
         
         /// <summary>
