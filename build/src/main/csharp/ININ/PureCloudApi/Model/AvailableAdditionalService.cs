@@ -25,9 +25,12 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Description">The description of this additional service. (required).</param>
         /// <param name="PartNumber">The part number of this additional service. (required).</param>
         /// <param name="RequiredForProducts">The list of products which require this additional service. (required).</param>
+        /// <param name="AvailableForProducts">The list of products for which this additional service is available. (required).</param>
+        /// <param name="DefaultForProducts">The list of products which have this additional service by default. (required).</param>
+        /// <param name="ExclusiveFromProducts">The list of additional services which are not compatible with this additional service. (required).</param>
         /// <param name="Rate">The rate of this additional service. (required).</param>
 
-        public AvailableAdditionalService(string Name = null, string Description = null, string PartNumber = null, List<string> RequiredForProducts = null, Rate Rate = null)
+        public AvailableAdditionalService(string Name = null, string Description = null, string PartNumber = null, List<string> RequiredForProducts = null, List<string> AvailableForProducts = null, List<string> DefaultForProducts = null, List<string> ExclusiveFromProducts = null, Rate Rate = null)
         {
             // to ensure "Description" is required (not null)
             if (Description == null)
@@ -55,6 +58,33 @@ namespace ININ.PureCloudApi.Model
             else
             {
                 this.RequiredForProducts = RequiredForProducts;
+            }
+            // to ensure "AvailableForProducts" is required (not null)
+            if (AvailableForProducts == null)
+            {
+                throw new InvalidDataException("AvailableForProducts is a required property for AvailableAdditionalService and cannot be null");
+            }
+            else
+            {
+                this.AvailableForProducts = AvailableForProducts;
+            }
+            // to ensure "DefaultForProducts" is required (not null)
+            if (DefaultForProducts == null)
+            {
+                throw new InvalidDataException("DefaultForProducts is a required property for AvailableAdditionalService and cannot be null");
+            }
+            else
+            {
+                this.DefaultForProducts = DefaultForProducts;
+            }
+            // to ensure "ExclusiveFromProducts" is required (not null)
+            if (ExclusiveFromProducts == null)
+            {
+                throw new InvalidDataException("ExclusiveFromProducts is a required property for AvailableAdditionalService and cannot be null");
+            }
+            else
+            {
+                this.ExclusiveFromProducts = ExclusiveFromProducts;
             }
             // to ensure "Rate" is required (not null)
             if (Rate == null)
@@ -105,6 +135,27 @@ namespace ININ.PureCloudApi.Model
         public List<string> RequiredForProducts { get; set; }
     
         /// <summary>
+        /// The list of products for which this additional service is available.
+        /// </summary>
+        /// <value>The list of products for which this additional service is available.</value>
+        [DataMember(Name="availableForProducts", EmitDefaultValue=false)]
+        public List<string> AvailableForProducts { get; set; }
+    
+        /// <summary>
+        /// The list of products which have this additional service by default.
+        /// </summary>
+        /// <value>The list of products which have this additional service by default.</value>
+        [DataMember(Name="defaultForProducts", EmitDefaultValue=false)]
+        public List<string> DefaultForProducts { get; set; }
+    
+        /// <summary>
+        /// The list of additional services which are not compatible with this additional service.
+        /// </summary>
+        /// <value>The list of additional services which are not compatible with this additional service.</value>
+        [DataMember(Name="exclusiveFromProducts", EmitDefaultValue=false)]
+        public List<string> ExclusiveFromProducts { get; set; }
+    
+        /// <summary>
         /// The rate of this additional service.
         /// </summary>
         /// <value>The rate of this additional service.</value>
@@ -131,6 +182,9 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  PartNumber: ").Append(PartNumber).Append("\n");
             sb.Append("  RequiredForProducts: ").Append(RequiredForProducts).Append("\n");
+            sb.Append("  AvailableForProducts: ").Append(AvailableForProducts).Append("\n");
+            sb.Append("  DefaultForProducts: ").Append(DefaultForProducts).Append("\n");
+            sb.Append("  ExclusiveFromProducts: ").Append(ExclusiveFromProducts).Append("\n");
             sb.Append("  Rate: ").Append(Rate).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
@@ -196,6 +250,21 @@ namespace ININ.PureCloudApi.Model
                     this.RequiredForProducts.SequenceEqual(other.RequiredForProducts)
                 ) &&
                 (
+                    this.AvailableForProducts == other.AvailableForProducts ||
+                    this.AvailableForProducts != null &&
+                    this.AvailableForProducts.SequenceEqual(other.AvailableForProducts)
+                ) &&
+                (
+                    this.DefaultForProducts == other.DefaultForProducts ||
+                    this.DefaultForProducts != null &&
+                    this.DefaultForProducts.SequenceEqual(other.DefaultForProducts)
+                ) &&
+                (
+                    this.ExclusiveFromProducts == other.ExclusiveFromProducts ||
+                    this.ExclusiveFromProducts != null &&
+                    this.ExclusiveFromProducts.SequenceEqual(other.ExclusiveFromProducts)
+                ) &&
+                (
                     this.Rate == other.Rate ||
                     this.Rate != null &&
                     this.Rate.Equals(other.Rate)
@@ -233,6 +302,15 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.RequiredForProducts != null)
                     hash = hash * 59 + this.RequiredForProducts.GetHashCode();
+                
+                if (this.AvailableForProducts != null)
+                    hash = hash * 59 + this.AvailableForProducts.GetHashCode();
+                
+                if (this.DefaultForProducts != null)
+                    hash = hash * 59 + this.DefaultForProducts.GetHashCode();
+                
+                if (this.ExclusiveFromProducts != null)
+                    hash = hash * 59 + this.ExclusiveFromProducts.GetHashCode();
                 
                 if (this.Rate != null)
                     hash = hash * 59 + this.Rate.GetHashCode();

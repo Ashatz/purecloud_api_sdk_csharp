@@ -62,8 +62,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="GroupType">GroupType.</param>
         /// <param name="GroupImages">GroupImages.</param>
         /// <param name="GroupState">GroupState.</param>
+        /// <param name="Version">Version.</param>
 
-        public Group(string Name = null, string Description = null, long? MemberCount = null, GroupTypeEnum? GroupType = null, GroupImages GroupImages = null, GroupStateEnum? GroupState = null)
+        public Group(string Name = null, string Description = null, long? MemberCount = null, GroupTypeEnum? GroupType = null, GroupImages GroupImages = null, GroupStateEnum? GroupState = null, double? Version = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -71,6 +72,7 @@ namespace ININ.PureCloudApi.Model
             this.GroupType = GroupType;
             this.GroupImages = GroupImages;
             this.GroupState = GroupState;
+            this.Version = Version;
             
         }
         
@@ -107,6 +109,12 @@ namespace ININ.PureCloudApi.Model
         public GroupImages GroupImages { get; set; }
     
         /// <summary>
+        /// Gets or Sets Version
+        /// </summary>
+        [DataMember(Name="version", EmitDefaultValue=false)]
+        public double? Version { get; set; }
+    
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -128,6 +136,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  GroupType: ").Append(GroupType).Append("\n");
             sb.Append("  GroupImages: ").Append(GroupImages).Append("\n");
             sb.Append("  GroupState: ").Append(GroupState).Append("\n");
+            sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
@@ -202,6 +211,11 @@ namespace ININ.PureCloudApi.Model
                     this.GroupState.Equals(other.GroupState)
                 ) &&
                 (
+                    this.Version == other.Version ||
+                    this.Version != null &&
+                    this.Version.Equals(other.Version)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -240,6 +254,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.GroupState != null)
                     hash = hash * 59 + this.GroupState.GetHashCode();
+                
+                if (this.Version != null)
+                    hash = hash * 59 + this.Version.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

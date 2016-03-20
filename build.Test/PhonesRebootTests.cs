@@ -60,6 +60,15 @@ namespace ININ.PureCloudApi.Test
             // TODO: unit test for the property 'PhoneIds' 
         }
         
+        /// <summary>
+        /// Test the property 'SiteId' 
+        /// </summary>
+        [Test]
+        public void SiteIdTest()
+        {
+            // TODO: unit test for the property 'SiteId' 
+        }
+        
 
     }
 

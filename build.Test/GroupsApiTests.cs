@@ -76,8 +76,9 @@ namespace ININ.PureCloudApi.Test
             string groupId = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
+            string sortOrder = null; // TODO: replace null with proper value
             
-            var response = instance.GetGroupIdMembers(groupId, pageSize, pageNumber);
+            var response = instance.GetGroupIdMembers(groupId, pageSize, pageNumber, sortOrder);
             Assert.IsInstanceOf<UserEntityListing> (response, "response is UserEntityListing"); 
         }
         
@@ -90,9 +91,9 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetGroups'
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
-            string name = null; // TODO: replace null with proper value
+            string sortOrder = null; // TODO: replace null with proper value
             
-            var response = instance.GetGroups(pageSize, pageNumber, name);
+            var response = instance.GetGroups(pageSize, pageNumber, sortOrder);
             Assert.IsInstanceOf<GroupEntityListing> (response, "response is GroupEntityListing"); 
         }
         

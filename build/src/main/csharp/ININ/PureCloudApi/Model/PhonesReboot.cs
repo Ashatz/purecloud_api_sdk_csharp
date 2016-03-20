@@ -22,10 +22,12 @@ namespace ININ.PureCloudApi.Model
         /// Initializes a new instance of the <see cref="PhonesReboot" />class.
         /// </summary>
         /// <param name="PhoneIds">PhoneIds.</param>
+        /// <param name="SiteId">SiteId.</param>
 
-        public PhonesReboot(List<string> PhoneIds = null)
+        public PhonesReboot(List<string> PhoneIds = null, string SiteId = null)
         {
             this.PhoneIds = PhoneIds;
+            this.SiteId = SiteId;
             
         }
         
@@ -37,6 +39,12 @@ namespace ININ.PureCloudApi.Model
         public List<string> PhoneIds { get; set; }
     
         /// <summary>
+        /// Gets or Sets SiteId
+        /// </summary>
+        [DataMember(Name="siteId", EmitDefaultValue=false)]
+        public string SiteId { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -45,6 +53,7 @@ namespace ININ.PureCloudApi.Model
             var sb = new StringBuilder();
             sb.Append("class PhonesReboot {\n");
             sb.Append("  PhoneIds: ").Append(PhoneIds).Append("\n");
+            sb.Append("  SiteId: ").Append(SiteId).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -86,6 +95,11 @@ namespace ININ.PureCloudApi.Model
                     this.PhoneIds == other.PhoneIds ||
                     this.PhoneIds != null &&
                     this.PhoneIds.SequenceEqual(other.PhoneIds)
+                ) &&
+                (
+                    this.SiteId == other.SiteId ||
+                    this.SiteId != null &&
+                    this.SiteId.Equals(other.SiteId)
                 );
         }
 
@@ -103,6 +117,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.PhoneIds != null)
                     hash = hash * 59 + this.PhoneIds.GetHashCode();
+                
+                if (this.SiteId != null)
+                    hash = hash * 59 + this.SiteId.GetHashCode();
                 
                 return hash;
             }

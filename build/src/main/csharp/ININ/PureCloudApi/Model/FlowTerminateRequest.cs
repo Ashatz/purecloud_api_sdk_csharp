@@ -12,7 +12,7 @@ using Newtonsoft.Json.Converters;
 namespace ININ.PureCloudApi.Model
 {
     /// <summary>
-    /// Passed into a terminate command to customize the termination/cancellation action.
+    /// Passed into a terminate command to customize the termination action.
     /// </summary>
     [DataContract]
     public partial class FlowTerminateRequest :  IEquatable<FlowTerminateRequest>
@@ -21,7 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowTerminateRequest" />class.
         /// </summary>
-        /// <param name="Reason">Reason for termination..</param>
+        /// <param name="Reason">Reason code for a termination..</param>
 
         public FlowTerminateRequest(string Reason = null)
         {
@@ -31,9 +31,9 @@ namespace ININ.PureCloudApi.Model
         
     
         /// <summary>
-        /// Reason for termination.
+        /// Reason code for a termination.
         /// </summary>
-        /// <value>Reason for termination.</value>
+        /// <value>Reason code for a termination.</value>
         [DataMember(Name="reason", EmitDefaultValue=false)]
         public string Reason { get; set; }
     

@@ -131,8 +131,9 @@ namespace ININ.PureCloudApi.Test
             int? pageNumber = null; // TODO: replace null with proper value
             string q = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
             
-            var response = instance.GetContacts(pageSize, pageNumber, q, sortOrder);
+            var response = instance.GetContacts(pageSize, pageNumber, q, sortOrder, expand);
             Assert.IsInstanceOf<ContactListing> (response, "response is ContactListing"); 
         }
         
@@ -144,8 +145,9 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetContactsContactId'
             string contactId = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
             
-            var response = instance.GetContactsContactId(contactId);
+            var response = instance.GetContactsContactId(contactId, expand);
             Assert.IsInstanceOf<ExternalContact> (response, "response is ExternalContact"); 
         }
         
@@ -220,8 +222,9 @@ namespace ININ.PureCloudApi.Test
             int? pageNumber = null; // TODO: replace null with proper value
             string q = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
             
-            var response = instance.GetOrganizationsExternalorganizationIdContacts(externalOrganizationId, pageSize, pageNumber, q, sortOrder);
+            var response = instance.GetOrganizationsExternalorganizationIdContacts(externalOrganizationId, pageSize, pageNumber, q, sortOrder, expand);
             Assert.IsInstanceOf<ContactListing> (response, "response is ContactListing"); 
         }
         

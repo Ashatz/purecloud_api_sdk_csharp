@@ -97,6 +97,33 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test the property 'AvailableForProducts' 
+        /// </summary>
+        [Test]
+        public void AvailableForProductsTest()
+        {
+            // TODO: unit test for the property 'AvailableForProducts' 
+        }
+        
+        /// <summary>
+        /// Test the property 'DefaultForProducts' 
+        /// </summary>
+        [Test]
+        public void DefaultForProductsTest()
+        {
+            // TODO: unit test for the property 'DefaultForProducts' 
+        }
+        
+        /// <summary>
+        /// Test the property 'ExclusiveFromProducts' 
+        /// </summary>
+        [Test]
+        public void ExclusiveFromProductsTest()
+        {
+            // TODO: unit test for the property 'ExclusiveFromProducts' 
+        }
+        
+        /// <summary>
         /// Test the property 'Rate' 
         /// </summary>
         [Test]

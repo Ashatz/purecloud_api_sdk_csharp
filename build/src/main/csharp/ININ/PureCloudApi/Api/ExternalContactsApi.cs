@@ -142,8 +142,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
         /// <param name="sortOrder">Sort order</param>
+        /// <param name="expand">which fields, if any, to expand</param>
         /// <returns>ContactListing</returns>
-        ContactListing GetContacts (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
+        ContactListing GetContacts (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
   
         /// <summary>
         /// Search for External Contacts
@@ -156,8 +157,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
         /// <param name="sortOrder">Sort order</param>
+        /// <param name="expand">which fields, if any, to expand</param>
         /// <returns>ApiResponse of ContactListing</returns>
-        ApiResponse<ContactListing> GetContactsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
+        ApiResponse<ContactListing> GetContactsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
         
         /// <summary>
         /// Fetch a ExternalContact
@@ -167,8 +169,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="expand">which fields, if any, to expand</param>
         /// <returns>ExternalContact</returns>
-        ExternalContact GetContactsContactId (string contactId);
+        ExternalContact GetContactsContactId (string contactId, List<string> expand = null);
   
         /// <summary>
         /// Fetch a ExternalContact
@@ -178,8 +181,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="expand">which fields, if any, to expand</param>
         /// <returns>ApiResponse of ExternalContact</returns>
-        ApiResponse<ExternalContact> GetContactsContactIdWithHttpInfo (string contactId);
+        ApiResponse<ExternalContact> GetContactsContactIdWithHttpInfo (string contactId, List<string> expand = null);
         
         /// <summary>
         /// List Notes for an ExternalContact
@@ -295,8 +299,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
         /// <param name="sortOrder">Sort order</param>
+        /// <param name="expand">which fields, if any, to expand</param>
         /// <returns>ContactListing</returns>
-        ContactListing GetOrganizationsExternalorganizationIdContacts (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
+        ContactListing GetOrganizationsExternalorganizationIdContacts (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
   
         /// <summary>
         /// Search for External Contacts
@@ -310,8 +315,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
         /// <param name="sortOrder">Sort order</param>
+        /// <param name="expand">which fields, if any, to expand</param>
         /// <returns>ApiResponse of ContactListing</returns>
-        ApiResponse<ContactListing> GetOrganizationsExternalorganizationIdContactsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
+        ApiResponse<ContactListing> GetOrganizationsExternalorganizationIdContactsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
         
         /// <summary>
         /// List Notes for an External Organization
@@ -630,7 +636,7 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<Note> PutOrganizationsExternalorganizationIdNotesNoteIdWithHttpInfo (string externalOrganizationId, string noteId, Note body = null);
         
         /// <summary>
-        /// Fetch a relationship
+        /// Update a relationship
         /// </summary>
         /// <remarks>
         /// 
@@ -642,7 +648,7 @@ namespace ININ.PureCloudApi.Api
         Relationship PutRelationshipsRelationshipId (string relationshipId, Relationship body = null);
   
         /// <summary>
-        /// Fetch a relationship
+        /// Update a relationship
         /// </summary>
         /// <remarks>
         /// 
@@ -782,8 +788,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
         /// <param name="sortOrder">Sort order</param>
+        /// <param name="expand">which fields, if any, to expand</param>
         /// <returns>Task of ContactListing</returns>
-        System.Threading.Tasks.Task<ContactListing> GetContactsAsync (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ContactListing> GetContactsAsync (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
         /// Search for External Contacts
@@ -796,8 +803,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
         /// <param name="sortOrder">Sort order</param>
+        /// <param name="expand">which fields, if any, to expand</param>
         /// <returns>Task of ApiResponse (ContactListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetContactsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetContactsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
         
         /// <summary>
         /// Fetch a ExternalContact
@@ -807,8 +815,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="expand">which fields, if any, to expand</param>
         /// <returns>Task of ExternalContact</returns>
-        System.Threading.Tasks.Task<ExternalContact> GetContactsContactIdAsync (string contactId);
+        System.Threading.Tasks.Task<ExternalContact> GetContactsContactIdAsync (string contactId, List<string> expand = null);
 
         /// <summary>
         /// Fetch a ExternalContact
@@ -818,8 +827,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="expand">which fields, if any, to expand</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExternalContact>> GetContactsContactIdAsyncWithHttpInfo (string contactId);
+        System.Threading.Tasks.Task<ApiResponse<ExternalContact>> GetContactsContactIdAsyncWithHttpInfo (string contactId, List<string> expand = null);
         
         /// <summary>
         /// List Notes for an ExternalContact
@@ -935,8 +945,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
         /// <param name="sortOrder">Sort order</param>
+        /// <param name="expand">which fields, if any, to expand</param>
         /// <returns>Task of ContactListing</returns>
-        System.Threading.Tasks.Task<ContactListing> GetOrganizationsExternalorganizationIdContactsAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ContactListing> GetOrganizationsExternalorganizationIdContactsAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
 
         /// <summary>
         /// Search for External Contacts
@@ -950,8 +961,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
         /// <param name="sortOrder">Sort order</param>
+        /// <param name="expand">which fields, if any, to expand</param>
         /// <returns>Task of ApiResponse (ContactListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetOrganizationsExternalorganizationIdContactsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetOrganizationsExternalorganizationIdContactsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
         
         /// <summary>
         /// List Notes for an External Organization
@@ -1270,7 +1282,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<Note>> PutOrganizationsExternalorganizationIdNotesNoteIdAsyncWithHttpInfo (string externalOrganizationId, string noteId, Note body = null);
         
         /// <summary>
-        /// Fetch a relationship
+        /// Update a relationship
         /// </summary>
         /// <remarks>
         /// 
@@ -1282,7 +1294,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<Relationship> PutRelationshipsRelationshipIdAsync (string relationshipId, Relationship body = null);
 
         /// <summary>
-        /// Fetch a relationship
+        /// Update a relationship
         /// </summary>
         /// <remarks>
         /// 
@@ -2260,10 +2272,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param> 
         /// <param name="sortOrder">Sort order</param> 
+        /// <param name="expand">which fields, if any, to expand</param> 
         /// <returns>ContactListing</returns>
-        public ContactListing GetContacts (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
+        public ContactListing GetContacts (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
         {
-             ApiResponse<ContactListing> localVarResponse = GetContactsWithHttpInfo(pageSize, pageNumber, q, sortOrder);
+             ApiResponse<ContactListing> localVarResponse = GetContactsWithHttpInfo(pageSize, pageNumber, q, sortOrder, expand);
              return localVarResponse.Data;
         }
 
@@ -2275,8 +2288,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param> 
         /// <param name="sortOrder">Sort order</param> 
+        /// <param name="expand">which fields, if any, to expand</param> 
         /// <returns>ApiResponse of ContactListing</returns>
-        public ApiResponse< ContactListing > GetContactsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
+        public ApiResponse< ContactListing > GetContactsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
         {
             
     
@@ -2311,6 +2325,7 @@ namespace ININ.PureCloudApi.Api
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (q != null) localVarQueryParams.Add("q", Configuration.ApiClient.ParameterToString(q)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
             
             
             
@@ -2352,10 +2367,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
         /// <param name="sortOrder">Sort order</param>
+        /// <param name="expand">which fields, if any, to expand</param>
         /// <returns>Task of ContactListing</returns>
-        public async System.Threading.Tasks.Task<ContactListing> GetContactsAsync (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ContactListing> GetContactsAsync (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
         {
-             ApiResponse<ContactListing> localVarResponse = await GetContactsAsyncWithHttpInfo(pageSize, pageNumber, q, sortOrder);
+             ApiResponse<ContactListing> localVarResponse = await GetContactsAsyncWithHttpInfo(pageSize, pageNumber, q, sortOrder, expand);
              return localVarResponse.Data;
 
         }
@@ -2368,8 +2384,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
         /// <param name="sortOrder">Sort order</param>
+        /// <param name="expand">which fields, if any, to expand</param>
         /// <returns>Task of ApiResponse (ContactListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetContactsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetContactsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
         {
             
     
@@ -2404,6 +2421,7 @@ namespace ININ.PureCloudApi.Api
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (q != null) localVarQueryParams.Add("q", Configuration.ApiClient.ParameterToString(q)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
             
             
             
@@ -2442,10 +2460,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param> 
+        /// <param name="expand">which fields, if any, to expand</param> 
         /// <returns>ExternalContact</returns>
-        public ExternalContact GetContactsContactId (string contactId)
+        public ExternalContact GetContactsContactId (string contactId, List<string> expand = null)
         {
-             ApiResponse<ExternalContact> localVarResponse = GetContactsContactIdWithHttpInfo(contactId);
+             ApiResponse<ExternalContact> localVarResponse = GetContactsContactIdWithHttpInfo(contactId, expand);
              return localVarResponse.Data;
         }
 
@@ -2454,8 +2473,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param> 
+        /// <param name="expand">which fields, if any, to expand</param> 
         /// <returns>ApiResponse of ExternalContact</returns>
-        public ApiResponse< ExternalContact > GetContactsContactIdWithHttpInfo (string contactId)
+        public ApiResponse< ExternalContact > GetContactsContactIdWithHttpInfo (string contactId, List<string> expand = null)
         {
             
             // verify the required parameter 'contactId' is set
@@ -2491,6 +2511,7 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (contactId != null) localVarPathParams.Add("contactId", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
             
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
             
             
             
@@ -2529,10 +2550,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="expand">which fields, if any, to expand</param>
         /// <returns>Task of ExternalContact</returns>
-        public async System.Threading.Tasks.Task<ExternalContact> GetContactsContactIdAsync (string contactId)
+        public async System.Threading.Tasks.Task<ExternalContact> GetContactsContactIdAsync (string contactId, List<string> expand = null)
         {
-             ApiResponse<ExternalContact> localVarResponse = await GetContactsContactIdAsyncWithHttpInfo(contactId);
+             ApiResponse<ExternalContact> localVarResponse = await GetContactsContactIdAsyncWithHttpInfo(contactId, expand);
              return localVarResponse.Data;
 
         }
@@ -2542,8 +2564,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="expand">which fields, if any, to expand</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ExternalContact>> GetContactsContactIdAsyncWithHttpInfo (string contactId)
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalContact>> GetContactsContactIdAsyncWithHttpInfo (string contactId, List<string> expand = null)
         {
             // verify the required parameter 'contactId' is set
             if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling GetContactsContactId");
@@ -2577,6 +2600,7 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (contactId != null) localVarPathParams.Add("contactId", Configuration.ApiClient.ParameterToString(contactId)); // path parameter
             
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
             
             
             
@@ -3353,10 +3377,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param> 
         /// <param name="sortOrder">Sort order</param> 
+        /// <param name="expand">which fields, if any, to expand</param> 
         /// <returns>ContactListing</returns>
-        public ContactListing GetOrganizationsExternalorganizationIdContacts (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
+        public ContactListing GetOrganizationsExternalorganizationIdContacts (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
         {
-             ApiResponse<ContactListing> localVarResponse = GetOrganizationsExternalorganizationIdContactsWithHttpInfo(externalOrganizationId, pageSize, pageNumber, q, sortOrder);
+             ApiResponse<ContactListing> localVarResponse = GetOrganizationsExternalorganizationIdContactsWithHttpInfo(externalOrganizationId, pageSize, pageNumber, q, sortOrder, expand);
              return localVarResponse.Data;
         }
 
@@ -3369,8 +3394,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param> 
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param> 
         /// <param name="sortOrder">Sort order</param> 
+        /// <param name="expand">which fields, if any, to expand</param> 
         /// <returns>ApiResponse of ContactListing</returns>
-        public ApiResponse< ContactListing > GetOrganizationsExternalorganizationIdContactsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
+        public ApiResponse< ContactListing > GetOrganizationsExternalorganizationIdContactsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
         {
             
             // verify the required parameter 'externalOrganizationId' is set
@@ -3410,6 +3436,7 @@ namespace ININ.PureCloudApi.Api
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (q != null) localVarQueryParams.Add("q", Configuration.ApiClient.ParameterToString(q)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
             
             
             
@@ -3452,10 +3479,11 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
         /// <param name="sortOrder">Sort order</param>
+        /// <param name="expand">which fields, if any, to expand</param>
         /// <returns>Task of ContactListing</returns>
-        public async System.Threading.Tasks.Task<ContactListing> GetOrganizationsExternalorganizationIdContactsAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ContactListing> GetOrganizationsExternalorganizationIdContactsAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
         {
-             ApiResponse<ContactListing> localVarResponse = await GetOrganizationsExternalorganizationIdContactsAsyncWithHttpInfo(externalOrganizationId, pageSize, pageNumber, q, sortOrder);
+             ApiResponse<ContactListing> localVarResponse = await GetOrganizationsExternalorganizationIdContactsAsyncWithHttpInfo(externalOrganizationId, pageSize, pageNumber, q, sortOrder, expand);
              return localVarResponse.Data;
 
         }
@@ -3469,8 +3497,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">Page number</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported)</param>
         /// <param name="sortOrder">Sort order</param>
+        /// <param name="expand">which fields, if any, to expand</param>
         /// <returns>Task of ApiResponse (ContactListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetOrganizationsExternalorganizationIdContactsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetOrganizationsExternalorganizationIdContactsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
         {
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling GetOrganizationsExternalorganizationIdContacts");
@@ -3508,6 +3537,7 @@ namespace ININ.PureCloudApi.Api
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (q != null) localVarQueryParams.Add("q", Configuration.ApiClient.ParameterToString(q)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
             
             
             
@@ -5989,7 +6019,7 @@ namespace ININ.PureCloudApi.Api
         }
         
         /// <summary>
-        /// Fetch a relationship 
+        /// Update a relationship 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param> 
@@ -6002,7 +6032,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Fetch a relationship 
+        /// Update a relationship 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param> 
@@ -6085,7 +6115,7 @@ namespace ININ.PureCloudApi.Api
 
         
         /// <summary>
-        /// Fetch a relationship 
+        /// Update a relationship 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
@@ -6099,7 +6129,7 @@ namespace ININ.PureCloudApi.Api
         }
 
         /// <summary>
-        /// Fetch a relationship 
+        /// Update a relationship 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>

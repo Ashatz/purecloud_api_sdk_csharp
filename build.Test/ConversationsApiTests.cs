@@ -257,6 +257,21 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test PostConversationIdParticipantsParticipantIdCallbacks
+        /// </summary>
+        [Test]
+        public void PostConversationIdParticipantsParticipantIdCallbacksTest()
+        {
+            // TODO: add unit test for the method 'PostConversationIdParticipantsParticipantIdCallbacks'
+            string conversationId = null; // TODO: replace null with proper value
+            string participantId = null; // TODO: replace null with proper value
+            CreateCallbackCommand body = null; // TODO: replace null with proper value
+            
+            instance.PostConversationIdParticipantsParticipantIdCallbacks(conversationId, participantId, body);
+             
+        }
+        
+        /// <summary>
         /// Test PostConversationIdParticipantsParticipantIdConsult
         /// </summary>
         [Test]
