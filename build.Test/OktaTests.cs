@@ -79,21 +79,21 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'SsoTargetURI' 
-        /// </summary>
-        [Test]
-        public void SsoTargetURITest()
-        {
-            // TODO: unit test for the property 'SsoTargetURI' 
-        }
-        
-        /// <summary>
         /// Test the property 'IssuerURI' 
         /// </summary>
         [Test]
         public void IssuerURITest()
         {
             // TODO: unit test for the property 'IssuerURI' 
+        }
+        
+        /// <summary>
+        /// Test the property 'SsoTargetURI' 
+        /// </summary>
+        [Test]
+        public void SsoTargetURITest()
+        {
+            // TODO: unit test for the property 'SsoTargetURI' 
         }
         
         /// <summary>
