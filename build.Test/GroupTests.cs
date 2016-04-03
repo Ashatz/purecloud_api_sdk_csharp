@@ -79,6 +79,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test the property 'DateModified' 
+        /// </summary>
+        [Test]
+        public void DateModifiedTest()
+        {
+            // TODO: unit test for the property 'DateModified' 
+        }
+        
+        /// <summary>
         /// Test the property 'MemberCount' 
         /// </summary>
         [Test]
@@ -88,30 +97,12 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'GroupType' 
+        /// Test the property 'State' 
         /// </summary>
         [Test]
-        public void GroupTypeTest()
+        public void StateTest()
         {
-            // TODO: unit test for the property 'GroupType' 
-        }
-        
-        /// <summary>
-        /// Test the property 'GroupImages' 
-        /// </summary>
-        [Test]
-        public void GroupImagesTest()
-        {
-            // TODO: unit test for the property 'GroupImages' 
-        }
-        
-        /// <summary>
-        /// Test the property 'GroupState' 
-        /// </summary>
-        [Test]
-        public void GroupStateTest()
-        {
-            // TODO: unit test for the property 'GroupState' 
+            // TODO: unit test for the property 'State' 
         }
         
         /// <summary>
@@ -121,6 +112,24 @@ namespace ININ.PureCloudApi.Test
         public void VersionTest()
         {
             // TODO: unit test for the property 'Version' 
+        }
+        
+        /// <summary>
+        /// Test the property 'Images' 
+        /// </summary>
+        [Test]
+        public void ImagesTest()
+        {
+            // TODO: unit test for the property 'Images' 
+        }
+        
+        /// <summary>
+        /// Test the property 'Addresses' 
+        /// </summary>
+        [Test]
+        public void AddressesTest()
+        {
+            // TODO: unit test for the property 'Addresses' 
         }
         
         /// <summary>

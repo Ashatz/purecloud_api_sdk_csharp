@@ -124,21 +124,21 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'EntityType' 
-        /// </summary>
-        [Test]
-        public void EntityTypeTest()
-        {
-            // TODO: unit test for the property 'EntityType' 
-        }
-        
-        /// <summary>
         /// Test the property 'Changes' 
         /// </summary>
         [Test]
         public void ChangesTest()
         {
             // TODO: unit test for the property 'Changes' 
+        }
+        
+        /// <summary>
+        /// Test the property 'EntityType' 
+        /// </summary>
+        [Test]
+        public void EntityTypeTest()
+        {
+            // TODO: unit test for the property 'EntityType' 
         }
         
         /// <summary>

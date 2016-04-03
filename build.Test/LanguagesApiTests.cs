@@ -54,6 +54,19 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
+        /// Test DeleteLanguageId
+        /// </summary>
+        [Test]
+        public void DeleteLanguageIdTest()
+        {
+            // TODO: add unit test for the method 'DeleteLanguageId'
+            string languageId = null; // TODO: replace null with proper value
+            
+            instance.DeleteLanguageId(languageId);
+             
+        }
+        
+        /// <summary>
         /// Test GetLanguageId
         /// </summary>
         [Test]
@@ -79,6 +92,33 @@ namespace ININ.PureCloudApi.Test
             
             var response = instance.GetLanguages(pageSize, pageNumber, sortOrder);
             Assert.IsInstanceOf<LanguageEntityListing> (response, "response is LanguageEntityListing"); 
+        }
+        
+        /// <summary>
+        /// Test PostLanguages
+        /// </summary>
+        [Test]
+        public void PostLanguagesTest()
+        {
+            // TODO: add unit test for the method 'PostLanguages'
+            Language body = null; // TODO: replace null with proper value
+            
+            var response = instance.PostLanguages(body);
+            Assert.IsInstanceOf<Language> (response, "response is Language"); 
+        }
+        
+        /// <summary>
+        /// Test PutLanguageId
+        /// </summary>
+        [Test]
+        public void PutLanguageIdTest()
+        {
+            // TODO: add unit test for the method 'PutLanguageId'
+            string languageId = null; // TODO: replace null with proper value
+            Language body = null; // TODO: replace null with proper value
+            
+            var response = instance.PutLanguageId(languageId, body);
+            Assert.IsInstanceOf<Language> (response, "response is Language"); 
         }
         
     }

@@ -410,7 +410,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'recordingId' when calling UserRecordingsApi->DeleteRecordingId");
             
     
-            var localVarPath = "/api/v1/userrecordings/{recordingId}";
+            var localVarPath = "/api/v2/userrecordings/{recordingId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -495,7 +495,7 @@ namespace ININ.PureCloudApi.Api
             if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling DeleteRecordingId");
             
     
-            var localVarPath = "/api/v1/userrecordings/{recordingId}";
+            var localVarPath = "/api/v2/userrecordings/{recordingId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -584,7 +584,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'recordingId' when calling UserRecordingsApi->GetRecordingId");
             
     
-            var localVarPath = "/api/v1/userrecordings/{recordingId}";
+            var localVarPath = "/api/v2/userrecordings/{recordingId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -673,7 +673,7 @@ namespace ININ.PureCloudApi.Api
             if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling GetRecordingId");
             
     
-            var localVarPath = "/api/v1/userrecordings/{recordingId}";
+            var localVarPath = "/api/v2/userrecordings/{recordingId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -763,7 +763,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'recordingId' when calling UserRecordingsApi->GetRecordingIdMedia");
             
     
-            var localVarPath = "/api/v1/userrecordings/{recordingId}/media";
+            var localVarPath = "/api/v2/userrecordings/{recordingId}/media";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -852,7 +852,7 @@ namespace ININ.PureCloudApi.Api
             if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling GetRecordingIdMedia");
             
     
-            var localVarPath = "/api/v1/userrecordings/{recordingId}/media";
+            var localVarPath = "/api/v2/userrecordings/{recordingId}/media";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -934,7 +934,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/userrecordings/summary";
+            var localVarPath = "/api/v2/userrecordings/summary";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1015,7 +1015,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/userrecordings/summary";
+            var localVarPath = "/api/v2/userrecordings/summary";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1101,7 +1101,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/userrecordings";
+            var localVarPath = "/api/v2/userrecordings";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1191,7 +1191,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/userrecordings";
+            var localVarPath = "/api/v2/userrecordings";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1284,7 +1284,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'recordingId' when calling UserRecordingsApi->PutRecordingId");
             
     
-            var localVarPath = "/api/v1/userrecordings/{recordingId}";
+            var localVarPath = "/api/v2/userrecordings/{recordingId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1382,7 +1382,7 @@ namespace ININ.PureCloudApi.Api
             if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling PutRecordingId");
             
     
-            var localVarPath = "/api/v1/userrecordings/{recordingId}";
+            var localVarPath = "/api/v2/userrecordings/{recordingId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();

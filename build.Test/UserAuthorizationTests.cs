@@ -52,33 +52,6 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test the property 'Id' 
-        /// </summary>
-        [Test]
-        public void IdTest()
-        {
-            // TODO: unit test for the property 'Id' 
-        }
-        
-        /// <summary>
-        /// Test the property 'Name' 
-        /// </summary>
-        [Test]
-        public void NameTest()
-        {
-            // TODO: unit test for the property 'Name' 
-        }
-        
-        /// <summary>
-        /// Test the property 'Licenses' 
-        /// </summary>
-        [Test]
-        public void LicensesTest()
-        {
-            // TODO: unit test for the property 'Licenses' 
-        }
-        
-        /// <summary>
         /// Test the property 'Roles' 
         /// </summary>
         [Test]
@@ -103,15 +76,6 @@ namespace ININ.PureCloudApi.Test
         public void PermissionPoliciesTest()
         {
             // TODO: unit test for the property 'PermissionPolicies' 
-        }
-        
-        /// <summary>
-        /// Test the property 'SelfUri' 
-        /// </summary>
-        [Test]
-        public void SelfUriTest()
-        {
-            // TODO: unit test for the property 'SelfUri' 
         }
         
 

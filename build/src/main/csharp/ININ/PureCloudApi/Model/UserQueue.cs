@@ -24,11 +24,11 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ACTIVE")]
             Active,
             
-            [EnumMember(Value = "DELETED")]
-            Deleted,
-            
             [EnumMember(Value = "INACTIVE")]
-            Inactive
+            Inactive,
+            
+            [EnumMember(Value = "DELETED")]
+            Deleted
         }
     
         [JsonConverter(typeof(StringEnumConverter))]
@@ -69,11 +69,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="State">State.</param>
         /// <param name="ModifiedByApp">ModifiedByApp.</param>
         /// <param name="CreatedByApp">CreatedByApp.</param>
-        /// <param name="WrapupCodes">WrapupCodes.</param>
         /// <param name="MediaSettings">MediaSettings.</param>
         /// <param name="Bullseye">Bullseye.</param>
         /// <param name="AcwSettings">AcwSettings.</param>
-        /// <param name="PhoneNumber">PhoneNumber.</param>
         /// <param name="SkillEvaluationMethod">SkillEvaluationMethod.</param>
         /// <param name="QueueFlow">QueueFlow.</param>
         /// <param name="CallingPartyName">CallingPartyName.</param>
@@ -81,7 +79,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Joined">Joined (default to false).</param>
         /// <param name="MemberCount">MemberCount.</param>
 
-        public UserQueue(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<UriReference> WrapupCodes = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, string PhoneNumber = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, string CallingPartyName = null, string CallingPartyNumber = null, bool? Joined = null, int? MemberCount = null)
+        public UserQueue(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, string CallingPartyName = null, string CallingPartyNumber = null, bool? Joined = null, int? MemberCount = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -93,11 +91,9 @@ namespace ININ.PureCloudApi.Model
             this.State = State;
             this.ModifiedByApp = ModifiedByApp;
             this.CreatedByApp = CreatedByApp;
-            this.WrapupCodes = WrapupCodes;
             this.MediaSettings = MediaSettings;
             this.Bullseye = Bullseye;
             this.AcwSettings = AcwSettings;
-            this.PhoneNumber = PhoneNumber;
             this.SkillEvaluationMethod = SkillEvaluationMethod;
             this.QueueFlow = QueueFlow;
             this.CallingPartyName = CallingPartyName;
@@ -180,12 +176,6 @@ namespace ININ.PureCloudApi.Model
         public string CreatedByApp { get; set; }
     
         /// <summary>
-        /// Gets or Sets WrapupCodes
-        /// </summary>
-        [DataMember(Name="wrapupCodes", EmitDefaultValue=false)]
-        public List<UriReference> WrapupCodes { get; set; }
-    
-        /// <summary>
         /// Gets or Sets MediaSettings
         /// </summary>
         [DataMember(Name="mediaSettings", EmitDefaultValue=false)]
@@ -202,12 +192,6 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="acwSettings", EmitDefaultValue=false)]
         public AcwSettings AcwSettings { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets PhoneNumber
-        /// </summary>
-        [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
-        public string PhoneNumber { get; set; }
     
         /// <summary>
         /// Gets or Sets QueueFlow
@@ -265,11 +249,9 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  ModifiedByApp: ").Append(ModifiedByApp).Append("\n");
             sb.Append("  CreatedByApp: ").Append(CreatedByApp).Append("\n");
-            sb.Append("  WrapupCodes: ").Append(WrapupCodes).Append("\n");
             sb.Append("  MediaSettings: ").Append(MediaSettings).Append("\n");
             sb.Append("  Bullseye: ").Append(Bullseye).Append("\n");
             sb.Append("  AcwSettings: ").Append(AcwSettings).Append("\n");
-            sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  SkillEvaluationMethod: ").Append(SkillEvaluationMethod).Append("\n");
             sb.Append("  QueueFlow: ").Append(QueueFlow).Append("\n");
             sb.Append("  CallingPartyName: ").Append(CallingPartyName).Append("\n");
@@ -370,11 +352,6 @@ namespace ININ.PureCloudApi.Model
                     this.CreatedByApp.Equals(other.CreatedByApp)
                 ) &&
                 (
-                    this.WrapupCodes == other.WrapupCodes ||
-                    this.WrapupCodes != null &&
-                    this.WrapupCodes.SequenceEqual(other.WrapupCodes)
-                ) &&
-                (
                     this.MediaSettings == other.MediaSettings ||
                     this.MediaSettings != null &&
                     this.MediaSettings.SequenceEqual(other.MediaSettings)
@@ -388,11 +365,6 @@ namespace ININ.PureCloudApi.Model
                     this.AcwSettings == other.AcwSettings ||
                     this.AcwSettings != null &&
                     this.AcwSettings.Equals(other.AcwSettings)
-                ) &&
-                (
-                    this.PhoneNumber == other.PhoneNumber ||
-                    this.PhoneNumber != null &&
-                    this.PhoneNumber.Equals(other.PhoneNumber)
                 ) &&
                 (
                     this.SkillEvaluationMethod == other.SkillEvaluationMethod ||
@@ -476,9 +448,6 @@ namespace ININ.PureCloudApi.Model
                 if (this.CreatedByApp != null)
                     hash = hash * 59 + this.CreatedByApp.GetHashCode();
                 
-                if (this.WrapupCodes != null)
-                    hash = hash * 59 + this.WrapupCodes.GetHashCode();
-                
                 if (this.MediaSettings != null)
                     hash = hash * 59 + this.MediaSettings.GetHashCode();
                 
@@ -487,9 +456,6 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.AcwSettings != null)
                     hash = hash * 59 + this.AcwSettings.GetHashCode();
-                
-                if (this.PhoneNumber != null)
-                    hash = hash * 59 + this.PhoneNumber.GetHashCode();
                 
                 if (this.SkillEvaluationMethod != null)
                     hash = hash * 59 + this.SkillEvaluationMethod.GetHashCode();

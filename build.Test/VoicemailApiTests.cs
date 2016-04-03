@@ -130,41 +130,41 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetUservoicemailpoliciesUserId
+        /// Test GetPolicy
         /// </summary>
         [Test]
-        public void GetUservoicemailpoliciesUserIdTest()
+        public void GetPolicyTest()
         {
-            // TODO: add unit test for the method 'GetUservoicemailpoliciesUserId'
-            string userId = null; // TODO: replace null with proper value
+            // TODO: add unit test for the method 'GetPolicy'
             
-            var response = instance.GetUservoicemailpoliciesUserId(userId);
-            Assert.IsInstanceOf<VoicemailUserPolicy> (response, "response is VoicemailUserPolicy"); 
-        }
-        
-        /// <summary>
-        /// Test GetVoicemailpolicy
-        /// </summary>
-        [Test]
-        public void GetVoicemailpolicyTest()
-        {
-            // TODO: add unit test for the method 'GetVoicemailpolicy'
-            
-            var response = instance.GetVoicemailpolicy();
+            var response = instance.GetPolicy();
             Assert.IsInstanceOf<VoicemailOrganizationPolicy> (response, "response is VoicemailOrganizationPolicy"); 
         }
         
         /// <summary>
-        /// Test PatchUservoicemailpoliciesUserId
+        /// Test GetUserpoliciesUserId
         /// </summary>
         [Test]
-        public void PatchUservoicemailpoliciesUserIdTest()
+        public void GetUserpoliciesUserIdTest()
         {
-            // TODO: add unit test for the method 'PatchUservoicemailpoliciesUserId'
+            // TODO: add unit test for the method 'GetUserpoliciesUserId'
+            string userId = null; // TODO: replace null with proper value
+            
+            var response = instance.GetUserpoliciesUserId(userId);
+            Assert.IsInstanceOf<VoicemailUserPolicy> (response, "response is VoicemailUserPolicy"); 
+        }
+        
+        /// <summary>
+        /// Test PatchUserpoliciesUserId
+        /// </summary>
+        [Test]
+        public void PatchUserpoliciesUserIdTest()
+        {
+            // TODO: add unit test for the method 'PatchUserpoliciesUserId'
             string userId = null; // TODO: replace null with proper value
             VoicemailUserPolicy body = null; // TODO: replace null with proper value
             
-            var response = instance.PatchUservoicemailpoliciesUserId(userId, body);
+            var response = instance.PatchUserpoliciesUserId(userId, body);
             Assert.IsInstanceOf<VoicemailUserPolicy> (response, "response is VoicemailUserPolicy"); 
         }
         
@@ -183,15 +183,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PutVoicemailpolicy
+        /// Test PutPolicy
         /// </summary>
         [Test]
-        public void PutVoicemailpolicyTest()
+        public void PutPolicyTest()
         {
-            // TODO: add unit test for the method 'PutVoicemailpolicy'
+            // TODO: add unit test for the method 'PutPolicy'
             VoicemailOrganizationPolicy body = null; // TODO: replace null with proper value
             
-            var response = instance.PutVoicemailpolicy(body);
+            var response = instance.PutPolicy(body);
             Assert.IsInstanceOf<VoicemailOrganizationPolicy> (response, "response is VoicemailOrganizationPolicy"); 
         }
         

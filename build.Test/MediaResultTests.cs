@@ -52,15 +52,6 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test the property 'WaveUri' 
-        /// </summary>
-        [Test]
-        public void WaveUriTest()
-        {
-            // TODO: unit test for the property 'WaveUri' 
-        }
-        
-        /// <summary>
         /// Test the property 'MediaUri' 
         /// </summary>
         [Test]

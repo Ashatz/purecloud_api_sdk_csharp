@@ -52,75 +52,39 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test the property 'Id' 
+        /// Test the property 'Address' 
         /// </summary>
         [Test]
-        public void IdTest()
+        public void AddressTest()
         {
-            // TODO: unit test for the property 'Id' 
+            // TODO: unit test for the property 'Address' 
         }
         
         /// <summary>
-        /// Test the property 'Name' 
+        /// Test the property 'Display' 
         /// </summary>
         [Test]
-        public void NameTest()
+        public void DisplayTest()
         {
-            // TODO: unit test for the property 'Name' 
+            // TODO: unit test for the property 'Display' 
         }
         
         /// <summary>
-        /// Test the property 'ContactListId' 
+        /// Test the property 'MediaType' 
         /// </summary>
         [Test]
-        public void ContactListIdTest()
+        public void MediaTypeTest()
         {
-            // TODO: unit test for the property 'ContactListId' 
+            // TODO: unit test for the property 'MediaType' 
         }
         
         /// <summary>
-        /// Test the property 'Data' 
+        /// Test the property 'Type' 
         /// </summary>
         [Test]
-        public void DataTest()
+        public void TypeTest()
         {
-            // TODO: unit test for the property 'Data' 
-        }
-        
-        /// <summary>
-        /// Test the property 'CallRecords' 
-        /// </summary>
-        [Test]
-        public void CallRecordsTest()
-        {
-            // TODO: unit test for the property 'CallRecords' 
-        }
-        
-        /// <summary>
-        /// Test the property 'Callable' 
-        /// </summary>
-        [Test]
-        public void CallableTest()
-        {
-            // TODO: unit test for the property 'Callable' 
-        }
-        
-        /// <summary>
-        /// Test the property 'PhoneNumberStatus' 
-        /// </summary>
-        [Test]
-        public void PhoneNumberStatusTest()
-        {
-            // TODO: unit test for the property 'PhoneNumberStatus' 
-        }
-        
-        /// <summary>
-        /// Test the property 'SelfUri' 
-        /// </summary>
-        [Test]
-        public void SelfUriTest()
-        {
-            // TODO: unit test for the property 'SelfUri' 
+            // TODO: unit test for the property 'Type' 
         }
         
 

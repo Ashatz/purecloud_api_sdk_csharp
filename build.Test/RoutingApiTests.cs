@@ -123,6 +123,33 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test DeleteSkillsSkillId
+        /// </summary>
+        [Test]
+        public void DeleteSkillsSkillIdTest()
+        {
+            // TODO: add unit test for the method 'DeleteSkillsSkillId'
+            string skillId = null; // TODO: replace null with proper value
+            
+            var response = instance.DeleteSkillsSkillId(skillId);
+            Assert.IsInstanceOf<string> (response, "response is string"); 
+        }
+        
+        /// <summary>
+        /// Test DeleteUserIdRoutingskillsSkillId
+        /// </summary>
+        [Test]
+        public void DeleteUserIdRoutingskillsSkillIdTest()
+        {
+            // TODO: add unit test for the method 'DeleteUserIdRoutingskillsSkillId'
+            string userId = null; // TODO: replace null with proper value
+            string skillId = null; // TODO: replace null with proper value
+            
+            var response = instance.DeleteUserIdRoutingskillsSkillId(userId, skillId);
+            Assert.IsInstanceOf<string> (response, "response is string"); 
+        }
+        
+        /// <summary>
         /// Test DeleteUtilization
         /// </summary>
         [Test]
@@ -243,25 +270,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetQueuesQueueIdMembers
-        /// </summary>
-        [Test]
-        public void GetQueuesQueueIdMembersTest()
-        {
-            // TODO: add unit test for the method 'GetQueuesQueueIdMembers'
-            string queueId = null; // TODO: replace null with proper value
-            int? pageSize = null; // TODO: replace null with proper value
-            int? pageNumber = null; // TODO: replace null with proper value
-            string userId = null; // TODO: replace null with proper value
-            string statusId = null; // TODO: replace null with proper value
-            bool? joined = null; // TODO: replace null with proper value
-            string expand = null; // TODO: replace null with proper value
-            
-            var response = instance.GetQueuesQueueIdMembers(queueId, pageSize, pageNumber, userId, statusId, joined, expand);
-            Assert.IsInstanceOf<QueueMemberEntityListing> (response, "response is QueueMemberEntityListing"); 
-        }
-        
-        /// <summary>
         /// Test GetQueuesQueueIdUsers
         /// </summary>
         [Test]
@@ -302,11 +310,38 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetSkills'
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
-            string sortBy = null; // TODO: replace null with proper value
-            string name = null; // TODO: replace null with proper value
             
-            var response = instance.GetSkills(pageSize, pageNumber, sortBy, name);
+            var response = instance.GetSkills(pageSize, pageNumber);
             Assert.IsInstanceOf<SkillEntityListing> (response, "response is SkillEntityListing"); 
+        }
+        
+        /// <summary>
+        /// Test GetSkillsSkillId
+        /// </summary>
+        [Test]
+        public void GetSkillsSkillIdTest()
+        {
+            // TODO: add unit test for the method 'GetSkillsSkillId'
+            string skillId = null; // TODO: replace null with proper value
+            
+            var response = instance.GetSkillsSkillId(skillId);
+            Assert.IsInstanceOf<RoutingSkill> (response, "response is RoutingSkill"); 
+        }
+        
+        /// <summary>
+        /// Test GetUserIdRoutingskills
+        /// </summary>
+        [Test]
+        public void GetUserIdRoutingskillsTest()
+        {
+            // TODO: add unit test for the method 'GetUserIdRoutingskills'
+            string userId = null; // TODO: replace null with proper value
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            string sortOrder = null; // TODO: replace null with proper value
+            
+            var response = instance.GetUserIdRoutingskills(userId, pageSize, pageNumber, sortOrder);
+            Assert.IsInstanceOf<UserSkillEntityListing> (response, "response is UserSkillEntityListing"); 
         }
         
         /// <summary>
@@ -419,6 +454,19 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test PostQueuesObservationsQuery
+        /// </summary>
+        [Test]
+        public void PostQueuesObservationsQueryTest()
+        {
+            // TODO: add unit test for the method 'PostQueuesObservationsQuery'
+            ObservationQuery body = null; // TODO: replace null with proper value
+            
+            var response = instance.PostQueuesObservationsQuery(body);
+            Assert.IsInstanceOf<ObservationQueryResponse> (response, "response is ObservationQueryResponse"); 
+        }
+        
+        /// <summary>
         /// Test PostQueuesQueueIdUsers
         /// </summary>
         [Test]
@@ -446,6 +494,33 @@ namespace ININ.PureCloudApi.Test
             
             var response = instance.PostQueuesQueueIdWrapupcodes(queueId, codeId, body);
             Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode"); 
+        }
+        
+        /// <summary>
+        /// Test PostSkills
+        /// </summary>
+        [Test]
+        public void PostSkillsTest()
+        {
+            // TODO: add unit test for the method 'PostSkills'
+            RoutingSkill body = null; // TODO: replace null with proper value
+            
+            var response = instance.PostSkills(body);
+            Assert.IsInstanceOf<RoutingSkill> (response, "response is RoutingSkill"); 
+        }
+        
+        /// <summary>
+        /// Test PostUserIdRoutingskills
+        /// </summary>
+        [Test]
+        public void PostUserIdRoutingskillsTest()
+        {
+            // TODO: add unit test for the method 'PostUserIdRoutingskills'
+            string userId = null; // TODO: replace null with proper value
+            UserRoutingSkill body = null; // TODO: replace null with proper value
+            
+            var response = instance.PostUserIdRoutingskills(userId, body);
+            Assert.IsInstanceOf<UserRoutingSkill> (response, "response is UserRoutingSkill"); 
         }
         
         /// <summary>
@@ -491,18 +566,17 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PutQueuesQueueIdMembersMemberId
+        /// Test PutSkillsSkillId
         /// </summary>
         [Test]
-        public void PutQueuesQueueIdMembersMemberIdTest()
+        public void PutSkillsSkillIdTest()
         {
-            // TODO: add unit test for the method 'PutQueuesQueueIdMembersMemberId'
-            string queueId = null; // TODO: replace null with proper value
-            string memberId = null; // TODO: replace null with proper value
-            QueueMember body = null; // TODO: replace null with proper value
+            // TODO: add unit test for the method 'PutSkillsSkillId'
+            string skillId = null; // TODO: replace null with proper value
+            RoutingSkill body = null; // TODO: replace null with proper value
             
-            var response = instance.PutQueuesQueueIdMembersMemberId(queueId, memberId, body);
-            Assert.IsInstanceOf<QueueMember> (response, "response is QueueMember"); 
+            var response = instance.PutSkillsSkillId(skillId, body);
+            Assert.IsInstanceOf<RoutingSkill> (response, "response is RoutingSkill"); 
         }
         
         /// <summary>

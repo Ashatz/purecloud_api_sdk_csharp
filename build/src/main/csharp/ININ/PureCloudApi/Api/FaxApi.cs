@@ -394,7 +394,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxApi->DeleteDocumentsDocumentId");
             
     
-            var localVarPath = "/api/v1/fax/documents/{documentId}";
+            var localVarPath = "/api/v2/fax/documents/{documentId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -479,7 +479,7 @@ namespace ININ.PureCloudApi.Api
             if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling DeleteDocumentsDocumentId");
             
     
-            var localVarPath = "/api/v1/fax/documents/{documentId}";
+            var localVarPath = "/api/v2/fax/documents/{documentId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -564,7 +564,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/fax/documents";
+            var localVarPath = "/api/v2/fax/documents";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -651,7 +651,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/fax/documents";
+            var localVarPath = "/api/v2/fax/documents";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -739,7 +739,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxApi->GetDocumentsDocumentId");
             
     
-            var localVarPath = "/api/v1/fax/documents/{documentId}";
+            var localVarPath = "/api/v2/fax/documents/{documentId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -825,7 +825,7 @@ namespace ININ.PureCloudApi.Api
             if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetDocumentsDocumentId");
             
     
-            var localVarPath = "/api/v1/fax/documents/{documentId}";
+            var localVarPath = "/api/v2/fax/documents/{documentId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -912,7 +912,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxApi->GetDocumentsDocumentIdContent");
             
     
-            var localVarPath = "/api/v1/fax/documents/{documentId}/content";
+            var localVarPath = "/api/v2/fax/documents/{documentId}/content";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -998,7 +998,7 @@ namespace ININ.PureCloudApi.Api
             if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetDocumentsDocumentIdContent");
             
     
-            var localVarPath = "/api/v1/fax/documents/{documentId}/content";
+            var localVarPath = "/api/v2/fax/documents/{documentId}/content";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1079,7 +1079,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/fax/summary";
+            var localVarPath = "/api/v2/fax/summary";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1160,7 +1160,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/fax/summary";
+            var localVarPath = "/api/v2/fax/summary";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1248,7 +1248,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxApi->PutDocumentsDocumentId");
             
     
-            var localVarPath = "/api/v1/fax/documents/{documentId}";
+            var localVarPath = "/api/v2/fax/documents/{documentId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1343,7 +1343,7 @@ namespace ININ.PureCloudApi.Api
             if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling PutDocumentsDocumentId");
             
     
-            var localVarPath = "/api/v1/fax/documents/{documentId}";
+            var localVarPath = "/api/v2/fax/documents/{documentId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();

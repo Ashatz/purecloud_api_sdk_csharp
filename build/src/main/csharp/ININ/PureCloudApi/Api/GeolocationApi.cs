@@ -305,7 +305,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/geolocations/settings";
+            var localVarPath = "/api/v2/geolocations/settings";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -386,7 +386,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/geolocations/settings";
+            var localVarPath = "/api/v2/geolocations/settings";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -478,7 +478,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'clientId' when calling GeolocationApi->GetUserIdGeolocationsClientId");
             
     
-            var localVarPath = "/api/v1/users/{userId}/geolocations/{clientId}";
+            var localVarPath = "/api/v2/users/{userId}/geolocations/{clientId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -569,7 +569,7 @@ namespace ININ.PureCloudApi.Api
             if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling GetUserIdGeolocationsClientId");
             
     
-            var localVarPath = "/api/v1/users/{userId}/geolocations/{clientId}";
+            var localVarPath = "/api/v2/users/{userId}/geolocations/{clientId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -653,7 +653,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/geolocations/settings";
+            var localVarPath = "/api/v2/geolocations/settings";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -743,7 +743,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/geolocations/settings";
+            var localVarPath = "/api/v2/geolocations/settings";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -844,7 +844,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'clientId' when calling GeolocationApi->PatchUserIdGeolocationsClientId");
             
     
-            var localVarPath = "/api/v1/users/{userId}/geolocations/{clientId}";
+            var localVarPath = "/api/v2/users/{userId}/geolocations/{clientId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -944,7 +944,7 @@ namespace ININ.PureCloudApi.Api
             if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling PatchUserIdGeolocationsClientId");
             
     
-            var localVarPath = "/api/v1/users/{userId}/geolocations/{clientId}";
+            var localVarPath = "/api/v2/users/{userId}/geolocations/{clientId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();

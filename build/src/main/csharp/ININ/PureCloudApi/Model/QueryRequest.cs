@@ -29,7 +29,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Filters">Filters.</param>
         /// <param name="AttributeFilters">AttributeFilters.</param>
 
-        public QueryRequest(string QueryPhrase = null, int? PageNumber = null, int? PageSize = null, List<string> FacetNameRequests = null, List<SortItem> Sort = null, List<FacetFilterItem> Filters = null, List<AttributeFilterItem> AttributeFilters = null)
+        public QueryRequest(string QueryPhrase = null, int? PageNumber = null, int? PageSize = null, List<string> FacetNameRequests = null, List<SortItem> Sort = null, List<ContentFilterItem> Filters = null, List<AttributeFilterItem> AttributeFilters = null)
         {
             this.QueryPhrase = QueryPhrase;
             this.PageNumber = PageNumber;
@@ -76,7 +76,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Filters
         /// </summary>
         [DataMember(Name="filters", EmitDefaultValue=false)]
-        public List<FacetFilterItem> Filters { get; set; }
+        public List<ContentFilterItem> Filters { get; set; }
     
         /// <summary>
         /// Gets or Sets AttributeFilters

@@ -24,11 +24,11 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ACTIVE")]
             Active,
             
-            [EnumMember(Value = "DELETED")]
-            Deleted,
-            
             [EnumMember(Value = "INACTIVE")]
-            Inactive
+            Inactive,
+            
+            [EnumMember(Value = "DELETED")]
+            Deleted
         }
         
         /// <summary>
@@ -44,24 +44,28 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ThirdPartyOrgId">ThirdPartyOrgId.</param>
         /// <param name="ThirdPartyOrgName">ThirdPartyOrgName.</param>
         /// <param name="ThirdPartyURI">ThirdPartyURI.</param>
-        /// <param name="AdminUsername">AdminUsername.</param>
-        /// <param name="AdminPassword">AdminPassword.</param>
         /// <param name="Domain">Domain.</param>
-        /// <param name="Version">Version.</param>
+        /// <param name="Version">The current version of the organization. (required).</param>
         /// <param name="State">State.</param>
         /// <param name="DefaultSiteId">DefaultSiteId.</param>
         /// <param name="Deletable">Deletable (default to false).</param>
 
-        public Organization(string Name = null, string ThirdPartyOrgId = null, string ThirdPartyOrgName = null, string ThirdPartyURI = null, string AdminUsername = null, string AdminPassword = null, string Domain = null, int? Version = null, StateEnum? State = null, string DefaultSiteId = null, bool? Deletable = null)
+        public Organization(string Name = null, string ThirdPartyOrgId = null, string ThirdPartyOrgName = null, string ThirdPartyURI = null, string Domain = null, int? Version = null, StateEnum? State = null, string DefaultSiteId = null, bool? Deletable = null)
         {
+            // to ensure "Version" is required (not null)
+            if (Version == null)
+            {
+                throw new InvalidDataException("Version is a required property for Organization and cannot be null");
+            }
+            else
+            {
+                this.Version = Version;
+            }
             this.Name = Name;
             this.ThirdPartyOrgId = ThirdPartyOrgId;
             this.ThirdPartyOrgName = ThirdPartyOrgName;
             this.ThirdPartyURI = ThirdPartyURI;
-            this.AdminUsername = AdminUsername;
-            this.AdminPassword = AdminPassword;
             this.Domain = Domain;
-            this.Version = Version;
             this.State = State;
             this.DefaultSiteId = DefaultSiteId;
             // use default value if no "Deletable" provided
@@ -109,26 +113,15 @@ namespace ININ.PureCloudApi.Model
         public string ThirdPartyURI { get; set; }
     
         /// <summary>
-        /// Gets or Sets AdminUsername
-        /// </summary>
-        [DataMember(Name="adminUsername", EmitDefaultValue=false)]
-        public string AdminUsername { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets AdminPassword
-        /// </summary>
-        [DataMember(Name="adminPassword", EmitDefaultValue=false)]
-        public string AdminPassword { get; set; }
-    
-        /// <summary>
         /// Gets or Sets Domain
         /// </summary>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public string Domain { get; set; }
     
         /// <summary>
-        /// Gets or Sets Version
+        /// The current version of the organization.
         /// </summary>
+        /// <value>The current version of the organization.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
     
@@ -164,8 +157,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ThirdPartyOrgId: ").Append(ThirdPartyOrgId).Append("\n");
             sb.Append("  ThirdPartyOrgName: ").Append(ThirdPartyOrgName).Append("\n");
             sb.Append("  ThirdPartyURI: ").Append(ThirdPartyURI).Append("\n");
-            sb.Append("  AdminUsername: ").Append(AdminUsername).Append("\n");
-            sb.Append("  AdminPassword: ").Append(AdminPassword).Append("\n");
             sb.Append("  Domain: ").Append(Domain).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
@@ -235,16 +226,6 @@ namespace ININ.PureCloudApi.Model
                     this.ThirdPartyURI.Equals(other.ThirdPartyURI)
                 ) &&
                 (
-                    this.AdminUsername == other.AdminUsername ||
-                    this.AdminUsername != null &&
-                    this.AdminUsername.Equals(other.AdminUsername)
-                ) &&
-                (
-                    this.AdminPassword == other.AdminPassword ||
-                    this.AdminPassword != null &&
-                    this.AdminPassword.Equals(other.AdminPassword)
-                ) &&
-                (
                     this.Domain == other.Domain ||
                     this.Domain != null &&
                     this.Domain.Equals(other.Domain)
@@ -302,12 +283,6 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.ThirdPartyURI != null)
                     hash = hash * 59 + this.ThirdPartyURI.GetHashCode();
-                
-                if (this.AdminUsername != null)
-                    hash = hash * 59 + this.AdminUsername.GetHashCode();
-                
-                if (this.AdminPassword != null)
-                    hash = hash * 59 + this.AdminPassword.GetHashCode();
                 
                 if (this.Domain != null)
                     hash = hash * 59 + this.Domain.GetHashCode();

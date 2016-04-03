@@ -24,11 +24,11 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ACTIVE")]
             Active,
             
-            [EnumMember(Value = "DELETED")]
-            Deleted,
-            
             [EnumMember(Value = "INACTIVE")]
-            Inactive
+            Inactive,
+            
+            [EnumMember(Value = "DELETED")]
+            Deleted
         }
         
         /// <summary>
@@ -60,7 +60,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Location">Location.</param>
         /// <param name="Managed">Managed (default to false).</param>
 
-        public Site(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<UriReference> PrimarySites = null, List<UriReference> SecondarySites = null, List<Edge> PrimaryEdges = null, List<Edge> SecondaryEdges = null, List<OrganizationAddress> Addresses = null, List<Edge> Edges = null, EdgeAutoUpdateConfig EdgeAutoUpdateConfig = null, UriReference Location = null, bool? Managed = null)
+        public Site(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<UriReference> PrimarySites = null, List<UriReference> SecondarySites = null, List<Edge> PrimaryEdges = null, List<Edge> SecondaryEdges = null, List<Contact> Addresses = null, List<Edge> Edges = null, EdgeAutoUpdateConfig EdgeAutoUpdateConfig = null, UriReference Location = null, bool? Managed = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -184,7 +184,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Addresses
         /// </summary>
         [DataMember(Name="addresses", EmitDefaultValue=false)]
-        public List<OrganizationAddress> Addresses { get; set; }
+        public List<Contact> Addresses { get; set; }
     
         /// <summary>
         /// Gets or Sets Edges

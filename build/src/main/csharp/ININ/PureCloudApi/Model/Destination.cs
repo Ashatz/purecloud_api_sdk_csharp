@@ -21,14 +21,12 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Destination" />class.
         /// </summary>
-        /// <param name="AccountCodeDigits">AccountCodeDigits.</param>
-        /// <param name="PostConnectDigits">PostConnectDigits.</param>
         /// <param name="Address">Address or phone number. (required).</param>
         /// <param name="Name">Name.</param>
         /// <param name="UserId">UserId.</param>
         /// <param name="QueueId">QueueId.</param>
 
-        public Destination(string AccountCodeDigits = null, string PostConnectDigits = null, string Address = null, string Name = null, string UserId = null, string QueueId = null)
+        public Destination(string Address = null, string Name = null, string UserId = null, string QueueId = null)
         {
             // to ensure "Address" is required (not null)
             if (Address == null)
@@ -39,26 +37,12 @@ namespace ININ.PureCloudApi.Model
             {
                 this.Address = Address;
             }
-            this.AccountCodeDigits = AccountCodeDigits;
-            this.PostConnectDigits = PostConnectDigits;
             this.Name = Name;
             this.UserId = UserId;
             this.QueueId = QueueId;
             
         }
         
-    
-        /// <summary>
-        /// Gets or Sets AccountCodeDigits
-        /// </summary>
-        [DataMember(Name="accountCodeDigits", EmitDefaultValue=false)]
-        public string AccountCodeDigits { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets PostConnectDigits
-        /// </summary>
-        [DataMember(Name="postConnectDigits", EmitDefaultValue=false)]
-        public string PostConnectDigits { get; set; }
     
         /// <summary>
         /// Address or phone number.
@@ -93,8 +77,6 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Destination {\n");
-            sb.Append("  AccountCodeDigits: ").Append(AccountCodeDigits).Append("\n");
-            sb.Append("  PostConnectDigits: ").Append(PostConnectDigits).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
@@ -137,16 +119,6 @@ namespace ININ.PureCloudApi.Model
 
             return true &&
                 (
-                    this.AccountCodeDigits == other.AccountCodeDigits ||
-                    this.AccountCodeDigits != null &&
-                    this.AccountCodeDigits.Equals(other.AccountCodeDigits)
-                ) &&
-                (
-                    this.PostConnectDigits == other.PostConnectDigits ||
-                    this.PostConnectDigits != null &&
-                    this.PostConnectDigits.Equals(other.PostConnectDigits)
-                ) &&
-                (
                     this.Address == other.Address ||
                     this.Address != null &&
                     this.Address.Equals(other.Address)
@@ -179,12 +151,6 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
-                if (this.AccountCodeDigits != null)
-                    hash = hash * 59 + this.AccountCodeDigits.GetHashCode();
-                
-                if (this.PostConnectDigits != null)
-                    hash = hash * 59 + this.PostConnectDigits.GetHashCode();
                 
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();

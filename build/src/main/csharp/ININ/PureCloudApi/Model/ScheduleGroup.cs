@@ -24,11 +24,11 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ACTIVE")]
             Active,
             
-            [EnumMember(Value = "DELETED")]
-            Deleted,
-            
             [EnumMember(Value = "INACTIVE")]
-            Inactive
+            Inactive,
+            
+            [EnumMember(Value = "DELETED")]
+            Deleted
         }
         
         /// <summary>

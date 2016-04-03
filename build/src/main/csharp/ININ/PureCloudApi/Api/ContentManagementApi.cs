@@ -1968,7 +1968,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->DeleteDocumentsDocumentId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/documents/{documentId}";
+            var localVarPath = "/api/v2/contentmanagement/documents/{documentId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2056,7 +2056,7 @@ namespace ININ.PureCloudApi.Api
             if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling DeleteDocumentsDocumentId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/documents/{documentId}";
+            var localVarPath = "/api/v2/contentmanagement/documents/{documentId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2143,7 +2143,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'shareId' when calling ContentManagementApi->DeleteSharesShareId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/shares/{shareId}";
+            var localVarPath = "/api/v2/contentmanagement/shares/{shareId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2228,7 +2228,7 @@ namespace ININ.PureCloudApi.Api
             if (shareId == null) throw new ApiException(400, "Missing required parameter 'shareId' when calling DeleteSharesShareId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/shares/{shareId}";
+            var localVarPath = "/api/v2/contentmanagement/shares/{shareId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2314,7 +2314,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'statusId' when calling ContentManagementApi->DeleteStatusStatusId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/status/{statusId}";
+            var localVarPath = "/api/v2/contentmanagement/status/{statusId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2399,7 +2399,7 @@ namespace ININ.PureCloudApi.Api
             if (statusId == null) throw new ApiException(400, "Missing required parameter 'statusId' when calling DeleteStatusStatusId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/status/{statusId}";
+            var localVarPath = "/api/v2/contentmanagement/status/{statusId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2487,7 +2487,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->DeleteWorkspacesWorkspaceId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces/{workspaceId}";
+            var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2575,7 +2575,7 @@ namespace ININ.PureCloudApi.Api
             if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling DeleteWorkspacesWorkspaceId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces/{workspaceId}";
+            var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2668,7 +2668,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'memberId' when calling ContentManagementApi->DeleteWorkspacesWorkspaceIdMembersMemberId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
+            var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2758,7 +2758,7 @@ namespace ININ.PureCloudApi.Api
             if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling DeleteWorkspacesWorkspaceIdMembersMemberId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
+            var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2851,7 +2851,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'tagId' when calling ContentManagementApi->DeleteWorkspacesWorkspaceIdTagvaluesTagId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
+            var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2941,7 +2941,7 @@ namespace ININ.PureCloudApi.Api
             if (tagId == null) throw new ApiException(400, "Missing required parameter 'tagId' when calling DeleteWorkspacesWorkspaceIdTagvaluesTagId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
+            var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3041,7 +3041,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetDocuments");
             
     
-            var localVarPath = "/api/v1/contentmanagement/documents";
+            var localVarPath = "/api/v2/contentmanagement/documents";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3145,7 +3145,7 @@ namespace ININ.PureCloudApi.Api
             if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetDocuments");
             
     
-            var localVarPath = "/api/v1/contentmanagement/documents";
+            var localVarPath = "/api/v2/contentmanagement/documents";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3240,7 +3240,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->GetDocumentsDocumentId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/documents/{documentId}";
+            var localVarPath = "/api/v2/contentmanagement/documents/{documentId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3329,7 +3329,7 @@ namespace ININ.PureCloudApi.Api
             if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetDocumentsDocumentId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/documents/{documentId}";
+            var localVarPath = "/api/v2/contentmanagement/documents/{documentId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3429,7 +3429,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->GetDocumentsDocumentIdAudits");
             
     
-            var localVarPath = "/api/v1/contentmanagement/documents/{documentId}/audits";
+            var localVarPath = "/api/v2/contentmanagement/documents/{documentId}/audits";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3533,7 +3533,7 @@ namespace ININ.PureCloudApi.Api
             if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetDocumentsDocumentIdAudits");
             
     
-            var localVarPath = "/api/v1/contentmanagement/documents/{documentId}/audits";
+            var localVarPath = "/api/v2/contentmanagement/documents/{documentId}/audits";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3629,7 +3629,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->GetDocumentsDocumentIdContent");
             
     
-            var localVarPath = "/api/v1/contentmanagement/documents/{documentId}/content";
+            var localVarPath = "/api/v2/contentmanagement/documents/{documentId}/content";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3720,7 +3720,7 @@ namespace ININ.PureCloudApi.Api
             if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling GetDocumentsDocumentIdContent");
             
     
-            var localVarPath = "/api/v1/contentmanagement/documents/{documentId}/content";
+            var localVarPath = "/api/v2/contentmanagement/documents/{documentId}/content";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3819,7 +3819,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'queryPhrase' when calling ContentManagementApi->GetQuery");
             
     
-            var localVarPath = "/api/v1/contentmanagement/query";
+            var localVarPath = "/api/v2/contentmanagement/query";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3920,7 +3920,7 @@ namespace ININ.PureCloudApi.Api
             if (queryPhrase == null) throw new ApiException(400, "Missing required parameter 'queryPhrase' when calling GetQuery");
             
     
-            var localVarPath = "/api/v1/contentmanagement/query";
+            var localVarPath = "/api/v2/contentmanagement/query";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4006,7 +4006,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/contentmanagement/securityprofiles";
+            var localVarPath = "/api/v2/contentmanagement/securityprofiles";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4087,7 +4087,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/contentmanagement/securityprofiles";
+            var localVarPath = "/api/v2/contentmanagement/securityprofiles";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4173,7 +4173,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'securityProfileId' when calling ContentManagementApi->GetSecurityprofilesSecurityprofileId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/securityprofiles/{securityProfileId}";
+            var localVarPath = "/api/v2/contentmanagement/securityprofiles/{securityProfileId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4259,7 +4259,7 @@ namespace ININ.PureCloudApi.Api
             if (securityProfileId == null) throw new ApiException(400, "Missing required parameter 'securityProfileId' when calling GetSecurityprofilesSecurityprofileId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/securityprofiles/{securityProfileId}";
+            var localVarPath = "/api/v2/contentmanagement/securityprofiles/{securityProfileId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4353,7 +4353,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'sharedId' when calling ContentManagementApi->GetSharedSharedId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/shared/{sharedId}";
+            var localVarPath = "/api/v2/contentmanagement/shared/{sharedId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4450,7 +4450,7 @@ namespace ININ.PureCloudApi.Api
             if (sharedId == null) throw new ApiException(400, "Missing required parameter 'sharedId' when calling GetSharedSharedId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/shared/{sharedId}";
+            var localVarPath = "/api/v2/contentmanagement/shared/{sharedId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4543,7 +4543,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/contentmanagement/shares";
+            var localVarPath = "/api/v2/contentmanagement/shares";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4636,7 +4636,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/contentmanagement/shares";
+            var localVarPath = "/api/v2/contentmanagement/shares";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4728,7 +4728,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'shareId' when calling ContentManagementApi->GetSharesShareId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/shares/{shareId}";
+            var localVarPath = "/api/v2/contentmanagement/shares/{shareId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4817,7 +4817,7 @@ namespace ININ.PureCloudApi.Api
             if (shareId == null) throw new ApiException(400, "Missing required parameter 'shareId' when calling GetSharesShareId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/shares/{shareId}";
+            var localVarPath = "/api/v2/contentmanagement/shares/{shareId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4903,7 +4903,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/contentmanagement/status";
+            var localVarPath = "/api/v2/contentmanagement/status";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4990,7 +4990,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/contentmanagement/status";
+            var localVarPath = "/api/v2/contentmanagement/status";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5078,7 +5078,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'statusId' when calling ContentManagementApi->GetStatusStatusId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/status/{statusId}";
+            var localVarPath = "/api/v2/contentmanagement/status/{statusId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5164,7 +5164,7 @@ namespace ININ.PureCloudApi.Api
             if (statusId == null) throw new ApiException(400, "Missing required parameter 'statusId' when calling GetStatusStatusId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/status/{statusId}";
+            var localVarPath = "/api/v2/contentmanagement/status/{statusId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5253,7 +5253,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces";
+            var localVarPath = "/api/v2/contentmanagement/workspaces";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5346,7 +5346,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces";
+            var localVarPath = "/api/v2/contentmanagement/workspaces";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5438,7 +5438,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetWorkspacesWorkspaceId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces/{workspaceId}";
+            var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5527,7 +5527,7 @@ namespace ININ.PureCloudApi.Api
             if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetWorkspacesWorkspaceId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces/{workspaceId}";
+            var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5621,7 +5621,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetWorkspacesWorkspaceIdMembers");
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces/{workspaceId}/members";
+            var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/members";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5716,7 +5716,7 @@ namespace ININ.PureCloudApi.Api
             if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetWorkspacesWorkspaceIdMembers");
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces/{workspaceId}/members";
+            var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/members";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5814,7 +5814,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'memberId' when calling ContentManagementApi->GetWorkspacesWorkspaceIdMembersMemberId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
+            var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5908,7 +5908,7 @@ namespace ININ.PureCloudApi.Api
             if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling GetWorkspacesWorkspaceIdMembersMemberId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
+            var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6005,7 +6005,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetWorkspacesWorkspaceIdTagvalues");
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues";
+            var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6103,7 +6103,7 @@ namespace ININ.PureCloudApi.Api
             if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling GetWorkspacesWorkspaceIdTagvalues");
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues";
+            var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6202,7 +6202,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'tagId' when calling ContentManagementApi->GetWorkspacesWorkspaceIdTagvaluesTagId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
+            var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6296,7 +6296,7 @@ namespace ININ.PureCloudApi.Api
             if (tagId == null) throw new ApiException(400, "Missing required parameter 'tagId' when calling GetWorkspacesWorkspaceIdTagvaluesTagId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
+            var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6385,7 +6385,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostAuditquery");
             
     
-            var localVarPath = "/api/v1/contentmanagement/auditquery";
+            var localVarPath = "/api/v2/contentmanagement/auditquery";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6477,7 +6477,7 @@ namespace ININ.PureCloudApi.Api
             if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PostAuditquery");
             
     
-            var localVarPath = "/api/v1/contentmanagement/auditquery";
+            var localVarPath = "/api/v2/contentmanagement/auditquery";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6572,7 +6572,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/contentmanagement/documents";
+            var localVarPath = "/api/v2/contentmanagement/documents";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6671,7 +6671,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/contentmanagement/documents";
+            var localVarPath = "/api/v2/contentmanagement/documents";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6773,7 +6773,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->PostDocumentsDocumentId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/documents/{documentId}";
+            var localVarPath = "/api/v2/contentmanagement/documents/{documentId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6874,7 +6874,7 @@ namespace ININ.PureCloudApi.Api
             if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling PostDocumentsDocumentId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/documents/{documentId}";
+            var localVarPath = "/api/v2/contentmanagement/documents/{documentId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6974,7 +6974,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->PostDocumentsDocumentIdContent");
             
     
-            var localVarPath = "/api/v1/contentmanagement/documents/{documentId}/content";
+            var localVarPath = "/api/v2/contentmanagement/documents/{documentId}/content";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -7072,7 +7072,7 @@ namespace ININ.PureCloudApi.Api
             if (documentId == null) throw new ApiException(400, "Missing required parameter 'documentId' when calling PostDocumentsDocumentIdContent");
             
     
-            var localVarPath = "/api/v1/contentmanagement/documents/{documentId}/content";
+            var localVarPath = "/api/v2/contentmanagement/documents/{documentId}/content";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -7169,7 +7169,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostQuery");
             
     
-            var localVarPath = "/api/v1/contentmanagement/query";
+            var localVarPath = "/api/v2/contentmanagement/query";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -7264,7 +7264,7 @@ namespace ININ.PureCloudApi.Api
             if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PostQuery");
             
     
-            var localVarPath = "/api/v1/contentmanagement/query";
+            var localVarPath = "/api/v2/contentmanagement/query";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -7354,7 +7354,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/contentmanagement/shares";
+            var localVarPath = "/api/v2/contentmanagement/shares";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -7444,7 +7444,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/contentmanagement/shares";
+            var localVarPath = "/api/v2/contentmanagement/shares";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -7533,7 +7533,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces";
+            var localVarPath = "/api/v2/contentmanagement/workspaces";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -7623,7 +7623,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces";
+            var localVarPath = "/api/v2/contentmanagement/workspaces";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -7718,7 +7718,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PostWorkspacesWorkspaceIdTagvalues");
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues";
+            var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -7813,7 +7813,7 @@ namespace ININ.PureCloudApi.Api
             if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling PostWorkspacesWorkspaceIdTagvalues");
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues";
+            var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -7911,7 +7911,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PostWorkspacesWorkspaceIdTagvaluesQuery");
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues/query";
+            var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/query";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -8009,7 +8009,7 @@ namespace ININ.PureCloudApi.Api
             if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling PostWorkspacesWorkspaceIdTagvaluesQuery");
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues/query";
+            var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/query";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -8106,7 +8106,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->PutWorkspacesWorkspaceId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces/{workspaceId}";
+            var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -8201,7 +8201,7 @@ namespace ININ.PureCloudApi.Api
             if (workspaceId == null) throw new ApiException(400, "Missing required parameter 'workspaceId' when calling PutWorkspacesWorkspaceId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces/{workspaceId}";
+            var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -8303,7 +8303,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'memberId' when calling ContentManagementApi->PutWorkspacesWorkspaceIdMembersMemberId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
+            var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -8403,7 +8403,7 @@ namespace ININ.PureCloudApi.Api
             if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling PutWorkspacesWorkspaceIdMembersMemberId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
+            var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -8506,7 +8506,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'tagId' when calling ContentManagementApi->PutWorkspacesWorkspaceIdTagvaluesTagId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
+            var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -8606,7 +8606,7 @@ namespace ININ.PureCloudApi.Api
             if (tagId == null) throw new ApiException(400, "Missing required parameter 'tagId' when calling PutWorkspacesWorkspaceIdTagvaluesTagId");
             
     
-            var localVarPath = "/api/v1/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
+            var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();

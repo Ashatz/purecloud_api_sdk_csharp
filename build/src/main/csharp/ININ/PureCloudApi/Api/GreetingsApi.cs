@@ -679,7 +679,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->DeleteGreetingId");
             
     
-            var localVarPath = "/api/v1/greetings/{greetingId}";
+            var localVarPath = "/api/v2/greetings/{greetingId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -765,7 +765,7 @@ namespace ININ.PureCloudApi.Api
             if (greetingId == null) throw new ApiException(400, "Missing required parameter 'greetingId' when calling DeleteGreetingId");
             
     
-            var localVarPath = "/api/v1/greetings/{greetingId}";
+            var localVarPath = "/api/v2/greetings/{greetingId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -846,7 +846,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/greetings/defaults";
+            var localVarPath = "/api/v2/greetings/defaults";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -927,7 +927,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/greetings/defaults";
+            var localVarPath = "/api/v2/greetings/defaults";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1013,7 +1013,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreetingId");
             
     
-            var localVarPath = "/api/v1/greetings/{greetingId}";
+            var localVarPath = "/api/v2/greetings/{greetingId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1099,7 +1099,7 @@ namespace ININ.PureCloudApi.Api
             if (greetingId == null) throw new ApiException(400, "Missing required parameter 'greetingId' when calling GetGreetingId");
             
     
-            var localVarPath = "/api/v1/greetings/{greetingId}";
+            var localVarPath = "/api/v2/greetings/{greetingId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1188,7 +1188,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreetingIdMedia");
             
     
-            var localVarPath = "/api/v1/greetings/{greetingId}/media";
+            var localVarPath = "/api/v2/greetings/{greetingId}/media";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1277,7 +1277,7 @@ namespace ININ.PureCloudApi.Api
             if (greetingId == null) throw new ApiException(400, "Missing required parameter 'greetingId' when calling GetGreetingIdMedia");
             
     
-            var localVarPath = "/api/v1/greetings/{greetingId}/media";
+            var localVarPath = "/api/v2/greetings/{greetingId}/media";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1363,7 +1363,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/greetings";
+            var localVarPath = "/api/v2/greetings";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1450,7 +1450,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/greetings";
+            var localVarPath = "/api/v2/greetings";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1542,7 +1542,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->GetUserIdGreetings");
             
     
-            var localVarPath = "/api/v1/users/{userId}/greetings";
+            var localVarPath = "/api/v2/users/{userId}/greetings";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1634,7 +1634,7 @@ namespace ININ.PureCloudApi.Api
             if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling GetUserIdGreetings");
             
     
-            var localVarPath = "/api/v1/users/{userId}/greetings";
+            var localVarPath = "/api/v2/users/{userId}/greetings";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1723,7 +1723,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->GetUserIdGreetingsDefaults");
             
     
-            var localVarPath = "/api/v1/users/{userId}/greetings/defaults";
+            var localVarPath = "/api/v2/users/{userId}/greetings/defaults";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1809,7 +1809,7 @@ namespace ININ.PureCloudApi.Api
             if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling GetUserIdGreetingsDefaults");
             
     
-            var localVarPath = "/api/v1/users/{userId}/greetings/defaults";
+            var localVarPath = "/api/v2/users/{userId}/greetings/defaults";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1896,7 +1896,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PostGreetings");
             
     
-            var localVarPath = "/api/v1/greetings";
+            var localVarPath = "/api/v2/greetings";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1988,7 +1988,7 @@ namespace ININ.PureCloudApi.Api
             if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PostGreetings");
             
     
-            var localVarPath = "/api/v1/greetings";
+            var localVarPath = "/api/v2/greetings";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2087,7 +2087,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PostUserIdGreetings");
             
     
-            var localVarPath = "/api/v1/users/{userId}/greetings";
+            var localVarPath = "/api/v2/users/{userId}/greetings";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2184,7 +2184,7 @@ namespace ININ.PureCloudApi.Api
             if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PostUserIdGreetings");
             
     
-            var localVarPath = "/api/v1/users/{userId}/greetings";
+            var localVarPath = "/api/v2/users/{userId}/greetings";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2278,7 +2278,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutDefaults");
             
     
-            var localVarPath = "/api/v1/greetings/defaults";
+            var localVarPath = "/api/v2/greetings/defaults";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2370,7 +2370,7 @@ namespace ININ.PureCloudApi.Api
             if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PutDefaults");
             
     
-            var localVarPath = "/api/v1/greetings/defaults";
+            var localVarPath = "/api/v2/greetings/defaults";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2469,7 +2469,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutGreetingId");
             
     
-            var localVarPath = "/api/v1/greetings/{greetingId}";
+            var localVarPath = "/api/v2/greetings/{greetingId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2566,7 +2566,7 @@ namespace ININ.PureCloudApi.Api
             if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PutGreetingId");
             
     
-            var localVarPath = "/api/v1/greetings/{greetingId}";
+            var localVarPath = "/api/v2/greetings/{greetingId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2666,7 +2666,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutUserIdGreetingsDefaults");
             
     
-            var localVarPath = "/api/v1/users/{userId}/greetings/defaults";
+            var localVarPath = "/api/v2/users/{userId}/greetings/defaults";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2763,7 +2763,7 @@ namespace ININ.PureCloudApi.Api
             if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PutUserIdGreetingsDefaults");
             
     
-            var localVarPath = "/api/v1/users/{userId}/greetings/defaults";
+            var localVarPath = "/api/v2/users/{userId}/greetings/defaults";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();

@@ -21,16 +21,12 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UserAuthorization" />class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Licenses">Licenses.</param>
         /// <param name="Roles">Roles.</param>
-        /// <param name="Permissions">Permissions.</param>
-        /// <param name="PermissionPolicies">PermissionPolicies.</param>
+        /// <param name="Permissions">A collection of the permissions granted by all assigned roles.</param>
+        /// <param name="PermissionPolicies">The policies configured for assigned permissions..</param>
 
-        public UserAuthorization(string Name = null, List<string> Licenses = null, List<string> Roles = null, List<string> Permissions = null, List<ResourcePermissionPolicy> PermissionPolicies = null)
+        public UserAuthorization(List<DomainRole> Roles = null, List<string> Permissions = null, List<ResourcePermissionPolicy> PermissionPolicies = null)
         {
-            this.Name = Name;
-            this.Licenses = Licenses;
             this.Roles = Roles;
             this.Permissions = Permissions;
             this.PermissionPolicies = PermissionPolicies;
@@ -39,48 +35,24 @@ namespace ININ.PureCloudApi.Model
         
     
         /// <summary>
-        /// The globally unique identifier for the object.
-        /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
-    
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets Licenses
-        /// </summary>
-        [DataMember(Name="licenses", EmitDefaultValue=false)]
-        public List<string> Licenses { get; set; }
-    
-        /// <summary>
         /// Gets or Sets Roles
         /// </summary>
         [DataMember(Name="roles", EmitDefaultValue=false)]
-        public List<string> Roles { get; set; }
+        public List<DomainRole> Roles { get; set; }
     
         /// <summary>
-        /// Gets or Sets Permissions
+        /// A collection of the permissions granted by all assigned roles
         /// </summary>
+        /// <value>A collection of the permissions granted by all assigned roles</value>
         [DataMember(Name="permissions", EmitDefaultValue=false)]
         public List<string> Permissions { get; set; }
     
         /// <summary>
-        /// Gets or Sets PermissionPolicies
+        /// The policies configured for assigned permissions.
         /// </summary>
+        /// <value>The policies configured for assigned permissions.</value>
         [DataMember(Name="permissionPolicies", EmitDefaultValue=false)]
         public List<ResourcePermissionPolicy> PermissionPolicies { get; set; }
-    
-        /// <summary>
-        /// The URI for this object
-        /// </summary>
-        /// <value>The URI for this object</value>
-        [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; private set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -90,13 +62,9 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserAuthorization {\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Licenses: ").Append(Licenses).Append("\n");
             sb.Append("  Roles: ").Append(Roles).Append("\n");
             sb.Append("  Permissions: ").Append(Permissions).Append("\n");
             sb.Append("  PermissionPolicies: ").Append(PermissionPolicies).Append("\n");
-            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -135,21 +103,6 @@ namespace ININ.PureCloudApi.Model
 
             return true &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
-                ) &&
-                (
-                    this.Licenses == other.Licenses ||
-                    this.Licenses != null &&
-                    this.Licenses.SequenceEqual(other.Licenses)
-                ) &&
-                (
                     this.Roles == other.Roles ||
                     this.Roles != null &&
                     this.Roles.SequenceEqual(other.Roles)
@@ -163,11 +116,6 @@ namespace ININ.PureCloudApi.Model
                     this.PermissionPolicies == other.PermissionPolicies ||
                     this.PermissionPolicies != null &&
                     this.PermissionPolicies.SequenceEqual(other.PermissionPolicies)
-                ) &&
-                (
-                    this.SelfUri == other.SelfUri ||
-                    this.SelfUri != null &&
-                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -183,15 +131,6 @@ namespace ININ.PureCloudApi.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
-                
-                if (this.Licenses != null)
-                    hash = hash * 59 + this.Licenses.GetHashCode();
-                
                 if (this.Roles != null)
                     hash = hash * 59 + this.Roles.GetHashCode();
                 
@@ -200,9 +139,6 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.PermissionPolicies != null)
                     hash = hash * 59 + this.PermissionPolicies.GetHashCode();
-                
-                if (this.SelfUri != null)
-                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }

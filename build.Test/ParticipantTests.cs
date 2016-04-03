@@ -214,15 +214,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'WrapupExpected' 
-        /// </summary>
-        [Test]
-        public void WrapupExpectedTest()
-        {
-            // TODO: unit test for the property 'WrapupExpected' 
-        }
-        
-        /// <summary>
         /// Test the property 'WrapupPrompt' 
         /// </summary>
         [Test]

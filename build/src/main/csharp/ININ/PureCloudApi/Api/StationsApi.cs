@@ -271,7 +271,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'id' when calling StationsApi->DeleteIdAssociateduser");
             
     
-            var localVarPath = "/api/v1/stations/{id}/associateduser";
+            var localVarPath = "/api/v2/stations/{id}/associateduser";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -357,7 +357,7 @@ namespace ININ.PureCloudApi.Api
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteIdAssociateduser");
             
     
-            var localVarPath = "/api/v1/stations/{id}/associateduser";
+            var localVarPath = "/api/v2/stations/{id}/associateduser";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -444,7 +444,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'id' when calling StationsApi->GetId");
             
     
-            var localVarPath = "/api/v1/stations/{id}";
+            var localVarPath = "/api/v2/stations/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -530,7 +530,7 @@ namespace ININ.PureCloudApi.Api
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetId");
             
     
-            var localVarPath = "/api/v1/stations/{id}";
+            var localVarPath = "/api/v2/stations/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -619,7 +619,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/stations";
+            var localVarPath = "/api/v2/stations";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -712,7 +712,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/stations";
+            var localVarPath = "/api/v2/stations";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();

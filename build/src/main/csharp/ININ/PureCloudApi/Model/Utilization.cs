@@ -21,29 +21,14 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Utilization" />class.
         /// </summary>
-        /// <param name="Name">Name.</param>
         /// <param name="UtilizationProperty">Map of media types to utilization settings.  Map keys can be: call, chat, email, or socialExpression.</param>
 
-        public Utilization(string Name = null, Dictionary<string, OrgMediaUtilization> UtilizationProperty = null)
+        public Utilization(Dictionary<string, OrgMediaUtilization> UtilizationProperty = null)
         {
-            this.Name = Name;
             this.UtilizationProperty = UtilizationProperty;
             
         }
         
-    
-        /// <summary>
-        /// The globally unique identifier for the object.
-        /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
-    
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
     
         /// <summary>
         /// Map of media types to utilization settings.  Map keys can be: call, chat, email, or socialExpression
@@ -53,13 +38,6 @@ namespace ININ.PureCloudApi.Model
         public Dictionary<string, OrgMediaUtilization> UtilizationProperty { get; set; }
     
         /// <summary>
-        /// The URI for this object
-        /// </summary>
-        /// <value>The URI for this object</value>
-        [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; private set; }
-    
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -67,10 +45,7 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Utilization {\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  UtilizationProperty: ").Append(UtilizationProperty).Append("\n");
-            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -109,24 +84,9 @@ namespace ININ.PureCloudApi.Model
 
             return true &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
-                ) &&
-                (
                     this.UtilizationProperty == other.UtilizationProperty ||
                     this.UtilizationProperty != null &&
                     this.UtilizationProperty.SequenceEqual(other.UtilizationProperty)
-                ) &&
-                (
-                    this.SelfUri == other.SelfUri ||
-                    this.SelfUri != null &&
-                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -142,17 +102,8 @@ namespace ININ.PureCloudApi.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.UtilizationProperty != null)
                     hash = hash * 59 + this.UtilizationProperty.GetHashCode();
-                
-                if (this.SelfUri != null)
-                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }

@@ -54,32 +54,6 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test DeleteAlertingAlertsAlertId
-        /// </summary>
-        [Test]
-        public void DeleteAlertingAlertsAlertIdTest()
-        {
-            // TODO: add unit test for the method 'DeleteAlertingAlertsAlertId'
-            string alertId = null; // TODO: replace null with proper value
-            
-            instance.DeleteAlertingAlertsAlertId(alertId);
-             
-        }
-        
-        /// <summary>
-        /// Test DeleteAlertingRulesRuleId
-        /// </summary>
-        [Test]
-        public void DeleteAlertingRulesRuleIdTest()
-        {
-            // TODO: add unit test for the method 'DeleteAlertingRulesRuleId'
-            string ruleId = null; // TODO: replace null with proper value
-            
-            instance.DeleteAlertingRulesRuleId(ruleId);
-             
-        }
-        
-        /// <summary>
         /// Test DeleteReportingSchedulesScheduleId
         /// </summary>
         [Test]
@@ -93,73 +67,16 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetAlertingAlerts
+        /// Test GetConversationsConversationIdDetails
         /// </summary>
         [Test]
-        public void GetAlertingAlertsTest()
+        public void GetConversationsConversationIdDetailsTest()
         {
-            // TODO: add unit test for the method 'GetAlertingAlerts'
-            int? pageNumber = null; // TODO: replace null with proper value
-            int? pageSize = null; // TODO: replace null with proper value
-            string sortBy = null; // TODO: replace null with proper value
-            string sortOrder = null; // TODO: replace null with proper value
+            // TODO: add unit test for the method 'GetConversationsConversationIdDetails'
+            string conversationId = null; // TODO: replace null with proper value
             
-            var response = instance.GetAlertingAlerts(pageNumber, pageSize, sortBy, sortOrder);
-            Assert.IsInstanceOf<AlertEntityListing> (response, "response is AlertEntityListing"); 
-        }
-        
-        /// <summary>
-        /// Test GetAlertingAlertsAlertId
-        /// </summary>
-        [Test]
-        public void GetAlertingAlertsAlertIdTest()
-        {
-            // TODO: add unit test for the method 'GetAlertingAlertsAlertId'
-            string alertId = null; // TODO: replace null with proper value
-            
-            var response = instance.GetAlertingAlertsAlertId(alertId);
-            Assert.IsInstanceOf<Alert> (response, "response is Alert"); 
-        }
-        
-        /// <summary>
-        /// Test GetAlertingAlertsUnread
-        /// </summary>
-        [Test]
-        public void GetAlertingAlertsUnreadTest()
-        {
-            // TODO: add unit test for the method 'GetAlertingAlertsUnread'
-            
-            var response = instance.GetAlertingAlertsUnread();
-            Assert.IsInstanceOf<UnreadMetric> (response, "response is UnreadMetric"); 
-        }
-        
-        /// <summary>
-        /// Test GetAlertingRules
-        /// </summary>
-        [Test]
-        public void GetAlertingRulesTest()
-        {
-            // TODO: add unit test for the method 'GetAlertingRules'
-            int? pageNumber = null; // TODO: replace null with proper value
-            int? pageSize = null; // TODO: replace null with proper value
-            string sortBy = null; // TODO: replace null with proper value
-            string sortOrder = null; // TODO: replace null with proper value
-            
-            var response = instance.GetAlertingRules(pageNumber, pageSize, sortBy, sortOrder);
-            Assert.IsInstanceOf<RuleEntityListing> (response, "response is RuleEntityListing"); 
-        }
-        
-        /// <summary>
-        /// Test GetAlertingRulesRuleId
-        /// </summary>
-        [Test]
-        public void GetAlertingRulesRuleIdTest()
-        {
-            // TODO: add unit test for the method 'GetAlertingRulesRuleId'
-            string ruleId = null; // TODO: replace null with proper value
-            
-            var response = instance.GetAlertingRulesRuleId(ruleId);
-            Assert.IsInstanceOf<Rule> (response, "response is Rule"); 
+            var response = instance.GetConversationsConversationIdDetails(conversationId);
+            Assert.IsInstanceOf<AnalyticsConversation> (response, "response is AnalyticsConversation"); 
         }
         
         /// <summary>
@@ -171,10 +88,9 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetReportingMetadata'
             int? pageNumber = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
-            string acceptLanguage = null; // TODO: replace null with proper value
             string locale = null; // TODO: replace null with proper value
             
-            var response = instance.GetReportingMetadata(pageNumber, pageSize, acceptLanguage, locale);
+            var response = instance.GetReportingMetadata(pageNumber, pageSize, locale);
             Assert.IsInstanceOf<ReportMetaDataEntityListing> (response, "response is ReportMetaDataEntityListing"); 
         }
         
@@ -186,10 +102,9 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetReportingReportIdMetadata'
             string reportId = null; // TODO: replace null with proper value
-            string acceptLanguage = null; // TODO: replace null with proper value
             string locale = null; // TODO: replace null with proper value
             
-            var response = instance.GetReportingReportIdMetadata(reportId, acceptLanguage, locale);
+            var response = instance.GetReportingReportIdMetadata(reportId, locale);
             Assert.IsInstanceOf<ReportMetaData> (response, "response is ReportMetaData"); 
         }
         
@@ -287,29 +202,69 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PostAlertingRules
+        /// Test PostConversationsAggregatesQuery
         /// </summary>
         [Test]
-        public void PostAlertingRulesTest()
+        public void PostConversationsAggregatesQueryTest()
         {
-            // TODO: add unit test for the method 'PostAlertingRules'
-            Rule body = null; // TODO: replace null with proper value
+            // TODO: add unit test for the method 'PostConversationsAggregatesQuery'
+            AggregationQuery body = null; // TODO: replace null with proper value
             
-            var response = instance.PostAlertingRules(body);
-            Assert.IsInstanceOf<Rule> (response, "response is Rule"); 
+            var response = instance.PostConversationsAggregatesQuery(body);
+            Assert.IsInstanceOf<AggregateQueryResponse> (response, "response is AggregateQueryResponse"); 
         }
         
         /// <summary>
-        /// Test PostMetricsQuery
+        /// Test PostConversationsConversationIdDetailsProperties
         /// </summary>
         [Test]
-        public void PostMetricsQueryTest()
+        public void PostConversationsConversationIdDetailsPropertiesTest()
         {
-            // TODO: add unit test for the method 'PostMetricsQuery'
-            Object body = null; // TODO: replace null with proper value
+            // TODO: add unit test for the method 'PostConversationsConversationIdDetailsProperties'
+            string conversationId = null; // TODO: replace null with proper value
+            PropertyIndexRequest body = null; // TODO: replace null with proper value
             
-            instance.PostMetricsQuery(body);
-             
+            var response = instance.PostConversationsConversationIdDetailsProperties(conversationId, body);
+            Assert.IsInstanceOf<PropertyIndexRequest> (response, "response is PropertyIndexRequest"); 
+        }
+        
+        /// <summary>
+        /// Test PostConversationsDetailsQuery
+        /// </summary>
+        [Test]
+        public void PostConversationsDetailsQueryTest()
+        {
+            // TODO: add unit test for the method 'PostConversationsDetailsQuery'
+            ConversationQuery body = null; // TODO: replace null with proper value
+            
+            var response = instance.PostConversationsDetailsQuery(body);
+            Assert.IsInstanceOf<AnalyticsConversationQueryResponse> (response, "response is AnalyticsConversationQueryResponse"); 
+        }
+        
+        /// <summary>
+        /// Test PostEvaluationsAggregatesQuery
+        /// </summary>
+        [Test]
+        public void PostEvaluationsAggregatesQueryTest()
+        {
+            // TODO: add unit test for the method 'PostEvaluationsAggregatesQuery'
+            AggregationQuery body = null; // TODO: replace null with proper value
+            
+            var response = instance.PostEvaluationsAggregatesQuery(body);
+            Assert.IsInstanceOf<AggregateQueryResponse> (response, "response is AggregateQueryResponse"); 
+        }
+        
+        /// <summary>
+        /// Test PostQueuesObservationsQuery
+        /// </summary>
+        [Test]
+        public void PostQueuesObservationsQueryTest()
+        {
+            // TODO: add unit test for the method 'PostQueuesObservationsQuery'
+            ObservationQuery body = null; // TODO: replace null with proper value
+            
+            var response = instance.PostQueuesObservationsQuery(body);
+            Assert.IsInstanceOf<ObservationQueryResponse> (response, "response is ObservationQueryResponse"); 
         }
         
         /// <summary>
@@ -339,44 +294,29 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PostSegmentsQuery
+        /// Test PostUsersAggregatesQuery
         /// </summary>
         [Test]
-        public void PostSegmentsQueryTest()
+        public void PostUsersAggregatesQueryTest()
         {
-            // TODO: add unit test for the method 'PostSegmentsQuery'
-            Object body = null; // TODO: replace null with proper value
+            // TODO: add unit test for the method 'PostUsersAggregatesQuery'
+            AggregationQuery body = null; // TODO: replace null with proper value
             
-            instance.PostSegmentsQuery(body);
-             
+            var response = instance.PostUsersAggregatesQuery(body);
+            Assert.IsInstanceOf<PresenceQueryResponse> (response, "response is PresenceQueryResponse"); 
         }
         
         /// <summary>
-        /// Test PutAlertingAlertsAlertId
+        /// Test PostUsersObservationsQuery
         /// </summary>
         [Test]
-        public void PutAlertingAlertsAlertIdTest()
+        public void PostUsersObservationsQueryTest()
         {
-            // TODO: add unit test for the method 'PutAlertingAlertsAlertId'
-            string alertId = null; // TODO: replace null with proper value
-            Alert body = null; // TODO: replace null with proper value
+            // TODO: add unit test for the method 'PostUsersObservationsQuery'
+            ObservationQuery body = null; // TODO: replace null with proper value
             
-            var response = instance.PutAlertingAlertsAlertId(alertId, body);
-            Assert.IsInstanceOf<Alert> (response, "response is Alert"); 
-        }
-        
-        /// <summary>
-        /// Test PutAlertingRulesRuleId
-        /// </summary>
-        [Test]
-        public void PutAlertingRulesRuleIdTest()
-        {
-            // TODO: add unit test for the method 'PutAlertingRulesRuleId'
-            string ruleId = null; // TODO: replace null with proper value
-            Rule body = null; // TODO: replace null with proper value
-            
-            var response = instance.PutAlertingRulesRuleId(ruleId, body);
-            Assert.IsInstanceOf<Rule> (response, "response is Rule"); 
+            var response = instance.PostUsersObservationsQuery(body);
+            Assert.IsInstanceOf<ObservationQueryResponse> (response, "response is ObservationQueryResponse"); 
         }
         
         /// <summary>

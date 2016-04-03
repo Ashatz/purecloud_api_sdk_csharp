@@ -40,7 +40,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="MemberType">MemberType.</param>
         /// <param name="Member">Member.</param>
 
-        public CreateShareRequestMember(MemberTypeEnum? MemberType = null, Entity Member = null)
+        public CreateShareRequestMember(MemberTypeEnum? MemberType = null, MemberEntity Member = null)
         {
             this.MemberType = MemberType;
             this.Member = Member;
@@ -52,7 +52,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Member
         /// </summary>
         [DataMember(Name="member", EmitDefaultValue=false)]
-        public Entity Member { get; set; }
+        public MemberEntity Member { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object

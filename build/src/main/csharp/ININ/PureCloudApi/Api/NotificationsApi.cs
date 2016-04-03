@@ -431,7 +431,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->DeleteChannelsChannelIdSubscriptions");
             
     
-            var localVarPath = "/api/v1/notifications/channels/{channelId}/subscriptions";
+            var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -517,7 +517,7 @@ namespace ININ.PureCloudApi.Api
             if (channelId == null) throw new ApiException(400, "Missing required parameter 'channelId' when calling DeleteChannelsChannelIdSubscriptions");
             
     
-            var localVarPath = "/api/v1/notifications/channels/{channelId}/subscriptions";
+            var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -598,7 +598,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/notifications/availabletopics";
+            var localVarPath = "/api/v2/notifications/availabletopics";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -679,7 +679,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/notifications/availabletopics";
+            var localVarPath = "/api/v2/notifications/availabletopics";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -759,7 +759,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/notifications/channels";
+            var localVarPath = "/api/v2/notifications/channels";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -840,7 +840,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/notifications/channels";
+            var localVarPath = "/api/v2/notifications/channels";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -926,7 +926,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->GetChannelsChannelIdSubscriptions");
             
     
-            var localVarPath = "/api/v1/notifications/channels/{channelId}/subscriptions";
+            var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1012,7 +1012,7 @@ namespace ININ.PureCloudApi.Api
             if (channelId == null) throw new ApiException(400, "Missing required parameter 'channelId' when calling GetChannelsChannelIdSubscriptions");
             
     
-            var localVarPath = "/api/v1/notifications/channels/{channelId}/subscriptions";
+            var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1093,7 +1093,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/notifications/channels";
+            var localVarPath = "/api/v2/notifications/channels";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1174,7 +1174,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/notifications/channels";
+            var localVarPath = "/api/v2/notifications/channels";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1262,7 +1262,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->PostChannelsChannelIdSubscriptions");
             
     
-            var localVarPath = "/api/v1/notifications/channels/{channelId}/subscriptions";
+            var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1357,7 +1357,7 @@ namespace ININ.PureCloudApi.Api
             if (channelId == null) throw new ApiException(400, "Missing required parameter 'channelId' when calling PostChannelsChannelIdSubscriptions");
             
     
-            var localVarPath = "/api/v1/notifications/channels/{channelId}/subscriptions";
+            var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1453,7 +1453,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->PutChannelsChannelIdSubscriptions");
             
     
-            var localVarPath = "/api/v1/notifications/channels/{channelId}/subscriptions";
+            var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1548,7 +1548,7 @@ namespace ININ.PureCloudApi.Api
             if (channelId == null) throw new ApiException(400, "Missing required parameter 'channelId' when calling PutChannelsChannelIdSubscriptions");
             
     
-            var localVarPath = "/api/v1/notifications/channels/{channelId}/subscriptions";
+            var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();

@@ -160,24 +160,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'Industry' 
-        /// </summary>
-        [Test]
-        public void IndustryTest()
-        {
-            // TODO: unit test for the property 'Industry' 
-        }
-        
-        /// <summary>
-        /// Test the property 'EstimatedUsers' 
-        /// </summary>
-        [Test]
-        public void EstimatedUsersTest()
-        {
-            // TODO: unit test for the property 'EstimatedUsers' 
-        }
-        
-        /// <summary>
         /// Test the property 'SelfUri' 
         /// </summary>
         [Test]

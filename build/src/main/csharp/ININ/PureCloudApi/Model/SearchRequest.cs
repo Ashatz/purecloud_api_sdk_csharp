@@ -12,84 +12,106 @@ using Newtonsoft.Json.Converters;
 namespace ININ.PureCloudApi.Model
 {
     /// <summary>
-    /// Used to perform a search on various data stored in search engines
+    /// 
     /// </summary>
     [DataContract]
     public partial class SearchRequest :  IEquatable<SearchRequest>
     { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum SortOrderEnum {
+            
+            [EnumMember(Value = "ASC")]
+            Asc,
+            
+            [EnumMember(Value = "DESC")]
+            Desc,
+            
+            [EnumMember(Value = "SCORE")]
+            Score
+        }
         
+        /// <summary>
+        /// Gets or Sets SortOrder
+        /// </summary>
+        [DataMember(Name="sortOrder", EmitDefaultValue=false)]
+        public SortOrderEnum? SortOrder { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchRequest" />class.
         /// </summary>
-        /// <param name="SearchPhrase">The search text to look for.</param>
-        /// <param name="PageNumber">The pageNumber to get results from (EG If there are 100 results with a pageSize of 10 and pageNumber is 3 then 10 results will be returned starting with index #31.</param>
-        /// <param name="PageSize">Number of entries to return/calculate per page..</param>
-        /// <param name="SearchFields">The fields to limit the searchPhrase search to.</param>
-        /// <param name="FacetRequests">List of facet requests to generate summary views from the search result set (if any).</param>
-        /// <param name="Sort">sort the results on a field(s).</param>
-        /// <param name="Filters">You can also restrict the search to particular field values and ranges.</param>
+        /// <param name="Types">Types.</param>
+        /// <param name="SortOrder">SortOrder.</param>
+        /// <param name="Query">Query.</param>
+        /// <param name="SortBy">SortBy.</param>
+        /// <param name="PageSize">PageSize.</param>
+        /// <param name="PageNumber">PageNumber.</param>
+        /// <param name="ReturnFields">ReturnFields.</param>
+        /// <param name="Aggregations">Aggregations.</param>
+        /// <param name="Expand">Expand.</param>
 
-        public SearchRequest(string SearchPhrase = null, int? PageNumber = null, int? PageSize = null, List<string> SearchFields = null, List<FacetRequest> FacetRequests = null, List<SortField> Sort = null, List<FilterItem> Filters = null)
+        public SearchRequest(List<string> Types = null, SortOrderEnum? SortOrder = null, List<SearchCriteria> Query = null, string SortBy = null, int? PageSize = null, int? PageNumber = null, List<string> ReturnFields = null, List<SearchAggregation> Aggregations = null, List<string> Expand = null)
         {
-            this.SearchPhrase = SearchPhrase;
-            this.PageNumber = PageNumber;
+            this.Types = Types;
+            this.SortOrder = SortOrder;
+            this.Query = Query;
+            this.SortBy = SortBy;
             this.PageSize = PageSize;
-            this.SearchFields = SearchFields;
-            this.FacetRequests = FacetRequests;
-            this.Sort = Sort;
-            this.Filters = Filters;
+            this.PageNumber = PageNumber;
+            this.ReturnFields = ReturnFields;
+            this.Aggregations = Aggregations;
+            this.Expand = Expand;
             
         }
         
     
         /// <summary>
-        /// The search text to look for
+        /// Gets or Sets Types
         /// </summary>
-        /// <value>The search text to look for</value>
-        [DataMember(Name="searchPhrase", EmitDefaultValue=false)]
-        public string SearchPhrase { get; set; }
+        [DataMember(Name="types", EmitDefaultValue=false)]
+        public List<string> Types { get; set; }
     
         /// <summary>
-        /// The pageNumber to get results from (EG If there are 100 results with a pageSize of 10 and pageNumber is 3 then 10 results will be returned starting with index #31
+        /// Gets or Sets Query
         /// </summary>
-        /// <value>The pageNumber to get results from (EG If there are 100 results with a pageSize of 10 and pageNumber is 3 then 10 results will be returned starting with index #31</value>
-        [DataMember(Name="pageNumber", EmitDefaultValue=false)]
-        public int? PageNumber { get; set; }
+        [DataMember(Name="query", EmitDefaultValue=false)]
+        public List<SearchCriteria> Query { get; set; }
     
         /// <summary>
-        /// Number of entries to return/calculate per page.
+        /// Gets or Sets SortBy
         /// </summary>
-        /// <value>Number of entries to return/calculate per page.</value>
+        [DataMember(Name="sortBy", EmitDefaultValue=false)]
+        public string SortBy { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets PageSize
+        /// </summary>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
     
         /// <summary>
-        /// The fields to limit the searchPhrase search to
+        /// Gets or Sets PageNumber
         /// </summary>
-        /// <value>The fields to limit the searchPhrase search to</value>
-        [DataMember(Name="searchFields", EmitDefaultValue=false)]
-        public List<string> SearchFields { get; set; }
+        [DataMember(Name="pageNumber", EmitDefaultValue=false)]
+        public int? PageNumber { get; set; }
     
         /// <summary>
-        /// List of facet requests to generate summary views from the search result set (if any)
+        /// Gets or Sets ReturnFields
         /// </summary>
-        /// <value>List of facet requests to generate summary views from the search result set (if any)</value>
-        [DataMember(Name="facetRequests", EmitDefaultValue=false)]
-        public List<FacetRequest> FacetRequests { get; set; }
+        [DataMember(Name="returnFields", EmitDefaultValue=false)]
+        public List<string> ReturnFields { get; set; }
     
         /// <summary>
-        /// sort the results on a field(s)
+        /// Gets or Sets Aggregations
         /// </summary>
-        /// <value>sort the results on a field(s)</value>
-        [DataMember(Name="sort", EmitDefaultValue=false)]
-        public List<SortField> Sort { get; set; }
+        [DataMember(Name="aggregations", EmitDefaultValue=false)]
+        public List<SearchAggregation> Aggregations { get; set; }
     
         /// <summary>
-        /// You can also restrict the search to particular field values and ranges
+        /// Gets or Sets Expand
         /// </summary>
-        /// <value>You can also restrict the search to particular field values and ranges</value>
-        [DataMember(Name="filters", EmitDefaultValue=false)]
-        public List<FilterItem> Filters { get; set; }
+        [DataMember(Name="expand", EmitDefaultValue=false)]
+        public List<string> Expand { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -99,13 +121,15 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SearchRequest {\n");
-            sb.Append("  SearchPhrase: ").Append(SearchPhrase).Append("\n");
-            sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
+            sb.Append("  Types: ").Append(Types).Append("\n");
+            sb.Append("  SortOrder: ").Append(SortOrder).Append("\n");
+            sb.Append("  Query: ").Append(Query).Append("\n");
+            sb.Append("  SortBy: ").Append(SortBy).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
-            sb.Append("  SearchFields: ").Append(SearchFields).Append("\n");
-            sb.Append("  FacetRequests: ").Append(FacetRequests).Append("\n");
-            sb.Append("  Sort: ").Append(Sort).Append("\n");
-            sb.Append("  Filters: ").Append(Filters).Append("\n");
+            sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
+            sb.Append("  ReturnFields: ").Append(ReturnFields).Append("\n");
+            sb.Append("  Aggregations: ").Append(Aggregations).Append("\n");
+            sb.Append("  Expand: ").Append(Expand).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -144,14 +168,24 @@ namespace ININ.PureCloudApi.Model
 
             return true &&
                 (
-                    this.SearchPhrase == other.SearchPhrase ||
-                    this.SearchPhrase != null &&
-                    this.SearchPhrase.Equals(other.SearchPhrase)
+                    this.Types == other.Types ||
+                    this.Types != null &&
+                    this.Types.SequenceEqual(other.Types)
                 ) &&
                 (
-                    this.PageNumber == other.PageNumber ||
-                    this.PageNumber != null &&
-                    this.PageNumber.Equals(other.PageNumber)
+                    this.SortOrder == other.SortOrder ||
+                    this.SortOrder != null &&
+                    this.SortOrder.Equals(other.SortOrder)
+                ) &&
+                (
+                    this.Query == other.Query ||
+                    this.Query != null &&
+                    this.Query.SequenceEqual(other.Query)
+                ) &&
+                (
+                    this.SortBy == other.SortBy ||
+                    this.SortBy != null &&
+                    this.SortBy.Equals(other.SortBy)
                 ) &&
                 (
                     this.PageSize == other.PageSize ||
@@ -159,24 +193,24 @@ namespace ININ.PureCloudApi.Model
                     this.PageSize.Equals(other.PageSize)
                 ) &&
                 (
-                    this.SearchFields == other.SearchFields ||
-                    this.SearchFields != null &&
-                    this.SearchFields.SequenceEqual(other.SearchFields)
+                    this.PageNumber == other.PageNumber ||
+                    this.PageNumber != null &&
+                    this.PageNumber.Equals(other.PageNumber)
                 ) &&
                 (
-                    this.FacetRequests == other.FacetRequests ||
-                    this.FacetRequests != null &&
-                    this.FacetRequests.SequenceEqual(other.FacetRequests)
+                    this.ReturnFields == other.ReturnFields ||
+                    this.ReturnFields != null &&
+                    this.ReturnFields.SequenceEqual(other.ReturnFields)
                 ) &&
                 (
-                    this.Sort == other.Sort ||
-                    this.Sort != null &&
-                    this.Sort.SequenceEqual(other.Sort)
+                    this.Aggregations == other.Aggregations ||
+                    this.Aggregations != null &&
+                    this.Aggregations.SequenceEqual(other.Aggregations)
                 ) &&
                 (
-                    this.Filters == other.Filters ||
-                    this.Filters != null &&
-                    this.Filters.SequenceEqual(other.Filters)
+                    this.Expand == other.Expand ||
+                    this.Expand != null &&
+                    this.Expand.SequenceEqual(other.Expand)
                 );
         }
 
@@ -192,26 +226,32 @@ namespace ININ.PureCloudApi.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.SearchPhrase != null)
-                    hash = hash * 59 + this.SearchPhrase.GetHashCode();
+                if (this.Types != null)
+                    hash = hash * 59 + this.Types.GetHashCode();
                 
-                if (this.PageNumber != null)
-                    hash = hash * 59 + this.PageNumber.GetHashCode();
+                if (this.SortOrder != null)
+                    hash = hash * 59 + this.SortOrder.GetHashCode();
+                
+                if (this.Query != null)
+                    hash = hash * 59 + this.Query.GetHashCode();
+                
+                if (this.SortBy != null)
+                    hash = hash * 59 + this.SortBy.GetHashCode();
                 
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();
                 
-                if (this.SearchFields != null)
-                    hash = hash * 59 + this.SearchFields.GetHashCode();
+                if (this.PageNumber != null)
+                    hash = hash * 59 + this.PageNumber.GetHashCode();
                 
-                if (this.FacetRequests != null)
-                    hash = hash * 59 + this.FacetRequests.GetHashCode();
+                if (this.ReturnFields != null)
+                    hash = hash * 59 + this.ReturnFields.GetHashCode();
                 
-                if (this.Sort != null)
-                    hash = hash * 59 + this.Sort.GetHashCode();
+                if (this.Aggregations != null)
+                    hash = hash * 59 + this.Aggregations.GetHashCode();
                 
-                if (this.Filters != null)
-                    hash = hash * 59 + this.Filters.GetHashCode();
+                if (this.Expand != null)
+                    hash = hash * 59 + this.Expand.GetHashCode();
                 
                 return hash;
             }

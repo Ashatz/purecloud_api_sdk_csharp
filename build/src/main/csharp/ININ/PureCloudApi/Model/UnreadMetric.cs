@@ -21,7 +21,7 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UnreadMetric" />class.
         /// </summary>
-        /// <param name="Count">Count.</param>
+        /// <param name="Count">The count of unread alerts for a specific rule type..</param>
 
         public UnreadMetric(int? Count = null)
         {
@@ -31,8 +31,9 @@ namespace ININ.PureCloudApi.Model
         
     
         /// <summary>
-        /// Gets or Sets Count
+        /// The count of unread alerts for a specific rule type.
         /// </summary>
+        /// <value>The count of unread alerts for a specific rule type.</value>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public int? Count { get; set; }
     

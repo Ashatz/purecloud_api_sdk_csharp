@@ -61,6 +61,96 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test the property 'Name' 
+        /// </summary>
+        [Test]
+        public void NameTest()
+        {
+            // TODO: unit test for the property 'Name' 
+        }
+        
+        /// <summary>
+        /// Test the property 'DateCreated' 
+        /// </summary>
+        [Test]
+        public void DateCreatedTest()
+        {
+            // TODO: unit test for the property 'DateCreated' 
+        }
+        
+        /// <summary>
+        /// Test the property 'DateModified' 
+        /// </summary>
+        [Test]
+        public void DateModifiedTest()
+        {
+            // TODO: unit test for the property 'DateModified' 
+        }
+        
+        /// <summary>
+        /// Test the property 'Version' 
+        /// </summary>
+        [Test]
+        public void VersionTest()
+        {
+            // TODO: unit test for the property 'Version' 
+        }
+        
+        /// <summary>
+        /// Test the property 'ColumnNames' 
+        /// </summary>
+        [Test]
+        public void ColumnNamesTest()
+        {
+            // TODO: unit test for the property 'ColumnNames' 
+        }
+        
+        /// <summary>
+        /// Test the property 'PhoneColumns' 
+        /// </summary>
+        [Test]
+        public void PhoneColumnsTest()
+        {
+            // TODO: unit test for the property 'PhoneColumns' 
+        }
+        
+        /// <summary>
+        /// Test the property 'ImportStatus' 
+        /// </summary>
+        [Test]
+        public void ImportStatusTest()
+        {
+            // TODO: unit test for the property 'ImportStatus' 
+        }
+        
+        /// <summary>
+        /// Test the property 'PreviewModeColumnName' 
+        /// </summary>
+        [Test]
+        public void PreviewModeColumnNameTest()
+        {
+            // TODO: unit test for the property 'PreviewModeColumnName' 
+        }
+        
+        /// <summary>
+        /// Test the property 'PreviewModeAcceptedValues' 
+        /// </summary>
+        [Test]
+        public void PreviewModeAcceptedValuesTest()
+        {
+            // TODO: unit test for the property 'PreviewModeAcceptedValues' 
+        }
+        
+        /// <summary>
+        /// Test the property 'Size' 
+        /// </summary>
+        [Test]
+        public void SizeTest()
+        {
+            // TODO: unit test for the property 'Size' 
+        }
+        
+        /// <summary>
         /// Test the property 'SelfUri' 
         /// </summary>
         [Test]

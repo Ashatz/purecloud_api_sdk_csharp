@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ModifyDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="CreateDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
 
-        public ExternalOrganization(string Name = null, string CompanyType = null, string Industry = null, string PrimaryContactId = null, Address Address = null, PhoneNumber PhoneNumber = null, PhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<Ticker> Tickers = null, DateTime? ModifyDate = null, DateTime? CreateDate = null)
+        public ExternalOrganization(string Name = null, string CompanyType = null, string Industry = null, string PrimaryContactId = null, ContactAddress Address = null, PhoneNumber PhoneNumber = null, PhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<Ticker> Tickers = null, DateTime? ModifyDate = null, DateTime? CreateDate = null)
         {
             this.Name = Name;
             this.CompanyType = CompanyType;
@@ -91,7 +91,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Address
         /// </summary>
         [DataMember(Name="address", EmitDefaultValue=false)]
-        public Address Address { get; set; }
+        public ContactAddress Address { get; set; }
     
         /// <summary>
         /// Gets or Sets PhoneNumber

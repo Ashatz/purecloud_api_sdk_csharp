@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="TimeSlots">TimeSlots.</param>
         /// <param name="TimeZoneId">TimeZoneId.</param>
 
-        public CallableTime(List<TimeSlot> TimeSlots = null, string TimeZoneId = null)
+        public CallableTime(List<CampaignTimeSlot> TimeSlots = null, string TimeZoneId = null)
         {
             this.TimeSlots = TimeSlots;
             this.TimeZoneId = TimeZoneId;
@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets TimeSlots
         /// </summary>
         [DataMember(Name="timeSlots", EmitDefaultValue=false)]
-        public List<TimeSlot> TimeSlots { get; set; }
+        public List<CampaignTimeSlot> TimeSlots { get; set; }
     
         /// <summary>
         /// Gets or Sets TimeZoneId

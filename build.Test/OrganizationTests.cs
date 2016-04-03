@@ -97,24 +97,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'AdminUsername' 
-        /// </summary>
-        [Test]
-        public void AdminUsernameTest()
-        {
-            // TODO: unit test for the property 'AdminUsername' 
-        }
-        
-        /// <summary>
-        /// Test the property 'AdminPassword' 
-        /// </summary>
-        [Test]
-        public void AdminPasswordTest()
-        {
-            // TODO: unit test for the property 'AdminPassword' 
-        }
-        
-        /// <summary>
         /// Test the property 'Domain' 
         /// </summary>
         [Test]

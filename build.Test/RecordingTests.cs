@@ -115,24 +115,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'MediaUri' 
-        /// </summary>
-        [Test]
-        public void MediaUriTest()
-        {
-            // TODO: unit test for the property 'MediaUri' 
-        }
-        
-        /// <summary>
-        /// Test the property 'WaveUri' 
-        /// </summary>
-        [Test]
-        public void WaveUriTest()
-        {
-            // TODO: unit test for the property 'WaveUri' 
-        }
-        
-        /// <summary>
         /// Test the property 'Annotations' 
         /// </summary>
         [Test]
@@ -250,12 +232,12 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'RecordingId' 
+        /// Test the property 'SessionId' 
         /// </summary>
         [Test]
-        public void RecordingIdTest()
+        public void SessionIdTest()
         {
-            // TODO: unit test for the property 'RecordingId' 
+            // TODO: unit test for the property 'SessionId' 
         }
         
         /// <summary>

@@ -142,22 +142,16 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="BuildTime">BuildTime.</param>
         /// <param name="BuildVersion">BuildVersion.</param>
-        /// <param name="BuildJdk">BuildJdk.</param>
-        /// <param name="BuiltBy">BuiltBy.</param>
-        /// <param name="ImplementationBuild">ImplementationBuild.</param>
         /// <param name="ImplementationVersion">ImplementationVersion.</param>
         /// <param name="Status">Status.</param>
         /// <param name="PingMs">PingMs.</param>
         /// <param name="Date">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
 
-        public HealthCheckInfo(string Name = null, string BuildTime = null, string BuildVersion = null, string BuildJdk = null, string BuiltBy = null, string ImplementationBuild = null, string ImplementationVersion = null, StatusEnum? Status = null, int? PingMs = null, DateTime? Date = null)
+        public HealthCheckInfo(string Name = null, string BuildTime = null, string BuildVersion = null, string ImplementationVersion = null, StatusEnum? Status = null, int? PingMs = null, DateTime? Date = null)
         {
             this.Name = Name;
             this.BuildTime = BuildTime;
             this.BuildVersion = BuildVersion;
-            this.BuildJdk = BuildJdk;
-            this.BuiltBy = BuiltBy;
-            this.ImplementationBuild = ImplementationBuild;
             this.ImplementationVersion = ImplementationVersion;
             this.Status = Status;
             this.PingMs = PingMs;
@@ -199,24 +193,6 @@ namespace ININ.PureCloudApi.Model
         public string BuildVersion { get; set; }
     
         /// <summary>
-        /// Gets or Sets BuildJdk
-        /// </summary>
-        [DataMember(Name="Build-Jdk", EmitDefaultValue=false)]
-        public string BuildJdk { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets BuiltBy
-        /// </summary>
-        [DataMember(Name="Built-By", EmitDefaultValue=false)]
-        public string BuiltBy { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets ImplementationBuild
-        /// </summary>
-        [DataMember(Name="Implementation-Build", EmitDefaultValue=false)]
-        public string ImplementationBuild { get; set; }
-    
-        /// <summary>
         /// Gets or Sets ImplementationVersion
         /// </summary>
         [DataMember(Name="Implementation-Version", EmitDefaultValue=false)]
@@ -248,9 +224,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  BuildTime: ").Append(BuildTime).Append("\n");
             sb.Append("  BuildVersion: ").Append(BuildVersion).Append("\n");
-            sb.Append("  BuildJdk: ").Append(BuildJdk).Append("\n");
-            sb.Append("  BuiltBy: ").Append(BuiltBy).Append("\n");
-            sb.Append("  ImplementationBuild: ").Append(ImplementationBuild).Append("\n");
             sb.Append("  ImplementationVersion: ").Append(ImplementationVersion).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  PingMs: ").Append(PingMs).Append("\n");
@@ -318,21 +291,6 @@ namespace ININ.PureCloudApi.Model
                     this.BuildVersion.Equals(other.BuildVersion)
                 ) &&
                 (
-                    this.BuildJdk == other.BuildJdk ||
-                    this.BuildJdk != null &&
-                    this.BuildJdk.Equals(other.BuildJdk)
-                ) &&
-                (
-                    this.BuiltBy == other.BuiltBy ||
-                    this.BuiltBy != null &&
-                    this.BuiltBy.Equals(other.BuiltBy)
-                ) &&
-                (
-                    this.ImplementationBuild == other.ImplementationBuild ||
-                    this.ImplementationBuild != null &&
-                    this.ImplementationBuild.Equals(other.ImplementationBuild)
-                ) &&
-                (
                     this.ImplementationVersion == other.ImplementationVersion ||
                     this.ImplementationVersion != null &&
                     this.ImplementationVersion.Equals(other.ImplementationVersion)
@@ -380,15 +338,6 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.BuildVersion != null)
                     hash = hash * 59 + this.BuildVersion.GetHashCode();
-                
-                if (this.BuildJdk != null)
-                    hash = hash * 59 + this.BuildJdk.GetHashCode();
-                
-                if (this.BuiltBy != null)
-                    hash = hash * 59 + this.BuiltBy.GetHashCode();
-                
-                if (this.ImplementationBuild != null)
-                    hash = hash * 59 + this.ImplementationBuild.GetHashCode();
                 
                 if (this.ImplementationVersion != null)
                     hash = hash * 59 + this.ImplementationVersion.GetHashCode();

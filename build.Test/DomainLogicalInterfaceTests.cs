@@ -331,6 +331,24 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test the property 'InheritPhoneTrunkBasesIPv4' 
+        /// </summary>
+        [Test]
+        public void InheritPhoneTrunkBasesIPv4Test()
+        {
+            // TODO: unit test for the property 'InheritPhoneTrunkBasesIPv4' 
+        }
+        
+        /// <summary>
+        /// Test the property 'InheritPhoneTrunkBasesIPv6' 
+        /// </summary>
+        [Test]
+        public void InheritPhoneTrunkBasesIPv6Test()
+        {
+            // TODO: unit test for the property 'InheritPhoneTrunkBasesIPv6' 
+        }
+        
+        /// <summary>
         /// Test the property 'UseForInternalEdgeCommunication' 
         /// </summary>
         [Test]

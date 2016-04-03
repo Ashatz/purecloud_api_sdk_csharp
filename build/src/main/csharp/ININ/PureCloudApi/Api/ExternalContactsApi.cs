@@ -1410,7 +1410,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->DeleteContactsContactId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/contacts/{contactId}";
+            var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1495,7 +1495,7 @@ namespace ININ.PureCloudApi.Api
             if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling DeleteContactsContactId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/contacts/{contactId}";
+            var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1587,7 +1587,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->DeleteContactsContactIdNotesNoteId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/contacts/{contactId}/notes/{noteId}";
+            var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1677,7 +1677,7 @@ namespace ININ.PureCloudApi.Api
             if (noteId == null) throw new ApiException(400, "Missing required parameter 'noteId' when calling DeleteContactsContactIdNotesNoteId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/contacts/{contactId}/notes/{noteId}";
+            var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1764,7 +1764,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->DeleteOrganizationsExternalorganizationId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/organizations/{externalOrganizationId}";
+            var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1849,7 +1849,7 @@ namespace ININ.PureCloudApi.Api
             if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling DeleteOrganizationsExternalorganizationId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/organizations/{externalOrganizationId}";
+            var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1941,7 +1941,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->DeleteOrganizationsExternalorganizationIdNotesNoteId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
+            var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2031,7 +2031,7 @@ namespace ININ.PureCloudApi.Api
             if (noteId == null) throw new ApiException(400, "Missing required parameter 'noteId' when calling DeleteOrganizationsExternalorganizationIdNotesNoteId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
+            var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2118,7 +2118,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'relationshipId' when calling ExternalContactsApi->DeleteRelationshipsRelationshipId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/relationships/{relationshipId}";
+            var localVarPath = "/api/v2/externalcontacts/relationships/{relationshipId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2203,7 +2203,7 @@ namespace ININ.PureCloudApi.Api
             if (relationshipId == null) throw new ApiException(400, "Missing required parameter 'relationshipId' when calling DeleteRelationshipsRelationshipId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/relationships/{relationshipId}";
+            var localVarPath = "/api/v2/externalcontacts/relationships/{relationshipId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2294,7 +2294,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/externalcontacts/contacts";
+            var localVarPath = "/api/v2/externalcontacts/contacts";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2390,7 +2390,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/externalcontacts/contacts";
+            var localVarPath = "/api/v2/externalcontacts/contacts";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2483,7 +2483,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->GetContactsContactId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/contacts/{contactId}";
+            var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2572,7 +2572,7 @@ namespace ININ.PureCloudApi.Api
             if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling GetContactsContactId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/contacts/{contactId}";
+            var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2666,7 +2666,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->GetContactsContactIdNotes");
             
     
-            var localVarPath = "/api/v1/externalcontacts/contacts/{contactId}/notes";
+            var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2761,7 +2761,7 @@ namespace ININ.PureCloudApi.Api
             if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling GetContactsContactIdNotes");
             
     
-            var localVarPath = "/api/v1/externalcontacts/contacts/{contactId}/notes";
+            var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2857,7 +2857,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->GetContactsContactIdNotesNoteId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/contacts/{contactId}/notes/{noteId}";
+            var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2948,7 +2948,7 @@ namespace ININ.PureCloudApi.Api
             if (noteId == null) throw new ApiException(400, "Missing required parameter 'noteId' when calling GetContactsContactIdNotesNoteId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/contacts/{contactId}/notes/{noteId}";
+            var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3038,7 +3038,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/externalcontacts/organizations";
+            var localVarPath = "/api/v2/externalcontacts/organizations";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3131,7 +3131,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/externalcontacts/organizations";
+            var localVarPath = "/api/v2/externalcontacts/organizations";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3221,7 +3221,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetOrganizationsExternalorganizationId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/organizations/{externalOrganizationId}";
+            var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3307,7 +3307,7 @@ namespace ININ.PureCloudApi.Api
             if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling GetOrganizationsExternalorganizationId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/organizations/{externalOrganizationId}";
+            var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3404,7 +3404,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetOrganizationsExternalorganizationIdContacts");
             
     
-            var localVarPath = "/api/v1/externalcontacts/organizations/{externalOrganizationId}/contacts";
+            var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/contacts";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3505,7 +3505,7 @@ namespace ININ.PureCloudApi.Api
             if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling GetOrganizationsExternalorganizationIdContacts");
             
     
-            var localVarPath = "/api/v1/externalcontacts/organizations/{externalOrganizationId}/contacts";
+            var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/contacts";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3603,7 +3603,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetOrganizationsExternalorganizationIdNotes");
             
     
-            var localVarPath = "/api/v1/externalcontacts/organizations/{externalOrganizationId}/notes";
+            var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3698,7 +3698,7 @@ namespace ININ.PureCloudApi.Api
             if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling GetOrganizationsExternalorganizationIdNotes");
             
     
-            var localVarPath = "/api/v1/externalcontacts/organizations/{externalOrganizationId}/notes";
+            var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3794,7 +3794,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->GetOrganizationsExternalorganizationIdNotesNoteId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
+            var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3885,7 +3885,7 @@ namespace ININ.PureCloudApi.Api
             if (noteId == null) throw new ApiException(400, "Missing required parameter 'noteId' when calling GetOrganizationsExternalorganizationIdNotesNoteId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
+            var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3979,7 +3979,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetOrganizationsExternalorganizationIdRelationships");
             
     
-            var localVarPath = "/api/v1/externalcontacts/organizations/{externalOrganizationId}/relationships";
+            var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/relationships";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4074,7 +4074,7 @@ namespace ININ.PureCloudApi.Api
             if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling GetOrganizationsExternalorganizationIdRelationships");
             
     
-            var localVarPath = "/api/v1/externalcontacts/organizations/{externalOrganizationId}/relationships";
+            var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/relationships";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4164,7 +4164,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'relationshipId' when calling ExternalContactsApi->GetRelationshipsRelationshipId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/relationships/{relationshipId}";
+            var localVarPath = "/api/v2/externalcontacts/relationships/{relationshipId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4250,7 +4250,7 @@ namespace ININ.PureCloudApi.Api
             if (relationshipId == null) throw new ApiException(400, "Missing required parameter 'relationshipId' when calling GetRelationshipsRelationshipId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/relationships/{relationshipId}";
+            var localVarPath = "/api/v2/externalcontacts/relationships/{relationshipId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4333,7 +4333,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/externalcontacts/contacts";
+            var localVarPath = "/api/v2/externalcontacts/contacts";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4423,7 +4423,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/externalcontacts/contacts";
+            var localVarPath = "/api/v2/externalcontacts/contacts";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4518,7 +4518,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->PostContactsContactIdNotes");
             
     
-            var localVarPath = "/api/v1/externalcontacts/contacts/{contactId}/notes";
+            var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4613,7 +4613,7 @@ namespace ININ.PureCloudApi.Api
             if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling PostContactsContactIdNotes");
             
     
-            var localVarPath = "/api/v1/externalcontacts/contacts/{contactId}/notes";
+            var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4703,7 +4703,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/externalcontacts/organizations";
+            var localVarPath = "/api/v2/externalcontacts/organizations";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4793,7 +4793,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/externalcontacts/organizations";
+            var localVarPath = "/api/v2/externalcontacts/organizations";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4888,7 +4888,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->PostOrganizationsExternalorganizationIdNotes");
             
     
-            var localVarPath = "/api/v1/externalcontacts/organizations/{externalOrganizationId}/notes";
+            var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4983,7 +4983,7 @@ namespace ININ.PureCloudApi.Api
             if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling PostOrganizationsExternalorganizationIdNotes");
             
     
-            var localVarPath = "/api/v1/externalcontacts/organizations/{externalOrganizationId}/notes";
+            var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5073,7 +5073,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/externalcontacts/relationships";
+            var localVarPath = "/api/v2/externalcontacts/relationships";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5163,7 +5163,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/externalcontacts/relationships";
+            var localVarPath = "/api/v2/externalcontacts/relationships";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5258,7 +5258,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->PutContactsContactId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/contacts/{contactId}";
+            var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5353,7 +5353,7 @@ namespace ININ.PureCloudApi.Api
             if (contactId == null) throw new ApiException(400, "Missing required parameter 'contactId' when calling PutContactsContactId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/contacts/{contactId}";
+            var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5455,7 +5455,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->PutContactsContactIdNotesNoteId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/contacts/{contactId}/notes/{noteId}";
+            var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5555,7 +5555,7 @@ namespace ININ.PureCloudApi.Api
             if (noteId == null) throw new ApiException(400, "Missing required parameter 'noteId' when calling PutContactsContactIdNotesNoteId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/contacts/{contactId}/notes/{noteId}";
+            var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5652,7 +5652,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->PutOrganizationsExternalorganizationId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/organizations/{externalOrganizationId}";
+            var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5747,7 +5747,7 @@ namespace ININ.PureCloudApi.Api
             if (externalOrganizationId == null) throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling PutOrganizationsExternalorganizationId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/organizations/{externalOrganizationId}";
+            var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5849,7 +5849,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->PutOrganizationsExternalorganizationIdNotesNoteId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
+            var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5949,7 +5949,7 @@ namespace ININ.PureCloudApi.Api
             if (noteId == null) throw new ApiException(400, "Missing required parameter 'noteId' when calling PutOrganizationsExternalorganizationIdNotesNoteId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
+            var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6046,7 +6046,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'relationshipId' when calling ExternalContactsApi->PutRelationshipsRelationshipId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/relationships/{relationshipId}";
+            var localVarPath = "/api/v2/externalcontacts/relationships/{relationshipId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6141,7 +6141,7 @@ namespace ININ.PureCloudApi.Api
             if (relationshipId == null) throw new ApiException(400, "Missing required parameter 'relationshipId' when calling PutRelationshipsRelationshipId");
             
     
-            var localVarPath = "/api/v1/externalcontacts/relationships/{relationshipId}";
+            var localVarPath = "/api/v2/externalcontacts/relationships/{relationshipId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();

@@ -117,10 +117,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready.</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <returns>List&lt;Recording&gt;</returns>
-        List<Recording> GetConversationIdRecordings (string conversationId, int? maxWaitMs = null, string formatId = null);
+        List<Recording> GetConversationIdRecordings (string conversationId, string formatId = null);
   
         /// <summary>
         /// Get all of a Conversation&#39;s Recordings.
@@ -130,10 +129,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready.</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <returns>ApiResponse of List&lt;Recording&gt;</returns>
-        ApiResponse<List<Recording>> GetConversationIdRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null);
+        ApiResponse<List<Recording>> GetConversationIdRecordingsWithHttpInfo (string conversationId, string formatId = null);
         
         /// <summary>
         /// Gets a specific recording.
@@ -144,12 +142,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for completion.</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <param name="download">requesting a download format of the recording</param>
         /// <param name="fileName">the name of the downloaded fileName</param>
         /// <returns></returns>
-        void GetConversationIdRecordingsRecordingId (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null);
+        void GetConversationIdRecordingsRecordingId (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null);
   
         /// <summary>
         /// Gets a specific recording.
@@ -160,12 +157,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for completion.</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <param name="download">requesting a download format of the recording</param>
         /// <param name="fileName">the name of the downloaded fileName</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetConversationIdRecordingsRecordingIdWithHttpInfo (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null);
+        ApiResponse<Object> GetConversationIdRecordingsRecordingIdWithHttpInfo (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null);
         
         /// <summary>
         /// Get annotations for recording
@@ -228,12 +224,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">The page number requested</param>
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
+        /// <param name="nextPage">next page token</param>
+        /// <param name="previousPage">Previous page token</param>
         /// <param name="name">the policy name - used for filtering results in searches.</param>
         /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false</param>
         /// <param name="summary">provides a less verbose response of policy lists.</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors</param>
         /// <returns>PolicyEntityListing</returns>
-        PolicyEntityListing GetMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+        PolicyEntityListing GetMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
   
         /// <summary>
         /// Gets media retention policy list with query options to filter on name and enabled.
@@ -246,12 +244,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">The page number requested</param>
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
+        /// <param name="nextPage">next page token</param>
+        /// <param name="previousPage">Previous page token</param>
         /// <param name="name">the policy name - used for filtering results in searches.</param>
         /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false</param>
         /// <param name="summary">provides a less verbose response of policy lists.</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors</param>
         /// <returns>ApiResponse of PolicyEntityListing</returns>
-        ApiResponse<PolicyEntityListing> GetMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+        ApiResponse<PolicyEntityListing> GetMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
         
         /// <summary>
         /// Get a media retention policy
@@ -308,8 +308,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">The page number requested</param>
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
+        /// <param name="nextPage">next page token</param>
+        /// <param name="previousPage">Previous page token</param>
         /// <returns>OrphanRecordingListing</returns>
-        OrphanRecordingListing GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null);
+        OrphanRecordingListing GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
   
         /// <summary>
         /// Gets all orphan recordings
@@ -322,8 +324,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">The page number requested</param>
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
+        /// <param name="nextPage">next page token</param>
+        /// <param name="previousPage">Previous page token</param>
         /// <returns>ApiResponse of OrphanRecordingListing</returns>
-        ApiResponse<OrphanRecordingListing> GetOrphanrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null);
+        ApiResponse<OrphanRecordingListing> GetOrphanrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
         
         /// <summary>
         /// Get the Recording Settings for the Organization
@@ -429,9 +433,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
-        /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param>
         /// <returns></returns>
-        void PutConversationIdRecordingsRecordingId (string conversationId, string recordingId, Recording body, int? restoreDays = null);
+        void PutConversationIdRecordingsRecordingId (string conversationId, string recordingId, Recording body);
   
         /// <summary>
         /// Updates the retention records on a recording.
@@ -443,9 +446,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
-        /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PutConversationIdRecordingsRecordingIdWithHttpInfo (string conversationId, string recordingId, Recording body, int? restoreDays = null);
+        ApiResponse<Object> PutConversationIdRecordingsRecordingIdWithHttpInfo (string conversationId, string recordingId, Recording body);
         
         /// <summary>
         /// Update annotation
@@ -625,10 +627,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready.</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <returns>Task of List&lt;Recording&gt;</returns>
-        System.Threading.Tasks.Task<List<Recording>> GetConversationIdRecordingsAsync (string conversationId, int? maxWaitMs = null, string formatId = null);
+        System.Threading.Tasks.Task<List<Recording>> GetConversationIdRecordingsAsync (string conversationId, string formatId = null);
 
         /// <summary>
         /// Get all of a Conversation&#39;s Recordings.
@@ -638,10 +639,9 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready.</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <returns>Task of ApiResponse (List&lt;Recording&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationIdRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null);
+        System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationIdRecordingsAsyncWithHttpInfo (string conversationId, string formatId = null);
         
         /// <summary>
         /// Gets a specific recording.
@@ -652,12 +652,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for completion.</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <param name="download">requesting a download format of the recording</param>
         /// <param name="fileName">the name of the downloaded fileName</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetConversationIdRecordingsRecordingIdAsync (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null);
+        System.Threading.Tasks.Task GetConversationIdRecordingsRecordingIdAsync (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null);
 
         /// <summary>
         /// Gets a specific recording.
@@ -668,12 +667,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for completion.</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <param name="download">requesting a download format of the recording</param>
         /// <param name="fileName">the name of the downloaded fileName</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetConversationIdRecordingsRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetConversationIdRecordingsRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null);
         
         /// <summary>
         /// Get annotations for recording
@@ -736,12 +734,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">The page number requested</param>
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
+        /// <param name="nextPage">next page token</param>
+        /// <param name="previousPage">Previous page token</param>
         /// <param name="name">the policy name - used for filtering results in searches.</param>
         /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false</param>
         /// <param name="summary">provides a less verbose response of policy lists.</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors</param>
         /// <returns>Task of PolicyEntityListing</returns>
-        System.Threading.Tasks.Task<PolicyEntityListing> GetMediaretentionpoliciesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+        System.Threading.Tasks.Task<PolicyEntityListing> GetMediaretentionpoliciesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
 
         /// <summary>
         /// Gets media retention policy list with query options to filter on name and enabled.
@@ -754,12 +754,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">The page number requested</param>
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
+        /// <param name="nextPage">next page token</param>
+        /// <param name="previousPage">Previous page token</param>
         /// <param name="name">the policy name - used for filtering results in searches.</param>
         /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false</param>
         /// <param name="summary">provides a less verbose response of policy lists.</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors</param>
         /// <returns>Task of ApiResponse (PolicyEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+        System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
         
         /// <summary>
         /// Get a media retention policy
@@ -816,8 +818,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">The page number requested</param>
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
+        /// <param name="nextPage">next page token</param>
+        /// <param name="previousPage">Previous page token</param>
         /// <returns>Task of OrphanRecordingListing</returns>
-        System.Threading.Tasks.Task<OrphanRecordingListing> GetOrphanrecordingsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null);
+        System.Threading.Tasks.Task<OrphanRecordingListing> GetOrphanrecordingsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
         /// Gets all orphan recordings
@@ -830,8 +834,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">The page number requested</param>
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
+        /// <param name="nextPage">next page token</param>
+        /// <param name="previousPage">Previous page token</param>
         /// <returns>Task of ApiResponse (OrphanRecordingListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrphanRecordingListing>> GetOrphanrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<OrphanRecordingListing>> GetOrphanrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
         
         /// <summary>
         /// Get the Recording Settings for the Organization
@@ -937,9 +943,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
-        /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PutConversationIdRecordingsRecordingIdAsync (string conversationId, string recordingId, Recording body, int? restoreDays = null);
+        System.Threading.Tasks.Task PutConversationIdRecordingsRecordingIdAsync (string conversationId, string recordingId, Recording body);
 
         /// <summary>
         /// Updates the retention records on a recording.
@@ -951,9 +956,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
-        /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PutConversationIdRecordingsRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId, Recording body, int? restoreDays = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PutConversationIdRecordingsRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId, Recording body);
         
         /// <summary>
         /// Update annotation
@@ -1146,7 +1150,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'annotationId' when calling RecordingApi->DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
             
     
-            var localVarPath = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
+            var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1241,7 +1245,7 @@ namespace ININ.PureCloudApi.Api
             if (annotationId == null) throw new ApiException(400, "Missing required parameter 'annotationId' when calling DeleteConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
             
     
-            var localVarPath = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
+            var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1330,7 +1334,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'ids' when calling RecordingApi->DeleteMediaretentionpolicies");
             
     
-            var localVarPath = "/api/v1/recording/mediaretentionpolicies";
+            var localVarPath = "/api/v2/recording/mediaretentionpolicies";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1416,7 +1420,7 @@ namespace ININ.PureCloudApi.Api
             if (ids == null) throw new ApiException(400, "Missing required parameter 'ids' when calling DeleteMediaretentionpolicies");
             
     
-            var localVarPath = "/api/v1/recording/mediaretentionpolicies";
+            var localVarPath = "/api/v2/recording/mediaretentionpolicies";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1503,7 +1507,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->DeleteMediaretentionpoliciesPolicyId");
             
     
-            var localVarPath = "/api/v1/recording/mediaretentionpolicies/{policyId}";
+            var localVarPath = "/api/v2/recording/mediaretentionpolicies/{policyId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1589,7 +1593,7 @@ namespace ININ.PureCloudApi.Api
             if (policyId == null) throw new ApiException(400, "Missing required parameter 'policyId' when calling DeleteMediaretentionpoliciesPolicyId");
             
     
-            var localVarPath = "/api/v1/recording/mediaretentionpolicies/{policyId}";
+            var localVarPath = "/api/v2/recording/mediaretentionpolicies/{policyId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1676,7 +1680,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'orphanId' when calling RecordingApi->DeleteOrphanId");
             
     
-            var localVarPath = "/api/v1/orphanrecordings/{orphanId}";
+            var localVarPath = "/api/v2/orphanrecordings/{orphanId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1762,7 +1766,7 @@ namespace ININ.PureCloudApi.Api
             if (orphanId == null) throw new ApiException(400, "Missing required parameter 'orphanId' when calling DeleteOrphanId");
             
     
-            var localVarPath = "/api/v1/orphanrecordings/{orphanId}";
+            var localVarPath = "/api/v2/orphanrecordings/{orphanId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1828,12 +1832,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param> 
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready.</param> 
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param> 
         /// <returns>List&lt;Recording&gt;</returns>
-        public List<Recording> GetConversationIdRecordings (string conversationId, int? maxWaitMs = null, string formatId = null)
+        public List<Recording> GetConversationIdRecordings (string conversationId, string formatId = null)
         {
-             ApiResponse<List<Recording>> localVarResponse = GetConversationIdRecordingsWithHttpInfo(conversationId, maxWaitMs, formatId);
+             ApiResponse<List<Recording>> localVarResponse = GetConversationIdRecordingsWithHttpInfo(conversationId, formatId);
              return localVarResponse.Data;
         }
 
@@ -1842,10 +1845,9 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param> 
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready.</param> 
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param> 
         /// <returns>ApiResponse of List&lt;Recording&gt;</returns>
-        public ApiResponse< List<Recording> > GetConversationIdRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null)
+        public ApiResponse< List<Recording> > GetConversationIdRecordingsWithHttpInfo (string conversationId, string formatId = null)
         {
             
             // verify the required parameter 'conversationId' is set
@@ -1853,7 +1855,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationIdRecordings");
             
     
-            var localVarPath = "/api/v1/conversations/{conversationId}/recordings";
+            var localVarPath = "/api/v2/conversations/{conversationId}/recordings";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1881,7 +1883,6 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
             
-            if (maxWaitMs != null) localVarQueryParams.Add("maxWaitMs", Configuration.ApiClient.ParameterToString(maxWaitMs)); // query parameter
             if (formatId != null) localVarQueryParams.Add("formatId", Configuration.ApiClient.ParameterToString(formatId)); // query parameter
             
             
@@ -1921,12 +1922,11 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready.</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <returns>Task of List&lt;Recording&gt;</returns>
-        public async System.Threading.Tasks.Task<List<Recording>> GetConversationIdRecordingsAsync (string conversationId, int? maxWaitMs = null, string formatId = null)
+        public async System.Threading.Tasks.Task<List<Recording>> GetConversationIdRecordingsAsync (string conversationId, string formatId = null)
         {
-             ApiResponse<List<Recording>> localVarResponse = await GetConversationIdRecordingsAsyncWithHttpInfo(conversationId, maxWaitMs, formatId);
+             ApiResponse<List<Recording>> localVarResponse = await GetConversationIdRecordingsAsyncWithHttpInfo(conversationId, formatId);
              return localVarResponse.Data;
 
         }
@@ -1936,16 +1936,15 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready.</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <returns>Task of ApiResponse (List&lt;Recording&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationIdRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationIdRecordingsAsyncWithHttpInfo (string conversationId, string formatId = null)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationIdRecordings");
             
     
-            var localVarPath = "/api/v1/conversations/{conversationId}/recordings";
+            var localVarPath = "/api/v2/conversations/{conversationId}/recordings";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1973,7 +1972,6 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
             
-            if (maxWaitMs != null) localVarQueryParams.Add("maxWaitMs", Configuration.ApiClient.ParameterToString(maxWaitMs)); // query parameter
             if (formatId != null) localVarQueryParams.Add("formatId", Configuration.ApiClient.ParameterToString(formatId)); // query parameter
             
             
@@ -2014,14 +2012,13 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param> 
         /// <param name="recordingId">Recording ID</param> 
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for completion.</param> 
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param> 
         /// <param name="download">requesting a download format of the recording</param> 
         /// <param name="fileName">the name of the downloaded fileName</param> 
         /// <returns></returns>
-        public void GetConversationIdRecordingsRecordingId (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null)
+        public void GetConversationIdRecordingsRecordingId (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
         {
-             GetConversationIdRecordingsRecordingIdWithHttpInfo(conversationId, recordingId, maxWaitMs, formatId, download, fileName);
+             GetConversationIdRecordingsRecordingIdWithHttpInfo(conversationId, recordingId, formatId, download, fileName);
         }
 
         /// <summary>
@@ -2030,12 +2027,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param> 
         /// <param name="recordingId">Recording ID</param> 
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for completion.</param> 
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param> 
         /// <param name="download">requesting a download format of the recording</param> 
         /// <param name="fileName">the name of the downloaded fileName</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetConversationIdRecordingsRecordingIdWithHttpInfo (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null)
+        public ApiResponse<Object> GetConversationIdRecordingsRecordingIdWithHttpInfo (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
         {
             
             // verify the required parameter 'conversationId' is set
@@ -2047,7 +2043,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->GetConversationIdRecordingsRecordingId");
             
     
-            var localVarPath = "/api/v1/conversations/{conversationId}/recordings/{recordingId}";
+            var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2076,7 +2072,6 @@ namespace ININ.PureCloudApi.Api
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
             if (recordingId != null) localVarPathParams.Add("recordingId", Configuration.ApiClient.ParameterToString(recordingId)); // path parameter
             
-            if (maxWaitMs != null) localVarQueryParams.Add("maxWaitMs", Configuration.ApiClient.ParameterToString(maxWaitMs)); // query parameter
             if (formatId != null) localVarQueryParams.Add("formatId", Configuration.ApiClient.ParameterToString(formatId)); // query parameter
             if (download != null) localVarQueryParams.Add("download", Configuration.ApiClient.ParameterToString(download)); // query parameter
             if (fileName != null) localVarQueryParams.Add("fileName", Configuration.ApiClient.ParameterToString(fileName)); // query parameter
@@ -2119,14 +2114,13 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for completion.</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <param name="download">requesting a download format of the recording</param>
         /// <param name="fileName">the name of the downloaded fileName</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetConversationIdRecordingsRecordingIdAsync (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null)
+        public async System.Threading.Tasks.Task GetConversationIdRecordingsRecordingIdAsync (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
         {
-             await GetConversationIdRecordingsRecordingIdAsyncWithHttpInfo(conversationId, recordingId, maxWaitMs, formatId, download, fileName);
+             await GetConversationIdRecordingsRecordingIdAsyncWithHttpInfo(conversationId, recordingId, formatId, download, fileName);
 
         }
 
@@ -2136,12 +2130,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
-        /// <param name="maxWaitMs">The maximum number of milliseconds to wait for completion.</param>
         /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
         /// <param name="download">requesting a download format of the recording</param>
         /// <param name="fileName">the name of the downloaded fileName</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetConversationIdRecordingsRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId, int? maxWaitMs = null, string formatId = null, bool? download = null, string fileName = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetConversationIdRecordingsRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling GetConversationIdRecordingsRecordingId");
@@ -2149,7 +2142,7 @@ namespace ININ.PureCloudApi.Api
             if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling GetConversationIdRecordingsRecordingId");
             
     
-            var localVarPath = "/api/v1/conversations/{conversationId}/recordings/{recordingId}";
+            var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2178,7 +2171,6 @@ namespace ININ.PureCloudApi.Api
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
             if (recordingId != null) localVarPathParams.Add("recordingId", Configuration.ApiClient.ParameterToString(recordingId)); // path parameter
             
-            if (maxWaitMs != null) localVarQueryParams.Add("maxWaitMs", Configuration.ApiClient.ParameterToString(maxWaitMs)); // query parameter
             if (formatId != null) localVarQueryParams.Add("formatId", Configuration.ApiClient.ParameterToString(formatId)); // query parameter
             if (download != null) localVarQueryParams.Add("download", Configuration.ApiClient.ParameterToString(download)); // query parameter
             if (fileName != null) localVarQueryParams.Add("fileName", Configuration.ApiClient.ParameterToString(fileName)); // query parameter
@@ -2247,7 +2239,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->GetConversationIdRecordingsRecordingIdAnnotations");
             
     
-            var localVarPath = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations";
+            var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2338,7 +2330,7 @@ namespace ININ.PureCloudApi.Api
             if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling GetConversationIdRecordingsRecordingIdAnnotations");
             
     
-            var localVarPath = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations";
+            var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2438,7 +2430,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'annotationId' when calling RecordingApi->GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
             
     
-            var localVarPath = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
+            var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2534,7 +2526,7 @@ namespace ININ.PureCloudApi.Api
             if (annotationId == null) throw new ApiException(400, "Missing required parameter 'annotationId' when calling GetConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
             
     
-            var localVarPath = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
+            var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2605,14 +2597,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">The page number requested</param> 
         /// <param name="sortBy">variable name requested to sort by</param> 
         /// <param name="expand">variable name requested by expand list</param> 
+        /// <param name="nextPage">next page token</param> 
+        /// <param name="previousPage">Previous page token</param> 
         /// <param name="name">the policy name - used for filtering results in searches.</param> 
         /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false</param> 
         /// <param name="summary">provides a less verbose response of policy lists.</param> 
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors</param> 
         /// <returns>PolicyEntityListing</returns>
-        public PolicyEntityListing GetMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+        public PolicyEntityListing GetMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
         {
-             ApiResponse<PolicyEntityListing> localVarResponse = GetMediaretentionpoliciesWithHttpInfo(pageSize, pageNumber, sortBy, expand, name, enabled, summary, hasErrors);
+             ApiResponse<PolicyEntityListing> localVarResponse = GetMediaretentionpoliciesWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors);
              return localVarResponse.Data;
         }
 
@@ -2624,16 +2618,18 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">The page number requested</param> 
         /// <param name="sortBy">variable name requested to sort by</param> 
         /// <param name="expand">variable name requested by expand list</param> 
+        /// <param name="nextPage">next page token</param> 
+        /// <param name="previousPage">Previous page token</param> 
         /// <param name="name">the policy name - used for filtering results in searches.</param> 
         /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false</param> 
         /// <param name="summary">provides a less verbose response of policy lists.</param> 
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors</param> 
         /// <returns>ApiResponse of PolicyEntityListing</returns>
-        public ApiResponse< PolicyEntityListing > GetMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+        public ApiResponse< PolicyEntityListing > GetMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
         {
             
     
-            var localVarPath = "/api/v1/recording/mediaretentionpolicies";
+            var localVarPath = "/api/v2/recording/mediaretentionpolicies";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2664,6 +2660,8 @@ namespace ININ.PureCloudApi.Api
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            if (nextPage != null) localVarQueryParams.Add("nextPage", Configuration.ApiClient.ParameterToString(nextPage)); // query parameter
+            if (previousPage != null) localVarQueryParams.Add("previousPage", Configuration.ApiClient.ParameterToString(previousPage)); // query parameter
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             if (enabled != null) localVarQueryParams.Add("enabled", Configuration.ApiClient.ParameterToString(enabled)); // query parameter
             if (summary != null) localVarQueryParams.Add("summary", Configuration.ApiClient.ParameterToString(summary)); // query parameter
@@ -2709,14 +2707,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">The page number requested</param>
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
+        /// <param name="nextPage">next page token</param>
+        /// <param name="previousPage">Previous page token</param>
         /// <param name="name">the policy name - used for filtering results in searches.</param>
         /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false</param>
         /// <param name="summary">provides a less verbose response of policy lists.</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors</param>
         /// <returns>Task of PolicyEntityListing</returns>
-        public async System.Threading.Tasks.Task<PolicyEntityListing> GetMediaretentionpoliciesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+        public async System.Threading.Tasks.Task<PolicyEntityListing> GetMediaretentionpoliciesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
         {
-             ApiResponse<PolicyEntityListing> localVarResponse = await GetMediaretentionpoliciesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, name, enabled, summary, hasErrors);
+             ApiResponse<PolicyEntityListing> localVarResponse = await GetMediaretentionpoliciesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors);
              return localVarResponse.Data;
 
         }
@@ -2729,16 +2729,18 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">The page number requested</param>
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
+        /// <param name="nextPage">next page token</param>
+        /// <param name="previousPage">Previous page token</param>
         /// <param name="name">the policy name - used for filtering results in searches.</param>
         /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false</param>
         /// <param name="summary">provides a less verbose response of policy lists.</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors</param>
         /// <returns>Task of ApiResponse (PolicyEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
         {
             
     
-            var localVarPath = "/api/v1/recording/mediaretentionpolicies";
+            var localVarPath = "/api/v2/recording/mediaretentionpolicies";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2769,6 +2771,8 @@ namespace ININ.PureCloudApi.Api
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            if (nextPage != null) localVarQueryParams.Add("nextPage", Configuration.ApiClient.ParameterToString(nextPage)); // query parameter
+            if (previousPage != null) localVarQueryParams.Add("previousPage", Configuration.ApiClient.ParameterToString(previousPage)); // query parameter
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             if (enabled != null) localVarQueryParams.Add("enabled", Configuration.ApiClient.ParameterToString(enabled)); // query parameter
             if (summary != null) localVarQueryParams.Add("summary", Configuration.ApiClient.ParameterToString(summary)); // query parameter
@@ -2832,7 +2836,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->GetMediaretentionpoliciesPolicyId");
             
     
-            var localVarPath = "/api/v1/recording/mediaretentionpolicies/{policyId}";
+            var localVarPath = "/api/v2/recording/mediaretentionpolicies/{policyId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2918,7 +2922,7 @@ namespace ININ.PureCloudApi.Api
             if (policyId == null) throw new ApiException(400, "Missing required parameter 'policyId' when calling GetMediaretentionpoliciesPolicyId");
             
     
-            var localVarPath = "/api/v1/recording/mediaretentionpolicies/{policyId}";
+            var localVarPath = "/api/v2/recording/mediaretentionpolicies/{policyId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3005,7 +3009,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'orphanId' when calling RecordingApi->GetOrphanId");
             
     
-            var localVarPath = "/api/v1/orphanrecordings/{orphanId}";
+            var localVarPath = "/api/v2/orphanrecordings/{orphanId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3091,7 +3095,7 @@ namespace ININ.PureCloudApi.Api
             if (orphanId == null) throw new ApiException(400, "Missing required parameter 'orphanId' when calling GetOrphanId");
             
     
-            var localVarPath = "/api/v1/orphanrecordings/{orphanId}";
+            var localVarPath = "/api/v2/orphanrecordings/{orphanId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3160,10 +3164,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">The page number requested</param> 
         /// <param name="sortBy">variable name requested to sort by</param> 
         /// <param name="expand">variable name requested by expand list</param> 
+        /// <param name="nextPage">next page token</param> 
+        /// <param name="previousPage">Previous page token</param> 
         /// <returns>OrphanRecordingListing</returns>
-        public OrphanRecordingListing GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null)
+        public OrphanRecordingListing GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
-             ApiResponse<OrphanRecordingListing> localVarResponse = GetOrphanrecordingsWithHttpInfo(pageSize, pageNumber, sortBy, expand);
+             ApiResponse<OrphanRecordingListing> localVarResponse = GetOrphanrecordingsWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
              return localVarResponse.Data;
         }
 
@@ -3175,12 +3181,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">The page number requested</param> 
         /// <param name="sortBy">variable name requested to sort by</param> 
         /// <param name="expand">variable name requested by expand list</param> 
+        /// <param name="nextPage">next page token</param> 
+        /// <param name="previousPage">Previous page token</param> 
         /// <returns>ApiResponse of OrphanRecordingListing</returns>
-        public ApiResponse< OrphanRecordingListing > GetOrphanrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null)
+        public ApiResponse< OrphanRecordingListing > GetOrphanrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
             
     
-            var localVarPath = "/api/v1/orphanrecordings";
+            var localVarPath = "/api/v2/orphanrecordings";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3211,6 +3219,8 @@ namespace ININ.PureCloudApi.Api
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            if (nextPage != null) localVarQueryParams.Add("nextPage", Configuration.ApiClient.ParameterToString(nextPage)); // query parameter
+            if (previousPage != null) localVarQueryParams.Add("previousPage", Configuration.ApiClient.ParameterToString(previousPage)); // query parameter
             
             
             
@@ -3252,10 +3262,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">The page number requested</param>
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
+        /// <param name="nextPage">next page token</param>
+        /// <param name="previousPage">Previous page token</param>
         /// <returns>Task of OrphanRecordingListing</returns>
-        public async System.Threading.Tasks.Task<OrphanRecordingListing> GetOrphanrecordingsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<OrphanRecordingListing> GetOrphanrecordingsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
-             ApiResponse<OrphanRecordingListing> localVarResponse = await GetOrphanrecordingsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand);
+             ApiResponse<OrphanRecordingListing> localVarResponse = await GetOrphanrecordingsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
              return localVarResponse.Data;
 
         }
@@ -3268,12 +3280,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">The page number requested</param>
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
+        /// <param name="nextPage">next page token</param>
+        /// <param name="previousPage">Previous page token</param>
         /// <returns>Task of ApiResponse (OrphanRecordingListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrphanRecordingListing>> GetOrphanrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OrphanRecordingListing>> GetOrphanrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
             
     
-            var localVarPath = "/api/v1/orphanrecordings";
+            var localVarPath = "/api/v2/orphanrecordings";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3304,6 +3318,8 @@ namespace ININ.PureCloudApi.Api
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            if (nextPage != null) localVarQueryParams.Add("nextPage", Configuration.ApiClient.ParameterToString(nextPage)); // query parameter
+            if (previousPage != null) localVarQueryParams.Add("previousPage", Configuration.ApiClient.ParameterToString(previousPage)); // query parameter
             
             
             
@@ -3359,7 +3375,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/recording/settings";
+            var localVarPath = "/api/v2/recording/settings";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3443,7 +3459,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/recording/settings";
+            var localVarPath = "/api/v2/recording/settings";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3532,7 +3548,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->PatchMediaretentionpoliciesPolicyId");
             
     
-            var localVarPath = "/api/v1/recording/mediaretentionpolicies/{policyId}";
+            var localVarPath = "/api/v2/recording/mediaretentionpolicies/{policyId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3627,7 +3643,7 @@ namespace ININ.PureCloudApi.Api
             if (policyId == null) throw new ApiException(400, "Missing required parameter 'policyId' when calling PatchMediaretentionpoliciesPolicyId");
             
     
-            var localVarPath = "/api/v1/recording/mediaretentionpolicies/{policyId}";
+            var localVarPath = "/api/v2/recording/mediaretentionpolicies/{policyId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3729,7 +3745,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->PostConversationIdRecordingsRecordingIdAnnotations");
             
     
-            var localVarPath = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations";
+            var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3829,7 +3845,7 @@ namespace ININ.PureCloudApi.Api
             if (recordingId == null) throw new ApiException(400, "Missing required parameter 'recordingId' when calling PostConversationIdRecordingsRecordingIdAnnotations");
             
     
-            var localVarPath = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations";
+            var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3920,7 +3936,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/recording/mediaretentionpolicies";
+            var localVarPath = "/api/v2/recording/mediaretentionpolicies";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4010,7 +4026,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/recording/mediaretentionpolicies";
+            var localVarPath = "/api/v2/recording/mediaretentionpolicies";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4084,11 +4100,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param> 
         /// <param name="recordingId">Recording ID</param> 
         /// <param name="body">recording</param> 
-        /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param> 
         /// <returns></returns>
-        public void PutConversationIdRecordingsRecordingId (string conversationId, string recordingId, Recording body, int? restoreDays = null)
+        public void PutConversationIdRecordingsRecordingId (string conversationId, string recordingId, Recording body)
         {
-             PutConversationIdRecordingsRecordingIdWithHttpInfo(conversationId, recordingId, body, restoreDays);
+             PutConversationIdRecordingsRecordingIdWithHttpInfo(conversationId, recordingId, body);
         }
 
         /// <summary>
@@ -4098,9 +4113,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param> 
         /// <param name="recordingId">Recording ID</param> 
         /// <param name="body">recording</param> 
-        /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PutConversationIdRecordingsRecordingIdWithHttpInfo (string conversationId, string recordingId, Recording body, int? restoreDays = null)
+        public ApiResponse<Object> PutConversationIdRecordingsRecordingIdWithHttpInfo (string conversationId, string recordingId, Recording body)
         {
             
             // verify the required parameter 'conversationId' is set
@@ -4116,7 +4130,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutConversationIdRecordingsRecordingId");
             
     
-            var localVarPath = "/api/v1/conversations/{conversationId}/recordings/{recordingId}";
+            var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4145,7 +4159,6 @@ namespace ININ.PureCloudApi.Api
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
             if (recordingId != null) localVarPathParams.Add("recordingId", Configuration.ApiClient.ParameterToString(recordingId)); // path parameter
             
-            if (restoreDays != null) localVarQueryParams.Add("restoreDays", Configuration.ApiClient.ParameterToString(restoreDays)); // query parameter
             
             
             
@@ -4193,11 +4206,10 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
-        /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PutConversationIdRecordingsRecordingIdAsync (string conversationId, string recordingId, Recording body, int? restoreDays = null)
+        public async System.Threading.Tasks.Task PutConversationIdRecordingsRecordingIdAsync (string conversationId, string recordingId, Recording body)
         {
-             await PutConversationIdRecordingsRecordingIdAsyncWithHttpInfo(conversationId, recordingId, body, restoreDays);
+             await PutConversationIdRecordingsRecordingIdAsyncWithHttpInfo(conversationId, recordingId, body);
 
         }
 
@@ -4208,9 +4220,8 @@ namespace ININ.PureCloudApi.Api
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="recordingId">Recording ID</param>
         /// <param name="body">recording</param>
-        /// <param name="restoreDays">The number of days the recording will be available before it is re-archived. Deprecated.</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutConversationIdRecordingsRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId, Recording body, int? restoreDays = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutConversationIdRecordingsRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId, Recording body)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null) throw new ApiException(400, "Missing required parameter 'conversationId' when calling PutConversationIdRecordingsRecordingId");
@@ -4220,7 +4231,7 @@ namespace ININ.PureCloudApi.Api
             if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PutConversationIdRecordingsRecordingId");
             
     
-            var localVarPath = "/api/v1/conversations/{conversationId}/recordings/{recordingId}";
+            var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4249,7 +4260,6 @@ namespace ININ.PureCloudApi.Api
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
             if (recordingId != null) localVarPathParams.Add("recordingId", Configuration.ApiClient.ParameterToString(recordingId)); // path parameter
             
-            if (restoreDays != null) localVarQueryParams.Add("restoreDays", Configuration.ApiClient.ParameterToString(restoreDays)); // query parameter
             
             
             
@@ -4330,7 +4340,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'annotationId' when calling RecordingApi->PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
             
     
-            var localVarPath = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
+            var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4435,7 +4445,7 @@ namespace ININ.PureCloudApi.Api
             if (annotationId == null) throw new ApiException(400, "Missing required parameter 'annotationId' when calling PutConversationIdRecordingsRecordingIdAnnotationsAnnotationId");
             
     
-            var localVarPath = "/api/v1/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
+            var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4533,7 +4543,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->PutMediaretentionpoliciesPolicyId");
             
     
-            var localVarPath = "/api/v1/recording/mediaretentionpolicies/{policyId}";
+            var localVarPath = "/api/v2/recording/mediaretentionpolicies/{policyId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4628,7 +4638,7 @@ namespace ININ.PureCloudApi.Api
             if (policyId == null) throw new ApiException(400, "Missing required parameter 'policyId' when calling PutMediaretentionpoliciesPolicyId");
             
     
-            var localVarPath = "/api/v1/recording/mediaretentionpolicies/{policyId}";
+            var localVarPath = "/api/v2/recording/mediaretentionpolicies/{policyId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4718,7 +4728,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/recording/settings";
+            var localVarPath = "/api/v2/recording/settings";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4808,7 +4818,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/recording/settings";
+            var localVarPath = "/api/v2/recording/settings";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();

@@ -227,7 +227,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'locationId' when calling LocationsApi->GetLocationId");
             
     
-            var localVarPath = "/api/v1/locations/{locationId}";
+            var localVarPath = "/api/v2/locations/{locationId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -313,7 +313,7 @@ namespace ININ.PureCloudApi.Api
             if (locationId == null) throw new ApiException(400, "Missing required parameter 'locationId' when calling GetLocationId");
             
     
-            var localVarPath = "/api/v1/locations/{locationId}";
+            var localVarPath = "/api/v2/locations/{locationId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -402,7 +402,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/locations";
+            var localVarPath = "/api/v2/locations";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -495,7 +495,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/locations";
+            var localVarPath = "/api/v2/locations";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();

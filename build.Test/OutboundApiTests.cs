@@ -342,7 +342,6 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetContactlists'
             bool? includeImportStatus = null; // TODO: replace null with proper value
-            bool? importStatus = null; // TODO: replace null with proper value
             bool? includeSize = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
@@ -351,7 +350,7 @@ namespace ININ.PureCloudApi.Test
             string sortBy = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
             
-            var response = instance.GetContactlists(includeImportStatus, importStatus, includeSize, pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+            var response = instance.GetContactlists(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, sortBy, sortOrder);
             Assert.IsInstanceOf<ContactListEntityListing> (response, "response is ContactListEntityListing"); 
         }
         
@@ -364,25 +363,10 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetContactlistsContactlistId'
             string contactListId = null; // TODO: replace null with proper value
             bool? includeImportStatus = null; // TODO: replace null with proper value
-            bool? importStatus = null; // TODO: replace null with proper value
             bool? includeSize = null; // TODO: replace null with proper value
             
-            var response = instance.GetContactlistsContactlistId(contactListId, includeImportStatus, importStatus, includeSize);
+            var response = instance.GetContactlistsContactlistId(contactListId, includeImportStatus, includeSize);
             Assert.IsInstanceOf<ContactList> (response, "response is ContactList"); 
-        }
-        
-        /// <summary>
-        /// Test GetContactlistsContactlistIdCampaignIdPenetrationrate
-        /// </summary>
-        [Test]
-        public void GetContactlistsContactlistIdCampaignIdPenetrationrateTest()
-        {
-            // TODO: add unit test for the method 'GetContactlistsContactlistIdCampaignIdPenetrationrate'
-            string contactListId = null; // TODO: replace null with proper value
-            string campaignId = null; // TODO: replace null with proper value
-            
-            var response = instance.GetContactlistsContactlistIdCampaignIdPenetrationrate(contactListId, campaignId);
-            Assert.IsInstanceOf<PenetrationRate> (response, "response is PenetrationRate"); 
         }
         
         /// <summary>
@@ -396,7 +380,7 @@ namespace ININ.PureCloudApi.Test
             string contactId = null; // TODO: replace null with proper value
             
             var response = instance.GetContactlistsContactlistIdContactsContactId(contactListId, contactId);
-            Assert.IsInstanceOf<Contact> (response, "response is Contact"); 
+            Assert.IsInstanceOf<DialerContact> (response, "response is DialerContact"); 
         }
         
         /// <summary>
@@ -420,7 +404,6 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetDnclists'
             bool? includeImportStatus = null; // TODO: replace null with proper value
-            bool? importStatus = null; // TODO: replace null with proper value
             bool? includeSize = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
@@ -429,7 +412,7 @@ namespace ININ.PureCloudApi.Test
             string sortBy = null; // TODO: replace null with proper value
             string sortOrder = null; // TODO: replace null with proper value
             
-            var response = instance.GetDnclists(includeImportStatus, importStatus, includeSize, pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+            var response = instance.GetDnclists(includeImportStatus, includeSize, pageSize, pageNumber, filterType, name, sortBy, sortOrder);
             Assert.IsInstanceOf<DncListEntityListing> (response, "response is DncListEntityListing"); 
         }
         
@@ -442,10 +425,9 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetDnclistsDnclistId'
             string dncListId = null; // TODO: replace null with proper value
             bool? includeImportStatus = null; // TODO: replace null with proper value
-            bool? importStatus = null; // TODO: replace null with proper value
             bool? includeSize = null; // TODO: replace null with proper value
             
-            var response = instance.GetDnclistsDnclistId(dncListId, includeImportStatus, importStatus, includeSize);
+            var response = instance.GetDnclistsDnclistId(dncListId, includeImportStatus, includeSize);
             Assert.IsInstanceOf<DncList> (response, "response is DncList"); 
         }
         
@@ -460,31 +442,6 @@ namespace ININ.PureCloudApi.Test
             
             var response = instance.GetDnclistsDnclistIdImportstatus(dncListId);
             Assert.IsInstanceOf<ImportStatus> (response, "response is ImportStatus"); 
-        }
-        
-        /// <summary>
-        /// Test GetPreviews
-        /// </summary>
-        [Test]
-        public void GetPreviewsTest()
-        {
-            // TODO: add unit test for the method 'GetPreviews'
-            
-            var response = instance.GetPreviews();
-            Assert.IsInstanceOf<List<Preview>> (response, "response is List<Preview>"); 
-        }
-        
-        /// <summary>
-        /// Test GetPreviewsPreviewId
-        /// </summary>
-        [Test]
-        public void GetPreviewsPreviewIdTest()
-        {
-            // TODO: add unit test for the method 'GetPreviewsPreviewId'
-            string previewId = null; // TODO: replace null with proper value
-            
-            var response = instance.GetPreviewsPreviewId(previewId);
-            Assert.IsInstanceOf<Preview> (response, "response is Preview"); 
         }
         
         /// <summary>
@@ -716,11 +673,11 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'PostContactlistsContactlistIdContacts'
             string contactListId = null; // TODO: replace null with proper value
-            List<Contact> body = null; // TODO: replace null with proper value
+            List<DialerContact> body = null; // TODO: replace null with proper value
             bool? priority = null; // TODO: replace null with proper value
             
             var response = instance.PostContactlistsContactlistIdContacts(contactListId, body, priority);
-            Assert.IsInstanceOf<Contact> (response, "response is Contact"); 
+            Assert.IsInstanceOf<DialerContact> (response, "response is DialerContact"); 
         }
         
         /// <summary>
@@ -734,19 +691,6 @@ namespace ININ.PureCloudApi.Test
             
             var response = instance.PostContactlistsContactlistIdExport(contactListId);
             Assert.IsInstanceOf<string> (response, "response is string"); 
-        }
-        
-        /// <summary>
-        /// Test PostContactlistsPenetrationrates
-        /// </summary>
-        [Test]
-        public void PostContactlistsPenetrationratesTest()
-        {
-            // TODO: add unit test for the method 'PostContactlistsPenetrationrates'
-            List<PenetrationRateId> body = null; // TODO: replace null with proper value
-            
-            var response = instance.PostContactlistsPenetrationrates(body);
-            Assert.IsInstanceOf<List<PenetrationRate>> (response, "response is List<PenetrationRate>"); 
         }
         
         /// <summary>
@@ -800,34 +744,6 @@ namespace ININ.PureCloudApi.Test
             
             instance.PostDnclistsDnclistIdPhonenumbers(dncListId, body);
              
-        }
-        
-        /// <summary>
-        /// Test PostPreviewsPreviewIdDispositioncall
-        /// </summary>
-        [Test]
-        public void PostPreviewsPreviewIdDispositioncallTest()
-        {
-            // TODO: add unit test for the method 'PostPreviewsPreviewIdDispositioncall'
-            string previewId = null; // TODO: replace null with proper value
-            DialerDispositionCallCommand body = null; // TODO: replace null with proper value
-            
-            var response = instance.PostPreviewsPreviewIdDispositioncall(previewId, body);
-            Assert.IsInstanceOf<string> (response, "response is string"); 
-        }
-        
-        /// <summary>
-        /// Test PostPreviewsPreviewIdPlacecall
-        /// </summary>
-        [Test]
-        public void PostPreviewsPreviewIdPlacecallTest()
-        {
-            // TODO: add unit test for the method 'PostPreviewsPreviewIdPlacecall'
-            string previewId = null; // TODO: replace null with proper value
-            DialerPlaceCallCommand body = null; // TODO: replace null with proper value
-            
-            var response = instance.PostPreviewsPreviewIdPlacecall(previewId, body);
-            Assert.IsInstanceOf<DialerCall> (response, "response is DialerCall"); 
         }
         
         /// <summary>
@@ -936,10 +852,10 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'PutContactlistsContactlistIdContactsContactId'
             string contactListId = null; // TODO: replace null with proper value
             string contactId = null; // TODO: replace null with proper value
-            Contact body = null; // TODO: replace null with proper value
+            DialerContact body = null; // TODO: replace null with proper value
             
             var response = instance.PutContactlistsContactlistIdContactsContactId(contactListId, contactId, body);
-            Assert.IsInstanceOf<Contact> (response, "response is Contact"); 
+            Assert.IsInstanceOf<DialerContact> (response, "response is DialerContact"); 
         }
         
         /// <summary>

@@ -52,21 +52,39 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test the property 'SearchPhrase' 
+        /// Test the property 'Types' 
         /// </summary>
         [Test]
-        public void SearchPhraseTest()
+        public void TypesTest()
         {
-            // TODO: unit test for the property 'SearchPhrase' 
+            // TODO: unit test for the property 'Types' 
         }
         
         /// <summary>
-        /// Test the property 'PageNumber' 
+        /// Test the property 'SortOrder' 
         /// </summary>
         [Test]
-        public void PageNumberTest()
+        public void SortOrderTest()
         {
-            // TODO: unit test for the property 'PageNumber' 
+            // TODO: unit test for the property 'SortOrder' 
+        }
+        
+        /// <summary>
+        /// Test the property 'Query' 
+        /// </summary>
+        [Test]
+        public void QueryTest()
+        {
+            // TODO: unit test for the property 'Query' 
+        }
+        
+        /// <summary>
+        /// Test the property 'SortBy' 
+        /// </summary>
+        [Test]
+        public void SortByTest()
+        {
+            // TODO: unit test for the property 'SortBy' 
         }
         
         /// <summary>
@@ -79,39 +97,39 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'SearchFields' 
+        /// Test the property 'PageNumber' 
         /// </summary>
         [Test]
-        public void SearchFieldsTest()
+        public void PageNumberTest()
         {
-            // TODO: unit test for the property 'SearchFields' 
+            // TODO: unit test for the property 'PageNumber' 
         }
         
         /// <summary>
-        /// Test the property 'FacetRequests' 
+        /// Test the property 'ReturnFields' 
         /// </summary>
         [Test]
-        public void FacetRequestsTest()
+        public void ReturnFieldsTest()
         {
-            // TODO: unit test for the property 'FacetRequests' 
+            // TODO: unit test for the property 'ReturnFields' 
         }
         
         /// <summary>
-        /// Test the property 'Sort' 
+        /// Test the property 'Aggregations' 
         /// </summary>
         [Test]
-        public void SortTest()
+        public void AggregationsTest()
         {
-            // TODO: unit test for the property 'Sort' 
+            // TODO: unit test for the property 'Aggregations' 
         }
         
         /// <summary>
-        /// Test the property 'Filters' 
+        /// Test the property 'Expand' 
         /// </summary>
         [Test]
-        public void FiltersTest()
+        public void ExpandTest()
         {
-            // TODO: unit test for the property 'Filters' 
+            // TODO: unit test for the property 'Expand' 
         }
         
 

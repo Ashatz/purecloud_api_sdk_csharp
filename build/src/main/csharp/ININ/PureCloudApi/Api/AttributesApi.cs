@@ -398,7 +398,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'attributeId' when calling AttributesApi->DeleteAttributeId");
             
     
-            var localVarPath = "/api/v1/attributes/{attributeId}";
+            var localVarPath = "/api/v2/attributes/{attributeId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -483,7 +483,7 @@ namespace ININ.PureCloudApi.Api
             if (attributeId == null) throw new ApiException(400, "Missing required parameter 'attributeId' when calling DeleteAttributeId");
             
     
-            var localVarPath = "/api/v1/attributes/{attributeId}";
+            var localVarPath = "/api/v2/attributes/{attributeId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -570,7 +570,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'attributeId' when calling AttributesApi->GetAttributeId");
             
     
-            var localVarPath = "/api/v1/attributes/{attributeId}";
+            var localVarPath = "/api/v2/attributes/{attributeId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -656,7 +656,7 @@ namespace ININ.PureCloudApi.Api
             if (attributeId == null) throw new ApiException(400, "Missing required parameter 'attributeId' when calling GetAttributeId");
             
     
-            var localVarPath = "/api/v1/attributes/{attributeId}";
+            var localVarPath = "/api/v2/attributes/{attributeId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -741,7 +741,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/attributes";
+            var localVarPath = "/api/v2/attributes";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -828,7 +828,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/attributes";
+            var localVarPath = "/api/v2/attributes";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -912,7 +912,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/attributes";
+            var localVarPath = "/api/v2/attributes";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1002,7 +1002,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/attributes";
+            var localVarPath = "/api/v2/attributes";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1091,7 +1091,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/attributes/query";
+            var localVarPath = "/api/v2/attributes/query";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1181,7 +1181,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/attributes/query";
+            var localVarPath = "/api/v2/attributes/query";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1276,7 +1276,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'attributeId' when calling AttributesApi->PutAttributeId");
             
     
-            var localVarPath = "/api/v1/attributes/{attributeId}";
+            var localVarPath = "/api/v2/attributes/{attributeId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1371,7 +1371,7 @@ namespace ININ.PureCloudApi.Api
             if (attributeId == null) throw new ApiException(400, "Missing required parameter 'attributeId' when calling PutAttributeId");
             
     
-            var localVarPath = "/api/v1/attributes/{attributeId}";
+            var localVarPath = "/api/v2/attributes/{attributeId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();

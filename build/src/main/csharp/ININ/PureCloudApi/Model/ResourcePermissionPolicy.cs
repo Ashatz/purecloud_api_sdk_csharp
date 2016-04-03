@@ -21,7 +21,6 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ResourcePermissionPolicy" />class.
         /// </summary>
-        /// <param name="OrgId">OrgId.</param>
         /// <param name="Id">Id.</param>
         /// <param name="Domain">Domain.</param>
         /// <param name="EntityName">EntityName.</param>
@@ -33,9 +32,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ResourceCondition">ResourceCondition.</param>
         /// <param name="ActionSet">ActionSet.</param>
 
-        public ResourcePermissionPolicy(string OrgId = null, string Id = null, string Domain = null, string EntityName = null, string PolicyName = null, string PolicyDescription = null, string ActionSetKey = null, ResourceConditionNode ResourceConditionNode = null, List<string> NamedResources = null, string ResourceCondition = null, List<string> ActionSet = null)
+        public ResourcePermissionPolicy(string Id = null, string Domain = null, string EntityName = null, string PolicyName = null, string PolicyDescription = null, string ActionSetKey = null, ResourceConditionNode ResourceConditionNode = null, List<string> NamedResources = null, string ResourceCondition = null, List<string> ActionSet = null)
         {
-            this.OrgId = OrgId;
             this.Id = Id;
             this.Domain = Domain;
             this.EntityName = EntityName;
@@ -49,12 +47,6 @@ namespace ININ.PureCloudApi.Model
             
         }
         
-    
-        /// <summary>
-        /// Gets or Sets OrgId
-        /// </summary>
-        [DataMember(Name="orgId", EmitDefaultValue=false)]
-        public string OrgId { get; set; }
     
         /// <summary>
         /// Gets or Sets Id
@@ -124,7 +116,6 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ResourcePermissionPolicy {\n");
-            sb.Append("  OrgId: ").Append(OrgId).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Domain: ").Append(Domain).Append("\n");
             sb.Append("  EntityName: ").Append(EntityName).Append("\n");
@@ -172,11 +163,6 @@ namespace ININ.PureCloudApi.Model
                 return false;
 
             return true &&
-                (
-                    this.OrgId == other.OrgId ||
-                    this.OrgId != null &&
-                    this.OrgId.Equals(other.OrgId)
-                ) &&
                 (
                     this.Id == other.Id ||
                     this.Id != null &&
@@ -240,9 +226,6 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
-                if (this.OrgId != null)
-                    hash = hash * 59 + this.OrgId.GetHashCode();
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();

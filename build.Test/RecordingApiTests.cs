@@ -115,10 +115,9 @@ namespace ININ.PureCloudApi.Test
         {
             // TODO: add unit test for the method 'GetConversationIdRecordings'
             string conversationId = null; // TODO: replace null with proper value
-            int? maxWaitMs = null; // TODO: replace null with proper value
             string formatId = null; // TODO: replace null with proper value
             
-            var response = instance.GetConversationIdRecordings(conversationId, maxWaitMs, formatId);
+            var response = instance.GetConversationIdRecordings(conversationId, formatId);
             Assert.IsInstanceOf<List<Recording>> (response, "response is List<Recording>"); 
         }
         
@@ -131,12 +130,11 @@ namespace ININ.PureCloudApi.Test
             // TODO: add unit test for the method 'GetConversationIdRecordingsRecordingId'
             string conversationId = null; // TODO: replace null with proper value
             string recordingId = null; // TODO: replace null with proper value
-            int? maxWaitMs = null; // TODO: replace null with proper value
             string formatId = null; // TODO: replace null with proper value
             bool? download = null; // TODO: replace null with proper value
             string fileName = null; // TODO: replace null with proper value
             
-            instance.GetConversationIdRecordingsRecordingId(conversationId, recordingId, maxWaitMs, formatId, download, fileName);
+            instance.GetConversationIdRecordingsRecordingId(conversationId, recordingId, formatId, download, fileName);
              
         }
         
@@ -180,12 +178,14 @@ namespace ININ.PureCloudApi.Test
             int? pageNumber = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
             List<string> expand = null; // TODO: replace null with proper value
+            string nextPage = null; // TODO: replace null with proper value
+            string previousPage = null; // TODO: replace null with proper value
             string name = null; // TODO: replace null with proper value
             bool? enabled = null; // TODO: replace null with proper value
             bool? summary = null; // TODO: replace null with proper value
             bool? hasErrors = null; // TODO: replace null with proper value
             
-            var response = instance.GetMediaretentionpolicies(pageSize, pageNumber, sortBy, expand, name, enabled, summary, hasErrors);
+            var response = instance.GetMediaretentionpolicies(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors);
             Assert.IsInstanceOf<PolicyEntityListing> (response, "response is PolicyEntityListing"); 
         }
         
@@ -226,8 +226,10 @@ namespace ININ.PureCloudApi.Test
             int? pageNumber = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
             List<string> expand = null; // TODO: replace null with proper value
+            string nextPage = null; // TODO: replace null with proper value
+            string previousPage = null; // TODO: replace null with proper value
             
-            var response = instance.GetOrphanrecordings(pageSize, pageNumber, sortBy, expand);
+            var response = instance.GetOrphanrecordings(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
             Assert.IsInstanceOf<OrphanRecordingListing> (response, "response is OrphanRecordingListing"); 
         }
         
@@ -296,9 +298,8 @@ namespace ININ.PureCloudApi.Test
             string conversationId = null; // TODO: replace null with proper value
             string recordingId = null; // TODO: replace null with proper value
             Recording body = null; // TODO: replace null with proper value
-            int? restoreDays = null; // TODO: replace null with proper value
             
-            instance.PutConversationIdRecordingsRecordingId(conversationId, recordingId, body, restoreDays);
+            instance.PutConversationIdRecordingsRecordingId(conversationId, recordingId, body);
              
         }
         

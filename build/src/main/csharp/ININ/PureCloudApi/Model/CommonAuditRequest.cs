@@ -29,7 +29,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Facets">Facets.</param>
         /// <param name="Filters">Filters.</param>
 
-        public CommonAuditRequest(int? PageNumber = null, int? PageSize = null, List<SortBy> SortBy = null, string QueryPhrase = null, List<string> QueryFields = null, List<Facet> Facets = null, List<Filter> Filters = null)
+        public CommonAuditRequest(int? PageNumber = null, int? PageSize = null, List<SortBy> SortBy = null, string QueryPhrase = null, List<string> QueryFields = null, List<AuditFacet> Facets = null, List<AuditFilter> Filters = null)
         {
             this.PageNumber = PageNumber;
             this.PageSize = PageSize;
@@ -76,13 +76,13 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Facets
         /// </summary>
         [DataMember(Name="facets", EmitDefaultValue=false)]
-        public List<Facet> Facets { get; set; }
+        public List<AuditFacet> Facets { get; set; }
     
         /// <summary>
         /// Gets or Sets Filters
         /// </summary>
         [DataMember(Name="filters", EmitDefaultValue=false)]
-        public List<Filter> Filters { get; set; }
+        public List<AuditFilter> Filters { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object

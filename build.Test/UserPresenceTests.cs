@@ -70,21 +70,21 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'User' 
-        /// </summary>
-        [Test]
-        public void UserTest()
-        {
-            // TODO: unit test for the property 'User' 
-        }
-        
-        /// <summary>
         /// Test the property 'Source' 
         /// </summary>
         [Test]
         public void SourceTest()
         {
             // TODO: unit test for the property 'Source' 
+        }
+        
+        /// <summary>
+        /// Test the property 'Primary' 
+        /// </summary>
+        [Test]
+        public void PrimaryTest()
+        {
+            // TODO: unit test for the property 'Primary' 
         }
         
         /// <summary>
@@ -103,24 +103,6 @@ namespace ININ.PureCloudApi.Test
         public void MessageTest()
         {
             // TODO: unit test for the property 'Message' 
-        }
-        
-        /// <summary>
-        /// Test the property 'ModifiedBy' 
-        /// </summary>
-        [Test]
-        public void ModifiedByTest()
-        {
-            // TODO: unit test for the property 'ModifiedBy' 
-        }
-        
-        /// <summary>
-        /// Test the property 'ModifiedDate' 
-        /// </summary>
-        [Test]
-        public void ModifiedDateTest()
-        {
-            // TODO: unit test for the property 'ModifiedDate' 
         }
         
         /// <summary>

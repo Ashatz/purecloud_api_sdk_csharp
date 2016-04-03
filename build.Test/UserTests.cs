@@ -70,75 +70,12 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'Username' 
-        /// </summary>
-        [Test]
-        public void UsernameTest()
-        {
-            // TODO: unit test for the property 'Username' 
-        }
-        
-        /// <summary>
-        /// Test the property 'Email' 
-        /// </summary>
-        [Test]
-        public void EmailTest()
-        {
-            // TODO: unit test for the property 'Email' 
-        }
-        
-        /// <summary>
-        /// Test the property 'DisplayName' 
-        /// </summary>
-        [Test]
-        public void DisplayNameTest()
-        {
-            // TODO: unit test for the property 'DisplayName' 
-        }
-        
-        /// <summary>
-        /// Test the property 'PhoneNumber' 
-        /// </summary>
-        [Test]
-        public void PhoneNumberTest()
-        {
-            // TODO: unit test for the property 'PhoneNumber' 
-        }
-        
-        /// <summary>
-        /// Test the property 'UserImages' 
-        /// </summary>
-        [Test]
-        public void UserImagesTest()
-        {
-            // TODO: unit test for the property 'UserImages' 
-        }
-        
-        /// <summary>
         /// Test the property 'Chat' 
         /// </summary>
         [Test]
         public void ChatTest()
         {
             // TODO: unit test for the property 'Chat' 
-        }
-        
-        /// <summary>
-        /// Test the property 'Roles' 
-        /// </summary>
-        [Test]
-        public void RolesTest()
-        {
-            // TODO: unit test for the property 'Roles' 
-        }
-        
-        /// <summary>
-        /// Test the property 'VoicemailEnabled' 
-        /// </summary>
-        [Test]
-        public void VoicemailEnabledTest()
-        {
-            // TODO: unit test for the property 'VoicemailEnabled' 
         }
         
         /// <summary>
@@ -151,12 +88,75 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test the property 'Email' 
+        /// </summary>
+        [Test]
+        public void EmailTest()
+        {
+            // TODO: unit test for the property 'Email' 
+        }
+        
+        /// <summary>
+        /// Test the property 'PrimaryContactInfo' 
+        /// </summary>
+        [Test]
+        public void PrimaryContactInfoTest()
+        {
+            // TODO: unit test for the property 'PrimaryContactInfo' 
+        }
+        
+        /// <summary>
+        /// Test the property 'Addresses' 
+        /// </summary>
+        [Test]
+        public void AddressesTest()
+        {
+            // TODO: unit test for the property 'Addresses' 
+        }
+        
+        /// <summary>
+        /// Test the property 'State' 
+        /// </summary>
+        [Test]
+        public void StateTest()
+        {
+            // TODO: unit test for the property 'State' 
+        }
+        
+        /// <summary>
         /// Test the property 'Title' 
         /// </summary>
         [Test]
         public void TitleTest()
         {
             // TODO: unit test for the property 'Title' 
+        }
+        
+        /// <summary>
+        /// Test the property 'Username' 
+        /// </summary>
+        [Test]
+        public void UsernameTest()
+        {
+            // TODO: unit test for the property 'Username' 
+        }
+        
+        /// <summary>
+        /// Test the property 'Images' 
+        /// </summary>
+        [Test]
+        public void ImagesTest()
+        {
+            // TODO: unit test for the property 'Images' 
+        }
+        
+        /// <summary>
+        /// Test the property 'Version' 
+        /// </summary>
+        [Test]
+        public void VersionTest()
+        {
+            // TODO: unit test for the property 'Version' 
         }
         
         /// <summary>
@@ -169,30 +169,12 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'Password' 
+        /// Test the property 'Presence' 
         /// </summary>
         [Test]
-        public void PasswordTest()
+        public void PresenceTest()
         {
-            // TODO: unit test for the property 'Password' 
-        }
-        
-        /// <summary>
-        /// Test the property 'PrimaryPresence' 
-        /// </summary>
-        [Test]
-        public void PrimaryPresenceTest()
-        {
-            // TODO: unit test for the property 'PrimaryPresence' 
-        }
-        
-        /// <summary>
-        /// Test the property 'Conversations' 
-        /// </summary>
-        [Test]
-        public void ConversationsTest()
-        {
-            // TODO: unit test for the property 'Conversations' 
+            // TODO: unit test for the property 'Presence' 
         }
         
         /// <summary>
@@ -223,12 +205,21 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'Permissions' 
+        /// Test the property 'Station' 
         /// </summary>
         [Test]
-        public void PermissionsTest()
+        public void StationTest()
         {
-            // TODO: unit test for the property 'Permissions' 
+            // TODO: unit test for the property 'Station' 
+        }
+        
+        /// <summary>
+        /// Test the property 'Authorization' 
+        /// </summary>
+        [Test]
+        public void AuthorizationTest()
+        {
+            // TODO: unit test for the property 'Authorization' 
         }
         
         /// <summary>
@@ -238,42 +229,6 @@ namespace ININ.PureCloudApi.Test
         public void SelfUriTest()
         {
             // TODO: unit test for the property 'SelfUri' 
-        }
-        
-        /// <summary>
-        /// Test the property 'RequestedStatus' 
-        /// </summary>
-        [Test]
-        public void RequestedStatusTest()
-        {
-            // TODO: unit test for the property 'RequestedStatus' 
-        }
-        
-        /// <summary>
-        /// Test the property 'DefaultStationUri' 
-        /// </summary>
-        [Test]
-        public void DefaultStationUriTest()
-        {
-            // TODO: unit test for the property 'DefaultStationUri' 
-        }
-        
-        /// <summary>
-        /// Test the property 'StationUri' 
-        /// </summary>
-        [Test]
-        public void StationUriTest()
-        {
-            // TODO: unit test for the property 'StationUri' 
-        }
-        
-        /// <summary>
-        /// Test the property 'LastStationUri' 
-        /// </summary>
-        [Test]
-        public void LastStationUriTest()
-        {
-            // TODO: unit test for the property 'LastStationUri' 
         }
         
 

@@ -38,7 +38,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Entity">Entity.</param>
         /// <param name="ServiceContext">ServiceContext.</param>
 
-        public AuditMessage(string Id = null, User User = null, string CorrelationId = null, string TransactionId = null, bool? TransactionInitiator = null, string Application = null, string ServiceName = null, string Level = null, string Timestamp = null, string ReceivedTimestamp = null, string Status = null, string ActionContext = null, string Action = null, List<Change> Changes = null, Entity Entity = null, ServiceContext ServiceContext = null)
+        public AuditMessage(string Id = null, AuditUser User = null, string CorrelationId = null, string TransactionId = null, bool? TransactionInitiator = null, string Application = null, string ServiceName = null, string Level = null, string Timestamp = null, string ReceivedTimestamp = null, string Status = null, string ActionContext = null, string Action = null, List<Change> Changes = null, AuditEntity Entity = null, ServiceContext ServiceContext = null)
         {
             this.Id = Id;
             this.User = User;
@@ -78,7 +78,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public User User { get; set; }
+        public AuditUser User { get; set; }
     
         /// <summary>
         /// Gets or Sets CorrelationId
@@ -156,7 +156,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Entity
         /// </summary>
         [DataMember(Name="entity", EmitDefaultValue=false)]
-        public Entity Entity { get; set; }
+        public AuditEntity Entity { get; set; }
     
         /// <summary>
         /// Gets or Sets ServiceContext

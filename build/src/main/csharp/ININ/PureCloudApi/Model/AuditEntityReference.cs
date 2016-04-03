@@ -52,25 +52,7 @@ namespace ININ.PureCloudApi.Model
             User,
             
             [EnumMember(Value = "PUBLIC")]
-            Public,
-            
-            [EnumMember(Value = "FILE")]
-            File,
-            
-            [EnumMember(Value = "INDEX")]
-            Index,
-            
-            [EnumMember(Value = "DATABASE")]
-            Database,
-            
-            [EnumMember(Value = "PROPERTY")]
-            Property,
-            
-            [EnumMember(Value = "TEXT")]
-            Text,
-            
-            [EnumMember(Value = "THUMBNAIL")]
-            Thumbnail
+            Public
         }
         
         /// <summary>

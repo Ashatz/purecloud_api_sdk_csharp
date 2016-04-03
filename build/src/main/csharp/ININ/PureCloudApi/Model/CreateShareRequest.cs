@@ -56,7 +56,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Member">Member.</param>
         /// <param name="Members">Members.</param>
 
-        public CreateShareRequest(SharedEntityTypeEnum? SharedEntityType = null, Entity SharedEntity = null, MemberTypeEnum? MemberType = null, Entity Member = null, List<CreateShareRequestMember> Members = null)
+        public CreateShareRequest(SharedEntityTypeEnum? SharedEntityType = null, SharedEntity SharedEntity = null, MemberTypeEnum? MemberType = null, SharedEntity Member = null, List<CreateShareRequestMember> Members = null)
         {
             this.SharedEntityType = SharedEntityType;
             this.SharedEntity = SharedEntity;
@@ -71,13 +71,13 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets SharedEntity
         /// </summary>
         [DataMember(Name="sharedEntity", EmitDefaultValue=false)]
-        public Entity SharedEntity { get; set; }
+        public SharedEntity SharedEntity { get; set; }
     
         /// <summary>
         /// Gets or Sets Member
         /// </summary>
         [DataMember(Name="member", EmitDefaultValue=false)]
-        public Entity Member { get; set; }
+        public SharedEntity Member { get; set; }
     
         /// <summary>
         /// Gets or Sets Members

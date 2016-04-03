@@ -56,7 +56,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Conversation">Conversation.</param>
-        /// <param name="EvaluationForm">EvaluationForm.</param>
+        /// <param name="EvaluationForm">Evaluation form used for evaluation..</param>
         /// <param name="Evaluator">Evaluator.</param>
         /// <param name="Agent">Agent.</param>
         /// <param name="Calibration">Calibration.</param>
@@ -139,8 +139,9 @@ namespace ININ.PureCloudApi.Model
         public Conversation Conversation { get; set; }
     
         /// <summary>
-        /// Gets or Sets EvaluationForm
+        /// Evaluation form used for evaluation.
         /// </summary>
+        /// <value>Evaluation form used for evaluation.</value>
         [DataMember(Name="evaluationForm", EmitDefaultValue=false)]
         public EvaluationForm EvaluationForm { get; set; }
     

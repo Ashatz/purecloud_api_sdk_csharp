@@ -97,6 +97,33 @@ namespace ININ.PureCloudApi.Test
             Assert.IsInstanceOf<GroupEntityListing> (response, "response is GroupEntityListing"); 
         }
         
+        /// <summary>
+        /// Test GetSearch
+        /// </summary>
+        [Test]
+        public void GetSearchTest()
+        {
+            // TODO: add unit test for the method 'GetSearch'
+            string q64 = null; // TODO: replace null with proper value
+            List<string> expand = null; // TODO: replace null with proper value
+            
+            var response = instance.GetSearch(q64, expand);
+            Assert.IsInstanceOf<GroupsSearchResponse> (response, "response is GroupsSearchResponse"); 
+        }
+        
+        /// <summary>
+        /// Test PostSearch
+        /// </summary>
+        [Test]
+        public void PostSearchTest()
+        {
+            // TODO: add unit test for the method 'PostSearch'
+            SearchRequest body = null; // TODO: replace null with proper value
+            
+            var response = instance.PostSearch(body);
+            Assert.IsInstanceOf<GroupsSearchResponse> (response, "response is GroupsSearchResponse"); 
+        }
+        
     }
 
 }

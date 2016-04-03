@@ -83,6 +83,19 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test DeleteFormsFormId
+        /// </summary>
+        [Test]
+        public void DeleteFormsFormIdTest()
+        {
+            // TODO: add unit test for the method 'DeleteFormsFormId'
+            string formId = null; // TODO: replace null with proper value
+            
+            var response = instance.DeleteFormsFormId(formId);
+            Assert.IsInstanceOf<string> (response, "response is string"); 
+        }
+        
+        /// <summary>
         /// Test GetAgentsActivity
         /// </summary>
         [Test]
@@ -93,6 +106,8 @@ namespace ININ.PureCloudApi.Test
             int? pageNumber = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
             List<string> expand = null; // TODO: replace null with proper value
+            string nextPage = null; // TODO: replace null with proper value
+            string previousPage = null; // TODO: replace null with proper value
             DateTime? startTime = null; // TODO: replace null with proper value
             DateTime? endTime = null; // TODO: replace null with proper value
             List<string> agentUserId = null; // TODO: replace null with proper value
@@ -100,7 +115,7 @@ namespace ININ.PureCloudApi.Test
             string name = null; // TODO: replace null with proper value
             string group = null; // TODO: replace null with proper value
             
-            var response = instance.GetAgentsActivity(pageSize, pageNumber, sortBy, expand, startTime, endTime, agentUserId, evaluatorUserId, name, group);
+            var response = instance.GetAgentsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group);
             Assert.IsInstanceOf<AgentActivityEntityListing> (response, "response is AgentActivityEntityListing"); 
         }
         
@@ -111,16 +126,18 @@ namespace ININ.PureCloudApi.Test
         public void GetCalibrationsTest()
         {
             // TODO: add unit test for the method 'GetCalibrations'
+            string calibratorId = null; // TODO: replace null with proper value
             int? pageSize = null; // TODO: replace null with proper value
             int? pageNumber = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
             List<string> expand = null; // TODO: replace null with proper value
+            string nextPage = null; // TODO: replace null with proper value
+            string previousPage = null; // TODO: replace null with proper value
             string conversationId = null; // TODO: replace null with proper value
             DateTime? startTime = null; // TODO: replace null with proper value
             DateTime? endTime = null; // TODO: replace null with proper value
-            string calibratorId = null; // TODO: replace null with proper value
             
-            var response = instance.GetCalibrations(pageSize, pageNumber, sortBy, expand, conversationId, startTime, endTime, calibratorId);
+            var response = instance.GetCalibrations(calibratorId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, startTime, endTime);
             Assert.IsInstanceOf<CalibrationEntityListing> (response, "response is CalibrationEntityListing"); 
         }
         
@@ -150,10 +167,12 @@ namespace ININ.PureCloudApi.Test
             int? pageNumber = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
             List<string> expand = null; // TODO: replace null with proper value
+            string nextPage = null; // TODO: replace null with proper value
+            string previousPage = null; // TODO: replace null with proper value
             string recordingId = null; // TODO: replace null with proper value
             string entityType = null; // TODO: replace null with proper value
             
-            var response = instance.GetConversationsConversationIdAudits(conversationId, pageSize, pageNumber, sortBy, expand, recordingId, entityType);
+            var response = instance.GetConversationsConversationIdAudits(conversationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, recordingId, entityType);
             Assert.IsInstanceOf<QualityAuditPage> (response, "response is QualityAuditPage"); 
         }
         
@@ -183,6 +202,8 @@ namespace ININ.PureCloudApi.Test
             int? pageNumber = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
             List<string> expand = null; // TODO: replace null with proper value
+            string nextPage = null; // TODO: replace null with proper value
+            string previousPage = null; // TODO: replace null with proper value
             string conversationId = null; // TODO: replace null with proper value
             string agentUserId = null; // TODO: replace null with proper value
             string evaluatorUserId = null; // TODO: replace null with proper value
@@ -195,7 +216,7 @@ namespace ININ.PureCloudApi.Test
             bool? expandAnswerTotalScores = null; // TODO: replace null with proper value
             int? maximum = null; // TODO: replace null with proper value
             
-            var response = instance.GetEvaluationsQuery(pageSize, pageNumber, sortBy, expand, conversationId, agentUserId, evaluatorUserId, queueId, startTime, endTime, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum);
+            var response = instance.GetEvaluationsQuery(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, evaluatorUserId, queueId, startTime, endTime, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum);
             Assert.IsInstanceOf<EvaluationEntityListing> (response, "response is EvaluationEntityListing"); 
         }
         
@@ -210,14 +231,91 @@ namespace ININ.PureCloudApi.Test
             int? pageNumber = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
             List<string> expand = null; // TODO: replace null with proper value
+            string nextPage = null; // TODO: replace null with proper value
+            string previousPage = null; // TODO: replace null with proper value
             DateTime? startTime = null; // TODO: replace null with proper value
             DateTime? endTime = null; // TODO: replace null with proper value
             string name = null; // TODO: replace null with proper value
             List<string> permission = null; // TODO: replace null with proper value
             string group = null; // TODO: replace null with proper value
             
-            var response = instance.GetEvaluatorsActivity(pageSize, pageNumber, sortBy, expand, startTime, endTime, name, permission, group);
+            var response = instance.GetEvaluatorsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, name, permission, group);
             Assert.IsInstanceOf<EvaluatorActivityEntityListing> (response, "response is EvaluatorActivityEntityListing"); 
+        }
+        
+        /// <summary>
+        /// Test GetForms
+        /// </summary>
+        [Test]
+        public void GetFormsTest()
+        {
+            // TODO: add unit test for the method 'GetForms'
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            string sortBy = null; // TODO: replace null with proper value
+            string nextPage = null; // TODO: replace null with proper value
+            string previousPage = null; // TODO: replace null with proper value
+            string expand = null; // TODO: replace null with proper value
+            string name = null; // TODO: replace null with proper value
+            
+            var response = instance.GetForms(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name);
+            Assert.IsInstanceOf<EvaluationFormEntityListing> (response, "response is EvaluationFormEntityListing"); 
+        }
+        
+        /// <summary>
+        /// Test GetFormsFormId
+        /// </summary>
+        [Test]
+        public void GetFormsFormIdTest()
+        {
+            // TODO: add unit test for the method 'GetFormsFormId'
+            string formId = null; // TODO: replace null with proper value
+            
+            var response = instance.GetFormsFormId(formId);
+            Assert.IsInstanceOf<EvaluationForm> (response, "response is EvaluationForm"); 
+        }
+        
+        /// <summary>
+        /// Test GetFormsFormIdVersions
+        /// </summary>
+        [Test]
+        public void GetFormsFormIdVersionsTest()
+        {
+            // TODO: add unit test for the method 'GetFormsFormIdVersions'
+            string formId = null; // TODO: replace null with proper value
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            
+            var response = instance.GetFormsFormIdVersions(formId, pageSize, pageNumber);
+            Assert.IsInstanceOf<EvaluationFormEntityListing> (response, "response is EvaluationFormEntityListing"); 
+        }
+        
+        /// <summary>
+        /// Test GetPublishedforms
+        /// </summary>
+        [Test]
+        public void GetPublishedformsTest()
+        {
+            // TODO: add unit test for the method 'GetPublishedforms'
+            int? pageSize = null; // TODO: replace null with proper value
+            int? pageNumber = null; // TODO: replace null with proper value
+            string name = null; // TODO: replace null with proper value
+            
+            var response = instance.GetPublishedforms(pageSize, pageNumber, name);
+            Assert.IsInstanceOf<EvaluationFormEntityListing> (response, "response is EvaluationFormEntityListing"); 
+        }
+        
+        /// <summary>
+        /// Test GetPublishedformsFormId
+        /// </summary>
+        [Test]
+        public void GetPublishedformsFormIdTest()
+        {
+            // TODO: add unit test for the method 'GetPublishedformsFormId'
+            string formId = null; // TODO: replace null with proper value
+            
+            var response = instance.GetPublishedformsFormId(formId);
+            Assert.IsInstanceOf<EvaluationForm> (response, "response is EvaluationForm"); 
         }
         
         /// <summary>
@@ -250,17 +348,16 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PostEvaluationsQuery
+        /// Test PostEvaluationsAggregatesQuery
         /// </summary>
         [Test]
-        public void PostEvaluationsQueryTest()
+        public void PostEvaluationsAggregatesQueryTest()
         {
-            // TODO: add unit test for the method 'PostEvaluationsQuery'
-            EvaluationQueryRequest body = null; // TODO: replace null with proper value
-            string expand = null; // TODO: replace null with proper value
+            // TODO: add unit test for the method 'PostEvaluationsAggregatesQuery'
+            AggregationQuery body = null; // TODO: replace null with proper value
             
-            var response = instance.PostEvaluationsQuery(body, expand);
-            Assert.IsInstanceOf<EvaluationEntityListing> (response, "response is EvaluationEntityListing"); 
+            var response = instance.PostEvaluationsAggregatesQuery(body);
+            Assert.IsInstanceOf<AggregateQueryResponse> (response, "response is AggregateQueryResponse"); 
         }
         
         /// <summary>
@@ -274,6 +371,32 @@ namespace ININ.PureCloudApi.Test
             
             var response = instance.PostEvaluationsScoring(body);
             Assert.IsInstanceOf<EvaluationScoringSet> (response, "response is EvaluationScoringSet"); 
+        }
+        
+        /// <summary>
+        /// Test PostForms
+        /// </summary>
+        [Test]
+        public void PostFormsTest()
+        {
+            // TODO: add unit test for the method 'PostForms'
+            EvaluationForm body = null; // TODO: replace null with proper value
+            
+            var response = instance.PostForms(body);
+            Assert.IsInstanceOf<EvaluationForm> (response, "response is EvaluationForm"); 
+        }
+        
+        /// <summary>
+        /// Test PostPublishedforms
+        /// </summary>
+        [Test]
+        public void PostPublishedformsTest()
+        {
+            // TODO: add unit test for the method 'PostPublishedforms'
+            EvaluationForm body = null; // TODO: replace null with proper value
+            
+            var response = instance.PostPublishedforms(body);
+            Assert.IsInstanceOf<EvaluationForm> (response, "response is EvaluationForm"); 
         }
         
         /// <summary>
@@ -304,6 +427,20 @@ namespace ININ.PureCloudApi.Test
             
             var response = instance.PutConversationsConversationIdEvaluationsEvaluationId(conversationId, evaluationId, body, expand);
             Assert.IsInstanceOf<Evaluation> (response, "response is Evaluation"); 
+        }
+        
+        /// <summary>
+        /// Test PutFormsFormId
+        /// </summary>
+        [Test]
+        public void PutFormsFormIdTest()
+        {
+            // TODO: add unit test for the method 'PutFormsFormId'
+            string formId = null; // TODO: replace null with proper value
+            EvaluationForm body = null; // TODO: replace null with proper value
+            
+            var response = instance.PutFormsFormId(formId, body);
+            Assert.IsInstanceOf<EvaluationForm> (response, "response is EvaluationForm"); 
         }
         
     }

@@ -97,33 +97,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'BuildJdk' 
-        /// </summary>
-        [Test]
-        public void BuildJdkTest()
-        {
-            // TODO: unit test for the property 'BuildJdk' 
-        }
-        
-        /// <summary>
-        /// Test the property 'BuiltBy' 
-        /// </summary>
-        [Test]
-        public void BuiltByTest()
-        {
-            // TODO: unit test for the property 'BuiltBy' 
-        }
-        
-        /// <summary>
-        /// Test the property 'ImplementationBuild' 
-        /// </summary>
-        [Test]
-        public void ImplementationBuildTest()
-        {
-            // TODO: unit test for the property 'ImplementationBuild' 
-        }
-        
-        /// <summary>
         /// Test the property 'ImplementationVersion' 
         /// </summary>
         [Test]

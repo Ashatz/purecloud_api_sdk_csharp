@@ -17,26 +17,39 @@ namespace ININ.PureCloudApi.Model
     [DataContract]
     public partial class OAuthClient :  IEquatable<OAuthClient>
     { 
+    
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum AuthorizedGrantTypeEnum {
+            
+            [EnumMember(Value = "CODE")]
+            Code,
+            
+            [EnumMember(Value = "TOKEN")]
+            Token,
+            
+            [EnumMember(Value = "CLIENT-CREDENTIALS")]
+            Clientcredentials
+        }
         
-        public static string AuthorizedGrantTypes_Code = "CODE";
-        public static string AuthorizedGrantTypes_Token = "TOKEN";
-        public static string AuthorizedGrantTypes_Saml2bearer = "SAML2BEARER";
-        public static string AuthorizedGrantTypes_Password = "PASSWORD";
-        public static string AuthorizedGrantTypes_ClientCredentials = "CLIENT_CREDENTIALS";
-        
-        
+        /// <summary>
+        /// The OAuth Grant/Client type supported by this client.
+        /// </summary>
+        /// <value>The OAuth Grant/Client type supported by this client.</value>
+        [DataMember(Name="authorizedGrantType", EmitDefaultValue=false)]
+        public AuthorizedGrantTypeEnum? AuthorizedGrantType { get; set; }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="OAuthClient" />class.
         /// </summary>
         /// <param name="Name">The name of the OAuth client. (required).</param>
         /// <param name="AccessTokenValiditySeconds">The number of seconds, between 5mins and 48hrs, until tokens created with this client expire. If this field is omitted, a default of 24 hours will be applied..</param>
-        /// <param name="AuthorizedGrantTypes">The OAuth Grant/Client type supported by this client. (required).</param>
         /// <param name="Description">Description.</param>
         /// <param name="RegisteredRedirectUri">List of allowed callbacks for this client. For example: https://myap.example.com/auth/callback (required).</param>
         /// <param name="Secret">System created secret assigned to this client. Secrets are required for code authorization grants..</param>
         /// <param name="RoleIds">Roles assigned to this client. Roles only apply to clients using the client_credential grant.</param>
+        /// <param name="AuthorizedGrantType">The OAuth Grant/Client type supported by this client. (required).</param>
 
-        public OAuthClient(string Name = null, long? AccessTokenValiditySeconds = null, List<string> AuthorizedGrantTypes = null, string Description = null, List<string> RegisteredRedirectUri = null, string Secret = null, List<string> RoleIds = null)
+        public OAuthClient(string Name = null, long? AccessTokenValiditySeconds = null, string Description = null, List<string> RegisteredRedirectUri = null, string Secret = null, List<string> RoleIds = null, AuthorizedGrantTypeEnum? AuthorizedGrantType = null)
         {
             // to ensure "Name" is required (not null)
             if (Name == null)
@@ -47,15 +60,6 @@ namespace ININ.PureCloudApi.Model
             {
                 this.Name = Name;
             }
-            // to ensure "AuthorizedGrantTypes" is required (not null)
-            if (AuthorizedGrantTypes == null)
-            {
-                throw new InvalidDataException("AuthorizedGrantTypes is a required property for OAuthClient and cannot be null");
-            }
-            else
-            {
-                this.AuthorizedGrantTypes = AuthorizedGrantTypes;
-            }
             // to ensure "RegisteredRedirectUri" is required (not null)
             if (RegisteredRedirectUri == null)
             {
@@ -64,6 +68,15 @@ namespace ININ.PureCloudApi.Model
             else
             {
                 this.RegisteredRedirectUri = RegisteredRedirectUri;
+            }
+            // to ensure "AuthorizedGrantType" is required (not null)
+            if (AuthorizedGrantType == null)
+            {
+                throw new InvalidDataException("AuthorizedGrantType is a required property for OAuthClient and cannot be null");
+            }
+            else
+            {
+                this.AuthorizedGrantType = AuthorizedGrantType;
             }
             this.AccessTokenValiditySeconds = AccessTokenValiditySeconds;
             this.Description = Description;
@@ -93,13 +106,6 @@ namespace ININ.PureCloudApi.Model
         /// <value>The number of seconds, between 5mins and 48hrs, until tokens created with this client expire. If this field is omitted, a default of 24 hours will be applied.</value>
         [DataMember(Name="accessTokenValiditySeconds", EmitDefaultValue=false)]
         public long? AccessTokenValiditySeconds { get; set; }
-    
-        /// <summary>
-        /// The OAuth Grant/Client type supported by this client.
-        /// </summary>
-        /// <value>The OAuth Grant/Client type supported by this client.</value>
-        [DataMember(Name="authorizedGrantTypes", EmitDefaultValue=false)]
-        public List<string> AuthorizedGrantTypes { get; set; }
     
         /// <summary>
         /// Gets or Sets Description
@@ -146,11 +152,11 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  AccessTokenValiditySeconds: ").Append(AccessTokenValiditySeconds).Append("\n");
-            sb.Append("  AuthorizedGrantTypes: ").Append(AuthorizedGrantTypes).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  RegisteredRedirectUri: ").Append(RegisteredRedirectUri).Append("\n");
             sb.Append("  Secret: ").Append(Secret).Append("\n");
             sb.Append("  RoleIds: ").Append(RoleIds).Append("\n");
+            sb.Append("  AuthorizedGrantType: ").Append(AuthorizedGrantType).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
@@ -205,11 +211,6 @@ namespace ININ.PureCloudApi.Model
                     this.AccessTokenValiditySeconds.Equals(other.AccessTokenValiditySeconds)
                 ) &&
                 (
-                    this.AuthorizedGrantTypes == other.AuthorizedGrantTypes ||
-                    this.AuthorizedGrantTypes != null &&
-                    this.AuthorizedGrantTypes.SequenceEqual(other.AuthorizedGrantTypes)
-                ) &&
-                (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
@@ -228,6 +229,11 @@ namespace ININ.PureCloudApi.Model
                     this.RoleIds == other.RoleIds ||
                     this.RoleIds != null &&
                     this.RoleIds.SequenceEqual(other.RoleIds)
+                ) &&
+                (
+                    this.AuthorizedGrantType == other.AuthorizedGrantType ||
+                    this.AuthorizedGrantType != null &&
+                    this.AuthorizedGrantType.Equals(other.AuthorizedGrantType)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -257,9 +263,6 @@ namespace ININ.PureCloudApi.Model
                 if (this.AccessTokenValiditySeconds != null)
                     hash = hash * 59 + this.AccessTokenValiditySeconds.GetHashCode();
                 
-                if (this.AuthorizedGrantTypes != null)
-                    hash = hash * 59 + this.AuthorizedGrantTypes.GetHashCode();
-                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
                 
@@ -271,6 +274,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.RoleIds != null)
                     hash = hash * 59 + this.RoleIds.GetHashCode();
+                
+                if (this.AuthorizedGrantType != null)
+                    hash = hash * 59 + this.AuthorizedGrantType.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -151,15 +151,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'WrapupCodes' 
-        /// </summary>
-        [Test]
-        public void WrapupCodesTest()
-        {
-            // TODO: unit test for the property 'WrapupCodes' 
-        }
-        
-        /// <summary>
         /// Test the property 'MediaSettings' 
         /// </summary>
         [Test]
@@ -184,15 +175,6 @@ namespace ININ.PureCloudApi.Test
         public void AcwSettingsTest()
         {
             // TODO: unit test for the property 'AcwSettings' 
-        }
-        
-        /// <summary>
-        /// Test the property 'PhoneNumber' 
-        /// </summary>
-        [Test]
-        public void PhoneNumberTest()
-        {
-            // TODO: unit test for the property 'PhoneNumber' 
         }
         
         /// <summary>

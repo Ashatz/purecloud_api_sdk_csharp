@@ -49,8 +49,10 @@ namespace ININ.PureCloudApi.Model
         /// <param name="UploadUri">UploadUri.</param>
         /// <param name="UploadStatus">UploadStatus.</param>
         /// <param name="HasDefault">HasDefault (default to false).</param>
+        /// <param name="LanguageDefault">LanguageDefault (default to false).</param>
+        /// <param name="Tags">Tags.</param>
 
-        public SystemPromptAsset(string Name = null, string PromptId = null, string Language = null, double? DurationSeconds = null, string MediaUri = null, string TtsString = null, string UploadUri = null, UploadStatusEnum? UploadStatus = null, bool? HasDefault = null)
+        public SystemPromptAsset(string Name = null, string PromptId = null, string Language = null, double? DurationSeconds = null, string MediaUri = null, string TtsString = null, string UploadUri = null, UploadStatusEnum? UploadStatus = null, bool? HasDefault = null, bool? LanguageDefault = null, Dictionary<string, string> Tags = null)
         {
             this.Name = Name;
             this.PromptId = PromptId;
@@ -69,6 +71,16 @@ namespace ININ.PureCloudApi.Model
             {
                 this.HasDefault = HasDefault;
             }
+            // use default value if no "LanguageDefault" provided
+            if (LanguageDefault == null)
+            {
+                this.LanguageDefault = false;
+            }
+            else
+            {
+                this.LanguageDefault = LanguageDefault;
+            }
+            this.Tags = Tags;
             
         }
         
@@ -129,6 +141,18 @@ namespace ININ.PureCloudApi.Model
         public bool? HasDefault { get; set; }
     
         /// <summary>
+        /// Gets or Sets LanguageDefault
+        /// </summary>
+        [DataMember(Name="languageDefault", EmitDefaultValue=false)]
+        public bool? LanguageDefault { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Tags
+        /// </summary>
+        [DataMember(Name="tags", EmitDefaultValue=false)]
+        public Dictionary<string, string> Tags { get; set; }
+    
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -153,6 +177,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  UploadUri: ").Append(UploadUri).Append("\n");
             sb.Append("  UploadStatus: ").Append(UploadStatus).Append("\n");
             sb.Append("  HasDefault: ").Append(HasDefault).Append("\n");
+            sb.Append("  LanguageDefault: ").Append(LanguageDefault).Append("\n");
+            sb.Append("  Tags: ").Append(Tags).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
@@ -242,6 +268,16 @@ namespace ININ.PureCloudApi.Model
                     this.HasDefault.Equals(other.HasDefault)
                 ) &&
                 (
+                    this.LanguageDefault == other.LanguageDefault ||
+                    this.LanguageDefault != null &&
+                    this.LanguageDefault.Equals(other.LanguageDefault)
+                ) &&
+                (
+                    this.Tags == other.Tags ||
+                    this.Tags != null &&
+                    this.Tags.SequenceEqual(other.Tags)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -289,6 +325,12 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.HasDefault != null)
                     hash = hash * 59 + this.HasDefault.GetHashCode();
+                
+                if (this.LanguageDefault != null)
+                    hash = hash * 59 + this.LanguageDefault.GetHashCode();
+                
+                if (this.Tags != null)
+                    hash = hash * 59 + this.Tags.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

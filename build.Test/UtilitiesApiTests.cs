@@ -54,18 +54,6 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test GetCheck
-        /// </summary>
-        [Test]
-        public void GetCheckTest()
-        {
-            // TODO: add unit test for the method 'GetCheck'
-            
-            var response = instance.GetCheck();
-            Assert.IsInstanceOf<HealthCheckInfo> (response, "response is HealthCheckInfo"); 
-        }
-        
-        /// <summary>
         /// Test GetDate
         /// </summary>
         [Test]
@@ -89,19 +77,6 @@ namespace ININ.PureCloudApi.Test
             
             var response = instance.GetTimezones(pageSize, pageNumber);
             Assert.IsInstanceOf<TimeZoneEntityListing> (response, "response is TimeZoneEntityListing"); 
-        }
-        
-        /// <summary>
-        /// Test PostAddressvalidation
-        /// </summary>
-        [Test]
-        public void PostAddressvalidationTest()
-        {
-            // TODO: add unit test for the method 'PostAddressvalidation'
-            ValidateAddressRequest body = null; // TODO: replace null with proper value
-            
-            var response = instance.PostAddressvalidation(body);
-            Assert.IsInstanceOf<ValidateAddressResponse> (response, "response is ValidateAddressResponse"); 
         }
         
         /// <summary>

@@ -52,24 +52,6 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test the property 'AccountCodeDigits' 
-        /// </summary>
-        [Test]
-        public void AccountCodeDigitsTest()
-        {
-            // TODO: unit test for the property 'AccountCodeDigits' 
-        }
-        
-        /// <summary>
-        /// Test the property 'PostConnectDigits' 
-        /// </summary>
-        [Test]
-        public void PostConnectDigitsTest()
-        {
-            // TODO: unit test for the property 'PostConnectDigits' 
-        }
-        
-        /// <summary>
         /// Test the property 'Address' 
         /// </summary>
         [Test]

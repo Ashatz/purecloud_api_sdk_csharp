@@ -97,30 +97,12 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'Licenses' 
-        /// </summary>
-        [Test]
-        public void LicensesTest()
-        {
-            // TODO: unit test for the property 'Licenses' 
-        }
-        
-        /// <summary>
         /// Test the property 'PermissionPolicies' 
         /// </summary>
         [Test]
         public void PermissionPoliciesTest()
         {
             // TODO: unit test for the property 'PermissionPolicies' 
-        }
-        
-        /// <summary>
-        /// Test the property 'Code' 
-        /// </summary>
-        [Test]
-        public void CodeTest()
-        {
-            // TODO: unit test for the property 'Code' 
         }
         
         /// <summary>

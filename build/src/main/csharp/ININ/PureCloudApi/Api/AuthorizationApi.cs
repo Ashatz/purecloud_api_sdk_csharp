@@ -48,7 +48,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns></returns>
-        void DeleteUsersUserIdRoles (string userId);
+        void DeleteUserIdRoles (string userId);
   
         /// <summary>
         /// Removes all the roles from the user.
@@ -59,31 +59,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteUsersUserIdRolesWithHttpInfo (string userId);
-        
-        /// <summary>
-        /// Retrieve a list of all licenses defined in the system
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <returns>DomainLicenseEntityListing</returns>
-        DomainLicenseEntityListing GetLicenses (int? pageSize = null, int? pageNumber = null);
-  
-        /// <summary>
-        /// Retrieve a list of all licenses defined in the system
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <returns>ApiResponse of DomainLicenseEntityListing</returns>
-        ApiResponse<DomainLicenseEntityListing> GetLicensesWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        ApiResponse<Object> DeleteUserIdRolesWithHttpInfo (string userId);
         
         /// <summary>
         /// Get all permissions.
@@ -140,10 +116,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">The page number requested</param>
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
+        /// <param name="nextPage">next page token</param>
+        /// <param name="previousPage">Previous page token</param>
         /// <param name="permission"></param>
         /// <param name="userCount"></param>
         /// <returns>OrganizationRoleEntityListing</returns>
-        OrganizationRoleEntityListing GetRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, List<string> permission = null, bool? userCount = null);
+        OrganizationRoleEntityListing GetRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> permission = null, bool? userCount = null);
   
         /// <summary>
         /// Retrieve a list of all roles defined for the organization
@@ -156,10 +134,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">The page number requested</param>
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
+        /// <param name="nextPage">next page token</param>
+        /// <param name="previousPage">Previous page token</param>
         /// <param name="permission"></param>
         /// <param name="userCount"></param>
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
-        ApiResponse<OrganizationRoleEntityListing> GetRolesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, List<string> permission = null, bool? userCount = null);
+        ApiResponse<OrganizationRoleEntityListing> GetRolesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> permission = null, bool? userCount = null);
         
         /// <summary>
         /// Get an org role to default role comparison comparison
@@ -208,7 +188,7 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<DomainOrganizationRole> GetRolesRoleIdWithHttpInfo (string roleId);
         
         /// <summary>
-        /// Get the list of roles for a user.
+        /// Returns a listing of roles and permissions for a user.
         /// </summary>
         /// <remarks>
         /// 
@@ -216,10 +196,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>UserAuthorization</returns>
-        UserAuthorization GetUsersUserIdRoles (string userId);
+        UserAuthorization GetUserIdRoles (string userId);
   
         /// <summary>
-        /// Get the list of roles for a user.
+        /// Returns a listing of roles and permissions for a user.
         /// </summary>
         /// <remarks>
         /// 
@@ -227,7 +207,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
-        ApiResponse<UserAuthorization> GetUsersUserIdRolesWithHttpInfo (string userId);
+        ApiResponse<UserAuthorization> GetUserIdRolesWithHttpInfo (string userId);
         
         /// <summary>
         /// Patch Organization Role for needsUpdate Field
@@ -426,8 +406,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
-        /// <returns>List&lt;string&gt;</returns>
-        List<string> PutUsersUserIdRoles (string userId, List<string> body = null);
+        /// <returns>UserAuthorization</returns>
+        UserAuthorization PutUserIdRoles (string userId, List<string> body = null);
   
         /// <summary>
         /// Sets the user&#39;s roles
@@ -438,8 +418,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
-        /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        ApiResponse<List<string>> PutUsersUserIdRolesWithHttpInfo (string userId, List<string> body = null);
+        /// <returns>ApiResponse of UserAuthorization</returns>
+        ApiResponse<UserAuthorization> PutUserIdRolesWithHttpInfo (string userId, List<string> body = null);
         
         #endregion Synchronous Operations
         
@@ -476,7 +456,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteUsersUserIdRolesAsync (string userId);
+        System.Threading.Tasks.Task DeleteUserIdRolesAsync (string userId);
 
         /// <summary>
         /// Removes all the roles from the user.
@@ -487,31 +467,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUsersUserIdRolesAsyncWithHttpInfo (string userId);
-        
-        /// <summary>
-        /// Retrieve a list of all licenses defined in the system
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <returns>Task of DomainLicenseEntityListing</returns>
-        System.Threading.Tasks.Task<DomainLicenseEntityListing> GetLicensesAsync (int? pageSize = null, int? pageNumber = null);
-
-        /// <summary>
-        /// Retrieve a list of all licenses defined in the system
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <returns>Task of ApiResponse (DomainLicenseEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DomainLicenseEntityListing>> GetLicensesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserIdRolesAsyncWithHttpInfo (string userId);
         
         /// <summary>
         /// Get all permissions.
@@ -568,10 +524,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">The page number requested</param>
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
+        /// <param name="nextPage">next page token</param>
+        /// <param name="previousPage">Previous page token</param>
         /// <param name="permission"></param>
         /// <param name="userCount"></param>
         /// <returns>Task of OrganizationRoleEntityListing</returns>
-        System.Threading.Tasks.Task<OrganizationRoleEntityListing> GetRolesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, List<string> permission = null, bool? userCount = null);
+        System.Threading.Tasks.Task<OrganizationRoleEntityListing> GetRolesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> permission = null, bool? userCount = null);
 
         /// <summary>
         /// Retrieve a list of all roles defined for the organization
@@ -584,10 +542,12 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">The page number requested</param>
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
+        /// <param name="nextPage">next page token</param>
+        /// <param name="previousPage">Previous page token</param>
         /// <param name="permission"></param>
         /// <param name="userCount"></param>
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> GetRolesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, List<string> permission = null, bool? userCount = null);
+        System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> GetRolesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> permission = null, bool? userCount = null);
         
         /// <summary>
         /// Get an org role to default role comparison comparison
@@ -636,7 +596,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> GetRolesRoleIdAsyncWithHttpInfo (string roleId);
         
         /// <summary>
-        /// Get the list of roles for a user.
+        /// Returns a listing of roles and permissions for a user.
         /// </summary>
         /// <remarks>
         /// 
@@ -644,10 +604,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of UserAuthorization</returns>
-        System.Threading.Tasks.Task<UserAuthorization> GetUsersUserIdRolesAsync (string userId);
+        System.Threading.Tasks.Task<UserAuthorization> GetUserIdRolesAsync (string userId);
 
         /// <summary>
-        /// Get the list of roles for a user.
+        /// Returns a listing of roles and permissions for a user.
         /// </summary>
         /// <remarks>
         /// 
@@ -655,7 +615,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> GetUsersUserIdRolesAsyncWithHttpInfo (string userId);
+        System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> GetUserIdRolesAsyncWithHttpInfo (string userId);
         
         /// <summary>
         /// Patch Organization Role for needsUpdate Field
@@ -854,8 +814,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
-        /// <returns>Task of List&lt;string&gt;</returns>
-        System.Threading.Tasks.Task<List<string>> PutUsersUserIdRolesAsync (string userId, List<string> body = null);
+        /// <returns>Task of UserAuthorization</returns>
+        System.Threading.Tasks.Task<UserAuthorization> PutUserIdRolesAsync (string userId, List<string> body = null);
 
         /// <summary>
         /// Sets the user&#39;s roles
@@ -866,8 +826,8 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
-        /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<string>>> PutUsersUserIdRolesAsyncWithHttpInfo (string userId, List<string> body = null);
+        /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutUserIdRolesAsyncWithHttpInfo (string userId, List<string> body = null);
         
         #endregion Asynchronous Operations
         
@@ -974,7 +934,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->DeleteRolesRoleId");
             
     
-            var localVarPath = "/api/v1/authorization/roles/{roleId}";
+            var localVarPath = "/api/v2/authorization/roles/{roleId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1059,7 +1019,7 @@ namespace ININ.PureCloudApi.Api
             if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling DeleteRolesRoleId");
             
     
-            var localVarPath = "/api/v1/authorization/roles/{roleId}";
+            var localVarPath = "/api/v2/authorization/roles/{roleId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1126,9 +1086,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param> 
         /// <returns></returns>
-        public void DeleteUsersUserIdRoles (string userId)
+        public void DeleteUserIdRoles (string userId)
         {
-             DeleteUsersUserIdRolesWithHttpInfo(userId);
+             DeleteUserIdRolesWithHttpInfo(userId);
         }
 
         /// <summary>
@@ -1137,15 +1097,15 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteUsersUserIdRolesWithHttpInfo (string userId)
+        public ApiResponse<Object> DeleteUserIdRolesWithHttpInfo (string userId)
         {
             
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling AuthorizationApi->DeleteUsersUserIdRoles");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling AuthorizationApi->DeleteUserIdRoles");
             
     
-            var localVarPath = "/api/v1/authorization/users/{userId}/roles";
+            var localVarPath = "/api/v2/users/{userId}/roles";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1195,9 +1155,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteUsersUserIdRoles: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUserIdRoles: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteUsersUserIdRoles: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUserIdRoles: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             
             return new ApiResponse<Object>(localVarStatusCode,
@@ -1212,9 +1172,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteUsersUserIdRolesAsync (string userId)
+        public async System.Threading.Tasks.Task DeleteUserIdRolesAsync (string userId)
         {
-             await DeleteUsersUserIdRolesAsyncWithHttpInfo(userId);
+             await DeleteUserIdRolesAsyncWithHttpInfo(userId);
 
         }
 
@@ -1224,13 +1184,13 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUsersUserIdRolesAsyncWithHttpInfo (string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserIdRolesAsyncWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling DeleteUsersUserIdRoles");
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling DeleteUserIdRoles");
             
     
-            var localVarPath = "/api/v1/authorization/users/{userId}/roles";
+            var localVarPath = "/api/v2/users/{userId}/roles";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1281,187 +1241,14 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteUsersUserIdRoles: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUserIdRoles: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling DeleteUsersUserIdRoles: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUserIdRoles: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
-        }
-        
-        /// <summary>
-        /// Retrieve a list of all licenses defined in the system 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <returns>DomainLicenseEntityListing</returns>
-        public DomainLicenseEntityListing GetLicenses (int? pageSize = null, int? pageNumber = null)
-        {
-             ApiResponse<DomainLicenseEntityListing> localVarResponse = GetLicensesWithHttpInfo(pageSize, pageNumber);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Retrieve a list of all licenses defined in the system 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <returns>ApiResponse of DomainLicenseEntityListing</returns>
-        public ApiResponse< DomainLicenseEntityListing > GetLicensesWithHttpInfo (int? pageSize = null, int? pageNumber = null)
-        {
-            
-    
-            var localVarPath = "/api/v1/authorization/licenses";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            
-            
-            
-
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetLicenses: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetLicenses: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<DomainLicenseEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DomainLicenseEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainLicenseEntityListing)));
-            
-        }
-
-        
-        /// <summary>
-        /// Retrieve a list of all licenses defined in the system 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <returns>Task of DomainLicenseEntityListing</returns>
-        public async System.Threading.Tasks.Task<DomainLicenseEntityListing> GetLicensesAsync (int? pageSize = null, int? pageNumber = null)
-        {
-             ApiResponse<DomainLicenseEntityListing> localVarResponse = await GetLicensesAsyncWithHttpInfo(pageSize, pageNumber);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Retrieve a list of all licenses defined in the system 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <returns>Task of ApiResponse (DomainLicenseEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DomainLicenseEntityListing>> GetLicensesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
-        {
-            
-    
-            var localVarPath = "/api/v1/authorization/licenses";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            
-            
-            
-
-            
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetLicenses: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetLicenses: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<DomainLicenseEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (DomainLicenseEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainLicenseEntityListing)));
-            
         }
         
         /// <summary>
@@ -1488,7 +1275,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/authorization/permissions";
+            var localVarPath = "/api/v2/authorization/permissions";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1575,7 +1362,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/authorization/permissions";
+            var localVarPath = "/api/v2/authorization/permissions";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1657,7 +1444,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/authorization/products";
+            var localVarPath = "/api/v2/authorization/products";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1738,7 +1525,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/authorization/products";
+            var localVarPath = "/api/v2/authorization/products";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1806,12 +1593,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">The page number requested</param> 
         /// <param name="sortBy">variable name requested to sort by</param> 
         /// <param name="expand">variable name requested by expand list</param> 
+        /// <param name="nextPage">next page token</param> 
+        /// <param name="previousPage">Previous page token</param> 
         /// <param name="permission"></param> 
         /// <param name="userCount"></param> 
         /// <returns>OrganizationRoleEntityListing</returns>
-        public OrganizationRoleEntityListing GetRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, List<string> permission = null, bool? userCount = null)
+        public OrganizationRoleEntityListing GetRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> permission = null, bool? userCount = null)
         {
-             ApiResponse<OrganizationRoleEntityListing> localVarResponse = GetRolesWithHttpInfo(pageSize, pageNumber, sortBy, expand, permission, userCount);
+             ApiResponse<OrganizationRoleEntityListing> localVarResponse = GetRolesWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, permission, userCount);
              return localVarResponse.Data;
         }
 
@@ -1823,14 +1612,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">The page number requested</param> 
         /// <param name="sortBy">variable name requested to sort by</param> 
         /// <param name="expand">variable name requested by expand list</param> 
+        /// <param name="nextPage">next page token</param> 
+        /// <param name="previousPage">Previous page token</param> 
         /// <param name="permission"></param> 
         /// <param name="userCount"></param> 
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
-        public ApiResponse< OrganizationRoleEntityListing > GetRolesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, List<string> permission = null, bool? userCount = null)
+        public ApiResponse< OrganizationRoleEntityListing > GetRolesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> permission = null, bool? userCount = null)
         {
             
     
-            var localVarPath = "/api/v1/authorization/roles";
+            var localVarPath = "/api/v2/authorization/roles";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1861,6 +1652,8 @@ namespace ININ.PureCloudApi.Api
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            if (nextPage != null) localVarQueryParams.Add("nextPage", Configuration.ApiClient.ParameterToString(nextPage)); // query parameter
+            if (previousPage != null) localVarQueryParams.Add("previousPage", Configuration.ApiClient.ParameterToString(previousPage)); // query parameter
             if (permission != null) localVarQueryParams.Add("permission", Configuration.ApiClient.ParameterToString(permission)); // query parameter
             if (userCount != null) localVarQueryParams.Add("userCount", Configuration.ApiClient.ParameterToString(userCount)); // query parameter
             
@@ -1904,12 +1697,14 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">The page number requested</param>
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
+        /// <param name="nextPage">next page token</param>
+        /// <param name="previousPage">Previous page token</param>
         /// <param name="permission"></param>
         /// <param name="userCount"></param>
         /// <returns>Task of OrganizationRoleEntityListing</returns>
-        public async System.Threading.Tasks.Task<OrganizationRoleEntityListing> GetRolesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, List<string> permission = null, bool? userCount = null)
+        public async System.Threading.Tasks.Task<OrganizationRoleEntityListing> GetRolesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> permission = null, bool? userCount = null)
         {
-             ApiResponse<OrganizationRoleEntityListing> localVarResponse = await GetRolesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, permission, userCount);
+             ApiResponse<OrganizationRoleEntityListing> localVarResponse = await GetRolesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, permission, userCount);
              return localVarResponse.Data;
 
         }
@@ -1922,14 +1717,16 @@ namespace ININ.PureCloudApi.Api
         /// <param name="pageNumber">The page number requested</param>
         /// <param name="sortBy">variable name requested to sort by</param>
         /// <param name="expand">variable name requested by expand list</param>
+        /// <param name="nextPage">next page token</param>
+        /// <param name="previousPage">Previous page token</param>
         /// <param name="permission"></param>
         /// <param name="userCount"></param>
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> GetRolesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, List<string> permission = null, bool? userCount = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> GetRolesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> permission = null, bool? userCount = null)
         {
             
     
-            var localVarPath = "/api/v1/authorization/roles";
+            var localVarPath = "/api/v2/authorization/roles";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1960,6 +1757,8 @@ namespace ININ.PureCloudApi.Api
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            if (nextPage != null) localVarQueryParams.Add("nextPage", Configuration.ApiClient.ParameterToString(nextPage)); // query parameter
+            if (previousPage != null) localVarQueryParams.Add("previousPage", Configuration.ApiClient.ParameterToString(previousPage)); // query parameter
             if (permission != null) localVarQueryParams.Add("permission", Configuration.ApiClient.ParameterToString(permission)); // query parameter
             if (userCount != null) localVarQueryParams.Add("userCount", Configuration.ApiClient.ParameterToString(userCount)); // query parameter
             
@@ -2027,7 +1826,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'rightRoleId' when calling AuthorizationApi->GetRolesLeftroleIdComparedefaultRightroleId");
             
     
-            var localVarPath = "/api/v1/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
+            var localVarPath = "/api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2118,7 +1917,7 @@ namespace ININ.PureCloudApi.Api
             if (rightRoleId == null) throw new ApiException(400, "Missing required parameter 'rightRoleId' when calling GetRolesLeftroleIdComparedefaultRightroleId");
             
     
-            var localVarPath = "/api/v1/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
+            var localVarPath = "/api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2206,7 +2005,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->GetRolesRoleId");
             
     
-            var localVarPath = "/api/v1/authorization/roles/{roleId}";
+            var localVarPath = "/api/v2/authorization/roles/{roleId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2292,7 +2091,7 @@ namespace ININ.PureCloudApi.Api
             if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling GetRolesRoleId");
             
     
-            var localVarPath = "/api/v1/authorization/roles/{roleId}";
+            var localVarPath = "/api/v2/authorization/roles/{roleId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2354,32 +2153,32 @@ namespace ININ.PureCloudApi.Api
         }
         
         /// <summary>
-        /// Get the list of roles for a user. 
+        /// Returns a listing of roles and permissions for a user. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param> 
         /// <returns>UserAuthorization</returns>
-        public UserAuthorization GetUsersUserIdRoles (string userId)
+        public UserAuthorization GetUserIdRoles (string userId)
         {
-             ApiResponse<UserAuthorization> localVarResponse = GetUsersUserIdRolesWithHttpInfo(userId);
+             ApiResponse<UserAuthorization> localVarResponse = GetUserIdRolesWithHttpInfo(userId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get the list of roles for a user. 
+        /// Returns a listing of roles and permissions for a user. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param> 
         /// <returns>ApiResponse of UserAuthorization</returns>
-        public ApiResponse< UserAuthorization > GetUsersUserIdRolesWithHttpInfo (string userId)
+        public ApiResponse< UserAuthorization > GetUserIdRolesWithHttpInfo (string userId)
         {
             
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling AuthorizationApi->GetUsersUserIdRoles");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling AuthorizationApi->GetUserIdRoles");
             
     
-            var localVarPath = "/api/v1/authorization/users/{userId}/roles";
+            var localVarPath = "/api/v2/users/{userId}/roles";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2429,9 +2228,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetUsersUserIdRoles: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetUserIdRoles: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetUsersUserIdRoles: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetUserIdRoles: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<UserAuthorization>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2441,31 +2240,31 @@ namespace ININ.PureCloudApi.Api
 
         
         /// <summary>
-        /// Get the list of roles for a user. 
+        /// Returns a listing of roles and permissions for a user. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of UserAuthorization</returns>
-        public async System.Threading.Tasks.Task<UserAuthorization> GetUsersUserIdRolesAsync (string userId)
+        public async System.Threading.Tasks.Task<UserAuthorization> GetUserIdRolesAsync (string userId)
         {
-             ApiResponse<UserAuthorization> localVarResponse = await GetUsersUserIdRolesAsyncWithHttpInfo(userId);
+             ApiResponse<UserAuthorization> localVarResponse = await GetUserIdRolesAsyncWithHttpInfo(userId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get the list of roles for a user. 
+        /// Returns a listing of roles and permissions for a user. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> GetUsersUserIdRolesAsyncWithHttpInfo (string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> GetUserIdRolesAsyncWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling GetUsersUserIdRoles");
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling GetUserIdRoles");
             
     
-            var localVarPath = "/api/v1/authorization/users/{userId}/roles";
+            var localVarPath = "/api/v2/users/{userId}/roles";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2516,9 +2315,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetUsersUserIdRoles: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetUserIdRoles: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetUsersUserIdRoles: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetUserIdRoles: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<UserAuthorization>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2554,7 +2353,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PatchRolesRoleId");
             
     
-            var localVarPath = "/api/v1/authorization/roles/{roleId}";
+            var localVarPath = "/api/v2/authorization/roles/{roleId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2649,7 +2448,7 @@ namespace ININ.PureCloudApi.Api
             if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling PatchRolesRoleId");
             
     
-            var localVarPath = "/api/v1/authorization/roles/{roleId}";
+            var localVarPath = "/api/v2/authorization/roles/{roleId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2739,7 +2538,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/authorization/roles";
+            var localVarPath = "/api/v2/authorization/roles";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2829,7 +2628,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/authorization/roles";
+            var localVarPath = "/api/v2/authorization/roles";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2918,7 +2717,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/authorization/roles/default";
+            var localVarPath = "/api/v2/authorization/roles/default";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3002,7 +2801,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/authorization/roles/default";
+            var localVarPath = "/api/v2/authorization/roles/default";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3097,7 +2896,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'rightRoleId' when calling AuthorizationApi->PostRolesLeftroleIdComparedefaultRightroleId");
             
     
-            var localVarPath = "/api/v1/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
+            var localVarPath = "/api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3197,7 +2996,7 @@ namespace ININ.PureCloudApi.Api
             if (rightRoleId == null) throw new ApiException(400, "Missing required parameter 'rightRoleId' when calling PostRolesLeftroleIdComparedefaultRightroleId");
             
     
-            var localVarPath = "/api/v1/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
+            var localVarPath = "/api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3288,7 +3087,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/authorization/roles/default";
+            var localVarPath = "/api/v2/authorization/roles/default";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3378,7 +3177,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/authorization/roles/default";
+            var localVarPath = "/api/v2/authorization/roles/default";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3473,7 +3272,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PutRolesRoleId");
             
     
-            var localVarPath = "/api/v1/authorization/roles/{roleId}";
+            var localVarPath = "/api/v2/authorization/roles/{roleId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3568,7 +3367,7 @@ namespace ININ.PureCloudApi.Api
             if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling PutRolesRoleId");
             
     
-            var localVarPath = "/api/v1/authorization/roles/{roleId}";
+            var localVarPath = "/api/v2/authorization/roles/{roleId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3664,7 +3463,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PutRolesRoleIdUsersAdd");
             
     
-            var localVarPath = "/api/v1/authorization/roles/{roleId}/users/add";
+            var localVarPath = "/api/v2/authorization/roles/{roleId}/users/add";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3759,7 +3558,7 @@ namespace ININ.PureCloudApi.Api
             if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling PutRolesRoleIdUsersAdd");
             
     
-            var localVarPath = "/api/v1/authorization/roles/{roleId}/users/add";
+            var localVarPath = "/api/v2/authorization/roles/{roleId}/users/add";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3855,7 +3654,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PutRolesRoleIdUsersRemove");
             
     
-            var localVarPath = "/api/v1/authorization/roles/{roleId}/users/remove";
+            var localVarPath = "/api/v2/authorization/roles/{roleId}/users/remove";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3950,7 +3749,7 @@ namespace ININ.PureCloudApi.Api
             if (roleId == null) throw new ApiException(400, "Missing required parameter 'roleId' when calling PutRolesRoleIdUsersRemove");
             
     
-            var localVarPath = "/api/v1/authorization/roles/{roleId}/users/remove";
+            var localVarPath = "/api/v2/authorization/roles/{roleId}/users/remove";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4024,10 +3823,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param> 
         /// <param name="body"></param> 
-        /// <returns>List&lt;string&gt;</returns>
-        public List<string> PutUsersUserIdRoles (string userId, List<string> body = null)
+        /// <returns>UserAuthorization</returns>
+        public UserAuthorization PutUserIdRoles (string userId, List<string> body = null)
         {
-             ApiResponse<List<string>> localVarResponse = PutUsersUserIdRolesWithHttpInfo(userId, body);
+             ApiResponse<UserAuthorization> localVarResponse = PutUserIdRolesWithHttpInfo(userId, body);
              return localVarResponse.Data;
         }
 
@@ -4037,16 +3836,16 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param> 
         /// <param name="body"></param> 
-        /// <returns>ApiResponse of List&lt;string&gt;</returns>
-        public ApiResponse< List<string> > PutUsersUserIdRolesWithHttpInfo (string userId, List<string> body = null)
+        /// <returns>ApiResponse of UserAuthorization</returns>
+        public ApiResponse< UserAuthorization > PutUserIdRolesWithHttpInfo (string userId, List<string> body = null)
         {
             
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling AuthorizationApi->PutUsersUserIdRoles");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling AuthorizationApi->PutUserIdRoles");
             
     
-            var localVarPath = "/api/v1/authorization/users/{userId}/roles";
+            var localVarPath = "/api/v2/users/{userId}/roles";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4103,13 +3902,13 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutUsersUserIdRoles: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutUserIdRoles: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutUsersUserIdRoles: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutUserIdRoles: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<List<string>>(localVarStatusCode,
+            return new ApiResponse<UserAuthorization>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<string>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<string>)));
+                (UserAuthorization) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserAuthorization)));
             
         }
 
@@ -4120,10 +3919,10 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
-        /// <returns>Task of List&lt;string&gt;</returns>
-        public async System.Threading.Tasks.Task<List<string>> PutUsersUserIdRolesAsync (string userId, List<string> body = null)
+        /// <returns>Task of UserAuthorization</returns>
+        public async System.Threading.Tasks.Task<UserAuthorization> PutUserIdRolesAsync (string userId, List<string> body = null)
         {
-             ApiResponse<List<string>> localVarResponse = await PutUsersUserIdRolesAsyncWithHttpInfo(userId, body);
+             ApiResponse<UserAuthorization> localVarResponse = await PutUserIdRolesAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
 
         }
@@ -4134,14 +3933,14 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body"></param>
-        /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<string>>> PutUsersUserIdRolesAsyncWithHttpInfo (string userId, List<string> body = null)
+        /// <returns>Task of ApiResponse (UserAuthorization)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutUserIdRolesAsyncWithHttpInfo (string userId, List<string> body = null)
         {
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling PutUsersUserIdRoles");
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling PutUserIdRoles");
             
     
-            var localVarPath = "/api/v1/authorization/users/{userId}/roles";
+            var localVarPath = "/api/v2/users/{userId}/roles";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4199,13 +3998,13 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutUsersUserIdRoles: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutUserIdRoles: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutUsersUserIdRoles: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutUserIdRoles: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<List<string>>(localVarStatusCode,
+            return new ApiResponse<UserAuthorization>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<string>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<string>)));
+                (UserAuthorization) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserAuthorization)));
             
         }
         

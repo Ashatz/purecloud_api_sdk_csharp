@@ -67,30 +67,16 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test DeleteUsersUserIdRoles
+        /// Test DeleteUserIdRoles
         /// </summary>
         [Test]
-        public void DeleteUsersUserIdRolesTest()
+        public void DeleteUserIdRolesTest()
         {
-            // TODO: add unit test for the method 'DeleteUsersUserIdRoles'
+            // TODO: add unit test for the method 'DeleteUserIdRoles'
             string userId = null; // TODO: replace null with proper value
             
-            instance.DeleteUsersUserIdRoles(userId);
+            instance.DeleteUserIdRoles(userId);
              
-        }
-        
-        /// <summary>
-        /// Test GetLicenses
-        /// </summary>
-        [Test]
-        public void GetLicensesTest()
-        {
-            // TODO: add unit test for the method 'GetLicenses'
-            int? pageSize = null; // TODO: replace null with proper value
-            int? pageNumber = null; // TODO: replace null with proper value
-            
-            var response = instance.GetLicenses(pageSize, pageNumber);
-            Assert.IsInstanceOf<DomainLicenseEntityListing> (response, "response is DomainLicenseEntityListing"); 
         }
         
         /// <summary>
@@ -130,10 +116,12 @@ namespace ININ.PureCloudApi.Test
             int? pageNumber = null; // TODO: replace null with proper value
             string sortBy = null; // TODO: replace null with proper value
             List<string> expand = null; // TODO: replace null with proper value
+            string nextPage = null; // TODO: replace null with proper value
+            string previousPage = null; // TODO: replace null with proper value
             List<string> permission = null; // TODO: replace null with proper value
             bool? userCount = null; // TODO: replace null with proper value
             
-            var response = instance.GetRoles(pageSize, pageNumber, sortBy, expand, permission, userCount);
+            var response = instance.GetRoles(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, permission, userCount);
             Assert.IsInstanceOf<OrganizationRoleEntityListing> (response, "response is OrganizationRoleEntityListing"); 
         }
         
@@ -165,15 +153,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetUsersUserIdRoles
+        /// Test GetUserIdRoles
         /// </summary>
         [Test]
-        public void GetUsersUserIdRolesTest()
+        public void GetUserIdRolesTest()
         {
-            // TODO: add unit test for the method 'GetUsersUserIdRoles'
+            // TODO: add unit test for the method 'GetUserIdRoles'
             string userId = null; // TODO: replace null with proper value
             
-            var response = instance.GetUsersUserIdRoles(userId);
+            var response = instance.GetUserIdRoles(userId);
             Assert.IsInstanceOf<UserAuthorization> (response, "response is UserAuthorization"); 
         }
         
@@ -288,17 +276,17 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test PutUsersUserIdRoles
+        /// Test PutUserIdRoles
         /// </summary>
         [Test]
-        public void PutUsersUserIdRolesTest()
+        public void PutUserIdRolesTest()
         {
-            // TODO: add unit test for the method 'PutUsersUserIdRoles'
+            // TODO: add unit test for the method 'PutUserIdRoles'
             string userId = null; // TODO: replace null with proper value
             List<string> body = null; // TODO: replace null with proper value
             
-            var response = instance.PutUsersUserIdRoles(userId, body);
-            Assert.IsInstanceOf<List<string>> (response, "response is List<string>"); 
+            var response = instance.PutUserIdRoles(userId, body);
+            Assert.IsInstanceOf<UserAuthorization> (response, "response is UserAuthorization"); 
         }
         
     }

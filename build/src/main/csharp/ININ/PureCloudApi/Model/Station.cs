@@ -43,8 +43,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="UserId">UserId.</param>
         /// <param name="PrimaryEdge">PrimaryEdge.</param>
         /// <param name="SecondaryEdge">SecondaryEdge.</param>
+        /// <param name="Type">Type.</param>
 
-        public Station(string Name = null, string Description = null, StatusEnum? Status = null, string UserId = null, UriReference PrimaryEdge = null, UriReference SecondaryEdge = null)
+        public Station(string Name = null, string Description = null, StatusEnum? Status = null, string UserId = null, UriReference PrimaryEdge = null, UriReference SecondaryEdge = null, string Type = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -52,6 +53,7 @@ namespace ININ.PureCloudApi.Model
             this.UserId = UserId;
             this.PrimaryEdge = PrimaryEdge;
             this.SecondaryEdge = SecondaryEdge;
+            this.Type = Type;
             
         }
         
@@ -94,6 +96,12 @@ namespace ININ.PureCloudApi.Model
         public UriReference SecondaryEdge { get; set; }
     
         /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public string Type { get; set; }
+    
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -115,6 +123,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  PrimaryEdge: ").Append(PrimaryEdge).Append("\n");
             sb.Append("  SecondaryEdge: ").Append(SecondaryEdge).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
@@ -189,6 +198,11 @@ namespace ININ.PureCloudApi.Model
                     this.SecondaryEdge.Equals(other.SecondaryEdge)
                 ) &&
                 (
+                    this.Type == other.Type ||
+                    this.Type != null &&
+                    this.Type.Equals(other.Type)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -227,6 +241,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.SecondaryEdge != null)
                     hash = hash * 59 + this.SecondaryEdge.GetHashCode();
+                
+                if (this.Type != null)
+                    hash = hash * 59 + this.Type.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

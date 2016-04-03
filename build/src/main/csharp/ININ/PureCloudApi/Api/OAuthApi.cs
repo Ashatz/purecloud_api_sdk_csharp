@@ -1050,7 +1050,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->DeleteClientsClientId");
             
     
-            var localVarPath = "/api/v1/oauth/clients/{clientId}";
+            var localVarPath = "/api/v2/oauth/clients/{clientId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1135,7 +1135,7 @@ namespace ININ.PureCloudApi.Api
             if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling DeleteClientsClientId");
             
     
-            var localVarPath = "/api/v1/oauth/clients/{clientId}";
+            var localVarPath = "/api/v2/oauth/clients/{clientId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1215,7 +1215,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/okta";
+            var localVarPath = "/api/v2/identityproviders/okta";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1295,7 +1295,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/okta";
+            var localVarPath = "/api/v2/identityproviders/okta";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1374,7 +1374,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/onelogin";
+            var localVarPath = "/api/v2/identityproviders/onelogin";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1454,7 +1454,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/onelogin";
+            var localVarPath = "/api/v2/identityproviders/onelogin";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1533,7 +1533,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/{providerId}";
+            var localVarPath = "/api/v2/identityproviders/{providerId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1613,7 +1613,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/{providerId}";
+            var localVarPath = "/api/v2/identityproviders/{providerId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1692,7 +1692,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/purecloud";
+            var localVarPath = "/api/v2/identityproviders/purecloud";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1772,7 +1772,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/purecloud";
+            var localVarPath = "/api/v2/identityproviders/purecloud";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1851,7 +1851,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/salesforce";
+            var localVarPath = "/api/v2/identityproviders/salesforce";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1931,7 +1931,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/salesforce";
+            var localVarPath = "/api/v2/identityproviders/salesforce";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2011,7 +2011,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/oauth/clients";
+            var localVarPath = "/api/v2/oauth/clients";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2092,7 +2092,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/oauth/clients";
+            var localVarPath = "/api/v2/oauth/clients";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2178,7 +2178,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->GetClientsClientId");
             
     
-            var localVarPath = "/api/v1/oauth/clients/{clientId}";
+            var localVarPath = "/api/v2/oauth/clients/{clientId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2264,7 +2264,7 @@ namespace ININ.PureCloudApi.Api
             if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling GetClientsClientId");
             
     
-            var localVarPath = "/api/v1/oauth/clients/{clientId}";
+            var localVarPath = "/api/v2/oauth/clients/{clientId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2345,7 +2345,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders";
+            var localVarPath = "/api/v2/identityproviders";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2426,7 +2426,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders";
+            var localVarPath = "/api/v2/identityproviders";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2506,7 +2506,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/okta";
+            var localVarPath = "/api/v2/identityproviders/okta";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2587,7 +2587,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/okta";
+            var localVarPath = "/api/v2/identityproviders/okta";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2667,7 +2667,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/onelogin";
+            var localVarPath = "/api/v2/identityproviders/onelogin";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2748,7 +2748,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/onelogin";
+            var localVarPath = "/api/v2/identityproviders/onelogin";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2828,7 +2828,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/{providerId}";
+            var localVarPath = "/api/v2/identityproviders/{providerId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2909,7 +2909,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/{providerId}";
+            var localVarPath = "/api/v2/identityproviders/{providerId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2989,7 +2989,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/purecloud";
+            var localVarPath = "/api/v2/identityproviders/purecloud";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3070,7 +3070,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/purecloud";
+            var localVarPath = "/api/v2/identityproviders/purecloud";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3150,7 +3150,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/salesforce";
+            var localVarPath = "/api/v2/identityproviders/salesforce";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3231,7 +3231,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/salesforce";
+            var localVarPath = "/api/v2/identityproviders/salesforce";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3313,7 +3313,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/oauth/clients";
+            var localVarPath = "/api/v2/oauth/clients";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3403,7 +3403,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/oauth/clients";
+            var localVarPath = "/api/v2/oauth/clients";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3495,7 +3495,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->PostClientsClientIdSecret");
             
     
-            var localVarPath = "/api/v1/oauth/clients/{clientId}/secret";
+            var localVarPath = "/api/v2/oauth/clients/{clientId}/secret";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3580,7 +3580,7 @@ namespace ININ.PureCloudApi.Api
             if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling PostClientsClientIdSecret");
             
     
-            var localVarPath = "/api/v1/oauth/clients/{clientId}/secret";
+            var localVarPath = "/api/v2/oauth/clients/{clientId}/secret";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3669,7 +3669,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->PutClientsClientId");
             
     
-            var localVarPath = "/api/v1/oauth/clients/{clientId}";
+            var localVarPath = "/api/v2/oauth/clients/{clientId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3764,7 +3764,7 @@ namespace ININ.PureCloudApi.Api
             if (clientId == null) throw new ApiException(400, "Missing required parameter 'clientId' when calling PutClientsClientId");
             
     
-            var localVarPath = "/api/v1/oauth/clients/{clientId}";
+            var localVarPath = "/api/v2/oauth/clients/{clientId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3853,7 +3853,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/okta";
+            var localVarPath = "/api/v2/identityproviders/okta";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3942,7 +3942,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/okta";
+            var localVarPath = "/api/v2/identityproviders/okta";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4030,7 +4030,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/onelogin";
+            var localVarPath = "/api/v2/identityproviders/onelogin";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4119,7 +4119,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/onelogin";
+            var localVarPath = "/api/v2/identityproviders/onelogin";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4207,7 +4207,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/{providerId}";
+            var localVarPath = "/api/v2/identityproviders/{providerId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4296,7 +4296,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/{providerId}";
+            var localVarPath = "/api/v2/identityproviders/{providerId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4384,7 +4384,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/purecloud";
+            var localVarPath = "/api/v2/identityproviders/purecloud";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4473,7 +4473,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/purecloud";
+            var localVarPath = "/api/v2/identityproviders/purecloud";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4561,7 +4561,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/salesforce";
+            var localVarPath = "/api/v2/identityproviders/salesforce";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4650,7 +4650,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/identityproviders/salesforce";
+            var localVarPath = "/api/v2/identityproviders/salesforce";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();

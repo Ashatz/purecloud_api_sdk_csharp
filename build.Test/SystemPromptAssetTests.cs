@@ -142,6 +142,24 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test the property 'LanguageDefault' 
+        /// </summary>
+        [Test]
+        public void LanguageDefaultTest()
+        {
+            // TODO: unit test for the property 'LanguageDefault' 
+        }
+        
+        /// <summary>
+        /// Test the property 'Tags' 
+        /// </summary>
+        [Test]
+        public void TagsTest()
+        {
+            // TODO: unit test for the property 'Tags' 
+        }
+        
+        /// <summary>
         /// Test the property 'SelfUri' 
         /// </summary>
         [Test]

@@ -630,7 +630,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'libraryId' when calling ResponseManagementApi->DeleteLibrariesLibraryId");
             
     
-            var localVarPath = "/api/v1/responsemanagement/libraries/{libraryId}";
+            var localVarPath = "/api/v2/responsemanagement/libraries/{libraryId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -715,7 +715,7 @@ namespace ININ.PureCloudApi.Api
             if (libraryId == null) throw new ApiException(400, "Missing required parameter 'libraryId' when calling DeleteLibrariesLibraryId");
             
     
-            var localVarPath = "/api/v1/responsemanagement/libraries/{libraryId}";
+            var localVarPath = "/api/v2/responsemanagement/libraries/{libraryId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -801,7 +801,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'responseId' when calling ResponseManagementApi->DeleteResponsesResponseId");
             
     
-            var localVarPath = "/api/v1/responsemanagement/responses/{responseId}";
+            var localVarPath = "/api/v2/responsemanagement/responses/{responseId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -886,7 +886,7 @@ namespace ININ.PureCloudApi.Api
             if (responseId == null) throw new ApiException(400, "Missing required parameter 'responseId' when calling DeleteResponsesResponseId");
             
     
-            var localVarPath = "/api/v1/responsemanagement/responses/{responseId}";
+            var localVarPath = "/api/v2/responsemanagement/responses/{responseId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -971,7 +971,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/responsemanagement/libraries";
+            var localVarPath = "/api/v2/responsemanagement/libraries";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1058,7 +1058,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/responsemanagement/libraries";
+            var localVarPath = "/api/v2/responsemanagement/libraries";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1146,7 +1146,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'libraryId' when calling ResponseManagementApi->GetLibrariesLibraryId");
             
     
-            var localVarPath = "/api/v1/responsemanagement/libraries/{libraryId}";
+            var localVarPath = "/api/v2/responsemanagement/libraries/{libraryId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1232,7 +1232,7 @@ namespace ININ.PureCloudApi.Api
             if (libraryId == null) throw new ApiException(400, "Missing required parameter 'libraryId' when calling GetLibrariesLibraryId");
             
     
-            var localVarPath = "/api/v1/responsemanagement/libraries/{libraryId}";
+            var localVarPath = "/api/v2/responsemanagement/libraries/{libraryId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1323,7 +1323,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'libraryId' when calling ResponseManagementApi->GetResponses");
             
     
-            var localVarPath = "/api/v1/responsemanagement/responses";
+            var localVarPath = "/api/v2/responsemanagement/responses";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1415,7 +1415,7 @@ namespace ININ.PureCloudApi.Api
             if (libraryId == null) throw new ApiException(400, "Missing required parameter 'libraryId' when calling GetResponses");
             
     
-            var localVarPath = "/api/v1/responsemanagement/responses";
+            var localVarPath = "/api/v2/responsemanagement/responses";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1504,7 +1504,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'responseId' when calling ResponseManagementApi->GetResponsesResponseId");
             
     
-            var localVarPath = "/api/v1/responsemanagement/responses/{responseId}";
+            var localVarPath = "/api/v2/responsemanagement/responses/{responseId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1590,7 +1590,7 @@ namespace ININ.PureCloudApi.Api
             if (responseId == null) throw new ApiException(400, "Missing required parameter 'responseId' when calling GetResponsesResponseId");
             
     
-            var localVarPath = "/api/v1/responsemanagement/responses/{responseId}";
+            var localVarPath = "/api/v2/responsemanagement/responses/{responseId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1673,7 +1673,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/responsemanagement/libraries";
+            var localVarPath = "/api/v2/responsemanagement/libraries";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1763,7 +1763,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/responsemanagement/libraries";
+            var localVarPath = "/api/v2/responsemanagement/libraries";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1852,7 +1852,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/responsemanagement/responses";
+            var localVarPath = "/api/v2/responsemanagement/responses";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1942,7 +1942,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/responsemanagement/responses";
+            var localVarPath = "/api/v2/responsemanagement/responses";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2031,7 +2031,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/responsemanagement/responses/query";
+            var localVarPath = "/api/v2/responsemanagement/responses/query";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2121,7 +2121,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/responsemanagement/responses/query";
+            var localVarPath = "/api/v2/responsemanagement/responses/query";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2216,7 +2216,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'libraryId' when calling ResponseManagementApi->PutLibrariesLibraryId");
             
     
-            var localVarPath = "/api/v1/responsemanagement/libraries/{libraryId}";
+            var localVarPath = "/api/v2/responsemanagement/libraries/{libraryId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2311,7 +2311,7 @@ namespace ININ.PureCloudApi.Api
             if (libraryId == null) throw new ApiException(400, "Missing required parameter 'libraryId' when calling PutLibrariesLibraryId");
             
     
-            var localVarPath = "/api/v1/responsemanagement/libraries/{libraryId}";
+            var localVarPath = "/api/v2/responsemanagement/libraries/{libraryId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2407,7 +2407,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'responseId' when calling ResponseManagementApi->PutResponsesResponseId");
             
     
-            var localVarPath = "/api/v1/responsemanagement/responses/{responseId}";
+            var localVarPath = "/api/v2/responsemanagement/responses/{responseId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2502,7 +2502,7 @@ namespace ININ.PureCloudApi.Api
             if (responseId == null) throw new ApiException(400, "Missing required parameter 'responseId' when calling PutResponsesResponseId");
             
     
-            var localVarPath = "/api/v1/responsemanagement/responses/{responseId}";
+            var localVarPath = "/api/v2/responsemanagement/responses/{responseId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();

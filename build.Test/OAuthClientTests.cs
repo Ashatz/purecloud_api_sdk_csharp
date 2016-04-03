@@ -79,15 +79,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'AuthorizedGrantTypes' 
-        /// </summary>
-        [Test]
-        public void AuthorizedGrantTypesTest()
-        {
-            // TODO: unit test for the property 'AuthorizedGrantTypes' 
-        }
-        
-        /// <summary>
         /// Test the property 'Description' 
         /// </summary>
         [Test]
@@ -121,6 +112,15 @@ namespace ININ.PureCloudApi.Test
         public void RoleIdsTest()
         {
             // TODO: unit test for the property 'RoleIds' 
+        }
+        
+        /// <summary>
+        /// Test the property 'AuthorizedGrantType' 
+        /// </summary>
+        [Test]
+        public void AuthorizedGrantTypeTest()
+        {
+            // TODO: unit test for the property 'AuthorizedGrantType' 
         }
         
         /// <summary>

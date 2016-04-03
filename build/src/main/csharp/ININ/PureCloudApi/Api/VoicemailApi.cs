@@ -146,28 +146,6 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<VoicemailMediaInfo> GetMessagesMessageIdMediaWithHttpInfo (string messageId, string formatId = null);
         
         /// <summary>
-        /// Get a user&#39;s voicemail policy
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User ID</param>
-        /// <returns>VoicemailUserPolicy</returns>
-        VoicemailUserPolicy GetUservoicemailpoliciesUserId (string userId);
-  
-        /// <summary>
-        /// Get a user&#39;s voicemail policy
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User ID</param>
-        /// <returns>ApiResponse of VoicemailUserPolicy</returns>
-        ApiResponse<VoicemailUserPolicy> GetUservoicemailpoliciesUserIdWithHttpInfo (string userId);
-        
-        /// <summary>
         /// Get a policy
         /// </summary>
         /// <remarks>
@@ -175,7 +153,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>VoicemailOrganizationPolicy</returns>
-        VoicemailOrganizationPolicy GetVoicemailpolicy ();
+        VoicemailOrganizationPolicy GetPolicy ();
   
         /// <summary>
         /// Get a policy
@@ -185,7 +163,29 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of VoicemailOrganizationPolicy</returns>
-        ApiResponse<VoicemailOrganizationPolicy> GetVoicemailpolicyWithHttpInfo ();
+        ApiResponse<VoicemailOrganizationPolicy> GetPolicyWithHttpInfo ();
+        
+        /// <summary>
+        /// Get a user&#39;s voicemail policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>VoicemailUserPolicy</returns>
+        VoicemailUserPolicy GetUserpoliciesUserId (string userId);
+  
+        /// <summary>
+        /// Get a user&#39;s voicemail policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>ApiResponse of VoicemailUserPolicy</returns>
+        ApiResponse<VoicemailUserPolicy> GetUserpoliciesUserIdWithHttpInfo (string userId);
         
         /// <summary>
         /// Update a user&#39;s voicemail policy
@@ -197,7 +197,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>VoicemailUserPolicy</returns>
-        VoicemailUserPolicy PatchUservoicemailpoliciesUserId (string userId, VoicemailUserPolicy body);
+        VoicemailUserPolicy PatchUserpoliciesUserId (string userId, VoicemailUserPolicy body);
   
         /// <summary>
         /// Update a user&#39;s voicemail policy
@@ -209,7 +209,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
-        ApiResponse<VoicemailUserPolicy> PatchUservoicemailpoliciesUserIdWithHttpInfo (string userId, VoicemailUserPolicy body);
+        ApiResponse<VoicemailUserPolicy> PatchUserpoliciesUserIdWithHttpInfo (string userId, VoicemailUserPolicy body);
         
         /// <summary>
         /// Update a message.
@@ -244,7 +244,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>VoicemailOrganizationPolicy</returns>
-        VoicemailOrganizationPolicy PutVoicemailpolicy (VoicemailOrganizationPolicy body = null);
+        VoicemailOrganizationPolicy PutPolicy (VoicemailOrganizationPolicy body = null);
   
         /// <summary>
         /// Update a policy
@@ -255,7 +255,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of VoicemailOrganizationPolicy</returns>
-        ApiResponse<VoicemailOrganizationPolicy> PutVoicemailpolicyWithHttpInfo (VoicemailOrganizationPolicy body = null);
+        ApiResponse<VoicemailOrganizationPolicy> PutPolicyWithHttpInfo (VoicemailOrganizationPolicy body = null);
         
         #endregion Synchronous Operations
         
@@ -390,28 +390,6 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<VoicemailMediaInfo>> GetMessagesMessageIdMediaAsyncWithHttpInfo (string messageId, string formatId = null);
         
         /// <summary>
-        /// Get a user&#39;s voicemail policy
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User ID</param>
-        /// <returns>Task of VoicemailUserPolicy</returns>
-        System.Threading.Tasks.Task<VoicemailUserPolicy> GetUservoicemailpoliciesUserIdAsync (string userId);
-
-        /// <summary>
-        /// Get a user&#39;s voicemail policy
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId">User ID</param>
-        /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> GetUservoicemailpoliciesUserIdAsyncWithHttpInfo (string userId);
-        
-        /// <summary>
         /// Get a policy
         /// </summary>
         /// <remarks>
@@ -419,7 +397,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of VoicemailOrganizationPolicy</returns>
-        System.Threading.Tasks.Task<VoicemailOrganizationPolicy> GetVoicemailpolicyAsync ();
+        System.Threading.Tasks.Task<VoicemailOrganizationPolicy> GetPolicyAsync ();
 
         /// <summary>
         /// Get a policy
@@ -429,7 +407,29 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (VoicemailOrganizationPolicy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> GetVoicemailpolicyAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> GetPolicyAsyncWithHttpInfo ();
+        
+        /// <summary>
+        /// Get a user&#39;s voicemail policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>Task of VoicemailUserPolicy</returns>
+        System.Threading.Tasks.Task<VoicemailUserPolicy> GetUserpoliciesUserIdAsync (string userId);
+
+        /// <summary>
+        /// Get a user&#39;s voicemail policy
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
+        System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> GetUserpoliciesUserIdAsyncWithHttpInfo (string userId);
         
         /// <summary>
         /// Update a user&#39;s voicemail policy
@@ -441,7 +441,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>Task of VoicemailUserPolicy</returns>
-        System.Threading.Tasks.Task<VoicemailUserPolicy> PatchUservoicemailpoliciesUserIdAsync (string userId, VoicemailUserPolicy body);
+        System.Threading.Tasks.Task<VoicemailUserPolicy> PatchUserpoliciesUserIdAsync (string userId, VoicemailUserPolicy body);
 
         /// <summary>
         /// Update a user&#39;s voicemail policy
@@ -453,7 +453,7 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> PatchUservoicemailpoliciesUserIdAsyncWithHttpInfo (string userId, VoicemailUserPolicy body);
+        System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> PatchUserpoliciesUserIdAsyncWithHttpInfo (string userId, VoicemailUserPolicy body);
         
         /// <summary>
         /// Update a message.
@@ -488,7 +488,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>Task of VoicemailOrganizationPolicy</returns>
-        System.Threading.Tasks.Task<VoicemailOrganizationPolicy> PutVoicemailpolicyAsync (VoicemailOrganizationPolicy body = null);
+        System.Threading.Tasks.Task<VoicemailOrganizationPolicy> PutPolicyAsync (VoicemailOrganizationPolicy body = null);
 
         /// <summary>
         /// Update a policy
@@ -499,7 +499,7 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (VoicemailOrganizationPolicy)</returns>
-        System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> PutVoicemailpolicyAsyncWithHttpInfo (VoicemailOrganizationPolicy body = null);
+        System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> PutPolicyAsyncWithHttpInfo (VoicemailOrganizationPolicy body = null);
         
         #endregion Asynchronous Operations
         
@@ -601,7 +601,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/voicemail/messages";
+            var localVarPath = "/api/v2/voicemail/messages";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -682,7 +682,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/voicemail/messages";
+            var localVarPath = "/api/v2/voicemail/messages";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -768,7 +768,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailApi->DeleteMessagesMessageId");
             
     
-            var localVarPath = "/api/v1/voicemail/messages/{messageId}";
+            var localVarPath = "/api/v2/voicemail/messages/{messageId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -854,7 +854,7 @@ namespace ININ.PureCloudApi.Api
             if (messageId == null) throw new ApiException(400, "Missing required parameter 'messageId' when calling DeleteMessagesMessageId");
             
     
-            var localVarPath = "/api/v1/voicemail/messages/{messageId}";
+            var localVarPath = "/api/v2/voicemail/messages/{messageId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -935,7 +935,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/voicemail/mailbox";
+            var localVarPath = "/api/v2/voicemail/mailbox";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1016,7 +1016,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/voicemail/mailbox";
+            var localVarPath = "/api/v2/voicemail/mailbox";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1096,7 +1096,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/voicemail/messages";
+            var localVarPath = "/api/v2/voicemail/messages";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1177,7 +1177,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/voicemail/messages";
+            var localVarPath = "/api/v2/voicemail/messages";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1263,7 +1263,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailApi->GetMessagesMessageId");
             
     
-            var localVarPath = "/api/v1/voicemail/messages/{messageId}";
+            var localVarPath = "/api/v2/voicemail/messages/{messageId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1349,7 +1349,7 @@ namespace ININ.PureCloudApi.Api
             if (messageId == null) throw new ApiException(400, "Missing required parameter 'messageId' when calling GetMessagesMessageId");
             
     
-            var localVarPath = "/api/v1/voicemail/messages/{messageId}";
+            var localVarPath = "/api/v2/voicemail/messages/{messageId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1438,7 +1438,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailApi->GetMessagesMessageIdMedia");
             
     
-            var localVarPath = "/api/v1/voicemail/messages/{messageId}/media";
+            var localVarPath = "/api/v2/voicemail/messages/{messageId}/media";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1527,7 +1527,7 @@ namespace ININ.PureCloudApi.Api
             if (messageId == null) throw new ApiException(400, "Missing required parameter 'messageId' when calling GetMessagesMessageIdMedia");
             
     
-            var localVarPath = "/api/v1/voicemail/messages/{messageId}/media";
+            var localVarPath = "/api/v2/voicemail/messages/{messageId}/media";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1590,14 +1590,175 @@ namespace ININ.PureCloudApi.Api
         }
         
         /// <summary>
+        /// Get a policy 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>VoicemailOrganizationPolicy</returns>
+        public VoicemailOrganizationPolicy GetPolicy ()
+        {
+             ApiResponse<VoicemailOrganizationPolicy> localVarResponse = GetPolicyWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a policy 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of VoicemailOrganizationPolicy</returns>
+        public ApiResponse< VoicemailOrganizationPolicy > GetPolicyWithHttpInfo ()
+        {
+            
+    
+            var localVarPath = "/api/v2/voicemail/policy";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetPolicy: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetPolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<VoicemailOrganizationPolicy>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (VoicemailOrganizationPolicy) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailOrganizationPolicy)));
+            
+        }
+
+        
+        /// <summary>
+        /// Get a policy 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of VoicemailOrganizationPolicy</returns>
+        public async System.Threading.Tasks.Task<VoicemailOrganizationPolicy> GetPolicyAsync ()
+        {
+             ApiResponse<VoicemailOrganizationPolicy> localVarResponse = await GetPolicyAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a policy 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (VoicemailOrganizationPolicy)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> GetPolicyAsyncWithHttpInfo ()
+        {
+            
+    
+            var localVarPath = "/api/v2/voicemail/policy";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetPolicy: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetPolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailOrganizationPolicy>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (VoicemailOrganizationPolicy) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailOrganizationPolicy)));
+            
+        }
+        
+        /// <summary>
         /// Get a user&#39;s voicemail policy 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param> 
         /// <returns>VoicemailUserPolicy</returns>
-        public VoicemailUserPolicy GetUservoicemailpoliciesUserId (string userId)
+        public VoicemailUserPolicy GetUserpoliciesUserId (string userId)
         {
-             ApiResponse<VoicemailUserPolicy> localVarResponse = GetUservoicemailpoliciesUserIdWithHttpInfo(userId);
+             ApiResponse<VoicemailUserPolicy> localVarResponse = GetUserpoliciesUserIdWithHttpInfo(userId);
              return localVarResponse.Data;
         }
 
@@ -1607,15 +1768,15 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param> 
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
-        public ApiResponse< VoicemailUserPolicy > GetUservoicemailpoliciesUserIdWithHttpInfo (string userId)
+        public ApiResponse< VoicemailUserPolicy > GetUserpoliciesUserIdWithHttpInfo (string userId)
         {
             
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling VoicemailApi->GetUservoicemailpoliciesUserId");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling VoicemailApi->GetUserpoliciesUserId");
             
     
-            var localVarPath = "/api/v1/configuration/uservoicemailpolicies/{userId}";
+            var localVarPath = "/api/v2/voicemail/userpolicies/{userId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1665,9 +1826,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetUservoicemailpoliciesUserId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetUserpoliciesUserId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetUservoicemailpoliciesUserId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetUserpoliciesUserId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<VoicemailUserPolicy>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -1682,9 +1843,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of VoicemailUserPolicy</returns>
-        public async System.Threading.Tasks.Task<VoicemailUserPolicy> GetUservoicemailpoliciesUserIdAsync (string userId)
+        public async System.Threading.Tasks.Task<VoicemailUserPolicy> GetUserpoliciesUserIdAsync (string userId)
         {
-             ApiResponse<VoicemailUserPolicy> localVarResponse = await GetUservoicemailpoliciesUserIdAsyncWithHttpInfo(userId);
+             ApiResponse<VoicemailUserPolicy> localVarResponse = await GetUserpoliciesUserIdAsyncWithHttpInfo(userId);
              return localVarResponse.Data;
 
         }
@@ -1695,13 +1856,13 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> GetUservoicemailpoliciesUserIdAsyncWithHttpInfo (string userId)
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> GetUserpoliciesUserIdAsyncWithHttpInfo (string userId)
         {
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling GetUservoicemailpoliciesUserId");
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling GetUserpoliciesUserId");
             
     
-            var localVarPath = "/api/v1/configuration/uservoicemailpolicies/{userId}";
+            var localVarPath = "/api/v2/voicemail/userpolicies/{userId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1752,174 +1913,13 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetUservoicemailpoliciesUserId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetUserpoliciesUserId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetUservoicemailpoliciesUserId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetUserpoliciesUserId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<VoicemailUserPolicy>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (VoicemailUserPolicy) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailUserPolicy)));
-            
-        }
-        
-        /// <summary>
-        /// Get a policy 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>VoicemailOrganizationPolicy</returns>
-        public VoicemailOrganizationPolicy GetVoicemailpolicy ()
-        {
-             ApiResponse<VoicemailOrganizationPolicy> localVarResponse = GetVoicemailpolicyWithHttpInfo();
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get a policy 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of VoicemailOrganizationPolicy</returns>
-        public ApiResponse< VoicemailOrganizationPolicy > GetVoicemailpolicyWithHttpInfo ()
-        {
-            
-    
-            var localVarPath = "/api/v1/configuration/voicemailpolicy";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            
-
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetVoicemailpolicy: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetVoicemailpolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<VoicemailOrganizationPolicy>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (VoicemailOrganizationPolicy) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailOrganizationPolicy)));
-            
-        }
-
-        
-        /// <summary>
-        /// Get a policy 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of VoicemailOrganizationPolicy</returns>
-        public async System.Threading.Tasks.Task<VoicemailOrganizationPolicy> GetVoicemailpolicyAsync ()
-        {
-             ApiResponse<VoicemailOrganizationPolicy> localVarResponse = await GetVoicemailpolicyAsyncWithHttpInfo();
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get a policy 
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (VoicemailOrganizationPolicy)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> GetVoicemailpolicyAsyncWithHttpInfo ()
-        {
-            
-    
-            var localVarPath = "/api/v1/configuration/voicemailpolicy";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            
-
-            
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetVoicemailpolicy: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetVoicemailpolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<VoicemailOrganizationPolicy>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (VoicemailOrganizationPolicy) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailOrganizationPolicy)));
             
         }
         
@@ -1930,9 +1930,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param> 
         /// <param name="body">The user&#39;s voicemail policy</param> 
         /// <returns>VoicemailUserPolicy</returns>
-        public VoicemailUserPolicy PatchUservoicemailpoliciesUserId (string userId, VoicemailUserPolicy body)
+        public VoicemailUserPolicy PatchUserpoliciesUserId (string userId, VoicemailUserPolicy body)
         {
-             ApiResponse<VoicemailUserPolicy> localVarResponse = PatchUservoicemailpoliciesUserIdWithHttpInfo(userId, body);
+             ApiResponse<VoicemailUserPolicy> localVarResponse = PatchUserpoliciesUserIdWithHttpInfo(userId, body);
              return localVarResponse.Data;
         }
 
@@ -1943,19 +1943,19 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param> 
         /// <param name="body">The user&#39;s voicemail policy</param> 
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
-        public ApiResponse< VoicemailUserPolicy > PatchUservoicemailpoliciesUserIdWithHttpInfo (string userId, VoicemailUserPolicy body)
+        public ApiResponse< VoicemailUserPolicy > PatchUserpoliciesUserIdWithHttpInfo (string userId, VoicemailUserPolicy body)
         {
             
             // verify the required parameter 'userId' is set
             if (userId == null)
-                throw new ApiException(400, "Missing required parameter 'userId' when calling VoicemailApi->PatchUservoicemailpoliciesUserId");
+                throw new ApiException(400, "Missing required parameter 'userId' when calling VoicemailApi->PatchUserpoliciesUserId");
             
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PatchUservoicemailpoliciesUserId");
+                throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PatchUserpoliciesUserId");
             
     
-            var localVarPath = "/api/v1/configuration/uservoicemailpolicies/{userId}";
+            var localVarPath = "/api/v2/voicemail/userpolicies/{userId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2012,9 +2012,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PatchUservoicemailpoliciesUserId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserpoliciesUserId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PatchUservoicemailpoliciesUserId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserpoliciesUserId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<VoicemailUserPolicy>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2030,9 +2030,9 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>Task of VoicemailUserPolicy</returns>
-        public async System.Threading.Tasks.Task<VoicemailUserPolicy> PatchUservoicemailpoliciesUserIdAsync (string userId, VoicemailUserPolicy body)
+        public async System.Threading.Tasks.Task<VoicemailUserPolicy> PatchUserpoliciesUserIdAsync (string userId, VoicemailUserPolicy body)
         {
-             ApiResponse<VoicemailUserPolicy> localVarResponse = await PatchUservoicemailpoliciesUserIdAsyncWithHttpInfo(userId, body);
+             ApiResponse<VoicemailUserPolicy> localVarResponse = await PatchUserpoliciesUserIdAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
 
         }
@@ -2044,15 +2044,15 @@ namespace ININ.PureCloudApi.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> PatchUservoicemailpoliciesUserIdAsyncWithHttpInfo (string userId, VoicemailUserPolicy body)
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> PatchUserpoliciesUserIdAsyncWithHttpInfo (string userId, VoicemailUserPolicy body)
         {
             // verify the required parameter 'userId' is set
-            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling PatchUservoicemailpoliciesUserId");
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling PatchUserpoliciesUserId");
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PatchUservoicemailpoliciesUserId");
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling PatchUserpoliciesUserId");
             
     
-            var localVarPath = "/api/v1/configuration/uservoicemailpolicies/{userId}";
+            var localVarPath = "/api/v2/voicemail/userpolicies/{userId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2110,9 +2110,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PatchUservoicemailpoliciesUserId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserpoliciesUserId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PatchUservoicemailpoliciesUserId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserpoliciesUserId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<VoicemailUserPolicy>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2148,7 +2148,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailApi->PutMessagesMessageId");
             
     
-            var localVarPath = "/api/v1/voicemail/messages/{messageId}";
+            var localVarPath = "/api/v2/voicemail/messages/{messageId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2243,7 +2243,7 @@ namespace ININ.PureCloudApi.Api
             if (messageId == null) throw new ApiException(400, "Missing required parameter 'messageId' when calling PutMessagesMessageId");
             
     
-            var localVarPath = "/api/v1/voicemail/messages/{messageId}";
+            var localVarPath = "/api/v2/voicemail/messages/{messageId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2317,9 +2317,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param> 
         /// <returns>VoicemailOrganizationPolicy</returns>
-        public VoicemailOrganizationPolicy PutVoicemailpolicy (VoicemailOrganizationPolicy body = null)
+        public VoicemailOrganizationPolicy PutPolicy (VoicemailOrganizationPolicy body = null)
         {
-             ApiResponse<VoicemailOrganizationPolicy> localVarResponse = PutVoicemailpolicyWithHttpInfo(body);
+             ApiResponse<VoicemailOrganizationPolicy> localVarResponse = PutPolicyWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -2329,11 +2329,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param> 
         /// <returns>ApiResponse of VoicemailOrganizationPolicy</returns>
-        public ApiResponse< VoicemailOrganizationPolicy > PutVoicemailpolicyWithHttpInfo (VoicemailOrganizationPolicy body = null)
+        public ApiResponse< VoicemailOrganizationPolicy > PutPolicyWithHttpInfo (VoicemailOrganizationPolicy body = null)
         {
             
     
-            var localVarPath = "/api/v1/configuration/voicemailpolicy";
+            var localVarPath = "/api/v2/voicemail/policy";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2389,9 +2389,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutVoicemailpolicy: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutPolicy: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutVoicemailpolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutPolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<VoicemailOrganizationPolicy>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -2406,9 +2406,9 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>Task of VoicemailOrganizationPolicy</returns>
-        public async System.Threading.Tasks.Task<VoicemailOrganizationPolicy> PutVoicemailpolicyAsync (VoicemailOrganizationPolicy body = null)
+        public async System.Threading.Tasks.Task<VoicemailOrganizationPolicy> PutPolicyAsync (VoicemailOrganizationPolicy body = null)
         {
-             ApiResponse<VoicemailOrganizationPolicy> localVarResponse = await PutVoicemailpolicyAsyncWithHttpInfo(body);
+             ApiResponse<VoicemailOrganizationPolicy> localVarResponse = await PutPolicyAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -2419,11 +2419,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (VoicemailOrganizationPolicy)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> PutVoicemailpolicyAsyncWithHttpInfo (VoicemailOrganizationPolicy body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> PutPolicyAsyncWithHttpInfo (VoicemailOrganizationPolicy body = null)
         {
             
     
-            var localVarPath = "/api/v1/configuration/voicemailpolicy";
+            var localVarPath = "/api/v2/voicemail/policy";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2480,9 +2480,9 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutVoicemailpolicy: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutPolicy: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutVoicemailpolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutPolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<VoicemailOrganizationPolicy>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),

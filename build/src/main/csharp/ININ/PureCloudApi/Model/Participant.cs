@@ -61,7 +61,6 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Dnis">Dnis.</param>
         /// <param name="Locale">Locale.</param>
         /// <param name="WrapupRequired">WrapupRequired (default to false).</param>
-        /// <param name="WrapupExpected">WrapupExpected (default to false).</param>
         /// <param name="WrapupPrompt">WrapupPrompt.</param>
         /// <param name="WrapupTimeoutMs">WrapupTimeoutMs.</param>
         /// <param name="WrapupSkipped">WrapupSkipped (default to false).</param>
@@ -76,7 +75,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Videos">Videos.</param>
         /// <param name="Evaluations">Evaluations.</param>
 
-        public Participant(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string QueueId = null, string GroupId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, bool? WrapupExpected = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, string MonitoredParticipantId = null, Dictionary<string, string> Attributes = null, List<Call> Calls = null, List<Callback> Callbacks = null, List<Chat> Chats = null, List<Email> Emails = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null)
+        public Participant(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string QueueId = null, string GroupId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, string MonitoredParticipantId = null, Dictionary<string, string> Attributes = null, List<Call> Calls = null, List<Callback> Callbacks = null, List<ConversationChat> Chats = null, List<Email> Emails = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null)
         {
             this.Id = Id;
             this.StartTime = StartTime;
@@ -103,15 +102,6 @@ namespace ININ.PureCloudApi.Model
             else
             {
                 this.WrapupRequired = WrapupRequired;
-            }
-            // use default value if no "WrapupExpected" provided
-            if (WrapupExpected == null)
-            {
-                this.WrapupExpected = false;
-            }
-            else
-            {
-                this.WrapupExpected = WrapupExpected;
             }
             this.WrapupPrompt = WrapupPrompt;
             this.WrapupTimeoutMs = WrapupTimeoutMs;
@@ -250,12 +240,6 @@ namespace ININ.PureCloudApi.Model
         public bool? WrapupRequired { get; set; }
     
         /// <summary>
-        /// Gets or Sets WrapupExpected
-        /// </summary>
-        [DataMember(Name="wrapupExpected", EmitDefaultValue=false)]
-        public bool? WrapupExpected { get; set; }
-    
-        /// <summary>
         /// Gets or Sets WrapupTimeoutMs
         /// </summary>
         [DataMember(Name="wrapupTimeoutMs", EmitDefaultValue=false)]
@@ -301,7 +285,7 @@ namespace ININ.PureCloudApi.Model
         /// Gets or Sets Chats
         /// </summary>
         [DataMember(Name="chats", EmitDefaultValue=false)]
-        public List<Chat> Chats { get; set; }
+        public List<ConversationChat> Chats { get; set; }
     
         /// <summary>
         /// Gets or Sets Emails
@@ -353,7 +337,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Dnis: ").Append(Dnis).Append("\n");
             sb.Append("  Locale: ").Append(Locale).Append("\n");
             sb.Append("  WrapupRequired: ").Append(WrapupRequired).Append("\n");
-            sb.Append("  WrapupExpected: ").Append(WrapupExpected).Append("\n");
             sb.Append("  WrapupPrompt: ").Append(WrapupPrompt).Append("\n");
             sb.Append("  WrapupTimeoutMs: ").Append(WrapupTimeoutMs).Append("\n");
             sb.Append("  WrapupSkipped: ").Append(WrapupSkipped).Append("\n");
@@ -495,11 +478,6 @@ namespace ININ.PureCloudApi.Model
                     this.WrapupRequired.Equals(other.WrapupRequired)
                 ) &&
                 (
-                    this.WrapupExpected == other.WrapupExpected ||
-                    this.WrapupExpected != null &&
-                    this.WrapupExpected.Equals(other.WrapupExpected)
-                ) &&
-                (
                     this.WrapupPrompt == other.WrapupPrompt ||
                     this.WrapupPrompt != null &&
                     this.WrapupPrompt.Equals(other.WrapupPrompt)
@@ -631,9 +609,6 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.WrapupRequired != null)
                     hash = hash * 59 + this.WrapupRequired.GetHashCode();
-                
-                if (this.WrapupExpected != null)
-                    hash = hash * 59 + this.WrapupExpected.GetHashCode();
                 
                 if (this.WrapupPrompt != null)
                     hash = hash * 59 + this.WrapupPrompt.GetHashCode();

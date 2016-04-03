@@ -97,33 +97,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'IsSubmitted' 
-        /// </summary>
-        [Test]
-        public void IsSubmittedTest()
-        {
-            // TODO: unit test for the property 'IsSubmitted' 
-        }
-        
-        /// <summary>
-        /// Test the property 'IsPending' 
-        /// </summary>
-        [Test]
-        public void IsPendingTest()
-        {
-            // TODO: unit test for the property 'IsPending' 
-        }
-        
-        /// <summary>
-        /// Test the property 'IsFrozen' 
-        /// </summary>
-        [Test]
-        public void IsFrozenTest()
-        {
-            // TODO: unit test for the property 'IsFrozen' 
-        }
-        
-        /// <summary>
         /// Test the property 'Currency' 
         /// </summary>
         [Test]

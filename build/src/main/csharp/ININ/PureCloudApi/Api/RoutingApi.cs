@@ -136,6 +136,52 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<string> DeleteQueuesQueueIdWrapupcodesCodeIdWithHttpInfo (string queueId, string codeId);
         
         /// <summary>
+        /// Delete Routing Skill
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="skillId">Skill ID</param>
+        /// <returns>string</returns>
+        string DeleteSkillsSkillId (string skillId);
+  
+        /// <summary>
+        /// Delete Routing Skill
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="skillId">Skill ID</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> DeleteSkillsSkillIdWithHttpInfo (string skillId);
+        
+        /// <summary>
+        /// Remove routing skill from user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="skillId"></param>
+        /// <returns>string</returns>
+        string DeleteUserIdRoutingskillsSkillId (string userId, string skillId);
+  
+        /// <summary>
+        /// Remove routing skill from user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="skillId"></param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> DeleteUserIdRoutingskillsSkillIdWithHttpInfo (string userId, string skillId);
+        
+        /// <summary>
         /// Delete utilization settings and revert to system defaults.
         /// </summary>
         /// <remarks>
@@ -340,40 +386,6 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<EstimatedWaitTimePredictions> GetQueuesQueueIdEstimatedwaittimeWithHttpInfo (string queueId, string conversationId = null);
         
         /// <summary>
-        /// Get members in a queue
-        /// </summary>
-        /// <remarks>
-        /// Get the list of members of a queue
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId"></param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="userId">UserID</param>
-        /// <param name="statusId">Status ID</param>
-        /// <param name="joined">Joined</param>
-        /// <param name="expand">expand</param>
-        /// <returns>QueueMemberEntityListing</returns>
-        QueueMemberEntityListing GetQueuesQueueIdMembers (string queueId, int? pageSize = null, int? pageNumber = null, string userId = null, string statusId = null, bool? joined = null, string expand = null);
-  
-        /// <summary>
-        /// Get members in a queue
-        /// </summary>
-        /// <remarks>
-        /// Get the list of members of a queue
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId"></param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="userId">UserID</param>
-        /// <param name="statusId">Status ID</param>
-        /// <param name="joined">Joined</param>
-        /// <param name="expand">expand</param>
-        /// <returns>ApiResponse of QueueMemberEntityListing</returns>
-        ApiResponse<QueueMemberEntityListing> GetQueuesQueueIdMembersWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string userId = null, string statusId = null, bool? joined = null, string expand = null);
-        
-        /// <summary>
         /// Get the members of this queue
         /// </summary>
         /// <remarks>
@@ -430,7 +442,7 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<WrapupCode> GetQueuesQueueIdWrapupcodesWithHttpInfo (string queueId, string codeId);
         
         /// <summary>
-        /// Get the list of skills.
+        /// Get the list of routing skills.
         /// </summary>
         /// <remarks>
         /// 
@@ -438,13 +450,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
-        /// <param name="sortBy">Sort by</param>
-        /// <param name="name">Name</param>
         /// <returns>SkillEntityListing</returns>
-        SkillEntityListing GetSkills (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
+        SkillEntityListing GetSkills (int? pageSize = null, int? pageNumber = null);
   
         /// <summary>
-        /// Get the list of skills.
+        /// Get the list of routing skills.
         /// </summary>
         /// <remarks>
         /// 
@@ -452,10 +462,58 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
-        /// <param name="sortBy">Sort by</param>
-        /// <param name="name">Name</param>
         /// <returns>ApiResponse of SkillEntityListing</returns>
-        ApiResponse<SkillEntityListing> GetSkillsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
+        ApiResponse<SkillEntityListing> GetSkillsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        
+        /// <summary>
+        /// Get Routing Skill
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="skillId">Skill ID</param>
+        /// <returns>RoutingSkill</returns>
+        RoutingSkill GetSkillsSkillId (string skillId);
+  
+        /// <summary>
+        /// Get Routing Skill
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="skillId">Skill ID</param>
+        /// <returns>ApiResponse of RoutingSkill</returns>
+        ApiResponse<RoutingSkill> GetSkillsSkillIdWithHttpInfo (string skillId);
+        
+        /// <summary>
+        /// List routing skills for user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="sortOrder">Ascending or descending sort order</param>
+        /// <returns>UserSkillEntityListing</returns>
+        UserSkillEntityListing GetUserIdRoutingskills (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+  
+        /// <summary>
+        /// List routing skills for user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="sortOrder">Ascending or descending sort order</param>
+        /// <returns>ApiResponse of UserSkillEntityListing</returns>
+        ApiResponse<UserSkillEntityListing> GetUserIdRoutingskillsWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
         
         /// <summary>
         /// Get the utilization settings.
@@ -644,6 +702,28 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<Queue> PostQueuesWithHttpInfo (Queue body = null);
         
         /// <summary>
+        /// Query for queue observations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>ObservationQueryResponse</returns>
+        ObservationQueryResponse PostQueuesObservationsQuery (ObservationQuery body = null);
+  
+        /// <summary>
+        /// Query for queue observations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>ApiResponse of ObservationQueryResponse</returns>
+        ApiResponse<ObservationQueryResponse> PostQueuesObservationsQueryWithHttpInfo (ObservationQuery body = null);
+        
+        /// <summary>
         /// Bulk add or delete up to 100 queue members
         /// </summary>
         /// <remarks>
@@ -694,6 +774,52 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body"></param>
         /// <returns>ApiResponse of WrapupCode</returns>
         ApiResponse<WrapupCode> PostQueuesQueueIdWrapupcodesWithHttpInfo (string queueId, string codeId, List<WrapupCode> body = null);
+        
+        /// <summary>
+        /// Create Skill
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Skill</param>
+        /// <returns>RoutingSkill</returns>
+        RoutingSkill PostSkills (RoutingSkill body = null);
+  
+        /// <summary>
+        /// Create Skill
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Skill</param>
+        /// <returns>ApiResponse of RoutingSkill</returns>
+        ApiResponse<RoutingSkill> PostSkillsWithHttpInfo (RoutingSkill body = null);
+        
+        /// <summary>
+        /// Add routing skill to user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Skill</param>
+        /// <returns>UserRoutingSkill</returns>
+        UserRoutingSkill PostUserIdRoutingskills (string userId, UserRoutingSkill body = null);
+  
+        /// <summary>
+        /// Add routing skill to user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Skill</param>
+        /// <returns>ApiResponse of UserRoutingSkill</returns>
+        ApiResponse<UserRoutingSkill> PostUserIdRoutingskillsWithHttpInfo (string userId, UserRoutingSkill body = null);
         
         /// <summary>
         /// Create a wrap-up code
@@ -768,30 +894,28 @@ namespace ININ.PureCloudApi.Api
         ApiResponse<Queue> PutQueuesQueueIdWithHttpInfo (string queueId, Queue body = null);
         
         /// <summary>
-        /// Join or unjoin a user to the queue.
+        /// Update Routing Skill
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="memberId">Member/User ID</param>
-        /// <param name="body">To join queue ~ \&quot;joined\&quot;:true</param>
-        /// <returns>QueueMember</returns>
-        QueueMember PutQueuesQueueIdMembersMemberId (string queueId, string memberId, QueueMember body = null);
+        /// <param name="skillId">Skill ID</param>
+        /// <param name="body">Skill</param>
+        /// <returns>RoutingSkill</returns>
+        RoutingSkill PutSkillsSkillId (string skillId, RoutingSkill body = null);
   
         /// <summary>
-        /// Join or unjoin a user to the queue.
+        /// Update Routing Skill
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="memberId">Member/User ID</param>
-        /// <param name="body">To join queue ~ \&quot;joined\&quot;:true</param>
-        /// <returns>ApiResponse of QueueMember</returns>
-        ApiResponse<QueueMember> PutQueuesQueueIdMembersMemberIdWithHttpInfo (string queueId, string memberId, QueueMember body = null);
+        /// <param name="skillId">Skill ID</param>
+        /// <param name="body">Skill</param>
+        /// <returns>ApiResponse of RoutingSkill</returns>
+        ApiResponse<RoutingSkill> PutSkillsSkillIdWithHttpInfo (string skillId, RoutingSkill body = null);
         
         /// <summary>
         /// Update the utilization settings.
@@ -960,6 +1084,52 @@ namespace ININ.PureCloudApi.Api
         /// <param name="codeId">Code ID</param>
         /// <returns>Task of ApiResponse (string)</returns>
         System.Threading.Tasks.Task<ApiResponse<string>> DeleteQueuesQueueIdWrapupcodesCodeIdAsyncWithHttpInfo (string queueId, string codeId);
+        
+        /// <summary>
+        /// Delete Routing Skill
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="skillId">Skill ID</param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> DeleteSkillsSkillIdAsync (string skillId);
+
+        /// <summary>
+        /// Delete Routing Skill
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="skillId">Skill ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteSkillsSkillIdAsyncWithHttpInfo (string skillId);
+        
+        /// <summary>
+        /// Remove routing skill from user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="skillId"></param>
+        /// <returns>Task of string</returns>
+        System.Threading.Tasks.Task<string> DeleteUserIdRoutingskillsSkillIdAsync (string userId, string skillId);
+
+        /// <summary>
+        /// Remove routing skill from user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="skillId"></param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        System.Threading.Tasks.Task<ApiResponse<string>> DeleteUserIdRoutingskillsSkillIdAsyncWithHttpInfo (string userId, string skillId);
         
         /// <summary>
         /// Delete utilization settings and revert to system defaults.
@@ -1166,40 +1336,6 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<EstimatedWaitTimePredictions>> GetQueuesQueueIdEstimatedwaittimeAsyncWithHttpInfo (string queueId, string conversationId = null);
         
         /// <summary>
-        /// Get members in a queue
-        /// </summary>
-        /// <remarks>
-        /// Get the list of members of a queue
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId"></param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="userId">UserID</param>
-        /// <param name="statusId">Status ID</param>
-        /// <param name="joined">Joined</param>
-        /// <param name="expand">expand</param>
-        /// <returns>Task of QueueMemberEntityListing</returns>
-        System.Threading.Tasks.Task<QueueMemberEntityListing> GetQueuesQueueIdMembersAsync (string queueId, int? pageSize = null, int? pageNumber = null, string userId = null, string statusId = null, bool? joined = null, string expand = null);
-
-        /// <summary>
-        /// Get members in a queue
-        /// </summary>
-        /// <remarks>
-        /// Get the list of members of a queue
-        /// </remarks>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId"></param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="userId">UserID</param>
-        /// <param name="statusId">Status ID</param>
-        /// <param name="joined">Joined</param>
-        /// <param name="expand">expand</param>
-        /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> GetQueuesQueueIdMembersAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string userId = null, string statusId = null, bool? joined = null, string expand = null);
-        
-        /// <summary>
         /// Get the members of this queue
         /// </summary>
         /// <remarks>
@@ -1256,7 +1392,7 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetQueuesQueueIdWrapupcodesAsyncWithHttpInfo (string queueId, string codeId);
         
         /// <summary>
-        /// Get the list of skills.
+        /// Get the list of routing skills.
         /// </summary>
         /// <remarks>
         /// 
@@ -1264,13 +1400,11 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
-        /// <param name="sortBy">Sort by</param>
-        /// <param name="name">Name</param>
         /// <returns>Task of SkillEntityListing</returns>
-        System.Threading.Tasks.Task<SkillEntityListing> GetSkillsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
+        System.Threading.Tasks.Task<SkillEntityListing> GetSkillsAsync (int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
-        /// Get the list of skills.
+        /// Get the list of routing skills.
         /// </summary>
         /// <remarks>
         /// 
@@ -1278,10 +1412,58 @@ namespace ININ.PureCloudApi.Api
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
-        /// <param name="sortBy">Sort by</param>
-        /// <param name="name">Name</param>
         /// <returns>Task of ApiResponse (SkillEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SkillEntityListing>> GetSkillsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<SkillEntityListing>> GetSkillsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        
+        /// <summary>
+        /// Get Routing Skill
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="skillId">Skill ID</param>
+        /// <returns>Task of RoutingSkill</returns>
+        System.Threading.Tasks.Task<RoutingSkill> GetSkillsSkillIdAsync (string skillId);
+
+        /// <summary>
+        /// Get Routing Skill
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="skillId">Skill ID</param>
+        /// <returns>Task of ApiResponse (RoutingSkill)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RoutingSkill>> GetSkillsSkillIdAsyncWithHttpInfo (string skillId);
+        
+        /// <summary>
+        /// List routing skills for user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="sortOrder">Ascending or descending sort order</param>
+        /// <returns>Task of UserSkillEntityListing</returns>
+        System.Threading.Tasks.Task<UserSkillEntityListing> GetUserIdRoutingskillsAsync (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+
+        /// <summary>
+        /// List routing skills for user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="sortOrder">Ascending or descending sort order</param>
+        /// <returns>Task of ApiResponse (UserSkillEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserSkillEntityListing>> GetUserIdRoutingskillsAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
         
         /// <summary>
         /// Get the utilization settings.
@@ -1470,6 +1652,28 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<Queue>> PostQueuesAsyncWithHttpInfo (Queue body = null);
         
         /// <summary>
+        /// Query for queue observations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of ObservationQueryResponse</returns>
+        System.Threading.Tasks.Task<ObservationQueryResponse> PostQueuesObservationsQueryAsync (ObservationQuery body = null);
+
+        /// <summary>
+        /// Query for queue observations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of ApiResponse (ObservationQueryResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ObservationQueryResponse>> PostQueuesObservationsQueryAsyncWithHttpInfo (ObservationQuery body = null);
+        
+        /// <summary>
         /// Bulk add or delete up to 100 queue members
         /// </summary>
         /// <remarks>
@@ -1520,6 +1724,52 @@ namespace ININ.PureCloudApi.Api
         /// <param name="body"></param>
         /// <returns>Task of ApiResponse (WrapupCode)</returns>
         System.Threading.Tasks.Task<ApiResponse<WrapupCode>> PostQueuesQueueIdWrapupcodesAsyncWithHttpInfo (string queueId, string codeId, List<WrapupCode> body = null);
+        
+        /// <summary>
+        /// Create Skill
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Skill</param>
+        /// <returns>Task of RoutingSkill</returns>
+        System.Threading.Tasks.Task<RoutingSkill> PostSkillsAsync (RoutingSkill body = null);
+
+        /// <summary>
+        /// Create Skill
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Skill</param>
+        /// <returns>Task of ApiResponse (RoutingSkill)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RoutingSkill>> PostSkillsAsyncWithHttpInfo (RoutingSkill body = null);
+        
+        /// <summary>
+        /// Add routing skill to user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Skill</param>
+        /// <returns>Task of UserRoutingSkill</returns>
+        System.Threading.Tasks.Task<UserRoutingSkill> PostUserIdRoutingskillsAsync (string userId, UserRoutingSkill body = null);
+
+        /// <summary>
+        /// Add routing skill to user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Skill</param>
+        /// <returns>Task of ApiResponse (UserRoutingSkill)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PostUserIdRoutingskillsAsyncWithHttpInfo (string userId, UserRoutingSkill body = null);
         
         /// <summary>
         /// Create a wrap-up code
@@ -1594,30 +1844,28 @@ namespace ININ.PureCloudApi.Api
         System.Threading.Tasks.Task<ApiResponse<Queue>> PutQueuesQueueIdAsyncWithHttpInfo (string queueId, Queue body = null);
         
         /// <summary>
-        /// Join or unjoin a user to the queue.
+        /// Update Routing Skill
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="memberId">Member/User ID</param>
-        /// <param name="body">To join queue ~ \&quot;joined\&quot;:true</param>
-        /// <returns>Task of QueueMember</returns>
-        System.Threading.Tasks.Task<QueueMember> PutQueuesQueueIdMembersMemberIdAsync (string queueId, string memberId, QueueMember body = null);
+        /// <param name="skillId">Skill ID</param>
+        /// <param name="body">Skill</param>
+        /// <returns>Task of RoutingSkill</returns>
+        System.Threading.Tasks.Task<RoutingSkill> PutSkillsSkillIdAsync (string skillId, RoutingSkill body = null);
 
         /// <summary>
-        /// Join or unjoin a user to the queue.
+        /// Update Routing Skill
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="memberId">Member/User ID</param>
-        /// <param name="body">To join queue ~ \&quot;joined\&quot;:true</param>
-        /// <returns>Task of ApiResponse (QueueMember)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QueueMember>> PutQueuesQueueIdMembersMemberIdAsyncWithHttpInfo (string queueId, string memberId, QueueMember body = null);
+        /// <param name="skillId">Skill ID</param>
+        /// <param name="body">Skill</param>
+        /// <returns>Task of ApiResponse (RoutingSkill)</returns>
+        System.Threading.Tasks.Task<ApiResponse<RoutingSkill>> PutSkillsSkillIdAsyncWithHttpInfo (string skillId, RoutingSkill body = null);
         
         /// <summary>
         /// Update the utilization settings.
@@ -1777,7 +2025,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'id' when calling RoutingApi->DeleteEmailDomainsDomainRoutesId");
             
     
-            var localVarPath = "/api/v1/routing/email/domains/{domain}/routes/{id}";
+            var localVarPath = "/api/v2/routing/email/domains/{domain}/routes/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1868,7 +2116,7 @@ namespace ININ.PureCloudApi.Api
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteEmailDomainsDomainRoutesId");
             
     
-            var localVarPath = "/api/v1/routing/email/domains/{domain}/routes/{id}";
+            var localVarPath = "/api/v2/routing/email/domains/{domain}/routes/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1956,7 +2204,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'id' when calling RoutingApi->DeleteEmailDomainsId");
             
     
-            var localVarPath = "/api/v1/routing/email/domains/{id}";
+            var localVarPath = "/api/v2/routing/email/domains/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2042,7 +2290,7 @@ namespace ININ.PureCloudApi.Api
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling DeleteEmailDomainsId");
             
     
-            var localVarPath = "/api/v1/routing/email/domains/{id}";
+            var localVarPath = "/api/v2/routing/email/domains/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2131,7 +2379,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->DeleteQueuesQueueId");
             
     
-            var localVarPath = "/api/v1/routing/queues/{queueId}";
+            var localVarPath = "/api/v2/routing/queues/{queueId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2220,7 +2468,7 @@ namespace ININ.PureCloudApi.Api
             if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling DeleteQueuesQueueId");
             
     
-            var localVarPath = "/api/v1/routing/queues/{queueId}";
+            var localVarPath = "/api/v2/routing/queues/{queueId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2314,7 +2562,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'memberId' when calling RoutingApi->DeleteQueuesQueueIdUsersMemberId");
             
     
-            var localVarPath = "/api/v1/routing/queues/{queueId}/users/{memberId}";
+            var localVarPath = "/api/v2/routing/queues/{queueId}/users/{memberId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2405,7 +2653,7 @@ namespace ININ.PureCloudApi.Api
             if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling DeleteQueuesQueueIdUsersMemberId");
             
     
-            var localVarPath = "/api/v1/routing/queues/{queueId}/users/{memberId}";
+            var localVarPath = "/api/v2/routing/queues/{queueId}/users/{memberId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2499,7 +2747,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->DeleteQueuesQueueIdWrapupcodesCodeId");
             
     
-            var localVarPath = "/api/v1/routing/queues/{queueId}/wrapupcodes/{codeId}";
+            var localVarPath = "/api/v2/routing/queues/{queueId}/wrapupcodes/{codeId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2590,7 +2838,7 @@ namespace ININ.PureCloudApi.Api
             if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling DeleteQueuesQueueIdWrapupcodesCodeId");
             
     
-            var localVarPath = "/api/v1/routing/queues/{queueId}/wrapupcodes/{codeId}";
+            var localVarPath = "/api/v2/routing/queues/{queueId}/wrapupcodes/{codeId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2653,6 +2901,364 @@ namespace ININ.PureCloudApi.Api
         }
         
         /// <summary>
+        /// Delete Routing Skill 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="skillId">Skill ID</param> 
+        /// <returns>string</returns>
+        public string DeleteSkillsSkillId (string skillId)
+        {
+             ApiResponse<string> localVarResponse = DeleteSkillsSkillIdWithHttpInfo(skillId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete Routing Skill 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="skillId">Skill ID</param> 
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > DeleteSkillsSkillIdWithHttpInfo (string skillId)
+        {
+            
+            // verify the required parameter 'skillId' is set
+            if (skillId == null)
+                throw new ApiException(400, "Missing required parameter 'skillId' when calling RoutingApi->DeleteSkillsSkillId");
+            
+    
+            var localVarPath = "/api/v2/routing/skills/{skillId}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (skillId != null) localVarPathParams.Add("skillId", Configuration.ApiClient.ParameterToString(skillId)); // path parameter
+            
+            
+            
+            
+            
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSkillsSkillId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSkillsSkillId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+
+        
+        /// <summary>
+        /// Delete Routing Skill 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="skillId">Skill ID</param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> DeleteSkillsSkillIdAsync (string skillId)
+        {
+             ApiResponse<string> localVarResponse = await DeleteSkillsSkillIdAsyncWithHttpInfo(skillId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete Routing Skill 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="skillId">Skill ID</param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteSkillsSkillIdAsyncWithHttpInfo (string skillId)
+        {
+            // verify the required parameter 'skillId' is set
+            if (skillId == null) throw new ApiException(400, "Missing required parameter 'skillId' when calling DeleteSkillsSkillId");
+            
+    
+            var localVarPath = "/api/v2/routing/skills/{skillId}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (skillId != null) localVarPathParams.Add("skillId", Configuration.ApiClient.ParameterToString(skillId)); // path parameter
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSkillsSkillId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSkillsSkillId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+        
+        /// <summary>
+        /// Remove routing skill from user 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param> 
+        /// <param name="skillId"></param> 
+        /// <returns>string</returns>
+        public string DeleteUserIdRoutingskillsSkillId (string userId, string skillId)
+        {
+             ApiResponse<string> localVarResponse = DeleteUserIdRoutingskillsSkillIdWithHttpInfo(userId, skillId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Remove routing skill from user 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param> 
+        /// <param name="skillId"></param> 
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > DeleteUserIdRoutingskillsSkillIdWithHttpInfo (string userId, string skillId)
+        {
+            
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling RoutingApi->DeleteUserIdRoutingskillsSkillId");
+            
+            // verify the required parameter 'skillId' is set
+            if (skillId == null)
+                throw new ApiException(400, "Missing required parameter 'skillId' when calling RoutingApi->DeleteUserIdRoutingskillsSkillId");
+            
+    
+            var localVarPath = "/api/v2/users/{userId}/routingskills/{skillId}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (skillId != null) localVarPathParams.Add("skillId", Configuration.ApiClient.ParameterToString(skillId)); // path parameter
+            
+            
+            
+            
+            
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUserIdRoutingskillsSkillId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUserIdRoutingskillsSkillId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+
+        
+        /// <summary>
+        /// Remove routing skill from user 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="skillId"></param>
+        /// <returns>Task of string</returns>
+        public async System.Threading.Tasks.Task<string> DeleteUserIdRoutingskillsSkillIdAsync (string userId, string skillId)
+        {
+             ApiResponse<string> localVarResponse = await DeleteUserIdRoutingskillsSkillIdAsyncWithHttpInfo(userId, skillId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Remove routing skill from user 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="skillId"></param>
+        /// <returns>Task of ApiResponse (string)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteUserIdRoutingskillsSkillIdAsyncWithHttpInfo (string userId, string skillId)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling DeleteUserIdRoutingskillsSkillId");
+            // verify the required parameter 'skillId' is set
+            if (skillId == null) throw new ApiException(400, "Missing required parameter 'skillId' when calling DeleteUserIdRoutingskillsSkillId");
+            
+    
+            var localVarPath = "/api/v2/users/{userId}/routingskills/{skillId}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (skillId != null) localVarPathParams.Add("skillId", Configuration.ApiClient.ParameterToString(skillId)); // path parameter
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUserIdRoutingskillsSkillId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUserIdRoutingskillsSkillId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+            
+        }
+        
+        /// <summary>
         /// Delete utilization settings and revert to system defaults. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2672,7 +3278,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/routing/utilization";
+            var localVarPath = "/api/v2/routing/utilization";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2753,7 +3359,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/routing/utilization";
+            var localVarPath = "/api/v2/routing/utilization";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2839,7 +3445,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->DeleteWrapupcodesCodeId");
             
     
-            var localVarPath = "/api/v1/routing/wrapupcodes/{codeId}";
+            var localVarPath = "/api/v2/routing/wrapupcodes/{codeId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2925,7 +3531,7 @@ namespace ININ.PureCloudApi.Api
             if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling DeleteWrapupcodesCodeId");
             
     
-            var localVarPath = "/api/v1/routing/wrapupcodes/{codeId}";
+            var localVarPath = "/api/v2/routing/wrapupcodes/{codeId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3006,7 +3612,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/routing/email/domains";
+            var localVarPath = "/api/v2/routing/email/domains";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3087,7 +3693,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/routing/email/domains";
+            var localVarPath = "/api/v2/routing/email/domains";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3173,7 +3779,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'domain' when calling RoutingApi->GetEmailDomainsDomainRoutes");
             
     
-            var localVarPath = "/api/v1/routing/email/domains/{domain}/routes";
+            var localVarPath = "/api/v2/routing/email/domains/{domain}/routes";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3259,7 +3865,7 @@ namespace ININ.PureCloudApi.Api
             if (domain == null) throw new ApiException(400, "Missing required parameter 'domain' when calling GetEmailDomainsDomainRoutes");
             
     
-            var localVarPath = "/api/v1/routing/email/domains/{domain}/routes";
+            var localVarPath = "/api/v2/routing/email/domains/{domain}/routes";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3352,7 +3958,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'id' when calling RoutingApi->GetEmailDomainsDomainRoutesId");
             
     
-            var localVarPath = "/api/v1/routing/email/domains/{domain}/routes/{id}";
+            var localVarPath = "/api/v2/routing/email/domains/{domain}/routes/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3443,7 +4049,7 @@ namespace ININ.PureCloudApi.Api
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling GetEmailDomainsDomainRoutesId");
             
     
-            var localVarPath = "/api/v1/routing/email/domains/{domain}/routes/{id}";
+            var localVarPath = "/api/v2/routing/email/domains/{domain}/routes/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3525,7 +4131,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/routing/email/setup";
+            var localVarPath = "/api/v2/routing/email/setup";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3606,7 +4212,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/routing/email/setup";
+            var localVarPath = "/api/v2/routing/email/setup";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3696,7 +4302,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/routing/queues";
+            var localVarPath = "/api/v2/routing/queues";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3792,7 +4398,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/routing/queues";
+            var localVarPath = "/api/v2/routing/queues";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3883,7 +4489,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueuesQueueId");
             
     
-            var localVarPath = "/api/v1/routing/queues/{queueId}";
+            var localVarPath = "/api/v2/routing/queues/{queueId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3969,7 +4575,7 @@ namespace ININ.PureCloudApi.Api
             if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling GetQueuesQueueId");
             
     
-            var localVarPath = "/api/v1/routing/queues/{queueId}";
+            var localVarPath = "/api/v2/routing/queues/{queueId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4058,7 +4664,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueuesQueueIdEstimatedwaittime");
             
     
-            var localVarPath = "/api/v1/routing/queues/{queueId}/estimatedwaittime";
+            var localVarPath = "/api/v2/routing/queues/{queueId}/estimatedwaittime";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4147,7 +4753,7 @@ namespace ININ.PureCloudApi.Api
             if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling GetQueuesQueueIdEstimatedwaittime");
             
     
-            var localVarPath = "/api/v1/routing/queues/{queueId}/estimatedwaittime";
+            var localVarPath = "/api/v2/routing/queues/{queueId}/estimatedwaittime";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4210,215 +4816,6 @@ namespace ININ.PureCloudApi.Api
         }
         
         /// <summary>
-        /// Get members in a queue Get the list of members of a queue
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId"></param> 
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="userId">UserID</param> 
-        /// <param name="statusId">Status ID</param> 
-        /// <param name="joined">Joined</param> 
-        /// <param name="expand">expand</param> 
-        /// <returns>QueueMemberEntityListing</returns>
-        public QueueMemberEntityListing GetQueuesQueueIdMembers (string queueId, int? pageSize = null, int? pageNumber = null, string userId = null, string statusId = null, bool? joined = null, string expand = null)
-        {
-             ApiResponse<QueueMemberEntityListing> localVarResponse = GetQueuesQueueIdMembersWithHttpInfo(queueId, pageSize, pageNumber, userId, statusId, joined, expand);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get members in a queue Get the list of members of a queue
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId"></param> 
-        /// <param name="pageSize">Page size</param> 
-        /// <param name="pageNumber">Page number</param> 
-        /// <param name="userId">UserID</param> 
-        /// <param name="statusId">Status ID</param> 
-        /// <param name="joined">Joined</param> 
-        /// <param name="expand">expand</param> 
-        /// <returns>ApiResponse of QueueMemberEntityListing</returns>
-        public ApiResponse< QueueMemberEntityListing > GetQueuesQueueIdMembersWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string userId = null, string statusId = null, bool? joined = null, string expand = null)
-        {
-            
-            // verify the required parameter 'queueId' is set
-            if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueuesQueueIdMembers");
-            
-    
-            var localVarPath = "/api/v1/routing/queues/{queueId}/members";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            if (userId != null) localVarQueryParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // query parameter
-            if (statusId != null) localVarQueryParams.Add("statusId", Configuration.ApiClient.ParameterToString(statusId)); // query parameter
-            if (joined != null) localVarQueryParams.Add("joined", Configuration.ApiClient.ParameterToString(joined)); // query parameter
-            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
-
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdMembers: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<QueueMemberEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (QueueMemberEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMemberEntityListing)));
-            
-        }
-
-        
-        /// <summary>
-        /// Get members in a queue Get the list of members of a queue
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId"></param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="userId">UserID</param>
-        /// <param name="statusId">Status ID</param>
-        /// <param name="joined">Joined</param>
-        /// <param name="expand">expand</param>
-        /// <returns>Task of QueueMemberEntityListing</returns>
-        public async System.Threading.Tasks.Task<QueueMemberEntityListing> GetQueuesQueueIdMembersAsync (string queueId, int? pageSize = null, int? pageNumber = null, string userId = null, string statusId = null, bool? joined = null, string expand = null)
-        {
-             ApiResponse<QueueMemberEntityListing> localVarResponse = await GetQueuesQueueIdMembersAsyncWithHttpInfo(queueId, pageSize, pageNumber, userId, statusId, joined, expand);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get members in a queue Get the list of members of a queue
-        /// </summary>
-        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId"></param>
-        /// <param name="pageSize">Page size</param>
-        /// <param name="pageNumber">Page number</param>
-        /// <param name="userId">UserID</param>
-        /// <param name="statusId">Status ID</param>
-        /// <param name="joined">Joined</param>
-        /// <param name="expand">expand</param>
-        /// <returns>Task of ApiResponse (QueueMemberEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueueMemberEntityListing>> GetQueuesQueueIdMembersAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string userId = null, string statusId = null, bool? joined = null, string expand = null)
-        {
-            // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling GetQueuesQueueIdMembers");
-            
-    
-            var localVarPath = "/api/v1/routing/queues/{queueId}/members";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            if (userId != null) localVarQueryParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // query parameter
-            if (statusId != null) localVarQueryParams.Add("statusId", Configuration.ApiClient.ParameterToString(statusId)); // query parameter
-            if (joined != null) localVarQueryParams.Add("joined", Configuration.ApiClient.ParameterToString(joined)); // query parameter
-            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
-
-            
-            // authentication (PureCloud Auth) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdMembers: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetQueuesQueueIdMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<QueueMemberEntityListing>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (QueueMemberEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMemberEntityListing)));
-            
-        }
-        
-        /// <summary>
         /// Get the members of this queue 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4454,7 +4851,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->GetQueuesQueueIdUsers");
             
     
-            var localVarPath = "/api/v1/routing/queues/{queueId}/users";
+            var localVarPath = "/api/v2/routing/queues/{queueId}/users";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4555,7 +4952,7 @@ namespace ININ.PureCloudApi.Api
             if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling GetQueuesQueueIdUsers");
             
     
-            var localVarPath = "/api/v1/routing/queues/{queueId}/users";
+            var localVarPath = "/api/v2/routing/queues/{queueId}/users";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4653,7 +5050,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->GetQueuesQueueIdWrapupcodes");
             
     
-            var localVarPath = "/api/v1/routing/queues/{queueId}/wrapupcodes";
+            var localVarPath = "/api/v2/routing/queues/{queueId}/wrapupcodes";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4744,7 +5141,7 @@ namespace ININ.PureCloudApi.Api
             if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling GetQueuesQueueIdWrapupcodes");
             
     
-            var localVarPath = "/api/v1/routing/queues/{queueId}/wrapupcodes";
+            var localVarPath = "/api/v2/routing/queues/{queueId}/wrapupcodes";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4807,34 +5204,30 @@ namespace ININ.PureCloudApi.Api
         }
         
         /// <summary>
-        /// Get the list of skills. 
+        /// Get the list of routing skills. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
-        /// <param name="sortBy">Sort by</param> 
-        /// <param name="name">Name</param> 
         /// <returns>SkillEntityListing</returns>
-        public SkillEntityListing GetSkills (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
+        public SkillEntityListing GetSkills (int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<SkillEntityListing> localVarResponse = GetSkillsWithHttpInfo(pageSize, pageNumber, sortBy, name);
+             ApiResponse<SkillEntityListing> localVarResponse = GetSkillsWithHttpInfo(pageSize, pageNumber);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get the list of skills. 
+        /// Get the list of routing skills. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size</param> 
         /// <param name="pageNumber">Page number</param> 
-        /// <param name="sortBy">Sort by</param> 
-        /// <param name="name">Name</param> 
         /// <returns>ApiResponse of SkillEntityListing</returns>
-        public ApiResponse< SkillEntityListing > GetSkillsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
+        public ApiResponse< SkillEntityListing > GetSkillsWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
             
     
-            var localVarPath = "/api/v1/routing/skills";
+            var localVarPath = "/api/v2/routing/skills";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4863,8 +5256,6 @@ namespace ININ.PureCloudApi.Api
             
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
-            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             
             
             
@@ -4899,35 +5290,31 @@ namespace ININ.PureCloudApi.Api
 
         
         /// <summary>
-        /// Get the list of skills. 
+        /// Get the list of routing skills. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
-        /// <param name="sortBy">Sort by</param>
-        /// <param name="name">Name</param>
         /// <returns>Task of SkillEntityListing</returns>
-        public async System.Threading.Tasks.Task<SkillEntityListing> GetSkillsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
+        public async System.Threading.Tasks.Task<SkillEntityListing> GetSkillsAsync (int? pageSize = null, int? pageNumber = null)
         {
-             ApiResponse<SkillEntityListing> localVarResponse = await GetSkillsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, name);
+             ApiResponse<SkillEntityListing> localVarResponse = await GetSkillsAsyncWithHttpInfo(pageSize, pageNumber);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get the list of skills. 
+        /// Get the list of routing skills. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size</param>
         /// <param name="pageNumber">Page number</param>
-        /// <param name="sortBy">Sort by</param>
-        /// <param name="name">Name</param>
         /// <returns>Task of ApiResponse (SkillEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SkillEntityListing>> GetSkillsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SkillEntityListing>> GetSkillsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
             
     
-            var localVarPath = "/api/v1/routing/skills";
+            var localVarPath = "/api/v2/routing/skills";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4956,8 +5343,6 @@ namespace ININ.PureCloudApi.Api
             
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
-            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             
             
             
@@ -4992,6 +5377,370 @@ namespace ININ.PureCloudApi.Api
         }
         
         /// <summary>
+        /// Get Routing Skill 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="skillId">Skill ID</param> 
+        /// <returns>RoutingSkill</returns>
+        public RoutingSkill GetSkillsSkillId (string skillId)
+        {
+             ApiResponse<RoutingSkill> localVarResponse = GetSkillsSkillIdWithHttpInfo(skillId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Routing Skill 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="skillId">Skill ID</param> 
+        /// <returns>ApiResponse of RoutingSkill</returns>
+        public ApiResponse< RoutingSkill > GetSkillsSkillIdWithHttpInfo (string skillId)
+        {
+            
+            // verify the required parameter 'skillId' is set
+            if (skillId == null)
+                throw new ApiException(400, "Missing required parameter 'skillId' when calling RoutingApi->GetSkillsSkillId");
+            
+    
+            var localVarPath = "/api/v2/routing/skills/{skillId}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (skillId != null) localVarPathParams.Add("skillId", Configuration.ApiClient.ParameterToString(skillId)); // path parameter
+            
+            
+            
+            
+            
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSkillsSkillId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSkillsSkillId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<RoutingSkill>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RoutingSkill) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RoutingSkill)));
+            
+        }
+
+        
+        /// <summary>
+        /// Get Routing Skill 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="skillId">Skill ID</param>
+        /// <returns>Task of RoutingSkill</returns>
+        public async System.Threading.Tasks.Task<RoutingSkill> GetSkillsSkillIdAsync (string skillId)
+        {
+             ApiResponse<RoutingSkill> localVarResponse = await GetSkillsSkillIdAsyncWithHttpInfo(skillId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Routing Skill 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="skillId">Skill ID</param>
+        /// <returns>Task of ApiResponse (RoutingSkill)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RoutingSkill>> GetSkillsSkillIdAsyncWithHttpInfo (string skillId)
+        {
+            // verify the required parameter 'skillId' is set
+            if (skillId == null) throw new ApiException(400, "Missing required parameter 'skillId' when calling GetSkillsSkillId");
+            
+    
+            var localVarPath = "/api/v2/routing/skills/{skillId}";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (skillId != null) localVarPathParams.Add("skillId", Configuration.ApiClient.ParameterToString(skillId)); // path parameter
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSkillsSkillId: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSkillsSkillId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RoutingSkill>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RoutingSkill) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RoutingSkill)));
+            
+        }
+        
+        /// <summary>
+        /// List routing skills for user 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param> 
+        /// <param name="pageSize">Page size</param> 
+        /// <param name="pageNumber">Page number</param> 
+        /// <param name="sortOrder">Ascending or descending sort order</param> 
+        /// <returns>UserSkillEntityListing</returns>
+        public UserSkillEntityListing GetUserIdRoutingskills (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        {
+             ApiResponse<UserSkillEntityListing> localVarResponse = GetUserIdRoutingskillsWithHttpInfo(userId, pageSize, pageNumber, sortOrder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List routing skills for user 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param> 
+        /// <param name="pageSize">Page size</param> 
+        /// <param name="pageNumber">Page number</param> 
+        /// <param name="sortOrder">Ascending or descending sort order</param> 
+        /// <returns>ApiResponse of UserSkillEntityListing</returns>
+        public ApiResponse< UserSkillEntityListing > GetUserIdRoutingskillsWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        {
+            
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling RoutingApi->GetUserIdRoutingskills");
+            
+    
+            var localVarPath = "/api/v2/users/{userId}/routingskills";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            
+            
+            
+            
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserIdRoutingskills: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserIdRoutingskills: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<UserSkillEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (UserSkillEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserSkillEntityListing)));
+            
+        }
+
+        
+        /// <summary>
+        /// List routing skills for user 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="sortOrder">Ascending or descending sort order</param>
+        /// <returns>Task of UserSkillEntityListing</returns>
+        public async System.Threading.Tasks.Task<UserSkillEntityListing> GetUserIdRoutingskillsAsync (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        {
+             ApiResponse<UserSkillEntityListing> localVarResponse = await GetUserIdRoutingskillsAsyncWithHttpInfo(userId, pageSize, pageNumber, sortOrder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// List routing skills for user 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size</param>
+        /// <param name="pageNumber">Page number</param>
+        /// <param name="sortOrder">Ascending or descending sort order</param>
+        /// <returns>Task of ApiResponse (UserSkillEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserSkillEntityListing>> GetUserIdRoutingskillsAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling GetUserIdRoutingskills");
+            
+    
+            var localVarPath = "/api/v2/users/{userId}/routingskills";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserIdRoutingskills: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserIdRoutingskills: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserSkillEntityListing>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (UserSkillEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserSkillEntityListing)));
+            
+        }
+        
+        /// <summary>
         /// Get the utilization settings. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5011,7 +5760,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/routing/utilization";
+            var localVarPath = "/api/v2/routing/utilization";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5092,7 +5841,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/routing/utilization";
+            var localVarPath = "/api/v2/routing/utilization";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5178,7 +5927,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/routing/wrapupcodes";
+            var localVarPath = "/api/v2/routing/wrapupcodes";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5268,7 +6017,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/routing/wrapupcodes";
+            var localVarPath = "/api/v2/routing/wrapupcodes";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5357,7 +6106,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->GetWrapupcodesCodeId");
             
     
-            var localVarPath = "/api/v1/routing/wrapupcodes/{codeId}";
+            var localVarPath = "/api/v2/routing/wrapupcodes/{codeId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5443,7 +6192,7 @@ namespace ININ.PureCloudApi.Api
             if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling GetWrapupcodesCodeId");
             
     
-            var localVarPath = "/api/v1/routing/wrapupcodes/{codeId}";
+            var localVarPath = "/api/v2/routing/wrapupcodes/{codeId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5532,7 +6281,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PatchQueuesQueueIdUsers");
             
     
-            var localVarPath = "/api/v1/routing/queues/{queueId}/users";
+            var localVarPath = "/api/v2/routing/queues/{queueId}/users";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5627,7 +6376,7 @@ namespace ININ.PureCloudApi.Api
             if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling PatchQueuesQueueIdUsers");
             
     
-            var localVarPath = "/api/v1/routing/queues/{queueId}/users";
+            var localVarPath = "/api/v2/routing/queues/{queueId}/users";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5729,7 +6478,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'memberId' when calling RoutingApi->PatchQueuesQueueIdUsersMemberId");
             
     
-            var localVarPath = "/api/v1/routing/queues/{queueId}/users/{memberId}";
+            var localVarPath = "/api/v2/routing/queues/{queueId}/users/{memberId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5829,7 +6578,7 @@ namespace ININ.PureCloudApi.Api
             if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling PatchQueuesQueueIdUsersMemberId");
             
     
-            var localVarPath = "/api/v1/routing/queues/{queueId}/users/{memberId}";
+            var localVarPath = "/api/v2/routing/queues/{queueId}/users/{memberId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5920,7 +6669,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/routing/email/domains";
+            var localVarPath = "/api/v2/routing/email/domains";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6010,7 +6759,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/routing/email/domains";
+            var localVarPath = "/api/v2/routing/email/domains";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6105,7 +6854,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'domain' when calling RoutingApi->PostEmailDomainsDomainRoutes");
             
     
-            var localVarPath = "/api/v1/routing/email/domains/{domain}/routes";
+            var localVarPath = "/api/v2/routing/email/domains/{domain}/routes";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6200,7 +6949,7 @@ namespace ININ.PureCloudApi.Api
             if (domain == null) throw new ApiException(400, "Missing required parameter 'domain' when calling PostEmailDomainsDomainRoutes");
             
     
-            var localVarPath = "/api/v1/routing/email/domains/{domain}/routes";
+            var localVarPath = "/api/v2/routing/email/domains/{domain}/routes";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6290,7 +7039,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/routing/queues";
+            var localVarPath = "/api/v2/routing/queues";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6380,7 +7129,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/routing/queues";
+            var localVarPath = "/api/v2/routing/queues";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6448,6 +7197,185 @@ namespace ININ.PureCloudApi.Api
         }
         
         /// <summary>
+        /// Query for queue observations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param> 
+        /// <returns>ObservationQueryResponse</returns>
+        public ObservationQueryResponse PostQueuesObservationsQuery (ObservationQuery body = null)
+        {
+             ApiResponse<ObservationQueryResponse> localVarResponse = PostQueuesObservationsQueryWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query for queue observations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param> 
+        /// <returns>ApiResponse of ObservationQueryResponse</returns>
+        public ApiResponse< ObservationQueryResponse > PostQueuesObservationsQueryWithHttpInfo (ObservationQuery body = null)
+        {
+            
+    
+            var localVarPath = "/api/v2/analytics/queues/observations/query";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostQueuesObservationsQuery: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostQueuesObservationsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<ObservationQueryResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ObservationQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ObservationQueryResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Query for queue observations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of ObservationQueryResponse</returns>
+        public async System.Threading.Tasks.Task<ObservationQueryResponse> PostQueuesObservationsQueryAsync (ObservationQuery body = null)
+        {
+             ApiResponse<ObservationQueryResponse> localVarResponse = await PostQueuesObservationsQueryAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query for queue observations 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <returns>Task of ApiResponse (ObservationQueryResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ObservationQueryResponse>> PostQueuesObservationsQueryAsyncWithHttpInfo (ObservationQuery body = null)
+        {
+            
+    
+            var localVarPath = "/api/v2/analytics/queues/observations/query";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostQueuesObservationsQuery: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostQueuesObservationsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ObservationQueryResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ObservationQueryResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ObservationQueryResponse)));
+            
+        }
+        
+        /// <summary>
         /// Bulk add or delete up to 100 queue members 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6477,7 +7405,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PostQueuesQueueIdUsers");
             
     
-            var localVarPath = "/api/v1/routing/queues/{queueId}/users";
+            var localVarPath = "/api/v2/routing/queues/{queueId}/users";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6575,7 +7503,7 @@ namespace ININ.PureCloudApi.Api
             if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling PostQueuesQueueIdUsers");
             
     
-            var localVarPath = "/api/v1/routing/queues/{queueId}/users";
+            var localVarPath = "/api/v2/routing/queues/{queueId}/users";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6678,7 +7606,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->PostQueuesQueueIdWrapupcodes");
             
     
-            var localVarPath = "/api/v1/routing/queues/{queueId}/wrapupcodes";
+            var localVarPath = "/api/v2/routing/queues/{queueId}/wrapupcodes";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6778,7 +7706,7 @@ namespace ININ.PureCloudApi.Api
             if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling PostQueuesQueueIdWrapupcodes");
             
     
-            var localVarPath = "/api/v1/routing/queues/{queueId}/wrapupcodes";
+            var localVarPath = "/api/v2/routing/queues/{queueId}/wrapupcodes";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6848,6 +7776,376 @@ namespace ININ.PureCloudApi.Api
         }
         
         /// <summary>
+        /// Create Skill 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Skill</param> 
+        /// <returns>RoutingSkill</returns>
+        public RoutingSkill PostSkills (RoutingSkill body = null)
+        {
+             ApiResponse<RoutingSkill> localVarResponse = PostSkillsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create Skill 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Skill</param> 
+        /// <returns>ApiResponse of RoutingSkill</returns>
+        public ApiResponse< RoutingSkill > PostSkillsWithHttpInfo (RoutingSkill body = null)
+        {
+            
+    
+            var localVarPath = "/api/v2/routing/skills";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostSkills: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostSkills: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<RoutingSkill>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RoutingSkill) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RoutingSkill)));
+            
+        }
+
+        
+        /// <summary>
+        /// Create Skill 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Skill</param>
+        /// <returns>Task of RoutingSkill</returns>
+        public async System.Threading.Tasks.Task<RoutingSkill> PostSkillsAsync (RoutingSkill body = null)
+        {
+             ApiResponse<RoutingSkill> localVarResponse = await PostSkillsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create Skill 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Skill</param>
+        /// <returns>Task of ApiResponse (RoutingSkill)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RoutingSkill>> PostSkillsAsyncWithHttpInfo (RoutingSkill body = null)
+        {
+            
+    
+            var localVarPath = "/api/v2/routing/skills";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostSkills: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostSkills: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<RoutingSkill>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (RoutingSkill) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RoutingSkill)));
+            
+        }
+        
+        /// <summary>
+        /// Add routing skill to user 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param> 
+        /// <param name="body">Skill</param> 
+        /// <returns>UserRoutingSkill</returns>
+        public UserRoutingSkill PostUserIdRoutingskills (string userId, UserRoutingSkill body = null)
+        {
+             ApiResponse<UserRoutingSkill> localVarResponse = PostUserIdRoutingskillsWithHttpInfo(userId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add routing skill to user 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param> 
+        /// <param name="body">Skill</param> 
+        /// <returns>ApiResponse of UserRoutingSkill</returns>
+        public ApiResponse< UserRoutingSkill > PostUserIdRoutingskillsWithHttpInfo (string userId, UserRoutingSkill body = null)
+        {
+            
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling RoutingApi->PostUserIdRoutingskills");
+            
+    
+            var localVarPath = "/api/v2/users/{userId}/routingskills";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            
+            
+            
+            
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostUserIdRoutingskills: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostUserIdRoutingskills: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<UserRoutingSkill>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (UserRoutingSkill) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserRoutingSkill)));
+            
+        }
+
+        
+        /// <summary>
+        /// Add routing skill to user 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Skill</param>
+        /// <returns>Task of UserRoutingSkill</returns>
+        public async System.Threading.Tasks.Task<UserRoutingSkill> PostUserIdRoutingskillsAsync (string userId, UserRoutingSkill body = null)
+        {
+             ApiResponse<UserRoutingSkill> localVarResponse = await PostUserIdRoutingskillsAsyncWithHttpInfo(userId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add routing skill to user 
+        /// </summary>
+        /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Skill</param>
+        /// <returns>Task of ApiResponse (UserRoutingSkill)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserRoutingSkill>> PostUserIdRoutingskillsAsyncWithHttpInfo (string userId, UserRoutingSkill body = null)
+        {
+            // verify the required parameter 'userId' is set
+            if (userId == null) throw new ApiException(400, "Missing required parameter 'userId' when calling PostUserIdRoutingskills");
+            
+    
+            var localVarPath = "/api/v2/users/{userId}/routingskills";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            
+            
+            
+            
+            if (body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            
+            // authentication (PureCloud Auth) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostUserIdRoutingskills: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostUserIdRoutingskills: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserRoutingSkill>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (UserRoutingSkill) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserRoutingSkill)));
+            
+        }
+        
+        /// <summary>
         /// Create a wrap-up code 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6869,7 +8167,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/routing/wrapupcodes";
+            var localVarPath = "/api/v2/routing/wrapupcodes";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6959,7 +8257,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/routing/wrapupcodes";
+            var localVarPath = "/api/v2/routing/wrapupcodes";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -7060,7 +8358,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'id' when calling RoutingApi->PutEmailDomainsDomainRoutesId");
             
     
-            var localVarPath = "/api/v1/routing/email/domains/{domain}/routes/{id}";
+            var localVarPath = "/api/v2/routing/email/domains/{domain}/routes/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -7160,7 +8458,7 @@ namespace ININ.PureCloudApi.Api
             if (id == null) throw new ApiException(400, "Missing required parameter 'id' when calling PutEmailDomainsDomainRoutesId");
             
     
-            var localVarPath = "/api/v1/routing/email/domains/{domain}/routes/{id}";
+            var localVarPath = "/api/v2/routing/email/domains/{domain}/routes/{id}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -7257,7 +8555,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PutQueuesQueueId");
             
     
-            var localVarPath = "/api/v1/routing/queues/{queueId}";
+            var localVarPath = "/api/v2/routing/queues/{queueId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -7352,7 +8650,7 @@ namespace ININ.PureCloudApi.Api
             if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling PutQueuesQueueId");
             
     
-            var localVarPath = "/api/v1/routing/queues/{queueId}";
+            var localVarPath = "/api/v2/routing/queues/{queueId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -7421,40 +8719,34 @@ namespace ININ.PureCloudApi.Api
         }
         
         /// <summary>
-        /// Join or unjoin a user to the queue. 
+        /// Update Routing Skill 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param> 
-        /// <param name="memberId">Member/User ID</param> 
-        /// <param name="body">To join queue ~ \&quot;joined\&quot;:true</param> 
-        /// <returns>QueueMember</returns>
-        public QueueMember PutQueuesQueueIdMembersMemberId (string queueId, string memberId, QueueMember body = null)
+        /// <param name="skillId">Skill ID</param> 
+        /// <param name="body">Skill</param> 
+        /// <returns>RoutingSkill</returns>
+        public RoutingSkill PutSkillsSkillId (string skillId, RoutingSkill body = null)
         {
-             ApiResponse<QueueMember> localVarResponse = PutQueuesQueueIdMembersMemberIdWithHttpInfo(queueId, memberId, body);
+             ApiResponse<RoutingSkill> localVarResponse = PutSkillsSkillIdWithHttpInfo(skillId, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Join or unjoin a user to the queue. 
+        /// Update Routing Skill 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param> 
-        /// <param name="memberId">Member/User ID</param> 
-        /// <param name="body">To join queue ~ \&quot;joined\&quot;:true</param> 
-        /// <returns>ApiResponse of QueueMember</returns>
-        public ApiResponse< QueueMember > PutQueuesQueueIdMembersMemberIdWithHttpInfo (string queueId, string memberId, QueueMember body = null)
+        /// <param name="skillId">Skill ID</param> 
+        /// <param name="body">Skill</param> 
+        /// <returns>ApiResponse of RoutingSkill</returns>
+        public ApiResponse< RoutingSkill > PutSkillsSkillIdWithHttpInfo (string skillId, RoutingSkill body = null)
         {
             
-            // verify the required parameter 'queueId' is set
-            if (queueId == null)
-                throw new ApiException(400, "Missing required parameter 'queueId' when calling RoutingApi->PutQueuesQueueIdMembersMemberId");
-            
-            // verify the required parameter 'memberId' is set
-            if (memberId == null)
-                throw new ApiException(400, "Missing required parameter 'memberId' when calling RoutingApi->PutQueuesQueueIdMembersMemberId");
+            // verify the required parameter 'skillId' is set
+            if (skillId == null)
+                throw new ApiException(400, "Missing required parameter 'skillId' when calling RoutingApi->PutSkillsSkillId");
             
     
-            var localVarPath = "/api/v1/routing/queues/{queueId}/members/{memberId}";
+            var localVarPath = "/api/v2/routing/skills/{skillId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -7480,8 +8772,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            if (memberId != null) localVarPathParams.Add("memberId", Configuration.ApiClient.ParameterToString(memberId)); // path parameter
+            if (skillId != null) localVarPathParams.Add("skillId", Configuration.ApiClient.ParameterToString(skillId)); // path parameter
             
             
             
@@ -7512,49 +8803,45 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutQueuesQueueIdMembersMemberId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutSkillsSkillId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutQueuesQueueIdMembersMemberId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutSkillsSkillId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<QueueMember>(localVarStatusCode,
+            return new ApiResponse<RoutingSkill>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (QueueMember) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMember)));
+                (RoutingSkill) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RoutingSkill)));
             
         }
 
         
         /// <summary>
-        /// Join or unjoin a user to the queue. 
+        /// Update Routing Skill 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="memberId">Member/User ID</param>
-        /// <param name="body">To join queue ~ \&quot;joined\&quot;:true</param>
-        /// <returns>Task of QueueMember</returns>
-        public async System.Threading.Tasks.Task<QueueMember> PutQueuesQueueIdMembersMemberIdAsync (string queueId, string memberId, QueueMember body = null)
+        /// <param name="skillId">Skill ID</param>
+        /// <param name="body">Skill</param>
+        /// <returns>Task of RoutingSkill</returns>
+        public async System.Threading.Tasks.Task<RoutingSkill> PutSkillsSkillIdAsync (string skillId, RoutingSkill body = null)
         {
-             ApiResponse<QueueMember> localVarResponse = await PutQueuesQueueIdMembersMemberIdAsyncWithHttpInfo(queueId, memberId, body);
+             ApiResponse<RoutingSkill> localVarResponse = await PutSkillsSkillIdAsyncWithHttpInfo(skillId, body);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Join or unjoin a user to the queue. 
+        /// Update Routing Skill 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="queueId">Queue ID</param>
-        /// <param name="memberId">Member/User ID</param>
-        /// <param name="body">To join queue ~ \&quot;joined\&quot;:true</param>
-        /// <returns>Task of ApiResponse (QueueMember)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QueueMember>> PutQueuesQueueIdMembersMemberIdAsyncWithHttpInfo (string queueId, string memberId, QueueMember body = null)
+        /// <param name="skillId">Skill ID</param>
+        /// <param name="body">Skill</param>
+        /// <returns>Task of ApiResponse (RoutingSkill)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<RoutingSkill>> PutSkillsSkillIdAsyncWithHttpInfo (string skillId, RoutingSkill body = null)
         {
-            // verify the required parameter 'queueId' is set
-            if (queueId == null) throw new ApiException(400, "Missing required parameter 'queueId' when calling PutQueuesQueueIdMembersMemberId");
-            // verify the required parameter 'memberId' is set
-            if (memberId == null) throw new ApiException(400, "Missing required parameter 'memberId' when calling PutQueuesQueueIdMembersMemberId");
+            // verify the required parameter 'skillId' is set
+            if (skillId == null) throw new ApiException(400, "Missing required parameter 'skillId' when calling PutSkillsSkillId");
             
     
-            var localVarPath = "/api/v1/routing/queues/{queueId}/members/{memberId}";
+            var localVarPath = "/api/v2/routing/skills/{skillId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -7580,8 +8867,7 @@ namespace ININ.PureCloudApi.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (queueId != null) localVarPathParams.Add("queueId", Configuration.ApiClient.ParameterToString(queueId)); // path parameter
-            if (memberId != null) localVarPathParams.Add("memberId", Configuration.ApiClient.ParameterToString(memberId)); // path parameter
+            if (skillId != null) localVarPathParams.Add("skillId", Configuration.ApiClient.ParameterToString(skillId)); // path parameter
             
             
             
@@ -7613,13 +8899,13 @@ namespace ININ.PureCloudApi.Api
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutQueuesQueueIdMembersMemberId: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling PutSkillsSkillId: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutQueuesQueueIdMembersMemberId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutSkillsSkillId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<QueueMember>(localVarStatusCode,
+            return new ApiResponse<RoutingSkill>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (QueueMember) Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueMember)));
+                (RoutingSkill) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RoutingSkill)));
             
         }
         
@@ -7645,7 +8931,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/routing/utilization";
+            var localVarPath = "/api/v2/routing/utilization";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -7735,7 +9021,7 @@ namespace ININ.PureCloudApi.Api
         {
             
     
-            var localVarPath = "/api/v1/routing/utilization";
+            var localVarPath = "/api/v2/routing/utilization";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -7830,7 +9116,7 @@ namespace ININ.PureCloudApi.Api
                 throw new ApiException(400, "Missing required parameter 'codeId' when calling RoutingApi->PutWrapupcodesCodeId");
             
     
-            var localVarPath = "/api/v1/routing/wrapupcodes/{codeId}";
+            var localVarPath = "/api/v2/routing/wrapupcodes/{codeId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -7925,7 +9211,7 @@ namespace ININ.PureCloudApi.Api
             if (codeId == null) throw new ApiException(400, "Missing required parameter 'codeId' when calling PutWrapupcodesCodeId");
             
     
-            var localVarPath = "/api/v1/routing/wrapupcodes/{codeId}";
+            var localVarPath = "/api/v2/routing/wrapupcodes/{codeId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();

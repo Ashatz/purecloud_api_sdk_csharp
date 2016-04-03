@@ -70,15 +70,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'StandardOffset' 
-        /// </summary>
-        [Test]
-        public void StandardOffsetTest()
-        {
-            // TODO: unit test for the property 'StandardOffset' 
-        }
-        
-        /// <summary>
         /// Test the property 'Offset' 
         /// </summary>
         [Test]

@@ -32,10 +32,8 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Language">Language.</param>
         /// <param name="ProductName">ProductName.</param>
         /// <param name="QuoteId">QuoteId.</param>
-        /// <param name="Industry">Industry.</param>
-        /// <param name="EstimatedUsers">EstimatedUsers.</param>
 
-        public ContactSales(string Name = null, string Email = null, string FirstName = null, string LastName = null, string ContactPhone = null, string Country = null, string Title = null, string Message = null, string Language = null, string ProductName = null, string QuoteId = null, string Industry = null, string EstimatedUsers = null)
+        public ContactSales(string Name = null, string Email = null, string FirstName = null, string LastName = null, string ContactPhone = null, string Country = null, string Title = null, string Message = null, string Language = null, string ProductName = null, string QuoteId = null)
         {
             this.Name = Name;
             this.Email = Email;
@@ -48,8 +46,6 @@ namespace ININ.PureCloudApi.Model
             this.Language = Language;
             this.ProductName = ProductName;
             this.QuoteId = QuoteId;
-            this.Industry = Industry;
-            this.EstimatedUsers = EstimatedUsers;
             
         }
         
@@ -128,18 +124,6 @@ namespace ININ.PureCloudApi.Model
         public string QuoteId { get; set; }
     
         /// <summary>
-        /// Gets or Sets Industry
-        /// </summary>
-        [DataMember(Name="industry", EmitDefaultValue=false)]
-        public string Industry { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets EstimatedUsers
-        /// </summary>
-        [DataMember(Name="estimatedUsers", EmitDefaultValue=false)]
-        public string EstimatedUsers { get; set; }
-    
-        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -166,8 +150,6 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  ProductName: ").Append(ProductName).Append("\n");
             sb.Append("  QuoteId: ").Append(QuoteId).Append("\n");
-            sb.Append("  Industry: ").Append(Industry).Append("\n");
-            sb.Append("  EstimatedUsers: ").Append(EstimatedUsers).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
@@ -267,16 +249,6 @@ namespace ININ.PureCloudApi.Model
                     this.QuoteId.Equals(other.QuoteId)
                 ) &&
                 (
-                    this.Industry == other.Industry ||
-                    this.Industry != null &&
-                    this.Industry.Equals(other.Industry)
-                ) &&
-                (
-                    this.EstimatedUsers == other.EstimatedUsers ||
-                    this.EstimatedUsers != null &&
-                    this.EstimatedUsers.Equals(other.EstimatedUsers)
-                ) &&
-                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -330,12 +302,6 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.QuoteId != null)
                     hash = hash * 59 + this.QuoteId.GetHashCode();
-                
-                if (this.Industry != null)
-                    hash = hash * 59 + this.Industry.GetHashCode();
-                
-                if (this.EstimatedUsers != null)
-                    hash = hash * 59 + this.EstimatedUsers.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

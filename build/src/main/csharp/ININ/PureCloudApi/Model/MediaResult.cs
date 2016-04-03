@@ -21,24 +21,16 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaResult" />class.
         /// </summary>
-        /// <param name="WaveUri">WaveUri.</param>
         /// <param name="MediaUri">MediaUri.</param>
         /// <param name="WaveformData">WaveformData.</param>
 
-        public MediaResult(string WaveUri = null, string MediaUri = null, List<float?> WaveformData = null)
+        public MediaResult(string MediaUri = null, List<float?> WaveformData = null)
         {
-            this.WaveUri = WaveUri;
             this.MediaUri = MediaUri;
             this.WaveformData = WaveformData;
             
         }
         
-    
-        /// <summary>
-        /// Gets or Sets WaveUri
-        /// </summary>
-        [DataMember(Name="waveUri", EmitDefaultValue=false)]
-        public string WaveUri { get; set; }
     
         /// <summary>
         /// Gets or Sets MediaUri
@@ -60,7 +52,6 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MediaResult {\n");
-            sb.Append("  WaveUri: ").Append(WaveUri).Append("\n");
             sb.Append("  MediaUri: ").Append(MediaUri).Append("\n");
             sb.Append("  WaveformData: ").Append(WaveformData).Append("\n");
             
@@ -101,11 +92,6 @@ namespace ININ.PureCloudApi.Model
 
             return true &&
                 (
-                    this.WaveUri == other.WaveUri ||
-                    this.WaveUri != null &&
-                    this.WaveUri.Equals(other.WaveUri)
-                ) &&
-                (
                     this.MediaUri == other.MediaUri ||
                     this.MediaUri != null &&
                     this.MediaUri.Equals(other.MediaUri)
@@ -128,9 +114,6 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
-                if (this.WaveUri != null)
-                    hash = hash * 59 + this.WaveUri.GetHashCode();
                 
                 if (this.MediaUri != null)
                     hash = hash * 59 + this.MediaUri.GetHashCode();

@@ -52,15 +52,6 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test the property 'OrgId' 
-        /// </summary>
-        [Test]
-        public void OrgIdTest()
-        {
-            // TODO: unit test for the property 'OrgId' 
-        }
-        
-        /// <summary>
         /// Test the property 'Id' 
         /// </summary>
         [Test]

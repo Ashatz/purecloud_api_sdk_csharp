@@ -24,11 +24,11 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "ACTIVE")]
             Active,
             
-            [EnumMember(Value = "DELETED")]
-            Deleted,
-            
             [EnumMember(Value = "INACTIVE")]
-            Inactive
+            Inactive,
+            
+            [EnumMember(Value = "DELETED")]
+            Deleted
         }
     
         [JsonConverter(typeof(StringEnumConverter))]
@@ -98,11 +98,13 @@ namespace ININ.PureCloudApi.Model
         /// <param name="LastModifiedCorrelationId">LastModifiedCorrelationId.</param>
         /// <param name="CommandResponses">CommandResponses.</param>
         /// <param name="InheritPhoneTrunkBases">Phone trunk base assignment will be inherited from the Edge Group. (default to false).</param>
+        /// <param name="InheritPhoneTrunkBasesIPv4">The IPv4 phone trunk base assignment will be inherited from the Edge Group. (default to false).</param>
+        /// <param name="InheritPhoneTrunkBasesIPv6">The IPv6 phone trunk base assignment will be inherited from the Edge Group. (default to false).</param>
         /// <param name="UseForInternalEdgeCommunication">This interface will be used for all internal edge-to-edge communication using settings from the edgeTrunkBaseAssignment on the Edge Group. (default to false).</param>
         /// <param name="ExternalTrunkBaseAssignments">External trunk base settings to use for external communication from this interface..</param>
         /// <param name="PhoneTrunkBaseAssignments">Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \&quot;inheritPhoneTrunkBases\&quot; is true..</param>
 
-        public DomainLogicalInterface(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string EdgeUri = null, string EdgeAssignedId = null, string FriendlyName = null, int? VlanTagId = null, string HardwareAddress = null, string PhysicalAdapterId = null, string IpAddress = null, string Gateway = null, string PrimaryDns = null, string SecondaryDns = null, string IfStatus = null, List<DomainNetworkRoute> Routes = null, List<DomainNetworkAddress> Addresses = null, DomainCapabilities Ipv4Capabilities = null, DomainCapabilities Ipv6Capabilities = null, CurrentStateEnum? CurrentState = null, string LastModifiedUserId = null, string LastModifiedCorrelationId = null, List<DomainNetworkCommandResponse> CommandResponses = null, bool? InheritPhoneTrunkBases = null, bool? UseForInternalEdgeCommunication = null, List<TrunkBaseAssignment> ExternalTrunkBaseAssignments = null, List<TrunkBaseAssignment> PhoneTrunkBaseAssignments = null)
+        public DomainLogicalInterface(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string EdgeUri = null, string EdgeAssignedId = null, string FriendlyName = null, int? VlanTagId = null, string HardwareAddress = null, string PhysicalAdapterId = null, string IpAddress = null, string Gateway = null, string PrimaryDns = null, string SecondaryDns = null, string IfStatus = null, List<DomainNetworkRoute> Routes = null, List<DomainNetworkAddress> Addresses = null, DomainCapabilities Ipv4Capabilities = null, DomainCapabilities Ipv6Capabilities = null, CurrentStateEnum? CurrentState = null, string LastModifiedUserId = null, string LastModifiedCorrelationId = null, List<DomainNetworkCommandResponse> CommandResponses = null, bool? InheritPhoneTrunkBases = null, bool? InheritPhoneTrunkBasesIPv4 = null, bool? InheritPhoneTrunkBasesIPv6 = null, bool? UseForInternalEdgeCommunication = null, List<TrunkBaseAssignment> ExternalTrunkBaseAssignments = null, List<TrunkBaseAssignment> PhoneTrunkBaseAssignments = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -141,6 +143,24 @@ namespace ININ.PureCloudApi.Model
             else
             {
                 this.InheritPhoneTrunkBases = InheritPhoneTrunkBases;
+            }
+            // use default value if no "InheritPhoneTrunkBasesIPv4" provided
+            if (InheritPhoneTrunkBasesIPv4 == null)
+            {
+                this.InheritPhoneTrunkBasesIPv4 = false;
+            }
+            else
+            {
+                this.InheritPhoneTrunkBasesIPv4 = InheritPhoneTrunkBasesIPv4;
+            }
+            // use default value if no "InheritPhoneTrunkBasesIPv6" provided
+            if (InheritPhoneTrunkBasesIPv6 == null)
+            {
+                this.InheritPhoneTrunkBasesIPv6 = false;
+            }
+            else
+            {
+                this.InheritPhoneTrunkBasesIPv6 = InheritPhoneTrunkBasesIPv6;
             }
             // use default value if no "UseForInternalEdgeCommunication" provided
             if (UseForInternalEdgeCommunication == null)
@@ -336,6 +356,20 @@ namespace ININ.PureCloudApi.Model
         public bool? InheritPhoneTrunkBases { get; set; }
     
         /// <summary>
+        /// The IPv4 phone trunk base assignment will be inherited from the Edge Group.
+        /// </summary>
+        /// <value>The IPv4 phone trunk base assignment will be inherited from the Edge Group.</value>
+        [DataMember(Name="inheritPhoneTrunkBasesIPv4", EmitDefaultValue=false)]
+        public bool? InheritPhoneTrunkBasesIPv4 { get; set; }
+    
+        /// <summary>
+        /// The IPv6 phone trunk base assignment will be inherited from the Edge Group.
+        /// </summary>
+        /// <value>The IPv6 phone trunk base assignment will be inherited from the Edge Group.</value>
+        [DataMember(Name="inheritPhoneTrunkBasesIPv6", EmitDefaultValue=false)]
+        public bool? InheritPhoneTrunkBasesIPv6 { get; set; }
+    
+        /// <summary>
         /// This interface will be used for all internal edge-to-edge communication using settings from the edgeTrunkBaseAssignment on the Edge Group.
         /// </summary>
         /// <value>This interface will be used for all internal edge-to-edge communication using settings from the edgeTrunkBaseAssignment on the Edge Group.</value>
@@ -402,6 +436,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  LastModifiedCorrelationId: ").Append(LastModifiedCorrelationId).Append("\n");
             sb.Append("  CommandResponses: ").Append(CommandResponses).Append("\n");
             sb.Append("  InheritPhoneTrunkBases: ").Append(InheritPhoneTrunkBases).Append("\n");
+            sb.Append("  InheritPhoneTrunkBasesIPv4: ").Append(InheritPhoneTrunkBasesIPv4).Append("\n");
+            sb.Append("  InheritPhoneTrunkBasesIPv6: ").Append(InheritPhoneTrunkBasesIPv6).Append("\n");
             sb.Append("  UseForInternalEdgeCommunication: ").Append(UseForInternalEdgeCommunication).Append("\n");
             sb.Append("  ExternalTrunkBaseAssignments: ").Append(ExternalTrunkBaseAssignments).Append("\n");
             sb.Append("  PhoneTrunkBaseAssignments: ").Append(PhoneTrunkBaseAssignments).Append("\n");
@@ -599,6 +635,16 @@ namespace ININ.PureCloudApi.Model
                     this.InheritPhoneTrunkBases.Equals(other.InheritPhoneTrunkBases)
                 ) &&
                 (
+                    this.InheritPhoneTrunkBasesIPv4 == other.InheritPhoneTrunkBasesIPv4 ||
+                    this.InheritPhoneTrunkBasesIPv4 != null &&
+                    this.InheritPhoneTrunkBasesIPv4.Equals(other.InheritPhoneTrunkBasesIPv4)
+                ) &&
+                (
+                    this.InheritPhoneTrunkBasesIPv6 == other.InheritPhoneTrunkBasesIPv6 ||
+                    this.InheritPhoneTrunkBasesIPv6 != null &&
+                    this.InheritPhoneTrunkBasesIPv6.Equals(other.InheritPhoneTrunkBasesIPv6)
+                ) &&
+                (
                     this.UseForInternalEdgeCommunication == other.UseForInternalEdgeCommunication ||
                     this.UseForInternalEdgeCommunication != null &&
                     this.UseForInternalEdgeCommunication.Equals(other.UseForInternalEdgeCommunication)
@@ -724,6 +770,12 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.InheritPhoneTrunkBases != null)
                     hash = hash * 59 + this.InheritPhoneTrunkBases.GetHashCode();
+                
+                if (this.InheritPhoneTrunkBasesIPv4 != null)
+                    hash = hash * 59 + this.InheritPhoneTrunkBasesIPv4.GetHashCode();
+                
+                if (this.InheritPhoneTrunkBasesIPv6 != null)
+                    hash = hash * 59 + this.InheritPhoneTrunkBasesIPv6.GetHashCode();
                 
                 if (this.UseForInternalEdgeCommunication != null)
                     hash = hash * 59 + this.UseForInternalEdgeCommunication.GetHashCode();
