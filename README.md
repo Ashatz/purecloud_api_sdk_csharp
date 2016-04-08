@@ -10,7 +10,7 @@ Documentation can be found at http://developer.mypurecloud.com/api/rest/client-l
 install-package PureCloudApiSdk
 ```
 
-Pacakage info can be found at http://www.nuget.org/packages/PureCloudApiSdk/
+Package info can be found at http://www.nuget.org/packages/PureCloudApiSdk/
 
 # Using the Library
 
