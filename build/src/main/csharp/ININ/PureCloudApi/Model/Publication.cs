@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="RawTweetText">The raw text of the tweet.</param>
         /// <param name="Approved">Approved (default to false).</param>
 
-        public Publication(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string TweetText = null, string RawTweetText = null, bool? Approved = null)
+        public Publication(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string TweetText = null, string RawTweetText = null, bool? Approved = null, )
         {
             this.Name = Name;
             this.DateCreated = DateCreated;

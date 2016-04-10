@@ -45,7 +45,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Message">Message.</param>
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
 
-        public PublishedResult(string Name = null, TypeEnum? Type = null, string Message = null, DateTime? DateCreated = null)
+        public PublishedResult(string Name = null, TypeEnum? Type = null, string Message = null, DateTime? DateCreated = null, )
         {
             this.Name = Name;
             this.Type = Type;

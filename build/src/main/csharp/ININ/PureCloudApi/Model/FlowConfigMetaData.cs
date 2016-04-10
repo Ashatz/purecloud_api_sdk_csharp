@@ -71,7 +71,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Description">User notes describing the flow definition..</param>
         /// <param name="HasDraft">Flag if this definition has a draft populated. (default to false).</param>
 
-        public FlowConfigMetaData(string Name = null, ConfigStateEnum? ConfigState = null, FlowTypeEnum? FlowType = null, User LockedByUser = null, string NewestPublishedVersion = null, string NewestVersion = null, List<Workspace> AssociatedWorkspaces = null, string Description = null, bool? HasDraft = null)
+        public FlowConfigMetaData(string Name = null, ConfigStateEnum? ConfigState = null, FlowTypeEnum? FlowType = null, User LockedByUser = null, string NewestPublishedVersion = null, string NewestVersion = null, List<Workspace> AssociatedWorkspaces = null, string Description = null, bool? HasDraft = null, )
         {
             // to ensure "FlowType" is required (not null)
             if (FlowType == null)

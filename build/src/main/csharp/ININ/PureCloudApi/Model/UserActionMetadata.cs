@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="HelpLink">HelpLink.</param>
         /// <param name="Requests">Requests.</param>
 
-        public UserActionMetadata(string Name = null, string Category = null, bool? Deprecated = null, string Description = null, bool? Published = null, List<string> Tags = null, string HelpLink = null, List<UserActionMetadataRequest> Requests = null)
+        public UserActionMetadata(string Name = null, string Category = null, bool? Deprecated = null, string Description = null, bool? Published = null, List<string> Tags = null, string HelpLink = null, List<UserActionMetadataRequest> Requests = null, )
         {
             this.Name = Name;
             this.Category = Category;

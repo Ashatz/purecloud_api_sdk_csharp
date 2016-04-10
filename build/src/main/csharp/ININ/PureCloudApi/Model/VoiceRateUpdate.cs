@@ -33,7 +33,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="AmendmentDate">The date of the rate amendment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
         /// <param name="EffectiveDate">The effective date of the rate amendment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
 
-        public VoiceRateUpdate(string Name = null, string Currency = null, VoiceRate InboundTollFree = null, List<VoiceRateExtended> Extended = null, VoiceRate InboundTolled = null, VoiceRate OutboundLocal = null, VoiceRate OutboundIntraState = null, VoiceRate OutboundInterState = null, List<VoiceRateInternational> OutboundInternational = null, DateTime? AmendmentDate = null, DateTime? EffectiveDate = null)
+        public VoiceRateUpdate(string Name = null, string Currency = null, VoiceRate InboundTollFree = null, List<VoiceRateExtended> Extended = null, VoiceRate InboundTolled = null, VoiceRate OutboundLocal = null, VoiceRate OutboundIntraState = null, VoiceRate OutboundInterState = null, List<VoiceRateInternational> OutboundInternational = null, DateTime? AmendmentDate = null, DateTime? EffectiveDate = null, )
         {
             // to ensure "Currency" is required (not null)
             if (Currency == null)

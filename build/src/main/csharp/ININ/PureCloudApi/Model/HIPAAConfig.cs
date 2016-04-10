@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="EnableIdleTokenTimeout">EnableIdleTokenTimeout (default to false).</param>
 
-        public HIPAAConfig(string Name = null, bool? EnableIdleTokenTimeout = null)
+        public HIPAAConfig(string Name = null, bool? EnableIdleTokenTimeout = null, )
         {
             this.Name = Name;
             // use default value if no "EnableIdleTokenTimeout" provided

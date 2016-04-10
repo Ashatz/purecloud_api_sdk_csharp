@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="User">User.</param>
 
-        public AutomateQueueMember(string Name = null, User User = null)
+        public AutomateQueueMember(string Name = null, User User = null, )
         {
             this.Name = Name;
             this.User = User;

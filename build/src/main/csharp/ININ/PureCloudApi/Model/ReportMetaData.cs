@@ -29,7 +29,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Parameters">Parameters.</param>
         /// <param name="ExampleUrl">ExampleUrl.</param>
 
-        public ReportMetaData(string Name = null, string Title = null, string Description = null, List<string> Keywords = null, List<string> AvailableLocales = null, List<Parameter> Parameters = null, string ExampleUrl = null)
+        public ReportMetaData(string Name = null, string Title = null, string Description = null, List<string> Keywords = null, List<string> AvailableLocales = null, List<Parameter> Parameters = null, string ExampleUrl = null, )
         {
             this.Name = Name;
             this.Title = Title;

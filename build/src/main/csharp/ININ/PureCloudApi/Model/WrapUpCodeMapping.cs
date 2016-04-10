@@ -33,7 +33,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DefaultSet">DefaultSet.</param>
         /// <param name="Mapping">Mapping.</param>
 
-        public WrapUpCodeMapping(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<string> DefaultSet = null, Dictionary<string, List<string>> Mapping = null)
+        public WrapUpCodeMapping(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<string> DefaultSet = null, Dictionary<string, List<string>> Mapping = null, )
         {
             this.Name = Name;
             this.DateCreated = DateCreated;

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SocialAccount">The Social Account used to publish this expression.</param>
         /// <param name="SocialHubResponseId">The id given to this response from the social hub.</param>
 
-        public ExpressionResponse(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string SocialHub = null, Conversation Conversation = null, TwitterExpression TwitterExpression = null, string RawResponseText = null, SocialAccount SocialAccount = null, string SocialHubResponseId = null)
+        public ExpressionResponse(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string SocialHub = null, Conversation Conversation = null, TwitterExpression TwitterExpression = null, string RawResponseText = null, SocialAccount SocialAccount = null, string SocialHubResponseId = null, )
         {
             this.Name = Name;
             this.DateCreated = DateCreated;

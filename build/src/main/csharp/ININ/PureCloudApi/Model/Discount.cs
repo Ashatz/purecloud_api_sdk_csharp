@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Minimum">Minimum.</param>
         /// <param name="ProductCategory">ProductCategory.</param>
 
-        public Discount(string Name = null, bool? AnnualPrePay = null, string DiscountProperty = null, string Maximum = null, string Minimum = null, string ProductCategory = null)
+        public Discount(string Name = null, bool? AnnualPrePay = null, string DiscountProperty = null, string Maximum = null, string Minimum = null, string ProductCategory = null, )
         {
             this.Name = Name;
             // use default value if no "AnnualPrePay" provided

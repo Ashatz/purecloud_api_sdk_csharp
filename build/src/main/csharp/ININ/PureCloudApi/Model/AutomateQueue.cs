@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="LastUpdateTime">The last time that the queue was updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="LastUpdateUser">The user who last performed an update..</param>
 
-        public AutomateQueue(string Name = null, string Description = null, List<User> Members = null, DateTime? LastUpdateTime = null, User LastUpdateUser = null)
+        public AutomateQueue(string Name = null, string Description = null, List<User> Members = null, DateTime? LastUpdateTime = null, User LastUpdateUser = null, )
         {
             this.Name = Name;
             this.Description = Description;

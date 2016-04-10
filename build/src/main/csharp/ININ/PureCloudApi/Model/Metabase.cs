@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="Description">Description.</param>
 
-        public Metabase(string Name = null, string Description = null)
+        public Metabase(string Name = null, string Description = null, )
         {
             this.Name = Name;
             this.Description = Description;

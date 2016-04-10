@@ -73,7 +73,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Managed">Managed (default to false).</param>
         /// <param name="ExternalTrunkBases">Trunk base settings of trunkType \&quot;EXTERNAL\&quot;.  This base must also be set on an edge logical interface for correct routing..</param>
 
-        public OutboundRoute(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Site Site = null, List<string> ClassificationTypes = null, bool? Enabled = null, DistributionEnum? Distribution = null, bool? Managed = null, List<UriReference> ExternalTrunkBases = null)
+        public OutboundRoute(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Site Site = null, List<string> ClassificationTypes = null, bool? Enabled = null, DistributionEnum? Distribution = null, bool? Managed = null, List<UriReference> ExternalTrunkBases = null, )
         {
             this.Name = Name;
             this.Description = Description;

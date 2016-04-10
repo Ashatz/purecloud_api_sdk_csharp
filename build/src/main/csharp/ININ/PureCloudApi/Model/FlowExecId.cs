@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
 
-        public FlowExecId(string Name = null)
+        public FlowExecId(string Name = null, )
         {
             this.Name = Name;
             

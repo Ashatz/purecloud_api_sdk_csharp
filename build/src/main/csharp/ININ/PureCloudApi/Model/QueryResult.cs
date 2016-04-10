@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="Body">Body.</param>
 
-        public QueryResult(string Name = null, DomainEntity Body = null)
+        public QueryResult(string Name = null, DomainEntity Body = null, )
         {
             this.Name = Name;
             this.Body = Body;

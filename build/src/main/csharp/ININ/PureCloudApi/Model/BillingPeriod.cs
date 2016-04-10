@@ -25,7 +25,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="StartDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="EndDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
 
-        public BillingPeriod(string Name = null, DateTime? StartDate = null, DateTime? EndDate = null)
+        public BillingPeriod(string Name = null, DateTime? StartDate = null, DateTime? EndDate = null, )
         {
             this.Name = Name;
             this.StartDate = StartDate;

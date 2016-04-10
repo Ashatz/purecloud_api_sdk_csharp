@@ -49,7 +49,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Tags">Tags.</param>
         /// <param name="Data">Data.</param>
 
-        public ComposerTemplate(string Name = null, string Description = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, int? Version = null, LevelEnum? Level = null, List<string> Tags = null, Dictionary<string, Object> Data = null)
+        public ComposerTemplate(string Name = null, string Description = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, int? Version = null, LevelEnum? Level = null, List<string> Tags = null, Dictionary<string, Object> Data = null, )
         {
             this.Name = Name;
             this.Description = Description;

@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CreatedBy">User that created the response.</param>
         /// <param name="DateCreated">The date and time the response was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
 
-        public Response(string Name = null, int? Version = null, List<UriReference> Libraries = null, List<ResponseText> Texts = null, User CreatedBy = null, DateTime? DateCreated = null)
+        public Response(string Name = null, int? Version = null, List<UriReference> Libraries = null, List<ResponseText> Texts = null, User CreatedBy = null, DateTime? DateCreated = null, )
         {
             // to ensure "Libraries" is required (not null)
             if (Libraries == null)

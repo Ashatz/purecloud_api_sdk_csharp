@@ -33,7 +33,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ProductName">ProductName.</param>
         /// <param name="QuoteId">QuoteId.</param>
 
-        public ContactSales(string Name = null, string Email = null, string FirstName = null, string LastName = null, string ContactPhone = null, string Country = null, string Title = null, string Message = null, string Language = null, string ProductName = null, string QuoteId = null)
+        public ContactSales(string Name = null, string Email = null, string FirstName = null, string LastName = null, string ContactPhone = null, string Country = null, string Title = null, string Message = null, string Language = null, string ProductName = null, string QuoteId = null, )
         {
             this.Name = Name;
             this.Email = Email;

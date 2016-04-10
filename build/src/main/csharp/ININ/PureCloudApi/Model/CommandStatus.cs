@@ -93,7 +93,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CommandType">CommandType.</param>
         /// <param name="Document">Document.</param>
 
-        public CommandStatus(string Name = null, DateTime? Expiration = null, string UserId = null, StatusCodeEnum? StatusCode = null, CommandTypeEnum? CommandType = null, Document Document = null)
+        public CommandStatus(string Name = null, DateTime? Expiration = null, string UserId = null, StatusCodeEnum? StatusCode = null, CommandTypeEnum? CommandType = null, Document Document = null, )
         {
             this.Name = Name;
             this.Expiration = Expiration;

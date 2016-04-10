@@ -47,7 +47,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Type">Defines which entity this Group Tag may be used for.  &#39;ANY&#39; for all entities..</param>
         /// <param name="Enabled">Indicates if this Group Tag is available for selection by other entities (default to false).</param>
 
-        public GroupTag(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, TypeEnum? Type = null, bool? Enabled = null)
+        public GroupTag(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, TypeEnum? Type = null, bool? Enabled = null, )
         {
             this.Name = Name;
             this.DateCreated = DateCreated;

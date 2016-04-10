@@ -25,7 +25,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Description">Description.</param>
         /// <param name="Resources">Resources.</param>
 
-        public SystemPrompt(string Name = null, string Description = null, List<SystemPromptAsset> Resources = null)
+        public SystemPrompt(string Name = null, string Description = null, List<SystemPromptAsset> Resources = null, )
         {
             this.Name = Name;
             this.Description = Description;

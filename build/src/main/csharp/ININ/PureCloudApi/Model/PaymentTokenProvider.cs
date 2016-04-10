@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="TokenCreationRequestEnvelope">TokenCreationRequestEnvelope.</param>
 
-        public PaymentTokenProvider(string Name = null, Dictionary<string, string> TokenCreationRequestEnvelope = null)
+        public PaymentTokenProvider(string Name = null, Dictionary<string, string> TokenCreationRequestEnvelope = null, )
         {
             this.Name = Name;
             this.TokenCreationRequestEnvelope = TokenCreationRequestEnvelope;

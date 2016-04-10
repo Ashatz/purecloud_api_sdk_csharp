@@ -54,7 +54,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="OpenSchedules">OpenSchedules.</param>
         /// <param name="ClosedSchedules">ClosedSchedules.</param>
 
-        public ScheduleGroup(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string TimeZone = null, List<UriReference> OpenSchedules = null, List<UriReference> ClosedSchedules = null)
+        public ScheduleGroup(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string TimeZone = null, List<UriReference> OpenSchedules = null, List<UriReference> ClosedSchedules = null, )
         {
             this.Name = Name;
             this.Description = Description;

@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
 
-        public OAuthProvider(string Name = null)
+        public OAuthProvider(string Name = null, )
         {
             this.Name = Name;
             

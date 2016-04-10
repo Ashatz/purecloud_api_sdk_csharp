@@ -49,7 +49,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Images">Images.</param>
         /// <param name="Addresses">Addresses.</param>
 
-        public Group(string Name = null, string Description = null, DateTime? DateModified = null, long? MemberCount = null, StateEnum? State = null, double? Version = null, List<UserImage> Images = null, List<Contact> Addresses = null)
+        public Group(string Name = null, string Description = null, DateTime? DateModified = null, long? MemberCount = null, StateEnum? State = null, double? Version = null, List<UserImage> Images = null, List<Contact> Addresses = null, )
         {
             this.Name = Name;
             this.Description = Description;

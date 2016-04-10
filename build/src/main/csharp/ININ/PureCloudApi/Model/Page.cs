@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="RootContainer">RootContainer.</param>
         /// <param name="Properties">Properties.</param>
 
-        public Page(string Name = null, string VersionId = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, Dictionary<string, Object> RootContainer = null, Dictionary<string, Object> Properties = null)
+        public Page(string Name = null, string VersionId = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, Dictionary<string, Object> RootContainer = null, Dictionary<string, Object> Properties = null, )
         {
             this.Name = Name;
             this.VersionId = VersionId;

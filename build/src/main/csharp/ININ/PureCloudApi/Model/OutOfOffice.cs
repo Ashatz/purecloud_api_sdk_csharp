@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="EndDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Active">Active (default to false).</param>
 
-        public OutOfOffice(string Name = null, User User = null, DateTime? StartDate = null, DateTime? EndDate = null, bool? Active = null)
+        public OutOfOffice(string Name = null, User User = null, DateTime? StartDate = null, DateTime? EndDate = null, bool? Active = null, )
         {
             this.Name = Name;
             this.User = User;

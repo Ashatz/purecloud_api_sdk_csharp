@@ -47,7 +47,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Summary">Summary.</param>
         /// <param name="Acl">Acl.</param>
 
-        public Workspace(string Name = null, TypeEnum? Type = null, bool? IsCurrentUserWorkspace = null, UriReference User = null, string Bucket = null, DateTime? DateCreated = null, DateTime? DateModified = null, WorkspaceSummary Summary = null, List<string> Acl = null)
+        public Workspace(string Name = null, TypeEnum? Type = null, bool? IsCurrentUserWorkspace = null, UriReference User = null, string Bucket = null, DateTime? DateCreated = null, DateTime? DateModified = null, WorkspaceSummary Summary = null, List<string> Acl = null, )
         {
             this.Name = Name;
             this.Type = Type;

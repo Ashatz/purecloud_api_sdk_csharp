@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
 
-        public CreateCallResponse(string Name = null)
+        public CreateCallResponse(string Name = null, )
         {
             this.Name = Name;
             

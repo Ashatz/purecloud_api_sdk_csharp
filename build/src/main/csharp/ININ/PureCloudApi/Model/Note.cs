@@ -26,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ModifyDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="CreateDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
 
-        public Note(string Name = null, string NoteText = null, DateTime? ModifyDate = null, DateTime? CreateDate = null)
+        public Note(string Name = null, string NoteText = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, )
         {
             this.Name = Name;
             this.NoteText = NoteText;

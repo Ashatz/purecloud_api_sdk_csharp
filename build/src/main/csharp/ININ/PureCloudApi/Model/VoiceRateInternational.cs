@@ -61,7 +61,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Origin">The origin. (required).</param>
         /// <param name="Destination">The destination. (required).</param>
 
-        public VoiceRateInternational(string Name = null, string Currency = null, string AmendmentId = null, TypeEnum? Type = null, DateTime? EffectiveDate = null, double? Rate = null, int? DurationMinimumSeconds = null, int? DurationIncrementSeconds = null, string Origin = null, string Destination = null)
+        public VoiceRateInternational(string Name = null, string Currency = null, string AmendmentId = null, TypeEnum? Type = null, DateTime? EffectiveDate = null, double? Rate = null, int? DurationMinimumSeconds = null, int? DurationIncrementSeconds = null, string Origin = null, string Destination = null, )
         {
             // to ensure "Currency" is required (not null)
             if (Currency == null)

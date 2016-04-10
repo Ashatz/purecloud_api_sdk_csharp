@@ -28,10 +28,10 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Entity">Entity.</param>
         /// <param name="Action">Action.</param>
         /// <param name="Status">Status.</param>
-        /// <param name="Changes">Changes.</param>
         /// <param name="EntityType">EntityType.</param>
+        /// <param name="Changes">Changes.</param>
 
-        public QualityAudit(string Name = null, User User = null, string Timestamp = null, string Level = null, Entity Entity = null, string Action = null, string Status = null, List<Change> Changes = null, string EntityType = null)
+        public QualityAudit(string Name = null, User User = null, string Timestamp = null, string Level = null, Entity Entity = null, string Action = null, string Status = null, string EntityType = null, List<Change> Changes = null, )
         {
             this.Name = Name;
             this.User = User;
@@ -40,8 +40,8 @@ namespace ININ.PureCloudApi.Model
             this.Entity = Entity;
             this.Action = Action;
             this.Status = Status;
-            this.Changes = Changes;
             this.EntityType = EntityType;
+            this.Changes = Changes;
             
         }
         
@@ -96,16 +96,16 @@ namespace ININ.PureCloudApi.Model
         public string Status { get; set; }
     
         /// <summary>
-        /// Gets or Sets Changes
-        /// </summary>
-        [DataMember(Name="changes", EmitDefaultValue=false)]
-        public List<Change> Changes { get; set; }
-    
-        /// <summary>
         /// Gets or Sets EntityType
         /// </summary>
         [DataMember(Name="entityType", EmitDefaultValue=false)]
         public string EntityType { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Changes
+        /// </summary>
+        [DataMember(Name="changes", EmitDefaultValue=false)]
+        public List<Change> Changes { get; set; }
     
         /// <summary>
         /// The URI for this object
@@ -130,8 +130,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Entity: ").Append(Entity).Append("\n");
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  Changes: ").Append(Changes).Append("\n");
             sb.Append("  EntityType: ").Append(EntityType).Append("\n");
+            sb.Append("  Changes: ").Append(Changes).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
@@ -211,14 +211,14 @@ namespace ININ.PureCloudApi.Model
                     this.Status.Equals(other.Status)
                 ) &&
                 (
-                    this.Changes == other.Changes ||
-                    this.Changes != null &&
-                    this.Changes.SequenceEqual(other.Changes)
-                ) &&
-                (
                     this.EntityType == other.EntityType ||
                     this.EntityType != null &&
                     this.EntityType.Equals(other.EntityType)
+                ) &&
+                (
+                    this.Changes == other.Changes ||
+                    this.Changes != null &&
+                    this.Changes.SequenceEqual(other.Changes)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -263,11 +263,11 @@ namespace ININ.PureCloudApi.Model
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
                 
-                if (this.Changes != null)
-                    hash = hash * 59 + this.Changes.GetHashCode();
-                
                 if (this.EntityType != null)
                     hash = hash * 59 + this.EntityType.GetHashCode();
+                
+                if (this.Changes != null)
+                    hash = hash * 59 + this.Changes.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

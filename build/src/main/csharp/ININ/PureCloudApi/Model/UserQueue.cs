@@ -79,7 +79,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Joined">Joined (default to false).</param>
         /// <param name="MemberCount">MemberCount.</param>
 
-        public UserQueue(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, string CallingPartyName = null, string CallingPartyNumber = null, bool? Joined = null, int? MemberCount = null)
+        public UserQueue(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, string CallingPartyName = null, string CallingPartyNumber = null, bool? Joined = null, int? MemberCount = null, )
         {
             this.Name = Name;
             this.Description = Description;

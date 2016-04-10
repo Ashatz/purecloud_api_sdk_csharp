@@ -67,7 +67,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="ModifiedBy">ModifiedBy.</param>
 
-        public Greeting(string Name = null, TypeEnum? Type = null, OwnerTypeEnum? OwnerType = null, DomainEntity Owner = null, GreetingAudioFile AudioFile = null, string AudioTTS = null, DateTime? CreatedDate = null, string CreatedBy = null, DateTime? ModifiedDate = null, string ModifiedBy = null)
+        public Greeting(string Name = null, TypeEnum? Type = null, OwnerTypeEnum? OwnerType = null, DomainEntity Owner = null, GreetingAudioFile AudioFile = null, string AudioTTS = null, DateTime? CreatedDate = null, string CreatedBy = null, DateTime? ModifiedDate = null, string ModifiedBy = null, )
         {
             this.Name = Name;
             this.Type = Type;

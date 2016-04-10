@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Workspace">Workspace.</param>
         /// <param name="CoverSheet">CoverSheet.</param>
 
-        public FaxSendRequest(string Name = null, List<string> Addresses = null, string OriginalFilename = null, string ContentType = null, Workspace Workspace = null, CoverSheet CoverSheet = null)
+        public FaxSendRequest(string Name = null, List<string> Addresses = null, string OriginalFilename = null, string ContentType = null, Workspace Workspace = null, CoverSheet CoverSheet = null, )
         {
             this.Name = Name;
             this.Addresses = Addresses;

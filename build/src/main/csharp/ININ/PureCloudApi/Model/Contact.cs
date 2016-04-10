@@ -65,15 +65,13 @@ namespace ININ.PureCloudApi.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Contact" />class.
         /// </summary>
-        /// <param name="Address">Address.</param>
-        /// <param name="Display">Display.</param>
+        /// <param name="Address">Email address or phone number for this contact type.</param>
         /// <param name="MediaType">MediaType.</param>
         /// <param name="Type">Type.</param>
 
-        public Contact(string Address = null, string Display = null, MediaTypeEnum? MediaType = null, TypeEnum? Type = null)
+        public Contact(string Address = null, MediaTypeEnum? MediaType = null, TypeEnum? Type = null)
         {
             this.Address = Address;
-            this.Display = Display;
             this.MediaType = MediaType;
             this.Type = Type;
             
@@ -81,16 +79,18 @@ namespace ININ.PureCloudApi.Model
         
     
         /// <summary>
-        /// Gets or Sets Address
+        /// Email address or phone number for this contact type
         /// </summary>
+        /// <value>Email address or phone number for this contact type</value>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public string Address { get; set; }
     
         /// <summary>
-        /// Gets or Sets Display
+        /// Formatted version of the address property
         /// </summary>
+        /// <value>Formatted version of the address property</value>
         [DataMember(Name="display", EmitDefaultValue=false)]
-        public string Display { get; set; }
+        public string Display { get; private set; }
     
         /// <summary>
         /// Returns the string presentation of the object

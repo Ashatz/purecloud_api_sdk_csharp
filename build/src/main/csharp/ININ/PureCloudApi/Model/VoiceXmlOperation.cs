@@ -89,7 +89,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="FetchAudio">FetchAudio.</param>
         /// <param name="TimeoutMS">TimeoutMS.</param>
 
-        public VoiceXmlOperation(string Name = null, TypeEnum? Type = null, MethodEnum? Method = null, EncodingEnum? Encoding = null, string Description = null, string Uri = null, string Inputs = null, string Outputs = null, string FetchAudio = null, int? TimeoutMS = null)
+        public VoiceXmlOperation(string Name = null, TypeEnum? Type = null, MethodEnum? Method = null, EncodingEnum? Encoding = null, string Description = null, string Uri = null, string Inputs = null, string Outputs = null, string FetchAudio = null, int? TimeoutMS = null, )
         {
             this.Name = Name;
             this.Type = Type;

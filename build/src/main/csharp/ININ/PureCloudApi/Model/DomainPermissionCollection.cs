@@ -25,7 +25,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Domain">Domain.</param>
         /// <param name="PermissionMap">PermissionMap.</param>
 
-        public DomainPermissionCollection(string Name = null, string Domain = null, Dictionary<string, List<DomainPermission>> PermissionMap = null)
+        public DomainPermissionCollection(string Name = null, string Domain = null, Dictionary<string, List<DomainPermission>> PermissionMap = null, )
         {
             this.Name = Name;
             this.Domain = Domain;

@@ -89,7 +89,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PhoneAssignmentToEdgeType">The phone status&#39;s edge assignment type..</param>
         /// <param name="Edge">The URI of the edge that provided this status information..</param>
 
-        public PhoneStatus(string Name = null, OperationalStatusEnum? OperationalStatus = null, EdgesStatusEnum? EdgesStatus = null, ProvisionInfo Provision = null, List<LineStatus> LineStatuses = null, PhoneAssignmentToEdgeTypeEnum? PhoneAssignmentToEdgeType = null, UriReference Edge = null)
+        public PhoneStatus(string Name = null, OperationalStatusEnum? OperationalStatus = null, EdgesStatusEnum? EdgesStatus = null, ProvisionInfo Provision = null, List<LineStatus> LineStatuses = null, PhoneAssignmentToEdgeTypeEnum? PhoneAssignmentToEdgeType = null, UriReference Edge = null, )
         {
             this.Name = Name;
             this.OperationalStatus = OperationalStatus;

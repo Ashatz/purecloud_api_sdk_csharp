@@ -55,7 +55,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Rrule">An iCal Recurrence Rule (RRULE) string.</param>
         /// <param name="Keywords">Keywords.</param>
 
-        public Schedule(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, DateTime? Start = null, DateTime? End = null, string Rrule = null, List<string> Keywords = null)
+        public Schedule(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, DateTime? Start = null, DateTime? End = null, string Rrule = null, List<string> Keywords = null, )
         {
             this.Name = Name;
             this.Description = Description;

@@ -45,7 +45,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="OtherMediaUris">The list of other media channels involved in the conversation..</param>
         /// <param name="RecordingState">RecordingState.</param>
 
-        public CallConversation(string Name = null, List<CallMediaParticipant> Participants = null, List<string> OtherMediaUris = null, RecordingStateEnum? RecordingState = null)
+        public CallConversation(string Name = null, List<CallMediaParticipant> Participants = null, List<string> OtherMediaUris = null, RecordingStateEnum? RecordingState = null, )
         {
             this.Name = Name;
             this.Participants = Participants;

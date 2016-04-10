@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
 
-        public RunNowResponse(string Name = null)
+        public RunNowResponse(string Name = null, )
         {
             this.Name = Name;
             

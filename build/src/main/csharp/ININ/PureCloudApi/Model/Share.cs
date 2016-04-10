@@ -59,7 +59,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Workspace">Workspace.</param>
         /// <param name="User">User.</param>
 
-        public Share(string Name = null, SharedEntityTypeEnum? SharedEntityType = null, UriReference SharedEntity = null, MemberTypeEnum? MemberType = null, UriReference Member = null, UriReference SharedBy = null, UriReference Workspace = null, User User = null)
+        public Share(string Name = null, SharedEntityTypeEnum? SharedEntityType = null, UriReference SharedEntity = null, MemberTypeEnum? MemberType = null, UriReference Member = null, UriReference SharedBy = null, UriReference Workspace = null, User User = null, )
         {
             this.Name = Name;
             this.SharedEntityType = SharedEntityType;

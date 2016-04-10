@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
 
-        public UserActionCategory(string Name = null)
+        public UserActionCategory(string Name = null, )
         {
             this.Name = Name;
             

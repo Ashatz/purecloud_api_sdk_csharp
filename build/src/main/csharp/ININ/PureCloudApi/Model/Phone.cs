@@ -61,7 +61,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Properties">Properties.</param>
         /// <param name="Capabilities">Capabilities.</param>
 
-        public Phone(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference EdgeGroup = null, UriReference Site = null, UriReference PhoneBaseSettings = null, UriReference LineBaseSettings = null, UriReference PhoneMetaBase = null, List<Line> Lines = null, PhoneStatus Status = null, PhoneStatus SecondaryStatus = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null)
+        public Phone(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, UriReference EdgeGroup = null, UriReference Site = null, UriReference PhoneBaseSettings = null, UriReference LineBaseSettings = null, UriReference PhoneMetaBase = null, List<Line> Lines = null, PhoneStatus Status = null, PhoneStatus SecondaryStatus = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null, )
         {
             this.Name = Name;
             this.Description = Description;

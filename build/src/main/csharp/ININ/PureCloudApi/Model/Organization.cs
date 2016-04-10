@@ -50,7 +50,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DefaultSiteId">DefaultSiteId.</param>
         /// <param name="Deletable">Deletable (default to false).</param>
 
-        public Organization(string Name = null, string ThirdPartyOrgId = null, string ThirdPartyOrgName = null, string ThirdPartyURI = null, string Domain = null, int? Version = null, StateEnum? State = null, string DefaultSiteId = null, bool? Deletable = null)
+        public Organization(string Name = null, string ThirdPartyOrgId = null, string ThirdPartyOrgName = null, string ThirdPartyURI = null, string Domain = null, int? Version = null, StateEnum? State = null, string DefaultSiteId = null, bool? Deletable = null, )
         {
             // to ensure "Version" is required (not null)
             if (Version == null)

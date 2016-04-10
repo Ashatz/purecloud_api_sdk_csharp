@@ -25,7 +25,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="InUse">InUse (default to false).</param>
         /// <param name="Acl">Acl.</param>
 
-        public TagValue(string Name = null, bool? InUse = null, List<string> Acl = null)
+        public TagValue(string Name = null, bool? InUse = null, List<string> Acl = null, )
         {
             this.Name = Name;
             // use default value if no "InUse" provided

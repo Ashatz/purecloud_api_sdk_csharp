@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">The name of the rate csv. (required).</param>
         /// <param name="Url">The url of the rate csv. (required).</param>
 
-        public VoiceRatesCsv(string Name = null, string Url = null)
+        public VoiceRatesCsv(string Name = null, string Url = null, )
         {
             // to ensure "Name" is required (not null)
             if (Name == null)

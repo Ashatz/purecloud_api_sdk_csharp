@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="Offset">Offset.</param>
 
-        public TimeZone(string Name = null, long? Offset = null)
+        public TimeZone(string Name = null, long? Offset = null, )
         {
             this.Name = Name;
             this.Offset = Offset;

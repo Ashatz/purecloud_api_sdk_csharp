@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Version">Version.</param>
         /// <param name="CallableTimes">CallableTimes.</param>
 
-        public CallableTimeSet(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<CallableTime> CallableTimes = null)
+        public CallableTimeSet(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<CallableTime> CallableTimes = null, )
         {
             this.Name = Name;
             this.DateCreated = DateCreated;

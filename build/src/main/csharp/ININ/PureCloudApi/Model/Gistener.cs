@@ -33,7 +33,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SocialAccount">The social account associated with this Gistener.</param>
         /// <param name="Queue">The operator queue the gistener will route to..</param>
 
-        public Gistener(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, bool? Enabled = null, string AnyWords = null, string AllWords = null, string ExcludeWords = null, string ExactPhrase = null, List<GroupTag> GroupTags = null, SocialAccount SocialAccount = null, Queue Queue = null)
+        public Gistener(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, bool? Enabled = null, string AnyWords = null, string AllWords = null, string ExcludeWords = null, string ExactPhrase = null, List<GroupTag> GroupTags = null, SocialAccount SocialAccount = null, Queue Queue = null, )
         {
             this.Name = Name;
             this.DateCreated = DateCreated;

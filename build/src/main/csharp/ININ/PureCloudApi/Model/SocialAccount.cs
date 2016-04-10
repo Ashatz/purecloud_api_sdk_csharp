@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="TwitterId">The account ID as provided by Twitter during the authorization process.</param>
         /// <param name="StreamingEnabled">Indicates if a stream should be opened on behalf of the indicated Social Hub account (default to false).</param>
 
-        public SocialAccount(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, bool? Enabled = null, bool? Authorized = null, string SocialHub = null, string AccessToken = null, string AccessTokenSecret = null, string TwitterId = null, bool? StreamingEnabled = null)
+        public SocialAccount(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, bool? Enabled = null, bool? Authorized = null, string SocialHub = null, string AccessToken = null, string AccessTokenSecret = null, string TwitterId = null, bool? StreamingEnabled = null, )
         {
             this.Name = Name;
             this.DateCreated = DateCreated;

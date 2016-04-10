@@ -418,60 +418,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test GetVideos
-        /// </summary>
-        [Test]
-        public void GetVideosTest()
-        {
-            // TODO: add unit test for the method 'GetVideos'
-            
-            var response = instance.GetVideos();
-            Assert.IsInstanceOf<VideoConversationEntityListing> (response, "response is VideoConversationEntityListing"); 
-        }
-        
-        /// <summary>
-        /// Test GetVideosVideoId
-        /// </summary>
-        [Test]
-        public void GetVideosVideoIdTest()
-        {
-            // TODO: add unit test for the method 'GetVideosVideoId'
-            string videoId = null; // TODO: replace null with proper value
-            
-            var response = instance.GetVideosVideoId(videoId);
-            Assert.IsInstanceOf<VideoConversation> (response, "response is VideoConversation"); 
-        }
-        
-        /// <summary>
-        /// Test GetVideosVideoIdParticipantsParticipantIdWrapup
-        /// </summary>
-        [Test]
-        public void GetVideosVideoIdParticipantsParticipantIdWrapupTest()
-        {
-            // TODO: add unit test for the method 'GetVideosVideoIdParticipantsParticipantIdWrapup'
-            string videoId = null; // TODO: replace null with proper value
-            string participantId = null; // TODO: replace null with proper value
-            bool? provisional = null; // TODO: replace null with proper value
-            
-            var response = instance.GetVideosVideoIdParticipantsParticipantIdWrapup(videoId, participantId, provisional);
-            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode"); 
-        }
-        
-        /// <summary>
-        /// Test GetVideosVideoIdParticipantsParticipantIdWrapupcodes
-        /// </summary>
-        [Test]
-        public void GetVideosVideoIdParticipantsParticipantIdWrapupcodesTest()
-        {
-            // TODO: add unit test for the method 'GetVideosVideoIdParticipantsParticipantIdWrapupcodes'
-            string videoId = null; // TODO: replace null with proper value
-            string participantId = null; // TODO: replace null with proper value
-            
-            var response = instance.GetVideosVideoIdParticipantsParticipantIdWrapupcodes(videoId, participantId);
-            Assert.IsInstanceOf<WrapupCode> (response, "response is WrapupCode"); 
-        }
-        
-        /// <summary>
         /// Test PatchCallbacksCallbackIdParticipantsParticipantId
         /// </summary>
         [Test]
@@ -647,36 +593,6 @@ namespace ININ.PureCloudApi.Test
             ParticipantAttributes body = null; // TODO: replace null with proper value
             
             instance.PatchEmailsEmailIdParticipantsParticipantIdAttributes(emailId, participantId, body);
-             
-        }
-        
-        /// <summary>
-        /// Test PatchVideosVideoIdParticipantsParticipantId
-        /// </summary>
-        [Test]
-        public void PatchVideosVideoIdParticipantsParticipantIdTest()
-        {
-            // TODO: add unit test for the method 'PatchVideosVideoIdParticipantsParticipantId'
-            string videoId = null; // TODO: replace null with proper value
-            string participantId = null; // TODO: replace null with proper value
-            MediaParticipantRequest body = null; // TODO: replace null with proper value
-            
-            instance.PatchVideosVideoIdParticipantsParticipantId(videoId, participantId, body);
-             
-        }
-        
-        /// <summary>
-        /// Test PatchVideosVideoIdParticipantsParticipantIdAttributes
-        /// </summary>
-        [Test]
-        public void PatchVideosVideoIdParticipantsParticipantIdAttributesTest()
-        {
-            // TODO: add unit test for the method 'PatchVideosVideoIdParticipantsParticipantIdAttributes'
-            string videoId = null; // TODO: replace null with proper value
-            string participantId = null; // TODO: replace null with proper value
-            ParticipantAttributes body = null; // TODO: replace null with proper value
-            
-            instance.PatchVideosVideoIdParticipantsParticipantIdAttributes(videoId, participantId, body);
              
         }
         
@@ -905,21 +821,6 @@ namespace ININ.PureCloudApi.Test
             
             var response = instance.PostFaxes(body);
             Assert.IsInstanceOf<FaxSendResponse> (response, "response is FaxSendResponse"); 
-        }
-        
-        /// <summary>
-        /// Test PostVideosVideoIdParticipantsParticipantIdReplace
-        /// </summary>
-        [Test]
-        public void PostVideosVideoIdParticipantsParticipantIdReplaceTest()
-        {
-            // TODO: add unit test for the method 'PostVideosVideoIdParticipantsParticipantIdReplace'
-            string videoId = null; // TODO: replace null with proper value
-            string participantId = null; // TODO: replace null with proper value
-            TransferRequest body = null; // TODO: replace null with proper value
-            
-            instance.PostVideosVideoIdParticipantsParticipantIdReplace(videoId, participantId, body);
-             
         }
         
         /// <summary>

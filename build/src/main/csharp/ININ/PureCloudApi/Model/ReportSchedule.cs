@@ -37,7 +37,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Parameters">Parameters.</param>
         /// <param name="LastRun">LastRun.</param>
 
-        public ReportSchedule(string Name = null, string QuartzCronExpression = null, DateTime? NextFireTime = null, DateTime? DateCreated = null, DateTime? DateModified = null, string Description = null, string TimeZone = null, string TimePeriod = null, DateTime? Interval = null, string ReportFormat = null, string Locale = null, bool? Enabled = null, string ReportId = null, Dictionary<string, Object> Parameters = null, ReportRunEntry LastRun = null)
+        public ReportSchedule(string Name = null, string QuartzCronExpression = null, DateTime? NextFireTime = null, DateTime? DateCreated = null, DateTime? DateModified = null, string Description = null, string TimeZone = null, string TimePeriod = null, DateTime? Interval = null, string ReportFormat = null, string Locale = null, bool? Enabled = null, string ReportId = null, Dictionary<string, Object> Parameters = null, ReportRunEntry LastRun = null, )
         {
             this.Name = Name;
             this.QuartzCronExpression = QuartzCronExpression;

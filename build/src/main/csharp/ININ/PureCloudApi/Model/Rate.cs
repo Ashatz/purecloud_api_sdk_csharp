@@ -25,7 +25,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PartNumber">PartNumber.</param>
         /// <param name="Tiers">Tiers.</param>
 
-        public Rate(string Name = null, string PartNumber = null, List<Tier> Tiers = null)
+        public Rate(string Name = null, string PartNumber = null, List<Tier> Tiers = null, )
         {
             this.Name = Name;
             this.PartNumber = PartNumber;

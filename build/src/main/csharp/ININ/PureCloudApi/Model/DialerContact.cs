@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Callable">Callable (default to false).</param>
         /// <param name="PhoneNumberStatus">PhoneNumberStatus.</param>
 
-        public DialerContact(string Name = null, string ContactListId = null, Dictionary<string, Object> Data = null, Dictionary<string, CallRecord> CallRecords = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null)
+        public DialerContact(string Name = null, string ContactListId = null, Dictionary<string, Object> Data = null, Dictionary<string, CallRecord> CallRecords = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null, )
         {
             this.Name = Name;
             this.ContactListId = ContactListId;

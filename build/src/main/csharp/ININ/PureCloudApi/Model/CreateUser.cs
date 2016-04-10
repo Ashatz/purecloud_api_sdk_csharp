@@ -23,14 +23,32 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Department">Department.</param>
-        /// <param name="Email">Email.</param>
-        /// <param name="Addresses">Addresses.</param>
+        /// <param name="Email">User&#39;s email and username (required).</param>
+        /// <param name="Addresses">Email addresses and phone numbers for this user.</param>
         /// <param name="Title">Title.</param>
-        /// <param name="Password">Password.</param>
+        /// <param name="Password">User&#39;s password (required).</param>
         /// <param name="Version">Use version number 1 when creating (required).</param>
 
         public CreateUser(string Name = null, string Department = null, string Email = null, List<Contact> Addresses = null, string Title = null, string Password = null, string Version = null)
         {
+            // to ensure "Email" is required (not null)
+            if (Email == null)
+            {
+                throw new InvalidDataException("Email is a required property for CreateUser and cannot be null");
+            }
+            else
+            {
+                this.Email = Email;
+            }
+            // to ensure "Password" is required (not null)
+            if (Password == null)
+            {
+                throw new InvalidDataException("Password is a required property for CreateUser and cannot be null");
+            }
+            else
+            {
+                this.Password = Password;
+            }
             // to ensure "Version" is required (not null)
             if (Version == null)
             {
@@ -42,10 +60,8 @@ namespace ININ.PureCloudApi.Model
             }
             this.Name = Name;
             this.Department = Department;
-            this.Email = Email;
             this.Addresses = Addresses;
             this.Title = Title;
-            this.Password = Password;
             
         }
         
@@ -63,14 +79,16 @@ namespace ININ.PureCloudApi.Model
         public string Department { get; set; }
     
         /// <summary>
-        /// Gets or Sets Email
+        /// User's email and username
         /// </summary>
+        /// <value>User's email and username</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
     
         /// <summary>
-        /// Gets or Sets Addresses
+        /// Email addresses and phone numbers for this user
         /// </summary>
+        /// <value>Email addresses and phone numbers for this user</value>
         [DataMember(Name="addresses", EmitDefaultValue=false)]
         public List<Contact> Addresses { get; set; }
     
@@ -81,8 +99,9 @@ namespace ININ.PureCloudApi.Model
         public string Title { get; set; }
     
         /// <summary>
-        /// Gets or Sets Password
+        /// User's password
         /// </summary>
+        /// <value>User's password</value>
         [DataMember(Name="password", EmitDefaultValue=false)]
         public string Password { get; set; }
     

@@ -57,7 +57,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Site">Site.</param>
         /// <param name="Dids">Dids.</param>
 
-        public Endpoint(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, int? Count = null, Dictionary<string, Object> Properties = null, UriReference Schema = null, bool? Enabled = null, UriReference Site = null, List<string> Dids = null)
+        public Endpoint(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, int? Count = null, Dictionary<string, Object> Properties = null, UriReference Schema = null, bool? Enabled = null, UriReference Site = null, List<string> Dids = null, )
         {
             this.Name = Name;
             this.Description = Description;

@@ -33,7 +33,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Thumbnails">Thumbnails.</param>
         /// <param name="Read">Read (default to false).</param>
 
-        public UserRecording(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ContentUri = null, UriReference Workspace = null, UriReference CreatedBy = null, Conversation Conversation = null, long? ContentLength = null, long? DurationMilliseconds = null, List<DocumentThumbnail> Thumbnails = null, bool? Read = null)
+        public UserRecording(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ContentUri = null, UriReference Workspace = null, UriReference CreatedBy = null, Conversation Conversation = null, long? ContentLength = null, long? DurationMilliseconds = null, List<DocumentThumbnail> Thumbnails = null, bool? Read = null, )
         {
             this.Name = Name;
             this.DateCreated = DateCreated;

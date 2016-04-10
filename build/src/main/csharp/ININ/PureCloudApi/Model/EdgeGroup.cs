@@ -54,7 +54,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="EdgeTrunkBaseAssignment">A trunk base settings assignment of trunkType \&quot;EDGE\&quot; to use for edge-to-edge communication..</param>
         /// <param name="PhoneTrunkBaseAssignments">Trunk base settings assignments of trunkType \&quot;PHONE\&quot; to inherit to edge logical interfaces for phone communication..</param>
 
-        public EdgeGroup(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, bool? Managed = null, TrunkBaseAssignment EdgeTrunkBaseAssignment = null, List<TrunkBaseAssignment> PhoneTrunkBaseAssignments = null)
+        public EdgeGroup(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, bool? Managed = null, TrunkBaseAssignment EdgeTrunkBaseAssignment = null, List<TrunkBaseAssignment> PhoneTrunkBaseAssignments = null, )
         {
             this.Name = Name;
             this.Description = Description;

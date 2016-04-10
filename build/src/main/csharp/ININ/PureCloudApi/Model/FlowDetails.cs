@@ -81,7 +81,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="FlowCompletionReason">The completion reason set at the flow completion time, if applicable..</param>
         /// <param name="FlowErrorInfo">Additional information if the flow is in error.</param>
 
-        public FlowDetails(string Name = null, FlowConfigId FlowConfigId = null, DateTime? LaunchTime = null, LaunchTypeEnum? LaunchType = null, User LaunchedBy = null, StatusEnum? Status = null, List<AssociatedDocument> AssociatedDocuments = null, DateTime? FlowCompletionTime = null, string FlowCompletionReason = null, ErrorBody FlowErrorInfo = null)
+        public FlowDetails(string Name = null, FlowConfigId FlowConfigId = null, DateTime? LaunchTime = null, LaunchTypeEnum? LaunchType = null, User LaunchedBy = null, StatusEnum? Status = null, List<AssociatedDocument> AssociatedDocuments = null, DateTime? FlowCompletionTime = null, string FlowCompletionReason = null, ErrorBody FlowErrorInfo = null, )
         {
             // to ensure "FlowConfigId" is required (not null)
             if (FlowConfigId == null)

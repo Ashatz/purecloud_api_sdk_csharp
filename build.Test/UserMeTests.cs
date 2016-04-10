@@ -223,15 +223,6 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'FeatureToggles' 
-        /// </summary>
-        [Test]
-        public void FeatureTogglesTest()
-        {
-            // TODO: unit test for the property 'FeatureToggles' 
-        }
-        
-        /// <summary>
         /// Test the property 'SelfUri' 
         /// </summary>
         [Test]

@@ -59,7 +59,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DurationMinimumSeconds">The minimum duration charged in seconds. (required).</param>
         /// <param name="DurationIncrementSeconds">The billing duration increment in seconds. (required).</param>
 
-        public VoiceRate(string Name = null, string Currency = null, string AmendmentId = null, TypeEnum? Type = null, DateTime? EffectiveDate = null, double? Rate = null, int? DurationMinimumSeconds = null, int? DurationIncrementSeconds = null)
+        public VoiceRate(string Name = null, string Currency = null, string AmendmentId = null, TypeEnum? Type = null, DateTime? EffectiveDate = null, double? Rate = null, int? DurationMinimumSeconds = null, int? DurationIncrementSeconds = null, )
         {
             // to ensure "Currency" is required (not null)
             if (Currency == null)

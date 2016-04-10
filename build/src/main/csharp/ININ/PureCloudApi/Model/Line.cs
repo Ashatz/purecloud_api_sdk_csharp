@@ -59,7 +59,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SecondaryEdge">SecondaryEdge.</param>
         /// <param name="LoggedInUser">LoggedInUser.</param>
 
-        public Line(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, Object> Properties = null, UriReference EdgeGroup = null, UriReference Template = null, UriReference Site = null, UriReference LineBaseSettings = null, Edge PrimaryEdge = null, Edge SecondaryEdge = null, UriReference LoggedInUser = null)
+        public Line(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, Object> Properties = null, UriReference EdgeGroup = null, UriReference Template = null, UriReference Site = null, UriReference LineBaseSettings = null, Edge PrimaryEdge = null, Edge SecondaryEdge = null, UriReference LoggedInUser = null, )
         {
             this.Name = Name;
             this.Description = Description;

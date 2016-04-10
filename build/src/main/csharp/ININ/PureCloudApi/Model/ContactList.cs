@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PreviewModeAcceptedValues">PreviewModeAcceptedValues.</param>
         /// <param name="Size">Size.</param>
 
-        public ContactList(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, ImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, long? Size = null)
+        public ContactList(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, ImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, long? Size = null, )
         {
             this.Name = Name;
             this.DateCreated = DateCreated;

@@ -29,7 +29,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Queue">Queue.</param>
         /// <param name="Rules">Rules.</param>
 
-        public RuleSet(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, List<DialerRule> Rules = null)
+        public RuleSet(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, List<DialerRule> Rules = null, )
         {
             this.Name = Name;
             this.DateCreated = DateCreated;

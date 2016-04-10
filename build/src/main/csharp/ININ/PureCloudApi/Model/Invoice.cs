@@ -29,7 +29,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Balance">Balance.</param>
         /// <param name="Status">Status.</param>
 
-        public Invoice(string Name = null, string InvoiceNumber = null, DateTime? InvoiceDate = null, DateTime? DueDate = null, string Amount = null, string Balance = null, string Status = null)
+        public Invoice(string Name = null, string InvoiceNumber = null, DateTime? InvoiceDate = null, DateTime? DueDate = null, string Amount = null, string Balance = null, string Status = null, )
         {
             this.Name = Name;
             this.InvoiceNumber = InvoiceNumber;

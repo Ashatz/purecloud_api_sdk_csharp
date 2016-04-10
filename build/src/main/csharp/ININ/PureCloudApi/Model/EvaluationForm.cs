@@ -29,7 +29,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="QuestionGroups">QuestionGroups.</param>
         /// <param name="PublishedVersions">PublishedVersions.</param>
 
-        public EvaluationForm(string Name = null, string Type = null, DateTime? ModifiedDate = null, bool? Published = null, string ContextId = null, List<QuestionGroup> QuestionGroups = null, DomainEntityListingEvaluationForm PublishedVersions = null)
+        public EvaluationForm(string Name = null, string Type = null, DateTime? ModifiedDate = null, bool? Published = null, string ContextId = null, List<QuestionGroup> QuestionGroups = null, DomainEntityListingEvaluationForm PublishedVersions = null, )
         {
             this.Name = Name;
             this.Type = Type;

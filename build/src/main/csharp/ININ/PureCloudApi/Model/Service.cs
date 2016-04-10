@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Vpn">Vpn.</param>
         /// <param name="Carrier">Carrier.</param>
 
-        public Service(string Name = null, string Status = null, List<string> Domains = null, List<ServiceType> ServiceTypes = null, List<Gateway> Gateways = null, Dns Dns = null, Vpn Vpn = null, Carrier Carrier = null)
+        public Service(string Name = null, string Status = null, List<string> Domains = null, List<ServiceType> ServiceTypes = null, List<Gateway> Gateways = null, Dns Dns = null, Vpn Vpn = null, Carrier Carrier = null, )
         {
             this.Name = Name;
             this.Status = Status;

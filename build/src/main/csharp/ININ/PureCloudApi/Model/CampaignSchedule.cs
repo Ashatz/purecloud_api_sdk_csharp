@@ -29,7 +29,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="TimeZone">TimeZone.</param>
         /// <param name="Campaign">Campaign.</param>
 
-        public CampaignSchedule(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<CampaignScheduleIntervals> Intervals = null, string TimeZone = null, UriReference Campaign = null)
+        public CampaignSchedule(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<CampaignScheduleIntervals> Intervals = null, string TimeZone = null, UriReference Campaign = null, )
         {
             this.Name = Name;
             this.DateCreated = DateCreated;

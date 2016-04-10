@@ -41,7 +41,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="UploadDestinationUri">UploadDestinationUri.</param>
         /// <param name="UploadMethodType">UploadMethodType.</param>
 
-        public FaxSendResponse(string Name = null, string UploadDestinationUri = null, UploadMethodTypeEnum? UploadMethodType = null)
+        public FaxSendResponse(string Name = null, string UploadDestinationUri = null, UploadMethodTypeEnum? UploadMethodType = null, )
         {
             this.Name = Name;
             this.UploadDestinationUri = UploadDestinationUri;

@@ -136,10 +136,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="feature">The feature toggles to query.</param>
         /// <param name="expand">Which fields, if any, to expand</param>
         /// <returns>UserMe</returns>
-        UserMe GetMe (List<string> feature, List<string> expand = null);
+        UserMe GetMe (List<string> expand = null);
   
         /// <summary>
         /// Get user.
@@ -148,10 +147,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="feature">The feature toggles to query.</param>
         /// <param name="expand">Which fields, if any, to expand</param>
         /// <returns>ApiResponse of UserMe</returns>
-        ApiResponse<UserMe> GetMeWithHttpInfo (List<string> feature, List<string> expand = null);
+        ApiResponse<UserMe> GetMeWithHttpInfo (List<string> expand = null);
         
         /// <summary>
         /// Search using q64
@@ -972,10 +970,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="feature">The feature toggles to query.</param>
         /// <param name="expand">Which fields, if any, to expand</param>
         /// <returns>Task of UserMe</returns>
-        System.Threading.Tasks.Task<UserMe> GetMeAsync (List<string> feature, List<string> expand = null);
+        System.Threading.Tasks.Task<UserMe> GetMeAsync (List<string> expand = null);
 
         /// <summary>
         /// Get user.
@@ -984,10 +981,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="feature">The feature toggles to query.</param>
         /// <param name="expand">Which fields, if any, to expand</param>
         /// <returns>Task of ApiResponse (UserMe)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserMe>> GetMeAsyncWithHttpInfo (List<string> feature, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<UserMe>> GetMeAsyncWithHttpInfo (List<string> expand = null);
         
         /// <summary>
         /// Search using q64
@@ -2640,12 +2636,11 @@ namespace ININ.PureCloudApi.Api
         /// Get user. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="feature">The feature toggles to query.</param> 
         /// <param name="expand">Which fields, if any, to expand</param> 
         /// <returns>UserMe</returns>
-        public UserMe GetMe (List<string> feature, List<string> expand = null)
+        public UserMe GetMe (List<string> expand = null)
         {
-             ApiResponse<UserMe> localVarResponse = GetMeWithHttpInfo(feature, expand);
+             ApiResponse<UserMe> localVarResponse = GetMeWithHttpInfo(expand);
              return localVarResponse.Data;
         }
 
@@ -2653,15 +2648,10 @@ namespace ININ.PureCloudApi.Api
         /// Get user. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="feature">The feature toggles to query.</param> 
         /// <param name="expand">Which fields, if any, to expand</param> 
         /// <returns>ApiResponse of UserMe</returns>
-        public ApiResponse< UserMe > GetMeWithHttpInfo (List<string> feature, List<string> expand = null)
+        public ApiResponse< UserMe > GetMeWithHttpInfo (List<string> expand = null)
         {
-            
-            // verify the required parameter 'feature' is set
-            if (feature == null)
-                throw new ApiException(400, "Missing required parameter 'feature' when calling UsersApi->GetMe");
             
     
             var localVarPath = "/api/v2/users/me";
@@ -2692,7 +2682,6 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            if (feature != null) localVarQueryParams.Add("feature", Configuration.ApiClient.ParameterToString(feature)); // query parameter
             
             
             
@@ -2730,12 +2719,11 @@ namespace ININ.PureCloudApi.Api
         /// Get user. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="feature">The feature toggles to query.</param>
         /// <param name="expand">Which fields, if any, to expand</param>
         /// <returns>Task of UserMe</returns>
-        public async System.Threading.Tasks.Task<UserMe> GetMeAsync (List<string> feature, List<string> expand = null)
+        public async System.Threading.Tasks.Task<UserMe> GetMeAsync (List<string> expand = null)
         {
-             ApiResponse<UserMe> localVarResponse = await GetMeAsyncWithHttpInfo(feature, expand);
+             ApiResponse<UserMe> localVarResponse = await GetMeAsyncWithHttpInfo(expand);
              return localVarResponse.Data;
 
         }
@@ -2744,13 +2732,10 @@ namespace ININ.PureCloudApi.Api
         /// Get user. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="feature">The feature toggles to query.</param>
         /// <param name="expand">Which fields, if any, to expand</param>
         /// <returns>Task of ApiResponse (UserMe)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserMe>> GetMeAsyncWithHttpInfo (List<string> feature, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserMe>> GetMeAsyncWithHttpInfo (List<string> expand = null)
         {
-            // verify the required parameter 'feature' is set
-            if (feature == null) throw new ApiException(400, "Missing required parameter 'feature' when calling GetMe");
             
     
             var localVarPath = "/api/v2/users/me";
@@ -2781,7 +2766,6 @@ namespace ININ.PureCloudApi.Api
             localVarPathParams.Add("format", "json");
             
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            if (feature != null) localVarQueryParams.Add("feature", Configuration.ApiClient.ParameterToString(feature)); // query parameter
             
             
             

@@ -126,10 +126,9 @@ namespace ININ.PureCloudApi.Test
         public void GetMeTest()
         {
             // TODO: add unit test for the method 'GetMe'
-            List<string> feature = null; // TODO: replace null with proper value
             List<string> expand = null; // TODO: replace null with proper value
             
-            var response = instance.GetMe(feature, expand);
+            var response = instance.GetMe(expand);
             Assert.IsInstanceOf<UserMe> (response, "response is UserMe"); 
         }
         

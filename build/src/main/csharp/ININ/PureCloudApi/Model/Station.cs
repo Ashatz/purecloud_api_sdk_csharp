@@ -45,7 +45,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SecondaryEdge">SecondaryEdge.</param>
         /// <param name="Type">Type.</param>
 
-        public Station(string Name = null, string Description = null, StatusEnum? Status = null, string UserId = null, UriReference PrimaryEdge = null, UriReference SecondaryEdge = null, string Type = null)
+        public Station(string Name = null, string Description = null, StatusEnum? Status = null, string UserId = null, UriReference PrimaryEdge = null, UriReference SecondaryEdge = null, string Type = null, )
         {
             this.Name = Name;
             this.Description = Description;

@@ -39,7 +39,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ProviderName">ProviderName.</param>
         /// <param name="Token">Token.</param>
 
-        public PaymentMethod(string Name = null, TypeEnum? Type = null, string ProviderName = null, string Token = null)
+        public PaymentMethod(string Name = null, TypeEnum? Type = null, string ProviderName = null, string Token = null, )
         {
             this.Name = Name;
             this.Type = Type;

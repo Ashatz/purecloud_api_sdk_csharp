@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CallerName">CallerName.</param>
         /// <param name="CallerUser">CallerUser.</param>
 
-        public VoicemailMessage(Conversation Conversation = null, bool? Read = null, int? AudioRecordingDurationSeconds = null, long? AudioRecordingSizeBytes = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, string CallerAddress = null, string CallerName = null, User CallerUser = null)
+        public VoicemailMessage(Conversation Conversation = null, bool? Read = null, int? AudioRecordingDurationSeconds = null, long? AudioRecordingSizeBytes = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, string CallerAddress = null, string CallerName = null, User CallerUser = null, )
         {
             this.Conversation = Conversation;
             // use default value if no "Read" provided

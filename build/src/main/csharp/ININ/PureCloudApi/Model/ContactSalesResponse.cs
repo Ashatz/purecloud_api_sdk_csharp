@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="EmailBody">EmailBody.</param>
 
-        public ContactSalesResponse(string Name = null, string EmailBody = null)
+        public ContactSalesResponse(string Name = null, string EmailBody = null, )
         {
             this.Name = Name;
             this.EmailBody = EmailBody;

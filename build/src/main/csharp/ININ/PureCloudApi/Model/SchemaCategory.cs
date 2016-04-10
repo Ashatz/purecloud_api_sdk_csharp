@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
 
-        public SchemaCategory(string Name = null)
+        public SchemaCategory(string Name = null, )
         {
             this.Name = Name;
             

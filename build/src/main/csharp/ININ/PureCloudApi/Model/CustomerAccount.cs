@@ -29,7 +29,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="BillingAddress">The account billing address. (required).</param>
         /// <param name="Currency">The account currency. (required).</param>
 
-        public CustomerAccount(string Name = null, bool? IsFrozen = null, string OrgLegalName = null, string OrgPhone = null, bool? IsTaxExempt = null, BillingAddress BillingAddress = null, string Currency = null)
+        public CustomerAccount(string Name = null, bool? IsFrozen = null, string OrgLegalName = null, string OrgPhone = null, bool? IsTaxExempt = null, BillingAddress BillingAddress = null, string Currency = null, )
         {
             // to ensure "IsFrozen" is required (not null)
             if (IsFrozen == null)

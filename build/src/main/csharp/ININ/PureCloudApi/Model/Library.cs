@@ -26,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="CreatedBy">CreatedBy.</param>
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
 
-        public Library(string Name = null, int? Version = null, User CreatedBy = null, DateTime? DateCreated = null)
+        public Library(string Name = null, int? Version = null, User CreatedBy = null, DateTime? DateCreated = null, )
         {
             this.Name = Name;
             this.Version = Version;

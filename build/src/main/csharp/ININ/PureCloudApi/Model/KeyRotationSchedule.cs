@@ -50,7 +50,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="Period">Value to set schedule to (required).</param>
 
-        public KeyRotationSchedule(string Name = null, PeriodEnum? Period = null)
+        public KeyRotationSchedule(string Name = null, PeriodEnum? Period = null, )
         {
             // to ensure "Period" is required (not null)
             if (Period == null)

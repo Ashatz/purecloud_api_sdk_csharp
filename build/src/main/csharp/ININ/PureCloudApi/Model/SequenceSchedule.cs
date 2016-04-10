@@ -29,7 +29,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="TimeZone">TimeZone.</param>
         /// <param name="Sequence">Sequence.</param>
 
-        public SequenceSchedule(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<CampaignScheduleIntervals> Intervals = null, string TimeZone = null, UriReference Sequence = null)
+        public SequenceSchedule(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<CampaignScheduleIntervals> Intervals = null, string TimeZone = null, UriReference Sequence = null, )
         {
             this.Name = Name;
             this.DateCreated = DateCreated;

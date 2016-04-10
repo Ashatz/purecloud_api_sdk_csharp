@@ -26,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ContractEffectiveDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Version">Version.</param>
 
-        public ThirdPartySubscription(string Name = null, string Notes = null, DateTime? ContractEffectiveDate = null, string Version = null)
+        public ThirdPartySubscription(string Name = null, string Notes = null, DateTime? ContractEffectiveDate = null, string Version = null, )
         {
             this.Name = Name;
             this.Notes = Notes;

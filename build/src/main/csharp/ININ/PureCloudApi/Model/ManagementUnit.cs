@@ -26,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Timezone">Timezone.</param>
         /// <param name="Version">Version.</param>
 
-        public ManagementUnit(string Name = null, string StartDayOfWeek = null, string Timezone = null, int? Version = null)
+        public ManagementUnit(string Name = null, string StartDayOfWeek = null, string Timezone = null, int? Version = null, )
         {
             this.Name = Name;
             this.StartDayOfWeek = StartDayOfWeek;

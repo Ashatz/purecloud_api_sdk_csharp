@@ -46,7 +46,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Department">Department.</param>
         /// <param name="Email">Email.</param>
         /// <param name="PrimaryContactInfo">Auto populated from addresses..</param>
-        /// <param name="Addresses">Addresses.</param>
+        /// <param name="Addresses">Email addresses and phone numbers for this user.</param>
         /// <param name="Title">Title.</param>
         /// <param name="Username">Username.</param>
         /// <param name="Images">Images.</param>
@@ -58,7 +58,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Station">Effective, default, and last station information.</param>
         /// <param name="Authorization">Roles and permissions assigned to the user.</param>
 
-        public User(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, List<UserImage> Images = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null)
+        public User(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, List<UserImage> Images = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, )
         {
             this.Name = Name;
             this.Chat = Chat;
@@ -119,8 +119,9 @@ namespace ININ.PureCloudApi.Model
         public List<Contact> PrimaryContactInfo { get; set; }
     
         /// <summary>
-        /// Gets or Sets Addresses
+        /// Email addresses and phone numbers for this user
         /// </summary>
+        /// <value>Email addresses and phone numbers for this user</value>
         [DataMember(Name="addresses", EmitDefaultValue=false)]
         public List<Contact> Addresses { get; set; }
     

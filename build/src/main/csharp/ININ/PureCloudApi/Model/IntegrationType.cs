@@ -45,7 +45,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Provider">Provider.</param>
         /// <param name="Images">Images.</param>
 
-        public IntegrationType(string Name = null, string Description = null, ProviderEnum? Provider = null, List<UserImage> Images = null)
+        public IntegrationType(string Name = null, string Description = null, ProviderEnum? Provider = null, List<UserImage> Images = null, )
         {
             this.Name = Name;
             this.Description = Description;

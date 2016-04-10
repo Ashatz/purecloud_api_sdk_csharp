@@ -75,7 +75,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SalesPartnerCode">SalesPartnerCode.</param>
         /// <param name="IsAnnualPrepay">IsAnnualPrepay (default to false).</param>
 
-        public Quote(string Name = null, string PurchaseOrder = null, TypeEnum? Type = null, StatusEnum? Status = null, string Currency = null, DateTime? CreatedDate = null, DateTime? LastUpdatedDate = null, string BillingContactEmail = null, string BillingContactFirstName = null, string BillingContactLastName = null, string BillingContactPhone = null, bool? IncludeVoiceCharges = null, List<QuoteCharge> Charges = null, string EdgeControlModel = null, List<string> ReferralCodes = null, List<string> DiscountCodes = null, string SalesPartnerCode = null, bool? IsAnnualPrepay = null)
+        public Quote(string Name = null, string PurchaseOrder = null, TypeEnum? Type = null, StatusEnum? Status = null, string Currency = null, DateTime? CreatedDate = null, DateTime? LastUpdatedDate = null, string BillingContactEmail = null, string BillingContactFirstName = null, string BillingContactLastName = null, string BillingContactPhone = null, bool? IncludeVoiceCharges = null, List<QuoteCharge> Charges = null, string EdgeControlModel = null, List<string> ReferralCodes = null, List<string> DiscountCodes = null, string SalesPartnerCode = null, bool? IsAnnualPrepay = null, )
         {
             this.Name = Name;
             this.PurchaseOrder = PurchaseOrder;

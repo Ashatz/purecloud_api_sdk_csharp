@@ -86,7 +86,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ConsumedResources">ConsumedResources.</param>
         /// <param name="ConsumingResources">ConsumingResources.</param>
 
-        public DependencyObject(string Name = null, string Version = null, TypeEnum? Type = null, bool? Deleted = null, List<Dependency> ConsumedResources = null, List<Dependency> ConsumingResources = null)
+        public DependencyObject(string Name = null, string Version = null, TypeEnum? Type = null, bool? Deleted = null, List<Dependency> ConsumedResources = null, List<Dependency> ConsumingResources = null, )
         {
             this.Name = Name;
             this.Version = Version;
