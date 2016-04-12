@@ -77,6 +77,9 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "TRANSFER_CONSULT")]
             TransferConsult,
             
+            [EnumMember(Value = "TRANSFER_FORWARD")]
+            TransferForward,
+            
             [EnumMember(Value = "ERROR")]
             Error,
             
@@ -122,8 +125,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SkipEnabled">SkipEnabled (default to false).</param>
         /// <param name="TimeoutSeconds">TimeoutSeconds.</param>
         /// <param name="ConnectedTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DisconnectedTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
 
-        public Callback(StateEnum? State = null, string Id = null, List<Segment> Segments = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DialerPreview DialerPreview = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null)
+        public Callback(StateEnum? State = null, string Id = null, List<Segment> Segments = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DialerPreview DialerPreview = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null)
         {
             this.State = State;
             this.Id = Id;
@@ -155,6 +159,7 @@ namespace ININ.PureCloudApi.Model
             }
             this.TimeoutSeconds = TimeoutSeconds;
             this.ConnectedTime = ConnectedTime;
+            this.DisconnectedTime = DisconnectedTime;
             
         }
         
@@ -228,6 +233,13 @@ namespace ININ.PureCloudApi.Model
         public DateTime? ConnectedTime { get; set; }
     
         /// <summary>
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="disconnectedTime", EmitDefaultValue=false)]
+        public DateTime? DisconnectedTime { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -249,6 +261,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  SkipEnabled: ").Append(SkipEnabled).Append("\n");
             sb.Append("  TimeoutSeconds: ").Append(TimeoutSeconds).Append("\n");
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
+            sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -355,6 +368,11 @@ namespace ININ.PureCloudApi.Model
                     this.ConnectedTime == other.ConnectedTime ||
                     this.ConnectedTime != null &&
                     this.ConnectedTime.Equals(other.ConnectedTime)
+                ) &&
+                (
+                    this.DisconnectedTime == other.DisconnectedTime ||
+                    this.DisconnectedTime != null &&
+                    this.DisconnectedTime.Equals(other.DisconnectedTime)
                 );
         }
 
@@ -411,6 +429,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();
+                
+                if (this.DisconnectedTime != null)
+                    hash = hash * 59 + this.DisconnectedTime.GetHashCode();
                 
                 return hash;
             }

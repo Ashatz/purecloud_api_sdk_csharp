@@ -112,7 +112,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Metrics">Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *)..</param>
         /// <param name="FlattenMultivaluedDimensions">Flattens any multivalued dimensions used in response groups (e.g. [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]-&gt;&#39;a,b,c&#39;) (default to false).</param>
 
-        public AggregationQuery(DateTime? Interval = null, DateTime? Granularity = null, List<string> GroupBy = null, AnalyticsQueryFilter Filter = null, List<string> Metrics = null, bool? FlattenMultivaluedDimensions = null)
+        public AggregationQuery(string Interval = null, DateTime? Granularity = null, List<string> GroupBy = null, AnalyticsQueryFilter Filter = null, List<string> Metrics = null, bool? FlattenMultivaluedDimensions = null)
         {
             this.Interval = Interval;
             this.Granularity = Granularity;
@@ -137,7 +137,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>Behaves like one clause in a SQL WHERE. Specifies the date and time range of data being queried. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss</value>
         [DataMember(Name="interval", EmitDefaultValue=false)]
-        public DateTime? Interval { get; set; }
+        public string Interval { get; set; }
     
         /// <summary>
         /// Granularity aggregates metrics into subpartitions within the time interval specified. The default granularity is the same duration as the interval. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H

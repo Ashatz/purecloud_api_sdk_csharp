@@ -52,15 +52,6 @@ namespace ININ.PureCloudApi.Test
 
         
         /// <summary>
-        /// Test the property 'EvaluationCriteria' 
-        /// </summary>
-        [Test]
-        public void EvaluationCriteriaTest()
-        {
-            // TODO: unit test for the property 'EvaluationCriteria' 
-        }
-        
-        /// <summary>
         /// Test the property 'Conditions' 
         /// </summary>
         [Test]

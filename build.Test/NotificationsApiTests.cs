@@ -73,8 +73,9 @@ namespace ININ.PureCloudApi.Test
         public void GetAvailabletopicsTest()
         {
             // TODO: add unit test for the method 'GetAvailabletopics'
+            List<string> expand = null; // TODO: replace null with proper value
             
-            var response = instance.GetAvailabletopics();
+            var response = instance.GetAvailabletopics(expand);
             Assert.IsInstanceOf<AvailableTopicEntityListing> (response, "response is AvailableTopicEntityListing"); 
         }
         

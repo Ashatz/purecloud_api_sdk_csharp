@@ -187,6 +187,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test the property 'DisconnectedTime' 
+        /// </summary>
+        [Test]
+        public void DisconnectedTimeTest()
+        {
+            // TODO: unit test for the property 'DisconnectedTime' 
+        }
+        
+        /// <summary>
         /// Test the property 'DisconnectReasons' 
         /// </summary>
         [Test]

@@ -53,8 +53,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Managed">Is this edge group being managed remotely. (default to false).</param>
         /// <param name="EdgeTrunkBaseAssignment">A trunk base settings assignment of trunkType \&quot;EDGE\&quot; to use for edge-to-edge communication..</param>
         /// <param name="PhoneTrunkBaseAssignments">Trunk base settings assignments of trunkType \&quot;PHONE\&quot; to inherit to edge logical interfaces for phone communication..</param>
+        /// <param name="PhoneTrunkBases">Trunk base settings of trunkType \&quot;PHONE\&quot; to inherit to edge logical interface for phone communication..</param>
 
-        public EdgeGroup(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, bool? Managed = null, TrunkBaseAssignment EdgeTrunkBaseAssignment = null, List<TrunkBaseAssignment> PhoneTrunkBaseAssignments = null, )
+        public EdgeGroup(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, bool? Managed = null, TrunkBaseAssignment EdgeTrunkBaseAssignment = null, List<TrunkBaseAssignment> PhoneTrunkBaseAssignments = null, List<UriReference> PhoneTrunkBases = null, )
         {
             this.Name = Name;
             this.Description = Description;
@@ -77,6 +78,7 @@ namespace ININ.PureCloudApi.Model
             }
             this.EdgeTrunkBaseAssignment = EdgeTrunkBaseAssignment;
             this.PhoneTrunkBaseAssignments = PhoneTrunkBaseAssignments;
+            this.PhoneTrunkBases = PhoneTrunkBases;
             
         }
         
@@ -166,6 +168,13 @@ namespace ININ.PureCloudApi.Model
         public List<TrunkBaseAssignment> PhoneTrunkBaseAssignments { get; set; }
     
         /// <summary>
+        /// Trunk base settings of trunkType \"PHONE\" to inherit to edge logical interface for phone communication.
+        /// </summary>
+        /// <value>Trunk base settings of trunkType \"PHONE\" to inherit to edge logical interface for phone communication.</value>
+        [DataMember(Name="phoneTrunkBases", EmitDefaultValue=false)]
+        public List<UriReference> PhoneTrunkBases { get; set; }
+    
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -194,6 +203,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Managed: ").Append(Managed).Append("\n");
             sb.Append("  EdgeTrunkBaseAssignment: ").Append(EdgeTrunkBaseAssignment).Append("\n");
             sb.Append("  PhoneTrunkBaseAssignments: ").Append(PhoneTrunkBaseAssignments).Append("\n");
+            sb.Append("  PhoneTrunkBases: ").Append(PhoneTrunkBases).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
@@ -303,6 +313,11 @@ namespace ININ.PureCloudApi.Model
                     this.PhoneTrunkBaseAssignments.SequenceEqual(other.PhoneTrunkBaseAssignments)
                 ) &&
                 (
+                    this.PhoneTrunkBases == other.PhoneTrunkBases ||
+                    this.PhoneTrunkBases != null &&
+                    this.PhoneTrunkBases.SequenceEqual(other.PhoneTrunkBases)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -362,6 +377,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.PhoneTrunkBaseAssignments != null)
                     hash = hash * 59 + this.PhoneTrunkBaseAssignments.GetHashCode();
+                
+                if (this.PhoneTrunkBases != null)
+                    hash = hash * 59 + this.PhoneTrunkBases.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -50,6 +50,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="UserUri">UserUri.</param>
         /// <param name="UserId">UserId.</param>
+        /// <param name="ExternalContactId">ExternalContactId.</param>
         /// <param name="QueueId">QueueId.</param>
         /// <param name="GroupId">GroupId.</param>
         /// <param name="QueueName">QueueName.</param>
@@ -75,7 +76,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Videos">Videos.</param>
         /// <param name="Evaluations">Evaluations.</param>
 
-        public Participant(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string QueueId = null, string GroupId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, string MonitoredParticipantId = null, Dictionary<string, string> Attributes = null, List<Call> Calls = null, List<Callback> Callbacks = null, List<ConversationChat> Chats = null, List<Email> Emails = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null)
+        public Participant(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string ExternalContactId = null, string QueueId = null, string GroupId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, string MonitoredParticipantId = null, Dictionary<string, string> Attributes = null, List<Call> Calls = null, List<Callback> Callbacks = null, List<ConversationChat> Chats = null, List<Email> Emails = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null)
         {
             this.Id = Id;
             this.StartTime = StartTime;
@@ -84,6 +85,7 @@ namespace ININ.PureCloudApi.Model
             this.Name = Name;
             this.UserUri = UserUri;
             this.UserId = UserId;
+            this.ExternalContactId = ExternalContactId;
             this.QueueId = QueueId;
             this.GroupId = GroupId;
             this.QueueName = QueueName;
@@ -172,6 +174,12 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets ExternalContactId
+        /// </summary>
+        [DataMember(Name="externalContactId", EmitDefaultValue=false)]
+        public string ExternalContactId { get; set; }
     
         /// <summary>
         /// Gets or Sets QueueId
@@ -326,6 +334,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  UserUri: ").Append(UserUri).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
+            sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  GroupId: ").Append(GroupId).Append("\n");
             sb.Append("  QueueName: ").Append(QueueName).Append("\n");
@@ -421,6 +430,11 @@ namespace ININ.PureCloudApi.Model
                     this.UserId == other.UserId ||
                     this.UserId != null &&
                     this.UserId.Equals(other.UserId)
+                ) &&
+                (
+                    this.ExternalContactId == other.ExternalContactId ||
+                    this.ExternalContactId != null &&
+                    this.ExternalContactId.Equals(other.ExternalContactId)
                 ) &&
                 (
                     this.QueueId == other.QueueId ||
@@ -576,6 +590,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
+                
+                if (this.ExternalContactId != null)
+                    hash = hash * 59 + this.ExternalContactId.GetHashCode();
                 
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();

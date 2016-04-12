@@ -268,6 +268,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test the property 'ContactSort' 
+        /// </summary>
+        [Test]
+        public void ContactSortTest()
+        {
+            // TODO: unit test for the property 'ContactSort' 
+        }
+        
+        /// <summary>
         /// Test the property 'SelfUri' 
         /// </summary>
         [Test]

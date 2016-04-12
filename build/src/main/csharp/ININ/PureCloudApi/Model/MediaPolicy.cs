@@ -18,32 +18,19 @@ namespace ININ.PureCloudApi.Model
     public partial class MediaPolicy :  IEquatable<MediaPolicy>
     { 
         
-        public static string EvaluationCriteria_ConversationComplete = "CONVERSATION_COMPLETE";
-        public static string EvaluationCriteria_PerConversationEvent = "PER_CONVERSATION_EVENT";
-        
-        
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaPolicy" />class.
         /// </summary>
-        /// <param name="EvaluationCriteria">When conditions are evaluation and actions applied.</param>
         /// <param name="Conditions">Conditions for when actions should be applied.</param>
         /// <param name="Actions">Actions applied when specified conditions are met.</param>
 
-        public MediaPolicy(List<string> EvaluationCriteria = null, PolicyConditions Conditions = null, PolicyActions Actions = null)
+        public MediaPolicy(PolicyConditions Conditions = null, PolicyActions Actions = null)
         {
-            this.EvaluationCriteria = EvaluationCriteria;
             this.Conditions = Conditions;
             this.Actions = Actions;
             
         }
         
-    
-        /// <summary>
-        /// When conditions are evaluation and actions applied
-        /// </summary>
-        /// <value>When conditions are evaluation and actions applied</value>
-        [DataMember(Name="evaluationCriteria", EmitDefaultValue=false)]
-        public List<string> EvaluationCriteria { get; set; }
     
         /// <summary>
         /// Conditions for when actions should be applied
@@ -67,7 +54,6 @@ namespace ININ.PureCloudApi.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MediaPolicy {\n");
-            sb.Append("  EvaluationCriteria: ").Append(EvaluationCriteria).Append("\n");
             sb.Append("  Conditions: ").Append(Conditions).Append("\n");
             sb.Append("  Actions: ").Append(Actions).Append("\n");
             
@@ -108,11 +94,6 @@ namespace ININ.PureCloudApi.Model
 
             return true &&
                 (
-                    this.EvaluationCriteria == other.EvaluationCriteria ||
-                    this.EvaluationCriteria != null &&
-                    this.EvaluationCriteria.SequenceEqual(other.EvaluationCriteria)
-                ) &&
-                (
                     this.Conditions == other.Conditions ||
                     this.Conditions != null &&
                     this.Conditions.Equals(other.Conditions)
@@ -135,9 +116,6 @@ namespace ININ.PureCloudApi.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
-                if (this.EvaluationCriteria != null)
-                    hash = hash * 59 + this.EvaluationCriteria.GetHashCode();
                 
                 if (this.Conditions != null)
                     hash = hash * 59 + this.Conditions.GetHashCode();

@@ -129,7 +129,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
-        /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
+        /// <param name="formatId">The desired media format (WEBM, WAV)</param>
         /// <returns>VoicemailMediaInfo</returns>
         VoicemailMediaInfo GetMessagesMessageIdMedia (string messageId, string formatId = null);
   
@@ -141,7 +141,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
-        /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
+        /// <param name="formatId">The desired media format (WEBM, WAV)</param>
         /// <returns>ApiResponse of VoicemailMediaInfo</returns>
         ApiResponse<VoicemailMediaInfo> GetMessagesMessageIdMediaWithHttpInfo (string messageId, string formatId = null);
         
@@ -373,7 +373,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
-        /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
+        /// <param name="formatId">The desired media format (WEBM, WAV)</param>
         /// <returns>Task of VoicemailMediaInfo</returns>
         System.Threading.Tasks.Task<VoicemailMediaInfo> GetMessagesMessageIdMediaAsync (string messageId, string formatId = null);
 
@@ -385,7 +385,7 @@ namespace ININ.PureCloudApi.Api
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
-        /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
+        /// <param name="formatId">The desired media format (WEBM, WAV)</param>
         /// <returns>Task of ApiResponse (VoicemailMediaInfo)</returns>
         System.Threading.Tasks.Task<ApiResponse<VoicemailMediaInfo>> GetMessagesMessageIdMediaAsyncWithHttpInfo (string messageId, string formatId = null);
         
@@ -1415,7 +1415,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param> 
-        /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param> 
+        /// <param name="formatId">The desired media format (WEBM, WAV)</param> 
         /// <returns>VoicemailMediaInfo</returns>
         public VoicemailMediaInfo GetMessagesMessageIdMedia (string messageId, string formatId = null)
         {
@@ -1428,7 +1428,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param> 
-        /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param> 
+        /// <param name="formatId">The desired media format (WEBM, WAV)</param> 
         /// <returns>ApiResponse of VoicemailMediaInfo</returns>
         public ApiResponse< VoicemailMediaInfo > GetMessagesMessageIdMediaWithHttpInfo (string messageId, string formatId = null)
         {
@@ -1505,7 +1505,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
-        /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
+        /// <param name="formatId">The desired media format (WEBM, WAV)</param>
         /// <returns>Task of VoicemailMediaInfo</returns>
         public async System.Threading.Tasks.Task<VoicemailMediaInfo> GetMessagesMessageIdMediaAsync (string messageId, string formatId = null)
         {
@@ -1519,7 +1519,7 @@ namespace ININ.PureCloudApi.Api
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
-        /// <param name="formatId">The desired format (WEBM, WAV, etc.)</param>
+        /// <param name="formatId">The desired media format (WEBM, WAV)</param>
         /// <returns>Task of ApiResponse (VoicemailMediaInfo)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailMediaInfo>> GetMessagesMessageIdMediaAsyncWithHttpInfo (string messageId, string formatId = null)
         {

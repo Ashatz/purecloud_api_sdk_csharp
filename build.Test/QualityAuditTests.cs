@@ -88,21 +88,21 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'Level' 
-        /// </summary>
-        [Test]
-        public void LevelTest()
-        {
-            // TODO: unit test for the property 'Level' 
-        }
-        
-        /// <summary>
         /// Test the property 'Entity' 
         /// </summary>
         [Test]
         public void EntityTest()
         {
             // TODO: unit test for the property 'Entity' 
+        }
+        
+        /// <summary>
+        /// Test the property 'Level' 
+        /// </summary>
+        [Test]
+        public void LevelTest()
+        {
+            // TODO: unit test for the property 'Level' 
         }
         
         /// <summary>
@@ -124,21 +124,21 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'EntityType' 
-        /// </summary>
-        [Test]
-        public void EntityTypeTest()
-        {
-            // TODO: unit test for the property 'EntityType' 
-        }
-        
-        /// <summary>
         /// Test the property 'Changes' 
         /// </summary>
         [Test]
         public void ChangesTest()
         {
             // TODO: unit test for the property 'Changes' 
+        }
+        
+        /// <summary>
+        /// Test the property 'EntityType' 
+        /// </summary>
+        [Test]
+        public void EntityTypeTest()
+        {
+            // TODO: unit test for the property 'EntityType' 
         }
         
         /// <summary>

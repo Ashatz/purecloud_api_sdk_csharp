@@ -223,6 +223,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test the property 'Organization' 
+        /// </summary>
+        [Test]
+        public void OrganizationTest()
+        {
+            // TODO: unit test for the property 'Organization' 
+        }
+        
+        /// <summary>
         /// Test the property 'SelfUri' 
         /// </summary>
         [Test]

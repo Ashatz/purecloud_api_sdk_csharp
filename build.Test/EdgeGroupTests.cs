@@ -178,6 +178,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test the property 'PhoneTrunkBases' 
+        /// </summary>
+        [Test]
+        public void PhoneTrunkBasesTest()
+        {
+            // TODO: unit test for the property 'PhoneTrunkBases' 
+        }
+        
+        /// <summary>
         /// Test the property 'SelfUri' 
         /// </summary>
         [Test]

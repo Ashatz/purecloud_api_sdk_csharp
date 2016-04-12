@@ -37,7 +37,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Parameters">Parameters.</param>
         /// <param name="LastRun">LastRun.</param>
 
-        public ReportSchedule(string Name = null, string QuartzCronExpression = null, DateTime? NextFireTime = null, DateTime? DateCreated = null, DateTime? DateModified = null, string Description = null, string TimeZone = null, string TimePeriod = null, DateTime? Interval = null, string ReportFormat = null, string Locale = null, bool? Enabled = null, string ReportId = null, Dictionary<string, Object> Parameters = null, ReportRunEntry LastRun = null, )
+        public ReportSchedule(string Name = null, string QuartzCronExpression = null, DateTime? NextFireTime = null, DateTime? DateCreated = null, DateTime? DateModified = null, string Description = null, string TimeZone = null, string TimePeriod = null, string Interval = null, string ReportFormat = null, string Locale = null, bool? Enabled = null, string ReportId = null, Dictionary<string, Object> Parameters = null, ReportRunEntry LastRun = null, )
         {
             this.Name = Name;
             this.QuartzCronExpression = QuartzCronExpression;
@@ -129,7 +129,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss</value>
         [DataMember(Name="interval", EmitDefaultValue=false)]
-        public DateTime? Interval { get; set; }
+        public string Interval { get; set; }
     
         /// <summary>
         /// Gets or Sets ReportFormat

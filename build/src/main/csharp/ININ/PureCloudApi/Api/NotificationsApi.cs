@@ -46,8 +46,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Which fields, if any, to expand</param>
         /// <returns>AvailableTopicEntityListing</returns>
-        AvailableTopicEntityListing GetAvailabletopics ();
+        AvailableTopicEntityListing GetAvailabletopics (List<string> expand = null);
   
         /// <summary>
         /// Get available notification topics.
@@ -56,8 +57,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Which fields, if any, to expand</param>
         /// <returns>ApiResponse of AvailableTopicEntityListing</returns>
-        ApiResponse<AvailableTopicEntityListing> GetAvailabletopicsWithHttpInfo ();
+        ApiResponse<AvailableTopicEntityListing> GetAvailabletopicsWithHttpInfo (List<string> expand = null);
         
         /// <summary>
         /// The list of existing channels
@@ -202,8 +204,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Which fields, if any, to expand</param>
         /// <returns>Task of AvailableTopicEntityListing</returns>
-        System.Threading.Tasks.Task<AvailableTopicEntityListing> GetAvailabletopicsAsync ();
+        System.Threading.Tasks.Task<AvailableTopicEntityListing> GetAvailabletopicsAsync (List<string> expand = null);
 
         /// <summary>
         /// Get available notification topics.
@@ -212,8 +215,9 @@ namespace ININ.PureCloudApi.Api
         /// 
         /// </remarks>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Which fields, if any, to expand</param>
         /// <returns>Task of ApiResponse (AvailableTopicEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AvailableTopicEntityListing>> GetAvailabletopicsAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<AvailableTopicEntityListing>> GetAvailabletopicsAsyncWithHttpInfo (List<string> expand = null);
         
         /// <summary>
         /// The list of existing channels
@@ -582,10 +586,11 @@ namespace ININ.PureCloudApi.Api
         /// Get available notification topics. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Which fields, if any, to expand</param> 
         /// <returns>AvailableTopicEntityListing</returns>
-        public AvailableTopicEntityListing GetAvailabletopics ()
+        public AvailableTopicEntityListing GetAvailabletopics (List<string> expand = null)
         {
-             ApiResponse<AvailableTopicEntityListing> localVarResponse = GetAvailabletopicsWithHttpInfo();
+             ApiResponse<AvailableTopicEntityListing> localVarResponse = GetAvailabletopicsWithHttpInfo(expand);
              return localVarResponse.Data;
         }
 
@@ -593,8 +598,9 @@ namespace ININ.PureCloudApi.Api
         /// Get available notification topics. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Which fields, if any, to expand</param> 
         /// <returns>ApiResponse of AvailableTopicEntityListing</returns>
-        public ApiResponse< AvailableTopicEntityListing > GetAvailabletopicsWithHttpInfo ()
+        public ApiResponse< AvailableTopicEntityListing > GetAvailabletopicsWithHttpInfo (List<string> expand = null)
         {
             
     
@@ -625,6 +631,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
             
             
             
@@ -662,10 +669,11 @@ namespace ININ.PureCloudApi.Api
         /// Get available notification topics. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Which fields, if any, to expand</param>
         /// <returns>Task of AvailableTopicEntityListing</returns>
-        public async System.Threading.Tasks.Task<AvailableTopicEntityListing> GetAvailabletopicsAsync ()
+        public async System.Threading.Tasks.Task<AvailableTopicEntityListing> GetAvailabletopicsAsync (List<string> expand = null)
         {
-             ApiResponse<AvailableTopicEntityListing> localVarResponse = await GetAvailabletopicsAsyncWithHttpInfo();
+             ApiResponse<AvailableTopicEntityListing> localVarResponse = await GetAvailabletopicsAsyncWithHttpInfo(expand);
              return localVarResponse.Data;
 
         }
@@ -674,8 +682,9 @@ namespace ININ.PureCloudApi.Api
         /// Get available notification topics. 
         /// </summary>
         /// <exception cref="ININ.PureCloudApi.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Which fields, if any, to expand</param>
         /// <returns>Task of ApiResponse (AvailableTopicEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AvailableTopicEntityListing>> GetAvailabletopicsAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<AvailableTopicEntityListing>> GetAvailabletopicsAsyncWithHttpInfo (List<string> expand = null)
         {
             
     
@@ -706,6 +715,7 @@ namespace ININ.PureCloudApi.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
             
             
             

@@ -97,21 +97,21 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
-        /// Test the property 'SignatureValid' 
-        /// </summary>
-        [Test]
-        public void SignatureValidTest()
-        {
-            // TODO: unit test for the property 'SignatureValid' 
-        }
-        
-        /// <summary>
         /// Test the property 'Valid' 
         /// </summary>
         [Test]
         public void ValidTest()
         {
             // TODO: unit test for the property 'Valid' 
+        }
+        
+        /// <summary>
+        /// Test the property 'SignatureValid' 
+        /// </summary>
+        [Test]
+        public void SignatureValidTest()
+        {
+            // TODO: unit test for the property 'SignatureValid' 
         }
         
 

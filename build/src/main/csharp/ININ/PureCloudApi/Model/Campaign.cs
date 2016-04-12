@@ -44,8 +44,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SkipPreviewDisabled">SkipPreviewDisabled (default to false).</param>
         /// <param name="PreviewTimeOutSeconds">PreviewTimeOutSeconds.</param>
         /// <param name="SingleNumberPreview">SingleNumberPreview (default to false).</param>
+        /// <param name="ContactSort">ContactSort.</param>
 
-        public Campaign(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, string DialingMode = null, UriReference Script = null, UriReference EdgeGroup = null, string CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<UriReference> DncLists = null, UriReference CallableTimeSet = null, UriReference CallAnalysisResponseSet = null, List<RestErrorDetail> Errors = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<UriReference> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, bool? SingleNumberPreview = null, )
+        public Campaign(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, string DialingMode = null, UriReference Script = null, UriReference EdgeGroup = null, string CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<UriReference> DncLists = null, UriReference CallableTimeSet = null, UriReference CallAnalysisResponseSet = null, List<RestErrorDetail> Errors = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<UriReference> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, bool? SingleNumberPreview = null, ContactSort ContactSort = null, )
         {
             this.Name = Name;
             this.DateCreated = DateCreated;
@@ -86,6 +87,7 @@ namespace ININ.PureCloudApi.Model
             {
                 this.SingleNumberPreview = SingleNumberPreview;
             }
+            this.ContactSort = ContactSort;
             
         }
         
@@ -238,6 +240,12 @@ namespace ININ.PureCloudApi.Model
         public bool? SingleNumberPreview { get; set; }
     
         /// <summary>
+        /// Gets or Sets ContactSort
+        /// </summary>
+        [DataMember(Name="contactSort", EmitDefaultValue=false)]
+        public ContactSort ContactSort { get; set; }
+    
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -276,6 +284,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  SkipPreviewDisabled: ").Append(SkipPreviewDisabled).Append("\n");
             sb.Append("  PreviewTimeOutSeconds: ").Append(PreviewTimeOutSeconds).Append("\n");
             sb.Append("  SingleNumberPreview: ").Append(SingleNumberPreview).Append("\n");
+            sb.Append("  ContactSort: ").Append(ContactSort).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
@@ -435,6 +444,11 @@ namespace ININ.PureCloudApi.Model
                     this.SingleNumberPreview.Equals(other.SingleNumberPreview)
                 ) &&
                 (
+                    this.ContactSort == other.ContactSort ||
+                    this.ContactSort != null &&
+                    this.ContactSort.Equals(other.ContactSort)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -524,6 +538,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.SingleNumberPreview != null)
                     hash = hash * 59 + this.SingleNumberPreview.GetHashCode();
+                
+                if (this.ContactSort != null)
+                    hash = hash * 59 + this.ContactSort.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

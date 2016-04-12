@@ -57,8 +57,9 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Geolocation">Current geolocation position.</param>
         /// <param name="Station">Effective, default, and last station information.</param>
         /// <param name="Authorization">Roles and permissions assigned to the user.</param>
+        /// <param name="Organization">Details about the organization the user is a member of.</param>
 
-        public UserMe(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, List<UserImage> Images = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, )
+        public UserMe(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, List<UserImage> Images = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, Organization Organization = null, )
         {
             this.Name = Name;
             this.Chat = Chat;
@@ -76,6 +77,7 @@ namespace ININ.PureCloudApi.Model
             this.Geolocation = Geolocation;
             this.Station = Station;
             this.Authorization = Authorization;
+            this.Organization = Organization;
             
         }
         
@@ -200,6 +202,13 @@ namespace ININ.PureCloudApi.Model
         public UserAuthorization Authorization { get; set; }
     
         /// <summary>
+        /// Details about the organization the user is a member of
+        /// </summary>
+        /// <value>Details about the organization the user is a member of</value>
+        [DataMember(Name="organization", EmitDefaultValue=false)]
+        public Organization Organization { get; set; }
+    
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -233,6 +242,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  Geolocation: ").Append(Geolocation).Append("\n");
             sb.Append("  Station: ").Append(Station).Append("\n");
             sb.Append("  Authorization: ").Append(Authorization).Append("\n");
+            sb.Append("  Organization: ").Append(Organization).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
@@ -367,6 +377,11 @@ namespace ININ.PureCloudApi.Model
                     this.Authorization.Equals(other.Authorization)
                 ) &&
                 (
+                    this.Organization == other.Organization ||
+                    this.Organization != null &&
+                    this.Organization.Equals(other.Organization)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -441,6 +456,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.Authorization != null)
                     hash = hash * 59 + this.Authorization.GetHashCode();
+                
+                if (this.Organization != null)
+                    hash = hash * 59 + this.Organization.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

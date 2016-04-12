@@ -67,7 +67,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Order">Sort the result set in ascending/descending order. Default is ascending.</param>
         /// <param name="OrderBy">Specify which data element within the result set to use for sorting. The options  to use as a basis for sorting the results: conversationStart, segmentStart, and segmentEnd. If not specified, the default is conversationStart.</param>
 
-        public ConversationQuery(DateTime? Interval = null, List<AnalyticsQueryFilter> ConversationFilters = null, List<AnalyticsQueryFilter> EvaluationFilters = null, List<AnalyticsQueryFilter> SegmentFilters = null, List<AnalyticsQueryAggregation> Aggregations = null, PagingSpec Paging = null, OrderEnum? Order = null, OrderByEnum? OrderBy = null)
+        public ConversationQuery(string Interval = null, List<AnalyticsQueryFilter> ConversationFilters = null, List<AnalyticsQueryFilter> EvaluationFilters = null, List<AnalyticsQueryFilter> SegmentFilters = null, List<AnalyticsQueryAggregation> Aggregations = null, PagingSpec Paging = null, OrderEnum? Order = null, OrderByEnum? OrderBy = null)
         {
             this.Interval = Interval;
             this.ConversationFilters = ConversationFilters;
@@ -86,7 +86,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <value>Specifies the date and time range of data being queried. Conversations MUST have started within this time range to potentially be included within the result set. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss</value>
         [DataMember(Name="interval", EmitDefaultValue=false)]
-        public DateTime? Interval { get; set; }
+        public string Interval { get; set; }
     
         /// <summary>
         /// Filters that target conversation-level data

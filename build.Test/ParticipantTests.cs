@@ -115,6 +115,15 @@ namespace ININ.PureCloudApi.Test
         }
         
         /// <summary>
+        /// Test the property 'ExternalContactId' 
+        /// </summary>
+        [Test]
+        public void ExternalContactIdTest()
+        {
+            // TODO: unit test for the property 'ExternalContactId' 
+        }
+        
+        /// <summary>
         /// Test the property 'QueueId' 
         /// </summary>
         [Test]

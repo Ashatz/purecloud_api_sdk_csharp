@@ -90,6 +90,9 @@ namespace ININ.PureCloudApi.Model
             [EnumMember(Value = "SYSTEM")]
             System,
             
+            [EnumMember(Value = "TIMEOUT")]
+            Timeout,
+            
             [EnumMember(Value = "TRANSFER")]
             Transfer,
             
@@ -98,6 +101,9 @@ namespace ININ.PureCloudApi.Model
             
             [EnumMember(Value = "TRANSFER_CONSULT")]
             TransferConsult,
+            
+            [EnumMember(Value = "TRANSFER_FORWARD")]
+            TransferForward,
             
             [EnumMember(Value = "ERROR")]
             Error,
@@ -151,9 +157,10 @@ namespace ININ.PureCloudApi.Model
         /// <param name="StartHoldTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DocumentId">DocumentId.</param>
         /// <param name="ConnectedTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DisconnectedTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DisconnectReasons">DisconnectReasons.</param>
 
-        public Call(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? ConnectedTime = null, List<DisconnectReason> DisconnectReasons = null)
+        public Call(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null)
         {
             this.State = State;
             this.Id = Id;
@@ -202,6 +209,7 @@ namespace ININ.PureCloudApi.Model
             this.StartHoldTime = StartHoldTime;
             this.DocumentId = DocumentId;
             this.ConnectedTime = ConnectedTime;
+            this.DisconnectedTime = DisconnectedTime;
             this.DisconnectReasons = DisconnectReasons;
             
         }
@@ -276,6 +284,13 @@ namespace ININ.PureCloudApi.Model
         public DateTime? ConnectedTime { get; set; }
     
         /// <summary>
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="disconnectedTime", EmitDefaultValue=false)]
+        public DateTime? DisconnectedTime { get; set; }
+    
+        /// <summary>
         /// Gets or Sets DisconnectReasons
         /// </summary>
         [DataMember(Name="disconnectReasons", EmitDefaultValue=false)]
@@ -304,6 +319,7 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
             sb.Append("  DocumentId: ").Append(DocumentId).Append("\n");
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
+            sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
             sb.Append("  DisconnectReasons: ").Append(DisconnectReasons).Append("\n");
             
             sb.Append("}\n");
@@ -418,6 +434,11 @@ namespace ININ.PureCloudApi.Model
                     this.ConnectedTime.Equals(other.ConnectedTime)
                 ) &&
                 (
+                    this.DisconnectedTime == other.DisconnectedTime ||
+                    this.DisconnectedTime != null &&
+                    this.DisconnectedTime.Equals(other.DisconnectedTime)
+                ) &&
+                (
                     this.DisconnectReasons == other.DisconnectReasons ||
                     this.DisconnectReasons != null &&
                     this.DisconnectReasons.SequenceEqual(other.DisconnectReasons)
@@ -480,6 +501,9 @@ namespace ININ.PureCloudApi.Model
                 
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();
+                
+                if (this.DisconnectedTime != null)
+                    hash = hash * 59 + this.DisconnectedTime.GetHashCode();
                 
                 if (this.DisconnectReasons != null)
                     hash = hash * 59 + this.DisconnectReasons.GetHashCode();
