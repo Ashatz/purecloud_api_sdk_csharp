@@ -44,7 +44,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="GroupTags">The Group Tags applied by the generating Gistener.</param>
         /// <param name="Routed">Routed (default to false).</param>
 
-        public TwitterExpression(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, bool? IsDispositioned = null, bool? IsNoise = null, Gistener Gistener = null, string TweetId = null, string Text = null, DateTime? TweetCreated = null, bool? IsReply = null, bool? IsRetweet = null, string RetweetParentId = null, int? RetweetCount = null, bool? IsQuotedTweet = null, string QuotedParentId = null, string UserId = null, string UserName = null, string UserScreenName = null, int? UserTweetCount = null, int? UserFollowersCount = null, List<GroupTag> GroupTags = null, bool? Routed = null, )
+        public TwitterExpression(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, bool? IsDispositioned = null, bool? IsNoise = null, Gistener Gistener = null, string TweetId = null, string Text = null, DateTime? TweetCreated = null, bool? IsReply = null, bool? IsRetweet = null, string RetweetParentId = null, int? RetweetCount = null, bool? IsQuotedTweet = null, string QuotedParentId = null, string UserId = null, string UserName = null, string UserScreenName = null, int? UserTweetCount = null, int? UserFollowersCount = null, List<GroupTag> GroupTags = null, bool? Routed = null)
         {
             this.Name = Name;
             this.DateCreated = DateCreated;

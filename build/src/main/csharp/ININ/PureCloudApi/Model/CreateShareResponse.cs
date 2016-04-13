@@ -60,7 +60,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Succeeded">Succeeded.</param>
         /// <param name="Failed">Failed.</param>
 
-        public CreateShareResponse(string Name = null, SharedEntityTypeEnum? SharedEntityType = null, UriReference SharedEntity = null, MemberTypeEnum? MemberType = null, UriReference Member = null, UriReference SharedBy = null, UriReference Workspace = null, List<Share> Succeeded = null, List<Share> Failed = null, )
+        public CreateShareResponse(string Name = null, SharedEntityTypeEnum? SharedEntityType = null, UriReference SharedEntity = null, MemberTypeEnum? MemberType = null, UriReference Member = null, UriReference SharedBy = null, UriReference Workspace = null, List<Share> Succeeded = null, List<Share> Failed = null)
         {
             this.Name = Name;
             this.SharedEntityType = SharedEntityType;

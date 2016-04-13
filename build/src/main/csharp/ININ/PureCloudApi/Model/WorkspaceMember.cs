@@ -45,7 +45,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Group">Group.</param>
         /// <param name="SecurityProfile">SecurityProfile.</param>
 
-        public WorkspaceMember(string Name = null, UriReference Workspace = null, MemberTypeEnum? MemberType = null, UriReference Member = null, User User = null, Group Group = null, SecurityProfile SecurityProfile = null, )
+        public WorkspaceMember(string Name = null, UriReference Workspace = null, MemberTypeEnum? MemberType = null, UriReference Member = null, User User = null, Group Group = null, SecurityProfile SecurityProfile = null)
         {
             this.Name = Name;
             this.Workspace = Workspace;

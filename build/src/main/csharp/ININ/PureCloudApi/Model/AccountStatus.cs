@@ -29,7 +29,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ThirdPartySubscriptionId">ThirdPartySubscriptionId.</param>
         /// <param name="ThirdPartySubscriptionNonAcbId">ThirdPartySubscriptionNonAcbId.</param>
 
-        public AccountStatus(string Name = null, string OrgName = null, bool? Configured = null, string AdminUIURL = null, string ThirdPartyAccountId = null, string ThirdPartySubscriptionId = null, string ThirdPartySubscriptionNonAcbId = null, )
+        public AccountStatus(string Name = null, string OrgName = null, bool? Configured = null, string AdminUIURL = null, string ThirdPartyAccountId = null, string ThirdPartySubscriptionId = null, string ThirdPartySubscriptionNonAcbId = null)
         {
             this.Name = Name;
             this.OrgName = OrgName;

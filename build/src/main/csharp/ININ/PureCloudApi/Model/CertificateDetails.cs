@@ -26,10 +26,10 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ExpirationDate">The expiration date of the certificate. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="IssueDate">The issue date of the certificate. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Expired">True if the certificate is expired, false otherwise. (default to false).</param>
-        /// <param name="Valid">Valid (default to false).</param>
         /// <param name="SignatureValid">SignatureValid (default to false).</param>
+        /// <param name="Valid">Valid (default to false).</param>
 
-        public CertificateDetails(string Issuer = null, string Subject = null, DateTime? ExpirationDate = null, DateTime? IssueDate = null, bool? Expired = null, bool? Valid = null, bool? SignatureValid = null)
+        public CertificateDetails(string Issuer = null, string Subject = null, DateTime? ExpirationDate = null, DateTime? IssueDate = null, bool? Expired = null, bool? SignatureValid = null, bool? Valid = null)
         {
             this.Issuer = Issuer;
             this.Subject = Subject;
@@ -44,15 +44,6 @@ namespace ININ.PureCloudApi.Model
             {
                 this.Expired = Expired;
             }
-            // use default value if no "Valid" provided
-            if (Valid == null)
-            {
-                this.Valid = false;
-            }
-            else
-            {
-                this.Valid = Valid;
-            }
             // use default value if no "SignatureValid" provided
             if (SignatureValid == null)
             {
@@ -61,6 +52,15 @@ namespace ININ.PureCloudApi.Model
             else
             {
                 this.SignatureValid = SignatureValid;
+            }
+            // use default value if no "Valid" provided
+            if (Valid == null)
+            {
+                this.Valid = false;
+            }
+            else
+            {
+                this.Valid = Valid;
             }
             
         }
@@ -102,16 +102,16 @@ namespace ININ.PureCloudApi.Model
         public bool? Expired { get; set; }
     
         /// <summary>
-        /// Gets or Sets Valid
-        /// </summary>
-        [DataMember(Name="valid", EmitDefaultValue=false)]
-        public bool? Valid { get; set; }
-    
-        /// <summary>
         /// Gets or Sets SignatureValid
         /// </summary>
         [DataMember(Name="signatureValid", EmitDefaultValue=false)]
         public bool? SignatureValid { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Valid
+        /// </summary>
+        [DataMember(Name="valid", EmitDefaultValue=false)]
+        public bool? Valid { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -126,8 +126,8 @@ namespace ININ.PureCloudApi.Model
             sb.Append("  ExpirationDate: ").Append(ExpirationDate).Append("\n");
             sb.Append("  IssueDate: ").Append(IssueDate).Append("\n");
             sb.Append("  Expired: ").Append(Expired).Append("\n");
-            sb.Append("  Valid: ").Append(Valid).Append("\n");
             sb.Append("  SignatureValid: ").Append(SignatureValid).Append("\n");
+            sb.Append("  Valid: ").Append(Valid).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -191,14 +191,14 @@ namespace ININ.PureCloudApi.Model
                     this.Expired.Equals(other.Expired)
                 ) &&
                 (
-                    this.Valid == other.Valid ||
-                    this.Valid != null &&
-                    this.Valid.Equals(other.Valid)
-                ) &&
-                (
                     this.SignatureValid == other.SignatureValid ||
                     this.SignatureValid != null &&
                     this.SignatureValid.Equals(other.SignatureValid)
+                ) &&
+                (
+                    this.Valid == other.Valid ||
+                    this.Valid != null &&
+                    this.Valid.Equals(other.Valid)
                 );
         }
 
@@ -229,11 +229,11 @@ namespace ININ.PureCloudApi.Model
                 if (this.Expired != null)
                     hash = hash * 59 + this.Expired.GetHashCode();
                 
-                if (this.Valid != null)
-                    hash = hash * 59 + this.Valid.GetHashCode();
-                
                 if (this.SignatureValid != null)
                     hash = hash * 59 + this.SignatureValid.GetHashCode();
+                
+                if (this.Valid != null)
+                    hash = hash * 59 + this.Valid.GetHashCode();
                 
                 return hash;
             }

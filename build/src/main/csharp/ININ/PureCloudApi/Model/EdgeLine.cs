@@ -53,7 +53,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="IpAddress">IpAddress.</param>
         /// <param name="LogicalInterfaceId">LogicalInterfaceId.</param>
 
-        public EdgeLine(string Name = null, UriReference Schema = null, Dictionary<string, Object> Properties = null, Edge Edge = null, EdgeGroup EdgeGroup = null, LineTypeEnum? LineType = null, Endpoint Endpoint = null, string IpAddress = null, string LogicalInterfaceId = null, )
+        public EdgeLine(string Name = null, UriReference Schema = null, Dictionary<string, Object> Properties = null, Edge Edge = null, EdgeGroup EdgeGroup = null, LineTypeEnum? LineType = null, Endpoint Endpoint = null, string IpAddress = null, string LogicalInterfaceId = null)
         {
             this.Name = Name;
             this.Schema = Schema;

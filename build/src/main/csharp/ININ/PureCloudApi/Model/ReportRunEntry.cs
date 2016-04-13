@@ -50,7 +50,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ReportFormat">ReportFormat.</param>
         /// <param name="ScheduleUri">ScheduleUri.</param>
 
-        public ReportRunEntry(string Name = null, string ReportId = null, DateTime? RunTime = null, RunStatusEnum? RunStatus = null, string ErrorMessage = null, long? RunDurationMsec = null, string ReportUrl = null, string ReportFormat = null, string ScheduleUri = null, )
+        public ReportRunEntry(string Name = null, string ReportId = null, DateTime? RunTime = null, RunStatusEnum? RunStatus = null, string ErrorMessage = null, long? RunDurationMsec = null, string ReportUrl = null, string ReportFormat = null, string ScheduleUri = null)
         {
             this.Name = Name;
             this.ReportId = ReportId;

@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SheetSchemas">A list of all the schemas for a XLSX file. Each schema represents a different sheet&#39;s schema. (required).</param>
         /// <param name="Name">Human readable name for schema. (required).</param>
 
-        public XlsxSchema(List<SheetSchema> SheetSchemas = null, string Name = null, )
+        public XlsxSchema(List<SheetSchema> SheetSchemas = null, string Name = null)
         {
             // to ensure "SheetSchemas" is required (not null)
             if (SheetSchemas == null)

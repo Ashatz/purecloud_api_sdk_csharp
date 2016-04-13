@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="MemberBy">MemberBy.</param>
         /// <param name="RoutingStatus">RoutingStatus.</param>
 
-        public QueueMember(string Name = null, User User = null, int? RingNumber = null, bool? Joined = null, string MemberBy = null, RoutingStatus RoutingStatus = null, )
+        public QueueMember(string Name = null, User User = null, int? RingNumber = null, bool? Joined = null, string MemberBy = null, RoutingStatus RoutingStatus = null)
         {
             this.Name = Name;
             this.User = User;

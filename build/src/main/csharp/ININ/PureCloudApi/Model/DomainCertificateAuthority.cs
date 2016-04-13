@@ -77,7 +77,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Services">The service(s) that the authority can be used to authenticate. (required).</param>
         /// <param name="CertificateDetails">The details of the parsed certificate(s)..</param>
 
-        public DomainCertificateAuthority(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string Certificate = null, TypeEnum? Type = null, List<string> Services = null, List<CertificateDetails> CertificateDetails = null, )
+        public DomainCertificateAuthority(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string Certificate = null, TypeEnum? Type = null, List<string> Services = null, List<CertificateDetails> CertificateDetails = null)
         {
             // to ensure "Certificate" is required (not null)
             if (Certificate == null)

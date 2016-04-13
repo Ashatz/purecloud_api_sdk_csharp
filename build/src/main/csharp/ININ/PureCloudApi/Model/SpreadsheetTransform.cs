@@ -29,7 +29,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Sheets">Sheets.</param>
         /// <param name="ClientTransformModel">ClientTransformModel.</param>
 
-        public SpreadsheetTransform(string Name = null, TransformEndpoint RestEndpoint = null, List<BasicTransform> FilenameTransforms = null, List<TagModel> Tags = null, List<IndexedTransform> SheetNameTransforms = null, List<SheetTransform> Sheets = null, ClientSpreadsheetTransform ClientTransformModel = null, )
+        public SpreadsheetTransform(string Name = null, TransformEndpoint RestEndpoint = null, List<BasicTransform> FilenameTransforms = null, List<TagModel> Tags = null, List<IndexedTransform> SheetNameTransforms = null, List<SheetTransform> Sheets = null, ClientSpreadsheetTransform ClientTransformModel = null)
         {
             this.Name = Name;
             this.RestEndpoint = RestEndpoint;

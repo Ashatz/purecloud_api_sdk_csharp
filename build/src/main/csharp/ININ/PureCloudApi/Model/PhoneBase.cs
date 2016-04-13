@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Properties">Properties.</param>
         /// <param name="Capabilities">Capabilities.</param>
 
-        public PhoneBase(string Name = null, UriReference PhoneMetaBase = null, List<LineBase> Lines = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null, )
+        public PhoneBase(string Name = null, UriReference PhoneMetaBase = null, List<LineBase> Lines = null, Dictionary<string, Object> Properties = null, PhoneCapabilities Capabilities = null)
         {
             this.Name = Name;
             this.PhoneMetaBase = PhoneMetaBase;

@@ -31,7 +31,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Changes">Changes.</param>
         /// <param name="EntityType">EntityType.</param>
 
-        public QualityAudit(string Name = null, User User = null, string Timestamp = null, Entity Entity = null, string Level = null, string Action = null, string Status = null, List<Change> Changes = null, string EntityType = null, )
+        public QualityAudit(string Name = null, User User = null, string Timestamp = null, Entity Entity = null, string Level = null, string Action = null, string Status = null, List<Change> Changes = null, string EntityType = null)
         {
             this.Name = Name;
             this.User = User;

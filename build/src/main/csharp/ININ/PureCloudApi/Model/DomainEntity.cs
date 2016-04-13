@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
 
-        public DomainEntity(string Name = null, )
+        public DomainEntity(string Name = null)
         {
             this.Name = Name;
             

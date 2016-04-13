@@ -36,7 +36,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ScoringIndex">ScoringIndex.</param>
         /// <param name="ExpertEvaluator">ExpertEvaluator.</param>
 
-        public Calibration(string Name = null, User Calibrator = null, User Agent = null, Conversation Conversation = null, EvaluationForm EvaluationForm = null, string ContextId = null, int? AverageScore = null, int? HighScore = null, int? LowScore = null, DateTime? CreatedDate = null, List<Evaluation> Evaluations = null, List<User> Evaluators = null, Evaluation ScoringIndex = null, User ExpertEvaluator = null, )
+        public Calibration(string Name = null, User Calibrator = null, User Agent = null, Conversation Conversation = null, EvaluationForm EvaluationForm = null, string ContextId = null, int? AverageScore = null, int? HighScore = null, int? LowScore = null, DateTime? CreatedDate = null, List<Evaluation> Evaluations = null, List<User> Evaluators = null, Evaluation ScoringIndex = null, User ExpertEvaluator = null)
         {
             this.Name = Name;
             this.Calibrator = Calibrator;

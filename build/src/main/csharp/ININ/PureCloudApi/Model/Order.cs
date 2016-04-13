@@ -25,7 +25,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Quote">Quote.</param>
         /// <param name="EnvelopeId">EnvelopeId.</param>
 
-        public Order(string Name = null, Quote Quote = null, string EnvelopeId = null, )
+        public Order(string Name = null, Quote Quote = null, string EnvelopeId = null)
         {
             this.Name = Name;
             this.Quote = Quote;

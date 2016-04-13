@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
 
-        public UserRoutingSkill(string Name = null, )
+        public UserRoutingSkill(string Name = null)
         {
             this.Name = Name;
             

@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Version">Version.</param>
         /// <param name="Responses">Responses.</param>
 
-        public ResponseSet(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, Dictionary<string, Reaction> Responses = null, )
+        public ResponseSet(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, Dictionary<string, Reaction> Responses = null)
         {
             this.Name = Name;
             this.DateCreated = DateCreated;

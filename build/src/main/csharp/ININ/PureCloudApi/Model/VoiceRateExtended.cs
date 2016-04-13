@@ -68,7 +68,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="InboundTollFreeDurationMinimumSeconds">The minimum duration charged in seconds. (required).</param>
         /// <param name="InboundTollFreeDurationIncrementSeconds">The billing duration increment in seconds. (required).</param>
 
-        public VoiceRateExtended(string Name = null, string Currency = null, string AmendmentId = null, TypeEnum? Type = null, DateTime? EffectiveDate = null, string GroupName = null, string AreaCode = null, bool? DeletionMarker = null, double? OutboundRate = null, int? OutboundDurationMinimumSeconds = null, int? OutboundDurationIncrementSeconds = null, double? InboundTolledRate = null, int? InboundTolledDurationMinimumSeconds = null, int? InboundTolledDurationIncrementSeconds = null, double? InboundTollFreeRate = null, int? InboundTollFreeDurationMinimumSeconds = null, int? InboundTollFreeDurationIncrementSeconds = null, )
+        public VoiceRateExtended(string Name = null, string Currency = null, string AmendmentId = null, TypeEnum? Type = null, DateTime? EffectiveDate = null, string GroupName = null, string AreaCode = null, bool? DeletionMarker = null, double? OutboundRate = null, int? OutboundDurationMinimumSeconds = null, int? OutboundDurationIncrementSeconds = null, double? InboundTolledRate = null, int? InboundTolledDurationMinimumSeconds = null, int? InboundTolledDurationIncrementSeconds = null, double? InboundTollFreeRate = null, int? InboundTollFreeDurationMinimumSeconds = null, int? InboundTollFreeDurationIncrementSeconds = null)
         {
             // to ensure "Currency" is required (not null)
             if (Currency == null)

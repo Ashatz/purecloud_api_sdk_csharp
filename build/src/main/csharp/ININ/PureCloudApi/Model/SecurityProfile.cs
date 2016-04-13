@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="Permissions">Permissions.</param>
 
-        public SecurityProfile(string Name = null, List<string> Permissions = null, )
+        public SecurityProfile(string Name = null, List<string> Permissions = null)
         {
             this.Name = Name;
             this.Permissions = Permissions;

@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="KeydataSummary">KeydataSummary.</param>
         /// <param name="User">User.</param>
 
-        public EncryptionKey(string Id = null, string Name = null, DateTime? CreateDate = null, string KeydataSummary = null, User User = null, )
+        public EncryptionKey(string Id = null, string Name = null, DateTime? CreateDate = null, string KeydataSummary = null, User User = null)
         {
             this.Id = Id;
             this.Name = Name;

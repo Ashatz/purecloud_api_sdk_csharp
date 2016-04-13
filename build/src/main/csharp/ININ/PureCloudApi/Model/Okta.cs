@@ -26,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="IssuerURI">IssuerURI.</param>
         /// <param name="SsoTargetURI">SsoTargetURI.</param>
 
-        public Okta(string Name = null, string Certificate = null, string IssuerURI = null, string SsoTargetURI = null, )
+        public Okta(string Name = null, string Certificate = null, string IssuerURI = null, string SsoTargetURI = null)
         {
             this.Name = Name;
             this.Certificate = Certificate;

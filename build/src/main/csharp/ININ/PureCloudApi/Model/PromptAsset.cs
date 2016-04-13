@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Tags">Tags.</param>
         /// <param name="DurationSeconds">DurationSeconds.</param>
 
-        public PromptAsset(string Name = null, string PromptId = null, string Language = null, string MediaUri = null, string TtsString = null, string UploadStatus = null, string UploadUri = null, bool? LanguageDefault = null, Dictionary<string, string> Tags = null, double? DurationSeconds = null, )
+        public PromptAsset(string Name = null, string PromptId = null, string Language = null, string MediaUri = null, string TtsString = null, string UploadStatus = null, string UploadUri = null, bool? LanguageDefault = null, Dictionary<string, string> Tags = null, double? DurationSeconds = null)
         {
             this.Name = Name;
             this.PromptId = PromptId;

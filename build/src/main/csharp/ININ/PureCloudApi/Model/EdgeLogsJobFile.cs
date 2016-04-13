@@ -52,7 +52,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="EdgePath">The path of this file on the Edge..</param>
         /// <param name="DownloadId">The download ID to use with the downloads API..</param>
 
-        public EdgeLogsJobFile(string Name = null, DateTime? TimeCreated = null, DateTime? TimeModified = null, double? SizeBytes = null, UploadStatusEnum? UploadStatus = null, string EdgePath = null, string DownloadId = null, )
+        public EdgeLogsJobFile(string Name = null, DateTime? TimeCreated = null, DateTime? TimeModified = null, double? SizeBytes = null, UploadStatusEnum? UploadStatus = null, string EdgePath = null, string DownloadId = null)
         {
             this.Name = Name;
             this.TimeCreated = TimeCreated;

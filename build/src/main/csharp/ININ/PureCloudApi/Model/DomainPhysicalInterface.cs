@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PortLabel">PortLabel.</param>
         /// <param name="PhysicalCapabilities">PhysicalCapabilities.</param>
 
-        public DomainPhysicalInterface(string Name = null, string EdgeUri = null, string FriendlyName = null, string HardwareAddress = null, string PortLabel = null, DomainPhysicalCapabilities PhysicalCapabilities = null, )
+        public DomainPhysicalInterface(string Name = null, string EdgeUri = null, string FriendlyName = null, string HardwareAddress = null, string PortLabel = null, DomainPhysicalCapabilities PhysicalCapabilities = null)
         {
             this.Name = Name;
             this.EdgeUri = EdgeUri;

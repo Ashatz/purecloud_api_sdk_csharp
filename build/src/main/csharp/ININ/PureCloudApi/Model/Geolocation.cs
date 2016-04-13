@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Region">Region.</param>
         /// <param name="City">City.</param>
 
-        public Geolocation(string Name = null, string Type = null, bool? Primary = null, double? Latitude = null, double? Longitude = null, string Country = null, string Region = null, string City = null, )
+        public Geolocation(string Name = null, string Type = null, bool? Primary = null, double? Latitude = null, double? Longitude = null, string Country = null, string Region = null, string City = null)
         {
             this.Name = Name;
             this.Type = Type;

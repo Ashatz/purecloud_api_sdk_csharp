@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
 
-        public GreetingOwner(string Name = null, )
+        public GreetingOwner(string Name = null)
         {
             this.Name = Name;
             

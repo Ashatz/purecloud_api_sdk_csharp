@@ -334,7 +334,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Entity">Entity.</param>
         /// <param name="Changes">Changes.</param>
 
-        public DocumentAudit(string Name = null, UriReference User = null, UriReference Workspace = null, string TransactionId = null, bool? TransactionInitiator = null, string Application = null, string ServiceName = null, LevelEnum? Level = null, DateTime? Timestamp = null, StatusEnum? Status = null, ActionContextEnum? ActionContext = null, ActionEnum? Action = null, AuditEntityReference Entity = null, List<AuditChange> Changes = null, )
+        public DocumentAudit(string Name = null, UriReference User = null, UriReference Workspace = null, string TransactionId = null, bool? TransactionInitiator = null, string Application = null, string ServiceName = null, LevelEnum? Level = null, DateTime? Timestamp = null, StatusEnum? Status = null, ActionContextEnum? ActionContext = null, ActionEnum? Action = null, AuditEntityReference Entity = null, List<AuditChange> Changes = null)
         {
             this.Name = Name;
             this.User = User;

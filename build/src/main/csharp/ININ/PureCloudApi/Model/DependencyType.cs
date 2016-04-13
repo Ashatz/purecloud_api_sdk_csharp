@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="Versioned">Versioned (default to false).</param>
 
-        public DependencyType(string Name = null, bool? Versioned = null, )
+        public DependencyType(string Name = null, bool? Versioned = null)
         {
             this.Name = Name;
             // use default value if no "Versioned" provided

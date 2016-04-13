@@ -45,7 +45,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Contract">Contract.</param>
         /// <param name="Status">The current status of the job..</param>
 
-        public ContractJob(string Name = null, Contract Contract = null, StatusEnum? Status = null, )
+        public ContractJob(string Name = null, Contract Contract = null, StatusEnum? Status = null)
         {
             this.Name = Name;
             this.Contract = Contract;

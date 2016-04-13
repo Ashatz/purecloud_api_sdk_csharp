@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="DomesticChargesTotal">DomesticChargesTotal.</param>
         /// <param name="InternationalChargesTotal">InternationalChargesTotal.</param>
 
-        public AccountOverview(string Name = null, bool? IsSuperUser = null, bool? HasAccountNumber = null, List<Charge> UsageCharges = null, int? DomesticChargesTotal = null, int? InternationalChargesTotal = null, )
+        public AccountOverview(string Name = null, bool? IsSuperUser = null, bool? HasAccountNumber = null, List<Charge> UsageCharges = null, int? DomesticChargesTotal = null, int? InternationalChargesTotal = null)
         {
             this.Name = Name;
             // use default value if no "IsSuperUser" provided

@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="Files">The files available to upload from the Edge to the cloud..</param>
 
-        public EdgeLogsJob(string Name = null, List<EdgeLogsJobFile> Files = null, )
+        public EdgeLogsJob(string Name = null, List<EdgeLogsJobFile> Files = null)
         {
             this.Name = Name;
             this.Files = Files;

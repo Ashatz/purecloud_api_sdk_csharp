@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="StateName">StateName.</param>
         /// <param name="PostalCode">PostalCode.</param>
 
-        public BillingAddress(string Name = null, string Street = null, string City = null, string CountryName = null, string StateName = null, string PostalCode = null, )
+        public BillingAddress(string Name = null, string Street = null, string City = null, string CountryName = null, string StateName = null, string PostalCode = null)
         {
             this.Name = Name;
             this.Street = Street;

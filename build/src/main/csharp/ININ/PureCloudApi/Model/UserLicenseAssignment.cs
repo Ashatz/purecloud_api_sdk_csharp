@@ -25,7 +25,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="User">User.</param>
         /// <param name="LicenseId">LicenseId.</param>
 
-        public UserLicenseAssignment(string Name = null, User User = null, string LicenseId = null, )
+        public UserLicenseAssignment(string Name = null, User User = null, string LicenseId = null)
         {
             this.Name = Name;
             this.User = User;

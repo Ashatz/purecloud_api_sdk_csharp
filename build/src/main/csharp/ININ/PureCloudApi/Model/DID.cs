@@ -77,7 +77,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Owner">A Uri reference to the owner of this DID, which is either a User or an IVR.</param>
         /// <param name="OwnerType">OwnerType.</param>
 
-        public DID(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string PhoneNumber = null, UriReference DidPool = null, UriReference Owner = null, OwnerTypeEnum? OwnerType = null, )
+        public DID(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string PhoneNumber = null, UriReference DidPool = null, UriReference Owner = null, OwnerTypeEnum? OwnerType = null)
         {
             this.Name = Name;
             this.Description = Description;

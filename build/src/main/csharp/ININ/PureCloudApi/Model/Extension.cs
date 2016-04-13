@@ -77,7 +77,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ExtensionPool">ExtensionPool.</param>
         /// <param name="OwnerType">OwnerType.</param>
 
-        public Extension(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string Number = null, UriReference Owner = null, UriReference ExtensionPool = null, OwnerTypeEnum? OwnerType = null, )
+        public Extension(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string Number = null, UriReference Owner = null, UriReference ExtensionPool = null, OwnerTypeEnum? OwnerType = null)
         {
             this.Name = Name;
             this.Description = Description;

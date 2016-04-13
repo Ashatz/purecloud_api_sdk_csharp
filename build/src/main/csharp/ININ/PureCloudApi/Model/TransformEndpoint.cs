@@ -32,7 +32,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Parallelism">The number of parallel POSTs to allow at once.</param>
         /// <param name="UpdateProgressEvery">The swagger route to use.</param>
 
-        public TransformEndpoint(string Name = null, string SwaggerUrl = null, string Route = null, string Entity = null, string ApiFunction = null, bool? Ready = null, bool? Active = null, int? BatchSize = null, int? Parallelism = null, int? UpdateProgressEvery = null, )
+        public TransformEndpoint(string Name = null, string SwaggerUrl = null, string Route = null, string Entity = null, string ApiFunction = null, bool? Ready = null, bool? Active = null, int? BatchSize = null, int? Parallelism = null, int? UpdateProgressEvery = null)
         {
             // to ensure "Ready" is required (not null)
             if (Ready == null)

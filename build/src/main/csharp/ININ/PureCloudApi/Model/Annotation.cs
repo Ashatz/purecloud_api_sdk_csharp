@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="User">User.</param>
         /// <param name="Description">Description.</param>
 
-        public Annotation(string Name = null, string Type = null, long? Location = null, long? DurationMs = null, User User = null, string Description = null, )
+        public Annotation(string Name = null, string Type = null, long? Location = null, long? DurationMs = null, User User = null, string Description = null)
         {
             this.Name = Name;
             this.Type = Type;

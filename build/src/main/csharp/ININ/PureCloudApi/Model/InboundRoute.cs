@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="FromName">The sender name to use for outgoing replies..</param>
         /// <param name="FromEmail">The sender email to use for outgoing replies..</param>
 
-        public InboundRoute(string Name = null, string Pattern = null, UriReference Queue = null, int? Priority = null, List<UriReference> Skills = null, UriReference Language = null, string FromName = null, string FromEmail = null, )
+        public InboundRoute(string Name = null, string Pattern = null, UriReference Queue = null, int? Priority = null, List<UriReference> Skills = null, UriReference Language = null, string FromName = null, string FromEmail = null)
         {
             this.Name = Name;
             this.Pattern = Pattern;

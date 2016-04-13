@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="AverageEvaluationScore">AverageEvaluationScore.</param>
         /// <param name="AgentEvaluatorActivityList">AgentEvaluatorActivityList.</param>
 
-        public AgentActivity(string Name = null, User Agent = null, int? NumEvaluations = null, int? AverageEvaluationScore = null, List<AgentEvaluatorActivity> AgentEvaluatorActivityList = null, )
+        public AgentActivity(string Name = null, User Agent = null, int? NumEvaluations = null, int? AverageEvaluationScore = null, List<AgentEvaluatorActivity> AgentEvaluatorActivityList = null)
         {
             this.Name = Name;
             this.Agent = Agent;

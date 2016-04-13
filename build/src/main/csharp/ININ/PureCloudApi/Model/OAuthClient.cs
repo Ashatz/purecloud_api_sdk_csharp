@@ -49,7 +49,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="RoleIds">Roles assigned to this client. Roles only apply to clients using the client_credential grant.</param>
         /// <param name="AuthorizedGrantType">The OAuth Grant/Client type supported by this client. (required).</param>
 
-        public OAuthClient(string Name = null, long? AccessTokenValiditySeconds = null, string Description = null, List<string> RegisteredRedirectUri = null, string Secret = null, List<string> RoleIds = null, AuthorizedGrantTypeEnum? AuthorizedGrantType = null, )
+        public OAuthClient(string Name = null, long? AccessTokenValiditySeconds = null, string Description = null, List<string> RegisteredRedirectUri = null, string Secret = null, List<string> RoleIds = null, AuthorizedGrantTypeEnum? AuthorizedGrantType = null)
         {
             // to ensure "Name" is required (not null)
             if (Name == null)

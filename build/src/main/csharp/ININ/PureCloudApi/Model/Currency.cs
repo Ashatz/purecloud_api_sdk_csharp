@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="DecimalPlaces">DecimalPlaces.</param>
 
-        public Currency(string Name = null, int? DecimalPlaces = null, )
+        public Currency(string Name = null, int? DecimalPlaces = null)
         {
             this.Name = Name;
             this.DecimalPlaces = DecimalPlaces;

@@ -50,7 +50,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="StopMessage">StopMessage.</param>
         /// <param name="Repeat">Repeat (default to false).</param>
 
-        public CampaignSequence(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<UriReference> Campaigns = null, int? CurrentCampaign = null, StatusEnum? Status = null, string StopMessage = null, bool? Repeat = null, )
+        public CampaignSequence(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<UriReference> Campaigns = null, int? CurrentCampaign = null, StatusEnum? Status = null, string StopMessage = null, bool? Repeat = null)
         {
             this.Name = Name;
             this.DateCreated = DateCreated;

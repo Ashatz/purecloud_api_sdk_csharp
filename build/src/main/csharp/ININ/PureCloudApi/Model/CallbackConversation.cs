@@ -25,7 +25,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Participants">The list of participants involved in the conversation..</param>
         /// <param name="OtherMediaUris">The list of other media channels involved in the conversation..</param>
 
-        public CallbackConversation(string Name = null, List<CallbackMediaParticipant> Participants = null, List<string> OtherMediaUris = null, )
+        public CallbackConversation(string Name = null, List<CallbackMediaParticipant> Participants = null, List<string> OtherMediaUris = null)
         {
             this.Name = Name;
             this.Participants = Participants;

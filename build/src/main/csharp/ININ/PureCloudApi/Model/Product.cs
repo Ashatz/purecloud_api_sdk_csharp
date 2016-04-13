@@ -47,7 +47,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Status">Status.</param>
         /// <param name="Comments">Comments.</param>
 
-        public Product(string Name = null, StatusEnum? Status = null, List<string> Comments = null, )
+        public Product(string Name = null, StatusEnum? Status = null, List<string> Comments = null)
         {
             this.Name = Name;
             this.Status = Status;

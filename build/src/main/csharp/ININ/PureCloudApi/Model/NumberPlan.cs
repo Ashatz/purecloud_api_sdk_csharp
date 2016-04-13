@@ -87,7 +87,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Classification">Classification.</param>
         /// <param name="MatchType">The type of matching technique the number plan uses. (required).</param>
 
-        public NumberPlan(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string Match = null, string NormalizedFormat = null, int? Priority = null, List<double?> Numbers = null, DigitLength DigitLength = null, string Classification = null, MatchTypeEnum? MatchType = null, )
+        public NumberPlan(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string Match = null, string NormalizedFormat = null, int? Priority = null, List<double?> Numbers = null, DigitLength DigitLength = null, string Classification = null, MatchTypeEnum? MatchType = null)
         {
             // to ensure "MatchType" is required (not null)
             if (MatchType == null)

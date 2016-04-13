@@ -33,7 +33,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Variables">Variables.</param>
         /// <param name="CustomActions">CustomActions.</param>
 
-        public Script(string Name = null, string VersionId = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, DateTime? PublishedDate = null, DateTime? VersionDate = null, string StartPageId = null, string StartPageName = null, Object Features = null, Object Variables = null, Object CustomActions = null, )
+        public Script(string Name = null, string VersionId = null, DateTime? CreatedDate = null, DateTime? ModifiedDate = null, DateTime? PublishedDate = null, DateTime? VersionDate = null, string StartPageId = null, string StartPageName = null, Object Features = null, Object Variables = null, Object CustomActions = null)
         {
             this.Name = Name;
             this.VersionId = VersionId;

@@ -26,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SignerUrl">SignerUrl.</param>
         /// <param name="Job">Job.</param>
 
-        public Contract(string Name = null, Quote Quote = null, string SignerUrl = null, ContractJob Job = null, )
+        public Contract(string Name = null, Quote Quote = null, string SignerUrl = null, ContractJob Job = null)
         {
             this.Name = Name;
             this.Quote = Quote;

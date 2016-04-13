@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Invoices">Invoices.</param>
         /// <param name="Subscriptions">Subscriptions.</param>
 
-        public ThirdPartyAccount(string Name = null, string AccountNumber = null, string Currency = null, List<Invoice> Invoices = null, List<ThirdPartySubscription> Subscriptions = null, )
+        public ThirdPartyAccount(string Name = null, string AccountNumber = null, string Currency = null, List<Invoice> Invoices = null, List<ThirdPartySubscription> Subscriptions = null)
         {
             this.Name = Name;
             this.AccountNumber = AccountNumber;

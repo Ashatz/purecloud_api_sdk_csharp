@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="NumCalibrationsStarted">NumCalibrationsStarted.</param>
         /// <param name="NumCalibrationsCompleted">NumCalibrationsCompleted.</param>
 
-        public EvaluatorActivity(string Name = null, User Evaluator = null, int? NumEvaluationsAssigned = null, int? NumEvaluationsStarted = null, int? NumEvaluationsCompleted = null, int? NumCalibrationsAssigned = null, int? NumCalibrationsStarted = null, int? NumCalibrationsCompleted = null, )
+        public EvaluatorActivity(string Name = null, User Evaluator = null, int? NumEvaluationsAssigned = null, int? NumEvaluationsStarted = null, int? NumEvaluationsCompleted = null, int? NumCalibrationsAssigned = null, int? NumCalibrationsStarted = null, int? NumCalibrationsCompleted = null)
         {
             this.Name = Name;
             this.Evaluator = Evaluator;

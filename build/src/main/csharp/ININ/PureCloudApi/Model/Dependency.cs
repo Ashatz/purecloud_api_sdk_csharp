@@ -84,7 +84,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Type">Type.</param>
         /// <param name="Deleted">Deleted (default to false).</param>
 
-        public Dependency(string Name = null, string Version = null, TypeEnum? Type = null, bool? Deleted = null, )
+        public Dependency(string Name = null, string Version = null, TypeEnum? Type = null, bool? Deleted = null)
         {
             this.Name = Name;
             this.Version = Version;

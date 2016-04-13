@@ -28,7 +28,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Current">Current (default to false).</param>
         /// <param name="LatestRelease">LatestRelease (default to false).</param>
 
-        public DomainEdgeSoftwareVersionDto(string Name = null, string EdgeVersion = null, DateTime? PublishDate = null, string EdgeUri = null, bool? Current = null, bool? LatestRelease = null, )
+        public DomainEdgeSoftwareVersionDto(string Name = null, string EdgeVersion = null, DateTime? PublishDate = null, string EdgeUri = null, bool? Current = null, bool? LatestRelease = null)
         {
             this.Name = Name;
             this.EdgeVersion = EdgeVersion;

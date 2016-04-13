@@ -54,7 +54,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SavedVersion">SavedVersion.</param>
         /// <param name="System">System (default to false).</param>
 
-        public Flow(string Name = null, string Description = null, TypeEnum? Type = null, UriReference LockedUser = null, bool? Active = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion CheckedInVersion = null, FlowVersion SavedVersion = null, bool? System = null, )
+        public Flow(string Name = null, string Description = null, TypeEnum? Type = null, UriReference LockedUser = null, bool? Active = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion CheckedInVersion = null, FlowVersion SavedVersion = null, bool? System = null)
         {
             this.Name = Name;
             this.Description = Description;

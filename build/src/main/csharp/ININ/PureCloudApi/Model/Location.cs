@@ -49,7 +49,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="SublocationOrder">SublocationOrder.</param>
         /// <param name="Version">Version.</param>
 
-        public Location(string Name = null, string Address = null, LocationAddressFields AddressFields = null, bool? AddressVerified = null, LocationEmergencyNumber EmergencyNumber = null, string Notes = null, List<string> Path = null, StateEnum? State = null, List<string> SublocationOrder = null, double? Version = null, )
+        public Location(string Name = null, string Address = null, LocationAddressFields AddressFields = null, bool? AddressVerified = null, LocationEmergencyNumber EmergencyNumber = null, string Notes = null, List<string> Path = null, StateEnum? State = null, List<string> SublocationOrder = null, double? Version = null)
         {
             this.Name = Name;
             this.Address = Address;

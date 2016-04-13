@@ -72,7 +72,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Comments">Comments.</param>
         /// <param name="Provider">The provider for this DID pool.</param>
 
-        public DIDPool(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string StartPhoneNumber = null, string EndPhoneNumber = null, string Comments = null, ProviderEnum? Provider = null, )
+        public DIDPool(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string StartPhoneNumber = null, string EndPhoneNumber = null, string Comments = null, ProviderEnum? Provider = null)
         {
             this.Name = Name;
             this.Description = Description;

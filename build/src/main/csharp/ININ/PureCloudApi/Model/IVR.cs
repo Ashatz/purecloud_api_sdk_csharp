@@ -58,7 +58,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ClosedHoursFlow">ClosedHoursFlow.</param>
         /// <param name="ScheduleGroup">ScheduleGroup.</param>
 
-        public IVR(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string IvrUri = null, List<string> Dnis = null, string FlowId = null, string ScheduleId = null, UriReference OpenHoursFlow = null, UriReference ClosedHoursFlow = null, UriReference ScheduleGroup = null, )
+        public IVR(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string IvrUri = null, List<string> Dnis = null, string FlowId = null, string ScheduleId = null, UriReference OpenHoursFlow = null, UriReference ClosedHoursFlow = null, UriReference ScheduleGroup = null)
         {
             this.Name = Name;
             this.Description = Description;

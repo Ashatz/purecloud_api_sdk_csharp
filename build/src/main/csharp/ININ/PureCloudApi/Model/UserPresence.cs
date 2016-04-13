@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="PresenceDefinition">PresenceDefinition.</param>
         /// <param name="Message">Message.</param>
 
-        public UserPresence(string Name = null, string Source = null, bool? Primary = null, OrganizationPresence PresenceDefinition = null, string Message = null, )
+        public UserPresence(string Name = null, string Source = null, bool? Primary = null, OrganizationPresence PresenceDefinition = null, string Message = null)
         {
             this.Name = Name;
             this.Source = Source;

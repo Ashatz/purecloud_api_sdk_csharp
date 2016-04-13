@@ -45,7 +45,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="State">State.</param>
         /// <param name="Version">Version.</param>
 
-        public Language(string Name = null, DateTime? DateModified = null, StateEnum? State = null, string Version = null, )
+        public Language(string Name = null, DateTime? DateModified = null, StateEnum? State = null, string Version = null)
         {
             this.Name = Name;
             this.DateModified = DateModified;

@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
 
-        public DomainSchemaReference(string Name = null, )
+        public DomainSchemaReference(string Name = null)
         {
             this.Name = Name;
             

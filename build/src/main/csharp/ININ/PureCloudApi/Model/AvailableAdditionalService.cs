@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ExclusiveFromProducts">The list of additional services which are not compatible with this additional service. (required).</param>
         /// <param name="Rate">The rate of this additional service. (required).</param>
 
-        public AvailableAdditionalService(string Name = null, string Description = null, string PartNumber = null, List<string> RequiredForProducts = null, List<string> AvailableForProducts = null, List<string> DefaultForProducts = null, List<string> ExclusiveFromProducts = null, Rate Rate = null, )
+        public AvailableAdditionalService(string Name = null, string Description = null, string PartNumber = null, List<string> RequiredForProducts = null, List<string> AvailableForProducts = null, List<string> DefaultForProducts = null, List<string> ExclusiveFromProducts = null, Rate Rate = null)
         {
             // to ensure "Description" is required (not null)
             if (Description == null)

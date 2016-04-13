@@ -29,7 +29,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Delimiter">Delimiter.</param>
         /// <param name="Table">Table.</param>
 
-        public TextTableTransform(string Name = null, TransformEndpoint RestEndpoint = null, List<BasicTransform> FilenameTransforms = null, List<TagModel> Tags = null, string CommentSymbol = null, string Delimiter = null, TableTransform Table = null, )
+        public TextTableTransform(string Name = null, TransformEndpoint RestEndpoint = null, List<BasicTransform> FilenameTransforms = null, List<TagModel> Tags = null, string CommentSymbol = null, string Delimiter = null, TableTransform Table = null)
         {
             this.Name = Name;
             this.RestEndpoint = RestEndpoint;

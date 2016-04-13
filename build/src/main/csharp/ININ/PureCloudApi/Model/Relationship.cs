@@ -26,7 +26,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ExternalOrganization">The external organization this relationship is attached to (required).</param>
         /// <param name="RelationshipProperty">The relationship or role of the user to this external organization.Examples: Account Manager, Sales Engineer, Implementation Consultant (required).</param>
 
-        public Relationship(string Name = null, User User = null, ExternalOrganization ExternalOrganization = null, string RelationshipProperty = null, )
+        public Relationship(string Name = null, User User = null, ExternalOrganization ExternalOrganization = null, string RelationshipProperty = null)
         {
             // to ensure "User" is required (not null)
             if (User == null)

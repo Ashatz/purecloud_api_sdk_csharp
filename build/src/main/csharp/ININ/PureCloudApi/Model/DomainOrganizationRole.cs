@@ -30,7 +30,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="RoleNeedsUpdate">RoleNeedsUpdate (default to false).</param>
         /// <param name="_Default">_Default (default to false).</param>
 
-        public DomainOrganizationRole(string Name = null, string Description = null, string DefaultRoleId = null, List<string> Permissions = null, List<DomainPermissionPolicy> PermissionPolicies = null, int? UserCount = null, bool? RoleNeedsUpdate = null, bool? _Default = null, )
+        public DomainOrganizationRole(string Name = null, string Description = null, string DefaultRoleId = null, List<string> Permissions = null, List<DomainPermissionPolicy> PermissionPolicies = null, int? UserCount = null, bool? RoleNeedsUpdate = null, bool? _Default = null)
         {
             this.Name = Name;
             this.Description = Description;

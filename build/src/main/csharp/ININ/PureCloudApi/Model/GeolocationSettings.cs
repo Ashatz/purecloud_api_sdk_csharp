@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Name">Name.</param>
         /// <param name="Enabled">Enabled (default to false).</param>
 
-        public GeolocationSettings(string Name = null, bool? Enabled = null, )
+        public GeolocationSettings(string Name = null, bool? Enabled = null)
         {
             this.Name = Name;
             // use default value if no "Enabled" provided

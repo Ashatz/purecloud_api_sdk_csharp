@@ -44,7 +44,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="MxRecordStatus">MxRecordStatus.</param>
         /// <param name="SubDomain">Indicates if this a PureCloud sub-domain.  If true, then the appropriate DNS records are created for sending/receiving email. (default to false).</param>
 
-        public InboundDomain(string Name = null, MxRecordStatusEnum? MxRecordStatus = null, bool? SubDomain = null, )
+        public InboundDomain(string Name = null, MxRecordStatusEnum? MxRecordStatus = null, bool? SubDomain = null)
         {
             this.Name = Name;
             this.MxRecordStatus = MxRecordStatus;

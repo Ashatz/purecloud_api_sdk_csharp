@@ -23,7 +23,7 @@ namespace ININ.PureCloudApi.Model
         /// </summary>
         /// <param name="Name">Name.</param>
 
-        public Snapshot(string Name = null, )
+        public Snapshot(string Name = null)
         {
             this.Name = Name;
             

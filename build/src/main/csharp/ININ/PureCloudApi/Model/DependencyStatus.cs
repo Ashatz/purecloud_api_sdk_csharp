@@ -54,7 +54,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Status">Status.</param>
         /// <param name="FailedObjects">FailedObjects.</param>
 
-        public DependencyStatus(string Name = null, User User = null, string BuildId = null, DateTime? DateStarted = null, DateTime? DateCompleted = null, StatusEnum? Status = null, List<FailedObject> FailedObjects = null, )
+        public DependencyStatus(string Name = null, User User = null, string BuildId = null, DateTime? DateStarted = null, DateTime? DateCompleted = null, StatusEnum? Status = null, List<FailedObject> FailedObjects = null)
         {
             this.Name = Name;
             this.User = User;

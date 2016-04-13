@@ -97,7 +97,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ProviderEndpoint">ProviderEndpoint.</param>
         /// <param name="Recording">Recording.</param>
 
-        public OrphanRecording(string Name = null, DateTime? CreatedTime = null, DateTime? RecoveredTime = null, ProviderTypeEnum? ProviderType = null, long? MediaSizeBytes = null, MediaTypeEnum? MediaType = null, FileStateEnum? FileState = null, Endpoint ProviderEndpoint = null, Recording Recording = null, )
+        public OrphanRecording(string Name = null, DateTime? CreatedTime = null, DateTime? RecoveredTime = null, ProviderTypeEnum? ProviderType = null, long? MediaSizeBytes = null, MediaTypeEnum? MediaType = null, FileStateEnum? FileState = null, Endpoint ProviderEndpoint = null, Recording Recording = null)
         {
             this.Name = Name;
             this.CreatedTime = CreatedTime;

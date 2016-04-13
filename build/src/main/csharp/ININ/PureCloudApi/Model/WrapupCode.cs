@@ -27,7 +27,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="ModifiedBy">ModifiedBy.</param>
         /// <param name="CreatedBy">CreatedBy.</param>
 
-        public WrapupCode(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, )
+        public WrapupCode(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null)
         {
             this.Name = Name;
             this.DateCreated = DateCreated;

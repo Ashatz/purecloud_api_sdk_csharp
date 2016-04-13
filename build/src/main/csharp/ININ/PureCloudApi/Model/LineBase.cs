@@ -25,7 +25,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="LineMetaBase">LineMetaBase.</param>
         /// <param name="Properties">Properties.</param>
 
-        public LineBase(string Name = null, UriReference LineMetaBase = null, Dictionary<string, Object> Properties = null, )
+        public LineBase(string Name = null, UriReference LineMetaBase = null, Dictionary<string, Object> Properties = null)
         {
             this.Name = Name;
             this.LineMetaBase = LineMetaBase;

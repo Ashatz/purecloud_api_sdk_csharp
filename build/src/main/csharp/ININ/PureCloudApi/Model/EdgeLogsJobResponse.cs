@@ -24,7 +24,7 @@ namespace ININ.PureCloudApi.Model
         /// <param name="Id">The created job id..</param>
         /// <param name="Name">Name.</param>
 
-        public EdgeLogsJobResponse(string Id = null, string Name = null, )
+        public EdgeLogsJobResponse(string Id = null, string Name = null)
         {
             this.Id = Id;
             this.Name = Name;
